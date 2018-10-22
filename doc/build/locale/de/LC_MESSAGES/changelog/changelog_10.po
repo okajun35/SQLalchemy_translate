@@ -1,0 +1,4088 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2018, the SQLAlchemy authors and contributors
+# This file is distributed under the same license as the SQLAlchemy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SQLAlchemy 1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-06 18:59+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../changelog/changelog_10.rst:5
+msgid "1.0 Changelog"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:28
+msgid ""
+"Fixed performance regression caused by the fix for :ticket:`3937` where "
+"cx_Oracle as of version 5.3 dropped the ``.UNICODE`` symbol from its "
+"namespace,  which was interpreted as cx_Oracle's \"WITH_UNICODE\" mode "
+"being turned on unconditionally, which invokes functions on the "
+"SQLAlchemy side which convert all strings to unicode unconditionally and "
+"causing a performance impact.  In fact, per cx_Oracle's author the "
+"\"WITH_UNICODE\" mode has been removed entirely as of 5.1, so the "
+"expensive unicode conversion functions are no longer necessary and are "
+"disabled if cx_Oracle 5.1 or greater is detected under Python 2.  The "
+"warning against \"WITH_UNICODE\" mode that was removed under "
+":ticket:`3937` is also restored."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:56
+msgid ""
+"A fix to cx_Oracle's WITH_UNICODE mode which was uncovered by the fact "
+"that cx_Oracle 5.3 now seems to hardcode this flag on in the build; an "
+"internal method that uses this mode wasn't using the correct signature."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:48
+msgid ""
+"Fixed issue in testing fixtures which was incompatible with a change made"
+" as of Python 3.6.2 involving context managers."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:79
+msgid ""
+"Fixed bug involving joined eager loading against multiple entities when "
+"polymorphic inheritance is also in use which would throw \"'NoneType' "
+"object has no attribute 'isa'\".  The issue was introduced by the fix for"
+" :ticket:`3611`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:71
+msgid ""
+"Fixed Python 3.6 DeprecationWarnings related to escaped strings without "
+"the 'r' modifier, and added test coverage for Python 3.6."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:93
+msgid ""
+"Fixed bug in :meth:`.Session.bulk_update_mappings` where an alternate-"
+"named primary key attribute would not track properly into the UPDATE "
+"statement."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:122
+msgid ""
+"Fixed bug where joined eager loading would fail for a polymorphically- "
+"loaded mapper, where the polymorphic_on was set to an un-mapped "
+"expression such as a CASE expression."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:131
+msgid ""
+"Fixed bug where the ArgumentError raised for an invalid bind sent to a "
+"Session via :meth:`.Session.bind_mapper`, :meth:`.Session.bind_table`, or"
+" the constructor would fail to be correctly raised."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:160
+msgid ""
+"Fixed bug in :meth:`.Session.bulk_save` where an UPDATE would not "
+"function correctly in conjunction with a mapping that implements a "
+"version id counter."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:171
+msgid ""
+"Fixed bug where the :attr:`.Mapper.attrs`, "
+":attr:`.Mapper.all_orm_descriptors` and other derived attributes would "
+"fail to refresh when mapper properties or other ORM constructs were added"
+" to the mapper/class after these  accessors were first called."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:101
+msgid ""
+"Changed the query used to get \"default schema name\", from one that "
+"queries the database principals table to using the \"schema_name()\" "
+"function, as issues have been reported that the former system was "
+"unavailable on the Azure Data Warehouse edition. It is hoped that this "
+"will finally work across all SQL Server versions and authentication "
+"styles."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:113
+msgid ""
+"Updated the server version info scheme for pyodbc to use SQL Server "
+"SERVERPROPERTY(), rather than relying upon pyodbc.SQL_DBMS_VER, which "
+"continues to be unreliable particularly with FreeTDS."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:141
+msgid ""
+"Added error code 20017 \"unexpected EOF from the server\" to the list of "
+"disconnect exceptions that result in a connection pool reset.  Pull "
+"request courtesy Ken Robbins."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:181
+msgid ""
+"Fixed bug in pyodbc dialect (as well as in the mostly non-working "
+"adodbapi dialect) whereby a semicolon present in the password or username"
+" fields could be interpreted as a separator for another token; the values"
+" are now quoted when semicolons are present."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:150
+msgid ""
+"Fixed bug where setting up a single-table inh subclass of a joined-table "
+"subclass which included an extra column would corrupt the foreign keys "
+"collection of the mapped table, thereby interfering with the "
+"initialization of relationships."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:206
+msgid ""
+"Fixed bug in subquery eager loading where a subqueryload of an "
+"\"of_type()\" object linked to a second subqueryload of a plain mapped "
+"class, or a longer chain of several \"of_type()\" attributes, would fail "
+"to link the joins correctly."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:216
+msgid ""
+"Fixed bug in :class:`.Table` where the internal method "
+"``_reset_exported()`` would corrupt the state of the object.  This method"
+" is intended for selectable objects and is called by the ORM in some "
+"cases; an erroneous mapper configuration would could lead the ORM to call"
+" this on on a :class:`.Table` object."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:195
+msgid ""
+"Added support for parsing MySQL/Connector boolean and integer arguments "
+"within the URL query string: connection_timeout, connect_timeout, "
+"pool_size, get_warnings, raise_on_warnings, raw, consume_results, "
+"ssl_verify_cert, force_ipv6, pool_reset_session, compress, "
+"allow_local_infile, use_pure."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:227
+msgid ""
+"Fixed bug in ``sqlalchemy.ext.baked`` where the unbaking of a subquery "
+"eager loader query would fail due to a variable scoping issue, when "
+"multiple subquery loaders were involved.  Pull request courtesy Mark "
+"Hahnenberg."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:307
+msgid ""
+"Fixed bug in cross-schema foreign key reflection in conjunction with the "
+":paramref:`.MetaData.schema` argument, where a referenced table that is "
+"present in the \"default\" schema would fail since there would be no way "
+"to indicate a :class:`.Table` that has \"blank\" for a schema.  The "
+"special symbol :attr:`.schema.BLANK_SCHEMA` has been added as an "
+"available value for :paramref:`.Table.schema` and "
+":paramref:`.Sequence.schema`, indicating that the schema name should be "
+"forced to be ``None`` even if :paramref:`.MetaData.schema` is specified."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:262
+msgid ""
+"Fixed issue in SQL math negation operator where the type of the "
+"expression would no longer be the numeric type of the original. This "
+"would cause issues where the type determined result set behaviors."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:272
+msgid ""
+"Fixed bug whereby the ``__getstate__`` / ``__setstate__`` methods for "
+"sqlalchemy.util.Properties were non-working due to the transition in the "
+"1.0 series to ``__slots__``. The issue potentially impacted some third-"
+"party applications. Pull request courtesy Pieter Mulder."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:282
+msgid ""
+":meth:`.FromClause.count` is pending deprecation for 1.1.  This function "
+"makes use of an arbitrary column in the table and is not reliable; for "
+"Core use, ``func.count()`` should be preferred."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:290
+msgid ""
+"Fixed bug in :class:`.CTE` structure which would cause it to not clone "
+"properly when a union was used, as is common in a recursive CTE.  The "
+"improper cloning would cause errors when the CTE is used in various ORM "
+"contexts such as that of a :func:`.column_property`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:299
+msgid ""
+"Fixed bug whereby :meth:`.Table.tometadata` would make a duplicate "
+":class:`.UniqueConstraint` for each :class:`.Column` object that featured"
+" the ``unique=True`` parameter."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:241
+msgid ""
+"Fixed bug whereby :class:`.TypeDecorator` and :class:`.Variant` types "
+"were not deeply inspected enough by the PostgreSQL dialect to determine "
+"if SMALLSERIAL or BIGSERIAL needed to be rendered rather than SERIAL."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:251
+msgid ""
+"Fixed bug in :paramref:`.Select.with_for_update.of`, where the Oracle "
+"\"rownum\" approach to LIMIT/OFFSET would fail to accommodate for the "
+"expressions inside the \"OF\" clause, which must be stated at the topmost"
+" level referring to expression within the subquery.  The expressions are "
+"now added to the subquery if needed."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:321
+msgid ""
+"Fixed a regression that occurred in the examples/vertical/dictlike-"
+"polymorphic.py example which prevented it from running."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:333
+msgid ""
+"Fixed bug in \"evaluate\" strategy of :meth:`.Query.update` and "
+":meth:`.Query.delete` which would fail to accommodate a bound parameter "
+"with a \"callable\" value, as which occurs when filtering by a many-to-"
+"one equality expression along a relationship."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:359
+msgid ""
+"Fixed bug whereby the event listeners used for backrefs could be "
+"inadvertently applied multiple times, when using a deep class inheritance"
+" hierarchy in conjunction with mutiple mapper configuration steps."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:368
+msgid ""
+"Fixed bug whereby passing a :func:`.text` construct to the "
+":meth:`.Query.group_by` method would raise an error, instead of "
+"intepreting the object as a SQL fragment."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:434
+msgid ""
+"Anonymous labeling is applied to a :attr:`.func` construct that is passed"
+" to :func:`.column_property`, so that if the same attribute is referred "
+"to as a column expression twice the names are de-duped, thus avoiding "
+"\"ambiguous column\" errors.   Previously, the ``.label(None)`` would "
+"need to be applied in order for the name to be de-anonymized."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:454
+msgid ""
+"Fixed regression appearing in the 1.0 series in ORM loading where the "
+"exception raised for an expected column missing would incorrectly be a "
+"``NoneType`` error, rather than the expected :class:`.NoSuchColumnError`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:406
+msgid ""
+"Fixed bug where when using ``case_sensitive=False`` with an "
+":class:`.Engine`, the result set would fail to correctly accommodate for "
+"duplicate column names in the result set, causing an error when the "
+"statement is executed in 1.0, and preventing the \"ambiguous column\" "
+"exception from functioning in 1.1."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:416
+msgid ""
+"Fixed bug where the negation of an EXISTS expression would not be "
+"properly typed as boolean in the result, and also would fail to be "
+"anonymously aliased in a SELECT list as is the case with a non-negated "
+"EXISTS construct."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:425
+msgid ""
+"Fixed bug where \"unconsumed column names\" exception would fail to be "
+"raised in the case where :meth:`.Insert.values` were called with a list "
+"of parameter mappings, instead of a single mapping of parameters.  Pull "
+"request courtesy Athena Yao."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:342
+msgid ""
+"Added disconnect detection support for the error string \"SSL error: "
+"decryption failed or bad record mac\".  Pull request courtesy Iuri de "
+"Silvio."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:350
+msgid ""
+"Fixed bug where by ROW_NUMBER OVER clause applied for OFFSET selects in "
+"SQL Server would inappropriately substitute a plain column from the local"
+" statement that overlaps with a label name used by the ORDER BY criteria "
+"of the statement."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:463
+msgid ""
+"Fixed regression appearing in the 1.0 series which would cause the Oracle"
+" and SQL Server dialects to incorrectly account for result set columns "
+"when these dialects would wrap a SELECT in a subquery in order to provide"
+" LIMIT/OFFSET behavior, and the original SELECT statement referred to the"
+" same column multiple times, such as a column and a label of that same "
+"column.  This issue is related to :ticket:`3658` in that when the error "
+"occurred, it would also cause a ``NoneType`` error, rather than reporting"
+" that it couldn't locate a column."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:376
+msgid ""
+"Fixed a bug in the cx_Oracle connect process that caused a TypeError when"
+" the either the user, password or dsn was empty. This prevented external "
+"authentication to Oracle databases, and prevented connecting to the "
+"default dsn.  The connect string oracle:// now logs into the default dsn "
+"using the Operating System username, equivalent to connecting using '/' "
+"with sqlplus."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:387
+msgid ""
+"Fixed a bug in the result proxy used mainly by Oracle when binary and "
+"other LOB types are in play, such that when query / statement caching "
+"were used, the type-level result processors, notably that required by the"
+" binary type itself but also any other processor, would become lost after"
+" the first run of the statement due to it being removed from the cached "
+"result metadata."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:398
+msgid ""
+"Changed the \"directed graph\" example to no longer consider integer "
+"identifiers of nodes as significant; the \"higher\" / \"lower\" "
+"references now allow mutual edges in both directions."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:445
+msgid ""
+"Fixed bug in \"to_list\" conversion where a single bytes object would be "
+"turned into a list of individual characters.  This would impact among "
+"other things using the :meth:`.Query.get` method on a primary key that's "
+"a bytes object."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:481
+msgid ""
+"Fixed bug in :meth:`.Session.merge` where an object with a composite "
+"primary key that has values for some but not all of the PK fields would "
+"emit a SELECT statement leaking the internal NEVER_SET symbol into the "
+"query, rather than detecting that this object does not have a searchable "
+"primary key and no SELECT should be emitted."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:580
+msgid ""
+"Fixed regression since 0.9 where the 0.9 style loader options system "
+"failed to accommodate for multiple :func:`.undefer_group` loader options "
+"in a single query.   Multiple :func:`.undefer_group` options will now be "
+"taken into account even against the same entity."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:529
+msgid ""
+"Revisiting :ticket:`2696`, first released in 1.0.10, which attempts to "
+"work around Python 2's lack of exception context reporting by emitting a "
+"warning for an exception that was interrupted by a second exception when "
+"attempting to roll back the already-failed transaction; this issue "
+"continues to occur for MySQL backends in conjunction with a savepoint "
+"that gets unexpectedly lost, which then causes a \"no such savepoint\" "
+"error when the rollback is attempted, obscuring what the original "
+"condition was."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:538
+msgid ""
+"The approach has been generalized to the Core \"safe reraise\" function "
+"which takes place across the ORM and Core in any place that a transaction"
+" is being rolled back in response to an error which occurred trying to "
+"commit, including the context managers provided by :class:`.Session` and "
+":class:`.Connection`, and taking place for operations such as a failure "
+"on \"RELEASE SAVEPOINT\". Previously, the fix was only in place for a "
+"specific path within the ORM flush/commit process; it now takes place for"
+" all transactional context managers as well."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:500
+msgid ""
+"Fixed issue where the \"literal_binds\" flag was not propagated for "
+":func:`.expression.insert`, :func:`.expression.update` or "
+":func:`.expression.delete` constructs when compiled to string SQL.  Pull "
+"request courtesy Tim Tate."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:518
+msgid ""
+"Fixed issue where inadvertent use of the Python ``__contains__`` override"
+" with a column expression (e.g. by using ``'x' in col``) would cause an "
+"endless loop in the case of an ARRAY type, as Python defers this to "
+"``__getitem__`` access which never raises for this type.  Overall, all "
+"use of ``__contains__`` now raises NotImplementedError."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:552
+msgid ""
+"Fixed bug in :class:`.Table` metadata construct which appeared around the"
+" 0.9 series where adding columns to a :class:`.Table` that was unpickled "
+"would fail to correctly establish the :class:`.Column` within the 'c' "
+"collection, leading to issues in areas such as ORM configuration.   This "
+"could impact use cases such as ``extend_existing`` and others."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:491
+msgid ""
+"Fixed bug in :func:`.expression.text` construct where a double-colon "
+"expression would not escape properly, e.g. ``some\\:\\:expr``, as is most"
+" commonly required when rendering PostgreSQL-style CAST expressions."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:572
+msgid ""
+"Fixed the syntax of the :func:`.extract` function when used on MSSQL "
+"against a datetime value; the quotes around the keyword are removed.  "
+"Pull request courtesy Guillaume Doumenc."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:590
+msgid ""
+"Fixed 1.0 regression where the eager fetch of cursor.rowcount was no "
+"longer called for an UPDATE or DELETE statement emitted via plain text or"
+" via the :func:`.text` construct, affecting those drivers that erase "
+"cursor.rowcount once the cursor is closed such as SQL Server ODBC and "
+"Firebird drivers."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:509
+msgid ""
+"Fixed a small issue in the Jython Oracle compiler involving the rendering"
+" of \"RETURNING\" which allows this currently unsupported/untested "
+"dialect to work rudimentally with the 1.0 series. Pull request courtesy "
+"Carlos Rivas."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:563
+msgid ""
+"Fixed bug where some exception re-raise scenarios would attach the "
+"exception to itself as the \"cause\"; while the Python 3 interpreter is "
+"OK with this, it could cause endless loops in iPython."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:639
+msgid ""
+"Fixed regression caused in 1.0.10 by the fix for :ticket:`3593` where the"
+" check added for a polymorphic joinedload from a "
+"poly_subclass->class->poly_baseclass connection would fail for the "
+"scenario of class->poly_subclass->class."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:648
+msgid ""
+"Fixed bug where :meth:`.Session.bulk_update_mappings` and related would "
+"not bump a version id counter when in use.  The experience here is still "
+"a little rough as the original version id is required in the given "
+"dictionaries and there's not clean error reporting on that yet."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:667
+msgid ""
+"Major fixes to the :paramref:`.Mapper.eager_defaults` flag, this flag "
+"would not be honored correctly in the case that multiple UPDATE "
+"statements were to be emitted, either as part of a flush or a bulk update"
+" operation.  Additionally, RETURNING would be emitted unnecessarily "
+"within update statements."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:677
+msgid ""
+"Fixed bug where use of the :meth:`.Query.select_from` method would cause "
+"a subsequent call to the :meth:`.Query.with_parent` method to fail."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:658
+msgid ""
+"Fixed bug in :meth:`.Update.return_defaults` which would cause all "
+"insert-default holding columns not otherwise included in the SET clause "
+"(such as primary key cols) to get rendered into the RETURNING even though"
+" this is an UPDATE."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:605
+msgid ""
+"An adjustment to the regular expression used to parse MySQL views, such "
+"that we no longer assume the \"ALGORITHM\" keyword is present in the "
+"reflected view source, as some users have reported this not being present"
+" in some Amazon RDS environments."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:614
+msgid ""
+"Added new reserved words for MySQL 5.7 to the MySQL dialect, including "
+"'generated', 'optimizer_costs', 'stored', 'virtual'. Pull request "
+"courtesy Hanno Schlichting."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:622
+msgid ""
+"Further fixes to :ticket:`3605`, pop method on :class:`.MutableDict`, "
+"where the \"default\" argument was not included."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:629
+msgid ""
+"Fixed bug in baked loader system where the systemwide monkeypatch for "
+"setting up baked lazy loaders would interfere with other loader "
+"strategies that rely on lazy loading as a fallback, e.g. joined and "
+"subquery eager loaders, leading to ``IndexError`` exceptions at mapper "
+"configuration time."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:726
+msgid ""
+"Fixed issue where post_update on a many-to-one relationship would fail to"
+" emit an UPDATE in the case where the attribute were set to None and not "
+"previously loaded."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:828
+msgid ""
+"Fixed bug which is actually a regression that occurred between versions "
+"0.8.0 and 0.8.1, due :ticket:`2714`.  The case where joined eager loading"
+" needs to join out over a subclass-bound relationship when "
+"\"with_polymorphic\" were also used would fail to join from the correct "
+"entity."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:838
+msgid ""
+"Fixed joinedload bug which would occur when a. the query includes "
+"limit/offset criteria that forces a subquery b. the relationship uses "
+"\"secondary\" c. the primaryjoin of the relationship refers to a column "
+"that is either not part of the primary key, or is a PK col in a joined-"
+"inheritance subclass table that is under a different attribute name than "
+"the parent table's primary key column d. the query defers the columns "
+"that are present in the primaryjoin, typically via not being included in "
+"load_only(); the necessary column(s) would not be present in the subquery"
+" and produce invalid SQL."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:852
+msgid ""
+"A rare case which occurs when a :meth:`.Session.rollback` fails in the "
+"scope of a :meth:`.Session.flush` operation that's raising an exception, "
+"as has been observed in some MySQL SAVEPOINT cases, prevents the original"
+"  database exception from being observed when it was emitted during  "
+"flush, but only on Py2K because Py2K does not support exception  "
+"chaining; on Py3K the originating exception is chained.  As a workaround,"
+" a warning is emitted in this specific case showing at least the string "
+"message of the original database error before we proceed to raise  the "
+"rollback-originating exception."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:773
+msgid ""
+"Fixed bug where in Py2K a unicode literal would not be accepted as the "
+"string name of a class or other argument within declarative using "
+":func:`.backref` on :func:`.relationship`.  Pull request courtesy Nils "
+"Philippsen."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:812
+msgid ""
+"Added support for parameter-ordered SET clauses in an UPDATE statement.  "
+"This feature is available by passing the "
+":paramref:`~.sqlalchemy.sql.expression.update.preserve_parameter_order` "
+"flag either to the core :class:`.Update` construct or alternatively "
+"adding it to the :paramref:`.Query.update.update_args` dictionary at the "
+"ORM-level, also passing the parameters themselves as a list of 2-tuples. "
+"Thanks to Gorka Eguileor for implementation and tests."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:822
+msgid ":ref:`updates_order_parameters`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:703
+msgid ""
+"Fixed issue within the :meth:`.Insert.from_select` construct whereby the "
+":class:`.Select` construct would have its ``._raw_columns`` collection "
+"mutated in-place when compiling the :class:`.Insert` construct, when the "
+"target :class:`.Table` has Python-side defaults. The :class:`.Select` "
+"construct would compile standalone with the erroneous column present "
+"subsequent to compilation of the :class:`.Insert`, and the the "
+":class:`.Insert` statement itself would fail on a second compile attempt "
+"due to duplicate bound parameters."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:734
+msgid ""
+"Fixed bug where CREATE TABLE with a no-column table, but a constraint "
+"such as a CHECK constraint would render an erroneous comma in the "
+"definition; this scenario can occur such as with a PostgreSQL INHERITS "
+"table that has no columns of its own."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:754
+msgid ""
+"Fixed issue where the \"FOR UPDATE OF\" PostgreSQL-specific SELECT "
+"modifier would fail if the referred table had a schema qualifier; PG "
+"needs the schema name to be omitted.  Pull request courtesy Diana Clarke."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:764
+msgid ""
+"Fixed bug where some varieties of SQL expression passed to the \"where\" "
+"clause of :class:`.postgresql.ExcludeConstraint` would fail to be "
+"accepted correctly.  Pull request courtesy aisch."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:866
+msgid ""
+"Fixed the ``.python_type`` attribute of :class:`.postgresql.INTERVAL` to "
+"return ``datetime.timedelta`` in the same way as that of "
+":obj:`.types.Interval.python_type`, rather than raising "
+"``NotImplementedError``."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:716
+msgid ""
+"Fixed bug in MySQL reflection where the \"fractional sections portion\" "
+"of the :class:`.mysql.DATETIME`, :class:`.mysql.TIMESTAMP` and "
+":class:`.mysql.TIME` types would be incorrectly placed into the "
+"``timezone`` attribute, which is unused by MySQL, instead of the ``fsp`` "
+"attribute."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:744
+msgid ""
+"Added the error \"20006: Write to the server failed\" to the list of "
+"disconnect errors for the pymssql driver, as this has been observed to "
+"render a connection unusable."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:782
+msgid ""
+"A descriptive ValueError is now raised in the event that SQL server "
+"returns an invalid date or time format from a DATE or TIME column, rather"
+" than failing with a NoneType error.  Pull request courtesy Ed Avis."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:876
+msgid ""
+"Fixed issue where DDL generated for the MSSQL types DATETIME2, TIME and "
+"DATETIMEOFFSET with a precision of \"zero\" would not generate the "
+"precision field.  Pull request courtesy Jacobo de Vera."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:689
+msgid ""
+"Added support for the ``dict.pop()`` and ``dict.popitem()`` methods to "
+"the :class:`.mutable.MutableDict` class."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:791
+msgid ""
+"Updates to internal getargspec() calls, some py36-related fixture "
+"updates, and alterations to two iterators to \"return\" instead of "
+"raising StopIteration, to allow tests to pass without errors or warnings "
+"on Py3.5, Py3.6, pull requests courtesy Jacob MacDonald, Luri de Silvio, "
+"and Phil Jones."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:801
+msgid ""
+"Fixed an issue in baked queries where the .get() method, used either "
+"directly or within lazy loads, didn't consider the mapper's \"get "
+"clause\" as part of the cache key, causing bound parameter mismatches if "
+"the clause got re-generated.  This clause is cached by mappers on the fly"
+" but in highly concurrent scenarios may be generated more than once when "
+"first accessed."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:695
+msgid ""
+"The ORM and Core tutorials, which have always been in doctest format, are"
+" now exercised within the normal unit test suite in both Python 2 and "
+"Python 3."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:921
+msgid ""
+"Added new method :meth:`.Query.one_or_none`; same as :meth:`.Query.one` "
+"but returns None if no row found.  Pull request courtesy esiegerman."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:889
+msgid ""
+"Fixed regression in 1.0 where new feature of using \"executemany\" for "
+"UPDATE statements in the ORM (e.g. :ref:`feature_updatemany`) would break"
+" on PostgreSQL and other RETURNING backends when using server-side "
+"version generation schemes, as the server side value is retrieved via "
+"RETURNING which is not supported with executemany."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:929
+msgid ""
+"Fixed rare TypeError which could occur when stringifying certain kinds of"
+" internal column loader options within internal logging."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:936
+msgid ""
+"Fixed bug in :meth:`.Session.bulk_save_objects` where a mapped column "
+"that had some kind of \"fetch on update\" value and was not locally "
+"present in the given object would cause an AttributeError within the "
+"operation."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:965
+msgid ""
+"Fixed 1.0 regression where the \"noload\" loader strategy would fail to "
+"function for a many-to-one relationship.  The loader used an API to place"
+" \"None\" into the dictionary which no longer actually writes a value; "
+"this is a side effect of :ticket:`3061`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:945
+msgid ""
+"Fixed regression in 1.0-released default-processor for multi-VALUES "
+"insert statement, :ticket:`3288`, where the column type for the default-"
+"holding column would not be propagated to the compiled statement in the "
+"case where the default was being used, leading to bind-level type "
+"handlers not being invoked."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:987
+msgid ""
+"An adjustment to the new PostgreSQL feature of reflecting storage options"
+" and USING of :ticket:`3455` released in 1.0.6, to disable the feature "
+"for PostgreSQL versions < 8.2 where the ``reloptions`` column is not "
+"provided; this allows Amazon Redshift to again work as it is based on an "
+"8.0.x version of PostgreSQL. Fix courtesy Pete Hollobon."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:16
+msgid ""
+"Fixed support for cx_Oracle version 5.2, which was tripping up "
+"SQLAlchemy's version detection under Python 3 and inadvertently not using"
+" the correct unicode mode for Python 3.  This would cause issues such as "
+"bound variables mis-interpreted as NULL and rows silently not being "
+"returned."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:911
+msgid ""
+"Fixed bug in Oracle dialect where reflection of tables and other symbols "
+"with names quoted to force all-lower-case would not be identified "
+"properly in reflection queries.  The :class:`.quoted_name` construct is "
+"now applied to incoming symbol names that detect as forced into all-"
+"lower-case within the \"name normalize\" process."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:900
+msgid ""
+"Added the :paramref:`.AssociationProxy.info` parameter to the "
+":class:`.AssociationProxy` constructor, to suit the "
+":attr:`.AssociationProxy.info` accessor that was added in :ticket:`2971`."
+"  This is possible because :class:`.AssociationProxy` is constructed "
+"explicitly, unlike a hybrid which is constructed implicitly via the "
+"decorator syntax."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:955
+msgid ""
+"Fixed two issues in the \"history_meta\" example where history tracking "
+"could encounter empty history, and where a column keyed to an alternate "
+"attribute name would fail to track properly.  Fixes courtesy Alex Fraser."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:975
+msgid ""
+"Fixed two issues regarding Sybase reflection, allowing tables without "
+"primary keys to be reflected as well as ensured that a SQL statement "
+"involved in foreign key detection is pre-fetched up front to avoid driver"
+" issues upon nested queries.  Fixes here courtesy Eugene Zapolsky; note "
+"that we cannot currently test Sybase to locally verify these changes."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:27
+msgid ""
+"Fixed critical issue whereby the pool \"checkout\" event handler may be "
+"called against a stale connection without the \"connect\" event handler "
+"having been called, in the case where the pool attempted to reconnect "
+"after being invalidated and failed; the stale connection would remain "
+"present and would be used on a subsequent attempt.  This issue has a "
+"greater impact in the 1.0 series subsequent to 1.0.2, as it also delivers"
+" a blanked-out ``.info`` dictionary to the event handler; prior to 1.0.2 "
+"the ``.info`` dictionary is still the previous one."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:46
+msgid ""
+"Fixed bug in SQLite dialect where reflection of UNIQUE constraints that "
+"included non-alphabetic characters in the names, like dots or spaces, "
+"would not be reflected with their name."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1003
+msgid ""
+"Fixed an issue where a particular base class within utils didn't "
+"implement ``__slots__``, and therefore meant all subclasses of that class"
+" didn't either, negating the rationale for ``__slots__`` to be in use.  "
+"Didn't cause any issue except on IronPython which apparently does not "
+"implement ``__slots__`` behavior compatibly with cPython."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1094
+msgid ""
+"Fixed 1.0 regression where value objects that override ``__eq__()`` to "
+"return a non-boolean-capable object, such as some geoalchemy types as "
+"well as numpy types, were being tested for ``bool()`` during a unit of "
+"work update operation, where in 0.9 the return value of ``__eq__()`` was "
+"tested against \"is True\" to guard against this."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1105
+msgid ""
+"Fixed 1.0 regression where a \"deferred\" attribute would not populate "
+"correctly if it were loaded within the \"optimized inheritance load\", "
+"which is a special SELECT emitted in the case of joined table inheritance"
+" used to populate expired or unloaded attributes against a joined table "
+"without loading the base table.  This is related to the fact that SQLA "
+"1.0 no longer guesses about loading deferred columns and must be directed"
+" explicitly."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1117
+msgid ""
+"Fixed 1.0 regression where the \"parent entity\" of a synonym- mapped "
+"attribute on top of an :func:`.aliased` object would resolve to the "
+"original mapper, not the :func:`.aliased` version of it, thereby causing "
+"problems for a :class:`.Query` that relies on this attribute (e.g. it's "
+"the only representative attribute given in the constructor) to figure out"
+" the correct FROM clause for the query."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1083
+msgid ""
+"Fixed bug in :class:`.AbstractConcreteBase` extension where a column "
+"setup on the ABC base which had a different attribute name vs. column "
+"name would not be correctly mapped on the final base class.   The failure"
+" on 0.9 would be silent whereas on 1.0 it raised an ArgumentError, so may"
+" not have been noticed prior to 1.0."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1028
+msgid ""
+"Fixed regression where new methods on :class:`.ResultProxy` used by the "
+"ORM :class:`.Query` object (part of the performance enhancements of "
+":ticket:`3175`) would not raise the \"this result does not return rows\" "
+"exception in the case where the driver (typically MySQL) fails to "
+"generate cursor.description correctly; an AttributeError against NoneType"
+" would be raised instead."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1039
+msgid ""
+"Fixed regression where :meth:`.ResultProxy.keys` would return un-adjusted"
+" internal symbol names for \"anonymous\" labels, which are the \"foo_1\" "
+"types of labels we see generated for SQL functions without labels and "
+"similar.  This was a side effect of the performance enhancements "
+"implemented as part of #918."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1020
+msgid ""
+"Added a :meth:`.ColumnElement.cast` method which performs the same "
+"purpose as the standalone :func:`.cast` function.  Pull request courtesy "
+"Sebastian Bank."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1050
+msgid ""
+"Fixed bug where coersion of literal ``True`` or ``False`` constant in "
+"conjunction with :func:`.and_` or :func:`.or_` would fail with an "
+"AttributeError."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1058
+msgid ""
+"Fixed potential issue where a custom subclass of "
+":class:`.FunctionElement` or other column element that incorrectly states"
+" 'None' or any other invalid object as the ``.type`` attribute will "
+"report this exception instead of recursion overflow."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1067
+msgid ""
+"Fixed bug where the modulus SQL operator wouldn't work in reverse due to "
+"a missing ``__rmod__`` method.  Pull request courtesy dan-gittik."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1075
+msgid ""
+"Added support for the MINVALUE, MAXVALUE, NO MINVALUE, NO MAXVALUE, and "
+"CYCLE arguments for CREATE SEQUENCE as supported by PostgreSQL and "
+"Oracle.  Pull request courtesy jakeogh."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1133
+msgid ""
+"Fixed a major regression in the 1.0 series where the version_id_counter "
+"feature would cause an object's version counter to be incremented when "
+"there was no net change to the object's row, but instead an object "
+"related to it via relationship (e.g. typically many-to-one) were "
+"associated or de-associated with it, resulting in an UPDATE statement "
+"that updates the object's version counter and nothing else. In the use "
+"case where the relatively recent \"server side\" and/or "
+"\"programmatic/conditional\" version counter feature were used (e.g. "
+"setting version_id_generator to False), the bug could cause an UPDATE "
+"without a valid SET clause to be emitted."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1186
+msgid ""
+"Fixed 1.0 regression where the enhanced behavior of single-inheritance "
+"joins of :ticket:`3222` takes place inappropriately for a JOIN along "
+"explicit join criteria with a single-inheritance subclass that does not "
+"make use of any discriminator, resulting in an additional \"AND NULL\" "
+"clause."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1217
+msgid ""
+"Fixed bug in new :meth:`.Session.bulk_update_mappings` feature where the "
+"primary key columns used in the WHERE clause to locate the row would also"
+" be included in the SET clause, setting their value to themselves "
+"unnecessarily.  Pull request courtesy Patrick Hayes."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1226
+msgid ""
+"Fixed an unexpected-use regression whereby custom :class:`.Comparator` "
+"objects that made use of the ``__clause_element__()`` method and returned"
+" an object that was an ORM-mapped :class:`.InstrumentedAttribute` and not"
+" explicitly a :class:`.ColumnElement` would fail to be correctly handled "
+"when passed as an expression to :meth:`.Session.query`. The logic in 0.9 "
+"happened to succeed on this, so this use case is now supported."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1239
+msgid ""
+"Fixed a bug where clause adaption as applied to a :class:`.Label` object "
+"would fail to accommodate the labeled SQL expression in all cases, such "
+"that any SQL operation that made use of :meth:`.Label.self_group` would "
+"use the original unadapted expression.  One effect of this would be that "
+"an ORM :func:`.aliased` construct would not fully accommodate attributes "
+"mapped by :obj:`.column_property`, such that the un-aliased table could "
+"leak out when the property were used in some kinds of SQL comparisons."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1170
+msgid ""
+"Added support for storage parameters under CREATE INDEX, using a new "
+"keyword argument ``postgresql_with``.  Also added support for reflection "
+"to support both the ``postgresql_with`` flag as well as the "
+"``postgresql_using`` flag, which will now be set on :class:`.Index` "
+"objects that are reflected, as well present in a new \"dialect_options\" "
+"dictionary in the result of :meth:`.Inspector.get_indexes`.  Pull request"
+" courtesy Pete Hollobon."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1180
+msgid ":ref:`postgresql_index_storage`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1205
+msgid ""
+"Added new execution option ``max_row_buffer`` which is interpreted by the"
+" psycopg2 dialect when the ``stream_results`` option is used, which sets "
+"a limit on the size of the row buffer that may be allocated.  This value "
+"is also provided based on the integer value sent to "
+":meth:`.Query.yield_per`.  Pull request courtesy mcclurem."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1159
+msgid ""
+"Re-fixed this issue first released in 1.0.5 to fix psycopg2cffi JSONB "
+"support once again, as they suddenly switched on unconditional decoding "
+"of JSONB types in version 2.7.1. Version detection now specifies 2.7.1 as"
+" where we should expect the DBAPI to do json encoding for us."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1196
+msgid ""
+"Repaired the :class:`.ExcludeConstraint` construct to support common "
+"features that other objects like :class:`.Index` now do, that the column "
+"expression may be specified as an arbitrary SQL expression such as "
+":obj:`.cast` or :obj:`.text`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1148
+msgid ""
+"Fixed issue when using :class:`.VARBINARY` type in conjunction with an "
+"INSERT of NULL + pyodbc; pyodbc requires a special object be passed in "
+"order to persist NULL.  As the :class:`.VARBINARY` type is now usually "
+"the default for :class:`.LargeBinary` due to :ticket:`3039`, this issue "
+"is partially a regression in 1.0. The pymssql driver appears to be "
+"unaffected."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1253
+msgid ""
+"Fixed an internal \"memoization\" routine for method types such that a "
+"Python descriptor is no longer used; repairs inspectability of these "
+"methods including support for Sphinx documentation."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1357
+msgid ""
+"Added new event :meth:`.InstanceEvents.refresh_flush`, invoked when an "
+"INSERT or UPDATE level default value fetched via RETURNING or Python-side"
+" default is invoked within the flush process.  This is to provide a hook "
+"that is no longer present as a result of :ticket:`3167`, where attribute "
+"and validation events are no longer called within the flush process."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1394
+msgid ""
+"The \"lightweight named tuple\" used when a :class:`.Query` returns rows "
+"failed to implement ``__slots__`` correctly such that it still had a "
+"``__dict__``.    This is resolved, but in the extremely unlikely case "
+"someone was assigning values to the returned tuples, that will no longer "
+"work."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1264
+msgid ""
+"Added new engine event :meth:`.ConnectionEvents.engine_disposed`. Called "
+"after the :meth:`.Engine.dispose` method is called."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1329
+msgid ""
+"Adjustments to the engine plugin hook, such that the "
+":meth:`.URL.get_dialect` method will continue to return the ultimate "
+":class:`.Dialect` object when a dialect plugin is used, without the need "
+"for the caller to be aware of the :meth:`.Dialect.get_dialect_cls` "
+"method."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1292
+msgid ""
+"Fixed bug where known boolean values used by :func:`.engine_from_config` "
+"were not being parsed correctly; these included ``pool_threadlocal`` and "
+"the psycopg2 argument ``use_native_unicode``."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1381
+msgid ""
+"Added support for the case of the misbehaving DBAPI that has pep-249 "
+"exception names linked to exception classes of an entirely different "
+"name, preventing SQLAlchemy's own exception wrapping from wrapping the "
+"error appropriately. The SQLAlchemy dialect in use needs to implement a "
+"new accessor :attr:`.DefaultDialect.dbapi_exception_translation_map` to "
+"support this feature; this is implemented now for the py-postgresql "
+"dialect."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1404
+msgid ""
+"Fixed bug involving the case when pool checkout event handlers are used "
+"and connection attempts are made in the handler itself which fail, the "
+"owning connection record would not be freed until the stack trace of the "
+"connect error itself were freed.   For the case where a test pool of only"
+" a single connection were used, this means the pool would be fully "
+"checked out until that stack trace were freed.  This mostly impacts very "
+"specific debugging scenarios and is unlikely to have been noticeable in "
+"any production application.  The fix applies an explicit checkin of the "
+"record before re-raising the caught exception."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:55
+msgid ""
+"Added official support for a CTE used by the SELECT present inside of "
+":meth:`.Insert.from_select`.  This behavior worked accidentally up until "
+"0.9.9, when it no longer worked due to unrelated changes as part of "
+":ticket:`3248`.   Note that this is the rendering of the WITH clause "
+"after the INSERT, before the SELECT; the full functionality of CTEs "
+"rendered at the top level of INSERT, UPDATE, DELETE is a new feature "
+"targeted for a later release."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1271
+msgid ""
+"Repaired some typing and test issues related to the pypy psycopg2cffi "
+"dialect, in particular that the current 2.7.0 version does not have "
+"native support for the JSONB type.  The version detection for psycopg2 "
+"features has been tuned into a specific sub-version for psycopg2cffi.  "
+"Additionally, test coverage has been enabled for the full series of "
+"psycopg2 features under psycopg2cffi."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1301
+msgid ""
+"Added a new dialect flag to the MSSQL dialect ``legacy_schema_aliasing`` "
+"which when set to False will disable a very old and obsolete behavior, "
+"that of the compiler's attempt to turn all schema-qualified table names "
+"into alias names, to work around old and no longer locatable issues where"
+" SQL server could not parse a multi-part identifier name in all "
+"circumstances.   The behavior prevented more sophisticated statements "
+"from working correctly, including those which use hints, as well as CRUD "
+"statements that embed correlated SELECT statements.  Rather than continue"
+" to repair the feature to work with more complex statements, it's better "
+"to just disable it as it should no longer be needed for any modern SQL "
+"server version.  The flag defaults to True for the 1.0.x series, leaving "
+"current behavior unchanged for this version series.  In the 1.1 series, "
+"it will default to False.  For the 1.0 series, when not set to either "
+"value explicitly, a warning is emitted when a schema-qualified table is "
+"first used in a statement, which suggests that the flag be set to False "
+"for all modern SQL Server versions."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1323
+msgid ":ref:`legacy_schema_rendering`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1282
+msgid ""
+"Added support for ``*args`` to be passed to the baked query initial "
+"callable, in the same way that ``*args`` are supported for the "
+":meth:`.BakedQuery.add_criteria` and :meth:`.BakedQuery.with_criteria` "
+"methods.  Initial PR courtesy Naoki INADA."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1368
+msgid ""
+"Added a new semi-public method to :class:`.MutableBase` "
+":meth:`.MutableBase._get_listen_keys`.  Overriding this method is needed "
+"in the case where a :class:`.MutableBase` subclass needs events to "
+"propagate for attribute keys other than the key to which the mutable type"
+" is associated with, when intercepting the "
+":meth:`.InstanceEvents.refresh` or :meth:`.InstanceEvents.refresh_flush` "
+"events.  The current example of this is composites using "
+":class:`.MutableComposite`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1340
+msgid ""
+"Fixed regression in the :mod:`sqlalchemy.ext.mutable` extension as a "
+"result of the bugfix for :ticket:`3167`, where attribute and validation "
+"events are no longer called within the flush process.  The mutable "
+"extension was relying upon this behavior in the case where a column level"
+" Python-side default were responsible for generating the new value on "
+"INSERT or UPDATE, or when a value were fetched from the RETURNING clause "
+"for \"eager defaults\" mode.  The new value would not be subject to any "
+"event when populated and the mutable extension could not establish proper"
+" coercion or history listening.  A new event "
+":meth:`.InstanceEvents.refresh_flush` is added which the mutable "
+"extension now makes use of for this use case."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1423
+msgid ""
+"Fixed unexpected-use regression where in the odd case that the "
+"primaryjoin of a relationship involved comparison to an unhashable type "
+"such as an HSTORE, lazy loads would fail due to a hash-oriented check on "
+"the statement parameters, modified in 1.0 as a result of :ticket:`3061` "
+"to use hashing and modified in :ticket:`3368` to occur in cases more "
+"common than \"load on pending\". The values are now checked for the "
+"``__hash__`` attribute beforehand."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1435
+msgid ""
+"Liberalized an assertion that was added as part of :ticket:`3347` to "
+"protect against unknown conditions when splicing inner joins together "
+"within joined eager loads with ``innerjoin=True``; if some of the joins "
+"use a \"secondary\" table, the assertion needs to unwrap further joins in"
+" order to pass."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1462
+msgid ""
+"Repaired / added to tests yet more expressions that were reported as "
+"failing with the new 'entity' key value added to "
+":attr:`.Query.column_descriptions`, the logic to discover the \"from\" "
+"clause is again reworked to accommodate columns from aliased classes, as "
+"well as to report the correct value for the \"aliased\" flag in these "
+"cases."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1445
+msgid ""
+"Fixed bug in enhanced constraint-attachment logic introduced in "
+":ticket:`3341` where in the unusual case of a constraint that refers to a"
+" mixture of :class:`.Column` objects and string column names at the same "
+"time, the auto-attach-on-column-attach logic will be skipped; for the "
+"constraint to be auto-attached in this case, all columns must be "
+"assembled on the target table up front. Added a new section to the "
+"migration document regarding the original feature as well as this change."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1456 ../../changelog/changelog_10.rst:1993
+msgid ":ref:`change_3341`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:69
+msgid ""
+"Fixed bug where when using extended attribute instrumentation system, the"
+" correct exception would not be raised when :func:`.class_mapper` were "
+"called with an invalid input that also happened to not be weak "
+"referencable, such as an integer."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:79
+msgid ""
+"Fixed an import that prevented \"pypy setup.py test\" from working "
+"correctly."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1478
+msgid ""
+"Fixed regression from 0.9.10 prior to release due to :ticket:`3349` where"
+" the check for query state on :meth:`.Query.update` or "
+":meth:`.Query.delete` compared the empty tuple to itself using ``is``, "
+"which fails on Pypy to produce ``True`` in this case; this would "
+"erronously emit a warning in 0.9 and raise an exception in 1.0."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1518
+msgid ""
+"Fixed regression from 0.9.10 prior to release where the new addition of "
+"``entity`` to the :attr:`.Query.column_descriptions` accessor would fail "
+"if the target entity was produced from a core selectable such as a "
+":class:`.Table` or :class:`.CTE` object."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1535
+msgid ""
+"Fixed regression within the flush process when an attribute were set to a"
+" SQL expression for an UPDATE, and the SQL expression when compared to "
+"the previous value of the attribute would produce a SQL comparison other "
+"than ``==`` or ``!=``, the exception \"Boolean value of this clause is "
+"not defined\" would raise.   The fix ensures that the unit of work will "
+"not interpret the SQL expression in this way."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1567
+msgid ""
+"Fixed unexpected use regression due to :ticket:`2992` where textual "
+"elements placed into the :meth:`.Query.order_by` clause in conjunction "
+"with joined eager loading would be added to the columns clause of the "
+"inner query in such a way that they were assumed to be table-bound column"
+" names, in the case where the joined eager load needs to wrap the query "
+"in a subquery to accommodate for a limit/offset."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1575
+msgid ""
+"Originally, the behavior here was intentional, in that a query such as "
+"``query(User).order_by('name').limit(1)`` would order by ``user.name`` "
+"even if the query was modified by joined eager loading to be within a "
+"subquery, as ``'name'`` would be interpreted as a symbol to be located "
+"within the FROM clauses, in this case ``User.name``, which would then be "
+"copied into the columns clause to ensure it were present for ORDER BY.  "
+"However, the feature fails to anticipate the case where "
+"``order_by(\"name\")`` refers to a specific label name present in the "
+"local columns clause already and not a name bound to a selectable in the "
+"FROM clause."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1586
+msgid ""
+"Beyond that, the feature also fails for deprecated cases such as "
+"``order_by(\"name desc\")``, which, while it emits a warning that "
+":func:`.text` should be used here (note that the issue does not impact "
+"cases where :func:`.text` is used explicitly), still produces a different"
+" query than previously where the \"name desc\" expression is copied into "
+"the columns clause inappropriately.  The resolution is such that the "
+"\"joined eager loading\" aspect of the feature will skip over these so-"
+"called \"label reference\" expressions when augmenting the inner columns "
+"clause, as though they were :func:`.text` constructs already."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1620
+msgid ""
+"Fixed a regression regarding the :meth:`.MapperEvents.instrument_class` "
+"event where its invocation was moved to be after the class manager's "
+"instrumentation of the class, which is the opposite of what the "
+"documentation for the event explicitly states.  The rationale for the "
+"switch was due to Declarative taking the step of setting up the full "
+"\"instrumentation manager\" for a class before it was mapped for the "
+"purpose of the new ``@declared_attr`` features described in "
+":ref:`feature_3150`, but the change was also made against the classical "
+"use of :func:`.mapper` for consistency. However, SQLSoup relies upon the "
+"instrumentation event happening before any instrumentation under "
+"classical mapping. The behavior is reverted in the case of classical and "
+"declarative mapping, the latter implemented by using a simple memoization"
+" without using class manager."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1639
+msgid ""
+"Fixed issue in new :meth:`.QueryEvents.before_compile` event where "
+"changes made to the :class:`.Query` object's collection of entities to "
+"load within the event would render in the SQL, but would not be reflected"
+" during the loading process."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1488
+msgid ""
+"New features added to support engine/pool plugins with advanced "
+"functionality.   Added a new \"soft invalidate\" feature to the "
+"connection pool at the level of the checked out connection wrapper as "
+"well as the :class:`._ConnectionRecord`.  This works similarly to a "
+"modern pool invalidation in that connections aren't actively closed, but "
+"are recycled only on next checkout; this is essentially a per-connection "
+"version of that feature.  A new event "
+":class:`.PoolEvents.soft_invalidate` is added to complement it."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1497
+msgid ""
+"Also added new flag "
+":attr:`.ExceptionContext.invalidate_pool_on_disconnect`. Allows an error "
+"handler within :meth:`.ConnectionEvents.handle_error` to maintain a "
+"\"disconnect\" condition, but to handle calling invalidate on individual "
+"connections in a specific manner within the event."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1507
+msgid ""
+"Added new event :class:`.DialectEvents.do_connect`, which allows "
+"interception / replacement of when the :meth:`.Dialect.connect` hook is "
+"called to create a DBAPI connection.  Also added dialect plugin hooks "
+":meth:`.Dialect.get_dialect_cls` and :meth:`.Dialect.engine_created` "
+"which allow external plugins to add events to existing dialects using "
+"entry points."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1526
+msgid ""
+"Added a placeholder method :meth:`.TypeEngine.compare_against_backend` "
+"which is now consumed by Alembic migrations as of 0.7.6.  User-defined "
+"types can implement this method to assist in the comparison of a type "
+"against one reflected from the database."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1555
+msgid ""
+"Fixed bug where the truncation of long labels in SQL could produce a "
+"label that overlapped another label that is not truncated; this because "
+"the length threshold for truncation was greater than the portion of the "
+"label that remains after truncation.  These two values have now been made"
+" the same; label_length - 6. The effect here is that shorter column "
+"labels will be \"truncated\" where they would not have been truncated "
+"before."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1601
+msgid ""
+"Fixed regression due to :ticket:`3282` where the ``tables`` collection "
+"passed as a keyword argument to the :meth:`.DDLEvents.before_create`, "
+":meth:`.DDLEvents.after_create`, :meth:`.DDLEvents.before_drop`, and "
+":meth:`.DDLEvents.after_drop` events would no longer be a list of tables,"
+" but instead a list of tuples which contained a second entry with foreign"
+" keys to be added or dropped.  As the ``tables`` collection, while "
+"documented as not necessarily stable, has come to be relied upon, this "
+"change is considered a regression. Additionally, in some cases for "
+"\"drop\", this collection would be an iterator that would cause the "
+"operation to fail if prematurely iterated.   The collection is now a list"
+" of table objects in all cases and test coverage for the format of this "
+"collection is now added."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1546
+msgid ""
+"Fixed bug in association proxy where an any()/has() on an "
+"relationship->scalar non-object attribute comparison would fail, e.g. "
+"``filter(Parent.some_collection_to_attribute.any(Child.attr == 'foo'))``"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1676
+msgid ""
+"Fixed unexpected use regression regarding the declarative "
+"``__declare_first__`` and ``__declare_last__`` accessors where these "
+"would no longer be called on the superclass of the declarative base."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1652
+msgid ""
+"Fixed a regression that was incorrectly fixed in 1.0.0b4 (hence becoming "
+"two regressions); reports that SELECT statements would GROUP BY a label "
+"name and fail was misconstrued that certain backends such as SQL Server "
+"should not be emitting ORDER BY or GROUP BY on a simple label name at "
+"all; when in fact, we had forgotten that 0.9 was already emitting ORDER "
+"BY on a simple label name for all backends, as described in "
+":ref:`migration_1068`, even though 1.0 includes a rewrite of this logic "
+"as part of :ticket:`2992`.  As far as emitting GROUP BY against a simple "
+"label, even PostgreSQL has cases where it will raise an error even though"
+" the label to group on should be apparent, so it is clear that GROUP BY "
+"should never be rendered in this way automatically."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1666
+msgid ""
+"In 1.0.2, SQL Server, Firebird and others will again emit ORDER BY on a "
+"simple label name when passed a :class:`.Label` construct that is also "
+"present in the columns clause. Additionally, no backend will emit GROUP "
+"BY against the simple label name only when passed a :class:`.Label` "
+"construct."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1759
+msgid ""
+"Fixed issue where a query of the form ``query(B).filter(B.a != A(id=7))``"
+" would render the ``NEVER_SET`` symbol, when given a transient object. "
+"For a persistent object, it would always use the persisted database value"
+" and not the currently set value.  Assuming autoflush is turned on, this "
+"usually would not be apparent for persistent values, as any pending "
+"changes would be flushed first in any case.  However, this is "
+"inconsistent vs. the logic used for the  non-negated comparison, "
+"``query(B).filter(B.a == A(id=7))``, which does use the current value and"
+" additionally allows comparisons to transient objects.  The comparison "
+"now uses the current value and not the database-persisted value."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1773
+msgid ""
+"Unlike the other ``NEVER_SET`` issues that are repaired as regressions "
+"caused by :ticket:`3061` in this release, this particular issue is "
+"present at least as far back as 0.8 and possibly earlier, however it was "
+"discovered as a result of repairing the related ``NEVER_SET`` issues."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1781
+msgid ":ref:`bug_3374`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1787
+msgid ""
+"Fixed unexpected use regression cause by :ticket:`3061` where the "
+"NEVER_SET symbol could leak into relationship-oriented queries, including"
+" ``filter()`` and ``with_parent()`` queries.  The ``None`` symbol is "
+"returned in all cases, however many of these queries have never been "
+"correctly supported in any case, and produce comparisons to NULL without "
+"using the IS operator.  For this reason, a warning is also added to that "
+"subset of relationship queries that don't currently provide for ``IS "
+"NULL``."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1799
+msgid ":ref:`bug_3371`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1806
+msgid ""
+"Fixed a regression caused by :ticket:`3061` where the NEVER_SET symbol "
+"could leak into a lazyload query, subsequent to the flush of a pending "
+"object.  This would occur typically for a many-to-one relationship that "
+"does not use a simple \"get\" strategy.   The good news is that the fix "
+"improves efficiency vs. 0.9, because we can now skip the SELECT statement"
+" entirely when we detect NEVER_SET symbols present in the parameters; "
+"prior to :ticket:`3061`, we couldn't discern if the None here were set or"
+" not."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:87
+msgid ""
+"Added the string value ``\"none\"`` to those accepted by the "
+":paramref:`.Pool.reset_on_return` parameter as a synonym for ``None``, so"
+" that string values can be used for all settings, allowing utilities like"
+" :func:`.engine_from_config` to be usable without issue."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1741
+msgid ""
+"Fixed issue where a straight SELECT EXISTS query would fail to assign the"
+" proper result type of Boolean to the result mapping, and instead would "
+"leak column types from within the query into the result map.  This issue "
+"exists in 0.9 and earlier as well, however has less of an impact in those"
+" versions.  In 1.0, due to :ticket:`918` this becomes a regression in "
+"that we now rely upon the result mapping to be very accurate, else we can"
+" assign result-type processors to the wrong column.   In all versions, "
+"this issue also has the effect that a simple EXISTS will not apply the "
+"Boolean type handler, leading to simple 1/0 values for backends without "
+"native boolean instead of True/False.   The fix includes that an EXISTS "
+"columns argument will be anon-labeled like other column expressions; a "
+"similar fix is implemented for pure-boolean expressions like "
+"``not_(True())``."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1705
+msgid ""
+"Fixed a regression due to :ticket:`3282`, where due to the fact that we "
+"attempt to assume the availability of ALTER when creating/dropping "
+"schemas, in the case of SQLite we simply said to not worry about foreign "
+"keys at all, since ALTER is not available, when creating and dropping "
+"tables.  This meant that the sorting of tables was basically skipped in "
+"the case of SQLite, and for the vast majority of SQLite use cases, this "
+"is not an issue."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1713
+msgid ""
+"However, users who were doing DROPs on SQLite with tables that contained "
+"data and with referential integrity turned on would then experience "
+"errors, as the dependency sorting *does* matter in the case of DROP with "
+"enforced constraints, when those tables have data (SQLite will still "
+"happily let you create foreign keys to nonexistent tables and drop tables"
+" referring to existing ones with constraints enabled, as long as there's "
+"no data being referenced)."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1722
+msgid ""
+"In order to maintain the new feature of :ticket:`3282` while still "
+"allowing a SQLite DROP operation to maintain ordering, we now do the sort"
+" with full FKs taken under consideration, and if we encounter an "
+"unresolvable cycle, only *then* do we forego attempting to sort the "
+"tables; we instead emit a warning and go with the unsorted list. If an "
+"environment needs both ordered DROPs *and* has foreign key cycles, then "
+"the warning notes they will need to restore the ``use_alter`` flag to "
+"their :class:`.ForeignKey` and :class:`.ForeignKeyConstraint` objects so "
+"that just those objects will be omitted from the dependency sort."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1735
+msgid ":ref:`feature_3282` - contains an updated note about SQLite."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1689
+msgid ""
+"Fixed a regression due to :ticket:`3034` where limit/offset clauses were "
+"not properly interpreted by the Firebird dialect. Pull request courtesy "
+"effem-git."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1697
+msgid ""
+"Fixed support for \"literal_binds\" mode when using limit/offset with "
+"Firebird, so that the values are again rendered inline when this is "
+"selected.  Related to :ticket:`3034`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1896
+msgid ""
+"Added new argument :paramref:`.Query.update.update_args` which allows kw "
+"arguments such as ``mysql_limit`` to be passed to the underlying "
+":class:`.Update` construct.  Pull request courtesy Amir Sadoughi."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1824
+msgid ""
+"Identified an inconsistency when handling :meth:`.Query.join` to the same"
+" target more than once; it implicitly dedupes only in the case of a "
+"relationship join, and due to :ticket:`3233`, in 1.0 a join to the same "
+"table twice behaves differently than 0.9 in that it no longer erroneously"
+" aliases.   To help document this change, the verbiage regarding "
+":ticket:`3233` in the migration notes has been generalized, and a warning"
+" has been added when :meth:`.Query.join` is called against the same "
+"target relationship more than once."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1837
+msgid ""
+"Made a small improvement to the heuristics of relationship when "
+"determining remote side with semi-self-referential (e.g. two joined inh "
+"subclasses referring to each other), non-simple join conditions such that"
+" the parententity is taken into account and can reduce the need for using"
+" the ``remote()`` annotation; this can restore some cases that might have"
+" worked without the annotation prior to 0.9.4 via :ticket:`2948`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1878
+msgid ""
+"The topological sorting used to sort :class:`.Table` objects and "
+"available via the :attr:`.MetaData.sorted_tables` collection will now "
+"produce a **deterministic** ordering; that is, the same ordering each "
+"time given a set of tables with particular names and dependencies.  This "
+"is to help with comparison of DDL scripts and other use cases.  The "
+"tables are sent to the topological sort sorted by name, and the "
+"topological sort itself will process the incoming data in an ordered "
+"fashion.  Pull request courtesy Sebastian Bank."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1890
+msgid ":ref:`feature_3084`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:98
+msgid ""
+"Fixed issue where a :class:`.MetaData` object that used a naming "
+"convention would not properly work with pickle.  The attribute was "
+"skipped leading to inconsistencies and failures if the unpickled "
+":class:`.MetaData` object were used to base additional tables from."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:109
+msgid ""
+"Fixed a long-standing bug where the :class:`.Enum` type as used with the "
+"psycopg2 dialect in conjunction with non-ascii values and "
+"``native_enum=False`` would fail to decode return results properly. This "
+"stemmed from when the PG :class:`.postgresql.ENUM` type used to be a "
+"standalone type without a \"non native\" option."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1849
+msgid ""
+"Fixed a regression where the \"last inserted id\" mechanics would fail to"
+" store the correct value for MSSQL on an INSERT where the primary key "
+"value was present in the insert params before execution, as well as in "
+"the case where an INSERT from SELECT would state the target columns as "
+"column objects, instead of string keys."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1860
+msgid ""
+"Using the ``Binary`` constructor now present in pymssql rather than "
+"patching one in.  Pull request courtesy Ramiro Morales."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1867
+msgid ""
+"Fixed the pathing used when tests run; for sqla_nose.py and py.test, the "
+"\"./lib\" prefix is again inserted at the head of sys.path but only if "
+"sys.flags.no_user_site isn't set; this makes it act just like the way "
+"Python puts \".\" in the current path by default. For tox, we are setting"
+" the PYTHONNOUSERSITE flag now."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:131
+msgid ""
+"Fixed bug where the state tracking within multiple, nested "
+":meth:`.Session.begin_nested` operations would fail to propagate the "
+"\"dirty\" flag for an object that had been updated within the inner "
+"savepoint, such that if the enclosing savepoint were rolled back, the "
+"object would not be part of the state that was expired and therefore "
+"reverted to its database state."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1908
+msgid ""
+":class:`.Query` doesn't support joins, subselects, or special FROM "
+"clauses when using the :meth:`.Query.update` or :meth:`.Query.delete` "
+"methods; instead of silently ignoring these fields if methods like "
+":meth:`.Query.join` or :meth:`.Query.select_from` has been called, an "
+"error is raised. In 0.9.10 this only emits a warning."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1918
+msgid ""
+"Added a list() call around a weak dictionary used within the commit phase"
+" of the session, which without it could cause a \"dictionary changed size"
+" during iter\" error if garbage collection interacted within the process."
+"   Change was introduced by #3139."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1951
+msgid ""
+"Fixed a bug related to \"nested\" inner join eager loading, which exists "
+"in 0.9 as well but is more of a regression in 1.0 due to :ticket:`3008` "
+"which turns on \"nested\" by default, such that a joined eager load that "
+"travels across sibling paths from a common ancestor using innerjoin=True "
+"will correctly splice each \"innerjoin\" sibling into the appropriate "
+"part of the join, when a series of inner/outer joins are mixed together."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1937
+msgid ""
+"The warning emitted by the unicode type for a non-unicode type has been "
+"liberalized to warn for values that aren't even string values, such as "
+"integers; previously, the updated warning system of 1.0 made use of "
+"string formatting operations which would raise an internal TypeError.   "
+"While these cases should ideally raise totally, some backends like SQLite"
+" and MySQL do accept them and are potentially in use by legacy code, not "
+"to mention that they will always pass through if unicode conversion is "
+"turned off for the target backend."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1928
+msgid ""
+"Fixed bug where updated PG index reflection as a result of :ticket:`3184`"
+" would cause index operations to fail on PostgreSQL versions 8.4 and "
+"earlier.  The enhancements are now disabled when using an older version "
+"of PostgreSQL."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1999
+msgid ""
+"Fixed bug in new \"label resolution\" feature of :ticket:`2992` where a "
+"label that was anonymous, then labeled again with a name, would fail to "
+"be locatable via a textual label.  This situation occurs naturally when a"
+" mapped :func:`.column_property` is given an explicit label in a query."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2009
+msgid ""
+"Fixed bug in new \"label resolution\" feature of :ticket:`2992` where the"
+" string label placed in the order_by() or group_by() of a statement would"
+" place higher priority on the name as found inside the FROM clause "
+"instead of a more locally available name inside the columns clause."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1983
+msgid ""
+"The \"auto-attach\" feature of constraints such as "
+":class:`.UniqueConstraint` and :class:`.CheckConstraint` has been further"
+" enhanced such that when the constraint is associated with non-table-"
+"bound :class:`.Column` objects, the constraint will set up event "
+"listeners with the columns themselves such that the constraint auto "
+"attaches at the same time the columns are associated with the table.  "
+"This in particular helps in some edge cases in declarative but is also of"
+" general use."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:143
+msgid ""
+"Fixed unicode support for PyMySQL when using an \"executemany\" operation"
+" with unicode parameters.  SQLAlchemy now passes both the statement as "
+"well as the bound parameters as unicode objects, as PyMySQL generally "
+"uses string interpolation internally to produce the final statement, and "
+"in the case of executemany does the \"encode\" step only on the final "
+"statement."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1967
+msgid ""
+"Turned off the \"simple order by\" flag on the MSSQL, Oracle dialects; "
+"this is the flag that per :ticket:`2992` causes an order by or group by "
+"an expression that's also in the columns clause to be copied by label, "
+"even if referenced as the expression object.   The behavior for MSSQL is "
+"now the old behavior that copies the whole expression in by default, as "
+"MSSQL can be picky on these particularly in GROUP BY expressions.  The "
+"flag is also turned off defensively for the Firebird and Sybase dialects."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:1976
+msgid ""
+"this resolution was incorrect, please see version 1.0.2 for a rework of "
+"this resolution."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2023
+msgid "Repaired the commit for issue #2771 which was inadvertently commented out."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2079
+msgid ""
+"Fixed unexpected use regression from pullreq github:137 where Py2K "
+"unicode literals (e.g. ``u\"\"``) would not be accepted by the "
+":paramref:`.relationship.cascade` option. Pull request courtesy Julien "
+"Castets."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2046
+msgid ""
+"Loosened some restrictions that were added to ``@declared_attr`` objects,"
+" such that they were prevented from being called outside of the "
+"declarative process; this is related to the enhancements of #3150 which "
+"allow ``@declared_attr`` to return a value that is cached based on the "
+"current class as it's being configured. The exception raise has been "
+"removed, and the behavior changed so that outside of the declarative "
+"process, the function decorated by ``@declared_attr`` is called every "
+"time just like a regular ``@property``, without using any caching, as "
+"none is available at this stage."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2061
+msgid ""
+"The \"auto close\" for :class:`.ResultProxy` is now a \"soft\" close. "
+"That is, after exhausing all rows using the fetch methods, the DBAPI "
+"cursor is released as before and the object may be safely discarded, but "
+"the fetch methods may continue to be called for which they will return an"
+" end-of-result object (None for fetchone, empty list for fetchmany and "
+"fetchall).   Only if :meth:`.ResultProxy.close` is called explicitly will"
+" these methods raise the \"result is closed\" error."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2072
+msgid ":ref:`change_3330`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:156
+msgid ""
+"Fixed the :class:`.mysql.BIT` type on Py3K which was not using the "
+"``ord()`` function correctly.  Pull request courtesy David Marin."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2036
+msgid ""
+"Fixes to fully support using the ``'utf8mb4'`` MySQL-specific charset "
+"with MySQL dialects, in particular MySQL-Python and PyMySQL.   In "
+"addition, MySQL databases that report more unusual charsets such as "
+"'koi8u' or 'eucjpms' will also work correctly.  Pull request courtesy "
+"Thomas Grainger."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2089
+msgid ""
+"Version 1.0.0b1 is the first release of the 1.0 series.   Many changes "
+"described here are also present in the 0.9 and sometimes the 0.8 series "
+"as well.  For changes that are specific to 1.0 with an emphasis on "
+"compatibility concerns, see :doc:`/changelog/migration_10`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2395
+msgid ""
+"Structural memory use has been improved via much more significant use of "
+"``__slots__`` for many internal objects.  This optimization is "
+"particularly geared towards the base memory size of large applications "
+"that have lots of tables and columns, and greatly reduces memory size for"
+" a variety of high-volume objects including event listening internals, "
+"comparator objects and parts of the ORM attribute and loader strategy "
+"system."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2405
+msgid ":ref:`feature_slots`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2803
+msgid ""
+"The ``__module__`` attribute is now set for all those SQL and ORM "
+"functions that are derived as \"public factory\" symbols, which should "
+"assist with documentation tools being able to report on the target "
+"module."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:172
+msgid ""
+"Added a new entry ``\"entity\"`` to the dictionaries returned by "
+":attr:`.Query.column_descriptions`.  This refers to the primary ORM "
+"mapped class or aliased class that is referred to by the expression. "
+"Compared to the existing entry for ``\"type\"``, it will always be a "
+"mapped entity, even if extracted from a column expression, or None if the"
+" given expression is a pure core expression. See also :ticket:`3403` "
+"which repaired a regression in this feature which was unreleased in "
+"0.9.10 but was released in the 1.0 version."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:270
+msgid ""
+"Added new parameter :paramref:`.Session.connection.execution_options` "
+"which may be used to set up execution options on a :class:`.Connection` "
+"when it is first checked out, before the transaction has begun. This is "
+"used to set up options such as isolation level on the connection before "
+"the transaction starts."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:278
+msgid ""
+":ref:`session_transaction_isolation` - new documentation section "
+"detailing best practices for setting transaction isolation with sessions."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:446
+msgid ""
+"Added new method :meth:`.Session.invalidate`, functions similarly to "
+":meth:`.Session.close`, except also calls :meth:`.Connection.invalidate` "
+"on all connections, guaranteeing that they will not be returned to the "
+"connection pool.  This is useful in situations e.g. dealing with gevent "
+"timeouts when it is not safe to use the connection further, even for "
+"rollbacks."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1262
+msgid ""
+"The \"primaryjoin\" model has been stretched a bit further to allow a "
+"join condition that is strictly from a single column to itself, "
+"translated through some kind of SQL function or expression.  This is kind"
+" of experimental, but the first proof of concept is a \"materialized "
+"path\" join condition where a path string is compared to itself using "
+"\"like\".   The :meth:`.ColumnOperators.like` operator has also been "
+"added to the list of valid operators to use in a primaryjoin condition."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1338
+msgid ""
+"Added new utility function :func:`.make_transient_to_detached` which can "
+"be used to manufacture objects that behave as though they were loaded "
+"from a session, then detached.   Attributes that aren't present are "
+"marked as expired, and the object can be added to a Session where it will"
+" act like a persistent one."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2130
+msgid ""
+"Added a new event suite :class:`.QueryEvents`.  The "
+":meth:`.QueryEvents.before_compile` event allows the creation of "
+"functions which may place additional modifications to :class:`.Query` "
+"objects before the construction of the SELECT statement.   It is hoped "
+"that this event be made much more useful via the advent of a new "
+"inspection system that will allow for detailed modifications to be made "
+"against :class:`.Query` objects in an automated fashion."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2141
+msgid ":class:`.QueryEvents`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2148
+msgid ""
+"The subquery wrapping which occurs when joined eager loading is used with"
+" a one-to-many query that also features LIMIT, OFFSET, or DISTINCT has "
+"been disabled in the case of a one-to-one relationship, that is a one-to-"
+"many with :paramref:`.relationship.uselist` set to False.  This will "
+"produce more efficient queries in these cases."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2157
+msgid ":ref:`change_3249`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2226
+#, python-format
+msgid ""
+"Mapped state internals have been reworked to allow for a 50% reduction in"
+" callcounts specific to the \"expiration\" of objects, as in the \"auto "
+"expire\" feature of :meth:`.Session.commit` and for "
+":meth:`.Session.expire_all`, as well as in the \"cleanup\" step which "
+"occurs when object states are garbage collected."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2326
+msgid ""
+"A warning is emitted when the same polymorphic identity is assigned to "
+"two different mappers in the same hierarchy.  This is typically a user "
+"error and means that the two different mapping types cannot be correctly "
+"distinguished at load time.  Pull request courtesy Sebastian Bank."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2478
+msgid ""
+"A new series of :class:`.Session` methods which provide hooks directly "
+"into the unit of work's facility for emitting INSERT and UPDATE "
+"statements has been created.  When used correctly, this expert-oriented "
+"system can allow ORM-mappings to be used to generate bulk insert and "
+"update statements batched into executemany groups, allowing the "
+"statements to proceed at speeds that rival direct use of the Core."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2488
+msgid ":ref:`bulk_operations`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2626
+msgid ""
+"Added a parameter :paramref:`.Query.join.isouter` which is synonymous "
+"with calling :meth:`.Query.outerjoin`; this flag is to provide a more "
+"consistent interface compared to Core :meth:`.FromClause.join`. Pull "
+"request courtesy Jonathan Vanasco."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3027
+msgid ""
+"Added new event handlers :meth:`.AttributeEvents.init_collection` and "
+":meth:`.AttributeEvents.dispose_collection`, which track when a "
+"collection is first associated with an instance and when it is replaced."
+"  These handlers supersede the :meth:`.collection.linker` annotation. The"
+" old hook remains supported through an event adapter."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3141
+msgid ""
+"The :class:`.Query` will raise an exception when :meth:`.Query.yield_per`"
+" is used with mappings or options where either subquery eager loading, or"
+" joined eager loading with collections, would take place.  These loading "
+"strategies are not currently compatible with yield_per, so by raising "
+"this error, the method is safer to use.  Eager loads can be disabled with"
+" the ``lazyload('*')`` option or :meth:`.Query.enable_eagerloads`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3151
+msgid ":ref:`migration_yield_per_eager_loading`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3206
+msgid ""
+"A new implementation for :class:`.KeyedTuple` used by the :class:`.Query`"
+" object offers dramatic speed improvements when fetching large numbers of"
+" column-oriented rows."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3212
+msgid ":ref:`feature_3176`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3218
+msgid ""
+"The behavior of :paramref:`.joinedload.innerjoin` as well as "
+":paramref:`.relationship.innerjoin` is now to use \"nested\" inner joins,"
+" that is, right-nested, as the default behavior when an inner join joined"
+" eager load is chained to an outer join eager load."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3225
+msgid ":ref:`migration_3008`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3299
+msgid ""
+"UPDATE statements can now be batched within an ORM flush into more "
+"performant executemany() call, similarly to how INSERT statements can be "
+"batched; this will be invoked within flush to the degree that subsequent "
+"UPDATE statements for the same mapping and table involve the identical "
+"columns within the VALUES clause, that no SET-level SQL expressions are "
+"embedded, and that the versioning requirements for the mapping are "
+"compatible with the backend dialect's ability to return a correct "
+"rowcount for an executemany operation."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3324
+msgid ""
+"The ``info`` parameter has been added to the constructor for "
+":class:`.SynonymProperty` and :class:`.ComparableProperty`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3341
+msgid ""
+"The :attr:`.InspectionAttr.info` collection is now moved down to "
+":class:`.InspectionAttr`, where in addition to being available on all "
+":class:`.MapperProperty` objects, it is also now available on hybrid "
+"properties, association proxies, when accessed via "
+":attr:`.Mapper.all_orm_descriptors`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3172
+msgid ""
+"The ``proc()`` callable passed to the ``create_row_processor()`` method "
+"of custom :class:`.Bundle` classes now accepts only a single \"row\" "
+"argument."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3178
+msgid ":ref:`bundle_api_change`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3183
+msgid ""
+"Deprecated event hooks removed:  ``populate_instance``, "
+"``create_instance``, ``translate_row``, ``append_result``"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3188
+msgid ":ref:`migration_deprecated_orm_events`"
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:108
+msgid ""
+"Fixed bug in subquery eager loading where a long chain of eager loads "
+"across a polymorphic-subclass boundary in conjunction with polymorphic "
+"loading would fail to locate the subclass-link in the chain, erroring out"
+" with a missing property name on an :class:`.AliasedClass`."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:146
+msgid ""
+"Fixed ORM bug where the :func:`.class_mapper` function would mask "
+"AttributeErrors or KeyErrors that should raise during mapper "
+"configuration due to user errors.  The catch for attribute/keyerror has "
+"been made more specific to not include the configuration step."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:225
+msgid ""
+"Fixed bugs in ORM object comparisons where comparison of many-to-one ``!="
+" None`` would fail if the source were an aliased class, or if the query "
+"needed to apply special aliasing to the expression due to aliased joins "
+"or polymorphic querying; also fixed bug in the case where comparing a "
+"many-to-one to an object state would fail if the query needed to apply "
+"special aliasing due to aliased joins or polymorphic querying."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:238
+msgid ""
+"Fixed bug where internal assertion would fail in the case where an "
+"``after_rollback()`` handler for a :class:`.Session` incorrectly adds "
+"state to that :class:`.Session` within the handler, and the task to warn "
+"and remove this state (established by :ticket:`2389`) attempts to "
+"proceed."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:249
+msgid ""
+"Fixed bug where TypeError raised when :meth:`.Query.join` called with "
+"unknown kw arguments would raise its own TypeError due to broken "
+"formatting.  Pull request courtesy Malthe Borch."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:298
+msgid ""
+"Fixed bug in lazy loading SQL construction whereby a complex primaryjoin "
+"that referred to the same \"local\" column multiple times in the \"column"
+" that points to itself\" style of self-referential join would not be "
+"substituted in all cases.   The logic to determine substitutions here has"
+" been reworked to be more open-ended."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:382
+msgid ""
+"The \"wildcard\" loader options, in particular the one set up by the "
+":func:`.orm.load_only` option to cover all attributes not explicitly "
+"mentioned, now takes into account the superclasses of a given entity, if "
+"that entity is mapped with inheritance mapping, so that attribute names "
+"within the superclasses are also omitted from the load.  Additionally, "
+"the polymorphic discriminator column is unconditionally included in the "
+"list, just in the same way that primary key columns are, so that even "
+"with load_only() set up, polymorphic loading of subtypes continues to "
+"function correctly."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:406
+msgid ""
+"Fixed bug where if an exception were thrown at the start of a "
+":class:`.Query` before it fetched results, particularly when row "
+"processors can't be formed, the cursor would stay open with results "
+"pending and not actually be closed.  This is typically only an issue on "
+"an interpreter like Pypy where the cursor isn't immediately GC'ed, and "
+"can in some circumstances lead to transactions/ locks being open longer "
+"than is desirable."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:481
+msgid ""
+"Fixed a leak which would occur in the unsupported and highly non-"
+"recommended use case of replacing a relationship on a fixed mapped class "
+"many times, referring to an arbitrarily growing number of target mappers."
+"  A warning is emitted when the old relationship is replaced, however if "
+"the mapping were already used for querying, the old relationship would "
+"still be referenced within some registries."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:505
+msgid ""
+"Fixed bug regarding expression mutations which could express itself as a "
+"\"Could not locate column\" error when using :class:`.Query` to  select "
+"from multiple, anonymous column entities when querying against SQLite, as"
+" a side effect of the \"join rewriting\" feature used by the SQLite "
+"dialect."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:528
+msgid ""
+"Fixed bug where the ON clause for :meth:`.Query.join`, and "
+":meth:`.Query.outerjoin` to a single-inheritance subclass using "
+"``of_type()`` would not render the \"single table criteria\" in the ON "
+"clause if the ``from_joinpoint=True`` flag were set."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:636
+msgid ""
+"Fixed bug that affected generally the same classes of event as that of "
+":ticket:`3199`, when the ``named=True`` parameter would be used.  Some "
+"events would fail to register, and others would not invoke the event "
+"arguments correctly, generally in the case of when an event was "
+"\"wrapped\" for adaption in some other way. The \"named\" mechanics have "
+"been rearranged to not interfere with the argument signature expected by "
+"internal wrapper functions."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:660
+msgid ""
+"Fixed bug that affected many classes of event, particularly ORM events "
+"but also engine events, where the usual logic of \"de duplicating\" a "
+"redundant call to :func:`.event.listen` with the same arguments would "
+"fail, for those events where the listener function is wrapped.  An "
+"assertion would be hit within registry.py.  This assertion has now been "
+"integrated into the deduplication check, with the added bonus of a "
+"simpler means of checking deduplication across the board."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:683
+msgid ""
+"Fixed warning that would emit when a complex self-referential primaryjoin"
+" contained functions, while at the same time remote_side was specified; "
+"the warning would suggest setting \"remote side\". It now only emits if "
+"remote_side isn't present."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:859
+msgid ""
+"Fixed a regression caused by :ticket:`2976` released in 0.9.4 where the "
+"\"outer join\" propagation along a chain of joined eager loads would "
+"incorrectly convert an \"inner join\" along a sibling join path into an "
+"outer join as well, when only descendant paths should be receiving the "
+"\"outer join\" propagation; additionally, fixed related issue where "
+"\"nested\" join propagation would take place inappropriately between two "
+"sibling join paths."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:909
+msgid ""
+"Fixed a regression from 0.9.0 due to :ticket:`2736` where the "
+":meth:`.Query.select_from` method no longer set up the \"from entity\" of"
+" the :class:`.Query` object correctly, so that subsequent "
+":meth:`.Query.filter_by` or :meth:`.Query.join` calls would fail to check"
+" the appropriate \"from\" entity when searching for attributes by string "
+"name."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1014
+msgid ""
+"Fixed bug where items that were persisted, deleted, or had a primary key "
+"change within a savepoint block would not participate in being restored "
+"to their former state (not in session, in session, previous PK) after the"
+" outer transaction were rolled back."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1025
+msgid ""
+"Fixed bug in subquery eager loading in conjunction with "
+":func:`.with_polymorphic`, the targeting of entities and columns in the "
+"subquery load has been made more accurate with respect to this type of "
+"entity and others."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1071
+msgid ""
+"Additional checks have been added for the case where an inheriting mapper"
+" is implicitly combining one of its column-based attributes with that of "
+"the parent, where those columns normally don't necessarily share the same"
+" value.  This is an extension of an existing check that was added via "
+":ticket:`1892`; however this new check emits only a warning, instead of "
+"an exception, to allow for applications that may be relying upon the "
+"existing behavior."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1081
+msgid ":ref:`faq_combining_columns`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1111
+msgid ""
+"Modified the behavior of :func:`.orm.load_only` such that primary key "
+"columns are always added to the list of columns to be \"undeferred\"; "
+"otherwise, the ORM can't load the row's identity.   Apparently, one can "
+"defer the mapped primary keys and the ORM will fail, that hasn't been "
+"changed.  But as load_only is essentially saying \"defer all but X\", "
+"it's more critical that PK cols not be part of this deferral."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1176
+msgid ""
+"Fixed a few edge cases which arise in the so-called \"row switch\" "
+"scenario, where an INSERT/DELETE can be turned into an UPDATE. In this "
+"situation, a many-to-one relationship set to None, or in some cases a "
+"scalar attribute set to None, may not be detected as a net change in "
+"value, and therefore the UPDATE would not reset what was on the previous "
+"row.   This is due to some as-yet unresovled side effects of the way "
+"attribute history works in terms of implicitly assuming None isn't really"
+" a \"change\" for a previously un-set attribute.  See also "
+":ticket:`3061`."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1188
+msgid ""
+"This change has been **REVERTED** in 0.9.6.   The full fix will be in "
+"version 1.0 of SQLAlchemy."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1196
+msgid ""
+"Related to :ticket:`3060`, an adjustment has been made to the unit of "
+"work such that loading for related many-to-one objects is slightly more "
+"aggressive, in the case of a graph of self-referential objects that are "
+"to be deleted; the load of related objects is to help determine the "
+"correct order for deletion if passive_deletes is not set."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1208
+msgid ""
+"Fixed bug in SQLite join rewriting where anonymized column names due to "
+"repeats would not correctly be rewritten in subqueries. This would affect"
+" SELECT queries with any kind of subquery + join."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1356
+msgid ""
+"Fixes to the newly enhanced boolean coercion in :ticket:`2804` where the "
+"new rules for \"where\" and \"having\" woudn't take effect for the "
+"\"whereclause\" and \"having\" kw arguments of the :func:`.select` "
+"construct, which is also what :class:`.Query` uses so wasn't working in "
+"the ORM either."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2164
+msgid ""
+"Fixed bug where the session attachment error \"object is already attached"
+" to session X\" would fail to prevent the object from also being attached"
+" to the new session, in the case that execution continued after the error"
+" raise occurred."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2344
+msgid ""
+"The primary :class:`.Mapper` of a :class:`.Query` is now passed to the "
+":meth:`.Session.get_bind` method when calling upon :meth:`.Query.count`, "
+":meth:`.Query.update`, :meth:`.Query.delete`, as well as queries against "
+"mapped columns, :obj:`.column_property` objects, and SQL functions and "
+"expressions derived from mapped columns.   This allows sessions that rely"
+" upon either customized :meth:`.Session.get_bind` schemes or \"bound\" "
+"metadata to work in all relevant cases."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2355
+msgid ":ref:`bug_3227`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2649
+msgid ""
+"The :meth:`.PropComparator.of_type` modifier has been improved in "
+"conjunction with loader directives such as :func:`.joinedload` and "
+":func:`.contains_eager` such that if two :meth:`.PropComparator.of_type` "
+"modifiers of the same base type/path are encountered, they will be joined"
+" together into a single \"polymorphic\" entity, rather than replacing the"
+" entity of type A with the one of type B.  E.g. a joinedload of "
+"``A.b.of_type(BSub1)->BSub1.c`` combined with joinedload of "
+"``A.b.of_type(BSub2)->BSub2.c`` will create a single joinedload of "
+"``A.b.of_type((BSub1, BSub2)) -> BSub1.c, BSub2.c``, without the need for"
+" the ``with_polymorphic`` to be explicit in the query."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2664
+msgid ""
+":ref:`eagerloading_polymorphic_subtypes` - contains an updated example "
+"illustrating the new format."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2705
+msgid ""
+"Repaired support of the ``copy.deepcopy()`` call when used by the "
+":class:`.orm.util.CascadeOptions` argument, which occurs if "
+"``copy.deepcopy()`` is being used with :func:`.relationship` (not an "
+"officially supported use case).  Pull request courtesy duesenfranz."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2730
+msgid ""
+"Fixed bug where :meth:`.Session.expunge` would not fully detach the given"
+" object if the object had been subject to a delete operation that was "
+"flushed, but not committed.  This would also affect related operations "
+"like :func:`.make_transient`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2737
+msgid ":ref:`bug_3139`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2743
+msgid ""
+"A warning is emitted in the case of multiple relationships that "
+"ultimately will populate a foreign key column in conflict with another, "
+"where the relationships are attempting to copy values from different "
+"source columns.  This occurs in the case where composite foreign keys "
+"with overlapping columns are mapped to relationships that each refer to a"
+" different referenced column. A new documentation section illustrates the"
+" example as well as how to overcome the issue by specifying \"foreign\" "
+"columns specifically on a per-relationship basis."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2755
+msgid ":ref:`relationship_overlapping_foreignkeys`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2774
+msgid ""
+"The :meth:`.Query.update` method will now convert string key names in the"
+" given dictionary of values into mapped attribute names against the "
+"mapped class being updated.  Previously, string names were taken in "
+"directly and passed to the core update statement without any means to "
+"resolve against the mapped entity.  Support for synonyms and hybrid "
+"attributes as the subject attributes of :meth:`.Query.update` are also "
+"supported."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2784
+msgid ":ref:`bug_3228`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2790
+msgid ""
+"Improvements to the mechanism used by :class:`.Session` to locate "
+"\"binds\" (e.g. engines to use), such engines can be associated with "
+"mixin classes, concrete subclasses, as well as a wider variety of table "
+"metadata such as joined inheritance tables."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2797
+msgid ":ref:`bug_3035`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2825
+msgid ""
+"Fixed bug in single table inheritance where a chain of joins that "
+"included the same single inh entity more than once (normally this should "
+"raise an error) could, in some cases depending on what was being joined "
+"\"from\", implicitly alias the second case of the single inh entity, "
+"producing a query that \"worked\".   But as this implicit aliasing is not"
+" intended in the case of single table inheritance, it didn't really "
+"\"work\" fully and was very misleading, since it wouldn't always appear."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2837
+msgid ":ref:`bug_3233`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2844
+msgid ""
+"The ON clause rendered when using :meth:`.Query.join`, "
+":meth:`.Query.outerjoin`, or the standalone :func:`.orm.join` / "
+":func:`.orm.outerjoin` functions to a single-inheritance subclass will "
+"now include the \"single table criteria\" in the ON clause even if the ON"
+" clause is otherwise hand-rolled; it is now added to the criteria using "
+"AND, the same way as if joining to a single-table target using "
+"relationship or similar."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2852
+msgid "This is sort of in-between feature and bug."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2856
+msgid ":ref:`migration_3222`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3037
+msgid ""
+"A major rework to the behavior of expression labels, most specifically "
+"when used with ColumnProperty constructs with custom SQL expressions and "
+"in conjunction with the \"order by labels\" logic first introduced in "
+"0.9.  Fixes include that an ``order_by(Entity.some_col_prop)`` will now "
+"make use of \"order by label\" rules even if Entity has been subject to "
+"aliasing, either via inheritance rendering or via the use of the "
+"``aliased()`` construct; rendering of the same column property multiple "
+"times with aliasing (e.g. ``query(Entity.some_prop, "
+"entity_alias.some_prop)``) will label each occurrence of the entity with "
+"a distinct label, and additionally \"order by label\" rules will work for"
+" both (e.g. ``order_by(Entity.some_prop, entity_alias.some_prop)``). "
+"Additional issues that could prevent the \"order by label\" logic from "
+"working in 0.9, most notably that the state of a Label could change such "
+"that \"order by label\" would stop working depending on how things were "
+"called, has been fixed."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3057
+msgid ":ref:`bug_3188`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3157
+msgid ""
+"Changed the approach by which the \"single inheritance criterion\" is "
+"applied, when using :meth:`.Query.from_self`, or its common user "
+":meth:`.Query.count`.  The criteria to limit rows to those with a certain"
+" type is now indicated on the inside subquery, not the outside one, so "
+"that even if the \"type\" column is not available in the columns clause, "
+"we can filter on it on the \"inner\" query."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3167
+msgid ":ref:`migration_3177`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3194
+msgid ""
+"Made a small adjustment to the mechanics of lazy loading, such that it "
+"has less chance of interfering with a joinload() in the very rare "
+"circumstance that an object points to itself; in this scenario, the "
+"object refers to itself while loading its attributes which can cause a "
+"mixup between loaders.   The use case of \"object points to itself\" is "
+"not fully supported, but the fix also removes some overhead so for now is"
+" part of testing."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3231
+msgid ""
+"The \"resurrect\" ORM event has been removed.  This event hook had no "
+"purpose since the old \"mutable attribute\" system was removed in 0.8."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3264
+msgid ""
+"Fixed bug where attribute \"set\" events or columns with ``@validates`` "
+"would have events triggered within the flush process, when those columns "
+"were the targets of a \"fetch and populate\" operation, such as an "
+"autoincremented primary key, a Python side default, or a server-side "
+"default \"eagerly\" fetched via RETURNING."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3291
+msgid ""
+"The :class:`.IdentityMap` exposed from :attr:`.Session.identity_map` now "
+"returns lists for ``items()`` and ``values()`` in Py3K. Early porting to "
+"Py3K here had these returning iterators, when they technically should be "
+"\"iterable views\"..for now, lists are OK."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3389
+msgid ""
+"The \"evaluator\" for query.update()/delete() won't work with multi-table"
+" updates, and needs to be set to `synchronize_session=False` or "
+"`synchronize_session='fetch'`; this now raises an exception, with a "
+"message to change the synchronize setting. This is upgraded from a "
+"warning emitted as of 0.9.7."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2214
+msgid ""
+"Mapped attributes marked as deferred without explicit undeferral will now"
+" remain \"deferred\" even if their column is otherwise present in the "
+"result set in some way.   This is a performance enhancement in that an "
+"ORM load no longer spends time searching for each deferred column when "
+"the result set is obtained.  However, for an application that has been "
+"relying upon this, an explicit :func:`.undefer` or similar option should "
+"now be used."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3411
+msgid ""
+"Adjustment to attribute mechanics concerning when a value is implicitly "
+"initialized to None via first access; this action, which has always "
+"resulted in a population of the attribute, no longer does so; the None "
+"value is returned but the underlying attribute receives no set event.  "
+"This is consistent with how collections work and allows attribute "
+"mechanics to behave more consistently; in particular, getting an "
+"attribute with no value does not squash the event that should proceed if "
+"the value is actually set to None."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3422
+msgid ":ref:`migration_3061`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3437
+msgid ""
+"where bound parameters are rendered inline as strings based on a compile-"
+"time option. Work on this feature is courtesy of Dobes Vandermeer."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3444
+msgid ":ref:`feature_3034`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2939
+msgid ""
+"The :class:`.declared_attr` construct has newly improved behaviors and "
+"features in conjunction with declarative.  The decorated function will "
+"now have access to the final column copies present on the local mixin "
+"when invoked, and will also be invoked exactly once for each mapped "
+"class, the returned result being memoized.   A new modifier "
+":attr:`.declared_attr.cascading` is added as well."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2933 ../../changelog/changelog_10.rst:2949
+msgid ":ref:`feature_3150`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:583
+msgid ""
+"Fixed \"'NoneType' object has no attribute 'concrete'\" error when using "
+":class:`.AbstractConcreteBase` in conjunction with a subclass that "
+"declares ``__abstract__``."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2173
+msgid ""
+"Fixed bug where using an ``__abstract__`` mixin in the middle of a "
+"declarative inheritance hierarchy would prevent attributes and "
+"configuration being correctly propagated from the base class to the "
+"inheriting class."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2926
+msgid ""
+"A relationship set up with :class:`.declared_attr` on a "
+":class:`.AbstractConcreteBase` base class will now be configured on the "
+"abstract base mapping automatically, in addition to being set up on "
+"descendant concrete classes as usual."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:362
+msgid ""
+"Added new user-space accessors for viewing transaction isolation levels; "
+":meth:`.Connection.get_isolation_level`, "
+":attr:`.Connection.default_isolation_level`."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1005
+msgid ""
+"Added new event :meth:`.ConnectionEvents.handle_error`, a more fully "
+"featured and comprehensive replacement for "
+":meth:`.ConnectionEvents.dbapi_error`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3127
+msgid ""
+"A new style of warning can be emitted which will \"filter\" up to N "
+"occurrences of a parameterized string.   This allows parameterized "
+"warnings that can refer to their arguments to be delivered a fixed number"
+" of times until allowing Python warning filters to squelch them, and "
+"prevents memory from growing unbounded within Python's warning "
+"registries."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3136
+msgid ":ref:`feature_3178`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:258
+msgid ""
+"Fixed bug in :class:`.Connection` and pool where the "
+":meth:`.Connection.invalidate` method, or an invalidation due to a "
+"database disconnect, would fail if the ``isolation_level`` parameter had "
+"been used with :meth:`.Connection.execution_options`; the \"finalizer\" "
+"that resets the isolation level would be called on the no longer opened "
+"connection."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:287
+msgid ""
+"A warning is emitted if the ``isolation_level`` parameter is used with "
+":meth:`.Connection.execution_options` when a :class:`.Transaction` is in "
+"play; DBAPIs and/or SQLAlchemy dialects such as psycopg2, MySQLdb may "
+"implicitly rollback or commit the transaction, or not change the setting "
+"til next transaction, so this is never safe."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:592
+msgid ""
+"The execution options passed to an :class:`.Engine` either via "
+":paramref:`.create_engine.execution_options` or "
+":meth:`.Engine.update_execution_options` are not passed to the special "
+":class:`.Connection` used to initialize the dialect within the \"first "
+"connect\" event; dialects will usually perform their own queries in this "
+"phase, and none of the current available  options should be applied here."
+"  In particular, the \"autocommit\" option was causing an attempt to "
+"autocommit within this initial connect which would fail with an "
+"AttributeError due to the non-standard state of the :class:`.Connection`."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:755
+msgid ""
+"The string keys that are used to determine the columns impacted for an "
+"INSERT or UPDATE are now sorted when they contribute towards the "
+"\"compiled cache\" cache key.   These keys were previously not "
+"deterministically ordered, meaning the same statement could be cached "
+"multiple times on equivalent keys, costing both in terms of memory as "
+"well as performance."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1141
+msgid ""
+"Fixed bug which would occur if a DBAPI exception occurs when the engine "
+"first connects and does its initial checks, and the exception is not a "
+"disconnect exception, yet the cursor raises an error when we try to close"
+" it.  In this case the real exception would be quashed as we tried to log"
+" the cursor close exception via the connection pool and failed, as we "
+"were trying to access the pool's logger in a way that is inappropriate in"
+" this very specific scenario."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1239
+msgid ""
+"Fixed some \"double invalidate\" situations were detected where a "
+"connection invalidation could occur within an already critical section "
+"like a connection.close(); ultimately, these conditions are caused by the"
+" change in :ticket:`2907`, in that the \"reset on return\" feature calls "
+"out to the Connection/Transaction in order to handle it, where "
+"\"disconnect detection\" might be caught.  However, it's possible that "
+"the more recent change in :ticket:`2985` made it more likely for this to "
+"be seen as the \"connection invalidate\" operation is much quicker, as "
+"the issue is more reproducible on 0.9.4 than 0.9.3."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1249
+msgid ""
+"Checks are now added within any section that an invalidate might occur to"
+" halt further disallowed operations on the invalidated connection.  This "
+"includes two fixes both at the engine level and at the pool level.   "
+"While the issue was observed with highly concurrent gevent cases, it "
+"could in theory occur in any kind of scenario where a disconnect occurs "
+"within the connection close operation."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2525
+msgid ""
+"The engine-level error handling and wrapping routines will now take "
+"effect in all engine connection use cases, including when user-custom "
+"connect routines are used via the :paramref:`.create_engine.creator` "
+"parameter, as well as when the :class:`.Connection` encounters a "
+"connection error on revalidation."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2534
+msgid ":ref:`change_3266`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3313
+msgid ""
+"Removing (or adding) an event listener at the same time that the event is"
+" being run itself, either from inside the listener or from a concurrent "
+"thread, now raises a RuntimeError, as the collection used is now an "
+"instance of ``colletions.deque()`` and does not support changes while "
+"being iterated.  Previously, a plain Python list was used where removal "
+"from inside the event itself would produce silent failures."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1276
+msgid ""
+"Liberalized the contract for :class:`.Index` a bit in that you can "
+"specify a :func:`.text` expression as the target; the index no longer "
+"needs to have a table-bound column present if the index is to be manually"
+" added to the table, either via inline declaration or via "
+":meth:`.Table.append_constraint`."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1367
+msgid ""
+"Added new flag :paramref:`.expression.between.symmetric`, when set to "
+"True renders \"BETWEEN SYMMETRIC\".  Also added a new negation operator "
+"\"notbetween_op\", which now allows an expression like ``~col.between(x, "
+"y)`` to render as \"col NOT BETWEEN x AND y\", rather than a "
+"parentheiszed NOT string."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2182
+msgid ""
+"The SQL compiler now generates the mapping of expected columns such that "
+"they are matched to the received result set positionally, rather than by "
+"name.  Originally, this was seen as a way to handle cases where we had "
+"columns returned with difficult-to-predict names, though in modern use "
+"that issue has been overcome by anonymous labeling.   In this version, "
+"the approach basically reduces function call count per-result by a few "
+"dozen calls, or more for larger sets of result columns.  The approach "
+"still degrades into a modern version of the old approach if any "
+"discrepancy in size exists between the compiled set of columns versus "
+"what was received, so there's no issue for partially or fully textual "
+"compilation scenarios where these lists might not line up."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2255
+msgid ""
+"Literal values within a :class:`.DefaultClause`, which is invoked when "
+"using the :paramref:`.Column.server_default` parameter, will now be "
+"rendered using the \"inline\" compiler, so that they are rendered as-is, "
+"rather than as bound parameters."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2262
+msgid ":ref:`change_3087`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2336
+msgid ""
+"The type of expression is reported when an object passed to a SQL "
+"expression unit can't be interpreted as a SQL fragment; pull request "
+"courtesy Ryan P. Kelly."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2693
+msgid ""
+"Added a new parameter :paramref:`.Table.tometadata.name` to the "
+":meth:`.Table.tometadata` method.  Similar to "
+":paramref:`.Table.tometadata.schema`, this argument causes the newly "
+"copied :class:`.Table` to take on the new name instead of the existing "
+"one.  An interesting capability this adds is that of copying a "
+":class:`.Table` object to the *same* :class:`.MetaData` target with a new"
+" name.  Pull request courtesy n.d. parker."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2761
+msgid ""
+"Exception messages have been spiffed up a bit.  The SQL statement and "
+"parameters are not displayed if None, reducing confusion for error "
+"messages that weren't related to a statement.  The full module and "
+"classname for the DBAPI-level exception is displayed, making it clear "
+"that this is a wrapped DBAPI exception.  The statement and parameters "
+"themselves are bounded within a bracketed sections to better isolate them"
+" from the error message and from each other."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2811
+msgid ""
+":meth:`.Insert.from_select` now includes Python and SQL-expression "
+"defaults if otherwise unspecified; the limitation where non- server "
+"column defaults aren't included in an INSERT FROM SELECT is now lifted "
+"and these expressions are rendered as constants into the SELECT "
+"statement."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2819
+msgid ":ref:`feature_insert_from_select_defaults`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2863
+msgid ""
+"The :class:`.UniqueConstraint` construct is now included when reflecting "
+"a :class:`.Table` object, for databases where this is applicable.  In "
+"order to achieve this with sufficient accuracy, MySQL and PostgreSQL now "
+"contain features that correct for the duplication of indexes and unique "
+"constraints when reflecting tables, indexes, and constraints. In the case"
+" of MySQL, there is not actually a \"unique constraint\" concept "
+"independent of a \"unique index\", so for this backend "
+":class:`.UniqueConstraint` continues to remain non-present for a "
+"reflected :class:`.Table`.  For PostgreSQL, the query used to detect "
+"indexes against ``pg_index`` has been improved to check for the same "
+"construct in ``pg_constraint``, and the implicitly constructed unique "
+"index is not included with a reflected :class:`.Table`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2878
+msgid ""
+"In both cases, the  :meth:`.Inspector.get_indexes` and the "
+":meth:`.Inspector.get_unique_constraints` methods return both constructs "
+"individually, but include a new token ``duplicates_constraint`` in the "
+"case of PostgreSQL or ``duplicates_index`` in the case of MySQL to "
+"indicate when this condition is detected. Pull request courtesy Johannes "
+"Erdfelt."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2888
+msgid ":ref:`feature_3184`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2971
+msgid ""
+"Added new method :meth:`.Select.with_statement_hint` and ORM method "
+":meth:`.Query.with_statement_hint` to support statement-level hints that "
+"are not specific to a table."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3331
+msgid ""
+"The ``info`` parameter has been added as a constructor argument to all "
+"schema constructs including :class:`.MetaData`, :class:`.Index`, "
+":class:`.ForeignKey`, :class:`.ForeignKeyConstraint`, "
+":class:`.UniqueConstraint`, :class:`.PrimaryKeyConstraint`, "
+":class:`.CheckConstraint`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3352
+msgid ""
+"The :paramref:`.Table.autoload_with` flag now implies that "
+":paramref:`.Table.autoload` should be ``True``.  Pull request courtesy "
+"Malik Diarra."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3428
+msgid ""
+"The :meth:`.Select.limit` and :meth:`.Select.offset` methods now accept "
+"any SQL expression, in addition to integer values, as arguments.  "
+"Typically this is used to allow a bound parameter to be passed, which can"
+" be substituted with a value later thus allowing Python-side caching of "
+"the SQL query.   The implementation here is fully backwards compatible "
+"with existing third party dialects, however those dialects which "
+"implement special LIMIT/OFFSET systems will need modification in order to"
+" take advantage of the new capabilities.  Limit and offset also support "
+"\"literal_binds\" mode,"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3094
+msgid ""
+"The :func:`~.expression.column` and :func:`~.expression.table` constructs"
+" are now importable from the \"from sqlalchemy\" namespace, just like "
+"every other Core construct."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3102
+msgid ""
+"The implicit conversion of strings to :func:`.text` constructs when "
+"passed to most builder methods of :func:`.select` as well as "
+":class:`.Query` now emits a warning with just the plain string sent.   "
+"The textual conversion still proceeds normally, however.  The only method"
+" that accepts a string without a warning are the \"label reference\" "
+"methods like order_by(), group_by(); these functions will now at compile "
+"time attempt to resolve a single string argument to a column or label "
+"expression present in the selectable; if none is located, the expression "
+"still renders, but you get the warning again. The rationale here is that "
+"the implicit conversion from string to text is more unexpected than not "
+"these days, and it is better that the user send more direction to the "
+"Core / ORM when passing a raw string as to what direction should be "
+"taken. Core/ORM tutorials have been updated to go more in depth as to how"
+" text is handled."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3120
+msgid ":ref:`migration_2992`"
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:37
+msgid ""
+"Fixed bug in :class:`.Enum` and other :class:`.SchemaType` subclasses "
+"where direct association of the type with a :class:`.MetaData` would lead"
+" to a hang when events (like create events) were emitted on the "
+":class:`.MetaData`."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:47
+msgid ""
+"Fixed a bug within the custom operator plus "
+":meth:`.TypeEngine.with_variant` system, whereby using a "
+":class:`.TypeDecorator` in conjunction with variant would fail with an "
+"MRO error when a comparison operator was used."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:90
+msgid ""
+"Fixed bug in INSERT..FROM SELECT construct where selecting from a UNION "
+"would wrap the union in an anonymous (e.g. unlabled) subquery."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:156
+msgid ""
+"Fixed bug where :meth:`.Table.update` and :meth:`.Table.delete` would "
+"produce an empty WHERE clause when an empty :func:`.and_()` or "
+":func:`.or_()` or other blank expression were applied.  This is now "
+"consistent with that of :func:`.select`."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:397
+msgid ""
+"Added the ``native_enum`` flag to the ``__repr__()`` output of "
+":class:`.Enum`, which is mostly important when using it with Alembic "
+"autogenerate.  Pull request courtesy Dimitris Theodorou."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:428
+msgid ""
+"Fixed bug where using a :class:`.TypeDecorator` that implemented a type "
+"that was also a :class:`.TypeDecorator` would fail with Python's \"Cannot"
+" create a consistent method resolution order (MRO)\" error, when any kind"
+" of SQL comparison expression were used against an object using this "
+"type."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:493
+msgid ""
+"Fixed issue where the columns from a SELECT embedded in an INSERT, either"
+" through the values clause or as a \"from select\", would pollute the "
+"column types used in the result set produced by the RETURNING clause when"
+" columns from both statements shared the same name, leading to potential "
+"errors or mis-adaptation when retrieving the returning rows."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:572
+msgid ""
+"Fixed bug where a fair number of SQL elements within the sql package "
+"would fail to ``__repr__()`` successfully, due to a missing "
+"``description`` attribute that would then invoke a recursion overflow "
+"when an internal AttributeError would then re-invoke ``__repr__()``."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:704
+msgid ""
+"An adjustment to table/index reflection such that if an index reports a "
+"column that isn't found to be present in the table, a warning is emitted "
+"and the column is skipped.  This can occur for some special system column"
+" situations as has been observed with Oracle."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:786
+msgid ""
+"Fixed bug in CTE where ``literal_binds`` compiler argument would not be "
+"always be correctly propagated when one CTE referred to another aliased "
+"CTE in a statement."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:806
+msgid ""
+"Fixed 0.9.7 regression caused by :ticket:`3067` in conjunction with a "
+"mis-named unit test such that so-called \"schema\" types like "
+":class:`.Boolean` and :class:`.Enum` could no longer be pickled."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:883
+msgid ""
+"Fix bug in naming convention feature where using a check constraint "
+"convention that includes ``constraint_name`` would then force all "
+":class:`.Boolean` and :class:`.Enum` types to require names as well, as "
+"these implicitly create a constraint, even if the ultimate target backend"
+" were one that does not require generation of the constraint such as "
+"PostgreSQL. The mechanics of naming conventions for these particular "
+"constraints has been reorganized such that the naming determination is "
+"done at DDL compile time, rather than at constraint/table construction "
+"time."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:921
+msgid ""
+"Fixed bug in common table expressions whereby positional bound parameters"
+" could be expressed in the wrong final order when CTEs were nested in "
+"certain ways."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:930
+msgid ""
+"Fixed bug where multi-valued :class:`.Insert` construct would fail to "
+"check subsequent values entries beyond the first one given for literal "
+"SQL expressions."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:939
+msgid ""
+"Added a \"str()\" step to the dialect_kwargs iteration for Python version"
+" < 2.6.5, working around the \"no unicode keyword arg\" bug as these args"
+" are passed along as keyword args within some reflection processes."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:949
+msgid ""
+"The :meth:`.TypeEngine.with_variant` method will now accept a type class "
+"as an argument which is internally converted to an instance, using the "
+"same convention long established by other constructs such as "
+":class:`.Column`."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1088
+msgid ""
+"The :paramref:`.Column.nullable` flag is implicitly set to ``False`` when"
+" that :class:`.Column` is referred to in an explicit "
+":class:`.PrimaryKeyConstraint` for that table.  This behavior now matches"
+" that of when the :class:`.Column` itself has the "
+":paramref:`.Column.primary_key` flag set to ``True``, which is intended "
+"to be an exactly equivalent case."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1217
+msgid ""
+"Fixed bug where the :meth:`.Operators.__and__`, :meth:`.Operators.__or__`"
+" and :meth:`.Operators.__invert__` operator overload methods could not be"
+" overridden within a custom :class:`.TypeEngine.Comparator` "
+"implementation."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1310
+msgid ""
+"Fixed bug in new :meth:`.DialectKWArgs.argument_for` method where adding "
+"an argument for a construct not previously included for any special "
+"arguments would fail."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1329
+msgid ""
+"Fixed regression introduced in 0.9 where new \"ORDER BY <labelname>\" "
+"feature from :ticket:`1068` would not apply quoting rules to the label "
+"name as rendered in the ORDER BY."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1348
+msgid ""
+"Restored the import for :class:`.Function` to the "
+"``sqlalchemy.sql.expression`` import namespace, which was removed at the "
+"beginning of 0.9."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2377
+msgid ""
+"The multi-values version of :meth:`.Insert.values` has been repaired to "
+"work more usefully with tables that have Python- side default values "
+"and/or functions, as well as server-side defaults. The feature will now "
+"work with a dialect that uses \"positional\" parameters; a Python "
+"callable will also be invoked individually for each row just as is the "
+"case with an \"executemany\" style invocation; a server- side default "
+"column will no longer implicitly receive the value explicitly specified "
+"for the first row, instead refusing to invoke without an explicit value."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2390
+msgid ":ref:`bug_3288`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2616
+msgid ""
+"Fixed bug in :meth:`.Table.tometadata` method where the "
+":class:`.CheckConstraint` associated with a :class:`.Boolean` or "
+":class:`.Enum` type object would be doubled in the target table. The copy"
+" process now tracks the production of this constraint object as local to "
+"a type object."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2635
+msgid ""
+"The behavioral contract of the :attr:`.ForeignKeyConstraint.columns` "
+"collection has been made consistent; this attribute is now a "
+":class:`.ColumnCollection` like that of all other constraints and is "
+"initialized at the point when the constraint is associated with a "
+":class:`.Table`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2643
+msgid ":ref:`change_3243`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2671
+msgid ""
+"The :attr:`.Column.key` attribute is now used as the source of anonymous "
+"bound parameter names within expressions, to match the existing use of "
+"this value as the key when rendered in an INSERT or UPDATE statement.   "
+"This allows :attr:`.Column.key` to be used as a \"substitute\" string to "
+"work around a difficult column name that doesn't translate well into a "
+"bound parameter name.   Note that the paramstyle is configurable on "
+":func:`.create_engine` in any case, and most DBAPIs today support a named"
+" and positional style."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2684
+msgid ""
+"Fixed the name of the :paramref:`.PoolEvents.reset.dbapi_connection` "
+"parameter as passed to this event; in particular this affects usage of "
+"the \"named\" argument style for this event.  Pull request courtesy Jason"
+" Goldberger."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2715
+msgid ""
+"Reversing a change that was made in 0.9, the \"singleton\" nature of the "
+"\"constants\" :func:`.null`, :func:`.true`, and :func:`.false` has been "
+"reverted.   These functions returning a \"singleton\" object had the "
+"effect that different instances would be treated as the same regardless "
+"of lexical use, which in particular would impact the rendering of the "
+"columns clause of a SELECT statement."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2724
+msgid ":ref:`bug_3170`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2906
+msgid ""
+"Fixed bug where a \"branched\" connection, that is the kind you get when "
+"you call :meth:`.Connection.connect`, would not share invalidation status"
+" with the parent.  The architecture of branching has been tweaked a bit "
+"so that the branched connection defers to the parent for all invalidation"
+" status and operations."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2916
+msgid ""
+"Fixed bug where a \"branched\" connection, that is the kind you get when "
+"you call :meth:`.Connection.connect`, would not share transaction status "
+"with the parent.  The architecture of branching has been tweaked a bit so"
+" that the branched connection defers to the parent for all transactional "
+"status and operations."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3239
+msgid ""
+"Using :meth:`.Insert.from_select`  now implies ``inline=True`` on "
+":func:`.insert`.  This helps to fix a bug where an INSERT...FROM SELECT "
+"construct would inadvertently be compiled as \"implicit returning\" on "
+"supporting backends, which would cause breakage in the case of an INSERT "
+"that inserts zero rows (as implicit returning expects a row), as well as "
+"arbitrary return data in the case of an INSERT that inserts multiple rows"
+" (e.g. only the first row of many). A similar change is also applied to "
+"an INSERT..VALUES with multiple parameter sets; implicit RETURNING will "
+"no longer emit for this statement either.  As both of these constructs "
+"deal with varible numbers of rows, the "
+":attr:`.ResultProxy.inserted_primary_key` accessor does not apply.   "
+"Previously, there was a documentation note that one may prefer "
+"``inline=True`` with INSERT..FROM SELECT as some databases don't support "
+"returning and therefore can't do \"implicit\" returning, but there's no "
+"reason an INSERT...FROM SELECT needs implicit returning in any case.   "
+"Regular explicit :meth:`.Insert.returning` should be used to return "
+"variable numbers of result rows if inserted data is needed."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2361
+msgid ""
+"Custom dialects that implement :class:`.GenericTypeCompiler` can now be "
+"constructed such that the visit methods receive an indication of the "
+"owning expression object, if any.  Any visit method that accepts keyword "
+"arguments (e.g. ``**kw``) will in most cases receive a keyword argument "
+"``type_expression``, referring to the expression object that the type is "
+"contained within.  For columns in DDL, the dialect's compiler class may "
+"need to alter its ``get_column_specification()`` method to support this "
+"as well. The ``UserDefinedType.get_col_spec()`` method will also receive "
+"``type_expression`` if it provides ``**kw`` in its argument signature."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2432
+msgid ""
+"The DDL generation system of :meth:`.MetaData.create_all` and "
+":meth:`.MetaData.drop_all` has been enhanced to in most cases "
+"automatically handle the case of mutually dependent foreign key "
+"constraints; the need for the :paramref:`.ForeignKeyConstraint.use_alter`"
+" flag is greatly reduced.  The system also works for constraints which "
+"aren't given a name up front; only in the case of DROP is a name required"
+" for at least one of the constraints involved in the cycle."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2443
+msgid ":ref:`feature_3282`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2448
+msgid ""
+"Added a new accessor :attr:`.Table.foreign_key_constraints` to complement"
+" the :attr:`.Table.foreign_keys` collection, as well as "
+":attr:`.ForeignKeyConstraint.referred_table`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2294
+#, python-format
+msgid ""
+"The :class:`.CheckConstraint` construct now supports naming conventions "
+"that include the token ``%(column_0_name)s``; the constraint expression "
+"is scanned for columns.  Additionally, naming conventions for check "
+"constraints that don't include the ``%(constraint_name)s`` token will now"
+" work for :class:`.SchemaType`- generated constraints, such as those of "
+":class:`.Boolean` and :class:`.Enum`; this stopped working in 0.9.7 due "
+"to :ticket:`3067`."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2304
+msgid ":ref:`naming_check_constraints`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2306
+msgid ":ref:`naming_schematypes`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:191
+msgid ""
+"Added support for the ``CONCURRENTLY`` keyword with PostgreSQL indexes, "
+"established using ``postgresql_concurrently``.  Pull request courtesy "
+"Iuri de Silvio."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:197
+msgid ":ref:`postgresql_index_concurrently`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:745
+msgid ""
+"Support is added for \"sane multi row count\" with the pg8000 driver, "
+"which applies mostly to when using versioning with the ORM. The feature "
+"is version-detected based on pg8000 1.9.14 or greater in use.  Pull "
+"request courtesy Tony Locke."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:977
+msgid ""
+"Added kw argument ``postgresql_regconfig`` to the "
+":meth:`.ColumnOperators.match` operator, allows the \"reg config\" "
+"argument to be specified to the ``to_tsquery()`` function emitted. Pull "
+"request courtesy Jonathan Vanasco."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:987
+msgid ""
+"Added support for PostgreSQL JSONB via :class:`.JSONB`.  Pull request "
+"courtesy Damian Dimmich."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1155
+msgid ""
+"Added support for AUTOCOMMIT isolation level when using the pg8000 DBAPI."
+"  Pull request courtesy Tony Locke."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1228
+msgid ""
+"Added a new flag :paramref:`.ARRAY.zero_indexes` to the PostgreSQL "
+":class:`.ARRAY` type.  When set to ``True``, a value of one will be added"
+" to all array index values before passing to the database, allowing "
+"better interoperability between Python style zero-based indexes and "
+"PostgreSQL one-based indexes.  Pull request courtesy Alexey Terentev."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2199
+msgid ""
+"The PG8000 dialect now supports the :paramref:`.create_engine.encoding` "
+"parameter, by setting up the client encoding on the connection which is "
+"then intercepted by pg8000.  Pull request courtesy Tony Locke."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2208
+msgid ""
+"Added support for PG8000's native JSONB feature.  Pull request courtesy "
+"Tony Locke."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2314
+msgid ""
+"Added support for the psycopg2cffi DBAPI on pypy.   Pull request courtesy"
+" shauns."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2319
+msgid ":mod:`sqlalchemy.dialects.postgresql.psycopg2cffi`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2894
+msgid ""
+"Added support for the FILTER keyword as applied to aggregate functions, "
+"supported by PostgreSQL 9.4.   Pull request courtesy Ilja Everilä."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2900
+msgid ":ref:`feature_gh134`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3012
+msgid ""
+"Support has been added for reflection of materialized views and foreign "
+"tables, as well as support for materialized views within "
+":meth:`.Inspector.get_view_names`, and a new method "
+":meth:`.PGInspector.get_foreign_table_names` available on the PostgreSQL "
+"version of :class:`.Inspector`.  Pull request courtesy Rodrigo Menezes."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3021
+msgid ":ref:`feature_2891`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3279
+msgid ""
+"Added support for PG table options TABLESPACE, ON COMMIT, WITH(OUT) OIDS,"
+" and INHERITS, when rendering DDL via the :class:`.Table` construct.   "
+"Pull request courtesy malikdiarra."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3286
+msgid ":ref:`postgresql_table_options`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3360
+msgid ""
+"Added new method :meth:`.PGInspector.get_enums`, when using the inspector"
+" for PostgreSQL will provide a list of ENUM types. Pull request courtesy "
+"Ilya Pekelny."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:98
+msgid ""
+"Added the ``hashable=False`` flag to the PG :class:`.HSTORE` type, which "
+"is needed to allow the ORM to skip over trying to \"hash\" an ORM-mapped "
+"HSTORE column when requesting it in a mixed column/entity list. Patch "
+"courtesy Gunnlaugur Þór Briem."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:166
+msgid ""
+"Added a new \"disconnect\" message \"connection has been closed "
+"unexpectedly\". This appears to be related to newer versions of SSL. Pull"
+" request courtesy Antti Haapala."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:309
+msgid ""
+"Repaired support for PostgreSQL UUID types in conjunction with the ARRAY "
+"type when using psycopg2.  The psycopg2 dialect now employs use of the "
+"psycopg2.extras.register_uuid() hook so that UUID values are always "
+"passed to/from the DBAPI as UUID() objects.   The "
+":paramref:`.UUID.as_uuid` flag is still honored, except with psycopg2 we "
+"need to convert returned UUID objects back into strings when this is "
+"disabled."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:322
+msgid ""
+"Added support for the :class:`postgresql.JSONB` datatype when using "
+"psycopg2 2.5.4 or greater, which features native conversion of JSONB data"
+" so that SQLAlchemy's converters must be disabled; additionally, the "
+"newly added psycopg2 extension ``extras.register_default_jsonb`` is used "
+"to establish a JSON deserializer passed to the dialect via the "
+"``json_deserializer`` argument.  Also repaired the PostgreSQL integration"
+" tests which weren't actually round-tripping the JSONB type as opposed to"
+" the JSON type.  Pull request courtesy Mateusz Susik."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:336
+msgid ""
+"Repaired the use of the \"array_oid\" flag when registering the HSTORE "
+"type with older psycopg2 versions < 2.4.3, which does not support this "
+"flag, as well as use of the native json serializer hook "
+"\"register_default_json\" with user-defined ``json_deserializer`` on "
+"psycopg2 versions < 2.5, which does not include native json."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:371
+msgid ""
+"Fixed bug where PostgreSQL dialect would fail to render an expression in "
+"an :class:`.Index` that did not correspond directly to a table-bound "
+"column; typically when a :func:`.text` construct was one of the "
+"expressions within the index; or could misinterpret the list of "
+"expressions if one or more of them were such an expression."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:623
+msgid ""
+"A revisit to this issue first patched in 0.9.5, apparently psycopg2's "
+"``.closed`` accessor is not as reliable as we assumed, so we have added "
+"an explicit check for the exception messages \"SSL SYSCALL error: Bad "
+"file descriptor\" and \"SSL SYSCALL error: EOF detected\" when detecting "
+"an is-disconnect scenario.   We will continue to consult psycopg2's "
+"connection.closed as a first check."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:767
+msgid ""
+"Fixed bug where PostgreSQL JSON type was not able to persist or otherwise"
+" render a SQL NULL column value, rather than a JSON-encoded ``'null'``.  "
+"To support this case, changes are as follows:"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:771
+msgid ""
+"The value :func:`.null` can now be specified, which will always result in"
+" a NULL value resulting in the statement."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:774
+msgid ""
+"A new parameter :paramref:`.JSON.none_as_null` is added, which when True "
+"indicates that the Python ``None`` value should be peristed as SQL NULL, "
+"rather than JSON-encoded ``'null'``."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:778
+msgid ""
+"Retrival of NULL as None is also repaired for DBAPIs other than psycopg2,"
+" namely pg8000."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:795
+msgid ""
+"The exception wrapping system for DBAPI errors can now accommodate non-"
+"standard DBAPI exceptions, such as the psycopg2 TransactionRollbackError."
+"  These exceptions will now be raised using the closest available "
+"subclass in ``sqlalchemy.exc``, in the case of TransactionRollbackError, "
+"``sqlalchemy.exc.OperationalError``."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:816
+msgid ""
+"Fixed bug in :class:`.postgresql.array` object where comparison to a "
+"plain Python list would fail to use the correct array constructor. Pull "
+"request courtesy Andrew."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:825
+msgid ""
+"Added a supported :meth:`.FunctionElement.alias` method to functions, "
+"e.g. the ``func`` construct.  Previously, behavior for this method was "
+"undefined.  The current behavior mimics that of pre-0.9.4, which is that "
+"the function is turned into a single-column FROM clause with the given "
+"alias name, where the column itself is anonymously named."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:841
+msgid ""
+"Fixed bug introduced in 0.9.5 by new pg8000 isolation level feature where"
+" engine-level isolation level parameter would raise an error on connect."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1164
+msgid ""
+"The psycopg2 ``.closed`` accessor is now consulted when determining if an"
+" exception is a \"disconnect\" error; ideally, this should remove the "
+"need for any other inspection of the exception message to detect "
+"disconnect, however we will leave those existing messages in place as a "
+"fallback.   This should be able to handle newer cases like \"SSL EOF\" "
+"conditions.  Pull request courtesy Dirk Mueller."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2112
+msgid ""
+"The PostgreSQL :class:`.postgresql.ENUM` type will emit a DROP TYPE "
+"instruction when a plain ``table.drop()`` is called, assuming the object "
+"is not associated directly with a :class:`.MetaData` object.   In order "
+"to accommodate the use case of an enumerated type shared between multiple"
+" tables, the type should be associated directly with the "
+":class:`.MetaData` object; in this case the type will only be created at "
+"the metadata level, or if created directly.  The rules for create/drop of"
+" PostgreSQL enumerated types have been highly reworked in general."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2124
+msgid ":ref:`change_3319`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2599
+msgid ""
+"The :meth:`.PGDialect.has_table` method will now query against "
+"``pg_catalog.pg_table_is_visible(c.oid)``, rather than testing for an "
+"exact schema match, when the schema name is None; this so that the method"
+" will also illustrate that temporary tables are present.  Note that this "
+"is a behavioral change, as PostgreSQL allows a non-temporary table to "
+"silently overwrite an existing temporary table of the same name, so this "
+"changes the behavior of ``checkfirst`` in that unusual scenario."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2610
+msgid ":ref:`change_3264`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1100
+msgid ""
+"Added a new type :class:`.postgresql.OID` to the PostgreSQL dialect. "
+"While \"oid\" is generally a private type within PG that is not exposed "
+"in modern versions, there are some PG use cases such as large object "
+"support where these types might be exposed, as well as within some user-"
+"reported schema reflection use cases."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2276
+msgid ""
+"The MySQL dialect now renders TIMESTAMP with NULL / NOT NULL in all "
+"cases, so that MySQL 5.6.6 with the ``explicit_defaults_for_timestamp`` "
+"flag enabled will will allow TIMESTAMP to continue to work as expected "
+"when ``nullable=False``.  Existing applications are unaffected as "
+"SQLAlchemy has always emitted NULL for a TIMESTAMP column that is "
+"``nullable=True``."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2286
+msgid ":ref:`change_3155`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2288
+msgid ":ref:`mysql_timestamp_null`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2566
+msgid ""
+"Updated the \"supports_unicode_statements\" flag to True for MySQLdb and "
+"Pymysql under Python 2.   This refers to the SQL statements themselves, "
+"not the parameters, and affects issues such as table and column names "
+"using non-ASCII characters.   These drivers both appear to support Python"
+" 2 Unicode objects without issue in modern versions."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:56
+msgid ""
+"MySQL error 2014 \"commands out of sync\" appears to be raised as a "
+"ProgrammingError, not OperationalError, in modern MySQL-Python versions; "
+"all MySQL error codes that are tested for \"is disconnect\" are now "
+"checked within OperationalError and ProgrammingError regardless."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:66
+msgid ""
+"Fixed bug where column names added to ``mysql_length`` parameter on an "
+"index needed to have the same quoting for quoted names in order to be "
+"recognized.  The fix makes the quotes optional but also provides the old "
+"behavior for backwards compatibility with those using the workaround."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:137
+msgid ""
+"Added support for reflecting tables where an index includes "
+"KEY_BLOCK_SIZE using an equal sign.  Pull request courtesy Sean McGivern."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:439
+msgid ""
+"Added a version check to the MySQLdb dialect surrounding the check for "
+"'utf8_bin' collation, as this fails on MySQL server < 5.0."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:541
+#, python-format
+msgid ""
+"Mysqlconnector as of version 2.0, probably as a side effect of the  "
+"python 3 merge, now does not expect percent signs (e.g. as used as the "
+"modulus operator and others) to be doubled, even when using the "
+"\"pyformat\" bound parameter format (this change is not documented by "
+"Mysqlconnector).  The dialect now checks for py2k and for mysqlconnector "
+"less than version 2.0 when detecting if the modulus operator should be "
+"rendered as ``%%`` or ``%``."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:554
+msgid ""
+"Unicode SQL is now passed for MySQLconnector version 2.0 and above; for "
+"Py2k and MySQL < 2.0, strings are encoded."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2235
+msgid ""
+"The MySQL dialect now supports CAST on types that are constructed as "
+":class:`.TypeDecorator` objects."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2242
+msgid ""
+"A warning is emitted when :func:`.cast` is used with the MySQL dialect on"
+" a type where MySQL does not support CAST; MySQL only supports CAST on a "
+"subset of datatypes.   SQLAlchemy has for a long time just omitted the "
+"CAST for unsupported types in the case of MySQL.  While we don't want to "
+"change this now, we emit a warning to show that it's taken place.   A "
+"warning is also emitted when a CAST is used with an older MySQL version "
+"(< 4) that doesn't support CAST at all, it's skipped in this case as "
+"well."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2411
+msgid ""
+"The :class:`.mysql.SET` type has been overhauled to no longer assume that"
+" the empty string, or a set with a single empty string value, is in fact "
+"a set with a single empty string; instead, this is by default treated as "
+"the empty set.  In order to handle persistence of a :class:`.mysql.SET` "
+"that actually wants to include the blank value ``''`` as a legitimate "
+"value, a new bitwise operational mode is added which is enabled by the "
+":paramref:`.mysql.SET.retrieve_as_bitwise` flag, which will persist and "
+"retrieve values unambiguously using their bitflag positioning. Storage "
+"and retrieval of unicode values for driver configurations that aren't "
+"converting unicode natively is also repaired."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2425
+msgid ":ref:`change_3283`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2577
+msgid ""
+"The :meth:`.ColumnOperators.match` operator is now handled such that the "
+"return type is not strictly assumed to be boolean; it now returns a "
+":class:`.Boolean` subclass called :class:`.MatchType`. The type will "
+"still produce boolean behavior when used in Python expressions, however "
+"the dialect can override its behavior at result time.  In the case of "
+"MySQL, while the MATCH operator is typically used in a boolean context "
+"within an expression, if one actually queries for the value of a match "
+"expression, a floating point value is returned; this value is not "
+"compatible with SQLAlchemy's C-based boolean processor, so MySQL's "
+"result-set behavior now follows that of the :class:`.Float` type. A new "
+"operator object ``notmatch_op`` is also added to better allow dialects to"
+" define the negation of a match operation."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2593
+msgid ":ref:`change_3263`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3064
+msgid ""
+"MySQL boolean symbols \"true\", \"false\" work again.  0.9's change in "
+":ticket:`2682` disallowed the MySQL dialect from making use of the "
+"\"true\" and \"false\" symbols in the context of \"IS\" / \"IS NOT\", but"
+" MySQL supports this syntax even though it has no boolean type. MySQL "
+"remains \"non native boolean\", but the :func:`.true` and :func:`.false` "
+"symbols again produce the keywords \"true\" and \"false\", so that an "
+"expression like ``column.is_(true())`` again works on MySQL."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3075
+msgid ":ref:`bug_3186`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3367
+msgid ""
+"The MySQL dialect will now disable :meth:`.ConnectionEvents.handle_error`"
+" events from firing for those statements which it uses internally to "
+"detect if a table exists or not.   This is achieved using an execution "
+"option ``skip_user_error_events`` that disables the handle error event "
+"for the scope of that execution.   In this way, user code that rewrites "
+"exceptions doesn't need to worry about the MySQL dialect or other "
+"dialects that occasionally need to catch SQLAlchemy specific exceptions."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3380
+msgid ""
+"Changed the default value of \"raise_on_warnings\" to False for "
+"MySQLconnector.  This was set at True for some reason.  The \"buffered\" "
+"flag unfortunately must stay at True as MySQLconnector does not allow a "
+"cursor to be closed unless all results are fully fetched."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:419
+msgid ""
+"The ``gaerdbms`` dialect is no longer necessary, and emits a deprecation "
+"warning.  Google now recommends using the MySQLdb dialect directly."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:213
+msgid ""
+"Added support for partial indexes (e.g. with a WHERE clause) on SQLite.  "
+"Pull request courtesy Kai Groner."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:218
+msgid ":ref:`sqlite_partial_index`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:515
+msgid ""
+"Added a new SQLite backend for the SQLCipher backend.  This backend "
+"provides for encrypted SQLite databases using the pysqlcipher Python "
+"driver, which is very similar to the pysqlite driver."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:521
+msgid ":mod:`~sqlalchemy.dialects.sqlite.pysqlcipher`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:609
+msgid ""
+"When selecting from a UNION using an attached database file, the pysqlite"
+" driver reports column names in cursor.description as "
+"'dbname.tablename.colname', instead of 'tablename.colname' as it normally"
+" does for a UNION (note that it's supposed to just be 'colname' for both,"
+" but we work around it).  The column translation logic here has been "
+"adjusted to retrieve the rightmost token, rather than the second token, "
+"so it works in both cases.   Workaround courtesy Tony Roberts."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:872
+msgid ""
+"Fixed a SQLite join rewriting issue where a subquery that is embedded as "
+"a scalar subquery such as within an IN would receive inappropriate "
+"substitutions from the enclosing query, if the same table were present "
+"inside the subquery as were in the enclosing query such as in a joined "
+"inheritance scenario."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2456
+msgid ""
+"UNIQUE and FOREIGN KEY constraints are now fully reflected on SQLite both"
+" with and without names.  Previously, foreign key names were ignored and "
+"unnamed unique constraints were skipped. Thanks to Jon Nelson for "
+"assistance with this."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2507
+msgid ""
+"The SQLite dialect, when using the :class:`.sqlite.DATE`, "
+":class:`.sqlite.TIME`, or :class:`.sqlite.DATETIME` types, and given a "
+"``storage_format`` that only renders numbers, will render the types in "
+"DDL as ``DATE_CHAR``, ``TIME_CHAR``, and ``DATETIME_CHAR``, so that "
+"despite the lack of alpha characters in the values, the column will still"
+" deliver the \"text affinity\".  Normally this is not needed, as the "
+"textual values within the default storage formats already imply text."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2519
+msgid ":ref:`sqlite_datetime`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2980
+msgid ""
+"SQLite now supports reflection of unique constraints from temp tables; "
+"previously, this would fail with a TypeError. Pull request courtesy "
+"Johannes Erdfelt."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2986
+msgid ""
+":ref:`change_3204` - changes regarding SQLite temporary table and view "
+"reflection."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2993
+msgid ""
+"Added :meth:`.Inspector.get_temp_table_names` and "
+":meth:`.Inspector.get_temp_view_names`; currently, only the SQLite and "
+"Oracle dialects support these methods.  The return of temporary table and"
+" view names has been **removed** from SQLite and Oracle's version of "
+":meth:`.Inspector.get_table_names` and :meth:`.Inspector.get_view_names`;"
+" other database backends cannot support this information (such as MySQL),"
+" and the scope of operation is different in that the tables can be local "
+"to a session and typically aren't supported in remote schemas."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3005
+msgid ":ref:`change_3204`"
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:995
+msgid ""
+"Enabled \"multivalues insert\" for SQL Server 2008.  Pull request "
+"courtesy Albert Cervin.  Also expanded the checks for \"IDENTITY INSERT\""
+" mode to include when the identity key is present in the VALUEs clause of"
+" the statement."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2494
+msgid ""
+"SQL Server 2012 now recommends VARCHAR(max), NVARCHAR(max), "
+"VARBINARY(max) for large text/binary types.  The MSSQL dialect will now "
+"respect this based on version detection, as well as the new "
+"``deprecate_large_types`` flag."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2501
+msgid ":ref:`mssql_large_type_deprecation`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3081
+msgid ""
+"The hostname-based connection format for SQL Server when using pyodbc "
+"will no longer specify a default \"driver name\", and a warning is "
+"emitted if this is missing.  The optimal driver name for SQL Server "
+"changes frequently and is per-platform, so hostname based connections "
+"need to specify this.  DSN-based connections are preferred."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3089
+msgid ":ref:`change_3182`"
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:14
+msgid ""
+"Added statement encoding to the \"SET IDENTITY_INSERT\" statements which "
+"operate when an explicit INSERT is being interjected into an IDENTITY "
+"column, to support non-ascii table identifiers on drivers such as pyodbc "
+"+ unix + py2k that don't support unicode statements."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:25
+msgid ""
+"In the SQL Server pyodbc dialect, repaired the implementation for the "
+"``description_encoding`` dialect parameter, which when not explicitly set"
+" was preventing  cursor.description from being parsed correctly in the "
+"case of result sets that contained names in alternate encodings.  This "
+"parameter shouldn't be needed going forward."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:674
+msgid ""
+"Fixed the version string detection in the pymssql dialect to work with "
+"Microsoft SQL Azure, which changes the word \"SQL Server\" to \"SQL "
+"Azure\"."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1299
+msgid ""
+"Revised the query used to determine the current default schema name to "
+"use the ``database_principal_id()`` function in conjunction with the "
+"``sys.database_principals`` view so that we can determine the default "
+"schema independently of the type of login in progress (e.g., SQL Server, "
+"Windows, etc)."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2268
+msgid ""
+"Added support for cx_oracle connections to a specific service name, as "
+"opposed to a tns name, by passing ``?service_name=<name>`` to the URL.  "
+"Pull request courtesy Sławomir Ehlert."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2539
+msgid ""
+"New Oracle DDL features for tables, indexes: COMPRESS, BITMAP. Patch "
+"courtesy Gabor Gombas."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2553
+msgid ""
+"Added support for CTEs under Oracle.  This includes some tweaks to the "
+"aliasing syntax, as well as a new CTE feature :meth:`.CTE.suffix_with`, "
+"which is useful for adding in special Oracle-specific directives to the "
+"CTE."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2560
+msgid ":ref:`change_3220`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3273
+msgid "Added support for the Oracle table option ON COMMIT."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:563
+msgid ""
+"Fixed long-standing bug in Oracle dialect where bound parameter names "
+"that started with numbers would not be quoted, as Oracle doesn't like "
+"numerics in bound parameter names."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:850
+msgid ""
+"Fixed bug in oracle dialect test suite where in one test, 'username' was "
+"assumed to be in the database URL, even though this might not be the "
+"case."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2545
+#, python-format
+msgid ""
+"An alias name will be properly quoted when referred to using the "
+"``%(name)s`` token inside the :meth:`.Select.with_hint` method. "
+"Previously, the Oracle backend hadn't implemented this quoting."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1124
+msgid ""
+"Added a new example illustrating materialized paths, using the latest "
+"relationship features.   Example courtesy Jack Zhou."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2098
+msgid ""
+"Added a new extension suite :mod:`sqlalchemy.ext.baked`.  This simple but"
+" unusual system allows for a dramatic savings in Python overhead for the "
+"construction and processing of orm :class:`.Query` objects, from query "
+"construction up through rendering of a string SQL statement."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2106
+msgid ":ref:`baked_toplevel`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2464
+msgid ""
+"A new suite of examples dedicated to providing a detailed study into "
+"performance of SQLAlchemy ORM and Core, as well as the DBAPI, from "
+"multiple perspectives.  The suite runs within a container that provides "
+"built in profiling displays both through console output as well as "
+"graphically via the RunSnake tool."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2472
+msgid ":ref:`examples_performance`"
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:2955
+msgid ""
+"The :mod:`sqlalchemy.ext.automap` extension will now set ``cascade=\"all,"
+" delete-orphan\"`` automatically on a one-to-many relationship/backref "
+"where the foreign key is detected as containing one or more non-nullable "
+"columns.  This argument is present in the keywords passed to "
+":func:`.automap.generate_relationship` in this case and can still be "
+"overridden.  Additionally, if the :class:`.ForeignKeyConstraint` "
+"specifies ``ondelete=\"CASCADE\"`` for a non-nullable or ``ondelete=\"SET"
+" NULL\"`` for a nullable set of columns, the argument "
+"``passive_deletes=True`` is also added to the relationship.  Note that "
+"not all backends support reflection of ondelete, but backends that do "
+"include PostgreSQL and MySQL."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3398
+msgid ""
+"The Drizzle dialect has been removed from the Core; it is now available "
+"as `sqlalchemy-drizzle <https://bitbucket.org/zzzeek/sqlalchemy-"
+"drizzle>`_, an independent, third party dialect.  The dialect is still "
+"based almost entirely off of the MySQL dialect present in SQLAlchemy."
+msgstr ""
+
+#: ../../changelog/changelog_10.rst:3405
+msgid ":ref:`change_2984`"
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:77
+msgid ""
+"The ``__mapper_args__`` dictionary is copied from a declarative mixin or "
+"abstract class when accessed, so that modifications made to this "
+"dictionary by declarative itself won't conflict with that of other "
+"mappings.  The dictionary is modified regarding the ``version_id_col`` "
+"and ``polymorphic_on`` arguments, replacing the column within with the "
+"one that is officially mapped to the local class/table."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:119
+msgid ""
+"Fixed bug in mutable extension where :class:`.MutableDict` did not report"
+" change events for the ``setdefault()`` dictionary operation."
+msgstr ""
+
+#: ../../changelog/changelog_08.rst:128
+msgid ""
+"Fixed bug where :meth:`.MutableDict.setdefault` didn't return the "
+"existing or new value (this bug was not released in any 0.8 version). "
+"Pull request courtesy Thomas Hervé."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:204
+msgid ""
+"Fixed bug where the association proxy list class would not interpret "
+"slices correctly under Py3K.  Pull request courtesy Gilles "
+"Dartiguelongue."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:458
+msgid ""
+"Updated the :ref:`examples_versioned_history` example such that mapped "
+"columns are re-mapped to match column names as well as grouping of "
+"columns; in particular, this allows columns that are explicitly grouped "
+"in a same-column-named joined inheritance scenario to be mapped in the "
+"same way in the history mappings, avoiding warnings added in the 0.9 "
+"series regarding this pattern and allowing the same view of attribute "
+"keys."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:471
+msgid ""
+"Fixed a bug in the "
+"examples/generic_assocaitions/discriminator_on_association.py example, "
+"where the subclasses of AddressAssociation were not being mapped as "
+"\"single table inheritance\", leading to problems when trying to use the "
+"mappings further."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:649
+msgid ""
+"Fixed an unlikely race condition observed in some exotic end-user setups,"
+" where the attempt to check for \"duplicate class name\" in declarative "
+"would hit upon a not-totally-cleaned-up weak reference related to some "
+"other class being removed; the check here now ensures the weakref still "
+"references an object before calling upon it further."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:693
+msgid ""
+"Fixed bug in ordering list where the order of items would be thrown off "
+"during a collection replace event, if the reorder_on_append flag were set"
+" to True.  The fix ensures that the ordering list only impacts the list "
+"that is explicitly associated with the object."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:715
+msgid ""
+"Fixed bug where :class:`.ext.mutable.MutableDict` failed to implement the"
+" ``update()`` dictionary method, thus not catching changes. Pull request "
+"courtesy Matt Chisholm."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:724
+msgid ""
+"Fixed bug where a custom subclass of :class:`.ext.mutable.MutableDict` "
+"would not show up in a \"coerce\" operation, and would instead return a "
+"plain :class:`.ext.mutable.MutableDict`.  Pull request courtesy Matt "
+"Chisholm."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:734
+msgid ""
+"Fixed bug in connection pool logging where the \"connection checked out\""
+" debug logging message would not emit if the logging were set up using "
+"``logging.setLevel()``, rather than using the ``echo_pool`` flag. Tests "
+"to assert this logging have been added.  This is a regression that was "
+"introduced in 0.9.0."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:967
+msgid ""
+"Fixed bug where \"python setup.py test\" wasn't calling into distutils "
+"appropriately, and errors would be emitted at the end of the test suite."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1043
+msgid ""
+"Fixed bug when the declarative ``__abstract__`` flag was not being "
+"distinguished for when it was actually the value ``False``. The "
+"``__abstract__`` flag needs to actually evaluate to a True value at the "
+"level being tested."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1132
+msgid ""
+"In public test suite, shanged to use of ``String(40)`` from less-"
+"supported ``Text`` in ``StringTest.test_literal_backslashes``. Pullreq "
+"courtesy Jan."
+msgstr ""
+
+#: ../../changelog/changelog_09.rst:1320
+msgid ""
+"Corrected for some deprecation warnings involving the ``imp`` module and "
+"Python 3.3 or greater, when running tests.  Pull request courtesy Matt "
+"Chisholm."
+msgstr ""
+

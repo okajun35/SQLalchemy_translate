@@ -1,0 +1,823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <title>
+            
+    
+    What's New in SQLAlchemy 1.3?
+ &mdash;
+    SQLAlchemy 1.3 Documentation
+
+        </title>
+
+        
+            <!-- begin iterate through site-imported + sphinx environment css_files -->
+                <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+                <link rel="stylesheet" href="../_static/docs.css" type="text/css" />
+                <link rel="stylesheet" href="../_static/changelog.css" type="text/css" />
+                <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+            <!-- end iterate through site-imported + sphinx environment css_files -->
+        
+
+        
+
+    
+
+    <!-- begin layout.mako headers -->
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+        <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
+        <link rel="up" title="Changes and Migration" href="index.html" />
+        <link rel="next" title="1.3 Changelog" href="changelog_13.html" />
+        <link rel="prev" title="Changes and Migration" href="index.html" />
+    <!-- end layout.mako headers -->
+
+
+    </head>
+    <body>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="docs-container">
+
+
+
+
+
+<div id="docs-top-navigation-container" class="body-background">
+<div id="docs-header">
+    <div id="docs-version-header">
+        Release: <span class="version-num">1.3.0b1</span>
+
+
+        | Release Date: unreleased
+
+    </div>
+
+    <h1>SQLAlchemy 1.3 Documentation</h1>
+
+</div>
+</div>
+
+<div id="docs-body-container">
+
+    <div id="fixed-sidebar" class="withsidebar">
+
+
+        <div id="docs-sidebar-popout">
+            <h3><a href="../index.html">SQLAlchemy 1.3 Documentation</a></h3>
+            <p id="sidebar-topnav">
+                <a href="../contents.html">Contents</a> |
+                <a href="../genindex.html">Index</a>
+            </p>
+
+            <div id="sidebar-search">
+                <form class="search" action="../search.html" method="get">
+                  <label>
+                  Search terms:
+                  <input type="text" placeholder="search..." name="q" size="12" />
+                  </label>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+
+        </div>
+
+        <div id="docs-sidebar">
+
+        <div id="sidebar-banner">
+            
+        </div>
+
+        <div id="docs-sidebar-inner">
+
+        
+        <h3>
+            <a href="index.html" title="Changes and Migration">Changes and Migration</a>
+        </h3>
+
+        <ul>
+<li class="selected"><span class="link-container first"><strong>What's New in SQLAlchemy 1.3?</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#introduction">Introduction</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#new-features-and-improvements-orm">New Features and Improvements - ORM</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#info-dictionary-added-to-instancestate">info dictionary added to InstanceState</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#horizontal-sharding-extension-supports-bulk-update-and-delete-methods">Horizontal Sharding extension supports bulk update and delete methods</a></span></li>
+</ul>
+</li>
+<li><span class="link-container first"><a class="reference external" href="#key-behavioral-changes-orm">Key Behavioral Changes - ORM</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#association-proxy-has-new-cascade-scalar-deletes-flag">Association proxy has new cascade_scalar_deletes flag</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#associationproxy-stores-class-specific-state-in-a-separate-container">AssociationProxy stores class-specific state in a separate container</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#for-update-clause-is-rendered-within-the-joined-eager-load-subquery-as-well-as-outside">FOR UPDATE clause is rendered within the joined eager load subquery as well as outside</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#passive-deletes-all-will-leave-fk-unchanged-for-object-removed-from-collection">passive_deletes='all' will leave FK unchanged for object removed from collection</a></span></li>
+</ul>
+</li>
+<li><span class="link-container first"><a class="reference external" href="#association-proxy-now-strong-references-the-parent-object">Association Proxy now Strong References the Parent Object</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#new-features-and-improvements-core">New Features and Improvements - Core</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#binary-comparison-interpretation-for-sql-functions">Binary comparison interpretation for SQL functions</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#expanding-in-feature-now-supports-empty-lists">Expanding IN feature now supports empty lists</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#typeengine-methods-bind-expression-column-expression-work-with-variant-type-specific-types">TypeEngine methods bind_expression, column_expression work with Variant, type-specific types</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#new-last-in-first-out-strategy-for-queuepool">New last-in-first-out strategy for QueuePool</a></span></li>
+</ul>
+</li>
+<li><span class="link-container first"><a class="reference external" href="#key-behavioral-changes-core">Key Behavioral Changes - Core</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#dialect-improvements-and-changes-postgresql">Dialect Improvements and Changes - PostgreSQL</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#added-basic-reflection-support-for-postgresql-paritioned-tables">Added basic reflection support for Postgresql paritioned tables</a></span></li>
+</ul>
+</li>
+<li><span class="link-container first"><a class="reference external" href="#dialect-improvements-and-changes-mysql">Dialect Improvements and Changes - MySQL</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#protocol-level-ping-now-used-for-pre-ping">Protocol-level ping now used for pre-ping</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#control-of-parameter-ordering-within-on-duplicate-key-update">Control of parameter ordering within ON DUPLICATE KEY UPDATE</a></span></li>
+</ul>
+</li>
+<li><span class="link-container first"><a class="reference external" href="#dialect-improvements-and-changes-sqlite">Dialect Improvements and Changes - SQLite</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#support-for-sqlite-json-added">Support for SQLite JSON Added</a></span></li>
+</ul>
+</li>
+<li><span class="link-container first"><a class="reference external" href="#dialect-improvements-and-changes-oracle">Dialect Improvements and Changes - Oracle</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#national-char-datatypes-de-emphasized-for-generic-unicode-re-enabled-with-option">National char datatypes de-emphasized for generic unicode, re-enabled with option</a></span></li>
+</ul>
+</li>
+<li><span class="link-container first"><a class="reference external" href="#dialect-improvements-and-changes-sql-server">Dialect Improvements and Changes - SQL Server</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#support-for-pyodbc-fast-executemany">Support for pyodbc fast_executemany</a></span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="link-container first"><a class="reference external" href="changelog_13.html">1.3 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_12.html">1.2 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_11.html">1.1 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_10.html">1.0 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_09.html">0.9 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_08.html">0.8 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_07.html">0.7 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_06.html">0.6 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_05.html">0.5 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_04.html">0.4 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_03.html">0.3 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_02.html">0.2 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="changelog_01.html">0.1 Changelog</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="migration_12.html">What's New in SQLAlchemy 1.2?</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="migration_11.html">What's New in SQLAlchemy 1.1?</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="migration_10.html">What's New in SQLAlchemy 1.0?</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="migration_09.html">What's New in SQLAlchemy 0.9?</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="migration_08.html">What's New in SQLAlchemy 0.8?</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="migration_07.html">What's New in SQLAlchemy 0.7?</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="migration_06.html">What's New in SQLAlchemy 0.6?</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="migration_05.html">What's new in SQLAlchemy 0.5?</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="migration_04.html">What's new in SQLAlchemy 0.4?</a></span></li>
+</ul>
+
+
+
+        </div>
+
+        </div>
+
+    </div>
+
+    
+
+    <div id="docs-body" class="withsidebar" >
+        
+<div class="section" id="what-s-new-in-sqlalchemy-1-3">
+<h1>What's New in SQLAlchemy 1.3?<a class="headerlink" href="#what-s-new-in-sqlalchemy-1-3" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="admonition-about-this-document admonition">
+<p class="first admonition-title">About this Document</p>
+<p class="last">This document describes changes between SQLAlchemy version 1.2
+and SQLAlchemy version 1.3.</p>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>This guide introduces what's new in SQLAlchemy version 1.3
+and also documents changes which affect users migrating
+their applications from the 1.2 series of SQLAlchemy to 1.3.</p>
+<p>Please carefully review the sections on behavioral changes for
+potentially backwards-incompatible changes in behavior.</p>
+</div>
+<div class="section" id="new-features-and-improvements-orm">
+<h2>New Features and Improvements - ORM<a class="headerlink" href="#new-features-and-improvements-orm" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="info-dictionary-added-to-instancestate">
+<span id="change-4257"></span><h3>info dictionary added to InstanceState<a class="headerlink" href="#info-dictionary-added-to-instancestate" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Added the <code class="docutils literal notranslate"><span class="pre">.info</span></code> dictionary to the <a class="reference internal" href="../orm/internals.html#sqlalchemy.orm.state.InstanceState" title="sqlalchemy.orm.state.InstanceState"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstanceState</span></code></a> class, the object
+that comes from calling <a class="reference internal" href="../core/inspection.html#sqlalchemy.inspection.inspect" title="sqlalchemy.inspection.inspect"><code class="xref py py-func docutils literal notranslate"><span class="pre">inspect()</span></code></a> on a mapped object.  This allows custom
+recipes to add additional information about an object that will be carried
+along with that object's full lifecycle in memory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">inspect</span>
+
+<span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;ed&#39;</span><span class="p">)</span>
+
+<span class="n">inspect</span><span class="p">(</span><span class="n">u1</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;user_info&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;7|ed&#39;</span></pre></div>
+</div>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/4257">#4257</a></p>
+</div>
+<div class="section" id="horizontal-sharding-extension-supports-bulk-update-and-delete-methods">
+<span id="change-4196"></span><h3>Horizontal Sharding extension supports bulk update and delete methods<a class="headerlink" href="#horizontal-sharding-extension-supports-bulk-update-and-delete-methods" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The <a class="reference internal" href="../orm/extensions/horizontal_shard.html#sqlalchemy.ext.horizontal_shard.ShardedQuery" title="sqlalchemy.ext.horizontal_shard.ShardedQuery"><code class="xref py py-class docutils literal notranslate"><span class="pre">ShardedQuery</span></code></a> extension object supports the <a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query.update" title="sqlalchemy.orm.query.Query.update"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Query.update()</span></code></a>
+and <a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query.delete" title="sqlalchemy.orm.query.Query.delete"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Query.delete()</span></code></a> bulk update/delete methods.    The <code class="docutils literal notranslate"><span class="pre">query_chooser</span></code>
+callable is consulted when they are called in order to run the update/delete
+across multiple shards based on given criteria.</p>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/4196">#4196</a></p>
+</div>
+</div>
+<div class="section" id="key-behavioral-changes-orm">
+<h2>Key Behavioral Changes - ORM<a class="headerlink" href="#key-behavioral-changes-orm" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="association-proxy-has-new-cascade-scalar-deletes-flag">
+<span id="change-4308"></span><h3>Association proxy has new cascade_scalar_deletes flag<a class="headerlink" href="#association-proxy-has-new-cascade-scalar-deletes-flag" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Given a mapping as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;test_a&#39;</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ab</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span>
+        <span class="s1">&#39;AB&#39;</span><span class="p">,</span> <span class="n">backref</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">uselist</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">association_proxy</span><span class="p">(</span>
+        <span class="s1">&#39;ab&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">creator</span><span class="o">=</span><span class="k">lambda</span> <span class="n">b</span><span class="p">:</span> <span class="n">AB</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="p">),</span>
+        <span class="n">cascade_scalar_deletes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;test_b&#39;</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ab</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s1">&#39;AB&#39;</span><span class="p">,</span> <span class="n">backref</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">cascade</span><span class="o">=</span><span class="s1">&#39;all, delete-orphan&#39;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">AB</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;test_ab&#39;</span>
+    <span class="n">a_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">id</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">b_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">id</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></pre></div>
+</div>
+<p>An assigment to <code class="docutils literal notranslate"><span class="pre">A.b</span></code> will generate an <code class="docutils literal notranslate"><span class="pre">AB</span></code> object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">B</span><span class="p">()</span></pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">A.b</span></code> association is scalar, and includes a new flag
+<a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxy.params.cascade_scalar_deletes" title="sqlalchemy.ext.associationproxy.AssociationProxy"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">AssociationProxy.cascade_scalar_deletes</span></code></a>.  When set, setting <code class="docutils literal notranslate"><span class="pre">A.b</span></code>
+to <code class="docutils literal notranslate"><span class="pre">None</span></code> will remove <code class="docutils literal notranslate"><span class="pre">A.ab</span></code> as well.   The default behavior remains
+that it leaves <code class="docutils literal notranslate"><span class="pre">a.ab</span></code> in place:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">assert</span> <span class="n">a</span><span class="o">.</span><span class="n">ab</span> <span class="ow">is</span> <span class="kc">None</span></pre></div>
+</div>
+<p>While it at first seemed intuitive that this logic should just look at the
+&quot;cascade&quot; attribute of the existing relationship, it's not clear from that
+alone if the proxied object should be removed, hence the behavior is
+made available as an explicit option.</p>
+<p>Additionally, <code class="docutils literal notranslate"><span class="pre">del</span></code> now works for scalars in a similar manner as setting
+to <code class="docutils literal notranslate"><span class="pre">None</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">a</span><span class="o">.</span><span class="n">b</span>
+<span class="k">assert</span> <span class="n">a</span><span class="o">.</span><span class="n">ab</span> <span class="ow">is</span> <span class="kc">None</span></pre></div>
+</div>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/4308">#4308</a></p>
+</div>
+<div class="section" id="associationproxy-stores-class-specific-state-in-a-separate-container">
+<span id="change-3423"></span><h3>AssociationProxy stores class-specific state in a separate container<a class="headerlink" href="#associationproxy-stores-class-specific-state-in-a-separate-container" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The <a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxy" title="sqlalchemy.ext.associationproxy.AssociationProxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssociationProxy</span></code></a> object makes lots of decisions based on the
+parent mapped class it is associated with.   While the
+<a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxy" title="sqlalchemy.ext.associationproxy.AssociationProxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssociationProxy</span></code></a> historically began as a relatively simple &quot;getter&quot;,
+it became apparent early on that it also needed to make decisions about what
+kind of attribute it is referring towards, e.g. scalar or collection, mapped
+object or simple value, and similar.  To achieve this, it needs to inspect the
+mapped attribute or other descriptor or attribute that it refers towards, as
+referenced from its parent class.   However in Python descriptor mechanics, a
+descriptor only learns about its &quot;parent&quot; class when it is accessed in the
+context of that class, such as calling <code class="docutils literal notranslate"><span class="pre">MyClass.some_descriptor</span></code>, which calls
+the <code class="docutils literal notranslate"><span class="pre">__get__()</span></code> method which passes in the class.    The
+<a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxy" title="sqlalchemy.ext.associationproxy.AssociationProxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssociationProxy</span></code></a> object would therefore store state that is specific
+to that class, but only once this method were called; trying to inspect this
+state ahead of time without first accessing the <a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxy" title="sqlalchemy.ext.associationproxy.AssociationProxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssociationProxy</span></code></a>
+as a descriptor would raise an error.  Additionally, it would  assume that
+the first class to be seen by <code class="docutils literal notranslate"><span class="pre">__get__()</span></code> would be  the only parent class it
+needed to know about.  This is despite the fact that if a particular class
+has inheriting subclasses, the association proxy is really working
+on behalf of more than one parent class even though it was not explicitly
+re-used.  While even with this shortcoming, the association proxy would
+still get pretty far with its current behavior, it still leaves shortcomings
+in some cases as well as the complex problem of determining the best &quot;owner&quot;
+class.</p>
+<p>These problems are now solved in that <a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxy" title="sqlalchemy.ext.associationproxy.AssociationProxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssociationProxy</span></code></a> no longer
+modifies its own internal state when <code class="docutils literal notranslate"><span class="pre">__get__()</span></code> is called; instead, a new
+object is generated per-class known as <a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxyInstance" title="sqlalchemy.ext.associationproxy.AssociationProxyInstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssociationProxyInstance</span></code></a> which
+handles all the state specific to a particular mapped parent class (when the
+parent class is not mapped, no <a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxyInstance" title="sqlalchemy.ext.associationproxy.AssociationProxyInstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssociationProxyInstance</span></code></a> is generated).
+The concept of a single &quot;owning class&quot; for the association proxy, which was
+nonetheless improved in 1.1, has essentially been replaced with an approach
+where the AP now can treat any number of &quot;owning&quot; classes equally.</p>
+<p>To accommodate for applications that want to inspect this state for an
+<a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxy" title="sqlalchemy.ext.associationproxy.AssociationProxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssociationProxy</span></code></a> without necessarily calling <code class="docutils literal notranslate"><span class="pre">__get__()</span></code>, a new
+method <a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxy.for_class" title="sqlalchemy.ext.associationproxy.AssociationProxy.for_class"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AssociationProxy.for_class()</span></code></a> is added that provides direct access
+to a class-specific <a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxyInstance" title="sqlalchemy.ext.associationproxy.AssociationProxyInstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssociationProxyInstance</span></code></a>, demonstrated as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="c1"># ...</span>
+
+    <span class="n">keywords</span> <span class="o">=</span> <span class="n">association_proxy</span><span class="p">(</span><span class="s1">&#39;kws&#39;</span><span class="p">,</span> <span class="s1">&#39;keyword&#39;</span><span class="p">)</span>
+
+
+<span class="n">proxy_state</span> <span class="o">=</span> <span class="n">inspect</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">all_orm_descriptors</span><span class="p">[</span><span class="s2">&quot;keywords&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">for_class</span><span class="p">(</span><span class="n">User</span><span class="p">)</span></pre></div>
+</div>
+<p>Once we have the <a class="reference internal" href="../orm/extensions/associationproxy.html#sqlalchemy.ext.associationproxy.AssociationProxyInstance" title="sqlalchemy.ext.associationproxy.AssociationProxyInstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">AssociationProxyInstance</span></code></a> object, in the above
+example stored in the <code class="docutils literal notranslate"><span class="pre">proxy_state</span></code> variable, we can look at attributes
+specific to the <code class="docutils literal notranslate"><span class="pre">User.keywords</span></code> proxy, such as <code class="docutils literal notranslate"><span class="pre">target_class</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">proxy_state</span><span class="o">.</span><span class="n">target_class</span>
+<span class="go">Keyword</span></pre></div>
+</div>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/3423">#3423</a></p>
+</div>
+<div class="section" id="for-update-clause-is-rendered-within-the-joined-eager-load-subquery-as-well-as-outside">
+<span id="change-4246"></span><h3>FOR UPDATE clause is rendered within the joined eager load subquery as well as outside<a class="headerlink" href="#for-update-clause-is-rendered-within-the-joined-eager-load-subquery-as-well-as-outside" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>This change applies specifically to the use of the <a class="reference internal" href="../orm/loading_relationships.html#sqlalchemy.orm.joinedload" title="sqlalchemy.orm.joinedload"><code class="xref py py-func docutils literal notranslate"><span class="pre">joinedload()</span></code></a> loading
+strategy in conjunction with a row limited query, e.g. using <a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query.first" title="sqlalchemy.orm.query.Query.first"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Query.first()</span></code></a>
+or <a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query.limit" title="sqlalchemy.orm.query.Query.limit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Query.limit()</span></code></a>, as well as with use of the <code class="xref py py-class docutils literal notranslate"><span class="pre">Query.with_for_update</span></code> method.</p>
+<p>Given a query as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span><span class="n">joinedload</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">b</span><span class="p">))</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span></pre></div>
+</div>
+<p>The <a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal notranslate"><span class="pre">Query</span></code></a> object renders a SELECT of the following form when joined
+eager loading is combined with LIMIT:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_id</span><span class="p">,</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_data</span><span class="p">,</span> <span class="n">b_alias</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">b_alias</span><span class="o">.</span><span class="n">data</span> <span class="n">FROM</span> <span class="p">(</span>
+    <span class="n">SELECT</span> <span class="n">a</span><span class="o">.</span><span class="n">id</span> <span class="n">AS</span> <span class="n">a_id</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">data</span> <span class="n">AS</span> <span class="n">a_data</span> <span class="n">FROM</span> <span class="n">a</span> <span class="n">LIMIT</span> <span class="mi">5</span>
+<span class="p">)</span> <span class="n">AS</span> <span class="n">subq</span> <span class="n">LEFT</span> <span class="n">OUTER</span> <span class="n">JOIN</span> <span class="n">b</span> <span class="n">ON</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_id</span><span class="o">=</span><span class="n">b</span><span class="o">.</span><span class="n">a_id</span></pre></div>
+</div>
+<p>This is so that the limit of rows takes place for the primary entity without
+affecting the joined eager load of related items.   When the above query is
+combined with &quot;SELECT..FOR UPDATE&quot;, the behavior has been this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_id</span><span class="p">,</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_data</span><span class="p">,</span> <span class="n">b_alias</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">b_alias</span><span class="o">.</span><span class="n">data</span> <span class="n">FROM</span> <span class="p">(</span>
+    <span class="n">SELECT</span> <span class="n">a</span><span class="o">.</span><span class="n">id</span> <span class="n">AS</span> <span class="n">a_id</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">data</span> <span class="n">AS</span> <span class="n">a_data</span> <span class="n">FROM</span> <span class="n">a</span> <span class="n">LIMIT</span> <span class="mi">5</span>
+<span class="p">)</span> <span class="n">AS</span> <span class="n">subq</span> <span class="n">LEFT</span> <span class="n">OUTER</span> <span class="n">JOIN</span> <span class="n">b</span> <span class="n">ON</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_id</span><span class="o">=</span><span class="n">b</span><span class="o">.</span><span class="n">a_id</span> <span class="n">FOR</span> <span class="n">UPDATE</span></pre></div>
+</div>
+<p>However, MySQL due to <a class="reference external" href="https://bugs.mysql.com/bug.php?id=90693">https://bugs.mysql.com/bug.php?id=90693</a> does not lock
+the rows inside the subquery, unlike that of Postgresql and other databases.
+So the above query now renders as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_id</span><span class="p">,</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_data</span><span class="p">,</span> <span class="n">b_alias</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">b_alias</span><span class="o">.</span><span class="n">data</span> <span class="n">FROM</span> <span class="p">(</span>
+    <span class="n">SELECT</span> <span class="n">a</span><span class="o">.</span><span class="n">id</span> <span class="n">AS</span> <span class="n">a_id</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">data</span> <span class="n">AS</span> <span class="n">a_data</span> <span class="n">FROM</span> <span class="n">a</span> <span class="n">LIMIT</span> <span class="mi">5</span> <span class="n">FOR</span> <span class="n">UPDATE</span>
+<span class="p">)</span> <span class="n">AS</span> <span class="n">subq</span> <span class="n">LEFT</span> <span class="n">OUTER</span> <span class="n">JOIN</span> <span class="n">b</span> <span class="n">ON</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_id</span><span class="o">=</span><span class="n">b</span><span class="o">.</span><span class="n">a_id</span> <span class="n">FOR</span> <span class="n">UPDATE</span></pre></div>
+</div>
+<p>On the Oracle dialect, the inner &quot;FOR UPDATE&quot; is not rendered as Oracle does
+not support this syntax and the dialect skips any &quot;FOR UPDATE&quot; that is against
+a subquery; it isn't necessary in any case since Oracle, like Postgresql,
+correctly locks all elements of the returned row.</p>
+<p>When using the <a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query.with_for_update.params.of" title="sqlalchemy.orm.query.Query.with_for_update"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">Query.with_for_update.of</span></code></a> modifier, typically on
+Postgresql, the outer &quot;FOR UPDATE&quot; is omitted, and the OF is now rendered
+on the inside; previously, the OF target would not be converted to accommodate
+for the subquery correctly.  So
+given:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span><span class="n">joinedload</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">b</span><span class="p">))</span><span class="o">.</span><span class="n">with_for_update</span><span class="p">(</span><span class="n">of</span><span class="o">=</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span></pre></div>
+</div>
+<p>The query would now render as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_id</span><span class="p">,</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_data</span><span class="p">,</span> <span class="n">b_alias</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">b_alias</span><span class="o">.</span><span class="n">data</span> <span class="n">FROM</span> <span class="p">(</span>
+    <span class="n">SELECT</span> <span class="n">a</span><span class="o">.</span><span class="n">id</span> <span class="n">AS</span> <span class="n">a_id</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">data</span> <span class="n">AS</span> <span class="n">a_data</span> <span class="n">FROM</span> <span class="n">a</span> <span class="n">LIMIT</span> <span class="mi">5</span> <span class="n">FOR</span> <span class="n">UPDATE</span> <span class="n">OF</span> <span class="n">a</span>
+<span class="p">)</span> <span class="n">AS</span> <span class="n">subq</span> <span class="n">LEFT</span> <span class="n">OUTER</span> <span class="n">JOIN</span> <span class="n">b</span> <span class="n">ON</span> <span class="n">subq</span><span class="o">.</span><span class="n">a_id</span><span class="o">=</span><span class="n">b</span><span class="o">.</span><span class="n">a_id</span></pre></div>
+</div>
+<p>The above form should be helpful on Postgresql additionally since Postgresql
+will not allow the FOR UPDATE clause to be rendered after the LEFT OUTER JOIN
+target.</p>
+<p>Overall, FOR UPDATE remains highly specific to the target database in use
+and can't easily be generalized for more complex queries.</p>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/4246">#4246</a></p>
+</div>
+<div class="section" id="passive-deletes-all-will-leave-fk-unchanged-for-object-removed-from-collection">
+<span id="change-3844"></span><h3>passive_deletes='all' will leave FK unchanged for object removed from collection<a class="headerlink" href="#passive-deletes-all-will-leave-fk-unchanged-for-object-removed-from-collection" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The <a class="reference internal" href="../orm/relationship_api.html#sqlalchemy.orm.relationship.params.passive_deletes" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">relationship.passive_deletes</span></code></a> option accepts the value
+<code class="docutils literal notranslate"><span class="pre">&quot;all&quot;</span></code> to indicate that no foreign key attributes should be modified when
+the object is flushed, even if the relationship's collection / reference has
+been removed.   Previously, this did not take place for one-to-many, or
+one-to-one relationships, in the following situation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;users&#39;</span>
+
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">addresses</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span>
+        <span class="s2">&quot;Address&quot;</span><span class="p">,</span>
+        <span class="n">passive_deletes</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Address</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;addresses&#39;</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;users.id&#39;</span><span class="p">))</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;User&quot;</span><span class="p">)</span>
+
+<span class="n">u1</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<span class="n">address</span> <span class="o">=</span> <span class="n">u1</span><span class="o">.</span><span class="n">addresses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">u1</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+<span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="c1"># would fail and be set to None</span>
+<span class="k">assert</span> <span class="n">address</span><span class="o">.</span><span class="n">user_id</span> <span class="o">==</span> <span class="n">u1</span><span class="o">.</span><span class="n">id</span></pre></div>
+</div>
+<p>The fix now includes that <code class="docutils literal notranslate"><span class="pre">address.user_id</span></code> is left unchanged as per
+<code class="docutils literal notranslate"><span class="pre">passive_deletes=&quot;all&quot;</span></code>. This kind of thing is useful for building custom
+&quot;version table&quot; schemes and such where rows are archived instead of deleted.</p>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/3844">#3844</a></p>
+</div>
+</div>
+<div class="section" id="association-proxy-now-strong-references-the-parent-object">
+<span id="change-4268"></span><h2>Association Proxy now Strong References the Parent Object<a class="headerlink" href="#association-proxy-now-strong-references-the-parent-object" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>The long-standing behavior of the association proxy collection maintaining
+only a weak reference to the parent object is reverted; the proxy will now
+maintain a strong reference to the parent for as long as the proxy
+collection itself is also in memory, eliminating the &quot;stale association
+proxy&quot; error. This change is being made on an experimental basis to see if
+any use cases arise where it causes side effects.</p>
+<p>As an example, given a mapping with association proxy:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">bs</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+    <span class="n">b_data</span> <span class="o">=</span> <span class="n">association_proxy</span><span class="p">(</span><span class="s1">&#39;bs&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">a_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;a.id&quot;</span><span class="p">))</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+
+
+<span class="n">a1</span> <span class="o">=</span> <span class="n">A</span><span class="p">(</span><span class="n">bs</span><span class="o">=</span><span class="p">[</span><span class="n">B</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="s1">&#39;b1&#39;</span><span class="p">),</span> <span class="n">B</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="s1">&#39;b2&#39;</span><span class="p">)])</span>
+
+<span class="n">b_data</span> <span class="o">=</span> <span class="n">a1</span><span class="o">.</span><span class="n">b_data</span></pre></div>
+</div>
+<p>Previously, if <code class="docutils literal notranslate"><span class="pre">a1</span></code> were deleted out of scope:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">a1</span></pre></div>
+</div>
+<p>Trying to iterate the <code class="docutils literal notranslate"><span class="pre">b_data</span></code> collection after <code class="docutils literal notranslate"><span class="pre">a1</span></code> is deleted from scope
+would raise the error <code class="docutils literal notranslate"><span class="pre">&quot;stale</span> <span class="pre">association</span> <span class="pre">proxy,</span> <span class="pre">parent</span> <span class="pre">object</span> <span class="pre">has</span> <span class="pre">gone</span> <span class="pre">out</span> <span class="pre">of</span>
+<span class="pre">scope&quot;</span></code>.  This is because the association proxy needs to access the actual
+<code class="docutils literal notranslate"><span class="pre">a1.bs</span></code> collection in order to produce a view, and prior to this change it
+maintained only a weak reference to <code class="docutils literal notranslate"><span class="pre">a1</span></code>.   In particular, users would
+frequently encounter this error when performing an inline operation
+such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">collection</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span><span class="o">.</span><span class="n">b_data</span></pre></div>
+</div>
+<p>Above, because the <code class="docutils literal notranslate"><span class="pre">A</span></code> object would be garbage collected before the
+<code class="docutils literal notranslate"><span class="pre">b_data</span></code> collection were actually used.</p>
+<p>The change is that the <code class="docutils literal notranslate"><span class="pre">b_data</span></code> collection is now maintaining a strong
+reference to the <code class="docutils literal notranslate"><span class="pre">a1</span></code> object, so that it remains present:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">b_data</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;b1&#39;</span><span class="p">,</span> <span class="s1">&#39;b2&#39;</span><span class="p">]</span></pre></div>
+</div>
+<p>This change introduces the side effect that if an application is passing around
+the collection as above, <strong>the parent object won't be garbage collected</strong> until
+the collection is also discarded.   As always, if <code class="docutils literal notranslate"><span class="pre">a1</span></code> is persistent inside a
+particular <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></a>, it will remain part of that session's  state
+until it is garbage collected.</p>
+<p>Note that this change may be revised if it leads to problems.</p>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/4268">#4268</a></p>
+</div>
+<div class="section" id="new-features-and-improvements-core">
+<h2>New Features and Improvements - Core<a class="headerlink" href="#new-features-and-improvements-core" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="binary-comparison-interpretation-for-sql-functions">
+<span id="change-3831"></span><h3>Binary comparison interpretation for SQL functions<a class="headerlink" href="#binary-comparison-interpretation-for-sql-functions" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>This enhancement is implemented at the Core level, however is applicable
+primarily to the ORM.</p>
+<p>A SQL function that compares two elements can now be used as a &quot;comparison&quot;
+object, suitable for usage in an ORM <a class="reference internal" href="../orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal notranslate"><span class="pre">relationship()</span></code></a>, by first
+creating the function as usual using the <a class="reference internal" href="../core/sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal notranslate"><span class="pre">func</span></code></a> factory, then
+when the function is complete calling upon the <a class="reference internal" href="../core/functions.html#sqlalchemy.sql.functions.FunctionElement.as_comparison" title="sqlalchemy.sql.functions.FunctionElement.as_comparison"><code class="xref py py-meth docutils literal notranslate"><span class="pre">FunctionElement.as_comparison()</span></code></a>
+modifier to produce a <a class="reference internal" href="../core/sqlelement.html#sqlalchemy.sql.expression.BinaryExpression" title="sqlalchemy.sql.expression.BinaryExpression"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryExpression</span></code></a> that has a &quot;left&quot; and a &quot;right&quot;
+side:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Venue</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;venue&#39;</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+
+    <span class="n">descendants</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span>
+        <span class="s2">&quot;Venue&quot;</span><span class="p">,</span>
+        <span class="n">primaryjoin</span><span class="o">=</span><span class="n">func</span><span class="o">.</span><span class="n">instr</span><span class="p">(</span>
+            <span class="n">remote</span><span class="p">(</span><span class="n">foreign</span><span class="p">(</span><span class="n">name</span><span class="p">)),</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">as_comparison</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">viewonly</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">order_by</span><span class="o">=</span><span class="n">name</span>
+    <span class="p">)</span></pre></div>
+</div>
+<p>Above, the <a class="reference internal" href="../orm/relationship_api.html#sqlalchemy.orm.relationship.params.primaryjoin" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">relationship.primaryjoin</span></code></a> of the &quot;descendants&quot; relationship
+will produce a &quot;left&quot; and a &quot;right&quot; expression based on the first and second
+arguments passed to <code class="docutils literal notranslate"><span class="pre">instr()</span></code>.   This allows features like the ORM
+lazyload to produce SQL like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SELECT venue.id AS venue_id, venue.name AS venue_name
+FROM venue
+WHERE instr(venue.name, (? || ?)) = ? ORDER BY venue.name
+(&#39;parent1&#39;, &#39;/&#39;, 1)</pre></div>
+</div>
+<p>and a joinedload, such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v1</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Venue</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;parent1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span>
+    <span class="n">joinedload</span><span class="p">(</span><span class="n">Venue</span><span class="o">.</span><span class="n">descendants</span><span class="p">))</span><span class="o">.</span><span class="n">one</span><span class="p">()</span></pre></div>
+</div>
+<p>to work as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SELECT venue.id AS venue_id, venue.name AS venue_name,
+  venue_1.id AS venue_1_id, venue_1.name AS venue_1_name
+FROM venue LEFT OUTER JOIN venue AS venue_1
+  ON instr(venue_1.name, (venue.name || ?)) = ?
+WHERE venue.name = ? ORDER BY venue_1.name
+(&#39;/&#39;, 1, &#39;parent1&#39;)</pre></div>
+</div>
+<p>This feature is expected to help with situations such as making use of
+geometric functions in relationship join conditions, or any case where
+the ON clause of the SQL join is expressed in terms of a SQL function.</p>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/3831">#3831</a></p>
+</div>
+<div class="section" id="expanding-in-feature-now-supports-empty-lists">
+<span id="change-4271"></span><h3>Expanding IN feature now supports empty lists<a class="headerlink" href="#expanding-in-feature-now-supports-empty-lists" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The &quot;expanding IN&quot; feature introduced in version 1.2 at <a class="reference internal" href="migration_12.html#change-3953"><span class="std std-ref">Late-expanded IN parameter sets allow IN expressions with cached statements</span></a> now
+supports empty lists passed to the <a class="reference internal" href="../core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.in_" title="sqlalchemy.sql.operators.ColumnOperators.in_"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ColumnOperators.in_()</span></code></a> operator.   The implementation
+for an empty list will produce an &quot;empty set&quot; expression that is specific to a target
+backend, such as &quot;SELECT CAST(NULL AS INTEGER) WHERE 1!=1&quot; for Postgresql,
+&quot;SELECT 1 FROM (SELECT 1) as _empty_set WHERE 1!=1&quot; for MySQL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">select</span><span class="p">,</span> <span class="n">literal_column</span><span class="p">,</span> <span class="n">bindparam</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;postgresql://scott:tiger@localhost/test&quot;</span><span class="p">,</span> <span class="n">echo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">e</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+<span class="gp">... </span>     <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+<span class="gp">... </span>         <span class="n">select</span><span class="p">([</span><span class="n">literal_column</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)])</span><span class="o">.</span>
+<span class="gp">... </span>         <span class="n">where</span><span class="p">(</span><span class="n">literal_column</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">in_</span><span class="p">(</span><span class="n">bindparam</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="n">expanding</span><span class="o">=</span><span class="kc">True</span><span class="p">))),</span>
+<span class="gp">... </span>         <span class="n">q</span><span class="o">=</span><span class="p">[]</span>
+<span class="gp">... </span>     <span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">SELECT 1 WHERE 1 IN (SELECT CAST(NULL AS INTEGER) WHERE 1!=1)</span></pre></div>
+</div>
+<p>The feature also works for tuple-oriented IN statements, where the &quot;empty IN&quot;
+expression will be expanded to support the elements given inside the tuple,
+such as on Postgresql:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">select</span><span class="p">,</span> <span class="n">literal_column</span><span class="p">,</span> <span class="n">tuple_</span><span class="p">,</span> <span class="n">bindparam</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;postgresql://scott:tiger@localhost/test&quot;</span><span class="p">,</span> <span class="n">echo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">e</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+<span class="gp">... </span>     <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+<span class="gp">... </span>         <span class="n">select</span><span class="p">([</span><span class="n">literal_column</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)])</span><span class="o">.</span>
+<span class="gp">... </span>         <span class="n">where</span><span class="p">(</span><span class="n">tuple_</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;somestring&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">in_</span><span class="p">(</span><span class="n">bindparam</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="n">expanding</span><span class="o">=</span><span class="kc">True</span><span class="p">))),</span>
+<span class="gp">... </span>         <span class="n">q</span><span class="o">=</span><span class="p">[]</span>
+<span class="gp">... </span>     <span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">SELECT 1 WHERE (%(param_1)s, %(param_2)s)</span>
+<span class="go">IN (SELECT CAST(NULL AS INTEGER), CAST(NULL AS VARCHAR) WHERE 1!=1)</span></pre></div>
+</div>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/4271">#4271</a></p>
+</div>
+<div class="section" id="typeengine-methods-bind-expression-column-expression-work-with-variant-type-specific-types">
+<span id="change-3981"></span><h3>TypeEngine methods bind_expression, column_expression work with Variant, type-specific types<a class="headerlink" href="#typeengine-methods-bind-expression-column-expression-work-with-variant-type-specific-types" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The <a class="reference internal" href="../core/type_api.html#sqlalchemy.types.TypeEngine.bind_expression" title="sqlalchemy.types.TypeEngine.bind_expression"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TypeEngine.bind_expression()</span></code></a> and <a class="reference internal" href="../core/type_api.html#sqlalchemy.types.TypeEngine.column_expression" title="sqlalchemy.types.TypeEngine.column_expression"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TypeEngine.column_expression()</span></code></a> methods
+now work when they are present on the &quot;impl&quot; of a particular datatype, allowing these methods
+to be used by dialects as well as for <a class="reference internal" href="../core/custom_types.html#sqlalchemy.types.TypeDecorator" title="sqlalchemy.types.TypeDecorator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeDecorator</span></code></a> and <a class="reference internal" href="../core/type_api.html#sqlalchemy.types.Variant" title="sqlalchemy.types.Variant"><code class="xref py py-class docutils literal notranslate"><span class="pre">Variant</span></code></a> use cases.</p>
+<p>The following example illustrates a <a class="reference internal" href="../core/custom_types.html#sqlalchemy.types.TypeDecorator" title="sqlalchemy.types.TypeDecorator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeDecorator</span></code></a> that applies SQL-time conversion
+functions to a <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.LargeBinary" title="sqlalchemy.types.LargeBinary"><code class="xref py py-class docutils literal notranslate"><span class="pre">LargeBinary</span></code></a>.   In order for this type to work in the
+context of a <a class="reference internal" href="../core/type_api.html#sqlalchemy.types.Variant" title="sqlalchemy.types.Variant"><code class="xref py py-class docutils literal notranslate"><span class="pre">Variant</span></code></a>, the compiler needs to drill into the &quot;impl&quot; of the
+variant expression in order to locate these methods:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">TypeDecorator</span><span class="p">,</span> <span class="n">LargeBinary</span><span class="p">,</span> <span class="n">func</span>
+
+<span class="k">class</span> <span class="nc">CompressedLargeBinary</span><span class="p">(</span><span class="n">TypeDecorator</span><span class="p">):</span>
+    <span class="n">impl</span> <span class="o">=</span> <span class="n">LargeBinary</span>
+
+    <span class="k">def</span> <span class="nf">bind_expression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bindvalue</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">func</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">bindvalue</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">column_expression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">func</span><span class="o">.</span><span class="n">uncompress</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+
+<span class="n">MyLargeBinary</span> <span class="o">=</span> <span class="n">LargeBinary</span><span class="p">()</span><span class="o">.</span><span class="n">with_variant</span><span class="p">(</span><span class="n">CompressedLargeBinary</span><span class="p">(),</span> <span class="s2">&quot;sqlite&quot;</span><span class="p">)</span></pre></div>
+</div>
+<p>The above expression will render a function within SQL when used on SQlite only:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">select</span><span class="p">,</span> <span class="n">column</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.dialects</span> <span class="k">import</span> <span class="n">sqlite</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">select</span><span class="p">([</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">CompressedLargeBinary</span><span class="p">)])</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">dialect</span><span class="o">=</span><span class="n">sqlite</span><span class="o">.</span><span class="n">dialect</span><span class="p">()))</span></pre></div>
+</div>
+<p>will render:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">uncompress</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="n">AS</span> <span class="n">x</span></pre></div>
+</div>
+<p>The change also includes that dialects can implement
+<a class="reference internal" href="../core/type_api.html#sqlalchemy.types.TypeEngine.bind_expression" title="sqlalchemy.types.TypeEngine.bind_expression"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TypeEngine.bind_expression()</span></code></a> and <a class="reference internal" href="../core/type_api.html#sqlalchemy.types.TypeEngine.column_expression" title="sqlalchemy.types.TypeEngine.column_expression"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TypeEngine.column_expression()</span></code></a>
+on dialect-level implementation types where they will now be used; in
+particular this will be used for MySQL's new &quot;binary prefix&quot; requirement as
+well as for casting decimal bind values for MySQL.</p>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/3981">#3981</a></p>
+</div>
+<div class="section" id="new-last-in-first-out-strategy-for-queuepool">
+<span id="change-pr467"></span><h3>New last-in-first-out strategy for QueuePool<a class="headerlink" href="#new-last-in-first-out-strategy-for-queuepool" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The connection pool usually used by <a class="reference internal" href="../core/engines.html#sqlalchemy.create_engine" title="sqlalchemy.create_engine"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_engine()</span></code></a> is known
+as <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.QueuePool" title="sqlalchemy.pool.QueuePool"><code class="xref py py-class docutils literal notranslate"><span class="pre">QueuePool</span></code></a>.  This pool uses an object equivalent to Python's
+built-in <code class="docutils literal notranslate"><span class="pre">Queue</span></code> class in order to store database connections waiting
+to be used.   The <code class="docutils literal notranslate"><span class="pre">Queue</span></code> features first-in-first-out behavior, which is
+intended to provide a round-robin use of the database connections that are
+persistently in the pool.   However, a potential downside of this is that
+when the utilization of the pool is low, the re-use of each connection in series
+means that a server-side timeout strategy that attempts to reduce unused
+connections is prevented from shutting down these connections.   To suit
+this use case, a new flag <a class="reference internal" href="../core/engines.html#sqlalchemy.create_engine.params.pool_use_lifo" title="sqlalchemy.create_engine"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">create_engine.pool_use_lifo</span></code></a> is added
+which reverses the <code class="docutils literal notranslate"><span class="pre">.get()</span></code> method of the <code class="docutils literal notranslate"><span class="pre">Queue</span></code> to pull the connection
+from the beginning of the queue instead of the end, essentially turning the
+&quot;queue&quot; into a &quot;stack&quot; (adding a whole new pool called <code class="docutils literal notranslate"><span class="pre">StackPool</span></code> was
+considered, however this was too much verbosity).</p>
+<div class="admonition seealso">
+<p class="first admonition-title">参考</p>
+<p class="last"><a class="reference internal" href="../core/pooling.html#pool-use-lifo"><span class="std std-ref">Using FIFO vs. LIFO</span></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="key-behavioral-changes-core">
+<h2>Key Behavioral Changes - Core<a class="headerlink" href="#key-behavioral-changes-core" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="dialect-improvements-and-changes-postgresql">
+<h2>Dialect Improvements and Changes - PostgreSQL<a class="headerlink" href="#dialect-improvements-and-changes-postgresql" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="added-basic-reflection-support-for-postgresql-paritioned-tables">
+<span id="change-4237"></span><h3>Added basic reflection support for Postgresql paritioned tables<a class="headerlink" href="#added-basic-reflection-support-for-postgresql-paritioned-tables" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SQLAlchemy can render the &quot;PARTITION BY&quot; sequnce within a Postgresql
+CREATE TABLE statement using the flag <code class="docutils literal notranslate"><span class="pre">postgresql_partition_by</span></code>, added in
+version 1.2.6.    However, the <code class="docutils literal notranslate"><span class="pre">'p'</span></code> type was not part of the reflection
+queries used until now.</p>
+<p>Given a schema such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dv</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span>
+    <span class="s1">&#39;data_values&#39;</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span>
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;modulus&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">30</span><span class="p">)),</span>
+    <span class="n">postgresql_partition_by</span><span class="o">=</span><span class="s1">&#39;range(modulus)&#39;</span><span class="p">)</span>
+
+<span class="n">sa</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span>
+    <span class="n">dv</span><span class="p">,</span>
+    <span class="s2">&quot;after_create&quot;</span><span class="p">,</span>
+    <span class="n">sa</span><span class="o">.</span><span class="n">DDL</span><span class="p">(</span>
+        <span class="s2">&quot;CREATE TABLE data_values_4_10 PARTITION OF data_values &quot;</span>
+        <span class="s2">&quot;FOR VALUES FROM (4) TO (10)&quot;</span><span class="p">)</span>
+<span class="p">)</span></pre></div>
+</div>
+<p>The two table names <code class="docutils literal notranslate"><span class="pre">'data_values'</span></code> and <code class="docutils literal notranslate"><span class="pre">'data_values_4_10'</span></code> will come
+back from <a class="reference internal" href="../core/reflection.html#sqlalchemy.engine.reflection.Inspector.get_table_names" title="sqlalchemy.engine.reflection.Inspector.get_table_names"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Inspector.get_table_names()</span></code></a> and additionally the columns
+will come back from <code class="docutils literal notranslate"><span class="pre">Inspector.get_columns('data_values')</span></code> as well
+as <code class="docutils literal notranslate"><span class="pre">Inspector.get_columns('data_values_4_10')</span></code>.   This also extends to the
+use of <code class="docutils literal notranslate"><span class="pre">Table(...,</span> <span class="pre">autoload=True)</span></code> with these tables.</p>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/4237">#4237</a></p>
+</div>
+</div>
+<div class="section" id="dialect-improvements-and-changes-mysql">
+<h2>Dialect Improvements and Changes - MySQL<a class="headerlink" href="#dialect-improvements-and-changes-mysql" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="protocol-level-ping-now-used-for-pre-ping">
+<span id="change-mysql-ping"></span><h3>Protocol-level ping now used for pre-ping<a class="headerlink" href="#protocol-level-ping-now-used-for-pre-ping" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The MySQL dialects including mysqlclient, python-mysql, PyMySQL and
+mysql-connector-python now use the <code class="docutils literal notranslate"><span class="pre">connection.ping()</span></code> method for the
+pool pre-ping feature, described at <a class="reference internal" href="../core/pooling.html#pool-disconnects-pessimistic"><span class="std std-ref">Disconnect Handling - Pessimistic</span></a>.
+This is a much more lightweight ping than the previous method of emitting
+&quot;SELECT 1&quot; on the connection.</p>
+</div>
+<div class="section" id="control-of-parameter-ordering-within-on-duplicate-key-update">
+<span id="change-mysql-ondupordering"></span><h3>Control of parameter ordering within ON DUPLICATE KEY UPDATE<a class="headerlink" href="#control-of-parameter-ordering-within-on-duplicate-key-update" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The order of UPDATE parameters in the <code class="docutils literal notranslate"><span class="pre">ON</span> <span class="pre">DUPLICATE</span> <span class="pre">KEY</span> <span class="pre">UPDATE</span></code> clause
+can now be explcitly ordered by passing a list of 2-tuples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.dialects.mysql</span> <span class="k">import</span> <span class="n">insert</span>
+
+<span class="n">insert_stmt</span> <span class="o">=</span> <span class="n">insert</span><span class="p">(</span><span class="n">my_table</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">(</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;some_existing_id&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="s1">&#39;inserted value&#39;</span><span class="p">)</span>
+
+<span class="n">on_duplicate_key_stmt</span> <span class="o">=</span> <span class="n">insert_stmt</span><span class="o">.</span><span class="n">on_duplicate_key_update</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;some data&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;updated_at&quot;</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="n">current_timestamp</span><span class="p">()),</span>
+    <span class="p">],</span>
+<span class="p">)</span></pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">参考</p>
+<p class="last"><a class="reference internal" href="../dialects/mysql.html#mysql-insert-on-duplicate-key-update"><span class="std std-ref">INSERT...ON DUPLICATE KEY UPDATE (Upsert)</span></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="dialect-improvements-and-changes-sqlite">
+<h2>Dialect Improvements and Changes - SQLite<a class="headerlink" href="#dialect-improvements-and-changes-sqlite" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="support-for-sqlite-json-added">
+<span id="change-3850"></span><h3>Support for SQLite JSON Added<a class="headerlink" href="#support-for-sqlite-json-added" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>A new datatype <a class="reference internal" href="../dialects/sqlite.html#sqlalchemy.dialects.sqlite.JSON" title="sqlalchemy.dialects.sqlite.JSON"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlite.JSON</span></code></a> is added which implements SQLite's json
+member access functions on behalf of the <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.JSON" title="sqlalchemy.types.JSON"><code class="xref py py-class docutils literal notranslate"><span class="pre">types.JSON</span></code></a>
+base datatype.  The SQLite <code class="docutils literal notranslate"><span class="pre">JSON_EXTRACT</span></code> and <code class="docutils literal notranslate"><span class="pre">JSON_QUOTE</span></code> functions
+are used by the implementation to provide basic JSON support.</p>
+<p>Note that the name of the datatype itself as rendered in the database is
+the name &quot;JSON&quot;.   This will create a SQLite datatype with &quot;numeric&quot; affinity,
+which normally should not be an issue except in the case of a JSON value that
+consists of single integer value.  Nevertheless, following an example
+in SQLite's own documentation at <a class="reference external" href="https://www.sqlite.org/json1.html">https://www.sqlite.org/json1.html</a> the name
+JSON is being used for its familiarity.</p>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/3850">#3850</a></p>
+</div>
+</div>
+<div class="section" id="dialect-improvements-and-changes-oracle">
+<h2>Dialect Improvements and Changes - Oracle<a class="headerlink" href="#dialect-improvements-and-changes-oracle" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="national-char-datatypes-de-emphasized-for-generic-unicode-re-enabled-with-option">
+<span id="change-4242"></span><h3>National char datatypes de-emphasized for generic unicode, re-enabled with option<a class="headerlink" href="#national-char-datatypes-de-emphasized-for-generic-unicode-re-enabled-with-option" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.Unicode" title="sqlalchemy.types.Unicode"><code class="xref py py-class docutils literal notranslate"><span class="pre">Unicode</span></code></a> and <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.UnicodeText" title="sqlalchemy.types.UnicodeText"><code class="xref py py-class docutils literal notranslate"><span class="pre">UnicodeText</span></code></a> datatypes by default now
+correspond to the <code class="docutils literal notranslate"><span class="pre">VARCHAR2</span></code> and <code class="docutils literal notranslate"><span class="pre">CLOB</span></code> datatypes on Oracle, rather than
+<code class="docutils literal notranslate"><span class="pre">NVARCHAR2</span></code> and <code class="docutils literal notranslate"><span class="pre">NCLOB</span></code> (otherwise known as &quot;national&quot; character set
+types).  This will be seen in behaviors such  as that of how they render in
+<code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> statements, as well as that no type object will be passed to
+<code class="docutils literal notranslate"><span class="pre">setinputsizes()</span></code> when bound parameters using <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.Unicode" title="sqlalchemy.types.Unicode"><code class="xref py py-class docutils literal notranslate"><span class="pre">Unicode</span></code></a> or
+<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.UnicodeText" title="sqlalchemy.types.UnicodeText"><code class="xref py py-class docutils literal notranslate"><span class="pre">UnicodeText</span></code></a> are used; cx_Oracle handles the string value natively.
+This change is based on advice from cx_Oracle's maintainer that the &quot;national&quot;
+datatypes in Oracle are largely obsolete and are not performant.   They also
+interfere in some situations such as when applied to the format specifier for
+functions like <code class="docutils literal notranslate"><span class="pre">trunc()</span></code>.</p>
+<p>The one case where <code class="docutils literal notranslate"><span class="pre">NVARCHAR2</span></code> and related types may be needed is for a
+database that is not using a Unicode-compliant character set.  In this case,
+the flag <code class="docutils literal notranslate"><span class="pre">use_nchar_for_unicode</span></code> can be passed to <a class="reference internal" href="../core/engines.html#sqlalchemy.create_engine" title="sqlalchemy.create_engine"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_engine()</span></code></a> to
+re-enable the old behavior.</p>
+<p>As always, using the <code class="xref py py-class docutils literal notranslate"><span class="pre">oracle.NVARCHAR2</span></code> and <a class="reference internal" href="../dialects/oracle.html#sqlalchemy.dialects.oracle.NCLOB" title="sqlalchemy.dialects.oracle.NCLOB"><code class="xref py py-class docutils literal notranslate"><span class="pre">oracle.NCLOB</span></code></a>
+datatypes explicitly will continue to make use of <code class="docutils literal notranslate"><span class="pre">NVARCHAR2</span></code> and <code class="docutils literal notranslate"><span class="pre">NCLOB</span></code>,
+including within DDL as well as when handling bound parameters with cx_Oracle's
+<code class="docutils literal notranslate"><span class="pre">setinputsizes()</span></code>.</p>
+<p>On the read side, automatic Unicode conversion under Python 2 has been added to
+CHAR/VARCHAR/CLOB result rows, to match the behavior of cx_Oracle under Python
+3.  In order to mitigate the performance hit that the cx_Oracle dialect  had
+previously with this behavior under Python 2, SQLAlchemy's very performant
+(when C extensions are built) native Unicode handlers are used under Python 2.
+The automatic unicode coercion can be disabled by setting the
+<code class="docutils literal notranslate"><span class="pre">coerce_to_unicode</span></code> flag to False. This flag now defaults to True and applies
+to all string data returned in a result set that isn't explicitly under
+<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.Unicode" title="sqlalchemy.types.Unicode"><code class="xref py py-class docutils literal notranslate"><span class="pre">Unicode</span></code></a> or Oracle's NVARCHAR2/NCHAR/NCLOB datatypes.</p>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/4242">#4242</a></p>
+</div>
+</div>
+<div class="section" id="dialect-improvements-and-changes-sql-server">
+<h2>Dialect Improvements and Changes - SQL Server<a class="headerlink" href="#dialect-improvements-and-changes-sql-server" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="support-for-pyodbc-fast-executemany">
+<span id="change-4158"></span><h3>Support for pyodbc fast_executemany<a class="headerlink" href="#support-for-pyodbc-fast-executemany" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Pyodbc's recently added &quot;fast_executemany&quot; mode, available when using the
+Microsoft ODBC driver, is now an option for the pyodbc / mssql dialect.
+Pass it via <a class="reference internal" href="../core/engines.html#sqlalchemy.create_engine" title="sqlalchemy.create_engine"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_engine()</span></code></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span>
+    <span class="s2">&quot;mssql+pyodbc://scott:tiger@mssql2017:1433/test?driver=ODBC+Driver+13+for+SQL+Server&quot;</span><span class="p">,</span>
+    <span class="n">fast_executemany</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">参考</p>
+<p class="last"><a class="reference internal" href="../dialects/mssql.html#mssql-pyodbc-fastexecutemany"><span class="std std-ref">Fast Executemany Mode</span></a></p>
+</div>
+<p><a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/4158">#4158</a></p>
+</div>
+</div>
+</div>
+
+    </div>
+
+</div>
+
+<div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
+        Previous:
+        <a href="index.html" title="previous chapter">Changes and Migration</a>
+        Next:
+        <a href="changelog_13.html" title="next chapter">1.3 Changelog</a>
+
+    <div id="docs-copyright">
+        &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
+    </div>
+</div>
+
+</div>
+
+
+
+        
+        
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+          URL_ROOT:    '../',
+          VERSION:     '1.3.0b1',
+          COLLAPSE_MODINDEX: false,
+          FILE_SUFFIX: '.html'
+      };
+    </script>
+
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+    <!-- begin iterate through sphinx environment script_files -->
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- end iterate through sphinx environment script_files -->
+
+    <script type="text/javascript" src="../_static/detectmobile.js"></script>
+    <script type="text/javascript" src="../_static/init.js"></script>
+
+
+    </body>
+</html>
+
+

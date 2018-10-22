@@ -1,0 +1,402 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2007-2018, the SQLAlchemy authors and contributors
+# This file is distributed under the same license as the SQLAlchemy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SQLAlchemy 1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-06 18:59+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../changelog/changelog_13.rst:3
+msgid "1.3 Changelog"
+msgstr ""
+
+#: ../../changelog/changelog_12.rst:786
+msgid ""
+"Added new feature :meth:`.Query.only_return_tuples`.  Causes the "
+":class:`.Query` object to return keyed tuple objects unconditionally even"
+" if the query is against a single entity.   Pull request courtesy Eric "
+"Atkin."
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Added ``.info`` dictionary to the :class:`.InstanceState` class, the "
+"object that comes from calling :func:`.inspect` on a mapped object."
+msgstr ""
+
+#: ../../changelog/unreleased_13:10
+msgid ":ref:`change_4257`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:4
+msgid ""
+"Added new flag :paramref:`.Session.bulk_save_objects.preserve_order` to "
+"the :meth:`.Session.bulk_save_objects` method, which defaults to True. "
+"When set to False, the given mappings will be grouped into inserts and "
+"updates per each object type, to allow for greater opportunities to batch"
+" common operations together.  Pull request courtesy Alessandro Cucci."
+msgstr ""
+
+#: ../../changelog/changelog_12.rst:78
+msgid ""
+"Fixed bug where use of :class:`.Lateral` construct in conjunction with "
+":meth:`.Query.join` as well as :meth:`.Query.select_entity_from` would "
+"not apply clause adaption to the right side of the join.   \"lateral\" "
+"introduces the use case of the right side of a join being correlatable.  "
+"Previously, adaptation of this clause wasn't considered.   Note that in "
+"1.2 only, a selectable introduced by :meth:`.Query.subquery` is still not"
+" adapted due to :ticket:`4304`; the selectable needs to be produced by "
+"the :func:`.select` function to be the right side of the \"lateral\" "
+"join."
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Removed the collection converter used by the :class:`.MappedCollection` "
+"class. This converter was used only to assert that the incoming "
+"dictionary keys matched that of their corresponding objects, and only "
+"during a bulk set operation.  The converter can interfere with a custom "
+"validator or :meth:`.AttributeEvents.bulk_replace` listener that wants to"
+" convert incoming values further.  The ``TypeError`` which would be "
+"raised by this converter when an incoming key didn't match the value is "
+"removed; incoming values during a bulk assignment will be keyed to their "
+"value-generated key, and not the key that's explicitly present in the "
+"dictionary."
+msgstr ""
+
+#: ../../changelog/unreleased_13:15
+msgid ""
+"Overall, @converter is superseded by the "
+":meth:`.AttributeEvents.bulk_replace` event handler added as part of "
+":ticket:`3896`."
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Fixed issue regarding passive_deletes=\"all\", where the foreign key "
+"attribute of an object is maintained with its value even after the object"
+" is removed from its parent collection.  Previously, the unit of work "
+"would set this to NULL even though passive_deletes indicated it should "
+"not be modified."
+msgstr ""
+
+#: ../../changelog/unreleased_13:13
+msgid ":ref:`change_3844`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"An informative exception is re-raised when a primary key value is not "
+"sortable in Python during an ORM flush under Python 3, such as an "
+"``Enum`` that has no ``__lt__()`` method; normally Python 3 raises a "
+"``TypeError`` in this case.   The flush process sorts persistent objects "
+"by primary key in Python so the values must be sortable."
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"The ORM now doubles the \"FOR UPDATE\" clause within the subquery that "
+"renders in conjunction with joined eager loading in some cases, as it has"
+" been observed that MySQL does not lock the rows from a subquery.   This "
+"means the query renders with two FOR UPDATE clauses; note that on some "
+"backends such as Oracle, FOR UPDATE clauses on subqueries are silently "
+"ignored since they are unnecessary.  Additionally, in the case of the "
+"\"OF\" clause used primarily with Postgresql, the FOR UPDATE is rendered "
+"only on the inner subquery when this is used so that the selectable can "
+"be targeted to the table within the SELECT statement."
+msgstr ""
+
+#: ../../changelog/unreleased_13:17
+msgid ":ref:`change_4246`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Fixed long-standing issue in :class:`.Query` where a scalar subquery such"
+" as produced by :meth:`.Query.exists`, :meth:`.Query.as_scalar` and other"
+" derivations from :attr:`.Query.statement` would not correctly be adapted"
+" when used in a new :class:`.Query` that required entity adaptation, such"
+" as when the query were turned into a union, or a from_self(), etc. The "
+"change removes the \"no adaptation\" annotation from the :func:`.select` "
+"object produced by the :attr:`.Query.statement` accessor."
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Fixed bug where declarative would not update the state of the "
+":class:`.Mapper` as far as what attributes were present, when additional "
+"attributes were added or removed after the mapper attribute collections "
+"had already been called and memoized.  Addtionally, a "
+"``NotImplementedError`` is now raised if a fully mapped attribute (e.g. "
+"column, relationship, etc.) is deleted from a class that is currently "
+"mapped, since the mapper will not function correctly if the attribute has"
+" been removed."
+msgstr ""
+
+#: ../../changelog/unreleased_13:4
+msgid ""
+"Added new \"lifo\" mode to :class:`.QueuePool`, typically enabled by "
+"setting the flag :paramref:`.create_engine.pool_use_lifo` to True.   "
+"\"lifo\" mode means the same connection just checked in will be the first"
+" to be checked out again, allowing excess connections to be cleaned up "
+"from the server side during periods of the pool being only partially "
+"utilized.  Pull request courtesy Taem Park."
+msgstr ""
+
+#: ../../changelog/unreleased_13:13
+msgid ":ref:`change_pr467`"
+msgstr ""
+
+#: ../../changelog/unreleased_12:5
+msgid ""
+"Refactored :class:`.SQLCompiler` to expose a "
+":meth:`.SQLCompiler.group_by_clause` method similar to the "
+":meth:`.SQLCompiler.order_by_clause` and "
+":meth:`.SQLCompiler.limit_clause` methods, which can be overridden by "
+"dialects to customize how GROUP BY renders.  Pull request courtesy Samuel"
+" Chou."
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Added new feature :meth:`.FunctionElement.as_comparison` which allows a "
+"SQL function to act as a binary comparison operation that can work within"
+" the ORM."
+msgstr ""
+
+#: ../../changelog/unreleased_13:11
+msgid ":ref:`change_3831`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Added new logic to the \"expanding IN\" bound parameter feature whereby "
+"if the given list is empty, a special \"empty set\" expression that is "
+"specific to different backends is generated, thus allowing IN expressions"
+" to be fully dynamic including empty IN expressions."
+msgstr ""
+
+#: ../../changelog/unreleased_13:12
+msgid ":ref:`change_4271`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:4
+msgid ""
+"The Python builtin ``dir()`` is now supported for a SQLAlchemy "
+"\"properties\" object, such as that of a Core columns collection (e.g. "
+"``.c``), ``mapper.attrs``, etc.  Allows iPython autocompletion to work as"
+" well. Pull request courtesy Uwe Korn."
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Fixed issue with :meth:`.TypeEngine.bind_expression` and "
+":meth:`.TypeEngine.column_expression` methods where these methods would "
+"not work if the target type were part of a :class:`.Variant`, or other "
+"target type of a :class:`.TypeDecorator`.  Additionally, the SQL compiler"
+" now calls upon the dialect-level implementation when it renders these "
+"methods so that dialects can now provide for SQL-level processing for "
+"built-in types."
+msgstr ""
+
+#: ../../changelog/unreleased_13:15
+msgid ":ref:`change_3981`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Added \"like\" based operators as \"comparison\" operators, including "
+":meth:`.ColumnOperators.startswith` :meth:`.ColumnOperators.endswith` "
+":meth:`.ColumnOperators.ilike` :meth:`.ColumnOperators.notilike` among "
+"many others, so that all of these operators can be the basis for an ORM "
+"\"primaryjoin\" condition."
+msgstr ""
+
+#: ../../changelog/changelog_12.rst:646
+msgid ""
+"Added new PG type :class:`.postgresql.REGCLASS` which assists in casting "
+"table names to OID values.  Pull request courtesy Sebastian Bank."
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Added rudimental support for reflection of Postgresql partitioned tables,"
+" e.g. that relkind='p' is added to reflection queries that return table "
+"information."
+msgstr ""
+
+#: ../../changelog/unreleased_13:11
+msgid ":ref:`change_4237`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Support added for the \"WITH PARSER\" syntax of CREATE FULLTEXT INDEX in "
+"MySQL, using the ``mysql_with_parser`` keyword argument.  Reflection is "
+"also supported, which accommodates MySQL's special comment format for "
+"reporting on this option as well.  Additionally, the \"FULLTEXT\" and "
+"\"SPATIAL\" index prefixes are now reflected back into the "
+"``mysql_prefix`` index option."
+msgstr ""
+
+#: ../../changelog/unreleased_13:4
+msgid ""
+"The \"pre-ping\" feature of the connection pool now uses the ``ping()`` "
+"method of the DBAPI connection in the case of mysqlclient, PyMySQL and "
+"mysql-connector-python.  Pull request courtesy Maxim Bublis."
+msgstr ""
+
+#: ../../changelog/unreleased_13:11
+msgid ":ref:`change_mysql_ping`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:4
+msgid ""
+"Added support for the parameters in an ON DUPLICATE KEY UPDATE statement "
+"on MySQL to be ordered, since parameter order in a MySQL UPDATE clause is"
+" significant, in a similar manner as that described at "
+":ref:`updates_order_parameters`.  Pull request courtesy Maxim Bublis."
+msgstr ""
+
+#: ../../changelog/unreleased_13:11
+msgid ":ref:`change_mysql_ondupordering`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Added support for SQLite's json functionality via the new SQLite "
+"implementation for :class:`.types.JSON`, :class:`.sqlite.JSON`. The name "
+"used for the type is ``JSON``, following an example found at SQLite's own"
+" documentation. Pull request courtesy Ilja Everilä."
+msgstr ""
+
+#: ../../changelog/unreleased_13:12
+msgid ":ref:`change_3850`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Added ``fast_executemany=True`` parameter to the SQL Server pyodbc "
+"dialect, which enables use of pyodbc's new performance feature of the "
+"same name when using Microsoft ODBC drivers."
+msgstr ""
+
+#: ../../changelog/unreleased_13:11
+msgid ":ref:`change_4158`"
+msgstr ""
+
+#: ../../changelog/changelog_12.rst:308
+msgid ""
+"Added a new event currently used only by the cx_Oracle dialect, "
+":meth:`.DialectEvents.setiputsizes`.  The event passes a dictionary of "
+":class:`.BindParameter` objects to DBAPI-specific type objects that will "
+"be passed, after conversion to parameter names, to the cx_Oracle "
+"``cursor.setinputsizes()`` method.  This allows both visibility into the "
+"setinputsizes process as well as the ability to alter the behavior of "
+"what datatypes are passed to this method."
+msgstr ""
+
+#: ../../changelog/changelog_12.rst:318
+msgid ":ref:`cx_oracle_setinputsizes`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"The Oracle dialect will no longer use the NCHAR/NCLOB datatypes represent"
+" generic unicode strings or clob fields in conjunction with "
+":class:`.Unicode` and :class:`.UnicodeText` unless the flag "
+"``use_nchar_for_unicode=True`` is passed to :func:`.create_engine` - this"
+" includes CREATE TABLE behavior as well as ``setinputsizes()`` for bound "
+"parameters.   On the read side, automatic Unicode conversion under Python"
+" 2 has been added to CHAR/VARCHAR/CLOB result rows, to match the behavior"
+" of cx_Oracle under Python 3.  In order to mitigate the performance hit "
+"under Python 2, SQLAlchemy's very performant (when C extensions are "
+"built) native Unicode handlers are used under Python 2."
+msgstr ""
+
+#: ../../changelog/unreleased_13:18
+msgid ":ref:`change_4242`"
+msgstr ""
+
+#: ../../changelog/changelog_12.rst:342
+msgid ""
+"Added new attribute :attr:`.Query.lazy_loaded_from` which is populated "
+"with an :class:`.InstanceState` that is using this :class:`.Query` in "
+"order to lazy load a relationship.  The rationale for this is that it "
+"serves as a hint for the horizontal sharding feature to use, such that "
+"the identity token of the state can be used as the default identity token"
+" to use for the query within id_chooser()."
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Added support for bulk :meth:`.Query.update` and :meth:`.Query.delete` to"
+" the :class:`.ShardedQuery` class within the horiziontal sharding "
+"extension.  This also adds an additional expansion hook to the bulk "
+"update/delete methods :meth:`.Query._execute_crud`."
+msgstr ""
+
+#: ../../changelog/unreleased_13:12
+msgid ":ref:`change_4196`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Added new feature :meth:`.BakedQuery.to_query`, which allows for a clean "
+"way of using one :class:`.BakedQuery` as a subquery inside of another "
+":class:`.BakedQuery` without needing to refer explicitly to a "
+":class:`.Session`."
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Reworked :class:`.AssociationProxy` to store state that's specific to a "
+"parent class in a separate object, so that a single "
+":class:`.AssocationProxy` can serve for multiple parent classes, as is "
+"intrinsic to inheritance, without any ambiguity in the state returned by "
+"it. A new method :meth:`.AssociationProxy.for_class` is added to allow "
+"inspection of class-specific state."
+msgstr ""
+
+#: ../../changelog/unreleased_13:14
+msgid ":ref:`change_3423`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"The long-standing behavior of the association proxy collection "
+"maintaining only a weak reference to the parent object is reverted; the "
+"proxy will now maintain a strong reference to the parent for as long as "
+"the proxy collection itself is also in memory, eliminating the \"stale "
+"association proxy\" error. This change is being made on an experimental "
+"basis to see if any use cases arise where it causes side effects."
+msgstr ""
+
+#: ../../changelog/unreleased_13:14
+msgid ":ref:`change_4268`"
+msgstr ""
+
+#: ../../changelog/unreleased_13:5
+msgid ""
+"Fixed multiple issues regarding de-association of scalar objects with the"
+" association proxy.  ``del`` now works, and additionally a new flag "
+":paramref:`.AssociationProxy.cascade_scalar_deletes` is added, which when"
+" set to True indicates that setting a scalar attribute to ``None`` or "
+"deleting via ``del`` will also set the source association to ``None``."
+msgstr ""
+
+#: ../../changelog/unreleased_13:13
+msgid ":ref:`change_4308`"
+msgstr ""
+
