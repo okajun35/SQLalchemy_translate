@@ -10,7 +10,7 @@
         <title>
             
     
-    Alternate Class Instrumentation
+    代替クラスの計装
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../../search.html" />
         <link rel="copyright" title="Copyright" href="../../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../../index.html" />
-        <link rel="up" title="ORM Extensions" href="index.html" />
-        <link rel="next" title="ORM Examples" href="../examples.html" />
-        <link rel="prev" title="Indexable" href="indexable.html" />
+        <link rel="up" title="ORM拡張" href="index.html" />
+        <link rel="next" title="ORMの例" href="../examples.html" />
+        <link rel="prev" title="インデックス作成可能" href="indexable.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,29 +120,29 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="../tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="index.html">ORM Extensions</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="associationproxy.html">Association Proxy</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="automap.html">Automap</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="baked.html">Baked Queries</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="declarative/index.html">Declarative</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mutable.html">Mutation Tracking</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="orderinglist.html">Ordering List</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="horizontal_shard.html">Horizontal Sharding</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="hybrid.html">Hybrid Attributes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="indexable.html">Indexable</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Alternate Class Instrumentation</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#api-reference">API Reference</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="index.html">ORM拡張</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="associationproxy.html">アソシエーションプロキシ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="automap.html">オートマップ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="baked.html">焼いたクエリ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="declarative/index.html">宣言的</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mutable.html">突然変異の追跡</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="orderinglist.html">オーダーリスト</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="horizontal_shard.html">水平シャーディング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="hybrid.html">ハイブリッド属性</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="indexable.html">インデックス作成可能</a></span></li>
+<li class="selected"><span class="link-container first"><strong>代替クラスの計装</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#api-reference">APIリファレンス</a></span></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="../examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -158,83 +158,51 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="module-sqlalchemy.ext.instrumentation">
-<span id="alternate-class-instrumentation"></span><span id="instrumentation-toplevel"></span><h1>Alternate Class Instrumentation<a class="headerlink" href="#module-sqlalchemy.ext.instrumentation" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Extensible class instrumentation.</p>
-<p>The <a class="reference internal" href="#module-sqlalchemy.ext.instrumentation" title="sqlalchemy.ext.instrumentation"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.ext.instrumentation</span></code></a> package provides for alternate
-systems of class instrumentation within the ORM.  Class instrumentation
-refers to how the ORM places attributes on the class which maintain
-data and track changes to that data, as well as event hooks installed
-on the class.</p>
+<span id="alternate-class-instrumentation"></span><span id="instrumentation-toplevel"></span><h1>代替クラスの計装<a class="headerlink" href="#module-sqlalchemy.ext.instrumentation" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>拡張可能なクラスの計測。</p>
+<p>：mod： <a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy.ext.instrumentation`パッケージは、ORM内のクラスインストルメンテーションの代替システムを提供します。クラスインストルメンテーションとは、ORMがどのようにデータを保持し、そのデータの変更を追跡するクラスに属性を配置するか、クラスにインストールされたイベントフックを指します。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">The extension package is provided for the benefit of integration
-with other object management packages, which already perform
-their own instrumentation.  It is not intended for general use.</p>
+<p class="last">拡張パッケージは、既に独自の計測を実行している他のオブジェクト管理パッケージとの統合のために提供されています。一般的な使用を意図したものではありません。</p>
 </div>
-<p>For examples of how the instrumentation extension is used,
-see the example <a class="reference internal" href="../examples.html#examples-instrumentation"><span class="std std-ref">Attribute Instrumentation</span></a>.</p>
+<p>インスツルメンテーション拡張の使用例については、例：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>examples_instrumentation`を参照してください。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 0.8 で変更: </span>The <a class="reference internal" href="../events.html#module-sqlalchemy.orm.instrumentation" title="sqlalchemy.orm.instrumentation"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.orm.instrumentation</span></code></a> was split out so
-that all functionality having to do with non-standard
-instrumentation was moved out to <a class="reference internal" href="#module-sqlalchemy.ext.instrumentation" title="sqlalchemy.ext.instrumentation"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.ext.instrumentation</span></code></a>.
-When imported, the module installs itself within
-<a class="reference internal" href="../events.html#module-sqlalchemy.orm.instrumentation" title="sqlalchemy.orm.instrumentation"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.orm.instrumentation</span></code></a> so that it
-takes effect, including recognition of
-<code class="docutils literal"><span class="pre">__sa_instrumentation_manager__</span></code> on mapped classes, as
-well <a class="reference internal" href="#sqlalchemy.ext.instrumentation.instrumentation_finders" title="sqlalchemy.ext.instrumentation.instrumentation_finders"><code class="xref py py-data docutils literal"><span class="pre">instrumentation_finders</span></code></a>
-being used to determine class instrumentation resolution.</p>
+<p><span class="versionmodified">バージョン 0.8 で変更: </span>：mod： <cite>sqlalchemy.orm.instrumentation`は分割されていたので、非標準的な計装と関連するすべての機能がmod：</cite> sqlalchemy.ext.instrumentation`に移されました。モジュールをインポートすると、モジュールは：mod： <cite>sqlalchemy.orm.instrumentation`の中にインストールされ、マップされたクラスでの</cite> <cite>__sa_instrumentation_manager__``の認識も含めて、それが有効になります：data：</cite> .instrumentation_finders`計装分解能。</p>
 </div>
 <div class="section" id="api-reference">
-<h2>API Reference<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>APIリファレンス<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="data">
 <dt id="sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER">
 <code class="descclassname">sqlalchemy.ext.instrumentation.</code><code class="descname">INSTRUMENTATION_MANAGER</code><em class="property"> = '__sa_instrumentation_manager__'</em><a class="headerlink" href="#sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Attribute, elects custom instrumentation when present on a mapped class.</p>
-<p>Allows a class to specify a slightly or wildly different technique for
-tracking changes made to mapped attributes and collections.</p>
-<p>Only one instrumentation implementation is allowed in a given object
-inheritance hierarchy.</p>
-<p>The value of this attribute must be a callable and will be passed a class
-object.  The callable must return one of:</p>
+<dd><p>属性は、マッピングされたクラスに存在する場合、カスタムインストルメンテーションを選択します。</p>
+<p>マップされた属性やコレクションに加えられた変更を追跡するために、クラスが多少違ったやり方で技術を指定できるようにします。</p>
+<p>指定されたオブジェクト継承階層では、インスツルメンテーション実装は1つだけ許可されます。</p>
+<p>この属性の値は呼び出し可能でなければならず、クラスオブジェクトに渡されます。呼び出し可能オブジェクトは、次のいずれかを返す必要があります。</p>
 <blockquote>
 <div><ul class="simple">
-<li>An instance of an InstrumentationManager or subclass</li>
-<li>An object implementing all or some of InstrumentationManager (TODO)</li>
-<li>A dictionary of callables, implementing all or some of the above (TODO)</li>
-<li>An instance of a ClassManager or subclass</li>
+<li>InstrumentationManagerまたはサブクラスのインスタンス</li>
+<li>InstrumentationManager（TODO）のすべてまたは一部を実装するオブジェクトは、</li>
+<li>上記（TODO）のすべてまたは一部を実装した呼び出し可能な辞書</li>
+<li>ClassManagerまたはサブクラスのインスタンス</li>
 </ul>
 </div></blockquote>
-<p>This attribute is consulted by SQLAlchemy instrumentation
-resolution, once the <a class="reference internal" href="#module-sqlalchemy.ext.instrumentation" title="sqlalchemy.ext.instrumentation"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.ext.instrumentation</span></code></a> module
-has been imported.  If custom finders are installed in the global
-instrumentation_finders list, they may or may not choose to honor this
-attribute.</p>
+<p>：mod： <a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy.ext.instrumentation`モジュールがインポートされると、この属性はSQLAlchemyインストルメンテーション解像度によって参照されます。カスタムファインダがグローバルinstrumentation_findersリストにインストールされている場合、この属性を尊重するかどうかは選択できません。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.orm.instrumentation.InstrumentationFactory">
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.instrumentation.</code><code class="descname">InstrumentationFactory</code><a class="headerlink" href="#sqlalchemy.orm.instrumentation.InstrumentationFactory" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Factory for new ClassManager instances.</p>
+<dd><p>新しいClassManagerインスタンスのためのFactory</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.ext.instrumentation.InstrumentationManager">
 <em class="property">class </em><code class="descclassname">sqlalchemy.ext.instrumentation.</code><code class="descname">InstrumentationManager</code><span class="sig-paren">(</span><em>class_</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.instrumentation.InstrumentationManager" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>User-defined class instrumentation extension.</p>
-<p><a class="reference internal" href="#sqlalchemy.ext.instrumentation.InstrumentationManager" title="sqlalchemy.ext.instrumentation.InstrumentationManager"><code class="xref py py-class docutils literal"><span class="pre">InstrumentationManager</span></code></a> can be subclassed in order
-to change
-how class instrumentation proceeds. This class exists for
-the purposes of integration with other object management
-frameworks which would like to entirely modify the
-instrumentation methodology of the ORM, and is not intended
-for regular usage.  For interception of class instrumentation
-events, see <a class="reference internal" href="../events.html#sqlalchemy.orm.events.InstrumentationEvents" title="sqlalchemy.orm.events.InstrumentationEvents"><code class="xref py py-class docutils literal"><span class="pre">InstrumentationEvents</span></code></a>.</p>
-<p>The API for this class should be considered as semi-stable,
-and may change slightly with new releases.</p>
+<dd><p>ユーザー定義のクラス計測拡張。</p>
+<p>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>InstrumentationManager`はクラスの計測がどのように進行するかを変更するためにサブクラス化することができます。このクラスは、ORMの計装方法を完全に変更したい他のオブジェクト管理フレームワークとの統合のために存在し、通常の使用目的ではありません。クラス計測イベントのインターセプトについては、class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.InstrumentationEvents`を参照してください。</p>
+<p>このクラスのAPIは半安定であるとみなされ、新しいリリースではわずかに変更される可能性があります。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 0.8 で変更: </span><a class="reference internal" href="#sqlalchemy.ext.instrumentation.InstrumentationManager" title="sqlalchemy.ext.instrumentation.InstrumentationManager"><code class="xref py py-class docutils literal"><span class="pre">InstrumentationManager</span></code></a> was moved from
-<a class="reference internal" href="../events.html#module-sqlalchemy.orm.instrumentation" title="sqlalchemy.orm.instrumentation"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.orm.instrumentation</span></code></a> to
-<a class="reference internal" href="#module-sqlalchemy.ext.instrumentation" title="sqlalchemy.ext.instrumentation"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.ext.instrumentation</span></code></a>.</p>
+<p><span class="versionmodified">バージョン 0.8 で変更: </span>：class： <cite>.InstrumentationManager`が：mod：</cite> sqlalchemy.orm.instrumentation`から：mod： <a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy.ext.instrumentation`に移動されました。</p>
 </div>
 <dl class="method">
 <dt id="sqlalchemy.ext.instrumentation.InstrumentationManager.dict_getter">
@@ -321,25 +289,16 @@ and may change slightly with new releases.</p>
 <dl class="data">
 <dt id="sqlalchemy.ext.instrumentation.instrumentation_finders">
 <code class="descclassname">sqlalchemy.ext.instrumentation.</code><code class="descname">instrumentation_finders</code><em class="property"> = [&lt;function find_native_user_instrumentation_hook&gt;]</em><a class="headerlink" href="#sqlalchemy.ext.instrumentation.instrumentation_finders" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>An extensible sequence of callables which return instrumentation
-implementations</p>
-<p>When a class is registered, each callable will be passed a class object.
-If None is returned, the
-next finder in the sequence is consulted.  Otherwise the return must be an
-instrumentation factory that follows the same guidelines as
-sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER.</p>
-<p>By default, the only finder is find_native_user_instrumentation_hook, which
-searches for INSTRUMENTATION_MANAGER.  If all finders return None, standard
-ClassManager instrumentation is used.</p>
+<dd><p>インストルメンテーションの実装を返す拡張可能な呼び出し可能なシーケンス</p>
+<p>クラスが登録されると、各呼び出し可能オブジェクトにクラスオブジェクトが渡されます。 Noneが返されると、シーケンス内の次のファインダが参照されます。それ以外の場合は、sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGERと同じガイドラインに従う計測ファクトリである必要があります。</p>
+<p>デフォルトでは、find_native_user_instrumentation_hookのみが検索され、INSTRUMENTATION_MANAGERが検索されます。すべてのファインダがNoneを返すと、標準のClassManager計測が使用されます。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.ext.instrumentation.ExtendedInstrumentationRegistry">
 <em class="property">class </em><code class="descclassname">sqlalchemy.ext.instrumentation.</code><code class="descname">ExtendedInstrumentationRegistry</code><a class="headerlink" href="#sqlalchemy.ext.instrumentation.ExtendedInstrumentationRegistry" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.orm.instrumentation.InstrumentationFactory" title="sqlalchemy.orm.instrumentation.InstrumentationFactory"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.orm.instrumentation.InstrumentationFactory</span></code></a></p>
-<p>Extends <a class="reference internal" href="#sqlalchemy.orm.instrumentation.InstrumentationFactory" title="sqlalchemy.orm.instrumentation.InstrumentationFactory"><code class="xref py py-class docutils literal"><span class="pre">InstrumentationFactory</span></code></a> with additional
-bookkeeping, to accommodate multiple types of
-class managers.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.orm.instrumentation.InstrumentationFactory" title="sqlalchemy.orm.instrumentation.InstrumentationFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.orm.instrumentation.InstrumentationFactory</span></code></a></p>
+<p>複数のタイプのクラスマネージャに対応するために、class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.InstrumentationFactory`を追加の簿記で拡張します。</p>
 </dd></dl>
 
 </div>
@@ -351,13 +310,13 @@ class managers.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="indexable.html" title="previous chapter">Indexable</a>
+        <a href="indexable.html" title="previous chapter">インデックス作成可能</a>
         Next:
-        <a href="../examples.html" title="next chapter">ORM Examples</a>
+        <a href="../examples.html" title="next chapter">ORMの例</a>
 
     <div id="docs-copyright">
         &copy; <a href="../../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -384,6 +343,7 @@ class managers.</p>
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../../_static/detectmobile.js"></script>

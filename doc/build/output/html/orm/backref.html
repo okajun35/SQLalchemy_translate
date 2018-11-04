@@ -10,7 +10,7 @@
         <title>
             
     
-    Linking Relationships with Backref
+    バックリファレンスとの関係のリンク
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Relationship Configuration" href="relationships.html" />
-        <link rel="next" title="Configuring how Relationship Joins" href="join_conditions.html" />
-        <link rel="prev" title="Adjacency List Relationships" href="self_referential.html" />
+        <link rel="up" title="関係の設定" href="relationships.html" />
+        <link rel="next" title="リレーションシップの参加方法のコンフィグレーション" href="join_conditions.html" />
+        <link rel="prev" title="隣接関係リストの関係" href="self_referential.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,27 +120,27 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="basic_relationships.html">Basic Relationship Patterns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="self_referential.html">Adjacency List Relationships</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Linking Relationships with Backref</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#backref-arguments">Backref Arguments</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#one-way-backrefs">One Way Backrefs</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="basic_relationships.html">基本的な関係パターン</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="self_referential.html">隣接関係リストの関係</a></span></li>
+<li class="selected"><span class="link-container first"><strong>バックリファレンスとの関係のリンク</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#backref-arguments">逆引き引数</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#one-way-backrefs">一方的な逆説</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="join_conditions.html">Configuring how Relationship Joins</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="collections.html">Collection Configuration and Techniques</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationship_persistence.html">Special Relationship Persistence Patterns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationship_api.html">Relationships API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="join_conditions.html">リレーションシップの参加方法のコンフィグレーション</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="collections.html">コレクションの構成とテクニック</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationship_persistence.html">特別な関係の永続パターン</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationship_api.html">リレーションシップAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -156,11 +156,9 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="linking-relationships-with-backref">
-<span id="relationships-backref"></span><h1>Linking Relationships with Backref<a class="headerlink" href="#linking-relationships-with-backref" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.backref" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">backref</span></code></a> keyword argument was first introduced in <a class="reference internal" href="tutorial.html"><span class="std std-ref">Object Relational Tutorial</span></a>, and has been
-mentioned throughout many of the examples here.   What does it actually do ?   Let's start
-with the canonical <code class="docutils literal"><span class="pre">User</span></code> and <code class="docutils literal"><span class="pre">Address</span></code> scenario:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Column</span>
+<span id="relationships-backref"></span><h1>バックリファレンスとの関係のリンク<a class="headerlink" href="#linking-relationships-with-backref" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>：paramref： <cite>〜.relationship.backref`キーワード引数は：ref：</cite> ormtutorial_toplevel`で初めて導入されました。ここでは多くの例で言及されています。それは実際に何をしていますか？正式な `` User``と `` Address``シナリオから始めましょう:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Column</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span>
 
@@ -179,14 +177,9 @@ with the canonical <code class="docutils literal"><span class="pre">User</span><
     <span class="n">email</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
     <span class="n">user_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;user.id&#39;</span><span class="p">))</span></pre></div>
 </div>
-<p>The above configuration establishes a collection of <code class="docutils literal"><span class="pre">Address</span></code> objects on <code class="docutils literal"><span class="pre">User</span></code> called
-<code class="docutils literal"><span class="pre">User.addresses</span></code>.   It also establishes a <code class="docutils literal"><span class="pre">.user</span></code> attribute on <code class="docutils literal"><span class="pre">Address</span></code> which will
-refer to the parent <code class="docutils literal"><span class="pre">User</span></code> object.</p>
-<p>In fact, the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.backref" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">backref</span></code></a> keyword is only a common shortcut for placing a second
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> onto the <code class="docutils literal"><span class="pre">Address</span></code> mapping, including the establishment
-of an event listener on both sides which will mirror attribute operations
-in both directions.   The above configuration is equivalent to:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Column</span>
+<p>上記の設定は、 `` User``の `` User.addresses``に `` Address``オブジェクトの集合を確立します。親 `` User``オブジェクトを参照する `` Address``に `` .user``属性を設定します。</p>
+<p>実際、：paramref： <cite>〜.relationship.backref`キーワードは、両側にイベントリスナーを設定することを含め、</cite> <cite>Address``マッピングにfunc：</cite> .relationship`を2番目に配置するための共通のショートカットです両方向の属性操作を反映します。上記の設定は、</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Column</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span>
 
@@ -207,63 +200,32 @@ in both directions.   The above configuration is equivalent to:</p>
 
     <span class="n">user</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;User&quot;</span><span class="p">,</span> <span class="n">back_populates</span><span class="o">=</span><span class="s2">&quot;addresses&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>Above, we add a <code class="docutils literal"><span class="pre">.user</span></code> relationship to <code class="docutils literal"><span class="pre">Address</span></code> explicitly.  On
-both relationships, the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.back_populates" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">back_populates</span></code></a> directive tells each relationship
-about the other one, indicating that they should establish &quot;bidirectional&quot;
-behavior between each other.   The primary effect of this configuration
-is that the relationship adds event handlers to both attributes
-which have the behavior of &quot;when an append or set event occurs here, set ourselves
-onto the incoming attribute using this particular attribute name&quot;.
-The behavior is illustrated as follows.   Start with a <code class="docutils literal"><span class="pre">User</span></code> and an <code class="docutils literal"><span class="pre">Address</span></code>
-instance.  The <code class="docutils literal"><span class="pre">.addresses</span></code> collection is empty, and the <code class="docutils literal"><span class="pre">.user</span></code> attribute
-is <code class="docutils literal"><span class="pre">None</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">()</span>
+<p>上記では、 `` .user``関係を明示的に `` Address``に追加しています。どちらの関係でも、：paramref： <cite>〜.relationship.back_populates`ディレクティブは、それぞれのリレーションシップにそれぞれのリレーションシップを伝えます。この設定の主な効果は、関係がイベントハンドラを両方の属性に追加することです。この属性は、 &amp;quot;追加イベントまたは設定イベントがここで発生した場合、この特定の属性名を使用して受信属性に自分自身を設定する&amp;quot;というふるまいを持ちます。その挙動を以下に示す。 `</cite> User``と `` Address``インスタンスから始めましょう。 `` .addresses``コレクションは空で、 `` .user``属性は `` None``です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span> <span class="o">=</span> <span class="n">Address</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span><span class="o">.</span><span class="n">addresses</span>
 <span class="go">[]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a1</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
 <span class="go">None</span></pre></div>
 </div>
-<p>However, once the <code class="docutils literal"><span class="pre">Address</span></code> is appended to the <code class="docutils literal"><span class="pre">u1.addresses</span></code> collection,
-both the collection and the scalar attribute have been populated:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+<p>しかし、 `` Address``が `` u1.addresses``コレクションに追加されると、コレクション属性とスカラー属性の両方が読み込まれます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span><span class="o">.</span><span class="n">addresses</span>
 <span class="go">[&lt;__main__.Address object at 0x12a6ed0&gt;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span><span class="o">.</span><span class="n">user</span>
 <span class="go">&lt;__main__.User object at 0x12a6590&gt;</span></pre></div>
 </div>
-<p>This behavior of course works in reverse for removal operations as well, as well
-as for equivalent operations on both sides.   Such as
-when <code class="docutils literal"><span class="pre">.user</span></code> is set again to <code class="docutils literal"><span class="pre">None</span></code>, the <code class="docutils literal"><span class="pre">Address</span></code> object is removed
-from the reverse collection:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span><span class="o">.</span><span class="n">user</span> <span class="o">=</span> <span class="kc">None</span>
+<p>この動作はもちろん、リバースでも削除操作でも同様の操作が両側で行われます。 `` .user``が `` None``に再び設定された場合など、 `` Address``オブジェクトは逆コレクション::から削除されます</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span><span class="o">.</span><span class="n">user</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span><span class="o">.</span><span class="n">addresses</span>
 <span class="go">[]</span></pre></div>
 </div>
-<p>The manipulation of the <code class="docutils literal"><span class="pre">.addresses</span></code> collection and the <code class="docutils literal"><span class="pre">.user</span></code> attribute
-occurs entirely in Python without any interaction with the SQL database.
-Without this behavior, the proper state would be apparent on both sides once the
-data has been flushed to the database, and later reloaded after a commit or
-expiration operation occurs.  The <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.backref" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">backref</span></code></a>/<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.back_populates" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">back_populates</span></code></a> behavior has the advantage
-that common bidirectional operations can reflect the correct state without requiring
-a database round trip.</p>
-<p>Remember, when the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.backref" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">backref</span></code></a> keyword is used on a single relationship, it's
-exactly the same as if the above two relationships were created individually
-using <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.back_populates" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">back_populates</span></code></a> on each.</p>
+<p>`` .addresses``コレクションと <a href="#id1"><span class="problematic" id="id2">``</span></a>user``属性の操作は、完全にPythonでSQLデータベースとのやりとりなしに行われます。この動作がないと、データがデータベースにフラッシュされた後、コミットまたは期限切れ操作が発生した後に後で再ロードされると、適切な状態が両側で明らかになります。 ：paramref： <cite>〜.relationship.backref</cite> /：paramref：<a href="#id3"><span class="problematic" id="id4">`</span></a>〜.relationship.back_populates`の振る舞いには、一般的な双方向操作がデータベースの往復を必要とせずに正しい状態を反映できるという利点があります。</p>
+<p>注意：paramref： <cite>〜.relationship.backref`キーワードが単一のリレーションシップで使用されている場合、上記の2つのリレーションシップが個別に：paramref：</cite>〜.relationship.back_populates`を使用して個別に作成された場合とまったく同じです。</p>
 <div class="section" id="backref-arguments">
-<h2>Backref Arguments<a class="headerlink" href="#backref-arguments" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>We've established that the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.backref" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">backref</span></code></a> keyword is merely a shortcut for building
-two individual <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> constructs that refer to each other.  Part of
-the behavior of this shortcut is that certain configurational arguments applied to
-the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>
-will also be applied to the other direction - namely those arguments that describe
-the relationship at a schema level, and are unlikely to be different in the reverse
-direction.  The usual case
-here is a many-to-many <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> that has a <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.secondary" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">secondary</span></code></a> argument,
-or a one-to-many or many-to-one which has a <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.primaryjoin" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">primaryjoin</span></code></a> argument (the
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.primaryjoin" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">primaryjoin</span></code></a> argument is discussed in <a class="reference internal" href="join_conditions.html#relationship-primaryjoin"><span class="std std-ref">Specifying Alternate Join Conditions</span></a>).  Such
-as if we limited the list of <code class="docutils literal"><span class="pre">Address</span></code> objects to those which start with &quot;tony&quot;:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Column</span>
+<h2>逆引き引数<a class="headerlink" href="#backref-arguments" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>paramref： <cite>〜.relationship.backref`キーワードは、互いに参照する2つの個別：func：</cite> .relationship`構造を構築するための単なるショートカットです。このショートカットの動作の一部は、：func： <cite>.relationship &amp;#39;に適用される特定の構成引数が、他の方向、つまりスキーマレベルでの関係を記述する引数にも適用され、逆の方向。ここでの通常の場合は：paramref： `〜.relationship.secondary`引数を持つmany-to-many：func：</cite> .relationship`や、以下を持つ1対多または多対1です。 paramref： <cite>〜.relationship.primaryjoin`引数（：paramref：</cite>〜.relationship.primaryjoin`引数は：ref： <cite>relationship_primaryjoin`で議論されています）。 `</cite> Address``オブジェクトのリストを&amp;quot;tony &amp;quot;で始まるものに限定した場合など:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Column</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span>
 
@@ -285,31 +247,17 @@ as if we limited the list of <code class="docutils literal"><span class="pre">Ad
     <span class="n">email</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
     <span class="n">user_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;user.id&#39;</span><span class="p">))</span></pre></div>
 </div>
-<p>We can observe, by inspecting the resulting property, that both sides
-of the relationship have this join condition applied:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">property</span><span class="o">.</span><span class="n">primaryjoin</span><span class="p">)</span>
+<p>結果のプロパティを調べることで、関係の両辺にこの結合条件が適用されていることがわかります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">property</span><span class="o">.</span><span class="n">primaryjoin</span><span class="p">)</span>
 <span class="go">&quot;user&quot;.id = address.user_id AND address.email LIKE :email_1 || &#39;%%&#39;</span>
 <span class="go">&gt;&gt;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Address</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">property</span><span class="o">.</span><span class="n">primaryjoin</span><span class="p">)</span>
 <span class="go">&quot;user&quot;.id = address.user_id AND address.email LIKE :email_1 || &#39;%%&#39;</span>
 <span class="go">&gt;&gt;&gt;</span></pre></div>
 </div>
-<p>This reuse of arguments should pretty much do the &quot;right thing&quot; - it
-uses only arguments that are applicable, and in the case of a many-to-
-many relationship, will reverse the usage of
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.primaryjoin" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">primaryjoin</span></code></a> and
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.secondaryjoin" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">secondaryjoin</span></code></a> to correspond to the other
-direction (see the example in <a class="reference internal" href="join_conditions.html#self-referential-many-to-many"><span class="std std-ref">Self-Referential Many-to-Many Relationship</span></a> for
-this).</p>
-<p>It's very often the case however that we'd like to specify arguments
-that are specific to just the side where we happened to place the
-&quot;backref&quot;. This includes <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> arguments like
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.lazy" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">lazy</span></code></a>,
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.remote_side" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">remote_side</span></code></a>,
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.cascade" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">cascade</span></code></a> and
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.cascade_backrefs" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">cascade_backrefs</span></code></a>.   For this case we use
-the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a> function in place of a string:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># &lt;other imports&gt;</span>
+<p>この引数の再利用は、適切な引数を使用するだけでよく、多対多の関係の場合は、paramref： <cite>〜.relationshipの使い方を逆にします。他の方向に対応するために：paramref： `〜.relationship.secondaryjoin`（これについては：ref：</cite> self_referential_many_to_many`を参照してください）。</p>
+<p>しかし、私たちが&amp;quot;backref &amp;quot;を配置した場所に固有の引数を指定することは非常によくあります。これには：paramref： <cite>〜.relationship.lazy</cite>、：paramref：<cite>〜.relationship.remote_side</cite>、：paramref： <cite>〜.relationship.cascade</cite>、：paramref：<cite>〜のようなfunc： `.relationship`引数が含まれます。 relationship.cascade_backrefs</cite>。この場合、文字列の代わりに：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.backref`関数を使用します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># &lt;other imports&gt;</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">backref</span>
 
 <span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
@@ -320,44 +268,20 @@ the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.bac
     <span class="n">addresses</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Address&quot;</span><span class="p">,</span>
                     <span class="n">backref</span><span class="o">=</span><span class="n">backref</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="s2">&quot;joined&quot;</span><span class="p">))</span></pre></div>
 </div>
-<p>Where above, we placed a <code class="docutils literal"><span class="pre">lazy=&quot;joined&quot;</span></code> directive only on the <code class="docutils literal"><span class="pre">Address.user</span></code>
-side, indicating that when a query against <code class="docutils literal"><span class="pre">Address</span></code> is made, a join to the <code class="docutils literal"><span class="pre">User</span></code>
-entity should be made automatically which will populate the <code class="docutils literal"><span class="pre">.user</span></code> attribute of each
-returned <code class="docutils literal"><span class="pre">Address</span></code>.   The <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a> function formatted the arguments we gave
-it into a form that is interpreted by the receiving <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> as additional
-arguments to be applied to the new relationship it creates.</p>
+<p>上記のところでは、 `` Address.user``側にのみ `` lazy = &amp;quot;join &amp;quot; <cite>ディレクティブを配置しました。これは、</cite> <cite>Address``に対するクエリが行われたときに、</cite> ` `` User``エンティティを自動的に作成して、返された各 `` Address``の `` .user``属性を設定する必要があります。 ：func： <cite>.backref`関数は、与えられた引数を、受け取った：func：</cite> .relationship`によって生成された新しい関係に適用される追加の引数として解釈します。</p>
 </div>
 <div class="section" id="one-way-backrefs">
-<h2>One Way Backrefs<a class="headerlink" href="#one-way-backrefs" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>An unusual case is that of the &quot;one way backref&quot;.   This is where the
-&quot;back-populating&quot; behavior of the backref is only desirable in one
-direction. An example of this is a collection which contains a
-filtering <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.primaryjoin" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">primaryjoin</span></code></a> condition.   We'd
-like to append items to this collection as needed, and have them
-populate the &quot;parent&quot; object on the incoming object. However, we'd
-also like to have items that are not part of the collection, but still
-have the same &quot;parent&quot; association - these items should never be in
-the collection.</p>
-<p>Taking our previous example, where we established a
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.primaryjoin" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">primaryjoin</span></code></a> that limited the collection
-only to <code class="docutils literal"><span class="pre">Address</span></code> objects whose email address started with the word
-<code class="docutils literal"><span class="pre">tony</span></code>, the usual backref behavior is that all items populate in
-both directions.   We wouldn't want this behavior for a case like the
-following:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">()</span>
+<h2>一方的な逆説<a class="headerlink" href="#one-way-backrefs" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>異常なケースは、&amp;quot;一方通行&amp;quot;のものです。これは、バックリファレンスの&amp;quot;バックポピュレート&amp;quot;動作が一方向のみで望ましい場合です。これの例は、フィルタリング：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.relationship.primaryjoin`条件を含むコレクションです。必要に応じてこのコレクションにアイテムを追加し、それらのコレクションに入ってくるオブジェクトに&amp;quot;親オブジェクトを設定したいのですが、コレクションの一部ではないアイテムも持っていますが、同じ&amp;quot;親&amp;quot;の関連付け - これらの項目は決してコレクションに含まれるべきではありません。</p>
+<p>前の例では、電子メールアドレスが `` tony`で始まっている `` Address``オブジェクトだけにコレクションを限定した：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.relationship.primaryjoin`を設定しましたが、通常のバックレファレンスはすべてのアイテムが両方向に読み込まれます。次のようなケースではこの動作が望ましくありません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span> <span class="o">=</span> <span class="n">Address</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="s1">&#39;mary&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span><span class="o">.</span><span class="n">user</span> <span class="o">=</span> <span class="n">u1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span><span class="o">.</span><span class="n">addresses</span>
 <span class="go">[&lt;__main__.Address object at 0x1411910&gt;]</span></pre></div>
 </div>
-<p>Above, the <code class="docutils literal"><span class="pre">Address</span></code> object that doesn't match the criterion of &quot;starts with 'tony'&quot;
-is present in the <code class="docutils literal"><span class="pre">addresses</span></code> collection of <code class="docutils literal"><span class="pre">u1</span></code>.   After these objects are flushed,
-the transaction committed and their attributes expired for a re-load, the <code class="docutils literal"><span class="pre">addresses</span></code>
-collection will hit the database on next access and no longer have this <code class="docutils literal"><span class="pre">Address</span></code> object
-present, due to the filtering condition.   But we can do away with this unwanted side
-of the &quot;backref&quot; behavior on the Python side by using two separate <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> constructs,
-placing <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.back_populates" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">back_populates</span></code></a> only on one side:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Column</span>
+<p>上の例では、 <a href="#id1"><span class="problematic" id="id2">``</span></a>アドレス &amp;#39;`オブジェクトの` <cite>アドレス&amp;#39;`のコレクションに `&amp;#39;tony&amp;#39; で始まる&amp;quot;の基準と一致しません。これらのオブジェクトがフラッシュされ、トランザクションがコミットされ、その属性が再ロードのために期限切れになると、 `</cite> addresses``コレクションは次のアクセス時にデータベースにヒットし、フィルタリングのためにこの `` Address``オブジェクトが存在しなくなります調子。しかし、2つの別々の：func： <cite>.relationship`構造を使用して、paramref：</cite>〜.relationship.back_populates`を一方の側に置くだけで、Python側の&amp;quot;backref &amp;quot;動作のこの不要な部分を取り除くことができます： ：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Column</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span>
 
@@ -379,33 +303,20 @@ placing <a class="reference internal" href="relationship_api.html#sqlalchemy.orm
     <span class="n">user_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;user.id&#39;</span><span class="p">))</span>
     <span class="n">user</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;User&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>With the above scenario, appending an <code class="docutils literal"><span class="pre">Address</span></code> object to the <code class="docutils literal"><span class="pre">.addresses</span></code>
-collection of a <code class="docutils literal"><span class="pre">User</span></code> will always establish the <code class="docutils literal"><span class="pre">.user</span></code> attribute on that
-<code class="docutils literal"><span class="pre">Address</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">()</span>
+<p>上記のシナリオでは、 `` Address``オブジェクトを `` User``の `` .addresses``コレクションに追加すると、その `` Address``に `` .user``属性が設定されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span> <span class="o">=</span> <span class="n">Address</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="s1">&#39;tony&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">u1</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span><span class="o">.</span><span class="n">user</span>
 <span class="go">&lt;__main__.User object at 0x1411850&gt;</span></pre></div>
 </div>
-<p>However, applying a <code class="docutils literal"><span class="pre">User</span></code> to the <code class="docutils literal"><span class="pre">.user</span></code> attribute of an <code class="docutils literal"><span class="pre">Address</span></code>,
-will not append the <code class="docutils literal"><span class="pre">Address</span></code> object to the collection:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a2</span> <span class="o">=</span> <span class="n">Address</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="s1">&#39;mary&#39;</span><span class="p">)</span>
+<p>しかし、 `` Address``の `` .user``属性に `` User``を適用すると `` Address``オブジェクトがコレクションに追加されません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a2</span> <span class="o">=</span> <span class="n">Address</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="s1">&#39;mary&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a2</span><span class="o">.</span><span class="n">user</span> <span class="o">=</span> <span class="n">u1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a2</span> <span class="ow">in</span> <span class="n">u1</span><span class="o">.</span><span class="n">addresses</span>
 <span class="go">False</span></pre></div>
 </div>
-<p>Of course, we've disabled some of the usefulness of
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.backref" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">backref</span></code></a> here, in that when we do append an
-<code class="docutils literal"><span class="pre">Address</span></code> that corresponds to the criteria of
-<code class="docutils literal"><span class="pre">email.startswith('tony')</span></code>, it won't show up in the
-<code class="docutils literal"><span class="pre">User.addresses</span></code> collection until the session is flushed, and the
-attributes reloaded after a commit or expire operation.   While we
-could consider an attribute event that checks this criterion in
-Python, this starts to cross the line of duplicating too much SQL
-behavior in Python.  The backref behavior itself is only a slight
-transgression of this philosophy - SQLAlchemy tries to keep these to a
-minimum overall.</p>
+<p>もちろん、paramref： <cite>〜.relationship.backref`の有用性を無効にしています。これは、</cite> <cite>email.startswith（ &amp;#39;tony&amp;#39;）の基準に対応する</cite> <cite>Address``を追加するときに、 &amp;#39;） ``の場合、セッションがフラッシュされ、コミットまたは期限切れ操作の後に属性がリロードされるまで、 `</cite> User.addresses``コレクションには表示されません。 Pythonでこの基準をチェックするアトリビュートイベントを考えてみることもできますが、これはPythonでSQLの動作を重複させるという行を超えていきます。バックリファレンスの動作自体は、この哲学のわずかな違反です.SQLAlchemyはこれらを最小限に抑えようとしています。</p>
 </div>
 </div>
 
@@ -415,13 +326,13 @@ minimum overall.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="self_referential.html" title="previous chapter">Adjacency List Relationships</a>
+        <a href="self_referential.html" title="previous chapter">隣接関係リストの関係</a>
         Next:
-        <a href="join_conditions.html" title="next chapter">Configuring how Relationship Joins</a>
+        <a href="join_conditions.html" title="next chapter">リレーションシップの参加方法のコンフィグレーション</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -448,6 +359,7 @@ minimum overall.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

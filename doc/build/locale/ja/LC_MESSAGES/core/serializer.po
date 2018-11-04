@@ -6,26 +6,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/serializer.rst:2
 msgid "Expression Serializer Extension"
-msgstr ""
+msgstr "式シリアライザ拡張"
 
 #: of sqlalchemy.ext.serializer:1
 msgid ""
 "Serializer/Deserializer objects for usage with SQLAlchemy query "
 "structures, allowing \"contextual\" deserialization."
-msgstr ""
+msgstr "SQLAlchemyクエリ構造で使用するためのシリアライザ/デシリアライザオブジェクトで、 &quot;コンテキスト上の&quot;デシリアライズが可能です。"
 
 #: of sqlalchemy.ext.serializer:4
 msgid ""
@@ -34,31 +24,31 @@ msgid ""
 " which are referenced by the structure are not persisted in serialized "
 "form, but are instead re-associated with the query structure when it is "
 "deserialized."
-msgstr ""
+msgstr "sqlalchemy.sql。*またはsqlalchemy.orm。*に基づくSQLAlchemyクエリ構造を使用できます。構造体によって参照されるマッパー、テーブル、列、セッションなどは、シリアル化された形式では永続化されませんが、逆シリアル化されたときにクエリ構造体に再関連付けされます。"
 
 #: of sqlalchemy.ext.serializer:10
 msgid "Usage is nearly the same as that of the standard Python pickle module::"
-msgstr ""
+msgstr "使用法は、標準的なPython pickleモジュールの使用法とほぼ同じです::"
 
 #: of sqlalchemy.ext.serializer:29
 msgid ""
 "Similar restrictions as when using raw pickle apply; mapped classes must "
 "be themselves be pickleable, meaning they are importable from a module-"
 "level namespace."
-msgstr ""
+msgstr "生のpickleを適用する場合と同様の制限が適用されます。マップされたクラス自体がpickleableでなければなりません。つまり、モジュールレベルの名前空間からインポート可能です。"
 
 #: of sqlalchemy.ext.serializer:33
 msgid ""
 "The serializer module is only appropriate for query structures.  It is "
 "not needed for:"
-msgstr ""
+msgstr "シリアライザモジュールは、クエリ構造にのみ適しています。それは必要ではありません："
 
 #: of sqlalchemy.ext.serializer:36
 msgid ""
 "instances of user-defined classes.   These contain no references to "
 "engines, sessions or expression constructs in the typical case and can be"
 " serialized directly."
-msgstr ""
+msgstr "ユーザー定義クラスのインスタンスこれらは、典型的なケースでは、エンジン、セッション、または表現構成への参照を含まず、直接シリアル化することができます。"
 
 #: of sqlalchemy.ext.serializer:40
 msgid ""
@@ -68,5 +58,5 @@ msgid ""
 " typically one which was reflected from an existing database at some "
 "previous point in time.  The serializer module is specifically for the "
 "opposite case, where the Table metadata is already present in memory."
-msgstr ""
+msgstr "シリアライズされた構造体から完全にロードされる（つまり、アプリケーションでまだ宣言されていない）テーブルメタデータ。通常のpickle.loads（）/ dumps（）は、以前のある時点で既存のデータベースから反映された &quot;MetaData&quot;オブジェクトを完全にダンプするために使用できます。シリアライザモジュールは、逆の場合に特に適しています。ここでは、テーブルのメタデータがすでにメモリに存在しています。"
 

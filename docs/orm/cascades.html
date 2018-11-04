@@ -10,7 +10,7 @@
         <title>
             
     
-    Cascades
+    カスケード
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Using the Session" href="session.html" />
-        <link rel="next" title="Transactions and Connection Management" href="session_transaction.html" />
-        <link rel="prev" title="State Management" href="session_state_management.html" />
+        <link rel="up" title="セッションの使用" href="session.html" />
+        <link rel="next" title="トランザクションと接続管理" href="session_transaction.html" />
+        <link rel="prev" title="状態管理" href="session_state_management.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,33 +120,33 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="session_basics.html">Session Basics</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session_state_management.html">State Management</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Cascades</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#save-update">save-update</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#delete">delete</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#delete-orphan">delete-orphan</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#merge">merge</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#refresh-expire">refresh-expire</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#expunge">expunge</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#controlling-cascade-on-backrefs">Controlling Cascade on Backrefs</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="session_basics.html">セッションの基礎</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_state_management.html">状態管理</a></span></li>
+<li class="selected"><span class="link-container first"><strong>カスケード</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#save-update">セーブ・アップデート</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#delete">削除</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#delete-orphan">孤児を削除する</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#merge">行きます</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#refresh-expire">リフレッシュ期限切れ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#expunge">消滅</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#controlling-cascade-on-backrefs">後方参照のカスケードの制御</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="session_transaction.html">Transactions and Connection Management</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="persistence_techniques.html">Additional Persistence Techniques</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="contextual.html">Contextual/Thread-local Sessions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session_events.html">Tracking Object and Session Changes with Events</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session_api.html">Session API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_transaction.html">トランザクションと接続管理</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="persistence_techniques.html">追加の永続化手法</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="contextual.html">コンテキスト/スレッドローカルセッション</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_events.html">イベントによるオブジェクトおよびセッションの変更の追跡</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_api.html">セッションAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -162,32 +162,18 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="cascades">
-<span id="unitofwork-cascades"></span><h1>Cascades<a class="headerlink" href="#cascades" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Mappers support the concept of configurable <span class="xref std std-term">cascade</span> behavior on
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> constructs.  This refers
-to how operations performed on a &quot;parent&quot; object relative to a
-particular <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> should be propagated to items
-referred to by that relationship (e.g. &quot;child&quot; objects), and is
-affected by the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.cascade" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">relationship.cascade</span></code></a> option.</p>
-<p>The default behavior of cascade is limited to cascades of the
-so-called <a class="reference internal" href="#cascade-save-update"><span class="std std-ref">save-update</span></a> and <a class="reference internal" href="#cascade-merge"><span class="std std-ref">merge</span></a> settings.
-The typical &quot;alternative&quot; setting for cascade is to add
-the <a class="reference internal" href="#cascade-delete"><span class="std std-ref">delete</span></a> and <a class="reference internal" href="#cascade-delete-orphan"><span class="std std-ref">delete-orphan</span></a> options;
-these settings are appropriate for related objects which only exist as
-long as they are attached to their parent, and are otherwise deleted.</p>
-<p>Cascade behavior is configured using the
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.cascade" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">cascade</span></code></a> option on
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Order</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="unitofwork-cascades"></span><h1>カスケード<a class="headerlink" href="#cascades" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>マッパーは：func： <cite>〜sqlalchemy.orm.relationship`構造体に対して、設定可能：term：</cite> cascade`の動作をサポートしています。これは特定の：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`に関連する&amp;quot;親&amp;quot;オブジェクトに対する操作が、その関係（例えば&amp;quot;子&amp;quot;オブジェクト）によって参照される項目にどのように伝播され、 ：paramref： <a href="#id3"><span class="problematic" id="id4">`</span></a>.relationship.cascade`オプションです。</p>
+<p>カスケードのデフォルト動作は、いわゆる：ref： <cite>cascade_save_update`と：ref：</cite> cascade_merge`設定のカスケードに限定されています。カスケードの典型的な &amp;quot;代替&amp;quot;設定は、：ref： <cite>cascade_delete`と：ref：</cite> cascade_delete_orphan`オプションを追加することです。これらの設定は、親にアタッチされている限り存在し、そうでない場合は削除される関連オブジェクトに適しています。</p>
+<p>カスケードの動作は：func： <cite>〜sqlalchemy.orm.relationship</cite> :: paramref：<a href="#id1"><span class="problematic" id="id2">`</span></a>〜.relationship.cascade`オプションを使って設定します</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Order</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;order&#39;</span>
 
     <span class="n">items</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Item&quot;</span><span class="p">,</span> <span class="n">cascade</span><span class="o">=</span><span class="s2">&quot;all, delete-orphan&quot;</span><span class="p">)</span>
     <span class="n">customer</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;User&quot;</span><span class="p">,</span> <span class="n">cascade</span><span class="o">=</span><span class="s2">&quot;save-update&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>To set cascades on a backref, the same flag can be used with the
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a> function, which ultimately feeds
-its arguments back into <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>バックリファレンスでカスケードを設定するには、同じフラグを：func： <cite>〜.sqlalchemy.orm.backref`関数で使用することができます。これは最終的に引数をfunc：</cite>〜sqlalchemy.orm.relationship` ::に戻します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;item&#39;</span>
 
     <span class="n">order</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Order&quot;</span><span class="p">,</span>
@@ -196,59 +182,31 @@ its arguments back into <a class="reference internal" href="relationship_api.htm
 </div>
 <div class="sidebar">
 <p class="first sidebar-title">The Origins of Cascade</p>
-<p class="last">SQLAlchemy's notion of cascading behavior on relationships,
-as well as the options to configure them, are primarily derived
-from the similar feature in the Hibernate ORM; Hibernate refers
-to &quot;cascade&quot; in a few places such as in
-<a class="reference external" href="https://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/example-parentchild.html">Example: Parent/Child</a>.
-If cascades are confusing, we'll refer to their conclusion,
-stating &quot;The sections we have just covered can be a bit confusing.
-However, in practice, it all works out nicely.&quot;</p>
+<p class="last">SQLAlchemyのリレーションシップに関するカスケード動作の概念とそれらを構成するオプションは、主にHibernate ORMの同様の機能から導出されます。 Hibernateは、「例：親/子」のようないくつかの場所で&amp;quot;カスケード&amp;quot;を参照します。 &lt;<a class="reference external" href="https://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/example-parentchild.html">https://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/example-parentchild.html</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_。カスケードが混乱している場合は、「ここで取り上げたセクションはちょっと混乱するかもしれませんが、実際にはうまくいきます。</p>
 </div>
-<p>The default value of <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.cascade" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">cascade</span></code></a> is <code class="docutils literal"><span class="pre">save-update,</span> <span class="pre">merge</span></code>.
-The typical alternative setting for this parameter is either
-<code class="docutils literal"><span class="pre">all</span></code> or more commonly <code class="docutils literal"><span class="pre">all,</span> <span class="pre">delete-orphan</span></code>.  The <code class="docutils literal"><span class="pre">all</span></code> symbol
-is a synonym for <code class="docutils literal"><span class="pre">save-update,</span> <span class="pre">merge,</span> <span class="pre">refresh-expire,</span> <span class="pre">expunge,</span> <span class="pre">delete</span></code>,
-and using it in conjunction with <code class="docutils literal"><span class="pre">delete-orphan</span></code> indicates that the child
-object should follow along with its parent in all cases, and be deleted once
-it is no longer associated with that parent.</p>
-<p>The list of available values which can be specified for
-the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.cascade" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">cascade</span></code></a> parameter are described in the following subsections.</p>
+<p>デフォルト値：paramref： <cite>〜.relationship.cascade`は</cite> <cite>save-update、merge``です。このパラメータの典型的な設定は、 ``すべて ``またはより一般的に ``すべて、削除孤立した ``のいずれかです。 `</cite> all``シンボルは、 `` save-update、merge、refresh-expire、expunge、delete`の同義語で、 `` delete-orphan``と組み合わせて使用​​すると、子オブジェクトがその親はすべての場合において、その親とはもはや関連付けられなくなると削除される。</p>
+<p>：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.relationship.cascade`パラメータで指定できる使用可能な値のリストは、次のサブセクションで説明しています。</p>
 <div class="section" id="save-update">
-<span id="cascade-save-update"></span><h2>save-update<a class="headerlink" href="#save-update" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><code class="docutils literal"><span class="pre">save-update</span></code> cascade indicates that when an object is placed into a
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> via <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.add" title="sqlalchemy.orm.session.Session.add"><code class="xref py py-meth docutils literal"><span class="pre">Session.add()</span></code></a>, all the objects associated
-with it via this <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> should also be added to that
-same <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>.  Suppose we have an object <code class="docutils literal"><span class="pre">user1</span></code> with two
-related objects <code class="docutils literal"><span class="pre">address1</span></code>, <code class="docutils literal"><span class="pre">address2</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">user1</span> <span class="o">=</span> <span class="n">User</span><span class="p">()</span>
+<span id="cascade-save-update"></span><h2>セーブ・アップデート<a class="headerlink" href="#save-update" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>`` save-update``カスケードは、：meth： <cite>.Session.add`を介してオブジェクトが：class：</cite> .Session`に置かれたときに、this：func： <cite>.relationship`クラス： `.Session</cite>：同じものに追加する必要があります。 2つの関連するオブジェクト `` address1``、 `` address2`` ::を持つオブジェクト `` user1``を持っているとします。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">user1</span> <span class="o">=</span> <span class="n">User</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">address1</span><span class="p">,</span> <span class="n">address2</span> <span class="o">=</span> <span class="n">Address</span><span class="p">(),</span> <span class="n">Address</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">user1</span><span class="o">.</span><span class="n">addresses</span> <span class="o">=</span> <span class="p">[</span><span class="n">address1</span><span class="p">,</span> <span class="n">address2</span><span class="p">]</span></pre></div>
 </div>
-<p>If we add <code class="docutils literal"><span class="pre">user1</span></code> to a <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>, it will also add
-<code class="docutils literal"><span class="pre">address1</span></code>, <code class="docutils literal"><span class="pre">address2</span></code> implicitly:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sess</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
+<p>：class： <cite>.Session`に</cite> <cite>user1``を追加すると、</cite> <cite>address1`</cite>、` <a href="#id1"><span class="problematic" id="id2">`</span></a>address2``が暗黙的に追加されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sess</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sess</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">user1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">address1</span> <span class="ow">in</span> <span class="n">sess</span>
 <span class="go">True</span></pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">save-update</span></code> cascade also affects attribute operations for objects
-that are already present in a <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>.  If we add a third
-object, <code class="docutils literal"><span class="pre">address3</span></code> to the <code class="docutils literal"><span class="pre">user1.addresses</span></code> collection, it
-becomes part of the state of that <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">address3</span> <span class="o">=</span> <span class="n">Address</span><span class="p">()</span>
+<p>`` save-update``カスケードは：class： <cite>.Session`に既に存在するオブジェクトの属性操作にも影響します。 3番目のオブジェクト `</cite> address3``を `` user1.addresses``コレクションに追加すると、その状態の一部になります：class： <cite>.Session</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">address3</span> <span class="o">=</span> <span class="n">Address</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">user1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">address3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">address3</span> <span class="ow">in</span> <span class="n">sess</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kc">True</span></pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">save-update</span></code> has the possibly surprising behavior which is that
-persistent objects which were <em>removed</em> from a collection
-or in some cases a scalar attribute
-may also be pulled into the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> of a parent object; this is
-so that the flush process may handle that related object appropriately.
-This case can usually only arise if an object is removed from one <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>
-and added to another:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">user1</span> <span class="o">=</span> <span class="n">sess1</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<p>`` save-update``はコレクションから削除された永続オブジェクトであるか、場合によってはスカラー属性も親オブジェクトの：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`に引っ張られるという驚くべき振る舞いをします。これは、フラッシュ処理が関連するオブジェクトを適切に処理できるようにするためです。このケースは通常、オブジェクトがクラス： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Session`から削除され、別のオブジェクトに追加された場合にのみ発生します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">user1</span> <span class="o">=</span> <span class="n">sess1</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">address1</span> <span class="o">=</span> <span class="n">user1</span><span class="o">.</span><span class="n">addresses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sess1</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>   <span class="c1"># user1, address1 no longer associated with sess1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">user1</span><span class="o">.</span><span class="n">addresses</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">address1</span><span class="p">)</span>  <span class="c1"># address1 no longer associated with user1</span>
@@ -257,38 +215,23 @@ and added to another:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">address1</span> <span class="ow">in</span> <span class="n">sess2</span>  <span class="c1"># because it&#39;s still &quot;pending&quot; for flush</span>
 <span class="go">True</span></pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">save-update</span></code> cascade is on by default, and is typically taken
-for granted; it simplifies code by allowing a single call to
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.add" title="sqlalchemy.orm.session.Session.add"><code class="xref py py-meth docutils literal"><span class="pre">Session.add()</span></code></a> to register an entire structure of objects within
-that <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> at once.   While it can be disabled, there
-is usually not a need to do so.</p>
-<p>One case where <code class="docutils literal"><span class="pre">save-update</span></code> cascade does sometimes get in the way is in that
-it takes place in both directions for bi-directional relationships, e.g.
-backrefs, meaning that the association of a child object with a particular parent
-can have the effect of the parent object being implicitly associated with that
-child object's <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>; this pattern, as well as how to modify its
-behavior using the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.cascade_backrefs" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">cascade_backrefs</span></code></a> flag,
-is discussed in the section <a class="reference internal" href="#backref-cascade"><span class="std std-ref">Controlling Cascade on Backrefs</span></a>.</p>
+<p>`` save-update``カスケードはデフォルトでオンになっており、通常は当然のことです。 ：meth： <cite>.Session.add`を一回呼び出すだけで、class：</cite> .Session`内のオブジェクトの構造体全体を一度に登録することができるので、コードが簡単になります。それは無効にすることができますが、通常そうする必要はありません。</p>
+<p>`` save-update``カスケードが途中で時々起こる1つのケースは、双方向関係（例えば、バックレファレンス）の両方向で起こるということです。つまり、特定の親との子オブジェクトの関連が、親オブジェクトのエフェクトはその子オブジェクトの暗黙的に関連付けられています：class： <cite>.Session</cite>;このパターンと、：paramref： <cite>〜.relationship.cascade_backrefs`フラグを使って動作を変更する方法については、ref：</cite> backref_cascade`のセクションで説明します。</p>
 </div>
 <div class="section" id="delete">
-<span id="cascade-delete"></span><h2>delete<a class="headerlink" href="#delete" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The <code class="docutils literal"><span class="pre">delete</span></code> cascade indicates that when a &quot;parent&quot; object
-is marked for deletion, its related &quot;child&quot; objects should also be marked
-for deletion.   If for example we we have a relationship <code class="docutils literal"><span class="pre">User.addresses</span></code>
-with <code class="docutils literal"><span class="pre">delete</span></code> cascade configured:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="cascade-delete"></span><h2>削除<a class="headerlink" href="#delete" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>`` delete``カスケードは、&amp;quot;親&amp;quot;オブジェクトが削除対象としてマークされている場合、その関連する &amp;quot;子&amp;quot;オブジェクトも削除対象としてマークする必要があることを示します。たとえば、 `` User.addresses``と `` delete``カスケードを設定した関係があるとします:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="c1"># ...</span>
 
     <span class="n">addresses</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Address&quot;</span><span class="p">,</span> <span class="n">cascade</span><span class="o">=</span><span class="s2">&quot;save-update, merge, delete&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>If using the above mapping, we have a <code class="docutils literal"><span class="pre">User</span></code> object and two
-related <code class="docutils literal"><span class="pre">Address</span></code> objects:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">user1</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<p>上記のマッピングを使用する場合、 `` User``オブジェクトと2つの関連する `` Address``オブジェクトがあります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">user1</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">address1</span><span class="p">,</span> <span class="n">address2</span> <span class="o">=</span> <span class="n">user1</span><span class="o">.</span><span class="n">addresses</span></pre></div>
 </div>
-<p>If we mark <code class="docutils literal"><span class="pre">user1</span></code> for deletion, after the flush operation proceeds,
-<code class="docutils literal"><span class="pre">address1</span></code> and <code class="docutils literal"><span class="pre">address2</span></code> will also be deleted:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">sess</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">user1</span><span class="p">)</span>
+<p>`` user1``に削除をマークすると、フラッシュ操作が行われた後、 `` address1``と `` address2``も削除されます：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">sess</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">user1</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">sess</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 <div class='show_sql'>DELETE FROM address WHERE address.id = ?
 ((1,), (2,))
@@ -296,18 +239,14 @@ DELETE FROM user WHERE user.id = ?
 (1,)
 COMMIT</div></pre></div>
 </div>
-<p>Alternatively, if our <code class="docutils literal"><span class="pre">User.addresses</span></code> relationship does <em>not</em> have
-<code class="docutils literal"><span class="pre">delete</span></code> cascade, SQLAlchemy's default behavior is to instead de-associate
-<code class="docutils literal"><span class="pre">address1</span></code> and <code class="docutils literal"><span class="pre">address2</span></code> from <code class="docutils literal"><span class="pre">user1</span></code> by setting their foreign key
-reference to <code class="docutils literal"><span class="pre">NULL</span></code>.  Using a mapping as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>あるいは、もし `` User.addresses``の関係が `` delete``カスケードを持っていなければ、SQLAlchemyのデフォルトの振る舞いは、 `` address1``と `` address2``を `` user1``から切り離すことですそれらの外部キー参照を `` NULL``に設定することによって、次のようなマッピングを使用する:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="c1"># ...</span>
 
     <span class="n">addresses</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Address&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>Upon deletion of a parent <code class="docutils literal"><span class="pre">User</span></code> object, the rows in <code class="docutils literal"><span class="pre">address</span></code> are not
-deleted, but are instead de-associated:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">sess</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">user1</span><span class="p">)</span>
+<p>親の `` User``オブジェクトを削除すると、 `` address``の行は削除されませんが、代わりに関連付け解除されます：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">sess</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">user1</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">sess</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 <div class='show_sql'>UPDATE address SET user_id=? WHERE address.id = ?
 (None, 1)
@@ -317,152 +256,58 @@ DELETE FROM user WHERE user.id = ?
 (1,)
 COMMIT</div></pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">delete</span></code> cascade is more often than not used in conjunction with
-<a class="reference internal" href="#cascade-delete-orphan"><span class="std std-ref">delete-orphan</span></a> cascade, which will emit a DELETE for the related
-row if the &quot;child&quot; object is deassociated from the parent.  The combination
-of <code class="docutils literal"><span class="pre">delete</span></code> and <code class="docutils literal"><span class="pre">delete-orphan</span></code> cascade covers both situations where
-SQLAlchemy has to decide between setting a foreign key column to NULL versus
-deleting the row entirely.</p>
+<p>`` delete``カスケードは：ref： <cite>cascade_delete_orphan`カスケードと組み合わせて使用​​されることはよくありません。カスケードは、&amp;quot;子&amp;quot;オブジェクトが親から分離されている場合、関連する行のDELETEを出します。 `</cite> delete``と `` delete-orphan``カスケードの組み合わせは、SQLAlchemyが外部キー列をNULLに設定するか、行全体を削除するかを決める必要がある状況をカバーします。</p>
 <div class="topic">
 <p class="topic-title first">ORM-level &quot;delete&quot; cascade vs. FOREIGN KEY level &quot;ON DELETE&quot; cascade</p>
-<p>The behavior of SQLAlchemy's &quot;delete&quot; cascade has a lot of overlap with the
-<code class="docutils literal"><span class="pre">ON</span> <span class="pre">DELETE</span> <span class="pre">CASCADE</span></code> feature of a database foreign key, as well
-as with that of the <code class="docutils literal"><span class="pre">ON</span> <span class="pre">DELETE</span> <span class="pre">SET</span> <span class="pre">NULL</span></code> foreign key setting when &quot;delete&quot;
-cascade is not specified.   Database level &quot;ON DELETE&quot; cascades are specific to the
-&quot;FOREIGN KEY&quot; construct of the relational database; SQLAlchemy allows
-configuration of these schema-level constructs at the <a class="reference internal" href="../glossary.html#term-ddl"><span class="xref std std-term">DDL</span></a> level
-using options on <a class="reference internal" href="../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a> which are described
-at <a class="reference internal" href="../core/constraints.html#on-update-on-delete"><span class="std std-ref">ON UPDATE and ON DELETE</span></a>.</p>
-<p>It is important to note the differences between the ORM and the relational
-database's notion of &quot;cascade&quot; as well as how they integrate:</p>
+<p>SQLAlchemyの&amp;quot;delete &amp;quot;カスケードの動作は、データベースの外部キーの `` ON DELETE CASCADE``機能と、 `` ON DELETE SET NULL``の外部キーの設定とのオーバーラップが大きくなります&amp;quot;delete &amp;quot;カスケードは指定されていません。データベースレベル&amp;quot;ON DELETE &amp;quot;カスケードは、リレーショナルデータベースの&amp;quot;FOREIGN KEY &amp;quot;構造に固有です。 SQLAlchemyでは：term： <cite>DDL`レベルでこれらのスキーマレベルのコンストラクトを設定することができます：class：</cite> .ForeignKeyConstraint`：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>on_update_on_delete`に記述されているオプションを使用します。</p>
+<p>ORMとリレーショナルデータベースの&amp;quot;カスケード&amp;quot;という概念とそれらの統合方法の違いに注意することは重要です。</p>
 <ul>
-<li><p class="first">A database level <code class="docutils literal"><span class="pre">ON</span> <span class="pre">DELETE</span></code> cascade is configured effectively
-on the <strong>many-to-one</strong> side of the relationship; that is, we configure
-it relative to the <code class="docutils literal"><span class="pre">FOREIGN</span> <span class="pre">KEY</span></code> constraint that is the &quot;many&quot; side
-of a relationship.  At the ORM level, <strong>this direction is reversed</strong>.
-SQLAlchemy handles the deletion of &quot;child&quot; objects relative to a
-&quot;parent&quot; from the &quot;parent&quot; side, which means that <code class="docutils literal"><span class="pre">delete</span></code> and
-<code class="docutils literal"><span class="pre">delete-orphan</span></code> cascade are configured on the <strong>one-to-many</strong>
-side.</p>
+<li><p class="first">データベースレベルの `` ON DELETE``カスケードは、関係の** many-to-one <strong>の側で効果的に設定されます。つまり、リレーションシップの&amp;quot;many &amp;quot;側の &amp;quot;FOREIGN KEY&amp;quot;制約に関連してそれを設定します。 ORMレベルで**この方向は逆になります</strong>。 SQLAlchemyは&amp;quot;親&amp;quot;側から&amp;quot;親&amp;quot;側への&amp;quot;子&amp;quot;オブジェクトの削除を処理します。つまり、 `` delete``と `` delete-orphan``カスケードは* * 1対多**側。</p>
 </li>
-<li><p class="first">Database level foreign keys with no <code class="docutils literal"><span class="pre">ON</span> <span class="pre">DELETE</span></code> setting
-are often used to <strong>prevent</strong> a parent
-row from being removed, as it would necessarily leave an unhandled
-related row present.  If this behavior is desired in a one-to-many
-relationship, SQLAlchemy's default behavior of setting a foreign key
-to <code class="docutils literal"><span class="pre">NULL</span></code> can be caught in one of two ways:</p>
+<li><p class="first">`` ON DELETE``が設定されていないデータベースレベルの外部キーは、処理されていない関連する行が残っているため、親行が削除されないようにするためによく使用されます。この動作が一対多の関係で必要な場合、外部キーを `` NULL``に設定するSQLAlchemyのデフォルト動作は、次の2つの方法のいずれかで捕捉できます：</p>
 <blockquote>
 <div><ul class="simple">
-<li>The easiest and most common is just to set the
-foreign-key-holding column to <code class="docutils literal"><span class="pre">NOT</span> <span class="pre">NULL</span></code> at the database schema
-level.  An attempt by SQLAlchemy to set the column to NULL will
-fail with a simple NOT NULL constraint exception.</li>
-<li>The other, more special case way is to set the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.passive_deletes" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">passive_deletes</span></code></a>
-flag to the string <code class="docutils literal"><span class="pre">&quot;all&quot;</span></code>.  This has the effect of entirely
-disabling SQLAlchemy's behavior of setting the foreign key column
-to NULL, and a DELETE will be emitted for the parent row without
-any affect on the child row, even if the child row is present
-in memory. This may be desirable in the case when
-database-level foreign key triggers, either special <code class="docutils literal"><span class="pre">ON</span> <span class="pre">DELETE</span></code> settings
-or otherwise, need to be activated in all cases when a parent row is deleted.</li>
+<li>最も簡単で最も一般的なのは、データベーススキーマレベルで外部キー保持列を `` NOT NULL``に設定するだけです。列をNULLに設定しようとすると、SQLAlchemyは単純なNOT NULL制約の例外で失敗します。</li>
+<li>もう一つの特別な場合は、：paramref： <cite>〜.relationship.passive_deletes`フラグを文字列</cite> <cite>&amp;quot; all &amp;quot;</cite> <cite>に設定することです。これは、外部キー列をNULLに設定するSQLAlchemyの動作を完全に無効にし、子行がメモリに存在していても子行に影響を与えずに親行に対してDELETEを発行するという効果があります。これは、特別な `</cite> ON DELETE` &amp;quot;設定などのデータベースレベルの外部キーのトリガが、親の行が削除されるすべての場合にアクティブにする必要がある場合に望ましい場合があります。</li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Database level <code class="docutils literal"><span class="pre">ON</span> <span class="pre">DELETE</span></code> cascade is <strong>vastly more efficient</strong>
-than that of SQLAlchemy.  The database can chain a series of cascade
-operations across many relationships at once; e.g. if row A is deleted,
-all the related rows in table B can be deleted, and all the C rows related
-to each of those B rows, and on and on, all within the scope of a single
-DELETE statement.  SQLAlchemy on the other hand, in order to support
-the cascading delete operation fully, has to individually load each
-related collection in order to target all rows that then may have further
-related collections.  That is, SQLAlchemy isn't sophisticated enough
-to emit a DELETE for all those related rows at once within this context.</p>
+<li><p class="first">データベースレベルの `` ON DELETE``カスケードは** SQLAlchemyよりもはるかに効率的です**。データベースは一連のカスケード操作を多数の関係にわたって一度に連鎖させることができます。行Aが削除されると、表Bのすべての関連行が削除され、すべてのC行が単一のDELETE文の有効範囲内にあるこれらのB行にそれぞれ関連しています。一方、SQLAlchemyでは、カスケード削除操作を完全にサポートするために、関連する各コレクションを個別にロードして、すべての行をターゲットにしてから関連するコレクションを追加する必要があります。つまり、SQLAlchemyは、このコンテキスト内で関連するすべての行に対して一度にDELETEを発行するほど洗練されていません。</p>
 </li>
-<li><p class="first">SQLAlchemy doesn't <strong>need</strong> to be this sophisticated, as we instead provide
-smooth integration with the database's own <code class="docutils literal"><span class="pre">ON</span> <span class="pre">DELETE</span></code> functionality,
-by using the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.passive_deletes" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">passive_deletes</span></code></a> option in conjunction
-with properly configured foreign key constraints.   Under this behavior,
-SQLAlchemy only emits DELETE for those rows that are already locally
-present in the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>; for any collections that are unloaded,
-it leaves them to the database to handle, rather than emitting a SELECT
-for them.  The section <a class="reference internal" href="collections.html#passive-deletes"><span class="std std-ref">Using Passive Deletes</span></a> provides an example of this use.</p>
+<li><p class="first">SQLAlchemyは、このような洗練されたものである必要はありません。代わりに：paramref： <cite>〜.relationship.passive_deletes`オプションを適切に使用することによって、データベース自身の</cite> <cite>ON DELETE``機能とのスムーズな統合を提供します構成された外部キー制約。この動作では、SQLAlchemyは：class： `.Session</cite>;に既にローカルに存在する行に対してのみDELETEを発行します。アンロードされたコレクションの場合は、SELECTを発行するのではなく、処理するデータベースにデータベースを残します。セクション：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>passive_deletes`は、この使用例です。</p>
 </li>
-<li><p class="first">While database-level <code class="docutils literal"><span class="pre">ON</span> <span class="pre">DELETE</span></code> functionality works only on the &quot;many&quot;
-side of a relationship, SQLAlchemy's &quot;delete&quot; cascade
-has <strong>limited</strong> ability to operate in the <em>reverse</em> direction as well,
-meaning it can be configured on the &quot;many&quot; side to delete an object
-on the &quot;one&quot; side when the reference on the &quot;many&quot; side is deleted.  However
-this can easily result in constraint violations if there are other objects
-referring to this &quot;one&quot; side from the &quot;many&quot;, so it typically is only
-useful when a relationship is in fact a &quot;one to one&quot;.  The
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.single_parent" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">single_parent</span></code></a> flag should be used to establish
-an in-Python assertion for this case.</p>
+<li><p class="first">データベースレベルの `` ON DELETE``機能はリレーションシップの&amp;quot;many &amp;quot;側でのみ機能しますが、SQLAlchemyの&amp;quot;delete &amp;quot;カスケードは** reverse * &amp;quot;many &amp;quot;側の参照が削除されたときに&amp;quot;one &amp;quot;側のオブジェクトを削除するには&amp;quot;many &amp;quot;側に設定することができます。しかし、これは、 &amp;quot;many &amp;quot;からこの &amp;quot;one&amp;quot;側を参照する他のオブジェクトがあると、制約の違反につながりやすいので、通常、関係が実際には &amp;quot;one to one&amp;quot; 。 ：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.relationship.single_parent`フラグは、この場合のPythonアサーションを確立するために使われます。</p>
 </li>
 </ul>
 </div>
-<p>When using a <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> that also includes a many-to-many
-table using the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.secondary" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">secondary</span></code></a> option, SQLAlchemy's
-delete cascade handles the rows in this many-to-many table automatically.
-Just like, as described in <a class="reference internal" href="basic_relationships.html#relationships-many-to-many-deletion"><span class="std std-ref">Deleting Rows from the Many to Many Table</span></a>,
-the addition or removal of an object from a many-to-many collection
-results in the INSERT or DELETE of a row in the many-to-many table,
-the <code class="docutils literal"><span class="pre">delete</span></code> cascade, when activated as the result of a parent object
-delete operation, will DELETE not just the row in the &quot;child&quot; table but also
-in the many-to-many table.</p>
+<p>：paruncref： <cite>〜.relationship.secondary`オプションを使用して多対多テーブルも含む：：func：</cite> .relationship`を使用すると、SQLAlchemyのdeleteカスケードはこの多対多テーブルの行を自動的に処理します。 ：ref： <cite>relationships_many_to_many_deletion`で説明したように、多対多コレクションからオブジェクトを追加または削除すると、多対多テーブルの行のINSERTまたはDELETEが発生し、</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>delete <a href="#id3"><span class="problematic" id="id4">``</span></a>カスケードは、親オブジェクトの削除操作の結果として起動されると、&amp;quot;子&amp;quot;テーブルの行だけでなく多対多テーブルも削除します。</p>
 </div>
 <div class="section" id="delete-orphan">
-<span id="cascade-delete-orphan"></span><h2>delete-orphan<a class="headerlink" href="#delete-orphan" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><code class="docutils literal"><span class="pre">delete-orphan</span></code> cascade adds behavior to the <code class="docutils literal"><span class="pre">delete</span></code> cascade,
-such that a child object will be marked for deletion when it is
-de-associated from the parent, not just when the parent is marked
-for deletion.   This is a common feature when dealing with a related
-object that is &quot;owned&quot; by its parent, with a NOT NULL foreign key,
-so that removal of the item from the parent collection results
-in its deletion.</p>
-<p><code class="docutils literal"><span class="pre">delete-orphan</span></code> cascade implies that each child object can only
-have one parent at a time, so is configured in the vast majority of cases
-on a one-to-many relationship.   Setting it on a many-to-one or
-many-to-many relationship is more awkward; for this use case,
-SQLAlchemy requires that the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>
-be configured with the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.single_parent" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">single_parent</span></code></a> argument,
-establishes Python-side validation that ensures the object
-is associated with only one parent at a time.</p>
+<span id="cascade-delete-orphan"></span><h2>孤児を削除する<a class="headerlink" href="#delete-orphan" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>`` delete-orphan``カスケードは `` delete``カスケードに振る舞いを追加します。これにより、親オブジェクトが削除マークされたときだけでなく、親オブジェクトとの関連付けが解除されたときに子オブジェクトが削除マークされます。これは、その親によって &amp;quot;所有されている&amp;quot;関連するオブジェクトをNOT NULL外部キーで扱う場合の共通の機能であるため、親コレクションからアイテムを削除すると削除されます。</p>
+<p>`` delete-orphan``カスケードは、各子オブジェクトが一度に1つの親しか持つことができないことを意味します。そのため、大多数の場合、1対多の関係で設定されます。多対1または多対多の関係に設定するのはもっと厄介です。この使用例では、SQLAlchemyは：func： <cite>〜sqlalchemy.orm.relationship`を：paramref：</cite>〜.relationship.single_parent`引数で設定し、オブジェクトが1つだけに関連付けられていることを確認するPython側の検証を行います親は一度に。</p>
 </div>
 <div class="section" id="merge">
-<span id="cascade-merge"></span><h2>merge<a class="headerlink" href="#merge" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><code class="docutils literal"><span class="pre">merge</span></code> cascade indicates that the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.merge" title="sqlalchemy.orm.session.Session.merge"><code class="xref py py-meth docutils literal"><span class="pre">Session.merge()</span></code></a>
-operation should be propagated from a parent that's the subject
-of the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.merge" title="sqlalchemy.orm.session.Session.merge"><code class="xref py py-meth docutils literal"><span class="pre">Session.merge()</span></code></a> call down to referred objects.
-This cascade is also on by default.</p>
+<span id="cascade-merge"></span><h2>行きます<a class="headerlink" href="#merge" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>`` merge``カスケードは、：meth： <cite>.Session.merge`オペレーションが：meth：</cite> .Session.merge`呼び出しの対象となる親から参照されるオブジェクトに伝播されるべきであることを示します。このカスケードもデフォルトでオンになっています。</p>
 </div>
 <div class="section" id="refresh-expire">
-<span id="cascade-refresh-expire"></span><h2>refresh-expire<a class="headerlink" href="#refresh-expire" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><code class="docutils literal"><span class="pre">refresh-expire</span></code> is an uncommon option, indicating that the
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.expire" title="sqlalchemy.orm.session.Session.expire"><code class="xref py py-meth docutils literal"><span class="pre">Session.expire()</span></code></a> operation should be propagated from a parent
-down to referred objects.   When using <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.refresh" title="sqlalchemy.orm.session.Session.refresh"><code class="xref py py-meth docutils literal"><span class="pre">Session.refresh()</span></code></a>,
-the referred objects are expired only, but not actually refreshed.</p>
+<span id="cascade-refresh-expire"></span><h2>リフレッシュ期限切れ<a class="headerlink" href="#refresh-expire" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>`` refresh-expire``は一般的ではないオプションで、：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session.expire`操作が親から参照されたオブジェクトに伝播されるべきであることを示します。 ：meth： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Session.refresh`を使用すると、参照されるオブジェクトは期限切れになりますが、実際にはリフレッシュされません。</p>
 </div>
 <div class="section" id="expunge">
-<span id="cascade-expunge"></span><h2>expunge<a class="headerlink" href="#expunge" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><code class="docutils literal"><span class="pre">expunge</span></code> cascade indicates that when the parent object is removed
-from the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> using <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.expunge" title="sqlalchemy.orm.session.Session.expunge"><code class="xref py py-meth docutils literal"><span class="pre">Session.expunge()</span></code></a>, the
-operation should be propagated down to referred objects.</p>
+<span id="cascade-expunge"></span><h2>消滅<a class="headerlink" href="#expunge" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>`` expunge``カスケードは、：meth： <cite>.Session.expunge`を使って親オブジェクトが：class：</cite> .Session`から削除されたとき、操作は参照されるオブジェクトに伝播されるべきであることを示します。</p>
 </div>
 <div class="section" id="controlling-cascade-on-backrefs">
-<span id="backref-cascade"></span><h2>Controlling Cascade on Backrefs<a class="headerlink" href="#controlling-cascade-on-backrefs" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The <a class="reference internal" href="#cascade-save-update"><span class="std std-ref">save-update</span></a> cascade by default takes place on attribute change events
-emitted from backrefs.  This is probably a confusing statement more
-easily described through demonstration; it means that, given a mapping such as this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mapper</span><span class="p">(</span><span class="n">Order</span><span class="p">,</span> <span class="n">order_table</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+<span id="backref-cascade"></span><h2>後方参照のカスケードの制御<a class="headerlink" href="#controlling-cascade-on-backrefs" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>cascade_save_update`カスケードは、デフォルトではバックグラウンドから放出される属性変更イベントに対して行われます。これはおそらく、デモンストレーションを通じてより簡単に説明される混乱したステートメントです。これは、次のようなマッピングが与えられたことを意味します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapper</span><span class="p">(</span><span class="n">Order</span><span class="p">,</span> <span class="n">order_table</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
     <span class="s1">&#39;items&#39;</span> <span class="p">:</span> <span class="n">relationship</span><span class="p">(</span><span class="n">Item</span><span class="p">,</span> <span class="n">backref</span><span class="o">=</span><span class="s1">&#39;order&#39;</span><span class="p">)</span>
 <span class="p">})</span></pre></div>
 </div>
-<p>If an <code class="docutils literal"><span class="pre">Order</span></code> is already in the session, and is assigned to the <code class="docutils literal"><span class="pre">order</span></code>
-attribute of an <code class="docutils literal"><span class="pre">Item</span></code>, the backref appends the <code class="docutils literal"><span class="pre">Item</span></code> to the <code class="docutils literal"><span class="pre">items</span></code>
-collection of that <code class="docutils literal"><span class="pre">Order</span></code>, resulting in the <code class="docutils literal"><span class="pre">save-update</span></code> cascade taking
-place:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">o1</span> <span class="o">=</span> <span class="n">Order</span><span class="p">()</span>
+<p>セッション中に `` Order``が既に存在し、 `` Item``の `` order``属性に割り当てられている場合、バックレファレンスは `` Items``のコレクションに `` Item``を追加します`` Order``を実行し、 `` save-update``カスケードが発生します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">o1</span> <span class="o">=</span> <span class="n">Order</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">o1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">o1</span> <span class="ow">in</span> <span class="n">session</span>
 <span class="go">True</span>
@@ -474,18 +319,13 @@ place:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span> <span class="ow">in</span> <span class="n">session</span>
 <span class="go">True</span></pre></div>
 </div>
-<p>This behavior can be disabled using the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.cascade_backrefs" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">cascade_backrefs</span></code></a> flag:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mapper</span><span class="p">(</span><span class="n">Order</span><span class="p">,</span> <span class="n">order_table</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+<p>この動作は、：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.relationship.cascade_backrefs`フラグを使って無効にすることができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapper</span><span class="p">(</span><span class="n">Order</span><span class="p">,</span> <span class="n">order_table</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
     <span class="s1">&#39;items&#39;</span> <span class="p">:</span> <span class="n">relationship</span><span class="p">(</span><span class="n">Item</span><span class="p">,</span> <span class="n">backref</span><span class="o">=</span><span class="s1">&#39;order&#39;</span><span class="p">,</span>
                                 <span class="n">cascade_backrefs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="p">})</span></pre></div>
 </div>
-<p>So above, the assignment of <code class="docutils literal"><span class="pre">i1.order</span> <span class="pre">=</span> <span class="pre">o1</span></code> will append <code class="docutils literal"><span class="pre">i1</span></code> to the <code class="docutils literal"><span class="pre">items</span></code>
-collection of <code class="docutils literal"><span class="pre">o1</span></code>, but will not add <code class="docutils literal"><span class="pre">i1</span></code> to the session.   You can, of
-course, <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.add" title="sqlalchemy.orm.session.Session.add"><code class="xref py py-meth docutils literal"><span class="pre">add()</span></code></a> <code class="docutils literal"><span class="pre">i1</span></code> to the session at a later point.   This
-option may be helpful for situations where an object needs to be kept out of a
-session until it's construction is completed, but still needs to be given
-associations to objects which are already persistent in the target session.</p>
+<p>上のように、 `` i1.order = o1``の割り当ては、 `` o1``の `` items``コレクションに `` i1``を追加しますが、セッションに `` i1``を追加しません。もちろん、：meth： <cite>〜.Session.add`</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>i1``を後でセッションに追加できます。このオプションは、オブジェクトの構築が完了するまでオブジェクトをセッションから外しておく必要があるが、ターゲットセッションですでに永続化しているオブジェクトへの関連付けを行う必要がある場合に役立ちます。</p>
 </div>
 </div>
 
@@ -495,13 +335,13 @@ associations to objects which are already persistent in the target session.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="session_state_management.html" title="previous chapter">State Management</a>
+        <a href="session_state_management.html" title="previous chapter">状態管理</a>
         Next:
-        <a href="session_transaction.html" title="next chapter">Transactions and Connection Management</a>
+        <a href="session_transaction.html" title="next chapter">トランザクションと接続管理</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -528,6 +368,7 @@ associations to objects which are already persistent in the target session.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

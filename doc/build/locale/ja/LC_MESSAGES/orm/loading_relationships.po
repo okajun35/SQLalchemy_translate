@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/loading_relationships.rst:6
 msgid "Relationship Loading Techniques"
-msgstr ""
+msgstr "関係の読み込み手法"
 
 #: ../../orm/loading_relationships.rst:8
 msgid ""
@@ -30,7 +20,7 @@ msgid ""
 "construction time using the :paramref:`.relationship.lazy` parameter to "
 "the :func:`.relationship` function, as well as by using options with the "
 ":class:`.Query` object."
-msgstr ""
+msgstr "SQLAlchemyの大きな部分は、クエリの際に関連オブジェクトがどのように読み込まれるかを幅広く制御しています。 \ &quot;関連オブジェクト\&quot;では、func： `.relationship`を使用してマッパー上で設定されたコレクションまたはスカラー関連を参照します。この動作は、：func： `.relationship`関数への：paramref：` .relationship.lazy`パラメータの使用や、：class： `.Query`オブジェクトでのオプションの使用によって、マッパー構築時に設定することができます。"
 
 #: ../../orm/loading_relationships.rst:15
 msgid ""
@@ -40,7 +30,7 @@ msgid ""
 "first.  When the given collection or reference is first accessed on a "
 "particular object, an additional SELECT statement is emitted such that "
 "the requested collection is loaded."
-msgstr ""
+msgstr "関係のロードは3つのカテゴリに分類されます。 **怠惰な**ローディング、**熱心な**ローディング、** **ローディング**。レイジーローディングとは、最初に関連オブジェクトがロードされていないクエリからオブジェクトが返されることを指します。指定されたコレクションまたは参照が最初に特定のオブジェクトでアクセスされると、要求されたコレクションがロードされるように追加のSELECTステートメントが発行されます。"
 
 #: ../../orm/loading_relationships.rst:22
 msgid ""
@@ -50,7 +40,7 @@ msgid ""
 "it would normally emit with a JOIN to load in related rows "
 "simultaneously, or by emitting additional SELECT statements after the "
 "primary one to load collections or scalar references at once."
-msgstr ""
+msgstr "熱心な読み込みとは、関連するコレクションまたはスカラー参照がすでに読み込まれているクエリから返されたオブジェクトを指します。 ：class： `.Query`は、関連する行を同時にロードするJOINで通常発生するSELECT文を拡張するか、コレクションまたはスカラー参照を一度に読み込むためにプライマリ文の後に追加のSELECT文を発行することによって、これを実現します。"
 
 #: ../../orm/loading_relationships.rst:29
 msgid ""
@@ -58,11 +48,11 @@ msgid ""
 "relationship, either that the attribute is empty and is just never "
 "loaded, or that it raises an error when it is accessed, in order to guard"
 " against unwanted lazy loads."
-msgstr ""
+msgstr "\ &quot;No \&quot;ロードとは、属性が空であり、ロードされていないこと、またはアクセス時にエラーが発生して、不要な遅延ロードを防ぐために、特定の関係でロードを無効にすることを指します。"
 
 #: ../../orm/loading_relationships.rst:33
 msgid "The primary forms of relationship loading are:"
-msgstr ""
+msgstr "関係ロードの主要な形式は次のとおりです。"
 
 #: ../../orm/loading_relationships.rst:35
 msgid ""
@@ -71,7 +61,7 @@ msgid ""
 " statement at attribute access time to lazily load a related reference on"
 " a single object at a time.  Lazy loading is detailed at "
 ":ref:`lazy_loading`."
-msgstr ""
+msgstr "** lazy loading **  -  `` lazy = &#39;&#39; select&#39;``または：func： `.lazyload`オプションを介して利用可能です。これは属性参照時にSELECT文を発行して関連参照を遅延ロードするロードの形式です一度に1つのオブジェクトに適用されます。遅延ロードは、ref： `lazy_loading`で詳しく説明しています。"
 
 #: ../../orm/loading_relationships.rst:40
 msgid ""
@@ -79,7 +69,7 @@ msgid ""
 ":func:`.joinedload` option, this form of loading applies a JOIN to the "
 "given SELECT statement so that related rows are loaded in the same result"
 " set.   Joined eager loading is detailed at :ref:`joined_eager_loading`."
-msgstr ""
+msgstr "**結合されたローディング**  -  `` lazy = &#39;joined&#39;``または：func： `.joinedload`オプションを介して利用可能なこのローディング形式は、関連するローが同じにロードされるようにJOINを与えられたSELECT文に適用します結果セット。結合されたeagerローディングの詳細は、：ref： `joined_eager_loading`を参照してください。"
 
 #: ../../orm/loading_relationships.rst:45
 msgid ""
@@ -89,7 +79,7 @@ msgid ""
 "subquery, then JOINs that subquery to the related table to be loaded to "
 "load all members of related collections / scalar references at once.  "
 "Subquery eager loading is detailed at :ref:`subquery_eager_loading`."
-msgstr ""
+msgstr "**サブクエリの読み込み**  -  `` lazy = &#39;&#39; subquery&#39;``または：func： `.subqueryload`オプションを介して利用できるこのローディング形式は、サブクエリの内部に埋め込まれた元のクエリを再記述する2番目のSELECT文を発行します関連するテーブルにサブクエリしてロードされるJOINは、関連するコレクション/スカラー参照のすべてのメンバーを一度にロードします。サブクエリの読み込みは、ref： `subquery_eager_loading`で詳しく説明しています。"
 
 #: ../../orm/loading_relationships.rst:51
 msgid ""
@@ -99,7 +89,7 @@ msgid ""
 " parent objects into an IN clause, so that all members of related "
 "collections / scalar references are loaded at once by primary key.  "
 "Select IN loading is detailed at :ref:`selectin_eager_loading`."
-msgstr ""
+msgstr "** IN INローディング**  -  `` lazy = &#39;selectin&#39;``または：func： `.selectinload`オプションを介して利用可能です。このローディング形式は、次の（またはそれ以上の）SELECT文を発行します。親オブジェクトをIN句に変換します。これにより、関連するコレクション/スカラー参照のすべてのメンバーがプライマリキーによって一度に読み込まれます。 INロードの詳細は：ref： `selectin_eager_loading`を参照してください。"
 
 #: ../../orm/loading_relationships.rst:57
 msgid ""
@@ -109,7 +99,7 @@ msgid ""
 "except it raises an ORM exception in order to guard against the "
 "application making unwanted lazy loads. An introduction to raise loading "
 "is at :ref:`prevent_lazy_with_raiseload`."
-msgstr ""
+msgstr "** loading raise **  -  `` lazy = &#39;raise&#39;``、 `` lazy =&#39; raise_on_sql&#39;``、または：func： `.raiseload`オプションを介して利用可能ですが、この形式の読み込みは同時にトリガされます通常は遅延ロードが発生しますが、アプリケーションから不要な遅延ロードを防ぐためにORM例外が発生します。ローディングを開始する方法は、：ref： `prevent_lazy_with_raiseload`です。"
 
 #: ../../orm/loading_relationships.rst:63
 msgid ""
@@ -117,11 +107,11 @@ msgid ""
 "option; this loading style turns the attribute into an empty attribute "
 "that will never load or have any loading effect.  \"noload\" is a fairly "
 "uncommon loader option."
-msgstr ""
+msgstr "** no loading **  -  `` lazy = &#39;noload&#39;``または：func： `.noload`オプションで利用できます。この読み込みスタイルは、属性を読み込まない、または読み込み効果を持たない空の属性に変換します。 \ &quot;noload \&quot;は非常に珍しいローダーオプションです。"
 
 #: ../../orm/loading_relationships.rst:71
 msgid "Configuring Loader Strategies at Mapping Time"
-msgstr ""
+msgstr "マッピング時のローダー戦略の設定"
 
 #: ../../orm/loading_relationships.rst:73
 msgid ""
@@ -131,13 +121,13 @@ msgid ""
 " This is configured using the :paramref:`.relationship.lazy` parameter to"
 " :func:`.relationship`; common values for this parameter include "
 "``select``, ``joined``, ``subquery`` and ``selectin``."
-msgstr ""
+msgstr "特定のリレーションシップに対するローダー戦略は、マップされた型のオブジェクトがロードされるすべてのケースで、変更するクエリレベルのオプションがない場合に、マッピング時に構成することができます。これは、：paramref： `.relationship.lazy`パラメータを使って設定されます：func：` .relationship`;このパラメータの一般的な値には、 `` select``、 `` joined``、 `` subquery``、および `` selectin``があります。"
 
 #: ../../orm/loading_relationships.rst:80
 msgid ""
 "For example, to configure a relationship to use joined eager loading when"
 " the parent object is queried::"
-msgstr ""
+msgstr "たとえば、親オブジェクトが照会されたときに結合されたeagerローディングを使用するように関係を構成するには、次のようにします。"
 
 #: ../../orm/loading_relationships.rst:89
 msgid ""
@@ -145,18 +135,18 @@ msgid ""
 "``Parent`` will also have its ``children`` collection populated, using "
 "rows fetched by adding a JOIN to the query for ``Parent`` objects. See "
 ":ref:`joined_eager_loading` for background on this style of loading."
-msgstr ""
+msgstr "上記では、 `` Parent``オブジェクトのコレクションがロードされるたびに、 `` Parent``の各オブジェクトは `` Parent``オブジェクトのクエリにJOINを追加した行を使って、 `` 。このロードスタイルの背景については、ref： `joined_eager_loading`を参照してください。"
 
 #: ../../orm/loading_relationships.rst:94
 msgid ""
 "The default value of the :paramref:`.relationship.lazy` argument is "
 "``\"select\"``, which indicates lazy loading.  See :ref:`lazy_loading` "
 "for further background."
-msgstr ""
+msgstr "：paramref： `.relationship.lazy`引数のデフォルト値は` `\&quot; select \ &quot;` `です。これは遅延ロードを示します。さらなる背景については：ref： `lazy_loading`を参照してください。"
 
 #: ../../orm/loading_relationships.rst:101
 msgid "Controlling Loading via Options"
-msgstr ""
+msgstr "オプションによる読み込みの制御"
 
 #: ../../orm/loading_relationships.rst:103
 msgid ""
@@ -169,20 +159,20 @@ msgid ""
 ":func:`~sqlalchemy.orm.lazyload`.   The option accepts either the string "
 "name of an attribute against a parent, or for greater specificity can "
 "accommodate a class-bound attribute directly::"
-msgstr ""
+msgstr "ローディング戦略を構成するもう1つの、もっと一般的な方法は、特定の属性に対してクエリごとにそれらを設定することです。ローダーオプションを使用してリレーションシップロードを非常に詳細に制御できます。最も一般的なのは：func： `〜sqlalchemy.orm.joinedload`、：func：`〜sqlalchemy.orm.subqueryload`、：func： `〜sqlalchemy.orm.selectinload`と：func：`〜sqlalchemy.orm.lazyload `。このオプションは、親に対する属性の文字列名を受け入れるか、またはより細かくするためにクラスバインド属性を直接受け入れることができます::"
 
 #: ../../orm/loading_relationships.rst:122
 msgid ""
 "The loader options can also be \"chained\" using **method chaining** to "
 "specify how loading should occur further levels deep::"
-msgstr ""
+msgstr "ローダオプションは**メソッド連鎖**を使用して\ &quot;連鎖\&quot;することもできます。"
 
 #: ../../orm/loading_relationships.rst:129
 msgid ""
 "Chained loader options can be applied against a \"lazy\" loaded "
 "collection. This means that when a collection or association is lazily "
 "loaded upon access, the specified option will then take effect::"
-msgstr ""
+msgstr "連鎖されたローダオプションは、ロードされたコレクションに適用することができます。つまり、コレクションまたは関連付けがアクセス時に遅延ロードされると、指定されたオプションが有効になります。"
 
 #: ../../orm/loading_relationships.rst:137
 msgid ""
@@ -191,7 +181,7 @@ msgid ""
 "``Parent`` object is first accessed, it will lazy load the related "
 "objects, but additionally apply eager loading to the ``subelements`` "
 "collection on each member of ``children``."
-msgstr ""
+msgstr "上記の場合、クエリは `` children``コレクションがロードされていない `` Parent``オブジェクトを返します。特定の `` Parent``オブジェクトの `` children``コレクションが最初にアクセスされると、関連するオブジェクトを遅延ロードしますが、 `` children``の各メンバの `` subelementments``コレクションにさらに熱心な読み込みを適用します`。"
 
 #: ../../orm/loading_relationships.rst:143
 msgid ""
@@ -199,7 +189,7 @@ msgid ""
 "explicitly stated.  To navigate along a path without changing the "
 "existing loader style of a particular attribute, the :func:`.defaultload`"
 " method/function may be used::"
-msgstr ""
+msgstr "メソッド連鎖を使用すると、パス内の各リンクのローダスタイルが明示的に記述されます。特定の属性の既存のローダースタイルを変更せずにパスをナビゲートするには、：func： `.defaultload`メソッド/関数を使用することができます::"
 
 #: ../../orm/loading_relationships.rst:151
 msgid ""
@@ -207,7 +197,7 @@ msgid ""
 "**\"sticky\"** to specific object instances, meaning they will persist "
 "upon collections loaded by that specific object for as long as it exists "
 "in memory.  For example, given the previous example::"
-msgstr ""
+msgstr "オブジェクトの遅延ロードされたコレクションに適用されるローダオプションは、特定のオブジェクトインスタンスに対して**スティッキー**の**です。つまり、メモリ内に存在する限り、特定のオブジェクトによってロードされたコレクションに保持されます。たとえば、前述の例を考えます::"
 
 #: ../../orm/loading_relationships.rst:160
 msgid ""
@@ -221,7 +211,7 @@ msgid ""
 "different set of options.To change the options on an existing object "
 "without expunging it and re-loading, they must be set explicitly in "
 "conjunction with the :meth:`.Query.populate_existing` method::"
-msgstr ""
+msgstr "上記のクエリでロードされた特定の `` Parent``オブジェクトの `` children``コレクションが（class： `.Session`オブジェクトのトランザクションがコミットまたはロールバックされたとき、または：meth：`のように）期限切れの場合。 Session.expire_all`が使用されている）、 `` Parent.children``コレクションが次回アクセスされたときに再び読み込まれると、 `` Child.subelements``コレクションはサブクエリeager loadingを使って再度ロードされます。上記の `` Parent``オブジェクトが別のオプションセットを指定した後続のクエリからアクセスされたとしても、それは削除されません。既存のオブジェクトを削除せずにリロードするオプションを変更するには、 ：meth： `.Query.populate_existing`メソッド::"
 
 #: ../../orm/loading_relationships.rst:176
 msgid ""
@@ -229,17 +219,17 @@ msgid ""
 " such as due to garbage collection or that :meth:`.Session.expunge_all` "
 "were used, the \"sticky\" options will also be gone and the newly created"
 " objects will make use of new options if loaded again."
-msgstr ""
+msgstr "上記のオブジェクトが：class： `.Session`から完全に消去された場合、ガベージコレクションや：meth：` .Session.expunge_all`が使用された場合など、\ &quot;sticky \&quot;オプションもなくなります。新たに作成されたオブジェクトは、再度読み込まれた場合に新しいオプションを使用します。"
 
 #: ../../orm/loading_relationships.rst:181
 msgid ""
 "A future SQLAlchemy release may add more alternatives to manipulating the"
 " loader options on already-loaded objects."
-msgstr ""
+msgstr "SQLAlchemyの将来のリリースでは、既にロードされているオブジェクトのローダオプションを操作するための代替手段が追加される可能性があります。"
 
 #: ../../orm/loading_relationships.rst:188
 msgid "Lazy Loading"
-msgstr ""
+msgstr "レイジーロード"
 
 #: ../../orm/loading_relationships.rst:190
 msgid ""
@@ -249,7 +239,7 @@ msgid ""
 "first time the attribute is accessed.  This trigger typically issues a "
 "SQL call at the point of access in order to load the related object or "
 "objects:"
-msgstr ""
+msgstr "デフォルトでは、すべてのオブジェクト間の関係は**遅延読み込み**です。 a：func： `〜sqlalchemy.orm.relationship`に関連するスカラー属性またはコレクション属性には、属性が初めてアクセスされたときにトリガされるトリガが含まれます。通常、このトリガーは、関連するオブジェクトをロードするために、アクセスポイントでSQLコールを発行します。"
 
 #: ../../orm/loading_relationships.rst:208
 msgid ""
@@ -262,24 +252,24 @@ msgid ""
 "target objects, lazy loading may be able to refer to these objects "
 "locally without emitting as many SELECT statements as there are parent "
 "objects."
-msgstr ""
+msgstr "SQLが発行されない1つのケースは、関連オブジェクトが主キーだけで識別され、そのオブジェクトがcurrent：class： `.Session`にすでに存在する場合、単純な多対1の関係です。この理由から、レイジーローディングは、関連するコレクションでは高価になる可能性がありますが、比較的少数の可能なターゲットオブジェクトに対して単純な多対1のオブジェクトをたくさん読み込んでいる場合、遅延読み込みはこれらを参照できる可能性があります親オブジェクトと同数のSELECT文を発行することなく、ローカルにオブジェクトを作成できます。"
 
 #: ../../orm/loading_relationships.rst:216
 msgid ""
 "This default behavior of \"load upon attribute access\" is known as "
 "\"lazy\" or \"select\" loading - the name \"select\" because a \"SELECT\""
 " statement is typically emitted when the attribute is first accessed."
-msgstr ""
+msgstr "属性アクセス時にロードするこのデフォルトの動作は、\ &quot;lazy \&quot;または\ &quot;select \&quot;ローディングと呼ばれます。\ &quot;SELECT \&quot;という名前は属性が最初になるとアクセスされました。"
 
 #: ../../orm/loading_relationships.rst:220
 msgid ""
 "Lazy loading can be enabled for a given attribute that is normally "
 "configured in some other way using the :func:`.lazyload` loader option::"
-msgstr ""
+msgstr "Lazyローディングは、通常は：func： `.lazyload`ローダーオプションを使用して他の方法で設定されている特定の属性に対して有効にすることができます::"
 
 #: ../../orm/loading_relationships.rst:232
 msgid "Preventing unwanted lazy loads using raiseload"
-msgstr ""
+msgstr "raiseloadを使用して不要な遅延ロードを防止する"
 
 #: ../../orm/loading_relationships.rst:234
 msgid ""
@@ -295,14 +285,14 @@ msgid ""
 "desired, may be addressed using the :func:`.raiseload` strategy; this "
 "loader strategy replaces the behavior of lazy loading with an informative"
 " error being raised::"
-msgstr ""
+msgstr "：func： `.lazyload`戦略は、オブジェクトリレーショナルマッピングで参照される最も一般的な問題の1つであるエフェクトを生成します。 ：term： `N plus one problem`：ロードされたN個のオブジェクトに対して、遅延ロードされた属性にアクセスすると、N + 1個のSELECT文が発行されることを意味します。 SQLAlchemyでは、N + 1問題の通常の緩和策は、非常に能力のある熱心な負荷システムを使用することです。しかし、積極的な読み込みでは、読み込まれる属性を：class： `.Query`で指定する必要があります。 lazyローディングが望ましくない、熱心にロードされなかった他の属性にアクセスする可能性のあるコードの問題は、：func： `.raiseload`戦略を使って解決できます。このローダー戦略は、レイジーローディングの動作を有益なエラーに置き換えます::"
 
 #: ../../orm/loading_relationships.rst:250
 msgid ""
 "Above, a ``User`` object loaded from the above query will not have the "
 "``.addresses`` collection loaded; if some code later on attempts to "
 "access this attribute, an ORM exception is raised."
-msgstr ""
+msgstr "上記のクエリから読み込まれた `` User``オブジェクトには `` .addresses``コレクションがロードされません。後でこの属性にアクセスしようとしたコードがあると、ORM例外が発生します。"
 
 #: ../../orm/loading_relationships.rst:254
 msgid ""
@@ -310,7 +300,7 @@ msgid ""
 " indicate that all relationships should use this strategy.  For example, "
 "to set up only one attribute as eager loading, and all the rest as "
 "raise::"
-msgstr ""
+msgstr "：func： `.raiseload`は、すべてのリレーションシップがこの戦略を使用すべきであることを示すために、ワイルドカード\という指定子とともに使用することができます。たとえば、熱心な負荷として1つの属性のみを設定し、残りのすべてをraise ::として設定するには、"
 
 #: ../../orm/loading_relationships.rst:261
 msgid ""
@@ -318,19 +308,19 @@ msgid ""
 "``Order`` besides ``items``, but all those on the ``Item`` objects as "
 "well.  To set up :func:`.raiseload` for only the ``Order`` objects, "
 "specify a full path with :class:`.orm.Load`::"
-msgstr ""
+msgstr "上記のワイルドカードは、 `` items``だけでなく `` Order``だけでなく、 `` Item``オブジェクトのすべての関係にも適用されます。 `` Order``オブジェクトのみに対して：func： `.raiseload`を設定するには、class：` .orm.Load` ::でフルパスを指定してください::"
 
 #: ../../orm/loading_relationships.rst:271
 msgid "Conversely, to set up the raise for just the ``Item`` objects::"
-msgstr ""
+msgstr "逆に、 `` Item``オブジェクトだけのためにraiseを設定するには::"
 
 #: ../../orm/loading_relationships.rst:278
 msgid ":ref:`wildcard_loader_strategies`"
-msgstr ""
+msgstr "：ref： `wildcard_loader_strategies`"
 
 #: ../../orm/loading_relationships.rst:283
 msgid "Joined Eager Loading"
-msgstr ""
+msgstr "参加したEager Loading"
 
 #: ../../orm/loading_relationships.rst:285
 msgid ""
@@ -338,11 +328,11 @@ msgid ""
 "the ORM.  It works by connecting a JOIN (by default a LEFT OUTER join) to"
 " the SELECT statement emitted by a :class:`.Query` and populates the "
 "target scalar/collection from the same result set as that of the parent."
-msgstr ""
+msgstr "結合された熱心な負荷は、ORMにおける熱心な負荷の最も基本的なスタイルです。これは：class： `.Query`によって生成されたSELECT文にJOIN（デフォルトでLEFT OUTER結合）を接続し、親のものと同じ結果セットからターゲットスカラ/コレクションを移入することによって機能します。"
 
 #: ../../orm/loading_relationships.rst:291
 msgid "At the mapping level, this looks like::"
-msgstr ""
+msgstr "マッピングレベルでは、次のようになります。"
 
 #: ../../orm/loading_relationships.rst:298
 msgid ""
@@ -350,7 +340,7 @@ msgid ""
 "than as a default loading option on the mapping, in particular when used "
 "for collections rather than many-to-one-references.   This is achieved "
 "using the :func:`.joinedload` loader option:"
-msgstr ""
+msgstr "結合されたeagerローディングは、通常、マッピングのデフォルトローディングオプションではなく、特に多対1参照ではなくコレクションに使用されるときに、クエリのオプションとして適用されます。これは：func： `.joinedload`ローダーオプションを使用して実現されます："
 
 #: ../../orm/loading_relationships.rst:322
 msgid ""
@@ -360,30 +350,30 @@ msgid ""
 "related object where the referencing foreign key is NOT NULL, the query "
 "can be made more efficient by using an inner join; this is available at "
 "the mapping level via the :paramref:`.relationship.innerjoin` flag::"
-msgstr ""
+msgstr "デフォルトで発行されるJOINは、LEFT OUTER JOINで、関連する行を参照しないリードオブジェクトを許可します。参照する外部キーがNOT NULLである関連オブジェクトへの多対1の参照などの要素を持つことが保証されている属性の場合、内部結合を使用するとより効率的にクエリを実行できます。これは：paramref： `.relationship.innerjoin`フラグを使ってマッピングレベルで利用できます::"
 
 #: ../../orm/loading_relationships.rst:335
 msgid ""
 "At the query option level, via the :paramref:`.joinedload.innerjoin` "
 "flag::"
-msgstr ""
+msgstr "クエリオプションレベルで、：paramref： `.joinedload.innerjoin`フラグを使用して："
 
 #: ../../orm/loading_relationships.rst:340
 msgid ""
 "The JOIN will right-nest itself when applied in a chain that includes an "
 "OUTER JOIN:"
-msgstr ""
+msgstr "JOINは、OUTER JOINを含むチェーンに適用されたときに、右にネストします。"
 
 #: ../../orm/loading_relationships.rst:363
 msgid ""
 "On older versions of SQLite, the above nested right JOIN may be re-"
 "rendered as a nested subquery.  Older versions of SQLAlchemy would "
 "convert right-nested joins into subuqeries in all cases."
-msgstr ""
+msgstr "SQLiteの古いバージョンでは、上記のネストされた右のJOINは、ネストされたサブクエリとしてレンダリングされる可能性があります。古いバージョンのSQLAlchemyは、すべての場合において、右ネストされた結合をサブクエリに変換します。"
 
 #: ../../orm/loading_relationships.rst:368
 msgid "Joined eager loading and result set batching"
-msgstr ""
+msgstr "eager loadingとresult set batchingに参加しました"
 
 #: ../../orm/loading_relationships.rst:370
 msgid ""
@@ -396,7 +386,7 @@ msgid ""
 "object just loaded in a previous row, the additional columns that refer "
 "to new ``Address`` objects are directed into additional results within "
 "the ``User.addresses`` collection of that particular object."
-msgstr ""
+msgstr "コレクションに適用すると結合されたeagerローディングの中心的な概念は、：class： `.Query`オブジェクトが、照会される先頭のエンティティに対して行を重複除外しなければならないということです。上記のように、読み込んだ `` User``オブジェクトが3つの `` Address``オブジェクトを参照すると、SQL文の結果には3つの行があります。まだ：class： `.Query`はただ一つの` `User``オブジェクトしか返しません。前の行にロードされたばかりの `` User``オブジェクトのために追加の行が受け取られると、新しい `` Address``オブジェクトを参照する追加の列は、その `` User.addresses``コレクション内の追加結果に導かれます特定のオブジェクト。"
 
 #: ../../orm/loading_relationships.rst:380
 msgid ""
@@ -407,7 +397,7 @@ msgid ""
 "with :meth:`.Query.yield_per`.  The :meth:`.Query.yield_per` method will "
 "result in an exception thrown if a collection based joined eager loader "
 "is in play."
-msgstr ""
+msgstr "このプロセスは非常にトランスペアレントですが、結合されたeagerローディングは、コレクション読み込みに使用されるときは：meth： `.Query.yield_per`メソッドによって提供される\&quot;バッチ処理された\ &quot;クエリ結果と互換性がありません。スカラー参照のために使用される結合されたeagerローディングは、：meth： `.Query.yield_per`と互換性があります。 ：meth： `.Query.yield_per`メソッドは、コレクションベースのeagerローダーが参加している場合に例外がスローされます。"
 
 #: ../../orm/loading_relationships.rst:388
 msgid ""
@@ -419,11 +409,11 @@ msgid ""
 ":meth:`.Query.yield_per`, provided that the database driver in use "
 "supports multiple, simultaneous cursors (SQLite, Postgresql drivers, not "
 "MySQL drivers or SQL Server ODBC drivers)."
-msgstr ""
+msgstr "任意の大きなセットの結果データを使用して問合せを行うには、WHERE句を使用する行のサブセットを参照する複数のSELECT文（ウィンドウ処理など）を指定します。または、データベースドライバが複数の同時カーソル（SQLite、Postgresqlドライバ、サポートされていないもの）をサポートしていれば、** &quot;select IN \&quot; eager loadingを使用することを検討してください。**は** meth： `.Query.yield_per`と互換性があります。 MySQLドライバまたはSQL Server ODBCドライバ）。"
 
 #: ../../orm/loading_relationships.rst:400
 msgid "The Zen of Joined Eager Loading"
-msgstr ""
+msgstr "結合されたEager Loadingの禅"
 
 #: ../../orm/loading_relationships.rst:402
 msgid ""
@@ -434,7 +424,7 @@ msgid ""
 ":func:`.joinedload` goes through great lengths to **not** alter the "
 "results of the query, and instead hide the effects of the rendered join "
 "to only allow for related objects to be present."
-msgstr ""
+msgstr "結合されたeager loadingは：meth： `.Query.join`の使用に多くの類似点を持つように思われるので、いつ、どのように使用すべきかについて混乱を生むことがよくあります。それは、：meth： `.Query.join`がクエリの結果を変更するために使用されるのに対し、：func：` .joinedload`は、照会し、代わりにレンダリングされた結合の効果を隠して、関連するオブジェクトのみが存在することを可能にする。"
 
 #: ../../orm/loading_relationships.rst:410
 msgid ""
@@ -450,7 +440,7 @@ msgid ""
 "be emitted. In theory (and pretty much in practice), nothing you can do "
 "to the :class:`.Query` would make it load a different set of primary or "
 "related objects based on a change in loader strategy."
-msgstr ""
+msgstr "ローダ・ストラテジの背後にある考え方は、特定の問合せにロード・スキームのセットを適用できることです。*結果は変更されません。*関連オブジェクトおよびコレクションを完全にロードするために必要なSQL文の数のみが変更されます。すべての遅延ロードを使用して特定のクエリが開始される可能性があります。コンテキストで使用した後は、特定の属性やコレクションが常にアクセスされ、これらのローダー戦略を変更する方が効率的であることが明らかになります。戦略は他の変更を加えずに変更することができますが、結果は同じままですが、発行されるSQL文の数は少なくなります。理論的には（実際にはかなり）、class： `.Query`はローダー戦略の変更に基づいて、異なるプライマリオブジェクトや関連オブジェクトをロードすることはできません。"
 
 #: ../../orm/loading_relationships.rst:422
 msgid ""
@@ -462,7 +452,7 @@ msgid ""
 "``addresses``, however the ``ORDER BY`` added against "
 "``Address.email_address`` is not valid - the ``Address`` entity is not "
 "named in the query:"
-msgstr ""
+msgstr "どのように：func： `joinedload`は特に、何らかの形で返されたエンティティ行に影響を与えないというこの結果が、クエリに追加する結合の匿名エイリアスを作成し、クエリ。たとえば、以下のクエリは：func： `.joinedload`を使用して` `users``から` `addresses``までLEFT OUTER JOINを作成しますが、` `Address.email_address``に対して` `ORDER BY``を追加しますが有効でない - クエリで `` Address``エンティティの名前が指定されていません："
 
 #: ../../orm/loading_relationships.rst:451
 msgid ""
@@ -470,7 +460,7 @@ msgid ""
 "``addresses`` is not in the FROM list.   The correct way to load the "
 "``User`` records and order by email address is to use "
 ":meth:`.Query.join`:"
-msgstr ""
+msgstr "上記の `` ORDER BY addresses.email_address``は `` addresses``がFROMリストにないので有効ではありません。 `` User``レコードと電子メールアドレスで注文をロードする正しい方法は：meth： `.Query.join`："
 
 #: ../../orm/loading_relationships.rst:473
 msgid ""
@@ -479,7 +469,7 @@ msgid ""
 "all.   We can add :func:`.joinedload` back in, so that there are two "
 "joins - one is that which we are ordering on, the other is used "
 "anonymously to load the contents of the ``User.addresses`` collection:"
-msgstr ""
+msgstr "上記の文はもちろん、前のものと同じではありません。つまり、 `` addresses``の列は結果にまったく含まれません。 ：func： `.joinedload`を追加して、2つの結合が存在するようにします.1つは、私たちが注文しているものです。もう1つは、` `User.addresses``コレクションの内容を読み込むために匿名で使用されます。"
 
 #: ../../orm/loading_relationships.rst:501
 msgid ""
@@ -493,7 +483,7 @@ msgid ""
 ":ref:`contains_eager` below.   But to see why :func:`joinedload` does "
 "what it does, consider if we were **filtering** on a particular "
 "``Address``:"
-msgstr ""
+msgstr "上で見てきたのは、：meth： `.Query.join`の使用法は、それ以降のクエリの基準で使用したいJOIN節を供給することです。func：` .joinedload`の使用法は、その結果の `` User``ごとに `` User.addresses``コレクションを読み込みます。この場合、2つの結合はおそらく冗長であるように見えます。順序付けだけでなくコレクションのロードにも1つのJOINを使用したい場合は、以下の：ref： `contains_eager`で説明されている：func：` .contains_eager`オプションを使用します。しかし、理由を知るには：func： `joinedload`は、特定の` `Address``に対してフィルタリング**を行ったかどうかを考えます："
 
 #: ../../orm/loading_relationships.rst:533
 msgid ""
@@ -503,7 +493,7 @@ msgid ""
 "OUTER JOIN will match *all* ``Address`` rows related to ``User``, and is "
 "only used to populate the ``User.addresses`` collection, for those "
 "``User`` objects that are returned."
-msgstr ""
+msgstr "上では、2つのJOINが非常に異なる役割を持つことがわかります。一つは `` User``と `` Address``が `` Address.email_address == &#39;someaddress @ foo.com&#39;``のところで結ばれた行とまったく同じ行にマッチします。他のLEFT OUTER JOINは `` User``に関連する ``すべての `` Address``行と一致し、 `` User.addresses``コレクションを生成するためにのみ使用されます。戻ってきた。"
 
 #: ../../orm/loading_relationships.rst:540
 msgid ""
@@ -511,7 +501,7 @@ msgid ""
 " we can change how the collection is loaded completely independently of "
 "SQL used to retrieve the actual ``User`` rows we want.  Below we change "
 ":func:`.joinedload` into :func:`.subqueryload`:"
-msgstr ""
+msgstr "：func： `.joinedload`の使用法を別のスタイルのロードに変更することで、私たちが望む実際の` `User``行を検索するために使用されるSQLと完全に独立してコレクションをロードする方法を変更できます。以下のように変更します：func： `.joinedload` into：func：` .subqueryload`："
 
 #: ../../orm/loading_relationships.rst:568
 msgid ""
@@ -524,15 +514,15 @@ msgid ""
 "ensure that it does not affect the end result of the query, only the way "
 "collections and related objects are loaded, no matter what the format of "
 "the query is."
-msgstr ""
+msgstr "結合されたeagerローディングを使用する場合、DISTINCT、LIMIT、OFFSETまたは同等のものを使用する場合など、ジョインの外部に戻された行に影響を与える修飾子がクエリに含まれる場合、完了した文は最初にサブクエリ内にラップされ、結合されたeager loadingがサブクエリに適用されます。 SQLAlchemyの積極的なロードは、クエリの形式に関係なく、クエリの最終結果、コレクションや関連オブジェクトのロード方法のみに影響しないことを絶対に保証するために、さらに1マイル、さらに10マイル以上移動します。"
 
 #: ../../orm/loading_relationships.rst:579
 msgid ":ref:`contains_eager` - using :func:`.contains_eager`"
-msgstr ""
+msgstr "：ref： `contains_eager`  - を使う：func：` .contains_eager`"
 
 #: ../../orm/loading_relationships.rst:584
 msgid "Subquery Eager Loading"
-msgstr ""
+msgstr "サブクエリのEager Loading"
 
 #: ../../orm/loading_relationships.rst:586
 msgid ""
@@ -541,7 +531,7 @@ msgid ""
 "we would specify ``\"subquery\"`` rather than ``\"joined\"``, and for the"
 " option we use the :func:`.subqueryload` option rather than the "
 ":func:`.joinedload` option."
-msgstr ""
+msgstr "サブクエリーロード熱負荷は、結合熱負荷の場合と同じ方法で構成されています。 ：paramref： `.relationship.lazy`パラメータの場合、` `\&quot;サブクエリ\ &quot;を` `\ &#39;&#39;に結合するように指定し、オプションとして：func：` .subqueryload `オプションの代わりに：func：` .joinedload`オプションを使用します。"
 
 #: ../../orm/loading_relationships.rst:592
 msgid ""
@@ -551,7 +541,7 @@ msgid ""
 "wrapped inside of a subquery, so that we retrieve the same list of "
 "primary keys for the primary object being returned, then link that to the"
 " sum of all the collection members to load them at once:"
-msgstr ""
+msgstr "サブクエリ・ロードの操作は、ロードする各リレーションシップの2番目のSELECT文を、すべての結果オブジェクトにわたって一度に発行することです。このSELECT文は、返されるプライマリオブジェクトのプライマリキーの同じリストを取得し、すべてのコレクションメンバの合計にリンクして一度にロードするために、サブクエリの内部にラップされた元のSELECT文を参照します。"
 
 #: ../../orm/loading_relationships.rst:625
 msgid ""
@@ -565,7 +555,7 @@ msgid ""
 "additional query only needs to load the collection items and not the lead"
 " object, it can use an inner JOIN in all cases for greater query "
 "efficiency."
-msgstr ""
+msgstr "subqueryload戦略には、コレクションをロードする領域で結合されたeagerのロードよりも多くの利点があります。第1に、元のクエリは、まったく変更せずに進めることができます。特にLEFT OUTER JOINを導入すると効率が低下する可能性があります。第2に、多くのコレクションが多数のJOINを含む単一の問合せを生成せずに積極的にロードされることを可能にします。各リレーションシップは完全に別のクエリでロードされます。最後に、追加のクエリは、リードオブジェクトではなくコレクションアイテムをロードするだけで済むため、すべてのケースで内部JOINを使用してクエリの効率を上げることができます。"
 
 #: ../../orm/loading_relationships.rst:635
 msgid ""
@@ -576,22 +566,22 @@ msgid ""
 "subqueryload strategy can only load the full contents of all collections "
 "at once, is therefore incompatible with \"batched\" loading supplied by "
 ":meth:`.Query.yield_per`, both for collection and scalar relationships."
-msgstr ""
+msgstr "subqueryloadの短所には、元のクエリの複雑さが関係クエリに転送されることが含まれます。このクエリは、サブクエリを組み合わせると、一部のバックエンド（特にMySQL）でかなり遅いクエリが生成される可能性があります。さらに、subqueryload戦略はすべてのコレクションの全内容を一度に読み込むことしかできないため、collectionとscalarの両方の関係のために：meth： `.Query.yield_per`によって提供される\&quot;バッチ\ &quot;読み込みと互換性がありません。"
 
 #: ../../orm/loading_relationships.rst:643
 msgid ""
 "The newer style of loading provided by :func:`.selectinload` solves these"
 " limitations of :func:`.subqueryload`."
-msgstr ""
+msgstr "func： `.selectinload`によって提供される新しいロードスタイルは：func：` .subqueryload`のこれらの制限を解決します。"
 
 #: ../../orm/loading_relationships.rst:648 of sqlalchemy.orm.immediateload:15
 #: sqlalchemy.orm.selectinload:27
 msgid ":ref:`selectin_eager_loading`"
-msgstr ""
+msgstr "：ref： `selectin_eager_loading`"
 
 #: ../../orm/loading_relationships.rst:654
 msgid "The Importance of Ordering"
-msgstr ""
+msgstr "注文の重要性"
 
 #: ../../orm/loading_relationships.rst:656
 msgid ""
@@ -602,15 +592,15 @@ msgid ""
 "queries emitted by :func:`.subqueryload` include the same ordering as "
 "used by the parent query.  Without it, there is a chance that the inner "
 "query could return the wrong rows::"
-msgstr ""
+msgstr "：meth： `.Query.first`、：meth：` .Query.limit`、または：meth： `.Query.offsetのような制限修飾子と組み合わせて：func：` .subqueryload`を使用するクエリです。 `〜** always ** include：meth：` .Query.order_by`を主キーのような一意の列に含めるべきです：func： `.subqueryload`によって生成された追加のクエリは、親クエリそれがなければ、内側のクエリが間違った行を返す可能性があります::"
 
 #: ../../orm/loading_relationships.rst:680
 msgid ":ref:`faq_subqueryload_limit_sort` - detailed example"
-msgstr ""
+msgstr "：ref： `faq_subqueryload_limit_sort`  - 詳細な例"
 
 #: ../../orm/loading_relationships.rst:685
 msgid "Select IN loading"
-msgstr ""
+msgstr "INロードを選択"
 
 #: ../../orm/loading_relationships.rst:687
 msgid ""
@@ -621,7 +611,7 @@ msgid ""
 " joined and subquery eager loading, is compatible with batching of "
 "results using :meth:`.Query.yield_per`, provided the database driver "
 "supports simultaneous cursors."
-msgstr ""
+msgstr "選択INロードはサブクエリeagerローディングと似ていますが、発行されるSELECT文はサブクエリeagerローディングよりもはるかに単純な構造です。さらに、INロードを選択すると、ロード結果のサブセットに一度に適用されるので、結合されたサブクエリロードとは異なり、データベースドライバが同時カーソルをサポートする場合は：meth： `.Query.yield_per`を使用した結果のバッチ処理と互換性があります。"
 
 #: ../../orm/loading_relationships.rst:697
 msgid ""
@@ -630,7 +620,7 @@ msgid ""
 ":func:`.selectinload` loader option.   This style of loading emits a "
 "SELECT that refers to the primary key values of the parent object inside "
 "of an IN clause, in order to load related associations:"
-msgstr ""
+msgstr "\ &quot;select IN \&quot; eager loadingは：paramref： `.relationship.lazy`のselectin \&quot; ``引数を使用するか、：func： `.selectinload`ローダーオプションを使用して提供されます。このロードスタイルは、関連する関連付けをロードするために、IN句の内部の親オブジェクトの主キー値を参照するSELECTを発行します。"
 
 #: ../../orm/loading_relationships.rst:727
 msgid ""
@@ -639,14 +629,14 @@ msgid ""
 "objects loaded; after a batch of objects are completely loaded, their "
 "primary key values are injected into the ``IN`` clause for the second "
 "SELECT."
-msgstr ""
+msgstr "上記の2番目のSELECTは、 `` users_1.idn（5,7） ``を参照しています。ここで、\ &quot;5 \&quot;と\ &quot;7 \&quot;は前回読み込まれた2つの `` User``オブジェクト;一群のオブジェクトが完全にロードされた後で、それらの主キー値が第2のSELECTの `` IN``節に注入されます。"
 
 #: ../../orm/loading_relationships.rst:732
 msgid ""
 "\"Select IN\" loading is the newest form of eager loading added to "
 "SQLAlchemy as of the 1.2 series.   Things to know about this kind of "
 "loading include:"
-msgstr ""
+msgstr "\ &quot;Select IN \&quot;ローディングは、1.2シリーズのSQLAlchemyに追加された熱心なローディングの最新のフォームです。この種の読み込みには以下のことが含まれます。"
 
 #: ../../orm/loading_relationships.rst:735
 msgid ""
@@ -654,7 +644,7 @@ msgid ""
 "that of \"subquery\", does not require a subquery nor does it inherit any"
 " of the performance limitations of the original query; the lookup is a "
 "simple primary key lookup and should have high performance."
-msgstr ""
+msgstr "\ &quot;selectin \&quot;ローダー戦略によって生成されたSELECTステートメントは、\ &quot;サブクエリ\&quot;とは異なり、副問合せを必要とせず、元の問合せのパフォーマンス上の制限も継承しません。ルックアップは単純な主キー検索であり、高性能でなければなりません。"
 
 #: ../../orm/loading_relationships.rst:741
 msgid ""
@@ -662,7 +652,7 @@ msgid ""
 ":ref:`subqueryload_ordering` also don't apply to selectin loading; "
 "selectin is always linking directly to a parent primary key and can't "
 "really return the wrong result."
-msgstr ""
+msgstr "：ref： `subqueryload_ordering`で説明されているsubqueryloadの特別な注文要件は、selectinの読み込みにも適用されません。 selectinは常に親の主キーに直接リンクしており、間違った結果を返すことはできません。"
 
 #: ../../orm/loading_relationships.rst:746
 msgid ""
@@ -672,7 +662,7 @@ msgid ""
 " loading many levels deep, \"selectin\" loading still uses exactly one "
 "JOIN in the statement. joined and subquery eager loading always refer to "
 "multiple JOINs up to the original parent."
-msgstr ""
+msgstr "\ &quot;selectin \&quot;ローディングは、結合されたサブクエリローディングとは異なり、ロードされた直近の親オブジェクトに関してSELECTを送出し、チェインの先頭にあるオブジェクトの元の型ではありません。だから、多くのレベルを深く読み込めば、\ &quot;selectin \&quot;ローディングはステートメント内でまったく1つのJOINを使います。サブクエリ・ロードは、常に元の親までの複数のJOINを参照します。"
 
 #: ../../orm/loading_relationships.rst:753
 msgid ""
@@ -682,7 +672,7 @@ msgid ""
 "it to work with cached queries, the selectin loader makes full use of the"
 " :mod:`sqlalchemy.ext.baked` extension to cache generated SQL and greatly"
 " cut down on internal function call overhead."
-msgstr ""
+msgstr "\ &quot;selectin \&quot;ロードは、元のクエリとは独立した、予測可能な構造のSELECT文を生成します。したがって、キャッシュされたクエリを処理するための：meth： `.ColumnOperators.in_`という新機能を利用すると、selectinローダは生成された：mod：` sqlalchemy.ext.baked`拡張を完全に利用します内部関数呼び出しオーバーヘッドを大幅に削減します。"
 
 #: ../../orm/loading_relationships.rst:760
 msgid ""
@@ -695,7 +685,7 @@ msgid ""
 "statements emit with minimal Python overhead due to the \"baked\" queries"
 " and also minimal SQL overhead as they query against primary key "
 "directly."
-msgstr ""
+msgstr "主キーがSQLステートメントの大きなIN式に表示されるため、この方法では一度に最大500の親主キー値のみを照会します。 Oracleなどの一部のデータベースでは、IN式の大きさにハード制限があり、全体的にSQL文字列のサイズを任意に大きくすべきではありません。したがって、大きな結果セットの場合、\ &quot;selectin \&quot;ローディングは返された500個の親ローごとにSELECTを送出します。これらのSELECT文は、\ &quot;baked \&quot;クエリのためPythonのオーバーヘッドが最小限に抑えられ、プライマリキーに対して直接問合せを行うため、SQLオーバーヘッドが最小限に抑えられます。"
 
 #: ../../orm/loading_relationships.rst:769
 msgid ""
@@ -706,7 +696,7 @@ msgid ""
 "specific result objects, \"selectin\" loading allows for eagerly loaded "
 "collections against arbitrarily large result sets with a top limit on "
 "memory use when used with :meth:`.Query.yield_per`."
-msgstr ""
+msgstr "\ &quot;selectin \&quot;ローディングは、データベースドライバが同時のカーソルをサポートしていれば、：meth： `.Query.yield_per`によって提供される\&quot;バッチ処理\ &quot;機能と連携して動作する唯一の熱心なローディングです。特定の結果オブジェクトに対して関連する項目だけを照会するので、\ &quot;selectin \&quot;の読み込みでは、：meth： `.Query.yield_per`で使用すると、メモリー使用量の上限がある任意の大きさの結果セットに対して積極的に読み込まれます。"
 
 #: ../../orm/loading_relationships.rst:776
 msgid ""
@@ -714,7 +704,7 @@ msgid ""
 "SQLite, Postgresql.   The MySQL drivers mysqlclient and pymysql currently"
 " **do not** support simultaneous cursors, nor do the ODBC drivers for SQL"
 " Server."
-msgstr ""
+msgstr "同時のカーソルをサポートする現在のデータベースドライバには、SQLite、Postgresqlなどがあります。 MySQLドライバのmysqlclientとpymysqlは、現在のところ**同時カーソルをサポートしておらず、SQL ServerのODBCドライバもサポートしていません。"
 
 #: ../../orm/loading_relationships.rst:781
 msgid ""
@@ -730,7 +720,7 @@ msgid ""
 "   An advantage to SQLAlchemy just running the SQL out for it to fail is "
 "that if a database like SQLite does start supporting this syntax, it will"
 " work without any changes to SQLAlchemy."
-msgstr ""
+msgstr "\ &quot;selectin \&quot;の読み込みはINに依存するため、複合主キーを使用したマッピングではINの &quot;タプル&quot;形式を使用する必要があります。この形式は `` WHERE（table.column_a、table.column_b）IN（ ？、？）、（？、？）、（？、？）） ``。この構文は、すべてのデータベースでサポートされているわけではありません。現代のPostgreSQLとMySQLのバージョンでのみサポートされていることが知られています。したがって、** selectinの読み込みは、複合主キー**のプラットフォームに依存しません。 SQLAlchemyには、この構文をサポートするプラットフォームを事前にチェックする特別なロジックはありません。サポートしていないプラットフォーム（SQLiteなど）に対して実行すると、データベースはエラーをただちに返します。 SQLAlchemyがSQLを実行するだけの利点は、SQLiteなどのデータベースがこの構文をサポートし始めると、SQLAlchemyを変更することなく動作することです。"
 
 #: ../../orm/loading_relationships.rst:794
 msgid ""
@@ -740,11 +730,11 @@ msgid ""
 "statements for larger result sets. As always, developers should spend "
 "time looking at the statements and results generated by their "
 "applications in development to check that things are working efficiently."
-msgstr ""
+msgstr "一般に、\ &quot;selectin \&quot;ローディングは、おそらく\ &quot;サブクエリ\&quot;の読み込みよりも優れています。コンポジット主キーのシンタックス要件を保存し、大きな結果セットに対しては多くのSELECT文を発行する可能性があります。いつものように、開発者は、開発中のアプリケーションによって生成されたステートメントや結果を見て、効率的に動作することを確認する時間を費やす必要があります。"
 
 #: ../../orm/loading_relationships.rst:804
 msgid "What Kind of Loading to Use ?"
-msgstr ""
+msgstr "どのようなローディングを使用するのですか？"
 
 #: ../../orm/loading_relationships.rst:806
 msgid ""
@@ -754,11 +744,11 @@ msgid ""
 ":func:`~sqlalchemy.orm.relationship` which references a collection, and a"
 " :func:`~sqlalchemy.orm.relationship` that references a scalar many-to-"
 "one reference."
-msgstr ""
+msgstr "どのタイプのロードを使用するのかは、SQL実行の数、SQLの複雑さ、フェッチされるデータの量のトレードオフを最適化するのが一般的です。コレクションを参照するfunc： `〜sqlalchemy.orm.relationship`とスカラ多対1参照を参照するa：func：`〜sqlalchemy.orm.relationship`の2つの例を考えてみましょう。"
 
 #: ../../orm/loading_relationships.rst:812
 msgid "One to Many Collection"
-msgstr ""
+msgstr "1対多コレクション"
 
 #: ../../orm/loading_relationships.rst:814
 msgid ""
@@ -766,7 +756,7 @@ msgid ""
 "access a collection on each of them, a total of 101 SQL statements will "
 "be emitted, although each statement will typically be a simple SELECT "
 "without any joins."
-msgstr ""
+msgstr "デフォルトの遅延ロードを使用する場合、100個のオブジェクトをロードしてそれぞれのコレクションにアクセスすると、合計101個のSQL文が発行されますが、通常、各ステートメントは結合なしの単純なSELECTになります。"
 
 #: ../../orm/loading_relationships.rst:818
 msgid ""
@@ -782,7 +772,7 @@ msgid ""
 "loading only makes sense when the size of the collections are relatively "
 "small.  The LEFT OUTER JOIN can also be performance intensive compared to"
 " an INNER join."
-msgstr ""
+msgstr "結合ロードを使用すると、100個のオブジェクトとそのコレクションのロードにより、1つのSQLステートメントだけが出力されます。ただし、フェッチされる行の総数は、すべてのコレクションのサイズの合計と、空のコレクションを持つ各親オブジェクトの1つの余分な行に等しくなります。 SQLAlchemyは主キーの列以外の列を再フェッチしませんが、ほとんどのDBAPI（いくつかの例外を除いて）は完全なデータを送信しますいずれの場合も、ワイヤを介した各親のクライアント接続への接続。したがって、結合されたeagerローディングは、コレクションのサイズが比較的小さい場合にのみ意味を持ちます。 LEFT OUTER JOINは、INNER結合と比較してパフォーマンスが向上します。"
 
 #: ../../orm/loading_relationships.rst:828
 msgid ""
@@ -791,7 +781,7 @@ msgid ""
 " to the sum of the size of all collections.  An INNER JOIN is used, and a"
 " minimum of parent columns are requested, only the primary keys. So a "
 "subquery load makes sense when the collections are larger."
-msgstr ""
+msgstr "副問合せのロードを使用すると、100個のオブジェクトのロードによって2つのSQL文が生成されます。 2番目のステートメントは、すべてのコレクションのサイズの合計と等しい合計行数をフェッチします。 INNER JOINが使用され、最小限の親列が要求され、主キーのみが要求されます。サブクエリのロードは、コレクションが大きい場合に意味があります。"
 
 #: ../../orm/loading_relationships.rst:834
 msgid ""
@@ -802,7 +792,7 @@ msgid ""
 "collection four levels deep, there will be four JOINs out to the parent."
 "  selectin loading on the other hand will always have exactly one JOIN to"
 " the immediate parent table."
-msgstr ""
+msgstr "ジョイントまたはサブクエリのローディングで複数レベルの深さを使用すると、コレクション内のコレクションをロードすると、デカルト形式でフェッチされた行の総数が増えます。結合されたサブクエリ読み込みとロードの両方が常に元の親クラスから結合します。コレクションを4レベル深くロードすると、親に4つのJOINがあります。一方、selectinの読み込みは常に、直接の親テーブルへのJOINを1つだけ持ちます。"
 
 #: ../../orm/loading_relationships.rst:841
 msgid ""
@@ -812,7 +802,7 @@ msgid ""
 "primary key values into a single SELECT statement; so for a lead "
 "collection larger than 500, there will be a SELECT statement emitted for "
 "each batch of 500 objects selected."
-msgstr ""
+msgstr "selectinの読み込みを使用すると、100個のオブジェクトの読み込みで2つのSQL文が出力され、2番目のSQL文は読み込まれたオブジェクトの100個の主キーを参照します。 selectinの読み込みでは、多くとも500個の主キー値が単一のSELECTステートメントにレンダリングされます。したがって、500を超える鉛回収の場合、選択された500個のオブジェクトの各バッチに対してSELECTステートメントが発行されます。"
 
 #: ../../orm/loading_relationships.rst:848
 msgid ""
@@ -821,7 +811,7 @@ msgid ""
 "queries for selectin loading have the best performance characteristics "
 "and the fewest number of rows.  The only caveat is that there might be "
 "more than one SELECT emitted depending on the size of the lead result."
-msgstr ""
+msgstr "selectinの読み込みに複数の深さの深さを使用しても、結合されたサブクエリの読み込みには\ &quot;デカルト\&quot;という問題は発生しません。セレクチンロードのクエリは、パフォーマンスの特性が最も高く、行数が最も少なくなります。唯一の注意点は、リード結果のサイズに応じて複数のSELECTが発行される可能性があることです。"
 
 #: ../../orm/loading_relationships.rst:854
 msgid ""
@@ -830,11 +820,11 @@ msgid ""
 "with result set batching provided by :meth:`.Query.yield_per` assuming an"
 " appropriate database driver, so may be able to allow batching for large "
 "result sets."
-msgstr ""
+msgstr "selectinの読み込みは、（コレクションを使用しているとき）結合されたもの（サブクエリの熱意的な読み込み）（あらゆる種類の関係）とは異なり、適切なデータベースドライバを仮定して：meth： `.Query.yield_per`によって提供される結果セットのバッチングと互換性があります。大きな結果セットのバッチ処理を可能にする。"
 
 #: ../../orm/loading_relationships.rst:859
 msgid "Many to One Reference"
-msgstr ""
+msgstr "多対1参照"
 
 #: ../../orm/loading_relationships.rst:861
 msgid ""
@@ -848,7 +838,7 @@ msgid ""
 "target objects have already been loaded into the session and are strongly"
 " referenced, using the default of `lazy='select'` is by far the most "
 "efficient way to go."
-msgstr ""
+msgstr "デフォルトの遅延ロードを使用する場合、100個のオブジェクトのロードは、コレクションの場合には101個ものSQL文を出力するようになります。ただし、多対1参照がターゲットの主キーへの単純な外部キー参照である場合、各参照は、現在のアイデンティティマップで最初に：meth： `.Queryを使用してチェックされるという点で、重大な例外があります.get`。したがって、オブジェクトのコレクションが比較的小さなターゲットオブジェクトのセットを参照している場合、または可能なターゲットオブジェクトのフルセットが既にセッションにロードされ、強く参照されている場合、デフォルトの `lazy = &#39;select&#39;`を使用するのはbyはるかに効率的な方法です。"
 
 #: ../../orm/loading_relationships.rst:869
 msgid ""
@@ -861,7 +851,7 @@ msgid ""
 ":func:`~sqlalchemy.orm.relationship`.   For a load of objects where there"
 " are many possible target references which may have not been loaded "
 "already, joined loading with an INNER JOIN is extremely efficient."
-msgstr ""
+msgstr "結合されたロードを使用すると、100個のオブジェクトのロードによってSQL文が1つだけ出力されます。結合はLEFT OUTER JOINになり、すべての場合に合計行数は100になります。それぞれの親が絶対に子を持っていることがわかっている場合（つまり、外部キー参照がNOT NULLの場合）、結合ロードは次のように構成できます：paramref： `〜.relationship.innerjoin`は通常「True」に設定されます：func： `〜sqlalchemy.orm.relationship`内にあります。すでにロードされていない可能性のあるターゲット参照が多数存在するオブジェクトのロードの場合、INNER JOINを使用したローディングの結合は非常に効率的です。"
 
 #: ../../orm/loading_relationships.rst:878
 msgid ""
@@ -870,7 +860,7 @@ msgid ""
 "There's probably not much advantage here over joined loading, however, "
 "except perhaps that subquery loading can use an INNER JOIN in all cases "
 "whereas joined loading requires that the foreign key is NOT NULL."
-msgstr ""
+msgstr "サブクエリ・ローディングは、すべての子オブジェクトに対して2番目のロードを発行するため、100個のオブジェクトがロードされると、2つのSQL文が発行されます。ただし、サブクエリのロードではすべての場合にINNER JOINを使用できますが、ジョインされたロードでは外部キーがNOT NULLである必要がある場合を除いて、ジョインされたロードよりも利点はあまりありません。"
 
 #: ../../orm/loading_relationships.rst:883
 msgid ""
@@ -880,11 +870,11 @@ msgid ""
 "emitted.  The query itself still has to JOIN to the parent table, so "
 "again there's not too much advantage to selectin loading for many-to-one "
 "vs. joined eager loading save for the use of INNER JOIN in all cases."
-msgstr ""
+msgstr "Selectinの読み込みでは、すべての子オブジェクトに対して2番目の読み込みも行われます（前述のように、結果が大きければ500行ごとにSELECTを出す）ので、100オブジェクトの読み込みでは2つのSQL文が出力されます。クエリ自体はまだ親テーブルにJOINしなければならないので、多対1のロードを選択するにはあまり利点がありません。すべてのケースでINNER JOINを使用するために節約されたロードを保存します。"
 
 #: ../../orm/loading_relationships.rst:891
 msgid "Polymorphic Eager Loading"
-msgstr ""
+msgstr "多形Eager Loading"
 
 #: ../../orm/loading_relationships.rst:893
 msgid ""
@@ -892,11 +882,11 @@ msgid ""
 "supported. See the section :ref:`eagerloading_polymorphic_subtypes` for "
 "examples of the :meth:`.PropComparator.of_type` method in conjunction "
 "with the :func:`.orm.with_polymorphic` function."
-msgstr ""
+msgstr "e-wager-loadベースでのポリゴンオプションの指定がサポートされています。 ：meth： `.PropComparator.of_type`メソッドの例は、：func：` .orm.with_polymorphic`関数と一緒に参照してください：ref： `eagerloading_polymorphic_subtypes`を参照してください。"
 
 #: ../../orm/loading_relationships.rst:901
 msgid "Wildcard Loading Strategies"
-msgstr ""
+msgstr "ワイルドカード読み込み方針"
 
 #: ../../orm/loading_relationships.rst:903
 msgid ""
@@ -907,7 +897,7 @@ msgid ""
 "not otherwise specified in the :class:`.Query`.   This feature is "
 "available by passing the string ``'*'`` as the argument to any of these "
 "options::"
-msgstr ""
+msgstr "：func： `.joinedload`、：func：` .subqueryload`、：func： `.lazyload`、：func：` .selectinload`、：func： `.noload`、および：func：` .raiseload` ：func： `.relationship`のデフォルトスタイルを設定するために使用することができます：func：` .relationship`  - ：class： `.Query`で指定されていないすべての属性に影響を与えます。この機能は、文字列 `` &#39;*&#39; ``をこれらのオプションのいずれかに引数として渡すことで利用できます::"
 
 #: ../../orm/loading_relationships.rst:914
 msgid ""
@@ -918,24 +908,24 @@ msgid ""
 "example, using ``lazyload('*')`` will unilaterally cause all those "
 "relationships to use ``'select'`` loading, e.g. emit a SELECT statement "
 "when each attribute is accessed."
-msgstr ""
+msgstr "上記の `` lazyload（ &#39;*&#39;） ``オプションは `` lazy``を使用するものを除き、全ての `` lazy``の設定に優先します：func： `.relationship`は、 ``スタイルの読み込み。 `` lazy = &#39;joined&#39; ``や `` lazy = &#39;subquery&#39;``を指定したリレーションシップがある場合、 `` lazyload（&#39; * &#39;） ``を使用すると、それらのリレーションシップに一方的に ``&#39; selectロードする。例えば、各属性にアクセスするときにSELECTステートメントを発行する。"
 
 #: ../../orm/loading_relationships.rst:923
 msgid ""
 "The option does not supersede loader options stated in the query, such as"
 " :func:`.eagerload`, :func:`.subqueryload`, etc.  The query below will "
 "still use joined loading for the ``widget`` relationship::"
-msgstr ""
+msgstr "このオプションは、func： `.eagerload`、：func：` .subqueryload`など、クエリに記述されたローダーオプションに代わるものではありません。以下のクエリは `` widget``の関係のために結合された読み込みを使用します::"
 
 #: ../../orm/loading_relationships.rst:933
 msgid ""
 "If multiple ``'*'`` options are passed, the last one overrides those "
 "previously passed."
-msgstr ""
+msgstr "複数の `` &#39;*&#39; ``オプションが渡された場合、最後に渡されたオプションが優先されます。"
 
 #: ../../orm/loading_relationships.rst:937
 msgid "Per-Entity Wildcard Loading Strategies"
-msgstr ""
+msgstr "エンティティごとのワイルドカード読み込み方法"
 
 #: ../../orm/loading_relationships.rst:939
 msgid ""
@@ -944,15 +934,15 @@ msgid ""
 "and ``Address``, we can instruct all relationships on ``Address`` only to"
 " use lazy loading by first applying the :class:`.Load` object, then "
 "specifying the ``*`` as a chained option::"
-msgstr ""
+msgstr "ワイルドカードローダー戦略の変種は、エンティティ単位で戦略を設定する能力です。例えば、 `` User``と `` Address``を問い合わせる場合、 `` Address``のすべてのリレーションシップに `：class：` .Load`オブジェクトを最初に適用して遅延読み込みを使用するよう指示し、 `` * ``を連鎖オプションとして使う::"
 
 #: ../../orm/loading_relationships.rst:948
 msgid "Above, all relationships on ``Address`` will be set to a lazy load."
-msgstr ""
+msgstr "上記のように、 `` Address``のすべての関係は遅延ロードに設定されます。"
 
 #: ../../orm/loading_relationships.rst:955
 msgid "Routing Explicit Joins/Statements into Eagerly Loaded Collections"
-msgstr ""
+msgstr "明示的な結合/ステートメントを熱心に読み込まれたコレクションにルーティングする"
 
 #: ../../orm/loading_relationships.rst:957
 msgid ""
@@ -963,7 +953,7 @@ msgid ""
 "necessary joins which represent a particular collection or scalar "
 "reference, and the joins added by the joinedload feature are redundant - "
 "yet you'd still like the collections/references to be populated."
-msgstr ""
+msgstr "：func： `〜sqlalchemy.orm.joinedload（）`の動​​作は、匿名エイリアスをターゲットとして自動的に結合が作成され、その結果がロードされたオブジェクトのコレクションとスカラー参照にルーティングされるようなものです。クエリーには、特定のコレクションまたはスカラー参照を表す必要な結合がすでに含まれている場合が多く、結合ロード機能によって追加された結合は冗長ですが、まだコレクション/参照に移入したいと思うことがあります。"
 
 #: ../../orm/loading_relationships.rst:965
 msgid ""
@@ -974,7 +964,7 @@ msgid ""
 "explicitly. Below, we specify a join between ``User`` and ``Address`` and"
 " additionally establish this as the basis for eager loading of "
 "``User.addresses``::"
-msgstr ""
+msgstr "このSQLAlchemyは：func： `〜sqlalchemy.orm.contains_eager（）`オプションを提供します。このオプションは、：func： `〜sqlalchemy.orm.joinedload（）`オプションと同じ方法で使用されますが、：class： `〜sqlalchemy.orm.query.Query`が適切な結合を明示的に指定することを前提としています。以下では、 `` User``と `` Address``の間の結合を指定し、これをさらに `` User.addresses``の読み込みの基礎として確立します::"
 
 #: ../../orm/loading_relationships.rst:986
 msgid ""
@@ -982,7 +972,7 @@ msgid ""
 "keyword argument to :func:`~sqlalchemy.orm.contains_eager` may be used to"
 " indicate it. This is sent as a reference to an :func:`.aliased` or "
 ":class:`.Alias` construct:"
-msgstr ""
+msgstr "文の\ &quot;eager \&quot;部分が\ &quot;aliased \&quot;であれば、：func： `〜sqlalchemy.orm.contains_eager`への` `alias``キーワード引数を使用してそれを示すことができます。これは：func： `.aliased`または：class：` .Alias`構造体への参照として送信されます："
 
 #: ../../orm/loading_relationships.rst:1014
 msgid ""
@@ -990,15 +980,15 @@ msgid ""
 "full path from the starting entity. For example if we were loading "
 "``Users->orders->Order->items->Item``, the string version would look "
 "like::"
-msgstr ""
+msgstr "：func： `.contains_eager`への引数として与えられたパスは、開始エンティティからのフルパスである必要があります。たとえば、 `` Users-&gt; orders-&gt; Order-&gt; items-&gt; Item``をロードしている場合、文字列のバージョンは次のようになります::"
 
 #: ../../orm/loading_relationships.rst:1022
 msgid "Or using the class-bound descriptor::"
-msgstr ""
+msgstr "または、クラスにバインドされた記述子を使用する::"
 
 #: ../../orm/loading_relationships.rst:1029
 msgid "Using contains_eager() to load a custom-filtered collection result"
-msgstr ""
+msgstr "contains_eager（）を使用してカスタムフィルタリングされたコレクションの結果をロードする"
 
 #: ../../orm/loading_relationships.rst:1031
 msgid ""
@@ -1007,14 +997,14 @@ msgid ""
 "follows that we can opt to **modify** what values the collection is "
 "intended to store, by writing our SQL to load a subset of elements for "
 "collections or scalar attributes."
-msgstr ""
+msgstr "：func： `.contains_eager`を使用すると、*私たちはコレクションを生成するために使用されるSQLを構築しています。このことから、コレクションやスカラー属性の要素のサブセットをロードするようにSQLを記述することで、コレクションに格納する値を**変更する**ことができます。"
 
 #: ../../orm/loading_relationships.rst:1037
 msgid ""
 "As an example, we can load a ``User`` object and eagerly load only "
 "particular addresses into its ``.addresses`` collection just by "
 "filtering::"
-msgstr ""
+msgstr "例として、 `` User``オブジェクトを読み込み、 `` .addresses``コレクションに特定のアドレスだけを熱心にロードすることができます::"
 
 #: ../../orm/loading_relationships.rst:1044
 msgid ""
@@ -1023,7 +1013,7 @@ msgid ""
 "field; the ``User.addresses`` collection will contain **only** these "
 "``Address`` entries, and *not* any other ``Address`` entries that are in "
 "fact associated with the collection."
-msgstr ""
+msgstr "上記のクエリは `` email``フィールドに部分文字列 `` &#39;ed``を含む少なくとも `` Address``オブジェクトを含む `` User``オブジェクトのみを読み込みます。 `` User.addresses``コレクションには、これらの `` Address``エントリだけが**含まれ、実際にコレクションに関連付けられている他の `` Address``エントリは含まれません。"
 
 #: ../../orm/loading_relationships.rst:1052
 msgid ""
@@ -1032,7 +1022,7 @@ msgid ""
 "database.  If we attempted to add entries to this collection, we might "
 "find ourselves conflicting with entries that are already in the database "
 "but not locally loaded."
-msgstr ""
+msgstr "オブジェクトのサブセットのみをコレクションにロードすると、そのコレクションは実際にデータベースに存在するものを表しなくなることに注意してください。このコレクションにエントリを追加しようとすると、すでにデータベースに存在するがローカルにロードされていないエントリと競合する可能性があります。"
 
 #: ../../orm/loading_relationships.rst:1058
 msgid ""
@@ -1041,18 +1031,18 @@ msgid ""
 ":meth:`.Session.commit`, :meth:`.Session.rollback` methods are used "
 "assuming default session settings, or the :meth:`.Session.expire_all` or "
 ":meth:`.Session.expire` methods are used."
-msgstr ""
+msgstr "さらに、オブジェクトまたは属性が期限切れになると、**コレクションは通常**完全にリロードされます。この満了は、：meth： `.Session.commit`、：meth：` .Session.rollback`メソッドがデフォルトのセッション設定、または：meth： `.Session.expire_all`または：meth：`。Session .expire`メソッドが使用されます。"
 
 #: ../../orm/loading_relationships.rst:1064
 msgid ""
 "For these reasons, prefer returning separate fields in a tuple rather "
 "than artificially altering a collection, when an object plus a custom set"
 " of related objects is desired::"
-msgstr ""
+msgstr "これらの理由から、オブジェクトと関連するオブジェクトのカスタムセットが必要な場合は、人工的にコレクションを変更するのではなく、タプル内の別々のフィールドを返すことをお勧めします。"
 
 #: ../../orm/loading_relationships.rst:1073
 msgid "Advanced Usage with Arbitrary Statements"
-msgstr ""
+msgstr "任意のステートメントによる高度な使用"
 
 #: ../../orm/loading_relationships.rst:1075
 msgid ""
@@ -1060,15 +1050,15 @@ msgid ""
 "made to represent any set of arbitrary names to match up into a "
 "statement. Below it is linked to a :func:`.select` which links a set of "
 "column objects to a string SQL statement::"
-msgstr ""
+msgstr "`` alias``引数は、任意の組の任意の名前を表現してステートメントにマッチさせることができるので、より創造的に使用することができます。以下はa：func： `.select`にリンクされ、一連の列オブジェクトを文字列SQL文にリンクします::"
 
 #: ../../orm/loading_relationships.rst:1098
 msgid "Creating Custom Load Rules"
-msgstr ""
+msgstr "カスタムロードルールの作成"
 
 #: ../../orm/loading_relationships.rst:1100
 msgid "This is an advanced technique!   Great care and testing should be applied."
-msgstr ""
+msgstr "これは高度な技術です！大きな注意とテストを適用する必要があります。"
 
 #: ../../orm/loading_relationships.rst:1103
 msgid ""
@@ -1082,7 +1072,7 @@ msgid ""
 "history\" system which is used to determine flush-time changes is "
 "bypassed; the attribute is assigned in the same way as if the ORM loaded "
 "it that way from the database."
-msgstr ""
+msgstr "ORMには、属性の値がローカルで使用可能なさまざまなエッジケースがありますが、ORM自体にはこれに関する認識がありません。また、ユーザー定義の負荷属性システムが望ましい場合もあります。ユーザ定義ローディングシステムのユースケースをサポートするために、主要な関数func： `.attributes.set_committed_value`が提供されています。この関数は基本的にPythonの `` setattr（） ``関数と同等ですが、ターゲットオブジェクトに適用すると、フラッシュタイムの変更を判断するためのSQLAlchemyの\ &quot;属性ヒストリー\&quot;システムはバイパスされます。属性は、ORMがデータベースからその方法でロードしたのと同じ方法で割り当てられます。"
 
 #: ../../orm/loading_relationships.rst:1113
 msgid ""
@@ -1094,63 +1084,63 @@ msgid ""
 "\"one-to-many\" side.  The SQLAlchemy ORM does not consider backrefs when"
 " loading related objects, and it views a \"one-to-one\" as just another "
 "\"one-to-many\", that just happens to be one row."
-msgstr ""
+msgstr "：func： `.attributes.set_committed_value`の使用は：meth：` .InstanceEvents.load`と呼ばれる別のキーイベントと組み合わされて、オブジェクトがロードされたときに属性集団動作を生成することができます。 1つのそのような例は、双方向の「1対1」の場合であり、1対1の「多対1」側の読み込みは、多対多の側にあります。 SQLAlchemy ORMは、関連するオブジェクトをロードするときには、バック・アウトーフを考慮せず、1対1という別の\ &quot;1対多\&quot;を1行と見なします。"
 
 #: ../../orm/loading_relationships.rst:1122
 msgid "Given the following mapping::"
-msgstr ""
+msgstr "与えられた次のマッピング::"
 
 #: ../../orm/loading_relationships.rst:1146
 msgid ""
 "If we query for an ``A`` row, and then ask it for ``a.b.a``, we will get "
 "an extra SELECT::"
-msgstr ""
+msgstr "`` A``行を照会し、 `` aba``を要求すると、特別なSELECT ::"
 
 #: ../../orm/loading_relationships.rst:1154
 msgid ""
 "This SELECT is redundant because ``b.a`` is the same value as ``a1``.  We"
 " can create an on-load rule to populate this for us::"
-msgstr ""
+msgstr "`` ba``は `` a1``と同じ値なので、このSELECTは冗長です。私たちにこれを設定するためのロードルールを作成することができます::"
 
 #: ../../orm/loading_relationships.rst:1165
 msgid ""
 "Now when we query for ``A``, we will get ``A.b`` from the joined eager "
 "load, and ``A.b.a`` from our event:"
-msgstr ""
+msgstr "今、 `` A``を問い合わせると、積極的に参加している人から `` Ab``を、イベントからは `` Aba``を取得します："
 
 #: ../../orm/loading_relationships.rst:1183
 msgid "Relationship Loader API"
-msgstr ""
+msgstr "リレーションシップローダーAPI"
 
 #: of sqlalchemy.orm.contains_alias:1
 msgid ""
 "Return a :class:`.MapperOption` that will indicate to the :class:`.Query`"
 " that the main table has been aliased."
-msgstr ""
+msgstr "メインテーブルがエイリアス化されたことを：class： `.Query`に示すclass：` .MapperOption`を返します。"
 
 #: of sqlalchemy.orm.contains_alias:4
 msgid ""
 "This is a seldom-used option to suit the very rare case that "
 ":func:`.contains_eager` is being used in conjunction with a user-defined "
 "SELECT statement that aliases the parent table.  E.g.::"
-msgstr ""
+msgstr "ごくまれに、func： `.contains_eager`が、親テーブルのエイリアスとなるユーザ定義のSELECT文と一緒に使用されている場合に適合することはめったにありません。例えば：："
 
 #: of sqlalchemy.orm.contains_alias sqlalchemy.orm.joinedload
 #: sqlalchemy.orm.raiseload
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.orm.contains_alias:28
 msgid ""
 "is the string name of an alias, or a :class:`~.sql.expression.Alias` "
 "object representing the alias."
-msgstr ""
+msgstr "はエイリアスの文字列名、またはエイリアスを表す：class： `〜.sql.expression.Alias`オブジェクトです。"
 
 #: of sqlalchemy.orm.contains_eager:1
 msgid ""
 "Indicate that the given attribute should be eagerly loaded from columns "
 "stated manually in the query."
-msgstr ""
+msgstr "指定された属性を、クエリで手動で記述された列から積極的に読み込む必要があることを示します。"
 
 #: of sqlalchemy.orm.contains_eager:4 sqlalchemy.orm.immediateload:8
 #: sqlalchemy.orm.joinedload:4 sqlalchemy.orm.lazyload:4
@@ -1159,20 +1149,20 @@ msgstr ""
 msgid ""
 "This function is part of the :class:`.Load` interface and supports both "
 "method-chained and standalone operation."
-msgstr ""
+msgstr "この関数は：class： `.Load`インターフェースの一部であり、メソッド連鎖操作とスタンドアロン操作の両方をサポートしています。"
 
 #: of sqlalchemy.orm.contains_eager:7
 msgid ""
 "The option is used in conjunction with an explicit join that loads the "
 "desired rows, i.e.::"
-msgstr ""
+msgstr "このオプションは、必要な行をロードする明示的な結合、すなわち::"
 
 #: of sqlalchemy.orm.contains_eager:14
 msgid ""
 "The above query would join from the ``Order`` entity to its related "
 "``User`` entity, and the returned ``Order`` objects would have the "
 "``Order.user`` attribute pre-populated."
-msgstr ""
+msgstr "上記のクエリは `` Order``エンティティから関連する `` User``エンティティに参加し、返された `` Order``オブジェクトは `` Order.user``属性が事前設定されています。"
 
 #: of sqlalchemy.orm.contains_eager:18
 msgid ""
@@ -1180,14 +1170,14 @@ msgid ""
 "string name of an alias, an :func:`~sqlalchemy.sql.expression.alias` "
 "construct, or an :func:`~sqlalchemy.orm.aliased` construct. Use this when"
 " the eagerly-loaded rows are to come from an aliased table::"
-msgstr ""
+msgstr "：func： `.contains_eager`は、エイリアスの文字列名である` alias`引数、：func： `〜sqlalchemy.sql.expression.alias`構文、または：func：`〜sqlalchemy.orm 。熱心に読み込まれた行がエイリアステーブルから来る場合は、これを使用します::"
 
 #: of sqlalchemy.orm.contains_eager:28
 msgid ""
 "When using :func:`.contains_eager` in conjunction with inherited "
 "subclasses, the :meth:`.RelationshipProperty.of_type` modifier should "
 "also be used in order to set up the pathing properly::"
-msgstr ""
+msgstr "継承されたサブクラスと組み合わせて：func： `.contains_eager`を使用する場合、適切にパスを設定するために：meth：` .RelationshipProperty.of_type`修飾子も使用する必要があります::"
 
 #: of sqlalchemy.orm.Load:32 sqlalchemy.orm.contains_eager:42
 #: sqlalchemy.orm.immediateload:13 sqlalchemy.orm.joinedload:80
@@ -1195,15 +1185,15 @@ msgstr ""
 #: sqlalchemy.orm.raiseload:25 sqlalchemy.orm.selectinload:25
 #: sqlalchemy.orm.subqueryload:24
 msgid ":ref:`loading_toplevel`"
-msgstr ""
+msgstr "：ref： `loading_toplevel`"
 
 #: of sqlalchemy.orm.contains_eager:44
 msgid ":ref:`contains_eager`"
-msgstr ""
+msgstr "：ref： `contains_eager`"
 
 #: of sqlalchemy.orm.defaultload:1
 msgid "Indicate an attribute should load using its default loader style."
-msgstr ""
+msgstr "デフォルトのローダスタイルを使用してロードする属性を指定します。"
 
 #: of sqlalchemy.orm.defaultload:3
 msgid ""
@@ -1211,53 +1201,53 @@ msgid ""
 "of attributes without altering the loader style of the links along the "
 "chain.  For example, to set joined eager loading for an element of an "
 "element::"
-msgstr ""
+msgstr "このメソッドは、チェーンに沿ったリンクのローダースタイルを変更せずに、他のローダーオプションを属性チェーンにさらにリンクするために使用されます。たとえば、エレメントのエレメントに対して結合eagerローディングを設定するには、次のようにします。"
 
 #: of sqlalchemy.orm.defaultload:13
 msgid ""
 ":func:`.defaultload` is also useful for setting column-level options on a"
 " related class, namely that of :func:`.defer` and :func:`.undefer`::"
-msgstr ""
+msgstr "：func： `.defaultload`は関連するクラス、つまり：func：` .defer`と：func： `.undefer`の列レベルオプションを設定するのにも便利です::"
 
 #: of sqlalchemy.orm.defaultload:24
 msgid ":ref:`relationship_loader_options`"
-msgstr ""
+msgstr "：ref： `relationship_loader_options`"
 
 #: of sqlalchemy.orm.defaultload:26
 msgid ":ref:`deferred_loading_w_multiple`"
-msgstr ""
+msgstr "：ref： `deferred_loading_w_multiple`"
 
 #: of sqlalchemy.orm.eagerload:1
 msgid "A synonym for :func:`joinedload()`."
-msgstr ""
+msgstr "：func： `joinedload（）`の同義語です。"
 
 #: of sqlalchemy.orm.eagerload_all:1
 msgid "A synonym for :func:`joinedload_all()`"
-msgstr ""
+msgstr "func： `joinedload_all（）`の同義語です。"
 
 #: of sqlalchemy.orm.immediateload:1
 msgid ""
 "Indicate that the given attribute should be loaded using an immediate "
 "load with a per-attribute SELECT statement."
-msgstr ""
+msgstr "指定された属性は、属性ごとのSELECT文を使用して即時ロードを使用してロードする必要があることを示します。"
 
 #: of sqlalchemy.orm.immediateload:4
 msgid ""
 "The :func:`.immediateload` option is superseded in general by the "
 ":func:`.selectinload` option, which performs the same task more "
 "efficiently by emitting a SELECT for all loaded objects."
-msgstr ""
+msgstr "：func： `.immediateload`オプションは、一般的に：func：` .selectinload`オプションよりも優先されます。これは、ロードされたすべてのオブジェクトに対してSELECTを発行することによって、より効率的に同じタスクを実行します。"
 
 #: of sqlalchemy.orm.joinedload:1
 msgid ""
 "Indicate that the given attribute should be loaded using joined eager "
 "loading."
-msgstr ""
+msgstr "指定された属性が結合されたeager loadingを使用してロードされるべきであることを示します。"
 
 #: of sqlalchemy.orm.joinedload:7 sqlalchemy.orm.selectinload:7
 #: sqlalchemy.orm.subqueryload:7
 msgid "examples::"
-msgstr ""
+msgstr "例::"
 
 #: of sqlalchemy.orm.joinedload:21
 msgid ""
@@ -1288,19 +1278,19 @@ msgid ""
 "0.9 it implied    ``innerjoin=\"unnested\"``.  In order to achieve the "
 "pre-1.0 \"unnested\"    inner join behavior, use the value "
 "``innerjoin=\"unnested\"``.    See :ref:`migration_3008`."
-msgstr ""
+msgstr "`` True``の場合は、結合されたeager loadが、デフォルトのleft join :: query（Order）.options（joinedload（Order.user、innerjoin = True））の代わりに内部結合を使用する必要があることを示します。いくつかの要素がOUTERとINNERである場合、右ネストされた結合がそれらをリンクするために使用されます:: query（A）.options（joinedload（A.bs、innerjoin = False）。joinedload（B.cs、innerjoin = True））上記のクエリは、\ &quot;outer \&quot; joinとB.csを介して &quot;inner \&quot; joinを介してA.bsをリンクすると、結合を &quot;LEFT OUTER JOIN（b JOIN c）\&quot;としてレンダリングします。古いバージョンのSQLite（&lt;3.7.16）を使用する場合、この形式のJOINは完全なサブクエリを使用するように変換されますが、この構文は直接サポートされていないためです。 `` innerjoin``フラグは、 `` \ &quot;unested \&quot; ``という言葉で記述することもできます。これは、結合がLEFT OUTER JOINに左にリンクされている場合を除いて、INNER JOINを使用する必要があることを示します。この場合、LEFT OUTER JOINとしてレンダリングされます。例えば、 `` A.bs``がouterjoin :: query（A）.options（joinedload（A.bs）。joinedload（B.cs、innerjoin = \ &quot;unnested \&quot;））であると仮定すると、 LEFT OUTER JOIN（b JOIN c）\ではなく、\ &quot;LEFT OUTER JOIN B LEFT OUTER JOIN \&quot;としてください。 .. note :: \ &quot;unnested \&quot;フラグは、多対多関連テーブルからレンダリングされたJOINに影響しません。例えば、paramref： `.relationship.secondary`でターゲットに設定されたテーブル表;結果の正確さのために、これらの結合は常にINNERであるため、OUTER結合にリンクされている場合は右にネストされます。 .. versionchanged :: 1.0.0 `` innerjoin = True``は `` innerjoin = \ &#39;がネストされた\ &quot;` `を意味するのに対して、0.9では` `innerjoin = \&quot;はネストされていない\ &quot;` `を意味します。 1.0より前の &quot;unnested&quot;の内部結合動作を実現するには、 `` innerjoin = \ &quot;unested \&quot; ``の値を使用します。参考文献：ref： `migration_3008`を参照してください。"
 
 #: of sqlalchemy.orm.joinedload:21
 msgid ""
 "if ``True``, indicates that the joined eager load should use an inner "
 "join instead of the default of left outer join::"
-msgstr ""
+msgstr "`` True``の場合、結合されたeager loadは、デフォルトのleft outer join ::の代わりにinner joinを使用する必要があることを示します"
 
 #: of sqlalchemy.orm.joinedload:26
 msgid ""
 "In order to chain multiple eager joins together where some may be OUTER "
 "and others INNER, right-nested joins are used to link them::"
-msgstr ""
+msgstr "いくつかがOUTERとINNERである可能性があるところで、複数の熱心な結合を連鎖させるために、右にネストされた結合を使用してそれらをリンクします。"
 
 #: of sqlalchemy.orm.joinedload:34
 msgid ""
@@ -1309,7 +1299,7 @@ msgid ""
 "using older versions of SQLite (< 3.7.16), this form of JOIN is "
 "translated to use full subqueries as this syntax is otherwise not "
 "directly supported."
-msgstr ""
+msgstr "上記のクエリは、A.bsを\ &quot;outer \&quot; joinとB.csを\ &quot;inner \&quot; joinを介して\ &quot;a LEFT OUTER JOIN（b JOIN c）\&quot;としてレンダリングします。古いバージョンのSQLite（&lt;3.7.16）を使用する場合、この形式のJOINは完全なサブクエリを使用するように変換されますが、この構文は直接サポートされていないためです。"
 
 #: of sqlalchemy.orm.joinedload:39
 msgid ""
@@ -1317,13 +1307,13 @@ msgid ""
 " This indicates that an INNER JOIN should be used, *unless* the join is "
 "linked to a LEFT OUTER JOIN to the left, in which case it will render as "
 "LEFT OUTER JOIN.  For example, supposing ``A.bs`` is an outerjoin::"
-msgstr ""
+msgstr "`` innerjoin``フラグは、 `` \ &quot;unested \&quot; ``という言葉で記述することもできます。これは、結合がLEFT OUTER JOINに左にリンクされている場合を除いて、INNER JOINを使用する必要があることを示します。この場合、LEFT OUTER JOINとしてレンダリングされます。たとえば、 `` A.bs``が外部結合::"
 
 #: of sqlalchemy.orm.joinedload:50
 msgid ""
 "The above join will render as \"a LEFT OUTER JOIN b LEFT OUTER JOIN c\", "
 "rather than as \"a LEFT OUTER JOIN (b JOIN c)\"."
-msgstr ""
+msgstr "上記の結合は、 &quot;LEFT OUTER JOIN（b JOIN c）&quot;ではなく &quot;LEFT OUTER JOIN B LEFT OUTER JOIN&quot;と表示されます。"
 
 #: of sqlalchemy.orm.joinedload:53
 msgid ""
@@ -1332,7 +1322,7 @@ msgid ""
 ":paramref:`.relationship.secondary`, to the target table; for correctness"
 " of results, these joins are always INNER and are therefore right-nested "
 "if linked to an OUTER join."
-msgstr ""
+msgstr "\ &quot;unnested \&quot;フラグは、多対多関連テーブルからレンダリングされたJOINには影響しません。例えば、paramref： `.relationship.secondary`として設定されたテーブルは、ターゲットテーブルに変換されます。結果の正確さのために、これらの結合は常にINNERであるため、OUTER結合にリンクされている場合は右にネストされます。"
 
 #: of sqlalchemy.orm.joinedload:59
 msgid ""
@@ -1340,7 +1330,7 @@ msgid ""
 "it implied ``innerjoin=\"unnested\"``.  In order to achieve the pre-1.0 "
 "\"unnested\" inner join behavior, use the value "
 "``innerjoin=\"unnested\"``. See :ref:`migration_3008`."
-msgstr ""
+msgstr "`` innerjoin = True``は `` innerjoin = \ &quot;がネストされた\&quot; ``を意味しますが、0.9では `` innerjoin = \ &quot;はネストされていない\&quot; ``を意味します。 1.0より前の &quot;unnested&quot;の内部結合動作を実現するには、 `` innerjoin = \ &quot;unested \&quot; ``の値を使用します。参考文献：ref： `migration_3008`を参照してください。"
 
 #: of sqlalchemy.orm.joinedload:67
 msgid ""
@@ -1348,41 +1338,41 @@ msgid ""
 "aliased**.  The criteria by which the join proceeds cannot be modified, "
 "nor can the :class:`.Query` refer to these joins in any way, including "
 "ordering.  See :ref:`zen_of_eager_loading` for further detail."
-msgstr ""
+msgstr "：func： `.orm.joinedload`によって生成される結合は**匿名でエイリアス化されています**。結合が進む基準は変更できません。また、：class： `.Query`は、順序を含めてこれらの結合を何ら参照することはできません。詳細は：ref： `zen_of_eager_loading`を参照してください。"
 
 #: of sqlalchemy.orm.joinedload:73
 msgid ""
 "To produce a specific SQL JOIN which is explicitly available, use "
 ":meth:`.Query.join`.   To combine explicit JOINs with eager loading of "
 "collections, use :func:`.orm.contains_eager`; see :ref:`contains_eager`."
-msgstr ""
+msgstr "明示的に使用可能な特定のSQL JOINを生成するには、：meth： `.Query.join`を使用します。明示的なJOINとコレクションの読み込みを組み合わせるには、func： `.orm.contains_eager`を使います。 ：ref： `contains_eager`を参照してください。"
 
 #: of sqlalchemy.orm.joinedload:82
 msgid ":ref:`joined_eager_loading`"
-msgstr ""
+msgstr "：ref： `joined_eager_loading`"
 
 #: of sqlalchemy.orm.joinedload_all:1
 msgid "Produce a standalone \"all\" option for :func:`.orm.joinedload`."
-msgstr ""
+msgstr "func： `.orm.joinedload`のスタンドアロンの\&quot; all \ &quot;オプションを生成します。"
 
 #: of sqlalchemy.orm.joinedload_all:5 sqlalchemy.orm.selectinload_all:5
 #: sqlalchemy.orm.subqueryload_all:5
 msgid "The \"_all()\" style is replaced by method chaining, e.g.::"
-msgstr ""
+msgstr "\ &quot;_ all（）\&quot;スタイルは、メソッド連鎖に置き換えられます。例えば："
 
 #: of sqlalchemy.orm.lazyload:1
 msgid "Indicate that the given attribute should be loaded using \"lazy\" loading."
-msgstr ""
+msgstr "指定された属性が\ &quot;lazy \&quot;ローディングを使用してロードされるべきであることを示します。"
 
 #: of sqlalchemy.orm.lazyload:11
 msgid ":ref:`lazy_loading`"
-msgstr ""
+msgstr "：ref： `lazy_loading`"
 
 #: of sqlalchemy.orm.Load:1
 msgid ""
 "Represents loader options which modify the state of a :class:`.Query` in "
 "order to affect how various mapped attributes are loaded."
-msgstr ""
+msgstr "さまざまなマップされた属性のロード方法に影響を与えるために：class： `.Query`の状態を変更するローダーオプションを表します。"
 
 #: of sqlalchemy.orm.Load:5
 msgid ""
@@ -1390,47 +1380,47 @@ msgid ""
 "scenes when one makes use of a query option like :func:`.joinedload`, "
 ":func:`.defer`, or similar.   However, the :class:`.Load` object can also"
 " be used directly, and in some cases can be useful."
-msgstr ""
+msgstr "：class： `.Load`オブジェクトは、ほとんどの場合、func：` .joinedload`、：func： `.defer`などのようなクエリオプションを使用すると暗黙のうちに暗黙的に使用されます。しかし、：class： `.Load`オブジェクトも直接使用することができ、場合によっては便利です。"
 
 #: of sqlalchemy.orm.Load:10
 msgid ""
 "To use :class:`.Load` directly, instantiate it with the target mapped "
 "class as the argument.   This style of usage is useful when dealing with "
 "a :class:`.Query` that has multiple entities::"
-msgstr ""
+msgstr "：class： `.Load`を直接使用するには、ターゲットとしてマップされたクラスを引数としてインスタンス化します。このスタイルは、複数のエンティティを持つ：class： `.Query`を扱うときに便利です::"
 
 #: of sqlalchemy.orm.Load:16
 msgid ""
 "The above ``myopt`` can now be used with :meth:`.Query.options`, where it"
 " will only take effect for the ``MyClass`` entity::"
-msgstr ""
+msgstr "上記の `` myopt``は：meth： `.Query.options`で使用できるようになりました。ここで` `MyClass``エンティティにのみ有効です::"
 
 #: of sqlalchemy.orm.Load:21
 msgid ""
 "One case where :class:`.Load` is useful as public API is when specifying "
 "\"wildcard\" options that only take effect for a certain class::"
-msgstr ""
+msgstr "class： `.Load`はパブリックAPIとして便利です：特定のクラスに対してのみ有効な\&quot;ワイルドカード\ &quot;オプションを指定する場合::"
 
 #: of sqlalchemy.orm.Load:26
 msgid ""
 "Above, all relationships on ``Order`` will be lazy-loaded, but other "
 "attributes on those descendant objects will load using their normal "
 "loader strategy."
-msgstr ""
+msgstr "上では、 `` Order``のすべてのリレーションシップは遅延ロードされますが、それらの子孫オブジェクトの他のアトリビュートは通常のローダー戦略を使用してロードされます。"
 
 #: of sqlalchemy.orm.noload:1
 msgid "Indicate that the given relationship attribute should remain unloaded."
-msgstr ""
+msgstr "指定されたリレーションシップ属性をアンロードしたままにする必要があることを示します。"
 
 #: of sqlalchemy.orm.noload:6
 msgid ""
 ":func:`.orm.noload` applies to :func:`.relationship` attributes; for "
 "column-based attributes, see :func:`.orm.defer`."
-msgstr ""
+msgstr "：func： `.orm.noload`はfunc：` .relationship`属性に適用されます。列ベースの属性については、：func： `.orm.defer`を参照してください。"
 
 #: of sqlalchemy.orm.raiseload:1
 msgid "Indicate that the given relationship attribute should disallow lazy loads."
-msgstr ""
+msgstr "指定されたリレーションシップ属性が遅延ロードを禁止する必要があることを示します。"
 
 #: of sqlalchemy.orm.raiseload:3
 msgid ""
@@ -1441,7 +1431,7 @@ msgid ""
 "context would have been already loaded via eager loading.  Instead of "
 "having to read through SQL logs to ensure lazy loads aren't occurring, "
 "this strategy will cause them to raise immediately."
-msgstr ""
+msgstr "：func： `.orm.raiseload`で設定された関係属性は、アクセス時に：exc：`〜sqlalchemy.exc.InvalidRequestError`を送出します。これが便利な典型的な方法は、アプリケーションが、特定のコンテキストでアクセスされたすべてのリレーションシップ属性が、熱心なロードによって既にロードされていることを確認しようとするときです。怠惰な負荷が発生していないことを確実にするためにSQLログを読み取る必要はなく、この戦略によって即座に発生させることができます。"
 
 #: of sqlalchemy.orm.raiseload:11
 msgid ""
@@ -1449,37 +1439,37 @@ msgid ""
 "only checking the identity map, or determining that the related value "
 "should just be None due to missing keys.  When False, the strategy will "
 "raise for all varieties of lazyload."
-msgstr ""
+msgstr "Trueの場合、レイジーロードによってSQLが生成されるが、アイデンティティマップのみをチェックしている場合や、キーがないために関連する値がNoneであると判断されない場合にのみ発生します。 Falseの場合、戦略はlazyloadのすべての種類に対して発生します。"
 
 #: of sqlalchemy.orm.raiseload:19
 msgid ":func:`.orm.raiseload` applies to :func:`.relationship` attributes only."
-msgstr ""
+msgstr "：func： `.orm.raiseload`は：func：` .relationship`属性にのみ適用されます。"
 
 #: of sqlalchemy.orm.raiseload:27
 msgid ":ref:`prevent_lazy_with_raiseload`"
-msgstr ""
+msgstr "：ref： `prevent_lazy_with_raiseload`"
 
 #: of sqlalchemy.orm.selectinload:1
 msgid ""
 "Indicate that the given attribute should be loaded using SELECT IN eager "
 "loading."
-msgstr ""
+msgstr "SELECT IN eager loadingを使用して、指定された属性をロードする必要があることを示します。"
 
 #: of sqlalchemy.orm.selectinload_all:1
 msgid "Produce a standalone \"all\" option for :func:`.orm.selectinload`."
-msgstr ""
+msgstr "func： `.orm.selectinload`のスタンドアロンの\&quot; all \ &quot;オプションを生成します。"
 
 #: of sqlalchemy.orm.subqueryload:1
 msgid ""
 "Indicate that the given attribute should be loaded using subquery eager "
 "loading."
-msgstr ""
+msgstr "指定された属性がサブクエリeager loadingを使用してロードされる必要があることを示します。"
 
 #: of sqlalchemy.orm.subqueryload:26
 msgid ":ref:`subquery_eager_loading`"
-msgstr ""
+msgstr "：ref： `subquery_eager_loading`"
 
 #: of sqlalchemy.orm.subqueryload_all:1
 msgid "Produce a standalone \"all\" option for :func:`.orm.subqueryload`."
-msgstr ""
+msgstr "func： `.orm.subqueryload`のスタンドアロンの\&quot; all \ &quot;オプションを生成します。"
 

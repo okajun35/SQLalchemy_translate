@@ -6,44 +6,34 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: of sqlalchemy.orm:1
 msgid "Functional constructs for ORM configuration."
-msgstr ""
+msgstr "ORM構成の機能構成。"
 
 #: of sqlalchemy.orm:3
 msgid ""
 "See the SQLAlchemy object relational tutorial and mapper configuration "
 "documentation for an overview of how this module is used."
-msgstr ""
+msgstr "このモジュールの使用方法の概要については、SQLAlchemyオブジェクトリレーショナルチュートリアルおよびマッパー設定のドキュメントを参照してください。"
 
 #: ../../orm/relationship_api.rst:4
 msgid "Relationships API"
-msgstr ""
+msgstr "リレーションシップAPI"
 
 #: of sqlalchemy.orm.relationship:1
 msgid "Provide a relationship between two mapped classes."
-msgstr ""
+msgstr "2つのマッピングされたクラス間に関係を提供します。"
 
 #: of sqlalchemy.orm.relationship:3
 msgid ""
 "This corresponds to a parent-child or associative table relationship. The"
 " constructed class is an instance of :class:`.RelationshipProperty`."
-msgstr ""
+msgstr "これは、親子関係または連想表関係に対応します。構築されたクラスは、class： `.RelationshipProperty`のインスタンスです。"
 
 #: of sqlalchemy.orm.relationship:7
 msgid "A typical :func:`.relationship`, used in a classical mapping::"
-msgstr ""
+msgstr "典型的な：func： `.relationship`は、古典的なマッピングで使われています::"
 
 #: of sqlalchemy.orm.relationship:13
 msgid ""
@@ -54,7 +44,7 @@ msgid ""
 "and is assumed to be after all mappings have been constructed.  This can "
 "be used to resolve order-of-declaration and other dependency issues, such"
 " as if ``Child`` is declared below ``Parent`` in the same file::"
-msgstr ""
+msgstr "：func： `.relationship`は、呼び出されたときに目的の値を生成する呼び出し可能な関数をオプションとして受け入れます。呼び出し元は、親：class： `.Mapper`がマッパー初期化時に呼び出されます。これは、マッパーが最初に使用されたときにのみ発生し、すべてのマッピングが構築された後であるとみなされます。これは、 `` Child``が同じファイルの `` Parent``の下で宣言されているかどうかなど、宣言の順序とその他の依存関係の問題を解決するために使用できます::"
 
 #: of sqlalchemy.orm.relationship:27
 msgid ""
@@ -65,21 +55,21 @@ msgid ""
 "class-registry as a namespace.  This allows the lookup of related classes"
 " to be automatic via their string name, and removes the need to import "
 "related classes at all into the local module space::"
-msgstr ""
+msgstr "：ref： `declarative_toplevel`拡張を使用する場合、宣言的初期化子は文字列引数を：func：` .relationship`に渡すことができます。これらの文字列引数は、Declarativeクラスレジストリを名前空間として使用して、文字列をPythonコードとして評価する呼び出し可能オブジェクトに変換されます。これにより、関連するクラスを文字列名で自動的に検索することができ、関連するクラスをローカルのモジュール空間にインポートする必要がなくなります。"
 
 #: of sqlalchemy.orm.relationship:46
 msgid ""
 ":ref:`relationship_config_toplevel` - Full introductory and reference "
 "documentation for :func:`.relationship`."
-msgstr ""
+msgstr "：ref： `relationship_config_toplevel`  -  func：` .relationship`の完全な入門書と参考資料です。"
 
 #: of sqlalchemy.orm.relationship:49
 msgid ":ref:`orm_tutorial_relationship` - ORM tutorial introduction."
-msgstr ""
+msgstr "：ref： `orm_tutorial_relationship`  -  ORMチュートリアルの紹介。"
 
 #: of sqlalchemy.orm.relationship
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.orm.relationship:51
 msgid ""
@@ -90,26 +80,26 @@ msgid ""
 "using Declarative.  .. seealso::    "
 ":ref:`declarative_configuring_relationships` - further detail   on "
 "relationship configuration when using Declarative."
-msgstr ""
+msgstr "マッピングされたクラス、または実際の：class： `.Mapper`インスタンスで、関係のターゲットを表します。 ：paramref： `〜.relationship.argument`は、マッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。 .. seealso ::：ref： `declarative_configuring_relationships`  -  Declarativeを使うときのリレーションシップ設定の詳細。"
 
 #: of sqlalchemy.orm.relationship:52
 msgid ""
 "a mapped class, or actual :class:`.Mapper` instance, representing the "
 "target of the relationship."
-msgstr ""
+msgstr "マッピングされたクラス、または実際の：class： `.Mapper`インスタンスで、関係のターゲットを表します。"
 
 #: of sqlalchemy.orm.relationship:55
 msgid ""
 ":paramref:`~.relationship.argument` may also be passed as a callable "
 "function which is evaluated at mapper initialization time, and may be "
 "passed as a Python-evaluable string when using Declarative."
-msgstr ""
+msgstr "：paramref： `〜.relationship.argument`は、マッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。"
 
 #: of sqlalchemy.orm.relationship:61
 msgid ""
 ":ref:`declarative_configuring_relationships` - further detail on "
 "relationship configuration when using Declarative."
-msgstr ""
+msgstr "：ref： `declarative_configuring_relationships`  -  Declarativeを使うときの関係設定の詳細。"
 
 #: of sqlalchemy.orm.relationship:64
 msgid ""
@@ -143,7 +133,7 @@ msgid ""
 "SQL     conditions to be used.  .. versionadded:: 0.9.2 "
 ":paramref:`~.relationship.secondary` works    more effectively when "
 "referring to a :class:`.Join` instance."
-msgstr ""
+msgstr "多対多の関係の場合、中間テーブルを指定します。通常は、class： `.Table`のインスタンスです。より一般的でない状況では、引数は：class： `.Alias`構造体、またはa：class：` .Join`構造体として指定することもできます。 ：paramref： `〜.relationship.secondary`は、マッパー初期化時に評価される呼び出し可能な関数として渡すこともできます。 Declarativeを使用している場合、親クラス：class： `.Table`に関連付けられた：class：` .MetaData`コレクションに存在する：class： `.Table`の名前を示す文字列引数でもかまいません。 ：paramref： `〜.relationship.secondary`キーワード引数は通常、中間クラス：class：` .Table`がダイレクトクラスマッピングでは表現されない場合に適用されます。 \ &quot;セカンダリ\&quot;テーブルも他の場所に明示的にマッピングされている場合（例：：ref： `association_pattern`）、：paramref：`〜.relationship.viewonly`フラグを適用することを検討して、this：func： `.relationship `は、関連オブジェクトパターンのものと競合する可能性のある持続操作には使用されません。 .. seealso :: ref： `relationships_many_to_many`  -  \&quot; many to many \ &quot;の参考例です。 ：ref： `orm_tutorial_many_to_many`  - 多対多関係のORMチュートリアルの紹介。 ：ref： `self_referential_many_to_many`  - 多対多の場合の多対多の使用に関する記述。 ：ref： `declarative_many_to_many`  -  Declarativeを使うときの追加オプション。 ：ref： `association_pattern`  - アソシエーションテーブルリレーションシップを作成するときに、paramref：`〜.relationship.secondary`に代わるもので、アソシエーションテーブルに追加の属性を指定できるようにします。 ：ref： `composite_secondary_join`  - あまり使用されないパターンで、場合によっては、complex：func：` .relationship` SQL条件を使用できるようにします。 .. versionadded :: 0.9.2：paramref： `〜.relationship.secondary`は：class：` .Join`インスタンスを参照するときに効果的です。"
 
 #: of sqlalchemy.orm.relationship:65
 msgid ""
@@ -151,7 +141,7 @@ msgid ""
 " typically an instance of :class:`.Table`. In less common circumstances, "
 "the argument may also be specified as an :class:`.Alias` construct, or "
 "even a :class:`.Join` construct."
-msgstr ""
+msgstr "多対多の関係の場合、中間テーブルを指定します。通常は、class： `.Table`のインスタンスです。より一般的でない状況では、引数は：class： `.Alias`構造体、またはa：class：` .Join`構造体として指定することもできます。"
 
 #: of sqlalchemy.orm.relationship:70
 msgid ""
@@ -160,7 +150,7 @@ msgid ""
 "Declarative, it may also be a string argument noting the name of a "
 ":class:`.Table` that is present in the :class:`.MetaData` collection "
 "associated with the parent-mapped :class:`.Table`."
-msgstr ""
+msgstr "：paramref： `〜.relationship.secondary`は、マッパー初期化時に評価される呼び出し可能な関数として渡すこともできます。 Declarativeを使用している場合、親クラス：class： `.Table`に関連付けられた：class：` .MetaData`コレクションに存在する：class： `.Table`の名前を示す文字列引数でもかまいません。"
 
 #: of sqlalchemy.orm.relationship:77
 msgid ""
@@ -172,29 +162,29 @@ msgid ""
 ":paramref:`~.relationship.viewonly` flag so that this "
 ":func:`.relationship` is not used for persistence operations which may "
 "conflict with those of the association object pattern."
-msgstr ""
+msgstr "：paramref： `〜.relationship.secondary`キーワード引数は通常、中間クラス：class：` .Table`がダイレクトクラスマッピングでは表現されない場合に適用されます。 \ &quot;セカンダリ\&quot;テーブルも他の場所に明示的にマッピングされている場合（例：：ref： `association_pattern`）、：paramref：`〜.relationship.viewonly`フラグを適用することを検討して、this：func： `.relationship `は、関連オブジェクトパターンのものと競合する可能性のある持続操作には使用されません。"
 
 #: of sqlalchemy.orm.relationship:88
 msgid ":ref:`relationships_many_to_many` - Reference example of \"many to many\"."
-msgstr ""
+msgstr "：ref： `relationships_many_to_many`  -  \&quot; many to many \ &quot;の参考例です。"
 
 #: of sqlalchemy.orm.relationship:91
 msgid ""
 ":ref:`orm_tutorial_many_to_many` - ORM tutorial introduction to many-to-"
 "many relationships."
-msgstr ""
+msgstr "：ref： `orm_tutorial_many_to_many`  - 多対多関係のORMチュートリアルの紹介。"
 
 #: of sqlalchemy.orm.relationship:94
 msgid ""
 ":ref:`self_referential_many_to_many` - Specifics on using many-to-many in"
 " a self-referential case."
-msgstr ""
+msgstr "：ref： `self_referential_many_to_many`  - 多対多の場合の多対多の使用に関する記述。"
 
 #: of sqlalchemy.orm.relationship:97
 msgid ""
 ":ref:`declarative_many_to_many` - Additional options when using "
 "Declarative."
-msgstr ""
+msgstr "：ref： `declarative_many_to_many`  -  Declarativeを使うときの追加オプション。"
 
 #: of sqlalchemy.orm.relationship:100
 msgid ""
@@ -202,19 +192,19 @@ msgid ""
 ":paramref:`~.relationship.secondary` when composing association table "
 "relationships, allowing additional attributes to be specified on the "
 "association table."
-msgstr ""
+msgstr "：ref： `association_pattern`  - アソシエーションテーブルリレーションシップを作成するときに、paramref：`〜.relationship.secondary`に代わるもので、アソシエーションテーブルに追加の属性を指定できるようにします。"
 
 #: of sqlalchemy.orm.relationship:105
 msgid ""
 ":ref:`composite_secondary_join` - a lesser-used pattern which in some "
 "cases can enable complex :func:`.relationship` SQL conditions to be used."
-msgstr ""
+msgstr "：ref： `composite_secondary_join`  - あまり使用されないパターンで、場合によっては、complex：func：` .relationship` SQL条件を使用できるようにします。"
 
 #: of sqlalchemy.orm.relationship:109
 msgid ""
 ":paramref:`~.relationship.secondary` works more effectively when "
 "referring to a :class:`.Join` instance."
-msgstr ""
+msgstr "：paramref： `〜.relationship.secondary`は：class：` .Join`インスタンスを参照するとより効果的に動作します。"
 
 #: of sqlalchemy.orm.relationship:112
 msgid ""
@@ -225,7 +215,7 @@ msgid ""
 "available for applications that make use of "
 ":func:`.attributes.get_history` which also need to know the \"previous\" "
 "value of the attribute."
-msgstr ""
+msgstr "`` True``のときは、多対1の参照の\ &quot;previous \&quot;値が置換されていなければ読み込まれるべきであることを示します。通常、単純な多対1の履歴追跡ロジックは、フラッシュを実行するために\ &quot;新しい\&quot;値を認識する必要があります。このフラグは：func： `.attributes.get_history`を使って、属性の\&quot;前\ &quot;値を知る必要があるアプリケーションで利用できます。"
 
 #: of sqlalchemy.orm.relationship:122
 msgid ""
@@ -239,7 +229,7 @@ msgid ""
 "backref specification.    :func:`.backref` - allows control over "
 ":func:`.relationship`   configuration when using "
 ":paramref:`~.relationship.backref`."
-msgstr ""
+msgstr "この関係を他の方向に処理する、関連するマッパーのクラスに配置されるプロパティの文字列名を示します。マッパーが設定されると、もう一方のプロパティが自動的に作成されます。新しい関係の設定を制御するためにa：func： `.backref`オブジェクトとして渡すこともできます。 .. seealso ::：ref： `relationships_backref`  - 入門書とサンプル。 ：paramref： `〜.relationship.back_populates`  - バックレファレンス仕様の代替形式。 ：func： `.backref`  - ：paramref：`〜.relationship.backref`を使用する場合、：func： `.relationship`設定を制御できます。"
 
 #: of sqlalchemy.orm.relationship:123
 msgid ""
@@ -248,23 +238,23 @@ msgid ""
 " The other property will be created automatically when the mappers are "
 "configured.  Can also be passed as a :func:`.backref` object to control "
 "the configuration of the new relationship."
-msgstr ""
+msgstr "この関係を他の方向に処理する、関連するマッパーのクラスに配置されるプロパティの文字列名を示します。マッパーが設定されると、もう一方のプロパティが自動的に作成されます。新しい関係の設定を制御するためにa：func： `.backref`オブジェクトとして渡すこともできます。"
 
 #: of sqlalchemy.orm.relationship:132 sqlalchemy.orm.relationship:153
 msgid ":ref:`relationships_backref` - Introductory documentation and examples."
-msgstr ""
+msgstr "：ref： `relationships_backref`  - 導入のドキュメントと例。"
 
 #: of sqlalchemy.orm.relationship:135
 msgid ""
 ":paramref:`~.relationship.back_populates` - alternative form of backref "
 "specification."
-msgstr ""
+msgstr "：paramref： `〜.relationship.back_populates`  - バックレファレンス仕様の代替形式。"
 
 #: of sqlalchemy.orm.relationship:138
 msgid ""
 ":func:`.backref` - allows control over :func:`.relationship` "
 "configuration when using :paramref:`~.relationship.backref`."
-msgstr ""
+msgstr "：func： `.backref`  - ：paramref：`〜.relationship.backref`を使用する場合、：func： `.relationship`設定を制御できます。"
 
 #: of sqlalchemy.orm.relationship:142
 msgid ""
@@ -277,7 +267,7 @@ msgid ""
 "Introductory documentation and   examples.    "
 ":paramref:`~.relationship.backref` - alternative form   of backref "
 "specification."
-msgstr ""
+msgstr "文字列名をとり、補完プロパティが**自動的には作成されない**以外は、paramref： `〜.relationship.backref`と同じ意味を持ち、代わりに他のマッパーで明示的に設定する必要があります。補完的なプロパティは適切な機能を確実にするために、この関係にparamref： `〜.relationship.back_populates`を示すべきです。 .. seealso ::：ref： `relationships_backref`  - 入門書とサンプル。 ：paramref： `〜.relationship.backref`  - バックレファレンス仕様の代替形式。"
 
 #: of sqlalchemy.orm.relationship:143
 msgid ""
@@ -287,13 +277,13 @@ msgid ""
 "on the other mapper.  The complementing property should also indicate "
 ":paramref:`~.relationship.back_populates` to this relationship to ensure "
 "proper functioning."
-msgstr ""
+msgstr "文字列名をとり、補完プロパティが**自動的には作成されない**以外は、paramref： `〜.relationship.backref`と同じ意味を持ち、代わりに他のマッパーで明示的に設定する必要があります。補完的なプロパティは適切な機能を確実にするために、この関係にparamref： `〜.relationship.back_populates`を示すべきです。"
 
 #: of sqlalchemy.orm.relationship:156
 msgid ""
 ":paramref:`~.relationship.backref` - alternative form of backref "
 "specification."
-msgstr ""
+msgstr "：paramref： `〜.relationship.backref`  - バックレファレンス仕様の代替形式。"
 
 #: of sqlalchemy.orm.relationship:159
 msgid ""
@@ -304,7 +294,7 @@ msgid ""
 "default implementation for the \"select\",    a.k.a. \"lazy\" loading "
 "strategy for relationships.  .. versionadded:: 1.0.0  .. seealso::    "
 ":ref:`baked_toplevel`"
-msgstr ""
+msgstr "遅延ロードで使用されるSQLの構築をキャッシュするには、：class： `.BakedQuery`キャッシュを使用します。デフォルトではTrueです。リレーションシップのジョイン条件に文キャッシュに応答しない可能性のある異常な機能がある場合は、Falseに設定します。 .. versionchanged :: 1.2 \ &quot;Baked \&quot;ローディングは、\ &quot;select \&quot;、つまり\ &quot;lazy \&quot;ローディング戦略のリレーションシップのデフォルト実装です。 .. versionadded :: 1.0.0 .. seealso ::：ref： `baked_toplevel`"
 
 #: of sqlalchemy.orm.relationship:160
 msgid ""
@@ -312,17 +302,17 @@ msgid ""
 "in lazy loads.  True by default.   Set to False if the join condition of "
 "the relationship has unusual features that might not respond well to "
 "statement caching."
-msgstr ""
+msgstr "遅延ロードで使用されるSQLの構築をキャッシュするには、：class： `.BakedQuery`キャッシュを使用します。デフォルトではTrueです。リレーションシップのジョイン条件に文キャッシュに応答しない可能性のある異常な機能がある場合は、Falseに設定します。"
 
 #: of sqlalchemy.orm.relationship:165
 msgid ""
 "\"Baked\" loading is the default implementation for the \"select\", "
 "a.k.a. \"lazy\" loading strategy for relationships."
-msgstr ""
+msgstr "\ &quot;Baked \&quot;ローディングは、\ &quot;select \&quot;、つまり\ &quot;lazy \&quot;ローディング戦略のデフォルト実装です。"
 
 #: of sqlalchemy.orm.relationship:173
 msgid ":ref:`baked_toplevel`"
-msgstr ""
+msgstr "：ref： `baked_toplevel`"
 
 #: of sqlalchemy.orm.relationship:175
 msgid ""
@@ -339,7 +329,7 @@ msgid ""
 " Full detail on each of the available   cascade options.    "
 ":ref:`tutorial_delete_cascade` - Tutorial example describing   a delete "
 "cascade."
-msgstr ""
+msgstr "セッション操作を親から子に「カスケード」する方法を決定する、カスケード規則のカンマ区切りリストです。デフォルトは `` False``です。これはデフォルトのカスケードを使うべきであることを意味します。このデフォルトのカスケードは `` \ &quot;save-update、merge \&quot; ``です。利用可能なカスケードは、「save-update」、「merge」、「expunge」、「delete」、「delete-orphan」、および「refresh-expire」です。追加オプション `` all``は、 `` \ &quot;save-update、merge、refresh-expire、expunge、delete \&quot; ``の省略形を示し、 `` \ &quot;all、delete-orphan \関連するオブジェクトがすべての場合に親オブジェクトと一緒に従うべきであることを示すために `` `、関連付け解除されると削除されます。 .. seealso :: ref： `unitofwork_cascades`  - 利用可能なカスケードオプションの詳細。 ：ref： `tutorial_delete_cascade`  - 削除カスケードを説明するチュートリアルの例。"
 
 #: of sqlalchemy.orm.relationship:176
 msgid ""
@@ -347,7 +337,7 @@ msgid ""
 "operations should be \"cascaded\" from parent to child. This defaults to "
 "``False``, which means the default cascade should be used - this default "
 "cascade is ``\"save-update, merge\"``."
-msgstr ""
+msgstr "セッション操作を親から子に「カスケード」する方法を決定する、カスケード規則のカンマ区切りリストです。デフォルトは `` False``です。これはデフォルトのカスケードを使うべきであることを意味します。このデフォルトのカスケードは `` \ &quot;save-update、merge \&quot; ``です。"
 
 #: of sqlalchemy.orm.relationship:181
 msgid ""
@@ -357,19 +347,19 @@ msgid ""
 "expire, expunge, delete\"``, and is often used as in ``\"all, delete-"
 "orphan\"`` to indicate that related objects should follow along with the "
 "parent object in all cases, and be deleted when de-associated."
-msgstr ""
+msgstr "利用可能なカスケードは、「save-update」、「merge」、「expunge」、「delete」、「delete-orphan」、および「refresh-expire」です。追加オプション `` all``は、 `` \ &quot;save-update、merge、refresh-expire、expunge、delete \&quot; ``の省略形を示し、 `` \ &quot;all、delete-orphan \関連するオブジェクトがすべての場合に親オブジェクトと一緒に従うべきであることを示すために `` `、関連付け解除されると削除されます。"
 
 #: of sqlalchemy.orm.relationship:191
 msgid ""
 ":ref:`unitofwork_cascades` - Full detail on each of the available cascade"
 " options."
-msgstr ""
+msgstr "：ref： `unitofwork_cascades`  - 利用可能なカスケードオプションの詳細。"
 
 #: of sqlalchemy.orm.relationship:194
 msgid ""
 ":ref:`tutorial_delete_cascade` - Tutorial example describing a delete "
 "cascade."
-msgstr ""
+msgstr "：ref： `tutorial_delete_cascade`  - 削除カスケードを説明するチュートリアルの例。"
 
 #: of sqlalchemy.orm.relationship:197
 msgid ""
@@ -380,7 +370,7 @@ msgid ""
 "the event is received via backref.  .. seealso::    "
 ":ref:`backref_cascade` - Full discussion and examples on how   the "
 ":paramref:`~.relationship.cascade_backrefs` option is used."
-msgstr ""
+msgstr "`` save-update``カスケードがbackrefで傍受された代入イベントに沿って動作するかどうかを示すブール値です。 `` False``に設定されている場合、この関係によって管理される属性は、バックグラウンドでイベントが受信された場合、永続的な親オブジェクトのセッションに入ってくる一時オブジェクトをカスケードしません。 .. seealso :: ref： `backref_cascade`  -  paramref：`〜.relationship.cascade_backrefs`オプションがどのように使われているかについての完全な議論と例。"
 
 #: of sqlalchemy.orm.relationship:198
 msgid ""
@@ -389,30 +379,30 @@ msgid ""
 "``False``, the attribute managed by this relationship will not cascade an"
 " incoming transient object into the session of a persistent parent, if "
 "the event is received via backref."
-msgstr ""
+msgstr "`` save-update``カスケードがbackrefで傍受された代入イベントに沿って動作するかどうかを示すブール値です。 `` False``に設定されている場合、この関係によって管理される属性は、バックグラウンドでイベントが受信された場合、永続的な親オブジェクトのセッションに入ってくる一時オブジェクトをカスケードしません。"
 
 #: of sqlalchemy.orm.relationship:206
 msgid ""
 ":ref:`backref_cascade` - Full discussion and examples on how the "
 ":paramref:`~.relationship.cascade_backrefs` option is used."
-msgstr ""
+msgstr "：ref： `backref_cascade`  - ：paramref：`〜.relationship.cascade_backrefs`オプションがどのように使われているかについての完全な議論と例。"
 
 #: of sqlalchemy.orm.relationship:209
 msgid ""
 "a class or callable that returns a new list-holding object. will be used "
 "in place of a plain list for storing elements.  .. seealso::    "
 ":ref:`custom_collections` - Introductory documentation and   examples."
-msgstr ""
+msgstr "新しいリスト保持オブジェクトを返すクラスまたは呼び出し可能クラス要素を格納するための単純なリストの代わりに使用されます。 .. seealso ::：ref： `custom_collections`  - 入門書とサンプル。"
 
 #: of sqlalchemy.orm.relationship:210
 msgid ""
 "a class or callable that returns a new list-holding object. will be used "
 "in place of a plain list for storing elements."
-msgstr ""
+msgstr "新しいリスト保持オブジェクトを返すクラスまたは呼び出し可能クラス要素を格納するための単純なリストの代わりに使用されます。"
 
 #: of sqlalchemy.orm.relationship:215
 msgid ":ref:`custom_collections` - Introductory documentation and examples."
-msgstr ""
+msgstr "：ref： `custom_collections`  - 入門書と例。"
 
 #: of sqlalchemy.orm.relationship:218
 msgid ""
@@ -421,23 +411,23 @@ msgid ""
 "seealso::    :class:`.PropComparator` - some detail on redefining "
 "comparators   at this level.    :ref:`custom_comparators` - Brief intro "
 "to this feature."
-msgstr ""
+msgstr "extends：class： `.RelationshipProperty.Comparator`これは、比較操作のためのカスタムSQL節生成を提供します。 .. seealso ::：class： `.PropComparator`  - このレベルでコンパイラを再定義するための詳細。 ：ref： `custom_comparators`  - この機能の簡単な紹介。"
 
 #: of sqlalchemy.orm.relationship:219
 msgid ""
 "a class which extends :class:`.RelationshipProperty.Comparator` which "
 "provides custom SQL clause generation for comparison operations."
-msgstr ""
+msgstr "extends：class： `.RelationshipProperty.Comparator`これは、比較操作のためのカスタムSQL節生成を提供します。"
 
 #: of sqlalchemy.orm.relationship:225
 msgid ""
 ":class:`.PropComparator` - some detail on redefining comparators at this "
 "level."
-msgstr ""
+msgstr "：class： `.PropComparator`  - このレベルでコンパイラを再定義するための詳細。"
 
 #: of sqlalchemy.orm.relationship:228
 msgid ":ref:`custom_comparators` - Brief intro to this feature."
-msgstr ""
+msgstr "：ref： `custom_comparators`  - この機能の簡単な紹介。"
 
 #: of sqlalchemy.orm.relationship:231
 msgid ""
@@ -457,7 +447,7 @@ msgid ""
 "cases where the innermost query targets a non-unique    key.  .. "
 "seealso::    :ref:`loading_toplevel` - includes an introduction to "
 "subquery   eager loading."
-msgstr ""
+msgstr "\ &quot;副問合せ\&quot; eager loadが最も内側のSELECT文にDISTINCTキーワードを適用する必要があるかどうかを示します。 `` None``のままにすると、ターゲット列がターゲット表の完全な主キーを含まない場合にDISTINCTキーワードが適用されます。 `` True``に設定すると、DISTINCTキーワードが最も内側のSELECTに無条件に適用されます。 DISTINCTが最も内側のサブクエリのパフォーマンスを、重複した最内側の行のパフォーマンスを超えて低下させている場合は、このフラグをFalseに設定することが望ましい場合があります。 .. versionadded :: 0.8.3  - ：paramref： `〜.relationship.distinct_target_key`は、サブクエリeagerローダーがDISTINCT修飾子を最も内側のSELECTに適用することを許可します。 .. versionchanged :: 0.9.0  - ：paramref： `〜.relationship.distinct_target_key`はデフォルトで` `None``になりました。これにより、一番内側のクエリが一意でないキーを対象とする場合に自動的に有効になります。 .. seealso ::：ref： `loading_toplevel`  - サブクエリの読み込みを紹介しています。"
 
 #: of sqlalchemy.orm.relationship:232
 msgid ""
@@ -466,37 +456,37 @@ msgid ""
 "keyword will be applied in those cases when the target columns do not "
 "comprise the full primary key of the target table. When set to ``True``, "
 "the DISTINCT keyword is applied to the innermost SELECT unconditionally."
-msgstr ""
+msgstr "\ &quot;副問合せ\&quot; eager loadが最も内側のSELECT文にDISTINCTキーワードを適用する必要があるかどうかを示します。 `` None``のままにすると、ターゲット列がターゲット表の完全な主キーを含まない場合にDISTINCTキーワードが適用されます。 `` True``に設定すると、DISTINCTキーワードが最も内側のSELECTに無条件に適用されます。"
 
 #: of sqlalchemy.orm.relationship:239
 msgid ""
 "It may be desirable to set this flag to False when the DISTINCT is "
 "reducing performance of the innermost subquery beyond that of what "
 "duplicate innermost rows may be causing."
-msgstr ""
+msgstr "DISTINCTが最も内側のサブクエリのパフォーマンスを、重複した最内側の行のパフォーマンスを超えて低下させている場合は、このフラグをFalseに設定することが望ましい場合があります。"
 
 #: of sqlalchemy.orm.relationship:243
 msgid ""
 "- :paramref:`~.relationship.distinct_target_key` allows the subquery "
 "eager loader to apply a DISTINCT modifier to the innermost SELECT."
-msgstr ""
+msgstr "- ：paramref： `〜.relationship.distinct_target_key`は、サブクエリeagerローダがDISTINCT修飾子を最も内側のSELECTに適用できるようにします。"
 
 #: of sqlalchemy.orm.relationship:248
 msgid ""
 "- :paramref:`~.relationship.distinct_target_key` now defaults to "
 "``None``, so that the feature enables itself automatically for those "
 "cases where the innermost query targets a non-unique key."
-msgstr ""
+msgstr "- ：paramref： `〜.relationship.distinct_target_key`はデフォルトで` `None``になっているので、一番内側のクエリが一意でないキーを対象とする場合に自動的に有効になります。"
 
 #: of sqlalchemy.orm.relationship:256
 msgid ""
 ":ref:`loading_toplevel` - includes an introduction to subquery eager "
 "loading."
-msgstr ""
+msgstr "：ref： `loading_toplevel`  - サブクエリの読み込みを紹介しています。"
 
 #: of sqlalchemy.orm.relationship:259
 msgid "docstring which will be applied to the resulting descriptor."
-msgstr ""
+msgstr "その結果の記述子に適用されるdocstring"
 
 #: of sqlalchemy.orm.relationship:262
 msgid ""
@@ -504,18 +494,18 @@ msgid ""
 "will be prepended to the list of attribute listeners for the resulting "
 "descriptor placed on the class.  .. deprecated:: 0.7 Please see "
 ":class:`.AttributeEvents`."
-msgstr ""
+msgstr "：class： `.AttributeExtension`インスタンス、またはクラスに配置された結果の記述子の属性リスナーのリストの前に追加される拡張のリストです。 .. deprecated :: 0.7参照してください：class： `.AttributeEvents`。"
 
 #: of sqlalchemy.orm.relationship:263
 msgid ""
 "an :class:`.AttributeExtension` instance, or list of extensions, which "
 "will be prepended to the list of attribute listeners for the resulting "
 "descriptor placed on the class."
-msgstr ""
+msgstr "：class： `.AttributeExtension`インスタンス、またはクラスに配置された結果の記述子の属性リスナーのリストの前に追加される拡張のリストです。"
 
 #: of sqlalchemy.orm.relationship:267
 msgid "Please see :class:`.AttributeEvents`."
-msgstr ""
+msgstr "参照してください：class： `.AttributeEvents`。"
 
 #: of sqlalchemy.orm.relationship:269
 msgid ""
@@ -568,7 +558,7 @@ msgid ""
 "alternate, more specific system of     describing which columns in a "
 "particular     :paramref:`~.relationship.primaryjoin` should be "
 "considered     \"foreign\"."
-msgstr ""
+msgstr "func： `.relationship`オブジェクトの：paramref：`〜.relationship &#39;のコンテキスト内で、\ &quot;外部キー\&quot;カラムとして使用されるカラムのリスト、またはリモートカラムの値を参照するカラム。プライマリジョイン状態。つまり、：func： `.relationship`の：paramref：`〜.relationship.primaryjoin`条件が `` a.id == b.a_id``であり、 `` b.a_id``の値`` a.id``に存在することが要求されている場合、func： `.relationship`は` `b.a_id``です。通常、：paramref： `〜.relationship.foreign_keys`パラメータは**必須ではありません**：func：` .relationship`は自動的にどの列を決定します：paramref： `〜.relationship.primaryjoin`条件は：class： `.ForeignKey`を指定するclass：` .Column`オブジェクトに基づいて\ &quot;外部キー\&quot;列と見なされるか、または：class： `.ForeignKeyConstraint`構造体の参照列としてリストされます。 ：paramref： `〜.relationship.foreign_keys`は、以下の場合にのみ必要です。1.複数の外部キー参照が存在するため、ローカルテーブルからリモートテーブルへの結合を構築する方法は複数あります。 `` foreign_keys``を設定すると、：func： `.relationship`が\&quot; foreign \ &quot;としてここで指定された列だけを考慮するように制限されます。 .. versionchanged :: 0.8複数の外部キー結合のあいまい性は、：paramref： `〜.relationship.foreign_keys`パラメータだけを明示的に設定する必要なしに設定することで解決できます：paramref：`〜.relationship.primaryjoin` 。 2.：class： `.Table`には、実際には：class：` .ForeignKey`または：class： `.ForeignKeyConstraint`が存在しません。これは、テーブルが外部キーリフレクションをサポートしていないデータベース（MySQL MyISAM）。 3.：paramref： `〜.relationship.primaryjoin`引数は、非標準の結合条件を構築するために使用されます。これは、通常、結合など、それらの\&quot;親\ &quot;列を参照しない列や式を使用しますSQL関数を使用した複合比較によって表される条件。 ：func： `.relationship`コンストラクトはあいまいな条件が与えられたときに：paramref：`〜.relationship.foreign_keys`パラメータの使用を示唆する情報メッセージを生成します。典型的な場合、：func： `.relationship`が例外を送出しない場合、：paramref：`〜.relationship.foreign_keys`パラメータは通常必要ありません。 ：paramref： `〜.relationship.foreign_keys`は、マッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。 .. seealso ::：ref： `relationship_foreign_keys`：ref：` relationship_custom_foreign`：func： `.foreign`  -  a：paramref：`〜.relationship.primaryjoin`条件内で\ &quot;foreign \&quot;列を直接アノテーションできます。 .. versionadded :: 0.8：func： `.foreign`アノテーションは、：paramref：`〜.relationship.primaryjoin`式に直接適用することもできます。これは、特定の列を記述する、より具体的な代替システムです。 paramref： `〜.relationship.primaryjoin`は\&quot; foreign \ &quot;とみなすべきです。"
 
 #: of sqlalchemy.orm.relationship:271
 msgid ""
@@ -580,7 +570,7 @@ msgid ""
 ":func:`.relationship` is ``a.id == b.a_id``, and the values in ``b.a_id``"
 " are required to be present in ``a.id``, then the \"foreign key\" column "
 "of this :func:`.relationship` is ``b.a_id``."
-msgstr ""
+msgstr "func： `.relationship`オブジェクトの：paramref：`〜.relationship &#39;のコンテキスト内で、\ &quot;外部キー\&quot;カラムとして使用されるカラムのリスト、またはリモートカラムの値を参照するカラム。プライマリジョイン状態。つまり、：func： `.relationship`の：paramref：`〜.relationship.primaryjoin`条件が `` a.id == b.a_id``であり、 `` b.a_id``の値`` a.id``に存在することが要求されている場合、func： `.relationship`は` `b.a_id``です。"
 
 #: of sqlalchemy.orm.relationship:281
 msgid ""
@@ -592,7 +582,7 @@ msgid ""
 "otherwise listed as referencing columns in a "
 ":class:`.ForeignKeyConstraint` construct. "
 ":paramref:`~.relationship.foreign_keys` is only needed when:"
-msgstr ""
+msgstr "通常、：paramref： `〜.relationship.foreign_keys`パラメータは**必須ではありません**：func：` .relationship`は自動的にどの列を決定します：paramref： `〜.relationship.primaryjoin`条件は：class： `.ForeignKey`を指定するclass：` .Column`オブジェクトに基づいて\ &quot;外部キー\&quot;列と見なされるか、または：class： `.ForeignKeyConstraint`構造体の参照列としてリストされます。 ：paramref： `〜.relationship.foreign_keys`は次の場合にのみ必要です："
 
 #: of sqlalchemy.orm.relationship:291
 msgid ""
@@ -600,14 +590,14 @@ msgid ""
 "the remote table, as there are multiple foreign key references present.  "
 "Setting ``foreign_keys`` will limit the :func:`.relationship` to consider"
 " just those columns specified here as \"foreign\"."
-msgstr ""
+msgstr "複数の外部キー参照が存在するので、ローカルテーブルからリモートテーブルへの結合を構築する方法は複数あります。 `` foreign_keys``を設定すると、：func： `.relationship`が\&quot; foreign \ &quot;としてここで指定された列だけを考慮するように制限されます。"
 
 #: of sqlalchemy.orm.relationship:297
 msgid ""
 "A multiple-foreign key join ambiguity can be resolved by setting the "
 ":paramref:`~.relationship.foreign_keys` parameter alone, without the need"
 " to explicitly set :paramref:`~.relationship.primaryjoin` as well."
-msgstr ""
+msgstr "複数の外部キー結合のあいまい性は、：paramref： `。.relationship.primaryjoin`を明示的に設定する必要なしに、：paramref：`。.relationship.foreign_keys`パラメータだけを設定することで解決できます。"
 
 #: of sqlalchemy.orm.relationship:303
 msgid ""
@@ -615,7 +605,7 @@ msgid ""
 ":class:`.ForeignKey` or :class:`.ForeignKeyConstraint` constructs "
 "present, often because the table was reflected from a database that does "
 "not support foreign key reflection (MySQL MyISAM)."
-msgstr ""
+msgstr "：class： `.Table`には、実際には：class：` .ForeignKey`または：class： `.ForeignKeyConstraint`が存在しません。これは、テーブルが外部キー反映をサポートしていないデータベースMyISAM）。"
 
 #: of sqlalchemy.orm.relationship:309
 msgid ""
@@ -623,7 +613,7 @@ msgid ""
 "a non-standard join condition, which makes use of columns or expressions "
 "that do not normally refer to their \"parent\" column, such as a join "
 "condition expressed by a complex comparison using a SQL function."
-msgstr ""
+msgstr "：paramref： `〜.relationship.primaryjoin`引数は、標準でない結合条件を構築するために使用されます。これは、表現された結合条件などの、通常は\&quot;親\ &quot;列を参照しない列や式を使用しますSQL関数を使用して複雑な比較を行います。"
 
 #: of sqlalchemy.orm.relationship:315
 msgid ""
@@ -632,29 +622,29 @@ msgid ""
 "parameter when presented with an ambiguous condition.   In typical cases,"
 " if :func:`.relationship` doesn't raise any exceptions, the "
 ":paramref:`~.relationship.foreign_keys` parameter is usually not needed."
-msgstr ""
+msgstr "：func： `.relationship`コンストラクトはあいまいな条件が与えられたときに：paramref：`〜.relationship.foreign_keys`パラメータの使用を示唆する情報メッセージを生成します。典型的な場合、：func： `.relationship`が例外を送出しない場合、：paramref：`〜.relationship.foreign_keys`パラメータは通常必要ありません。"
 
 #: of sqlalchemy.orm.relationship:323
 msgid ""
 ":paramref:`~.relationship.foreign_keys` may also be passed as a callable "
 "function which is evaluated at mapper initialization time, and may be "
 "passed as a Python-evaluable string when using Declarative."
-msgstr ""
+msgstr "：paramref： `〜.relationship.foreign_keys`は、マッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。"
 
 #: of sqlalchemy.orm.relationship:330
 msgid ":ref:`relationship_foreign_keys`"
-msgstr ""
+msgstr "：ref： `relationship_foreign_keys`"
 
 #: of sqlalchemy.orm.foreign:11 sqlalchemy.orm.relationship:332
 #: sqlalchemy.orm.remote:11
 msgid ":ref:`relationship_custom_foreign`"
-msgstr ""
+msgstr "：ref： `relationship_custom_foreign`"
 
 #: of sqlalchemy.orm.relationship:334
 msgid ""
 ":func:`.foreign` - allows direct annotation of the \"foreign\" columns "
 "within a :paramref:`~.relationship.primaryjoin` condition."
-msgstr ""
+msgstr "：func： `.foreign`  -  a：：paramref：`〜.relationship.primaryjoin`条件内の\ &quot;foreign \&quot;列の直接アノテーションを許可します。"
 
 #: of sqlalchemy.orm.relationship:337
 msgid ""
@@ -662,20 +652,20 @@ msgid ""
 ":paramref:`~.relationship.primaryjoin` expression, which is an alternate,"
 " more specific system of describing which columns in a particular "
 ":paramref:`~.relationship.primaryjoin` should be considered \"foreign\"."
-msgstr ""
+msgstr "：func： `.foreign`アノテーションは、：paramref：`〜.relationship.primaryjoin`式に直接適用することもできます。これは、特定の列を記述する、より具体的な代替システムです。paramref： `〜.relationship .primaryjoinは\ &quot;foreign \&quot;とみなすべきです。"
 
 #: of sqlalchemy.orm.relationship:345
 msgid ""
 "Optional data dictionary which will be populated into the "
 ":attr:`.MapperProperty.info` attribute of this object.  .. versionadded::"
 " 0.8"
-msgstr ""
+msgstr "このオブジェクトの：attr： `.MapperProperty.info`属性に読み込まれるオプションのデータ辞書です。 .. versionadded :: 0.8"
 
 #: of sqlalchemy.orm.relationship:345
 msgid ""
 "Optional data dictionary which will be populated into the "
 ":attr:`.MapperProperty.info` attribute of this object."
-msgstr ""
+msgstr "このオブジェクトの：attr： `.MapperProperty.info`属性に読み込まれるオプションのデータ辞書です。"
 
 #: of sqlalchemy.orm.relationship:350
 msgid ""
@@ -692,7 +682,7 @@ msgid ""
 " the option as specified by   loader option, including detail on nesting "
 "behavior.    :ref:`what_kind_of_loading` - Discussion of some details of"
 "   various loader options."
-msgstr ""
+msgstr "`` True``が結合されたとき、熱心な負荷は内部結合を使用して外部結合の代わりに関連するテーブルに結合します。内部結合は一般的に外部結合よりも優れているため、このオプションの目的は一般にパフォーマンスの1つです。関係がヌル可能でないローカルの外部キーを使用して多対1でオブジェクトを参照するとき、または参照が一対一であるか、または持っていることが保証されているコレクションのときに、このフラグを `` True``に設定できます1つまたは少なくとも1つのエントリ。このオプションは：paramref： `.joinedload.innerjoin`と同じ\&quot; nested \ &quot;と\&quot; unnested \ &quot;オプションをサポートしています。ネスト/ネストされていない動作の詳細については、そのフラグを参照してください。 .. seealso :: paramref： `.joinedload.innerjoin`  -  loaderオプションで指定されたオプションで、ネスト動作の詳細を含みます。 ：ref： `what_kind_of_loading`  - さまざまなローダーオプションの詳細についての議論。"
 
 #: of sqlalchemy.orm.relationship:351
 msgid ""
@@ -700,7 +690,7 @@ msgid ""
 "related tables instead of an outer join.  The purpose of this option is "
 "generally one of performance, as inner joins generally perform better "
 "than outer joins."
-msgstr ""
+msgstr "`` True``が結合されたとき、熱心な負荷は内部結合を使用して外部結合の代わりに関連するテーブルに結合します。内部結合は一般的に外部結合よりも優れているため、このオプションの目的は一般にパフォーマンスの1つです。"
 
 #: of sqlalchemy.orm.relationship:356
 msgid ""
@@ -708,26 +698,26 @@ msgid ""
 "object via many-to-one using local foreign keys that are not nullable, or"
 " when the reference is one-to-one or a collection that is guaranteed to "
 "have one or at least one entry."
-msgstr ""
+msgstr "関係がヌル可能でないローカルの外部キーを使用して多対1でオブジェクトを参照するとき、または参照が一対一であるか、または持っていることが保証されているコレクションのときに、このフラグを `` True``に設定できます1つまたは少なくとも1つのエントリ。"
 
 #: of sqlalchemy.orm.relationship:361
 msgid ""
 "The option supports the same \"nested\" and \"unnested\" options as that "
 "of :paramref:`.joinedload.innerjoin`.  See that flag for details on "
 "nested / unnested behaviors."
-msgstr ""
+msgstr "このオプションは：paramref： `.joinedload.innerjoin`と同じ\&quot; nested \ &quot;と\&quot; unnested \ &quot;オプションをサポートしています。ネスト/ネストされていない動作の詳細については、そのフラグを参照してください。"
 
 #: of sqlalchemy.orm.relationship:367
 msgid ""
 ":paramref:`.joinedload.innerjoin` - the option as specified by loader "
 "option, including detail on nesting behavior."
-msgstr ""
+msgstr "：paramref： `.joinedload.innerjoin`  -  loaderオプションで指定されたオプションで、ネスト動作の詳細を含みます。"
 
 #: of sqlalchemy.orm.relationship:370
 msgid ""
 ":ref:`what_kind_of_loading` - Discussion of some details of various "
 "loader options."
-msgstr ""
+msgstr "：ref： `what_kind_of_loading`  - さまざまなローダーオプションの詳細についての議論。"
 
 #: of sqlalchemy.orm.relationship:374
 msgid ""
@@ -740,7 +730,7 @@ msgid ""
 " chain.  This option applies both to joined- and subquery- eager loaders."
 "  .. seealso::    :ref:`self_referential_eager_loading` - Introductory "
 "documentation   and examples."
-msgstr ""
+msgstr "`` Not``以外のときは、自己参照型または循環型の関係でローダーが参加する必要のあるレベルの深さを示す整数値です。この数は、特定の結合ブランチに沿って同じMapperがロード条件に存在する回数をカウントします。デフォルトで `` None``のままにしておくと、チェーン内で既に高い位置にある同じターゲットマッパーに出会うと、熱心なローダーは連鎖を停止します。このオプションは、ジョイン・ローダーとサブクエリ・ローダーの両方に適用されます。 .. seealso :: ref： `self_referential_eager_loading`  - 入門書と事例。"
 
 #: of sqlalchemy.orm.relationship:375
 msgid ""
@@ -751,13 +741,13 @@ msgid ""
 "left at its default of ``None``, eager loaders will stop chaining when "
 "they encounter a the same target mapper which is already higher up in the"
 " chain.  This option applies both to joined- and subquery- eager loaders."
-msgstr ""
+msgstr "`` Not``以外のときは、自己参照型または循環型の関係でローダーが参加する必要のあるレベルの深さを示す整数値です。この数は、特定の結合ブランチに沿って同じMapperがロード条件に存在する回数をカウントします。デフォルトで `` None``のままにしておくと、チェーン内で既に高い位置にある同じターゲットマッパーに出会うと、熱心なローダーは連鎖を停止します。このオプションは、ジョイン・ローダーとサブクエリ・ローダーの両方に適用されます。"
 
 #: of sqlalchemy.orm.relationship:386
 msgid ""
 ":ref:`self_referential_eager_loading` - Introductory documentation and "
 "examples."
-msgstr ""
+msgstr "：ref： `self_referential_eager_loading`  - 入門書とサンプル。"
 
 #: of sqlalchemy.orm.relationship:389
 msgid ""
@@ -802,27 +792,27 @@ msgid ""
 " Full documentation on relationship loader   configuration.    "
 ":ref:`dynamic_relationship` - detail on the ``dynamic`` option.    "
 ":ref:`collections_noload_raiseload` - notes on \"noload\" and \"raise\""
-msgstr ""
+msgstr "関連項目のロード方法を指定します。デフォルト値は `` select``です。値には次のものがあります：* `` select``  - プロパティが最初にアクセスされたときに、別のSELECT文を使用して遅延ロードされるか、単純な多対1参照のアイデンティティマップフェッチが必要です。 * `` immediate``  - アイテムは親がロードされるときにロードされ、別のSELECTステートメント、または単純な多対1の参照のアイデンティティマップフェッチを使用してロードされます。 * `` joined``  - 項目は、JOINまたはLEFT OUTER JOINを使用して、親のものと同じクエリで\ &quot;eagerly \&quot;読み込まなければなりません。結合が\ &quot;外部\&quot;かどうかは、：paramref： `〜.relationship.innerjoin`パラメータによって決まります。 * `` subquery``  - アイテムは、要求されたコレクションごとに元のステートメントのサブクエリにJOINを発行する1つの追加のSQLステートメントを使用して、親がロードされるときに\ eagerly \ &quot;ロードされます。 * `` selectin``  -  1つ以上の追加のSQL文を使用して、親がロードされるときに項目をロードする必要があります。IN節を使用して主キー識別子を指定して直接の親オブジェクトにJOINを発行します。 .. versionadded :: 1.2 * `` noload``  - いつでもロードは行われません。これは\ &quot;write-only \&quot;属性、またはアプリケーション固有の方法で設定された属性をサポートするためです。 * `` raise``  - 遅延ロードは許可されません。属性にアクセスすると、その値が熱心な読み込みでまだ読み込まれていない場合、：exc： `〜sqlalchemy.exc.InvalidRequestError`が発生します。この戦略は、オブジェクトが読み込まれた後、オブジェクトが添付された：class： `.Session`から切り離されるときに使用できます。 .. versionadded :: 1.1 * `` raise_on_sql``  -  SQLを発行するレイジーローディングは許可されません。属性にアクセスすると、その値が熱心な読み込みですでに読み込まれていない場合、レイジーロードでSQL **を生成する必要がある場合は、：exc： `〜sqlalchemy.exc.InvalidRequestError`、**が発生します。遅延ロードが関連する値をアイデンティティ・マップから取得するか、またはそれが「なし」であると判断できる場合は、値がロードされます。この戦略は、オブジェクトが添付されたままになるときに使用できます：class： `.Session`、ただし追加のSELECT文はブロックされるべきです。 versionadded :: 1.1 * `` dynamic``  - 属性は、すべての読み取り操作に対して事前設定された：class： `.Query`オブジェクトを返します。このオブジェクトには、結果を反復する前にさらにフィルタリング操作を適用できます。詳細は、ref： `dynamic_relationship`を参照してください。 * True  -  &#39;select&#39;の同義語* False  -  &#39;joined&#39;の同義語* None  -  &#39;noload&#39;の同義語.. seealso :: doc： `/ orm / loading_relationships`  - リレーションシップローダーの設定に関する完全なドキュメント。 ：ref： `dynamic_relationship`  - ` `dynamic``オプションの詳細。 ：ref： `collections_noload_raiseload`  -  \&quot; noload \ &quot;と\&quot; raise \"
 
 #: of sqlalchemy.orm.relationship:389
 msgid ""
 "specifies how the related items should be loaded.  Default value is "
 "``select``.  Values include:"
-msgstr ""
+msgstr "関連項目のロード方法を指定します。デフォルト値は `` select``です。値は次のとおりです。"
 
 #: of sqlalchemy.orm.relationship:393
 msgid ""
 "``select`` - items should be loaded lazily when the property is first "
 "accessed, using a separate SELECT statement, or identity map fetch for "
 "simple many-to-one references."
-msgstr ""
+msgstr "`` select``  - プロパティが最初にアクセスされたときに、別のSELECT文を使うか、単純な多対1の参照のためのアイデンティティマップフェッチを使って、項目を遅延してロードするべきです。"
 
 #: of sqlalchemy.orm.relationship:397
 msgid ""
 "``immediate`` - items should be loaded as the parents are loaded, using a"
 " separate SELECT statement, or identity map fetch for simple many-to-one "
 "references."
-msgstr ""
+msgstr "`` immediate``  - アイテムは親がロードされるときにロードされ、別のSELECTステートメント、または単純な多対1の参照のアイデンティティマップのフェッチを使用してロードされます。"
 
 #: of sqlalchemy.orm.relationship:401
 msgid ""
@@ -830,14 +820,14 @@ msgid ""
 " of the parent, using a JOIN or LEFT OUTER JOIN.  Whether the join is "
 "\"outer\" or not is determined by the "
 ":paramref:`~.relationship.innerjoin` parameter."
-msgstr ""
+msgstr "`` joined``  - アイテムは、JOINまたはLEFT OUTER JOINを使用して、親のものと同じクエリで\ &quot;eagerly \&quot;読み込まなければなりません。結合が\ &quot;外部\&quot;かどうかは、：paramref： `〜.relationship.innerjoin`パラメータによって決まります。"
 
 #: of sqlalchemy.orm.relationship:406
 msgid ""
 "``subquery`` - items should be loaded \"eagerly\" as the parents are "
 "loaded, using one additional SQL statement, which issues a JOIN to a "
 "subquery of the original statement, for each collection requested."
-msgstr ""
+msgstr "`` subquery``  - アイテムは、リクエストされたコレクションごとに元のステートメントのサブクエリにJOINを発行する1つの追加のSQLステートメントを使用して、親がロードされるときに\ eagerly \ &quot;ロードされます。"
 
 #: of sqlalchemy.orm.relationship:411
 msgid ""
@@ -845,14 +835,14 @@ msgid ""
 "loaded, using one or more additional SQL statements, which issues a JOIN "
 "to the immediate parent object, specifying primary key identifiers using "
 "an IN clause."
-msgstr ""
+msgstr "`` selectin``  -  1つ以上の追加のSQL文を使用して、親がロードされるときにアイテムが読み込まれる必要があります。IN節を使用して主キー識別子を指定して、直接の親オブジェクトにJOINを発行します。"
 
 #: of sqlalchemy.orm.relationship:418
 msgid ""
 "``noload`` - no loading should occur at any time.  This is to support "
 "\"write-only\" attributes, or attributes which are populated in some "
 "manner specific to the application."
-msgstr ""
+msgstr "`` noload``  - いつでもローディングは発生しません。これは\ &quot;write-only \&quot;属性、またはアプリケーション固有の方法で設定された属性をサポートするためです。"
 
 #: of sqlalchemy.orm.relationship:422
 msgid ""
@@ -861,7 +851,7 @@ msgid ""
 ":exc:`~sqlalchemy.exc.InvalidRequestError`. This strategy can be used "
 "when objects are to be detached from their attached :class:`.Session` "
 "after they are loaded."
-msgstr ""
+msgstr "`` raise``  - 遅延ロードは許可されません。属性にアクセスすると、その値が熱心な読み込みでまだ読み込まれていない場合、：exc： `〜sqlalchemy.exc.InvalidRequestError`が発生します。この戦略は、オブジェクトが読み込まれた後、オブジェクトが添付された：class： `.Session`から切り離されるときに使用できます。"
 
 #: of sqlalchemy.orm.relationship:430
 msgid ""
@@ -873,7 +863,7 @@ msgid ""
 "loaded.  This strategy can be used when objects will remain associated "
 "with the attached :class:`.Session`, however additional SELECT statements"
 " should be blocked."
-msgstr ""
+msgstr "`` raise_on_sql``  -  SQLを発行する遅延ロードは許可されません。属性にアクセスすると、その値が熱心な読み込みですでに読み込まれていない場合、レイジーロードでSQL **を生成する必要がある場合は、：exc： `〜sqlalchemy.exc.InvalidRequestError`、**が発生します。遅延ロードが関連する値をアイデンティティ・マップから取得するか、またはそれが「なし」であると判断できる場合は、値がロードされます。この戦略は、オブジェクトが添付されたままになるときに使用できます：class： `.Session`、ただし追加のSELECT文はブロックされるべきです。"
 
 #: of sqlalchemy.orm.relationship:442
 msgid ""
@@ -881,33 +871,33 @@ msgid ""
 "object for all read operations, onto which further filtering operations "
 "can be applied before iterating the results.  See the section "
 ":ref:`dynamic_relationship` for more details."
-msgstr ""
+msgstr "`` dynamic``  - 属性はすべての読み取り操作に対して事前設定された：class： `.Query`オブジェクトを返します。このオブジェクトには結果を反復する前にさらにフィルタリング操作を適用できます。詳細は、ref： `dynamic_relationship`を参照してください。"
 
 #: of sqlalchemy.orm.relationship:448
 msgid "True - a synonym for 'select'"
-msgstr ""
+msgstr "True  -  &#39;select&#39;の同義語"
 
 #: of sqlalchemy.orm.relationship:450
 msgid "False - a synonym for 'joined'"
-msgstr ""
+msgstr "False  -  &#39;joined&#39;の同義語"
 
 #: of sqlalchemy.orm.relationship:452
 msgid "None - a synonym for 'noload'"
-msgstr ""
+msgstr "なし -  &#39;noload&#39;の同義語"
 
 #: of sqlalchemy.orm.relationship:456
 msgid ""
 ":doc:`/orm/loading_relationships` - Full documentation on relationship "
 "loader configuration."
-msgstr ""
+msgstr "：doc： `/ orm / loading_relationships`  - リレーションシップローダーの設定に関する完全なドキュメント。"
 
 #: of sqlalchemy.orm.relationship:459
 msgid ":ref:`dynamic_relationship` - detail on the ``dynamic`` option."
-msgstr ""
+msgstr "：ref： `dynamic_relationship`  - ` `dynamic``オプションの詳細。"
 
 #: of sqlalchemy.orm.relationship:461
 msgid ":ref:`collections_noload_raiseload` - notes on \"noload\" and \"raise\""
-msgstr ""
+msgstr "：ref： `collections_noload_raiseload`  -  \&quot; noload \ &quot;と\&quot; raise \"
 
 #: of sqlalchemy.orm.relationship:463
 msgid ""
@@ -925,11 +915,11 @@ msgid ""
 ":meth:`.Session.enable_relationship_loading` - this method     "
 "establishes \"load on pending\" behavior for the whole object, and     "
 "also allows loading on objects that remain transient or     detached."
-msgstr ""
+msgstr "一時オブジェクトまたは保留中の親オブジェクトの読み込み動作を示します。 `` True``に設定すると、永続的ではない親オブジェクトに対するクエリをレイジーローダーが発行します。これは、一度もフラッシュされていないことを意味します。これは、autoflushが無効になっているときに保留中のオブジェクトに対して、または：class： `.Session`に一時的に格納されていて、保留中のコレクションの一部ではない一時オブジェクトに対して有効です。 ：paramref： `〜.relationship.load_on_pending`フラグは、ORMが通常使用されているときの動作を改善しません。オブジェクト参照は、外部キーレベルではなく、オブジェクトレベルで構築されていなければなりません。フラッシュが進む。このフラグは一般的な使用のためのものではありません。 .. seealso ::：meth： `.Session.enable_relationship_loading`  - このメソッドは、オブジェクト全体の&quot;ロード時にロードする &quot;動作を確立し、トランジェントまたはデタッチされたままのオブジェクトへのロードも許可します。"
 
 #: of sqlalchemy.orm.relationship:464
 msgid "Indicates loading behavior for transient or pending parent objects."
-msgstr ""
+msgstr "一時オブジェクトまたは保留中の親オブジェクトの読み込み動作を示します。"
 
 #: of sqlalchemy.orm.relationship:466
 msgid ""
@@ -938,7 +928,7 @@ msgid ""
 "  This may take effect for a pending object when autoflush is disabled, "
 "or for a transient object that has been \"attached\" to a "
 ":class:`.Session` but is not part of its pending collection."
-msgstr ""
+msgstr "`` True``に設定すると、永続的ではない親オブジェクトに対するクエリをレイジーローダーが発行します。これは、一度もフラッシュされていないことを意味します。これは、autoflushが無効になっているときに保留中のオブジェクトに対して、または：class： `.Session`に一時的に格納されていて、保留中のコレクションの一部ではない一時オブジェクトに対して有効です。"
 
 #: of sqlalchemy.orm.relationship:473
 msgid ""
@@ -947,14 +937,14 @@ msgid ""
 "constructed at the object level, not at the foreign key level, so that "
 "they are present in an ordinary way before a flush proceeds. This flag is"
 " not not intended for general use."
-msgstr ""
+msgstr "：paramref： `〜.relationship.load_on_pending`フラグは、ORMが通常使用されているときの動作を改善しません。オブジェクト参照は、外部キーレベルではなく、オブジェクトレベルで構築されていなければなりません。フラッシュが進む。このフラグは一般的な使用のためのものではありません。"
 
 #: of sqlalchemy.orm.relationship:481
 msgid ""
 ":meth:`.Session.enable_relationship_loading` - this method establishes "
 "\"load on pending\" behavior for the whole object, and also allows "
 "loading on objects that remain transient or detached."
-msgstr ""
+msgstr "：meth： `.Session.enable_relationship_loading`  - このメソッドは、オブジェクト全体に対して\&quot;ロード時保留\ &quot;動作を確立します。また、一時的または分離状態のオブジェクトにロードすることもできます。"
 
 #: of sqlalchemy.orm.relationship:486
 msgid ""
@@ -965,7 +955,7 @@ msgid ""
 ":paramref:`~.relationship.order_by` may also be passed as a callable "
 "function which is evaluated at mapper initialization time, and may be "
 "passed as a Python-evaluable string when using Declarative."
-msgstr ""
+msgstr "これらのアイテムをロードするときに適用する順序を示します。 ：paramref： `〜.relationship.order_by`は、ターゲットクラスがマップされる：class：` .Column`オブジェクトの1つ、またはそのカラムを参照するターゲットクラスにバインドされた属性自体を参照すると予想されます。 ：paramref： `〜.relationship.order_by`は、マッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。"
 
 #: of sqlalchemy.orm.relationship:487
 msgid ""
@@ -973,14 +963,14 @@ msgid ""
 ":paramref:`~.relationship.order_by` is expected to refer to one of the "
 ":class:`.Column` objects to which the target class is mapped, or the "
 "attribute itself bound to the target class which refers to the column."
-msgstr ""
+msgstr "これらのアイテムをロードするときに適用する順序を示します。 ：paramref： `〜.relationship.order_by`は、ターゲットクラスがマップされる：class：` .Column`オブジェクトの1つ、またはそのカラムを参照するターゲットクラスにバインドされた属性自体を参照すると予想されます。"
 
 #: of sqlalchemy.orm.relationship:493
 msgid ""
 ":paramref:`~.relationship.order_by` may also be passed as a callable "
 "function which is evaluated at mapper initialization time, and may be "
 "passed as a Python-evaluable string when using Declarative."
-msgstr ""
+msgstr "：paramref： `〜.relationship.order_by`は、マッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。"
 
 #: of sqlalchemy.orm.relationship:497
 msgid ""
@@ -1001,11 +991,11 @@ msgid ""
 "occur if the child object is de-associated with the parent.  .. seealso::"
 "       :ref:`passive_deletes` - Introductory documentation      and "
 "examples."
-msgstr ""
+msgstr "削除操作中の読み込み動作を示します。値がTrueの場合、アンロードされた子アイテムは親に対して削除操作中にロードされるべきではありません。通常、親アイテムが削除されると、すべての子アイテムがロードされ、削除済みとしてマークされるか、親に対する外部キーがNULLに設定されます。このフラグをTrueとマークすると、通常、ON DELETE <CASCADE|SET NULL>データベース側の子ローの更新/削除を処理するルールが設定されています。さらに、フラグを文字列値 &#39;all&#39;に設定すると、親オブジェクトが削除され、削除または削除孤立カスケードが有効になっていないときに、子外部キーの\ &quot;nulling out \&quot;が無効になります。これは、通常、データベース側でトリガまたはエラー発生のシナリオが実行されている場合に使用されます。インセッションの子オブジェクトの外部キー属性は、フラッシュが発生した後も変更されないので、これは非常に特殊なユースケース設定です。さらに、子オブジェクトが親オブジェクトと関連付けられていない場合、\ &quot;nulling out \&quot;も発生します。 .. seealso ::：ref： `passive_deletes`  - 入門書と事例。"
 
 #: of sqlalchemy.orm.relationship:498
 msgid "Indicates loading behavior during delete operations."
-msgstr ""
+msgstr "削除操作中の読み込み動作を示します。"
 
 #: of sqlalchemy.orm.relationship:500
 msgid ""
@@ -1016,7 +1006,7 @@ msgid ""
 "this flag as True usually implies an ON DELETE <CASCADE|SET NULL> rule is"
 " in place which will handle updating/deleting child rows on the database "
 "side."
-msgstr ""
+msgstr "値がTrueの場合、アンロードされた子アイテムは親に対して削除操作中にロードされるべきではありません。通常、親アイテムが削除されると、すべての子アイテムがロードされ、削除済みとしてマークされるか、親に対する外部キーがNULLに設定されます。このフラグをTrueとマークすると、通常、ON DELETE <CASCADE|SET NULL>データベース側の子ローの更新/削除を処理するルールが設定されています。"
 
 #: of sqlalchemy.orm.relationship:509
 msgid ""
@@ -1028,11 +1018,11 @@ msgid ""
 "child objects will not be changed after a flush occurs so this is a very "
 "special use-case setting. Additionally, the \"nulling out\" will still "
 "occur if the child object is de-associated with the parent."
-msgstr ""
+msgstr "さらに、フラグを文字列値 &#39;all&#39;に設定すると、親オブジェクトが削除され、削除または削除孤立カスケードが有効になっていないときに、子外部キーの\ &quot;nulling out \&quot;が無効になります。これは、通常、データベース側でトリガまたはエラー発生のシナリオが実行されている場合に使用されます。インセッションの子オブジェクトの外部キー属性は、フラッシュが発生した後も変更されないので、これは非常に特殊なユースケース設定です。さらに、子オブジェクトが親オブジェクトと関連付けられていない場合、\ &quot;nulling out \&quot;も発生します。"
 
 #: of sqlalchemy.orm.relationship:521
 msgid ":ref:`passive_deletes` - Introductory documentation and examples."
-msgstr ""
+msgstr "：ref： `passive_deletes`  - 入門書と例。"
 
 #: of sqlalchemy.orm.relationship:524
 msgid ""
@@ -1055,14 +1045,14 @@ msgid ""
 ":ref:`passive_updates` - Introductory documentation and     examples."
 "      :paramref:`.mapper.passive_updates` - a similar flag which     "
 "takes effect for joined-table inheritance mappings."
-msgstr ""
+msgstr "参照されている主キーの値が変更されたときに実行する永続性の動作を示します。これは、参照する外部キーの列も値を変更する必要があることを示します。 Trueの場合、データベース内の外部キーに「ON UPDATE CASCADE」が設定されており、データベースがソース列から従属行へのUPDATEの伝播を処理するとみなされます。 Falseの場合、SQLAlchemy：func： `.relationship`構文は関連するターゲットを変更するために独自のUPDATE文を発行しようとします。ただし、SQLAlchemy **では複数レベルのカスケードに対してUPDATEを発行することはできません。また、このフラグをFalseに設定することは、データベースが実際に参照整合性を強制している場合には、ターゲットバックエンドがサポートしていれば、それらの制約が明示的に\ &quot;遅延&quot;されている場合を除き、互換性がありません。変更可能な主キーを使用するアプリケーションでは、 `` passive_updates``がTrueに設定され、変更を効率的かつ完全に処理するためにデータベース自体の参照整合性機能が使用されることが強く勧められます。 .. seealso ::：ref： `passive_updates`  - 入門書と事例。 ：paramref： `.mapper.passive_updates`  - 結合されたテーブルの継承マッピングに有効な同様のフラグです。"
 
 #: of sqlalchemy.orm.relationship:525
 msgid ""
 "Indicates the persistence behavior to take when a referenced primary key "
 "value changes in place, indicating that the referencing foreign key "
 "columns will also need their value changed."
-msgstr ""
+msgstr "参照されている主キーの値が変更されたときに実行する永続性の動作を示します。これは、参照する外部キーの列も値を変更する必要があることを示します。"
 
 #: of sqlalchemy.orm.relationship:529
 msgid ""
@@ -1076,7 +1066,7 @@ msgid ""
 "where the database is in fact enforcing referential integrity, unless "
 "those constraints are explicitly \"deferred\", if the target backend "
 "supports it."
-msgstr ""
+msgstr "Trueの場合、データベース内の外部キーに「ON UPDATE CASCADE」が設定されており、データベースがソース列から従属行へのUPDATEの伝播を処理するとみなされます。 Falseの場合、SQLAlchemy：func： `.relationship`構文は関連するターゲットを変更するために独自のUPDATE文を発行しようとします。ただし、SQLAlchemy **では複数レベルのカスケードに対してUPDATEを発行することはできません。また、このフラグをFalseに設定することは、データベースが実際に参照整合性を強制している場合には、ターゲットバックエンドがサポートしていれば、それらの制約が明示的に\ &quot;遅延&quot;されている場合を除き、互換性がありません。"
 
 #: of sqlalchemy.orm.relationship:541
 msgid ""
@@ -1084,17 +1074,17 @@ msgid ""
 "primary keys keeps ``passive_updates`` set to True, and instead uses the "
 "referential integrity features of the database itself in order to handle "
 "the change efficiently and fully."
-msgstr ""
+msgstr "変更可能な主キーを使用するアプリケーションでは、 `` passive_updates``がTrueに設定され、変更を効率的かつ完全に処理するためにデータベース自体の参照整合性機能が使用されることが強く勧められます。"
 
 #: of sqlalchemy.orm.relationship:548
 msgid ":ref:`passive_updates` - Introductory documentation and examples."
-msgstr ""
+msgstr "：ref： `passive_updates`  - 入門書とその例。"
 
 #: of sqlalchemy.orm.relationship:551
 msgid ""
 ":paramref:`.mapper.passive_updates` - a similar flag which takes effect "
 "for joined-table inheritance mappings."
-msgstr ""
+msgstr "：paramref： `.mapper.passive_updates`  - 結合されたテーブルの継承マッピングに有効な同様のフラグです。"
 
 #: of sqlalchemy.orm.relationship:554
 msgid ""
@@ -1114,7 +1104,7 @@ msgid ""
 " to use :paramref:`~.relationship.post_update` to \"break\" the cycle.  "
 ".. seealso::      :ref:`post_update` - Introductory documentation and "
 "examples."
-msgstr ""
+msgstr "この関係は、INSERTの後またはDELETEの前に2番目のUPDATEステートメントによって処理される必要があることを示します。現時点では、インスタンスの更新後もUPDATEを発行しますが、これは技術的に改善する必要があります。このフラグは、2つの個々の行（つまり、各行が他の行を参照する）間の双方向依存性の保存を処理するために使用され、そうでなければ一方の行が他方の行より前に存在するため、両方の行を完全にINSERTまたはDELETEすることはできません。特定のマッピング配置で、子ローのセットと1対多の関係を持つテーブルや、1つの子ローを参照するカラムなど、お互いに依存する2つのローが発生する場合に使用します（つまり、両方のテーブルには互いに外部キーが含まれています）。フラッシュ操作が\ &quot;循環依存性\&quot;が検出されたエラーを返した場合、これはサイクルを\ &quot;中断する&quot;ためにparamref： `〜.relationship.post_update`を使用することができます。 .. seealso ::：ref： `post_update`  - 入門書とサンプル。"
 
 #: of sqlalchemy.orm.relationship:555
 msgid ""
@@ -1132,11 +1122,11 @@ msgid ""
 "a foreign key to each other). If a flush operation returns an error that "
 "a \"cyclical dependency\" was detected, this is a cue that you might want"
 " to use :paramref:`~.relationship.post_update` to \"break\" the cycle."
-msgstr ""
+msgstr "この関係は、INSERTの後またはDELETEの前に2番目のUPDATEステートメントによって処理される必要があることを示します。現時点では、インスタンスの更新後もUPDATEを発行しますが、これは技術的に改善する必要があります。このフラグは、2つの個々の行（つまり、各行が他の行を参照する）間の双方向依存性の保存を処理するために使用され、そうでなければ一方の行が他方の行より前に存在するため、両方の行を完全にINSERTまたはDELETEすることはできません。特定のマッピング配置で、子ローのセットと1対多の関係を持つテーブルや、1つの子ローを参照するカラムなど、お互いに依存する2つのローが発生する場合に使用します（つまり、両方のテーブルには互いに外部キーが含まれています）。フラッシュ操作が\ &quot;循環依存性\&quot;が検出されたエラーを返した場合、これはサイクルを\ &quot;中断する&quot;ためにparamref： `〜.relationship.post_update`を使用することができます。"
 
 #: of sqlalchemy.orm.relationship:574
 msgid ":ref:`post_update` - Introductory documentation and examples."
-msgstr ""
+msgstr "：ref： `post_update`  - 入門書とサンプル。"
 
 #: of sqlalchemy.orm.relationship:576
 msgid ""
@@ -1149,7 +1139,7 @@ msgid ""
 "function which is evaluated at mapper initialization time, and may be "
 "passed as a Python-evaluable string when using Declarative.  .. seealso::"
 "      :ref:`relationship_primaryjoin`"
-msgstr ""
+msgstr "この子オブジェクトと親オブジェクト、または多対多リレーションシップのプライマリ・ジョインとして使用されるSQL式。プライマリ・オブジェクトのアソシエーション・テーブルへのジョイン。デフォルトでは、この値は親テーブルと子テーブル（または関連テーブル）の外部キーの関係に基づいて計算されます。 ：paramref： `〜.relationship.primaryjoin`は、マッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。 .. seealso ::：ref： `relationship_primaryjoin`"
 
 #: of sqlalchemy.orm.relationship:577
 msgid ""
@@ -1158,18 +1148,18 @@ msgid ""
 "join of the primary object to the association table. By default, this "
 "value is computed based on the foreign key relationships of the parent "
 "and child tables (or association table)."
-msgstr ""
+msgstr "この子オブジェクトと親オブジェクト、または多対多リレーションシップのプライマリ・ジョインとして使用されるSQL式。プライマリ・オブジェクトのアソシエーション・テーブルへのジョイン。デフォルトでは、この値は親テーブルと子テーブル（または関連テーブル）の外部キーの関係に基づいて計算されます。"
 
 #: of sqlalchemy.orm.relationship:584
 msgid ""
 ":paramref:`~.relationship.primaryjoin` may also be passed as a callable "
 "function which is evaluated at mapper initialization time, and may be "
 "passed as a Python-evaluable string when using Declarative."
-msgstr ""
+msgstr "：paramref： `〜.relationship.primaryjoin`は、マッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。"
 
 #: of sqlalchemy.orm.relationship:591 sqlalchemy.orm.relationship:644
 msgid ":ref:`relationship_primaryjoin`"
-msgstr ""
+msgstr "：ref： `relationship_primaryjoin`"
 
 #: of sqlalchemy.orm.relationship:593
 msgid ""
@@ -1188,20 +1178,20 @@ msgid ""
 "that accomplishes the   same purpose as "
 ":paramref:`~.relationship.remote_side`, typically   when a custom "
 ":paramref:`~.relationship.primaryjoin` condition   is used."
-msgstr ""
+msgstr "自己参照関係に使用され、関係の「リモート側」を形成する列または列のリストを示します。 ：paramref： `.relationship.remote_side`はマッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。 .. versionchanged :: 0.8：func： `.remote`アノテーションは、` `primaryjoin``式に直接適用することもできます。これは、特定の` `primaryjoin``のどの列を\ &quot;リモート\&quot;とみなされます。 .. seealso :: ref： `self_referential`  - 詳細な説明：paramref：`〜.relationship.remote_side`は自己参照関係を設定するために使われます。 ：func： `.remote`  - 通常、custom：paramref：`〜.relationship.primaryjoin`条件が使用されている場合、paramref： `〜.relationship.remote_side`と同じ目的を達成するアノテーション関数です。"
 
 #: of sqlalchemy.orm.relationship:594
 msgid ""
 "used for self-referential relationships, indicates the column or list of "
 "columns that form the \"remote side\" of the relationship."
-msgstr ""
+msgstr "自己参照関係に使用され、関係の「リモート側」を形成する列または列のリストを示します。"
 
 #: of sqlalchemy.orm.relationship:597
 msgid ""
 ":paramref:`.relationship.remote_side` may also be passed as a callable "
 "function which is evaluated at mapper initialization time, and may be "
 "passed as a Python-evaluable string when using Declarative."
-msgstr ""
+msgstr "：paramref： `.relationship.remote_side`はマッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。"
 
 #: of sqlalchemy.orm.relationship:602
 msgid ""
@@ -1209,21 +1199,21 @@ msgid ""
 "``primaryjoin`` expression, which is an alternate, more specific system "
 "of describing which columns in a particular ``primaryjoin`` should be "
 "considered \"remote\"."
-msgstr ""
+msgstr "：func： `.remote`アノテーションは、` `primaryjoin``式に直接適用することもできます。これは特定の` `primaryjoin``内のどの列を\&quot;リモート\ &quot;"
 
 #: of sqlalchemy.orm.relationship:610
 msgid ""
 ":ref:`self_referential` - in-depth explanation of how "
 ":paramref:`~.relationship.remote_side` is used to configure self-"
 "referential relationships."
-msgstr ""
+msgstr "：ref： `self_referential`  - 詳細な説明：paramref：`〜.relationship.remote_side`は自己参照関係を設定するために使われます。"
 
 #: of sqlalchemy.orm.relationship:614
 msgid ""
 ":func:`.remote` - an annotation function that accomplishes the same "
 "purpose as :paramref:`~.relationship.remote_side`, typically when a "
 "custom :paramref:`~.relationship.primaryjoin` condition is used."
-msgstr ""
+msgstr "：func： `.remote`  - 通常、custom：paramref：`〜.relationship.primaryjoin`条件が使用されている場合、paramref： `〜.relationship.remote_side`と同じ目的を達成するアノテーション関数です。"
 
 #: of sqlalchemy.orm.relationship:619
 msgid ""
@@ -1233,7 +1223,7 @@ msgid ""
 "constructed using the :func:`.orm.dynamic_loader` function.  .. seealso::"
 "    :ref:`dynamic_relationship` - Introduction to \"dynamic\"   "
 "relationship loaders."
-msgstr ""
+msgstr "\ &quot;ダイナミック\&quot;関係によって返された\ &quot;アペンダクエリ\&quot;の基底として使用される ``クッキー ``サブクラス： ``レイジー= \ &quot;ダイナミック\ ``を呼び出すか、または：func： `.orm.dynamic_loader`関数を使用して構築されました。 .. seealso ::：ref： `dynamic_relationship`  -  \&quot;ダイナミック\ &quot;関係ローダーの紹介。"
 
 #: of sqlalchemy.orm.relationship:620
 msgid ""
@@ -1241,13 +1231,13 @@ msgid ""
 "\"appender query\" returned by a \"dynamic\" relationship, that is, a "
 "relationship that specifies ``lazy=\"dynamic\"`` or was otherwise "
 "constructed using the :func:`.orm.dynamic_loader` function."
-msgstr ""
+msgstr "\ &quot;ダイナミック\&quot;関係によって返された\ &quot;アペンダクエリ\&quot;の基底として使用される ``クッキー ``サブクラス： ``レイジー= \ &quot;ダイナミック\ ``を呼び出すか、または：func： `.orm.dynamic_loader`関数を使用して構築されました。"
 
 #: of sqlalchemy.orm.relationship:628
 msgid ""
 ":ref:`dynamic_relationship` - Introduction to \"dynamic\" relationship "
 "loaders."
-msgstr ""
+msgstr "：ref： `dynamic_relationship`  -  \&quot;ダイナミック\ &quot;関係ローダーの紹介。"
 
 #: of sqlalchemy.orm.relationship:631
 msgid ""
@@ -1258,21 +1248,21 @@ msgid ""
 " function which is evaluated at mapper initialization time, and may be "
 "passed as a Python-evaluable string when using Declarative.  .. seealso::"
 "      :ref:`relationship_primaryjoin`"
-msgstr ""
+msgstr "子表への関連表の結合として使用されるSQL式。デフォルトでは、この値は関連テーブルと子テーブルの外部キーの関係に基づいて計算されます。 ：paramref： `〜.relationship.secondaryjoin`は、マッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。 .. seealso ::：ref： `relationship_primaryjoin`"
 
 #: of sqlalchemy.orm.relationship:632
 msgid ""
 "a SQL expression that will be used as the join of an association table to"
 " the child object. By default, this value is computed based on the "
 "foreign key relationships of the association and child tables."
-msgstr ""
+msgstr "子表への関連表の結合として使用されるSQL式。デフォルトでは、この値は関連テーブルと子テーブルの外部キーの関係に基づいて計算されます。"
 
 #: of sqlalchemy.orm.relationship:637
 msgid ""
 ":paramref:`~.relationship.secondaryjoin` may also be passed as a callable"
 " function which is evaluated at mapper initialization time, and may be "
 "passed as a Python-evaluable string when using Declarative."
-msgstr ""
+msgstr "：paramref： `〜.relationship.secondaryjoin`は、マッパーの初期化時に評価される呼び出し可能な関数として渡すこともできますし、Declarativeを使うときはPythonで評価可能な文字列として渡すこともできます。"
 
 #: of sqlalchemy.orm.relationship:646
 msgid ""
@@ -1286,7 +1276,7 @@ msgid ""
 "when this option is required.  .. seealso::    :ref:`unitofwork_cascades`"
 " - includes detail on when the   :paramref:`~.relationship.single_parent`"
 " flag may be appropriate."
-msgstr ""
+msgstr "Trueの場合、オブジェクトが一度に複数の親に関連付けられないようにするバリデーターをインストールします。これは、多対1または多対多の関係で、1対1または1対多として扱われる必要があります。 func： `.relationship`コンストラクト（many-to-oneまたはmany-to-many）と` `delete-orphan``カスケードオプションを指定する以外は、オプションです。 ：func： `.relationship`構造体自体は、このオプションが必要な時に指示するエラーを発生させます。 .. seealso ::：ref： `unitofwork_cascades`  - ：paramref：`〜.relationship.single_parent`フラグが適切な場合の詳細を含みます。"
 
 #: of sqlalchemy.orm.relationship:647
 msgid ""
@@ -1298,13 +1288,13 @@ msgid ""
 "and also specify the ``delete-orphan`` cascade option.  The "
 ":func:`.relationship` construct itself will raise an error instructing "
 "when this option is required."
-msgstr ""
+msgstr "Trueの場合、オブジェクトが一度に複数の親に関連付けられないようにするバリデーターをインストールします。これは、多対1または多対多の関係で、1対1または1対多として扱われる必要があります。 func： `.relationship`コンストラクト（many-to-oneまたはmany-to-many）と` `delete-orphan``カスケードオプションを指定する以外は、オプションです。 ：func： `.relationship`構造体自体は、このオプションが必要な時に指示するエラーを発生させます。"
 
 #: of sqlalchemy.orm.relationship:659
 msgid ""
 ":ref:`unitofwork_cascades` - includes detail on when the "
 ":paramref:`~.relationship.single_parent` flag may be appropriate."
-msgstr ""
+msgstr "：ref： `unitofwork_cascades`  - ：paramref：`〜.relationship.single_parent`フラグが適切な場合の詳細を含みます。"
 
 #: of sqlalchemy.orm.relationship:662
 msgid ""
@@ -1322,7 +1312,7 @@ msgid ""
 ".. seealso::      :ref:`relationships_one_to_one` - Introduction to the "
 "\"one to     one\" relationship pattern, which is typically when the     "
 ":paramref:`~.relationship.uselist` flag is needed."
-msgstr ""
+msgstr "このプロパティをリストまたはスカラーとしてロードする必要があるかどうかを示すブール値ほとんどの場合、この値は次のように自動的に決定されます：func： `.relationship`マッパー設定時、関係のタイプと方向に基づいて - リストを形成し、多くは1つのスカラーを形成します。リスト。通常、双方向の一対一の関係など、リストが存在するスカラーが必要な場合は、paramref： `〜.relationship.uselist`をFalseに設定します。 ：paramref： `〜.relationship.uselist`フラグは、既存の：func：` .relationship`コンストラクトで読み取り専用属性としても利用できます。これは、func： `.relationship`が扱うかどうかを判断するために使用できます。コレクションやスカラーの属性:: &gt;&gt;&gt; User.addresses.property.uselist True .. seealso :: ref： `relationships_one_to_one`  - 典型的には：paramref： `〜.relationship.uselist`フラグが必要です。"
 
 #: of sqlalchemy.orm.relationship:663
 msgid ""
@@ -1333,7 +1323,7 @@ msgid ""
 "forms a scalar, many to many is a list. If a scalar is desired where "
 "normally a list would be present, such as a bi-directional one-to-one "
 "relationship, set :paramref:`~.relationship.uselist` to False."
-msgstr ""
+msgstr "このプロパティをリストまたはスカラーとしてロードする必要があるかどうかを示すブール値ほとんどの場合、この値は次のように自動的に決定されます：func： `.relationship`マッパー設定時、関係のタイプと方向に基づいて - リストを形成し、多くは1つのスカラーを形成します。リスト。通常、双方向の一対一の関係など、リストが存在するスカラーが必要な場合は、paramref： `〜.relationship.uselist`をFalseに設定します。"
 
 #: of sqlalchemy.orm.relationship:673
 msgid ""
@@ -1341,14 +1331,14 @@ msgid ""
 "existing :func:`.relationship` construct as a read-only attribute, which "
 "can be used to determine if this :func:`.relationship` deals with "
 "collections or scalar attributes::"
-msgstr ""
+msgstr "：paramref： `〜.relationship.uselist`フラグは、既存の：func：` .relationship`コンストラクトで読み取り専用属性としても利用できます。これは、func： `.relationship`が扱うかどうかを判断するために使用できます。コレクションまたはスカラー属性::"
 
 #: of sqlalchemy.orm.relationship:683
 msgid ""
 ":ref:`relationships_one_to_one` - Introduction to the \"one to one\" "
 "relationship pattern, which is typically when the "
 ":paramref:`~.relationship.uselist` flag is needed."
-msgstr ""
+msgstr "：ref： `relationships_one_to_one`  - 典型的には：paramref：`〜.relationship.uselist`フラグが必要な場合、\ &quot;one to one \&quot;関係パターンの紹介です。"
 
 #: of sqlalchemy.orm.relationship:687
 msgid ""
@@ -1363,65 +1353,65 @@ msgid ""
 ":func:`~.relationship` that doesn't represent the full set of related "
 "objects, to prevent modifications of the collection from resulting in "
 "persistence operations."
-msgstr ""
+msgstr "Trueに設定されている場合、関係はオブジェクトのロードにのみ使用され、永続操作には使用されません。 paramref： `〜.relationship.viewonly`は：paramref：`〜.relationship.primaryjoin`条件の中でより広範囲のSQL操作で動作することができます。さまざまな比較演算子、およびfunc： `〜.sql.expression.cast`のようなSQL関数が含まれています。 ：paramref： `〜.relationship.viewonly`フラグは、関連するオブジェクトのフルセットを表現しないfunc：`〜.relationship`の種類を定義するときにも一般的に使用されます。永続性操作で使用します。"
 
 #: of sqlalchemy.orm.backref:1
 msgid ""
 "Create a back reference with explicit keyword arguments, which are the "
 "same arguments one can send to :func:`relationship`."
-msgstr ""
+msgstr "明示的なキーワード引数を持つバックリファレンスを作成します。これは、func： `relationship`に送ることができる同じ引数です。"
 
 #: of sqlalchemy.orm.backref:4
 msgid ""
 "Used with the ``backref`` keyword argument to :func:`relationship` in "
 "place of a string argument, e.g.::"
-msgstr ""
+msgstr "文字列引数の代わりに：func： `relationship`の` `backref``キーワード引数と一緒に使用します。例えば::"
 
 #: of sqlalchemy.orm.backref:12
 msgid ":ref:`relationships_backref`"
-msgstr ""
+msgstr "：ref： `relationships_backref`"
 
 #: of sqlalchemy.orm.relation:1
 msgid "A synonym for :func:`relationship`."
-msgstr ""
+msgstr "：func： `relationship`の同義語です。"
 
 #: of sqlalchemy.orm.dynamic_loader:1
 msgid "Construct a dynamically-loading mapper property."
-msgstr ""
+msgstr "動的ロードマッパープロパティを構築します。"
 
 #: of sqlalchemy.orm.dynamic_loader:3
 msgid ""
 "This is essentially the same as using the ``lazy='dynamic'`` argument "
 "with :func:`relationship`::"
-msgstr ""
+msgstr "これは、本質的に、 `` lazy = &#39;dynamic``引数を：func： `relationship` ::と使うことと同じです"
 
 #: of sqlalchemy.orm.dynamic_loader:12
 msgid ""
 "See the section :ref:`dynamic_relationship` for more details on dynamic "
 "loading."
-msgstr ""
+msgstr "動的ロードの詳細については、ref： `dynamic_relationship`を参照してください。"
 
 #: of sqlalchemy.orm.foreign:1
 msgid ""
 "Annotate a portion of a primaryjoin expression with a 'foreign' "
 "annotation."
-msgstr ""
+msgstr "primaryjoin式の一部に &#39;foreign&#39;アノテーションを付けてアノテーションを付けます。"
 
 #: of sqlalchemy.orm.foreign:4 sqlalchemy.orm.remote:4
 msgid ""
 "See the section :ref:`relationship_custom_foreign` for a description of "
 "use."
-msgstr ""
+msgstr "使用の説明については、ref： `relationship_custom_foreign`の節を参照してください。"
 
 #: of sqlalchemy.orm.foreign:13
 msgid ":func:`.remote`"
-msgstr ""
+msgstr "：func： `.remote`"
 
 #: of sqlalchemy.orm.remote:1
 msgid "Annotate a portion of a primaryjoin expression with a 'remote' annotation."
-msgstr ""
+msgstr "「リモート」注釈でprimaryjoin式の一部に注釈を付ける。"
 
 #: of sqlalchemy.orm.remote:13
 msgid ":func:`.foreign`"
-msgstr ""
+msgstr "：func： `.foreign`"
 

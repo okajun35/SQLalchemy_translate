@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/mapping_api.rst:4
 msgid "Class Mapping API"
-msgstr ""
+msgstr "クラスマッピングAPI"
 
 #: of sqlalchemy.orm.mapper:1
 msgid "Return a new :class:`~.Mapper` object."
-msgstr ""
+msgstr "新しい：class： `〜.Mapper`オブジェクトを返します。"
 
 #: of sqlalchemy.orm.mapper:3
 msgid ""
@@ -33,31 +23,31 @@ msgid ""
 "``class_``, ``local_table``, ``properties``, and  ``inherits``. Other "
 "options are passed to :func:`.mapper` using the ``__mapper_args__`` class"
 " variable::"
-msgstr ""
+msgstr "この関数は通常、Declarative拡張を介してシーンの裏で使用されます。 Declarativeを使用する場合、通常の：func： `.mapper`引数の多くは、` `class_``、` `local_table``、` `properties``、` `inherits``を含むDeclarative拡張機能によって処理されます。他のオプションは `` __mapper_args__``クラス変数を使って：func： `.mapper`に渡されます::"
 
 #: of sqlalchemy.orm.mapper:22
 msgid ""
 "Explicit use of :func:`.mapper` is often referred to as *classical "
 "mapping*.  The above declarative example is equivalent in classical form "
 "to::"
-msgstr ""
+msgstr "：func： `.mapper`の明示的な使用は、しばしば*古典的なマッピング*と呼ばれます。上記の宣言的な例は、古典的な形式では次のようになります。"
 
 #: of sqlalchemy.orm.mapper:43
 msgid ":ref:`classical_mapping` - discussion of direct usage of :func:`.mapper`"
-msgstr ""
+msgstr "：ref： `classical_mapping`  -  func：` .mapper`の直接使用の議論"
 
 #: of sqlalchemy.orm.mapper sqlalchemy.orm.mapper.Mapper.cascade_iterator
 #: sqlalchemy.orm.mapper.Mapper.identity_key_from_primary_key
 #: sqlalchemy.orm.mapper.Mapper.identity_key_from_row
 #: sqlalchemy.orm.util.polymorphic_union
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.orm.mapper:46
 msgid ""
 "The class to be mapped.  When using Declarative, this argument is "
 "automatically passed as the declared class itself."
-msgstr ""
+msgstr "マップされるクラス。 Declarativeを使用する場合、この引数は自動的に宣言されたクラス自体として渡されます。"
 
 #: of sqlalchemy.orm.mapper:50
 msgid ""
@@ -67,7 +57,7 @@ msgid ""
 "automatically passed by the extension, based on what is configured via "
 "the ``__table__`` argument or via the :class:`.Table` produced as a "
 "result of the ``__tablename__`` and :class:`.Column` arguments present."
-msgstr ""
+msgstr "：class： `.Table`またはクラスがマッピングされる他の選択可能なものです。このマッパが単一テーブル継承を使用して別のマッパから継承される場合は、 `` None``となります。 Declarativeを使用する場合、この引数は `` __table__``引数を介して設定されたものに基づいて自動的に拡張子によって渡されます： `` __tablename__``と：classの結果として生成される：class： `.Table` ： `.Column`引数があります。"
 
 #: of sqlalchemy.orm.mapper:59
 msgid ""
@@ -76,7 +66,7 @@ msgid ""
 "erasing any in-memory changes with whatever information was loaded from "
 "the database. Usage of this flag is highly discouraged; as an "
 "alternative, see the method :meth:`.Query.populate_existing`."
-msgstr ""
+msgstr "Trueの場合、このマップされたクラスのすべてのクエリ操作によって、セッション内にすでに存在するオブジェクトインスタンス内のすべてのデータが上書きされ、データベースからロードされた情報を含むメモリ内の変更が消去されます。このフラグの使用は避けてください。代わりに、メソッド：meth： `.Query.populate_existing`を参照してください。"
 
 #: of sqlalchemy.orm.mapper:66
 msgid ""
@@ -86,7 +76,7 @@ msgid ""
 "identity, as well as if :meth:`.Session.merge` will check the database "
 "first for a particular primary key value. A \"partial primary key\" can "
 "occur if one has mapped to an OUTER JOIN, for example."
-msgstr ""
+msgstr "デフォルトはTrueです。いくつかのNULL値を持つ複合主キーがデータベース内に存在する可能性があるとみなす必要があることを示します。これは、マッパーが既存のアイデンティティに入ってくる行を割り当てるかどうか、また：meth： `.Session.merge`が特定の主キー値をデータベースで最初にチェックするかどうかに影響します。たとえば、 &quot;OUTER JOIN&quot;にマップされている場合、\ &quot;部分的な主キー\&quot;が発生する可能性があります。"
 
 #: of sqlalchemy.orm.mapper:74
 msgid ""
@@ -96,7 +86,7 @@ msgid ""
 "instance.  This is used in the extremely rare case that a "
 ":class:`.MapperEvents` listener requires being called in between "
 "individual row persistence operations."
-msgstr ""
+msgstr "デフォルトは `` True``です。複数のエンティティの保存操作をまとめて効率化できることを示します。 Falseに設定すると、次のインスタンスを保存する前にインスタンスが完全に保存されることを示します。これは非常にまれなケースで、class： `.MapperEvents`リスナーが個々の行の永続化操作の間に呼び出される必要がある場合に使用されます。"
 
 #: of sqlalchemy.orm.mapper:82
 msgid ""
@@ -104,7 +94,7 @@ msgid ""
 ":class:`.Column` objects are automatically assigned as attributes to the "
 "mapped class.  Does not affect explicitly specified column-based "
 "properties.  See the section :ref:`column_prefix` for an example."
-msgstr ""
+msgstr "：class： `.Column`オブジェクトがマップされたクラスに自動的に属性として割り当てられるときに、マップされた属性名の先頭に付加される文字列です。明示的に指定された列ベースのプロパティには影響しません。例を参照してください：ref： `column_prefix`を参照してください。"
 
 #: of sqlalchemy.orm.mapper:82
 msgid ""
@@ -112,28 +102,28 @@ msgid ""
 ":class:`.Column` objects are automatically assigned as attributes to the "
 "mapped class.  Does not affect explicitly specified column-based "
 "properties."
-msgstr ""
+msgstr "：class： `.Column`オブジェクトがマップされたクラスに自動的に属性として割り当てられるときに、マップされた属性名の先頭に付加される文字列です。明示的に指定された列ベースのプロパティには影響しません。"
 
 #: of sqlalchemy.orm.mapper:88
 msgid "See the section :ref:`column_prefix` for an example."
-msgstr ""
+msgstr "例を参照してください：ref： `column_prefix`を参照してください。"
 
 #: of sqlalchemy.orm.mapper:90
 msgid ""
 "If True, indicates this mapper should use concrete table inheritance with"
 " its parent mapper.  See the section :ref:`concrete_inheritance` for an "
 "example."
-msgstr ""
+msgstr "Trueの場合、このマッパーが親マッパーで具象テーブルの継承を使用する必要があることを示します。例はref： `concrete_inheritance`を参照してください。"
 
 #: of sqlalchemy.orm.mapper:90
 msgid ""
 "If True, indicates this mapper should use concrete table inheritance with"
 " its parent mapper."
-msgstr ""
+msgstr "Trueの場合、このマッパーが親マッパーで具象テーブルの継承を使用する必要があることを示します。"
 
 #: of sqlalchemy.orm.mapper:93
 msgid "See the section :ref:`concrete_inheritance` for an example."
-msgstr ""
+msgstr "例はref： `concrete_inheritance`を参照してください。"
 
 #: of sqlalchemy.orm.mapper:95
 msgid ""
@@ -145,7 +135,7 @@ msgid ""
 " an exception in a future release.  .. versionadded:: 0.9.4 - added    "
 ":paramref:`.mapper.confirm_deleted_rows` as well as conditional    "
 "matched row checking on delete."
-msgstr ""
+msgstr "デフォルトはTrueです。特定の主キーに基づいてもう1行のDELETEが発生すると、一致する行の数と期待される行の数が等しくない場合に警告が発行されます。このパラメータは、データベースON DELETE CASCADEルールがこれらの行の一部を自動的に削除するケースを処理するためにFalseに設定されている場合があります。この警告は、将来のリリースで例外に変更される可能性があります。 .. versionadded :: 0.9.4  - 追加：paramref： `.mapper.confirm_deleted_rows`と、条件付きで一致した行の削除をチェックします。"
 
 #: of sqlalchemy.orm.mapper:95
 msgid ""
@@ -155,13 +145,13 @@ msgid ""
 "False to handle the case where database ON DELETE CASCADE rules may be "
 "deleting some of those rows automatically.  The warning may be changed to"
 " an exception in a future release."
-msgstr ""
+msgstr "デフォルトはTrueです。特定の主キーに基づいてもう1行のDELETEが発生すると、一致する行の数と期待される行の数が等しくない場合に警告が発行されます。このパラメータは、データベースON DELETE CASCADEルールがこれらの行の一部を自動的に削除するケースを処理するためにFalseに設定されている場合があります。この警告は、将来のリリースで例外に変更される可能性があります。"
 
 #: of sqlalchemy.orm.mapper:103
 msgid ""
 "- added :paramref:`.mapper.confirm_deleted_rows` as well as conditional "
 "matched row checking on delete."
-msgstr ""
+msgstr "-  paramref： `.mapper.confirm_deleted_rows`と、条件付きで一致した行の削除を追加しました。"
 
 #: of sqlalchemy.orm.mapper:107
 msgid ""
@@ -178,7 +168,7 @@ msgid ""
 "  .. seealso::        :ref:`orm_server_defaults`  .. versionchanged:: "
 "0.9.0 The ``eager_defaults`` option can now    make use of "
 ":term:`RETURNING` for backends which support it."
-msgstr ""
+msgstr "Trueの場合、ORMは、INSERTまたはUPDATEの後にサーバー生成のデフォルト値の値をすぐにフェッチし、次のアクセス時にフェッチされるように期限切れにします。これは、フラッシュが完了する直前にサーバー生成値が必要なイベント・スキームで使用できます。デフォルトでは、このスキームは挿入または更新された行ごとに個別の `` SELECT``文を発行します。ただし、ターゲット・データベースが：term： `RETURNING`をサポートしている場合、INSERTまたはUPDATEステートメントでデフォルト値がインラインで戻されます。これにより、生成されたサーバーのデフォルトに頻繁にアクセスする必要があるアプリケーションのパフォーマンスが大幅に向上します。 .. seealso :: ref： `orm_server_defaults` .. versionchanged :: 0.9.0` `eager_defaults``オプションは、それをサポートするバックエンドに対して：term：` RETURNING`を使用できるようになりました。"
 
 #: of sqlalchemy.orm.mapper:107
 msgid ""
@@ -192,48 +182,48 @@ msgid ""
 ":term:`RETURNING`, the default values will be returned inline with the "
 "INSERT or UPDATE statement, which can greatly enhance performance for an "
 "application that needs frequent access to just-generated server defaults."
-msgstr ""
+msgstr "Trueの場合、ORMは、INSERTまたはUPDATEの後にサーバー生成のデフォルト値の値をすぐにフェッチし、次のアクセス時にフェッチされるように期限切れにします。これは、フラッシュが完了する直前にサーバー生成値が必要なイベント・スキームで使用できます。デフォルトでは、このスキームは挿入または更新された行ごとに個別の `` SELECT``文を発行します。ただし、ターゲット・データベースが：term： `RETURNING`をサポートしている場合、INSERTまたはUPDATEステートメントでデフォルト値がインラインで戻されます。これにより、生成されたサーバーのデフォルトに頻繁にアクセスする必要があるアプリケーションのパフォーマンスが大幅に向上します。"
 
 #: of sqlalchemy.orm.mapper:122
 msgid ":ref:`orm_server_defaults`"
-msgstr ""
+msgstr "：ref： `orm_server_defaults`"
 
 #: of sqlalchemy.orm.mapper:124
 msgid ""
 "The ``eager_defaults`` option can now make use of :term:`RETURNING` for "
 "backends which support it."
-msgstr ""
+msgstr "`` eager_defaults``オプションはそれをサポートするバックエンドに対して：term： `RETURNING`を使用できるようになりました。"
 
 #: of sqlalchemy.orm.mapper:127
 msgid ""
 "A list or set of string column names to be excluded from mapping.  See "
 ":ref:`include_exclude_cols` for an example."
-msgstr ""
+msgstr "マッピングから除外されるリストまたはストリング列名のセット。例を参照してください：ref： `include_exclude_cols`"
 
 #: of sqlalchemy.orm.mapper:127
 msgid "A list or set of string column names to be excluded from mapping."
-msgstr ""
+msgstr "マッピングから除外されるリストまたはストリング列名のセット。"
 
 #: of sqlalchemy.orm.mapper:130 sqlalchemy.orm.mapper:140
 msgid "See :ref:`include_exclude_cols` for an example."
-msgstr ""
+msgstr "例を参照してください：ref： `include_exclude_cols`"
 
 #: of sqlalchemy.orm.mapper:132
 msgid ""
 "A :class:`.MapperExtension` instance or list of :class:`.MapperExtension`"
 " instances which will be applied to all operations by this "
 ":class:`.Mapper`.  **Deprecated.** Please see :class:`.MapperEvents`."
-msgstr ""
+msgstr "A：class： `.MapperExtension`インスタンスまたは：class：` .MapperExtension`インスタンスのリストです。このインスタンスは、class： `.Mapper`によってすべての操作に適用されます。 **推奨されていません。**参照：class： `.MapperEvents`。"
 
 #: of sqlalchemy.orm.mapper:137
 msgid ""
 "An inclusive list or set of string column names to map.  See "
 ":ref:`include_exclude_cols` for an example."
-msgstr ""
+msgstr "マップする包括的なリストまたは一連の文字列名。例を参照してください：ref： `include_exclude_cols`"
 
 #: of sqlalchemy.orm.mapper:137
 msgid "An inclusive list or set of string column names to map."
-msgstr ""
+msgstr "マップする包括的なリストまたは一連の文字列名。"
 
 #: of sqlalchemy.orm.mapper:142
 msgid ""
@@ -243,7 +233,7 @@ msgid ""
 "using Declarative, this argument is passed automatically as a result of "
 "the natural class hierarchy of the declared classes.  .. seealso::    "
 ":ref:`inheritance_toplevel`"
-msgstr ""
+msgstr "マップされたクラスまたはそれに対応する：class： `.Mapper`はスーパークラスを表します。これはclass：` .Mapper`が継承しなければなりません。ここにマップされたクラスは、他のマッパーのクラスのサブクラスでなければなりません。 Declarativeを使用する場合、この引数は宣言されたクラスの自然なクラス階層の結果として自動的に渡されます。 .. seealso ::：ref： `継承_レベル &#39;"
 
 #: of sqlalchemy.orm.mapper:142
 msgid ""
@@ -252,24 +242,24 @@ msgid ""
 "mapped class here must be a subclass of the other mapper's class.   When "
 "using Declarative, this argument is passed automatically as a result of "
 "the natural class hierarchy of the declared classes."
-msgstr ""
+msgstr "マップされたクラスまたはそれに対応する：class： `.Mapper`はスーパークラスを表します。これはclass：` .Mapper`が継承しなければなりません。ここにマップされたクラスは、他のマッパーのクラスのサブクラスでなければなりません。 Declarativeを使用する場合、この引数は宣言されたクラスの自然なクラス階層の結果として自動的に渡されます。"
 
 #: of sqlalchemy.orm.mapper:151 sqlalchemy.orm.mapper:384
 msgid ":ref:`inheritance_toplevel`"
-msgstr ""
+msgstr "：ref： `継承_レベル`"
 
 #: of sqlalchemy.orm.mapper:153
 msgid ""
 "For joined table inheritance, a SQL expression which will define how the "
 "two tables are joined; defaults to a natural join between the two tables."
-msgstr ""
+msgstr "結合テーブル継承の場合、2つのテーブルの結合方法を定義するSQL式。デフォルトでは、2つのテーブル間の自然な結合になります。"
 
 #: of sqlalchemy.orm.mapper:158
 msgid ""
 "When ``inherit_condition`` is used and the columns present are missing a "
 ":class:`.ForeignKey` configuration, this parameter can be used to specify"
 " which columns are \"foreign\".  In most cases can be left as ``None``."
-msgstr ""
+msgstr "`` inherit_condition``が使用され、存在するカラムにclass： `.ForeignKey`設定がない場合、このパラメータはどのカラムが\&quot; foreign \ &quot;であるかを指定するために使用できます。ほとんどの場合、 `` None``のままにすることができます。"
 
 #: of sqlalchemy.orm.mapper:163
 msgid ""
@@ -293,7 +283,7 @@ msgid ""
 "expunged only if de-associated   from all of its orphan-enabled parents. "
 "The new flag   ``legacy_is_orphan`` is added to :func:`.orm.mapper` which"
 "   re-establishes the legacy behavior."
-msgstr ""
+msgstr "Boolean、デフォルトは `` False``です。 `` True``を指定すると、このマッパーによってマップされたオブジェクトに\ &quot;レガシー\&quot;の孤児の配慮が適用されることが指定されています。つまり、保留中の（すなわち永続的ではない）オブジェクトは、このマッパーに向かって `` delete-orphan``カスケードを指定している*すべての親からの関連付けが解除されているときだけ `.Session`を返します。新しいデフォルトの振る舞いは、オブジェクトが `` delete-orphan``カスケードを指定する親の* any *との関連付けが解除されたときにオブジェクトが自動的に消去されることです。この動作は永続オブジェクトの動作と一貫性があり、孤児オブジェクトがまだフラッシュされているかどうかに関係なく、より多くのシナリオで動作が一貫しています。この変更の詳細については、変更ノートと例：ref： `legacy_is_orphan_addition`を参照してください。 .. versionadded :: 0.8  - 保留中のオブジェクトが\ &quot;孤児\&quot;として考慮されるように変更されました。これは永続オブジェクトと同じ動作になります。つまり、オブジェクトは：class： `.Session孤児が育っている両親と関連がなくなるとすぐに、以前は、保留中のオブジェクトは、孤立しているすべての親からの関連付けが解除された場合にのみ削除されます。新しいフラグ `` legacy_is_orphan``は：func： `.orm.mapper`に追加され、レガシー動作を再確立します。"
 
 #: of sqlalchemy.orm.mapper:163
 msgid ""
@@ -308,13 +298,13 @@ msgid ""
 "persistent object, and allows behavior to be consistent in more scenarios"
 " independently of whether or not an orphanable object has been flushed "
 "yet or not."
-msgstr ""
+msgstr "Boolean、デフォルトは `` False``です。 `` True``を指定すると、このマッパーによってマップされたオブジェクトに\ &quot;レガシー\&quot;の孤児の配慮が適用されることが指定されています。つまり、保留中の（すなわち永続的ではない）オブジェクトは、このマッパーに向かって `` delete-orphan``カスケードを指定している*すべての親からの関連付けが解除されているときだけ `.Session`を返します。新しいデフォルトの振る舞いは、オブジェクトが `` delete-orphan``カスケードを指定する親の* any *との関連付けが解除されたときにオブジェクトが自動的に消去されることです。この動作は永続オブジェクトの動作と一貫性があり、孤児オブジェクトがまだフラッシュされているかどうかに関係なく、より多くのシナリオで動作が一貫しています。"
 
 #: of sqlalchemy.orm.mapper:176
 msgid ""
 "See the change note and example at :ref:`legacy_is_orphan_addition` for "
 "more detail on this change."
-msgstr ""
+msgstr "この変更の詳細については、変更ノートと例：ref： `legacy_is_orphan_addition`を参照してください。"
 
 #: of sqlalchemy.orm.mapper:179
 msgid ""
@@ -326,7 +316,7 @@ msgid ""
 "from all of its orphan-enabled parents. The new flag ``legacy_is_orphan``"
 " is added to :func:`.orm.mapper` which re-establishes the legacy "
 "behavior."
-msgstr ""
+msgstr "- 保留中のオブジェクトの考慮事項が、永続オブジェクトの動作とより密接に一致するように変更されました。つまり、オブジェクトはすぐに：class： `.Session`から消去されます。孤児に対応している親からの関連付けが解除されています。以前は、保留中のオブジェクトは、孤立しているすべての親からの関連付けが解除された場合にのみ削除されます。新しいフラグ `` legacy_is_orphan``は：func： `.orm.mapper`に追加され、レガシー動作を再確立します。"
 
 #: of sqlalchemy.orm.mapper:189
 msgid ""
@@ -336,7 +326,7 @@ msgid ""
 "selectable, for loading only.  :paramref:`.Mapper.non_primary` is not an "
 "often used option, but is useful in some specific :func:`.relationship` "
 "cases.  .. seealso::      :ref:`relationship_non_primary_mapper`"
-msgstr ""
+msgstr "これは：class： `.Mapper`が\&quot;プライマリ\ &quot;マッパー、つまり永続性のために使われるものに加えて指定されていることを指定します。ここで作成された：class： `.Mapper`は、クラスの代替選択肢へのアドホック・マッピングに使用され、ロード専用です。 ：paramref： `.Mapper.non_primary`はよく使われるオプションではありませんが、いくつかの特定の：func：` .relationship`の場合に便利です。 .. seealso ::：ref： `relationship_non_primary_mapper`"
 
 #: of sqlalchemy.orm.mapper:189
 msgid ""
@@ -344,17 +334,17 @@ msgid ""
 "mapper, that is, the one used for persistence. The :class:`.Mapper` "
 "created here may be used for ad-hoc mapping of the class to an alternate "
 "selectable, for loading only."
-msgstr ""
+msgstr "これは：class： `.Mapper`が\&quot;プライマリ\ &quot;マッパー、つまり永続性のために使われるものに加えて指定されていることを指定します。ここで作成された：class： `.Mapper`は、クラスの代替選択肢へのアドホック・マッピングに使用され、ロード専用です。"
 
 #: of sqlalchemy.orm.mapper:195
 msgid ""
 ":paramref:`.Mapper.non_primary` is not an often used option, but is "
 "useful in some specific :func:`.relationship` cases."
-msgstr ""
+msgstr "：paramref： `.Mapper.non_primary`はよく使われるオプションではありませんが、いくつかの特定の：func：` .relationship`の場合に便利です。"
 
 #: of sqlalchemy.orm.mapper:200
 msgid ":ref:`relationship_non_primary_mapper`"
-msgstr ""
+msgstr "：ref： `relationship_non_primary_mapper`"
 
 #: of sqlalchemy.orm.mapper:202
 msgid ""
@@ -363,20 +353,20 @@ msgid ""
 " default mappers have no pre-defined ordering.  .. deprecated:: 1.1 The "
 ":paramref:`.Mapper.order_by` parameter    is deprecated.   Use "
 ":meth:`.Query.order_by` to determine the    ordering of a result set."
-msgstr ""
+msgstr "単一の：class： `.Column`または：class：` .Column`オブジェクトのリスト。選択操作がエンティティのデフォルトの順序として使用されます。デフォルトでは、マッパーにはあらかじめ定義された順序がありません。 .. deprecated :: 1.1：paramref： `.Mapper.order_by`パラメータは非推奨です。結果セットの順序を決定するには、meth： `.Query.order_by`を使用します。"
 
 #: of sqlalchemy.orm.mapper:202
 msgid ""
 "A single :class:`.Column` or list of :class:`.Column` objects for which "
 "selection operations should use as the default ordering for entities.  By"
 " default mappers have no pre-defined ordering."
-msgstr ""
+msgstr "単一の：class： `.Column`または：class：` .Column`オブジェクトのリスト。選択操作がエンティティのデフォルトの順序として使用されます。デフォルトでは、マッパーにはあらかじめ定義された順序がありません。"
 
 #: of sqlalchemy.orm.mapper:207
 msgid ""
 "The :paramref:`.Mapper.order_by` parameter is deprecated.   Use "
 ":meth:`.Query.order_by` to determine the ordering of a result set."
-msgstr ""
+msgstr "：paramref： `.Mapper.order_by`パラメータは非推奨です。結果セットの順序を決定するには、meth： `.Query.order_by`を使用します。"
 
 #: of sqlalchemy.orm.mapper:211
 msgid ""
@@ -400,7 +390,7 @@ msgid ""
 "     used with :func:`.relationship`      "
 ":paramref:`.mapper.passive_updates` - supporting ON UPDATE     CASCADE "
 "for joined-table inheritance mappers"
-msgstr ""
+msgstr "結合されたテーブル継承エンティティが削除されているときの外部キー列のDELETE動作を示します。ベースマッパーのデフォルトは `` False``です。スーパークラスマッパー上で値が `` True``にセットされていない限り、継承マッパーの場合、デフォルトは `` False``になります。 `` True``の場合、このマッパーのテーブルをそのスーパークラス・テーブルにリンクする外部キー関係上にON DELETE CASCADEが構成されているとみなされ、作業ユニットがエンティティを削除しようとするとき、DELETEこの表ではなく、スーパークラス表のステートメント。 `` False``の場合、このマッパーのテーブルに対してDELETE文が個別に発行されます。この表のローカルの主キー属性がアンロードされている場合は、これらの属性を検証するためにSELECTを発行する必要があります。結合されたテーブルのサブクラスの主キー列は、オブジェクト全体の\ &quot;主キー\&quot;の一部ではないことに注意してください。 `` True``の値は**常に**サブクラスマッパーに強制されます。つまり、スーパークラスがpassive_deletesを指定することは、すべてのサブクラスマッパーに対して有効にならずに、これを指定することはできません。 .. versionadded :: 1.1 .. seealso ::：ref： `passive_deletes`  -  func：` .relationship`：paramref： `.mapper.passive_updates`で使用されている同様の機能の説明 - 結合テーブルのON UPDATE CASCADEをサポート継承マッパー"
 
 #: of sqlalchemy.orm.mapper:211
 msgid ""
@@ -408,7 +398,7 @@ msgid ""
 "inheritance entity is being deleted. Defaults to ``False`` for a base "
 "mapper; for an inheriting mapper, defaults to ``False`` unless the value "
 "is set to ``True`` on the superclass mapper."
-msgstr ""
+msgstr "結合されたテーブル継承エンティティが削除されているときの外部キー列のDELETE動作を示します。ベースマッパーのデフォルトは `` False``です。スーパークラスマッパー上で値が `` True``にセットされていない限り、継承マッパーの場合、デフォルトは `` False``になります。"
 
 #: of sqlalchemy.orm.mapper:217
 msgid ""
@@ -417,7 +407,7 @@ msgid ""
 " table, so that when the unit of work attempts to delete the entity, it "
 "need only emit a DELETE statement for the superclass table, and not this "
 "table."
-msgstr ""
+msgstr "`` True``の場合、このマッパーのテーブルをそのスーパークラス・テーブルにリンクする外部キー関係上にON DELETE CASCADEが構成されているとみなされ、作業ユニットがエンティティを削除しようとするとき、DELETEこの表ではなく、スーパークラス表のステートメント。"
 
 #: of sqlalchemy.orm.mapper:223
 msgid ""
@@ -426,26 +416,26 @@ msgid ""
 "unloaded, then a SELECT must be emitted in order to validate these "
 "attributes; note that the primary key columns of a joined-table subclass "
 "are not part of the \"primary key\" of the object as a whole."
-msgstr ""
+msgstr "`` False``の場合、このマッパーのテーブルに対してDELETE文が個別に発行されます。この表のローカルの主キー属性がアンロードされている場合は、これらの属性を検証するためにSELECTを発行する必要があります。結合されたテーブルのサブクラスの主キー列は、オブジェクト全体の\ &quot;主キー\&quot;の一部ではないことに注意してください。"
 
 #: of sqlalchemy.orm.mapper:230
 msgid ""
 "Note that a value of ``True`` is **always** forced onto the subclass "
 "mappers; that is, it's not possible for a superclass to specify "
 "passive_deletes without this taking effect for all subclass mappers."
-msgstr ""
+msgstr "`` True``の値は**常に**サブクラスマッパーに強制されます。つまり、スーパークラスがpassive_deletesを指定することは、すべてのサブクラスマッパーに対して有効にならずに、これを指定することはできません。"
 
 #: of sqlalchemy.orm.mapper:239
 msgid ""
 ":ref:`passive_deletes` - description of similar feature as used with "
 ":func:`.relationship`"
-msgstr ""
+msgstr "：ref： `passive_deletes`  - 類似機能の説明：func：` .relationship`"
 
 #: of sqlalchemy.orm.mapper:242
 msgid ""
 ":paramref:`.mapper.passive_updates` - supporting ON UPDATE CASCADE for "
 "joined-table inheritance mappers"
-msgstr ""
+msgstr "：paramref： `.mapper.passive_updates`  - 結合テーブル継承マッパのON UPDATE CASCADEをサポート"
 
 #: of sqlalchemy.orm.mapper:245
 msgid ""
@@ -462,14 +452,14 @@ msgid ""
 "as     used with :func:`.relationship`      "
 ":paramref:`.mapper.passive_deletes` - supporting ON DELETE     CASCADE "
 "for joined-table inheritance mappers"
-msgstr ""
+msgstr "結合表の継承マッピングで主キー列が変更された場合の外部キー列のUPDATE動作を示します。デフォルトは `` True``です。 Trueの場合、データベース内の外部キーにON UPDATE CASCADEが構成されており、ソース列から結合表の行の従属列へのUPDATEの伝播を処理します。 Falseの場合、データベースは参照整合性を強制せず、更新のために独自のCASCADE操作を発行しません。作業単位プロセスは、主キーの変更中に従属列のUPDATEステートメントを発行します。 .. seealso :: ref： `passive_updates`  -  func：` .relationship`：paramref： `.mapper.passive_deletes`で使用されている同様の機能の説明 - 結合テーブル継承マッパーのON DELETE CASCADEをサポート"
 
 #: of sqlalchemy.orm.mapper:245
 msgid ""
 "Indicates UPDATE behavior of foreign key columns when a primary key "
 "column changes on a joined-table inheritance mapping.   Defaults to "
 "``True``."
-msgstr ""
+msgstr "結合表の継承マッピングで主キー列が変更された場合の外部キー列のUPDATE動作を示します。デフォルトは `` True``です。"
 
 #: of sqlalchemy.orm.mapper:249
 msgid ""
@@ -477,7 +467,7 @@ msgid ""
 "foreign key in the database, and that the database will handle "
 "propagation of an UPDATE from a source column to dependent columns on "
 "joined-table rows."
-msgstr ""
+msgstr "Trueの場合、データベース内の外部キーにON UPDATE CASCADEが構成されており、ソース列から結合表の行の従属列へのUPDATEの伝播を処理します。"
 
 #: of sqlalchemy.orm.mapper:254
 msgid ""
@@ -485,19 +475,19 @@ msgid ""
 "integrity and will not be issuing its own CASCADE operation for an "
 "update.  The unit of work process will emit an UPDATE statement for the "
 "dependent columns during a primary key change."
-msgstr ""
+msgstr "Falseの場合、データベースは参照整合性を強制せず、更新のために独自のCASCADE操作を発行しません。作業単位プロセスは、主キーの変更中に従属列のUPDATEステートメントを発行します。"
 
 #: of sqlalchemy.orm.mapper:262
 msgid ""
 ":ref:`passive_updates` - description of a similar feature as used with "
 ":func:`.relationship`"
-msgstr ""
+msgstr "：ref： `passive_updates`  -  func：` .relationship`で使用されている同様の機能の説明"
 
 #: of sqlalchemy.orm.mapper:265
 msgid ""
 ":paramref:`.mapper.passive_deletes` - supporting ON DELETE CASCADE for "
 "joined-table inheritance mappers"
-msgstr ""
+msgstr "：paramref： `.mapper.passive_deletes`  - 結合テーブル継承マッパーのON DELETE CASCADEをサポート"
 
 #: of sqlalchemy.orm.mapper:268
 msgid ""
@@ -511,39 +501,39 @@ msgid ""
 "to this subclass.  The SELECT uses      IN to fetch multiple subclasses "
 "at once.  .. versionadded:: 1.2  .. seealso::     "
 ":ref:`with_polymorphic_mapper_config`     :ref:`polymorphic_selectin`"
-msgstr ""
+msgstr "継承階層のサブクラス（結合された単一のテーブル継承のみ）の\ &quot;ポリモーフィックロード&quot;動作を指定します。有効な値は次のとおりです。* \ &quot;&#39;inline&#39; \&quot;  - このクラスは\ &quot;with_polymorphic \&quot;マッパーの一部でなければならないことを指定します。例えば、その列はベースに対するSELECTクエリに含まれます。 * \ &quot;&#39;selectin&#39; \&quot;  - このクラスのインスタンスがロードされると、このサブクラスに固有の列を取得するために追加のSELECTが発行されることを指定します。 SELECTは複数のサブクラスを一度にフェッチするためにINを使用します。 .. versionadded :: 1.2 .. seealso :: ref： `with_polymorphic_mapper_config`：ref：` polymorphic_selectin`"
 
 #: of sqlalchemy.orm.mapper:279
 msgid "Specifies \"polymorphic loading\" behavior"
-msgstr ""
+msgstr "\ &quot;ポリモーフィックローディング\&quot;の動作を指定する"
 
 #: of sqlalchemy.orm.mapper:269
 msgid ""
 "for a subclass in an inheritance hierarchy (joined and single table "
 "inheritance only).   Valid values are:"
-msgstr ""
+msgstr "継承階層のサブクラス（結合された単一のテーブル継承のみ）。有効な値は次のとおりです。"
 
 #: of sqlalchemy.orm.mapper:272
 msgid ""
 "\"'inline'\" - specifies this class should be part of the "
 "\"with_polymorphic\" mappers, e.g. its columns will be included in a "
 "SELECT query against the base."
-msgstr ""
+msgstr "\ &quot;&#39;inline&#39; \&quot;  - このクラスが\ &quot;with_polymorphic \&quot;マッパーの一部であることを指定します。例えば、その列はベースに対するSELECTクエリに含まれます。"
 
 #: of sqlalchemy.orm.mapper:276
 msgid ""
 "\"'selectin'\" - specifies that when instances of this class are loaded, "
 "an additional SELECT will be emitted to retrieve the columns specific to "
 "this subclass.  The SELECT uses IN to fetch multiple subclasses at once."
-msgstr ""
+msgstr "\ &quot;&#39;selectin&#39; \&quot;  - このクラスのインスタンスがロードされると、このサブクラスに固有の列を取得するために追加のSELECTが発行されることを指定します。 SELECTは複数のサブクラスを一度にフェッチするためにINを使用します。"
 
 #: of sqlalchemy.orm.mapper:285
 msgid ":ref:`with_polymorphic_mapper_config`"
-msgstr ""
+msgstr "：ref： `with_polymorphic_mapper_config`"
 
 #: of sqlalchemy.orm.mapper:287
 msgid ":ref:`polymorphic_selectin`"
-msgstr ""
+msgstr "：ref： `polymorphic_selectin`"
 
 #: of sqlalchemy.orm.mapper:289
 msgid ""
@@ -592,38 +582,38 @@ msgid ""
 "**only one discriminator column may be set**, typically    on the base-"
 "most class in the hierarchy. \"Cascading\" polymorphic    columns are not"
 " yet supported.  .. seealso::    :ref:`inheritance_toplevel`"
-msgstr ""
+msgstr "継承クラスが存在する場合に、受信する行のターゲットクラスを決定するために使用される列、属性、またはSQL式を指定します。この値は、マップされたclass： `.Table` :: classに存在するclass：` .Column`オブジェクトです：class Employee（Base）：__tablename__ = &#39;employee&#39; id = Column（Integer、primary_key = True）discriminator = \（polymorphic_on \ &quot;：discriminator \ polymorphic_identity \&quot;：\ &quot;employee \&quot;}この例のように、SQL式として指定することもできます：func ：条件付きアプローチを提供する `.case`構造体:: class Employee（Base）：__tablename__ = &#39;employee&#39; id = Column（Integer、primary_key = True）discriminator = Column（String（50））__mapper_args__ = {\&quot; polymorphic_on \ （discriminator == \ &quot;エンジニア\&quot;）、（discriminator == \ &quot;MA \&quot;、\ &quot;manager \&quot;）、]、else _ = \ &quot;employee \&quot;） \ &quot;polymorphic_identity \&quot;：\ &quot;employee \&quot;}：func： `.column_property`または1の文字列名で構成された属性を参照することもできます:: class Employee（Base）：__tablename__ = &#39;employee&#39; id =列（Integer、primary_key = True）discriminator =列（String（50）） （discriminator == \ &quot;EN \&quot;、エンジニア\ &quot;）、（discriminator == \&quot; MA \ &quot;、\&quot; manager \ &quot;）、]、else _ = \&quot; employee \ &quot;employee_type = column_property ））__mapper_args__ = {\ &quot;polymorphic_on \&quot;：employee_type、\ &quot;polymorphic_identity \&quot;：\ &quot;employee \&quot;} .. versionchanged :: 0.7.4 `` polymorphic_on``はSQL式として指定するか、 ：func： `.column_property`または1の文字列名で構成された属性です。局所的にマップされた：class： `.Table`にはない属性や式を参照するために` `polymorphic_on``を設定すると、discriminatorの値はデータベースに保持されますが、discriminatorの値は自動的には設定されません新しいインスタンスについてこれは、手動手段またはイベントリスナを介して、ユーザによって処理されなければならない。このようなリスナーを確立する典型的なアプローチは、次のようになります:: sqlalchemyからのインポートイベントsqlalchemy.ormからのインポートイベントimport object_mapper @ event.listens_for（Employee、\ &quot;init \&quot;、propagate = True）def set_identity（instance、* arg、** kw ）：mapper = object_mapper（instance）instance.discriminator = mapper.polymorphic_identity上の例では、マップされたクラスの `` polymorphic_identity``の値を `` discriminator``属性に代入し、 `` discriminator &#39;データベース内の ``列。 .. warning ::現在のところ、**典型的には、階層内の最も基底クラスにある**のディスクリミネータ列は**に設定されます。 \ &quot;Cascading \&quot;多相カラムはまだサポートされていません。 .. seealso ::：ref： `継承_レベル &#39;"
 
 #: of sqlalchemy.orm.mapper:289
 msgid ""
 "Specifies the column, attribute, or SQL expression used to determine the "
 "target class for an incoming row, when inheriting classes are present."
-msgstr ""
+msgstr "継承クラスが存在する場合に、受信する行のターゲットクラスを決定するために使用される列、属性、またはSQL式を指定します。"
 
 #: of sqlalchemy.orm.mapper:293
 msgid ""
 "This value is commonly a :class:`.Column` object that's present in the "
 "mapped :class:`.Table`::"
-msgstr ""
+msgstr "この値は、マップされた：class： `.Table` ::に存在する一般的にclass：` .Column`オブジェクトです。"
 
 #: of sqlalchemy.orm.mapper:307
 msgid ""
 "It may also be specified as a SQL expression, as in this example where we"
 " use the :func:`.case` construct to provide a conditional approach::"
-msgstr ""
+msgstr "この例のように：func： `.case`構文を使用して条件付きアプローチを提供するSQL式として指定することもできます::"
 
 #: of sqlalchemy.orm.mapper:326
 msgid ""
 "It may also refer to any attribute configured with "
 ":func:`.column_property`, or to the string name of one::"
-msgstr ""
+msgstr "また、：func： `.column_property`、または1の文字列名で構成された属性を参照することもできます::"
 
 #: of sqlalchemy.orm.mapper:347
 msgid ""
 "``polymorphic_on`` may be specified as a SQL expression, or refer to any "
 "attribute configured with :func:`.column_property`, or to the string name"
 " of one."
-msgstr ""
+msgstr "`` polymorphic_on``はSQL式として指定するか、：func： `.column_property`、または1の文字列名で設定された属性を参照することができます。"
 
 #: of sqlalchemy.orm.mapper:352
 msgid ""
@@ -633,21 +623,21 @@ msgid ""
 "the discriminator is not automatically set on new instances; this must be"
 " handled by the user, either through manual means or via event listeners."
 " A typical approach to establishing such a listener looks like::"
-msgstr ""
+msgstr "局所的にマップされた：class： `.Table`にはない属性や式を参照するために` `polymorphic_on``を設定すると、discriminatorの値はデータベースに保持されますが、discriminatorの値は自動的には設定されません新しいインスタンスについてこれは、手動手段またはイベントリスナを介して、ユーザによって処理されなければならない。このようなリスナーを確立するための典型的なアプローチは、次のようになります。"
 
 #: of sqlalchemy.orm.mapper:371
 msgid ""
 "Where above, we assign the value of ``polymorphic_identity`` for the "
 "mapped class to the ``discriminator`` attribute, thus persisting the "
 "value to the ``discriminator`` column in the database."
-msgstr ""
+msgstr "上記の場合、マップされたクラスの `` polymorphic_identity``の値を `` discriminator``属性に代入し、値をデータベースの `` discriminator``カラムに永続させます。"
 
 #: of sqlalchemy.orm.mapper:378
 msgid ""
 "Currently, **only one discriminator column may be set**, typically on the"
 " base-most class in the hierarchy. \"Cascading\" polymorphic columns are "
 "not yet supported."
-msgstr ""
+msgstr "現時点では、**階層内の基本クラスの**には、**のディスクリミネータ列が1つしか設定されていない可能性があります。 \ &quot;Cascading \&quot;多相カラムはまだサポートされていません。"
 
 #: of sqlalchemy.orm.mapper:386
 msgid ""
@@ -656,7 +646,7 @@ msgid ""
 " rows are received, the value corresponding to the ``polymorphic_on`` "
 "column expression is compared to this value, indicating which subclass "
 "should be used for the newly reconstructed object."
-msgstr ""
+msgstr "この特定のクラスを、 `` polymorphic_on``設定で参照される列式によって返されるものとして識別する値を指定します。行が受け取られると、 `` polymorphic_on``列式に対応する値がこの値と比較され、新しく再構築されたオブジェクトにどのサブクラスを使用すべきかを示します。"
 
 #: of sqlalchemy.orm.mapper:394
 msgid ""
@@ -667,14 +657,14 @@ msgid ""
 "instances upon mapping, unless overridden. When using Declarative, this "
 "argument is passed automatically, based on all those "
 ":class:`.MapperProperty` instances declared in the declared class body."
-msgstr ""
+msgstr "オブジェクト属性の文字列名を：class： `.MapperProperty`インスタンスにマッピングする辞書。その属性の永続化動作を定義します。 Map：class： `.Table`にあるclass：` .Column`オブジェクトは、オーバーライドされない限り自動的にマッピング時に `` ColumnProperty``インスタンスに配置されます。 Declarativeを使用する場合、この引数は宣言されたクラス本体で宣言された：class： `.MapperProperty`インスタンスすべてに基づいて自動的に渡されます。"
 
 #: of sqlalchemy.orm.mapper:404
 msgid ""
 "A list of :class:`.Column` objects which define the primary key to be "
 "used against this mapper's selectable unit. This is normally simply the "
 "primary key of the ``local_table``, but can be overridden here."
-msgstr ""
+msgstr "このマッパーの選択可能ユニットに対して使用されるプライマリキーを定義するclass： `.Column`オブジェクトのリストです。通常これは `` local_table``の主キーですが、ここでは上書きすることができます。"
 
 #: of sqlalchemy.orm.mapper:409
 msgid ""
@@ -687,7 +677,7 @@ msgid ""
 "``version_id_generator`` specifies an alternative version generator.  .. "
 "seealso::     :ref:`mapper_version_counter` - discussion of version "
 "counting    and rationale."
-msgstr ""
+msgstr "A：class：テーブル内の行の実行中のバージョンIDを保持するために使用される `.Column`です。これは、同時更新またはフラッシュ中の失効したデータの存在を検出するために使用されます。この方法は、UPDATE文が最後の既知のバージョンIDと一致しない場合、class： `〜sqlalchemy.orm.exc.StaleDataError`例外がスローされたかどうかを検出することです。デフォルトでは、 `` version_id_generator``が代替バージョンジェネレータを指定しない限り、列は：class： `.Integer`型でなければなりません。 .. seealso ::：ref： `mapper_version_counter`  - バージョンカウントと根拠の議論。"
 
 #: of sqlalchemy.orm.mapper:409
 msgid ""
@@ -698,13 +688,13 @@ msgid ""
 ":class:`~sqlalchemy.orm.exc.StaleDataError` exception is thrown. By "
 "default, the column must be of :class:`.Integer` type, unless "
 "``version_id_generator`` specifies an alternative version generator."
-msgstr ""
+msgstr "A：class：テーブル内の行の実行中のバージョンIDを保持するために使用される `.Column`です。これは、同時更新またはフラッシュ中の失効したデータの存在を検出するために使用されます。この方法は、UPDATE文が最後の既知のバージョンIDと一致しない場合、class： `〜sqlalchemy.orm.exc.StaleDataError`例外がスローされたかどうかを検出することです。デフォルトでは、 `` version_id_generator``が代替バージョンジェネレータを指定しない限り、列は：class： `.Integer`型でなければなりません。"
 
 #: of sqlalchemy.orm.mapper:423
 msgid ""
 ":ref:`mapper_version_counter` - discussion of version counting and "
 "rationale."
-msgstr ""
+msgstr "：ref： `mapper_version_counter`  - バージョンカウントと根拠の議論。"
 
 #: of sqlalchemy.orm.mapper:426
 msgid ""
@@ -719,7 +709,7 @@ msgid ""
 "when using this option.  .. versionadded:: 0.9.0 ``version_id_generator``"
 " supports    server-side version number generation.  .. seealso::     "
 ":ref:`custom_version_counter`     :ref:`server_side_version_counter`"
-msgstr ""
+msgstr "新しいバージョンIDを生成する方法を定義します。デフォルトは `` None``です。これは、単純な整数カウント方式が採用されていることを示します。カスタムバージョン管理スキームを提供するには、:: def generate_version（version）の形式の呼び出し可能な関数を提供します。return next_versionまたは、バージョンID生成プログラム以外のプログラム側のバージョン管理スキーマなどのサーバー側のバージョン管理機能を`` False``を指定します。このオプションを使用する際の重要な点については、ref： `server_side_version_counter`を参照してください。 .. versionadded :: 0.9.0 `` version_id_generator``は、サーバー側のバージョン番号の生成をサポートします。 .. seealso ::：ref： `custom_version_counter`：ref：` server_side_version_counter`"
 
 #: of sqlalchemy.orm.mapper:426
 msgid ""
@@ -727,7 +717,7 @@ msgid ""
 "which indicates that a simple integer counting scheme be employed.  To "
 "provide a custom versioning scheme, provide a callable function of the "
 "form::"
-msgstr ""
+msgstr "新しいバージョンIDを生成する方法を定義します。デフォルトは `` None``です。これは、単純な整数カウント方式が採用されていることを示します。カスタムバージョン管理スキームを提供するには、以下の形式の呼び出し可能な関数を提供します。"
 
 #: of sqlalchemy.orm.mapper:434
 msgid ""
@@ -736,19 +726,19 @@ msgid ""
 "be used, by specifying the value ``False``. Please see "
 ":ref:`server_side_version_counter` for a discussion of important points "
 "when using this option."
-msgstr ""
+msgstr "代わりに、値 `` False``を指定することによって、バージョンIDジェネレータの外部にあるトリガやプログラム的なバージョニングスキームなどのサーバ側のバージョン管理機能を使用することもできます。このオプションを使用する際の重要な点については、ref： `server_side_version_counter`を参照してください。"
 
 #: of sqlalchemy.orm.mapper:440
 msgid "``version_id_generator`` supports server-side version number generation."
-msgstr ""
+msgstr "`` version_id_generator``は、サーバー側のバージョン番号の生成をサポートします。"
 
 #: of sqlalchemy.orm.mapper:445
 msgid ":ref:`custom_version_counter`"
-msgstr ""
+msgstr "：ref： `custom_version_counter`"
 
 #: of sqlalchemy.orm.mapper:447
 msgid ":ref:`server_side_version_counter`"
-msgstr ""
+msgstr "：ref： `server_side_version_counter`"
 
 #: of sqlalchemy.orm.mapper:450
 msgid ""
@@ -761,7 +751,7 @@ msgid ""
 "indicates a selectable that will be used to query for multiple classes.  "
 ".. seealso::    :ref:`with_polymorphic` - discussion of polymorphic "
 "querying   techniques."
-msgstr ""
+msgstr "``の形式のタプル（ <classes> 、 <selectable> ） ``は、\ &quot;polymorphic \&quot;ローディングのデフォルトスタイルを示します。つまり、一度にどのテーブルがクエリされるかを指定します。 <classes>一度にロードする必要がある継承クラスを示すマ​​ッパーおよび/またはクラスの単一またはリストです。特別な値 `` &#39;*&#39; &#39;`は、すべての降順クラスをすぐにロードする必要があることを示すために使用できます。 2番目のタプル引数<selectable>複数のクラスを照会するために使用される選択項目を示します。 .. seealso ::：ref： `with_polymorphic`  - 多相問合せテクニックの議論。"
 
 #: of sqlalchemy.orm.mapper:450
 msgid ""
@@ -772,64 +762,64 @@ msgid ""
 "special value ``'*'`` may be used to indicate all descending classes "
 "should be loaded immediately. The second tuple argument <selectable> "
 "indicates a selectable that will be used to query for multiple classes."
-msgstr ""
+msgstr "``の形式のタプル（ <classes> 、 <selectable> ） ``は、\ &quot;polymorphic \&quot;ローディングのデフォルトスタイルを示します。つまり、一度にどのテーブルがクエリされるかを指定します。 <classes>一度にロードする必要がある継承クラスを示すマ​​ッパーおよび/またはクラスの単一またはリストです。特別な値 `` &#39;*&#39; &#39;`は、すべての降順クラスをすぐにロードする必要があることを示すために使用できます。 2番目のタプル引数<selectable>複数のクラスを照会するために使用される選択項目を示します。"
 
 #: of sqlalchemy.orm.mapper:462
 msgid ":ref:`with_polymorphic` - discussion of polymorphic querying techniques."
-msgstr ""
+msgstr "：ref： `with_polymorphic`  - 多相問合せテクニックの議論。"
 
 #: of sqlalchemy.orm.object_mapper:1
 msgid ""
 "Given an object, return the primary Mapper associated with the object "
 "instance."
-msgstr ""
+msgstr "オブジェクトを指定すると、オブジェクトインスタンスに関連付けられているプラ​​イマリMapperを返します。"
 
 #: of sqlalchemy.orm.object_mapper:4
 msgid ""
 "Raises :class:`sqlalchemy.orm.exc.UnmappedInstanceError` if no mapping is"
 " configured."
-msgstr ""
+msgstr "マッピングが設定されていない場合は、class： `sqlalchemy.orm.exc.UnmappedInstanceError`を送出します。"
 
 #: of sqlalchemy.orm.object_mapper:7
 msgid "This function is available via the inspection system as::"
-msgstr ""
+msgstr "この機能は検査システムを介して利用できます::"
 
 #: of sqlalchemy.orm.object_mapper:11
 msgid ""
 "Using the inspection system will raise "
 ":class:`sqlalchemy.exc.NoInspectionAvailable` if the instance is not part"
 " of a mapping."
-msgstr ""
+msgstr "インスペクションシステムを使用すると、インスタンスがマッピングの一部でない場合、class： `sqlalchemy.exc.NoInspectionAvailable`が生成されます。"
 
 #: of sqlalchemy.orm.class_mapper:1
 msgid ""
 "Given a class, return the primary :class:`.Mapper` associated with the "
 "key."
-msgstr ""
+msgstr "クラスが与えられた場合、key：class： `.Mapper`を返します。"
 
 #: of sqlalchemy.orm.class_mapper:4
 msgid ""
 "Raises :exc:`.UnmappedClassError` if no mapping is configured on the "
 "given class, or :exc:`.ArgumentError` if a non-class object is passed."
-msgstr ""
+msgstr "指定されたクラスにマッピングが設定されていない場合はexc： `.UnmappedClassError`、非クラスのオブジェクトが渡された場合は：exc：` .ArgumentError`が生成されます。"
 
 #: of sqlalchemy.orm.class_mapper:8
 msgid ""
 "Equivalent functionality is available via the :func:`.inspect` function "
 "as::"
-msgstr ""
+msgstr "同等の機能は、：func： `.inspect`関数として利用できます::"
 
 #: of sqlalchemy.orm.class_mapper:13
 msgid ""
 "Using the inspection system will raise "
 ":class:`sqlalchemy.exc.NoInspectionAvailable` if the class is not mapped."
-msgstr ""
+msgstr "クラスがマップされていない場合、検査システムを使用すると、class： `sqlalchemy.exc.NoInspectionAvailable`が生成されます。"
 
 #: of sqlalchemy.orm.configure_mappers:1
 msgid ""
 "Initialize the inter-mapper relationships of all mappers that have been "
 "constructed thus far."
-msgstr ""
+msgstr "これまでに構築されたすべてのマッパーのマッパー間関係を初期化します。"
 
 #: of sqlalchemy.orm.configure_mappers:4
 msgid ""
@@ -837,20 +827,20 @@ msgid ""
 "invoked automatically, the first time mappings are used, as well as "
 "whenever mappings are used and additional not-yet-configured mappers have"
 " been constructed."
-msgstr ""
+msgstr "この関数は何度でも呼び出すことができますが、ほとんどの場合、マッピングが初めて使用されたときに自動的に呼び出されます。また、マッピングが使用され、未構成の追加のマッパーが構築されたときは常に呼び出されます。"
 
 #: of sqlalchemy.orm.configure_mappers:9
 msgid ""
 "Points at which this occur include when a mapped class is instantiated "
 "into an instance, as well as when the :meth:`.Session.query` method is "
 "used."
-msgstr ""
+msgstr "これが発生するポイントには、マッピングされたクラスがインスタンスにインスタンス化されるときと、：meth： `.Session.query`メソッドが使用されるときが含まれます。"
 
 #: of sqlalchemy.orm.configure_mappers:13
 msgid ""
 "The :func:`.configure_mappers` function provides several event hooks that"
 " can be used to augment its functionality.  These methods include:"
-msgstr ""
+msgstr "：func： `.configure_mappers`関数は、その機能を拡張するために使用できるいくつかのイベントフックを提供します。これらの方法には、"
 
 #: of sqlalchemy.orm.configure_mappers:16
 msgid ""
@@ -858,7 +848,7 @@ msgid ""
 ":func:`.configure_mappers` does any work; this can be used to establish "
 "additional options, properties, or related mappings before the operation "
 "proceeds."
-msgstr ""
+msgstr "：meth： `.MapperEvents.before_configured`  - 一度前に呼び出されます：func：` .configure_mappers`は何らかの作業を行います。これは、操作が進む前に追加のオプション、プロパティ、または関連するマッピングを確立するために使用できます。"
 
 #: of sqlalchemy.orm.configure_mappers:21
 msgid ""
@@ -866,7 +856,7 @@ msgid ""
 ":class:`.Mapper` is configured within the process; will include all "
 "mapper state except for backrefs set up by other mappers that are still "
 "to be configured."
-msgstr ""
+msgstr "：meth： `.MapperEvents.mapper_configured`  - それぞれの個体として呼び出されます：class：` .Mapper`はプロセス内で設定されます。まだ構成されている他のマッパーによって設定されたバックレックスを除いて、すべてのマッパー状態を含みます。"
 
 #: of sqlalchemy.orm.configure_mappers:26
 msgid ""
@@ -876,18 +866,18 @@ msgid ""
 "configured.  Note that the calling application may still have other "
 "mappings that haven't been produced yet, such as if they are in modules "
 "as yet unimported."
-msgstr ""
+msgstr "：meth： `.MapperEvents.after_configured`  - 一度呼び出されます：func：` .configure_mappers`が完了しました。この段階では、SQLAlchemyに知られているall：class： `.Mapper`オブジェクトが完全に設定されます。呼び出し元のアプリケーションには、モジュールにまだインポートされていないなど、まだ生成されていないマッピングがまだ残っていることに注意してください。"
 
 #: of sqlalchemy.orm.clear_mappers:1
 msgid "Remove all mappers from all classes."
-msgstr ""
+msgstr "すべてのクラスからすべてのマッパーを削除します。"
 
 #: of sqlalchemy.orm.clear_mappers:3
 msgid ""
 "This function removes all instrumentation from classes and disposes of "
 "their associated mappers.  Once called, the classes are unmapped and can "
 "be later re-mapped with new mappers."
-msgstr ""
+msgstr "この関数は、クラスからすべての計測を削除し、関連するマッパーを破棄します。いったん呼び出されると、クラスはマッピングされず、後で新しいマッパーで再マッピングできます。"
 
 #: of sqlalchemy.orm.clear_mappers:7
 msgid ""
@@ -902,67 +892,67 @@ msgid ""
 "own test suite, and possibly the test suites of other ORM extension "
 "libraries which intend to test various combinations of mapper "
 "construction upon a fixed set of classes."
-msgstr ""
+msgstr "：func： `.clear_mappers`は、通常の使用のために* not *です。文字通り、非常に特殊なテストシナリオの外で有効な使用法はありません。通常、マッパーはユーザー定義のクラスの永続的な構造コンポーネントであり、クラスとは独立して決して破棄されません。マップされたクラス自体がガベージコレクトされている場合、そのマッパーも自動的に処分されます。 ：func： `.clear_mappers`は、異なるマッピングを持つ同じクラスを再利用するテストスイートでの使用のためだけに使用されます。これは非常にまれな使用例です。そのような使用例は、実際にはSQLAlchemy独自のテストスイートです。おそらくはクラスの固定されたセットでのマッパー構築のさまざまな組み合わせをテストしようとする他のORM拡張ライブラリのテストスイートです。"
 
 #: of sqlalchemy.orm.util.identity_key:1
 msgid ""
 "Generate \"identity key\" tuples, as are used as keys in the "
 ":attr:`.Session.identity_map` dictionary."
-msgstr ""
+msgstr "：attr： `.Session.identity_map`ディクショナリのキーとして使用される\&quot;アイデンティティキー\ &quot;タプルを生成します。"
 
 #: of sqlalchemy.orm.util.identity_key:4
 msgid "This function has several call styles:"
-msgstr ""
+msgstr "この関数にはいくつかの呼び出しスタイルがあります："
 
 #: of sqlalchemy.orm.util.identity_key:6
 msgid "``identity_key(class, ident, identity_token=token)``"
-msgstr ""
+msgstr "`` identity_key（class、ident、identity_token = token） ``"
 
 #: of sqlalchemy.orm.util.identity_key:8
 msgid ""
 "This form receives a mapped class and a primary key scalar or tuple as an"
 " argument."
-msgstr ""
+msgstr "このフォームは、マップされたクラスと主キーのスカラまたはタプルを引数として受け取ります。"
 
 #: of sqlalchemy.orm.util.identity_key:11 sqlalchemy.orm.util.identity_key:30
 #: sqlalchemy.orm.util.identity_key:48
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.orm.util.identity_key
 msgid "param class"
-msgstr ""
+msgstr "paramクラス"
 
 #: of sqlalchemy.orm.util.identity_key:16 sqlalchemy.orm.util.identity_key:54
 msgid "mapped class (must be a positional argument)"
-msgstr ""
+msgstr "マップされたクラス（位置指定の引数でなければならない）"
 
 #: of sqlalchemy.orm.util.identity_key
 msgid "param ident"
-msgstr ""
+msgstr "パラメータident"
 
 #: of sqlalchemy.orm.util.identity_key:17
 msgid "primary key, may be a scalar or tuple argument."
-msgstr ""
+msgstr "主キー。スカラーまたはタプルの引数である可能性があります。"
 
 #: of sqlalchemy.orm.util.identity_key:18 sqlalchemy.orm.util.identity_key:57
 msgid ";param identity_token: optional identity token"
-msgstr ""
+msgstr "; param identity_token：オプションのアイデンティティトークン"
 
 #: of sqlalchemy.orm.util.identity_key:20 sqlalchemy.orm.util.identity_key:59
 msgid "added identity_token"
-msgstr ""
+msgstr "追加されたidentity_token"
 
 #: of sqlalchemy.orm.util.identity_key:23
 msgid "``identity_key(instance=instance)``"
-msgstr ""
+msgstr "`` identity_key（インスタンス=インスタンス） ``"
 
 #: of sqlalchemy.orm.util.identity_key:25
 msgid ""
 "This form will produce the identity key for a given instance.  The "
 "instance need not be persistent, only that its primary key attributes are"
 " populated (else the key will contain ``None`` for those missing values)."
-msgstr ""
+msgstr "このフォームは、指定されたインスタンスのIDキーを生成します。インスタンスは、永続的である必要はなく、主キーの属性に値が設定されている場合のみです（そうでない場合、キーには欠落している値に対して `` None``が含まれます）。"
 
 #: of sqlalchemy.orm.util.identity_key:36
 msgid ""
@@ -970,71 +960,71 @@ msgid ""
 ":meth:`.Mapper.identity_key_from_instance`, which will have the effect of"
 " performing a database check for the corresponding row if the object is "
 "expired."
-msgstr ""
+msgstr "この形式では、指定されたインスタンスは最終的には：meth： `.Mapper.identity_key_from_instance`によって実行され、オブジェクトが期限切れになった場合に対応する行のデータベースチェックを実行します。"
 
 #: of sqlalchemy.orm.util.identity_key
 msgid "param instance"
-msgstr ""
+msgstr "paramインスタンス"
 
 #: of sqlalchemy.orm.util.identity_key:41
 msgid "object instance (must be given as a keyword arg)"
-msgstr ""
+msgstr "オブジェクトインスタンス（キーワードargとして指定する必要があります）"
 
 #: of sqlalchemy.orm.util.identity_key:43
 msgid "``identity_key(class, row=row, identity_token=token)``"
-msgstr ""
+msgstr "`` identity_key（class、row = row、identity_token = token） ``"
 
 #: of sqlalchemy.orm.util.identity_key:45
 msgid ""
 "This form is similar to the class/tuple form, except is passed a database"
 " result row as a :class:`.RowProxy` object."
-msgstr ""
+msgstr "この形式はclass / tuple形式に似ていますが、class： `.RowProxy`オブジェクトとしてデータベース結果行が渡される点が異なります。"
 
 #: of sqlalchemy.orm.util.identity_key
 msgid "param row"
-msgstr ""
+msgstr "パラーム行"
 
 #: of sqlalchemy.orm.util.identity_key:55
 msgid ""
 ":class:`.RowProxy` row returned by a :class:`.ResultProxy` (must be given"
 " as a keyword arg)"
-msgstr ""
+msgstr "：class： `.RowProxy`の行は：class：` .ResultProxy`（キーワードargとして与えられなければなりません）"
 
 #: of sqlalchemy.orm.util.polymorphic_union:1
 msgid "Create a ``UNION`` statement used by a polymorphic mapper."
-msgstr ""
+msgstr "多相マッパーが使用する `` UNION``文を作成します。"
 
 #: of sqlalchemy.orm.util.polymorphic_union:3
 msgid "See  :ref:`concrete_inheritance` for an example of how this is used."
-msgstr ""
+msgstr "これがどのように使用されるかの例は、ref： `concrete_inheritance`を参照してください。"
 
 #: of sqlalchemy.orm.util.polymorphic_union:6
 msgid "mapping of polymorphic identities to :class:`.Table` objects."
-msgstr ""
+msgstr "polymorphicアイデンティティの：class： `.Table`オブジェクトへのマッピング。"
 
 #: of sqlalchemy.orm.util.polymorphic_union:8
 msgid ""
 "string name of a \"discriminator\" column, which will be derived from the"
 " query, producing the polymorphic identity for each row.  If ``None``, no"
 " polymorphic discriminator is generated."
-msgstr ""
+msgstr "\ &quot;discriminator \&quot;列の文字列名。クエリから派生し、各行の多相識別情報を生成します。 `` None``の場合、多型識別器は生成されません。"
 
 #: of sqlalchemy.orm.util.polymorphic_union:11
 msgid ""
 "name of the :func:`~sqlalchemy.sql.expression.alias()` construct "
 "generated."
-msgstr ""
+msgstr "：func： `〜sqlalchemy.sql.expression.alias（）`コンストラクトの名前が生成されました。"
 
 #: of sqlalchemy.orm.util.polymorphic_union:13
 msgid ""
 "if True, non-existent columns, which are represented as labeled NULLs, "
 "will be passed into CAST.   This is a legacy behavior that is problematic"
 " on some backends such as Oracle - in which case it can be set to False."
-msgstr ""
+msgstr "Trueの場合、ラベルされたNULLとして表される存在しない列がCASTに渡されます。これは、Oracleなどのバックエンドで問題となるレガシー動作です。この場合、Falseに設定できます。"
 
 #: of sqlalchemy.orm.mapper.Mapper:1
 msgid "Define the correlation of class attributes to database table columns."
-msgstr ""
+msgstr "クラス属性とデータベーステーブルの列との相関を定義します。"
 
 #: of sqlalchemy.orm.mapper.Mapper:4
 msgid ""
@@ -1042,7 +1032,7 @@ msgid ""
 ":func:`~sqlalchemy.orm.mapper` function.    For information about "
 "instantiating new :class:`.Mapper` objects, see that function's "
 "documentation."
-msgstr ""
+msgstr "：class： `.Mapper`オブジェクトは、：func：`〜sqlalchemy.orm.mapper`関数を使ってインスタンス化されます。 new：class： `.Mapper`オブジェクトのインスタンス化については、その関数のドキュメントを参照してください。"
 
 #: of sqlalchemy.orm.mapper.Mapper:10
 msgid ""
@@ -1051,31 +1041,31 @@ msgid ""
 "SQLAlchemy usage tends to favor the :mod:`sqlalchemy.ext.declarative` "
 "extension for class configuration, which makes usage of :func:`.mapper` "
 "behind the scenes."
-msgstr ""
+msgstr "：func： `.mapper`が明示的にユーザ定義のクラスとテーブルのメタデータをリンクするとき、これは*古典的なマッピング*と呼ばれます。現代のSQLAlchemyの使用法は、クラス構成のための：mod： `sqlalchemy.ext.declarative`拡張を支持する傾向があります。これは：func：` .mapper`をバックグラウンドで使用します。"
 
 #: of sqlalchemy.orm.mapper.Mapper:18
 msgid ""
 "Given a particular class known to be mapped by the ORM, the "
 ":class:`.Mapper` which maintains it can be acquired using the "
 ":func:`.inspect` function::"
-msgstr ""
+msgstr "ORMによってマッピングされることが知られている特定のクラスが与えられた場合、それを保持する：class： `.Mapper`は：func：` .inspect`関数を使用して取得できます::"
 
 #: of sqlalchemy.orm.mapper.Mapper:26
 msgid ""
 "A class which was mapped by the :mod:`sqlalchemy.ext.declarative` "
 "extension will also have its mapper available via the ``__mapper__`` "
 "attribute."
-msgstr ""
+msgstr "：mod： `sqlalchemy.ext.declarative`拡張でマップされたクラスも、そのマッパーを` `__mapper__``属性で利用できます。"
 
 #: of sqlalchemy.orm.mapper.Mapper.add_properties:1
 msgid ""
 "Add the given dictionary of properties to this mapper, using "
 "`add_property`."
-msgstr ""
+msgstr "`add_property`を使って、与えられたプロパティの辞書をこのマッパーに追加してください。"
 
 #: of sqlalchemy.orm.mapper.Mapper.add_property:1
 msgid "Add an individual MapperProperty to this mapper."
-msgstr ""
+msgstr "個々のMapperPropertyをこのマッパーに追加します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.add_property:3
 msgid ""
@@ -1083,19 +1073,19 @@ msgid ""
 "initial properties dictionary sent to the constructor.  If this Mapper "
 "has already been configured, then the given MapperProperty is configured "
 "immediately."
-msgstr ""
+msgstr "マッパーがまだ設定されていない場合は、コンストラクタに送信される初期プロパティ辞書にプロパティを追加するだけです。このMapperがすでに設定されている場合は、指定されたMapperPropertyが直ちに設定されます。"
 
 #: of sqlalchemy.orm.mapper.Mapper.all_orm_descriptors:1
 msgid ""
 "A namespace of all :class:`.InspectionAttr` attributes associated with "
 "the mapped class."
-msgstr ""
+msgstr "マッピングされたクラスに関連付けられたall：class： `.InspectionAttr`属性の名前空間。"
 
 #: of sqlalchemy.orm.mapper.Mapper.all_orm_descriptors:4
 msgid ""
 "These attributes are in all cases Python :term:`descriptors` associated "
 "with the mapped class or its superclasses."
-msgstr ""
+msgstr "これらの属性はすべての場合、マッピングされたクラスまたはそのスーパークラスに関連するPython：term： `descriptors &#39;です。"
 
 #: of sqlalchemy.orm.mapper.Mapper.all_orm_descriptors:7
 msgid ""
@@ -1105,14 +1095,14 @@ msgid ""
 "includes :class:`.QueryableAttribute`, as well as extension types such as"
 " :class:`.hybrid_property`, :class:`.hybrid_method` and "
 ":class:`.AssociationProxy`."
-msgstr ""
+msgstr "この名前空間には、クラスにマッピングされる属性と、拡張モジュールによって宣言された属性が含まれます。これは：class： `.InspectionAttr`から継承する任意のPython記述子型を含みます。これには：class： `.QueryableAttribute`と同様に：class：` .hybrid_property`、：class： `.hybrid_method`、：class：` .AssociationProxy`のような拡張タイプが含まれます。"
 
 #: of sqlalchemy.orm.mapper.Mapper.all_orm_descriptors:15
 msgid ""
 "To distinguish between mapped attributes and extension attributes, the "
 "attribute :attr:`.InspectionAttr.extension_type` will refer to a constant"
 " that distinguishes between different extension types."
-msgstr ""
+msgstr "マップされた属性と拡張属性とを区別するために、属性：attr： `.InspectionAttr.extension_type`は、異なる拡張タイプを区別する定数を参照します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.all_orm_descriptors:19
 msgid ""
@@ -1120,7 +1110,7 @@ msgid ""
 ":attr:`.QueryableAttribute.property` attribute refers to the "
 ":class:`.MapperProperty` property, which is what you get when referring "
 "to the collection of mapped properties via :attr:`.Mapper.attrs`."
-msgstr ""
+msgstr "：class： `.QueryableAttribute`を扱う場合、：attr：` .QueryableAttribute.property`属性は：class： `.MapperProperty`プロパティーを参照します。これは、マップされたプロパティーのコレクションを参照するときに得られるものです。 attr： `.Mapper.attrs`。"
 
 #: of sqlalchemy.orm.mapper.Mapper.all_orm_descriptors:27
 msgid ""
@@ -1132,17 +1122,17 @@ msgid ""
 "scheme, e.g. ``mapper.all_orm_descriptors[somename]`` over "
 "``getattr(mapper.all_orm_descriptors, somename)`` to avoid name "
 "collisions."
-msgstr ""
+msgstr "：attr： `.Mapper.all_orm_descriptors`アクセサの名前空間は：class：` .OrderedProperties`のインスタンスです。これは辞書のようなオブジェクトであり、meth： `.OrderedProperties.items`と：meth：` .OrderedProperties.values`のような少数の名前付きメソッドが含まれています。属性に動的にアクセスする場合、名前の衝突を避けるために、例えば `` mapper.all_orm_descriptors [somename] ``や `` getattr（mapper.all_orm_descriptors、somename） `&#39;などのdict-accessスキームを使用することをお勧めします。"
 
 #: of sqlalchemy.orm.mapper.Mapper.all_orm_descriptors:41
 msgid ":attr:`.Mapper.attrs`"
-msgstr ""
+msgstr "：attr： `.Mapper.attrs`"
 
 #: of sqlalchemy.orm.mapper.Mapper.attrs:1
 msgid ""
 "A namespace of all :class:`.MapperProperty` objects associated this "
 "mapper."
-msgstr ""
+msgstr "このマッパーに関連付けられたall：class： `.MapperProperty`オブジェクトの名前空間。"
 
 #: of sqlalchemy.orm.mapper.Mapper.attrs:4
 msgid ""
@@ -1152,14 +1142,14 @@ msgid ""
 ":class:`.ColumnProperty` representing the ``name`` column.   The "
 "namespace object can also be iterated, which would yield each "
 ":class:`.MapperProperty`."
-msgstr ""
+msgstr "これは、キー名に基づいて各プロパティを提供するオブジェクトです。例えば、 `` User.name``属性を持つ `` User``クラスのマッパーは、 `` mapper.attrs.name``を提供します。これは `` class :: `.ColumnProperty``を表します。名前欄に記入してください。名前空間オブジェクトは反復することもでき、それぞれ：class： `.MapperProperty`を生成します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.attrs:12
 msgid ""
 ":class:`.Mapper` has several pre-filtered views of this attribute which "
 "limit the types of properties returned, inclding :attr:`.synonyms`, "
 ":attr:`.column_attrs`, :attr:`.relationships`, and :attr:`.composites`."
-msgstr ""
+msgstr "：class： `.Mapper`には、この属性のいくつかの事前フィルタリングされたビューがあり、attr：` .synonyms`、：attr： `.column_attrs`、：attr：` .relationships`、および：attr： `.composites`。"
 
 #: of sqlalchemy.orm.mapper.Mapper.attrs:19
 msgid ""
@@ -1170,15 +1160,15 @@ msgid ""
 "When accessing attributes dynamically, favor using the dict-access "
 "scheme, e.g. ``mapper.attrs[somename]`` over ``getattr(mapper.attrs, "
 "somename)`` to avoid name collisions."
-msgstr ""
+msgstr "：attr： `.Mapper.attrs`アクセサの名前空間は：class：` .OrderedProperties`のインスタンスです。これは辞書のようなオブジェクトであり、meth： `.OrderedProperties.items`と：meth：` .OrderedProperties.values`のような少数の名前付きメソッドが含まれています。属性に動的にアクセスする場合、名前の衝突を避けるために、dict-accessスキーム（例えば、 `` mapper.attrs [somename] `` `` `getattr（mapper.attrs、somename）` `"
 
 #: of sqlalchemy.orm.mapper.Mapper.attrs:30
 msgid ":attr:`.Mapper.all_orm_descriptors`"
-msgstr ""
+msgstr "：attr： `.Mapper.all_orm_descriptors`"
 
 #: of sqlalchemy.orm.mapper.Mapper.base_mapper:1
 msgid "The base-most :class:`.Mapper` in an inheritance chain."
-msgstr ""
+msgstr "継承チェーンのbase-most：class： `.Mapper`。"
 
 #: of sqlalchemy.orm.mapper.Mapper.base_mapper:3
 msgid ""
@@ -1186,7 +1176,7 @@ msgid ""
 ":class:`.Mapper`.   In an inheritance scenario, it references the "
 ":class:`.Mapper` which is parent to all other :class:`.Mapper` objects in"
 " the inheritance chain."
-msgstr ""
+msgstr "非継承シナリオでは、この属性は常にclass： `.Mapper`です。継承シナリオでは、：class： `.Mapper`を参照します。これは、継承チェーンの他のすべての：class：` .Mapper`オブジェクトの親です。"
 
 #: of sqlalchemy.orm.mapper.Mapper.base_mapper:8
 #: sqlalchemy.orm.mapper.Mapper.class_:3
@@ -1204,89 +1194,89 @@ msgstr ""
 msgid ""
 "This is a *read only* attribute determined during mapper construction. "
 "Behavior is undefined if directly modified."
-msgstr ""
+msgstr "これは、マッパー構築時に決定された*読み取り専用*属性です。直接変更された場合の動作は未定義です。"
 
 #: of sqlalchemy.orm.mapper.Mapper.c:1
 msgid "A synonym for :attr:`~.Mapper.columns`."
-msgstr ""
+msgstr "attr： `〜.Mapper.columns`の同義語です。"
 
 #: of sqlalchemy.orm.mapper.Mapper.cascade_iterator:1
 msgid ""
 "Iterate each element and its mapper in an object graph, for all "
 "relationships that meet the given cascade rule."
-msgstr ""
+msgstr "与えられたカスケード規則を満たすすべての関係について、各要素とそのマッパーをオブジェクトグラフに反復する。"
 
 #: of sqlalchemy.orm.mapper.Mapper.cascade_iterator:4
 msgid ""
 "The name of the cascade rule (i.e. ``\"save-update\"``, ``\"delete\"``, "
 "etc.).  .. note::  the ``\"all\"`` cascade is not accepted here.  For a "
 "generic    object traversal function, see :ref:`faq_walk_objects`."
-msgstr ""
+msgstr "カスケードルールの名前（ `` \ &quot;save-update \&quot; ``、 `` \ &quot;delete \&quot; ``など）。 .. note :: `` \ &quot;all \&quot; ``カスケードはここでは受け入れられません。一般的なオブジェクトトラバーサル関数については、：ref： `faq_walk_objects`を参照してください。"
 
 #: of sqlalchemy.orm.mapper.Mapper.cascade_iterator:5
 msgid ""
 "The name of the cascade rule (i.e. ``\"save-update\"``, ``\"delete\"``, "
 "etc.)."
-msgstr ""
+msgstr "カスケードルールの名前（ `` \ &quot;save-update \&quot; ``、 `` \ &quot;delete \&quot; ``など）。"
 
 #: of sqlalchemy.orm.mapper.Mapper.cascade_iterator:8
 msgid ""
 "the ``\"all\"`` cascade is not accepted here.  For a generic object "
 "traversal function, see :ref:`faq_walk_objects`."
-msgstr ""
+msgstr "`` \ &quot;all \&quot; ``カスケードはここでは受け入れられません。一般的なオブジェクトトラバーサル関数については、：ref： `faq_walk_objects`を参照してください。"
 
 #: of sqlalchemy.orm.mapper.Mapper.cascade_iterator:11
 msgid ""
 "The lead InstanceState.  child items will be processed per the "
 "relationships defined for this object's mapper."
-msgstr ""
+msgstr "InstanceStateのリード。子オブジェクトは、このオブジェクトのマッパー用に定義された関係ごとに処理されます。"
 
 #: of sqlalchemy.orm.mapper.Mapper.cascade_iterator
 msgid "戻り値"
-msgstr ""
+msgstr "戻り値"
 
 #: of sqlalchemy.orm.mapper.Mapper.cascade_iterator:15
 msgid "the method yields individual object instances."
-msgstr ""
+msgstr "メソッドは個々のオブジェクトインスタンスを生成します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.cascade_iterator:19
 msgid ":ref:`unitofwork_cascades`"
-msgstr ""
+msgstr "：ref： `unitofwork_cascades`"
 
 #: of sqlalchemy.orm.mapper.Mapper.cascade_iterator:21
 msgid ""
 ":ref:`faq_walk_objects` - illustrates a generic function to traverse all "
 "objects without relying on cascades."
-msgstr ""
+msgstr "：ref： `faq_walk_objects`  - カスケードに頼らずにすべてのオブジェクトをトラバースする汎用関数を示します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.class_:1
 msgid "The Python class which this :class:`.Mapper` maps."
-msgstr ""
+msgstr "これは：class： `.Mapper`がマップするPythonクラスです。"
 
 #: of sqlalchemy.orm.mapper.Mapper.class_manager:1
 msgid ""
 "The :class:`.ClassManager` which maintains event listeners and class-"
 "bound descriptors for this :class:`.Mapper`."
-msgstr ""
+msgstr "：class： `.ClassManager`：これはイベントリスナーとクラスバインドされた記述子を保持します：class：` .Mapper`。"
 
 #: of sqlalchemy.orm.mapper.Mapper.column_attrs:1
 msgid ""
 "Return a namespace of all :class:`.ColumnProperty` properties maintained "
 "by this :class:`.Mapper`."
-msgstr ""
+msgstr "this：class： `.Mapper`によって維持されるall：class：` .ColumnProperty`プロパティの名前空間を返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.column_attrs:6
 #: sqlalchemy.orm.mapper.Mapper.composites:6
 #: sqlalchemy.orm.mapper.Mapper.relationships:18
 #: sqlalchemy.orm.mapper.Mapper.synonyms:6
 msgid ":attr:`.Mapper.attrs` - namespace of all :class:`.MapperProperty` objects."
-msgstr ""
+msgstr "：attr： `.Mapper.attrs`  -  all：class：` .MapperProperty`オブジェクトの名前空間です。"
 
 #: of sqlalchemy.orm.mapper.Mapper.columns:1
 msgid ""
 "A collection of :class:`.Column` or other scalar expression objects "
 "maintained by this :class:`.Mapper`."
-msgstr ""
+msgstr "クラス： `.Column`やこれによって保持される他のスカラ式オブジェクトのコレクションです：class：` .Mapper`。"
 
 #: of sqlalchemy.orm.mapper.Mapper.columns:4
 msgid ""
@@ -1296,59 +1286,59 @@ msgid ""
 " the mapping, not necessarily the ``key`` attribute of the "
 ":class:`.Column` itself.   Additionally, scalar expressions mapped by "
 ":func:`.column_property` are also present here."
-msgstr ""
+msgstr "コレクションは、このマッピングに含まれる列のみが存在し、マッピングで定義された属性名に基づいてキーが設定されることを除いて、class： `.Table`オブジェクトの` `c``属性と同じように動作しますクラス： `.Column`自体の` `key``属性であるとは限りません。さらに、：func： `.column_property`によってマップされたスカラー式もここに存在します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.common_parent:1
 msgid ""
 "Return true if the given mapper shares a common inherited parent as this "
 "mapper."
-msgstr ""
+msgstr "指定されたマッパーがこのマッパーとして共通の継承された親を共有する場合はtrueを返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.composites:1
 msgid ""
 "Return a namespace of all :class:`.CompositeProperty` properties "
 "maintained by this :class:`.Mapper`."
-msgstr ""
+msgstr "すべての：class： `.CompositeProperty`プロパティの名前空間を返します：class：` .Mapper`。"
 
 #: of sqlalchemy.orm.mapper.Mapper.concrete:1
 msgid ""
 "Represent ``True`` if this :class:`.Mapper` is a concrete inheritance "
 "mapper."
-msgstr ""
+msgstr "次のような場合は `` True``を表します：class： `.Mapper`は具象継承マッパーです。"
 
 #: of sqlalchemy.orm.mapper.Mapper.configured:1
 msgid "Represent ``True`` if this :class:`.Mapper` has been configured."
-msgstr ""
+msgstr "class： `.Mapper`が設定されている場合は、` `True``を表します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.configured:8
 msgid ":func:`.configure_mappers`."
-msgstr ""
+msgstr "：func： `.configure_mappers`。"
 
 #: of sqlalchemy.orm.mapper.Mapper.entity:1
 #: sqlalchemy.orm.mapper.Mapper.is_mapper:1
 #: sqlalchemy.orm.mapper.Mapper.mapper:1
 msgid "Part of the inspection API."
-msgstr ""
+msgstr "検査APIの一部。"
 
 #: of sqlalchemy.orm.mapper.Mapper.entity:3
 msgid "Returns self.class\\_."
-msgstr ""
+msgstr "self.class \\ _を返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.get_property:1
 msgid "return a MapperProperty associated with the given key."
-msgstr ""
+msgstr "指定されたキーに関連付けられたMapperPropertyを返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.get_property_by_column:1
 msgid ""
 "Given a :class:`.Column` object, return the :class:`.MapperProperty` "
 "which maps this column."
-msgstr ""
+msgstr "与えられたa：class： `.Column`オブジェクトは、この列をマップする：class：` .MapperProperty`を返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.identity_key_from_instance:1
 msgid ""
 "Return the identity key for the given instance, based on its primary key "
 "attributes."
-msgstr ""
+msgstr "主キーの属性に基づいて、指定されたインスタンスのIDキーを返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.identity_key_from_instance:4
 #: sqlalchemy.orm.mapper.Mapper.primary_key_from_instance:4
@@ -1356,29 +1346,29 @@ msgid ""
 "If the instance's state is expired, calling this method will result in a "
 "database check to see if the object has been deleted. If the row no "
 "longer exists, :class:`~sqlalchemy.orm.exc.ObjectDeletedError` is raised."
-msgstr ""
+msgstr "インスタンスの状態が期限切れになっている場合、このメソッドを呼び出すと、オブジェクトが削除されたかどうかを確認するデータベースチェックが行われます。行が存在しなくなったら、：class： `〜sqlalchemy.orm.exc.ObjectDeletedError`が送出されます。"
 
 #: of sqlalchemy.orm.mapper.Mapper.identity_key_from_instance:9
 msgid ""
 "This value is typically also found on the instance state under the "
 "attribute name `key`."
-msgstr ""
+msgstr "この値は、通常、属性名 `key`のインスタンス状態でも検出されます。"
 
 #: of sqlalchemy.orm.mapper.Mapper.identity_key_from_primary_key:1
 msgid ""
 "Return an identity-map key for use in storing/retrieving an item from an "
 "identity map."
-msgstr ""
+msgstr "アイデンティティマップからアイテムを格納/取得する際に使用するアイデンティティマップキーを返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.identity_key_from_primary_key:4
 msgid "A list of values indicating the identifier."
-msgstr ""
+msgstr "識別子を示す値のリスト。"
 
 #: of sqlalchemy.orm.mapper.Mapper.identity_key_from_row:1
 msgid ""
 "Return an identity-map key for use in storing/retrieving an item from the"
 " identity map."
-msgstr ""
+msgstr "アイデンティティマップからアイテムを格納/取得する際に使用するアイデンティティマップキーを返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.identity_key_from_row:4
 msgid ""
@@ -1387,31 +1377,31 @@ msgid ""
 ":class:`.Column` object directly (as is the case when a :func:`.select` "
 "construct is executed), or via string names of the form "
 "``<tablename>_<colname>``."
-msgstr ""
+msgstr "A：class： `.RowProxy`インスタンスです。 this：class： `.Mapper`によってマップされる列は、行内で、好ましくは：class：` .Column`オブジェクトを介して直接的に見つけることができます（a：func： `.select`構造体が実行される場合）、または `` <tablename> _ <colname> ``。"
 
 #: of sqlalchemy.orm.mapper.Mapper.inherits:1
 msgid ""
 "References the :class:`.Mapper` which this :class:`.Mapper` inherits "
 "from, if any."
-msgstr ""
+msgstr "これを参照する：class： `.Mapper`：class：` .Mapper`はもしあればそれを継承します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.isa:1
 msgid "Return True if the this mapper inherits from the given mapper."
-msgstr ""
+msgstr "このマッパーが指定されたマッパーから継承する場合はTrueを返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.iterate_properties:1
 msgid "return an iterator of all MapperProperty objects."
-msgstr ""
+msgstr "すべてのMapperPropertyオブジェクトのイテレータを返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.local_table:1
 msgid "The :class:`.Selectable` which this :class:`.Mapper` manages."
-msgstr ""
+msgstr "：class： `.Selectable`これは：class：` .Mapper`が管理するものです。"
 
 #: of sqlalchemy.orm.mapper.Mapper.local_table:3
 msgid ""
 "Typically is an instance of :class:`.Table` or :class:`.Alias`. May also "
 "be ``None``."
-msgstr ""
+msgstr "通常、class： `.Table`または：class：` .Alias`のインスタンスです。 「なし」でもよい。"
 
 #: of sqlalchemy.orm.mapper.Mapper.local_table:6
 msgid ""
@@ -1422,21 +1412,21 @@ msgid ""
 "local_table will be the particular sub-table of the overall \"join\" "
 "which this :class:`.Mapper` represents.  If this mapper is a single-table"
 " inheriting mapper, local_table will be ``None``."
-msgstr ""
+msgstr "\ &quot;local \&quot;テーブルは：class： `.Mapper`がアトリビュートアクセスとフラッシュパースペクティブからの管理を直接担当する選択可能です。非継承マッパの場合、ローカルテーブルは\ &quot;mapped \&quot;テーブルと同じです。ジョインされたテーブル継承マッパーの場合、local_tableは\ &quot;join \&quot;全体の特定のサブテーブルになります。これはclass： `.Mapper`が表します。このマッパーが単一テーブルの継承マッパーである場合、local_tableは `` None``になります。"
 
 #: of sqlalchemy.orm.mapper.Mapper.local_table:17
 msgid ":attr:`~.Mapper.mapped_table`."
-msgstr ""
+msgstr "：attr： `〜.Mapper.mapped_table`。"
 
 #: of sqlalchemy.orm.mapper.Mapper.mapped_table:1
 msgid "The :class:`.Selectable` to which this :class:`.Mapper` is mapped."
-msgstr ""
+msgstr "：class： `.Selectable`これは：class：` .Mapper`がマップされています。"
 
 #: of sqlalchemy.orm.mapper.Mapper.mapped_table:3
 msgid ""
 "Typically an instance of :class:`.Table`, :class:`.Join`, or "
 ":class:`.Alias`."
-msgstr ""
+msgstr "通常、class： `.Table`、：class：` .Join`、または：class： `.Alias`のインスタンスです。"
 
 #: of sqlalchemy.orm.mapper.Mapper.mapped_table:6
 msgid ""
@@ -1446,93 +1436,93 @@ msgid ""
 "mapped_table references the full :class:`.Join` representing full rows "
 "for this particular subclass.  For single-table inheritance mappers, "
 "mapped_table references the base table."
-msgstr ""
+msgstr "\ &quot;マップされた\&quot;テーブルは、クエリ中にマッパーが選択する選択可能なものです。非継承マッパーの場合、マップされたテーブルは\ &quot;local \&quot;テーブルと同じです。結合されたテーブル継承マッパーの場合、mapped_tableはこの特定のサブクラスの完全な行を表すfull：class： `.Join`を参照します。単一テーブル継承マッパーの場合、mapped_tableは基本テーブルを参照します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.mapped_table:16
 msgid ":attr:`~.Mapper.local_table`."
-msgstr ""
+msgstr "：attr： `〜.Mapper.local_table`。"
 
 #: of sqlalchemy.orm.mapper.Mapper.mapper:3
 msgid "Returns self."
-msgstr ""
+msgstr "自己を返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.non_primary:1
 msgid ""
 "Represent ``True`` if this :class:`.Mapper` is a \"non-primary\" mapper, "
 "e.g. a mapper that is used only to selet rows but not for persistence "
 "management."
-msgstr ""
+msgstr "class： `.Mapper`が\&quot;非プライマリ\ &quot;のマッパです。例えば、行を選択するためだけに使用され、永続性管理のためには使われないマッパです。"
 
 #: of sqlalchemy.orm.mapper.Mapper.polymorphic_identity:1
 msgid ""
 "Represent an identifier which is matched against the "
 ":attr:`~.Mapper.polymorphic_on` column during result row loading."
-msgstr ""
+msgstr "結果行のロード中に：attr： `〜.Mapper.polymorphic_on`列と照合される識別子を表します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.polymorphic_identity:4
 msgid ""
 "Used only with inheritance, this object can be of any type which is "
 "comparable to the type of column represented by "
 ":attr:`~.Mapper.polymorphic_on`."
-msgstr ""
+msgstr "継承でのみ使用されるこのオブジェクトは、attr： `〜.Mapper.polymorphic_on`で表される型の型に匹敵する任意の型である可能性があります。"
 
 #: of sqlalchemy.orm.mapper.Mapper.polymorphic_iterator:1
 msgid ""
 "Iterate through the collection including this mapper and all descendant "
 "mappers."
-msgstr ""
+msgstr "このマッパーとすべての子孫マッパーを含むコレクションを繰り返し処理します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.polymorphic_iterator:4
 #: sqlalchemy.orm.mapper.Mapper.self_and_descendants:3
 msgid ""
 "This includes not just the immediately inheriting mappers but all their "
 "inheriting mappers as well."
-msgstr ""
+msgstr "これには、すぐに継承するマッパーだけでなく、継承しているすべてのマッパーも含まれます。"
 
 #: of sqlalchemy.orm.mapper.Mapper.polymorphic_iterator:7
 msgid ""
 "To iterate through an entire hierarchy, use "
 "``mapper.base_mapper.polymorphic_iterator()``."
-msgstr ""
+msgstr "階層全体を反復処理するには、 `` mapper.base_mapper.polymorphic_iterator（） ``を使います。"
 
 #: of sqlalchemy.orm.mapper.Mapper.polymorphic_map:1
 msgid ""
 "A mapping of \"polymorphic identity\" identifiers mapped to "
 ":class:`.Mapper` instances, within an inheritance scenario."
-msgstr ""
+msgstr "継承シナリオ内で：class： `.Mapper`インスタンスにマップされた\&quot;ポリモーフィックアイデンティティ\ &quot;識別子のマッピング。"
 
 #: of sqlalchemy.orm.mapper.Mapper.polymorphic_map:4
 msgid ""
 "The identifiers can be of any type which is comparable to the type of "
 "column represented by :attr:`~.Mapper.polymorphic_on`."
-msgstr ""
+msgstr "識別子は、attr： `〜.Mapper.polymorphic_on`で表される型の型に匹敵する任意の型であることができます。"
 
 #: of sqlalchemy.orm.mapper.Mapper.polymorphic_map:7
 msgid ""
 "An inheritance chain of mappers will all reference the same polymorphic "
 "map object.  The object is used to correlate incoming result rows to "
 "target mappers."
-msgstr ""
+msgstr "マッパーの継承チェーンは、すべて同じポリモフィックマップオブジェクトを参照します。このオブジェクトは、着信結果行をターゲットマッパーに関連付けるために使用されます。"
 
 #: of sqlalchemy.orm.mapper.Mapper.polymorphic_on:1
 msgid ""
 "The :class:`.Column` or SQL expression specified as the "
 "``polymorphic_on`` argument for this :class:`.Mapper`, within an "
 "inheritance scenario."
-msgstr ""
+msgstr "継承のシナリオでは、：class： `.Mapper`：class：` .Column`またはSQLの式で、これは `` polymorphic_on``引数として指定します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.polymorphic_on:5
 msgid ""
 "This attribute is normally a :class:`.Column` instance but may also be an"
 " expression, such as one derived from :func:`.cast`."
-msgstr ""
+msgstr "この属性は通常は：class： `.Column`インスタンスですが、func：` .cast`から派生したものなどの式であってもかまいません。"
 
 #: of sqlalchemy.orm.mapper.Mapper.primary_key:1
 msgid ""
 "An iterable containing the collection of :class:`.Column` objects which "
 "comprise the 'primary key' of the mapped table, from the perspective of "
 "this :class:`.Mapper`."
-msgstr ""
+msgstr "this：class： `.Mapper`の観点から、マッピングされたテーブルの &#39;プライマリキー&#39;を構成する：class：` .Column`オブジェクトのコレクションを含む反復可能ファイルです。"
 
 #: of sqlalchemy.orm.mapper.Mapper.primary_key:5
 msgid ""
@@ -1541,7 +1531,7 @@ msgid ""
 "superclass mapper.  For example, in the case of a :class:`.Join`, the "
 "primary key is determined by all of the primary key columns across all "
 "tables referenced by the :class:`.Join`."
-msgstr ""
+msgstr "このリストは：attr： `〜.Mapper.mapped_table`で選択可能です。継承マッパーの場合、スーパークラスマッパーによって管理される列もあります。たとえば：a：class： `.Join`の場合、主キーは、：class：` .Join`で参照されるすべてのテーブルにわたるすべての主キー列によって決まります。"
 
 #: of sqlalchemy.orm.mapper.Mapper.primary_key:11
 msgid ""
@@ -1549,23 +1539,23 @@ msgid ""
 "collection associated with the underlying tables; the :class:`.Mapper` "
 "features a ``primary_key`` argument that can override what the "
 ":class:`.Mapper` considers as primary key columns."
-msgstr ""
+msgstr "このリストは、基礎となる表に関連付けられた主キー列コレクションと必ずしも同じである必要はありません。 ：class： `.Mapper`は：class：` .Mapper`が主キー列とみなすものを上書きできる `` primary_key``引数を備えています。"
 
 #: of sqlalchemy.orm.mapper.Mapper.primary_key_from_instance:1
 msgid "Return the list of primary key values for the given instance."
-msgstr ""
+msgstr "指定されたインスタンスの主キー値のリストを返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.primary_mapper:1
 msgid ""
 "Return the primary mapper corresponding to this mapper's class key "
 "(class)."
-msgstr ""
+msgstr "このマッパーのクラスキー（クラス）に対応するプライマリマッパーを返します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.relationships:1
 msgid ""
 "A namespace of all :class:`.RelationshipProperty` properties maintained "
 "by this :class:`.Mapper`."
-msgstr ""
+msgstr "all：class： `.RelationshipProperty`プロパティのnamespaceは、これによって保持されます：class：` .Mapper`。"
 
 #: of sqlalchemy.orm.mapper.Mapper.relationships:6
 msgid ""
@@ -1576,69 +1566,69 @@ msgid ""
 "When accessing attributes dynamically, favor using the dict-access "
 "scheme, e.g. ``mapper.relationships[somename]`` over "
 "``getattr(mapper.relationships, somename)`` to avoid name collisions."
-msgstr ""
+msgstr "：attr： `.Mapper.relationships`アクセサの名前空間は：class：` .OrderedProperties`のインスタンスです。これは辞書のようなオブジェクトであり、meth： `.OrderedProperties.items`と：meth：` .OrderedProperties.values`のような少数の名前付きメソッドが含まれています。属性に動的にアクセスする場合、名前の衝突を避けるために、例えば `` mapper.relationships [somename] ``や `` getattr（mapper.relationships、somename） `&#39;などのdict-accessスキームを使用することをお勧めします。"
 
 #: of sqlalchemy.orm.mapper.Mapper.selectable:1
 msgid ""
 "The :func:`.select` construct this :class:`.Mapper` selects from by "
 "default."
-msgstr ""
+msgstr "：func： `.select`はこれを構成します：class：` .Mapper`はデフォルトからのfromを選択します。"
 
 #: of sqlalchemy.orm.mapper.Mapper.selectable:4
 msgid ""
 "Normally, this is equivalent to :attr:`.mapped_table`, unless the "
 "``with_polymorphic`` feature is in use, in which case the full "
 "\"polymorphic\" selectable is returned."
-msgstr ""
+msgstr "通常は、これは `` with_polymorphic``機能が使用されている場合を除いて：attr： `.mapped_table`と等価です。この場合、完全な&quot;多形体 &quot;の選択が返されます。"
 
 #: of sqlalchemy.orm.mapper.Mapper.self_and_descendants:1
 msgid "The collection including this mapper and all descendant mappers."
-msgstr ""
+msgstr "このマッパーとすべての子孫マッパーを含むコレクション。"
 
 #: of sqlalchemy.orm.mapper.Mapper.single:1
 msgid ""
 "Represent ``True`` if this :class:`.Mapper` is a single table inheritance"
 " mapper."
-msgstr ""
+msgstr "次のような場合は `` True``を表します。class： `.Mapper`は単一のテーブル継承マッパーです。"
 
 #: of sqlalchemy.orm.mapper.Mapper.single:4
 msgid ":attr:`~.Mapper.local_table` will be ``None`` if this flag is set."
-msgstr ""
+msgstr "：このフラグが設定されている場合、attr： `〜.Mapper.local_table`は` `None``になります。"
 
 #: of sqlalchemy.orm.mapper.Mapper.synonyms:1
 msgid ""
 "Return a namespace of all :class:`.SynonymProperty` properties maintained"
 " by this :class:`.Mapper`."
-msgstr ""
+msgstr "すべての：class： `.SynonymProperty`プロパティの名前空間を返します：class：` .Mapper`。"
 
 #: of sqlalchemy.orm.mapper.Mapper.tables:1
 msgid ""
 "An iterable containing the collection of :class:`.Table` objects which "
 "this :class:`.Mapper` is aware of."
-msgstr ""
+msgstr "this：class： `.Mapper`が認識している：class：` .Table`オブジェクトのコレクションを含むiterableです。"
 
 #: of sqlalchemy.orm.mapper.Mapper.tables:4
 msgid ""
 "If the mapper is mapped to a :class:`.Join`, or an :class:`.Alias` "
 "representing a :class:`.Select`, the individual :class:`.Table` objects "
 "that comprise the full construct will be represented here."
-msgstr ""
+msgstr "mapperが：class： `.Join`にマッピングされている場合、または：class：` .Alias`が：class： `.Select`を表す場合、完全なコンストラクトを構成する個々の：class：` .Table`オブジェクトはここに代表される。"
 
 #: of sqlalchemy.orm.mapper.Mapper.validators:1
 msgid ""
 "An immutable dictionary of attributes which have been decorated using the"
 " :func:`~.orm.validates` decorator."
-msgstr ""
+msgstr "：func： `〜.orm.validates`デコレータを使って修飾された属性の不変な辞書です。"
 
 #: of sqlalchemy.orm.mapper.Mapper.validators:4
 msgid ""
 "The dictionary contains string attribute names as keys mapped to the "
 "actual validation method."
-msgstr ""
+msgstr "辞書には、実際の検証方法にマップされたキーとしての文字列属性名が含まれています。"
 
 #: of sqlalchemy.orm.mapper.Mapper.with_polymorphic_mappers:1
 msgid ""
 "The list of :class:`.Mapper` objects included in the default "
 "\"polymorphic\" query."
-msgstr ""
+msgstr "デフォルトの\ &quot;polymorphic \&quot;クエリに含まれるclass： `.Mapper`オブジェクトのリストです。"
 

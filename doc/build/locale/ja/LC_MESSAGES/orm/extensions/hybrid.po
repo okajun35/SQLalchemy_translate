@@ -6,30 +6,20 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/hybrid.rst:4
 msgid "Hybrid Attributes"
-msgstr ""
+msgstr "ハイブリッド属性"
 
 #: of sqlalchemy.ext.hybrid:1
 msgid "Define attributes on ORM-mapped classes that have \"hybrid\" behavior."
-msgstr ""
+msgstr "\ &quot;ハイブリッド\&quot;の動作を持つORMでマップされたクラスの属性を定義します。"
 
 #: of sqlalchemy.ext.hybrid:3
 msgid ""
 "\"hybrid\" means the attribute has distinct behaviors defined at the "
 "class level and at the instance level."
-msgstr ""
+msgstr "\ &quot;hybrid \&quot;は、クラスレベルとインスタンスレベルで定義された異なる動作を属性が持つことを意味します。"
 
 #: of sqlalchemy.ext.hybrid:6
 msgid ""
@@ -37,7 +27,7 @@ msgid ""
 "method decorator, is around 50 lines of code and has almost no "
 "dependencies on the rest of SQLAlchemy.  It can, in theory, work with any"
 " descriptor-based expression system."
-msgstr ""
+msgstr "：mod： `〜sqlalchemy.ext.hybrid`拡張は、メソッドデコレータの特別な形式を提供し、約50行のコードであり、残りのSQLAlchemyにほとんど依存しません。これは、理論上は、記述子ベースの任意の表現システムで動作します。"
 
 #: of sqlalchemy.ext.hybrid:11
 msgid ""
@@ -47,14 +37,14 @@ msgid ""
 "evaluation at the instance level.  Below, each function decorated with "
 ":class:`.hybrid_method` or :class:`.hybrid_property` may receive ``self``"
 " as an instance of the class, or as the class itself::"
-msgstr ""
+msgstr "整数の `` start``と `` end``の値を表すマッピング `` Interval``を考えてみましょう。クラスレベルでSQL式を生成するマップされたクラスと、インスタンスレベルでPython式の評価を行う上級レベルの関数を定義できます。以下では、class： `.hybrid_method`または：class：` .hybrid_property`で修飾された各関数は、クラスのインスタンスとして、またはクラス自体として `` self``を受け取ることができます::"
 
 #: of sqlalchemy.ext.hybrid:48
 msgid ""
 "Above, the ``length`` property returns the difference between the ``end``"
 " and ``start`` attributes.  With an instance of ``Interval``, this "
 "subtraction occurs in Python, using normal Python descriptor mechanics::"
-msgstr ""
+msgstr "上記の `` length``プロパティは `` end``と `` start``属性の違いを返します。 `` Interval``のインスタンスでは、この減算は通常のPython記述子機構を使ってPythonで行われます::"
 
 #: of sqlalchemy.ext.hybrid:57
 msgid ""
@@ -62,13 +52,13 @@ msgid ""
 ":class:`.hybrid_property` descriptor evaluates the function body given "
 "the ``Interval`` class as the argument, which when evaluated with "
 "SQLAlchemy expression mechanics returns a new SQL expression::"
-msgstr ""
+msgstr "：class： `.hybrid_property`デスクリプタは` `Interval``クラスを引数として関数本体を評価します。これは、SQLAlchemyの式機構で評価されたときに新しいSQL式を返します： ："
 
 #: of sqlalchemy.ext.hybrid:71
 msgid ""
 "ORM methods such as :meth:`~.Query.filter_by` generally use ``getattr()``"
 " to locate attributes, so can also be used with hybrid attributes::"
-msgstr ""
+msgstr "：meth： `〜.Query.filter_by`のようなORMメソッドは、一般に属性を見つけるために` `getattr（）` `を使うので、ハイブリッド属性でも使うことができます::"
 
 #: of sqlalchemy.ext.hybrid:80
 msgid ""
@@ -79,11 +69,11 @@ msgid ""
 "return boolean values, and take advantage of the Python ``|`` and ``&`` "
 "bitwise operators to produce equivalent instance-level and SQL "
 "expression-level boolean behavior::"
-msgstr ""
+msgstr "`` Interval``クラスの例は、class： `.hybrid_method`で装飾された` `contains（）` `と` `intersects（）` `の2つのメソッドも示しています。このデコレータは、同じ考え方をメソッドに適用します：class： `.hybrid_property`は属性に適用されます。このメソッドはブール値を返し、Pythonの `` | ``と ``と ``のビット演算子を利用して、同等のインスタンスレベルとSQL式レベルのブーリアンビヘイビアを生成します::"
 
 #: of sqlalchemy.ext.hybrid:115
 msgid "Defining Expression Behavior Distinct from Attribute Behavior"
-msgstr ""
+msgstr "属性の動作とは区別される式の動作の定義"
 
 #: of sqlalchemy.ext.hybrid:117
 msgid ""
@@ -95,39 +85,39 @@ msgid ""
 "decorators define the :meth:`.hybrid_property.expression` modifier for "
 "this purpose.   As an example we'll define the radius of the interval, "
 "which requires the usage of the absolute value function::"
-msgstr ""
+msgstr "上記のビット演算子の ``＆ ``と `` | ``の使用法は、関数が新しい値を返すために2つのブール値で操作されるため、幸運でした。多くの場合、Python関数とSQLAlchemy SQL式の構築には、2つの別々のPython式を定義するだけの相違があります。 ：mod： `〜sqlalchemy.ext.hybrid`デコレータは、この目的のために：meth：` .hybrid_property.expression`修飾子を定義します。例として、区間の半径を定義します。絶対値関数を使用する必要があります::"
 
 #: of sqlalchemy.ext.hybrid:140
 msgid ""
 "Above the Python function ``abs()`` is used for instance-level "
 "operations, the SQL function ``ABS()`` is used via the :data:`.func` "
 "object for class-level expressions::"
-msgstr ""
+msgstr "Python関数の上では、インスタンスレベルの操作に `` abs（） ``が使用されていますが、クラスレベルの式のために：data： `.func`オブジェクトを介してSQL関数` `ABS（）"
 
 #: of sqlalchemy.ext.hybrid:154
 msgid "Defining Setters"
-msgstr ""
+msgstr "セッターの定義"
 
 #: of sqlalchemy.ext.hybrid:156
 msgid ""
 "Hybrid properties can also define setter methods.  If we wanted "
 "``length`` above, when set, to modify the endpoint value::"
-msgstr ""
+msgstr "ハイブリッドプロパティは、セッターメソッドを定義することもできます。上記の `` length``を設定した場合、終点の値を変更するには::"
 
 #: of sqlalchemy.ext.hybrid:170
 msgid "The ``length(self, value)`` method is now called upon set::"
-msgstr ""
+msgstr "`` length（self、value） ``メソッドはset ::で呼び出されるようになりました"
 
 #: of sqlalchemy.ext.hybrid:182
 msgid "Allowing Bulk ORM Update"
-msgstr ""
+msgstr "バルクORMの更新を許可する"
 
 #: of sqlalchemy.ext.hybrid:184
 msgid ""
 "A hybrid can define a custom \"UPDATE\" handler for when using the "
 ":meth:`.Query.update` method, allowing the hybrid to be used in the SET "
 "clause of the update."
-msgstr ""
+msgstr "ハイブリッドは、：meth： `.Query.update`メソッドを使用するときにカスタム\&quot; UPDATE \ &quot;ハンドラを定義して、そのハイブリッドを更新のSET句で使用できるようにすることができます。"
 
 #: of sqlalchemy.ext.hybrid:188
 msgid ""
@@ -135,7 +125,7 @@ msgid ""
 "expression is used as the column that's the target of the SET.  If our "
 "``Interval`` class had a hybrid ``start_point`` that linked to "
 "``Interval.start``, this could be substituted directly::"
-msgstr ""
+msgstr "通常、：meth： `.Query.update`でハイブリッドを使用する場合、SQL式はSETのターゲットとなる列として使用されます。私たちの `` Interval``クラスが `` Interval.start``にリンクされたハイブリッド `` start_point``を持っていれば、これは直接代用することができます::"
 
 #: of sqlalchemy.ext.hybrid:195
 msgid ""
@@ -144,15 +134,15 @@ msgid ""
 "will accommodate a value passed to :meth:`.Query.update` which can affect"
 " this, using the :meth:`.hybrid_propery.update_expression` decorator. A "
 "handler that works similarly to our setter would be::"
-msgstr ""
+msgstr "しかし、 `` Interval.length``のような複合ハイブリッドを使用する場合、このハイブリッドは複数の列を表します。 ：meth： `.hybrid_propery.update_expression`デコレータを使用して、これに影響する：meth：` .Query.update`に渡された値を受け入れるハンドラを設定できます。私たちのセッターと同様の働きをするハンドラーは::"
 
 #: of sqlalchemy.ext.hybrid:218
 msgid "Above, if we use ``Interval.length`` in an UPDATE expression as::"
-msgstr ""
+msgstr "上記のように、UPDATE式で `` Interval.length``を::"
 
 #: of sqlalchemy.ext.hybrid:223
 msgid "We'll get an UPDATE statement along the lines of::"
-msgstr ""
+msgstr "私たちは::の行に沿ってUPDATE文を得るでしょう"
 
 #: of sqlalchemy.ext.hybrid:227
 msgid ""
@@ -161,15 +151,15 @@ msgid ""
 "supported, for more complex SET expressions it will usually be necessary "
 "to use either the \"fetch\" or False synchronization strategy as "
 "illustrated above."
-msgstr ""
+msgstr "場合によっては、デフォルトの &quot;評価&quot;戦略はPythonでSET式を実行できません。上で使用している加算演算子はサポートされていますが、より複雑なSET式の場合は、通常、上の図のように\ &quot;フェッチ\&quot;または偽の同期方針を使用する必要があります。"
 
 #: of sqlalchemy.ext.hybrid:233
 msgid "added support for bulk updates to hybrid properties."
-msgstr ""
+msgstr "ハイブリッドプロパティへの一括更新のサポートが追加されました。"
 
 #: of sqlalchemy.ext.hybrid:236
 msgid "Working with Relationships"
-msgstr ""
+msgstr "関係を使って作業する"
 
 #: of sqlalchemy.ext.hybrid:238
 msgid ""
@@ -177,17 +167,17 @@ msgid ""
 "related objects as opposed to column-based data. The need for distinct "
 "expressions tends to be greater.  The two variants we'll illustrate are "
 "the \"join-dependent\" hybrid, and the \"correlated subquery\" hybrid."
-msgstr ""
+msgstr "列ベースのデータではなく、関連するオブジェクトで動作するハイブリッドを作成するときには、本質的な違いはありません。明確な表現の必要性はより大きくなる傾向があります。私たちが示している2つの変種は、\ &quot;join-dependent \&quot;ハイブリッドと\ &quot;相関サブクエリ\&quot;ハイブリッドです。"
 
 #: of sqlalchemy.ext.hybrid:244
 msgid "Join-Dependent Relationship Hybrid"
-msgstr ""
+msgstr "結合依存関係ハイブリッド"
 
 #: of sqlalchemy.ext.hybrid:246
 msgid ""
 "Consider the following declarative mapping which relates a ``User`` to a "
 "``SavingsAccount``::"
-msgstr ""
+msgstr "`` User``を `` SavingsAccount``に関連付ける次の宣言的なマッピングを考えてみましょう::"
 
 #: of sqlalchemy.ext.hybrid:288
 msgid ""
@@ -195,14 +185,14 @@ msgid ""
 "``SavingsAccount`` entry in the list of accounts for this user.   The in-"
 "Python getter/setter methods can treat ``accounts`` as a Python list "
 "available on ``self``."
-msgstr ""
+msgstr "上記のハイブリッドプロパティ `` balance``は、このユーザのアカウントリストの最初の `` SavingsAccount``エントリと連携します。 in-Pythonのgetter / setterメソッドは `` accounts``を `` self``で利用できるPythonリストとして扱います。"
 
 #: of sqlalchemy.ext.hybrid:293
 msgid ""
 "However, at the expression level, it's expected that the ``User`` class "
 "will be used in an appropriate context such that an appropriate join to "
 "``SavingsAccount`` will be present::"
-msgstr ""
+msgstr "しかし、表現レベルでは、 `` User``クラスは適切なコンテキストで使用され、 `` SavingsAccount``への適切な結合が存在することが期待されています::"
 
 #: of sqlalchemy.ext.hybrid:304
 msgid ""
@@ -210,11 +200,11 @@ msgid ""
 " whether ``self.accounts`` is even present, this issue expresses itself "
 "differently at the SQL expression level, where we basically would use an "
 "outer join::"
-msgstr ""
+msgstr "しかし、インスタンスレベルのアクセサは `` self.accounts``が存在するかどうかを心配する必要がありますが、この問題はSQLの表現レベルでは異なって表現されますが、基本的には外部結合::"
 
 #: of sqlalchemy.ext.hybrid:318
 msgid "Correlated Subquery Relationship Hybrid"
-msgstr ""
+msgstr "相関サブクエリ関係ハイブリッド"
 
 #: of sqlalchemy.ext.hybrid:320
 msgid ""
@@ -226,17 +216,17 @@ msgid ""
 "we can adjust our ``SavingsAccount`` example to aggregate the balances "
 "for *all* accounts, and use a correlated subquery for the column "
 "expression::"
-msgstr ""
+msgstr "もちろん、単一の列式に移植可能な関連サブクエリを使用して、囲むクエリの結合の使用方法に依存することを避けることができます。相関サブクエリは移植性が高くなりますが、SQLレベルではパフォーマンスが低下することがよくあります。 ：ref： `mapper_column_property_sql_expressions`と同じテクニックを使って、` `SavingsAccount``の例を調整して、* all *アカウントの残高を集計し、列式に相関サブクエリを使用することができます::"
 
 #: of sqlalchemy.ext.hybrid:359
 msgid ""
 "The above recipe will give us the ``balance`` column which renders a "
 "correlated SELECT::"
-msgstr ""
+msgstr "上記のレシピは、相関SELECT ::をレンダリングする `` balance``カラムを与えます"
 
 #: of sqlalchemy.ext.hybrid:372
 msgid "Building Custom Comparators"
-msgstr ""
+msgstr "カスタムコンパレータの作成"
 
 #: of sqlalchemy.ext.hybrid:374
 msgid ""
@@ -245,26 +235,26 @@ msgid ""
 "behavior of each SQLAlchemy expression operator individually.  They are "
 "useful when creating custom types that have some highly idiosyncratic "
 "behavior on the SQL side."
-msgstr ""
+msgstr "ハイブリッドプロパティには、カスタムコンパレータの構築を可能にするヘルパーも含まれます。比較オブジェクトを使用すると、各SQLAlchemy式演算子の動作を個別にカスタマイズできます。これらは、SQL側で非常に特殊な動作をするカスタムタイプを作成する場合に便利です。"
 
 #: of sqlalchemy.ext.hybrid:380
 msgid ""
 "The :meth:`.hybrid_property.comparator` decorator introduced in this "
 "section **replaces** the use of the :meth:`.hybrid_property.expression` "
 "decorator.  They cannot be used together."
-msgstr ""
+msgstr "このセクションで紹介した：meth： `.hybrid_property.comparator`デコレータ**は：meth：` .hybrid_property.expression`デコレータの使用を置き換えます**。一緒に使うことはできません。"
 
 #: of sqlalchemy.ext.hybrid:384
 msgid ""
 "The example class below allows case-insensitive comparisons on the "
 "attribute named ``word_insensitive``::"
-msgstr ""
+msgstr "以下の例のクラスでは、 `` word_insensitive``という属性の大文字と小文字を区別しない比較が可能です::"
 
 #: of sqlalchemy.ext.hybrid:411
 msgid ""
 "Above, SQL expressions against ``word_insensitive`` will apply the "
 "``LOWER()`` SQL function to both sides::"
-msgstr ""
+msgstr "上の例では、 `` word_insensitive``に対するSQL式は `` LOWER（） `` SQL関数を両側に適用します::"
 
 #: of sqlalchemy.ext.hybrid:419
 msgid ""
@@ -272,11 +262,11 @@ msgid ""
 ":class:`.ColumnOperators` interface.   A \"coercion\" operation like "
 "lowercasing can be applied to all comparison operations (i.e. ``eq``, "
 "``lt``, ``gt``, etc.) using :meth:`.Operators.operate`::"
-msgstr ""
+msgstr "上記の `` CaseInsensitiveComparator``は：class： `.ColumnOperators`インタフェースの一部を実装しています。 lower演算のような &quot;強制&quot;演算は：meth： `.Operators.operate`を使ってすべての比較演算（` `eq``、` `lt``、` `gt``など） ："
 
 #: of sqlalchemy.ext.hybrid:431
 msgid "Reusing Hybrid Properties across Subclasses"
-msgstr ""
+msgstr "サブクラス間でのハイブリッドプロパティの再利用"
 
 #: of sqlalchemy.ext.hybrid:433
 msgid ""
@@ -284,14 +274,14 @@ msgid ""
 " like :meth:`.hybrid_property.getter`, :meth:`.hybrid_property.setter` to"
 " be used to redefine those methods on a subclass.  This is similar to how"
 " the standard Python ``@property`` object works::"
-msgstr ""
+msgstr "ハイブリッドはスーパークラスから参照することができ、サブクラスのメソッドを再定義するために：meth： `.hybrid_property.getter`、：meth：` .hybrid_property.setter`のようなメソッドを変更することができます。これは、標準的なPythonの `` @ property``オブジェクトの仕組みと似ています::"
 
 #: of sqlalchemy.ext.hybrid:464
 msgid ""
 "Above, the ``FirstNameLastName`` class refers to the hybrid from "
 "``FirstNameOnly.name`` to repurpose its getter and setter for the "
 "subclass."
-msgstr ""
+msgstr "上記の `` FirstNameLastName``クラスは、 `` FirstNameOnly.name``のハイブリッドを参照して、そのサブクラスのgetterとsetterを再利用します。"
 
 #: of sqlalchemy.ext.hybrid:467
 msgid ""
@@ -303,17 +293,17 @@ msgid ""
 "class descriptor, add the special qualifier "
 ":attr:`.hybrid_property.overrides`, which will de-reference the "
 "instrumented attribute back to the hybrid object::"
-msgstr ""
+msgstr "スーパークラスの最初の参照として：meth： `.hybrid_property.expression`と：meth：` .hybrid_property.comparator`をオーバーライドすると、これらの名前はクラスレベルで同じ名前のアクセサと衝突します：class： `.QueryableAttribute `オブジェクトはクラスレベルで返されました。親クラス記述子を直接参照するときにこれらのメソッドをオーバーライドするには、特別な修飾子：attr： `.hybrid_property.overrides`を追加します。これにより、継承された属性をハイブリッドオブジェクトに逆参照します::"
 
 #: of sqlalchemy.ext.hybrid:485
 msgid ""
 "Added :meth:`.hybrid_property.getter` as well as the ability to redefine "
 "accessors per-subclass."
-msgstr ""
+msgstr "追加された：meth： `.hybrid_property.getter`と、サブクラスごとにアクセサを再定義する機能。"
 
 #: of sqlalchemy.ext.hybrid:490
 msgid "Hybrid Value Objects"
-msgstr ""
+msgstr "ハイブリッドバリューオブジェクト"
 
 #: of sqlalchemy.ext.hybrid:492
 msgid ""
@@ -322,7 +312,7 @@ msgid ""
 "Python string, the plain Python string would not be coerced to lower case"
 " - the ``CaseInsensitiveComparator`` we built, being returned by "
 "``@word_insensitive.comparator``, only applies to the SQL side."
-msgstr ""
+msgstr "前の例では、 `` SearchWord``インスタンスの `` word_insensitive``属性をプレーンなPython文字列と比較すると、単純なPython文字列は小文字に強制されませんでした -  `` CaseInsensitiveComparator``私たちは `` @ word_insensitive.comparator``によって返されるように構築しましたが、SQL側にのみ適用されます。"
 
 #: of sqlalchemy.ext.hybrid:498
 msgid ""
@@ -334,7 +324,7 @@ msgid ""
 "expression side as well as the Python value side.   Replacing the "
 "previous ``CaseInsensitiveComparator`` class with a new "
 "``CaseInsensitiveWord`` class::"
-msgstr ""
+msgstr "カスタムコンパレータのより包括的な形式は、*ハイブリッドバリューオブジェクト*を構築することです。この手法では、すべての場合にアクセサーによって返される値オブジェクトにターゲット値または式が適用されます。値オブジェクトを使用すると、SQL式側とPython値側の両方で、値に対するすべての操作と比較値の処理方法を制御できます。以前の `` CaseInsensitiveComparator``クラスを新しい `` CaseInsensitiveWord``クラスに置き換える::"
 
 #: of sqlalchemy.ext.hybrid:532
 msgid ""
@@ -345,7 +335,7 @@ msgid ""
 "\"converted\" form of ``word``, whether it be SQL side or Python side. "
 "Our ``SearchWord`` class can now deliver the ``CaseInsensitiveWord`` "
 "object unconditionally from a single hybrid call::"
-msgstr ""
+msgstr "上記の `` CaseInsensitiveWord``オブジェクトは `` self.word``を表します。これはSQL関数でもPythonネイティブでも構いません。 ``（） ``と `` __clause_element __（） ``を `` self.word``を使ってオーバーライドすることにより、すべての比較演算は `` word``の ``変換された `それがSQL側であろうと、Python側であろうと。 `` SearchWord``クラスは、単一のハイブリッド呼び出しから無条件に `` CaseInsensitiveWord``オブジェクトを配送できるようになりました::"
 
 #: of sqlalchemy.ext.hybrid:549
 msgid ""
@@ -353,38 +343,38 @@ msgid ""
 "behavior universally, including SQL expression vs. Python expression "
 "(note the Python value is converted to lower case on the Python side "
 "here)::"
-msgstr ""
+msgstr "`` word_insensitive``属性は、SQL式とPython式を含む大文字と小文字を区別しない比較動作を持つようになりました（Pythonの値はPython側で小文字に変換されます）。"
 
 #: of sqlalchemy.ext.hybrid:559
 msgid "SQL expression versus SQL expression::"
-msgstr ""
+msgstr "SQL式対SQL式::"
 
 #: of sqlalchemy.ext.hybrid:574
 msgid "Python only expression::"
-msgstr ""
+msgstr "Pythonのみの式::"
 
 #: of sqlalchemy.ext.hybrid:584
 msgid ""
 "The Hybrid Value pattern is very useful for any kind of value that may "
 "have multiple representations, such as timestamps, time deltas, units of "
 "measurement, currencies and encrypted passwords."
-msgstr ""
+msgstr "ハイブリッドバリューパターンは、タイムスタンプ、タイムデルタ、測定単位、通貨、暗号化されたパスワードなど、複数の表現を持つあらゆる種類の値に非常に役立ちます。"
 
 #: of sqlalchemy.ext.hybrid:590
 msgid ""
 "`Hybrids and Value Agnostic Types <http://techspot.zzzeek.org/2011/10/21"
 "/hybrids-and-value-agnostic-types/>`_ - on the techspot.zzzeek.org blog"
-msgstr ""
+msgstr "`ハイブリッドと価値に依存しない型<http://techspot.zzzeek.org/2011/10/21/hybrids-and-value-agnostic-types/> `_  -  techspot.zzzeek.orgのブログ"
 
 #: of sqlalchemy.ext.hybrid:594
 msgid ""
 "`Value Agnostic Types, Part II <http://techspot.zzzeek.org/2011/10/29"
 "/value-agnostic-types-part-ii/>`_ - on the techspot.zzzeek.org blog"
-msgstr ""
+msgstr "`価値不可知論型、その2 <http://techspot.zzzeek.org/2011/10/29/value-agnostic-types-part-ii/> `_  -  techspot.zzzeek.orgのブログ"
 
 #: of sqlalchemy.ext.hybrid:601
 msgid "Building Transformers"
-msgstr ""
+msgstr "変圧器の製造"
 
 #: of sqlalchemy.ext.hybrid:603
 msgid ""
@@ -392,27 +382,27 @@ msgid ""
 "and return a new one.   The :class:`.Query` object includes a method "
 ":meth:`.with_transformation` that returns a new :class:`.Query` "
 "transformed by the given function."
-msgstr ""
+msgstr "A * transformer *は：class： `.Query`オブジェクトを受け取って新しいオブジェクトを返すオブジェクトです。 ：class： `.Query`オブジェクトには：meth：` .with_transformation`メソッドが含まれています。このメソッドは、指定された関数によって変換された新しい：class： `.Query`を返します。"
 
 #: of sqlalchemy.ext.hybrid:608
 msgid ""
 "We can combine this with the :class:`.Comparator` class to produce one "
 "type of recipe which can both set up the FROM clause of a query as well "
 "as assign filtering criterion."
-msgstr ""
+msgstr "これを：class： `.Comparator`クラスと組み合わせることで、クエリのFROM句を設定するだけでなくフィルタリング基準を割り当てることもできる1種類のレシピを生成することができます。"
 
 #: of sqlalchemy.ext.hybrid:612
 msgid ""
 "Consider a mapped class ``Node``, which assembles using adjacency list "
 "into a hierarchical tree pattern::"
-msgstr ""
+msgstr "隣接リストを使用して階層ツリーパターンにアセンブルされる、マップされたクラス `` Node``を考えてみましょう::"
 
 #: of sqlalchemy.ext.hybrid:626
 msgid ""
 "Suppose we wanted to add an accessor ``grandparent``.  This would return "
 "the ``parent`` of ``Node.parent``.  When we have an instance of ``Node``,"
 " this is simple::"
-msgstr ""
+msgstr "アクセサ「祖父母」を追加したいとします。これは `` Node.parent``の `` parent``を返します。 `` Node``のインスタンスがあるとき、これは簡単です::"
 
 #: of sqlalchemy.ext.hybrid:639
 msgid ""
@@ -423,7 +413,7 @@ msgid ""
 "receive any :class:`.Query` object, and return a new one that's joined to"
 " the ``Node.parent`` attribute and filtered based on the given "
 "criterion::"
-msgstr ""
+msgstr "表現のために、物事はあまり明確ではありません。 `` Node.parent``に沿って：meth： `〜.Query.join`を` `grandparent``に2回置くことで、：class：` .Query`を構築する必要があります。代わりに：class： `.Comparator`クラスと組み合わせて、class：` .Query`オブジェクトを受け取って、 `` Node.parent``に結合された新しいものを返すような変形可能な呼び出し可能コードを返すことができます属性と与えられた基準に基づいてフィルタリングされる::"
 
 #: of sqlalchemy.ext.hybrid:674
 msgid ""
@@ -437,7 +427,7 @@ msgid ""
 "which will transform a :class:`.Query` first to join to ``Node.parent``, "
 "then to compare ``parent_alias`` using :attr:`.Operators.eq` against the "
 "left and right sides, passing into :class:`.Query.filter`:"
-msgstr ""
+msgstr "`` GrandparentTransformer``は、：class： `.Comparator`階層の基底にあるcore：meth：` .Operators.operate`メソッドをオーバーライドして、問い合わせ変換可能な呼び出し可能オブジェクトを返します。コンテキスト。上の例では、：attr： `.Operators.eq`呼び出し可能で、` `Node（id = 5）` `の右側に` `演算 &#39;&#39;メソッドが呼び出されています。関数 `` transform``が返され、class： `.Query`を最初に` `Node.parent``に結合し、次に` `parent_alias``を：attr：` .Operators.eq `左右に向かって、class：` .Query.filter`："
 
 #: of sqlalchemy.ext.hybrid:698
 msgid ""
@@ -447,7 +437,7 @@ msgid ""
 "same :class:`.AliasedClass` object against ``Node``.  Below we use a "
 "simple memoizing approach that associates a ``GrandparentTransformer`` "
 "with each class::"
-msgstr ""
+msgstr "\ &quot;join \&quot;ステップを\ &quot;filter \&quot;ステップから分離することにより、より冗長で柔軟なパターンに変更できます。ここでの微妙な部分は、 `` GrandparentTransformer``の連続したインスタンスが `` Node``に対して同じ：class： `.AliasedClass`オブジェクトを使用することです。以下では、 `` GrandparentTransformer``を各クラスに関連付ける簡単なメモ化アプローチを使用しています::"
 
 #: of sqlalchemy.ext.hybrid:741
 msgid ""
@@ -455,49 +445,49 @@ msgid ""
 "make usage of some functional programming paradigms. While it's only "
 "recommended for advanced and/or patient developers, there's probably a "
 "whole lot of amazing things it can be used for."
-msgstr ""
+msgstr "\ &quot;transformer \&quot;パターンは、いくつかの機能プログラミングパラダイムの使用を開始する実験パターンです。上級者および/または患者の開発者にのみ推奨されますが、おそらくそれが使用できる素晴らしいものがたくさんあります。"
 
 #: ../../orm/extensions/hybrid.rst:9
 msgid "API Reference"
-msgstr ""
+msgstr "APIリファレンス"
 
 #: of sqlalchemy.ext.hybrid.hybrid_method:1
 msgid ""
 "A decorator which allows definition of a Python object method with both "
 "instance-level and class-level behavior."
-msgstr ""
+msgstr "インスタンスレベルとクラスレベルの両方の動作を持つPythonオブジェクトメソッドの定義を可能にするデコレータ。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_method.expression:1
 #: sqlalchemy.ext.hybrid.hybrid_property.expression:1
 msgid ""
 "Provide a modifying decorator that defines a SQL-expression producing "
 "method."
-msgstr ""
+msgstr "SQL式生成メソッドを定義する修飾デコレータを提供します。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property:1
 msgid ""
 "A decorator which allows definition of a Python descriptor with both "
 "instance-level and class-level behavior."
-msgstr ""
+msgstr "インスタンスレベルとクラスレベルの両方の動作を持つPython記述子の定義を可能にするデコレータ。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.comparator:1
 msgid ""
 "Provide a modifying decorator that defines a custom comparator producing "
 "method."
-msgstr ""
+msgstr "カスタムコンパレータ生成メソッドを定義する修正デコレータを提供します。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.comparator:4
 msgid ""
 "The return value of the decorated method should be an instance of "
 ":class:`~.hybrid.Comparator`."
-msgstr ""
+msgstr "装飾されたメソッドの戻り値は、class： `〜.hybrid.Comparator`のインスタンスでなければなりません。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.comparator:7
 msgid ""
 "The :meth:`.hybrid_property.comparator` decorator **replaces** the use of"
 " the :meth:`.hybrid_property.expression` decorator.  They cannot be used "
 "together."
-msgstr ""
+msgstr "：meth： `.hybrid_property.comparator`デコレータ**は：meth：` .hybrid_property.expression`デコレータの使用を置き換えます**。一緒に使うことはできません。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.comparator:11
 msgid ""
@@ -509,7 +499,7 @@ msgid ""
 "a reference to the hybrid itself may be maintained within the structure "
 "that's returned, without any modifications to the original comparator "
 "object passed in."
-msgstr ""
+msgstr "ハイブリッドがクラスレベルで呼び出されると、ここで与えられた：class： `〜.hybrid.Comparator`オブジェクトは、class：：.QueryableAttributeの内部にラップされます。これは、ORMによって使用されるオブジェクトと同じ種類のオブジェクトです他のマップされた属性を表します。この理由は、渡された元のコンパレータ・オブジェクトに変更を加えることなく、返された構造体内でdocstringやハイブリッドへの参照などの他のクラス・レベル属性を維持できるためです。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.comparator:22
 msgid ""
@@ -521,11 +511,11 @@ msgid ""
 "decorators on a subclass, it may be necessary to qualify it using the "
 ":attr:`.hybrid_property.overrides` modifier first.  See that modifier for"
 " details."
-msgstr ""
+msgstr "所有クラス（例えば、 `` SomeClass.some_hybrid``）からのハイブリッドプロパティを参照すると、class： `.QueryableAttribute`のインスタンスが返され、式またはコンパレータオブジェクトをこのハイブリッドオブジェクトとして表します。しかし、そのオブジェクト自体には `` expression``と `` comparator``というアクセサがあります。そのため、これらのデコレータをサブクラスでオーバーライドしようとすると、：attr： `.hybrid_property.overrides`修飾子を使用して修飾する必要があります。詳細については、その修飾子を参照してください。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.deleter:1
 msgid "Provide a modifying decorator that defines a deletion method."
-msgstr ""
+msgstr "削除メソッドを定義する変更デコレータを提供します。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.expression:4
 msgid ""
@@ -536,7 +526,7 @@ msgid ""
 "attributes such as docstrings and a reference to the hybrid itself may be"
 " maintained within the structure that's returned, without any "
 "modifications to the original SQL expression passed in."
-msgstr ""
+msgstr "ハイブリッドがクラスレベルで呼び出されると、ここで与えられたSQL式は特殊な：class： `.QueryableAttribute`の中にラップされます。これは、他のマップされた属性を表すためにORMによって使用されるオブジェクトと同じ種類のオブジェクトです。この理由は、渡された元のSQL式に変更を加えずに、戻された構造内でdocstringやハイブリッドへの参照などの他のクラス・レベル属性を維持できるようにするためです。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.expression:14
 msgid ""
@@ -548,15 +538,15 @@ msgid ""
 "decorators on a subclass, it may be necessary to qualify it using the "
 ":attr:`.hybrid_property.overrides` modifier first.  See that modifier for"
 " details."
-msgstr ""
+msgstr "所有クラス（例えば `` SomeClass.some_hybrid``）からのハイブリッドプロパティを参照すると、class： `.QueryableAttribute`のインスタンスが返され、式またはコンパレータオブジェクトとこのハイブリッドオブジェクトを表します。しかし、そのオブジェクト自体には `` expression``と `` comparator``というアクセサがあります。そのため、これらのデコレータをサブクラスでオーバーライドしようとすると、：attr： `.hybrid_property.overrides`修飾子を使用して修飾する必要があります。詳細については、その修飾子を参照してください。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.getter:1
 msgid "Provide a modifying decorator that defines a getter method."
-msgstr ""
+msgstr "getterメソッドを定義する修飾デコレータを提供します。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.overrides:1
 msgid "Prefix for a method that is overriding an existing attribute."
-msgstr ""
+msgstr "既存の属性をオーバーライドするメソッドの接頭辞。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.overrides:3
 msgid ""
@@ -568,21 +558,21 @@ msgid ""
 ":meth:`.hybrid_property.comparator` to be used without conflicting with "
 "the same-named attributes normally present on the "
 ":class:`.QueryableAttribute`::"
-msgstr ""
+msgstr "：attr： `.hybrid_property.overrides`アクセサは、このハイブリッドオブジェクトを返します。このクラスは、親クラスからクラスレベルで呼び出されると、このレベルで通常返される\&quot; instrumented属性\ &quot;を参照解除し、デコレータ：meth： `.hybrid_property.expression`や:: meth：` .hybrid_property.comparator`のように、通常は：class： `.QueryableAttribute`にある同じ名前の属性と衝突することなく使用されます::"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.overrides:30
 msgid ":ref:`hybrid_reuse_subclass`"
-msgstr ""
+msgstr "：ref： `hybrid_reuse_subclass`"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.setter:1
 msgid "Provide a modifying decorator that defines a setter method."
-msgstr ""
+msgstr "setterメソッドを定義する修飾デコレータを提供します。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.update_expression:1
 msgid ""
 "Provide a modifying decorator that defines an UPDATE tuple producing "
 "method."
-msgstr ""
+msgstr "UPDATEタプル生成メソッドを定義する変更デコレータを提供します。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.update_expression:4
 msgid ""
@@ -591,15 +581,15 @@ msgid ""
 "this value into individual column expressions that fit into the ultimate "
 "SET clause, and return them as a sequence of 2-tuples.  Each tuple "
 "contains a column expression as the key and a value to be rendered."
-msgstr ""
+msgstr "このメソッドは、単一の値を受け取ります。これは、UPDATEステートメントのSET節にレンダリングされる値です。メソッドは、この値を最終的なSET句に収まる個々の列式に処理し、それらを2タプルのシーケンスとして返します。各タプルには、キーとしての列式とレンダリングされる値が含まれています。"
 
 #: of sqlalchemy.ext.hybrid.hybrid_property.update_expression:11
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.ext.hybrid.Comparator:1
 msgid ""
 "A helper class that allows easy construction of custom "
 ":class:`~.orm.interfaces.PropComparator` classes for usage with hybrids."
-msgstr ""
+msgstr "class： `〜.orm.interfaces.PropComparator`クラスを簡単に構築できるヘルパークラスです。"
 

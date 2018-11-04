@@ -6,26 +6,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../faq/sessions.rst:2
 msgid "Sessions / Queries"
-msgstr ""
+msgstr "セッション/クエリ"
 
 #: ../../faq/sessions.rst:11
 msgid ""
 "I'm re-loading data with my Session but it isn't seeing changes that I "
 "committed elsewhere"
-msgstr ""
+msgstr "セッションでデータを再ロードしていますが、他の場所でコミットした変更は表示されません"
 
 #: ../../faq/sessions.rst:13
 msgid ""
@@ -34,20 +24,20 @@ msgid ""
 "not (and it usually is not).   In practical terms, this means that the "
 "session does not alter any data that it's already read within the scope "
 "of a transaction."
-msgstr ""
+msgstr "この振る舞いに関する主な問題は、セッションが、トランザクションが*シリアライズ可能な*分離状態にあるかのように動作することです。現実的に言えば、セッションがトランザクションの範囲内で既に読み取られたデータを変更しないことを意味します。"
 
 #: ../../faq/sessions.rst:18
 msgid ""
 "If the term \"isolation level\" is unfamiliar, then you first need to "
 "read this link:"
-msgstr ""
+msgstr "「分離レベル」という用語が不慣れな場合は、まずこのリンクを読む必要があります。"
 
 #: ../../faq/sessions.rst:20
 #, python-format
 msgid ""
 "`Isolation Level "
 "<https://en.wikipedia.org/wiki/Isolation_%28database_systems%29>`_"
-msgstr ""
+msgstr "`分離レベル<https://en.wikipedia.org/wiki/Isolation_%28database_systems%29> `_"
 
 #: ../../faq/sessions.rst:22
 msgid ""
@@ -59,13 +49,13 @@ msgid ""
 "loaded, you won't see any change.   Only if you are in a lower isolation "
 "level, e.g. \"read committed\", does it become possible to see a row of "
 "data change its value."
-msgstr ""
+msgstr "簡単に言えば、シリアライズ可能な分離レベルは、一般に、トランザクション内の一連の行を選択すると、そのSELECTを再発行するたびに同じデータ*を返すことを意味します。次の低い隔離レベルである &quot;反復可能な読み取り&quot;の場合は、新しく追加された行が表示されます（削除された行は表示されません）が、既にロードされている行については、変更を参照してください。 \ &quot;read committed \&quot;のような低い隔離レベルにある場合にのみ、データの行がその値を変更するのを見ることが可能になります。"
 
 #: ../../faq/sessions.rst:31
 msgid ""
 "For information on controlling the isolation level when using the "
 "SQLAlchemy ORM, see :ref:`session_transaction_isolation`."
-msgstr ""
+msgstr "SQLAlchemy ORMを使用する際の分離レベルの制御については、ref： `session_transaction_isolation`を参照してください。"
 
 #: ../../faq/sessions.rst:34
 msgid ""
@@ -77,25 +67,25 @@ msgid ""
 "considered to be the exception, not the norm; to work within this "
 "exception, several methods are provided to allow specific data to be "
 "reloaded within the context of an ongoing transaction."
-msgstr ""
+msgstr "劇的に物事を簡素化するために、：class： `.Session`自体は、完全に分離されたトランザクションの観点から動作し、あなたが指示しない限り、既に読み込まれているマップされた属性を上書きしません。すでに進行中のトランザクションで既にロードしたデータを再読み込みしようとするユースケースは、多くの場合効果がない*珍しい*ユースケースです。したがって、これは例外ではなくノルムです。この例外内で動作するには、進行中のトランザクションのコンテキスト内で特定のデータを再ロードできるようにするためのいくつかのメソッドが用意されています。"
 
 #: ../../faq/sessions.rst:43
 msgid ""
 "To understand what we mean by \"the transaction\" when we talk about the "
 ":class:`.Session`, your :class:`.Session` is intended to only work within"
 " a transaction.  An overview of this is at :ref:`unitofwork_transaction`."
-msgstr ""
+msgstr "私たちが：class： `.Session`について話すとき、\&quot;トランザクション\ &quot;が意味することを理解するために、あなたの：class：` .Session`はトランザクション内でのみ動作するようになっています。これの概要は：ref： `unitofwork_transaction`です。"
 
 #: ../../faq/sessions.rst:47
 msgid ""
 "Once we've figured out what our isolation level is, and we think that our"
 " isolation level is set at a low enough level so that if we re-SELECT a "
 "row, we should see new data in our :class:`.Session`, how do we see it?"
-msgstr ""
+msgstr "分離レベルが何であるかを把握したら、分離レベルが十分低いレベルに設定されているので、行を再選択すると、新しいデータがクラス： `.Session` 、どうやって見ますか？"
 
 #: ../../faq/sessions.rst:51
 msgid "Three ways, from most common to least:"
-msgstr ""
+msgstr "最も一般的なものから最も少ないものへの3つの方法："
 
 #: ../../faq/sessions.rst:53
 msgid ""
@@ -108,7 +98,7 @@ msgid ""
 "which is at the core of the best practice of **short lived "
 "transactions**. See :ref:`session_faq_whentocreate` for some thoughts on "
 "this."
-msgstr ""
+msgstr "私たちは単にトランザクションを終了し、次のアクセス時に：class： `.Session`を呼び出して新しいものを開始します：meth：` .Session.commit`（：class： `.Session`がless- \ &quot;autocommit \&quot;モードを使用すると、：meth： `.Session.begin`も呼び出されます）。アプリケーションやユースケースの大部分は、**短命トランザクションのベストプラクティスの中核であるこのパターンに固執しているため、他のトランザクションのデータを見ることができないという問題はありません* *。これに関するいくつかの考え方については：ref： `session_faq_whentocreate`を参照してください。"
 
 #: ../../faq/sessions.rst:63
 msgid ""
@@ -116,26 +106,26 @@ msgid ""
 "either when we next query for them using :meth:`.Session.expire_all` or "
 ":meth:`.Session.expire`, or immediately on an object using "
 ":class:`.Session.refresh`.  See :ref:`session_expire` for detail on this."
-msgstr ""
+msgstr "クラス： `.Session`は、すでに読み込んだ行を：meth：` .Session.expire_all`または：meth： `.Session.expire`を使って次に問い合わせるときに読み込みます。クラス： `.Session.refresh`を使用してオブジェクト上で直ちに実行します。詳しくは：ref： `session_expire`を参照してください。"
 
 #: ../../faq/sessions.rst:68
 msgid ""
 "We can run whole queries while setting them to definitely overwrite "
 "already-loaded objects as they read rows by using "
 ":meth:`.Query.populate_existing`."
-msgstr ""
+msgstr "クエリー全体を実行することができます。クエリーは、：meth： `.Query.populate_existing`を使って行を読み込んだときにすでにロードされているオブジェクトを確実に上書きするように設定します。"
 
 #: ../../faq/sessions.rst:72
 msgid ""
 "But remember, **the ORM cannot see changes in rows if our isolation level"
 " is repeatable read or higher, unless we start a new transaction**."
-msgstr ""
+msgstr "ただし、新しいトランザクション**を開始しない限り、ORMは分離レベルが再現可能な読取り以上であれば行の変更を認識できません**。"
 
 #: ../../faq/sessions.rst:77
 msgid ""
 "\"This Session's transaction has been rolled back due to a previous "
 "exception during flush.\" (or similar)"
-msgstr ""
+msgstr "\ &quot;このセッションのトランザクションは、フラッシュ中の以前の例外のためにロールバックされました。"
 
 #: ../../faq/sessions.rst:79
 msgid ""
@@ -143,20 +133,20 @@ msgid ""
 "exception, rolls back the transaction, but further commands upon the "
 "`Session` are called without an explicit call to "
 ":meth:`.Session.rollback` or :meth:`.Session.close`."
-msgstr ""
+msgstr "これは、：meth： `.Session.flush`が例外を発生させ、トランザクションをロールバックしますが、` Session`のさらなるコマンドが：meth： `.Session.rollback`を明示的に呼び出さずに呼び出されたときに発生するエラーです。または：meth： `.Session.close`。"
 
 #: ../../faq/sessions.rst:83
 msgid ""
 "It usually corresponds to an application that catches an exception upon "
 ":meth:`.Session.flush` or :meth:`.Session.commit` and does not properly "
 "handle the exception.    For example::"
-msgstr ""
+msgstr "これは通常：meth： `.Session.flush`または：meth：` .Session.commit`に例外をキャッチし、例外を適切に処理しないアプリケーションに対応します。例えば：："
 
 #: ../../faq/sessions.rst:114
 msgid ""
 "The usage of the :class:`.Session` should fit within a structure similar "
 "to this::"
-msgstr ""
+msgstr "：class： `.Session`の使い方は、次のような構造体に収まる必要があります::"
 
 #: ../../faq/sessions.rst:125
 msgid ""
@@ -169,17 +159,17 @@ msgid ""
 " would be a terrible idea.  You should architect your application such "
 "that there is one (or few) point(s) of \"framing\" around session "
 "operations."
-msgstr ""
+msgstr "多くのことが、フラッシュ以外にtry / except内で失敗を引き起こす可能性があります。接続とトランザクションのリソースが明確な境界を持つように、セッション操作には常に何らかの\ &quot;フレーミング\&quot;があるべきです。そうでなければ、アプリケーションは制御下にあるリソースの使用を本当に持っていません。これは、あなたのアプリケーション全体にtry / exceptブロックを置く必要があると言っているのではなく、これはひどい考えです。セッション操作の周りに\ &quot;フレーミング\&quot;が1つ（またはいくつか）あるようにアプリケーションを設計するべきです。"
 
 #: ../../faq/sessions.rst:134
 msgid ""
 "For a detailed discussion on how to organize usage of the "
 ":class:`.Session`, please see :ref:`session_faq_whentocreate`."
-msgstr ""
+msgstr "：class： `.Session`の使い方を整理する方法の詳細については、ref：` session_faq_whentocreate`を参照してください。"
 
 #: ../../faq/sessions.rst:138
 msgid "But why does flush() insist on issuing a ROLLBACK?"
-msgstr ""
+msgstr "しかし、なぜflush（）はROLLBACKを発行することを主張しているのですか？"
 
 #: ../../faq/sessions.rst:140
 msgid ""
@@ -192,7 +182,7 @@ msgid ""
 "operations require a ROLLBACK in any case. Postgres in particular has "
 "operations which, once failed, the transaction is not allowed to "
 "continue::"
-msgstr ""
+msgstr "：meth： `.Session.flush`が部分的に完了してからロールバックしないと良いでしょうが、内部の簿記をいつでも停止してデータベースにフラッシュされたものと正確に一致します。理論的には可能ですが、多くのデータベース操作ではROLLBACKが必要な場合が多いため、拡張の有用性は大幅に低下します。特にPostgresは、一度失敗したトランザクションは、トランザクションが続行されないようにしています::"
 
 #: ../../faq/sessions.rst:165
 msgid ""
@@ -201,13 +191,13 @@ msgid ""
 "you can frame an operation that may potentially fail within a "
 "transaction, and then \"roll back\" to the point before its failure while"
 " maintaining the enclosing transaction."
-msgstr ""
+msgstr "両方の問題を解決するSQLAlchemyが提供するものは、meth： `.Session.begin_nested`を介して、SAVEPOINTのサポートです。 ：meth： `.Session.begin_nested`を使用すると、トランザクション内で失敗する可能性のある操作をフレーム化し、その後、そのトランザクションの前にそのトランザクションを維持しながらロールバックすることができます。"
 
 #: ../../faq/sessions.rst:171
 msgid ""
 "But why isn't the one automatic call to ROLLBACK enough?  Why must I "
 "ROLLBACK again?"
-msgstr ""
+msgstr "しかし、なぜROLLBACKへの1回の自動呼び出しでは十分ではありませんか？なぜ私はもう一度ROLLBACKする必要がありますか？"
 
 #: ../../faq/sessions.rst:173
 msgid ""
@@ -216,7 +206,7 @@ msgid ""
 "example, the :class:`.Session` supports \"framing\" above within multiple"
 " levels. Such as, suppose you had a decorator ``@with_session()``, which "
 "did this::"
-msgstr ""
+msgstr "これはやはり：class： `.Session`の一貫したインターフェースを提供し、どのコンテキストが使用されているかを推測するのを拒否します。たとえば、：class： `.Session`は、複数のレベルの中で上記の\&quot;フレーミング\ &quot;をサポートします。例えば、これを行ったデコレータ `` @with_session（） ``があるとします："
 
 #: ../../faq/sessions.rst:190
 msgid ""
@@ -227,7 +217,7 @@ msgid ""
 " is decremented when :meth:`.Session.commit` is called and only when it "
 "goes back to zero does the actual COMMIT happen. It allows this usage "
 "pattern::"
-msgstr ""
+msgstr "上記のデコレータは、すでに存在しない場合はトランザクションを開始し、作成者の場合はトランザクションをコミットします。 \ &quot;subtransactions \&quot;フラグは、：meth： `.Session.begin`が既に囲み関数によって呼び出されている場合、カウンタがインクリメントされている以外は何も起こらないことを意味します。このカウンタは、：meth：` .Session.commit`が呼び出され、ゼロに戻ったときだけ、実際のCOMMITが実行されます。これは、この使用パターンを許可します::"
 
 #: ../../faq/sessions.rst:211
 msgid ""
@@ -245,7 +235,7 @@ msgid ""
 " silent failure condition. The main reason people get this error in fact "
 "is because they didn't write clean \"framing\" code and they would have "
 "had other problems down the road."
-msgstr ""
+msgstr "``（） ``は `` two（） ``を呼び出すことができ、 `` two（） ``はそれ自身で呼び出すことができ、 `` @ with_session``デコレータは適切な\ &quot;フレーミング\トランザクションの境界は最も外側のコールレベルにとどまります。あなたが見ることができるように、 `` two（） ``が例外をスローして `` rollback（） ``を発行する `` flush（） ``を呼び出すと、*常にロールバック（） ``とデコレータの2つのレベルに対応する可能性があります。 `` flush（） ``が `` rollback（） ``をスタックの一番上まで押し出し、残りの ``ロールバック（） ``の呼び出しが間違っていると言った場合、静かな行動が続いている。正しく書かれていない囲みメソッドは例外を抑制し、何も間違っていないと仮定して `` commit（） ``を呼び出すと、サイレントエラー状態になります。人々がこのエラーを実際に受け取る主な理由は、クリーンな &quot;フレーミング&quot;コードを書かなかったためであり、他の問題が残っていたからでしょう。"
 
 #: ../../faq/sessions.rst:225
 msgid ""
@@ -257,14 +247,14 @@ msgid ""
 " is called, and you might have any sequence of "
 "``rollback()``/``commit()`` in any order, and its the level of nesting "
 "that determines their behavior."
-msgstr ""
+msgstr "上記のユースケースがちょっとエキゾチックであると思うなら、SAVEPOINTをしたいならば同じ種類のものが出てくるでしょう。あなたは `` begin_nested（） ``を何回か呼び出すかもしれないし、 `` commit（） `` / ` `rollback（）` `の呼び出しは、それぞれ最新の` `begin_nested（）` `を解決します。 `` rollback（） ``や `` commit（） ``の意味は、それが呼び出されているブロックに依存しており、 `` rollback（） `` / `` commit（） ``どのような順序であっても、その振る舞いを決定するネスティングのレベルです。"
 
 #: ../../faq/sessions.rst:233
 msgid ""
 "In both of the above cases, if ``flush()`` broke the nesting of "
 "transaction blocks, the behavior is, depending on scenario, anywhere from"
 " \"magic\" to silent failure to blatant interruption of code flow."
-msgstr ""
+msgstr "上記のどちらの場合でも、 `` flush（） ``がトランザクションブロックのネストを壊した場合、シナリオに応じて、\ &quot;マジック\&quot;から静かな失敗まで、コードフローの中断までどこでも可能です。"
 
 #: ../../faq/sessions.rst:237
 msgid ""
@@ -277,23 +267,23 @@ msgid ""
 "subtransactions and real SAVEPOINTs. The job of starting/ending the "
 "\"frame\" is kept consistently with the code external to the ``flush()``,"
 " and we made a decision that this was the most consistent approach."
-msgstr ""
+msgstr "`` commit（） ``や `` rollback（） `を呼び出すと、トランザクションは外部トランザクション状態に関係なく起動されるように、` `flush（）` `自身のサブトランザクションを行います。 `失敗時 - しかし、` `rollback（）` `はそれ自身のサブトランザクションに対応しています - トランザクションの外部\&quot;フレーミング\ &quot;をどのように扱うかを推測したくはありません。サブトランザクションと実際のSAVEPOINTの任意の組み合わせを使用します。 \ &quot;フレーム\&quot;の開始/終了の仕事は、 &quot;flush（）&quot;の外部のコードと一貫して保持されており、これが最も一貫したアプローチであると判断しました。"
 
 #: ../../faq/sessions.rst:249
 msgid "How do I make a Query that always adds a certain filter to every query?"
-msgstr ""
+msgstr "すべてのクエリに特定のフィルタを追加するクエリを作成するにはどうすればよいですか？"
 
 #: ../../faq/sessions.rst:251
 msgid ""
 "See the recipe at `PreFilteredQuery "
 "<http://www.sqlalchemy.org/trac/wiki/UsageRecipes/PreFilteredQuery>`_."
-msgstr ""
+msgstr "`PreFilteredQueryのレシピを参照してください。 <http://www.sqlalchemy.org/trac/wiki/UsageRecipes/PreFilteredQuery> `_。"
 
 #: ../../faq/sessions.rst:254
 msgid ""
 "I've created a mapping against an Outer Join, and while the query returns"
 " rows, no objects are returned.  Why not?"
-msgstr ""
+msgstr "私はOuter Joinに対するマッピングを作成しましたが、クエリが行を返す間はオブジェクトは返されません。何故なの？"
 
 #: ../../faq/sessions.rst:256
 msgid ""
@@ -304,14 +294,14 @@ msgid ""
 "``allow_partial_pks`` flag on :func:`.mapper`, a primary key is accepted "
 "if the value has at least one non-NULL value, or alternatively if the "
 "value has no NULL values.  See ``allow_partial_pks`` at :func:`.mapper`."
-msgstr ""
+msgstr "主キーは両方のテーブルのコンポジットなので、外部結合によって戻された行には主キーの一部としてNULLが含まれることがあります。 ：class： `.Query`オブジェクトは、受け入れ可能な主キーを持たない入力行を無視します。 ：func： `.mapper`の` `allow_partial_pks``フラグの設定に基づいて、値に少なくとも1つの非NULL値がある場合、または値にNULL値がない場合は主キーが受け入れられます。 `` allow_partial_pks``：func： `.mapper`を参照してください。"
 
 #: ../../faq/sessions.rst:265
 msgid ""
 "I'm using ``joinedload()`` or ``lazy=False`` to create a JOIN/OUTER JOIN "
 "and SQLAlchemy is not constructing the correct query when I try to add a "
 "WHERE, ORDER BY, LIMIT, etc. (which relies upon the (OUTER) JOIN)"
-msgstr ""
+msgstr "JOIN / OUTER JOINを作成するために `` joinedload（） ``や `` lazy = False``を使用しています.SQLAlchemyはWHERE、ORDER BY、LIMITなどを追加しようとすると正しいクエリを構築しません（OUTER）JOINに依存する）"
 
 #: ../../faq/sessions.rst:267
 msgid ""
@@ -319,15 +309,15 @@ msgid ""
 "related collections, and are designed to have no impact on the primary "
 "results of the query. Since they are anonymously aliased, they cannot be "
 "referenced directly."
-msgstr ""
+msgstr "結合されたeagerローディングによって生成された結合は、関連するコレクションを完全にロードするためにのみ使用され、クエリの主な結果に影響を与えないように設計されています。彼らは匿名でエイリアス化されているため、直接参照することはできません。"
 
 #: ../../faq/sessions.rst:271
 msgid "For detail on this beahvior, see :ref:`zen_of_eager_loading`."
-msgstr ""
+msgstr "このbeahviorの詳細は：ref： `zen_of_eager_loading`を参照してください。"
 
 #: ../../faq/sessions.rst:274
 msgid "Query has no ``__len__()``, why not?"
-msgstr ""
+msgstr "クエリに `` __len __（） ``はありません。どうしてですか？"
 
 #: ../../faq/sessions.rst:276
 msgid ""
@@ -337,55 +327,55 @@ msgid ""
 ":meth:`.Query.count` method, which emits a `SELECT COUNT`. The reason "
 "this is not possible is because evaluating the query as a list would "
 "incur two SQL calls instead of one::"
-msgstr ""
+msgstr "オブジェクトに適用されるPythonの `` __len __（） ``マジックメソッドは、 `` len（） ``組み込み関数を使ってコレクションの長さを判断することを可能にします。 SQLクエリオブジェクトは、 `` __len __（） ``を：meth： `.Query.count`メソッドにリンクすることは直感的です。これはSELECT COUNTを送出します。これが不可能な理由は、クエリをリストとして評価すると、1つではなく2つのSQL呼び出しが発生するためです。"
 
 #: ../../faq/sessions.rst:294
 msgid "output::"
-msgstr ""
+msgstr "出力：："
 
 #: ../../faq/sessions.rst:300
 msgid "How Do I use Textual SQL with ORM Queries?"
-msgstr ""
+msgstr "ORMクエリでテキストSQLを使用するにはどうすればよいですか？"
 
 #: ../../faq/sessions.rst:302
 msgid "See:"
-msgstr ""
+msgstr "見る："
 
 #: ../../faq/sessions.rst:304
 msgid ""
 ":ref:`orm_tutorial_literal_sql` - Ad-hoc textual blocks with "
 ":class:`.Query`"
-msgstr ""
+msgstr "：ref： `orm_tutorial_literal_sql`  - アドホックテキストブロック：class：` .Query`"
 
 #: ../../faq/sessions.rst:306
 msgid ""
 ":ref:`session_sql_expressions` - Using :class:`.Session` with textual SQL"
 " directly."
-msgstr ""
+msgstr "：ref： `session_sql_expressions`  - ：class：` .Session`とテキストSQLを直接使用します。"
 
 #: ../../faq/sessions.rst:309
 msgid ""
 "I'm calling ``Session.delete(myobject)`` and it isn't removed from the "
 "parent collection!"
-msgstr ""
+msgstr "私は `` Session.delete（myobject） ``と呼びますが、親コレクションからは削除されません！"
 
 #: ../../faq/sessions.rst:311
 msgid ""
 "See :ref:`session_deleting_from_collections` for a description of this "
 "behavior."
-msgstr ""
+msgstr "この動作の説明については：ref： `session_deleting_from_collections`を参照してください。"
 
 #: ../../faq/sessions.rst:314
 msgid "why isn't my ``__init__()`` called when I load objects?"
-msgstr ""
+msgstr "オブジェクトをロードするときに私の `` __init __（） ``が呼び出されないのはなぜですか？"
 
 #: ../../faq/sessions.rst:316
 msgid "See :ref:`mapping_constructors` for a description of this behavior."
-msgstr ""
+msgstr "この動作の説明については：ref： `mapping_constructors`を参照してください。"
 
 #: ../../faq/sessions.rst:319
 msgid "how do I use ON DELETE CASCADE with SA's ORM?"
-msgstr ""
+msgstr "SAのORMでON DELETE CASCADEを使用するにはどうすればよいですか？"
 
 #: ../../faq/sessions.rst:321
 msgid ""
@@ -395,13 +385,13 @@ msgid ""
 " rows and update/delete those as well; in other words it assumes there is"
 " no ON DELETE CASCADE configured. To configure SQLAlchemy to cooperate "
 "with ON DELETE CASCADE, see :ref:`passive_deletes`."
-msgstr ""
+msgstr "SQLAlchemyは、現在：class： `.Session`にロードされている依存行に対して、常にUPDATEまたはDELETE文を発行します。ロードされていない行については、デフォルトでSELECT文を発行してそれらの行をロードし、それらの行を更新/削除します。つまり、ON DELETE CASCADEが構成されていないとみなします。 ON DELETE CASCADEと協力するようにSQLAlchemyを設定するには、：ref： `passive_deletes`を参照してください。"
 
 #: ../../faq/sessions.rst:330
 msgid ""
 "I set the \"foo_id\" attribute on my instance to \"7\", but the \"foo\" "
 "attribute is still ``None`` - shouldn't it have loaded Foo with id #7?"
-msgstr ""
+msgstr "私はインスタンスの\ &quot;foo_id \&quot;属性を\ &quot;7 \&quot;に設定しますが、\ &quot;foo \&quot;属性は &quot;` None``です -  Fooにid＃7をロードしてはいけませんか？"
 
 #: ../../faq/sessions.rst:332
 msgid ""
@@ -411,7 +401,7 @@ msgid ""
 "attributes are handled by the ORM behind the scenes, the end user sets up"
 " object relationships naturally. Therefore, the recommended way to set "
 "``o.foo`` is to do just that - set it!::"
-msgstr ""
+msgstr "ORMは、外部キー属性の変更に起因する関係の即時の集団をサポートするような方法で構築されているのではなく、逆の働きをするように設計されています。外部キー属性は、オブジェクト関係を自然に設定します。したがって、 `` o.foo``を設定するための推奨される方法は、これを行うことです - それを設定する！::"
 
 #: ../../faq/sessions.rst:344
 msgid ""
@@ -419,28 +409,28 @@ msgid ""
 "However, setting a foreign-key attribute to a new value currently does "
 "not trigger an \"expire\" event of the :func:`.relationship` in which "
 "it's involved.  This means that for the following sequence::"
-msgstr ""
+msgstr "もちろん、外部キー属性の操作は完全に合法です。しかし、外部キー属性を新しい値に設定しても、それが関与している：func： `.relationship`の\&quot; expire \ &quot;イベントは発生しません。これは、以下のシーケンスのために："
 
 #: ../../faq/sessions.rst:353
 msgid ""
 "``o.foo`` is initialized to ``None`` when we first accessed it.  Setting "
 "``o.foo_id = 7`` will have the value of \"7\" as pending, but no flush "
 "has occurred - so ``o.foo`` is still ``None``::"
-msgstr ""
+msgstr "`` o.foo``は最初にアクセスしたときに `` None``に初期化されます。 `` o.foo_id = 7``を設定すると、保留中の\ &quot;7 \&quot;の値を持ちますが、フラッシュは発生していません - したがって `` o.foo``は `` None``です::"
 
 #: ../../faq/sessions.rst:361
 msgid ""
 "For ``o.foo`` to load based on the foreign key mutation is usually "
 "achieved naturally after the commit, which both flushes the new foreign "
 "key value and expires all state::"
-msgstr ""
+msgstr "`` o.foo``が外部キーに基づいてロードするためには、突然変異は通常、新しい外部キー値をフラッシュしてすべての状態を期限切れにするコミット後に自然に達成されます::"
 
 #: ../../faq/sessions.rst:371
 msgid ""
 "A more minimal operation is to expire the attribute individually - this "
 "can be performed for any :term:`persistent` object using "
 ":meth:`.Session.expire`::"
-msgstr ""
+msgstr "最小限の操作で属性を個別に期限切れにすることができます。これは：term： `persistent`オブジェクトに対して：meth：` .Session.expire` ::を使用して実行できます"
 
 #: ../../faq/sessions.rst:382
 msgid ""
@@ -449,7 +439,7 @@ msgid ""
 "for the object has not been INSERTed into the database yet.  For such an "
 "object, setting ``foo_id`` does not have meaning until the row is "
 "inserted; otherwise there is no row yet::"
-msgstr ""
+msgstr "オブジェクトが永続的ではなく、：class： `.Session`に存在する場合、それは：term：` pending`と呼ばれます。これは、オブジェクトの行がまだデータベースにINSERTされていないことを意味します。このようなオブジェクトの場合、 `` foo_id``は行が挿入されるまで意味を持ちません。そうでなければまだ行はありません::"
 
 #: ../../faq/sessions.rst:405
 msgid ""
@@ -464,7 +454,7 @@ msgid ""
 "recommended for general use**; they were added to suit specific "
 "programming scenarios encountered by users which involve the repurposing "
 "of the ORM's usual object states."
-msgstr ""
+msgstr "func： `.relationship`でフラグ` `load_on_pending``を使用すると、上の\&quot; pending \ &quot;の動作の変種があります。このフラグが設定されると、INSERTが進む前に `` new_obj.foo``のために遅延ローダが出力します。これの別の変形は、：meth： `.Session.enable_relationship_loading`メソッドを使用することです。このメソッドは、多対1の関係が以下のようにロードするようにオブジェクトをa：class：` .Session`にアタッチすることができますどちらのテクニックも**一般的な使用には推奨されていません**; ORMの通常のオブジェクト状態の再利用を伴うユーザーが遭遇する特定のプログラミングシナリオに合うように追加されました。"
 
 #: ../../faq/sessions.rst:416
 msgid ""
@@ -472,51 +462,51 @@ msgid ""
 "<http://www.sqlalchemy.org/trac/wiki/UsageRecipes/ExpireRelationshipOnFKChange>`_"
 " features an example using SQLAlchemy events in order to coordinate the "
 "setting of foreign key attributes with many-to-one relationships."
-msgstr ""
+msgstr "レシピ `ExpireRelationshipOnFKChange <http://www.sqlalchemy.org/trac/wiki/UsageRecipes/ExpireRelationshipOnFKChange> `_には、SQLAlchemyイベントを使用して、多対1の関係で外部キー属性の設定を調整する例があります。"
 
 #: ../../faq/sessions.rst:423
 msgid "How do I walk all objects that are related to a given object?"
-msgstr ""
+msgstr "特定のオブジェクトに関連するすべてのオブジェクトをどのように歩くのですか？"
 
 #: ../../faq/sessions.rst:425
 msgid ""
 "An object that has other objects related to it will correspond to the "
 ":func:`.relationship` constructs set up between mappers.  This code "
 "fragment will iterate all the objects, correcting for cycles as well::"
-msgstr ""
+msgstr "それに関連する他のオブジェクトを持つオブジェクトは、マッパーの間に設定された：func： `.relationship`コンストラクトに対応します。このコードフラグメントは、すべてのオブジェクトを繰り返し処理し、サイクルも修正します::"
 
 #: ../../faq/sessions.rst:452
 msgid "The function can be demonstrated as follows::"
-msgstr ""
+msgstr "この機能は次のように示すことができます::"
 
 #: ../../faq/sessions.rst:482
 msgid "Output::"
-msgstr ""
+msgstr "出力：："
 
 #: ../../faq/sessions.rst:492
 msgid ""
 "Is there a way to automagically have only unique keywords (or other kinds"
 " of objects) without doing a query for the keyword and getting a "
 "reference to the row containing that keyword?"
-msgstr ""
+msgstr "キーワードのクエリを実行せずに、そのキーワードを含む行への参照を取得せずに、一意のキーワード（または他の種類のオブジェクト）のみを自動的に持つ方法はありますか？"
 
 #: ../../faq/sessions.rst:494
 msgid ""
 "When people read the many-to-many example in the docs, they get hit with "
 "the fact that if you create the same ``Keyword`` twice, it gets put in "
 "the DB twice. Which is somewhat inconvenient."
-msgstr ""
+msgstr "人々がドキュメントの多対多の例を読むと、同じ `` Keyword``を2回作成するとDBに2回置かれます。これはやや不便です。"
 
 #: ../../faq/sessions.rst:498
 msgid ""
 "This `UniqueObject "
 "<http://www.sqlalchemy.org/trac/wiki/UsageRecipes/UniqueObject>`_ recipe "
 "was created to address this issue."
-msgstr ""
+msgstr "この `UniqueObject <http://www.sqlalchemy.org/trac/wiki/UsageRecipes/UniqueObject> `_このレシピに対処するためのレシピが作成されました。"
 
 #: ../../faq/sessions.rst:503
 msgid "Why does post_update emit UPDATE in addition to the first UPDATE?"
-msgstr ""
+msgstr "post_updateが最初のUPDATEに加えてUPDATEを発行するのはなぜですか？"
 
 #: ../../faq/sessions.rst:505
 msgid ""
@@ -531,7 +521,7 @@ msgid ""
 "target row itself is subject to an UPDATE. In this case, the UPDATE "
 "emitted by post_update is *usually* unnecessary and will often appear "
 "wasteful."
-msgstr ""
+msgstr "：ref： `post_update`に記載されているpost_update機能は、通常、ターゲットに対して発行されるINSERT / UPDATE / DELETEに加えて、特定のリレーションバインドされた外部キーへの変更に応じてUPDATE文が発行される行。このUPDATE文の主な目的は、その行のINSERTまたはDELETEとペアにして、相互に依存する外部キーを使用してサイクルを中断するために外部キー参照をポストセットまたは事前設定解除できるようにすることですが、現在は、ターゲット行自体がUPDATEの対象となるときに発行される2番目のUPDATEとしてバンドルされています。この場合、post_updateによって発行されるUPDATEは通常は不要*であり、多くの場合無駄に見えます。"
 
 #: ../../faq/sessions.rst:516
 msgid ""
@@ -543,7 +533,7 @@ msgid ""
 "post_update side in some cases, which in turn can impact other cases, "
 "such as correctly handling an UPDATE of a referenced primary key value "
 "(see :ticket:`1063` for a proof of concept)."
-msgstr ""
+msgstr "しかし、この &quot;UPDATE / UPDATE&quot;動作を削除しようとするいくつかの研究では、作業単位プロセスの大きな変更は、post_updateの実装全体だけでなく、post_updateに関連しない領域これは動作するためには、非post_update側で操作の順序を逆にする必要があり、参照される主キー値のUPDATEを正しく処理するなどの他のケースに影響を与える可能性があります（ticket：概念の証明のために「1063」）。"
 
 #: ../../faq/sessions.rst:524
 msgid ""
@@ -552,5 +542,5 @@ msgid ""
 "limited to just INSERT/DELETE of the target table implies that the "
 "ordering of UPDATE statements elsewhere would need to be liberalized, "
 "leading to breakage in other edge cases."
-msgstr ""
+msgstr "答えは、\ &quot;post_update \&quot;が相互に依存する2つの外部キーの間のサイクルを壊し、このサイクルを分割することがターゲットテーブルのINSERT / DELETEに限定されるようにするために、UPDATEステートメントの順序が自由化され、他の縁の場合に破損につながる。"
 

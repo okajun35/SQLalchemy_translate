@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/instrumentation.rst:4
 msgid "Alternate Class Instrumentation"
-msgstr ""
+msgstr "代替クラスの計装"
 
 #: of sqlalchemy.ext.instrumentation:1
 msgid "Extensible class instrumentation."
-msgstr ""
+msgstr "拡張可能なクラスの計測。"
 
 #: of sqlalchemy.ext.instrumentation:3
 msgid ""
@@ -32,20 +22,20 @@ msgid ""
 "refers to how the ORM places attributes on the class which maintain data "
 "and track changes to that data, as well as event hooks installed on the "
 "class."
-msgstr ""
+msgstr "：mod： `sqlalchemy.ext.instrumentation`パッケージは、ORM内のクラスインストルメンテーションの代替システムを提供します。クラスインストルメンテーションとは、ORMがどのようにデータを保持し、そのデータの変更を追跡するクラスに属性を配置するか、クラスにインストールされたイベントフックを指します。"
 
 #: of sqlalchemy.ext.instrumentation:10
 msgid ""
 "The extension package is provided for the benefit of integration with "
 "other object management packages, which already perform their own "
 "instrumentation.  It is not intended for general use."
-msgstr ""
+msgstr "拡張パッケージは、既に独自の計測を実行している他のオブジェクト管理パッケージとの統合のために提供されています。一般的な使用を意図したものではありません。"
 
 #: of sqlalchemy.ext.instrumentation:14
 msgid ""
 "For examples of how the instrumentation extension is used, see the "
 "example :ref:`examples_instrumentation`."
-msgstr ""
+msgstr "インスツルメンテーション拡張の使用例については、例：ref： `examples_instrumentation`を参照してください。"
 
 #: of sqlalchemy.ext.instrumentation:17
 msgid ""
@@ -56,49 +46,49 @@ msgid ""
 "takes effect, including recognition of ``__sa_instrumentation_manager__``"
 " on mapped classes, as well :data:`.instrumentation_finders` being used "
 "to determine class instrumentation resolution."
-msgstr ""
+msgstr "：mod： `sqlalchemy.orm.instrumentation`は分割されていたので、非標準的な計装と関連するすべての機能がmod：` sqlalchemy.ext.instrumentation`に移されました。モジュールをインポートすると、モジュールは：mod： `sqlalchemy.orm.instrumentation`の中にインストールされ、マップされたクラスでの` `__sa_instrumentation_manager__``の認識も含めて、それが有効になります：data：` .instrumentation_finders`計装分解能。"
 
 #: ../../orm/extensions/instrumentation.rst:9
 msgid "API Reference"
-msgstr ""
+msgstr "APIリファレンス"
 
 #: of sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER:1
 msgid "Attribute, elects custom instrumentation when present on a mapped class."
-msgstr ""
+msgstr "属性は、マッピングされたクラスに存在する場合、カスタムインストルメンテーションを選択します。"
 
 #: of sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER:3
 msgid ""
 "Allows a class to specify a slightly or wildly different technique for "
 "tracking changes made to mapped attributes and collections."
-msgstr ""
+msgstr "マップされた属性やコレクションに加えられた変更を追跡するために、クラスが多少違ったやり方で技術を指定できるようにします。"
 
 #: of sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER:6
 msgid ""
 "Only one instrumentation implementation is allowed in a given object "
 "inheritance hierarchy."
-msgstr ""
+msgstr "指定されたオブジェクト継承階層では、インスツルメンテーション実装は1つだけ許可されます。"
 
 #: of sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER:9
 msgid ""
 "The value of this attribute must be a callable and will be passed a class"
 " object.  The callable must return one of:"
-msgstr ""
+msgstr "この属性の値は呼び出し可能でなければならず、クラスオブジェクトに渡されます。呼び出し可能オブジェクトは、次のいずれかを返す必要があります。"
 
 #: of sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER:12
 msgid "An instance of an InstrumentationManager or subclass"
-msgstr ""
+msgstr "InstrumentationManagerまたはサブクラスのインスタンス"
 
 #: of sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER:13
 msgid "An object implementing all or some of InstrumentationManager (TODO)"
-msgstr ""
+msgstr "InstrumentationManager（TODO）のすべてまたは一部を実装するオブジェクトは、"
 
 #: of sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER:14
 msgid "A dictionary of callables, implementing all or some of the above (TODO)"
-msgstr ""
+msgstr "上記（TODO）のすべてまたは一部を実装した呼び出し可能な辞書"
 
 #: of sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER:15
 msgid "An instance of a ClassManager or subclass"
-msgstr ""
+msgstr "ClassManagerまたはサブクラスのインスタンス"
 
 #: of sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER:17
 msgid ""
@@ -106,15 +96,15 @@ msgid ""
 "once the :mod:`sqlalchemy.ext.instrumentation` module has been imported."
 "  If custom finders are installed in the global instrumentation_finders "
 "list, they may or may not choose to honor this attribute."
-msgstr ""
+msgstr "：mod： `sqlalchemy.ext.instrumentation`モジュールがインポートされると、この属性はSQLAlchemyインストルメンテーション解像度によって参照されます。カスタムファインダがグローバルinstrumentation_findersリストにインストールされている場合、この属性を尊重するかどうかは選択できません。"
 
 #: of sqlalchemy.orm.instrumentation.InstrumentationFactory:1
 msgid "Factory for new ClassManager instances."
-msgstr ""
+msgstr "新しいClassManagerインスタンスのためのFactory"
 
 #: of sqlalchemy.ext.instrumentation.InstrumentationManager:1
 msgid "User-defined class instrumentation extension."
-msgstr ""
+msgstr "ユーザー定義のクラス計測拡張。"
 
 #: of sqlalchemy.ext.instrumentation.InstrumentationManager:3
 msgid ""
@@ -124,26 +114,26 @@ msgid ""
 "entirely modify the instrumentation methodology of the ORM, and is not "
 "intended for regular usage.  For interception of class instrumentation "
 "events, see :class:`.InstrumentationEvents`."
-msgstr ""
+msgstr "：class： `InstrumentationManager`はクラスの計測がどのように進行するかを変更するためにサブクラス化することができます。このクラスは、ORMの計装方法を完全に変更したい他のオブジェクト管理フレームワークとの統合のために存在し、通常の使用目的ではありません。クラス計測イベントのインターセプトについては、class： `.InstrumentationEvents`を参照してください。"
 
 #: of sqlalchemy.ext.instrumentation.InstrumentationManager:12
 msgid ""
 "The API for this class should be considered as semi-stable, and may "
 "change slightly with new releases."
-msgstr ""
+msgstr "このクラスのAPIは半安定であるとみなされ、新しいリリースではわずかに変更される可能性があります。"
 
 #: of sqlalchemy.ext.instrumentation.InstrumentationManager:15
 msgid ""
 ":class:`.InstrumentationManager` was moved from "
 ":mod:`sqlalchemy.orm.instrumentation` to "
 ":mod:`sqlalchemy.ext.instrumentation`."
-msgstr ""
+msgstr "：class： `.InstrumentationManager`が：mod：` sqlalchemy.orm.instrumentation`から：mod： `sqlalchemy.ext.instrumentation`に移動されました。"
 
 #: of sqlalchemy.ext.instrumentation.instrumentation_finders:1
 msgid ""
 "An extensible sequence of callables which return instrumentation "
 "implementations"
-msgstr ""
+msgstr "インストルメンテーションの実装を返す拡張可能な呼び出し可能なシーケンス"
 
 #: of sqlalchemy.ext.instrumentation.instrumentation_finders:4
 msgid ""
@@ -152,18 +142,18 @@ msgid ""
 "Otherwise the return must be an instrumentation factory that follows the "
 "same guidelines as "
 "sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGER."
-msgstr ""
+msgstr "クラスが登録されると、各呼び出し可能オブジェクトにクラスオブジェクトが渡されます。 Noneが返されると、シーケンス内の次のファインダが参照されます。それ以外の場合は、sqlalchemy.ext.instrumentation.INSTRUMENTATION_MANAGERと同じガイドラインに従う計測ファクトリである必要があります。"
 
 #: of sqlalchemy.ext.instrumentation.instrumentation_finders:10
 msgid ""
 "By default, the only finder is find_native_user_instrumentation_hook, "
 "which searches for INSTRUMENTATION_MANAGER.  If all finders return None, "
 "standard ClassManager instrumentation is used."
-msgstr ""
+msgstr "デフォルトでは、find_native_user_instrumentation_hookのみが検索され、INSTRUMENTATION_MANAGERが検索されます。すべてのファインダがNoneを返すと、標準のClassManager計測が使用されます。"
 
 #: of sqlalchemy.ext.instrumentation.ExtendedInstrumentationRegistry:1
 msgid ""
 "Extends :class:`.InstrumentationFactory` with additional bookkeeping, to "
 "accommodate multiple types of class managers."
-msgstr ""
+msgstr "複数のタイプのクラスマネージャに対応するために、class： `.InstrumentationFactory`を追加の簿記で拡張します。"
 

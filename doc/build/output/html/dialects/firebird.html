@@ -10,7 +10,7 @@
         <title>
             
     
-    Firebird
+    ファイアバード
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Dialects" href="index.html" />
+        <link rel="up" title="方言" href="index.html" />
         <link rel="next" title="Microsoft SQL Server" href="mssql.html" />
-        <link rel="prev" title="Dialects" href="index.html" />
+        <link rel="prev" title="方言" href="index.html" />
     <!-- end layout.mako headers -->
 
 
@@ -116,32 +116,32 @@
 
         
         <h3>
-            <a href="index.html" title="Dialects">Dialects</a>
+            <a href="index.html" title="方言">方言</a>
         </h3>
 
         <ul>
-<li class="selected"><span class="link-container first"><strong>Firebird</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li class="selected"><span class="link-container first"><strong>ファイアバード</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
 <li><span class="link-container first"><a class="reference external" href="#dialect-firebird">Support for the Firebird database.</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#firebird-dialects">Firebird Dialects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#locking-behavior">Locking Behavior</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#returning-support">RETURNING support</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#firebird-dialects">ファイアバードの方言</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#locking-behavior">ロック動作</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#returning-support">RETURNINGサポート</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="#module-sqlalchemy.dialects.firebird.fdb">fdb</a></span><ul>
 <li><span class="link-container first"><a class="reference external" href="#dialect-firebird-fdb-url">DBAPI</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="#dialect-firebird-fdb-connect">Connecting</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#arguments">Arguments</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#arguments">引数</a></span></li>
 </ul>
 </li>
 <li><span class="link-container first"><a class="reference external" href="#module-sqlalchemy.dialects.firebird.kinterbasdb">kinterbasdb</a></span><ul>
 <li><span class="link-container first"><a class="reference external" href="#dialect-firebird-kinterbasdb-url">DBAPI</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="#dialect-firebird-kinterbasdb-connect">Connecting</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#id1">Arguments</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#id1">引数</a></span></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><span class="link-container first"><a class="reference external" href="mssql.html">Microsoft SQL Server</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="mysql.html">MySQL</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="oracle.html">Oracle</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="oracle.html">オラクル</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="postgresql.html">PostgreSQL</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="sqlite.html">SQLite</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="sybase.html">Sybase</a></span></li>
@@ -160,7 +160,7 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="module-sqlalchemy.dialects.firebird.base">
-<span id="firebird"></span><span id="firebird-toplevel"></span><h1>Firebird<a class="headerlink" href="#module-sqlalchemy.dialects.firebird.base" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="firebird"></span><span id="firebird-toplevel"></span><h1>ファイアバード<a class="headerlink" href="#module-sqlalchemy.dialects.firebird.base" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="dialect-firebird">
 <p>Support for the Firebird database.</p>
 <h2>DBAPI Support<a class="headerlink" href="#dialect-firebird" title="このヘッドラインへのパーマリンク">¶</a></h2>
@@ -171,44 +171,29 @@
 </p>
 </div>
 <div class="section" id="firebird-dialects">
-<h2>Firebird Dialects<a class="headerlink" href="#firebird-dialects" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Firebird offers two distinct <a class="reference external" href="http://mc-computing.com/Databases/Firebird/SQL_Dialect.html">dialects</a> (not to be confused with a
-SQLAlchemy <code class="docutils literal"><span class="pre">Dialect</span></code>):</p>
+<h2>ファイアバードの方言<a class="headerlink" href="#firebird-dialects" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Firebirdは2つの異なるdialectを提供しています_（SQLAlchemyの <a href="#id1"><span class="problematic" id="id2">`</span></a>Dialect`と混同しないでください）：</p>
 <dl class="docutils">
-<dt>dialect 1</dt>
-<dd>This is the old syntax and behaviour, inherited from Interbase pre-6.0.</dd>
-<dt>dialect 3</dt>
-<dd>This is the newer and supported syntax, introduced in Interbase 6.0.</dd>
+<dt>方言1</dt>
+<dd>これは、6.0より前のInterbaseから継承された古い構文と動作です。</dd>
+<dt>方言3</dt>
+<dd>これは、Interbase 6.0で導入された、より新しい、サポートされている構文です。</dd>
 </dl>
-<p>The SQLAlchemy Firebird dialect detects these versions and
-adjusts its representation of SQL accordingly.  However,
-support for dialect 1 is not well tested and probably has
-incompatibilities.</p>
+<p>SQLAlchemy Firebirdダイアレクトはこれらのバージョンを検出し、それに応じてSQLの表現を調整します。しかし、方言1のサポートは十分にテストされておらず、おそらく互換性がありません。</p>
 </div>
 <div class="section" id="locking-behavior">
-<h2>Locking Behavior<a class="headerlink" href="#locking-behavior" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Firebird locks tables aggressively.  For this reason, a DROP TABLE may
-hang until other transactions are released.  SQLAlchemy does its best
-to release transactions as quickly as possible.  The most common cause
-of hanging transactions is a non-fully consumed result set, i.e.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select * from table&quot;</span><span class="p">)</span>
+<h2>ロック動作<a class="headerlink" href="#locking-behavior" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Firebirdはテーブルを積極的にロックします。このため、他のトランザクションが解放されるまで、DROP TABLEがハングアップする可能性があります。 SQLAlchemyはトランザクションをできるだけ早く解放するために最善を尽くします。トランザクションをハングする最も一般的な原因は、完全に消費されていない結果セット、つまり:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select * from table&quot;</span><span class="p">)</span>
 <span class="n">row</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
 <span class="k">return</span></pre></div>
 </div>
-<p>Where above, the <code class="docutils literal"><span class="pre">ResultProxy</span></code> has not been fully consumed.  The
-connection will be returned to the pool and the transactional state
-rolled back once the Python garbage collector reclaims the objects
-which hold onto the connection, which often occurs asynchronously.
-The above use case can be alleviated by calling <code class="docutils literal"><span class="pre">first()</span></code> on the
-<code class="docutils literal"><span class="pre">ResultProxy</span></code> which will fetch the first row and immediately close
-all remaining cursor/connection resources.</p>
+<p>上記の場合、 `` ResultProxy``は完全には消費されていません。接続はプールに返され、Pythonガベージコレクタが接続上に保持されているオブジェクト（非同期的に発生することが多い）を回収すると、トランザクション状態がロールバックされます。上記のユースケースは、最初の行をフェッチし、残りのすべてのカーソル/接続リソースを直ちに閉じる `` ResultProxy``の `` first（） <a href="#id1"><span class="problematic" id="id2">``</span></a>を呼び出すことで緩和できます。</p>
 </div>
 <div class="section" id="returning-support">
-<h2>RETURNING support<a class="headerlink" href="#returning-support" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Firebird 2.0 supports returning a result set from inserts, and 2.1
-extends that to deletes and updates. This is generically exposed by
-the SQLAlchemy <code class="docutils literal"><span class="pre">returning()</span></code> method, such as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># INSERT..RETURNING</span>
+<h2>RETURNINGサポート<a class="headerlink" href="#returning-support" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Firebird 2.0は挿入物から結果セットを返すことをサポートし、2.1はそれを削除と更新に拡張します。これは、SQLAlchemyの <a href="#id1"><span class="problematic" id="id2">`</span></a>returning（）`メソッドで一般的に公開されています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># INSERT..RETURNING</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">insert</span><span class="p">()</span><span class="o">.</span><span class="n">returning</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col1</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col2</span><span class="p">)</span><span class="o">.</span>\
                <span class="n">values</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">result</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
@@ -228,7 +213,7 @@ the SQLAlchemy <code class="docutils literal"><span class="pre">returning()</spa
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified">バージョン 0.9 で変更: </span>- The fdb dialect is now the default dialect
-under the <code class="docutils literal"><span class="pre">firebird://</span></code> URL space, as <code class="docutils literal"><span class="pre">fdb</span></code> is now the official
+under the <code class="docutils literal notranslate"><span class="pre">firebird://</span></code> URL space, as <code class="docutils literal notranslate"><span class="pre">fdb</span></code> is now the official
 Python driver for Firebird.</p>
 </div>
 </p>
@@ -239,54 +224,32 @@ Python driver for Firebird.</p>
 </div>
 <div class="section" id="dialect-firebird-fdb-connect">
 <h3>Connecting<a class="headerlink" href="#dialect-firebird-fdb-connect" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Connect String:<div class="highlight-default"><div class="highlight"><pre><span></span>firebird+fdb://user:password@host:port/path/to/db[?key=value&amp;key=value...]</pre></div>
+<p>Connect String:<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>firebird+fdb://user:password@host:port/path/to/db[?key=value&amp;key=value...]</pre></div>
 </div>
 </p>
 </div>
 <div class="section" id="arguments">
-<h3>Arguments<a class="headerlink" href="#arguments" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The <code class="docutils literal"><span class="pre">fdb</span></code> dialect is based on the
-<a class="reference internal" href="#module-sqlalchemy.dialects.firebird.kinterbasdb" title="sqlalchemy.dialects.firebird.kinterbasdb"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.dialects.firebird.kinterbasdb</span></code></a> dialect, however does not
-accept every argument that Kinterbasdb does.</p>
+<h3>引数<a class="headerlink" href="#arguments" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>`` fdb``方言は：mod： <a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy.dialects.firebird.kinterbasdb`方言に基づいていますが、Kinterbasdbが行うすべての引数を受け入れません。</p>
 <ul>
-<li><p class="first"><code class="docutils literal"><span class="pre">enable_rowcount</span></code> - True by default, setting this to False disables
-the usage of &quot;cursor.rowcount&quot; with the
-Kinterbasdb dialect, which SQLAlchemy ordinarily calls upon automatically
-after any UPDATE or DELETE statement.   When disabled, SQLAlchemy's
-ResultProxy will return -1 for result.rowcount.   The rationale here is
-that Kinterbasdb requires a second round trip to the database when
-.rowcount is called -  since SQLA's resultproxy automatically closes
-the cursor after a non-result-returning statement, rowcount must be
-called, if at all, before the result object is returned.   Additionally,
-cursor.rowcount may not return correct results with older versions
-of Firebird, and setting this flag to False will also cause the
-SQLAlchemy ORM to ignore its usage. The behavior can also be controlled on a
-per-execution basis using the <code class="docutils literal"><span class="pre">enable_rowcount</span></code> option with
-<a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection.execution_options" title="sqlalchemy.engine.Connection.execution_options"><code class="xref py py-meth docutils literal"><span class="pre">Connection.execution_options()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span><span class="o">.</span><span class="n">execution_options</span><span class="p">(</span><span class="n">enable_rowcount</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<li><p class="first">`` enable_rowcount``  - デフォルトではTrueで、これをFalseに設定するとKinterbasdb方言で&amp;quot;cursor.rowcount &amp;quot;の使用が無効になります。通常、SQLAlchemyはUPDATEまたはDELETE文の後に自動的に呼びます。無効にすると、SQLAlchemyのResultProxyはresult.rowcountに-1を返します。ここでの理論的根拠は、Kernbasdbは.rowcountが呼び出されたときにデータベースへの2回目のラウンドトリップが必要だということです.SQLAのresultproxyは、結果を返さない文の後でカーソルを自動的に閉じます。戻ってきた。さらに、cursor.rowcountはFirebirdの古いバージョンでは正しい結果を返さないことがあり、このフラグをFalseに設定すると、SQLAlchemy ORMはその使用法を無視します。この動作は、 `` enable_rowcount``オプションを使って実行ごとに制御することもできます：meth： <cite>.Connection.execution_options</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span><span class="o">.</span><span class="n">execution_options</span><span class="p">(</span><span class="n">enable_rowcount</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">stmt</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">r</span><span class="o">.</span><span class="n">rowcount</span></pre></div>
 </div>
 </li>
-<li><p class="first"><code class="docutils literal"><span class="pre">retaining</span></code> - False by default.   Setting this to True will pass the
-<code class="docutils literal"><span class="pre">retaining=True</span></code> keyword argument to the <code class="docutils literal"><span class="pre">.commit()</span></code> and <code class="docutils literal"><span class="pre">.rollback()</span></code>
-methods of the DBAPI connection, which can improve performance in some
-situations, but apparently with significant caveats.
-Please read the fdb and/or kinterbasdb DBAPI documentation in order to
-understand the implications of this flag.</p>
+<li><p class="first">`` retain``  - デフォルトではfalseです。これをTrueに設定するとDBAPI接続の `` .commit（） <a href="#id1"><span class="problematic" id="id2">``</span></a>と `` .rollback（） <a href="#id3"><span class="problematic" id="id4">``</span></a>メソッドに `` retain = True``キーワード引数が渡されます。明らかに重要な警告があります。このフラグの意味を理解するには、fdbおよび/またはkinterbasdb DBAPIのドキュメントを参照してください。</p>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 0.8.2 で追加: </span>- <code class="docutils literal"><span class="pre">retaining</span></code> keyword argument specifying
-transaction retaining behavior - in 0.8 it defaults to <code class="docutils literal"><span class="pre">True</span></code>
+<p><span class="versionmodified">バージョン 0.8.2 で追加: </span>- <code class="docutils literal notranslate"><span class="pre">retaining</span></code> keyword argument specifying
+transaction retaining behavior - in 0.8 it defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>
 for backwards compatibility.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 0.9.0 で変更: </span>- the <code class="docutils literal"><span class="pre">retaining</span></code> flag defaults to <code class="docutils literal"><span class="pre">False</span></code>.
-In 0.8 it defaulted to <code class="docutils literal"><span class="pre">True</span></code>.</p>
+<p><span class="versionmodified">バージョン 0.9.0 で変更: </span>`` retain``フラグのデフォルトは `` False``です。 0.8ではデフォルトで `` True``になりました。</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference external" href="http://pythonhosted.org/fdb/usage-guide.html#retaining-transactions">http://pythonhosted.org/fdb/usage-guide.html#retaining-transactions</a>
-- information on the &quot;retaining&quot; flag.</p>
+<p class="last"><a class="reference external" href="http://pythonhosted.org/fdb/usage-guide.html#retaining-transactions">http://pythonhosted.org/fdb/usage-guide.html#retaining-transactions</a>  -  &amp;quot;保持&amp;quot;フラグに関する情報。</p>
 </div>
 </li>
 </ul>
@@ -302,22 +265,16 @@ In 0.8 it defaulted to <code class="docutils literal"><span class="pre">True</sp
 </div>
 <div class="section" id="dialect-firebird-kinterbasdb-connect">
 <h3>Connecting<a class="headerlink" href="#dialect-firebird-kinterbasdb-connect" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Connect String:<div class="highlight-default"><div class="highlight"><pre><span></span>firebird+kinterbasdb://user:password@host:port/path/to/db[?key=value&amp;key=value...]</pre></div>
+<p>Connect String:<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>firebird+kinterbasdb://user:password@host:port/path/to/db[?key=value&amp;key=value...]</pre></div>
 </div>
 </p>
 </div>
 <div class="section" id="id1">
-<h3>Arguments<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The Kinterbasdb backend accepts the <code class="docutils literal"><span class="pre">enable_rowcount</span></code> and <code class="docutils literal"><span class="pre">retaining</span></code>
-arguments accepted by the <a class="reference internal" href="#module-sqlalchemy.dialects.firebird.fdb" title="sqlalchemy.dialects.firebird.fdb"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.dialects.firebird.fdb</span></code></a> dialect.
-In addition, it also accepts the following:</p>
+<h3>引数<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Kinterbasdbバックエンドは、：mod： <cite>sqlalchemy.dialects.firebird.fdb`の方言で受け入れられた</cite> <cite>enable_rowcount``と</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>retaining``引数を受け入れます。さらに、次のものも受け入れます。</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">type_conv</span></code> - select the kind of mapping done on the types: by default
-SQLAlchemy uses 200 with Unicode, datetime and decimal support.  See
-the linked documents below for further information.</li>
-<li><code class="docutils literal"><span class="pre">concurrency_level</span></code> - set the backend policy with regards to threading
-issues: by default SQLAlchemy uses policy 1.  See the linked documents
-below for further information.</li>
+<li>`` type_conv``  - 型に対して行われたマッピングの種類を選択します：デフォルトでは、SQLAlchemyはUnicode、日時、10進数のサポートで200を使用します。詳細については、以下のリンク先のドキュメントを参照してください。</li>
+<li>`` concurrency_level``  - スレッディングに関するバックエンドポリシーを設定します：デフォルトでSQLAlchemyはポリシー1を使用します。</li>
 </ul>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
@@ -335,13 +292,13 @@ below for further information.</li>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="index.html" title="previous chapter">Dialects</a>
+        <a href="index.html" title="previous chapter">方言</a>
         Next:
         <a href="mssql.html" title="next chapter">Microsoft SQL Server</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -368,6 +325,7 @@ below for further information.</li>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

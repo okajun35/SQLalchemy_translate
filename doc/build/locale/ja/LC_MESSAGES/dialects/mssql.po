@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../dialects/mssql.rst:4
 msgid "Microsoft SQL Server"
-msgstr ""
+msgstr "Microsoft SQL Server"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:6
 msgid "Auto Increment Behavior"
-msgstr ""
+msgstr "自動インクリメント動作"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:8
 msgid ""
@@ -34,18 +24,18 @@ msgid ""
 " by default, the first integer primary key column in a :class:`.Table` "
 "will be considered to be the identity column and will generate DDL as "
 "such::"
-msgstr ""
+msgstr "SQL Serverは、整数主キーに配置できる `` IDENTITY``構造を使用して、いわゆる &quot;自動増分&quot;動作を提供します。 SQLAlchemyは、デフォルトの\ &quot;autoincrement \&quot;の動作の中で `` IDENTITY``を考慮します：paramref： `.Column.autoincrement`;つまり、デフォルトでは：class： `.Table`の最初の整数の主キー列はID列とみなされ、DDLを生成します::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:23
 msgid "The above example will generate DDL as:"
-msgstr ""
+msgstr "上記の例では、DDLは次のように生成されます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:33
 msgid ""
 "For the case where this default generation of ``IDENTITY`` is not "
 "desired, specify ``autoincrement=False`` on all integer primary key "
 "columns::"
-msgstr ""
+msgstr "このデフォルトの `` IDENTITY``生成が望ましくない場合は、すべての整数主キー列に対して `` autoincrement = False``を指定してください::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:44
 msgid ""
@@ -55,11 +45,11 @@ msgid ""
 "time.  As this is not a high performing process, care should be taken to "
 "set the ``autoincrement`` flag appropriately for columns that will not "
 "actually require IDENTITY behavior."
-msgstr ""
+msgstr "このような列の明示的な値を参照するINSERT文はSQL Serverでは禁止されていますが、SQLAlchemyはこれを検出して文実行時に `` IDENTITY_INSERT``フラグを修正します。これは高性能なプロセスではないので、実際にIDENTITYの動作を必要としないカラムに対して `` autoincrement``フラグを適切に設定するよう注意してください。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:52
 msgid "Controlling \"Start\" and \"Increment\""
-msgstr ""
+msgstr "\ &quot;スタート\&quot;と\ &quot;インクリメント\"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:54
 msgid ""
@@ -68,21 +58,21 @@ msgid ""
 "normally represents an explicit \"sequence\" for supporting backends, on "
 "SQL Server it is re-purposed to specify behavior regarding the identity "
 "column, including support of the \"start\" and \"increment\" values::"
-msgstr ""
+msgstr "`` IDENTITY``値のパラメータに対する特定の制御は：class： `.schema.Sequence`オブジェクトを使ってサポートされています。このオブジェクトは通常、バックエンドをサポートするための明示的な\ &quot;シーケンス\&quot;を表しますが、SQL Serverでは、\ &quot;開始\&quot;と\ &quot;インクリメント\&quot;値のサポートを含む、ID列に関する動作を指定するために、"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:69
 msgid "would yield:"
-msgstr ""
+msgstr "次のようになります。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:78
 msgid ""
 "Note that the ``start`` and ``increment`` values for sequences are "
 "optional and will default to 1,1."
-msgstr ""
+msgstr "シーケンスの `` start``と `` increment``の値はオプションで、デフォルトは1,1です。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:82
 msgid "INSERT behavior"
-msgstr ""
+msgstr "INSERTの動作"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:84
 msgid ""
@@ -90,36 +80,36 @@ msgid ""
 "techniques. The most common is being able to fetch the \"last inserted "
 "value\" for a given ``IDENTITY`` column, a process which SQLAlchemy "
 "performs implicitly in many cases, most importantly within the ORM."
-msgstr ""
+msgstr "INSERT時に `` IDENTITY``カラムを扱うには、2つの重要なテクニックが必要です。最も一般的なのは、与えられた `` IDENTITY``カラムに対して\ &quot;最後に挿入された値\&quot;を取り出すことができることです.SQLAlchemyは多くの場合暗黙的に実行します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:89
 msgid "The process for fetching this value has several variants:"
-msgstr ""
+msgstr "この値を取得するプロセスにはいくつかのバリエーションがあります。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:91
 msgid ""
 "In the vast majority of cases, RETURNING is used in conjunction with "
 "INSERT statements on SQL Server in order to get newly generated primary "
 "key values:"
-msgstr ""
+msgstr "大部分の場合、RETURNINGは、新しく生成された主キー値を取得するために、SQL ServerのINSERTステートメントとともに使用されます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:98
 msgid ""
 "When RETURNING is not available or has been disabled via "
 "``implicit_returning=False``, either the ``scope_identity()`` function or"
 " the ``@@identity`` variable is used; behavior varies by backend:"
-msgstr ""
+msgstr "RETURNINGが利用できない場合、または `` implicit_returning = False``で無効になっている場合、 `` scope_identity（） ``関数または `` @@ identity``変数が使用されます。動作はバックエンドによって異なります。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:102
 msgid ""
 "when using PyODBC, the phrase ``; select scope_identity()`` will be "
 "appended to the end of the INSERT statement; a second result set will be "
 "fetched in order to receive the value.  Given a table as::"
-msgstr ""
+msgstr "PyODBCを使うとき、フレーズ ``; select scope_identity（） ``はINSERT文の末尾に追加されます。値を受け取るために2番目の結果セットがフェッチされます。与えられたテーブルを::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:110
 msgid "an INSERT will look like:"
-msgstr ""
+msgstr "INSERTは次のようになります："
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:116
 msgid ""
@@ -127,7 +117,7 @@ msgid ""
 "AS lastrowid`` subsequent to an INSERT statement. If the flag "
 "``use_scope_identity=False`` is passed to :func:`.create_engine`, the "
 "statement ``SELECT @@identity AS lastrowid`` is used instead."
-msgstr ""
+msgstr "pymssqlのような他の方言は、INSERT文の後に `` SELECT scope_identity（）AS lastrowid``を呼び出すでしょう。フラグ `` use_scope_identity = False``が：func： `.create_engine`に渡された場合、代わりに` `SELECT @@ identity AS lastrowid``が使用されます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:122
 msgid ""
@@ -138,24 +128,24 @@ msgid ""
 "identity column, and in this case will emit ``SET IDENTITY_INSERT ON`` "
 "prior to the insert statement proceeding, and ``SET IDENTITY_INSERT OFF``"
 " subsequent to the execution.  Given this example::"
-msgstr ""
+msgstr "`` IDENTITY``カラムを含むテーブルは、IDカラムを明示的に参照するINSERT文を禁止します。 SQLAlchemy方言は、core：func： `.insert`構文（単純な文字列SQLではない）を使用して作成されたINSERT構文がID列を参照したときに検出します。この場合、事前に「SET IDENTITY_INSERT ON」を発行しますINSERTステートメントを進め、 `` SET IDENTITY_INSERT OFF``を実行します。この例では::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:137
 msgid ""
 "The above column will be created with IDENTITY, however the INSERT "
 "statement we emit is specifying explicit values.  In the echo output we "
 "can see how SQLAlchemy handles this:"
-msgstr ""
+msgstr "上記の列はIDENTITYで作成されますが、私たちが発行するINSERT文は明示的な値を指定しています。エコー出力では、SQLAlchemyがこれをどのように処理するかを見ることができます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:158
 msgid ""
 "This is an auxiliary use case suitable for testing and bulk insert "
 "scenarios."
-msgstr ""
+msgstr "これは、テストおよびバルク挿入シナリオに適した補助的な使用例です。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:162
 msgid "MAX on VARCHAR / NVARCHAR"
-msgstr ""
+msgstr "VARCHAR / NVARCHARのMAX"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:164
 msgid ""
@@ -166,56 +156,56 @@ msgid ""
 "dialect-specific version of these types, so that a base type specified "
 "such as ``VARCHAR(None)`` can assume \"unlengthed\" behavior on more than"
 " one backend without using dialect-specific types."
-msgstr ""
+msgstr "SQL Serverは：class： `.sqltypes.VARCHAR`と：class：` .sqltypes.NVARCHAR`データ型の中で特別な文字列\ &quot;MAX \&quot;をサポートし、\ &quot;最大長可能\&quot;を示します。現在のところ、方言は、 `` VARCHAR（なし） ``のように指定された基本型が\ &#39;95 \ &#39;5cのように指定できるように、これらの型の方言固有のバージョンを提供するのではなく、 Dialect特有の型を使わずに、複数のバックエンドで &quot;unlengthed \&quot;の振る舞いをします。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:172
 msgid "To build a SQL Server VARCHAR or NVARCHAR with MAX length, use None::"
-msgstr ""
+msgstr "MAXの長さのSQL Server VARCHARまたはNVARCHARを構築するには、None ::を使用します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:182
 msgid "Collation Support"
-msgstr ""
+msgstr "照合サポート"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:184
 msgid ""
 "Character collations are supported by the base string types, specified by"
 " the string argument \"collation\"::"
-msgstr ""
+msgstr "文字列の照合は、文字列引数\ &quot;collat​​ion \&quot;によって指定される基本文字列型によってサポートされます::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:190
 msgid ""
 "When such a column is associated with a :class:`.Table`, the CREATE TABLE"
 " statement for this column will yield::"
-msgstr ""
+msgstr "そのような列が：class： `.Table`に関連付けられている場合、この列のCREATE TABLE文は次のようになります::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:195
 msgid "Character collations are now part of the base string types."
-msgstr ""
+msgstr "文字の照合は、基本文字列型の一部になりました。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:199
 msgid "LIMIT/OFFSET Support"
-msgstr ""
+msgstr "LIMIT / OFFSETのサポート"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:201
 msgid ""
 "MSSQL has no support for the LIMIT or OFFSET keywords. LIMIT is supported"
 " directly through the ``TOP`` Transact SQL keyword::"
-msgstr ""
+msgstr "MSSQLはLIMITまたはOFFSETキーワードをサポートしていません。 LIMITは、 `` TOP`` Transact SQLキーワードで直接サポートされています::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:206
 msgid "will yield::"
-msgstr ""
+msgstr "生成する::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:210
 msgid ""
 "If using SQL Server 2005 or above, LIMIT with OFFSET support is available"
 " through the ``ROW_NUMBER OVER`` construct. For versions below 2005, "
 "LIMIT with OFFSET usage will fail."
-msgstr ""
+msgstr "SQL Server 2005以上を使用している場合、OFFSETサポート付きのLIMITは、 `` ROW_NUMBER OVER``構造体を介して利用できます。 2005より下のバージョンでは、OFFSETを使用するLIMITは失敗します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:217
 msgid "Transaction Isolation Level"
-msgstr ""
+msgstr "トランザクション分離レベル"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:219
 msgid ""
@@ -227,77 +217,77 @@ msgid ""
 "passed to :meth:`.Connection.execution_options`.  This feature works by "
 "issuing the command ``SET TRANSACTION ISOLATION LEVEL <level>`` for each "
 "new connection."
-msgstr ""
+msgstr "すべてのSQL Serverダイアレクトは、ダイアレクト特有のパラメータ（paramref： `.create_engine.isolation_level`：func：` .create_engine`）と：paramref： `.Connection.execution_options.isolation_level `引数は：meth：` .Connection.execution_options`に渡されます。この機能は、コマンド `` SET TRANSACTION ISOLATION LEVEL <level> ``新しい接続ごとに。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:229
 msgid "To set isolation level using :func:`.create_engine`::"
-msgstr ""
+msgstr "func： `.create_engine` ::を使って隔離レベルを設定する"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:236
 msgid "To set using per-connection execution options::"
-msgstr ""
+msgstr "接続ごとの実行オプションを使用して設定するには::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:243
 msgid "Valid values for ``isolation_level`` include:"
-msgstr ""
+msgstr "`` isolation_level``に有効な値は次のとおりです："
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:245
 msgid "``AUTOCOMMIT`` - pyodbc / pymssql-specific"
-msgstr ""
+msgstr "`` AUTOCOMMIT``  -  pyodbc / pymssql固有"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:246
 msgid "``READ COMMITTED``"
-msgstr ""
+msgstr "`` READ COMMITTED``"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:247
 msgid "``READ UNCOMMITTED``"
-msgstr ""
+msgstr "`` READ UNCOMMITTED``"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:248
 msgid "``REPEATABLE READ``"
-msgstr ""
+msgstr "`` REPEATABLE READ``"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:249
 msgid "``SERIALIZABLE``"
-msgstr ""
+msgstr "``シリアル化可能 ``"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:250
 msgid "``SNAPSHOT`` - specific to SQL Server"
-msgstr ""
+msgstr "`` SNAPSHOT``  -  SQL Server固有のもの"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:252
 msgid "support for isolation level setting on Microsoft SQL Server."
-msgstr ""
+msgstr "Microsoft SQL Serverの分離レベル設定のサポート"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:255
 msgid "added AUTOCOMMIT isolation level setting"
-msgstr ""
+msgstr "AUTOCOMMIT分離レベルの設定を追加"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:258
 msgid "Nullability"
-msgstr ""
+msgstr "Nullability"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:259
 msgid ""
 "MSSQL has support for three levels of column nullability. The default "
 "nullability allows nulls and is explicit in the CREATE TABLE construct::"
-msgstr ""
+msgstr "MSSQLは、3段階のカラムのNULL可否をサポートしています。デフォルトのNULL許容はNULLを許可し、CREATE TABLEの構造体で明示的です::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:265
 msgid ""
 "If ``nullable=None`` is specified then no specification is made. In other"
 " words the database's configured default is used. This will render::"
-msgstr ""
+msgstr "`` nullable = None``が指定されていれば、指定は行われません。つまり、データベースのデフォルト設定が使用されます。これは::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:271
 msgid ""
 "If ``nullable`` is ``True`` or ``False`` then the column will be ``NULL``"
 " or ``NOT NULL`` respectively."
-msgstr ""
+msgstr "`` nullable``が `` True``または `` False``の場合、カラムはそれぞれ `` NULL``または `` NOT NULL``になります。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:275
 msgid "Date / Time Handling"
-msgstr ""
+msgstr "日付/時刻の処理"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:276
 msgid ""
@@ -306,11 +296,11 @@ msgid ""
 "results are processed from strings if needed. The DATE and TIME types are"
 " not available for MSSQL 2005 and previous - if a server version below "
 "2008 is detected, DDL for these types will be issued as DATETIME."
-msgstr ""
+msgstr "DATEおよびTIMEがサポートされています。バインドパラメータは、ほとんどのMSSQLドライバで必要とされるdatetime.datetime（）オブジェクトに変換され、必要に応じて結果が文字列から処理されます。 DATEおよびTIMEタイプはMSSQL 2005およびそれ以前のバージョンでは使用できません。2008年以下のサーババージョンが検出された場合、これらのタイプのDDLはDATETIMEとして発行されます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:286
 msgid "Large Text/Binary Type Deprecation"
-msgstr ""
+msgstr "大文字/バイナリ型の非推奨"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:288
 msgid ""
@@ -319,7 +309,7 @@ msgid ""
 "datatypes are to be removed from SQL Server in a future release.   "
 "SQLAlchemy normally relates these types to the :class:`.UnicodeText`, "
 ":class:`.Text` and :class:`.LargeBinary` datatypes."
-msgstr ""
+msgstr "Per `SQL Server 2012/2014ドキュメント<http://technet.microsoft.com/en-us/library/ms187993.aspx> `_、` `NTEXT``、` `TEXT``、` `IMAGE``データ型は、将来のリリースでSQL Serverから削除される予定です。 SQLAlchemyは通常、これらの型を：class： `.UnicodeText`、：class：` .Text`、：class： `.LargeBinary`データ型に関連付けます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:293
 msgid ""
@@ -327,7 +317,7 @@ msgid ""
 " is added to the dialect, which will be automatically set based on "
 "detection of the server version in use, if not otherwise set by the user."
 "  The behavior of this flag is as follows:"
-msgstr ""
+msgstr "この変更に対応するために、新しいフラグ `` deprecate_large_types``が方言に追加されます。このフラグは、ユーザによって設定されていなければ、使用中のサーバのバージョンの検出に基づいて自動的に設定されます。このフラグの動作は次のとおりです。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:298
 msgid ""
@@ -335,7 +325,7 @@ msgid ""
 " :class:`.LargeBinary` datatypes, when used to render DDL, will render "
 "the types ``NVARCHAR(max)``, ``VARCHAR(max)``, and ``VARBINARY(max)``, "
 "respectively.  This is a new behavior as of the addition of this flag."
-msgstr ""
+msgstr "このフラグが `` True``の場合、：class： `.UnicodeText`、：class：` .Text`、：class： `.LargeBinary`データ型は、DDLをレンダリングするときに、` `NVARCHAR max） ``、 `` VARCHAR（max） ``、 `` VARBINARY（max） ``と呼ばれます。これは、このフラグを追加したときの新しい動作です。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:303
 msgid ""
@@ -343,27 +333,27 @@ msgid ""
 "and :class:`.LargeBinary` datatypes, when used to render DDL, will render"
 " the types ``NTEXT``, ``TEXT``, and ``IMAGE``, respectively.  This is the"
 " long-standing behavior of these types."
-msgstr ""
+msgstr "このフラグが `` False``の場合、：class： `.UnicodeText`、：class：` .Text`、：class： `.LargeBinary`データ型は、DDLをレンダリングする際に、` `NTEXT` `、` `TEXT``、` `IMAGE``をそれぞれ出力します。これは、これらのタイプの長年にわたる動作です。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:308
 msgid ""
 "The flag begins with the value ``None``, before a database connection is "
 "established.   If the dialect is used to render DDL without the flag "
 "being set, it is interpreted the same as ``False``."
-msgstr ""
+msgstr "フラグは、データベース接続が確立される前に値「 ``なし &#39;&#39;で始まります。 DDLをフラグの設定なしでレンダリングするために方言が使用されている場合、DDLは `` False``と同じように解釈されます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:312
 msgid ""
 "On first connection, the dialect detects if SQL Server version 2012 or "
 "greater is in use; if the flag is still at ``None``, it sets it to "
 "``True`` or ``False`` based on whether 2012 or greater is detected."
-msgstr ""
+msgstr "最初の接続では、方言はSQL Serverのバージョン2012以上が使用されているかどうかを検出します。フラグがまだ「なし」であれば、2012以上が検出されたかどうかに基づいて、フラグを「真」または「偽」に設定する。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:316
 msgid ""
 "The flag can be set to either ``True`` or ``False`` when the dialect is "
 "created, typically via :func:`.create_engine`::"
-msgstr ""
+msgstr "ダイアグラムが作成されるとき、フラグは `` True``または `` False``に設定できます。通常は：func： `.create_engine` ::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:322
 msgid ""
@@ -373,11 +363,11 @@ msgid ""
 ":class:`.types.VARBINARY`, :class:`.TEXT`, :class:`.mssql.NTEXT`, "
 ":class:`.mssql.IMAGE` will always remain fixed and always output exactly "
 "that type."
-msgstr ""
+msgstr "：class： `.NVARCHAR`、：class：` .VARCHAR`、：： &quot;古い&quot;または &quot;新しい&quot;タイプがレンダリングされるかどうかを完全に制御するには、UPPERCASEタイプのオブジェクトを使用してすべてのSQLAlchemyバージョンで使用できます。クラス： `.types.VARBINARY`、：class：` .TEXT`、：class： `.mssql.NTEXT`、：class：` .mssql.IMAGE`は常に固定され、常にその型を出力します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:333
 msgid "Multipart Schema Names"
-msgstr ""
+msgstr "マルチパートのスキーマ名"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:335
 msgid ""
@@ -386,7 +376,7 @@ msgid ""
 "separate tokens, such as ``mydatabase.dbo.some_table``. These multipart "
 "names can be set at once using the :paramref:`.Table.schema` argument of "
 ":class:`.Table`::"
-msgstr ""
+msgstr "SQL Serverスキーマには、スキーマ\ &quot;スキーマ&quot;修飾子に複数の部分が必要な場合があります。つまり、データベース名と所有者名を別々のトークン（ `` mydatabase.dbo.some_table``など）に含める必要があります。これらのマルチパート名は：class： `.Table` :: paramref：` .Table.schema`引数を使って一度に設定できます："
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:346
 msgid ""
@@ -397,14 +387,14 @@ msgid ""
 "separately. Additionally, when rendering the schema name for DDL or SQL, "
 "the two components will be quoted separately for case sensitive names and"
 " other special characters.   Given an argument as below::"
-msgstr ""
+msgstr "テーブルやコンポーネントのリフレクションなどの操作を実行する場合、ドットを含むスキーマ引数は、SQL Server情報スキーマテーブルを正しくクエリするために、これらの2つの値として正しく\ &quot;データベース\&quot;と\ &quot;所有者\&quot;コンポーネントに分割されます別々に保管されます。さらに、DDLまたはSQLのスキーマ名をレンダリングする場合、大文字と小文字を区別する名前やその他の特殊文字については、2つのコンポーネントが別々に引用されます。以下のような議論が与えられます::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:360
 msgid ""
 "The above schema would be rendered as ``[MyDataBase].dbo``, and also in "
 "reflection, would be reflected using \"dbo\" as the owner and "
 "\"MyDataBase\" as the database name."
-msgstr ""
+msgstr "上記のスキーマは `` [MyDataBase] .dbo``としてレンダリングされ、また反映では、所有者として\ &quot;dbo \&quot;、データベース名として &quot;MyDataBase&quot;を使用して反映されます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:364
 msgid ""
@@ -412,38 +402,38 @@ msgid ""
 "brackets (which in SQL Server are quoting characters) in the name. Below,"
 " the \"owner\" will be considered as ``MyDataBase.dbo`` and the "
 "\"database\" will be None::"
-msgstr ""
+msgstr "スキーマ名をデータベース/所有者に分割する方法を制御するには、名前に角括弧（SQL Serverでは引用符で囲んでいる）を指定します。以下では、\ &quot;owner \&quot;は &quot;MyDataBase.dbo&quot;とみなされ、\ &quot;database \&quot;はNone ::となります"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:375
 msgid ""
 "To individually specify both database and owner name with special "
 "characters or embedded dots, use two sets of brackets::"
-msgstr ""
+msgstr "特殊文字または埋め込みドットを使用してデータベース名と所有者名を個別に指定するには、大括弧の2つのセットを使用します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:385
 msgid ""
 "the SQL Server dialect now treats brackets as identifier delimeters "
 "splitting the schema into separate database and owner tokens, to allow "
 "dots within either name itself."
-msgstr ""
+msgstr "SQL Serverの方言では、角括弧を識別子区切り文字として処理して、スキーマを別々のデータベースと所有者トークンに分割し、いずれかの名前自体にドットを使用できるようにしました。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:392
 msgid "Legacy Schema Mode"
-msgstr ""
+msgstr "レガシースキーマモード"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:394
 msgid ""
 "Very old versions of the MSSQL dialect introduced the behavior such that "
 "a schema-qualified table would be auto-aliased when used in a SELECT "
 "statement; given a table::"
-msgstr ""
+msgstr "非常に古いバージョンのMSSQL方言は、SELECT文で使用するとスキーマ修飾テーブルが自動エイリアスになるような動作を導入しました。与えられたテーブル::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:405
 msgid ""
 "this legacy mode of rendering would assume that "
 "\"customer_schema.account\" would not be accepted by all parts of the SQL"
 " statement, as illustrated below::"
-msgstr ""
+msgstr "この従来のレンダリングモードでは、以下に示すように、\ &quot;customer_schema.account \&quot;がSQL文のすべての部分で受け入れられないと想定します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:414
 msgid ""
@@ -451,53 +441,53 @@ msgid ""
 " no purpose; however in the case that legacy applications rely upon it, "
 "it is available using the ``legacy_schema_aliasing`` argument to "
 ":func:`.create_engine` as illustrated above."
-msgstr ""
+msgstr "この動作モードはデフォルトではオフになっていますが、目的が達成されなかったようです。しかし、レガシーアプリケーションがそれに依存している場合は、上記のように：func： `.create_engine`に` `legacy_schema_aliasing``引数を使用して利用できます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:419
 msgid ""
 "the ``legacy_schema_aliasing`` flag introduced in version 1.0.5 to allow "
 "disabling of legacy mode for schemas now defaults to False."
-msgstr ""
+msgstr "スキーマのレガシーモードを無効にするためにバージョン1.0.5で導入された `` legacy_schema_aliasing``フラグがデフォルトでFalseになりました。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:427
 msgid "Clustered Index Support"
-msgstr ""
+msgstr "クラスタ化インデックスのサポート"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:429
 msgid ""
 "The MSSQL dialect supports clustered indexes (and primary keys) via the "
 "``mssql_clustered`` option.  This option is available to :class:`.Index`,"
 " :class:`.UniqueConstraint`. and :class:`.PrimaryKeyConstraint`."
-msgstr ""
+msgstr "MSSQLダイアレクトは、 `` mssql_clustered``オプションを介してクラスタ化インデックス（および主キー）をサポートします。このオプションは、class： `.Index`、：class：` .UniqueConstraint`で利用できます。 and：class： `.PrimaryKeyConstraint`。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:433
 msgid "To generate a clustered index::"
-msgstr ""
+msgstr "クラスタードインデックスを生成する::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:437
 msgid ""
 "which renders the index as ``CREATE CLUSTERED INDEX my_index ON table "
 "(x)``."
-msgstr ""
+msgstr "インデックスは `` CREATE CLUSTERED INDEX my_index ON table（x） ``としてレンダリングされます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:439
 msgid "To generate a clustered primary key use::"
-msgstr ""
+msgstr "クラスター化された主キーを生成するには::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:446
 #: sqlalchemy.dialects.mssql.base:468
 msgid "which will render the table, for example, as::"
-msgstr ""
+msgstr "テーブルをレンダリングします。たとえば、::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:451
 msgid "Similarly, we can generate a clustered unique constraint using::"
-msgstr ""
+msgstr "同様に、クラスター固有の制約を生成するには、::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:460
 msgid ""
 "To explicitly request a non-clustered primary key (for example, when a "
 "separate clustered index is desired), use::"
-msgstr ""
+msgstr "クラスタ化されていない主キーを明示的に要求するには（たとえば、別のクラスタ化インデックスが必要な場合など）、::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:473
 msgid ""
@@ -505,53 +495,53 @@ msgid ""
 "``mssql_clustered=False`` now explicitly renders the NONCLUSTERED clause,"
 " whereas None omits the CLUSTERED clause entirely, allowing SQL Server "
 "defaults to take effect."
-msgstr ""
+msgstr "`` mssql_clustered``オプションのデフォルトはFalseではなくNoneになりました。 `` mssql_clustered = False``は明示的にNONCLUSTERED句を表示しますが、NoneはCLUSTERED句を完全に省略し、SQL Serverのデフォルトを有効にします。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:480
 msgid "MSSQL-Specific Index Options"
-msgstr ""
+msgstr "MSSQL固有のインデックスオプション"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:482
 msgid ""
 "In addition to clustering, the MSSQL dialect supports other special "
 "options for :class:`.Index`."
-msgstr ""
+msgstr "クラスタ化に加えて、MSSQLダイアレクトは、class： `.Index`のための他の特別なオプションもサポートしています。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:486
 msgid "INCLUDE"
-msgstr ""
+msgstr "含める"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:488
 msgid ""
 "The ``mssql_include`` option renders INCLUDE(colname) for the given "
 "string names::"
-msgstr ""
+msgstr "`` mssql_include``オプションは与えられた文字列名のINCLUDE（colname）をレンダリングします::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:493
 msgid ""
 "would render the index as ``CREATE INDEX my_index ON table (x) INCLUDE "
 "(y)``"
-msgstr ""
+msgstr "インデックスを `` CREATE INDEX my_index ON table（x）INCLUDE（y） ``としてレンダリングします。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:498
 msgid "Index ordering"
-msgstr ""
+msgstr "インデックスの順序付け"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:500
 msgid "Index ordering is available via functional expressions, such as::"
-msgstr ""
+msgstr "インデックスの順序付けは、::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:504
 msgid "would render the index as ``CREATE INDEX my_index ON table (x DESC)``"
-msgstr ""
+msgstr "インデックスを `` CREATE INDEX my_index ON table（x DESC） ``としてレンダリングします"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:510
 msgid ":ref:`schema_indexes_functional`"
-msgstr ""
+msgstr "：ref： `schema_indexes_functional`"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:513
 msgid "Compatibility Levels"
-msgstr ""
+msgstr "互換性レベル"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:514
 msgid ""
@@ -563,11 +553,11 @@ msgid ""
 "information. Because of this, if running under a backwards compatibility "
 "mode SQAlchemy may attempt to use T-SQL statements that are unable to be "
 "parsed by the database server."
-msgstr ""
+msgstr "MSSQLは、データベースレベルで互換性レベルを設定するという概念をサポートしています。これにより、たとえば、SQL2005データベースサーバーで実行しているときにSQL2000と互換性のあるデータベースを実行できます。 `` server_version_info``は常に互換性レベルの情報ではなくデータベースサーバのバージョン情報（この場合はSQL2005）を返します。このため、下位互換モードで実行している場合、SQAlchemyはデータベースサーバによって解析できないT-SQL文を使用しようとする可能性があります。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:524
 msgid "Triggers"
-msgstr ""
+msgstr "トリガー"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:526
 msgid ""
@@ -577,27 +567,27 @@ msgid ""
 "triggers. To disable the usage of OUTPUT INSERTED on a per-table basis, "
 "specify ``implicit_returning=False`` for each :class:`.Table` which has "
 "triggers::"
-msgstr ""
+msgstr "SQLAlchemyは、デフォルトでOUTPUT INSERTEDを使用して、IDENTITYカラムまたは他のサーバサイドのデフォルトを介して新しく生成されたプライマリキー値を取得します。 MS-SQLでは、トリガーを持つテーブルでOUTPUT INSERTEDを使用することはできません。テーブルごとにOUTPUT INSERTEDの使用を無効にするには、各クラスに対して `` implicit_returning = False``を指定します：class： `.Table`にはトリガがあります::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:540
 msgid "Declarative form::"
-msgstr ""
+msgstr "宣言形式::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:547
 msgid ""
 "This option can also be specified engine-wide using the "
 "``implicit_returning=False`` argument on :func:`.create_engine`."
-msgstr ""
+msgstr "このオプションは：func： `.create_engine`の` `implicit_returning = False``引数を使用してエンジン全体に指定することもできます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:553
 msgid "Rowcount Support / ORM Versioning"
-msgstr ""
+msgstr "行数サポート/ ORMバージョン管理"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:555
 msgid ""
 "The SQL Server drivers may have limited ability to return the number of "
 "rows updated from an UPDATE or DELETE statement."
-msgstr ""
+msgstr "SQL Serverドライバでは、UPDATEまたはDELETEステートメントから更新された行数を返す機能が制限されている可能性があります。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:558
 msgid ""
@@ -609,18 +599,18 @@ msgid ""
 " of rows expected, which is how it verifies that the version identifier "
 "matched.   When this condition occurs, a warning will be emitted but the "
 "operation will proceed."
-msgstr ""
+msgstr "この執筆時点では、OUTPUT INSERTEDが使用されている場合、PyODBCドライバは行数を返すことができません。これは、SQLAlchemy ORMのバージョン管理機能に影響を与えるサーバー側のバリュージェネレータが使用されている場合、バージョン管理操作が成功する一方、ORMはUPDATEまたはDELETE文が期待される行数バージョン識別子が一致していることを確認します。この状態が発生すると、警告が表示されますが、操作は続行されます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:566
 msgid ""
 "The use of OUTPUT INSERTED can be disabled by setting the "
 ":paramref:`.Table.implicit_returning` flag to ``False`` on a particular "
 ":class:`.Table`, which in declarative looks like::"
-msgstr ""
+msgstr "OUTPUT INSERTEDの使用を無効にするには、：paramref： `.Table.implicit_returning`フラグを、特定の：class：` .Table`の `` False``に設定します。これは宣言的には::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:584
 msgid "Enabling Snapshot Isolation"
-msgstr ""
+msgstr "スナップショット分離を有効にする"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:586
 msgid ""
@@ -630,30 +620,30 @@ msgid ""
 "database as a whole is recommended for modern levels of concurrency "
 "support.  This is accomplished via the following ALTER DATABASE commands "
 "executed at the SQL prompt::"
-msgstr ""
+msgstr "SQL Serverには、テーブル全体をロックする既定のトランザクション分離モードがあり、軽度の並行アプリケーションでも長いロックを保持し、頻繁なデッドロックが発生します。最新の並行性サポートには、データベース全体のスナップショット分離を有効にすることをお勧めします。これは、SQLプロンプトで実行される次のALTER DATABASEコマンドを使用して実行されます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.base:597
 msgid ""
 "Background on SQL Server snapshot isolation is available at "
 "http://msdn.microsoft.com/en-us/library/ms175095.aspx."
-msgstr ""
+msgstr "SQL Serverスナップショットの隔離に関する背景については、http：//msdn.microsoft.com/en-us/library/ms175095.aspxを参照してください。"
 
 #: ../../dialects/mssql.rst:9
 msgid "SQL Server Data Types"
-msgstr ""
+msgstr "SQL Serverのデータ型"
 
 #: ../../dialects/mssql.rst:11
 msgid ""
 "As with all SQLAlchemy dialects, all UPPERCASE types that are known to be"
 " valid with SQL server are importable from the top level dialect, whether"
 " they originate from :mod:`sqlalchemy.types` or from the local dialect::"
-msgstr ""
+msgstr "すべてのSQLAlchemy方言と同様に、SQLサーバで有効であることが知られているすべてのUPPERCASE型は、from：mod： `sqlalchemy.types`またはローカルの方言からトップレベルの方言からインポートできます::"
 
 #: ../../dialects/mssql.rst:22
 msgid ""
 "Types which are specific to SQL Server, or have SQL Server-specific "
 "construction arguments, are as follows:"
-msgstr ""
+msgstr "SQL Serverに固有の型、またはSQL Server固有の構成引数を持つ型は、次のとおりです。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.BIT.__init__:1
 #: sqlalchemy.dialects.mssql.MONEY.__init__:1
@@ -662,18 +652,18 @@ msgstr ""
 #: sqlalchemy.dialects.mssql.TINYINT.__init__:1
 #: sqlalchemy.dialects.mssql.UNIQUEIDENTIFIER.__init__:1
 msgid "Initialize self.  See help(type(self)) for accurate signature."
-msgstr ""
+msgstr "自己を初期化する。正確な署名については、help（type（self））を参照してください。"
 
 #: of sqlalchemy.dialects.mssql.CHAR:1
 msgid "The SQL CHAR type."
-msgstr ""
+msgstr "SQL CHAR型。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.CHAR.__init__:1
 #: sqlalchemy.dialects.mssql.TEXT.__init__:1
 #: sqlalchemy.dialects.mssql.VARCHAR.__init__:1
 #: sqlalchemy.dialects.mssql.XML.__init__:1
 msgid "Create a string-holding type."
-msgstr ""
+msgstr "文字列保持型を作成します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.CHAR.__init__
 #: sqlalchemy.dialects.mssql.IMAGE.__init__
@@ -684,7 +674,7 @@ msgstr ""
 #: sqlalchemy.dialects.mssql.VARCHAR.__init__
 #: sqlalchemy.dialects.mssql.XML.__init__
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.CHAR.__init__:3
 #: sqlalchemy.dialects.mssql.TEXT.__init__:3
@@ -697,7 +687,7 @@ msgid ""
 "exception when the ``CREATE TABLE`` DDL is issued if a ``VARCHAR`` with "
 "no length is included.  Whether the value is interpreted as bytes or "
 "characters is database specific."
-msgstr ""
+msgstr "オプションで、DDLおよびCAST式で使用する列の長さ。 `` CREATE TABLE``が発行されない場合は、安全に省略することができます。特定のデータベースでは、DDLで使用するために `` length``が必要な場合があります。長さのない `` VARCHAR``が含まれている場合は、 `` CREATE TABLE`` DDLが発行されると例外が発生します。値がバイトまたは文字として解釈されるかどうかは、データベース固有です。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.CHAR.__init__:11
 #: sqlalchemy.dialects.mssql.TEXT.__init__:11
@@ -710,7 +700,7 @@ msgid ""
 ">>> print select([cast('some string', String(collation='utf8'))])   "
 "SELECT CAST(:param_1 AS VARCHAR COLLATE utf8) AS anon_1  .. "
 "versionadded:: 0.8 Added support for COLLATE to all    string types."
-msgstr ""
+msgstr "オプションで、DDLおよびCAST式で使用する列レベルの照合。 SQLite、MySQL、PostgreSQLでサポートされているCOLLATEキーワードを使用してレンダリングします。 SELECT CAST（：param_1 AS VARCHAR COLLATE utf8）ASを使用する場合は、次のように入力します。 anon_1 .. versionadded :: 0.8すべての文字列型に対するCOLLATEのサポートが追加されました。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.CHAR.__init__:11
 #: sqlalchemy.dialects.mssql.TEXT.__init__:11
@@ -720,14 +710,14 @@ msgid ""
 "Optional, a column-level collation for use in DDL and CAST expressions.  "
 "Renders using the COLLATE keyword supported by SQLite, MySQL, and "
 "PostgreSQL. E.g.::"
-msgstr ""
+msgstr "オプションで、DDLおよびCAST式で使用する列レベルの照合。 SQLite、MySQL、PostgreSQLでサポートされているCOLLATEキーワードを使用してレンダリングします。例えば：："
 
 #: ../../docstring of sqlalchemy.dialects.mssql.CHAR.__init__:20
 #: sqlalchemy.dialects.mssql.TEXT.__init__:20
 #: sqlalchemy.dialects.mssql.VARCHAR.__init__:20
 #: sqlalchemy.dialects.mssql.XML.__init__:20
 msgid "Added support for COLLATE to all string types."
-msgstr ""
+msgstr "すべての文字列型に対するCOLLATEのサポートが追加されました。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.CHAR.__init__:23
 #: sqlalchemy.dialects.mssql.TEXT.__init__:23
@@ -750,7 +740,7 @@ msgid ""
 "backend that does natively support Python ``unicode``, the value "
 "``force`` can be passed here which will cause SQLAlchemy's encode/decode "
 "services to be used unconditionally."
-msgstr ""
+msgstr "`` True``に設定すると、：class： `.String`型は入力がPythonの` `unicode``オブジェクトとして渡され、結果がPythonの` `unicode``オブジェクトとして返されると想定します。使用しているDBAPIがPython unicodeをサポートしていない場合（最近はこれよりも少ない）、SQLAlchemyは：func： `.create_engine`に渡された` `encoding``パラメータの値を使用して値をエンコード/デコードしますエンコーディング。 PythonのUnicodeオブジェクトをネイティブにサポートするDBAPIを使用する場合、このフラグは一般に設定する必要はありません。非ASCIIデータを明示的に格納するカラムの場合、：class： `.Unicode`または：class：` .UnicodeText`型は、 `` convert_unicode``と同じ動作をしますが、 `` NVARCHAR``のような、Unicodeを直接サポートする基底のカラム型です。非常にまれにPython `` unicode``がPython `` unicode``をネイティブにサポートするバックエンドでSQLAlchemyによってエンコード/デコードされることになっている場合、 `` force``をここに渡すとSQLAlchemyのエンコードが行われます/無条件に使用されるサービスをデコードします。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.CHAR.__init__:23
 #: sqlalchemy.dialects.mssql.TEXT.__init__:23
@@ -763,7 +753,7 @@ msgid ""
 "unicode (which is fewer and fewer these days), SQLAlchemy will "
 "encode/decode the value, using the value of the ``encoding`` parameter "
 "passed to :func:`.create_engine` as the encoding."
-msgstr ""
+msgstr "`` True``に設定すると、：class： `.String`型は入力がPythonの` `unicode``オブジェクトとして渡され、結果がPythonの` `unicode``オブジェクトとして返されると想定します。使用しているDBAPIがPython unicodeをサポートしていない場合（最近はこれよりも少ない）、SQLAlchemyは：func： `.create_engine`に渡された` `encoding``パラメータの値を使用して値をエンコード/デコードしますエンコーディング。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.CHAR.__init__:33
 #: sqlalchemy.dialects.mssql.TEXT.__init__:33
@@ -776,7 +766,7 @@ msgid ""
 ":class:`.UnicodeText` types should be used regardless, which feature the "
 "same behavior of ``convert_unicode`` but also indicate an underlying "
 "column type that directly supports unicode, such as ``NVARCHAR``."
-msgstr ""
+msgstr "PythonのUnicodeオブジェクトをネイティブにサポートするDBAPIを使用する場合、このフラグは一般に設定する必要はありません。非ASCIIデータを明示的に格納するカラムの場合、：class： `.Unicode`または：class：` .UnicodeText`型は、 `` convert_unicode``と同じ動作をしますが、 `` NVARCHAR``のような、Unicodeを直接サポートする基底のカラム型です。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.CHAR.__init__:43
 #: sqlalchemy.dialects.mssql.TEXT.__init__:43
@@ -787,7 +777,7 @@ msgid ""
 "encoded/decoded by SQLAlchemy on a backend that does natively support "
 "Python ``unicode``, the value ``force`` can be passed here which will "
 "cause SQLAlchemy's encode/decode services to be used unconditionally."
-msgstr ""
+msgstr "非常にまれにPython `` unicode``がPython `` unicode``をネイティブにサポートするバックエンドでSQLAlchemyによってエンコード/デコードされることになっている場合、 `` force``をここに渡すとSQLAlchemyのエンコードが行われます/無条件に使用されるサービスをデコードします。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.CHAR.__init__:50
 #: sqlalchemy.dialects.mssql.TEXT.__init__:50
@@ -803,91 +793,91 @@ msgid ""
 " backends that already return unicode objects natively (which most DBAPIs"
 " do).  This flag should only be used as a last resort for reading strings"
 " from a column with varied or corrupted encodings."
-msgstr ""
+msgstr "オプションで、Unicode変換エラーの処理に使用するメソッド。標準ライブラリの `` string.decode（） ``関数の `` errors``キーワード引数のように動作します。このフラグは、 `` convert_unicode``が `` force``に設定されている必要があります。そうでなければ、SQLAlchemyはUnicode変換のタスクを処理することは保証されていません。このフラグは、ユニコードオブジェクトをネイティブに返すバックエンド（ほとんどのDBAPIが行う）の行取得操作に大きなパフォーマンスオーバーヘッドを追加することに注意してください。このフラグは、可変または壊れたエンコーディングを持つ列から文字列を読み取る最後の手段としてのみ使用してください。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.IMAGE.__init__:1
 msgid "Construct a LargeBinary type."
-msgstr ""
+msgstr "LargeBinary型を構築します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.IMAGE.__init__:3
 msgid ""
 "optional, a length for the column for use in DDL statements, for those "
 "binary types that accept a length, such as the MySQL BLOB type."
-msgstr ""
+msgstr "オプションで、長さを受け入れるバイナリ型（MySQL BLOB型など）のDDL文で使用する列の長さ。"
 
 #: of sqlalchemy.dialects.mssql.NCHAR:1
 msgid "The SQL NCHAR type."
-msgstr ""
+msgstr "SQL NCHAR型。"
 
 #: of sqlalchemy.dialects.mssql.NCHAR.__init__:1
 #: sqlalchemy.dialects.mssql.NVARCHAR.__init__:1
 msgid "Create a :class:`.Unicode` object."
-msgstr ""
+msgstr "a：class： `.Unicode`オブジェクトを作成します。"
 
 #: of sqlalchemy.dialects.mssql.NCHAR.__init__:3
 #: sqlalchemy.dialects.mssql.NVARCHAR.__init__:3
 msgid ""
 "Parameters are the same as that of :class:`.String`, with the exception "
 "that ``convert_unicode`` defaults to ``True``."
-msgstr ""
+msgstr "パラメータは：class： `.String`と同じですが、` `convert_unicode``のデフォルトは` `True``です。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.NTEXT:1
 msgid "MSSQL NTEXT type, for variable-length unicode text up to 2^30 characters."
-msgstr ""
+msgstr "MSSQL NTEXT型。可変長のUnicodeテキストの場合、2〜30文字まで使用できます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.NTEXT.__init__:1
 msgid "Create a Unicode-converting Text type."
-msgstr ""
+msgstr "Unicode変換テキストタイプを作成します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.NTEXT.__init__:3
 msgid ""
 "Parameters are the same as that of :class:`.Text`, with the exception "
 "that ``convert_unicode`` defaults to ``True``."
-msgstr ""
+msgstr "パラメータは：class： `.Text`と同じですが、` `convert_unicode``のデフォルトは` `True``です。"
 
 #: of sqlalchemy.dialects.mssql.NVARCHAR:1
 msgid "The SQL NVARCHAR type."
-msgstr ""
+msgstr "SQLのNVARCHAR型です。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.ROWVERSION:1
 msgid "Implement the SQL Server ROWVERSION type."
-msgstr ""
+msgstr "SQL Server ROWVERSION型を実装します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.ROWVERSION:3
 msgid ""
 "The ROWVERSION datatype is a SQL Server synonym for the TIMESTAMP "
 "datatype, however current SQL Server documentation suggests using "
 "ROWVERSION for new datatypes going forward."
-msgstr ""
+msgstr "ROWVERSIONデータ型は、TIMESTAMPデータ型のSQL Serverシノニムですが、現在のSQL Serverのドキュメントでは、今後の新しいデータ型に対してROWVERSIONを使用することを提案しています。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.ROWVERSION:7
 msgid ""
 "The ROWVERSION datatype does **not** reflect (e.g. introspect) from the "
 "database as itself; the returned datatype will be "
 ":class:`.mssql.TIMESTAMP`."
-msgstr ""
+msgstr "ROWVERSIONデータ型はデータベース自体から反映されません**。返されるデータ型はclass： `.mssql.TIMESTAMP`になります。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.ROWVERSION:11
 msgid "This is a read-only datatype that does not support INSERT of values."
-msgstr ""
+msgstr "これは、値のINSERTをサポートしない読み取り専用のデータ型です。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.ROWVERSION:17
 msgid ":class:`.mssql.TIMESTAMP`"
-msgstr ""
+msgstr "：クラス： `.mssql.TIMESTAMP`"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.ROWVERSION.__init__:1
 #: sqlalchemy.dialects.mssql.TIMESTAMP.__init__:1
 msgid "Construct a TIMESTAMP or ROWVERSION type."
-msgstr ""
+msgstr "TIMESTAMPまたはROWVERSION型を構築します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.ROWVERSION.__init__:3
 #: sqlalchemy.dialects.mssql.TIMESTAMP.__init__:3
 msgid "if True, binary integer values will be converted to integers on read."
-msgstr ""
+msgstr "Trueの場合、バイナリ整数値は読み込み時に整数に変換されます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.SMALLDATETIME.__init__:1
 msgid "Construct a new :class:`.DateTime`."
-msgstr ""
+msgstr "新しい：class： `.DateTime`を作ります。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.SMALLDATETIME.__init__:3
 msgid ""
@@ -897,34 +887,34 @@ msgid ""
 "directly when using this flag, as some databases include separate generic"
 " date/time-holding types distinct from the timezone-capable TIMESTAMP "
 "datatype, such as Oracle."
-msgstr ""
+msgstr "ブール値。 ** datetime型で**タイムゾーンのサポートを有効にする必要があることを示します。一部のデータベースには、Oracleなどのタイムゾーン対応のTIMESTAMPデータ型とは異なる別の汎用日付/時刻保持タイプが含まれているため、：class： `〜.types.TIMESTAMP`データ型を直接使用することをお薦めします。"
 
 #: of sqlalchemy.dialects.mssql.TEXT:1
 msgid "The SQL TEXT type."
-msgstr ""
+msgstr "SQL TEXT型。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.TIMESTAMP:1
 msgid "Implement the SQL Server TIMESTAMP type."
-msgstr ""
+msgstr "SQL ServerのTIMESTAMP型を実装します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.TIMESTAMP:3
 msgid ""
 "Note this is **completely different** than the SQL Standard TIMESTAMP "
 "type, which is not supported by SQL Server.  It is a read-only datatype "
 "that does not support INSERT of values."
-msgstr ""
+msgstr "これは、SQL ServerでサポートされていないSQL標準のTIMESTAMPタイプとはまったく異なる**です。これは、値のINSERTをサポートしない読み取り専用のデータ型です。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.TIMESTAMP:11
 msgid ":class:`.mssql.ROWVERSION`"
-msgstr ""
+msgstr "：クラス： `.mssql.ROWVERSION`"
 
 #: of sqlalchemy.dialects.mssql.VARCHAR:1
 msgid "The SQL VARCHAR type."
-msgstr ""
+msgstr "SQL VARCHAR型。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.XML:1
 msgid "MSSQL XML type."
-msgstr ""
+msgstr "MSSQL XMLタイプ。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.XML:3
 msgid ""
@@ -932,70 +922,70 @@ msgid ""
 "any Python-side datatype support.   It also does not currently support "
 "additional arguments, such as \"CONTENT\", \"DOCUMENT\", "
 "\"xml_schema_collection\"."
-msgstr ""
+msgstr "これは、Python側のデータ型サポートを含まない、リフレクションのためのプレースホルダ型です。現在、\ &quot;CONTENT \&quot;、\ &quot;DOCUMENT \&quot;、\ &quot;xml_schema_collection \&quot;などの追加引数もサポートしていません。"
 
 #: ../../dialects/mssql.rst:109
 msgid "PyODBC"
-msgstr ""
+msgstr "PyODBC"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:8
 msgid "Connecting to PyODBC"
-msgstr ""
+msgstr "PyODBCに接続する"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:10
 msgid ""
 "The URL here is to be translated to PyODBC connection strings, as "
 "detailed in `ConnectionStrings "
 "<https://code.google.com/p/pyodbc/wiki/ConnectionStrings>`_."
-msgstr ""
+msgstr "ここのURLは、 `ConnectionStrings`で詳しく述べられているように、PyODBC接続文字列に変換されます。 <https://code.google.com/p/pyodbc/wiki/ConnectionStrings> `_。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:14
 msgid "DSN Connections"
-msgstr ""
+msgstr "DSN接続"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:16
 msgid ""
 "A DSN-based connection is **preferred** overall when using ODBC.  A basic"
 " DSN-based connection looks like::"
-msgstr ""
+msgstr "DSNベースの接続は、ODBCを使用している場合には全体的に**好まれます**。基本的なDSNベースの接続は次のようになります::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:21
 msgid "Which above, will pass the following connection string to PyODBC::"
-msgstr ""
+msgstr "上のコードはPyODBCに次の接続文字列を渡します::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:25
 msgid ""
 "If the username and password are omitted, the DSN form will also add the "
 "``Trusted_Connection=yes`` directive to the ODBC string."
-msgstr ""
+msgstr "ユーザ名とパスワードを省略すると、DSN形式はODBC文字列に `` Trusted_Connection = yes``指示文を追加します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:29
 msgid "Hostname Connections"
-msgstr ""
+msgstr "ホスト名の接続"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:31
 msgid ""
 "Hostname-based connections are **not preferred**, however are supported. "
 "The ODBC driver name must be explicitly specified::"
-msgstr ""
+msgstr "ホスト名ベースの接続は**好ましくはありませんが、サポートされています。 ODBCドライバ名は明示的に指定する必要があります::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:36
 msgid ""
 "Hostname-based PyODBC connections now require the SQL Server driver name "
 "specified explicitly.  SQLAlchemy cannot choose an optimal default here "
 "as it varies based on platform and installed drivers."
-msgstr ""
+msgstr "ホスト名ベースのPyODBC接続では、明示的に指定されたSQL Serverドライバ名が必要になりました。 SQLAlchemyは、プラットフォームやインストールされているドライバに応じて最適なデフォルト値を選択することはできません。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:41
 msgid ""
 "Other keywords interpreted by the Pyodbc dialect to be passed to "
 "``pyodbc.connect()`` in both the DSN and hostname cases include: "
 "``odbc_autotranslate``, ``ansi``, ``unicode_results``, ``autocommit``."
-msgstr ""
+msgstr "DSNとホスト名の両方の場合にPyodbc方言によって `` pyodbc.connect（） ``に渡される他のキーワードは、 `` odbc_autotranslate``、 `` ansi``、 `` unicode_results``、 `` autocommit ``。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:46
 msgid "Pass through exact Pyodbc string"
-msgstr ""
+msgstr "厳密なPyodbc文字列を渡す"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:48
 msgid ""
@@ -1004,17 +994,17 @@ msgid ""
 "<https://code.google.com/p/pyodbc/wiki/ConnectionStrings>`_ into the "
 "driver using the parameter ``odbc_connect``.  The delimeters must be URL "
 "escaped, however, as illustrated below using ``urllib.quote_plus``::"
-msgstr ""
+msgstr "PyODBC接続文字列は、 `ConnectionStrings <https://code.google.com/p/pyodbc/wiki/ConnectionStrings> `_ odbc_connect`パラメータを使用してドライバに` _を追加します。ただし、区切り文字はURLでエスケープする必要があります（下の図は `` urllib.quote_plus`` ::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:60
 msgid "Driver / Unicode Support"
-msgstr ""
+msgstr "ドライバ/ Unicodeのサポート"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:62
 msgid ""
 "PyODBC works best with Microsoft ODBC drivers, particularly in the area "
 "of Unicode support on both Python 2 and Python 3."
-msgstr ""
+msgstr "PyODBCは、特にPython 2とPython 3の両方のUnicodeサポートの分野で、Microsoft ODBCドライバで最も効果的です。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:65
 msgid ""
@@ -1024,22 +1014,22 @@ msgid ""
 "OSX.   Now that Microsoft offers drivers for all platforms, for PyODBC "
 "support these are recommended.  FreeTDS remains relevant for non-ODBC "
 "drivers such as pymssql where it works very well."
-msgstr ""
+msgstr "LinuxまたはFreeBSD ODBCドライバをPyODBCで使用することは**推奨されていません**。 MicrosoftがLinuxおよびOSXのODBCドライバを提供する前も含めて、この分野で歴史的に多くのUnicode関連の問題がありました。 Microsoftはすべてのプラットフォーム用のドライバを提供しているので、PyODBCのサポートが推奨されています。 FreeTDSは、pymssqlのような非ODBCドライバにとってはうまく動作します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:74
 msgid "Rowcount Support"
-msgstr ""
+msgstr "行数のサポート"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:76
 msgid ""
 "Pyodbc only has partial support for rowcount.  See the notes at "
 ":ref:`mssql_rowcount_versioning` for important notes when using ORM "
 "versioning."
-msgstr ""
+msgstr "Pyodbcは、行数を部分的にしかサポートしていません。 ORMのバージョニングを使用する際の注意点については、ref： `mssql_rowcount_versioning`のノートを参照してください。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:83
 msgid "Fast Executemany Mode"
-msgstr ""
+msgstr "高速実行モード"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:85
 msgid ""
@@ -1051,21 +1041,21 @@ msgid ""
 "dialect supports setting this flag automatically when the "
 "``.fast_executemany`` flag is passed to :func:`.create_engine`; note that"
 " the ODBC driver must be the Microsoft driver in order to use this flag::"
-msgstr ""
+msgstr "Pyodbcドライバは、Microsoft ODBCドライバを使用しているときにDBAPI `` executemany（） ``呼び出しのラウンドトリップを大幅に削減する\ &quot;高速executemany \&quot;モードのサポートを追加しました。この機能はexecutemanyコールが使用されるときにDBAPIカーソルにフラグ `` .fast_executemany``を設定することで有効になります。 SQLAlchemy pyodbc SQL Serverの方言は、 `` .fast_executemany``フラグが：func： `.create_engine`に渡されたときに自動的にこのフラグを設定することをサポートします。このフラグを使用するには、ODBCドライバがMicrosoftドライバでなければならないことに注意してください::"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.pyodbc:102
 msgid ""
 "`fast executemany <https://github.com/mkleehammer/pyodbc/wiki/Features-"
 "beyond-the-DB-API#fast_executemany>`_ - on github"
-msgstr ""
+msgstr "`fast executemany <https://github.com/mkleehammer/pyodbc/wiki/Features-beyond-the-DB-API#fast_executemany> `_  -  github上で"
 
 #: ../../dialects/mssql.rst:113
 msgid "mxODBC"
-msgstr ""
+msgstr "mxODBC"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.mxodbc:8
 msgid "Execution Modes"
-msgstr ""
+msgstr "実行モード"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.mxodbc:10
 msgid ""
@@ -1074,7 +1064,7 @@ msgid ""
 "being an extension to the DBAPI specification). The former makes use of a"
 " particular API call specific to the SQL Server Native Client ODBC driver"
 " known SQLDescribeParam, while the latter does not."
-msgstr ""
+msgstr "mxODBCには、 `` cursor.execute（） ``と `` cursor.executedirect（） ``メソッド（2番目はDBAPI仕様への拡張）を使用して、2つのスタイルの文の実行があります。前者はSQL Server Native Client ODBCドライバに固有の特定のAPI呼び出しを使用しますが、後者はSQLDescribeParamと呼ばれます。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.mxodbc:16
 msgid ""
@@ -1086,14 +1076,14 @@ msgid ""
 "function calls, anywhere outside the FROM, or even within subqueries "
 "within the FROM clause - making the usage of bind parameters within "
 "SELECT statements impossible for all but the most simplistic statements."
-msgstr ""
+msgstr "mxODBCは、SQLDescribeParamが使用されているときに、準備された単一の文を繰り返し使用するだけです。準備されたステートメントの再利用の利点は、パフォーマンスの1つです。欠点は、SQLDescribeParamには、関数呼び出しの引数リスト、FROM外の場所、FROM句内のサブクエリ内に配置することができないなど、バインドパラメータが理解できるシナリオが限られていることです。最も単純なステートメント以外のステートメントでは不可能なSELECTステートメント内のパラメーターをバインドします。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.mxodbc:25
 msgid ""
 "For this reason, the mxODBC dialect uses the \"native\" mode by default "
 "only for INSERT, UPDATE, and DELETE statements, and uses the escaped "
 "string mode for all other statements."
-msgstr ""
+msgstr "このため、mxODBC方言は、デフォルトではINSERT、UPDATE、およびDELETE文にのみ\ &quot;native \&quot;モードを使用し、他のすべての文ではエスケープ文字列モードを使用します。"
 
 #: ../../docstring of sqlalchemy.dialects.mssql.mxodbc:29
 msgid ""
@@ -1103,36 +1093,36 @@ msgid ""
 "where a value of ``True`` will unconditionally use native bind parameters"
 " and a value of ``False`` will unconditionally use string-escaped "
 "parameters."
-msgstr ""
+msgstr "この動作は、 `` True``または `` False``の値を持つ `` native_odbc_execute``フラグを使って：meth： `〜sqlalchemy.sql.expression.Executable.execution_options`で制御することができます。 `True``はネイティブバインドパラメータを無条件に使用し、` False`の値は無条件に文字列エスケープパラメータを使用します。"
 
 #: ../../dialects/mssql.rst:117
 msgid "pymssql"
-msgstr ""
+msgstr "pymssql"
 
 #: of sqlalchemy.dialects.mssql.pymssql:7
 msgid ""
 "pymssql is a Python module that provides a Python DBAPI interface around "
 "`FreeTDS <http://www.freetds.org/>`_.  Compatible builds are available "
 "for Linux, MacOSX and Windows platforms."
-msgstr ""
+msgstr "pymssqlは `FreeTDSの周りにPython DBAPIインターフェースを提供するPythonモジュールです<http://www.freetds.org/> `_。互換性のあるビルドは、Linux、MacOSX、Windowsプラットフォームで利用できます。"
 
 #: of sqlalchemy.dialects.mssql.pymssql:11
 msgid ""
 "Modern versions of this driver work very well with SQL Server and FreeTDS"
 " from Linux and is highly recommended."
-msgstr ""
+msgstr "このドライバの現代版は、LinuxのSQL ServerやFreeTDSでうまく動作します。"
 
 #: ../../dialects/mssql.rst:121
 msgid "zxjdbc"
-msgstr ""
+msgstr "zxjdbc"
 
 #: ../../dialects/mssql.rst:126
 msgid "AdoDBAPI"
-msgstr ""
+msgstr "AdoDBAPI"
 
 #: of sqlalchemy.dialects.mssql.adodbapi:9
 msgid ""
 "The adodbapi dialect is not implemented SQLAlchemy versions 0.6 and above"
 " at this time."
-msgstr ""
+msgstr "この時点では、adodbapi方言はSQLAlchemyバージョン0.6以上では実装されていません。"
 

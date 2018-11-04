@@ -10,7 +10,7 @@
         <title>
             
     
-    Composite Column Types
+    コンポジット列の種類
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Mapping Columns and Expressions" href="scalar_mapping.html" />
-        <link rel="next" title="Mapping Class Inheritance Hierarchies" href="inheritance.html" />
-        <link rel="prev" title="Changing Attribute Behavior" href="mapped_attributes.html" />
+        <link rel="up" title="列と式のマッピング" href="scalar_mapping.html" />
+        <link rel="next" title="クラス継承階層のマッピング" href="inheritance.html" />
+        <link rel="prev" title="属性の動作の変更" href="mapped_attributes.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,32 +120,32 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="mapping_styles.html">Types of Mappings</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="scalar_mapping.html">Mapping Columns and Expressions</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="mapping_columns.html">Mapping Table Columns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapped_sql_expr.html">SQL Expressions as Mapped Attributes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapped_attributes.html">Changing Attribute Behavior</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Composite Column Types</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#tracking-in-place-mutations-on-composites">Tracking In-Place Mutations on Composites</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#redefining-comparison-operations-for-composites">Redefining Comparison Operations for Composites</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="mapping_styles.html">マッピングのタイプ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="scalar_mapping.html">列と式のマッピング</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="mapping_columns.html">マッピング表の列</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapped_sql_expr.html">マップされた属性としてのSQL式</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapped_attributes.html">属性の動作の変更</a></span></li>
+<li class="selected"><span class="link-container first"><strong>コンポジット列の種類</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#tracking-in-place-mutations-on-composites">コンポジットのインプレース・ミューテックスのトラッキング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#redefining-comparison-operations-for-composites">コンポジットの比較操作の再定義</a></span></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="inheritance.html">Mapping Class Inheritance Hierarchies</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="nonstandard_mappings.html">Non-Traditional Mappings</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="versioning.html">Configuring a Version Counter</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapping_api.html">Class Mapping API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="inheritance.html">クラス継承階層のマッピング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="nonstandard_mappings.html">非伝統的なマッピング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="versioning.html">バージョンカウンタの設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapping_api.html">クラスマッピングAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -161,13 +161,10 @@
     <div id="docs-body" class="withsidebar" >
         
 <span class="target" id="module-sqlalchemy.orm"></span><div class="section" id="composite-column-types">
-<span id="mapper-composite"></span><h1>Composite Column Types<a class="headerlink" href="#composite-column-types" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Sets of columns can be associated with a single user-defined datatype. The ORM
-provides a single attribute which represents the group of columns using the
-class you provide.</p>
-<p>A simple example represents pairs of columns as a <code class="docutils literal"><span class="pre">Point</span></code> object.
-<code class="docutils literal"><span class="pre">Point</span></code> represents such a pair as <code class="docutils literal"><span class="pre">.x</span></code> and <code class="docutils literal"><span class="pre">.y</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span id="mapper-composite"></span><h1>コンポジット列の種類<a class="headerlink" href="#composite-column-types" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>列のセットは、単一のユーザー定義データ型に関連付けることができます。 ORMは、提供するクラスを使用して列のグループを表す単一の属性を提供します。</p>
+<p>簡単な例は、列のペアを `` Point``オブジェクトとして表現します。 `` Point``は `` .x``と `` .y``のようなペアを表します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
@@ -186,17 +183,9 @@ class you provide.</p>
     <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span></pre></div>
 </div>
-<p>The requirements for the custom datatype class are that it have a constructor
-which accepts positional arguments corresponding to its column format, and
-also provides a method <code class="docutils literal"><span class="pre">__composite_values__()</span></code> which returns the state of
-the object as a list or tuple, in order of its column-based attributes. It
-also should supply adequate <code class="docutils literal"><span class="pre">__eq__()</span></code> and <code class="docutils literal"><span class="pre">__ne__()</span></code> methods which test
-the equality of two instances.</p>
-<p>We will create a mapping to a table <code class="docutils literal"><span class="pre">vertices</span></code>, which represents two points
-as <code class="docutils literal"><span class="pre">x1/y1</span></code> and <code class="docutils literal"><span class="pre">x2/y2</span></code>. These are created normally as <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a>
-objects. Then, the <a class="reference internal" href="#sqlalchemy.orm.composite" title="sqlalchemy.orm.composite"><code class="xref py py-func docutils literal"><span class="pre">composite()</span></code></a> function is used to assign new
-attributes that will represent sets of columns via the <code class="docutils literal"><span class="pre">Point</span></code> class:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span>
+<p>カスタムデータ型クラスの要件は、列フォーマットに対応する位置引数を受け入れるコンストラクタを持ち、オブジェクトの状態をリストまたはタプルとして順番に返すメソッド__composite_values __（）を提供することです列ベースの属性のうちの1つです。また、2つのインスタンスの等価性をテストする適切な `` __eq __（） <a href="#id1"><span class="problematic" id="id2">``</span></a>と `` __ne __（） <a href="#id3"><span class="problematic" id="id4">``</span></a>メソッドを提供する必要があります。</p>
+<p>`` x1 / y1``と `` x2 / y2``の2つの点を表現するテーブル `` vertices``へのマッピングを作成します。これらは通常、class： <cite>.Column`オブジェクトとして作成されます。次に、：func： `.composite`関数を使用して、</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>Point``クラスを介して列の集合を表す新しい属性を割り当てます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">composite</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 
@@ -214,16 +203,14 @@ attributes that will represent sets of columns via the <code class="docutils lit
     <span class="n">start</span> <span class="o">=</span> <span class="n">composite</span><span class="p">(</span><span class="n">Point</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
     <span class="n">end</span> <span class="o">=</span> <span class="n">composite</span><span class="p">(</span><span class="n">Point</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span></pre></div>
 </div>
-<p>A classical mapping above would define each <a class="reference internal" href="#sqlalchemy.orm.composite" title="sqlalchemy.orm.composite"><code class="xref py py-func docutils literal"><span class="pre">composite()</span></code></a>
-against the existing table:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mapper</span><span class="p">(</span><span class="n">Vertex</span><span class="p">,</span> <span class="n">vertices_table</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
+<p>上記の古典的なマッピングはそれぞれを定義します：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.composite`は既存のテーブルに対して:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapper</span><span class="p">(</span><span class="n">Vertex</span><span class="p">,</span> <span class="n">vertices_table</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
     <span class="s1">&#39;start&#39;</span><span class="p">:</span><span class="n">composite</span><span class="p">(</span><span class="n">Point</span><span class="p">,</span> <span class="n">vertices_table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">x1</span><span class="p">,</span> <span class="n">vertices_table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">y1</span><span class="p">),</span>
     <span class="s1">&#39;end&#39;</span><span class="p">:</span><span class="n">composite</span><span class="p">(</span><span class="n">Point</span><span class="p">,</span> <span class="n">vertices_table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">x2</span><span class="p">,</span> <span class="n">vertices_table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">y2</span><span class="p">),</span>
 <span class="p">})</span></pre></div>
 </div>
-<p>We can now persist and use <code class="docutils literal"><span class="pre">Vertex</span></code> instances, as well as query for them,
-using the <code class="docutils literal"><span class="pre">.start</span></code> and <code class="docutils literal"><span class="pre">.end</span></code> attributes against ad-hoc <code class="docutils literal"><span class="pre">Point</span></code> instances:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">v</span> <span class="o">=</span> <span class="n">Vertex</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">Point</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="n">Point</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<p>アドホックな `` Point``インスタンスに対して `` .start``と `` .end``属性を使用して、 `` Vertex``インスタンスを永続化して使用することができます。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">v</span> <span class="o">=</span> <span class="n">Vertex</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">Point</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="n">Point</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">q</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Vertex</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Vertex</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="n">Point</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 <a href='#' class='sql_link'>sql</a><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">first</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
@@ -244,46 +231,23 @@ WHERE vertices.x1 = ? AND vertices.y1 = ?
 <dl class="function">
 <dt id="sqlalchemy.orm.composite">
 <code class="descclassname">sqlalchemy.orm.</code><code class="descname">composite</code><span class="sig-paren">(</span><em>class_</em>, <em>*attrs</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.composite" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a composite column-based property for use with a Mapper.</p>
-<p>See the mapping documentation section <a class="reference internal" href="#mapper-composite"><span class="std std-ref">Composite Column Types</span></a> for a
-full usage example.</p>
-<p>The <a class="reference internal" href="internals.html#sqlalchemy.orm.interfaces.MapperProperty" title="sqlalchemy.orm.interfaces.MapperProperty"><code class="xref py py-class docutils literal"><span class="pre">MapperProperty</span></code></a> returned by <a class="reference internal" href="#sqlalchemy.orm.composite" title="sqlalchemy.orm.composite"><code class="xref py py-func docutils literal"><span class="pre">composite()</span></code></a>
-is the <a class="reference internal" href="internals.html#sqlalchemy.orm.descriptor_props.CompositeProperty" title="sqlalchemy.orm.descriptor_props.CompositeProperty"><code class="xref py py-class docutils literal"><span class="pre">CompositeProperty</span></code></a>.</p>
+<dd><p>Mapperで使用する複合列ベースのプロパティを返します。</p>
+<p>完全な使用例については、マッピングドキュメンテーションのsection：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>mapper_composite`を参照してください。</p>
+<p>：func： <cite>.composite`によって返される：class：</cite> .MapperProperty`は：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.CompositeProperty`です。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.orm.composite.params.class_"></span><strong>class_</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.class_">¶</a> -- The &quot;composite type&quot; class.</li>
-<li><span class="target" id="sqlalchemy.orm.composite.params.*cols"></span><strong>*cols</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.*cols">¶</a> -- List of Column objects to be mapped.</li>
-<li><span class="target" id="sqlalchemy.orm.composite.params.active_history"></span><strong>active_history=False</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.active_history">¶</a> -- <p>When <code class="docutils literal"><span class="pre">True</span></code>, indicates that the &quot;previous&quot; value for a
-scalar attribute should be loaded when replaced, if not
-already loaded.  See the same flag on <a class="reference internal" href="mapping_columns.html#sqlalchemy.orm.column_property" title="sqlalchemy.orm.column_property"><code class="xref py py-func docutils literal"><span class="pre">column_property()</span></code></a>.</p>
-<div class="versionchanged">
-<p><span class="versionmodified">バージョン 0.7 で変更: </span>This flag specifically becomes meaningful
-- previously it was a placeholder.</p>
-</div>
-</li>
-<li><span class="target" id="sqlalchemy.orm.composite.params.group"></span><strong>group</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.group">¶</a> -- A group name for this property when marked as deferred.</li>
-<li><span class="target" id="sqlalchemy.orm.composite.params.deferred"></span><strong>deferred</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.deferred">¶</a> -- When True, the column property is &quot;deferred&quot;, meaning that it does
-not load immediately, and is instead loaded when the attribute is
-first accessed on an instance.  See also
-<a class="reference internal" href="loading_columns.html#sqlalchemy.orm.deferred" title="sqlalchemy.orm.deferred"><code class="xref py py-func docutils literal"><span class="pre">deferred()</span></code></a>.</li>
-<li><span class="target" id="sqlalchemy.orm.composite.params.comparator_factory"></span><strong>comparator_factory</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.comparator_factory">¶</a> -- a class which extends
-<a class="reference internal" href="internals.html#sqlalchemy.orm.descriptor_props.CompositeProperty.Comparator" title="sqlalchemy.orm.descriptor_props.CompositeProperty.Comparator"><code class="xref py py-class docutils literal"><span class="pre">CompositeProperty.Comparator</span></code></a> which provides custom SQL
-clause generation for comparison operations.</li>
-<li><span class="target" id="sqlalchemy.orm.composite.params.doc"></span><strong>doc</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.doc">¶</a> -- optional string that will be applied as the doc on the
-class-bound descriptor.</li>
-<li><span class="target" id="sqlalchemy.orm.composite.params.info"></span><strong>info</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.info">¶</a> -- <p>Optional data dictionary which will be populated into the
-<a class="reference internal" href="internals.html#sqlalchemy.orm.interfaces.MapperProperty.info" title="sqlalchemy.orm.interfaces.MapperProperty.info"><code class="xref py py-attr docutils literal"><span class="pre">MapperProperty.info</span></code></a> attribute of this object.</p>
-<div class="versionadded">
-<p><span class="versionmodified">バージョン 0.8 で追加.</span></p>
-</div>
-</li>
-<li><span class="target" id="sqlalchemy.orm.composite.params.extension"></span><strong>extension</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.extension">¶</a> -- an <a class="reference internal" href="deprecated.html#sqlalchemy.orm.interfaces.AttributeExtension" title="sqlalchemy.orm.interfaces.AttributeExtension"><code class="xref py py-class docutils literal"><span class="pre">AttributeExtension</span></code></a> instance,
-or list of extensions, which will be prepended to the list of
-attribute listeners for the resulting descriptor placed on the
-class.  <strong>Deprecated.</strong>  Please see <a class="reference internal" href="events.html#sqlalchemy.orm.events.AttributeEvents" title="sqlalchemy.orm.events.AttributeEvents"><code class="xref py py-class docutils literal"><span class="pre">AttributeEvents</span></code></a>.</li>
+<li><span class="target" id="sqlalchemy.orm.composite.params.class_"></span><strong>class_</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.class_">¶</a> -- &amp;quot;複合型&amp;quot;クラス。</li>
+<li><span class="target" id="sqlalchemy.orm.composite.params.*cols"></span><strong>*cols</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.*cols">¶</a> -- マップされる列オブジェクトのリスト。</li>
+<li><span class="target" id="sqlalchemy.orm.composite.params.active_history"></span><strong>active_history=False</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.active_history">¶</a> -- `` True``のときは、スカラ属性の&amp;quot;previous &amp;quot;値が置換されていなければ読み込まれなければならないことを示します。同じフラグをfunc： <a href="#id1"><span class="problematic" id="id2">`</span></a>.column_property`で見てください。 .. versionchanged :: 0.7このフラグは特に意味があります。以前はプレースホルダでした。</li>
+<li><span class="target" id="sqlalchemy.orm.composite.params.group"></span><strong>group</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.group">¶</a> -- 遅延されているとマークされている場合、このプロパティーのグループ名。</li>
+<li><span class="target" id="sqlalchemy.orm.composite.params.deferred"></span><strong>deferred</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.deferred">¶</a> -- Trueの場合、columnプロパティは&amp;quot;deferred &amp;quot;です。つまり、すぐに読み込まれることはなく、インスタンスでその属性が最初にアクセスされたときに読み込まれます。 func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.orm.deferred`も参照してください。</li>
+<li><span class="target" id="sqlalchemy.orm.composite.params.comparator_factory"></span><strong>comparator_factory</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.comparator_factory">¶</a> -- extends：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.CompositeProperty.Comparator`これは比較演算のためのカスタムSQL節生成を提供します。</li>
+<li><span class="target" id="sqlalchemy.orm.composite.params.doc"></span><strong>doc</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.doc">¶</a> -- クラスバインド記述子のdocとして適用されるオプションの文字列。</li>
+<li><span class="target" id="sqlalchemy.orm.composite.params.info"></span><strong>info</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.info">¶</a> -- このオブジェクトの：attr： <a href="#id1"><span class="problematic" id="id2">`</span></a>.MapperProperty.info`属性に読み込まれるオプションのデータ辞書です。 .. versionadded :: 0.8</li>
+<li><span class="target" id="sqlalchemy.orm.composite.params.extension"></span><strong>extension</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.composite.params.extension">¶</a> -- ：class： <cite>.AttributeExtension`インスタンス、またはクラスに配置された結果の記述子の属性リスナーのリストの前に追加される拡張のリストです。 **推奨されていません。**参照：class： `.AttributeEvents</cite>。</li>
 </ul>
 </td>
 </tr>
@@ -292,29 +256,16 @@ class.  <strong>Deprecated.</strong>  Please see <a class="reference internal" h
 </dd></dl>
 
 <div class="section" id="tracking-in-place-mutations-on-composites">
-<h2>Tracking In-Place Mutations on Composites<a class="headerlink" href="#tracking-in-place-mutations-on-composites" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>In-place changes to an existing composite value are
-not tracked automatically.  Instead, the composite class needs to provide
-events to its parent object explicitly.   This task is largely automated
-via the usage of the <a class="reference internal" href="extensions/mutable.html#sqlalchemy.ext.mutable.MutableComposite" title="sqlalchemy.ext.mutable.MutableComposite"><code class="xref py py-class docutils literal"><span class="pre">MutableComposite</span></code></a> mixin, which uses events
-to associate each user-defined composite object with all parent associations.
-Please see the example in <a class="reference internal" href="extensions/mutable.html#mutable-composites"><span class="std std-ref">Establishing Mutability on Composites</span></a>.</p>
+<h2>コンポジットのインプレース・ミューテックスのトラッキング<a class="headerlink" href="#tracking-in-place-mutations-on-composites" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>既存のコンポジット値のインプレース変更は自動的には追跡されません。代わりに、複合クラスはイベントをその親オブジェクトに明示的に提供する必要があります。このタスクは、：class： <cite>.MutableComposite</cite> mixinの使用によって大部分が自動化されます。mixinは、イベントを使用して各ユーザー定義コンポジットオブジェクトをすべての親の関連付けに関連付けます。 ：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>mutable_composites`の例を見てください。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 0.7 で変更: </span>In-place changes to an existing composite value are no longer
-tracked automatically; the functionality is superseded by the
-<a class="reference internal" href="extensions/mutable.html#sqlalchemy.ext.mutable.MutableComposite" title="sqlalchemy.ext.mutable.MutableComposite"><code class="xref py py-class docutils literal"><span class="pre">MutableComposite</span></code></a> class.</p>
+<p><span class="versionmodified">バージョン 0.7 で変更: </span>既存のコンポジット値のインプレース変更は自動的には追跡されません。この機能は：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.MutableComposite`クラスに取って代わられます。</p>
 </div>
 </div>
 <div class="section" id="redefining-comparison-operations-for-composites">
-<span id="composite-operations"></span><h2>Redefining Comparison Operations for Composites<a class="headerlink" href="#redefining-comparison-operations-for-composites" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The &quot;equals&quot; comparison operation by default produces an AND of all
-corresponding columns equated to one another. This can be changed using
-the <code class="docutils literal"><span class="pre">comparator_factory</span></code> argument to <a class="reference internal" href="#sqlalchemy.orm.composite" title="sqlalchemy.orm.composite"><code class="xref py py-func docutils literal"><span class="pre">composite()</span></code></a>, where we
-specify a custom <a class="reference internal" href="internals.html#sqlalchemy.orm.descriptor_props.CompositeProperty.Comparator" title="sqlalchemy.orm.descriptor_props.CompositeProperty.Comparator"><code class="xref py py-class docutils literal"><span class="pre">CompositeProperty.Comparator</span></code></a> class
-to define existing or new operations.
-Below we illustrate the &quot;greater than&quot; operator, implementing
-the same expression that the base &quot;greater than&quot; does:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.properties</span> <span class="k">import</span> <span class="n">CompositeProperty</span>
+<span id="composite-operations"></span><h2>コンポジットの比較操作の再定義<a class="headerlink" href="#redefining-comparison-operations-for-composites" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>&amp;quot;equals &amp;quot;比較演算は、デフォルトでは、対応するすべての列の論理積を生成します。これは：func： <cite>.composite`の</cite> <cite>comparator_factory``引数を使って変更できます。ここでは、custom：class：</cite> .CompositeProperty.Comparator`クラスを指定して、既存の操作や新しい操作を定義します。以下では、&amp;quot;より大きい&amp;quot;演算子を示しており、ベース&amp;quot;より大きいと同じ式を実装しています：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.properties</span> <span class="k">import</span> <span class="n">CompositeProperty</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">sql</span>
 
 <span class="k">class</span> <span class="nc">PointComparator</span><span class="p">(</span><span class="n">CompositeProperty</span><span class="o">.</span><span class="n">Comparator</span><span class="p">):</span>
@@ -348,13 +299,13 @@ the same expression that the base &quot;greater than&quot; does:</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="mapped_attributes.html" title="previous chapter">Changing Attribute Behavior</a>
+        <a href="mapped_attributes.html" title="previous chapter">属性の動作の変更</a>
         Next:
-        <a href="inheritance.html" title="next chapter">Mapping Class Inheritance Hierarchies</a>
+        <a href="inheritance.html" title="next chapter">クラス継承階層のマッピング</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -381,6 +332,7 @@ the same expression that the base &quot;greater than&quot; does:</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

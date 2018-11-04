@@ -332,16 +332,16 @@ no release date<div class="section" id="change-0.7.11-orm">
 <h3>orm<a class="headerlink" href="#change-0.7.11-orm" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
 <li><p id="change-0.7.11-0"><span class="target" id="change-452dd931d596e8eff62a71b5f6d967bd"><strong>[orm] [bug] </strong></span>Fixed bug where list instrumentation would fail to represent a
-setslice of <code class="docutils literal"><span class="pre">[0:0]</span></code> correctly, which in particular could occur
-when using <code class="docutils literal"><span class="pre">insert(0,</span> <span class="pre">item)</span></code> with the association proxy.  Due
+setslice of <code class="docutils literal notranslate"><span class="pre">[0:0]</span></code> correctly, which in particular could occur
+when using <code class="docutils literal notranslate"><span class="pre">insert(0,</span> <span class="pre">item)</span></code> with the association proxy.  Due
 to some quirk in Python collections, the issue was much more likely
 with Python 3 rather than 2.<a class="changeset-link headerlink reference internal" href="#change-452dd931d596e8eff62a71b5f6d967bd">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2807">#2807</a></p>
 </p>
 </li>
 <li><p id="change-0.7.11-1"><span class="target" id="change-67c2029e6f187392003eec283687e00e"><strong>[orm] [bug] </strong></span>Fixed bug when a query of the form:
-<code class="docutils literal"><span class="pre">query(SubClass).options(subqueryload(Baseclass.attrname))</span></code>,
-where <code class="docutils literal"><span class="pre">SubClass</span></code> is a joined inh of <code class="docutils literal"><span class="pre">BaseClass</span></code>,
-would fail to apply the <code class="docutils literal"><span class="pre">JOIN</span></code> inside the subquery
+<code class="docutils literal notranslate"><span class="pre">query(SubClass).options(subqueryload(Baseclass.attrname))</span></code>,
+where <code class="docutils literal notranslate"><span class="pre">SubClass</span></code> is a joined inh of <code class="docutils literal notranslate"><span class="pre">BaseClass</span></code>,
+would fail to apply the <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> inside the subquery
 on the attribute load, producing a cartesian product.
 The populated results still tended to be correct as additional
 rows are just ignored, so this issue may be present as a
@@ -377,7 +377,7 @@ itself on top of an existing one in an inheritance relationship
 <div class="section" id="change-0.7.11-engine">
 <h3>engine<a class="headerlink" href="#change-0.7.11-engine" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
-<li><p id="change-0.7.11-5"><span class="target" id="change-005cb70429df3b19c76d850725f7a8b3"><strong>[engine] [bug] </strong></span>The regexp used by the <a class="reference internal" href="../core/engines.html#sqlalchemy.engine.url.make_url" title="sqlalchemy.engine.url.make_url"><code class="xref py py-func docutils literal"><span class="pre">make_url()</span></code></a> function now parses
+<li><p id="change-0.7.11-5"><span class="target" id="change-005cb70429df3b19c76d850725f7a8b3"><strong>[engine] [bug] </strong></span>The regexp used by the <a class="reference internal" href="../core/engines.html#sqlalchemy.engine.url.make_url" title="sqlalchemy.engine.url.make_url"><code class="xref py py-func docutils literal notranslate"><span class="pre">make_url()</span></code></a> function now parses
 ipv6 addresses, e.g. surrounded by brackets.<a class="changeset-link headerlink reference internal" href="#change-005cb70429df3b19c76d850725f7a8b3">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2851">#2851</a></p>
 </p>
 </li>
@@ -391,12 +391,12 @@ not be properly quoted if it was referred to in multiple FROM clauses.<a class="
 </p>
 </li>
 <li><p id="change-0.7.11-7"><span class="target" id="change-cbc2ad305d9de1b8db977dd167cdff57"><strong>[sql] [bug] [cte] </strong></span>Fixed bug in common table expression system where if the CTE were
-used only as an <code class="docutils literal"><span class="pre">alias()</span></code> construct, it would not render using the
+used only as an <code class="docutils literal notranslate"><span class="pre">alias()</span></code> construct, it would not render using the
 WITH keyword.<a class="changeset-link headerlink reference internal" href="#change-cbc2ad305d9de1b8db977dd167cdff57">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2783">#2783</a></p>
 </p>
 </li>
-<li><p id="change-0.7.11-8"><span class="target" id="change-558878ea1f3882a6457b6019765de96b"><strong>[sql] [bug] </strong></span>Fixed bug in <a class="reference internal" href="../core/constraints.html#sqlalchemy.schema.CheckConstraint" title="sqlalchemy.schema.CheckConstraint"><code class="xref py py-class docutils literal"><span class="pre">CheckConstraint</span></code></a> DDL where the &quot;quote&quot; flag from a
-<a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> object would not be propagated.<a class="changeset-link headerlink reference internal" href="#change-558878ea1f3882a6457b6019765de96b">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2784">#2784</a></p>
+<li><p id="change-0.7.11-8"><span class="target" id="change-558878ea1f3882a6457b6019765de96b"><strong>[sql] [bug] </strong></span>Fixed bug in <a class="reference internal" href="../core/constraints.html#sqlalchemy.schema.CheckConstraint" title="sqlalchemy.schema.CheckConstraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">CheckConstraint</span></code></a> DDL where the &quot;quote&quot; flag from a
+<a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal notranslate"><span class="pre">Column</span></code></a> object would not be propagated.<a class="changeset-link headerlink reference internal" href="#change-558878ea1f3882a6457b6019765de96b">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2784">#2784</a></p>
 </p>
 </li>
 </ul>
@@ -406,7 +406,7 @@ WITH keyword.<a class="changeset-link headerlink reference internal" href="#chan
 <ul class="simple">
 <li><p id="change-0.7.11-9"><span class="target" id="change-b0a1f0bd19bff684a508913ac98efced"><strong>[postgresql] [feature] </strong></span>Added support for PostgreSQL's traditional SUBSTRING
 function syntax, renders as &quot;SUBSTRING(x FROM y FOR z)&quot;
-when regular <code class="docutils literal"><span class="pre">func.substring()</span></code> is used.
+when regular <code class="docutils literal notranslate"><span class="pre">func.substring()</span></code> is used.
 Courtesy Gunnlaugur Þór Briem.<a class="changeset-link headerlink reference internal" href="#change-b0a1f0bd19bff684a508913ac98efced">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2676">#2676</a></p>
 </p>
 </li>
@@ -437,7 +437,7 @@ Released: Thu Feb 7 2013<div class="section" id="change-0.7.10-orm">
 <h3>orm<a class="headerlink" href="#change-0.7.10-orm" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
 <li><p id="change-0.7.10-0"><span class="target" id="change-db2025d4880044d4cbb1b4c52be875bb"><strong>[orm] [bug] </strong></span>Fixed potential memory leak which could occur if an
-arbitrary number of <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.sessionmaker" title="sqlalchemy.orm.session.sessionmaker"><code class="xref py py-class docutils literal"><span class="pre">sessionmaker</span></code></a> objects
+arbitrary number of <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.sessionmaker" title="sqlalchemy.orm.session.sessionmaker"><code class="xref py py-class docutils literal notranslate"><span class="pre">sessionmaker</span></code></a> objects
 were created.   The anonymous subclass created by
 the sessionmaker, when dereferenced, would not be garbage
 collected due to remaining class-level references from the
@@ -446,16 +446,16 @@ that made use of ad-hoc subclasses in conjunction with
 an event dispatcher.<a class="changeset-link headerlink reference internal" href="#change-db2025d4880044d4cbb1b4c52be875bb">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2650">#2650</a></p>
 </p>
 </li>
-<li><p id="change-0.7.10-1"><span class="target" id="change-7067a9d674a48894b96003b25993413c"><strong>[orm] [bug] </strong></span><a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query.merge_result" title="sqlalchemy.orm.query.Query.merge_result"><code class="xref py py-meth docutils literal"><span class="pre">Query.merge_result()</span></code></a> can now load rows from an outer join
-where an entity may be <code class="docutils literal"><span class="pre">None</span></code> without throwing an error.<a class="changeset-link headerlink reference internal" href="#change-7067a9d674a48894b96003b25993413c">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2640">#2640</a></p>
+<li><p id="change-0.7.10-1"><span class="target" id="change-7067a9d674a48894b96003b25993413c"><strong>[orm] [bug] </strong></span><a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query.merge_result" title="sqlalchemy.orm.query.Query.merge_result"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Query.merge_result()</span></code></a> can now load rows from an outer join
+where an entity may be <code class="docutils literal notranslate"><span class="pre">None</span></code> without throwing an error.<a class="changeset-link headerlink reference internal" href="#change-7067a9d674a48894b96003b25993413c">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2640">#2640</a></p>
 </p>
 </li>
-<li><p id="change-0.7.10-2"><span class="target" id="change-2ddfafd175eec1a2d9f2b88808c52919"><strong>[orm] [bug] </strong></span>The <a class="reference internal" href="../orm/extensions/mutable.html#sqlalchemy.ext.mutable.MutableComposite" title="sqlalchemy.ext.mutable.MutableComposite"><code class="xref py py-class docutils literal"><span class="pre">MutableComposite</span></code></a> type did not allow for the
-<a class="reference internal" href="../orm/extensions/mutable.html#sqlalchemy.ext.mutable.MutableBase.coerce" title="sqlalchemy.ext.mutable.MutableBase.coerce"><code class="xref py py-meth docutils literal"><span class="pre">MutableBase.coerce()</span></code></a> method to be used, even though
+<li><p id="change-0.7.10-2"><span class="target" id="change-2ddfafd175eec1a2d9f2b88808c52919"><strong>[orm] [bug] </strong></span>The <a class="reference internal" href="../orm/extensions/mutable.html#sqlalchemy.ext.mutable.MutableComposite" title="sqlalchemy.ext.mutable.MutableComposite"><code class="xref py py-class docutils literal notranslate"><span class="pre">MutableComposite</span></code></a> type did not allow for the
+<a class="reference internal" href="../orm/extensions/mutable.html#sqlalchemy.ext.mutable.MutableBase.coerce" title="sqlalchemy.ext.mutable.MutableBase.coerce"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MutableBase.coerce()</span></code></a> method to be used, even though
 the code seemed to indicate this intent, so this now works
 and a brief example is added.  As a side-effect,
 the mechanics of this event handler have been changed so that
-new <a class="reference internal" href="../orm/extensions/mutable.html#sqlalchemy.ext.mutable.MutableComposite" title="sqlalchemy.ext.mutable.MutableComposite"><code class="xref py py-class docutils literal"><span class="pre">MutableComposite</span></code></a> types no longer add per-type
+new <a class="reference internal" href="../orm/extensions/mutable.html#sqlalchemy.ext.mutable.MutableComposite" title="sqlalchemy.ext.mutable.MutableComposite"><code class="xref py py-class docutils literal notranslate"><span class="pre">MutableComposite</span></code></a> types no longer add per-type
 global event handlers.  Also in 0.8.0b2.<a class="changeset-link headerlink reference internal" href="#change-2ddfafd175eec1a2d9f2b88808c52919">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2624">#2624</a></p>
 </p>
 </li>
@@ -473,10 +473,10 @@ or by primary key switch of another instance.<a class="changeset-link headerlink
 <div class="section" id="change-0.7.10-engine">
 <h3>engine<a class="headerlink" href="#change-0.7.10-engine" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
-<li><p id="change-0.7.10-4"><span class="target" id="change-60e87964fba0b375da4e3e2525694bc3"><strong>[engine] [bug] </strong></span>Fixed <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.MetaData.reflect" title="sqlalchemy.schema.MetaData.reflect"><code class="xref py py-meth docutils literal"><span class="pre">MetaData.reflect()</span></code></a> to correctly use
-the given <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection" title="sqlalchemy.engine.Connection"><code class="xref py py-class docutils literal"><span class="pre">Connection</span></code></a>, if given, without
+<li><p id="change-0.7.10-4"><span class="target" id="change-60e87964fba0b375da4e3e2525694bc3"><strong>[engine] [bug] </strong></span>Fixed <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.MetaData.reflect" title="sqlalchemy.schema.MetaData.reflect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MetaData.reflect()</span></code></a> to correctly use
+the given <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection" title="sqlalchemy.engine.Connection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Connection</span></code></a>, if given, without
 opening a second connection from that connection's
-<a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a>.<a class="changeset-link headerlink reference internal" href="#change-60e87964fba0b375da4e3e2525694bc3">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2604">#2604</a></p>
+<a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal notranslate"><span class="pre">Engine</span></code></a>.<a class="changeset-link headerlink reference internal" href="#change-60e87964fba0b375da4e3e2525694bc3">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2604">#2604</a></p>
 </p>
 </li>
 </ul>
@@ -484,13 +484,13 @@ opening a second connection from that connection's
 <div class="section" id="change-0.7.10-sql">
 <h3>sql<a class="headerlink" href="#change-0.7.10-sql" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
-<li><p id="change-0.7.10-5"><span class="target" id="change-9c4c1ed9adc28c0f4580ffb99fe90993"><strong>[sql] [bug] </strong></span>Backported adjustment to <code class="docutils literal"><span class="pre">__repr__</span></code> for
-<a class="reference internal" href="../core/custom_types.html#sqlalchemy.types.TypeDecorator" title="sqlalchemy.types.TypeDecorator"><code class="xref py py-class docutils literal"><span class="pre">TypeDecorator</span></code></a> to 0.7, allows <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.PickleType" title="sqlalchemy.types.PickleType"><code class="xref py py-class docutils literal"><span class="pre">PickleType</span></code></a>
-to produce a clean <code class="docutils literal"><span class="pre">repr()</span></code> to help with Alembic.<a class="changeset-link headerlink reference internal" href="#change-9c4c1ed9adc28c0f4580ffb99fe90993">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2584">#2584</a>, <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2594">#2594</a></p>
+<li><p id="change-0.7.10-5"><span class="target" id="change-9c4c1ed9adc28c0f4580ffb99fe90993"><strong>[sql] [bug] </strong></span>Backported adjustment to <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> for
+<a class="reference internal" href="../core/custom_types.html#sqlalchemy.types.TypeDecorator" title="sqlalchemy.types.TypeDecorator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeDecorator</span></code></a> to 0.7, allows <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.PickleType" title="sqlalchemy.types.PickleType"><code class="xref py py-class docutils literal notranslate"><span class="pre">PickleType</span></code></a>
+to produce a clean <code class="docutils literal notranslate"><span class="pre">repr()</span></code> to help with Alembic.<a class="changeset-link headerlink reference internal" href="#change-9c4c1ed9adc28c0f4580ffb99fe90993">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2584">#2584</a>, <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2594">#2594</a></p>
 </p>
 </li>
-<li><p id="change-0.7.10-6"><span class="target" id="change-8f574adb5328ea81c58038e0dc84e0f1"><strong>[sql] [bug] </strong></span>Fixed bug where <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Table.tometadata" title="sqlalchemy.schema.Table.tometadata"><code class="xref py py-meth docutils literal"><span class="pre">Table.tometadata()</span></code></a> would fail if a
-<a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> had both a foreign key as well as an
+<li><p id="change-0.7.10-6"><span class="target" id="change-8f574adb5328ea81c58038e0dc84e0f1"><strong>[sql] [bug] </strong></span>Fixed bug where <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Table.tometadata" title="sqlalchemy.schema.Table.tometadata"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Table.tometadata()</span></code></a> would fail if a
+<a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal notranslate"><span class="pre">Column</span></code></a> had both a foreign key as well as an
 alternate &quot;.key&quot; name for the column.<a class="changeset-link headerlink reference internal" href="#change-8f574adb5328ea81c58038e0dc84e0f1">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2643">#2643</a></p>
 </p>
 </li>
@@ -503,10 +503,10 @@ used) so it is now arranged internally using a copy of the given default
 object, if the flag isn't set to what corresponds to that argument.<a class="changeset-link headerlink reference internal" href="#change-ec0e00d90e249bad5a39a8d564525068">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2631">#2631</a></p>
 </p>
 </li>
-<li><p id="change-0.7.10-8"><span class="target" id="change-681094e6f3e1bffd849392f4ef50efd1"><strong>[sql] [gae] [mysql] </strong></span>Added a conditional import to the <code class="docutils literal"><span class="pre">gaerdbms</span></code> dialect which attempts
+<li><p id="change-0.7.10-8"><span class="target" id="change-681094e6f3e1bffd849392f4ef50efd1"><strong>[sql] [gae] [mysql] </strong></span>Added a conditional import to the <code class="docutils literal notranslate"><span class="pre">gaerdbms</span></code> dialect which attempts
 to import rdbms_apiproxy vs. rdbms_googleapi to work
 on both dev and production platforms.  Also now honors the
-<code class="docutils literal"><span class="pre">instance</span></code> attribute.  Courtesy Sean Lynch.  Also backported
+<code class="docutils literal notranslate"><span class="pre">instance</span></code> attribute.  Courtesy Sean Lynch.  Also backported
 enhancements to allow username/password as well as
 fixing error code interpretation from 0.8.<a class="changeset-link headerlink reference internal" href="#change-681094e6f3e1bffd849392f4ef50efd1">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2649">#2649</a></p>
 </p>
@@ -564,9 +564,9 @@ so the dialect has been repaired to exclude LONG from
 having cx_Oracle.LOB filtering applied.<a class="changeset-link headerlink reference internal" href="#change-edf0bd57d1a082833b533bbae1afe691">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/2620">#2620</a></p>
 </p>
 </li>
-<li><p id="change-0.7.10-15"><span class="target" id="change-cbc0a0886495a3f69359e08b1582633f"><strong>[oracle] [bug] </strong></span>Repaired the usage of <code class="docutils literal"><span class="pre">.prepare()</span></code> in conjunction with
-cx_Oracle so that a return value of <code class="docutils literal"><span class="pre">False</span></code> will result
-in no call to <code class="docutils literal"><span class="pre">connection.commit()</span></code>, hence avoiding
+<li><p id="change-0.7.10-15"><span class="target" id="change-cbc0a0886495a3f69359e08b1582633f"><strong>[oracle] [bug] </strong></span>Repaired the usage of <code class="docutils literal notranslate"><span class="pre">.prepare()</span></code> in conjunction with
+cx_Oracle so that a return value of <code class="docutils literal notranslate"><span class="pre">False</span></code> will result
+in no call to <code class="docutils literal notranslate"><span class="pre">connection.commit()</span></code>, hence avoiding
 &quot;no transaction&quot; errors.   Two-phase transactions have
 now been shown to work in a rudimental fashion with
 SQLAlchemy and cx_oracle, however are subject to caveats
@@ -1260,11 +1260,11 @@ over connection return activity.<a class="changeset-link headerlink reference in
 </p>
 </li>
 <li><p id="change-0.7.6-15"><span class="target" id="change-f22f644c754519a55485cda58f78ade4"><strong>[engine] [feature] </strong></span>Added some decent context managers
-to Engine, Connection:<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">engine</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+to Engine, Connection:<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">engine</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">work</span> <span class="k">with</span> <span class="n">conn</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">transaction</span><span class="o">&gt;</span></pre></div>
 </div>
 <p>and:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">work</span> <span class="k">with</span> <span class="n">conn</span><span class="o">&gt;</span></pre></div>
 </div>
 <p>Both close out the connection when done,
@@ -1959,7 +1959,7 @@ statement using &quot;CONSTRAINT &lt;name&gt; CHECK &lt;expression&gt;&quot;.<a 
 arguments, which will be applied to the same-named
 arguments of a Table
 or Sequence which leaves these at their default
-of <code class="docutils literal"><span class="pre">None</span></code>.<a class="changeset-link headerlink reference internal" href="#change-82862f893ba8ec9c5f0ee21833ef35a4">¶</a><p></p>
+of <code class="docutils literal notranslate"><span class="pre">None</span></code>.<a class="changeset-link headerlink reference internal" href="#change-82862f893ba8ec9c5f0ee21833ef35a4">¶</a><p></p>
 </p>
 </li>
 <li><p id="change-0.7.4-29"><span class="target" id="change-0ee589a6906f82d2282e3743c9ac4052"><strong>[schema] </strong></span>Sequence accepts &quot;quote_schema&quot; argument<a class="changeset-link headerlink reference internal" href="#change-0ee589a6906f82d2282e3743c9ac4052">¶</a><p></p>
@@ -4166,7 +4166,7 @@ declarative class. (also in 0.6.7)<a class="changeset-link headerlink reference 
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -4193,6 +4193,7 @@ declarative class. (also in 0.6.7)<a class="changeset-link headerlink reference 
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

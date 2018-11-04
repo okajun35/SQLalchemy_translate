@@ -10,7 +10,7 @@
         <title>
             
     
-    Deprecated ORM Event Interfaces
+    非推奨のORMイベントインターフェイス
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Events and Internals" href="extending.html" />
-        <link rel="next" title="ORM Extensions" href="extensions/index.html" />
-        <link rel="prev" title="ORM Exceptions" href="exceptions.html" />
+        <link rel="up" title="イベントと内部" href="extending.html" />
+        <link rel="next" title="ORM拡張" href="extensions/index.html" />
+        <link rel="prev" title="ORMの例外" href="exceptions.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,25 +120,25 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="events.html">ORM Events</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="internals.html">ORM Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="exceptions.html">ORM Exceptions</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Deprecated ORM Event Interfaces</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#mapper-events">Mapper Events</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#session-events">Session Events</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#attribute-events">Attribute Events</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="events.html">ORMイベント</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="internals.html">ORM内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="exceptions.html">ORMの例外</a></span></li>
+<li class="selected"><span class="link-container first"><strong>非推奨のORMイベントインターフェイス</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#mapper-events">マッパーイベント</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#session-events">セッションイベント</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#attribute-events">属性イベント</a></span></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -154,31 +154,23 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="module-sqlalchemy.orm.interfaces">
-<span id="deprecated-orm-event-interfaces"></span><span id="dep-interfaces-orm-toplevel"></span><h1>Deprecated ORM Event Interfaces<a class="headerlink" href="#module-sqlalchemy.orm.interfaces" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>This section describes the class-based ORM event interface which first
-existed in SQLAlchemy 0.1, which progressed with more kinds of events up
-until SQLAlchemy 0.5.  The non-ORM analogue is described at <a class="reference internal" href="../core/interfaces.html"><span class="std std-ref">Deprecated Event Interfaces</span></a>.</p>
+<span id="deprecated-orm-event-interfaces"></span><span id="dep-interfaces-orm-toplevel"></span><h1>非推奨のORMイベントインターフェイス<a class="headerlink" href="#module-sqlalchemy.orm.interfaces" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>このセクションでは、SQLAlchemy 0.1にはじめて登場したクラスベースのORMイベントインターフェイスについて説明します。これは、SQLAlchemy 0.5までさらに多くの種類のイベントが進行しました。非ORMアナログは：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>dep_interfaces_core_toplevel`に記述されています。</p>
 <div class="deprecated">
-<p><span class="versionmodified">バージョン 0.7 で撤廃: </span>As of SQLAlchemy 0.7, the new event system described in
-<a class="reference internal" href="../core/event.html"><span class="std std-ref">Events</span></a> replaces the extension/proxy/listener system, providing
-a consistent interface to all events without the need for subclassing.</p>
+<p><span class="versionmodified">バージョン 0.7 で撤廃: </span>SQLAlchemy 0.7以降、：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>event_toplevel`に記述された新しいイベントシステムは、拡張/プロキシ/リスナーシステムを置き換え、サブクラス化を必要とせずにすべてのイベントに対して一貫したインターフェースを提供します。</p>
 </div>
 <div class="section" id="mapper-events">
-<h2>Mapper Events<a class="headerlink" href="#mapper-events" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>マッパーイベント<a class="headerlink" href="#mapper-events" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="class">
 <dt id="sqlalchemy.orm.interfaces.MapperExtension">
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.interfaces.</code><code class="descname">MapperExtension</code><a class="headerlink" href="#sqlalchemy.orm.interfaces.MapperExtension" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Base implementation for <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.Mapper" title="sqlalchemy.orm.mapper.Mapper"><code class="xref py py-class docutils literal"><span class="pre">Mapper</span></code></a> event hooks.</p>
+<dd><p>class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Mapper`イベントフックの基本実装です。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last"><a class="reference internal" href="#sqlalchemy.orm.interfaces.MapperExtension" title="sqlalchemy.orm.interfaces.MapperExtension"><code class="xref py py-class docutils literal"><span class="pre">MapperExtension</span></code></a> is deprecated.   Please
-refer to <a class="reference internal" href="../core/event.html#sqlalchemy.event.listen" title="sqlalchemy.event.listen"><code class="xref py py-func docutils literal"><span class="pre">event.listen()</span></code></a> as well as
-<a class="reference internal" href="events.html#sqlalchemy.orm.events.MapperEvents" title="sqlalchemy.orm.events.MapperEvents"><code class="xref py py-class docutils literal"><span class="pre">MapperEvents</span></code></a>.</p>
+<p class="last">：class： <cite>.MapperExtension`は推奨されていません。 func： `.event.listen`と：class：</cite> .MapperEvents`を参照してください。</p>
 </div>
-<p>New extension classes subclass <a class="reference internal" href="#sqlalchemy.orm.interfaces.MapperExtension" title="sqlalchemy.orm.interfaces.MapperExtension"><code class="xref py py-class docutils literal"><span class="pre">MapperExtension</span></code></a> and are specified
-using the <code class="docutils literal"><span class="pre">extension</span></code> mapper() argument, which is a single
-<a class="reference internal" href="#sqlalchemy.orm.interfaces.MapperExtension" title="sqlalchemy.orm.interfaces.MapperExtension"><code class="xref py py-class docutils literal"><span class="pre">MapperExtension</span></code></a> or a list of such:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.interfaces</span> <span class="k">import</span> <span class="n">MapperExtension</span>
+<p>新しい拡張クラスsubclass：class： <cite>.MapperExtension`そして</cite> <cite>extension`</cite> mapper（）引数を使用して指定されます。この引数はclass：` .MapperExtension`またはそのようなリストです：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.interfaces</span> <span class="k">import</span> <span class="n">MapperExtension</span>
 
 <span class="k">class</span> <span class="nc">MyExtension</span><span class="p">(</span><span class="n">MapperExtension</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">before_insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">connection</span><span class="p">,</span> <span class="n">instance</span><span class="p">):</span>
@@ -186,174 +178,106 @@ using the <code class="docutils literal"><span class="pre">extension</span></cod
 
 <span class="n">m</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">users_table</span><span class="p">,</span> <span class="n">extension</span><span class="o">=</span><span class="n">MyExtension</span><span class="p">())</span></pre></div>
 </div>
-<p>A single mapper can maintain a chain of <code class="docutils literal"><span class="pre">MapperExtension</span></code>
-objects. When a particular mapping event occurs, the
-corresponding method on each <code class="docutils literal"><span class="pre">MapperExtension</span></code> is invoked
-serially, and each method has the ability to halt the chain
-from proceeding further:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">users_table</span><span class="p">,</span> <span class="n">extension</span><span class="o">=</span><span class="p">[</span><span class="n">ext1</span><span class="p">,</span> <span class="n">ext2</span><span class="p">,</span> <span class="n">ext3</span><span class="p">])</span></pre></div>
+<p>単一のマッパーは、 `` MapperExtension``オブジェクトの連鎖を維持することができます。特定のマッピングイベントが発生すると、各「MapperExtension」に対応するメソッドが順次呼び出され、各メソッドはチェーンをさらに進めるのを止めることができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">users_table</span><span class="p">,</span> <span class="n">extension</span><span class="o">=</span><span class="p">[</span><span class="n">ext1</span><span class="p">,</span> <span class="n">ext2</span><span class="p">,</span> <span class="n">ext3</span><span class="p">])</span></pre></div>
 </div>
-<p>Each <code class="docutils literal"><span class="pre">MapperExtension</span></code> method returns the symbol
-EXT_CONTINUE by default.   This symbol generally means &quot;move
-to the next <code class="docutils literal"><span class="pre">MapperExtension</span></code> for processing&quot;.  For methods
-that return objects like translated rows or new object
-instances, EXT_CONTINUE means the result of the method
-should be ignored.   In some cases it's required for a
-default mapper activity to be performed, such as adding a
-new instance to a result list.</p>
-<p>The symbol EXT_STOP has significance within a chain
-of <code class="docutils literal"><span class="pre">MapperExtension</span></code> objects that the chain will be stopped
-when this symbol is returned.  Like EXT_CONTINUE, it also
-has additional significance in some cases that a default
-mapper activity will not be performed.</p>
+<p>それぞれの `` MapperExtension``メソッドは、デフォルトでシンボルEXT_CONTINUEを返します。このシンボルは一般に、&amp;quot;を処理するために次の` <a href="#id1"><span class="problematic" id="id2">`</span></a>MapperExtension``に移動することを意味します。変換された行や新しいオブジェクトインスタンスのようなオブジェクトを返すメソッドの場合、EXT_CONTINUEはメソッドの結果を無視することを意味します。場合によっては、結果リストに新しいインスタンスを追加するなど、デフォルトのマッパーアクティビティーを実行する必要があります。</p>
+<p>シンボルEXT_STOPは、 `` MapperExtension``オブジェクトのチェーン内で、このシンボルが返されたときにチェーンが停止する意味を持ちます。 EXT_CONTINUEと同様に、デフォルトのマッパーアクティビティーが実行されない場合もあります。</p>
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.MapperExtension.after_delete">
 <code class="descname">after_delete</code><span class="sig-paren">(</span><em>mapper</em>, <em>connection</em>, <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.MapperExtension.after_delete" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive an object instance after that instance is deleted.</p>
-<p>The return value is only significant within the <code class="docutils literal"><span class="pre">MapperExtension</span></code>
-chain; the parent mapper's behavior isn't modified by this method.</p>
+<dd><p>インスタンスが削除された後にオブジェクトインスタンスを受け取ります。</p>
+<p>戻り値は `` MapperExtension``チェーン内でのみ重要です。親マッパーの動作はこのメソッドによって変更されません。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.MapperExtension.after_insert">
 <code class="descname">after_insert</code><span class="sig-paren">(</span><em>mapper</em>, <em>connection</em>, <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.MapperExtension.after_insert" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive an object instance after that instance is inserted.</p>
-<p>The return value is only significant within the <code class="docutils literal"><span class="pre">MapperExtension</span></code>
-chain; the parent mapper's behavior isn't modified by this method.</p>
+<dd><p>インスタンスが挿入された後にオブジェクトインスタンスを受け取ります。</p>
+<p>戻り値は `` MapperExtension``チェーン内でのみ重要です。親マッパーの動作はこのメソッドによって変更されません。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.MapperExtension.after_update">
 <code class="descname">after_update</code><span class="sig-paren">(</span><em>mapper</em>, <em>connection</em>, <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.MapperExtension.after_update" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive an object instance after that instance is updated.</p>
-<p>The return value is only significant within the <code class="docutils literal"><span class="pre">MapperExtension</span></code>
-chain; the parent mapper's behavior isn't modified by this method.</p>
+<dd><p>インスタンスが更新された後にオブジェクトインスタンスを受け取ります。</p>
+<p>戻り値は `` MapperExtension``チェーン内でのみ重要です。親マッパーの動作はこのメソッドによって変更されません。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.MapperExtension.before_delete">
 <code class="descname">before_delete</code><span class="sig-paren">(</span><em>mapper</em>, <em>connection</em>, <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.MapperExtension.before_delete" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive an object instance before that instance is deleted.</p>
-<p>Note that <em>no</em> changes to the overall flush plan can be made
-here; and manipulation of the <code class="docutils literal"><span class="pre">Session</span></code> will not have the
-desired effect. To manipulate the <code class="docutils literal"><span class="pre">Session</span></code> within an
-extension, use <code class="docutils literal"><span class="pre">SessionExtension</span></code>.</p>
-<p>The return value is only significant within the <code class="docutils literal"><span class="pre">MapperExtension</span></code>
-chain; the parent mapper's behavior isn't modified by this method.</p>
+<dd><p>インスタンスが削除される前にオブジェクトインスタンスを受け取ります。</p>
+<p>ここでは、全体的なフラッシュプランの変更はできません。 `` Session``の操作には望みの効果はありません。拡張子の中で `` Session``を操作するには、 `` SessionExtension``を使います。</p>
+<p>戻り値は `` MapperExtension``チェーン内でのみ重要です。親マッパーの動作はこのメソッドによって変更されません。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.MapperExtension.before_insert">
 <code class="descname">before_insert</code><span class="sig-paren">(</span><em>mapper</em>, <em>connection</em>, <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.MapperExtension.before_insert" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive an object instance before that instance is inserted
-into its table.</p>
-<p>This is a good place to set up primary key values and such
-that aren't handled otherwise.</p>
-<p>Column-based attributes can be modified within this method
-which will result in the new value being inserted.  However
-<em>no</em> changes to the overall flush plan can be made, and
-manipulation of the <code class="docutils literal"><span class="pre">Session</span></code> will not have the desired effect.
-To manipulate the <code class="docutils literal"><span class="pre">Session</span></code> within an extension, use
-<code class="docutils literal"><span class="pre">SessionExtension</span></code>.</p>
-<p>The return value is only significant within the <code class="docutils literal"><span class="pre">MapperExtension</span></code>
-chain; the parent mapper's behavior isn't modified by this method.</p>
+<dd><p>インスタンスがそのテーブルに挿入される前にオブジェクトインスタンスを受け取ります。</p>
+<p>これはプライマリキーの値を設定するのに適しており、それ以外の場合は処理されません。</p>
+<p>このメソッド内で列ベースの属性を変更すると、新しい値が挿入されます。しかし、全体的なフラッシュプランの変更はできません。また、 `` Session``の操作は望みの効果を持たないでしょう。拡張子の中で `` Session``を操作するには、 `` SessionExtension``を使います。</p>
+<p>戻り値は `` MapperExtension``チェーン内でのみ重要です。親マッパーの動作はこのメソッドによって変更されません。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.MapperExtension.before_update">
 <code class="descname">before_update</code><span class="sig-paren">(</span><em>mapper</em>, <em>connection</em>, <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.MapperExtension.before_update" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive an object instance before that instance is updated.</p>
-<p>Note that this method is called for all instances that are marked as
-&quot;dirty&quot;, even those which have no net changes to their column-based
-attributes. An object is marked as dirty when any of its column-based
-attributes have a &quot;set attribute&quot; operation called or when any of its
-collections are modified. If, at update time, no column-based
-attributes have any net changes, no UPDATE statement will be issued.
-This means that an instance being sent to before_update is <em>not</em> a
-guarantee that an UPDATE statement will be issued (although you can
-affect the outcome here).</p>
-<p>To detect if the column-based attributes on the object have net
-changes, and will therefore generate an UPDATE statement, use
-<code class="docutils literal"><span class="pre">object_session(instance).is_modified(instance,</span>
-<span class="pre">include_collections=False)</span></code>.</p>
-<p>Column-based attributes can be modified within this method
-which will result in the new value being updated.  However
-<em>no</em> changes to the overall flush plan can be made, and
-manipulation of the <code class="docutils literal"><span class="pre">Session</span></code> will not have the desired effect.
-To manipulate the <code class="docutils literal"><span class="pre">Session</span></code> within an extension, use
-<code class="docutils literal"><span class="pre">SessionExtension</span></code>.</p>
-<p>The return value is only significant within the <code class="docutils literal"><span class="pre">MapperExtension</span></code>
-chain; the parent mapper's behavior isn't modified by this method.</p>
+<dd><p>インスタンスが更新される前にオブジェクトインスタンスを受け取ります。</p>
+<p>このメソッドは、列ベースの属性に正味の変更を加えていない場合でも、&amp;quot;ダーティ&amp;quot;とマークされているすべてのインスタンスに対して呼び出されることに注意してください。列ベースの属性のいずれかが呼び出されたときに、またはそのコレクションのいずれかが変更されたときに、オブジェクトはダーティとしてマークされます。更新時に列ベースの属性に正味の変更がない場合、UPDATEステートメントは発行されません。つまり、before_updateに送信されるインスタンスは、UPDATE文が発行される保証ではありません（ただし、ここでの結果に影響を与える可能性があります）。</p>
+<p>オブジェクトの列ベースの属性に正味の変更があるかどうかを検出し、UPDATE文を生成するかどうかを検出するには、 `` object_session（instance）.is_modified（instance、include_collections = False） <a href="#id1"><span class="problematic" id="id2">``</span></a>を使用します。</p>
+<p>このメソッド内で列ベースの属性を変更すると、新しい値が更新されます。しかし、全体的なフラッシュプランの変更はできません。また、 `` Session``の操作は望みの効果を持たないでしょう。拡張子の中で `` Session``を操作するには、 `` SessionExtension``を使います。</p>
+<p>戻り値は `` MapperExtension``チェーン内でのみ重要です。親マッパーの動作はこのメソッドによって変更されません。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.MapperExtension.init_failed">
 <code class="descname">init_failed</code><span class="sig-paren">(</span><em>mapper</em>, <em>class_</em>, <em>oldinit</em>, <em>instance</em>, <em>args</em>, <em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.MapperExtension.init_failed" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive an instance when its constructor has been called,
-and raised an exception.</p>
-<p>This method is only called during a userland construction of
-an object.  It is not called when an object is loaded from the
-database.</p>
-<p>The return value is only significant within the <code class="docutils literal"><span class="pre">MapperExtension</span></code>
-chain; the parent mapper's behavior isn't modified by this method.</p>
+<dd><p>コンストラクタが呼び出されたときにインスタンスを受け取り、例外を送出します。</p>
+<p>このメソッドは、オブジェクトのユーザランド構築時にのみ呼び出されます。オブジェクトがデータベースからロードされたときには呼び出されません。</p>
+<p>戻り値は `` MapperExtension``チェーン内でのみ重要です。親マッパーの動作はこのメソッドによって変更されません。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.MapperExtension.init_instance">
 <code class="descname">init_instance</code><span class="sig-paren">(</span><em>mapper</em>, <em>class_</em>, <em>oldinit</em>, <em>instance</em>, <em>args</em>, <em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.MapperExtension.init_instance" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive an instance when its constructor is called.</p>
-<p>This method is only called during a userland construction of
-an object.  It is not called when an object is loaded from the
-database.</p>
-<p>The return value is only significant within the <code class="docutils literal"><span class="pre">MapperExtension</span></code>
-chain; the parent mapper's behavior isn't modified by this method.</p>
+<dd><p>コンストラクタが呼び出されたときにインスタンスを受け取ります。</p>
+<p>このメソッドは、オブジェクトのユーザランド構築時にのみ呼び出されます。オブジェクトがデータベースからロードされたときには呼び出されません。</p>
+<p>戻り値は `` MapperExtension``チェーン内でのみ重要です。親マッパーの動作はこのメソッドによって変更されません。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.MapperExtension.instrument_class">
 <code class="descname">instrument_class</code><span class="sig-paren">(</span><em>mapper</em>, <em>class_</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.MapperExtension.instrument_class" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive a class when the mapper is first constructed, and has
-applied instrumentation to the mapped class.</p>
-<p>The return value is only significant within the <code class="docutils literal"><span class="pre">MapperExtension</span></code>
-chain; the parent mapper's behavior isn't modified by this method.</p>
+<dd><p>マッパーが最初に構築され、マッピングされたクラスに計測を適用したときにクラスを受け取ります。</p>
+<p>戻り値は `` MapperExtension``チェーン内でのみ重要です。親マッパーの動作はこのメソッドによって変更されません。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.MapperExtension.reconstruct_instance">
 <code class="descname">reconstruct_instance</code><span class="sig-paren">(</span><em>mapper</em>, <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.MapperExtension.reconstruct_instance" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive an object instance after it has been created via
-<code class="docutils literal"><span class="pre">__new__</span></code>, and after initial attribute population has
-occurred.</p>
-<p>This typically occurs when the instance is created based on
-incoming result rows, and is only called once for that
-instance's lifetime.</p>
-<p>Note that during a result-row load, this method is called upon
-the first row received for this instance.  Note that some
-attributes and collections may or may not be loaded or even
-initialized, depending on what's present in the result rows.</p>
-<p>The return value is only significant within the <code class="docutils literal"><span class="pre">MapperExtension</span></code>
-chain; the parent mapper's behavior isn't modified by this method.</p>
+<dd><p>オブジェクトインスタンスが `` __new__``を介して生成され、初期属性の集合が発生した後にそれを受け取ります。</p>
+<p>これは、通常、受信結果の行に基づいてインスタンスが作成され、そのインスタンスの存続時間に対して一度だけ呼び出される場合に発生します。</p>
+<p>結果行のロード中、このメソッドはこのインスタンスに対して最初に受信された行で呼び出されることに注意してください。結果行にあるものに応じて、属性やコレクションの一部がロードされたり、初期化されたりされたりすることがあります。</p>
+<p>戻り値は `` MapperExtension``チェーン内でのみ重要です。親マッパーの動作はこのメソッドによって変更されません。</p>
 </dd></dl>
 
 </dd></dl>
 
 </div>
 <div class="section" id="session-events">
-<h2>Session Events<a class="headerlink" href="#session-events" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>セッションイベント<a class="headerlink" href="#session-events" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="class">
 <dt id="sqlalchemy.orm.interfaces.SessionExtension">
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.interfaces.</code><code class="descname">SessionExtension</code><a class="headerlink" href="#sqlalchemy.orm.interfaces.SessionExtension" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Base implementation for <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> event hooks.</p>
+<dd><p>class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`イベントフックの基本実装です。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last"><a class="reference internal" href="#sqlalchemy.orm.interfaces.SessionExtension" title="sqlalchemy.orm.interfaces.SessionExtension"><code class="xref py py-class docutils literal"><span class="pre">SessionExtension</span></code></a> is deprecated.   Please
-refer to <a class="reference internal" href="../core/event.html#sqlalchemy.event.listen" title="sqlalchemy.event.listen"><code class="xref py py-func docutils literal"><span class="pre">event.listen()</span></code></a> as well as
-<a class="reference internal" href="events.html#sqlalchemy.orm.events.SessionEvents" title="sqlalchemy.orm.events.SessionEvents"><code class="xref py py-class docutils literal"><span class="pre">SessionEvents</span></code></a>.</p>
+<p class="last">：class： <cite>.SessionExtension`は非推奨です。 func： `.event.listen`と：class：</cite> .SessionEvents`を参照してください。</p>
 </div>
-<p>Subclasses may be installed into a <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> (or
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.sessionmaker" title="sqlalchemy.orm.session.sessionmaker"><code class="xref py py-class docutils literal"><span class="pre">sessionmaker</span></code></a>) using the <code class="docutils literal"><span class="pre">extension</span></code> keyword
-argument:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.interfaces</span> <span class="k">import</span> <span class="n">SessionExtension</span>
+<p>サブクラスは `` extension``キーワード引数を使って：class： <cite>.Session`（または：class：</cite> .sessionmaker`）にインストールすることができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.interfaces</span> <span class="k">import</span> <span class="n">SessionExtension</span>
 
 <span class="k">class</span> <span class="nc">MySessionExtension</span><span class="p">(</span><span class="n">SessionExtension</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">before_commit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
@@ -361,119 +285,94 @@ argument:</p>
 
 <span class="n">Session</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">extension</span><span class="o">=</span><span class="n">MySessionExtension</span><span class="p">())</span></pre></div>
 </div>
-<p>The same <a class="reference internal" href="#sqlalchemy.orm.interfaces.SessionExtension" title="sqlalchemy.orm.interfaces.SessionExtension"><code class="xref py py-class docutils literal"><span class="pre">SessionExtension</span></code></a> instance can be used
-with any number of sessions.</p>
+<p>同じ：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.SessionExtension`インスタンスは任意の数のセッションで使用できます。</p>
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.SessionExtension.after_attach">
 <code class="descname">after_attach</code><span class="sig-paren">(</span><em>session</em>, <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.SessionExtension.after_attach" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute after an instance is attached to a session.</p>
-<p>This is called after an add, delete or merge.</p>
+<dd><p>インスタンスがセッションにアタッチされた後に実行します。</p>
+<p>これは、追加、削除、またはマージの後に呼び出されます。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.SessionExtension.after_begin">
 <code class="descname">after_begin</code><span class="sig-paren">(</span><em>session</em>, <em>transaction</em>, <em>connection</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.SessionExtension.after_begin" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute after a transaction is begun on a connection</p>
-<p><cite>transaction</cite> is the SessionTransaction. This method is called
-after an engine level transaction is begun on a connection.</p>
+<dd><p>接続時にトランザクションが開始された後に実行する</p>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>transaction`はSessionTransactionです。このメソッドは、接続時にエンジンレベルのトランザクションが開始された後に呼び出されます。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.SessionExtension.after_bulk_delete">
 <code class="descname">after_bulk_delete</code><span class="sig-paren">(</span><em>session</em>, <em>query</em>, <em>query_context</em>, <em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.SessionExtension.after_bulk_delete" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute after a bulk delete operation to the session.</p>
-<p>This is called after a session.query(...).delete()</p>
-<p><cite>query</cite> is the query object that this delete operation was
-called on. <cite>query_context</cite> was the query context object.
-<cite>result</cite> is the result object returned from the bulk operation.</p>
+<dd><p>セッションに対する一括削除操作の後に実行します。</p>
+<p>これはsession.query（...）の後に呼び出されます。delete（）</p>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>query`は、この削除オペレーションが呼び出されたクエリオブジェクトです。 <a href="#id3"><span class="problematic" id="id4">`</span></a>query_context`はクエリコンテキストオブジェクトでした。 <a href="#id5"><span class="problematic" id="id6">`</span></a>result`は、バルク操作から返された結果オブジェクトです。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.SessionExtension.after_bulk_update">
 <code class="descname">after_bulk_update</code><span class="sig-paren">(</span><em>session</em>, <em>query</em>, <em>query_context</em>, <em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.SessionExtension.after_bulk_update" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute after a bulk update operation to the session.</p>
-<p>This is called after a session.query(...).update()</p>
-<p><cite>query</cite> is the query object that this update operation was
-called on. <cite>query_context</cite> was the query context object.
-<cite>result</cite> is the result object returned from the bulk operation.</p>
+<dd><p>セッションに対する一括更新操作の後に実行します。</p>
+<p>これはsession.query（...）の後に呼び出されます。update（）</p>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>query`は、この更新オペレーションが呼び出されたクエリオブジェクトです。 <a href="#id3"><span class="problematic" id="id4">`</span></a>query_context`はクエリコンテキストオブジェクトでした。 <a href="#id5"><span class="problematic" id="id6">`</span></a>result`は、バルク操作から返された結果オブジェクトです。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.SessionExtension.after_commit">
 <code class="descname">after_commit</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.SessionExtension.after_commit" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute after a commit has occurred.</p>
-<p>Note that this may not be per-flush if a longer running
-transaction is ongoing.</p>
+<dd><p>コミットが発生した後に実行します。</p>
+<p>これは、より長い実行中のトランザクションが進行中であれば、1フラッシュではないことに注意してください。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.SessionExtension.after_flush">
 <code class="descname">after_flush</code><span class="sig-paren">(</span><em>session</em>, <em>flush_context</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.SessionExtension.after_flush" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute after flush has completed, but before commit has been
-called.</p>
-<p>Note that the session's state is still in pre-flush, i.e. 'new',
-'dirty', and 'deleted' lists still show pre-flush state as well
-as the history settings on instance attributes.</p>
+<dd><p>flushが完了した後、commitが呼び出される前に実行します。</p>
+<p>セッションの状態はまだpre-flushであることに注意してください。つまり、 &amp;#39;new&amp;#39;、 &amp;#39;dirty&amp;#39;、 &amp;#39;deleted&amp;#39;リストはプリフラッシュ状態とインスタンス属性の履歴設定を表示します。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.SessionExtension.after_flush_postexec">
 <code class="descname">after_flush_postexec</code><span class="sig-paren">(</span><em>session</em>, <em>flush_context</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.SessionExtension.after_flush_postexec" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute after flush has completed, and after the post-exec
-state occurs.</p>
-<p>This will be when the 'new', 'dirty', and 'deleted' lists are in
-their final state.  An actual commit() may or may not have
-occurred, depending on whether or not the flush started its own
-transaction or participated in a larger transaction.</p>
+<dd><p>フラッシュが完了した後、および実行後状態が発生した後に実行します。</p>
+<p>これは、「新規」、「ダーティ」、および「削除済み」リストが最終状態にあるときです。フラッシュが自身のトランザクションを開始したかどうか、またはより大きなトランザクションに参加したかどうかによって、実際のcommit（）が発生しているかどうかは不明です。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.SessionExtension.after_rollback">
 <code class="descname">after_rollback</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.SessionExtension.after_rollback" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute after a rollback has occurred.</p>
-<p>Note that this may not be per-flush if a longer running
-transaction is ongoing.</p>
+<dd><p>ロールバックが発生した後に実行します。</p>
+<p>これは、より長い実行中のトランザクションが進行中であれば、1フラッシュではないことに注意してください。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.SessionExtension.before_commit">
 <code class="descname">before_commit</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.SessionExtension.before_commit" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute right before commit is called.</p>
-<p>Note that this may not be per-flush if a longer running
-transaction is ongoing.</p>
+<dd><p>コミットが呼び出される直前に実行します。</p>
+<p>これは、より長い実行中のトランザクションが進行中であれば、1フラッシュではないことに注意してください。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.SessionExtension.before_flush">
 <code class="descname">before_flush</code><span class="sig-paren">(</span><em>session</em>, <em>flush_context</em>, <em>instances</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.SessionExtension.before_flush" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute before flush process has started.</p>
-<p><cite>instances</cite> is an optional list of objects which were passed to
-the <code class="docutils literal"><span class="pre">flush()</span></code> method.</p>
+<dd><p>フラッシュ処理が開始される前に実行します。</p>
+<p><cite>instances`は、</cite> <cite>flush（）</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>メソッドに渡されたオブジェクトのオプションリストです。</p>
 </dd></dl>
 
 </dd></dl>
 
 </div>
 <div class="section" id="attribute-events">
-<h2>Attribute Events<a class="headerlink" href="#attribute-events" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>属性イベント<a class="headerlink" href="#attribute-events" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="class">
 <dt id="sqlalchemy.orm.interfaces.AttributeExtension">
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.interfaces.</code><code class="descname">AttributeExtension</code><a class="headerlink" href="#sqlalchemy.orm.interfaces.AttributeExtension" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Base implementation for <code class="xref py py-class docutils literal"><span class="pre">AttributeImpl</span></code> event hooks, events
-that fire upon attribute mutations in user code.</p>
+<dd><p>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AttributeImpl`イベントフック、ユーザコードの属性の突然変異を引き起こすイベント。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last"><a class="reference internal" href="#sqlalchemy.orm.interfaces.AttributeExtension" title="sqlalchemy.orm.interfaces.AttributeExtension"><code class="xref py py-class docutils literal"><span class="pre">AttributeExtension</span></code></a> is deprecated.   Please
-refer to <a class="reference internal" href="../core/event.html#sqlalchemy.event.listen" title="sqlalchemy.event.listen"><code class="xref py py-func docutils literal"><span class="pre">event.listen()</span></code></a> as well as
-<a class="reference internal" href="events.html#sqlalchemy.orm.events.AttributeEvents" title="sqlalchemy.orm.events.AttributeEvents"><code class="xref py py-class docutils literal"><span class="pre">AttributeEvents</span></code></a>.</p>
+<p class="last">：class： <cite>.AttributeExtension`は推奨されていません。 func： `.event.listen`と：class：</cite> .AttributeEvents`を参照してください。</p>
 </div>
-<p><a class="reference internal" href="#sqlalchemy.orm.interfaces.AttributeExtension" title="sqlalchemy.orm.interfaces.AttributeExtension"><code class="xref py py-class docutils literal"><span class="pre">AttributeExtension</span></code></a> is used to listen for set,
-remove, and append events on individual mapped attributes.
-It is established on an individual mapped attribute using
-the <cite>extension</cite> argument, available on
-<a class="reference internal" href="mapping_columns.html#sqlalchemy.orm.column_property" title="sqlalchemy.orm.column_property"><code class="xref py py-func docutils literal"><span class="pre">column_property()</span></code></a>, <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>, and
-others:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.interfaces</span> <span class="k">import</span> <span class="n">AttributeExtension</span>
+<p>：class： <cite>.AttributeExtension`は個々のマップされた属性のset、remove、appendイベントをリスンするために使われます。 func： `.column_property</cite>、：func：` .relationship`などで利用できる <a href="#id1"><span class="problematic" id="id2">`</span></a>extension`引数を使用して、個々のマップされた属性に設定されます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.interfaces</span> <span class="k">import</span> <span class="n">AttributeExtension</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">relationship</span><span class="p">,</span> <span class="n">column_property</span>
 
 <span class="k">class</span> <span class="nc">MyAttrExt</span><span class="p">(</span><span class="n">AttributeExtension</span><span class="p">):</span>
@@ -490,44 +389,34 @@ others:</p>
     <span class="s1">&#39;bar&#39;</span><span class="p">:</span><span class="n">relationship</span><span class="p">(</span><span class="n">Bar</span><span class="p">,</span> <span class="n">extension</span><span class="o">=</span><span class="n">MyAttrExt</span><span class="p">())</span>
 <span class="p">})</span></pre></div>
 </div>
-<p>Note that the <a class="reference internal" href="#sqlalchemy.orm.interfaces.AttributeExtension" title="sqlalchemy.orm.interfaces.AttributeExtension"><code class="xref py py-class docutils literal"><span class="pre">AttributeExtension</span></code></a> methods
-<a class="reference internal" href="#sqlalchemy.orm.interfaces.AttributeExtension.append" title="sqlalchemy.orm.interfaces.AttributeExtension.append"><code class="xref py py-meth docutils literal"><span class="pre">append()</span></code></a> and
-<a class="reference internal" href="#sqlalchemy.orm.interfaces.AttributeExtension.set" title="sqlalchemy.orm.interfaces.AttributeExtension.set"><code class="xref py py-meth docutils literal"><span class="pre">set()</span></code></a> need to return the
-<code class="docutils literal"><span class="pre">value</span></code> parameter. The returned value is used as the
-effective value, and allows the extension to change what is
-ultimately persisted.</p>
-<p>AttributeExtension is assembled within the descriptors associated
-with a mapped class.</p>
+<p>class： <cite>.AttributeExtension`メソッド：meth：</cite>〜.AttributeExtension.append`と：meth： <cite>〜.AttributeExtension.set`は、</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>value``パラメータを返す必要があることに注意してください。戻り値は実効値として使用され、最終的に永続化されるものを拡張が変更できるようにします。</p>
+<p>AttributeExtensionは、マップされたクラスに関連付けられた記述子内でアセンブルされます。</p>
 <dl class="attribute">
 <dt id="sqlalchemy.orm.interfaces.AttributeExtension.active_history">
 <code class="descname">active_history</code><em class="property"> = True</em><a class="headerlink" href="#sqlalchemy.orm.interfaces.AttributeExtension.active_history" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>indicates that the set() method would like to receive the 'old' value,
-even if it means firing lazy callables.</p>
-<p>Note that <code class="docutils literal"><span class="pre">active_history</span></code> can also be set directly via
-<a class="reference internal" href="mapping_columns.html#sqlalchemy.orm.column_property" title="sqlalchemy.orm.column_property"><code class="xref py py-func docutils literal"><span class="pre">column_property()</span></code></a> and <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>.</p>
+<dd><p>は、たとえそれが遅延呼び出し可能呼び出しを意味するとしても、set（）メソッドが &amp;#39;old&amp;#39;値を受け取ることを希望していることを示します。</p>
+<p>`` active_history``は：func： <cite>.column_property`と：func：</cite> .relationship`を介して直接設定することもできます。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.AttributeExtension.append">
 <code class="descname">append</code><span class="sig-paren">(</span><em>state</em>, <em>value</em>, <em>initiator</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.AttributeExtension.append" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive a collection append event.</p>
-<p>The returned value will be used as the actual value to be
-appended.</p>
+<dd><p>コレクションの追加イベントを受け取ります。</p>
+<p>返された値は、追加される実際の値として使用されます。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.AttributeExtension.remove">
 <code class="descname">remove</code><span class="sig-paren">(</span><em>state</em>, <em>value</em>, <em>initiator</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.AttributeExtension.remove" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive a remove event.</p>
-<p>No return value is defined.</p>
+<dd><p>removeイベントを受け取ります。</p>
+<p>戻り値は定義されていません。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.interfaces.AttributeExtension.set">
 <code class="descname">set</code><span class="sig-paren">(</span><em>state</em>, <em>value</em>, <em>oldvalue</em>, <em>initiator</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.interfaces.AttributeExtension.set" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Receive a set event.</p>
-<p>The returned value will be used as the actual value to be
-set.</p>
+<dd><p>設定されたイベントを受信します。</p>
+<p>返される値は、実際に設定される値として使用されます。</p>
 </dd></dl>
 
 </dd></dl>
@@ -541,13 +430,13 @@ set.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="exceptions.html" title="previous chapter">ORM Exceptions</a>
+        <a href="exceptions.html" title="previous chapter">ORMの例外</a>
         Next:
-        <a href="extensions/index.html" title="next chapter">ORM Extensions</a>
+        <a href="extensions/index.html" title="next chapter">ORM拡張</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -574,6 +463,7 @@ set.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

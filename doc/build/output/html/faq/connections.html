@@ -10,7 +10,7 @@
         <title>
             
     
-    Connections / Engines
+    接続/エンジン
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Frequently Asked Questions" href="index.html" />
-        <link rel="next" title="MetaData / Schema" href="metadata_schema.html" />
-        <link rel="prev" title="Frequently Asked Questions" href="index.html" />
+        <link rel="up" title="よくある質問" href="index.html" />
+        <link rel="next" title="メタデータ/スキーマ" href="metadata_schema.html" />
+        <link rel="prev" title="よくある質問" href="index.html" />
     <!-- end layout.mako headers -->
 
 
@@ -116,31 +116,31 @@
 
         
         <h3>
-            <a href="index.html" title="Frequently Asked Questions">Frequently Asked Questions</a>
+            <a href="index.html" title="よくある質問">よくある質問</a>
         </h3>
 
         <ul>
-<li class="selected"><span class="link-container first"><strong>Connections / Engines</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#how-do-i-configure-logging">How do I configure logging?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#how-do-i-pool-database-connections-are-my-connections-pooled">How do I pool database connections?   Are my connections pooled?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#how-do-i-pass-custom-connect-arguments-to-my-database-api">How do I pass custom connect arguments to my database API?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#mysql-server-has-gone-away">&quot;MySQL Server has gone away&quot;</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#commands-out-of-sync-you-can-t-run-this-command-now-this-result-object-does-not-return-rows-it-has-been-closed-automatically">&quot;Commands out of sync; you can't run this command now&quot; / &quot;This result object does not return rows. It has been closed automatically&quot;</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#why-does-sqlalchemy-issue-so-many-rollbacks">Why does SQLAlchemy issue so many ROLLBACKs?</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#i-m-on-myisam-how-do-i-turn-it-off">I'm on MyISAM - how do I turn it off?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#i-m-on-sql-server-how-do-i-turn-those-rollbacks-into-commits">I'm on SQL Server - how do I turn those ROLLBACKs into COMMITs?</a></span></li>
+<li class="selected"><span class="link-container first"><strong>接続/エンジン</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#how-do-i-configure-logging">どのようにログを設定するのですか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#how-do-i-pool-database-connections-are-my-connections-pooled">データベース接続をプールするにはどうすればいいですか？私の接続はプールされていますか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#how-do-i-pass-custom-connect-arguments-to-my-database-api">データベースAPIにカスタム接続引数を渡すにはどうすればよいですか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#mysql-server-has-gone-away">&amp;quot;MySQLサーバーがなくなった</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#commands-out-of-sync-you-can-t-run-this-command-now-this-result-object-does-not-return-rows-it-has-been-closed-automatically">&amp;quot;コマンドが同期していない;このコマンドを現在実行できません&amp;quot; / &amp;quot;この結果オブジェクトは行を返しません。</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#why-does-sqlalchemy-issue-so-many-rollbacks">なぜSQLAlchemyは非常に多くのROLLBACKを発行しますか？</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#i-m-on-myisam-how-do-i-turn-it-off">私はMyISAMにいます - どうすればいいですか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#i-m-on-sql-server-how-do-i-turn-those-rollbacks-into-commits">SQL Serverを使用しています。これらのROLLBACKをCOMMITに変換するにはどうすればよいですか？</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#i-am-using-multiple-connections-with-a-sqlite-database-typically-to-test-transaction-operation-and-my-test-program-is-not-working">I am using multiple connections with a SQLite database (typically to test transaction operation), and my test program is not working!</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#how-do-i-get-at-the-raw-dbapi-connection-when-using-an-engine">How do I get at the raw DBAPI connection when using an Engine?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#how-do-i-use-engines-connections-sessions-with-python-multiprocessing-or-os-fork">How do I use engines / connections / sessions with Python multiprocessing, or os.fork()?</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#i-am-using-multiple-connections-with-a-sqlite-database-typically-to-test-transaction-operation-and-my-test-program-is-not-working">SQLiteデータベースで複数の接続を使用しています（通常はトランザクション操作をテストします）、テストプログラムが動作していません。</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#how-do-i-get-at-the-raw-dbapi-connection-when-using-an-engine">エンジンを使用している場合、未処理のDBAPI接続を取得するにはどうすればよいですか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#how-do-i-use-engines-connections-sessions-with-python-multiprocessing-or-os-fork">Pythonのマルチプロセッシング、またはos.fork（）でエンジン/接続/セッションを使用するにはどうすればよいですか？</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="metadata_schema.html">MetaData / Schema</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="sqlexpressions.html">SQL Expressions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="ormconfiguration.html">ORM Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="performance.html">Performance</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="sessions.html">Sessions / Queries</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="metadata_schema.html">メタデータ/スキーマ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="sqlexpressions.html">SQL式</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="ormconfiguration.html">ORM設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="performance.html">パフォーマンス</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="sessions.html">セッション/クエリ</a></span></li>
 </ul>
 
 
@@ -156,253 +156,128 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="connections-engines">
-<h1>Connections / Engines<a class="headerlink" href="#connections-engines" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>接続/エンジン<a class="headerlink" href="#connections-engines" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="contents faq local topic" id="id1">
 <ul class="simple">
-<li><a class="reference internal" href="#how-do-i-configure-logging" id="id2">How do I configure logging?</a></li>
-<li><a class="reference internal" href="#how-do-i-pool-database-connections-are-my-connections-pooled" id="id3">How do I pool database connections?   Are my connections pooled?</a></li>
-<li><a class="reference internal" href="#how-do-i-pass-custom-connect-arguments-to-my-database-api" id="id4">How do I pass custom connect arguments to my database API?</a></li>
-<li><a class="reference internal" href="#mysql-server-has-gone-away" id="id5">&quot;MySQL Server has gone away&quot;</a></li>
-<li><a class="reference internal" href="#commands-out-of-sync-you-can-t-run-this-command-now-this-result-object-does-not-return-rows-it-has-been-closed-automatically" id="id6">&quot;Commands out of sync; you can't run this command now&quot; / &quot;This result object does not return rows. It has been closed automatically&quot;</a></li>
-<li><a class="reference internal" href="#why-does-sqlalchemy-issue-so-many-rollbacks" id="id7">Why does SQLAlchemy issue so many ROLLBACKs?</a><ul>
-<li><a class="reference internal" href="#i-m-on-myisam-how-do-i-turn-it-off" id="id8">I'm on MyISAM - how do I turn it off?</a></li>
-<li><a class="reference internal" href="#i-m-on-sql-server-how-do-i-turn-those-rollbacks-into-commits" id="id9">I'm on SQL Server - how do I turn those ROLLBACKs into COMMITs?</a></li>
+<li><a class="reference internal" href="#how-do-i-configure-logging" id="id2">どのようにログを設定するのですか？</a></li>
+<li><a class="reference internal" href="#how-do-i-pool-database-connections-are-my-connections-pooled" id="id3">データベース接続をプールするにはどうすればいいですか？私の接続はプールされていますか？</a></li>
+<li><a class="reference internal" href="#how-do-i-pass-custom-connect-arguments-to-my-database-api" id="id4">データベースAPIにカスタム接続引数を渡すにはどうすればよいですか？</a></li>
+<li><a class="reference internal" href="#mysql-server-has-gone-away" id="id5">&amp;quot;MySQLサーバーがなくなった</a></li>
+<li><a class="reference internal" href="#commands-out-of-sync-you-can-t-run-this-command-now-this-result-object-does-not-return-rows-it-has-been-closed-automatically" id="id6">&amp;quot;コマンドが同期していない;このコマンドを現在実行できません&amp;quot; / &amp;quot;この結果オブジェクトは行を返しません。</a></li>
+<li><a class="reference internal" href="#why-does-sqlalchemy-issue-so-many-rollbacks" id="id7">なぜSQLAlchemyは非常に多くのROLLBACKを発行しますか？</a><ul>
+<li><a class="reference internal" href="#i-m-on-myisam-how-do-i-turn-it-off" id="id8">私はMyISAMにいます - どうすればいいですか？</a></li>
+<li><a class="reference internal" href="#i-m-on-sql-server-how-do-i-turn-those-rollbacks-into-commits" id="id9">SQL Serverを使用しています。これらのROLLBACKをCOMMITに変換するにはどうすればよいですか？</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#i-am-using-multiple-connections-with-a-sqlite-database-typically-to-test-transaction-operation-and-my-test-program-is-not-working" id="id10">I am using multiple connections with a SQLite database (typically to test transaction operation), and my test program is not working!</a></li>
-<li><a class="reference internal" href="#how-do-i-get-at-the-raw-dbapi-connection-when-using-an-engine" id="id11">How do I get at the raw DBAPI connection when using an Engine?</a></li>
-<li><a class="reference internal" href="#how-do-i-use-engines-connections-sessions-with-python-multiprocessing-or-os-fork" id="id12">How do I use engines / connections / sessions with Python multiprocessing, or os.fork()?</a></li>
+<li><a class="reference internal" href="#i-am-using-multiple-connections-with-a-sqlite-database-typically-to-test-transaction-operation-and-my-test-program-is-not-working" id="id10">SQLiteデータベースで複数の接続を使用しています（通常はトランザクション操作をテストします）、テストプログラムが動作していません。</a></li>
+<li><a class="reference internal" href="#how-do-i-get-at-the-raw-dbapi-connection-when-using-an-engine" id="id11">エンジンを使用している場合、未処理のDBAPI接続を取得するにはどうすればよいですか？</a></li>
+<li><a class="reference internal" href="#how-do-i-use-engines-connections-sessions-with-python-multiprocessing-or-os-fork" id="id12">Pythonのマルチプロセッシング、またはos.fork（）でエンジン/接続/セッションを使用するにはどうすればよいですか？</a></li>
 </ul>
 </div>
 <div class="section" id="how-do-i-configure-logging">
-<h2>How do I configure logging?<a class="headerlink" href="#how-do-i-configure-logging" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>See <a class="reference internal" href="../core/engines.html#dbengine-logging"><span class="std std-ref">Configuring Logging</span></a>.</p>
+<h2>どのようにログを設定するのですか？<a class="headerlink" href="#how-do-i-configure-logging" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>参照：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>dbengine_logging`を参照してください。</p>
 </div>
 <div class="section" id="how-do-i-pool-database-connections-are-my-connections-pooled">
-<h2>How do I pool database connections?   Are my connections pooled?<a class="headerlink" href="#how-do-i-pool-database-connections-are-my-connections-pooled" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>SQLAlchemy performs application-level connection pooling automatically
-in most cases.  With the exception of SQLite, a <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> object
-refers to a <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.QueuePool" title="sqlalchemy.pool.QueuePool"><code class="xref py py-class docutils literal"><span class="pre">QueuePool</span></code></a> as a source of connectivity.</p>
-<p>For more detail, see <a class="reference internal" href="../core/engines.html"><span class="std std-ref">Engine Configuration</span></a> and <a class="reference internal" href="../core/pooling.html"><span class="std std-ref">Connection Pooling</span></a>.</p>
+<h2>データベース接続をプールするにはどうすればいいですか？私の接続はプールされていますか？<a class="headerlink" href="#how-do-i-pool-database-connections-are-my-connections-pooled" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ほとんどの場合、SQLAlchemyはアプリケーションレベルの接続プーリングを自動的に実行します。 SQLiteを除いて、：class： <cite>.Engine`オブジェクトは接続のソースとして：class：</cite> .QueuePool`を参照します。</p>
+<p>詳細は、ref： <cite>engines_toplevel`と：ref：</cite> pooling_toplevel`を参照してください。</p>
 </div>
 <div class="section" id="how-do-i-pass-custom-connect-arguments-to-my-database-api">
-<h2>How do I pass custom connect arguments to my database API?<a class="headerlink" href="#how-do-i-pass-custom-connect-arguments-to-my-database-api" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The <a class="reference internal" href="../core/engines.html#sqlalchemy.create_engine" title="sqlalchemy.create_engine"><code class="xref py py-func docutils literal"><span class="pre">create_engine()</span></code></a> call accepts additional arguments either
-directly via the <code class="docutils literal"><span class="pre">connect_args</span></code> keyword argument:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;mysql://scott:tiger@localhost/test&quot;</span><span class="p">,</span>
+<h2>データベースAPIにカスタム接続引数を渡すにはどうすればよいですか？<a class="headerlink" href="#how-do-i-pass-custom-connect-arguments-to-my-database-api" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>：func： <cite>.create_engine`呼び出しは、</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>connect_args``キーワード引数を介して直接的に追加の引数を受け取ります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;mysql://scott:tiger@localhost/test&quot;</span><span class="p">,</span>
                     <span class="n">connect_args</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;utf8&quot;</span><span class="p">})</span></pre></div>
 </div>
-<p>Or for basic string and integer arguments, they can usually be specified
-in the query string of the URL:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;mysql://scott:tiger@localhost/test?encoding=utf8&quot;</span><span class="p">)</span></pre></div>
+<p>基本的な文字列と整数の引数については、通常、URLのクエリ文字列で指定することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;mysql://scott:tiger@localhost/test?encoding=utf8&quot;</span><span class="p">)</span></pre></div>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="../core/engines.html#custom-dbapi-args"><span class="std std-ref">Custom DBAPI connect() arguments</span></a></p>
+<p class="last">：ref： <cite>custom_dbapi_args</cite></p>
 </div>
 </div>
 <div class="section" id="mysql-server-has-gone-away">
-<h2>&quot;MySQL Server has gone away&quot;<a class="headerlink" href="#mysql-server-has-gone-away" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The primary cause of this error is that the MySQL connection has timed out
-and has been closed by the server.   The MySQL server closes connections
-which have been idle a period of time which defaults to eight hours.
-To accommodate this, the immediate setting is to enable the
-<a class="reference internal" href="../core/engines.html#sqlalchemy.create_engine.params.pool_recycle" title="sqlalchemy.create_engine"><code class="xref py py-paramref docutils literal"><span class="pre">create_engine.pool_recycle</span></code></a> setting, which will ensure that a
-connection which is older than a set amount of seconds will be discarded
-and replaced with a new connection when it is next checked out.</p>
-<p>For the more general case of accommodating database restarts and other
-temporary loss of connectivity due to network issues, connections that
-are in the pool may be recycled in response to more generalized disconnect
-detection techniques.  The section <a class="reference internal" href="../core/pooling.html#pool-disconnects"><span class="std std-ref">Dealing with Disconnects</span></a> provides
-background on both &quot;pessimistic&quot; (e.g. pre-ping) and &quot;optimistic&quot;
-(e.g. graceful recovery) techniques.   Modern SQLAlchemy tends to favor
-the &quot;pessimistic&quot; approach.</p>
+<h2>&amp;quot;MySQLサーバーがなくなった<a class="headerlink" href="#mysql-server-has-gone-away" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>このエラーの主な原因は、MySQL接続がタイムアウトしてサーバーによって閉じられていることです。 MySQLサーバは、アイドル状態の接続をデフォルトで8時間閉鎖します。これに対処するために、直ちに設定することは：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.create_engine.pool_recycle`設定を有効にすることです。これにより、設定された秒数よりも古い接続が破棄され、次の接続時に新しい接続に置き換えられますチェックアウトされた。</p>
+<p>データベースの再起動やネットワークの問題による一時的な接続喪失に対処するより一般的なケースでは、プール内の接続は、より一般化された切断検出テクニックに対応してリサイクルされる可能性があります。セクション：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>pool_disconnects`は、&amp;quot;悲観的な&amp;quot;（例：プレping）と&amp;quot;楽観的&amp;quot;（例：優雅な回復）の両方のテクニックについての背景を提供します。現代のSQLAlchemyは、「悲観的な」アプローチを支持する傾向があります。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="../core/pooling.html#pool-disconnects"><span class="std std-ref">Dealing with Disconnects</span></a></p>
+<p class="last">：ref： <cite>pool_disconnects</cite></p>
 </div>
 </div>
 <div class="section" id="commands-out-of-sync-you-can-t-run-this-command-now-this-result-object-does-not-return-rows-it-has-been-closed-automatically">
-<span id="mysql-sync-errors"></span><h2>&quot;Commands out of sync; you can't run this command now&quot; / &quot;This result object does not return rows. It has been closed automatically&quot;<a class="headerlink" href="#commands-out-of-sync-you-can-t-run-this-command-now-this-result-object-does-not-return-rows-it-has-been-closed-automatically" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The MySQL drivers have a fairly wide class of failure modes whereby the state of
-the connection to the server is in an invalid state.  Typically, when the connection
-is used again, one of these two error messages will occur.    The reason is because
-the state of the server has been changed to one in which the client library
-does not expect, such that when the client library emits a new statement
-on the connection, the server does not respond as expected.</p>
-<p>In SQLAlchemy, because database connections are pooled, the issue of the messaging
-being out of sync on a connection becomes more important, since when an operation
-fails, if the connection itself is in an unusable state, if it goes back into the
-connection pool, it will malfunction when checked out again.  The mitigation
-for this issue is that the connection is <strong>invalidated</strong> when such a failure
-mode occurs so that the underlying database connection to MySQL is discarded.
-This invalidation occurs automatically for many known failure modes and can
-also be called explicitly via the <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection.invalidate" title="sqlalchemy.engine.Connection.invalidate"><code class="xref py py-meth docutils literal"><span class="pre">Connection.invalidate()</span></code></a> method.</p>
-<p>There is also a second class of failure modes within this category where a context manager
-such as <code class="docutils literal"><span class="pre">with</span> <span class="pre">session.begin_nested():</span></code> wants to &quot;roll back&quot; the transaction
-when an error occurs; however within some failure modes of the connection, the
-rollback itself (which can also be a RELEASE SAVEPOINT operation) also
-fails, causing misleading stack traces.</p>
-<p>Originally, the cause of this error used to be fairly simple, it meant that
-a multithreaded program was invoking commands on a single connection from more
-than one thread.   This applied to the original &quot;MySQLdb&quot; native-C driver that was
-pretty much the only driver in use.   However, with the introduction of pure Python
-drivers like PyMySQL and MySQL-connector-Python, as well as increased use of
-tools such as gevent/eventlet, multiprocessing (often with Celery), and others,
-there is a whole series of factors that has been known to cause this problem, some of
-which have been improved across SQLAlchemy versions but others which are unavoidable:</p>
+<span id="mysql-sync-errors"></span><h2>&amp;quot;コマンドが同期していない;このコマンドを現在実行できません&amp;quot; / &amp;quot;この結果オブジェクトは行を返しません。<a class="headerlink" href="#commands-out-of-sync-you-can-t-run-this-command-now-this-result-object-does-not-return-rows-it-has-been-closed-automatically" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>MySQLドライバにはかなりの種類の障害モードがあり、それによってサーバへの接続状態が無効な状態になります。通常、接続を再度使用すると、これら2つのエラーメッセージのいずれかが発生します。理由は、サーバーの状態がクライアント・ライブラリーが予期しないものに変更されたためです。そのため、クライアント・ライブラリーが接続で新しいステートメントを発行すると、サーバーは期待どおりに応答しません。</p>
+<p>SQLAlchemyでは、データベース接続がプールされているため、接続でメッセージが同期しなくなる問題がより重要になります。操作が失敗した場合、接続自体が使用不可能な状態になった場合、接続プールに戻った場合、再度チェックアウトすると誤動作します。この問題の軽減策は、そのような障害モードが発生したときに接続が**無効化され**、MySQLへのデータベース接続が破棄されることです。この無効化は多くの既知の障害モードで自動的に発生し、また：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Connection.invalidate`メソッドを介して明示的に呼び出すこともできます。</p>
+<p>このカテゴリには、 `` with session.begin_nested（）： <a href="#id1"><span class="problematic" id="id2">``</span></a>などのコンテキストマネージャが、エラーが発生したときにトランザクションをロールバックしたいという第2のクラスの失敗モードもあります。しかし、接続のいくつかの障害モードでは、ロールバック自体（リリースSAVEPOINT操作でもあり得る）も失敗し、誤ったスタックトレースを引き起こします。</p>
+<p>もともと、このエラーの原因はかなり単純でしたが、それはマルチスレッドプログラムが複数のスレッドからの単一の接続でコマンドを呼び出すことを意味していました。これは、使用されている唯一のドライバであった元の&amp;quot;MySQLdb &amp;quot;ネイティブCドライバに適用されます。しかし、PyMySQLやMySQL-connector-Pythonのような純粋なPythonドライバの導入や、gevent / eventlet、マルチプロセッシング（しばしばCelery）などのツールの使用の増加とともに、この問題を引き起こすことが知られていますが、その中にはSQLAlchemyのバージョン間で改善されているものもあれば、避けられないものもあります。</p>
 <ul>
-<li><p class="first"><strong>Sharing a connection among threads</strong> - This is the original reason these kinds
-of errors occurred.  A program used the same connection in two or more threads at
-the same time, meaning multiple sets of messages got mixed up on the connection,
-putting the server-side session into a state that the client no longer knows how
-to interpret.   However, other causes are usually more likely today.</p>
+<li><p class="first"><strong>スレッド間の接続の共有</strong>  - これが、この種のエラーが発生した元の理由です。プログラムは2つ以上のスレッドで同時に同じ接続を使用しました。これは、複数のメッセージセットが接続上で混在していることを意味し、クライアントがもはや解釈する方法を知らない状態にサーバー側セッションを置きます。しかし、今日は通常、他の原因が考えられます。</p>
 </li>
-<li><p class="first"><strong>Sharing the filehandle for the connection among processes</strong> - This usually occurs
-when a program uses <code class="docutils literal"><span class="pre">os.fork()</span></code> to spawn a new process, and a TCP connection
-that is present in th parent process gets shared into one or more child processes.
-As multiple processes are now emitting messages to essentially the same filehandle,
-the server receives interleaved messages and breaks the state of the connection.</p>
-<p>This scenario can occur very easily if a program uses Python's &quot;multiprocessing&quot;
-module and makes use of an <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> that was created in the parent
-process.  It's common that &quot;multiprocessing&quot; is in use when using tools like
-Celery.  The correct approach should be either that a new <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a>
-is produced when a child process first starts, discarding any <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a>
-that came down from the parent process; or, the <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> that's inherited
-from the parent process can have it's internal pool of connections disposed by
-calling <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine.dispose" title="sqlalchemy.engine.Engine.dispose"><code class="xref py py-meth docutils literal"><span class="pre">Engine.dispose()</span></code></a>.</p>
+<li><p class="first"><strong>プロセス間の接続のためのファイルハンドルの共有</strong>  - これは通常、プログラムが `` os.fork（） <a href="#id1"><span class="problematic" id="id2">``</span></a>を使用して新しいプロセスを生成し、親プロセスに存在するTCP接続が1つのプロセスに共有されるまたはそれ以上の子プロセス。複数のプロセスが本質的に同じファイルハンドルにメッセージを発信しているので、サーバーはインターリーブされたメッセージを受信し、接続の状態を解除します。</p>
+<p>このシナリオは、プログラムがPythonの&amp;quot;マルチプロセッシング&amp;quot;モジュールを使用し、親プロセスで作成された：class： <cite>.Engine`を使用すると非常に簡単に発生します。 Celeryのようなツールを使うときは、&amp;quot;マルチプロセッシング&amp;quot;が使われているのが一般的です。正しいアプローチは、新しい：class： `.Engine`が子プロセスが最初に起動するときに生成され、親プロセスから来たclass：</cite> .Engine`を破棄するか、親プロセスから継承された：class： <cite>.Engine`は、：meth：</cite> .Engine.dispose`を呼び出すことで、内部接続プールを持つことができます。</p>
 </li>
-<li><p class="first"><strong>Greenlet Monkeypatching w/ Exits</strong> - When using a library like gevent or eventlet
-that monkeypatches the Python networking API, libraries like PyMySQL are now
-working in an asynchronous mode of operation, even though they are not developed
-explicitly against this model.  A common issue is that a greenthread is interrupted,
-often due to timeout logic in the application.  This results in the <code class="docutils literal"><span class="pre">GreenletExit</span></code>
-exception being raised, and the pure-Python MySQL driver is interrupted from
-its work, which may have been that it was receiving a response from the server
-or preparing to otherwise reset the state of the connection.   When the exception
-cuts all that work short, the conversation between client and server is now
-out of sync and subsequent usage of the connection may fail.   SQLAlchemy
-as of version 1.1.0 knows how to guard against this, as if a database operation
-is interrupted by a so-called &quot;exit exception&quot;, which includes <code class="docutils literal"><span class="pre">GreenletExit</span></code>
-and any other subclass of Python <code class="docutils literal"><span class="pre">BaseException</span></code> that is not also a subclass
-of <code class="docutils literal"><span class="pre">Exception</span></code>, the connection is invalidated.</p>
+<li><p class="first">PythonのネットワーキングAPIをmonkeypatchesするgeventやeventletのようなライブラリを使うとき、PyMySQLのようなライブラリは、このモデルに対して明示的に開発されていなくても非同期操作モードで動作するようになりました。一般的な問題は、アプリケーションのタイムアウトロジックのために、greenthreadが中断されることです。この結果、 `` GreenletExit``例外が発生し、純粋なPython MySQLドライバは、サーバからの応答を受け取っていたか、そうでなければ接続の状態をリセットする準備ができている可能性があります。例外がすべての作業を短くすると、クライアントとサーバーの間の会話が同期しなくなり、その後の接続の使用が失敗する可能性があります。バージョン1.1.0のSQLAlchemyは、データベース操作が、いわゆる &amp;quot;終了例外&amp;quot;によって中断されたかのように、これを防ぐ方法を知っています。これには、 &amp;quot;GreenletExit&amp;quot;とPythonの &amp;quot;BaseException&amp;quot; <cite>それは</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>Exception``のサブクラスでもないので、接続は無効になります。</p>
 </li>
-<li><p class="first"><strong>Rollbacks / SAVEPOINT releases failing</strong> - Some classes of error cause
-the connection to be unusable within the context of a transaction, as well
-as when operating in a &quot;SAVEPOINT&quot; block.  In these cases, the failure
-on the connection has rendered any SAVEPOINT as no longer existing, yet
-when SQLAlchemy, or the application, attempts to &quot;roll back&quot; this savepoint,
-the &quot;RELEASE SAVEPOINT&quot; operation fails, typically with a message like
-&quot;savepoint does not exist&quot;.   In this case, under Python 3 there will be
-a chain of exceptions output, where the ultimate &quot;cause&quot; of the error
-will be displayed as well.  Under Python 2, there are no &quot;chained&quot; exceptions,
-however recent versions of SQLAlchemy will attempt to emit a warning
-illustrating the original failure cause, while still throwing the
-immediate error which is the failure of the ROLLBACK.</p>
+<li><p class="first">** Rollbacks / SAVEPOINTリリースの失敗**  - いくつかのクラスのエラーは、トランザクションが「SAVEPOINT」ブロックで動作しているときだけでなく、そのコンテキスト内でも接続を使用できないようにします。このような場合、接続の失敗によりSAVEPOINTは存在しなくなりましたが、SQLAlchemyまたはアプリケーションがこのセーブポイントを &amp;quot;ロールバック&amp;quot;しようとすると、&amp;quot;RELEASE SAVEPOINT &amp;quot;操作は失敗します。 &amp;quot;セーブポイントが存在しません&amp;quot;のようなメッセージです。この場合、Python 3では、エラーの最終的な &amp;quot;原因&amp;quot;も表示される一連の例外出力があります。 Python 2では、&amp;quot;連鎖&amp;quot;例外はありませんが、SQLAlchemyの最近のバージョンでは、元のエラーの原因を示す警告を出そうとしますが、ROLLBACKの失敗である即時のエラーをスローします。</p>
 </li>
 </ul>
 </div>
 <div class="section" id="why-does-sqlalchemy-issue-so-many-rollbacks">
-<h2>Why does SQLAlchemy issue so many ROLLBACKs?<a class="headerlink" href="#why-does-sqlalchemy-issue-so-many-rollbacks" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>SQLAlchemy currently assumes DBAPI connections are in &quot;non-autocommit&quot; mode -
-this is the default behavior of the Python database API, meaning it
-must be assumed that a transaction is always in progress. The
-connection pool issues <code class="docutils literal"><span class="pre">connection.rollback()</span></code> when a connection is returned.
-This is so that any transactional resources remaining on the connection are
-released. On a database like PostgreSQL or MSSQL where table resources are
-aggressively locked, this is critical so that rows and tables don't remain
-locked within connections that are no longer in use. An application can
-otherwise hang. It's not just for locks, however, and is equally critical on
-any database that has any kind of transaction isolation, including MySQL with
-InnoDB. Any connection that is still inside an old transaction will return
-stale data, if that data was already queried on that connection within
-isolation. For background on why you might see stale data even on MySQL, see
-<a class="reference external" href="http://dev.mysql.com/doc/refman/5.1/en/innodb-transaction-model.html">http://dev.mysql.com/doc/refman/5.1/en/innodb-transaction-model.html</a></p>
+<h2>なぜSQLAlchemyは非常に多くのROLLBACKを発行しますか？<a class="headerlink" href="#why-does-sqlalchemy-issue-so-many-rollbacks" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQLAlchemyは現在、DBAPI接続が&amp;quot;非自動コミット&amp;quot;モードであると想定しています。これはPythonデータベースAPIのデフォルトの動作です。つまり、トランザクションが常に進行中であることが前提です。接続プールは、接続が返されたときに `` connection.rollback（） <a href="#id1"><span class="problematic" id="id2">``</span></a>を発行します。これは、接続に残っているトランザクションリソースがすべて解放されるようにするためです。 PostgreSQLやMSSQLのようなテーブルリソースが積極的にロックされているデータベースでは、使用されなくなった接続内で行やテーブルがロックされないようにすることが重要です。それ以外の場合は、アプリケーションがハングアップする可能しかし、ロックだけでなく、MySQLを含むInnoDBを含むあらゆる種類のトランザクション分離を持つデータベースでも同様に重要です。古いトランザクション内にまだ存在する接続は、そのデータがすでに分離内で照会されていた場合は失効したデータを返します。 MySQLで古いデータが表示される理由については、http：//dev.mysql.com/doc/refman/5.1/en/innodb-transaction-model.htmlを参照してください。</p>
 <div class="section" id="i-m-on-myisam-how-do-i-turn-it-off">
-<h3>I'm on MyISAM - how do I turn it off?<a class="headerlink" href="#i-m-on-myisam-how-do-i-turn-it-off" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The behavior of the connection pool's connection return behavior can be
-configured using <code class="docutils literal"><span class="pre">reset_on_return</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span>
+<h3>私はMyISAMにいます - どうすればいいですか？<a class="headerlink" href="#i-m-on-myisam-how-do-i-turn-it-off" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>接続プールの接続戻り動作の動作は、 `` reset_on_return``</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.pool</span> <span class="k">import</span> <span class="n">QueuePool</span>
 
 <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;mysql://scott:tiger@localhost/myisam_database&#39;</span><span class="p">,</span> <span class="n">pool</span><span class="o">=</span><span class="n">QueuePool</span><span class="p">(</span><span class="n">reset_on_return</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span></pre></div>
 </div>
 </div>
 <div class="section" id="i-m-on-sql-server-how-do-i-turn-those-rollbacks-into-commits">
-<h3>I'm on SQL Server - how do I turn those ROLLBACKs into COMMITs?<a class="headerlink" href="#i-m-on-sql-server-how-do-i-turn-those-rollbacks-into-commits" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p><code class="docutils literal"><span class="pre">reset_on_return</span></code> accepts the values <code class="docutils literal"><span class="pre">commit</span></code>, <code class="docutils literal"><span class="pre">rollback</span></code> in addition
-to <code class="docutils literal"><span class="pre">True</span></code>, <code class="docutils literal"><span class="pre">False</span></code>, and <code class="docutils literal"><span class="pre">None</span></code>.   Setting to <code class="docutils literal"><span class="pre">commit</span></code> will cause
-a COMMIT as any connection is returned to the pool:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;mssql://scott:tiger@mydsn&#39;</span><span class="p">,</span> <span class="n">pool</span><span class="o">=</span><span class="n">QueuePool</span><span class="p">(</span><span class="n">reset_on_return</span><span class="o">=</span><span class="s1">&#39;commit&#39;</span><span class="p">))</span></pre></div>
+<h3>SQL Serverを使用しています。これらのROLLBACKをCOMMITに変換するにはどうすればよいですか？<a class="headerlink" href="#i-m-on-sql-server-how-do-i-turn-those-rollbacks-into-commits" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>`` reset_on_return``は `` True`````````````````````````````````````````に加えて `` commit````、 `` rollback``を受け入れます。 `` commit``に設定すると、プールに接続が返されるたびにCOMMITが発生します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;mssql://scott:tiger@mydsn&#39;</span><span class="p">,</span> <span class="n">pool</span><span class="o">=</span><span class="n">QueuePool</span><span class="p">(</span><span class="n">reset_on_return</span><span class="o">=</span><span class="s1">&#39;commit&#39;</span><span class="p">))</span></pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="i-am-using-multiple-connections-with-a-sqlite-database-typically-to-test-transaction-operation-and-my-test-program-is-not-working">
-<h2>I am using multiple connections with a SQLite database (typically to test transaction operation), and my test program is not working!<a class="headerlink" href="#i-am-using-multiple-connections-with-a-sqlite-database-typically-to-test-transaction-operation-and-my-test-program-is-not-working" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>If using a SQLite <code class="docutils literal"><span class="pre">:memory:</span></code> database, or a version of SQLAlchemy prior
-to version 0.7, the default connection pool is the <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.SingletonThreadPool" title="sqlalchemy.pool.SingletonThreadPool"><code class="xref py py-class docutils literal"><span class="pre">SingletonThreadPool</span></code></a>,
-which maintains exactly one SQLite connection per thread.  So two
-connections in use in the same thread will actually be the same SQLite
-connection.   Make sure you're not using a :memory: database and
-use <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.NullPool" title="sqlalchemy.pool.NullPool"><code class="xref py py-class docutils literal"><span class="pre">NullPool</span></code></a>, which is the default for non-memory databases in
-current SQLAlchemy versions.</p>
+<h2>SQLiteデータベースで複数の接続を使用しています（通常はトランザクション操作をテストします）、テストプログラムが動作していません。<a class="headerlink" href="#i-am-using-multiple-connections-with-a-sqlite-database-typically-to-test-transaction-operation-and-my-test-program-is-not-working" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQLiteの <a href="#id1"><span class="problematic" id="id2">``</span></a>：memory： <a href="#id3"><span class="problematic" id="id4">``</span></a>データベース、またはバージョン0.7より前のバージョンのSQLAlchemyを使用している場合、デフォルトの接続プールは：class： <a href="#id5"><span class="problematic" id="id6">`</span></a>.SingletonThreadPool`です。スレッドごとに1つのSQLite接続を維持します。したがって、同じスレッドで使用されている2つの接続は、実際には同じSQLite接続になります。 ：memory：データベースを使用せずに、：class： <a href="#id7"><span class="problematic" id="id8">`</span></a>.NullPool`を使用してください。これは、現在のSQLAlchemyバージョンの非メモリデータベースのデフォルトです。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="../dialects/sqlite.html#pysqlite-threading-pooling"><span class="std std-ref">Threading/Pooling Behavior</span></a> - info on PySQLite's behavior.</p>
+<p class="last">：ref： <cite>pysqlite_threading_pooling</cite>  -  PySQLiteの動作に関する情報です。</p>
 </div>
 </div>
 <div class="section" id="how-do-i-get-at-the-raw-dbapi-connection-when-using-an-engine">
-<h2>How do I get at the raw DBAPI connection when using an Engine?<a class="headerlink" href="#how-do-i-get-at-the-raw-dbapi-connection-when-using-an-engine" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>With a regular SA engine-level Connection, you can get at a pool-proxied
-version of the DBAPI connection via the <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection.connection" title="sqlalchemy.engine.Connection.connection"><code class="xref py py-attr docutils literal"><span class="pre">Connection.connection</span></code></a> attribute on
-<a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection" title="sqlalchemy.engine.Connection"><code class="xref py py-class docutils literal"><span class="pre">Connection</span></code></a>, and for the really-real DBAPI connection you can call the
-<code class="xref py py-attr docutils literal"><span class="pre">ConnectionFairy.connection</span></code> attribute on that - but there should never be any need to access
-the non-pool-proxied DBAPI connection, as all methods are proxied through:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<h2>エンジンを使用している場合、未処理のDBAPI接続を取得するにはどうすればよいですか？<a class="headerlink" href="#how-do-i-get-at-the-raw-dbapi-connection-when-using-an-engine" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>通常のSAエンジンレベルのConnectionでは、：class： <cite>.Connection`の：attr：</cite> .Connection.connection`属性を使用してDBAPI接続のプールプロキシバージョンを取得できます。実際のDBAPI接続には：attr： <a href="#id1"><span class="problematic" id="id2">`</span></a>.ConnectionFairy.connection`属性を呼び出すことができますが、プールされていないDBAPI接続にはアクセスする必要がありません。すべてのメソッドは、</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 <span class="n">conn</span><span class="o">.</span><span class="n">connection</span><span class="o">.&lt;</span><span class="n">do</span> <span class="n">DBAPI</span> <span class="n">things</span><span class="o">&gt;</span>
 <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">(</span><span class="o">&lt;</span><span class="n">DBAPI</span> <span class="n">specific</span> <span class="n">arguments</span><span class="o">..&gt;</span><span class="p">)</span></pre></div>
 </div>
-<p>You must ensure that you revert any isolation level settings or other
-operation-specific settings on the connection back to normal before returning
-it to the pool.</p>
-<p>As an alternative to reverting settings, you can call the <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection.detach" title="sqlalchemy.engine.Connection.detach"><code class="xref py py-meth docutils literal"><span class="pre">Connection.detach()</span></code></a> method on
-either <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection" title="sqlalchemy.engine.Connection"><code class="xref py py-class docutils literal"><span class="pre">Connection</span></code></a> or the proxied connection, which will de-associate
-the connection from the pool such that it will be closed and discarded
-when <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection.close" title="sqlalchemy.engine.Connection.close"><code class="xref py py-meth docutils literal"><span class="pre">Connection.close()</span></code></a> is called:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<p>プールに戻す前に、分離レベル設定または接続の他の操作固有の設定を通常に戻す必要があります。</p>
+<p>設定を元に戻す代わりに、：class： <cite>.Connection`またはプロキシ接続のどちらかで：meth：</cite> .Connection.detach`メソッドを呼び出すことができます。閉じられ、破棄されたとき：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Connection.close`が呼び出される:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 <span class="n">conn</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span>  <span class="c1"># detaches the DBAPI connection from the connection pool</span>
 <span class="n">conn</span><span class="o">.</span><span class="n">connection</span><span class="o">.&lt;</span><span class="n">go</span> <span class="n">nuts</span><span class="o">&gt;</span>
 <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># connection is closed for real, the pool replaces it with a new connection</span></pre></div>
 </div>
 </div>
 <div class="section" id="how-do-i-use-engines-connections-sessions-with-python-multiprocessing-or-os-fork">
-<h2>How do I use engines / connections / sessions with Python multiprocessing, or os.fork()?<a class="headerlink" href="#how-do-i-use-engines-connections-sessions-with-python-multiprocessing-or-os-fork" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The key goal with multiple python processes is to prevent any database connections
-from being shared across processes.   Depending on specifics of the driver and OS,
-the issues that arise here range from non-working connections to socket connections that
-are used by multiple processes concurrently, leading to broken messaging (the latter
-case is typically the most common).</p>
-<p>The SQLAlchemy <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> object refers to a connection pool of existing
-database connections.  So when this object is replicated to a child process,
-the goal is to ensure that no database connections are carried over.  There
-are three general approaches to this:</p>
+<h2>Pythonのマルチプロセッシング、またはos.fork（）でエンジン/接続/セッションを使用するにはどうすればよいですか？<a class="headerlink" href="#how-do-i-use-engines-connections-sessions-with-python-multiprocessing-or-os-fork" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>複数のPythonプロセスの重要な目標は、データベース接続がプロセス間で共有されないようにすることです。ドライバやOSの仕様によっては、動作しない接続から複数のプロセスで同時に使用されるソケット接続に至るまでの問題があり、メッセージングが壊れています（後者の場合が一般的です）。</p>
+<p>SQLAlchemy：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Engine`オブジェクトは、既存のデータベース接続の接続プールを参照します。したがって、このオブジェクトが子プロセスに複製されるとき、目標はデータベース接続が引き継がれないようにすることです。これには3つの一般的なアプローチがあります：</p>
 <ol class="arabic">
-<li><p class="first">Disable pooling using <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.NullPool" title="sqlalchemy.pool.NullPool"><code class="xref py py-class docutils literal"><span class="pre">NullPool</span></code></a>.  This is the most simplistic,
-one shot system that prevents the <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> from using any connection
-more than once.</p>
+<li><p class="first">：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.NullPool`を使用してプールを無効にします。これは：class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Engine`が何度も何らかの接続を使用するのを防ぐ最もシンプルなワンショットシステムです。</p>
 </li>
-<li><p class="first">Call <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine.dispose" title="sqlalchemy.engine.Engine.dispose"><code class="xref py py-meth docutils literal"><span class="pre">Engine.dispose()</span></code></a> on any given <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> as soon one is
-within the new process.  In Python multiprocessing, constructs such as
-<code class="docutils literal"><span class="pre">multiprocessing.Pool</span></code> include &quot;initializer&quot; hooks which are a place
-that this can be performed; otherwise at the top of where <code class="docutils literal"><span class="pre">os.fork()</span></code>
-or where the <code class="docutils literal"><span class="pre">Process</span></code> object begins the child fork, a single call
-to <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine.dispose" title="sqlalchemy.engine.Engine.dispose"><code class="xref py py-meth docutils literal"><span class="pre">Engine.dispose()</span></code></a> will ensure any remaining connections are flushed.</p>
+<li><p class="first">`` .Engine``を新しいプロセスの中に入れたらすぐに：meth： <cite>.Engine.dispose</cite>：class：` .Engine`を呼び出してください。 Pythonのマルチプロセッシングでは、 `` multiprocessing.Pool``のような構造体には、これを実行できる場所である &amp;quot;初期化子&amp;quot;フックが含まれています。そうでなければ、 `` os.fork（） <a href="#id1"><span class="problematic" id="id2">``</span></a>のどこか、または `` Process``オブジェクトが子のforkを開始するところで、：meth： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Engine.dispose`を一回呼び出すことで残りの接続が確実にフラッシュされます。</p>
 </li>
-<li><p class="first">An event handler can be applied to the connection pool that tests for connections
-being shared across process boundaries, and invalidates them.  This looks like
-the following:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<li><p class="first">イベントハンドラは、プロセス境界で共有される接続をテストし、無効にする接続プールに適用できます。これは次のようになります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">event</span>
@@ -437,23 +312,14 @@ the following:</p>
                 <span class="p">(</span><span class="n">connection_record</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;pid&#39;</span><span class="p">],</span> <span class="n">pid</span><span class="p">)</span>
             <span class="p">)</span></pre></div>
 </div>
-<p>These events are applied to an <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> as soon as its created:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">)</span>
+<p>これらのイベントは、作成されるとすぐに：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Engine`に適用されます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">)</span>
 
 <span class="n">add_engine_pidguard</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span></pre></div>
 </div>
 </li>
 </ol>
-<p>The above strategies will accommodate the case of an <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a>
-being shared among processes.  However, for the case of a transaction-active
-<a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> or <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection" title="sqlalchemy.engine.Connection"><code class="xref py py-class docutils literal"><span class="pre">Connection</span></code></a> being shared, there's no automatic
-fix for this; an application needs to ensure a new child process only
-initiate new <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection" title="sqlalchemy.engine.Connection"><code class="xref py py-class docutils literal"><span class="pre">Connection</span></code></a> objects and transactions, as well as ORM
-<a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> objects.  For a <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> object, technically
-this is only needed if the session is currently transaction-bound, however
-the scope of a single <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> is in any case intended to be
-kept within a single call stack in any case (e.g. not a global object, not
-shared between processes or threads).</p>
+<p>上記の戦略は：class： <cite>.Engine`がプロセス間で共有されるケースに対応します。しかし、transaction-active：class： `.Session`や：class：</cite> .Connection`が共有されている場合は、このための自動修正はありません。アプリケーションは新しい子プロセスがORM：class： <cite>.Session`オブジェクトだけでなく、新しい：class：</cite> .Connection`オブジェクトとトランザクションを開始するようにする必要があります。 a：class： <cite>.Session`オブジェクトの場合、これは技術的にはセッションが現在トランザクションにバインドされている場合にのみ必要ですが、class：</cite> .Session`のスコープはいずれの場合でも単一の呼び出し（グローバルオブジェクトではなく、プロセスやスレッド間で共有されていないなど）。</p>
 </div>
 </div>
 
@@ -463,13 +329,13 @@ shared between processes or threads).</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="index.html" title="previous chapter">Frequently Asked Questions</a>
+        <a href="index.html" title="previous chapter">よくある質問</a>
         Next:
-        <a href="metadata_schema.html" title="next chapter">MetaData / Schema</a>
+        <a href="metadata_schema.html" title="next chapter">メタデータ/スキーマ</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -496,6 +362,7 @@ shared between processes or threads).</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

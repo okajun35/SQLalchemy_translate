@@ -6,37 +6,27 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/mutable.rst:4
 msgid "Mutation Tracking"
-msgstr ""
+msgstr "突然変異の追跡"
 
 #: of sqlalchemy.ext.mutable:1
 msgid ""
 "Provide support for tracking of in-place changes to scalar values, which "
 "are propagated into ORM change events on owning parent objects."
-msgstr ""
+msgstr "親オブジェクトの所有に関するORM変更イベントに伝播されるスカラー値のインプレース変更の追跡をサポートします。"
 
 #: of sqlalchemy.ext.mutable:4
 msgid ""
 ":mod:`sqlalchemy.ext.mutable` replaces SQLAlchemy's legacy approach to "
 "in-place mutations of scalar values; see "
 ":ref:`07_migration_mutation_extension`."
-msgstr ""
+msgstr "：mod： `sqlalchemy.ext.mutable`は、SQLAlchemyの従来のアプローチをスカラー値のインプレース変異に置き換えます。 ref： `07_migration_mutation_extension`を参照してください。"
 
 #: of sqlalchemy.ext.mutable:11
 msgid "Establishing Mutability on Scalar Column Values"
-msgstr ""
+msgstr "スカラの列値の変更可能性の確立"
 
 #: of sqlalchemy.ext.mutable:13
 msgid ""
@@ -44,7 +34,7 @@ msgid ""
 "Following the example introduced in :ref:`types_toplevel`, we begin with "
 "a custom type that marshals Python dictionaries into JSON strings before "
 "being persisted::"
-msgstr ""
+msgstr "\ &quot;可変\&quot;構造の典型的な例は、Python辞書です。 ：ref： `types_toplevel`で紹介されている例に続いて、永続化される前にPython辞書をJSON文字列にマーシャリングするカスタムタイプから始めます::"
 
 #: of sqlalchemy.ext.mutable:36
 msgid ""
@@ -52,7 +42,7 @@ msgid ""
 ":mod:`sqlalchemy.ext.mutable` extension can be used with any type whose "
 "target Python type may be mutable, including :class:`.PickleType`, "
 ":class:`.postgresql.ARRAY`, etc."
-msgstr ""
+msgstr "`` json``の使用法は、例の目的に過ぎません。 ：mod： `sqlalchemy.ext.mutable`拡張は、class：` .PickleType`、：class： `.postgresql.ARRAY`など、ターゲットのPython型が変更可能な任意の型で使用できます。"
 
 #: of sqlalchemy.ext.mutable:41
 msgid ""
@@ -60,7 +50,7 @@ msgid ""
 "tracks all parents which reference it.  Below, we illustrate a simple "
 "version of the :class:`.MutableDict` dictionary object, which applies the"
 " :class:`.Mutable` mixin to a plain Python dictionary::"
-msgstr ""
+msgstr "：mod： `sqlalchemy.ext.mutable`拡張を使用する場合、値自体はそれを参照するすべての親を追跡します。以下に、class： `.MutableDict`ディクショナリオブジェクトの簡単なバージョンを示します。このオブジェクトは：class：` .Mutable` mixinをプレーンなPythonディクショナリに適用します::"
 
 #: of sqlalchemy.ext.mutable:74
 msgid ""
@@ -71,7 +61,7 @@ msgid ""
 "``collections.MutableMapping``; the part that's important to this example"
 " is that the :meth:`.Mutable.changed` method is called whenever an in-"
 "place change to the datastructure takes place."
-msgstr ""
+msgstr "上記のディクショナリクラスでは、Pythonに組み込まれた `` dict``をサブクラス化して `` __setitem__``を通してすべての突然変異イベントをルーティングするdictサブクラスを生成するアプローチをとっています。このアプローチには、 `` UserDict.UserDict``や `` collections.MutableMapping``のサブクラス化などのバリエーションがあります。この例にとって重要な部分は、：meth： `.Mutable.changed`メソッドは、データ構造のインプレース変更が行われるたびに呼び出されるということです。"
 
 #: of sqlalchemy.ext.mutable:82
 msgid ""
@@ -84,7 +74,7 @@ msgid ""
 "code uses ``MutableDict`` explicitly.  When :meth:`.Mutable.coerce` is "
 "not overridden, any values applied to a parent object which are not "
 "instances of the mutable type will raise a ``ValueError``."
-msgstr ""
+msgstr "`` MutableDict``のインスタンスではない値（ `` json``モジュールで返されたプレーンな辞書など）を、 `` json``モジュールに変換するために使われる：meth： `.Mutable.coerce`メソッドも再定義します。適切なタイプ。このメソッドの定義はオプションです。 `` MutableDict``のインスタンスを常に返すように `` JSONEncodedDict``を作成し、すべての呼び出しコードが明示的に `` MutableDict``を明示的に使用するようにすることもできます。 ：meth： `.Mutable.coerce`がオーバーライドされていない場合、親オブジェクトに適用され、変更可能な型のインスタンスでない値は、` `ValueError``を送出します。"
 
 #: of sqlalchemy.ext.mutable:92
 msgid ""
@@ -94,7 +84,7 @@ msgid ""
 "and associates a listener that will detect all future mappings of this "
 "type, applying event listening instrumentation to the mapped attribute. "
 "Such as, with classical table metadata::"
-msgstr ""
+msgstr "私たちの新しい `` MutableDict``型はクラスメソッドを提供しています：meth： `〜.Mutable.as_mutable`これは、型と関連付けるためにカラムメタデータ内で使用できます。このメソッドは、指定された型オブジェクトまたはクラスを取得し、この型の今後のすべてのマッピングを検出し、イベントリスニングインストゥルメンテーションをマップされた属性に適用するリスナーを関連付けます。のような、古典的なテーブルのメタデータ::"
 
 #: of sqlalchemy.ext.mutable:106
 msgid ""
@@ -102,23 +92,23 @@ msgid ""
 "``JSONEncodedDict`` (if the type object was not an instance already), "
 "which will intercept any attributes which are mapped against this type.  "
 "Below we establish a simple mapping against the ``my_data`` table::"
-msgstr ""
+msgstr "上記：:: meth： `〜.Mutable.as_mutable`は、型オブジェクトがすでにインスタンスではない場合には、` `JSONEncodedDict``のインスタンスを返します。これは、この型に対してマップされた属性をインターセプトします。以下では、 `` my_data``テーブルに対して単純なマッピングを確立します::"
 
 #: of sqlalchemy.ext.mutable:119
 msgid ""
 "The ``MyDataClass.data`` member will now be notified of in place changes "
 "to its value."
-msgstr ""
+msgstr "`` MyDataClass.data``メンバに、その値が変更されたことが通知されます。"
 
 #: of sqlalchemy.ext.mutable:122
 msgid "There's no difference in usage when using declarative::"
-msgstr ""
+msgstr "declarative ::を使用すると使用方法に違いはありません::"
 
 #: of sqlalchemy.ext.mutable:133
 msgid ""
 "Any in-place changes to the ``MyDataClass.data`` member will flag the "
 "attribute as \"dirty\" on the parent object::"
-msgstr ""
+msgstr "`` MyDataClass.data``メンバのインプレースの変更は、その属性を親オブジェクトの\ &quot;dirty \&quot;としてフラグを立てます::"
 
 #: of sqlalchemy.ext.mutable:147
 msgid ""
@@ -127,11 +117,11 @@ msgid ""
 "  This is similar to :meth:`~.Mutable.as_mutable` except it will "
 "intercept all occurrences of ``MutableDict`` in all mappings "
 "unconditionally, without the need to declare it individually::"
-msgstr ""
+msgstr "`` MutableDict``は、 `` JSONEncodedDict``のすべての将来のインスタンスに、：meth： `〜.Mutable.associate_with`を使って1つのステップで関連付けることができます。これは：meth： `〜.Mutable.as_mutable`に似ていますが、それは個別に宣言する必要はなく、無条件にすべてのマッピングで` `MutableDict``のすべての出現を傍受します。"
 
 #: of sqlalchemy.ext.mutable:163 sqlalchemy.ext.mutable:342
 msgid "Supporting Pickling"
-msgstr ""
+msgstr "支持酸洗い"
 
 #: of sqlalchemy.ext.mutable:165
 msgid ""
@@ -146,13 +136,13 @@ msgid ""
 "context of the parent. The developer responsibility here is only to "
 "provide a ``__getstate__`` method that excludes the "
 ":meth:`~MutableBase._parents` collection from the pickle stream::"
-msgstr ""
+msgstr "：mod： `sqlalchemy.ext.mutable`拡張のキーは値オブジェクトに` `weakref.WeakKeyDictionary``を置くことに依存しています。これは親のマップされたオブジェクトのマッピングをそれらが存在する属性名にキーして格納しますこの値に関連付けられます。 `` WeakKeyDictionary``オブジェクトは弱点と関数のコールバックを含んでいるため、picklableではありません。私たちの場合、これは良いことです。なぜなら、このディクショナリをpicklableにすると、親の文脈の外で自分自身でpickleされる値オブジェクトのために、大きすぎるpickleサイズにつながる可能性があるからです。ここでの開発者の責任は、pickleストリームから：meth： `〜MutableBase._parents`コレクションを除外する` `__getstate__``メソッドを提供することだけです::"
 
 #: of sqlalchemy.ext.mutable:183
 msgid ""
 "With our dictionary example, we need to return the contents of the dict "
 "itself (and also restore them on __setstate__)::"
-msgstr ""
+msgstr "私たちの辞書の例では、dict自体の内容を返す必要があります（また、それらを__setstate__に復元する必要があります）："
 
 #: of sqlalchemy.ext.mutable:195
 msgid ""
@@ -161,11 +151,11 @@ msgid ""
 ":class:`.Mutable` mixin will re-establish the :attr:`.Mutable._parents` "
 "collection on each value object as the owning parents themselves are "
 "unpickled."
-msgstr ""
+msgstr "mutable valueオブジェクトがpickleの一部でもある1つ以上の親オブジェクトに添付されているときにpickleされる場合、：class： `.Mutable` mixinは：attr：` .Mutable._parents `各値オブジェクトのコレクションは、所有する親自体がunpickleされているので。"
 
 #: of sqlalchemy.ext.mutable:201
 msgid "Receiving Events"
-msgstr ""
+msgstr "イベントを受け取る"
 
 #: of sqlalchemy.ext.mutable:203
 msgid ""
@@ -173,11 +163,11 @@ msgid ""
 "receive an event when a mutable scalar emits a change event.  This event "
 "handler is called when the :func:`.attributes.flag_modified` function is "
 "called from within the mutable extension::"
-msgstr ""
+msgstr "：meth： `.AttributeEvents.modified`イベントハンドラは、変更可能なスカラが変更イベントを発行したときにイベントを受け取るために使用されます。このイベントハンドラは、：func： `.attributes.flag_modified`関数が変更可能な拡張モジュール内から呼び出されたときに呼び出されます::"
 
 #: of sqlalchemy.ext.mutable:225
 msgid "Establishing Mutability on Composites"
-msgstr ""
+msgstr "コンポジットへの変更可能性の確立"
 
 #: of sqlalchemy.ext.mutable:227
 msgid ""
@@ -186,7 +176,7 @@ msgid ""
 "\"composed\" from one or more columns from the underlying mapped table. "
 "The usual example is that of a geometric \"point\", and is introduced in "
 ":ref:`mapper_composite`."
-msgstr ""
+msgstr "コンポジットは、単一のスカラーアトリビュートに、基本となるマップされたテーブルの1つまたは複数のカラムからの情報を表すオブジェクト値を割り当てることを可能にする特別なORM機能です。通常の例は、幾何学的な\ &quot;point \&quot;の例であり、：ref： `mapper_composite`に導入されています。"
 
 #: of sqlalchemy.ext.mutable:232
 msgid ""
@@ -196,7 +186,7 @@ msgid ""
 "all owning parents. The :mod:`sqlalchemy.ext.mutable` extension provides "
 "the helper class :class:`.MutableComposite`, which is a slight variant on"
 " the :class:`.Mutable` class."
-msgstr ""
+msgstr "：func： `.orm.composite`の内部は大幅に単純化され、インプレース突然変異の検出はもはやデフォルトでは有効になっていません。その代わりに、ユーザー定義の値はそれ自身の変更を検出し、それを所有するすべての親に伝搬する必要があります。 ：mod： `sqlalchemy.ext.mutable`拡張はhelperクラスを提供します：class：` .MutableComposite`は、：class： `.Mutable`クラスのわずかなバリエーションです。"
 
 #: of sqlalchemy.ext.mutable:240
 msgid ""
@@ -210,7 +200,7 @@ msgid ""
 " :ref:`mapper_composite` to subclass :class:`.MutableComposite` and to "
 "also route attribute set events via ``__setattr__`` to the "
 ":meth:`.MutableComposite.changed` method::"
-msgstr ""
+msgstr "：class： `.Mutable`の場合と同様に、ユーザ定義の複合クラスは：class：` .MutableComposite`をmixinとしてサブクラス化し、：meth： `.MutableComposite.changed `メソッド。複合クラスの場合、検出は通常Python記述子（すなわち `` @ property``）の使用を介して行われるか、特殊なPythonメソッド `` __setattr __（） ``を介して行われます。以下では：class： `.MutableComposite`をサブクラス化するための：ref：` mapper_composite`に導入された `` Point``クラスを拡張し、 `` __setattr__``を介して：meth： `.MutableCompositeに属性セットイベントをルーティングします。変更されたメソッド::"
 
 #: of sqlalchemy.ext.mutable:277
 msgid ""
@@ -220,17 +210,17 @@ msgid ""
 "the ``Vertex`` class, listeners are established which will route change "
 "events from ``Point`` objects to each of the ``Vertex.start`` and "
 "``Vertex.end`` attributes::"
-msgstr ""
+msgstr "：class： `.MutableComposite`クラスはPythonのメタクラスを使って、` `Point``型を指定する：func：` .orm.composite`の使用法のリスナーを自動的に確立します。以下、 `` Point``が `` Vertex``クラスにマップされると、 `` Point``オブジェクトからの変更イベントを `` Vertex.start``と `` Vertex`のそれぞれにルーティングするリスナが確立されます。 end``属性::"
 
 #: of sqlalchemy.ext.mutable:302
 msgid ""
 "Any in-place changes to the ``Vertex.start`` or ``Vertex.end`` members "
 "will flag the attribute as \"dirty\" on the parent object::"
-msgstr ""
+msgstr "`` Vertex.start``または `` Vertex.end``のメンバをインプレースで変更すると、その属性は親オブジェクトの\ &quot;dirty \&quot;にフラグが立てられます::"
 
 #: of sqlalchemy.ext.mutable:317
 msgid "Coercing Mutable Composites"
-msgstr ""
+msgstr "変更可能なコンポジットの強制"
 
 #: of sqlalchemy.ext.mutable:319
 msgid ""
@@ -241,13 +231,13 @@ msgid ""
 ":meth:`.MutableBase.coerce` method is essentially equivalent to using a "
 ":func:`.validates` validation routine for all attributes which make use "
 "of the custom composite type::"
-msgstr ""
+msgstr "：meth： `.MutableBase.coerce`メソッドは複合型でもサポートされています。 ：class： `.MutableComposite`の場合、：meth：` .MutableBase.coerce`メソッドは、ロード操作ではなく、属性セット操作に対してのみ呼び出されます。 ：meth： `.MutableBase.coerce`メソッドをオーバーライドすることは、カスタム複合型を使用するすべての属性に対して：func：` .validates`検証ルーチンを使用することと本質的に同じです::"
 
 #: of sqlalchemy.ext.mutable:337
 msgid ""
 "Support for the :meth:`.MutableBase.coerce` method in conjunction with "
 "objects of type :class:`.MutableComposite`."
-msgstr ""
+msgstr "：meth： `.MutableBase.coerce`メソッドを、：class：` .MutableComposite`のオブジェクトと組み合わせてサポートします。"
 
 #: of sqlalchemy.ext.mutable:344
 msgid ""
@@ -259,7 +249,7 @@ msgid ""
 "``_parents`` dictionary. Below we define both a ``__getstate__`` and a "
 "``__setstate__`` that package up the minimal form of our ``Point`` "
 "class::"
-msgstr ""
+msgstr "：class： `.Mutable`の場合と同じように、：class：` .MutableComposite`ヘルパークラスは、pickableではない：meth： `MutableBase._parents`属性で利用可能な` `weakref.WeakKeyDictionary``を使用します。 `` Point``やその所有クラス `` Vertex``のインスタンスをピクルする必要がある場合、少なくとも `_parents``ディクショナリを含まない` `__getstate__``を定義する必要があります。以下では、 `` Point``クラスの最小限の形式をパッケージ化する `` __getstate__``と `` __setstate__``の両方を定義しています::"
 
 #: of sqlalchemy.ext.mutable:361
 msgid ""
@@ -267,20 +257,20 @@ msgid ""
 "pickling process of the parent's object-relational state so that the "
 ":meth:`MutableBase._parents` collection is restored to all ``Point`` "
 "objects."
-msgstr ""
+msgstr "：class： `.Mutable`と同様に、：class：` .MutableComposite`は親のオブジェクト・リレーショナル状態のpicklingプロセスを補完して、：meth： `MutableBase._parents`コレクションをすべて` `Point``に復元しますオブジェクト。"
 
 #: ../../orm/extensions/mutable.rst:9
 msgid "API Reference"
-msgstr ""
+msgstr "APIリファレンス"
 
 #: of sqlalchemy.ext.mutable.MutableBase:1
 msgid "Common base class to :class:`.Mutable` and :class:`.MutableComposite`."
-msgstr ""
+msgstr "共通の基本クラスは：class： `.Mutable`と：class：` .MutableComposite`です。"
 
 #: of sqlalchemy.ext.mutable.Mutable._parents:1
 #: sqlalchemy.ext.mutable.MutableBase._parents:1
 msgid "Dictionary of parent object->attribute name on the parent."
-msgstr ""
+msgstr "parentの親オブジェクト - &gt;属性名の辞書。"
 
 #: of sqlalchemy.ext.mutable.Mutable._parents:3
 #: sqlalchemy.ext.mutable.MutableBase._parents:3
@@ -288,24 +278,24 @@ msgid ""
 "This attribute is a so-called \"memoized\" property.  It initializes "
 "itself with a new ``weakref.WeakKeyDictionary`` the first time it is "
 "accessed, returning the same object upon subsequent access."
-msgstr ""
+msgstr "この属性は、いわゆる &quot;memoized&quot;プロパティです。最初にアクセスされたときに新しい `` weakref.WeakKeyDictionary``で自身を初期化し、その後のアクセス時に同じオブジェクトを返します。"
 
 #: of sqlalchemy.ext.mutable.Mutable.coerce:1
 #: sqlalchemy.ext.mutable.MutableBase.coerce:1
 msgid "Given a value, coerce it into the target type."
-msgstr ""
+msgstr "値が与えられたら、それをターゲットタイプに強制します。"
 
 #: of sqlalchemy.ext.mutable.Mutable.coerce:3
 #: sqlalchemy.ext.mutable.MutableBase.coerce:3
 msgid ""
 "Can be overridden by custom subclasses to coerce incoming data into a "
 "particular type."
-msgstr ""
+msgstr "着信データを特定のタイプに強制するカスタムサブクラスによってオーバーライドできます。"
 
 #: of sqlalchemy.ext.mutable.Mutable.coerce:6
 #: sqlalchemy.ext.mutable.MutableBase.coerce:6
 msgid "By default, raises ``ValueError``."
-msgstr ""
+msgstr "デフォルトでは、 `` ValueError``が発生します。"
 
 #: of sqlalchemy.ext.mutable.Mutable.coerce:8
 #: sqlalchemy.ext.mutable.MutableBase.coerce:8
@@ -316,50 +306,50 @@ msgid ""
 "operations as well as during ORM loading operations.  For the latter, it "
 "is only called during attribute-set operations; the mechanics of the "
 ":func:`.composite` construct handle coercion during load operations."
-msgstr ""
+msgstr "このメソッドは、親クラスが：class： `.Mutable`型であるか、：class：` .MutableComposite`型であるかによって異なるシナリオで呼び出されます。前者の場合、ORMローディング操作中だけでなく、属性セット操作も呼び出されます。後者の場合、属性セット操作中にのみ呼び出されます。 ：func： `.composite`構造体は、ロード操作中に変換を処理します。"
 
 #: of sqlalchemy.ext.mutable.Mutable.coerce
 #: sqlalchemy.ext.mutable.MutableBase.coerce
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.ext.mutable.Mutable.coerce:17
 #: sqlalchemy.ext.mutable.MutableBase.coerce:17
 msgid "string name of the ORM-mapped attribute being set."
-msgstr ""
+msgstr "設定されているORMでマップされた属性の文字列名。"
 
 #: of sqlalchemy.ext.mutable.Mutable.coerce:18
 #: sqlalchemy.ext.mutable.MutableBase.coerce:18
 msgid "the incoming value."
-msgstr ""
+msgstr "入ってくる値。"
 
 #: of sqlalchemy.ext.mutable.Mutable.coerce
 #: sqlalchemy.ext.mutable.MutableBase.coerce
 msgid "戻り値"
-msgstr ""
+msgstr "戻り値"
 
 #: of sqlalchemy.ext.mutable.Mutable.coerce:19
 #: sqlalchemy.ext.mutable.MutableBase.coerce:19
 msgid ""
 "the method should return the coerced value, or raise ``ValueError`` if "
 "the coercion cannot be completed."
-msgstr ""
+msgstr "メソッドは強制的な値を返すか、強制が完了できない場合は `` ValueError``を送出します。"
 
 #: of sqlalchemy.ext.mutable.Mutable:1
 msgid ""
 "Mixin that defines transparent propagation of change events to a parent "
 "object."
-msgstr ""
+msgstr "親オブジェクトへの変更イベントの透過的伝搬を定義するMixin。"
 
 #: of sqlalchemy.ext.mutable.Mutable:4
 msgid "See the example in :ref:`mutable_scalars` for usage information."
-msgstr ""
+msgstr "使用方法については、：ref： `mutable_scalars`の例を参照してください。"
 
 #: of sqlalchemy.ext.mutable.Mutable._get_listen_keys:1
 msgid ""
 "Given a descriptor attribute, return a ``set()`` of the attribute keys "
 "which indicate a change in the state of this attribute."
-msgstr ""
+msgstr "記述子属性が与えられた場合、この属性の状態の変化を示す属性キーの `` set（） ``を返します。"
 
 #: of sqlalchemy.ext.mutable.Mutable._get_listen_keys:4
 msgid ""
@@ -367,7 +357,7 @@ msgid ""
 "provide for additional keys.  E.g. a :class:`.MutableComposite` augments "
 "this set with the attribute keys associated with the columns that "
 "comprise the composite value."
-msgstr ""
+msgstr "これは通常 `` set（[attribute.key]） ``ですが、追加のキーを提供するためにオーバーライドできます。例えば：class： `.MutableComposite`は、コンポジット値を構成する列に関連付けられた属性キーでこのセットを補強します。"
 
 #: of sqlalchemy.ext.mutable.Mutable._get_listen_keys:9
 msgid ""
@@ -376,37 +366,37 @@ msgid ""
 " events, which pass along a list of attribute names that have been "
 "refreshed; the list is compared against this set to determine if action "
 "needs to be taken."
-msgstr ""
+msgstr "このコレクションは：meth： `.InstanceEvents.refresh`と：meth：` .InstanceEvents.refresh_flush`イベントをインターセプトする場合に参照されます。これらのイベントは、リフレッシュされた属性名のリストを渡します。リストをこのセットと比較して、アクションを取る必要があるかどうかを判断します。"
 
 #: of sqlalchemy.ext.mutable.Mutable._listen_on_attribute:1
 #: sqlalchemy.ext.mutable.Mutable.associate_with_attribute:1
 msgid ""
 "Establish this type as a mutation listener for the given mapped "
 "descriptor."
-msgstr ""
+msgstr "指定されたマップされた記述子の突然変異リスナーとしてこの型を設定します。"
 
 #: of sqlalchemy.ext.mutable.Mutable.as_mutable:1
 msgid "Associate a SQL type with this mutable Python type."
-msgstr ""
+msgstr "この可変Python型にSQL型を関連付けます。"
 
 #: of sqlalchemy.ext.mutable.Mutable.as_mutable:3
 msgid ""
 "This establishes listeners that will detect ORM mappings against the "
 "given type, adding mutation event trackers to those mappings."
-msgstr ""
+msgstr "これにより、指定された型に対してORMマッピングを検出し、これらのマッピングに突然変異イベントトラッカーを追加するリスナーが確立されます。"
 
 #: of sqlalchemy.ext.mutable.Mutable.as_mutable:6
 msgid ""
 "The type is returned, unconditionally as an instance, so that "
 ":meth:`.as_mutable` can be used inline::"
-msgstr ""
+msgstr "型は無条件にインスタンスとして返されるので、：meth： `.as_mutable`をinline ::"
 
 #: of sqlalchemy.ext.mutable.Mutable.as_mutable:14
 msgid ""
 "Note that the returned type is always an instance, even if a class is "
 "given, and that only columns which are declared specifically with that "
 "type instance receive additional instrumentation."
-msgstr ""
+msgstr "クラスが指定されていても、返される型は常にインスタンスであり、その型インスタンスで特に宣言された列だけが追加の計装を受け取ることに注意してください。"
 
 #: of sqlalchemy.ext.mutable.Mutable.as_mutable:18
 msgid ""
@@ -414,7 +404,7 @@ msgid ""
 "particular type, use the :meth:`.Mutable.associate_with` classmethod of "
 "the particular :class:`.Mutable` subclass to establish a global "
 "association."
-msgstr ""
+msgstr "ある特定の型のすべての出現に特定の変更可能な型を関連付けるには、：class： `.Mutable`サブクラスの：meth：` .Mutable.associate_with`クラスメソッドを使用して、グローバルな関連付けを確立します。"
 
 #: of sqlalchemy.ext.mutable.Mutable.as_mutable:25
 msgid ""
@@ -422,17 +412,17 @@ msgid ""
 " are *not* garbage collected.   Only use :meth:`.as_mutable` for types "
 "that are permanent to an application, not with ad-hoc types else this "
 "will cause unbounded growth in memory usage."
-msgstr ""
+msgstr "このメソッドによって確立されたリスナーは、すべてのマッパーにとって* global *であり、ガベージコレクションされません。特別な型ではなく、アプリケーションに永続的な型の場合にのみ：meth： `.as_mutable`を使用してください。そうしないと、メモリ使用量が無限に増加します。"
 
 #: of sqlalchemy.ext.mutable.Mutable.associate_with:1
 msgid "Associate this wrapper with all future mapped columns of the given type."
-msgstr ""
+msgstr "指定された型の今後マップされるすべての列にこのラッパーを関連付けます。"
 
 #: of sqlalchemy.ext.mutable.Mutable.associate_with:4
 msgid ""
 "This is a convenience method that calls ``associate_with_attribute`` "
 "automatically."
-msgstr ""
+msgstr "これは `` associate_with_attribute``を自動的に呼び出す便利なメソッドです。"
 
 #: of sqlalchemy.ext.mutable.Mutable.associate_with:9
 msgid ""
@@ -440,33 +430,33 @@ msgid ""
 " are *not* garbage collected.   Only use :meth:`.associate_with` for "
 "types that are permanent to an application, not with ad-hoc types else "
 "this will cause unbounded growth in memory usage."
-msgstr ""
+msgstr "このメソッドによって確立されたリスナーは、すべてのマッパーにとって* global *であり、ガベージコレクションされません。アドホック型ではなく、アプリケーションに永続的な型の場合にのみ：meth： `.associate_with`を使用してください。そうしないと、メモリ使用量が無限に増加します。"
 
 #: of sqlalchemy.ext.mutable.Mutable.changed:1
 #: sqlalchemy.ext.mutable.MutableComposite.changed:1
 msgid "Subclasses should call this method whenever change events occur."
-msgstr ""
+msgstr "サブクラスは、変更イベントが発生するたびにこのメソッドを呼び出す必要があります。"
 
 #: of sqlalchemy.ext.mutable.MutableComposite:1
 msgid ""
 "Mixin that defines transparent propagation of change events on a "
 "SQLAlchemy \"composite\" object to its owning parent or parents."
-msgstr ""
+msgstr "ミックスインは、SQLAlchemy \ &quot;複合\&quot;オブジェクト上の変更イベントを所有する親または親への透過的な伝播を定義します。"
 
 #: of sqlalchemy.ext.mutable.MutableComposite:5
 msgid "See the example in :ref:`mutable_composites` for usage information."
-msgstr ""
+msgstr "使用法については、：ref： `mutable_composites`の例を参照してください。"
 
 #: of sqlalchemy.ext.mutable.MutableDict:1
 msgid "A dictionary type that implements :class:`.Mutable`."
-msgstr ""
+msgstr "クラス： `.Mutable`を実装する辞書型。"
 
 #: of sqlalchemy.ext.mutable.MutableDict:3
 msgid ""
 "The :class:`.MutableDict` object implements a dictionary that will emit "
 "change events to the underlying mapping when the contents of the "
 "dictionary are altered, including when values are added or removed."
-msgstr ""
+msgstr "：class： `.MutableDict`オブジェクトは、値が追加または削除されたときを含めて、ディクショナリの内容が変更されたときに基本となるマッピングに変更イベントを送出するディクショナリを実装します。"
 
 #: of sqlalchemy.ext.mutable.MutableDict:7
 msgid ""
@@ -477,32 +467,32 @@ msgid ""
 "this use case, build a subclass of  :class:`.MutableDict` that provides "
 "appropriate coersion to the values placed in the dictionary so that they "
 "too are \"mutable\", and emit events up to their parent structure."
-msgstr ""
+msgstr "注：class： `.MutableDict`は辞書内の*値自体に可変トラッキングを適用しません**。したがって、JSON構造のような*再帰的な辞書構造の深い変更を追跡するユースケースのための十分な解決策ではありません。このユースケースをサポートするには、class： `.MutableDict`のサブクラスを構築します。このクラスは、ディクショナリに配置された値を適切に調整して変更可能にし、イベントを親構造体に出力します。"
 
 #: of sqlalchemy.ext.mutable.MutableDict:19
 #: sqlalchemy.ext.mutable.MutableSet:21
 msgid ":class:`.MutableList`"
-msgstr ""
+msgstr "：クラス： `.MutableList`"
 
 #: of sqlalchemy.ext.mutable.MutableDict:21
 #: sqlalchemy.ext.mutable.MutableList:21
 msgid ":class:`.MutableSet`"
-msgstr ""
+msgstr "：クラス： `.MutableSet`"
 
 #: of sqlalchemy.ext.mutable.MutableDict.coerce:1
 msgid "Convert plain dictionary to instance of this class."
-msgstr ""
+msgstr "プレーンディクショナリをこのクラスのインスタンスに変換します。"
 
 #: of sqlalchemy.ext.mutable.MutableList:1
 msgid "A list type that implements :class:`.Mutable`."
-msgstr ""
+msgstr "クラス： `.Mutable`を実装するリスト型です。"
 
 #: of sqlalchemy.ext.mutable.MutableList:3
 msgid ""
 "The :class:`.MutableList` object implements a list that will emit change "
 "events to the underlying mapping when the contents of the list are "
 "altered, including when values are added or removed."
-msgstr ""
+msgstr "：class： `.MutableList`オブジェクトは、値が追加または削除されたときを含め、リストの内容が変更されたときに基本となるマッピングに変更イベントを送出するリストを実装します。"
 
 #: of sqlalchemy.ext.mutable.MutableList:7
 msgid ""
@@ -513,27 +503,27 @@ msgid ""
 "build a subclass of  :class:`.MutableList` that provides appropriate "
 "coersion to the values placed in the dictionary so that they too are "
 "\"mutable\", and emit events up to their parent structure."
-msgstr ""
+msgstr "注意：class： `.MutableList`はリスト内の*値自体に変更可能なトラッキングを適用しません**。したがって、JSON構造のような*再帰的*可変構造への深い変更を追跡するというユースケースのための十分な解決策ではありません。このユースケースをサポートするには、class： `.MutableList`のサブクラスを構築します。サブクラスは、ディクショナリに配置された値に適切な値を与えて、それらも&quot;変更可能 &quot;になるようにし、イベントを親構造体に出力します。"
 
 #: of sqlalchemy.ext.mutable.MutableList:19
 #: sqlalchemy.ext.mutable.MutableSet:19
 msgid ":class:`.MutableDict`"
-msgstr ""
+msgstr "：クラス： `.MutableDict`"
 
 #: of sqlalchemy.ext.mutable.MutableList.coerce:1
 msgid "Convert plain list to instance of this class."
-msgstr ""
+msgstr "プレーンリストをこのクラスのインスタンスに変換します。"
 
 #: of sqlalchemy.ext.mutable.MutableSet:1
 msgid "A set type that implements :class:`.Mutable`."
-msgstr ""
+msgstr "クラス： `.Mutable`を実装するセット型。"
 
 #: of sqlalchemy.ext.mutable.MutableSet:3
 msgid ""
 "The :class:`.MutableSet` object implements a set that will emit change "
 "events to the underlying mapping when the contents of the set are "
 "altered, including when values are added or removed."
-msgstr ""
+msgstr "：class： `.MutableSet`オブジェクトは、値が追加または削除されたときを含め、セットの内容が変更されたときに基本となるマッピングに変更イベントを送出するセットを実装します。"
 
 #: of sqlalchemy.ext.mutable.MutableSet:7
 msgid ""
@@ -544,9 +534,9 @@ msgid ""
 ":class:`.MutableSet` that provides appropriate coersion to the values "
 "placed in the dictionary so that they too are \"mutable\", and emit "
 "events up to their parent structure."
-msgstr ""
+msgstr "注：class： `.MutableSet`は、セット内の*値自体に可変トラッキングを適用しません**。したがって、*再帰的*可変構造への深い変更を追跡するユースケースのための十分な解決策ではありません。このユースケースをサポートするには、class： `.MutableSet`のサブクラスを構築し、ディクショナリに配置された値に適切な値を与えて、それらも&quot;変更可能 &quot;になるようにし、イベントを親構造体に出力します。"
 
 #: of sqlalchemy.ext.mutable.MutableSet.coerce:1
 msgid "Convert plain set to instance of this class."
-msgstr ""
+msgstr "プレーンセットをこのクラスのインスタンスに変換します。"
 

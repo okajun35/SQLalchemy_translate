@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/inheritance.rst:4
 msgid "Mapping Class Inheritance Hierarchies"
-msgstr ""
+msgstr "クラス継承階層のマッピング"
 
 #: ../../orm/inheritance.rst:6
 msgid ""
@@ -30,30 +20,30 @@ msgid ""
 "where the class hierarchy is broken up among dependent tables, each class"
 " represented by its own table that only includes those attributes local "
 "to that class."
-msgstr ""
+msgstr "SQLAlchemyは、継承の3つの形式をサポートしています：**単一テーブルの継承**、いくつかのタイプのクラスが単一のテーブルで表現されます**具体的なテーブル継承**、各タイプのクラスは独立したテーブルで表され**結合テーブルの継承**では、クラス階層が従属テーブル間で分割され、各クラスはそのクラスのローカル属性のみを含む独自のテーブルで表されます。"
 
 #: ../../orm/inheritance.rst:13
 msgid ""
 "The most common forms of inheritance are single and joined table, while "
 "concrete inheritance presents more configurational challenges."
-msgstr ""
+msgstr "継承の最も一般的な形式は、単一の結合テーブルですが、具体的な継承ではより多くの構成上の課題があります。"
 
 #: ../../orm/inheritance.rst:16
 msgid ""
 "When mappers are configured in an inheritance relationship, SQLAlchemy "
 "has the ability to load elements :term:`polymorphically`, meaning that a "
 "single query can return objects of multiple types."
-msgstr ""
+msgstr "マッパが継承関係に設定されている場合、SQLAlchemyは要素を読み込むことができます。term： `polymorphically`です。つまり、単一のクエリが複数の型のオブジェクトを返すことができます。"
 
 #: ../../orm/inheritance.rst:22
 msgid ""
 ":ref:`examples_inheritance` - complete exampes of joined, single and "
 "concrete inheritance"
-msgstr ""
+msgstr "：ref： `examples_inheritance`  - 結合された、単一の、具体的な継承の完全な例"
 
 #: ../../orm/inheritance.rst:28
 msgid "Joined Table Inheritance"
-msgstr ""
+msgstr "結合されたテーブル継承"
 
 #: ../../orm/inheritance.rst:30
 msgid ""
@@ -70,14 +60,14 @@ msgid ""
 "they are accessed.    Alternatively, there are options which can change "
 "the default behavior, allowing the query to include columns corresponding"
 " to multiple tables/subclasses up front."
-msgstr ""
+msgstr "結合された表の継承では、クラスの階層に沿った各クラスは別個の表で表されます。階層内の特定のサブクラスを照会すると、継承パス内のすべてのテーブルに沿ってSQL JOINとしてレンダリングされます。照会されたクラスが基本クラスである場合、**デフォルトの動作は基本表**のみをSELECTステートメントに組み込むことです。すべての場合において、与えられた行のインスタンスを生成する究極のクラスは、識別子テーブルのカラムまたはベーステーブルに対して動作する式によって決定されます。サブクラスが基本表に対して** **のみロードされると、結果として得られるオブジェクトには最初に移入された基本属性があります。サブクラスにローカルな属性は、termにアクセスするときに `lazy load`となります。あるいは、デフォルトの動作を変更できるオプションがあり、複数のテーブル/サブクラスに対応する列を前面に表示することができます。"
 
 #: ../../orm/inheritance.rst:43
 msgid ""
 "The base class in a joined inheritance hierarchy is configured with "
 "additional arguments that will refer to the polymorphic discriminator "
 "column as well as the identifier for the base class::"
-msgstr ""
+msgstr "継承された継承階層の基本クラスは、基本クラスの識別子と同様に、多態性の識別器列を参照する追加の引数で構成されます。"
 
 #: ../../orm/inheritance.rst:58
 msgid ""
@@ -87,7 +77,7 @@ msgid ""
 "value which indicates the type of object represented within the row. The "
 "column may be of any datatype, though string and integer are the most "
 "common."
-msgstr ""
+msgstr "上記では、** discriminator **として動作するように追加の列 `` type``が設定されています：paramref： `.mapper.polymorphic_on`パラメータを使用して設定されています。この列には、行内で表されるオブジェクトのタイプを示す値が格納されます。列には任意のデータ型を使用できますが、文字列と整数が最も一般的です。"
 
 #: ../../orm/inheritance.rst:64
 msgid ""
@@ -96,7 +86,7 @@ msgid ""
 " column on the base table is the easiest way to achieve this, however "
 "very sophisticated inheritance mappings may even configure a SQL "
 "expression such as a CASE statement as the polymorphic discriminator."
-msgstr ""
+msgstr "多型弁別者の発現は厳密には必要ではないが、多型負荷が望ましい場合には必要である。これを達成する最も簡単な方法は、実表に単純な列を設定することですが、非常に洗練された継承マッピングでは、CASE文などのSQL式を多態性弁別子として構成することさえできます。"
 
 #: ../../orm/inheritance.rst:72
 msgid ""
@@ -104,7 +94,7 @@ msgid ""
 "configured for the entire inheritance hierarchy**, typically on the base-"
 " most class in the hierarchy. \"Cascading\" polymorphic discriminator "
 "expressions are not yet supported."
-msgstr ""
+msgstr "現時点では、継承階層**全体に対して、通常は階層内の最も基本的なクラスに1つのディスクリミネータ列またはSQL式しか構成できません。 \ &quot;カスケーディング\&quot;多態性弁別子式はまだサポートされていません。"
 
 #: ../../orm/inheritance.rst:77
 msgid ""
@@ -113,7 +103,7 @@ msgid ""
 "subclass they represent. Each table also must contain a primary key "
 "column (or columns), as well as a foreign key reference to the parent "
 "table::"
-msgstr ""
+msgstr "次に、「従業員」の「エンジニア」と「マネージャ」のサブクラスを定義します。それぞれには、それらが表すサブクラスに固有の属性を表す列が含まれています。各テーブルには、親テーブルへの外部キー参照と同様に、主キー列（または複数の列）が含まれている必要があります。"
 
 #: ../../orm/inheritance.rst:100
 msgid ""
@@ -123,7 +113,7 @@ msgid ""
 "refer to the parent via foreign key.  The way that a JOIN is constructed "
 "from the base table to subclasses is also directly customizable, however "
 "this is rarely necessary."
-msgstr ""
+msgstr "外部キー制約は、主キー自体と同じ列で確立されることが最も一般的ですが、これは必須ではありません。プライマリキーとは別の列を作成して、外部キーを介して親を参照することもできます。 JOINが基本表からサブクラスに構築される方法も直接カスタマイズ可能ですが、ほとんど必要ありません。"
 
 #: ../../orm/inheritance.rst:108
 msgid ""
@@ -138,7 +128,7 @@ msgid ""
 "critical to the proper operation of the pattern overall as they are used "
 "to locate the joined row, once the parent row has been determined within "
 "a statement."
-msgstr ""
+msgstr "結合表継承構成の1つの自然な効果は、すべてのマップされたオブジェクトの識別が、基本表のみの行から完全に決定できることです。これには明白な利点があるので、SQLAlchemyは結合された継承クラスの主キー列を常に基本表の主キー列とみなします。言い換えれば、 ``エンジニア ``と ``マネージャー ``のテーブルの `` id``カラムは ``エンジニア ``や ``マネージャ``オブジェクトの検索には使われません。 `` employee.id``が考慮されます。 「engineer.id``と `` manager.id``は、親行がステートメント内で決定されると、結合された行の位置を突き止めるために、パターン全体が適切に動作するためには依然として重要です。"
 
 #: ../../orm/inheritance.rst:119
 msgid ""
@@ -148,11 +138,11 @@ msgid ""
 "``Employee`` objects will automatically populate the ``employee.type`` "
 "column with the correct \"discriminator\" value in this case "
 "``\"engineer\"``, ``\"manager\"``, or ``\"employee\"``, as appropriate."
-msgstr ""
+msgstr "結合された継承マッピングが完了すると、 `` Employee``に対して照会すると、 `` Employee``、 `` Engineer``、 `` Manager``オブジェクトの組み合わせが返されます。新しく保存された `` Engineer``、 `` Manager``、 `` Employee``オブジェクトは自動的に `` employee.type``カラムに正しいdiscriminatorという値を設定します。 `` manager &#39;&#39; ``、または `` \ &quot;employee \&quot; ``に変更することができます。"
 
 #: ../../orm/inheritance.rst:127
 msgid "Relationships with Joined Inheritance"
-msgstr ""
+msgstr "結合された継承との関係"
 
 #: ../../orm/inheritance.rst:129
 msgid ""
@@ -162,7 +152,7 @@ msgid ""
 "below, as the ``employee`` table has a foreign key constraint back to the"
 " ``company`` table, the relationships are set up between ``Company`` and "
 "``Employee``::"
-msgstr ""
+msgstr "リレーションシップは、結合されたテーブル継承で完全にサポートされています。継承継承クラスを含む関係は、外部キー制約にも対応する階層内のクラスをターゲットにする必要があります。下記のように、 `` employee``テーブルは `` company``テーブルに戻る外部キー制約を持っているので、 `` Company``と `` Employee``の間に関係が設定されています::"
 
 #: ../../orm/inheritance.rst:161
 msgid ""
@@ -171,18 +161,18 @@ msgid ""
 "below, there is a foreign key constraint from ``manager`` to ``company``,"
 " so the relationships are established between the ``Manager`` and "
 "``Company`` classes::"
-msgstr ""
+msgstr "外部キー制約がサブクラスに対応する表にある場合、その関係はそのサブクラスをターゲットにする必要があります。以下の例では、 `` manager``から `` company``への外部キー制約があるため、 `` Manager``クラスと `` Company``クラスの関係が確立されています::"
 
 #: ../../orm/inheritance.rst:199
 msgid ""
 "Above, the ``Manager`` class will have a ``Manager.company`` attribute; "
 "``Company`` will have a ``Company.managers`` attribute that always loads "
 "against a join of the ``employee`` and ``manager`` tables together."
-msgstr ""
+msgstr "上の `` Manager``クラスは `` Manager.company``属性を持ちます。 `` Company``には `` employee``と `` manager``テーブルの結合を常にロードする `` Company.managers``属性があります。"
 
 #: ../../orm/inheritance.rst:204
 msgid "Loading Joined Inheritance Mappings"
-msgstr ""
+msgstr "結合された継承マッピングのロード"
 
 #: ../../orm/inheritance.rst:206
 msgid ""
@@ -190,11 +180,11 @@ msgid ""
 ":ref:`loading_joined_inheritance` for background on inheritance loading "
 "techniques, including configuration of tables to be queried both at "
 "mapper configuration time as well as query time."
-msgstr ""
+msgstr "マッパー設定時とクエリ時の両方で照会されるテーブルの設定を含む継承ローディング技術の背景については、ref： `inheritance_loading_toplevel`と：ref：` loading_joined_inheritance`節を参照してください。"
 
 #: ../../orm/inheritance.rst:214
 msgid "Single Table Inheritance"
-msgstr ""
+msgstr "単一テーブル継承"
 
 #: ../../orm/inheritance.rst:216
 msgid ""
@@ -202,7 +192,7 @@ msgid ""
 "within a single table.  A particular subclass that has attributes unique "
 "to that class will persist them within columns in the table that are "
 "otherwise NULL if the row refers to a different kind of object."
-msgstr ""
+msgstr "単一テーブルの継承は、単一のテーブル内のすべてのサブクラスのすべての属性を表します。そのクラスに固有の属性を持つ特定のサブクラスは、行が別の種類のオブジェクトを参照している場合はNULLであるテーブル内の列内にそれらを保持します。"
 
 #: ../../orm/inheritance.rst:221
 msgid ""
@@ -210,7 +200,7 @@ msgid ""
 "SELECT against the base table, which will include a WHERE clause that "
 "limits rows to those with a particular value or values present in the "
 "discriminator column or expression."
-msgstr ""
+msgstr "階層内の特定のサブクラスを照会すると、基本表に対してSELECTとしてレンダリングされます。WHERE句には、特定の値を持つ行に、または識別器の列または式に存在する値に行を限定します。"
 
 #: ../../orm/inheritance.rst:226
 msgid ""
@@ -218,7 +208,7 @@ msgid ""
 "joined table inheritance; queries are much more efficient as only one "
 "table needs to be involved in order to load objects of every represented "
 "class."
-msgstr ""
+msgstr "単一テーブルの継承には、結合されたテーブルの継承と比較して単純さの利点があります。表現されたすべてのクラスのオブジェクトをロードするためには、1つのテーブルだけが関与する必要があるため、クエリはずっと効率的です。"
 
 #: ../../orm/inheritance.rst:230
 msgid ""
@@ -226,7 +216,7 @@ msgid ""
 "inheritance, except only the base class specifies ``__tablename__``. A "
 "discriminator column is also required on the base table so that classes "
 "can be differentiated from each other."
-msgstr ""
+msgstr "単一テーブルの継承設定は、基本クラスだけが `` __tablename__``を指定する点を除いて、結合されたテーブルの継承とよく似ています。また、クラスが互いに区別できるように、基本表にも弁別子列が必要です。"
 
 #: ../../orm/inheritance.rst:235
 msgid ""
@@ -235,18 +225,18 @@ msgid ""
 "on subclasses, indicating that the column is to be mapped only to that "
 "subclass; the :class:`.Column` will be applied to the same base "
 ":class:`.Table` object::"
-msgstr ""
+msgstr "サブクラスがすべての属性のベーステーブルを共有していても、Declarativeを使用するときは：class： `.Column`オブジェクトがサブクラスで指定されている可能性があり、そのサブクラスのみにマッピングされることを示します。 ：class： `.Column`は同じベースに適用されます：class：` .Table` object ::"
 
 #: ../../orm/inheritance.rst:265
 msgid ""
 "Note that the mappers for the derived classes Manager and Engineer omit "
 "the ``__tablename__``, indicating they do not have a mapped table of "
 "their own."
-msgstr ""
+msgstr "派生クラスのマネージャとエンジニアのマッパーは `` __tablename__``を省略して、マップされた独自のテーブルを持たないことを示します。"
 
 #: ../../orm/inheritance.rst:270
 msgid "Relationships with Single Table Inheritance"
-msgstr ""
+msgstr "単一テーブル継承との関係"
 
 #: ../../orm/inheritance.rst:272
 msgid ""
@@ -254,7 +244,7 @@ msgid ""
 "Configuration is done in the same manner as that of joined inheritance; a"
 " foreign key attribute should be on the same class that's the \"foreign\""
 " side of the relationship::"
-msgstr ""
+msgstr "リレーションシップは、単一のテーブル継承で完全にサポートされています。設定は継承継承と同じ方法で行われます。外部キー属性は、関係の\ &quot;foreign \ sideである同じクラスになければなりません::"
 
 #: ../../orm/inheritance.rst:311
 msgid ""
@@ -262,7 +252,7 @@ msgid ""
 "that involve a specific subclass.   When queried, the SELECT statement "
 "will include a WHERE clause that limits the class selection to that "
 "subclass or subclasses::"
-msgstr ""
+msgstr "また、継承継承の場合と同様に、特定のサブクラスを含むリレーションシップを作成できます。照会されると、SELECTステートメントには、クラス選択をそのサブクラスまたはサブクラスに限定するWHERE句が含まれます。"
 
 #: ../../orm/inheritance.rst:352
 msgid ""
@@ -270,11 +260,11 @@ msgid ""
 "``Company`` will have a ``Company.managers`` attribute that always loads "
 "against the ``employee`` with an additional WHERE clause that limits rows"
 " to those with ``type = 'manager'``."
-msgstr ""
+msgstr "上の `` Manager``クラスは `` Manager.company``属性を持ちます。 `` Company``には `` Company.managers``属性があり、 `` employee``に対して `` type = &#39;manager&#39;``の行に制限するWHERE句が追加されています。"
 
 #: ../../orm/inheritance.rst:358
 msgid "Loading Single Inheritance Mappings"
-msgstr ""
+msgstr "単一継承マッピングのロード"
 
 #: ../../orm/inheritance.rst:360
 msgid ""
@@ -288,11 +278,11 @@ msgid ""
 " for documentation on inheritance loading techniques, including "
 "configuration of classes to be queried both at mapper configuration time "
 "as well as query time."
-msgstr ""
+msgstr "単一テーブル継承の読み込み手法は、結合テーブルの継承に使用されるものとほとんど同じであり、これらの2つのマッピングタイプの間で高度な抽象化が提供されるため、それらの間で切り替えたり、単一の階層（いずれかのサブクラスが単一継承されるものから `` __tablename__``を省略します）。マッパー設定時とクエリ時の両方で照会されるクラスの設定を含む、継承ローディング手法に関するドキュメントについては、ref： `inheritance_loading_toplevel`と：ref：` loading_single_inheritance`節を参照してください。"
 
 #: ../../orm/inheritance.rst:373
 msgid "Concrete Table Inheritance"
-msgstr ""
+msgstr "具体的なテーブル継承"
 
 #: ../../orm/inheritance.rst:375
 msgid ""
@@ -303,7 +293,7 @@ msgid ""
 "class' table and only return instances of that class.  Polymorphic "
 "loading of concrete classes is enabled by configuring within the mapper a"
 " special SELECT that typically is produced as a UNION of all the tables."
-msgstr ""
+msgstr "具象継承は各サブクラスをそれ自身の別個のテーブルにマップし、それぞれはそのクラスのインスタンスを生成するために必要なすべての列を含みます。コンクリートの継承設定は、デフォルトでは非ポリモーフィックにクエリされます。特定のクラスのクエリはそのクラスのテーブルのみをクエリし、そのクラスのインスタンスのみを返します。具象クラスの多態的なロードは、マッパー内で通常はすべてのテーブルのUNIONとして生成される特殊なSELECTを構成することによって有効になります。"
 
 #: ../../orm/inheritance.rst:385
 msgid ""
@@ -317,7 +307,7 @@ msgid ""
 "be used if at all possible.   If polymorphic loading isn't required, then"
 " plain non-inheriting mappings can be used if each class refers to its "
 "own table completely."
-msgstr ""
+msgstr "具体的なテーブルの継承は**結合**または単一のテーブルの継承より**はるかに複雑**であり、特に関係性、熱心な読み込み、および多相ロードでそれを使用することに関連する**機能ははるかに制限されています**。多態的に使用されると、単純な結合と同様に機能しないUNIONSを伴う**非常に大きなクエリ**が生成されます。リレーションシップロードと多型ロードの柔軟性が必要な場合は、可能な限り結合された単一のテーブル継承を使用することを強くお勧めします。多相ローディングが必要ない場合は、各クラスが独自のテーブルを完全に参照する場合は、継承しない非継承マッピングを使用できます。"
 
 #: ../../orm/inheritance.rst:396
 msgid ""
@@ -326,7 +316,7 @@ msgid ""
 "reason, concrete inheritance is more appropriate when **polymorphic "
 "loading is not required**.   Establishing relationships that involve "
 "concrete inheritance classes is also more awkward."
-msgstr ""
+msgstr "結合された単一テーブルの継承は\ &quot;ポリモーフィック\ローディング&quot;に堪能ですが、具体的な継承の方が面倒です。**多態的なローディングが不要な**具体的な継承がより適切です**。継承クラスももっと厄介です。"
 
 #: ../../orm/inheritance.rst:402
 msgid ""
@@ -334,18 +324,18 @@ msgid ""
 ":paramref:`.mapper.concrete` parameter within the ``__mapper_args__``. "
 "This indicates to Declarative as well as the mapping that the superclass "
 "table should not be considered as part of the mapping::"
-msgstr ""
+msgstr "具体的な継承を使用するクラスを確立するには、 `` __mapper_args__``の中に：paramref： `.mapper.concrete`パラメータを追加します。これは、スーパークラスのテーブルをマッピングの一部とみなしてはならないことを、宣言とマッピングに示します。"
 
 #: ../../orm/inheritance.rst:435
 msgid "Two critical points should be noted:"
-msgstr ""
+msgstr "2つの重要な点に注意する必要があります。"
 
 #: ../../orm/inheritance.rst:437
 msgid ""
 "We must **define all columns explicitly** on each subclass, even those of"
 " the same name.  A column such as ``Employee.name`` here is **not** "
 "copied out to the tables mapped by ``Manager`` or ``Engineer`` for us."
-msgstr ""
+msgstr "**同じ名前のものであっても、各サブクラスですべての列を明示的に**定義する必要があります。 `` Employee.name``などのカラムは、 `` Manager``や `` Engineer``でマップされたテーブルにコピーされません**。"
 
 #: ../../orm/inheritance.rst:442
 msgid ""
@@ -353,11 +343,11 @@ msgid ""
 "inheritance relationship with ``Employee``, they still **do not include "
 "polymorphic loading**.  Meaning, if we query for ``Employee`` objects, "
 "the ``manager`` and ``engineer`` tables are not queried at all."
-msgstr ""
+msgstr "`` Engineer``と ``Manager``クラスは` `Employee``との継承関係にマップされていますが、まだ** **多型ロードは含まれていません**。つまり、 `` Employee``オブジェクトを問い合わせると、 `` manager``と `` engineer``のテーブルはまったく問い合わせされません。"
 
 #: ../../orm/inheritance.rst:450
 msgid "Concrete Polymorphic Loading Configuration"
-msgstr ""
+msgstr "コンクリート多形荷重設定"
 
 #: ../../orm/inheritance.rst:452
 msgid ""
@@ -366,7 +356,7 @@ msgid ""
 "polymorphic loading.  This SELECT needs to be capable of accessing all "
 "the mapped tables individually, and is typically a UNION statement that "
 "is constructed using a SQLAlchemy helper :func:`.polymorphic_union`."
-msgstr ""
+msgstr "具象継承を伴うポリモーフィックなロードでは、ポリモーフィックなローディングが必要な各基本クラスに対して特殊なSELECTを構成する必要があります。このSELECTは、マップされたすべてのテーブルに個別にアクセスできる必要があります。通常、SQLAlchemyヘルパー：func： `.polymorphic_union`を使用して構築されたUNION文です。"
 
 #: ../../orm/inheritance.rst:458
 msgid ""
@@ -375,7 +365,7 @@ msgid ""
 "selectable by default using the :paramref:`.mapper.with_polymorphic` "
 "argument.  Current public API requires that this argument is set on a "
 ":class:`.Mapper` when it is first constructed."
-msgstr ""
+msgstr "：ref： `inheritance_loading_toplevel`で説明したように、：paramref：` .mapper.with_polymorphic`引数を使用して、デフォルトで特別な選択肢からロードするように、任意のタイプのマッパー継承設定を設定できます。現在のパブリックAPIでは、この引数が最初に構築されたときに：class： `.Mapper`に設定されている必要があります。"
 
 #: ../../orm/inheritance.rst:464
 msgid ""
@@ -385,20 +375,20 @@ msgid ""
 ":paramref:`.mapper.with_polymorphic` argument cannot be provided yet, "
 "since the :class:`.Table` objects that correspond to the subclasses "
 "haven't yet been defined."
-msgstr ""
+msgstr "しかし、Declarativeの場合、マッピングされている：class： `.Table`は、マップされたクラスが定義された瞬間に作成されます。つまり、：paramref： `.mapper.with_polymorphic`引数は、サブクラスに対応する：class：` .Table`オブジェクトがまだ定義されていないため、まだ提供できません。"
 
 #: ../../orm/inheritance.rst:470
 msgid ""
 "There are a few strategies available to resolve this cycle, however "
 "Declarative provides helper classes :class:`.ConcreteBase` and "
 ":class:`.AbstractConcreteBase` which handle this issue behind the scenes."
-msgstr ""
+msgstr "このサイクルを解決するための戦略がいくつかありますが、Declarativeではhelperクラス（class： `.ConcreteBase`）と：class：` .AbstractConcreteBase`が提供されています。"
 
 #: ../../orm/inheritance.rst:474
 msgid ""
 "Using :class:`.ConcreteBase`, we can set up our concrete mapping in "
 "almost the same way as we do other forms of inheritance mappings::"
-msgstr ""
+msgstr "：class： `.ConcreteBase`を使うと、継承マッピングの他の形式とほぼ同じ方法で具体的なマッピングを設定できます::"
 
 #: ../../orm/inheritance.rst:511
 msgid ""
@@ -409,22 +399,22 @@ msgid ""
 "function to create a UNION of all concrete-mapped tables after all the "
 "other classes are set up, and then configures this statement with the "
 "already existing base-class mapper."
-msgstr ""
+msgstr "上記のDeclarativeは、マッパー\ &quot;初期化\&quot;時に `` Employee``クラスの多型選択を設定します。これは、他の従属マッパーを解決するマッパーの後半の設定ステップです。 ：class： `.ConcreteBase`ヘルパーは：func：` .polymorphic_union`関数を使用して、他のすべてのクラスが設定された後にすべての具体的にマップされたテーブルのUNIONを作成し、このステートメントを既存のベースクラスマッパー。"
 
 #: ../../orm/inheritance.rst:519
 msgid "Upon select, the polymorphic union produces a query like this:"
-msgstr ""
+msgstr "selectを実行すると、多態式共用体は次のような問合せを生成します。"
 
 #: ../../orm/inheritance.rst:557
 msgid ""
 "The above UNION query needs to manufacture \"NULL\" columns for each "
 "subtable in order to accommodate for those columns that aren't members of"
 " that particular subclass."
-msgstr ""
+msgstr "上記のUNIONクエリは、特定のサブクラスのメンバーではない列に対応するために、各サブテーブルの\ &quot;NULL \&quot;列を作成する必要があります。"
 
 #: ../../orm/inheritance.rst:562
 msgid "Abstract Concrete Classes"
-msgstr ""
+msgstr "抽象コンクリートクラス"
 
 #: ../../orm/inheritance.rst:564
 msgid ""
@@ -433,7 +423,7 @@ msgid ""
 "inheritance use case, it is common that the base class is not represented"
 " within the database, only the subclasses.  In other words, the base "
 "class is \"abstract\"."
-msgstr ""
+msgstr "これまで説明した具体的なマッピングでは、サブクラスと基本クラスの両方が個々のテーブルにマッピングされています。具体的な継承ユースケースでは、基本クラスはデータベース内では表現されず、サブクラスのみで表現されるのが一般的です。つまり、基本クラスは「抽象的な」です。"
 
 #: ../../orm/inheritance.rst:570
 msgid ""
@@ -441,7 +431,7 @@ msgid ""
 "individual tables, and leave the base class unmapped, this can be "
 "achieved very easily. When using Declarative, just declare the base class"
 " with the ``__abstract__`` indicator::"
-msgstr ""
+msgstr "通常、2つの異なるサブクラスを個々のテーブルにマップし、ベースクラスをマッピングしないままにしたい場合は、これを非常に簡単に行うことができます。 Declarativeを使うときは、 `` __abstract__``インジケータで基本クラスを宣言してください::"
 
 #: ../../orm/inheritance.rst:598
 msgid ""
@@ -453,7 +443,7 @@ msgid ""
 "``Engineer`` instances.    This brings us back into the domain of "
 "concrete inheritance, and we must build a special mapper against "
 "``Employee`` in order to achieve this."
-msgstr ""
+msgstr "上記では、SQLAlchemyの継承マッピング機能を実際に使用していません。通常は `` Manager``と `` Engineer``のインスタンスをロードして永続させることができます。しかし、多態的に**を問い合わせる必要がある場合は状況が変わります。つまり、 `` session.query（Employee） ``を出して、 `` Manager``と `` Engineer``のコレクションを取得したいとします。インスタンス。これは具体的な継承の領域に戻ります。これを達成するために、従業員に対する特別なマッパーを構築する必要があります。"
 
 #: ../../orm/inheritance.rst:608
 msgid ""
@@ -463,7 +453,7 @@ msgid ""
 "\"single table inheritance\" mapper does not map to a table, these "
 "mappers in fact implicitly refer to the table that is mapped by a "
 "superclass."
-msgstr ""
+msgstr "SQLAlchemyでは、クラスのマッパーは、通常は：class： `.Table`であるが、任意の：func：` .select`オブジェクトも参照することができる、いくつかの\ &quot;selectable \&quot;を参照する必要があります。 \ &quot;単一テーブル継承\&quot;マッパーがテーブルにマップされていないように見えるかもしれませんが、これらのマッパーは実際には暗黙的にスーパークラスによってマップされたテーブルを参照します。"
 
 #: ../../orm/inheritance.rst:614
 msgid ""
@@ -473,14 +463,14 @@ msgid ""
 "the ``Employee`` mapper will be mapped directly to the \"polymorphic "
 "union\", rather than specifying it locally to the "
 ":paramref:`.mapper.with_polymorphic` parameter."
-msgstr ""
+msgstr "ポリモーフィックなローディングが可能な抽象的なベースを示すために具体的な継承の例を変更するには、エンジニアとマネージャーの両方のテーブルと `` employee``テーブルしか持たない`` Employee`マッパーは、：paramref： `.mapper.with_polymorphic`パラメーターに対してローカルに指定するのではなく、\&quot; polymorphic union \ &quot;に直接マップされます。"
 
 #: ../../orm/inheritance.rst:621
 msgid ""
 "To help with this, Declarative offers a variant of the "
 ":class:`.ConcreteBase` class called :class:`.AbstractConcreteBase` which "
 "achieves this automatically::"
-msgstr ""
+msgstr "これを助けるために、Declarativeは：class： `.AcstractConcreteBase`という名前の：class：` .ConcreteBase`クラスのバリエーションを提供します："
 
 #: ../../orm/inheritance.rst:651
 msgid ""
@@ -491,17 +481,17 @@ msgid ""
 "``Manager`` and ``Engineer`` may be persised; querying against the "
 "``Employee`` class will always produce ``Manager`` and ``Engineer`` "
 "objects."
-msgstr ""
+msgstr "：class： `.AbstractConcreteBase`ヘルパークラスは：class：` .ConcreteBase`よりも複雑な内部処理をしています。基本クラスのマッピング全体は、すべてのサブクラスが宣言されるまで遅らせる必要があります。上記のようなマッピングでは、 `` Manager``と `` Engineer``のインスタンスだけが表示されます。 `` Employee``クラスに対して照会すると、常に `` Manager``と `` Engineer``オブジェクトが生成されます。"
 
 #: ../../orm/inheritance.rst:660
 msgid ""
 ":ref:`declarative_concrete_table` - in the Declarative reference "
 "documentation"
-msgstr ""
+msgstr "：ref： `declarative_concrete_table`  - 宣言的なリファレンスドキュメント"
 
 #: ../../orm/inheritance.rst:663
 msgid "Classical and Semi-Classical Concrete Polymorphic Configuration"
-msgstr ""
+msgstr "古典的および準古典的なコンクリート多形構成"
 
 #: ../../orm/inheritance.rst:665
 msgid ""
@@ -512,17 +502,17 @@ msgid ""
 "explicitly so that the \"polymorphic union\" can be created first, then "
 "applied to the mappings.   These are illustrated here to clarify the role"
 " of the :func:`.polymorphic_union` function in terms of mapping."
-msgstr ""
+msgstr "：class： `.ConcreteBase`と：class：` .AbstractConcreteBase`は、：func： `.polymorphic_union`を明示的に使用する他の2つの設定と同等です。これらのコンフィグレーションフォームは、：class： `.Table`オブジェクトを明示的に使用して、\&quot;ポリモーフィックユニオン\ &quot;を最初に作成してマッピングに適用できるようにします。 ：func： `.polymorphic_union`関数のマッピングの役割を明確にするためにここに示します。"
 
 #: ../../orm/inheritance.rst:673
 msgid ""
 "A **semi-classical mapping** for example makes use of Declarative, but "
 "establishes the :class:`.Table` objects separately::"
-msgstr ""
+msgstr "**半古典的なマッピング**例えばDeclarativeを使用しますが、class： `.Table`オブジェクトを別個に確立します::"
 
 #: ../../orm/inheritance.rst:698
 msgid "Next, the UNION is produced using :func:`.polymorphic_union`::"
-msgstr ""
+msgstr "次に、UNIONは以下を使用して生成されます：func： `.polymorphic_union` ::"
 
 #: ../../orm/inheritance.rst:708
 msgid ""
@@ -531,14 +521,14 @@ msgid ""
 "with the ``__table__`` argument; our polymorphic union above is passed "
 "via ``__mapper_args__`` to the :paramref:`.mapper.with_polymorphic` "
 "parameter::"
-msgstr ""
+msgstr "上記の：class： `.Table`オブジェクトでは、マッピングは\&quot; semi-classical \ &quot;スタイルを使用して生成できます。ここではDeclarativeを` `__table__``引数とともに使用します。上記のポリモーフィックな共用は `` __mapper_args__``を介して：paramref： `.mapper.with_polymorphic`パラメータに渡されます::"
 
 #: ../../orm/inheritance.rst:733
 msgid ""
 "Alternatvely, the same :class:`.Table` objects can be used in fully "
 "\"classical\" style, without using Declarative at all. A constructor "
 "similar to that supplied by Declarative is illustrated::"
-msgstr ""
+msgstr "代わりに、同じ：class： `.Table`オブジェクトは、宣言型を全く使わずに、完全に&quot;古典的な &quot;スタイルで使うことができます。 Declarativeによって提供されるコンストラクタに似たコンストラクタが示されています::"
 
 #: ../../orm/inheritance.rst:761
 msgid ""
@@ -547,23 +537,23 @@ msgid ""
 "\"polymorphic union\" to the :paramref:`.mapper.with_polymorphic` "
 "parameter, we apply it directly as the mapped selectable on our basemost "
 "mapper.  The semi-classical mapping is illustrated below::"
-msgstr ""
+msgstr "\ &quot;抽象\&quot;の例は、\ &quot;半古典\&quot;または\ &quot;古典\&quot;スタイルを使用してマップすることもできます。相違点は、\ &quot;polymorphic union \&quot;を：paramref： `.mapper.with_polymorphic`パラメータに適用するのではなく、ベースマップマッパー上のマップされた選択肢として直接適用する点です。準古典的なマッピングは以下の通りです::"
 
 #: ../../orm/inheritance.rst:794
 msgid ""
 "Above, we use :func:`.polymorphic_union` in the same manner as before, "
 "except that we omit the ``employee`` table."
-msgstr ""
+msgstr "上記では、 `` employee``テーブルを省略した点を除いて、前と同じ方法で：func： `.polymorphic_union`を使用します。"
 
 #: ../../orm/inheritance.rst:799
 msgid ""
 ":ref:`classical_mapping` - background information on \"classical\" "
 "mappings"
-msgstr ""
+msgstr "：ref： `classical_mapping`  -  \&quot;古典的な\ &quot;マッピングに関する背景情報"
 
 #: ../../orm/inheritance.rst:804
 msgid "Relationships with Concrete Inheritance"
-msgstr ""
+msgstr "コンクリート継承との関係"
 
 #: ../../orm/inheritance.rst:806
 msgid ""
@@ -572,7 +562,7 @@ msgid ""
 "only involve specific classes, such as a relationship between ``Company``"
 " in our previous examples and ``Manager``, special steps aren't needed as"
 " these are just two related tables."
-msgstr ""
+msgstr "具体的な継承シナリオでは、異なるクラスがテーブルを共有しないため、マッピング関係は困難です。以前の例の `` Company``と `` Manager``の関係のような特定のクラスのみが関連している場合は、関連する2つのテーブルなので特別なステップは必要ありません。"
 
 #: ../../orm/inheritance.rst:812
 msgid ""
@@ -582,7 +572,7 @@ msgid ""
 " have polymorphic loading capabilities and also that each table to be "
 "related must have a foreign key back to the ``company`` table.  An "
 "example of such a configuration is as follows::"
-msgstr ""
+msgstr "しかし、 `` Company``が `` Employee``と1対多の関係を持ち、 `` Engineer``と ``Manager``オブジェクトの両方を含むコレクションであることを示しているならば、` ` Employee``は多態的なローディング機能を持っていなければなりません。関連する各テーブルは `` company``テーブルへの外部キーを持っていなければなりません。このような構成の例は、次のとおりです。"
 
 #: ../../orm/inheritance.rst:866
 msgid ""
@@ -597,18 +587,18 @@ msgid ""
 "relationships which serve as the opposite of ``Company.employees``, the "
 ":paramref:`.relationship.back_populates` parameter is used between each "
 "of the relationships::"
-msgstr ""
+msgstr "具体的な継承と関係を持つ次の複雑さは、「従業員」、「マネージャー」、「エンジニア」のいずれかまたはすべてが「会社」を参照するようにしたいときです。この場合、SQLAlchemyは `` Company`` **にリンクしている `` Employee``に置かれた：func： `.relationship`が` `Manager``と` `Manager``に対して動作しないという特別な振る舞いをしています。エンジニア授業は、インスタンスレベルで行使されたとき。代わりに、distinct：func： `.relationship`を各クラスに適用する必要があります。 `` Company.employees``の反対の役割を果たす3つの別々の関係の双方向性を実現するために、：paramref： `.relationship.back_populates`パラメータは各関係の間で使用されます::"
 
 #: ../../orm/inheritance.rst:929
 msgid ""
 "The above limitation is related to the current implementation, including "
 "that concrete inheriting classes do not share any of the attributes of "
 "the superclass and therefore need distinct relationships to be set up."
-msgstr ""
+msgstr "上記の制限は現在の実装に関連しています。具体的な継承クラスはスーパークラスの属性のいずれも共有しないため、設定する明確な関係が必要です。"
 
 #: ../../orm/inheritance.rst:934
 msgid "Loading Concrete Inheritance Mappings"
-msgstr ""
+msgstr "コンクリート継承マッピングのロード"
 
 #: ../../orm/inheritance.rst:936
 msgid ""
@@ -619,5 +609,5 @@ msgid ""
 ":func:`.orm.with_polymorphic` function would be able to override the "
 "style of loading used by concrete, however due to current limitations "
 "this is not yet supported."
-msgstr ""
+msgstr "具象継承によるロードのオプションは限られています。一般に、宣言的コンクリートミックスインの1つを使用してマッパー上に多型ロードが設定されている場合、現在のSQLAlchemyバージョンではクエリ時に変更することはできません。通常、：func： `.orm.with_polymorphic`関数は、コンクリートで使用される読み込みのスタイルをオーバーライドすることができますが、現在の制限のため、これはまだサポートされていません。"
 

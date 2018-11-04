@@ -6,26 +6,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/indexable.rst:4
 msgid "Indexable"
-msgstr ""
+msgstr "インデックス作成可能"
 
 #: of sqlalchemy.ext.indexable:1
 msgid ""
 "Define attributes on ORM-mapped classes that have \"index\" attributes "
 "for columns with :class:`~.types.Indexable` types."
-msgstr ""
+msgstr "：class： `〜.types.Indexable`型を持つ列の\&quot; index \ &quot;属性を持つORMでマップされたクラスの属性を定義します。"
 
 #: of sqlalchemy.ext.indexable:4
 msgid ""
@@ -34,7 +24,7 @@ msgid ""
 " The :class:`~.types.Indexable` types include types such as "
 ":class:`~.types.ARRAY`, :class:`~.types.JSON` and "
 ":class:`~.postgresql.HSTORE`."
-msgstr ""
+msgstr "\ &quot;index \&quot;は、属性が：class： `〜.types.Indexable`カラムの要素に関連付けられていることを意味します。 ：class： `〜.types.Indexable`型には、class：`〜.types.ARRAY`、：class： `〜.types.JSON`、：class：`〜.postgresql.HSTORE`のような型があります。"
 
 #: of sqlalchemy.ext.indexable:12
 msgid ""
@@ -42,11 +32,11 @@ msgid ""
 ":class:`~.schema.Column`-like interface for any element of an "
 ":class:`~.types.Indexable` typed column. In simple cases, it can be "
 "treated as a :class:`~.schema.Column` - mapped attribute."
-msgstr ""
+msgstr "：mod： `〜sqlalchemy.ext.indexable`拡張モジュールは：class：`〜.types.Indexable`型付きカラムの任意の要素に対するclass： `〜.schema.Column`のようなインタフェースを提供します。単純な場合、それは：class： `〜.schema.Column`  -  mapped属性として扱うことができます。"
 
 #: of sqlalchemy.ext.indexable:21
 msgid "Synopsis"
-msgstr ""
+msgstr "シノプシス"
 
 #: of sqlalchemy.ext.indexable:23
 msgid ""
@@ -54,27 +44,27 @@ msgid ""
 " this field may have any number of elements encoded within it, we would "
 "like to refer to the element called ``name`` individually as a dedicated "
 "attribute which behaves like a standalone column::"
-msgstr ""
+msgstr "主キーとJSONデータフィールドを持つモデルとして `` Person``を与えます。このフィールドにはいくつかの要素が記述されていますが、スタンドアロンのカラムのように振る舞う専用の属性として、 `` name``という要素を個別に参照したいと思います。"
 
 #: of sqlalchemy.ext.indexable:43
 msgid ""
 "Above, the ``name`` attribute now behaves like a mapped column.   We can "
 "compose a new ``Person`` and set the value of ``name``::"
-msgstr ""
+msgstr "上では、 `` name``属性はマップされた列のようになりました。新しい `` Person``を作成し、 `` name``の値を設定することができます::"
 
 #: of sqlalchemy.ext.indexable:48
 msgid "The value is now accessible::"
-msgstr ""
+msgstr "値は現在アクセス可能です::"
 
 #: of sqlalchemy.ext.indexable:53
 msgid ""
 "Behind the scenes, the JSON field was initialized to a new blank "
 "dictionary and the field was set::"
-msgstr ""
+msgstr "背後では、JSONフィールドが新しい空の辞書に初期化され、フィールドが設定されました::"
 
 #: of sqlalchemy.ext.indexable:59
 msgid "The field is mutable in place::"
-msgstr ""
+msgstr "フィールドは変更可能です::"
 
 #: of sqlalchemy.ext.indexable:67
 msgid ""
@@ -82,59 +72,59 @@ msgid ""
 "indexable structure is also automatically tracked as history; we no "
 "longer need to use :class:`~.mutable.MutableDict` in order to track this "
 "change for the unit of work."
-msgstr ""
+msgstr "：class： `.index_property`を使うと、索引付け可能な構造に加えた変更も自動的に履歴として追跡されます。作業ユニットのこの変更を追跡するために、class： `.mutable.MutableDict`を使う必要はなくなりました。"
 
 #: of sqlalchemy.ext.indexable:72
 msgid "Deletions work normally as well::"
-msgstr ""
+msgstr "削除も正常に機能します::"
 
 #: of sqlalchemy.ext.indexable:78
 msgid ""
 "Above, deletion of ``person.name`` deletes the value from the dictionary,"
 " but not the dictionary itself."
-msgstr ""
+msgstr "上記のように、 `` person.name``を削除すると、その値は辞書から削除されますが、辞書自体は削除されません。"
 
 #: of sqlalchemy.ext.indexable:81
 msgid "A missing key will produce ``AttributeError``::"
-msgstr ""
+msgstr "キーがないと `` AttributeError`` ::が生成されます"
 
 #: of sqlalchemy.ext.indexable:88
 msgid "Unless you set a default value::"
-msgstr ""
+msgstr "デフォルト値を設定しない限り::"
 
 #: of sqlalchemy.ext.indexable:103
 msgid ""
 "The attributes are also accessible at the class level. Below, we "
 "illustrate ``Person.name`` used to generate an indexed SQL criteria::"
-msgstr ""
+msgstr "属性はクラスレベルでもアクセスできます。以下では、インデックス付きSQL criteria ::を生成するために使用される `` Person.name``を示します。"
 
 #: of sqlalchemy.ext.indexable:111
 msgid "The above query is equivalent to::"
-msgstr ""
+msgstr "上記のクエリは、"
 
 #: of sqlalchemy.ext.indexable:115
 msgid ""
 "Multiple :class:`.index_property` objects can be chained to produce "
 "multiple levels of indexing::"
-msgstr ""
+msgstr "複数のクラス：class： `.index_property`オブジェクトを連鎖させて複数のレベルの索引作成を可能にする::"
 
 #: of sqlalchemy.ext.indexable:135
 msgid "Above, a query such as::"
-msgstr ""
+msgstr "上記のように、::"
 
 #: of sqlalchemy.ext.indexable:139
 msgid "On a PostgreSQL backend, the above query will render as::"
-msgstr ""
+msgstr "PostgreSQLのバックエンドでは、上記のクエリは次のようにレンダリングされます::"
 
 #: of sqlalchemy.ext.indexable:146
 msgid "Default Values"
-msgstr ""
+msgstr "デフォルト値"
 
 #: of sqlalchemy.ext.indexable:148
 msgid ""
 ":class:`.index_property` includes special behaviors for when the indexed "
 "data structure does not exist, and a set operation is called:"
-msgstr ""
+msgstr "：class： `.index_property`は、索引付きデータ構造が存在せず、set操作が呼び出されたときの特殊な振る舞いを含みます："
 
 #: of sqlalchemy.ext.indexable:151
 msgid ""
@@ -147,25 +137,25 @@ msgid ""
 " None, None]`` before setting the fifth element to the given value.   "
 "Note that an existing list is **not** extended in place to receive a "
 "value."
-msgstr ""
+msgstr "：class： `.index_property`には整数のインデックス値が与えられていますが、デフォルトのデータ構造は、少なくともインデックス値と同じ長さの` `None``値のPythonリストになります。その値がリストのその場所に設定されます。つまり、インデックス値がゼロの場合、指定された値を設定する前にリストは `` [None] ``に初期化され、インデックス値が5の場合、リストは `` [None、None、None 、None、None] ``を実行してから5番目の要素を指定した値に設定します。既存のリストは**値を受け取るために**拡張されていない**ということに注意してください。"
 
 #: of sqlalchemy.ext.indexable:161
 msgid ""
 "for an :class:`.index_property` that is given any other kind of index "
 "value (e.g. strings usually), a Python dictionary is used as the default "
 "data structure."
-msgstr ""
+msgstr "：class： `.index_property`には、他の種類のインデックス値（通常は文字列）が与えられているため、デフォルトのデータ構造としてPython辞書が使用されます。"
 
 #: of sqlalchemy.ext.indexable:165
 msgid ""
 "The default data structure can be set to any Python callable using the "
 ":paramref:`.index_property.datatype` parameter, overriding the previous "
 "rules."
-msgstr ""
+msgstr "既定のデータ構造体は、：paramref： `.index_property.datatype`パラメータを使用して、任意のPython呼び出し可能に設定することができ、前の規則をオーバーライドします。"
 
 #: of sqlalchemy.ext.indexable:175
 msgid "Subclassing"
-msgstr ""
+msgstr "サブクラス化"
 
 #: of sqlalchemy.ext.indexable:177
 msgid ""
@@ -173,36 +163,36 @@ msgid ""
 "use case of providing coercion of values or SQL expressions as they are "
 "accessed.  Below is a common recipe for use with a PostgreSQL JSON type, "
 "where we want to also include automatic casting plus ``astext()``::"
-msgstr ""
+msgstr "：class： `.index_property`はサブクラス化することができます。特に、値やSQL式がアクセスされるときに強制的に変換する一般的な使用例については、サブクラス化できます。以下は、PostgreSQL JSONタイプで使用するための一般的なレシピです。ここでは自動キャストと `` astext（） `::"
 
 #: of sqlalchemy.ext.indexable:191
 msgid ""
 "The above subclass can be used with the PostgreSQL-specific version of "
 ":class:`.postgresql.JSON`::"
-msgstr ""
+msgstr "上記のサブクラスは、PostgreSQL固有のバージョンで使用できます：class： `.postgresql.JSON` ::"
 
 #: of sqlalchemy.ext.indexable:208
 msgid ""
 "The ``age`` attribute at the instance level works as before; however when"
 " rendering SQL, PostgreSQL's ``->>`` operator will be used for indexed "
 "access, instead of the usual index opearator of ``->``::"
-msgstr ""
+msgstr "インスタンスレベルの `` age``属性は以前と同じように動作します。しかし、SQLをレンダリングするとき、PostgreSQLの ``  -  &gt;&gt; ``演算子は、通常のインデックスopearatorの ``  - &gt; `` ::"
 
 #: of sqlalchemy.ext.indexable:214
 msgid "The above query will render::"
-msgstr ""
+msgstr "上記のクエリは::"
 
 #: ../../orm/extensions/indexable.rst:9
 msgid "API Reference"
-msgstr ""
+msgstr "APIリファレンス"
 
 #: of sqlalchemy.ext.indexable.index_property:1
 msgid ""
 "A property generator. The generated property describes an object "
 "attribute that corresponds to an :class:`~.types.Indexable` column."
-msgstr ""
+msgstr "プロパティジェネレータ。生成されたプロパティは：class： `〜.types.Indexable`カラムに対応するオブジェクト属性を記述します。"
 
 #: of sqlalchemy.ext.indexable.index_property:9
 msgid ":mod:`sqlalchemy.ext.indexable`"
-msgstr ""
+msgstr "：mod： `sqlalchemy.ext.indexable`"
 

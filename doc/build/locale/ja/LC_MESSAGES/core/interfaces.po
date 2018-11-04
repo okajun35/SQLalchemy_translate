@@ -6,134 +6,124 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/interfaces.rst:4
 msgid "Deprecated Event Interfaces"
-msgstr ""
+msgstr "推奨されないイベントインターフェイス"
 
 #: ../../core/interfaces.rst:8
 msgid ""
 "This section describes the class-based core event interface introduced in"
 " SQLAlchemy 0.5.  The ORM analogue is described at "
 ":ref:`dep_interfaces_orm_toplevel`."
-msgstr ""
+msgstr "このセクションでは、SQLAlchemy 0.5で導入されたクラスベースのコアイベントインタフェースについて説明します。 ORMのアナログは、ref： `dep_interfaces_orm_toplevel`に記述されています。"
 
 #: ../../core/interfaces.rst:11
 msgid ""
 "The new event system described in :ref:`event_toplevel` replaces the "
 "extension/proxy/listener system, providing a consistent interface to all "
 "events without the need for subclassing."
-msgstr ""
+msgstr "：ref： `event_toplevel`に記述された新しいイベントシステムは、拡張/プロキシ/リスナーシステムを置き換え、サブクラス化を必要とせずにすべてのイベントに対して一貫したインターフェースを提供します。"
 
 #: ../../core/interfaces.rst:17
 msgid "Execution, Connection and Cursor Events"
-msgstr ""
+msgstr "実行、接続、およびカーソルイベント"
 
 #: of sqlalchemy.interfaces.ConnectionProxy:1
 msgid "Allows interception of statement execution by Connections."
-msgstr ""
+msgstr "接続による文の実行の傍受を許可します。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy:5
 msgid ""
 ":class:`.ConnectionProxy` is deprecated.   Please refer to "
 ":class:`.ConnectionEvents`."
-msgstr ""
+msgstr "：class： `.ConnectionProxy`は非推奨です。 ：class： `.ConnectionEvents`を参照してください。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy:8
 msgid ""
 "Either or both of the ``execute()`` and ``cursor_execute()`` may be "
 "implemented to intercept compiled statement and cursor level executions, "
 "e.g.::"
-msgstr ""
+msgstr "`` execute（） ``と `` cursor_execute（） `&quot;のどちらか、または両方を実装して、コンパイルされた文やカーソルレベルの実行を傍受することができます。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy:23
 msgid ""
 "The ``execute`` argument is a function that will fulfill the default "
 "execution behavior for the operation.  The signature illustrated in the "
 "example should be used."
-msgstr ""
+msgstr "`` execute``引数は、操作のデフォルトの実行動作を実現する関数です。この例に示す署名を使用する必要があります。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy:27
 msgid ""
 "The proxy is installed into an :class:`~sqlalchemy.engine.Engine` via the"
 " ``proxy`` argument::"
-msgstr ""
+msgstr "プロキシは `` proxy``引数によって：class： `〜sqlalchemy.engine.Engine`にインストールされます::"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.begin:1
 msgid "Intercept begin() events."
-msgstr ""
+msgstr "begin（）イベントを傍受します。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.begin_twophase:1
 msgid "Intercept begin_twophase() events."
-msgstr ""
+msgstr "begin_twophase（）イベントを傍受します。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.commit:1
 msgid "Intercept commit() events."
-msgstr ""
+msgstr "commit（）イベントを傍受します。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.commit_twophase:1
 msgid "Intercept commit_twophase() events."
-msgstr ""
+msgstr "commit_twophase（）イベントをインターセプトします。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.cursor_execute:1
 msgid "Intercept low-level cursor execute() events."
-msgstr ""
+msgstr "低レベルカーソルのexecute（）イベントを代行受信します。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.execute:1
 msgid "Intercept high level execute() events."
-msgstr ""
+msgstr "高レベルのexecute（）イベントを代行します。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.prepare_twophase:1
 msgid "Intercept prepare_twophase() events."
-msgstr ""
+msgstr "prepare_twophase（）イベントをインターセプトします。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.release_savepoint:1
 msgid "Intercept release_savepoint() events."
-msgstr ""
+msgstr "release_savepoint（）イベントを傍受します。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.rollback:1
 msgid "Intercept rollback() events."
-msgstr ""
+msgstr "ロールバック（）イベントを傍受します。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.rollback_savepoint:1
 msgid "Intercept rollback_savepoint() events."
-msgstr ""
+msgstr "rollback_savepoint（）イベントを代行します。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.rollback_twophase:1
 msgid "Intercept rollback_twophase() events."
-msgstr ""
+msgstr "rollback_twophase（）イベントを代行受信します。"
 
 #: of sqlalchemy.interfaces.ConnectionProxy.savepoint:1
 msgid "Intercept savepoint() events."
-msgstr ""
+msgstr "savepoint（）イベントを代行します。"
 
 #: ../../core/interfaces.rst:24
 msgid "Connection Pool Events"
-msgstr ""
+msgstr "接続プールのイベント"
 
 #: of sqlalchemy.interfaces.PoolListener:1
 msgid "Hooks into the lifecycle of connections in a :class:`.Pool`."
-msgstr ""
+msgstr "接続：class： `.Pool`で接続のライフサイクルに入ります。"
 
 #: of sqlalchemy.interfaces.PoolListener:5
 msgid ""
 ":class:`.PoolListener` is deprecated.   Please refer to "
 ":class:`.PoolEvents`."
-msgstr ""
+msgstr "：class： `.PoolListener`は非推奨です。 class： `.PoolEvents`を参照してください。"
 
 #: of sqlalchemy.interfaces.PoolListener:8
 msgid "Usage::"
-msgstr ""
+msgstr "使用法：："
 
 #: of sqlalchemy.interfaces.PoolListener:24
 msgid ""
@@ -141,7 +131,7 @@ msgid ""
 "accept event listeners for key connection lifecycle events: creation, "
 "pool check-out and check-in.  There are no events fired when a connection"
 " closes."
-msgstr ""
+msgstr "すべての標準的な接続：class： `〜sqlalchemy.pool.Pool`型では、キー接続ライフサイクルイベントのイベントリスナー（作成、プールのチェックアウト、チェックイン）を受け入れることができます。接続が閉じられたときに発生するイベントはありません。"
 
 #: of sqlalchemy.interfaces.PoolListener:29
 msgid ""
@@ -149,7 +139,7 @@ msgid ""
 " number of ``checkout`` events, and either `n` or `n - 1` ``checkin`` "
 "events.  (If a ``Connection`` is detached from its pool via the "
 "``detach()`` method, it won't be checked back in.)"
-msgstr ""
+msgstr "任意のDB-API接続に対して、1つの `` connect``イベント、 `n`回の` `checkout``イベント、` n`または `n-1``` checkin``イベントがあります。 （ `` Connection``が `` detach（） ``メソッドを介してそのプールから切り離された場合、それはチェックインされません）。"
 
 #: of sqlalchemy.interfaces.PoolListener:34
 msgid ""
@@ -158,7 +148,7 @@ msgid ""
 "wrapper, ``Dialect`` services or ``ClauseElement`` execution.  If you "
 "execute SQL through the connection, explicitly closing all cursors and "
 "other resources is recommended."
-msgstr ""
+msgstr "これは、SQLAlchemyの `` Connection``ラッパー、 `` Dialect``サービス、 `` ClauseElement``の実行の利便性を欠いた、低レベルのオブジェクトのローレベルイベントです。接続を介してSQLを実行する場合は、すべてのカーソルおよびその他のリソースを明示的にクローズすることをお勧めします。"
 
 #: of sqlalchemy.interfaces.PoolListener:40
 msgid ""
@@ -168,7 +158,7 @@ msgid ""
 "``info``, a dictionary whose contents are scoped to the lifetime of the "
 "DB-API connection managed by the record.  You can use this shared storage"
 " area however you like."
-msgstr ""
+msgstr "イベントはまた、基本的に接続プール内の\ &quot;スロット\&quot;を表す内部的な `` Pool``オブジェクトである `` _ConnectionRecord``を受け取ります。 `` _ConnectionRecord``オブジェクトには、レコードの管理対象となるDB-API接続の有効期間内に内容がスコープされている辞書であるnote： `` info``という1つのpublic属性があります。あなたはこの共有ストレージエリアを好きなように使うことができます。"
 
 #: of sqlalchemy.interfaces.PoolListener:47
 msgid ""
@@ -179,78 +169,78 @@ msgid ""
 " its capabilities.  In terms of efficiency and function call overhead, "
 "you're much better off only providing implementations for the hooks "
 "you'll be using."
-msgstr ""
+msgstr "イベントを処理するために `` PoolListener``をサブクラス化する必要はありません。これらのメソッドの1つ以上を実装するクラスはすべて、プールリスナーとして使用できます。 `` Pool``は、リスナオブジェクトによって提供されるメソッドを検査し、リスナをその機能に基づいて1つまたは複数の内部イベントキューに追加します。効率と関数呼び出しのオーバーヘッドに関しては、使用するフックの実装を提供するほうがはるかに優れています。"
 
 #: of sqlalchemy.interfaces.PoolListener.checkin:1
 msgid "Called when a connection returns to the pool."
-msgstr ""
+msgstr "接続がプールに戻るときに呼び出されます。"
 
 #: of sqlalchemy.interfaces.PoolListener.checkin:3
 msgid ""
 "Note that the connection may be closed, and may be None if the connection"
 " has been invalidated.  ``checkin`` will not be called for detached "
 "connections.  (They do not return to the pool.)"
-msgstr ""
+msgstr "接続が閉じられている可能性があります。接続が無効になっている場合は、Noneになることがあります。分離された接続に対して `` checkin``は呼び出されません。 （彼らはプールに戻りません。）"
 
 #: of sqlalchemy.interfaces.PoolListener.checkin:8
 #: sqlalchemy.interfaces.PoolListener.checkout:4
 #: sqlalchemy.interfaces.PoolListener.connect:5
 #: sqlalchemy.interfaces.PoolListener.first_connect:5
 msgid "dbapi_con"
-msgstr ""
+msgstr "dbapi_con"
 
 #: of sqlalchemy.interfaces.PoolListener.checkin:8
 #: sqlalchemy.interfaces.PoolListener.checkout:4
 msgid "A raw DB-API connection"
-msgstr ""
+msgstr "生のDB-API接続"
 
 #: of sqlalchemy.interfaces.PoolListener.checkin:10
 #: sqlalchemy.interfaces.PoolListener.checkout:7
 #: sqlalchemy.interfaces.PoolListener.connect:7
 #: sqlalchemy.interfaces.PoolListener.first_connect:7
 msgid "con_record"
-msgstr ""
+msgstr "con_record"
 
 #: of sqlalchemy.interfaces.PoolListener.checkin:11
 #: sqlalchemy.interfaces.PoolListener.checkout:7
 #: sqlalchemy.interfaces.PoolListener.connect:8
 #: sqlalchemy.interfaces.PoolListener.first_connect:8
 msgid "The ``_ConnectionRecord`` that persistently manages the connection"
-msgstr ""
+msgstr "接続を永続的に管理する `` _ConnectionRecord``"
 
 #: of sqlalchemy.interfaces.PoolListener.checkout:1
 msgid "Called when a connection is retrieved from the Pool."
-msgstr ""
+msgstr "接続がプールから取得されたときに呼び出されます。"
 
 #: of sqlalchemy.interfaces.PoolListener.checkout:11
 msgid "con_proxy"
-msgstr ""
+msgstr "con_proxy"
 
 #: of sqlalchemy.interfaces.PoolListener.checkout:10
 msgid ""
 "The ``_ConnectionFairy`` which manages the connection for the span of the"
 " current checkout."
-msgstr ""
+msgstr "現在のチェックアウトのスパンに対する接続を管理する `` _ConnectionFairy``です。"
 
 #: of sqlalchemy.interfaces.PoolListener.checkout:13
 msgid ""
 "If you raise an ``exc.DisconnectionError``, the current connection will "
 "be disposed and a fresh connection retrieved. Processing of all checkout "
 "listeners will abort and restart using the new connection."
-msgstr ""
+msgstr "`` exc.DisconnectionError``を発生させると、現在の接続が破棄され、新しい接続が取得されます。すべてのチェックアウトリスナーの処理が中止され、新しい接続を使用して再開されます。"
 
 #: of sqlalchemy.interfaces.PoolListener.connect:1
 msgid "Called once for each new DB-API connection or Pool's ``creator()``."
-msgstr ""
+msgstr "新しいDB-API接続またはPoolの `` creator（） `&#39;ごとに1回呼び出されます。"
 
 #: of sqlalchemy.interfaces.PoolListener.connect:4
 #: sqlalchemy.interfaces.PoolListener.first_connect:4
 msgid ""
 "A newly connected raw DB-API connection (not a SQLAlchemy ``Connection`` "
 "wrapper)."
-msgstr ""
+msgstr "新たに接続された未処理のDB-API接続（SQLAlchemyの `Connection`ラッパーではありません）。"
 
 #: of sqlalchemy.interfaces.PoolListener.first_connect:1
 msgid "Called exactly once for the first DB-API connection."
-msgstr ""
+msgstr "最初のDB-API接続に1回だけ呼び出されます。"
 

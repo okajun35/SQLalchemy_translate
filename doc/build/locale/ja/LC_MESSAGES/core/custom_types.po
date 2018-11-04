@@ -6,30 +6,20 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/custom_types.rst:6
 msgid "Custom Types"
-msgstr ""
+msgstr "カスタムタイプ"
 
 #: ../../core/custom_types.rst:8
 msgid ""
 "A variety of methods exist to redefine the behavior of existing types as "
 "well as to provide new ones."
-msgstr ""
+msgstr "既存の型の動作を再定義し、新しい型を提供するためのさまざまなメソッドが存在します。"
 
 #: ../../core/custom_types.rst:12
 msgid "Overriding Type Compilation"
-msgstr ""
+msgstr "型コンパイルのオーバーライド"
 
 #: ../../core/custom_types.rst:14
 msgid ""
@@ -41,24 +31,24 @@ msgid ""
 "this case :class:`.LargeBinary`, is preferred for most use cases.  But to"
 " control types more accurately, a compilation directive that is per-"
 "dialect can be associated with any type::"
-msgstr ""
+msgstr "CREATE TABLEステートメントやCASTのような他のSQL関数でレンダリングされる型の\ &quot;文字列\&quot;バージョンを強制的に変更する必要が頻繁にあります。例えば、アプリケーションは、 `` BLOB``がレンダリングされることを望むプラットフォーム以外のすべてのプラットフォームで `` BINARY``のレンダリングを強制したいかもしれません。既存のジェネリック型（この場合は：class： `.LargeBinary`）の使用法は、ほとんどのユースケースで優先されます。しかし、型をより正確に制御するために、方言ごとのコンパイルディレクティブを任意の型に関連付けることができます::"
 
 #: ../../core/custom_types.rst:31
 msgid ""
 "The above code allows the usage of :class:`.types.BINARY`, which will "
 "produce the string ``BINARY`` against all backends except SQLite, in "
 "which case it will produce ``BLOB``."
-msgstr ""
+msgstr "上記のコードでは：class： `.types.BINARY`を使用できます。これは、SQLite以外のすべてのバックエンドに対して文字列` `BINARY``を生成します。この場合、` `BLOB``が生成されます。"
 
 #: ../../core/custom_types.rst:35
 msgid ""
 "See the section :ref:`type_compilation_extension`, a subsection of "
 ":ref:`sqlalchemy.ext.compiler_toplevel`, for additional examples."
-msgstr ""
+msgstr "追加の例は：ref： `sqlalchemy.ext.compiler_toplevel`のサブセクション：ref：` type_compilation_extension`の節を参照してください。"
 
 #: ../../core/custom_types.rst:41
 msgid "Augmenting Existing Types"
-msgstr ""
+msgstr "既存のタイプの拡張"
 
 #: ../../core/custom_types.rst:43
 msgid ""
@@ -66,7 +56,7 @@ msgid ""
 " bind-parameter and result-processing behavior to an existing type "
 "object.  It is used when additional in-Python marshaling of data to and "
 "from the database is required."
-msgstr ""
+msgstr "：class： `.TypeDecorator`は、バインドパラメータと結果処理の振る舞いを既存の型オブジェクトに追加するカスタム型の作成を可能にします。これは、データベース内の追加のPythonマーシャリングが必要な場合に使用されます。"
 
 #: ../../core/custom_types.rst:50
 msgid ""
@@ -75,24 +65,24 @@ msgid ""
 "is customized by SQLAlchemy on a per-DBAPI basis to perform processing "
 "specific to that DBAPI.  To change the DBAPI-level processing for an "
 "existing type, see the section :ref:`replacing_processors`."
-msgstr ""
+msgstr "：class： `.TypeDecorator`のバインドと結果の処理は、ホスト型によって既に実行されている処理に加えて*です。この処理は、DBAPIごとにSQLAlchemyによってカスタマイズされ、そのDBAPIに固有の処理を実行します。既存の型のDBAPIレベルの処理を変更するには、ref： `replacement_processors`を参照してください。"
 
 #: of sqlalchemy.types.TypeDecorator:1
 msgid ""
 "Allows the creation of types which add additional functionality to an "
 "existing type."
-msgstr ""
+msgstr "既存のタイプに追加の機能を追加するタイプの作成を可能にします。"
 
 #: of sqlalchemy.types.TypeDecorator:4
 msgid ""
 "This method is preferred to direct subclassing of SQLAlchemy's built-in "
 "types as it ensures that all required functionality of the underlying "
 "type is kept in place."
-msgstr ""
+msgstr "このメソッドは、SQLAlchemyの組み込み型のサブクラス化を指示するのに適しているため、基本型のすべての必要な機能が確実に保持されます。"
 
 #: of sqlalchemy.types.TypeDecorator:8
 msgid "Typical usage::"
-msgstr ""
+msgstr "典型的な使用法::"
 
 #: of sqlalchemy.types.TypeDecorator:28
 msgid ""
@@ -101,7 +91,7 @@ msgid ""
 "used to provide different type classes based on the dialect given; in "
 "this case, the \"impl\" variable can reference ``TypeEngine`` as a "
 "placeholder."
-msgstr ""
+msgstr "クラスレベルの\ &quot;impl \&quot;属性は必須であり、任意のTypeEngineクラスを参照できます。代わりに、load_dialect_impl（）メソッドを使用して、与えられた方言に基づいて異なるタイプのクラスを提供することができます。この場合、\ &quot;impl \&quot;変数は `` TypeEngine``をプレースホルダとして参照できます。"
 
 #: of sqlalchemy.types.TypeDecorator:34
 msgid ""
@@ -110,7 +100,7 @@ msgid ""
 "method. This is used to give the expression system a hint when coercing "
 "Python objects into bind parameters within expressions. Consider this "
 "expression::"
-msgstr ""
+msgstr "使用される最終的な型に似ていないPython型を受け取る型は：meth： `TypeDecorator.coerce_compared_value`メソッドを定義したいかもしれません。これは、Pythonオブジェクトを式内のバインドパラメータに変換する際にヒントを与えるために使用されます。次の式を考えてみましょう::"
 
 #: of sqlalchemy.types.TypeDecorator:42
 msgid ""
@@ -119,7 +109,7 @@ msgid ""
 "databases as adding a number of days to the given date. The expression "
 "system does the right thing by not attempting to coerce the \"date()\" "
 "value into an integer-oriented bind parameter."
-msgstr ""
+msgstr "上記の\ &quot;somecol \&quot;が &quot;Integer&quot;型である場合は、日付演算を行うことが理にかなっています。式システムは、\ &quot;date（）\&quot;の値を整数指向のバインドパラメータに変換しようとしないことで正しいことを行います。"
 
 #: of sqlalchemy.types.TypeDecorator:48
 msgid ""
@@ -128,13 +118,13 @@ msgid ""
 " \"coerce\" the non-typed side to be the same type as itself. Such as "
 "below, we define an \"epoch\" type that stores a date value as an "
 "integer::"
-msgstr ""
+msgstr "しかし、 `` TypeDecorator``の場合、普通は入ってくるPython型を何か新しいものに変更しています - デフォルトで `` TypeDecorator``は、型指定されていない側がそれ自身と同じ型になるよう強制します。以下のように、日付値を整数として格納する\ &quot;epoch \&quot;型を定義します::"
 
 #: of sqlalchemy.types.TypeDecorator:64
 msgid ""
 "Our expression of ``somecol + date`` with the above type will coerce the "
 "\"date\" on the right side to also be treated as ``MyEpochType``."
-msgstr ""
+msgstr "上記の型の `` somecol + date``の式は、右側の\ &quot;date \&quot;を &quot;MyEpochType&quot;として扱うよう強制します。"
 
 #: of sqlalchemy.types.TypeDecorator:67
 msgid ""
@@ -144,7 +134,7 @@ msgid ""
 "such that an integer value will be treated as an ``Integer``, and any "
 "other value is assumed to be a date and will be treated as a "
 "``MyEpochType``::"
-msgstr ""
+msgstr "この動作は：meth： `〜TypeDecorator.coerce_compared_value`メソッドでオーバーライドできます。このメソッドは、式の値に使用する型を返します。以下では整数値を `` Integer``として扱い、他の値は日付とみなして `` MyEpochType`` ::として扱います。"
 
 #: of sqlalchemy.types.TypeDecorator:81
 msgid ""
@@ -155,43 +145,43 @@ msgid ""
 "decorating the :class:`.postgresql.JSON` and :class:`.postgresql.JSONB` "
 "types; the default rules of :meth:`.TypeEngine.coerce_compared_value` "
 "should be used in order to deal with operators like index operations::"
-msgstr ""
+msgstr "coerce_compared_valueの**動作は、基本型**の動作からデフォルトで継承されないことに注意してください。 ：class： `.TypeDecorator`が特定の型の演算子に対して特別なロジックを必要とする型を増やしている場合、このメソッドは**オーバーライドする必要があります。重要な例は、：class： `.postgresql.JSON`と：class：` .postgresql.JSONB`型を装飾するときです。インデックス操作のような演算子を扱うために：meth： `.TypeEngine.coerce_compared_value`のデフォルトルールを使用する必要があります::"
 
 #: of sqlalchemy.types.TypeDecorator:96
 msgid ""
 "Without the above step, index operations such as ``mycol['foo']`` will "
 "cause the index value ``'foo'`` to be JSON encoded."
-msgstr ""
+msgstr "上記の手順がなければ、 `` mycol [&#39;foo&#39;] ``などのインデックス操作によってインデックス値 `` &#39;foo&#39;``がJSONエンコードされます。"
 
 #: of sqlalchemy.types.TypeDecorator.adapt:1
 msgid ""
 "Produce an \"adapted\" form of this type, given an \"impl\" class to work"
 " with."
-msgstr ""
+msgstr "この型の\ &quot;適合\&quot;形式を生成する。\ &quot;impl \&quot;クラスで動作する。"
 
 #: of sqlalchemy.types.TypeDecorator.adapt:4
 msgid ""
 "This method is used internally to associate generic types with "
 "\"implementation\" types that are specific to a particular dialect."
-msgstr ""
+msgstr "このメソッドは、ジェネリック型を特定の方言に固有の\ &quot;実装\&quot;型に関連付けるために内部的に使用されます。"
 
 #: of sqlalchemy.types.TypeDecorator.bind_processor:1
 msgid "Provide a bound value processing function for the given :class:`.Dialect`."
-msgstr ""
+msgstr "与えられた：class： `.Dialect`のためのバウンド値処理関数を提供します。"
 
 #: of sqlalchemy.types.TypeDecorator.bind_processor:4
 msgid ""
 "This is the method that fulfills the :class:`.TypeEngine` contract for "
 "bound value conversion.   :class:`.TypeDecorator` will wrap a user-"
 "defined implementation of :meth:`process_bind_param` here."
-msgstr ""
+msgstr "これは、バウンド値変換のための：class： `.TypeEngine`契約を満たすメソッドです。 ：class： `.TypeDecorator`は：meth：` process_bind_param`のユーザ定義の実装をここでラップします。"
 
 #: of sqlalchemy.types.TypeDecorator.bind_processor:9
 msgid ""
 "User-defined code can override this method directly, though its likely "
 "best to use :meth:`process_bind_param` so that the processing provided by"
 " ``self.impl`` is maintained."
-msgstr ""
+msgstr "ユーザ定義コードはこのメソッドを直接オーバーライドすることができますが、 `` self.impl``で提供される処理が維持されるようにmeth： `process_bind_param`を使用するのが最善です。"
 
 #: of sqlalchemy.types.TypeDecorator.bind_processor
 #: sqlalchemy.types.TypeDecorator.compare_against_backend
@@ -201,23 +191,23 @@ msgstr ""
 #: sqlalchemy.types.TypeDecorator.result_processor
 #: sqlalchemy.types.TypeDecorator.with_variant
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.types.TypeDecorator.bind_processor:13
 #: sqlalchemy.types.TypeDecorator.result_processor:13
 msgid "Dialect instance in use."
-msgstr ""
+msgstr "使用中の方言インスタンス。"
 
 #: of sqlalchemy.types.TypeDecorator.bind_processor:15
 msgid ""
 "This method is the reverse counterpart to the :meth:`result_processor` "
 "method of this class."
-msgstr ""
+msgstr "このメソッドは、このクラスの：meth： `result_processor`メソッドと逆の対応です。"
 
 #: of sqlalchemy.types.TypeDecorator.coerce_compared_value:1
 #: sqlalchemy.types.UserDefinedType.coerce_compared_value:1
 msgid "Suggest a type for a 'coerced' Python value in an expression."
-msgstr ""
+msgstr "式で「強制的」なPython値の型を推薦する。"
 
 #: of sqlalchemy.types.TypeDecorator.coerce_compared_value:3
 msgid ""
@@ -225,7 +215,7 @@ msgid ""
 "system when an object using this type is on the left or right side of an "
 "expression against a plain Python object which does not yet have a "
 "SQLAlchemy type assigned::"
-msgstr ""
+msgstr "デフォルトでは、selfを返します。このメソッドは、この型を使用するオブジェクトが、式の左辺または右辺に、まだSQLAlchemy型が割り当てられていないプレーンなPythonオブジェクトに対して、式システムによって呼び出されます"
 
 #: of sqlalchemy.types.TypeDecorator.coerce_compared_value:10
 msgid ""
@@ -233,43 +223,43 @@ msgid ""
 " with the value ``operator.add`` and ``35``.  The return value is "
 "whatever SQLAlchemy type should be used for ``35`` for this particular "
 "operation."
-msgstr ""
+msgstr "上記の場合、 `` somecolumn``がこの型を使用する場合、このメソッドは値 `` operator.add``と `` 35``で呼び出されます。戻り値は、この特定の操作に対して `` 35``に使用されるSQLAlchemy型が何であれです。"
 
 #: of sqlalchemy.types.TypeDecorator.coerce_to_is_types:1
 msgid ""
 "Specify those Python types which should be coerced at the expression "
 "level to \"IS <constant>\" when compared using ``==`` (and same for ``IS "
 "NOT`` in conjunction with ``!=``."
-msgstr ""
+msgstr "式レベルで\ &quot;ISに強制されるべきPython型を指定する<constant> `` == ``を使用して比較した場合（および ``！= ``と組み合わせて `` IS NOT &#39;&#39;と同じ場合）"
 
 #: of sqlalchemy.types.TypeDecorator.coerce_to_is_types:5
 msgid ""
 "For most SQLAlchemy types, this includes ``NoneType``, as well as "
 "``bool``."
-msgstr ""
+msgstr "ほとんどのSQLAlchemy型では、 `` NoneType``と `` bool``があります。"
 
 #: of sqlalchemy.types.TypeDecorator.coerce_to_is_types:8
 msgid ""
 ":class:`.TypeDecorator` modifies this list to only include ``NoneType``, "
 "as typedecorator implementations that deal with boolean types are common."
-msgstr ""
+msgstr "：class： `.TypeDecorator`は、ブール型を扱うtypedecoratorの実装が一般的なので、このリストを` `NoneType``だけを含むように変更します。"
 
 #: of sqlalchemy.types.TypeDecorator.coerce_to_is_types:11
 msgid ""
 "Custom :class:`.TypeDecorator` classes can override this attribute to "
 "return an empty tuple, in which case no values will be coerced to "
 "constants."
-msgstr ""
+msgstr "カスタム：class： `.TypeDecorator`クラスは、この属性をオーバーライドして空のタプルを返すことができます。その場合、値は定数に強制されません。"
 
 #: of sqlalchemy.types.TypeDecorator.coerce_to_is_types:15
 msgid ""
 "Added :attr:`.TypeDecorator.coerce_to_is_types` to allow for easier "
 "control of ``__eq__()`` ``__ne__()`` operations."
-msgstr ""
+msgstr "追加された：attr： `.TypeDecorator.coerce_to_is_types`は、` `__eq __（）` `` `__ne __（）` `操作を簡単に制御できるようにしました。"
 
 #: of sqlalchemy.types.TypeDecorator.compare_against_backend:1
 msgid "Compare this type against the given backend type."
-msgstr ""
+msgstr "このタイプを指定されたバックエンドタイプと比較してください。"
 
 #: of sqlalchemy.types.TypeDecorator.compare_against_backend:3
 msgid ""
@@ -277,13 +267,13 @@ msgid ""
 "all built in types will return ``None``.  However, it can be implemented "
 "by a user-defined type where it can be consumed by schema comparison "
 "tools such as Alembic autogenerate."
-msgstr ""
+msgstr "この関数は現在SQLAlchemy型では実装されていません。組み込み型では `` None``が返されます。ただし、Alembicの自動生成などのスキーマ比較ツールで使用できるユーザー定義型で実装できます。"
 
 #: of sqlalchemy.types.TypeDecorator.compare_against_backend:9
 msgid ""
 "A future release of SQLAlchemy will potentially impement this method for "
 "builtin types as well."
-msgstr ""
+msgstr "SQLAlchemyの今後のリリースでは、組み込み型に対してもこのメソッドを実装する可能性があります。"
 
 #: of sqlalchemy.types.TypeDecorator.compare_against_backend:12
 msgid ""
@@ -291,51 +281,51 @@ msgid ""
 "type; the type is typically reflected from the database so should be "
 "database specific.  The dialect in use is also passed.   It can also "
 "return False to assert that the type is not equivalent."
-msgstr ""
+msgstr "この型が指定された型と等しい場合、この関数はTrueを返さなければなりません。型は通常データベースから反映されるため、データベース固有である必要があります。使用中の方言も渡されます。また、型が等価でないことを宣言するためにFalseを返すこともできます。"
 
 #: of sqlalchemy.types.TypeDecorator.compare_against_backend:18
 msgid "a :class:`.Dialect` that is involved in the comparison."
-msgstr ""
+msgstr "a：class：比較に含まれる `.Dialect`です。"
 
 #: of sqlalchemy.types.TypeDecorator.compare_against_backend:20
 msgid "the type object reflected from the backend."
-msgstr ""
+msgstr "バックエンドから反映された型オブジェクト"
 
 #: of sqlalchemy.types.TypeDecorator.compare_values:1
 msgid "Given two values, compare them for equality."
-msgstr ""
+msgstr "2つの値が与えられたら、それらの値を比較し"
 
 #: of sqlalchemy.types.TypeDecorator.compare_values:3
 msgid ""
 "By default this calls upon :meth:`.TypeEngine.compare_values` of the "
 "underlying \"impl\", which in turn usually uses the Python equals "
 "operator ``==``."
-msgstr ""
+msgstr "デフォルトでは、この関数は、基礎となる\ &quot;impl \&quot;の：meth： `.TypeEngine.compare_values`を呼び出します。これは通常、Python equals演算子` `==` `を使用します。"
 
 #: of sqlalchemy.types.TypeDecorator.compare_values:7
 msgid ""
 "This function is used by the ORM to compare an original-loaded value with"
 " an intercepted \"changed\" value, to determine if a net change has "
 "occurred."
-msgstr ""
+msgstr "この関数はORMによって元の読み込み値とインターセプトされた\ &quot;変更された値&quot;を比較して、正味の変更が発生したかどうかを判断するために使用されます。"
 
 #: of sqlalchemy.types.TypeDecorator.compile:1
 msgid "Produce a string-compiled form of this :class:`.TypeEngine`."
-msgstr ""
+msgstr "クラス： `.TypeEngine`の文字列でコンパイルされた形式を生成します。"
 
 #: of sqlalchemy.types.TypeDecorator.compile:3
 msgid ""
 "When called with no arguments, uses a \"default\" dialect to produce a "
 "string result."
-msgstr ""
+msgstr "引数なしで呼び出された場合、\ &quot;default \&quot;という方言を使用して文字列の結果を生成します。"
 
 #: of sqlalchemy.types.TypeDecorator.compile:6
 msgid "a :class:`.Dialect` instance."
-msgstr ""
+msgstr "a：class： `.Dialect`インスタンスです。"
 
 #: of sqlalchemy.types.TypeDecorator.copy:1
 msgid "Produce a copy of this :class:`.TypeDecorator` instance."
-msgstr ""
+msgstr "this：class： `.TypeDecorator`インスタンスのコピーを作成します。"
 
 #: of sqlalchemy.types.TypeDecorator.copy:3
 msgid ""
@@ -343,21 +333,21 @@ msgid ""
 ":class:`.TypeEngine` contract.  It usually does not need to be overridden"
 " unless the user-defined :class:`.TypeDecorator` has local state that "
 "should be deep-copied."
-msgstr ""
+msgstr "これは浅いコピーで、：class： `.TypeEngine`契約の一部を満たすために提供されています。これは通常、ユーザ定義の：class： `.TypeDecorator`がディープコピーされるべきローカル状態を持たない限り、オーバーライドする必要はありません。"
 
 #: of sqlalchemy.types.TypeDecorator.dialect_impl:1
 msgid "Return a dialect-specific implementation for this :class:`.TypeEngine`."
-msgstr ""
+msgstr "このために、方言固有の実装を返します：class： `.TypeEngine`。"
 
 #: of sqlalchemy.types.TypeDecorator.evaluates_none:1
 msgid ""
 "Return a copy of this type which has the :attr:`.should_evaluate_none` "
 "flag set to True."
-msgstr ""
+msgstr "：attr： `.should_evaluate_none`フラグがTrueに設定されているこのタイプのコピーを返します。"
 
 #: of sqlalchemy.types.TypeDecorator.evaluates_none:4
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.types.TypeDecorator.evaluates_none:14
 msgid ""
@@ -368,14 +358,14 @@ msgid ""
 "behavior associated with the Python None value to indicate that the value"
 " doesn't necessarily translate into SQL NULL; a prime example of this is "
 "a JSON type which may wish to persist the JSON value ``'null'``."
-msgstr ""
+msgstr "ORMは、このフラグを使用して、列レベルのデフォルトを起動する効果を持つINSERT文から列を省略するのではなく、INSERT文の列に `` None``の正の値が渡されることを示します。また、PythonのNone値に関連付けられた特別な動作を持つ型で、値が必ずしもSQL NULLに変換されないことを示すことができます。 JSON値 `` &#39;null&#39;``を永続化したいJSON型です。"
 
 #: of sqlalchemy.types.TypeDecorator.evaluates_none:23
 msgid ""
 "In all cases, the actual NULL SQL value can be always be persisted in any"
 " column by using the :obj:`~.expression.null` SQL construct in an INSERT "
 "statement or associated with an ORM-mapped attribute."
-msgstr ""
+msgstr "いずれの場合でも、実際のNULL SQL値は、INSERT文の中で：obj： `〜.expression.null` SQL構文を使用するか、ORMでマップされた属性に関連付けて、いつでも任意の列に永続化することができます。"
 
 #: of sqlalchemy.types.TypeDecorator.evaluates_none:30
 msgid ""
@@ -383,42 +373,42 @@ msgid ""
 "passed to :paramref:`.Column.default` or "
 ":paramref:`.Column.server_default`; in these cases, ``None`` still means "
 "\"no default\"."
-msgstr ""
+msgstr "\ &quot;evaulates none \&quot;フラグは、paramref： `.Column.default`または：paramref：` .Column.server_default`;に渡される `` None``の値には適用されません。これらの場合、 `` None``は\ &quot;no default \&quot;を意味します。"
 
 #: of sqlalchemy.types.TypeDecorator.evaluates_none:39
 msgid ":ref:`session_forcing_null` - in the ORM documentation"
-msgstr ""
+msgstr "：ref： `session_forcing_null`  -  ORMのドキュメント"
 
 #: of sqlalchemy.types.TypeDecorator.evaluates_none:41
 msgid ""
 ":paramref:`.postgresql.JSON.none_as_null` - PostgreSQL JSON interaction "
 "with this flag."
-msgstr ""
+msgstr "：paramref： `.postgresql.JSON.none_as_null`  -  PostgreSQL JSONはこのフラグと対話します。"
 
 #: of sqlalchemy.types.TypeDecorator.evaluates_none:44
 msgid ":attr:`.TypeEngine.should_evaluate_none` - class-level flag"
-msgstr ""
+msgstr "：attr： `.TypeEngine.should_evaluate_none`  - クラスレベルのフラグ"
 
 #: of sqlalchemy.types.TypeDecorator.get_dbapi_type:1
 msgid "Return the DBAPI type object represented by this :class:`.TypeDecorator`."
-msgstr ""
+msgstr "this：class： `.TypeDecorator`で表されるDBAPI型オブジェクトを返します。"
 
 #: of sqlalchemy.types.TypeDecorator.get_dbapi_type:4
 msgid ""
 "By default this calls upon :meth:`.TypeEngine.get_dbapi_type` of the "
 "underlying \"impl\"."
-msgstr ""
+msgstr "デフォルトでは、これは、基礎となる\ &quot;impl \&quot;の：meth： `.TypeEngine.get_dbapi_type`を呼び出します。"
 
 #: of sqlalchemy.types.TypeDecorator.literal_processor:1
 msgid "Provide a literal processing function for the given :class:`.Dialect`."
-msgstr ""
+msgstr "与えられた：class： `.Dialect`にリテラル処理関数を提供します。"
 
 #: of sqlalchemy.types.TypeDecorator.literal_processor:4
 msgid ""
 "Subclasses here will typically override "
 ":meth:`.TypeDecorator.process_literal_param` instead of this method "
 "directly."
-msgstr ""
+msgstr "ここでのサブクラスは、通常、このメソッドの代わりに：meth： `.TypeDecorator.process_literal_param`をオーバーライドします。"
 
 #: of sqlalchemy.types.TypeDecorator.literal_processor:8
 msgid ""
@@ -430,11 +420,11 @@ msgid ""
 "With the value converted by :meth:`.TypeDecorator.process_bind_param`, "
 "the underlying type will then handle whether it needs to be presented to "
 "the DBAPI as a bound parameter or to the database as an inline SQL value."
-msgstr ""
+msgstr "デフォルトでは、このメソッドは、：meth： `.TypeDecorator.process_literal_param`がそうでない場合、そのメソッドが実装されている場合は：meth：` .TypeDecorator.process_bind_param`を使用します。ここでの理論的根拠は：class： `.TypeDecorator`は、典型的には、データベースプレゼンテーションのレイヤーの上にあるデータのPython変換を扱います。値は：meth： `.TypeDecorator.process_bind_param`で変換され、基底型はバインドされたパラメータとしてDBAPIに渡す必要があるのか​​、インラインSQL値としてデータベースに渡す必要があるのか​​を処理します。"
 
 #: of sqlalchemy.types.TypeDecorator.load_dialect_impl:1
 msgid "Return a :class:`.TypeEngine` object corresponding to a dialect."
-msgstr ""
+msgstr "方言に対応するa：class： `.TypeEngine`オブジェクトを返します。"
 
 #: of sqlalchemy.types.TypeDecorator.load_dialect_impl:3
 msgid ""
@@ -443,22 +433,22 @@ msgid ""
 ":class:`.TypeDecorator` implementation of :meth:`type_engine` to help "
 "determine what type should ultimately be returned for a given "
 ":class:`.TypeDecorator`."
-msgstr ""
+msgstr "これは、指定された方言に応じて異なる型を提供するために使用できるエンドユーザオーバーライドフックです。これは：meth： `type_engine`の：class：` .TypeDecorator`実装によって使用され、与えられた：class： `.TypeDecorator`に対して最終的にどの型を返すべきかを判断するのに役立ちます。"
 
 #: of sqlalchemy.types.TypeDecorator.load_dialect_impl:9
 msgid "By default returns ``self.impl``."
-msgstr ""
+msgstr "デフォルトで `` self.impl``を返します。"
 
 #: of sqlalchemy.types.TypeDecorator.process_bind_param:1
 msgid "Receive a bound parameter value to be converted."
-msgstr ""
+msgstr "変換するバインドされたパラメータ値を受け取ります。"
 
 #: of sqlalchemy.types.TypeDecorator.process_bind_param:3
 msgid ""
 "Subclasses override this method to return the value that should be passed"
 " along to the underlying :class:`.TypeEngine` object, and from there to "
 "the DBAPI ``execute()`` method."
-msgstr ""
+msgstr "サブクラスはこのメソッドをオーバーライドして渡されるべき値を基礎クラス：class： `.TypeEngine`オブジェクトに返し、そこからDBAPI` `execute（）` `メソッドに返します。"
 
 #: of sqlalchemy.types.TypeDecorator.process_bind_param:8
 #: sqlalchemy.types.TypeDecorator.process_result_value:12
@@ -466,52 +456,52 @@ msgid ""
 "The operation could be anything desired to perform custom behavior, such "
 "as transforming or serializing data. This could also be used as a hook "
 "for validating logic."
-msgstr ""
+msgstr "操作は、データの変換やシリアル化など、カスタム動作を実行するために必要なものであれば何でもかまいません。これは、ロジックを検証するためのフックとしても使用できます。"
 
 #: of sqlalchemy.types.TypeDecorator.process_bind_param:12
 msgid ""
 "This operation should be designed with the reverse operation in mind, "
 "which would be the process_result_value method of this class."
-msgstr ""
+msgstr "この操作は、このクラスのprocess_result_valueメソッドである逆の操作を念頭に置いて設計する必要があります。"
 
 #: of sqlalchemy.types.TypeDecorator.process_bind_param:16
 #: sqlalchemy.types.TypeDecorator.process_result_value:16
 msgid ""
 "Data to operate upon, of any type expected by this method in the "
 "subclass.  Can be ``None``."
-msgstr ""
+msgstr "サブクラスでこのメソッドによって予期される任意の型の操作対象のデータ。 「なし」にすることができます。"
 
 #: of sqlalchemy.types.TypeDecorator.process_bind_param:18
 #: sqlalchemy.types.TypeDecorator.process_result_value:18
 msgid "the :class:`.Dialect` in use."
-msgstr ""
+msgstr "：class： `.Dialect`が使用中です。"
 
 #: of sqlalchemy.types.TypeDecorator.process_literal_param:1
 msgid ""
 "Receive a literal parameter value to be rendered inline within a "
 "statement."
-msgstr ""
+msgstr "ステートメント内でインラインでレンダリングされるリテラルパラメータ値を受け取ります。"
 
 #: of sqlalchemy.types.TypeDecorator.process_literal_param:4
 msgid ""
 "This method is used when the compiler renders a literal value without "
 "using binds, typically within DDL such as in the \"server default\" of a "
 "column or an expression within a CHECK constraint."
-msgstr ""
+msgstr "このメソッドは、コンパイラーがバインドを使用しないリテラル値（通常は列の「サーバーのデフォルト」またはCHECK制約内の式）のDDL内でレンダリングする場合に使用されます。"
 
 #: of sqlalchemy.types.TypeDecorator.process_literal_param:9
 msgid "The returned string will be rendered into the output string."
-msgstr ""
+msgstr "返された文字列は出力文字列にレンダリングされます。"
 
 #: of sqlalchemy.types.TypeDecorator.process_result_value:1
 msgid "Receive a result-row column value to be converted."
-msgstr ""
+msgstr "変換される結果行の列値を受け取ります。"
 
 #: of sqlalchemy.types.TypeDecorator.process_result_value:3
 msgid ""
 "Subclasses should implement this method to operate on data fetched from "
 "the database."
-msgstr ""
+msgstr "サブクラスは、このメソッドを実装して、データベースからフェッチされたデータを処理する必要があります。"
 
 #: of sqlalchemy.types.TypeDecorator.process_result_value:6
 msgid ""
@@ -519,72 +509,72 @@ msgid ""
 " back to the application, given a value that is already processed by the "
 "underlying :class:`.TypeEngine` object, originally from the DBAPI cursor "
 "method ``fetchone()`` or similar."
-msgstr ""
+msgstr "元々DBAPIカーソルメソッドの `` fetchone（） ``または `` fetchone（） ``の元のclass： `.TypeEngine`オブジェクトによってすでに処理されている値を与えられた場合、サブクラスはこのメソッドをオーバーライドしてアプリケーションに返すべき値を返します。類似。"
 
 #: of sqlalchemy.types.TypeDecorator.process_result_value:20
 msgid ""
 "This operation should be designed to be reversible by the "
 "\"process_bind_param\" method of this class."
-msgstr ""
+msgstr "この操作は、このクラスの\ &quot;process_bind_param \&quot;メソッドで元に戻せるように設計する必要があります。"
 
 #: of sqlalchemy.types.TypeDecorator.python_type:1
 msgid ""
 "Return the Python type object expected to be returned by instances of "
 "this type, if known."
-msgstr ""
+msgstr "既知の場合、この型のインスタンスによって返されると予想されるPython型オブジェクトを返します。"
 
 #: of sqlalchemy.types.TypeDecorator.python_type:4
 msgid ""
 "Basically, for those types which enforce a return type, or are known "
 "across the board to do such for all common DBAPIs (like ``int`` for "
 "example), will return that type."
-msgstr ""
+msgstr "基本的には、戻り値の型を強制する型や、一般的なDBAPI（例えば `` int``など）のために全面的に知られている型の場合、その型を返します。"
 
 #: of sqlalchemy.types.TypeDecorator.python_type:8
 msgid "If a return type is not defined, raises ``NotImplementedError``."
-msgstr ""
+msgstr "戻り値の型が定義されていない場合、 `` NotImplementedError``が送出されます。"
 
 #: of sqlalchemy.types.TypeDecorator.python_type:11
 msgid ""
 "Note that any type also accommodates NULL in SQL which means you can also"
 " get back ``None`` from any type in practice."
-msgstr ""
+msgstr "どんな型もSQLにNULLを格納することに注意してください。つまり、実際にはどの型からでも `` None``を返すことができます。"
 
 #: of sqlalchemy.types.TypeDecorator.result_processor:1
 msgid ""
 "Provide a result value processing function for the given "
 ":class:`.Dialect`."
-msgstr ""
+msgstr "与えられた：class： `.Dialect`に対して結果値処理関数を提供します。"
 
 #: of sqlalchemy.types.TypeDecorator.result_processor:4
 msgid ""
 "This is the method that fulfills the :class:`.TypeEngine` contract for "
 "result value conversion.   :class:`.TypeDecorator` will wrap a user-"
 "defined implementation of :meth:`process_result_value` here."
-msgstr ""
+msgstr "これは、結果値変換のための：class： `.TypeEngine`契約を満たすメソッドです。 ：class： `.TypeDecorator`は：meth：` process_result_value`のユーザ定義の実装をここでラップします。"
 
 #: of sqlalchemy.types.TypeDecorator.result_processor:9
 msgid ""
 "User-defined code can override this method directly, though its likely "
 "best to use :meth:`process_result_value` so that the processing provided "
 "by ``self.impl`` is maintained."
-msgstr ""
+msgstr "ユーザ定義コードはこのメソッドを直接オーバーライドすることができますが、 `` self.impl &#39;&#39;によって提供される処理が維持されるようにmeth： `process_result_value`を使用するのが最善です。"
 
 #: of sqlalchemy.types.TypeDecorator.result_processor:14
 msgid "A SQLAlchemy data type"
-msgstr ""
+msgstr "SQLAlchemyデータ型"
 
 #: of sqlalchemy.types.TypeDecorator.result_processor:16
 msgid ""
 "This method is the reverse counterpart to the :meth:`bind_processor` "
 "method of this class."
-msgstr ""
+msgstr "このメソッドは、このクラスの：meth： `bind_processor`メソッドと逆の対応です。"
 
 #: of sqlalchemy.types.TypeDecorator.type_engine:1
 msgid ""
 "Return a dialect-specific :class:`.TypeEngine` instance for this "
 ":class:`.TypeDecorator`."
-msgstr ""
+msgstr "Dialect特有の：class： `.TypeEngine`インスタンスを返します：class：` .TypeDecorator`。"
 
 #: of sqlalchemy.types.TypeDecorator.type_engine:4
 msgid ""
@@ -593,17 +583,17 @@ msgid ""
 ":meth:`dialect_impl` but also traverses into wrapped "
 ":class:`.TypeDecorator` instances. Behavior can be customized here by "
 "overriding :meth:`load_dialect_impl`."
-msgstr ""
+msgstr "ほとんどの場合、これは `` self.impl``で表される：class： `.TypeEngine`型のダイアレクトに適合した形式を返します。 ：meth： `dialect_impl`の使用を行いますが、wrapped：class：` .TypeDecorator`インスタンスにも移動します。ここでの動作は、meth： `load_dialect_impl`をオーバーライドすることでカスタマイズできます。"
 
 #: of sqlalchemy.types.TypeDecorator.with_variant:1
 msgid ""
 "Produce a new type object that will utilize the given type when applied "
 "to the dialect of the given name."
-msgstr ""
+msgstr "与えられた名前の方言に適用されたときに、与えられた型を利用する新しい型オブジェクトを生成する。"
 
 #: of sqlalchemy.types.TypeDecorator.with_variant:4
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.types.TypeDecorator.with_variant:13
 msgid ""
@@ -611,31 +601,31 @@ msgid ""
 "\"fallback\" type to that which is dialect specific. The returned type is"
 " an instance of :class:`.Variant`, which itself provides a "
 ":meth:`.Variant.with_variant` that can be called repeatedly."
-msgstr ""
+msgstr "：meth： `.TypeEngine.with_variant`の構成は、常に「フォールバック」型から、方言固有の型へと変わります。返される型は：class： `.Variant`のインスタンスであり、それ自身が：meth：` .Variant.with_variant`を繰り返し提供することができます。"
 
 #: of sqlalchemy.types.TypeDecorator.with_variant:19
 msgid ""
 "a :class:`.TypeEngine` that will be selected as a variant from the "
 "originating type, when a dialect of the given name is in use."
-msgstr ""
+msgstr "a：class： `.TypeEngine`。指定された名前の方言が使用されているときに、元の型からバリアントとして選択されます。"
 
 #: of sqlalchemy.types.TypeDecorator.with_variant:22
 msgid ""
 "base name of the dialect which uses this type. (i.e. ``'postgresql'``, "
 "``'mysql'``, etc.)"
-msgstr ""
+msgstr "この型を使用する方言の基底名。 （つまり、 `` &#39;postgresql``、 ``&#39; mysql&#39;``など）"
 
 #: ../../core/custom_types.rst:62
 msgid "TypeDecorator Recipes"
-msgstr ""
+msgstr "TypeDecoratorのレシピ"
 
 #: ../../core/custom_types.rst:64
 msgid "A few key :class:`.TypeDecorator` recipes follow."
-msgstr ""
+msgstr "いくつかのキー：クラス： `.TypeDecorator`レシピが続きます。"
 
 #: ../../core/custom_types.rst:69
 msgid "Coercing Encoded Strings to Unicode"
-msgstr ""
+msgstr "エンコードされた文字列をUnicodeに変換する"
 
 #: ../../core/custom_types.rst:71
 msgid ""
@@ -645,7 +635,7 @@ msgid ""
 "the form ``u'some string'`` if using Python 2 and not 3. The "
 "encoding/decoding functions it performs are only to suit what the DBAPI "
 "in use requires, and are primarily a private implementation detail."
-msgstr ""
+msgstr "：class： `.Unicode`型に関するよくある混乱の原因は、Python側でPythonの` `unicode``オブジェクトを扱うことのみを意図しているということです。 Python 2ではなく3を使用している場合は `` u&#39;some string&#39;``を作成します。これが実行するエンコード/デコード機能は、使用されているDBAPIに合ったもので、主にプライベートな実装の詳細です。"
 
 #: ../../core/custom_types.rst:78
 msgid ""
@@ -653,43 +643,43 @@ msgid ""
 "is strings that contain non-ASCII characters and are not ``u''`` objects "
 "in Python 2, can be achieved using a :class:`.TypeDecorator` which "
 "coerces as needed::"
-msgstr ""
+msgstr "Pythonのバイナリを安全に受け取ることができるタイプのユースケース、つまり非ASCII文字を含み、Python 2の `` u&#39;&#39;``オブジェクトではない文字列は、：class： `.TypeDecorator`を使って実現できます。必要に応じて強制する::"
 
 #: ../../core/custom_types.rst:97
 msgid "Rounding Numerics"
-msgstr ""
+msgstr "丸め数値"
 
 #: ../../core/custom_types.rst:99
 msgid ""
 "Some database connectors like those of SQL Server choke if a Decimal is "
 "passed with too many decimal places.   Here's a recipe that rounds them "
 "down::"
-msgstr ""
+msgstr "SQL Serverのデータベースコネクタのように、小数点以下の桁数が多いDecimalが渡された場合、一部のデータベースコネクタでは問題が発生します。それらを丸めるレシピがあります::"
 
 #: ../../core/custom_types.rst:124
 msgid "Backend-agnostic GUID Type"
-msgstr ""
+msgstr "バックエンドに依存しないGUIDタイプ"
 
 #: ../../core/custom_types.rst:126
 msgid ""
 "Receives and returns Python uuid() objects.  Uses the PG UUID type when "
 "using PostgreSQL, CHAR(32) on other backends, storing them in stringified"
 " hex format.   Can be modified to store binary in CHAR(16) if desired::"
-msgstr ""
+msgstr "Pythonのuuid（）オブジェクトを受け取って返します。 PostgreSQLを使用する場合はPG UUIDタイプを使用し、他のバックエンドではCHAR（32）を使用してストリング形式の16進形式で格納します。必要に応じて、バイナリをCHAR（16）に格納するように変更できます。"
 
 #: ../../core/custom_types.rst:171
 msgid "Marshal JSON Strings"
-msgstr ""
+msgstr "JSONストリングを整列化する"
 
 #: ../../core/custom_types.rst:173
 msgid ""
 "This type uses ``simplejson`` to marshal Python data structures to/from "
 "JSON.   Can be modified to use Python's builtin json encoder::"
-msgstr ""
+msgstr "このタイプは `` simplejson``を使ってPythonデータ構造をJSONとの間でマーシャリングします。 Pythonの組み込みjsonエンコーダを使用するように変更することができます::"
 
 #: ../../core/custom_types.rst:202
 msgid "Adding Mutability"
-msgstr ""
+msgstr "変更可能性の追加"
 
 #: ../../core/custom_types.rst:204
 msgid ""
@@ -698,7 +688,7 @@ msgid ""
 "be flushed.   Without further steps, you instead would need to replace "
 "the existing value with a new one on each parent object to detect "
 "changes::"
-msgstr ""
+msgstr "デフォルトでORMは上記のような型の\ &quot;mutability \&quot;を検出しません。つまり、値のインプレース変更は検出されず、フラッシュされません。これ以上の手順を行わなければ、既存の値を各親オブジェクトの新しい値に置き換えて変更を検出する必要があります。"
 
 #: ../../core/custom_types.rst:213
 msgid ""
@@ -707,15 +697,15 @@ msgid ""
 "this requirement, support for mutability is best applied using the "
 "``sqlalchemy.ext.mutable`` extension.  For a dictionary-oriented JSON "
 "structure, we can apply this as::"
-msgstr ""
+msgstr "多くのアプリケーションでは、一度作成されると値が変更されることを必要としないため、上記の制限は問題ありません。この要件を持っている人にとっては、 `` sqlalchemy.ext.mutable``拡張を使ってmutabilityをサポートするのが最も効果的です。辞書指向のJSON構造については、これを::"
 
 #: ../../core/custom_types.rst:229
 msgid ":ref:`mutable_toplevel`"
-msgstr ""
+msgstr "：ref： `mutable_toplevel`"
 
 #: ../../core/custom_types.rst:232
 msgid "Dealing with Comparison Operations"
-msgstr ""
+msgstr "比較操作の処理"
 
 #: ../../core/custom_types.rst:234
 msgid ""
@@ -730,7 +720,7 @@ msgid ""
 "``JSONEncodedDict``, we need to **coerce** the column to a textual form "
 "using :func:`.cast` or :func:`.type_coerce` before attempting to use this"
 " operator::"
-msgstr ""
+msgstr "：class： `.TypeDecorator`のデフォルトの動作は、任意の式の\&quot;右辺\ &quot;を同じ型に強制することです。 JSONのような型の場合、使用される演算子はすべてJSONの意味で意味を持つ必要があります。場合によっては、タイプによってはJSONのような振る舞いをすることがあります。 1つの例は、JSONタイプのLIKE演算子を処理したい場合です。 LIKEはJSON構造に対しては意味がありませんが、基礎となるテキスト表現には意味があります。これを `` JSONEncodedDict``のような型で取得するには、この演算子を使用する前に：func： `.cast`または：func：` .type_coerce`を使用して、列をテキスト形式に変換する必要があります::"
 
 #: ../../core/custom_types.rst:250
 msgid ""
@@ -739,7 +729,7 @@ msgid ""
 "use the LIKE operator with our JSON object interpreted as a string, we "
 "can build it into the type by overriding the "
 ":meth:`.TypeDecorator.coerce_compared_value` method::"
-msgstr ""
+msgstr "：class： `.TypeDecorator`は、演算子に基づいた型変換のような型変換を組み込むための組み込みシステムを提供します。文字列として解釈されるJSONオブジェクトでLIKE演算子を頻繁に使用したい場合は、：meth： `.TypeDecorator.coerce_compared_value`メソッドをオーバーライドすることにより、その型に構造体を構築できます::"
 
 #: ../../core/custom_types.rst:280
 msgid ""
@@ -747,11 +737,11 @@ msgid ""
 "applications may wish to raise ``NotImplementedError`` for operators that"
 " have no meaning with a JSON object such as \"LIKE\", rather than "
 "automatically coercing to text."
-msgstr ""
+msgstr "上記は\ &quot;LIKE \&quot;のような演算子を扱う方法の1つに過ぎません。他のアプリケーションでは、自動的にテキストに強制変換するのではなく、\ &quot;LIKE \&quot;などのJSONオブジェクトで意味を持たない演算子に対して `` NotImplementedError``を発生させたいかもしれません。"
 
 #: ../../core/custom_types.rst:289
 msgid "Replacing the Bind/Result Processing of Existing Types"
-msgstr ""
+msgstr "既存の型のバインド/結果処理の置換"
 
 #: ../../core/custom_types.rst:291
 msgid ""
@@ -767,11 +757,11 @@ msgid ""
 "subclass the :class:`.types.TIME` type to have custom result processing "
 "behavior. The ``process()`` function will receive ``value`` from the "
 "DBAPI cursor directly::"
-msgstr ""
+msgstr "バインド/結果レベルでの型の振る舞いの増加は、class： `.TypeDecorator`を使って実現します。 SQLAlchemyによってDBAPIレベルで適用される特定の処理を置き換える必要がある場合、SQLAlchemy型は直接サブクラス化でき、 `` bind_processor（） ``または `` result_processor（） ``メソッドはオーバーライドできます。これを行うには、 `` adapt（） ``メソッドもオーバーライドする必要があります。このメソッドは、SQLAlchemyがステートメント実行中にDBAPI固有の型の動作を生成するメカニズムです。これをオーバーライドすると、DBAPI固有の型の代わりにカスタム型のコピーを使用することができます。以下では、class： `.types.TIME`型をサブクラス化して、カスタム結果処理の振る舞いをします。 `` process（） ``関数はDBAPIカーソルから直接 `` value``を受け取ります::"
 
 #: ../../core/custom_types.rst:333
 msgid "Applying SQL-level Bind/Result Processing"
-msgstr ""
+msgstr "SQLレベルのバインド/結果処理の適用"
 
 #: ../../core/custom_types.rst:335
 msgid ""
@@ -788,7 +778,7 @@ msgid ""
 "that handle geographic data.  The PostGIS extension to PostgreSQL "
 "includes an extensive array of SQL functions that are necessary for "
 "coercing data into particular formats."
-msgstr ""
+msgstr "SQLAlchemyは、ref： `types_typedecorator`と：ref：` replaced_processors`の節で見られるように、SQLAlchemyはパラメータが文に送られたときと、結果行がデータベースからロードされたとき、変換を適用するときの両方でPython関数を呼び出すことができますデータベースへのまたはデータベースからの送信時の値に変換します。また、SQLレベルの変換も定義することができます。ここでの論理的根拠は、リレーショナルデータベースだけが、アプリケーションと永続化形式の間で送受信データを強制するのに必要な特定の一連の関数を含む場合です。例としては、データベース定義の暗号化/復号化関数、地理データを扱うストアドプロシージャの使用などがあります。 PostgreSQLへのPostGISエクステンションには、データを特定のフォーマットに強制するために必要な広範なSQL関数が含まれています。"
 
 #: ../../core/custom_types.rst:347
 msgid ""
@@ -803,13 +793,13 @@ msgid ""
 "values and the function ``ST_AsText`` to all incoming data, we can create"
 " our own subclass of :class:`.UserDefinedType` which provides these "
 "methods in conjunction with :data:`~.sqlalchemy.sql.expression.func`::"
-msgstr ""
+msgstr "任意の：class： `.TypeEngine`、：class：` .UserDefinedType`または：class： `.TypeDecorator`サブクラスは：meth：` .TypeEngine.bind_expression`や：meth： `.TypeEngine.column_expression`の実装を含むことができます。 `` None``以外の値を返すように定義されている場合は、：class： `.ColumnElement`式を、SQLステートメントに、バインドされたパラメタを囲むか、列式のいずれかに注入する必要があります。たとえばPostGIS関数 `` ST_GeomFromText``をすべての発信値に適用し、関数 `` ST_AsText``をすべての着信データに適用する `` Geometry``型を構築するには、次の独自のサブクラスを作成できます：class：これらのメソッドを提供する `.UserDefinedType`：data：`〜.sqlalchemy.sql.expression.func` ::"
 
 #: ../../core/custom_types.rst:371
 msgid ""
 "We can apply the ``Geometry`` type into :class:`.Table` metadata and use "
 "it in a :func:`.select` construct::"
-msgstr ""
+msgstr "`` Geometry``型を：class： `.Table`メタデータに適用し、それをa：func：` .select`構造体に使用することができます::"
 
 #: ../../core/custom_types.rst:382
 msgid ""
@@ -817,7 +807,7 @@ msgid ""
 "is applied to the columns clause so that the return value is run through "
 "the function before passing into a result set, and ``ST_GeomFromText`` is"
 " run on the bound parameter so that the passed-in value is converted::"
-msgstr ""
+msgstr "結果として得られるSQLは、両方の関数を適切なものとして組み込みます。 `` ST_AsText``はcolumns節に適用され、結果セットに渡される前に戻り値が関数で実行され、渡された値が変換されるように `` ST_GeomFromText``が実行されます。 ："
 
 #: ../../core/custom_types.rst:391
 msgid ""
@@ -826,11 +816,11 @@ msgid ""
 " with the labeling of the wrapped expression.   Such as, if we rendered a"
 " :func:`.select` against a :func:`.label` of our expression, the string "
 "label is moved to the outside of the wrapped expression::"
-msgstr ""
+msgstr "：meth： `.TypeEngine.column_expression`メソッドは、SQL式がラップされた式のラベリングに干渉しないようにコンパイラの仕組みとやりとりします。たとえば、式の：func： `.label`に対して：func：` .select`をレンダリングすると、文字列ラベルはラップされた式の外側に移動します::"
 
 #: ../../core/custom_types.rst:399
 msgid "Output::"
-msgstr ""
+msgstr "出力：："
 
 #: ../../core/custom_types.rst:404
 msgid ""
@@ -838,31 +828,31 @@ msgid ""
 ":class:`.postgresql.BYTEA` to provide a ``PGPString``, which will make "
 "use of the PostgreSQL ``pgcrypto`` extension to encrypt/decrypt values "
 "transparently::"
-msgstr ""
+msgstr "組み込み型を直接サブクラス化する例については、class： `.postgresql.BYTEA`をサブクラス化してPostgreSQLの` `pgcrypto``拡張を使って値を透過的に暗号化/復号化する` `PGPString``を提供します::"
 
 #: ../../core/custom_types.rst:448
 msgid ""
 "The ``pgp_sym_encrypt`` and ``pgp_sym_decrypt`` functions are applied to "
 "the INSERT and SELECT statements::"
-msgstr ""
+msgstr "`` pgp_sym_encrypt``と `` pgp_sym_decrypt``関数は、INSERT文とSELECT文に適用されます::"
 
 #: ../../core/custom_types.rst:462
 msgid ""
 "Added the :meth:`.TypeEngine.bind_expression` and "
 ":meth:`.TypeEngine.column_expression` methods."
-msgstr ""
+msgstr "：meth： `.TypeEngine.bind_expression`と：meth：` .TypeEngine.column_expression`メソッドを追加しました。"
 
 #: ../../core/custom_types.rst:465
 msgid "See also:"
-msgstr ""
+msgstr "参照："
 
 #: ../../core/custom_types.rst:467
 msgid ":ref:`examples_postgis`"
-msgstr ""
+msgstr "：ref： `examples_postgis`"
 
 #: ../../core/custom_types.rst:472
 msgid "Redefining and Creating New Operators"
-msgstr ""
+msgstr "新しい演算子の再定義と作成"
 
 #: ../../core/custom_types.rst:474
 #, python-format
@@ -876,7 +866,7 @@ msgid ""
 "operators are exposed as explicit methods on column expressions, such as "
 ":meth:`.ColumnOperators.in_` (``table.c.value.in_(['x', 'y'])``) and "
 ":meth:`.ColumnOperators.like` (``table.c.value.like('%ed%')``)."
-msgstr ""
+msgstr "SQLAlchemy Coreは、すべての列式で使用可能な式演算子の固定セットを定義します。これらの演算の中には、Pythonに組み込まれた演算子のオーバーロードの影響があります。このような演算子の例には、meth： `.ColumnOperators .__ eq__`（` `table.c.somecolumn == &#39;foo&#39;``）、：meth：` .ColumnOperators .__ invert__`（ ``〜table.c.flag` `）、および：meth：` .ColumnOperators .__ add__`（ `` table.cx + table.cy``）です。他の演算子は：meth： `.ColumnOperators.in_`（` `table.c.value.in _（[&#39;x&#39;、 &#39;y&#39;]）` `）や：meth： `.ColumnOperators.like`（` `table.c.value.like（ &#39;％ed％&#39;）` `）です。"
 
 #: ../../core/custom_types.rst:484
 msgid ""
@@ -890,7 +880,7 @@ msgid ""
 "into a simple subclass of a particular type in order to override or "
 "define new operations.  Below, we create a :class:`.Integer` subclass "
 "which overrides the :meth:`.ColumnOperators.__add__` operator::"
-msgstr ""
+msgstr "既存の演算子の振る舞いを決定するために、また組み込みセットの一部ではない追加の演算子を見つけるために、すべてのケースでコア式の構文が式の型を調べます。 ：class： `.TypeEngine`基本クラスはルート\&quot;比較\ &quot;の実装：class：` .TypeEngine.Comparator`を定義し、多くの特定の型はこのクラスの独自のサブ実装を提供します。ユーザ定義：クラス： `.TypeEngine.Comparator`実装は、新しい操作をオーバーライドまたは定義するために、特定の型の単純なサブクラスに直接構築できます。以下に、：meth： `.ColumnOperators .__ add__`演算子をオーバーライドする：class：` .Integer`サブクラスを作成します::"
 
 #: ../../core/custom_types.rst:499
 msgid ""
@@ -898,11 +888,11 @@ msgid ""
 "the :attr:`.TypeEngine.comparator_factory` attribute as referring to a "
 "new class, subclassing the :class:`.TypeEngine.Comparator` class "
 "associated with the :class:`.Integer` type."
-msgstr ""
+msgstr "上記の設定は新しいクラスを参照するための：attr： `.TypeEngine.comparator_factory`属性を設定する新しいクラス` `MyInt``を作成し、：class：` .TypeEngine.Comparator`クラスにサブクラス化します：class ： `.Integer`型です。"
 
 #: ../../core/custom_types.rst:504
 msgid "Usage::"
-msgstr ""
+msgstr "使用法：："
 
 #: ../../core/custom_types.rst:510
 msgid ""
@@ -914,14 +904,14 @@ msgid ""
 "construct. Above, we could just as well have said "
 "``self.expr.op(\"goofy\")(other)`` instead of "
 "``self.op(\"goofy\")(other)``."
-msgstr ""
+msgstr "：meth： `.ColumnOperators .__ add__`の実装は：class：` .TypeEngine.Comparator`を `` expr``属性としてインスタンス化することで、所有するSQL式によって参照されます。式システムの仕組みは、式オブジェクトが新しいSQL式構成を生成するまで、操作が再帰的に継続するようなものです。上の例では、 `` self.ex（\ &quot;goofy \&quot;）（他） ``の代わりに `` self.expr.op（\ &quot;goofy \&quot;）"
 
 #: ../../core/custom_types.rst:518
 msgid ""
 "When using :meth:`.Operators.op` for comparison operations that return a "
 "boolean result, the :paramref:`.Operators.op.is_comparison` flag should "
 "be set to ``True``::"
-msgstr ""
+msgstr "ブール結果を返す比較演算に：meth： `.Operators.op`を使用する場合、：paramref：` .Operators.op.is_comparison`フラグを `` True``に設定する必要があります::"
 
 #: ../../core/custom_types.rst:527
 msgid ""
@@ -930,11 +920,11 @@ msgid ""
 "methods added to :class:`.TypeEngine.Comparator` onto the owning "
 ":class:`.ColumnElement`. For example, to add a ``log()`` function to "
 "integers::"
-msgstr ""
+msgstr "class： `.TypeEngine.Comparator`に追加された新しいメソッドは、所有しているSQL式で、`：__getattr__``スキームを使って公開されます。 `.ColumnElement`。例えば、整数に `` log（） ``関数を追加するには::"
 
 #: ../../core/custom_types.rst:541 ../../core/custom_types.rst:562
 msgid "Using the above type::"
-msgstr ""
+msgstr "上記のタイプを使用する::"
 
 #: ../../core/custom_types.rst:546
 msgid ""
@@ -942,19 +932,19 @@ msgid ""
 "implementation of the PostgreSQL factorial operator, we combine the "
 ":class:`.UnaryExpression` construct along with a :class:`.custom_op` to "
 "produce the factorial expression::"
-msgstr ""
+msgstr "単項演算も可能です。例えば、PostgreSQL階乗演算子の実装を追加するために、：class： `.UnaryExpression`構造体と：class：` .custom_op`を組み合わせて階乗式を生成します::"
 
 #: ../../core/custom_types.rst:570
 msgid ":meth:`.Operators.op`"
-msgstr ""
+msgstr "：meth： `.Operators.op`"
 
 #: ../../core/custom_types.rst:572
 msgid ":attr:`.TypeEngine.comparator_factory`"
-msgstr ""
+msgstr "：attr： `.TypeEngine.comparator_factory`"
 
 #: ../../core/custom_types.rst:577
 msgid "Creating New Types"
-msgstr ""
+msgstr "新しいタイプの作成"
 
 #: ../../core/custom_types.rst:579
 msgid ""
@@ -962,21 +952,21 @@ msgid ""
 "for defining entirely new database types.   Use this to represent native "
 "database types not known by SQLAlchemy.   If only Python translation "
 "behavior is needed, use :class:`.TypeDecorator` instead."
-msgstr ""
+msgstr "：class： `.UserDefinedType`クラスは、全く新しいデータベース型を定義するための単純な基本クラスとして提供されています。これを使用して、SQLAlchemyには知られていないネイティブデータベースタイプを表します。 Pythonの変換動作のみが必要な場合は、代わりに：class： `.TypeDecorator`を使用してください。"
 
 #: of sqlalchemy.types.UserDefinedType:1
 msgid "Base for user defined types."
-msgstr ""
+msgstr "ユーザー定義型のベース。"
 
 #: of sqlalchemy.types.UserDefinedType:3
 msgid ""
 "This should be the base of new types.  Note that for most cases, "
 ":class:`.TypeDecorator` is probably more appropriate::"
-msgstr ""
+msgstr "これは新しいタイプの基盤でなければなりません。ほとんどの場合、：class： `.TypeDecorator`はおそらくもっと適切です::"
 
 #: of sqlalchemy.types.UserDefinedType:26
 msgid "Once the type is made, it's immediately usable::"
-msgstr ""
+msgstr "タイプが作成されるとすぐに使用できます::"
 
 #: of sqlalchemy.types.UserDefinedType:33
 msgid ""
@@ -986,14 +976,14 @@ msgid ""
 "construct.  This keyword is only sent if the method accepts keyword "
 "arguments (e.g. ``**kw``) in its argument signature; introspection is "
 "used to check for this in order to support legacy forms of this function."
-msgstr ""
+msgstr "`` get_col_spec（） ``メソッドは、大抵の場合、キーワードの引数 `` type_expression``を受け取ります。これは、type：class： `.Column`や：func：`のように、 .castコンストラクト。このキーワードは、引数シグネチャにキーワード引数（例えば `` ** kw``）を受け入れる場合にのみ送信されます。この機能のレガシー形式をサポートするために、これをチェックするためにイントロスペクションが使用されます。"
 
 #: of sqlalchemy.types.UserDefinedType:41
 msgid ""
 "the owning expression is passed to the ``get_col_spec()`` method via the "
 "keyword argument ``type_expression``, if it receives ``**kw`` in its "
 "signature."
-msgstr ""
+msgstr "所有する式は、その署名に `` ** kw``を受け取った場合、キーワード引数 `` type_expression``を介して `` get_col_spec（） ``メソッドに渡されます。"
 
 #: of sqlalchemy.types.UserDefinedType.coerce_compared_value:3
 msgid ""
@@ -1001,12 +991,12 @@ msgid ""
 ":class:`.TypeDecorator`; by default it returns ``self``, assuming the "
 "compared value should be coerced into the same type as this one.  See "
 ":meth:`.TypeDecorator.coerce_compared_value` for more detail."
-msgstr ""
+msgstr "：class： `.UserDefinedType`のデフォルトの振る舞いは：class：` .TypeDecorator`;と同じです。デフォルトでは、比較値をこの型と同じ型に強制する必要があると仮定して、 `` self``を返します。詳細は：meth： `.TypeDecorator.coerce_compared_value`を参照してください。"
 
 #: of sqlalchemy.types.UserDefinedType.coerce_compared_value:9
 msgid ""
 ":meth:`.UserDefinedType.coerce_compared_value` now returns ``self`` by "
 "default, rather than falling onto the more fundamental behavior of "
 ":meth:`.TypeEngine.coerce_compared_value`."
-msgstr ""
+msgstr "：meth： `.UserDefinedType.coerce_compared_value`は：meth：` .TypeEngine.coerce_compared_value`のより基本的な動作に陥るのではなく、デフォルトで `` self``を返すようになりました。"
 

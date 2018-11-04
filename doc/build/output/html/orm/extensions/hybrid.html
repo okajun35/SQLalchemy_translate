@@ -10,7 +10,7 @@
         <title>
             
     
-    Hybrid Attributes
+    ハイブリッド属性
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../../search.html" />
         <link rel="copyright" title="Copyright" href="../../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../../index.html" />
-        <link rel="up" title="ORM Extensions" href="index.html" />
-        <link rel="next" title="Indexable" href="indexable.html" />
-        <link rel="prev" title="Horizontal Sharding" href="horizontal_shard.html" />
+        <link rel="up" title="ORM拡張" href="index.html" />
+        <link rel="next" title="インデックス作成可能" href="indexable.html" />
+        <link rel="prev" title="水平シャーディング" href="horizontal_shard.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,41 +120,41 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="../tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="index.html">ORM Extensions</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="associationproxy.html">Association Proxy</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="automap.html">Automap</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="baked.html">Baked Queries</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="declarative/index.html">Declarative</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mutable.html">Mutation Tracking</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="orderinglist.html">Ordering List</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="horizontal_shard.html">Horizontal Sharding</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Hybrid Attributes</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#defining-expression-behavior-distinct-from-attribute-behavior">Defining Expression Behavior Distinct from Attribute Behavior</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#defining-setters">Defining Setters</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#allowing-bulk-orm-update">Allowing Bulk ORM Update</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#working-with-relationships">Working with Relationships</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#join-dependent-relationship-hybrid">Join-Dependent Relationship Hybrid</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#correlated-subquery-relationship-hybrid">Correlated Subquery Relationship Hybrid</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="index.html">ORM拡張</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="associationproxy.html">アソシエーションプロキシ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="automap.html">オートマップ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="baked.html">焼いたクエリ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="declarative/index.html">宣言的</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mutable.html">突然変異の追跡</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="orderinglist.html">オーダーリスト</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="horizontal_shard.html">水平シャーディング</a></span></li>
+<li class="selected"><span class="link-container first"><strong>ハイブリッド属性</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#defining-expression-behavior-distinct-from-attribute-behavior">属性の動作とは区別される式の動作の定義</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#defining-setters">セッターの定義</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#allowing-bulk-orm-update">バルクORMの更新を許可する</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#working-with-relationships">関係を使って作業する</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#join-dependent-relationship-hybrid">結合依存関係ハイブリッド</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#correlated-subquery-relationship-hybrid">相関サブクエリ関係ハイブリッド</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#building-custom-comparators">Building Custom Comparators</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#reusing-hybrid-properties-across-subclasses">Reusing Hybrid Properties across Subclasses</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#hybrid-value-objects">Hybrid Value Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#building-transformers">Building Transformers</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#api-reference">API Reference</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#building-custom-comparators">カスタムコンパレータの作成</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#reusing-hybrid-properties-across-subclasses">サブクラス間でのハイブリッドプロパティの再利用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#hybrid-value-objects">ハイブリッドバリューオブジェクト</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#building-transformers">変圧器の製造</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#api-reference">APIリファレンス</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="indexable.html">Indexable</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="instrumentation.html">Alternate Class Instrumentation</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="indexable.html">インデックス作成可能</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="instrumentation.html">代替クラスの計装</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="../examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -170,21 +170,12 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="module-sqlalchemy.ext.hybrid">
-<span id="hybrid-attributes"></span><span id="hybrids-toplevel"></span><h1>Hybrid Attributes<a class="headerlink" href="#module-sqlalchemy.ext.hybrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Define attributes on ORM-mapped classes that have &quot;hybrid&quot; behavior.</p>
-<p>&quot;hybrid&quot; means the attribute has distinct behaviors defined at the
-class level and at the instance level.</p>
-<p>The <a class="reference internal" href="#module-sqlalchemy.ext.hybrid" title="sqlalchemy.ext.hybrid"><code class="xref py py-mod docutils literal"><span class="pre">hybrid</span></code></a> extension provides a special form of
-method decorator, is around 50 lines of code and has almost no
-dependencies on the rest of SQLAlchemy.  It can, in theory, work with
-any descriptor-based expression system.</p>
-<p>Consider a mapping <code class="docutils literal"><span class="pre">Interval</span></code>, representing integer <code class="docutils literal"><span class="pre">start</span></code> and <code class="docutils literal"><span class="pre">end</span></code>
-values. We can define higher level functions on mapped classes that produce
-SQL expressions at the class level, and Python expression evaluation at the
-instance level.  Below, each function decorated with <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_method" title="sqlalchemy.ext.hybrid.hybrid_method"><code class="xref py py-class docutils literal"><span class="pre">hybrid_method</span></code></a> or
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property" title="sqlalchemy.ext.hybrid.hybrid_property"><code class="xref py py-class docutils literal"><span class="pre">hybrid_property</span></code></a> may receive <code class="docutils literal"><span class="pre">self</span></code> as an instance of the class, or
-as the class itself:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span>
+<span id="hybrid-attributes"></span><span id="hybrids-toplevel"></span><h1>ハイブリッド属性<a class="headerlink" href="#module-sqlalchemy.ext.hybrid" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>&amp;quot;ハイブリッド&amp;quot;の動作を持つORMでマップされたクラスの属性を定義します。</p>
+<p>&amp;quot;hybrid &amp;quot;は、クラスレベルとインスタンスレベルで定義された異なる動作を属性が持つことを意味します。</p>
+<p>：mod： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.ext.hybrid`拡張は、メソッドデコレータの特別な形式を提供し、約50行のコードであり、残りのSQLAlchemyにほとんど依存しません。これは、理論上は、記述子ベースの任意の表現システムで動作します。</p>
+<p>整数の `` start``と `` end``の値を表すマッピング `` Interval``を考えてみましょう。クラスレベルでSQL式を生成するマップされたクラスと、インスタンスレベルでPython式の評価を行う上級レベルの関数を定義できます。以下では、class： <cite>.hybrid_method`または：class：</cite> .hybrid_property`で修飾された各関数は、クラスのインスタンスとして、またはクラス自体として `` self``を受け取ることができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">Session</span><span class="p">,</span> <span class="n">aliased</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_property</span><span class="p">,</span> <span class="n">hybrid_method</span>
@@ -214,19 +205,13 @@ as the class itself:</p>
     <span class="k">def</span> <span class="nf">intersects</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">start</span><span class="p">)</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">end</span><span class="p">)</span></pre></div>
 </div>
-<p>Above, the <code class="docutils literal"><span class="pre">length</span></code> property returns the difference between the
-<code class="docutils literal"><span class="pre">end</span></code> and <code class="docutils literal"><span class="pre">start</span></code> attributes.  With an instance of <code class="docutils literal"><span class="pre">Interval</span></code>,
-this subtraction occurs in Python, using normal Python descriptor
-mechanics:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<p>上記の `` length``プロパティは `` end``と `` start``属性の違いを返します。 `` Interval``のインスタンスでは、この減算は通常のPython記述子機構を使ってPythonで行われます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span><span class="o">.</span><span class="n">length</span>
 <span class="go">5</span></pre></div>
 </div>
-<p>When dealing with the <code class="docutils literal"><span class="pre">Interval</span></code> class itself, the <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property" title="sqlalchemy.ext.hybrid.hybrid_property"><code class="xref py py-class docutils literal"><span class="pre">hybrid_property</span></code></a>
-descriptor evaluates the function body given the <code class="docutils literal"><span class="pre">Interval</span></code> class as
-the argument, which when evaluated with SQLAlchemy expression mechanics
-returns a new SQL expression:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Interval</span><span class="o">.</span><span class="n">length</span>
+<p>：class： <cite>.hybrid_property`デスクリプタは</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>Interval``クラスを引数として関数本体を評価します。これは、SQLAlchemyの式機構で評価されたときに新しいSQL式を返します： ：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Interval</span><span class="o">.</span><span class="n">length</span>
 <span class="go">interval.&quot;end&quot; - interval.start</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Interval</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Interval</span><span class="o">.</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>
@@ -235,22 +220,15 @@ returns a new SQL expression:</p>
 <span class="go">FROM interval</span>
 <span class="go">WHERE interval.&quot;end&quot; - interval.start &gt; :param_1</span></pre></div>
 </div>
-<p>ORM methods such as <a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query.filter_by" title="sqlalchemy.orm.query.Query.filter_by"><code class="xref py py-meth docutils literal"><span class="pre">filter_by()</span></code></a> generally use <code class="docutils literal"><span class="pre">getattr()</span></code> to
-locate attributes, so can also be used with hybrid attributes:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Interval</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<p>：meth： <cite>〜.Query.filter_by`のようなORMメソッドは、一般に属性を見つけるために</cite> <cite>getattr（）</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>を使うので、ハイブリッド属性でも使うことができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Interval</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="go">SELECT interval.id AS interval_id, interval.start AS interval_start,</span>
 <span class="go">interval.&quot;end&quot; AS interval_end</span>
 <span class="go">FROM interval</span>
 <span class="go">WHERE interval.&quot;end&quot; - interval.start = :param_1</span></pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">Interval</span></code> class example also illustrates two methods,
-<code class="docutils literal"><span class="pre">contains()</span></code> and <code class="docutils literal"><span class="pre">intersects()</span></code>, decorated with
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_method" title="sqlalchemy.ext.hybrid.hybrid_method"><code class="xref py py-class docutils literal"><span class="pre">hybrid_method</span></code></a>. This decorator applies the same idea to
-methods that <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property" title="sqlalchemy.ext.hybrid.hybrid_property"><code class="xref py py-class docutils literal"><span class="pre">hybrid_property</span></code></a> applies to attributes.   The
-methods return boolean values, and take advantage of the Python <code class="docutils literal"><span class="pre">|</span></code>
-and <code class="docutils literal"><span class="pre">&amp;</span></code> bitwise operators to produce equivalent instance-level and
-SQL expression-level boolean behavior:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<p>`` Interval``クラスの例は、class： <cite>.hybrid_method`で装飾された</cite> <cite>contains（）</cite> <cite>と</cite> <cite>intersects（）</cite> <cite>の2つのメソッドも示しています。このデコレータは、同じ考え方をメソッドに適用します：class： `.hybrid_property`は属性に適用されます。このメソッドはブール値を返し、Pythonの `</cite> | <a href="#id1"><span class="problematic" id="id2">``</span></a>と <a href="#id3"><span class="problematic" id="id4">``</span></a>と <a href="#id5"><span class="problematic" id="id6">``</span></a>のビット演算子を利用して、同等のインスタンスレベルとSQL式レベルのブーリアンビヘイビアを生成します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 <span class="go">False</span>
@@ -277,17 +255,9 @@ SQL expression-level boolean behavior:</p>
 <span class="go">    AND interval.&quot;end&quot; &gt; interval_1.&quot;end&quot;</span></pre></div>
 </div>
 <div class="section" id="defining-expression-behavior-distinct-from-attribute-behavior">
-<h2>Defining Expression Behavior Distinct from Attribute Behavior<a class="headerlink" href="#defining-expression-behavior-distinct-from-attribute-behavior" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Our usage of the <code class="docutils literal"><span class="pre">&amp;</span></code> and <code class="docutils literal"><span class="pre">|</span></code> bitwise operators above was
-fortunate, considering our functions operated on two boolean values to
-return a new one.   In many cases, the construction of an in-Python
-function and a SQLAlchemy SQL expression have enough differences that
-two separate Python expressions should be defined.  The
-<a class="reference internal" href="#module-sqlalchemy.ext.hybrid" title="sqlalchemy.ext.hybrid"><code class="xref py py-mod docutils literal"><span class="pre">hybrid</span></code></a> decorators define the
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.expression" title="sqlalchemy.ext.hybrid.hybrid_property.expression"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.expression()</span></code></a> modifier for this purpose.   As an
-example we'll define the radius of the interval, which requires the
-usage of the absolute value function:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">func</span>
+<h2>属性の動作とは区別される式の動作の定義<a class="headerlink" href="#defining-expression-behavior-distinct-from-attribute-behavior" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>上記のビット演算子の <a href="#id1"><span class="problematic" id="id2">``</span></a>＆ <a href="#id3"><span class="problematic" id="id4">``</span></a>と `` | <a href="#id5"><span class="problematic" id="id6">``</span></a>の使用法は、関数が新しい値を返すために2つのブール値で操作されるため、幸運でした。多くの場合、Python関数とSQLAlchemy SQL式の構築には、2つの別々のPython式を定義するだけの相違があります。 ：mod： <cite>〜sqlalchemy.ext.hybrid`デコレータは、この目的のために：meth：</cite> .hybrid_property.expression`修飾子を定義します。例として、区間の半径を定義します。絶対値関数を使用する必要があります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">func</span>
 
 <span class="k">class</span> <span class="nc">Interval</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="c1"># ...</span>
@@ -300,10 +270,8 @@ usage of the absolute value function:</p>
     <span class="k">def</span> <span class="nf">radius</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">func</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">length</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span></pre></div>
 </div>
-<p>Above the Python function <code class="docutils literal"><span class="pre">abs()</span></code> is used for instance-level
-operations, the SQL function <code class="docutils literal"><span class="pre">ABS()</span></code> is used via the <a class="reference internal" href="../../core/sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal"><span class="pre">func</span></code></a>
-object for class-level expressions:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span><span class="o">.</span><span class="n">radius</span>
+<p>Python関数の上では、インスタンスレベルの操作に `` abs（） <a href="#id1"><span class="problematic" id="id2">``</span></a>が使用されていますが、クラスレベルの式のために：data： <cite>.func`オブジェクトを介してSQL関数</cite> <a href="#id3"><span class="problematic" id="id4">`</span></a>ABS（）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span><span class="o">.</span><span class="n">radius</span>
 <span class="go">2</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Interval</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Interval</span><span class="o">.</span><span class="n">radius</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span>
@@ -314,10 +282,9 @@ object for class-level expressions:</p>
 </div>
 </div>
 <div class="section" id="defining-setters">
-<h2>Defining Setters<a class="headerlink" href="#defining-setters" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Hybrid properties can also define setter methods.  If we wanted
-<code class="docutils literal"><span class="pre">length</span></code> above, when set, to modify the endpoint value:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Interval</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<h2>セッターの定義<a class="headerlink" href="#defining-setters" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ハイブリッドプロパティは、セッターメソッドを定義することもできます。上記の `` length``を設定した場合、終点の値を変更するには:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Interval</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="c1"># ...</span>
 
     <span class="nd">@hybrid_property</span>
@@ -328,8 +295,8 @@ object for class-level expressions:</p>
     <span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">value</span></pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">length(self,</span> <span class="pre">value)</span></code> method is now called upon set:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<p>`` length（self、value） <a href="#id1"><span class="problematic" id="id2">``</span></a>メソッドはset ::で呼び出されるようになりました</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span> <span class="o">=</span> <span class="n">Interval</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span><span class="o">.</span><span class="n">length</span>
 <span class="go">5</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="mi">12</span>
@@ -338,22 +305,13 @@ object for class-level expressions:</p>
 </div>
 </div>
 <div class="section" id="allowing-bulk-orm-update">
-<span id="hybrid-bulk-update"></span><h2>Allowing Bulk ORM Update<a class="headerlink" href="#allowing-bulk-orm-update" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>A hybrid can define a custom &quot;UPDATE&quot; handler for when using the
-<a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query.update" title="sqlalchemy.orm.query.Query.update"><code class="xref py py-meth docutils literal"><span class="pre">Query.update()</span></code></a> method, allowing the hybrid to be used in the
-SET clause of the update.</p>
-<p>Normally, when using a hybrid with <a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query.update" title="sqlalchemy.orm.query.Query.update"><code class="xref py py-meth docutils literal"><span class="pre">Query.update()</span></code></a>, the SQL
-expression is used as the column that's the target of the SET.  If our
-<code class="docutils literal"><span class="pre">Interval</span></code> class had a hybrid <code class="docutils literal"><span class="pre">start_point</span></code> that linked to
-<code class="docutils literal"><span class="pre">Interval.start</span></code>, this could be substituted directly:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Interval</span><span class="p">)</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">Interval</span><span class="o">.</span><span class="n">start_point</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span></pre></div>
+<span id="hybrid-bulk-update"></span><h2>バルクORMの更新を許可する<a class="headerlink" href="#allowing-bulk-orm-update" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ハイブリッドは、：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Query.update`メソッドを使用するときにカスタム&amp;quot; UPDATE &amp;quot;ハンドラを定義して、そのハイブリッドを更新のSET句で使用できるようにすることができます。</p>
+<p>通常、：meth： <cite>.Query.update`でハイブリッドを使用する場合、SQL式はSETのターゲットとなる列として使用されます。私たちの `</cite> Interval``クラスが `` Interval.start``にリンクされたハイブリッド `` start_point``を持っていれば、これは直接代用することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Interval</span><span class="p">)</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">Interval</span><span class="o">.</span><span class="n">start_point</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span></pre></div>
 </div>
-<p>However, when using a composite hybrid like <code class="docutils literal"><span class="pre">Interval.length</span></code>, this
-hybrid represents more than one column.   We can set up a handler that will
-accommodate a value passed to <a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query.update" title="sqlalchemy.orm.query.Query.update"><code class="xref py py-meth docutils literal"><span class="pre">Query.update()</span></code></a> which can affect
-this, using the <code class="xref py py-meth docutils literal"><span class="pre">hybrid_propery.update_expression()</span></code> decorator.
-A handler that works similarly to our setter would be:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Interval</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<p>しかし、 `` Interval.length``のような複合ハイブリッドを使用する場合、このハイブリッドは複数の列を表します。 ：meth： <cite>.hybrid_propery.update_expression`デコレータを使用して、これに影響する：meth：</cite> .Query.update`に渡された値を受け入れるハンドラを設定できます。私たちのセッターと同様の働きをするハンドラーは:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Interval</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="c1"># ...</span>
 
     <span class="nd">@hybrid_property</span>
@@ -370,33 +328,25 @@ A handler that works similarly to our setter would be:</p>
             <span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">value</span><span class="p">)</span>
         <span class="p">]</span></pre></div>
 </div>
-<p>Above, if we use <code class="docutils literal"><span class="pre">Interval.length</span></code> in an UPDATE expression as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Interval</span><span class="p">)</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+<p>上記のように、UPDATE式で `` Interval.length``を:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Interval</span><span class="p">)</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
     <span class="p">{</span><span class="n">Interval</span><span class="o">.</span><span class="n">length</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span> <span class="n">synchronize_session</span><span class="o">=</span><span class="s1">&#39;fetch&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>We'll get an UPDATE statement along the lines of:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">UPDATE</span> <span class="n">interval</span> <span class="n">SET</span> <span class="n">end</span><span class="o">=</span><span class="n">start</span> <span class="o">+</span> <span class="p">:</span><span class="n">value</span></pre></div>
+<p>私たちは::の行に沿ってUPDATE文を得るでしょう</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UPDATE</span> <span class="n">interval</span> <span class="n">SET</span> <span class="n">end</span><span class="o">=</span><span class="n">start</span> <span class="o">+</span> <span class="p">:</span><span class="n">value</span></pre></div>
 </div>
-<p>In some cases, the default &quot;evaluate&quot; strategy can't perform the SET
-expression in Python; while the addition operator we're using above
-is supported, for more complex SET expressions it will usually be necessary
-to use either the &quot;fetch&quot; or False synchronization strategy as illustrated
-above.</p>
+<p>場合によっては、デフォルトの &amp;quot;評価&amp;quot;戦略はPythonでSET式を実行できません。上で使用している加算演算子はサポートされていますが、より複雑なSET式の場合は、通常、上の図のように&amp;quot;フェッチ&amp;quot;または偽の同期方針を使用する必要があります。</p>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 1.2 で追加: </span>added support for bulk updates to hybrid properties.</p>
+<p><span class="versionmodified">バージョン 1.2 で追加: </span>ハイブリッドプロパティへの一括更新のサポートが追加されました。</p>
 </div>
 </div>
 <div class="section" id="working-with-relationships">
-<h2>Working with Relationships<a class="headerlink" href="#working-with-relationships" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>There's no essential difference when creating hybrids that work with
-related objects as opposed to column-based data. The need for distinct
-expressions tends to be greater.  The two variants we'll illustrate
-are the &quot;join-dependent&quot; hybrid, and the &quot;correlated subquery&quot; hybrid.</p>
+<h2>関係を使って作業する<a class="headerlink" href="#working-with-relationships" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>列ベースのデータではなく、関連するオブジェクトで動作するハイブリッドを作成するときには、本質的な違いはありません。明確な表現の必要性はより大きくなる傾向があります。私たちが示している2つの変種は、&amp;quot;join-dependent &amp;quot;ハイブリッドと&amp;quot;相関サブクエリ&amp;quot;ハイブリッドです。</p>
 <div class="section" id="join-dependent-relationship-hybrid">
-<h3>Join-Dependent Relationship Hybrid<a class="headerlink" href="#join-dependent-relationship-hybrid" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Consider the following declarative
-mapping which relates a <code class="docutils literal"><span class="pre">User</span></code> to a <code class="docutils literal"><span class="pre">SavingsAccount</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">Numeric</span><span class="p">,</span> <span class="n">String</span>
+<h3>結合依存関係ハイブリッド<a class="headerlink" href="#join-dependent-relationship-hybrid" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>`` User``を `` SavingsAccount``に関連付ける次の宣言的なマッピングを考えてみましょう:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">Numeric</span><span class="p">,</span> <span class="n">String</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_property</span>
@@ -435,25 +385,17 @@ mapping which relates a <code class="docutils literal"><span class="pre">User</s
     <span class="k">def</span> <span class="nf">balance</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">SavingsAccount</span><span class="o">.</span><span class="n">balance</span></pre></div>
 </div>
-<p>The above hybrid property <code class="docutils literal"><span class="pre">balance</span></code> works with the first
-<code class="docutils literal"><span class="pre">SavingsAccount</span></code> entry in the list of accounts for this user.   The
-in-Python getter/setter methods can treat <code class="docutils literal"><span class="pre">accounts</span></code> as a Python
-list available on <code class="docutils literal"><span class="pre">self</span></code>.</p>
-<p>However, at the expression level, it's expected that the <code class="docutils literal"><span class="pre">User</span></code> class will
-be used in an appropriate context such that an appropriate join to
-<code class="docutils literal"><span class="pre">SavingsAccount</span></code> will be present:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">User</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span><span class="o">.</span>\
+<p>上記のハイブリッドプロパティ `` balance``は、このユーザのアカウントリストの最初の `` SavingsAccount``エントリと連携します。 in-Pythonのgetter / setterメソッドは `` accounts``を `` self``で利用できるPythonリストとして扱います。</p>
+<p>しかし、表現レベルでは、 `` User``クラスは適切なコンテキストで使用され、 `` SavingsAccount``への適切な結合が存在することが期待されています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">User</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span><span class="o">.</span>\
 <span class="gp">... </span>    <span class="n">join</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">accounts</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">5000</span><span class="p">)</span>
 <span class="go">SELECT &quot;user&quot;.id AS user_id, &quot;user&quot;.name AS user_name,</span>
 <span class="go">account.balance AS account_balance</span>
 <span class="go">FROM &quot;user&quot; JOIN account ON &quot;user&quot;.id = account.user_id</span>
 <span class="go">WHERE account.balance &gt; :balance_1</span></pre></div>
 </div>
-<p>Note however, that while the instance level accessors need to worry
-about whether <code class="docutils literal"><span class="pre">self.accounts</span></code> is even present, this issue expresses
-itself differently at the SQL expression level, where we basically
-would use an outer join:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">or_</span>
+<p>しかし、インスタンスレベルのアクセサは `` self.accounts``が存在するかどうかを心配する必要がありますが、この問題はSQLの表現レベルでは異なって表現されますが、基本的には外部結合:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">or_</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="p">(</span><span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">User</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span><span class="o">.</span><span class="n">outerjoin</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">accounts</span><span class="p">)</span><span class="o">.</span>
 <span class="gp">... </span>        <span class="nb">filter</span><span class="p">(</span><span class="n">or_</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">balance</span> <span class="o">&lt;</span> <span class="mi">5000</span><span class="p">,</span> <span class="n">User</span><span class="o">.</span><span class="n">balance</span> <span class="o">==</span> <span class="kc">None</span><span class="p">)))</span>
 <span class="go">SELECT &quot;user&quot;.id AS user_id, &quot;user&quot;.name AS user_name,</span>
@@ -463,15 +405,9 @@ would use an outer join:</p>
 </div>
 </div>
 <div class="section" id="correlated-subquery-relationship-hybrid">
-<h3>Correlated Subquery Relationship Hybrid<a class="headerlink" href="#correlated-subquery-relationship-hybrid" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>We can, of course, forego being dependent on the enclosing query's usage
-of joins in favor of the correlated subquery, which can portably be packed
-into a single column expression. A correlated subquery is more portable, but
-often performs more poorly at the SQL level. Using the same technique
-illustrated at <a class="reference internal" href="../mapped_sql_expr.html#mapper-column-property-sql-expressions"><span class="std std-ref">Using column_property</span></a>,
-we can adjust our <code class="docutils literal"><span class="pre">SavingsAccount</span></code> example to aggregate the balances for
-<em>all</em> accounts, and use a correlated subquery for the column expression:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">Numeric</span><span class="p">,</span> <span class="n">String</span>
+<h3>相関サブクエリ関係ハイブリッド<a class="headerlink" href="#correlated-subquery-relationship-hybrid" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>もちろん、単一の列式に移植可能な関連サブクエリを使用して、囲むクエリの結合の使用方法に依存することを避けることができます。相関サブクエリは移植性が高くなりますが、SQLレベルではパフォーマンスが低下することがよくあります。 ：ref： <cite>mapper_column_property_sql_expressions`と同じテクニックを使って、</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>SavingsAccount``の例を調整して、* all <a href="#id3"><span class="problematic" id="id4">*</span></a>アカウントの残高を集計し、列式に相関サブクエリを使用することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">Numeric</span><span class="p">,</span> <span class="n">String</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_property</span>
@@ -502,9 +438,8 @@ we can adjust our <code class="docutils literal"><span class="pre">SavingsAccoun
                 <span class="n">where</span><span class="p">(</span><span class="n">SavingsAccount</span><span class="o">.</span><span class="n">user_id</span><span class="o">==</span><span class="bp">cls</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span>\
                 <span class="n">label</span><span class="p">(</span><span class="s1">&#39;total_balance&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>The above recipe will give us the <code class="docutils literal"><span class="pre">balance</span></code> column which renders
-a correlated SELECT:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">s</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">400</span><span class="p">)</span>
+<p>上記のレシピは、相関SELECT ::をレンダリングする `` balance``カラムを与えます</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">s</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">400</span><span class="p">)</span>
 <span class="go">SELECT &quot;user&quot;.id AS user_id, &quot;user&quot;.name AS user_name</span>
 <span class="go">FROM &quot;user&quot;</span>
 <span class="go">WHERE (SELECT sum(account.balance) AS sum_1</span>
@@ -514,21 +449,14 @@ a correlated SELECT:</p>
 </div>
 </div>
 <div class="section" id="building-custom-comparators">
-<span id="hybrid-custom-comparators"></span><h2>Building Custom Comparators<a class="headerlink" href="#building-custom-comparators" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The hybrid property also includes a helper that allows construction of
-custom comparators. A comparator object allows one to customize the
-behavior of each SQLAlchemy expression operator individually.  They
-are useful when creating custom types that have some highly
-idiosyncratic behavior on the SQL side.</p>
+<span id="hybrid-custom-comparators"></span><h2>カスタムコンパレータの作成<a class="headerlink" href="#building-custom-comparators" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ハイブリッドプロパティには、カスタムコンパレータの構築を可能にするヘルパーも含まれます。比較オブジェクトを使用すると、各SQLAlchemy式演算子の動作を個別にカスタマイズできます。これらは、SQL側で非常に特殊な動作をするカスタムタイプを作成する場合に便利です。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">The <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.comparator" title="sqlalchemy.ext.hybrid.hybrid_property.comparator"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.comparator()</span></code></a> decorator introduced
-in this section <strong>replaces</strong> the use of the
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.expression" title="sqlalchemy.ext.hybrid.hybrid_property.expression"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.expression()</span></code></a> decorator.  They cannot be used together.</p>
+<p class="last">このセクションで紹介した：meth： <cite>.hybrid_property.comparator`デコレータ**は：meth：</cite> .hybrid_property.expression`デコレータの使用を置き換えます**。一緒に使うことはできません。</p>
 </div>
-<p>The example class below allows case-insensitive comparisons on the attribute
-named <code class="docutils literal"><span class="pre">word_insensitive</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">Comparator</span><span class="p">,</span> <span class="n">hybrid_property</span>
+<p>以下の例のクラスでは、 `` word_insensitive``という属性の大文字と小文字を区別しない比較が可能です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">Comparator</span><span class="p">,</span> <span class="n">hybrid_property</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">func</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">Session</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
@@ -552,29 +480,22 @@ named <code class="docutils literal"><span class="pre">word_insensitive</span></
     <span class="k">def</span> <span class="nf">word_insensitive</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">CaseInsensitiveComparator</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">word</span><span class="p">)</span></pre></div>
 </div>
-<p>Above, SQL expressions against <code class="docutils literal"><span class="pre">word_insensitive</span></code> will apply the <code class="docutils literal"><span class="pre">LOWER()</span></code>
-SQL function to both sides:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SearchWord</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">word_insensitive</span><span class="o">=</span><span class="s2">&quot;Trucks&quot;</span><span class="p">)</span>
+<p>上の例では、 `` word_insensitive``に対するSQL式は `` LOWER（） `` SQL関数を両側に適用します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SearchWord</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">word_insensitive</span><span class="o">=</span><span class="s2">&quot;Trucks&quot;</span><span class="p">)</span>
 <span class="go">SELECT searchword.id AS searchword_id, searchword.word AS searchword_word</span>
 <span class="go">FROM searchword</span>
 <span class="go">WHERE lower(searchword.word) = lower(:lower_1)</span></pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">CaseInsensitiveComparator</span></code> above implements part of the
-<a class="reference internal" href="../../core/sqlelement.html#sqlalchemy.sql.operators.ColumnOperators" title="sqlalchemy.sql.operators.ColumnOperators"><code class="xref py py-class docutils literal"><span class="pre">ColumnOperators</span></code></a> interface.   A &quot;coercion&quot; operation like
-lowercasing can be applied to all comparison operations (i.e. <code class="docutils literal"><span class="pre">eq</span></code>,
-<code class="docutils literal"><span class="pre">lt</span></code>, <code class="docutils literal"><span class="pre">gt</span></code>, etc.) using <a class="reference internal" href="../../core/sqlelement.html#sqlalchemy.sql.operators.Operators.operate" title="sqlalchemy.sql.operators.Operators.operate"><code class="xref py py-meth docutils literal"><span class="pre">Operators.operate()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CaseInsensitiveComparator</span><span class="p">(</span><span class="n">Comparator</span><span class="p">):</span>
+<p>上記の `` CaseInsensitiveComparator``は：class： <cite>.ColumnOperators`インタフェースの一部を実装しています。 lower演算のような &amp;quot;強制&amp;quot;演算は：meth： `.Operators.operate`を使ってすべての比較演算（</cite> <cite>eq`</cite>、` <cite>lt`</cite>、` <a href="#id1"><span class="problematic" id="id2">`</span></a>gt``など） ：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CaseInsensitiveComparator</span><span class="p">(</span><span class="n">Comparator</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">operate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">op</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">lower</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__clause_element__</span><span class="p">()),</span> <span class="n">func</span><span class="o">.</span><span class="n">lower</span><span class="p">(</span><span class="n">other</span><span class="p">))</span></pre></div>
 </div>
 </div>
 <div class="section" id="reusing-hybrid-properties-across-subclasses">
-<span id="hybrid-reuse-subclass"></span><h2>Reusing Hybrid Properties across Subclasses<a class="headerlink" href="#reusing-hybrid-properties-across-subclasses" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>A hybrid can be referred to from a superclass, to allow modifying
-methods like <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.getter" title="sqlalchemy.ext.hybrid.hybrid_property.getter"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.getter()</span></code></a>, <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.setter" title="sqlalchemy.ext.hybrid.hybrid_property.setter"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.setter()</span></code></a>
-to be used to redefine those methods on a subclass.  This is similar to
-how the standard Python <code class="docutils literal"><span class="pre">&#64;property</span></code> object works:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FirstNameOnly</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="hybrid-reuse-subclass"></span><h2>サブクラス間でのハイブリッドプロパティの再利用<a class="headerlink" href="#reusing-hybrid-properties-across-subclasses" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ハイブリッドはスーパークラスから参照することができ、サブクラスのメソッドを再定義するために：meth： <cite>.hybrid_property.getter</cite>、：meth：` .hybrid_property.setter`のようなメソッドを変更することができます。これは、標準的なPythonの `` &#64; property``オブジェクトの仕組みと似ています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FirstNameOnly</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="c1"># ...</span>
 
     <span class="n">first_name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
@@ -600,17 +521,9 @@ how the standard Python <code class="docutils literal"><span class="pre">&#64;pr
     <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></pre></div>
 </div>
-<p>Above, the <code class="docutils literal"><span class="pre">FirstNameLastName</span></code> class refers to the hybrid from
-<code class="docutils literal"><span class="pre">FirstNameOnly.name</span></code> to repurpose its getter and setter for the subclass.</p>
-<p>When overriding <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.expression" title="sqlalchemy.ext.hybrid.hybrid_property.expression"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.expression()</span></code></a> and
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.comparator" title="sqlalchemy.ext.hybrid.hybrid_property.comparator"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.comparator()</span></code></a> alone as the first reference
-to the superclass, these names conflict
-with the same-named accessors on the class-level <a class="reference internal" href="../internals.html#sqlalchemy.orm.attributes.QueryableAttribute" title="sqlalchemy.orm.attributes.QueryableAttribute"><code class="xref py py-class docutils literal"><span class="pre">QueryableAttribute</span></code></a>
-object returned at the class level.  To override these methods when
-referring directly to the parent class descriptor, add
-the special qualifier <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.overrides" title="sqlalchemy.ext.hybrid.hybrid_property.overrides"><code class="xref py py-attr docutils literal"><span class="pre">hybrid_property.overrides</span></code></a>, which will
-de-reference the instrumented attribute back to the hybrid object:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FirstNameLastName</span><span class="p">(</span><span class="n">FirstNameOnly</span><span class="p">):</span>
+<p>上記の `` FirstNameLastName``クラスは、 `` FirstNameOnly.name``のハイブリッドを参照して、そのサブクラスのgetterとsetterを再利用します。</p>
+<p>スーパークラスの最初の参照として：meth： <cite>.hybrid_property.expression`と：meth：</cite> .hybrid_property.comparator`をオーバーライドすると、これらの名前はクラスレベルで同じ名前のアクセサと衝突します：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.QueryableAttribute <a href="#id3"><span class="problematic" id="id4">`</span></a>オブジェクトはクラスレベルで返されました。親クラス記述子を直接参照するときにこれらのメソッドをオーバーライドするには、特別な修飾子：attr： <a href="#id5"><span class="problematic" id="id6">`</span></a>.hybrid_property.overrides`を追加します。これにより、継承された属性をハイブリッドオブジェクトに逆参照します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FirstNameLastName</span><span class="p">(</span><span class="n">FirstNameOnly</span><span class="p">):</span>
     <span class="c1"># ...</span>
 
     <span class="n">last_name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
@@ -620,26 +533,14 @@ de-reference the instrumented attribute back to the hybrid object:</p>
         <span class="k">return</span> <span class="n">func</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">first_name</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="n">last_name</span><span class="p">)</span></pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 1.2 で追加: </span>Added <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.getter" title="sqlalchemy.ext.hybrid.hybrid_property.getter"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.getter()</span></code></a> as well as the
-ability to redefine accessors per-subclass.</p>
+<p><span class="versionmodified">バージョン 1.2 で追加: </span>追加された：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.hybrid_property.getter`と、サブクラスごとにアクセサを再定義する機能。</p>
 </div>
 </div>
 <div class="section" id="hybrid-value-objects">
-<h2>Hybrid Value Objects<a class="headerlink" href="#hybrid-value-objects" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Note in our previous example, if we were to compare the
-<code class="docutils literal"><span class="pre">word_insensitive</span></code> attribute of a <code class="docutils literal"><span class="pre">SearchWord</span></code> instance to a plain
-Python string, the plain Python string would not be coerced to lower
-case - the <code class="docutils literal"><span class="pre">CaseInsensitiveComparator</span></code> we built, being returned by
-<code class="docutils literal"><span class="pre">&#64;word_insensitive.comparator</span></code>, only applies to the SQL side.</p>
-<p>A more comprehensive form of the custom comparator is to construct a
-<em>Hybrid Value Object</em>. This technique applies the target value or
-expression to a value object which is then returned by the accessor in
-all cases.   The value object allows control of all operations upon
-the value as well as how compared values are treated, both on the SQL
-expression side as well as the Python value side.   Replacing the
-previous <code class="docutils literal"><span class="pre">CaseInsensitiveComparator</span></code> class with a new
-<code class="docutils literal"><span class="pre">CaseInsensitiveWord</span></code> class:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CaseInsensitiveWord</span><span class="p">(</span><span class="n">Comparator</span><span class="p">):</span>
+<h2>ハイブリッドバリューオブジェクト<a class="headerlink" href="#hybrid-value-objects" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>前の例では、 `` SearchWord``インスタンスの `` word_insensitive``属性をプレーンなPython文字列と比較すると、単純なPython文字列は小文字に強制されませんでした -  `` CaseInsensitiveComparator``私たちは `` &#64; word_insensitive.comparator``によって返されるように構築しましたが、SQL側にのみ適用されます。</p>
+<p>カスタムコンパレータのより包括的な形式は、<a href="#id1"><span class="problematic" id="id2">*</span></a>ハイブリッドバリューオブジェクト*を構築することです。この手法では、すべての場合にアクセサーによって返される値オブジェクトにターゲット値または式が適用されます。値オブジェクトを使用すると、SQL式側とPython値側の両方で、値に対するすべての操作と比較値の処理方法を制御できます。以前の `` CaseInsensitiveComparator``クラスを新しい `` CaseInsensitiveWord``クラスに置き換える:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CaseInsensitiveWord</span><span class="p">(</span><span class="n">Comparator</span><span class="p">):</span>
     <span class="s2">&quot;Hybrid value representing a lower case representation of a word.&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
@@ -664,14 +565,8 @@ previous <code class="docutils literal"><span class="pre">CaseInsensitiveCompara
     <span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;word&#39;</span>
     <span class="s2">&quot;Label to apply to Query tuple results&quot;</span></pre></div>
 </div>
-<p>Above, the <code class="docutils literal"><span class="pre">CaseInsensitiveWord</span></code> object represents <code class="docutils literal"><span class="pre">self.word</span></code>,
-which may be a SQL function, or may be a Python native.   By
-overriding <code class="docutils literal"><span class="pre">operate()</span></code> and <code class="docutils literal"><span class="pre">__clause_element__()</span></code> to work in terms
-of <code class="docutils literal"><span class="pre">self.word</span></code>, all comparison operations will work against the
-&quot;converted&quot; form of <code class="docutils literal"><span class="pre">word</span></code>, whether it be SQL side or Python side.
-Our <code class="docutils literal"><span class="pre">SearchWord</span></code> class can now deliver the <code class="docutils literal"><span class="pre">CaseInsensitiveWord</span></code>
-object unconditionally from a single hybrid call:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SearchWord</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>上記の `` CaseInsensitiveWord``オブジェクトは `` self.word``を表します。これはSQL関数でもPythonネイティブでも構いません。 <a href="#id1"><span class="problematic" id="id2">``</span></a>（） <a href="#id3"><span class="problematic" id="id4">``</span></a>と `` __clause_element __（） <a href="#id5"><span class="problematic" id="id6">``</span></a>を `` self.word``を使ってオーバーライドすることにより、すべての比較演算は `` word``の <a href="#id7"><span class="problematic" id="id8">``</span></a>変換された <cite>それがSQL側であろうと、Python側であろうと。 `</cite> SearchWord``クラスは、単一のハイブリッド呼び出しから無条件に `` CaseInsensitiveWord``オブジェクトを配送できるようになりました:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SearchWord</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;searchword&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">word</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -680,17 +575,14 @@ object unconditionally from a single hybrid call:</p>
     <span class="k">def</span> <span class="nf">word_insensitive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">CaseInsensitiveWord</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">word</span><span class="p">)</span></pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">word_insensitive</span></code> attribute now has case-insensitive comparison
-behavior universally, including SQL expression vs. Python expression
-(note the Python value is converted to lower case on the Python side
-here):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SearchWord</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">word_insensitive</span><span class="o">=</span><span class="s2">&quot;Trucks&quot;</span><span class="p">)</span>
+<p>`` word_insensitive``属性は、SQL式とPython式を含む大文字と小文字を区別しない比較動作を持つようになりました（Pythonの値はPython側で小文字に変換されます）。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SearchWord</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">word_insensitive</span><span class="o">=</span><span class="s2">&quot;Trucks&quot;</span><span class="p">)</span>
 <span class="go">SELECT searchword.id AS searchword_id, searchword.word AS searchword_word</span>
 <span class="go">FROM searchword</span>
 <span class="go">WHERE lower(searchword.word) = :lower_1</span></pre></div>
 </div>
-<p>SQL expression versus SQL expression:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sw1</span> <span class="o">=</span> <span class="n">aliased</span><span class="p">(</span><span class="n">SearchWord</span><span class="p">)</span>
+<p>SQL式対SQL式:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sw1</span> <span class="o">=</span> <span class="n">aliased</span><span class="p">(</span><span class="n">SearchWord</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sw2</span> <span class="o">=</span> <span class="n">aliased</span><span class="p">(</span><span class="n">SearchWord</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Session</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
 <span class="gp">... </span>                   <span class="n">sw1</span><span class="o">.</span><span class="n">word_insensitive</span><span class="p">,</span>
@@ -703,8 +595,8 @@ here):</p>
 <span class="go">FROM searchword AS searchword_1, searchword AS searchword_2</span>
 <span class="go">WHERE lower(searchword_1.word) &gt; lower(searchword_2.word)</span></pre></div>
 </div>
-<p>Python only expression:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ws1</span> <span class="o">=</span> <span class="n">SearchWord</span><span class="p">(</span><span class="n">word</span><span class="o">=</span><span class="s2">&quot;SomeWord&quot;</span><span class="p">)</span>
+<p>Pythonのみの式:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ws1</span> <span class="o">=</span> <span class="n">SearchWord</span><span class="p">(</span><span class="n">word</span><span class="o">=</span><span class="s2">&quot;SomeWord&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ws1</span><span class="o">.</span><span class="n">word_insensitive</span> <span class="o">==</span> <span class="s2">&quot;sOmEwOrD&quot;</span>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ws1</span><span class="o">.</span><span class="n">word_insensitive</span> <span class="o">==</span> <span class="s2">&quot;XOmEwOrX&quot;</span>
@@ -712,29 +604,19 @@ here):</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">ws1</span><span class="o">.</span><span class="n">word_insensitive</span>
 <span class="go">someword</span></pre></div>
 </div>
-<p>The Hybrid Value pattern is very useful for any kind of value that may
-have multiple representations, such as timestamps, time deltas, units
-of measurement, currencies and encrypted passwords.</p>
+<p>ハイブリッドバリューパターンは、タイムスタンプ、タイムデルタ、測定単位、通貨、暗号化されたパスワードなど、複数の表現を持つあらゆる種類の値に非常に役立ちます。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference external" href="http://techspot.zzzeek.org/2011/10/21/hybrids-and-value-agnostic-types/">Hybrids and Value Agnostic Types</a>
-- on the techspot.zzzeek.org blog</p>
-<p class="last"><a class="reference external" href="http://techspot.zzzeek.org/2011/10/29/value-agnostic-types-part-ii/">Value Agnostic Types, Part II</a> -
-on the techspot.zzzeek.org blog</p>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>ハイブリッドと価値に依存しない型&lt;<a class="reference external" href="http://techspot.zzzeek.org/2011/10/21/hybrids-and-value-agnostic-types/">http://techspot.zzzeek.org/2011/10/21/hybrids-and-value-agnostic-types/</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  techspot.zzzeek.orgのブログ</p>
+<p class="last"><a href="#id1"><span class="problematic" id="id2">`</span></a>価値不可知論型、その2 &lt;<a class="reference external" href="http://techspot.zzzeek.org/2011/10/29/value-agnostic-types-part-ii/">http://techspot.zzzeek.org/2011/10/29/value-agnostic-types-part-ii/</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  techspot.zzzeek.orgのブログ</p>
 </div>
 </div>
 <div class="section" id="building-transformers">
-<span id="hybrid-transformers"></span><h2>Building Transformers<a class="headerlink" href="#building-transformers" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>A <em>transformer</em> is an object which can receive a <a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a>
-object and return a new one.   The <a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> object includes a
-method <a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query.with_transformation" title="sqlalchemy.orm.query.Query.with_transformation"><code class="xref py py-meth docutils literal"><span class="pre">with_transformation()</span></code></a> that returns a new <a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a>
-transformed by the given function.</p>
-<p>We can combine this with the <a class="reference internal" href="#sqlalchemy.ext.hybrid.Comparator" title="sqlalchemy.ext.hybrid.Comparator"><code class="xref py py-class docutils literal"><span class="pre">Comparator</span></code></a> class to produce one type
-of recipe which can both set up the FROM clause of a query as well as assign
-filtering criterion.</p>
-<p>Consider a mapped class <code class="docutils literal"><span class="pre">Node</span></code>, which assembles using adjacency list
-into a hierarchical tree pattern:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span>
+<span id="hybrid-transformers"></span><h2>変圧器の製造<a class="headerlink" href="#building-transformers" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>A * transformer <a href="#id1"><span class="problematic" id="id2">*</span></a>は：class： <cite>.Query`オブジェクトを受け取って新しいオブジェクトを返すオブジェクトです。 ：class： `.Query`オブジェクトには：meth：</cite> .with_transformation`メソッドが含まれています。このメソッドは、指定された関数によって変換された新しい：class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Query`を返します。</p>
+<p>これを：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Comparator`クラスと組み合わせることで、クエリのFROM句を設定するだけでなくフィルタリング基準を割り当てることもできる1種類のレシピを生成することができます。</p>
+<p>隣接リストを使用して階層ツリーパターンにアセンブルされる、マップされたクラス `` Node``を考えてみましょう:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 <span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
@@ -745,10 +627,8 @@ into a hierarchical tree pattern:</p>
     <span class="n">parent_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;node.id&#39;</span><span class="p">))</span>
     <span class="n">parent</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Node&quot;</span><span class="p">,</span> <span class="n">remote_side</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span></pre></div>
 </div>
-<p>Suppose we wanted to add an accessor <code class="docutils literal"><span class="pre">grandparent</span></code>.  This would
-return the <code class="docutils literal"><span class="pre">parent</span></code> of <code class="docutils literal"><span class="pre">Node.parent</span></code>.  When we have an instance of
-<code class="docutils literal"><span class="pre">Node</span></code>, this is simple:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_property</span>
+<p>アクセサ「祖父母」を追加したいとします。これは `` Node.parent``の `` parent``を返します。 `` Node``のインスタンスがあるとき、これは簡単です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_property</span>
 
 <span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="c1"># ...</span>
@@ -757,14 +637,8 @@ return the <code class="docutils literal"><span class="pre">parent</span></code>
     <span class="k">def</span> <span class="nf">grandparent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span></pre></div>
 </div>
-<p>For the expression, things are not so clear.   We'd need to construct
-a <a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> where we <a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query.join" title="sqlalchemy.orm.query.Query.join"><code class="xref py py-meth docutils literal"><span class="pre">join()</span></code></a> twice along
-<code class="docutils literal"><span class="pre">Node.parent</span></code> to get to the <code class="docutils literal"><span class="pre">grandparent</span></code>.   We can instead return
-a transforming callable that we'll combine with the
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.Comparator" title="sqlalchemy.ext.hybrid.Comparator"><code class="xref py py-class docutils literal"><span class="pre">Comparator</span></code></a> class to receive any <a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> object, and
-return a new one that's joined to the <code class="docutils literal"><span class="pre">Node.parent</span></code> attribute and
-filtered based on the given criterion:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">Comparator</span>
+<p>表現のために、物事はあまり明確ではありません。 `` Node.parent``に沿って：meth： <cite>〜.Query.join`を</cite> <cite>grandparent``に2回置くことで、：class：</cite> .Query`を構築する必要があります。代わりに：class： <cite>.Comparator`クラスと組み合わせて、class：</cite> .Query`オブジェクトを受け取って、 `` Node.parent``に結合された新しいものを返すような変形可能な呼び出し可能コードを返すことができます属性と与えられた基準に基づいてフィルタリングされる:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">Comparator</span>
 
 <span class="k">class</span> <span class="nc">GrandparentTransformer</span><span class="p">(</span><span class="n">Comparator</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">operate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
@@ -791,18 +665,8 @@ filtered based on the given criterion:</p>
     <span class="k">def</span> <span class="nf">grandparent</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">GrandparentTransformer</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span></pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">GrandparentTransformer</span></code> overrides the core
-<a class="reference internal" href="../../core/sqlelement.html#sqlalchemy.sql.operators.Operators.operate" title="sqlalchemy.sql.operators.Operators.operate"><code class="xref py py-meth docutils literal"><span class="pre">Operators.operate()</span></code></a> method at the base of the
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.Comparator" title="sqlalchemy.ext.hybrid.Comparator"><code class="xref py py-class docutils literal"><span class="pre">Comparator</span></code></a> hierarchy to return a query-transforming
-callable, which then runs the given comparison operation in a
-particular context. Such as, in the example above, the <code class="docutils literal"><span class="pre">operate</span></code>
-method is called, given the <code class="xref py py-attr docutils literal"><span class="pre">Operators.eq</span></code> callable as well as
-the right side of the comparison <code class="docutils literal"><span class="pre">Node(id=5)</span></code>.  A function
-<code class="docutils literal"><span class="pre">transform</span></code> is then returned which will transform a <a class="reference internal" href="../query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a>
-first to join to <code class="docutils literal"><span class="pre">Node.parent</span></code>, then to compare <code class="docutils literal"><span class="pre">parent_alias</span></code>
-using <code class="xref py py-attr docutils literal"><span class="pre">Operators.eq</span></code> against the left and right sides, passing
-into <code class="xref py py-class docutils literal"><span class="pre">Query.filter</span></code>:</p>
-<div class="highlight-pycon+sql"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">Session</span>
+<p>`` GrandparentTransformer``は、：class： <cite>.Comparator`階層の基底にあるcore：meth：</cite> .Operators.operate`メソッドをオーバーライドして、問い合わせ変換可能な呼び出し可能オブジェクトを返します。コンテキスト。上の例では、：attr： <cite>.Operators.eq`呼び出し可能で、</cite> <cite>Node（id = 5）</cite> <cite>の右側に</cite> <cite>演算 &amp;#39;&amp;#39;メソッドが呼び出されています。関数 `</cite> transform``が返され、class： <cite>.Query`を最初に</cite> <cite>Node.parent``に結合し、次に</cite> <cite>parent_alias``を：attr：</cite> .Operators.eq <cite>左右に向かって、class：</cite> .Query.filter`：</p>
+<div class="highlight-pycon+sql notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">Session</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
 <a href='#' class='sql_link'>sql</a><span class="gp">&gt;&gt;&gt; </span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Node</span><span class="p">)</span><span class="o">.</span>\
 <span class="gp">... </span>       <span class="n">with_transformation</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">grandparent</span><span class="o">==</span><span class="n">Node</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span><span class="o">.</span>\
@@ -812,13 +676,8 @@ FROM node JOIN node AS node_1 ON node_1.id = node.parent_id
 WHERE :param_1 = node_1.parent_id
 </div></pre></div>
 </div>
-<p>We can modify the pattern to be more verbose but flexible by separating
-the &quot;join&quot; step from the &quot;filter&quot; step.  The tricky part here is ensuring
-that successive instances of <code class="docutils literal"><span class="pre">GrandparentTransformer</span></code> use the same
-<a class="reference internal" href="../query.html#sqlalchemy.orm.util.AliasedClass" title="sqlalchemy.orm.util.AliasedClass"><code class="xref py py-class docutils literal"><span class="pre">AliasedClass</span></code></a> object against <code class="docutils literal"><span class="pre">Node</span></code>.  Below we use a simple
-memoizing approach that associates a <code class="docutils literal"><span class="pre">GrandparentTransformer</span></code>
-with each class:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>&amp;quot;join &amp;quot;ステップを&amp;quot;filter &amp;quot;ステップから分離することにより、より冗長で柔軟なパターンに変更できます。ここでの微妙な部分は、 `` GrandparentTransformer``の連続したインスタンスが `` Node``に対して同じ：class： <cite>.AliasedClass`オブジェクトを使用することです。以下では、 `</cite> GrandparentTransformer``を各クラスに関連付ける簡単なメモ化アプローチを使用しています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
 
     <span class="c1"># ...</span>
 
@@ -844,7 +703,7 @@ with each class:</p>
     <span class="k">def</span> <span class="nf">operate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">op</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent_alias</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span></pre></div>
 </div>
-<div class="highlight-pycon+sql"><div class="highlight"><pre><span></span><a href='#' class='sql_link'>sql</a><span class="gp">&gt;&gt;&gt; </span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Node</span><span class="p">)</span><span class="o">.</span>\
+<div class="highlight-pycon+sql notranslate"><div class="highlight"><pre><span></span><a href='#' class='sql_link'>sql</a><span class="gp">&gt;&gt;&gt; </span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Node</span><span class="p">)</span><span class="o">.</span>\
 <span class="gp">... </span>           <span class="n">with_transformation</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">grandparent</span><span class="o">.</span><span class="n">join</span><span class="p">)</span><span class="o">.</span>\
 <span class="gp">... </span>           <span class="nb">filter</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">grandparent</span><span class="o">==</span><span class="n">Node</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
 <div class='popup_sql'>SELECT node.id AS node_id, node.parent_id AS node_parent_id
@@ -852,25 +711,21 @@ FROM node JOIN node AS node_1 ON node_1.id = node.parent_id
 WHERE :param_1 = node_1.parent_id
 </div></pre></div>
 </div>
-<p>The &quot;transformer&quot; pattern is an experimental pattern that starts
-to make usage of some functional programming paradigms.
-While it's only recommended for advanced and/or patient developers,
-there's probably a whole lot of amazing things it can be used for.</p>
+<p>&amp;quot;transformer &amp;quot;パターンは、いくつかの機能プログラミングパラダイムの使用を開始する実験パターンです。上級者および/または患者の開発者にのみ推奨されますが、おそらくそれが使用できる素晴らしいものがたくさんあります。</p>
 </div>
 <div class="section" id="api-reference">
-<h2>API Reference<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>APIリファレンス<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="class">
 <dt id="sqlalchemy.ext.hybrid.hybrid_method">
 <em class="property">class </em><code class="descclassname">sqlalchemy.ext.hybrid.</code><code class="descname">hybrid_method</code><span class="sig-paren">(</span><em>func</em>, <em>expr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_method" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../internals.html#sqlalchemy.orm.base.InspectionAttrInfo" title="sqlalchemy.orm.base.InspectionAttrInfo"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.orm.base.InspectionAttrInfo</span></code></a></p>
-<p>A decorator which allows definition of a Python object method with both
-instance-level and class-level behavior.</p>
+<dd><p>Bases: <a class="reference internal" href="../internals.html#sqlalchemy.orm.base.InspectionAttrInfo" title="sqlalchemy.orm.base.InspectionAttrInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.orm.base.InspectionAttrInfo</span></code></a></p>
+<p>インスタンスレベルとクラスレベルの両方の動作を持つPythonオブジェクトメソッドの定義を可能にするデコレータ。</p>
 <dl class="method">
 <dt id="sqlalchemy.ext.hybrid.hybrid_method.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>func</em>, <em>expr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_method.__init__" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Create a new <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_method" title="sqlalchemy.ext.hybrid.hybrid_method"><code class="xref py py-class docutils literal"><span class="pre">hybrid_method</span></code></a>.</p>
+<dd><p>Create a new <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_method" title="sqlalchemy.ext.hybrid.hybrid_method"><code class="xref py py-class docutils literal notranslate"><span class="pre">hybrid_method</span></code></a>.</p>
 <p>Usage is typically via decorator:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_method</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_method</span>
 
 <span class="k">class</span> <span class="nc">SomeClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@hybrid_method</span>
@@ -886,8 +741,7 @@ instance-level and class-level behavior.</p>
 <dl class="method">
 <dt id="sqlalchemy.ext.hybrid.hybrid_method.expression">
 <code class="descname">expression</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_method.expression" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Provide a modifying decorator that defines a
-SQL-expression producing method.</p>
+<dd><p>SQL式生成メソッドを定義する修飾デコレータを提供します。</p>
 </dd></dl>
 
 </dd></dl>
@@ -895,15 +749,14 @@ SQL-expression producing method.</p>
 <dl class="class">
 <dt id="sqlalchemy.ext.hybrid.hybrid_property">
 <em class="property">class </em><code class="descclassname">sqlalchemy.ext.hybrid.</code><code class="descname">hybrid_property</code><span class="sig-paren">(</span><em>fget</em>, <em>fset=None</em>, <em>fdel=None</em>, <em>expr=None</em>, <em>custom_comparator=None</em>, <em>update_expr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_property" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../internals.html#sqlalchemy.orm.base.InspectionAttrInfo" title="sqlalchemy.orm.base.InspectionAttrInfo"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.orm.base.InspectionAttrInfo</span></code></a></p>
-<p>A decorator which allows definition of a Python descriptor with both
-instance-level and class-level behavior.</p>
+<dd><p>Bases: <a class="reference internal" href="../internals.html#sqlalchemy.orm.base.InspectionAttrInfo" title="sqlalchemy.orm.base.InspectionAttrInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.orm.base.InspectionAttrInfo</span></code></a></p>
+<p>インスタンスレベルとクラスレベルの両方の動作を持つPython記述子の定義を可能にするデコレータ。</p>
 <dl class="method">
 <dt id="sqlalchemy.ext.hybrid.hybrid_property.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>fget</em>, <em>fset=None</em>, <em>fdel=None</em>, <em>expr=None</em>, <em>custom_comparator=None</em>, <em>update_expr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_property.__init__" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Create a new <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property" title="sqlalchemy.ext.hybrid.hybrid_property"><code class="xref py py-class docutils literal"><span class="pre">hybrid_property</span></code></a>.</p>
+<dd><p>Create a new <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property" title="sqlalchemy.ext.hybrid.hybrid_property"><code class="xref py py-class docutils literal notranslate"><span class="pre">hybrid_property</span></code></a>.</p>
 <p>Usage is typically via decorator:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_property</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_property</span>
 
 <span class="k">class</span> <span class="nc">SomeClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@hybrid_property</span>
@@ -919,74 +772,40 @@ instance-level and class-level behavior.</p>
 <dl class="method">
 <dt id="sqlalchemy.ext.hybrid.hybrid_property.comparator">
 <code class="descname">comparator</code><span class="sig-paren">(</span><em>comparator</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_property.comparator" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Provide a modifying decorator that defines a custom
-comparator producing method.</p>
-<p>The return value of the decorated method should be an instance of
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.Comparator" title="sqlalchemy.ext.hybrid.Comparator"><code class="xref py py-class docutils literal"><span class="pre">Comparator</span></code></a>.</p>
+<dd><p>カスタムコンパレータ生成メソッドを定義する修正デコレータを提供します。</p>
+<p>装飾されたメソッドの戻り値は、class： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.hybrid.Comparator`のインスタンスでなければなりません。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">The <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.comparator" title="sqlalchemy.ext.hybrid.hybrid_property.comparator"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.comparator()</span></code></a> decorator
-<strong>replaces</strong> the use of the <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.expression" title="sqlalchemy.ext.hybrid.hybrid_property.expression"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.expression()</span></code></a>
-decorator.  They cannot be used together.</p>
+<p class="last">：meth： <cite>.hybrid_property.comparator`デコレータ**は：meth：</cite> .hybrid_property.expression`デコレータの使用を置き換えます**。一緒に使うことはできません。</p>
 </div>
-<p>When a hybrid is invoked at the class level, the
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.Comparator" title="sqlalchemy.ext.hybrid.Comparator"><code class="xref py py-class docutils literal"><span class="pre">Comparator</span></code></a> object given here is wrapped inside of a
-specialized <a class="reference internal" href="../internals.html#sqlalchemy.orm.attributes.QueryableAttribute" title="sqlalchemy.orm.attributes.QueryableAttribute"><code class="xref py py-class docutils literal"><span class="pre">QueryableAttribute</span></code></a>, which is the same kind of
-object used by the ORM to represent other mapped attributes.   The
-reason for this is so that other class-level attributes such as
-docstrings and a reference to the hybrid itself may be maintained
-within the structure that's returned, without any modifications to the
-original comparator object passed in.</p>
+<p>ハイブリッドがクラスレベルで呼び出されると、ここで与えられた：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.hybrid.Comparator`オブジェクトは、class：：.QueryableAttributeの内部にラップされます。これは、ORMによって使用されるオブジェクトと同じ種類のオブジェクトです他のマップされた属性を表します。この理由は、渡された元のコンパレータ・オブジェクトに変更を加えることなく、返された構造体内でdocstringやハイブリッドへの参照などの他のクラス・レベル属性を維持できるためです。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">when referring to a hybrid property  from an owning class (e.g.
-<code class="docutils literal"><span class="pre">SomeClass.some_hybrid</span></code>), an instance of
-<a class="reference internal" href="../internals.html#sqlalchemy.orm.attributes.QueryableAttribute" title="sqlalchemy.orm.attributes.QueryableAttribute"><code class="xref py py-class docutils literal"><span class="pre">QueryableAttribute</span></code></a> is returned, representing the
-expression or comparator object as this  hybrid object.  However,
-that object itself has accessors called <code class="docutils literal"><span class="pre">expression</span></code> and
-<code class="docutils literal"><span class="pre">comparator</span></code>; so when attempting to override these decorators on a
-subclass, it may be necessary to qualify it using the
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.overrides" title="sqlalchemy.ext.hybrid.hybrid_property.overrides"><code class="xref py py-attr docutils literal"><span class="pre">hybrid_property.overrides</span></code></a> modifier first.  See that
-modifier for details.</p>
+<p class="last">所有クラス（例えば、 `` SomeClass.some_hybrid``）からのハイブリッドプロパティを参照すると、class： <cite>.QueryableAttribute`のインスタンスが返され、式またはコンパレータオブジェクトをこのハイブリッドオブジェクトとして表します。しかし、そのオブジェクト自体には `</cite> expression``と `` comparator``というアクセサがあります。そのため、これらのデコレータをサブクラスでオーバーライドしようとすると、：attr： <a href="#id1"><span class="problematic" id="id2">`</span></a>.hybrid_property.overrides`修飾子を使用して修飾する必要があります。詳細については、その修飾子を参照してください。</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.ext.hybrid.hybrid_property.deleter">
 <code class="descname">deleter</code><span class="sig-paren">(</span><em>fdel</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_property.deleter" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Provide a modifying decorator that defines a deletion method.</p>
+<dd><p>削除メソッドを定義する変更デコレータを提供します。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.ext.hybrid.hybrid_property.expression">
 <code class="descname">expression</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_property.expression" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Provide a modifying decorator that defines a SQL-expression
-producing method.</p>
-<p>When a hybrid is invoked at the class level, the SQL expression given
-here is wrapped inside of a specialized <a class="reference internal" href="../internals.html#sqlalchemy.orm.attributes.QueryableAttribute" title="sqlalchemy.orm.attributes.QueryableAttribute"><code class="xref py py-class docutils literal"><span class="pre">QueryableAttribute</span></code></a>,
-which is the same kind of object used by the ORM to represent other
-mapped attributes.   The reason for this is so that other class-level
-attributes such as docstrings and a reference to the hybrid itself may
-be maintained within the structure that's returned, without any
-modifications to the original SQL expression passed in.</p>
+<dd><p>SQL式生成メソッドを定義する修飾デコレータを提供します。</p>
+<p>ハイブリッドがクラスレベルで呼び出されると、ここで与えられたSQL式は特殊な：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.QueryableAttribute`の中にラップされます。これは、他のマップされた属性を表すためにORMによって使用されるオブジェクトと同じ種類のオブジェクトです。この理由は、渡された元のSQL式に変更を加えずに、戻された構造内でdocstringやハイブリッドへの参照などの他のクラス・レベル属性を維持できるようにするためです。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">when referring to a hybrid property  from an owning class (e.g.
-<code class="docutils literal"><span class="pre">SomeClass.some_hybrid</span></code>), an instance of
-<a class="reference internal" href="../internals.html#sqlalchemy.orm.attributes.QueryableAttribute" title="sqlalchemy.orm.attributes.QueryableAttribute"><code class="xref py py-class docutils literal"><span class="pre">QueryableAttribute</span></code></a> is returned, representing the
-expression or comparator object as well as this  hybrid object.
-However, that object itself has accessors called <code class="docutils literal"><span class="pre">expression</span></code> and
-<code class="docutils literal"><span class="pre">comparator</span></code>; so when attempting to override these decorators on a
-subclass, it may be necessary to qualify it using the
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.overrides" title="sqlalchemy.ext.hybrid.hybrid_property.overrides"><code class="xref py py-attr docutils literal"><span class="pre">hybrid_property.overrides</span></code></a> modifier first.  See that
-modifier for details.</p>
+<p class="last">所有クラス（例えば `` SomeClass.some_hybrid``）からのハイブリッドプロパティを参照すると、class： <cite>.QueryableAttribute`のインスタンスが返され、式またはコンパレータオブジェクトとこのハイブリッドオブジェクトを表します。しかし、そのオブジェクト自体には `</cite> expression``と `` comparator``というアクセサがあります。そのため、これらのデコレータをサブクラスでオーバーライドしようとすると、：attr： <a href="#id1"><span class="problematic" id="id2">`</span></a>.hybrid_property.overrides`修飾子を使用して修飾する必要があります。詳細については、その修飾子を参照してください。</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.ext.hybrid.hybrid_property.getter">
 <code class="descname">getter</code><span class="sig-paren">(</span><em>fget</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_property.getter" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Provide a modifying decorator that defines a getter method.</p>
+<dd><p>getterメソッドを定義する修飾デコレータを提供します。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.2 で追加.</span></p>
 </div>
@@ -995,16 +814,9 @@ modifier for details.</p>
 <dl class="attribute">
 <dt id="sqlalchemy.ext.hybrid.hybrid_property.overrides">
 <code class="descname">overrides</code><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_property.overrides" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Prefix for a method that is overriding an existing attribute.</p>
-<p>The <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.overrides" title="sqlalchemy.ext.hybrid.hybrid_property.overrides"><code class="xref py py-attr docutils literal"><span class="pre">hybrid_property.overrides</span></code></a> accessor just returns
-this hybrid object, which when called at the class level from
-a parent class, will de-reference the &quot;instrumented attribute&quot;
-normally returned at this level, and allow modifying decorators
-like <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.expression" title="sqlalchemy.ext.hybrid.hybrid_property.expression"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.expression()</span></code></a> and
-<a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_property.comparator" title="sqlalchemy.ext.hybrid.hybrid_property.comparator"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.comparator()</span></code></a>
-to be used without conflicting with the same-named attributes
-normally present on the <a class="reference internal" href="../internals.html#sqlalchemy.orm.attributes.QueryableAttribute" title="sqlalchemy.orm.attributes.QueryableAttribute"><code class="xref py py-class docutils literal"><span class="pre">QueryableAttribute</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SuperClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<dd><p>既存の属性をオーバーライドするメソッドの接頭辞。</p>
+<p>：attr： <cite>.hybrid_property.overrides`アクセサは、このハイブリッドオブジェクトを返します。このクラスは、親クラスからクラスレベルで呼び出されると、このレベルで通常返される&amp;quot; instrumented属性&amp;quot;を参照解除し、デコレータ：meth： `.hybrid_property.expression`や:: meth：</cite> .hybrid_property.comparator`のように、通常は：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.QueryableAttribute`にある同じ名前の属性と衝突することなく使用されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SuperClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="c1"># ...</span>
 
     <span class="nd">@hybrid_property</span>
@@ -1023,29 +835,23 @@ normally present on the <a class="reference internal" href="../internals.html#sq
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="#hybrid-reuse-subclass"><span class="std std-ref">Reusing Hybrid Properties across Subclasses</span></a></p>
+<p class="last">：ref： <cite>hybrid_reuse_subclass</cite></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.ext.hybrid.hybrid_property.setter">
 <code class="descname">setter</code><span class="sig-paren">(</span><em>fset</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_property.setter" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Provide a modifying decorator that defines a setter method.</p>
+<dd><p>setterメソッドを定義する修飾デコレータを提供します。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.ext.hybrid.hybrid_property.update_expression">
 <code class="descname">update_expression</code><span class="sig-paren">(</span><em>meth</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.hybrid_property.update_expression" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Provide a modifying decorator that defines an UPDATE tuple
-producing method.</p>
-<p>The method accepts a single value, which is the value to be
-rendered into the SET clause of an UPDATE statement.  The method
-should then process this value into individual column expressions
-that fit into the ultimate SET clause, and return them as a
-sequence of 2-tuples.  Each tuple
-contains a column expression as the key and a value to be rendered.</p>
-<p>E.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<dd><p>UPDATEタプル生成メソッドを定義する変更デコレータを提供します。</p>
+<p>このメソッドは、単一の値を受け取ります。これは、UPDATEステートメントのSET節にレンダリングされる値です。メソッドは、この値を最終的なSET句に収まる個々の列式に処理し、それらを2タプルのシーケンスとして返します。各タプルには、キーとしての列式とレンダリングされる値が含まれています。</p>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="c1"># ...</span>
 
     <span class="n">first_name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
@@ -1073,21 +879,37 @@ contains a column expression as the key and a value to be rendered.</p>
 <dl class="class">
 <dt id="sqlalchemy.ext.hybrid.Comparator">
 <em class="property">class </em><code class="descclassname">sqlalchemy.ext.hybrid.</code><code class="descname">Comparator</code><span class="sig-paren">(</span><em>expression</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.hybrid.Comparator" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../internals.html#sqlalchemy.orm.interfaces.PropComparator" title="sqlalchemy.orm.interfaces.PropComparator"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.orm.interfaces.PropComparator</span></code></a></p>
-<p>A helper class that allows easy construction of custom
-<a class="reference internal" href="../internals.html#sqlalchemy.orm.interfaces.PropComparator" title="sqlalchemy.orm.interfaces.PropComparator"><code class="xref py py-class docutils literal"><span class="pre">PropComparator</span></code></a>
-classes for usage with hybrids.</p>
+<dd><p>Bases: <a class="reference internal" href="../internals.html#sqlalchemy.orm.interfaces.PropComparator" title="sqlalchemy.orm.interfaces.PropComparator"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.orm.interfaces.PropComparator</span></code></a></p>
+<p>class： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.orm.interfaces.PropComparator`クラスを簡単に構築できるヘルパークラスです。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="sqlalchemy.ext.hybrid.HYBRID_METHOD">
 <code class="descclassname">sqlalchemy.ext.hybrid.</code><code class="descname">HYBRID_METHOD</code><em class="property"> = symbol('HYBRID_METHOD')</em><a class="headerlink" href="#sqlalchemy.ext.hybrid.HYBRID_METHOD" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Symbol indicating an <code class="xref py py-class docutils literal notranslate"><span class="pre">InspectionAttr</span></code> that's
+of type <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_method" title="sqlalchemy.ext.hybrid.hybrid_method"><code class="xref py py-class docutils literal notranslate"><span class="pre">hybrid_method</span></code></a>.</p>
+<p>Is assigned to the <a class="reference internal" href="../internals.html#sqlalchemy.orm.base.InspectionAttr.extension_type" title="sqlalchemy.orm.base.InspectionAttr.extension_type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">InspectionAttr.extension_type</span></code></a>
+attibute.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">参考</p>
+<p class="last"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapper.all_orm_attributes</span></code></p>
+</div>
+</dd></dl>
 
 <dl class="data">
 <dt id="sqlalchemy.ext.hybrid.HYBRID_PROPERTY">
 <code class="descclassname">sqlalchemy.ext.hybrid.</code><code class="descname">HYBRID_PROPERTY</code><em class="property"> = symbol('HYBRID_PROPERTY')</em><a class="headerlink" href="#sqlalchemy.ext.hybrid.HYBRID_PROPERTY" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
+<dd><dl class="docutils">
+<dt>Symbol indicating an <code class="xref py py-class docutils literal notranslate"><span class="pre">InspectionAttr</span></code> that's</dt>
+<dd>of type <a class="reference internal" href="#sqlalchemy.ext.hybrid.hybrid_method" title="sqlalchemy.ext.hybrid.hybrid_method"><code class="xref py py-class docutils literal notranslate"><span class="pre">hybrid_method</span></code></a>.</dd>
+</dl>
+<p>Is assigned to the <a class="reference internal" href="../internals.html#sqlalchemy.orm.base.InspectionAttr.extension_type" title="sqlalchemy.orm.base.InspectionAttr.extension_type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">InspectionAttr.extension_type</span></code></a>
+attibute.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">参考</p>
+<p class="last"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapper.all_orm_attributes</span></code></p>
+</div>
+</dd></dl>
 
 </div>
 </div>
@@ -1098,13 +920,13 @@ classes for usage with hybrids.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="horizontal_shard.html" title="previous chapter">Horizontal Sharding</a>
+        <a href="horizontal_shard.html" title="previous chapter">水平シャーディング</a>
         Next:
-        <a href="indexable.html" title="next chapter">Indexable</a>
+        <a href="indexable.html" title="next chapter">インデックス作成可能</a>
 
     <div id="docs-copyright">
         &copy; <a href="../../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -1131,6 +953,7 @@ classes for usage with hybrids.</p>
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../../_static/detectmobile.js"></script>

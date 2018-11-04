@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/relationship_persistence.rst:2
 msgid "Special Relationship Persistence Patterns"
-msgstr ""
+msgstr "特別な関係の永続パターン"
 
 #: ../../orm/relationship_persistence.rst:7
 msgid "Rows that point to themselves / Mutually Dependent Rows"
-msgstr ""
+msgstr "自分自身を指す行/相互に依存する行"
 
 #: ../../orm/relationship_persistence.rst:9
 msgid ""
@@ -31,27 +21,27 @@ msgid ""
 "and a second UPDATE in order to properly populate a row (and vice versa "
 "an UPDATE and DELETE in order to delete without violating foreign key "
 "constraints). The two use cases are:"
-msgstr ""
+msgstr "これは、関係（）が行を適切に埋めるためにINSERTと2番目のUPDATEを実行しなければならない非常に特殊なケースです（また、外部キー制約に違反することなく削除するためにUPDATEとDELETEの逆も同様です）。 2つのユースケースは次のとおりです。"
 
 #: ../../orm/relationship_persistence.rst:14
 msgid ""
 "A table contains a foreign key to itself, and a single row will have a "
 "foreign key value pointing to its own primary key."
-msgstr ""
+msgstr "テーブルには、それ自身の外部キーが含まれています.1つの行には、それ自身のプライマリキーを指す外部キー値があります。"
 
 #: ../../orm/relationship_persistence.rst:16
 msgid ""
 "Two tables each contain a foreign key referencing the other table, with a"
 " row in each table referencing the other."
-msgstr ""
+msgstr "2つのテーブルには、それぞれ他のテーブルを参照する外部キーが含まれ、各テーブル内の行は他のテーブルを参照します。"
 
 #: ../../orm/relationship_persistence.rst:19
 msgid "For example::"
-msgstr ""
+msgstr "例えば：："
 
 #: ../../orm/relationship_persistence.rst:26
 msgid "Or::"
-msgstr ""
+msgstr "または::"
 
 #: ../../orm/relationship_persistence.rst:33
 msgid ""
@@ -63,7 +53,7 @@ msgid ""
 "model of row population during flush, so unless you are populating the "
 "primary key/foreign key columns directly, "
 ":func:`~sqlalchemy.orm.relationship` needs to use two statements."
-msgstr ""
+msgstr "最初のケースでは、行はそれ自身を指しています。技術的には、PostgreSQLやOracleなどのシーケンスを使用するデータベースでは、以前に生成された値を使用して一度に行をINSERTできますが、自動インクリメントスタイルの主キー識別子に依存するデータベースではできません。 ：func： `〜sqlalchemy.orm.relationship`は、flush中に行母集団の\&quot;親/子\ &quot;モデルを常に仮定しているので、主キー/外部キー列に直接入力しない限り、：func：`〜sqlalchemy。 orm.relationship`は2つのステートメントを使用する必要があります。"
 
 #: ../../orm/relationship_persistence.rst:41
 msgid ""
@@ -77,7 +67,7 @@ msgid ""
 "commit\" (a feature some databases support) and if the identifiers were "
 "populated manually (again essentially bypassing "
 ":func:`~sqlalchemy.orm.relationship`)."
-msgstr ""
+msgstr "2番目のケースでは、\ &quot;ウィジェット\&quot;の行は参照\ &quot;エントリ\&quot;行の前に挿入する必要がありますが、\ &quot;ウィジェット\&quot;行の\ &quot;favorite_entry_id \&quot;列は\ &quot;エントリ\ &quot;行が生成されました。この場合、通常は2つのINSERT文を使用して\ &quot;widget \&quot;と\ &quot;entry \&quot;行を挿入することは不可能です。外部キーの制約を満たすためにUPDATEを実行する必要があります。例外は、外部キーが\ &quot;コミットまで延期されました\&quot;（一部のデータベースでサポートされている機能）として設定されていて、識別子が手動で設定されていた場合です（func： `〜sqlalchemy.orm.relationship`）。"
 
 #: ../../orm/relationship_persistence.rst:51
 msgid ""
@@ -89,7 +79,7 @@ msgid ""
 "DELETE is emitted.  The flag should be placed on just *one* of the "
 "relationships, preferably the many-to-one side.  Below we illustrate a "
 "complete example, including two :class:`.ForeignKey` constructs::"
-msgstr ""
+msgstr "補足的なUPDATE文の使用を可能にするために、：func： `.relationship`の：paramref：`〜.relationship.post_update`オプションを使用します。両方の行がINSERTEDされた後、UPDATE文を使用して2つの行間のリンケージを作成する必要があることを指定します。 DELETEが発行される前に、UPDATEを介して行が相互に関連付け解除されます。フラグはリレーションシップの* one *、好ましくはmany-to-oneサイドに配置する必要があります。以下は、2つの例を含む完全な例です：class： `.ForeignKey`構造体::"
 
 #: ../../orm/relationship_persistence.rst:89
 msgid ""
@@ -99,7 +89,7 @@ msgid ""
 "\"widget\" row, and then an UPDATE statement will populate the "
 "\"favorite_entry_id\" column of the \"widget\" table (it's one row at a "
 "time for the time being):"
-msgstr ""
+msgstr "上記の構成に対する構造体がフラッシュされると、\ &quot;widget \&quot;行がINSERTされて\ &quot;favorite_entry_id \&quot;の値から差し引かれ、すべての\ &quot;entry \&quot;行が親\ &quot;widget \&quot;行それからUPDATEステートメントは、\ &quot;widget \&quot;テーブルの\ &quot;favorite_entry_id \&quot;カラムに値を設定します（これは一度に1行です）。"
 
 #: ../../orm/relationship_persistence.rst:112
 msgid ""
@@ -108,7 +98,7 @@ msgid ""
 "guaranteed that ``favorite_entry_id`` refers to an ``Entry`` that also "
 "refers to this ``Widget``.  We can use a composite foreign key, as "
 "illustrated below::"
-msgstr ""
+msgstr "もう一つの設定として、 ``ウィジェット ``にはより包括的な外部キー制約を与えることができます。 `` favorite_entry_id``が ``ウィジェット &#39;&#39;を参照する ``エントリー &#39;&#39;を参照することが保証されています。以下に示すように、複合外部キーを使用できます::"
 
 #: ../../orm/relationship_persistence.rst:159
 msgid ""
@@ -119,11 +109,11 @@ msgid ""
 " on :class:`.Column`, and additionally on each :func:`.relationship` we "
 "must limit those columns considered as part of the foreign key for the "
 "purposes of joining and cross-population."
-msgstr ""
+msgstr "上記のマッピングは、 `` widget_id``と `` favorite_entry_id``カラムを橋渡しする複合：クラス： `.ForeignKeyConstraint`を特徴としています。 `` Widget.widget_id``が\ &quot;autoincrementing \&quot;カラムのままであることを保証するために、paramref： `〜.Column.autoincrement`を値` `\&quot; ignore_fk \ &quot;` `on：class：` .Column` func： `.relationship`のそれぞれには、結合およびクロス・ポピュレーションの目的で外部キーの一部と見なされる列を制限する必要があります。"
 
 #: ../../orm/relationship_persistence.rst:170
 msgid "Mutable Primary Keys / Update Cascades"
-msgstr ""
+msgstr "変更可能な主キー/更新カスケード"
 
 #: ../../orm/relationship_persistence.rst:172
 msgid ""
@@ -134,7 +124,7 @@ msgid ""
 " referenced foreign keys - the values cannot be out of sync for any "
 "moment unless the constraints are marked as \"deferrable\", that is, not "
 "enforced until the transaction completes."
-msgstr ""
+msgstr "エンティティの主キーが変更されると、主キーを参照する関連項目も更新する必要があります。参照整合性を実施するデータベースの場合、データベースのON UPDATE CASCADE機能を使用して、主キーの変更を参照先の外部キーに伝播することが最善の方法です。制約が &quot;遅延可能&quot; \ &quot;、つまり、トランザクションが完了するまで強制されません。"
 
 #: ../../orm/relationship_persistence.rst:181
 msgid ""
@@ -142,7 +132,7 @@ msgid ""
 "natural primary keys with mutable values to use the ``ON UPDATE CASCADE``"
 " capabilities of the database.   An example mapping which illustrates "
 "this is::"
-msgstr ""
+msgstr "データベースの &quot;ON UPDATE CASCADE&quot;機能を使用するために、変更可能な値を持つ自然な主キーを採用しようとするアプリケーションを**強くお勧めします**。これを示すマッピング例は::"
 
 #: ../../orm/relationship_persistence.rst:205
 msgid ""
@@ -152,21 +142,21 @@ msgid ""
 "referential integrity is used.  When using SQLite, referential integrity "
 "should be enabled, using the configuration described at "
 ":ref:`sqlite_foreign_keys`."
-msgstr ""
+msgstr "上記では、：class： `.ForeignKey`オブジェクトの` `onupdate = \&quot; cascade \ &quot;` `を示し、` `mysql_engine = &#39;InnoDB``の設定を示します。参照整合性をサポートする `` InnoDB``エンジンが使用されています。 SQLiteを使用する場合、参照：ref： `sqlite_foreign_keys`で説明されている設定を使用して、参照整合性を有効にする必要があります。"
 
 #: ../../orm/relationship_persistence.rst:214
 msgid ":ref:`passive_deletes` - supporting ON DELETE CASCADE with relationships"
-msgstr ""
+msgstr "：ref： `passive_deletes`  - 関係と一緒にDELETE CASCADEをサポートする"
 
 #: ../../orm/relationship_persistence.rst:216
 msgid ""
 ":paramref:`.orm.mapper.passive_updates` - similar feature on "
 ":func:`.mapper`"
-msgstr ""
+msgstr "：paramref： `.orm.mapper.passive_updates`  - 類似機能：func：` .mapper`"
 
 #: ../../orm/relationship_persistence.rst:220
 msgid "Simulating limited ON UPDATE CASCADE without foreign key support"
-msgstr ""
+msgstr "外部キーのサポートなしで限定的なON UPDATE CASCADEをシミュレート"
 
 #: ../../orm/relationship_persistence.rst:222
 msgid ""
@@ -182,7 +172,7 @@ msgid ""
 "support for ``ON UPDATE CASCADE``, but because it still enforces "
 "referential integrity, needs constraints to be marked as deferrable so "
 "that SQLAlchemy can emit UPDATE statements."
-msgstr ""
+msgstr "参照整合性をサポートしていないデータベースが使用され、変更可能な値を持つ自然な主キーが有効な場合、SQLAlchemyは主キー値をすでに参照されている外部キーに**限定された**エクステントは、値が変更された主キー列を即座に参照する外部キー列に対してUPDATEステートメントを発行します。参照整合性機能を持たない主なプラットフォームは、 `` MyISAM``ストレージエンジンを使用している場合はMySQL、 `` PRAGMA foreign_keys = ON``プラグマを使用しない場合はSQLiteです。 Oracleデータベースでは、「ON UPDATE CASCADE」はサポートされていませんが、依然として参照整合性が強制されているため、SQLAlchemyがUPDATE文を発行できるように遅延制約としてマークする必要があります。"
 
 #: ../../orm/relationship_persistence.rst:235
 msgid ""
@@ -194,15 +184,15 @@ msgid ""
 "collection referred to by the parent object with a changing primary key "
 "value.  This also implies that collections will be fully loaded into "
 "memory if not already locally present."
-msgstr ""
+msgstr "この機能は：paramref： `〜.relationship.passive_updates`フラグを` `False``に、最も好ましくは一対多多対多：func：` .relationship`に設定することで有効になります。 \ &quot;更新\&quot;がもはや\ &quot;パッシブ\&quot;でなければ、SQLAlchemyは主キー値の変更を伴う親オブジェクトによって参照されるコレクションで参照されるオブジェクトに対して個別にUPDATEステートメントを発行することを示します。これはまた、コレクションがまだローカルに存在していない場合、メモリに完全にロードされることを意味します。"
 
 #: ../../orm/relationship_persistence.rst:245
 msgid "Our previous mapping using ``passive_updates=False`` looks like::"
-msgstr ""
+msgstr "`` passive_updates = False``を使った以前のマッピングは次のようになります::"
 
 #: ../../orm/relationship_persistence.rst:263
 msgid "Key limitations of ``passive_updates=False`` include:"
-msgstr ""
+msgstr "`` passive_updates = False``の重要な制限は次のとおりです："
 
 #: ../../orm/relationship_persistence.rst:265
 msgid ""
@@ -211,7 +201,7 @@ msgid ""
 "also must emit  UPDATE statements against those values, which it will "
 "attempt to run  in \"batches\" but still runs on a per-row basis at the "
 "DBAPI level."
-msgstr ""
+msgstr "SELECTを使用して影響を受けるコレクションを完全に事前ロードする必要があるため、UPDATEステートメントを\ &quot;バッチ\&quot;で実行しようとするUPDATEステートメントを発行する必要があるため、ダイレクトデータベースのON UPDATE CASCADEよりもはるかにパフォーマンスが劣ります行単位でDBAPIレベルで実行されます。"
 
 #: ../../orm/relationship_persistence.rst:271
 msgid ""
@@ -220,7 +210,7 @@ msgid ""
 "then mapping Y's primary key is itself a foreign key to mapping Z, "
 "``passive_updates=False`` cannot cascade a change in primary key value "
 "from ``Z`` to ``X``."
-msgstr ""
+msgstr "この機能は複数のレベルでカスケードすることはできません。つまり、マッピングXがマッピングYの主キーを参照する外部キーを持っているが、Yの主キーをマッピングすること自体がZをマッピングする外部キーである場合、 `` passive_updates = False``は主キー値の変更をカスケードすることができません「Z」から「X」まで"
 
 #: ../../orm/relationship_persistence.rst:277
 msgid ""
@@ -228,7 +218,7 @@ msgid ""
 "relationship will not have a full effect, as the unit of work searches "
 "only through the current identity map for objects that may be referencing"
 " the one with a mutating primary key, not throughout the database."
-msgstr ""
+msgstr "関係の多対1側でのみ `` passive_updates = False``を設定することは、作業単位が、変化しているものを参照している可能性のあるオブジェクトの現在のアイデンティティマップを介してのみ検索するので、完全な効果を持ちません主キーであり、データベース全体ではありません。"
 
 #: ../../orm/relationship_persistence.rst:283
 msgid ""
@@ -236,5 +226,5 @@ msgid ""
 "CASCADE``, it is highly recommended that traditional ``ON UPDATE "
 "CASCADE`` support be used in the case that natural and mutable primary "
 "key values are in use."
-msgstr ""
+msgstr "事実上、Oracle以外のすべてのデータベースが「ON UPDATE CASCADE」をサポートしているので、自然かつ変更可能な主キー値が使用されている場合には、従来の「ON UPDATE CASCADE」サポートを使用することを強く推奨します。"
 

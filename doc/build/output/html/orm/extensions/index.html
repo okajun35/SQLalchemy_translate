@@ -10,7 +10,7 @@
         <title>
             
     
-    ORM Extensions
+    ORM拡張
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -36,8 +36,8 @@
         <link rel="copyright" title="Copyright" href="../../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../../index.html" />
         <link rel="up" title="SQLAlchemy ORM" href="../index.html" />
-        <link rel="next" title="Association Proxy" href="associationproxy.html" />
-        <link rel="prev" title="Deprecated ORM Event Interfaces" href="../deprecated.html" />
+        <link rel="next" title="アソシエーションプロキシ" href="associationproxy.html" />
+        <link rel="prev" title="非推奨のORMイベントインターフェイス" href="../deprecated.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,26 +120,26 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="../tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../extending.html">Events and Internals</a></span></li>
-<li class="selected"><span class="link-container first"><strong>ORM Extensions</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="associationproxy.html">Association Proxy</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="automap.html">Automap</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="baked.html">Baked Queries</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="declarative/index.html">Declarative</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mutable.html">Mutation Tracking</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="orderinglist.html">Ordering List</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="horizontal_shard.html">Horizontal Sharding</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="hybrid.html">Hybrid Attributes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="indexable.html">Indexable</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="instrumentation.html">Alternate Class Instrumentation</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../extending.html">イベントと内部</a></span></li>
+<li class="selected"><span class="link-container first"><strong>ORM拡張</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="associationproxy.html">アソシエーションプロキシ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="automap.html">オートマップ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="baked.html">焼いたクエリ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="declarative/index.html">宣言的</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mutable.html">突然変異の追跡</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="orderinglist.html">オーダーリスト</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="horizontal_shard.html">水平シャーディング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="hybrid.html">ハイブリッド属性</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="indexable.html">インデックス作成可能</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="instrumentation.html">代替クラスの計装</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="../examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -155,25 +155,21 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="orm-extensions">
-<span id="sqlalchemy-ext"></span><span id="plugins"></span><h1>ORM Extensions<a class="headerlink" href="#orm-extensions" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>SQLAlchemy has a variety of ORM extensions available, which add additional
-functionality to the core behavior.</p>
-<p>The extensions build almost entirely on public core and ORM APIs and users should
-be encouraged to read their source code to further their understanding of their
-behavior.   In particular the &quot;Horizontal Sharding&quot;, &quot;Hybrid Attributes&quot;, and
-&quot;Mutation Tracking&quot; extensions are very succinct.</p>
+<span id="sqlalchemy-ext"></span><span id="plugins"></span><h1>ORM拡張<a class="headerlink" href="#orm-extensions" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>SQLAlchemyにはさまざまなORM拡張が用意されており、コア動作に追加の機能が追加されています。</p>
+<p>この拡張は、ほぼ完全に公的なコアとORMのAPIに基づいており、ユーザはソースコードを読んで行動の理解を深めるよう奨励されるべきです。特に、&amp;quot;Horizo​​ntal Sharding &amp;quot;、&amp;quot;Hybrid Attributes &amp;quot;、&amp;quot;Mutation Tracking &amp;quot;という拡張は非常に簡潔です。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="associationproxy.html">Association Proxy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automap.html">Automap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baked.html">Baked Queries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="declarative/index.html">Declarative</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mutable.html">Mutation Tracking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="orderinglist.html">Ordering List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="horizontal_shard.html">Horizontal Sharding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hybrid.html">Hybrid Attributes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="indexable.html">Indexable</a></li>
-<li class="toctree-l1"><a class="reference internal" href="instrumentation.html">Alternate Class Instrumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="associationproxy.html">アソシエーションプロキシ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automap.html">オートマップ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baked.html">焼いたクエリ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="declarative/index.html">宣言的</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutable.html">突然変異の追跡</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orderinglist.html">オーダーリスト</a></li>
+<li class="toctree-l1"><a class="reference internal" href="horizontal_shard.html">水平シャーディング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hybrid.html">ハイブリッド属性</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indexable.html">インデックス作成可能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instrumentation.html">代替クラスの計装</a></li>
 </ul>
 </div>
 </div>
@@ -184,13 +180,13 @@ behavior.   In particular the &quot;Horizontal Sharding&quot;, &quot;Hybrid Attr
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="../deprecated.html" title="previous chapter">Deprecated ORM Event Interfaces</a>
+        <a href="../deprecated.html" title="previous chapter">非推奨のORMイベントインターフェイス</a>
         Next:
-        <a href="associationproxy.html" title="next chapter">Association Proxy</a>
+        <a href="associationproxy.html" title="next chapter">アソシエーションプロキシ</a>
 
     <div id="docs-copyright">
         &copy; <a href="../../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -217,6 +213,7 @@ behavior.   In particular the &quot;Horizontal Sharding&quot;, &quot;Hybrid Attr
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../../_static/detectmobile.js"></script>

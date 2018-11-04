@@ -6,27 +6,17 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/functions.rst:6
 msgid "SQL and Generic Functions"
-msgstr ""
+msgstr "SQLと汎用関数"
 
 #: ../../core/functions.rst:10
 msgid ""
 "SQL functions which are known to SQLAlchemy with regards to database-"
 "specific rendering, return types and argument behavior. Generic functions"
 " are invoked like all SQL functions, using the :attr:`func` attribute::"
-msgstr ""
+msgstr "SQLAlchemyがデータベース特有のレンダリング、戻り値の型、および引数の動作に関して知っているSQL関数。一般関数は：attr： `func`属性を使って、すべてのSQL関数のように呼び出されます::"
 
 #: ../../core/functions.rst:16
 msgid ""
@@ -35,99 +25,99 @@ msgid ""
 "known or unknown to SQLAlchemy, built-in or user defined. The section "
 "here only describes those functions where SQLAlchemy already knows what "
 "argument and return types are in use."
-msgstr ""
+msgstr "attr： `func`には知られていない任意の名前がそのまま関数名を生成することに注意してください。-SQLAlchemyに対して、組み込み関数またはユーザー定義関数で呼び出すことのできるSQL関数を制限することはできません。このセクションでは、SQLAlchemyがすでに使用されている引数と戻り値の型を知っている関数についてのみ説明します。"
 
 #: of sqlalchemy.sql.functions:1
 msgid "SQL function API, factories, and built-in functions."
-msgstr ""
+msgstr "SQLファンクションAPI、ファクトリ、および組み込み関数が含まれます。"
 
 #: of sqlalchemy.sql.functions.Function:1
 msgid "Describe a named SQL function."
-msgstr ""
+msgstr "名前付きSQL関数を記述します。"
 
 #: of sqlalchemy.sql.functions.Function:3
 msgid ""
 "See the superclass :class:`.FunctionElement` for a description of public "
 "methods."
-msgstr ""
+msgstr "パブリックメソッドの説明については、スーパークラス：class： `.FunctionElement`を参照してください。"
 
 #: of sqlalchemy.sql.functions.Function:8
 #: sqlalchemy.sql.functions.FunctionElement:7
 msgid ""
 ":data:`.func` - namespace which produces registered or ad-hoc "
 ":class:`.Function` instances."
-msgstr ""
+msgstr "：data： `.func`  - 登録されたクラスまたはアドホッククラスを生成するnamespace：class：` .Function`インスタンス。"
 
 #: of sqlalchemy.sql.functions.Function:11
 #: sqlalchemy.sql.functions.FunctionElement:10
 msgid ":class:`.GenericFunction` - allows creation of registered function types."
-msgstr ""
+msgstr "：class： `.GenericFunction`  - 登録された関数型の作成を許可します。"
 
 #: of sqlalchemy.sql.functions.FunctionElement:1
 msgid "Base for SQL function-oriented constructs."
-msgstr ""
+msgstr "SQL関数指向の構造のベース。"
 
 #: of sqlalchemy.sql.functions.FunctionElement:5
 msgid ":class:`.Function` - named SQL function."
-msgstr ""
+msgstr "：class： `.Function`  - 名前付きSQL関数です。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.alias:1
 msgid ""
 "Produce a :class:`.Alias` construct against this "
 ":class:`.FunctionElement`."
-msgstr ""
+msgstr "以下のようにa：class： `.Alias`を生成します：class：` .FunctionElement`。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.alias:4
 msgid ""
 "This construct wraps the function in a named alias which is suitable for "
 "the FROM clause, in the style accepted for example by PostgreSQL."
-msgstr ""
+msgstr "この構造体は、PostgreSQLなどで受け入れられたスタイルで、FROM句に適した名前付きエイリアスに関数をラップします。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.alias:8
 #: sqlalchemy.sql.functions.array_agg:6
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.sql.functions.FunctionElement.alias:17
 msgid "Would produce:"
-msgstr ""
+msgstr "それは生産するでしょう："
 
 #: of sqlalchemy.sql.functions.FunctionElement.alias:24
 msgid ""
 "The :meth:`.FunctionElement.alias` method is now supported.  Previously, "
 "this method's behavior was undefined and did not behave consistently "
 "across versions."
-msgstr ""
+msgstr "：meth： `.FunctionElement.alias`メソッドがサポートされるようになりました。以前は、このメソッドの動作は未定義であり、バージョン間で一貫して動作しませんでした。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:1
 msgid "Interpret this expression as a boolean comparison between two values."
-msgstr ""
+msgstr "この式を2つの値のブール比較として解釈します。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:3
 msgid ""
 "A hypothetical SQL function \"is_equal()\" which compares to values for "
 "equality would be written in the Core expression language as::"
-msgstr ""
+msgstr "仮想のSQL関数\ &quot;is_equal（）\&quot;は、等価の値と比較して、コア表現言語で次のように記述されます::"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:8
 msgid ""
 "If \"is_equal()\" above is comparing \"a\" and \"b\" for equality, the "
 ":meth:`.FunctionElement.as_comparison` method would be invoked as::"
-msgstr ""
+msgstr "上記の\ &quot;is_equal（）\&quot;が\ &quot;a \&quot;と\ &quot;b \&quot;を等価であると比較すると、：meth： `.FunctionElement.as_comparison`メソッドは::"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:13
 msgid ""
 "Where above, the integer value \"1\" refers to the first argument of the "
 "\"is_equal()\" function and the integer value \"2\" refers to the second."
-msgstr ""
+msgstr "上記の場合、整数値 &quot;1&quot;は\ &quot;is_equal（）\&quot;関数の第1引数を参照し、整数値 &quot;2 \&quot;は第2引数を参照します。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:16
 msgid "This would create a :class:`.BinaryExpression` that is equivalent to::"
-msgstr ""
+msgstr "これは：class： `.BinaryExpression`を生成します：これは::"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:20
 msgid "However, at the SQL level it would still render as \"is_equal('a', 'b')\"."
-msgstr ""
+msgstr "しかし、SQLレベルでは、 &quot;is_equal（ &#39;a&#39;、 &#39;b&#39;）\&quot;としてレンダリングされます。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:23
 msgid ""
@@ -137,11 +127,11 @@ msgid ""
 "construct that can also supply this information to the ORM, when used "
 "with the :paramref:`.relationship.primaryjoin` parameter.  The return "
 "value is a containment object called :class:`.FunctionAsBinary`."
-msgstr ""
+msgstr "ORMは、関連するオブジェクトまたはコレクションをロードするときに、JOIN式のON句の左辺と右辺を操作できる必要があります。このメソッドの目的は、：paramref： `.relationship.primaryjoin`パラメータとともに使用すると、この情報をORMにも渡すことができるSQL関数構造を提供することです。戻り値は、class： `.FunctionAsBinary`と呼ばれる包含オブジェクトです。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:30
 msgid "An ORM example is as follows::"
-msgstr ""
+msgstr "ORMの例は次のとおりです::"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:46
 msgid ""
@@ -149,168 +139,168 @@ msgid ""
 "determining if the name of the parent Venue is contained within the start"
 " of the hypothetical descendant value's name, e.g. \"parent1\" would "
 "match up to \"parent1/child1\", but not to \"parent2/child1\"."
-msgstr ""
+msgstr "上の\ &quot;Venue \&quot;クラスは、親Venueの名前が仮説的子孫値の名前の先頭に含まれているかどうかを判定することによって子孫\ &quot;Venue \&quot;オブジェクトをロードすることができます。例えば、\ &quot;parent1 \&quot;は\ &quot;parent1 / child1 \&quot;ではなく、 &quot;parent2 / child1 \&quot;には適用されません。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:51
 msgid ""
 "Possible use cases include the \"materialized path\" example given above,"
 " as well as making use of special SQL functions such as geometric "
 "functions to create join conditions."
-msgstr ""
+msgstr "可能なユースケースには、上記の「マテリアライズドパス」の例があります。また、ジオメトリ関数などの特殊なSQL関数を使用して結合条件を作成することもできます。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:55
 msgid ""
 "the integer 1-based index of the function argument that serves as the "
 "\"left\" side of the expression."
-msgstr ""
+msgstr "式の左辺として機能する関数の引数の1から始まる整数のインデックス。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.as_comparison:57
 msgid ""
 "the integer 1-based index of the function argument that serves as the "
 "\"right\" side of the expression."
-msgstr ""
+msgstr "式の右辺として機能する関数の引数の1から始まる整数のインデックス。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.clauses:1
 msgid ""
 "Return the underlying :class:`.ClauseList` which contains the arguments "
 "for this :class:`.FunctionElement`."
-msgstr ""
+msgstr "基礎となる：class： `.ClauseList`を返します。これには、class：` .FunctionElement`の引数が含まれています。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.columns:1
 msgid "The set of columns exported by this :class:`.FunctionElement`."
-msgstr ""
+msgstr "this：class： `.FunctionElement`によってエクスポートされたカラムのセットです。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.columns:3
 msgid ""
 "Function objects currently have no result column names built in; this "
 "method returns a single-element column collection with an anonymously "
 "named column."
-msgstr ""
+msgstr "関数オブジェクトには現在、結果の列名が組み込まれていません。このメソッドは、匿名で命名された列を持つ単一要素の列コレクションを返します。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.columns:7
 msgid ""
 "An interim approach to providing named columns for a function as a FROM "
 "clause is to build a :func:`.select` with the desired columns::"
-msgstr ""
+msgstr "関数の名前付きカラムをFROM句として提供するための暫定的なアプローチは、：func： `.select`を目的のカラムで構築することです::"
 
 #: of sqlalchemy.sql.functions.FunctionElement.execute:1
 msgid "Execute this :class:`.FunctionElement` against an embedded 'bind'."
-msgstr ""
+msgstr "組み込みの &#39;bind&#39;に対してthis：class： `.FunctionElement`を実行します。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.execute:4
 #: sqlalchemy.sql.functions.FunctionElement.scalar:4
 msgid ""
 "This first calls :meth:`~.FunctionElement.select` to produce a SELECT "
 "construct."
-msgstr ""
+msgstr "これは最初に：meth： `〜.FunctionElement.select`を呼び出してSELECT構文を生成します。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.execute:7
 msgid ""
 "Note that :class:`.FunctionElement` can be passed to the "
 ":meth:`.Connectable.execute` method of :class:`.Connection` or "
 ":class:`.Engine`."
-msgstr ""
+msgstr "class： `.FunctionElement`は：class：` .Connection`または：class： `.Engine`の：meth：` .Connectable.execute`メソッドに渡すことができます。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.filter:1
 msgid "Produce a FILTER clause against this function."
-msgstr ""
+msgstr "この関数に対してFILTER句を生成します。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.filter:3
 msgid ""
 "Used against aggregate and window functions, for database backends that "
 "support the \"FILTER\" clause."
-msgstr ""
+msgstr "\ &quot;FILTER \&quot;句をサポートするデータベースバックエンドに対して、集約関数およびウィンドウ関数に対して使用されます。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.filter:6
 #: sqlalchemy.sql.functions.FunctionElement.over:6
 msgid "The expression::"
-msgstr ""
+msgstr "表現：："
 
 #: of sqlalchemy.sql.functions.FunctionElement.filter:10
 #: sqlalchemy.sql.functions.FunctionElement.over:10
 msgid "is shorthand for::"
-msgstr ""
+msgstr "::の省略形です"
 
 #: of sqlalchemy.sql.functions.FunctionElement.filter:19
 msgid ":class:`.FunctionFilter`"
-msgstr ""
+msgstr "：class： `.FunctionFilter`"
 
 #: of sqlalchemy.sql.functions.FunctionElement.filter:21
 msgid ":func:`.funcfilter`"
-msgstr ""
+msgstr "：機能： `.funcfilter`"
 
 #: of sqlalchemy.sql.functions.FunctionElement.over:1
 msgid "Produce an OVER clause against this function."
-msgstr ""
+msgstr "この関数に対してOVER句を生成します。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.over:3
 msgid ""
 "Used against aggregate or so-called \"window\" functions, for database "
 "backends that support window functions."
-msgstr ""
+msgstr "ウィンドウ関数をサポートするデータベースバックエンドに対して、集約またはいわゆる\ &quot;ウィンドウ\&quot;関数に対して使用されます。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.over:15
 msgid "See :func:`~.expression.over` for a full description."
-msgstr ""
+msgstr "See：func： `〜.expression.over`で詳しく説明しています。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.scalar:1
 msgid ""
 "Execute this :class:`.FunctionElement` against an embedded 'bind' and "
 "return a scalar value."
-msgstr ""
+msgstr "組み込みの &#39;bind&#39;に対してclass： `.FunctionElement`を実行し、スカラー値を返します。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.scalar:7
 msgid ""
 "Note that :class:`.FunctionElement` can be passed to the "
 ":meth:`.Connectable.scalar` method of :class:`.Connection` or "
 ":class:`.Engine`."
-msgstr ""
+msgstr "class： `.FunctionElement`は：class：` .Connection`または：class： `.Engine`の：meth：` .Connectable.scalar`メソッドに渡すことができます。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.select:1
 msgid ""
 "Produce a :func:`~.expression.select` construct against this "
 ":class:`.FunctionElement`."
-msgstr ""
+msgstr "次のようにa：func： `〜.expression.select`を生成します：class：` .FunctionElement`。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.select:4
 msgid "This is shorthand for::"
-msgstr ""
+msgstr "これは::の短縮形です"
 
 #: of sqlalchemy.sql.functions.FunctionElement.within_group:1
 msgid "Produce a WITHIN GROUP (ORDER BY expr) clause against this function."
-msgstr ""
+msgstr "この関数に対してWITHIN GROUP（ORDER BY expr）句を生成します。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.within_group:3
 msgid ""
 "Used against so-called \"ordered set aggregate\" and \"hypothetical set "
 "aggregate\" functions, including :class:`.percentile_cont`, "
 ":class:`.rank`, :class:`.dense_rank`, etc."
-msgstr ""
+msgstr "class： `.percentile_cont`、：class：` .rank`、：class： `.dense_rank`など、いわゆる\&quot;順序集合集合\ &quot;と\&quot;仮集合集約\ &quot;関数に対して使用されます。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.within_group:7
 msgid "See :func:`~.expression.within_group` for a full description."
-msgstr ""
+msgstr "詳細は、func： `〜.expression.within_group`を参照してください。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.within_group_type:1
 msgid ""
 "For types that define their return type as based on the criteria within a"
 " WITHIN GROUP (ORDER BY) expression, called by the :class:`.WithinGroup` "
 "construct."
-msgstr ""
+msgstr "：class： `.WithinGroup`構造体によって呼び出されたWITHIN GROUP（ORDER BY）式内の基準に基づいて、戻り値の型を定義する型の場合。"
 
 #: of sqlalchemy.sql.functions.FunctionElement.within_group_type:5
 msgid ""
 "Returns None by default, in which case the function's normal ``.type`` is"
 " used."
-msgstr ""
+msgstr "デフォルトではNoneを返します。この場合、関数の通常の `` .type``が使われます。"
 
 #: of sqlalchemy.sql.functions.GenericFunction:1
 msgid "Define a 'generic' function."
-msgstr ""
+msgstr "「汎用」関数を定義します。"
 
 #: of sqlalchemy.sql.functions.GenericFunction:3
 msgid ""
@@ -322,14 +312,14 @@ msgid ""
 ":class:`.GenericFunction` class is so that a function of a particular "
 "name may be given a fixed return type. It can also include custom "
 "argument parsing schemes as well as additional methods."
-msgstr ""
+msgstr "ジェネリック関数は、：data： `.func`属性から名前で呼ばれたときに自動的にインスタンス化される、事前設定されたclass：` .Function`クラスです。 ：data： `.func`から任意の名前を呼び出すと、その名前を指定するとnew：class：` .Function`インスタンスが自動的に作成されるという効果があります。 a：class： `.GenericFunction`クラスを定義するための主な使用例は、特定の名前の関数に固定戻り値型を与えることができるようにすることです。カスタム引数の構文解析スキームと追加のメソッドも含めることができます。"
 
 #: of sqlalchemy.sql.functions.GenericFunction:14
 msgid ""
 "Subclasses of :class:`.GenericFunction` are automatically registered "
 "under the name of the class.  For example, a user-defined function "
 "``as_utc()`` would be available immediately::"
-msgstr ""
+msgstr "：class： `.GenericFunction`のサブクラスは自動的にクラスの名前で登録されます。例えば、ユーザ定義の関数 `` as_utc（） ``はすぐに利用できます::"
 
 #: of sqlalchemy.sql.functions.GenericFunction:27
 msgid ""
@@ -339,13 +329,13 @@ msgid ""
 "functions may want to use this in order to avoid name conflicts with "
 "other systems.   For example, if our ``as_utc()`` function were part of a"
 " package \"time\"::"
-msgstr ""
+msgstr "ユーザ定義のジェネリック関数は、class： `.GenericFunction`を定義するときに\&quot; package \ &quot;属性を指定することで、パッケージ化することができます。多くの関数を含むサードパーティのライブラリは、他のシステムとの名前の競合を避けるためにこれを使用したいかもしれません。例えば、 `` as_utc（） ``関数が\ &quot;time \&quot;パッケージに含まれているとします::"
 
 #: of sqlalchemy.sql.functions.GenericFunction:39
 msgid ""
 "The above function would be available from :data:`.func` using the "
 "package name ``time``::"
-msgstr ""
+msgstr "上記の関数は以下から入手可能です：data： `.func`パッケージ名` `time`` ::"
 
 #: of sqlalchemy.sql.functions.GenericFunction:44
 msgid ""
@@ -354,70 +344,70 @@ msgid ""
 "attribute will override the name used to access the function as loaded "
 "from :data:`.func`, but will retain the usage of ``name`` as the rendered"
 " name::"
-msgstr ""
+msgstr "最後のオプションは：data： `.func`内のある名前から関数にアクセスできるようにすることですが、別の名前としてレンダリングすることです。 `` identifier``属性は：data： `.func`からロードされた関数へのアクセスに使用された名前を上書きしますが、レンダリングされた名前として` `name``の使用法を保持します::"
 
 #: of sqlalchemy.sql.functions.GenericFunction:56
 msgid "The above function will render as follows::"
-msgstr ""
+msgstr "上記の関数は次のようにレンダリングされます::"
 
 #: of sqlalchemy.sql.functions.GenericFunction:61
 msgid ""
 ":class:`.GenericFunction` now supports automatic registration of new "
 "functions as well as package and custom naming support."
-msgstr ""
+msgstr "：class： `.GenericFunction`は、新しい関数の自動登録と、パッケージとカスタム命名のサポートをサポートするようになりました。"
 
 #: of sqlalchemy.sql.functions.GenericFunction:65
 msgid ""
 "The attribute name ``type`` is used to specify the function's return type"
 " at the class level. Previously, the name ``__return_type__`` was used.  "
 "This name is still recognized for backwards-compatibility."
-msgstr ""
+msgstr "属性名 `` type``は、クラスレベルで関数の戻り値の型を指定するために使用されます。以前は、 `` __return_type__``という名前が使われていました。この名前は下位互換性のために認識されています。"
 
 #: of sqlalchemy.sql.functions.OrderedSetAgg:1
 msgid ""
 "Define a function where the return type is based on the sort expression "
 "type as defined by the expression passed to the "
 ":meth:`.FunctionElement.within_group` method."
-msgstr ""
+msgstr "戻り値の型が：meth： `.FunctionElement.within_group`メソッドに渡される式によって定義されたソート式の型に基づく関数を定義します。"
 
 #: of sqlalchemy.sql.functions.ReturnTypeFromArgs:1
 msgid "Define a function whose return type is the same as its arguments."
-msgstr ""
+msgstr "戻り値の型が引数と同じである関数を定義します。"
 
 #: of sqlalchemy.sql.functions.array_agg:1
 msgid "support for the ARRAY_AGG function."
-msgstr ""
+msgstr "ARRAY_AGG関数のサポート。"
 
 #: of sqlalchemy.sql.functions.array_agg:3
 msgid ""
 "The ``func.array_agg(expr)`` construct returns an expression of type "
 ":class:`.types.ARRAY`."
-msgstr ""
+msgstr "`` func.array_agg（expr） ``の構文は、class： `.types.ARRAY`型の式を返します。"
 
 #: of sqlalchemy.sql.functions.array_agg:14
 msgid ""
 ":func:`.postgresql.array_agg` - PostgreSQL-specific version that returns "
 ":class:`.postgresql.ARRAY`, which has PG-specific operators added."
-msgstr ""
+msgstr "：func： `.postgresql.array_agg`  -  PostgreSQL特有のバージョンで、class：` .postgresql.ARRAY`を返します。これには、PG固有の演算子が追加されています。"
 
 #: of sqlalchemy.sql.functions.count:1
 msgid "The ANSI COUNT aggregate function.  With no arguments, emits COUNT \\*."
-msgstr ""
+msgstr "ANSI COUNT集計関数。引き数を指定しない場合は、COUNT \\ *を出力します。"
 
 #: of sqlalchemy.sql.functions.cube:1
 msgid "Implement the ``CUBE`` grouping operation."
-msgstr ""
+msgstr "`` CUBE``グルーピング操作を実装してください。"
 
 #: of sqlalchemy.sql.functions.cube:3 sqlalchemy.sql.functions.grouping_sets:3
 #: sqlalchemy.sql.functions.rollup:3
 msgid ""
 "This function is used as part of the GROUP BY of a statement, e.g. "
 ":meth:`.Select.group_by`::"
-msgstr ""
+msgstr "この関数は、文のGROUP BYの一部として使用されます。例：meth： `.Select.group_by` ::"
 
 #: of sqlalchemy.sql.functions.cume_dist:1
 msgid "Implement the ``cume_dist`` hypothetical-set aggregate function."
-msgstr ""
+msgstr "`` cume_dist``仮説集合集合関数を実装します。"
 
 #: of sqlalchemy.sql.functions.cume_dist:3
 #: sqlalchemy.sql.functions.dense_rank:3 sqlalchemy.sql.functions.mode:3
@@ -427,57 +417,57 @@ msgstr ""
 msgid ""
 "This function must be used with the :meth:`.FunctionElement.within_group`"
 " modifier to supply a sort expression to operate upon."
-msgstr ""
+msgstr "この関数は：meth： `.FunctionElement.within_group`修飾子と一緒に使用して操作するソート式を指定する必要があります。"
 
 #: of sqlalchemy.sql.functions.cume_dist:6
 #: sqlalchemy.sql.functions.percent_rank:6
 msgid "The return type of this function is :class:`.Numeric`."
-msgstr ""
+msgstr "この関数の戻り値の型は：class： `.Numeric`です。"
 
 #: of sqlalchemy.sql.functions.dense_rank:1
 msgid "Implement the ``dense_rank`` hypothetical-set aggregate function."
-msgstr ""
+msgstr "`` dense_rank``仮説集合集合関数を実装します。"
 
 #: of sqlalchemy.sql.functions.dense_rank:6 sqlalchemy.sql.functions.rank:6
 msgid "The return type of this function is :class:`.Integer`."
-msgstr ""
+msgstr "この関数の戻り値の型は：class： `.Integer`です。"
 
 #: of sqlalchemy.sql.functions.grouping_sets:1
 msgid "Implement the ``GROUPING SETS`` grouping operation."
-msgstr ""
+msgstr "`` GROUPING SETS``グルーピング操作を実装してください。"
 
 #: of sqlalchemy.sql.functions.grouping_sets:10
 msgid "In order to group by multiple sets, use the :func:`.tuple_` construct::"
-msgstr ""
+msgstr "複数のセットでグループ化するには、：func： `.tuple_`構造体を使用します::"
 
 #: of sqlalchemy.sql.functions.mode:1
 msgid "implement the ``mode`` ordered-set aggregate function."
-msgstr ""
+msgstr "`` mode``順序集合集合関数を実装します。"
 
 #: of sqlalchemy.sql.functions.mode:6
 msgid "The return type of this function is the same as the sort expression."
-msgstr ""
+msgstr "この関数の戻り値の型は、ソート式と同じです。"
 
 #: of sqlalchemy.sql.functions.next_value:1
 msgid ""
 "Represent the 'next value', given a :class:`.Sequence` as its single "
 "argument."
-msgstr ""
+msgstr "その次の値を表す：class： `.Sequence`を単一の引数として与えます。"
 
 #: of sqlalchemy.sql.functions.next_value:4
 msgid ""
 "Compiles into the appropriate function on each backend, or will raise "
 "NotImplementedError if used on a backend that does not provide support "
 "for sequences."
-msgstr ""
+msgstr "各バックエンドで適切な関数にコンパイルするか、シーケンスのサポートを提供しないバックエンドで使用する場合はNotImplementedErrorを生成します。"
 
 #: of sqlalchemy.sql.functions.percent_rank:1
 msgid "Implement the ``percent_rank`` hypothetical-set aggregate function."
-msgstr ""
+msgstr "`` percent_rank``仮説集合集合関数を実装します。"
 
 #: of sqlalchemy.sql.functions.percentile_cont:1
 msgid "implement the ``percentile_cont`` ordered-set aggregate function."
-msgstr ""
+msgstr "`` percentile_cont``順序集合集合関数を実装してください。"
 
 #: of sqlalchemy.sql.functions.percentile_cont:6
 #: sqlalchemy.sql.functions.percentile_disc:6
@@ -485,28 +475,28 @@ msgid ""
 "The return type of this function is the same as the sort expression, or "
 "if the arguments are an array, an :class:`.types.ARRAY` of the sort "
 "expression's type."
-msgstr ""
+msgstr "この関数の戻り値の型は、ソート式と同じです。または、引数が配列の場合、ソート式の型の：class： `.types.ARRAY`です。"
 
 #: of sqlalchemy.sql.functions.percentile_disc:1
 msgid "implement the ``percentile_disc`` ordered-set aggregate function."
-msgstr ""
+msgstr "`` percentile_disc``順序集合集合関数を実装します。"
 
 #: of sqlalchemy.sql.functions.rank:1
 msgid "Implement the ``rank`` hypothetical-set aggregate function."
-msgstr ""
+msgstr "`` rank``仮説集合集合関数を実装します。"
 
 #: of sqlalchemy.sql.functions.register_function:1
 msgid "Associate a callable with a particular func. name."
-msgstr ""
+msgstr "呼び出し可能関数を特定の関数と関連付けます。名。"
 
 #: of sqlalchemy.sql.functions.register_function:3
 msgid ""
 "This is normally called by _GenericMeta, but is also available by itself "
 "so that a non-Function construct can be associated with the :data:`.func`"
 " accessor (i.e. CAST, EXTRACT)."
-msgstr ""
+msgstr "これは通常_GenericMetaによって呼び出されますが、それ自身でも利用でき、非関数構造体を：data： `.func`アクセサ（つまりCAST、EXTRACT）に関連付けることができます。"
 
 #: of sqlalchemy.sql.functions.rollup:1
 msgid "Implement the ``ROLLUP`` grouping operation."
-msgstr ""
+msgstr "`` ROLLUP``グルーピング操作を実装してください。"
 

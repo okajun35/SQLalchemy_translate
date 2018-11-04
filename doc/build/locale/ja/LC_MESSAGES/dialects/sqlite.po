@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../dialects/sqlite.rst:4
 msgid "SQLite"
-msgstr ""
+msgstr "SQLite"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:7
 msgid "Date and Time Types"
-msgstr ""
+msgstr "日付と時刻の種類"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:9
 msgid ""
@@ -37,11 +27,11 @@ msgid ""
 "dates and times as ISO formatted strings, which also nicely support "
 "ordering. There's no reliance on typical \"libc\" internals for these "
 "functions so historical dates are fully supported."
-msgstr ""
+msgstr "SQLiteにはDATE、TIME、またはDATETIME型が組み込まれておらず、Pythonの `datetime`オブジェクトとSQLiteでサポートされている形式の間で値を変換する機能は用意されていません。 SQLAlchemy自身の：class： `〜sqlalchemy.types.DateTime`および関連する型は、SQliteが使用されているときに日付の書式設定と解析機能を提供します。実装クラスは、class： `〜.sqlite.DATETIME`、：class：`〜.sqlite.DATE`、：class： `〜.sqlite.TIME`です。これらのタイプは日付と時刻をISO形式の文字列として表し、順序付けもうまくサポートします。典型的な\ &quot;libc \&quot;内部関数には依存していないので、歴史的日付が完全にサポートされています。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:20
 msgid "Ensuring Text affinity"
-msgstr ""
+msgstr "テキストの親和性の確保"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:22
 msgid ""
@@ -51,32 +41,32 @@ msgid ""
 "containing no alpha characters, the DDL for these types is rendered as "
 "``DATE_CHAR``, ``TIME_CHAR``, and ``DATETIME_CHAR``, so that the column "
 "continues to have textual affinity."
-msgstr ""
+msgstr "これらの型に対してレンダリングされるDDLは、標準の `` DATE``、 `` TIME``、および `DATETIME`のインジケータです。ただし、カスタム記憶域形式をこれらの種類に適用することもできます。格納形式がアルファベット文字を含まないものとして検出されると、これらの型のDDLは `` DATE_CHAR``、 `` TIME_CHAR``、および `` DATETIME_CHAR``としてレンダリングされ、列は引き続きテキストの親和性を持ちます。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:31
 msgid ""
 "`Type Affinity <http://www.sqlite.org/datatype3.html#affinity>`_ - in the"
 " SQLite documentation"
-msgstr ""
+msgstr "`タイプアフィニティー<http://www.sqlite.org/datatype3.html#affinity> `_  -  SQLiteのドキュメント"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:36
 msgid "SQLite Auto Incrementing Behavior"
-msgstr ""
+msgstr "SQLite自動インクリメント動作"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:38
 msgid "Background on SQLite's autoincrement is at: http://sqlite.org/autoinc.html"
-msgstr ""
+msgstr "SQLiteの自動インクリメントの背景はhttp://sqlite.org/autoinc.htmlです。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:40
 msgid "Key concepts:"
-msgstr ""
+msgstr "主なコンセプト："
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:42
 msgid ""
 "SQLite has an implicit \"auto increment\" feature that takes place for "
 "any non-composite primary-key column that is specifically created using "
 "\"INTEGER PRIMARY KEY\" for the type + primary key."
-msgstr ""
+msgstr "SQLiteには、タイプ+プライマリキーに &quot;INTEGER PRIMARY KEY&quot;を使用して作成された非複合プライマリキーカラムに対して暗黙の\ &quot;自動インクリメント\&quot;機能があります。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:46
 msgid ""
@@ -85,24 +75,24 @@ msgid ""
 "recommended for general use.  SQLAlchemy does not render this keyword "
 "unless a special SQLite-specific directive is used (see below).  However,"
 " it still requires that the column's type is named \"INTEGER\"."
-msgstr ""
+msgstr "SQLiteには明示的な\ &quot;AUTOINCREMENT \&quot;キーワードがあります。**は暗黙の自動インクリメント機能と同等ではありません**。このキーワードは一般的な使用には推奨されません。 SQLAlchemyは特別なSQLite特有の指令が使われていない限り、このキーワードを表示しません（下記参照）。ただし、列の型は\ &quot;INTEGER \&quot;という名前でなければなりません。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:53
 msgid "Using the AUTOINCREMENT Keyword"
-msgstr ""
+msgstr "AUTOINCREMENTキーワードの使用"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:55
 msgid ""
 "To specifically render the AUTOINCREMENT keyword on the primary key "
 "column when rendering DDL, add the flag ``sqlite_autoincrement=True`` to "
 "the Table construct::"
-msgstr ""
+msgstr "DDLをレンダリングするときに主キー列のAUTOINCREMENTキーワードを特にレンダリングするには、フラグ `` sqlite_autoincrement = True``を表の構造体::に追加します"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:64
 msgid ""
 "Allowing autoincrement behavior SQLAlchemy types other than "
 "Integer/INTEGER"
-msgstr ""
+msgstr "自動インクリメントの動作を許可するInteger / INTEGER以外のSQLAlchemy型"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:66
 msgid ""
@@ -118,35 +108,35 @@ msgid ""
 "be rendered as the name ``\"INTEGER\"`` when emitting the initial "
 "``CREATE TABLE`` statement in order for the autoincrement behavior to be "
 "available."
-msgstr ""
+msgstr "SQLiteの型定義モデルは命名規則に基づいています。とりわけ、これは部分文字列 `` \ &quot;INT \&quot; `&quot;を含む型名は\ &quot;整数類似性\&quot;であると判断されることを意味します。 &quot;\&quot; BIGINT \ &quot;` `、` `\&quot; SPECIAL_INT \ &quot;` `または` `\&quot; XYZINTQPR \ &quot;` `という名前の型は、SQLiteによって\&quot;整数\ &quot;親和性であるとみなされます。ただし、**暗黙的または明示的に有効になっているSQLite自動インクリメント機能は、列の型名が文字列\ &quot;INTEGER \&quot; **であることを必要とします。したがって、アプリケーションが主キーに：class： `.BigInteger`のような型を使用する場合、SQLiteではこの型は最初の` `CREATE TABLE &#39;を発行するときに` `\&quot; INTEGER \ &quot;` `という名前でレンダリングする必要があります``ステートメントを使用して、自動インクリメントの動作を利用できるようにします。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:79
 msgid ""
 "One approach to achieve this is to use :class:`.Integer` on SQLite only "
 "using :meth:`.TypeEngine.with_variant`::"
-msgstr ""
+msgstr "これを達成するための1つのアプローチは、：meth： `.TypeEngine.with_variant` ::を使用してSQLite上で：class：` .Integer`を使用することです。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:87
 msgid ""
 "Another is to use a subclass of :class:`.BigInteger` that overrides its "
 "DDL name to be ``INTEGER`` when compiled against SQLite::"
-msgstr ""
+msgstr "もう1つは：class： `.BigInteger`のサブクラスを使用して、DDL名をSQLiteに対してコンパイルするときに` `INTEGER``にオーバーライドすることです::"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:112
 msgid ":meth:`.TypeEngine.with_variant`"
-msgstr ""
+msgstr "：meth： `.TypeEngine.with_variant`"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:114
 msgid ":ref:`sqlalchemy.ext.compiler_toplevel`"
-msgstr ""
+msgstr "：ref： `sqlalchemy.ext.compiler_toplevel`"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:116
 msgid "`Datatypes In SQLite Version 3 <http://sqlite.org/datatype3.html>`_"
-msgstr ""
+msgstr "`SQLiteバージョン3のデータ型<http://sqlite.org/datatype3.html> `_"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:121
 msgid "Database Locking Behavior / Concurrency"
-msgstr ""
+msgstr "データベースのロック動作/同時実行性"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:123
 msgid ""
@@ -155,7 +145,7 @@ msgid ""
 "operations within transactions, meaning exactly one \"connection\" (in "
 "reality a file handle) has exclusive access to the database during this "
 "period - all other \"connections\" will be blocked during this time."
-msgstr ""
+msgstr "SQLiteは、高いレベルの書き込み同時実行性のために設計されていません。データベースそのものはファイルであり、トランザクション内の書き込み操作中に完全にロックされます。つまり、正確に1つの &quot;接続&quot;（実際にはファイルハンドル）はこの期間中にデータベースへの排他的アクセス権を持ちます。この間にブロックされます。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:129
 msgid ""
@@ -167,7 +157,7 @@ msgid ""
 "particular database file at any time; however, there are several factors "
 "both within SQlite itself as well as within the pysqlite driver which "
 "loosen this restriction significantly."
-msgstr ""
+msgstr "Python DBAPI仕様では、常にトランザクション内にある接続モデルも必要です。 `` connection.begin（） ``メソッドはなく、すぐに新しいトランザクションを開始する `` connection.commit（） ``と `` connection.rollback（） ``だけがあります。これは、SQLiteドライバが理論的にはいつでも特定のデータベースファイルに対して1つのファイルハンドルしか許可しないことを意味するように見えるかもしれません。しかし、SQlite自体とpysqliteドライバ内には、この制限を大幅に緩和するいくつかの要因があります。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:138
 msgid ""
@@ -177,7 +167,7 @@ msgid ""
 "other transactions at least at the point that they also attempt to emit "
 "DML. By default, the length of time on this block is very short before it"
 " times out with an error."
-msgstr ""
+msgstr "しかし、ロックモードが使用されていても、トランザクションが開始され、DML（INSERT、UPDATE、DELETEなど）が少なくとも発行されると、SQLiteは常にデータベースファイルをロックし、少なくともその時点で他のトランザクションをブロックしますまた、DMLを発行しようとしています。デフォルトでは、このブロックの時間の長さは非常に短くなってからタイムアウトになり、エラーが発生します。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:145
 msgid ""
@@ -189,7 +179,7 @@ msgid ""
 "the pysqlite driver can be manipulated to some degree, however it should "
 "be noted that achieving a high degree of write-concurrency with SQLite is"
 " a losing battle."
-msgstr ""
+msgstr "この動作は、SQLAlchemy ORMと組み合わせて使用​​するとより重要になります。 SQLAlchemyの：class： `.Session`オブジェクトは、デフォルトでトランザクション内で実行され、その自動フラッシュモデルでは、SELECT文の前にDMLを発行することができます。これは、予想よりも早くロックするSQLiteデータベースにつながる可能性があります。 SQLiteとpysqliteドライバのロックモードはある程度操作できますが、SQLiteで高度な書き込み同時実行を実現することは失われた戦いであることに注意してください。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:153
 msgid ""
@@ -197,18 +187,18 @@ msgid ""
 "please see `Situations Where Another RDBMS May Work Better - High "
 "Concurrency <http://www.sqlite.org/whentouse.html>`_ near the bottom of "
 "the page."
-msgstr ""
+msgstr "SQLiteの設計による書き込み同時実行性の欠如の詳細については、「別のRDBMSがうまくいく状況 - 高い並行性」を参照してください。 <http://www.sqlite.org/whentouse.html> `_ページの一番下にあります。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:158
 msgid ""
 "The following subsections introduce areas that are impacted by SQLite's "
 "file-based architecture and additionally will usually require workarounds"
 " to work when using the pysqlite driver."
-msgstr ""
+msgstr "以下のサブセクションでは、SQLiteのファイルベースアーキテクチャの影響を受ける領域について説明します。通常、pysqliteドライバを使用する場合は、回避策が必要です。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:165
 msgid "Transaction Isolation Level"
-msgstr ""
+msgstr "トランザクション分離レベル"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:167
 msgid ""
@@ -218,7 +208,7 @@ msgid ""
 "instruction.   This setting can essentially switch SQLite between its "
 "default mode of ``SERIALIZABLE`` isolation, and a \"dirty read\" "
 "isolation mode normally referred to as ``READ UNCOMMITTED``."
-msgstr ""
+msgstr "SQLiteは、2つの軸に沿って非標準的な方法で\ &quot;トランザクション分離\&quot;をサポートしています。 1つは `PRAGMA read_uncommitted <http://www.sqlite.org/pragma.html#pragma_read_uncommitted> `_命令。この設定は、基本的に `` SERIALIZABLE``分離のデフォルトモードと通常 `` READ UNCOMMITTED``と呼ばれる\ &quot;ダーティー読み込み\&quot;分離モードの間でSQLiteを切り替えることができます。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:173
 msgid ""
@@ -229,7 +219,7 @@ msgid ""
 "corresponding to a value of 0 and 1, respectively. SQLite defaults to "
 "``SERIALIZABLE``, however its behavior is impacted by the pysqlite "
 "driver's default behavior."
-msgstr ""
+msgstr "SQLAlchemyは、：func： `.create_engine`の：paramref：` .create_engine.isolation_level`パラメータを使用して、このPRAGMA文に結びつきます。このパラメータの有効な値は、SQLiteと一緒に使用するときは、それぞれ0と1の値に対応する `` \ &quot;SERIALIZABLE \&quot; ``と `` \ &quot;READ UNCOMMITTED \&quot; `&quot;です。 SQLiteのデフォルトは `` SERIALIZABLE``ですが、動作はpysqliteドライバのデフォルト動作の影響を受けます。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:180
 msgid ""
@@ -243,7 +233,7 @@ msgid ""
 "operation.  But again, it is critical to note that the pysqlite driver "
 "interferes with this behavior by *not even emitting BEGIN* until the "
 "first write operation."
-msgstr ""
+msgstr "SQLiteのトランザクションロックが影響を受けるもう1つの軸は、使用される `` BEGIN``ステートメントの性質によるものです。 `BEGIN TRANSACTION &#39;で説明されているように、3つの変種は\&quot;遅延\ &quot;、&quot;即時\ &quot;、および\&quot;排他\ &quot;です。 <http://sqlite.org/lang_transaction.html> `_。ストレート `` BEGIN`ステートメントは、データベースファイルが最初の読み取りまたは書き込み操作までロックされておらず、読み取りアクセスが最初の書き込み操作まで他のトランザクションに対して開いたままである\ &quot;遅延\&quot;モードを使用します。しかし、再び、pysqliteドライバは、最初の書き込み操作までBEGIN *を出さないことによってこの動作に干渉することに注意することが重要です。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:192
 msgid ""
@@ -251,11 +241,11 @@ msgid ""
 "pysqlite driver, which defers BEGIN statements to a greater degree than "
 "is often feasible. See the section :ref:`pysqlite_serializable` for "
 "techniques to work around this behavior."
-msgstr ""
+msgstr "SQLiteのトランザクションスコープは、pysqliteドライバの未解決の問題によって影響を受けます。この問題は、BEGIN文を実行する可能性があるよりもはるかに高いです。この動作を回避するテクニックについては、ref： `pysqlite_serializable`の節を参照してください。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:198
 msgid "SAVEPOINT Support"
-msgstr ""
+msgstr "SAVEPOINTのサポート"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:200
 msgid ""
@@ -264,7 +254,7 @@ msgid ""
 ":meth:`.Connection.begin_nested` method at the Core level, and "
 ":meth:`.Session.begin_nested` at the ORM level.   However, SAVEPOINTs "
 "won't work at all with pysqlite unless workarounds are taken."
-msgstr ""
+msgstr "SQLiteはSAVEPOINTをサポートしています.SAVEPOINTは、トランザクションが開始されると機能します。 SQLAlchemyのSAVEPOINTサポートは、コアレベルで：meth： `.Connection.begin_nested`メソッドを使用し、ORMレベルで：meth：` .Session.begin_nested`を使用して使用できます。ただし、回避策が講じられない限り、SAVEPOINTはpysqliteではまったく動作しません。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:208
 msgid ""
@@ -272,11 +262,11 @@ msgid ""
 "pysqlite driver, which defers BEGIN statements to a greater degree than "
 "is often feasible. See the section :ref:`pysqlite_serializable` for "
 "techniques to work around this behavior."
-msgstr ""
+msgstr "SQLiteのSAVEPOINT機能は、pysqliteドライバの未解決の問題によって影響を受けます。これは、BEGIN文をしばしば実現可能な程度よりも大きくします。この動作を回避するテクニックについては、ref： `pysqlite_serializable`の節を参照してください。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:214
 msgid "Transactional DDL"
-msgstr ""
+msgstr "トランザクションDDL"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:216
 msgid ""
@@ -284,7 +274,7 @@ msgid ""
 "case, the pysqlite driver is not only failing to start transactions, it "
 "also is ending any existing transction when DDL is detected, so again, "
 "workarounds are required."
-msgstr ""
+msgstr "SQLiteデータベースはtransactional：term： `DDL`もサポートしています。この場合、pysqliteドライバはトランザクションの開始に失敗するだけでなく、DDLが検出されたときに既存のトランザクションも終了するため、回避策も必要です。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:223
 msgid ""
@@ -293,44 +283,44 @@ msgid ""
 "COMMIT to cancel any transaction when DDL is encountered. See the section"
 " :ref:`pysqlite_serializable` for techniques to work around this "
 "behavior."
-msgstr ""
+msgstr "SQLiteのトランザクションDDLは、BEGINを発行できず、さらにDDLに遭遇したときにCOMMITにトランザクションをキャンセルさせるpysqliteドライバの未解決の問題の影響を受けます。この動作を回避するテクニックについては、ref： `pysqlite_serializable`の節を参照してください。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:232
 msgid "Foreign Key Support"
-msgstr ""
+msgstr "外部キーのサポート"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:234
 msgid ""
 "SQLite supports FOREIGN KEY syntax when emitting CREATE statements for "
 "tables, however by default these constraints have no effect on the "
 "operation of the table."
-msgstr ""
+msgstr "SQLiteは、テーブルのCREATE文を発行する際にFOREIGN KEY構文をサポートしていますが、デフォルトではこれらの制約はテーブルの操作には影響しません。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:238
 msgid "Constraint checking on SQLite has three prerequisites:"
-msgstr ""
+msgstr "SQLiteの制約チェックには、次の3つの前提条件があります。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:240
 msgid "At least version 3.6.19 of SQLite must be in use"
-msgstr ""
+msgstr "SQLiteのバージョン3.6.19以上が使用されている必要があります"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:241
 msgid ""
 "The SQLite library must be compiled *without* the SQLITE_OMIT_FOREIGN_KEY"
 " or SQLITE_OMIT_TRIGGER symbols enabled."
-msgstr ""
+msgstr "SQLiteライブラリは、SQLITE_OMIT_FOREIGN_KEYまたはSQLITE_OMIT_TRIGGERシンボルを有効にしないで*コンパイルする必要があります。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:243
 msgid ""
 "The ``PRAGMA foreign_keys = ON`` statement must be emitted on all "
 "connections before use."
-msgstr ""
+msgstr "`` PRAGMA foreign_keys = ON``ステートメントは、使用する前にすべてのコネクションで発行する必要があります。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:246
 msgid ""
 "SQLAlchemy allows for the ``PRAGMA`` statement to be emitted "
 "automatically for new connections through the usage of events::"
-msgstr ""
+msgstr "SQLAlchemyはイベントの使用を通して新しい接続のために `` PRAGMA``文が自動的に出力されるようにします::"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:260
 msgid ""
@@ -339,31 +329,31 @@ msgid ""
 "foreign key constraints; to emit the DDL for these tables requires that "
 "ALTER TABLE be used to create or drop these constraints separately, for "
 "which SQLite has no support."
-msgstr ""
+msgstr "SQLiteの外部キーが有効な場合、相互に依存する外部キー制約を含むテーブルに対してCREATEまたはDROPステートメントを発行することはできません**。これらのテーブルに対してDDLを発行するには、ALTER TABLEを使用してこれらの制約を個別に作成または削除する必要があります。そのためにはSQLiteはサポートしていません。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:269
 msgid ""
 "`SQLite Foreign Key Support <http://www.sqlite.org/foreignkeys.html>`_ - "
 "on the SQLite web site."
-msgstr ""
+msgstr "`SQLite外部キーサポート<http://www.sqlite.org/foreignkeys.html> `_  -  SQLiteのWebサイトにあります。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:272
 msgid ":ref:`event_toplevel` - SQLAlchemy event API."
-msgstr ""
+msgstr "：ref： `event_toplevel`  -  SQLAlchemyイベントAPI。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:274
 msgid ""
 ":ref:`use_alter` - more information on SQLAlchemy's facilities for "
 "handling"
-msgstr ""
+msgstr "：ref： `use_alter`  - 処理のためのSQLAlchemyの機能の詳細"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:275
 msgid "mutually-dependent foreign key constraints."
-msgstr ""
+msgstr "相互に依存する外部キー制約。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:280
 msgid "Type Reflection"
-msgstr ""
+msgstr "タイプリフレクション"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:282
 msgid ""
@@ -372,7 +362,7 @@ msgid ""
 "a one-to-one fashion.  Instead, SQLite links per-column typing behavior "
 "to one of five so-called \"type affinities\" based on a string matching "
 "pattern for the type."
-msgstr ""
+msgstr "SQLite型は、他のほとんどのデータベースバックエンドとは異なります。通常、型の文字列名は1対1の方法で\ &quot;型\&quot;に対応しません。その代わりに、SQLiteは、型ごとの文字列一致パターンに基づいて、列ごとの型付き動作を5つのいわゆる\ &quot;型類似性\&quot;のいずれかにリンクします。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:288
 msgid ""
@@ -383,13 +373,13 @@ msgid ""
 " routine for when a particular type name is not located in the lookup "
 "map; it instead implements the SQLite \"type affinity\" scheme located at"
 " http://www.sqlite.org/datatype3.html section 2.1."
-msgstr ""
+msgstr "SQLAlchemyのリフレクションプロセスは、タイプを検査するときに、単純なルックアップテーブルを使用して、提供されたSQLAlchemyタイプに返されたキーワードをリンクします。このルックアップテーブルは、他のすべての方言の場合と同様に、SQLiteダイアレクト内に存在します。しかし、SQLiteの方言は、特定の型名がルックアップマップにないときには\ &quot;フォールバック\&quot;ルーチンを持っています;代わりにhttp://www.sqlite.orgにあるSQLite \ &quot;type affinity \&quot;スキームを実装します/datatype3.htmlセクション2.1。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:296
 msgid ""
 "The provided typemap will make direct associations from an exact string "
 "name match for the following types:"
-msgstr ""
+msgstr "指定されたタイプマップは、以下のタイプの文字列名との直接の関連付けを行います："
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:299
 msgid ""
@@ -402,63 +392,63 @@ msgid ""
 ":class:`~.types.SMALLINT`, :class:`~.types.TEXT`, :class:`~.types.TIME`, "
 ":class:`~.types.TIMESTAMP`, :class:`~.types.VARCHAR`, "
 ":class:`~.types.NVARCHAR`, :class:`~.types.NCHAR`"
-msgstr ""
+msgstr "：class： `〜.types.BIGLE`、：class：`〜.types.BLOB`、：class： `〜.types.BOOLEAN`、：class：`〜.types.BOOLEAN`、：class： `〜。 ：class： `〜.types.DATE &#39;、：class：`〜.types.FLOAT`、：class： `〜.types.DECIMAL`、：：クラス： `〜.types.FLOAT`、：class：`〜.types.INTEGER`、：class： `〜.types.INTEGER`、：class：`〜.types.NUMERIC`、：class： `〜.typesクラス： `〜.types.SMALLINT`、：class：`〜.types.TEXT`、：class： `〜.types.TIME`、：class：`〜.types.TIMESTAMP`、：class ： `〜.types.VARCHAR`、：class：`〜.types.NVARCHAR`、：クラス： `〜.types.NCHAR`"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:311
 msgid ""
 "When a type name does not match one of the above types, the \"type "
 "affinity\" lookup is used instead:"
-msgstr ""
+msgstr "型名が上記の型のいずれかと一致しない場合、代わりに\ &quot;型類義語\&quot;の参照が使用されます："
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:314
 msgid ""
 ":class:`~.types.INTEGER` is returned if the type name includes the string"
 " ``INT``"
-msgstr ""
+msgstr "：型名に文字列 `` INT``が含まれている場合、クラス： `〜.types.INTEGER`が返されます"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:316
 msgid ""
 ":class:`~.types.TEXT` is returned if the type name includes the string "
 "``CHAR``, ``CLOB`` or ``TEXT``"
-msgstr ""
+msgstr "：型名に文字列 `` CHAR``、 `` CLOB``または `` TEXT``が含まれている場合、クラス： `〜.types.TEXT`が返されます"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:318
 msgid ""
 ":class:`~.types.NullType` is returned if the type name includes the "
 "string ``BLOB``"
-msgstr ""
+msgstr "：型名に文字列 `` BLOB``が含まれている場合、クラス： `〜.types.NullType`が返されます。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:320
 msgid ""
 ":class:`~.types.REAL` is returned if the type name includes the string "
 "``REAL``, ``FLOA`` or ``DOUB``."
-msgstr ""
+msgstr "：class： `` REAL``、 `` FLOA``または `` DOUB``の文字列が型名に含まれている場合、 `〜.types.REAL`が返されます。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:322
 msgid "Otherwise, the :class:`~.types.NUMERIC` type is used."
-msgstr ""
+msgstr "それ以外の場合は：class： `〜.types.NUMERIC`型が使用されます。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:324
 msgid "Support for SQLite type affinity rules when reflecting columns."
-msgstr ""
+msgstr "列を反映させる際のSQLite型親和性ルールのサポート"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:331
 msgid "Partial Indexes"
-msgstr ""
+msgstr "部分インデックス"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:333
 msgid ""
 "A partial index, e.g. one which uses a WHERE clause, can be specified "
 "with the DDL system using the argument ``sqlite_where``::"
-msgstr ""
+msgstr "DDLシステムでは、 `` sqlite_where`` ::引数を使用して部分インデックス（例：WHERE句を使用するインデックス）を指定できます。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:340
 msgid "The index will be rendered at create time as::"
-msgstr ""
+msgstr "作成時にインデックスがレンダリングされます::"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:350
 msgid "Dotted Column Names"
-msgstr ""
+msgstr "点列名"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:352
 msgid ""
@@ -467,42 +457,42 @@ msgid ""
 "databases in general, as the dot is a syntactically significant "
 "character, the SQLite driver up until version **3.10.0** of SQLite has a "
 "bug which requires that SQLAlchemy filter out these dots in result sets."
-msgstr ""
+msgstr "明示的にピリオドを含む表名または列名を使用することは推奨されません**。これは一般的にリレーショナルデータベースでは一般的に悪い考えですが、ドットが構文的に重要な文字であるため、SQLiteのバージョン** 3.10.0 **までのSQLiteドライバにはバグがあり、SQLAlchemyはこれらの点を結果セット。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:360
 msgid ""
 "The following SQLite issue has been resolved as of version 3.10.0 of "
 "SQLite.  SQLAlchemy as of **1.1** automatically disables its internal "
 "workarounds based on detection of this version."
-msgstr ""
+msgstr "次のSQLiteの問題は、SQLiteのバージョン3.10.0で解決されています。 ** 1.1 **のSQLAlchemyは、このバージョンの検出に基づいて内部的な回避策を自動的に無効にします。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:364
 msgid "The bug, entirely outside of SQLAlchemy, can be illustrated thusly::"
-msgstr ""
+msgstr "このバグは、SQLAlchemyの外部にあります。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:388
 msgid "The second assertion fails::"
-msgstr ""
+msgstr "2番目のアサーションは失敗します::"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:395
 msgid ""
 "Where above, the driver incorrectly reports the names of the columns "
 "including the name of the table, which is entirely inconsistent vs. when "
 "the UNION is not present."
-msgstr ""
+msgstr "上記の場合、ドライバはテーブルの名前を含む列の名前を間違って報告します。これは、UNIONが存在しない場合とまったく矛盾しています。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:399
 msgid ""
 "SQLAlchemy relies upon column names being predictable in how they match "
 "to the original statement, so the SQLAlchemy dialect has no choice but to"
 " filter these out::"
-msgstr ""
+msgstr "SQLAlchemyは、元の文とどのように一致するか予測可能なカラム名に依存しているため、SQLAlchemy方言はこれらをフィルタリングするだけではありません::"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:423
 msgid ""
 "Note that above, even though SQLAlchemy filters out the dots, *both names"
 " are still addressable*::"
-msgstr ""
+msgstr "上記のように、SQLAlchemyがドットをフィルタリングしても、*両方の名前はまだアドレス可能です*："
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:436
 msgid ""
@@ -514,60 +504,60 @@ msgid ""
 "return these dotted names unmodified, the ``sqlite_raw_colnames`` "
 "execution option may be provided, either on a per-:class:`.Connection` "
 "basis::"
-msgstr ""
+msgstr "したがって、SQLAlchemyによって適用される回避策は、パブリックAPIの：meth： `.ResultProxy.keys`および：meth：` .RowProxy.keys（） `にのみ影響します。アプリケーションがドットを含む列名を使用するように強制され、これらのドット付きの名前を返すには：meth： `.ResultProxy.keys`と：meth：` .RowProxy.keys（） `の機能が必要な非常に特殊なケースでは、 `` sqlite_raw_colnames``実行オプションは、per-：class： `.Connection`の基礎で提供されるかもしれません::"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:451
 msgid "or on a per-:class:`.Engine` basis::"
-msgstr ""
+msgstr "またはper-：class： `.Engine` basis ::"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.base:455
 msgid ""
 "When using the per-:class:`.Engine` execution option, note that **Core "
 "and ORM queries that use UNION may not function properly**."
-msgstr ""
+msgstr "per-：class： `.Engine`実行オプションを使用する場合、UNIONを使用する**コアクエリとORMクエリは正しく機能しない可能性があります**。"
 
 #: ../../dialects/sqlite.rst:9
 msgid "SQLite Data Types"
-msgstr ""
+msgstr "SQLiteデータ型"
 
 #: ../../dialects/sqlite.rst:11
 msgid ""
 "As with all SQLAlchemy dialects, all UPPERCASE types that are known to be"
 " valid with SQLite are importable from the top level dialect, whether "
 "they originate from :mod:`sqlalchemy.types` or from the local dialect::"
-msgstr ""
+msgstr "すべてのSQLAlchemyの方言と同様に、SQLiteで有効であることが知られているすべてのUPPERCASE型は、from：mod： `sqlalchemy.types`またはローカルの方言から上位の方言からインポートできます::"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.DATETIME:1
 msgid "Represent a Python datetime object in SQLite using a string."
-msgstr ""
+msgstr "文字列を使用してSQLiteでPython datetimeオブジェクトを表します。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.DATE:3
 #: sqlalchemy.dialects.sqlite.DATETIME:3 sqlalchemy.dialects.sqlite.TIME:3
 msgid "The default string storage format is::"
-msgstr ""
+msgstr "デフォルトの文字列格納形式は::"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.DATE:7
 #: sqlalchemy.dialects.sqlite.DATETIME:7 sqlalchemy.dialects.sqlite.TIME:7
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.DATE:11
 #: sqlalchemy.dialects.sqlite.DATETIME:11 sqlalchemy.dialects.sqlite.TIME:11
 msgid ""
 "The storage format can be customized to some degree using the "
 "``storage_format`` and ``regexp`` parameters, such as::"
-msgstr ""
+msgstr "ストレージフォーマットは、 `` storage_format``と `` regexp``パラメータを使ってある程度カスタマイズすることができます："
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.DATE
 #: sqlalchemy.dialects.sqlite.DATETIME sqlalchemy.dialects.sqlite.TIME
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.DATETIME:22
 msgid ""
 "format string which will be applied to the dict with keys year, month, "
 "day, hour, minute, second, and microsecond."
-msgstr ""
+msgstr "年、月、日、時、分、秒、マイクロ秒のキーで辞書に適用される書式文字列。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.DATETIME:25
 msgid ""
@@ -576,17 +566,17 @@ msgid ""
 "Python datetime() constructor as keyword arguments. Otherwise, if "
 "positional groups are used, the datetime() constructor is called with "
 "positional arguments via ``*map(int, match_obj.groups(0))``."
-msgstr ""
+msgstr "着信結果行に適用される正規表現。正規表現に名前付きグループが含まれている場合、結果の一致するdictはキーワード引数としてPythonのdatetime（）コンストラクタに適用されます。それ以外の場合は、位置グループを使用すると、datetime（）コンストラクタは `` * map（int、match_obj.groups（0）） `&#39;を介して位置引数で呼び出されます。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.DATE:1
 msgid "Represent a Python date object in SQLite using a string."
-msgstr ""
+msgstr "文字列を使用してSQLiteでPythonの日付オブジェクトを表します。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.DATE:22
 msgid ""
 "format string which will be applied to the dict with keys year, month, "
 "and day."
-msgstr ""
+msgstr "年、月、日のキーを使って辞書に適用されるフォーマット文字列。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.DATE:25
 msgid ""
@@ -595,11 +585,11 @@ msgid ""
 "Python date() constructor as keyword arguments. Otherwise, if positional "
 "groups are used, the date() constructor is called with positional "
 "arguments via ``*map(int, match_obj.groups(0))``."
-msgstr ""
+msgstr "着信結果行に適用される正規表現。正規表現に名前付きグループが含まれている場合、結果の一致するdictはキーワード引数としてPythonのdate（）コンストラクタに適用されます。それ以外の場合は、位置グループを使用すると、date（）コンストラクタは `` * map（int、match_obj.groups（0）） `&#39;を介して位置引数で呼び出されます。"
 
 #: of sqlalchemy.dialects.sqlite.JSON:1
 msgid "SQLite JSON type."
-msgstr ""
+msgstr "SQLite JSONタイプ。"
 
 #: of sqlalchemy.dialects.sqlite.JSON:3
 msgid ""
@@ -607,7 +597,7 @@ msgid ""
 " that JSON1_ is a `loadable extension "
 "<https://www.sqlite.org/loadext.html>`_ and as such may not be available,"
 " or may require run-time loading."
-msgstr ""
+msgstr "SQLiteは、JSON1_拡張を介してバージョン3.9のJSONをサポートしています。 JSON1_はロード可能な拡張機能です<https://www.sqlite.org/loadext.html> `_そのようなものが利用できないか、実行時の読み込みが必要な場合があります。"
 
 #: of sqlalchemy.dialects.sqlite.JSON:8
 msgid ""
@@ -617,21 +607,21 @@ msgid ""
 "function wrapped in the ``JSON_QUOTE`` function at the database level. "
 "Extracted values are quoted in order to ensure that the results are "
 "always JSON string values."
-msgstr ""
+msgstr "：class： `.sqlite.JSON`型はJSON値の永続性と、class：` .types.JSON`データ型によって提供されるコアインデックス操作をサポートします。これは、 `` JSON_EXTRACT``関数をラップするデータベースレベルの `` JSON_QUOTE``関数の中で実行されます。結果が常にJSON文字列値であることを保証するために、抽出された値が引用されます。"
 
 #: of sqlalchemy.dialects.sqlite.JSON:19
 msgid "JSON1_"
-msgstr ""
+msgstr "JSON1_"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.TIME:1
 msgid "Represent a Python time object in SQLite using a string."
-msgstr ""
+msgstr "文字列を使用してSQLiteでPythonの時間オブジェクトを表します。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.TIME:22
 msgid ""
 "format string which will be applied to the dict with keys hour, minute, "
 "second, and microsecond."
-msgstr ""
+msgstr "日付、時間、分、秒、マイクロ秒のキーで適用されるフォーマット文字列。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.TIME:25
 msgid ""
@@ -640,16 +630,16 @@ msgid ""
 "Python time() constructor as keyword arguments. Otherwise, if positional "
 "groups are used, the time() constructor is called with positional "
 "arguments via ``*map(int, match_obj.groups(0))``."
-msgstr ""
+msgstr "着信結果行に適用される正規表現。正規表現に名前付きグループが含まれている場合、結果の一致するdictはキーワード引数としてPythonのtime（）コンストラクタに適用されます。それ以外の場合は、位置グループを使用すると、time（）コンストラクタが `` * map（int、match_obj.groups（0）） `&#39;を介して位置引数で呼び出されます。"
 
 #: ../../dialects/sqlite.rst:31
 msgid "Pysqlite"
-msgstr ""
+msgstr "Pysqlite"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.pysqlcipher:18
 #: sqlalchemy.dialects.sqlite.pysqlite:11
 msgid "Driver"
-msgstr ""
+msgstr "ドライバ"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:13
 msgid ""
@@ -657,7 +647,7 @@ msgid ""
 "already installed and no additional installation is needed.  Otherwise, "
 "the ``pysqlite2`` driver needs to be present.  This is the same driver as"
 " ``sqlite3``, just with a different name."
-msgstr ""
+msgstr "Python 2.5以上を使用する場合、組み込みの `` sqlite3``ドライバは既にインストールされており、追加のインストールは必要ありません。それ以外の場合は、 `` pysqlite2``ドライバが必要です。これは `` sqlite3``と同じドライバで、名前が違うだけです。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:18
 msgid ""
@@ -666,48 +656,48 @@ msgid ""
 "driver to take precedence over the built in one.   As with all dialects, "
 "a specific DBAPI module may be provided to "
 ":func:`~sqlalchemy.create_engine()` to control this explicitly::"
-msgstr ""
+msgstr "`` pysqlite2``ドライバが最初にロードされ、見つからなければ `` sqlite3``がロードされます。これにより、明示的にインストールされたpysqliteドライバが組み込みドライバよりも優先されます。すべての方言と同様に、特定のDBAPIモジュールを次のように提供することができます：func： `〜sqlalchemy.create_engine（）`これを明示的に制御する::"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.pysqlcipher:30
 #: sqlalchemy.dialects.sqlite.pysqlite:29
 msgid "Connect Strings"
-msgstr ""
+msgstr "文字列を接続する"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:31
 msgid ""
 "The file specification for the SQLite database is taken as the "
 "\"database\" portion of the URL.  Note that the format of a SQLAlchemy "
 "url is::"
-msgstr ""
+msgstr "SQLiteデータベースのファイル指定は、URLの &quot;データベース&quot;部分とみなされます。 SQLAlchemyのURLのフォーマットは::"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:36
 msgid ""
 "This means that the actual filename to be used starts with the characters"
 " to the **right** of the third slash.   So connecting to a relative "
 "filepath looks like::"
-msgstr ""
+msgstr "つまり、実際に使用されるファイル名は、3番目のスラッシュの** right **の文字で始まります。相対ファイルパスに接続すると、次のようになります::"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:43
 msgid ""
 "An absolute path, which is denoted by starting with a slash, means you "
 "need **four** slashes::"
-msgstr ""
+msgstr "スラッシュで始まる絶対パスは、**四つのスラッシュが必要です::"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:49
 msgid ""
 "To use a Windows path, regular drive specifications and backslashes can "
 "be used. Double backslashes are probably needed::"
-msgstr ""
+msgstr "Windowsパスを使用するには、通常のドライブ指定とバックスラッシュを使用できます。ダブルバックスラッシュはおそらく必要です::"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:55
 msgid ""
 "The sqlite ``:memory:`` identifier is the default if no filepath is "
 "present.  Specify ``sqlite://`` and nothing else::"
-msgstr ""
+msgstr "ファイルパスが存在しない場合、sqlite ``：memory： ``識別子がデフォルトです。 `` sqlite：// ``を指定し、他には何も指定しないでください::"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:62
 msgid "Compatibility with sqlite3 \"native\" date and datetime types"
-msgstr ""
+msgstr "sqlite3 \ &quot;native \&quot;の日付と日時の型との互換性"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:64
 msgid ""
@@ -724,7 +714,7 @@ msgid ""
 " pysqlite does not provide the standard DBAPI types in "
 "``cursor.description``, leaving SQLAlchemy with no way to detect these "
 "types on the fly without expensive per-row type checks."
-msgstr ""
+msgstr "pysqliteドライバには、sqlite3.PARSE_DECLTYPESおよびsqlite3.PARSE_COLNAMESオプションが含まれています。これらのオプションは、\ &quot;日付\&quot;または\ &quot;タイムスタンプ\&quot;として明示的にキャストされる列または式の影響をPythonの日付または日時オブジェクトに変換します。 pysqliteの方言で提供されているdate型とdatetime型は、pysqliteのドライバではないマイクロ秒を含むISOの日付/時刻をレンダリングするため、これらのオプションと現在互換性がありません。さらに、SQLAlchemyは現在、フリースタンディング関数\ &quot;current_timestamp \&quot;と\ &quot;current_date \&quot;に必要な\ &quot;キャスト\&quot;構文をネイティブにdatetime / date型を返すように自動的にレンダリングしません。残念ながら、pysqliteは標準のDBAPI型を `` cursor.description``に提供していないため、SQLAlchemyに高価な行単位のチェックを行わずにこれらの型を即座に検出することはできません。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:78
 msgid ""
@@ -732,7 +722,7 @@ msgid ""
 "should be necessary, for use with SQLAlchemy, usage of PARSE_DECLTYPES "
 "can be forced if one configures \"native_datetime=True\" on "
 "create_engine()::"
-msgstr ""
+msgstr "SQLAlchemyで使用するには、pysqliteの解析オプションは推奨されておらず、また必要であることに留意してください。create_engine（）で\ &quot;native_datetime = True \&quot;を設定すると、PARSE_DECLTYPESの使用を強制できます。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:88
 msgid ""
@@ -742,11 +732,11 @@ msgid ""
 " return a string. \"func.current_timestamp()\" is registered as returning"
 " a DATETIME type in SQLAlchemy, so this function still receives "
 "SQLAlchemy-level result processing."
-msgstr ""
+msgstr "このフラグを有効にすると、DATETIME型やTIMESTAMP型（ただし、DATETIME型やTIME型ではありませんが、まだ混乱していません）は、バインドパラメータや結果処理を実行しません。 \ &quot;func.current_date（）\&quot;の実行は文字列を返します。 \ &quot;func.current_timestamp（）\&quot;はSQLAlchemyにDATETIME型を返すように登録されているので、この関数はSQLAlchemyレベルの結果処理を受け取ります。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:98
 msgid "Threading/Pooling Behavior"
-msgstr ""
+msgstr "スレッド/プーリングの動作"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:100
 msgid ""
@@ -756,7 +746,7 @@ msgid ""
 "operation under various circumstances.  In particular, older SQLite "
 "versions did not allow a ``:memory:`` database to be used in multiple "
 "threads under any circumstances."
-msgstr ""
+msgstr "Pysqliteのデフォルトの動作は、複数のスレッドで単一の接続の使用を禁止することです。これはもともと、さまざまな状況下でマルチスレッド処理をサポートしていなかった古いバージョンのSQLiteで動作するように意図されています。特に、以前のSQLiteのバージョンでは、どんな状況下でも `` memory： ``データベースを複数のスレッドで使用することができませんでした。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:107
 msgid ""
@@ -769,11 +759,11 @@ msgid ""
 "``:memory:`` databases can be shared among threads in modern SQLite, "
 "Pysqlite doesn't provide enough thread-safety to make this usage worth "
 "it."
-msgstr ""
+msgstr "Pysqliteには、このチェックを無効にする `` check_same_thread``というフラグがありますが、pysqliteの接続は複数のスレッドで同時に使用することは安全ではありません。特に、Pysqliteはスレッドセーフなエラーメッセージの伝播を提供しないため、ステートメント実行呼び出しは外部的に相互排除する必要があります。そのため、現代のSQLiteではスレッド間で ``：memory： ``のデータベースを共有することができますが、Pysqliteはスレッドセーフではありません。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:116
 msgid "SQLAlchemy sets up pooling to work with Pysqlite's default behavior:"
-msgstr ""
+msgstr "SQLAlchemyは、Pysqliteのデフォルト動作で動作するようにプーリングを設定します。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:118
 msgid ""
@@ -782,7 +772,7 @@ msgid ""
 "connection per thread, so that all access to the engine within the "
 "current thread use the same ``:memory:`` database - other threads would "
 "access a different ``:memory:`` database."
-msgstr ""
+msgstr "`` memory： `` SQLiteデータベースが指定されている場合、デフォルトでは：class： `.SingletonThreadPool`が使用されます。このプールはスレッドごとに1つの接続を維持するので、現在のスレッド内のエンジンへのすべてのアクセスは同じ `` memory： ``データベースを使用し、他のスレッドは別の `` memory： ``データベースにアクセスします。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:123
 msgid ""
@@ -793,18 +783,18 @@ msgid ""
 "necessary. The scheme also prevents a connection from being used again in"
 " a different thread and works best with SQLite's coarse-grained file "
 "locking."
-msgstr ""
+msgstr "ファイルベースのデータベースが指定されると、方言は：class： `.NullPool`を接続のソースとして使用します。このプールは、すぐにプールに返される接続を閉じて破棄します。 SQLiteのファイルベースの接続は非常にオーバーヘッドが少ないため、プールする必要はありません。このスキームはまた、接続が別のスレッドで再び使用されることを防ぎ、SQLiteの粗いファイルロックで最も効果的です。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:130
 msgid ""
 "Default selection of :class:`.NullPool` for SQLite file-based databases. "
 "Previous versions select :class:`.SingletonThreadPool` by default for all"
 " SQLite databases."
-msgstr ""
+msgstr "デフォルト選択：class：SQLiteファイルベースのデータベースの `.NullPool`。以前のバージョンでは、すべてのSQLiteデータベースに対して、class： `.SingletonThreadPool`がデフォルトで選択されていました。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:137
 msgid "Using a Memory Database in Multiple Threads"
-msgstr ""
+msgstr "複数のスレッドでのメモリデータベースの使用"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:139
 msgid ""
@@ -813,17 +803,17 @@ msgid ""
 " only within the scope of that connection.   The :class:`.StaticPool` "
 "implementation will maintain a single connection globally, and the "
 "``check_same_thread`` flag can be passed to Pysqlite as ``False``::"
-msgstr ""
+msgstr "マルチスレッドのシナリオで `` memory： ``データベースを使用するには、データベースがその接続のスコープ内にしか存在しないため、同じ接続オブジェクトをスレッド間で共有する必要があります。 ：class： `.StaticPool`実装はグローバルに単一の接続を維持し、` `check_same_thread``フラグをPysqliteに` `False`` ::として渡すことができます"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:151
 msgid ""
 "Note that using a ``:memory:`` database in multiple threads requires a "
 "recent version of SQLite."
-msgstr ""
+msgstr "複数のスレッドで `` memory： ``データベースを使用するには、最近のバージョンのSQLiteが必要です。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:155
 msgid "Using Temporary Tables with SQLite"
-msgstr ""
+msgstr "SQLiteでのテンポラリテーブルの使用"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:157
 msgid ""
@@ -836,18 +826,18 @@ msgid ""
 ":class:`.SingletonThreadPool` if the scope is only needed within the "
 "current thread, or :class:`.StaticPool` is scope is needed within "
 "multiple threads for this case::"
-msgstr ""
+msgstr "SQLiteが一時テーブルを処理する方法のため、ORM：class： `.Session`を使用する場合など、接続プールからの複数のチェックアウトにわたってファイルベースのSQLiteデータベースで一時テーブルを使用する場合は、一時テーブル：meth： `.Session.commit`または：meth：` .Session.rollback`が呼び出された後も引き続き残る必要があります.1つの接続を維持するプールを使用する必要があります。スコープが現在のスレッド内でのみ必要な場合は、class： `.SingletonThreadPool`を使用するか、または：class：` .StaticPool` isスコープがこの場合複数のスレッド内で必要です::"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:177
 msgid ""
 "Note that :class:`.SingletonThreadPool` should be configured for the "
 "number of threads that are to be used; beyond that number, connections "
 "will be closed out in a non deterministic way."
-msgstr ""
+msgstr "注意：class： `.SingletonThreadPool`は、使用されるスレッドの数を設定する必要があります。その数を超えると、接続は非決定論的な方法でクローズされます。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:182
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:184
 msgid ""
@@ -860,11 +850,11 @@ msgid ""
 "values passed inadvertently will emit a warning.  Pysqlite will emit an "
 "error if a non-``unicode`` string is passed containing non-ASCII "
 "characters."
-msgstr ""
+msgstr "pysqliteドライバは、結果セット内のPythonの `` unicode``オブジェクトだけを返すだけで、決してプレーンな文字列ではなく、すべての場合にバインドされたパラメータ値内の `` unicode``オブジェクトに対応します。使用されているSQLAlchemy文字列型にかかわらず、文字列ベースの結果値はPython 2のPythonの `` unicode``になります。：class： `.Unicode`型は、Unicodeを必要とする列を示すために使用されます。誤って渡された ``unicode``以外の値は警告を発します。 ASCII以外の文字を含む ``unicode``以外の文字列が渡された場合、Pysqliteはエラーを出力します。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:196
 msgid "Serializable isolation / Savepoints / Transactional DDL"
-msgstr ""
+msgstr "シリアライズ可能な分離/セーブポイント/トランザクションDDL"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:198
 msgid ""
@@ -875,7 +865,7 @@ msgid ""
 "   In its default mode of operation, SQLite features such as SERIALIZABLE"
 " isolation, transactional DDL, and SAVEPOINT support are non-functional, "
 "and in order to use these features, workarounds must be taken."
-msgstr ""
+msgstr "セクション：ref： `sqlite_concurrency`では、SQLiteのいくつかの機能が正しく動作しないようにするpysqliteドライバのさまざまな問題を取り上げます。 pysqlite DBAPIドライバには、トランザクショナル動作の正確性に影響するいくつかの長年にわたるバグがあります。デフォルトの動作モードでは、SERIALIZABLE分離、トランザクションDDL、SAVEPOINTサポートなどのSQLite機能は機能しません。これらの機能を使用するには、回避策を講じる必要があります。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:207
 msgid ""
@@ -884,7 +874,7 @@ msgid ""
 "prematurely, in an effort to minimize the SQLite databases's file locking"
 " behavior, even though SQLite itself uses \"shared\" locks for read-only "
 "activities."
-msgstr ""
+msgstr "問題は基本的に、ドライバがSQLiteデータベースのファイルロック動作を最小限に抑えるために、SQLite自体が\ &quot;共有\&quot;ロックを使用しているにもかかわらず、ユーザーの意図を第二に推測し、トランザクションを開始せず、読み取り専用アクティビティ"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:212
 msgid ""
@@ -892,21 +882,21 @@ msgid ""
 "long-expected behavior of the pysqlite driver; if and when the pysqlite "
 "driver attempts to repair these issues, that will be more of a driver "
 "towards defaults for SQLAlchemy."
-msgstr ""
+msgstr "SQLAlchemyは、この動作をデフォルトで変更しないことを選択します。これは、pysqliteドライバの長い動作が期待される動作であるためです。 pysqliteドライバがこれらの問題を修復しようとすると、SQLAlchemyのデフォルトに近づくでしょう。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:217
 msgid ""
 "The good news is that with a few events, we can implement transactional "
 "support fully, by disabling pysqlite's feature entirely and emitting "
 "BEGIN ourselves. This is achieved using two event listeners::"
-msgstr ""
+msgstr "良いニュースは、いくつかのイベントでは、pysqliteの機能を完全に無効にして自分自身を始動させることによって、トランザクションサポートを完全に実装できることです。これは、2つのイベントリスナーを使用して実現されます。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:236
 msgid ""
 "Above, we intercept a new pysqlite connection and disable any "
 "transactional integration.   Then, at the point at which SQLAlchemy knows"
 " that transaction scope is to begin, we emit ``\"BEGIN\"`` ourselves."
-msgstr ""
+msgstr "上では、新しいpysqlite接続を傍受し、トランザクション統合を無効にします。次に、SQLAlchemyがトランザクションスコープを開始することを知っている時点で、私たちは `` \ &quot;BEGIN \&quot; ``を自分自身で発行します。"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:240
 msgid ""
@@ -914,29 +904,29 @@ msgid ""
 "SQLite's locking modes, introduced at `BEGIN TRANSACTION "
 "<http://sqlite.org/lang_transaction.html>`_, by adding the desired "
 "locking mode to our ``\"BEGIN\"``::"
-msgstr ""
+msgstr "`` \ &quot;BEGIN \&quot; ``を制御すると、 `BEGIN TRANSACTION &#39;で導入されたSQLiteのロックモードを直接制御することもできます<http://sqlite.org/lang_transaction.html> `_ &#39;に、希望するロックモードを` `\&quot; BEGIN \ &quot;` `::に追加する"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:250
 msgid ""
 "`BEGIN TRANSACTION <http://sqlite.org/lang_transaction.html>`_ - on the "
 "SQLite site"
-msgstr ""
+msgstr "`BEGIN TRANSACTION <http://sqlite.org/lang_transaction.html> `_  -  SQLiteサイトで"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:252
 msgid ""
 "`sqlite3 SELECT does not BEGIN a transaction "
 "<http://bugs.python.org/issue9924>`_ - on the Python bug tracker"
-msgstr ""
+msgstr "`sqlite3 SELECTはトランザクションを開始しません<http://bugs.python.org/issue9924> `_  -  Pythonバグトラッカーで"
 
 #: of sqlalchemy.dialects.sqlite.pysqlite:254
 msgid ""
 "`sqlite3 module breaks transactions and potentially corrupts data "
 "<http://bugs.python.org/issue10740>`_ - on the Python bug tracker"
-msgstr ""
+msgstr "`sqlite3モジュールがトランザクションを中断し、データを破壊する可能性がある<http://bugs.python.org/issue10740> `_  -  Pythonバグトラッカーで"
 
 #: ../../dialects/sqlite.rst:36
 msgid "Pysqlcipher"
-msgstr ""
+msgstr "Pysqlcipher"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.pysqlcipher:20
 msgid ""
@@ -945,26 +935,26 @@ msgid ""
 "the SQLCipher engine.  This system essentially introduces new PRAGMA "
 "commands to SQLite which allows the setting of a passphrase and other "
 "encryption parameters, allowing the database file to be encrypted."
-msgstr ""
+msgstr "ここのドライバは `pysqlcipher <https://pypi.python.org/pypi/pysqlcipher> `_ドライバ、SQLCipherエンジンを利用します。このシステムは基本的に新しいPRAGMAコマンドをSQLiteに導入し、パスフレーズや他の暗号化パラメータの設定を可能にし、データベースファイルを暗号化できるようにします。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.pysqlcipher:26
 msgid ""
 "`pysqlcipher3` is a fork of `pysqlcipher` with support for Python 3, the "
 "driver is the same."
-msgstr ""
+msgstr "`pysqlcipher3`はPython 3をサポートする` pysqlcipher`のforkです。ドライバは同じです。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.pysqlcipher:32
 msgid ""
 "The format of the connect string is in every way the same as that of the "
 ":mod:`~sqlalchemy.dialects.sqlite.pysqlite` driver, except that the "
 "\"password\" field is now accepted, which should contain a passphrase::"
-msgstr ""
+msgstr "接続文字列の形式は、mod： `〜sqlalchemy.dialects.sqlite.pysqlite`ドライバと同じように、パスフレーズを含む\&quot;パスワード\ &quot;フィールドが現在受け入れられています。 ："
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.pysqlcipher:38
 msgid ""
 "For an absolute file path, two leading slashes should be used for the "
 "database name::"
-msgstr ""
+msgstr "絶対ファイルパスの場合は、データベース名に2つの先頭スラッシュを使用する必要があります。"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.pysqlcipher:43
 msgid ""
@@ -973,11 +963,11 @@ msgid ""
 "api/ can be passed in the query string, and will result in that PRAGMA "
 "being called for each new connection.  Currently, ``cipher``, "
 "``kdf_iter`` ``cipher_page_size`` and ``cipher_use_hmac`` are supported::"
-msgstr ""
+msgstr "https://www.zetetic.net/sqlcipher/sqlcipher-api/で文書化されているようにSQLCipherでサポートされている追加の暗号化関連プラグマをクエリ文字列に渡すと、新しい接続ごとにPRAGMAが呼び出されます。現在、 `` cipher``、 `` kdf_iter``、 `` cipher_page_size``、 `` cipher_use_hmac``がサポートされています::"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.pysqlcipher:53
 msgid "Pooling Behavior"
-msgstr ""
+msgstr "プール動作"
 
 #: ../../docstring of sqlalchemy.dialects.sqlite.pysqlcipher:55
 msgid ""
@@ -993,5 +983,5 @@ msgid ""
 "be used to prevent unencrypted connections from being held open for long "
 "periods of time, at the expense of slower startup time for new "
 "connections."
-msgstr ""
+msgstr "ドライバは、：ref： `pysqlite_threading_pooling`で説明されているように、pysqliteのデフォルトのプール動作を変更します。 pysqlcipherドライバはpysqliteドライバよりも接続がかなり遅いことが観測されています。おそらく暗号化のオーバーヘッドが原因です。したがって、ここでの方言は：class： `.SingletonThreadPool`実装の代わりに：class：`の代わりに使用されます。 pysqliteによって使用されるNullPoolプール。いつものように、プールの実装は：paramref： `.create_engine.poolclass`パラメータを使って完全に設定可能です。 ：class： `.StaticPool`は、シングルスレッドの場合にはより適しています：class：` .NullPool`は、暗号化されていない接続が長時間オープンされないようにするために使用されます。新しい接続のために。"
 

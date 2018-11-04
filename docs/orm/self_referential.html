@@ -10,7 +10,7 @@
         <title>
             
     
-    Adjacency List Relationships
+    隣接関係リストの関係
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Relationship Configuration" href="relationships.html" />
-        <link rel="next" title="Linking Relationships with Backref" href="backref.html" />
-        <link rel="prev" title="Basic Relationship Patterns" href="basic_relationships.html" />
+        <link rel="up" title="関係の設定" href="relationships.html" />
+        <link rel="next" title="バックリファレンスとの関係のリンク" href="backref.html" />
+        <link rel="prev" title="基本的な関係パターン" href="basic_relationships.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,28 +120,28 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="basic_relationships.html">Basic Relationship Patterns</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Adjacency List Relationships</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#composite-adjacency-lists">Composite Adjacency Lists</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#self-referential-query-strategies">Self-Referential Query Strategies</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#configuring-self-referential-eager-loading">Configuring Self-Referential Eager Loading</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="basic_relationships.html">基本的な関係パターン</a></span></li>
+<li class="selected"><span class="link-container first"><strong>隣接関係リストの関係</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#composite-adjacency-lists">複合隣接リスト</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#self-referential-query-strategies">自己参照クエリの戦略</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#configuring-self-referential-eager-loading">自己参照型eagerローディングのコンフィグレーション</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="backref.html">Linking Relationships with Backref</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="join_conditions.html">Configuring how Relationship Joins</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="collections.html">Collection Configuration and Techniques</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationship_persistence.html">Special Relationship Persistence Patterns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationship_api.html">Relationships API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="backref.html">バックリファレンスとの関係のリンク</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="join_conditions.html">リレーションシップの参加方法のコンフィグレーション</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="collections.html">コレクションの構成とテクニック</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationship_persistence.html">特別な関係の永続パターン</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationship_api.html">リレーションシップAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -157,34 +157,24 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="adjacency-list-relationships">
-<span id="self-referential"></span><h1>Adjacency List Relationships<a class="headerlink" href="#adjacency-list-relationships" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The <strong>adjacency list</strong> pattern is a common relational pattern whereby a table
-contains a foreign key reference to itself. This is the most common
-way to represent hierarchical data in flat tables.  Other methods
-include <strong>nested sets</strong>, sometimes called &quot;modified preorder&quot;,
-as well as <strong>materialized path</strong>.  Despite the appeal that modified preorder
-has when evaluated for its fluency within SQL queries, the adjacency list model is
-probably the most appropriate pattern for the large majority of hierarchical
-storage needs, for reasons of concurrency, reduced complexity, and that
-modified preorder has little advantage over an application which can fully
-load subtrees into the application space.</p>
-<p>In this example, we'll work with a single mapped
-class called <code class="docutils literal"><span class="pre">Node</span></code>, representing a tree structure:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="self-referential"></span><h1>隣接関係リストの関係<a class="headerlink" href="#adjacency-list-relationships" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><strong>隣接関係リスト**パターンは、テーブルがそれ自身への外部キー参照を含む共通の関係パターンです。これは、フラットテーブルで階層データを表現する最も一般的な方法です。他のメソッドには**ネストされたセット</strong>、時に&amp;quot;修正された予約注文&amp;quot;と呼ばれるもの、<a href="#id1"><span class="problematic" id="id2">**</span></a>マテリアライズドパス**があります。並行性、複雑さの軽減、および変更された予約注文の利点がほとんどないため、SQL照会内での流暢性を評価したときに変更された予約注文があったにもかかわらず、おそらく隣接リスト・モデルは大半の階層ストレージニーズにとって最も適切なパターンですサブツリーをアプリケーション空間に完全にロードすることができるアプリケーションに適用されます。</p>
+<p>この例では、ツリー構造を表す `` Node``というマップされたクラスを1つ使用して作業します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;node&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">parent_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;node.id&#39;</span><span class="p">))</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
     <span class="n">children</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Node&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>With this structure, a graph such as the following:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="o">--+---&gt;</span> <span class="n">child1</span>
+<p>このような構成により、以下のようなグラフが生成される。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="o">--+---&gt;</span> <span class="n">child1</span>
        <span class="o">+---&gt;</span> <span class="n">child2</span> <span class="o">--+--&gt;</span> <span class="n">subchild1</span>
        <span class="o">|</span>              <span class="o">+--&gt;</span> <span class="n">subchild2</span>
        <span class="o">+---&gt;</span> <span class="n">child3</span></pre></div>
 </div>
-<p>Would be represented with data such as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">id</span>       <span class="n">parent_id</span>     <span class="n">data</span>
+<p>::のようなデータで表されるでしょうか？</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span>       <span class="n">parent_id</span>     <span class="n">data</span>
 <span class="o">---</span>      <span class="o">-------</span>       <span class="o">----</span>
 <span class="mi">1</span>        <span class="n">NULL</span>          <span class="n">root</span>
 <span class="mi">2</span>        <span class="mi">1</span>             <span class="n">child1</span>
@@ -193,28 +183,17 @@ class called <code class="docutils literal"><span class="pre">Node</span></code>
 <span class="mi">5</span>        <span class="mi">3</span>             <span class="n">subchild2</span>
 <span class="mi">6</span>        <span class="mi">1</span>             <span class="n">child3</span></pre></div>
 </div>
-<p>The <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> configuration here works in the
-same way as a &quot;normal&quot; one-to-many relationship, with the
-exception that the &quot;direction&quot;, i.e. whether the relationship
-is one-to-many or many-to-one, is assumed by default to
-be one-to-many.   To establish the relationship as many-to-one,
-an extra directive is added known as <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.remote_side" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">remote_side</span></code></a>, which
-is a <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> or collection of <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> objects
-that indicate those which should be considered to be &quot;remote&quot;:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>：func： <cite>.relationship`の設定は&amp;quot;普通&amp;quot;の1対多の関係と同じように動作しますが、&amp;quot;方向&amp;quot;、つまり関係が1対多または多対1は、デフォルトでは1対多であるとみなされます。関係を多対1にするために、paramref： `〜.relationship.remote_side`という追加の指示文が追加されています。これは：class：</cite> .Column`または：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Column`オブジェクトのコレクションです。 &amp;quot;リモート&amp;quot;と考えるべきものを示す：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;node&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">parent_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;node.id&#39;</span><span class="p">))</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
     <span class="n">parent</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Node&quot;</span><span class="p">,</span> <span class="n">remote_side</span><span class="o">=</span><span class="p">[</span><span class="nb">id</span><span class="p">])</span></pre></div>
 </div>
-<p>Where above, the <code class="docutils literal"><span class="pre">id</span></code> column is applied as the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.remote_side" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">remote_side</span></code></a>
-of the <code class="docutils literal"><span class="pre">parent</span></code> <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>, thus establishing
-<code class="docutils literal"><span class="pre">parent_id</span></code> as the &quot;local&quot; side, and the relationship
-then behaves as a many-to-one.</p>
-<p>As always, both directions can be combined into a bidirectional
-relationship using the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a> function:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>上記のところでは、 `` id``カラムは `` parent``：func： <cite>.relationship`の：paramref：</cite>〜.relationship.remote_side`として適用され、 `` parent_id``を <a href="#id1"><span class="problematic" id="id2">`</span></a>ローカル側では、リレーションシップは多対1のように動作します。</p>
+<p>いつものように、：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.backref`関数を使って両方向を双方向関係に結合することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;node&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">parent_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;node.id&#39;</span><span class="p">))</span>
@@ -223,19 +202,11 @@ relationship using the <a class="reference internal" href="relationship_api.html
                 <span class="n">backref</span><span class="o">=</span><span class="n">backref</span><span class="p">(</span><span class="s1">&#39;parent&#39;</span><span class="p">,</span> <span class="n">remote_side</span><span class="o">=</span><span class="p">[</span><span class="nb">id</span><span class="p">])</span>
             <span class="p">)</span></pre></div>
 </div>
-<p>There are several examples included with SQLAlchemy illustrating
-self-referential strategies; these include <a class="reference internal" href="examples.html#examples-adjacencylist"><span class="std std-ref">Adjacency List</span></a> and
-<a class="reference internal" href="examples.html#examples-xmlpersistence"><span class="std std-ref">XML Persistence</span></a>.</p>
+<p>自己参照戦略を示すSQLAlchemyには、いくつかの例があります。 ref： <cite>examples_adjacencylist`と：ref：</cite> examples_xmlpersistence`があります。</p>
 <div class="section" id="composite-adjacency-lists">
-<h2>Composite Adjacency Lists<a class="headerlink" href="#composite-adjacency-lists" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>A sub-category of the adjacency list relationship is the rare
-case where a particular column is present on both the &quot;local&quot; and
-&quot;remote&quot; side of the join condition.  An example is the <code class="docutils literal"><span class="pre">Folder</span></code>
-class below; using a composite primary key, the <code class="docutils literal"><span class="pre">account_id</span></code>
-column refers to itself, to indicate sub folders which are within
-the same account as that of the parent; while <code class="docutils literal"><span class="pre">folder_id</span></code> refers
-to a specific folder within that account:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Folder</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<h2>複合隣接リスト<a class="headerlink" href="#composite-adjacency-lists" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>隣接リスト関係のサブカテゴリは、特定の列が結合条件の&amp;quot;ローカル&amp;quot;と&amp;quot;リモート&amp;quot;の両方に存在するまれなケースです。例は、以下の `` Folder``クラスです。複合主キーを使用する場合、 `` account_id``列は、それ自身を参照して、親アカウントと同じアカウント内にあるサブフォルダを示します。 `` folder_id``はそのアカウント内の特定のフォルダを参照しています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Folder</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;folder&#39;</span>
     <span class="n">__table_args__</span> <span class="o">=</span> <span class="p">(</span>
       <span class="n">ForeignKeyConstraint</span><span class="p">(</span>
@@ -253,31 +224,20 @@ to a specific folder within that account:</p>
                         <span class="n">remote_side</span><span class="o">=</span><span class="p">[</span><span class="n">account_id</span><span class="p">,</span> <span class="n">folder_id</span><span class="p">]</span>
                   <span class="p">)</span></pre></div>
 </div>
-<p>Above, we pass <code class="docutils literal"><span class="pre">account_id</span></code> into the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.remote_side" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">remote_side</span></code></a> list.
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> recognizes that the <code class="docutils literal"><span class="pre">account_id</span></code> column here
-is on both sides, and aligns the &quot;remote&quot; column along with the
-<code class="docutils literal"><span class="pre">folder_id</span></code> column, which it recognizes as uniquely present on
-the &quot;remote&quot; side.</p>
+<p>上では、： <cite>account_id``を：paramref：</cite>〜.relationship.remote_side`リストに渡します。 ：func： <cite>.relationship`は、ここにある</cite> <cite>account_id``カラムが両側にあることを認識し、&amp;quot; remote &amp;quot;カラムと</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>folder_id``カラムを整列させます。 &amp;quot;リモート&amp;quot;側。</p>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 0.8 で追加: </span>Support for self-referential composite keys in <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>
-where a column points to itself.</p>
+<p><span class="versionmodified">バージョン 0.8 で追加: </span>自己参照複合キーのサポート：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.relationship`カラムは、それ自身を指します。</p>
 </div>
 </div>
 <div class="section" id="self-referential-query-strategies">
-<h2>Self-Referential Query Strategies<a class="headerlink" href="#self-referential-query-strategies" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Querying of self-referential structures works like any other query:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># get all nodes named &#39;child2&#39;</span>
+<h2>自己参照クエリの戦略<a class="headerlink" href="#self-referential-query-strategies" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>自己参照構造の問合せは、他の問合せと同様に機能します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># get all nodes named &#39;child2&#39;</span>
 <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Node</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">data</span><span class="o">==</span><span class="s1">&#39;child2&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>However extra care is needed when attempting to join along
-the foreign key from one level of the tree to the next.  In SQL,
-a join from a table to itself requires that at least one side of the
-expression be &quot;aliased&quot; so that it can be unambiguously referred to.</p>
-<p>Recall from <a class="reference internal" href="tutorial.html#ormtutorial-aliases"><span class="std std-ref">Using Aliases</span></a> in the ORM tutorial that the
-<a class="reference internal" href="query.html#sqlalchemy.orm.aliased" title="sqlalchemy.orm.aliased"><code class="xref py py-func docutils literal"><span class="pre">orm.aliased()</span></code></a> construct is normally used to provide an &quot;alias&quot; of
-an ORM entity.  Joining from <code class="docutils literal"><span class="pre">Node</span></code> to itself using this technique
-looks like:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">aliased</span>
+<p>ただし、ツリーの1つのレベルから次のレベルへの外部キーに沿って結合しようとすると、特別な注意が必要です。 SQLでは、テーブルからそれ自身への結合は、明示的に参照できるように、式の少なくとも片方を&amp;quot;別名&amp;quot;にする必要があります。</p>
+<p>ORMチュートリアルの：ref： <cite>ormtutorial_aliases`を思い出してください。：func：</cite> .orm.aliased`構文は通常、ORMエンティティの&amp;quot;エイリアス&amp;quot;を提供するために使用されます。このテクニックを使って `` Node``から自分自身に参加すると以下のようになります：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">aliased</span>
 
 <span class="n">nodealias</span> <span class="o">=</span> <span class="n">aliased</span><span class="p">(</span><span class="n">Node</span><span class="p">)</span>
 <a href='#' class='sql_link'>sql</a><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Node</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">data</span><span class="o">==</span><span class="s1">&#39;subchild1&#39;</span><span class="p">)</span><span class="o">.</span>\
@@ -293,14 +253,8 @@ WHERE node.data = ?
     AND node_1.data = ?
 [&#39;subchild1&#39;, &#39;child2&#39;]</div></pre></div>
 </div>
-<p><a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.join" title="sqlalchemy.orm.query.Query.join"><code class="xref py py-meth docutils literal"><span class="pre">Query.join()</span></code></a> also includes a feature known as
-<a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.join.params.aliased" title="sqlalchemy.orm.query.Query.join"><code class="xref py py-paramref docutils literal"><span class="pre">Query.join.aliased</span></code></a> that can shorten the verbosity self-
-referential joins, at the expense of query flexibility.  This feature
-performs a similar &quot;aliasing&quot; step to that above, without the need for
-an explicit entity.   Calls to <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.filter" title="sqlalchemy.orm.query.Query.filter"><code class="xref py py-meth docutils literal"><span class="pre">Query.filter()</span></code></a> and similar
-subsequent to the aliased join will <strong>adapt</strong> the <code class="docutils literal"><span class="pre">Node</span></code> entity to
-be that of the alias:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><a href='#' class='sql_link'>sql</a><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Node</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">data</span><span class="o">==</span><span class="s1">&#39;subchild1&#39;</span><span class="p">)</span><span class="o">.</span>\
+<p>：meth： <cite>.Query.join`には、クエリの柔軟性を犠牲にして、冗長自己参照結合を短縮できるparamref：</cite> .Query.join.aliased`という機能も含まれています。この機能は、明示的なエンティティを必要とせずに、上記と同様のエイリアス処理を行います。 ：meth： <cite>.Query.filter`などのエイリアス化された結合に続く呼び出しは、エイリアスのものになるように</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>Node``エンティティを適応させます**：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><a href='#' class='sql_link'>sql</a><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Node</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">data</span><span class="o">==</span><span class="s1">&#39;subchild1&#39;</span><span class="p">)</span><span class="o">.</span>\
         <span class="n">join</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span> <span class="n">aliased</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span>\
         <span class="nb">filter</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">data</span><span class="o">==</span><span class="s1">&#39;child2&#39;</span><span class="p">)</span><span class="o">.</span>\
         <span class="nb">all</span><span class="p">()</span>
@@ -312,10 +266,8 @@ FROM node
 WHERE node.data = ? AND node_1.data = ?
 [&#39;subchild1&#39;, &#39;child2&#39;]</div></pre></div>
 </div>
-<p>To add criterion to multiple points along a longer join, add
-<a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.join.params.from_joinpoint" title="sqlalchemy.orm.query.Query.join"><code class="xref py py-paramref docutils literal"><span class="pre">Query.join.from_joinpoint</span></code></a> to the additional
-<a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.join" title="sqlalchemy.orm.query.Query.join"><code class="xref py py-meth docutils literal"><span class="pre">join()</span></code></a> calls:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="c1"># get all nodes named &#39;subchild1&#39; with a</span>
+<p>より長い結合に沿って複数のポイントに基準を追加するには、paramref： <cite>.Query.join.from_joinpoint`を追加：meth：</cite>〜.Query.join`呼び出しに追加します：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="c1"># get all nodes named &#39;subchild1&#39; with a</span>
 <span class="c1"># parent named &#39;child2&#39; and a grandparent &#39;root&#39;</span>
 <a href='#' class='sql_link'>sql</a><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Node</span><span class="p">)</span><span class="o">.</span>\
         <span class="nb">filter</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">data</span><span class="o">==</span><span class="s1">&#39;subchild1&#39;</span><span class="p">)</span><span class="o">.</span>\
@@ -335,31 +287,19 @@ WHERE node.data = ?
     AND node_2.data = ?
 [&#39;subchild1&#39;, &#39;child2&#39;, &#39;root&#39;]</div></pre></div>
 </div>
-<p><a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.reset_joinpoint" title="sqlalchemy.orm.query.Query.reset_joinpoint"><code class="xref py py-meth docutils literal"><span class="pre">Query.reset_joinpoint()</span></code></a> will also remove the &quot;aliasing&quot; from filtering
-calls:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Node</span><span class="p">)</span><span class="o">.</span>\
+<p>：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Query.reset_joinpoint`はフィルタリング呼び出しから&amp;quot; aliasing &amp;quot;も削除します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Node</span><span class="p">)</span><span class="o">.</span>\
         <span class="n">join</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">children</span><span class="p">,</span> <span class="n">aliased</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span>\
         <span class="nb">filter</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span><span class="o">.</span>\
         <span class="n">reset_joinpoint</span><span class="p">()</span><span class="o">.</span>\
         <span class="nb">filter</span><span class="p">(</span><span class="n">Node</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>For an example of using <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.join.params.aliased" title="sqlalchemy.orm.query.Query.join"><code class="xref py py-paramref docutils literal"><span class="pre">Query.join.aliased</span></code></a> to
-arbitrarily join along a chain of self-referential nodes, see
-<a class="reference internal" href="examples.html#examples-xmlpersistence"><span class="std std-ref">XML Persistence</span></a>.</p>
+<p>：paramref： <cite>.Query.join.aliased`を使って、自己参照ノードのチェーンに沿って任意に結合する例については、：ref：</cite> examples_xmlpersistence`を参照してください。</p>
 </div>
 <div class="section" id="configuring-self-referential-eager-loading">
-<span id="self-referential-eager-loading"></span><h2>Configuring Self-Referential Eager Loading<a class="headerlink" href="#configuring-self-referential-eager-loading" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Eager loading of relationships occurs using joins or outerjoins from parent to
-child table during a normal query operation, such that the parent and its
-immediate child collection or reference can be populated from a single SQL
-statement, or a second statement for all immediate child collections.
-SQLAlchemy's joined and subquery eager loading use aliased tables in all cases
-when joining to related items, so are compatible with self-referential
-joining. However, to use eager loading with a self-referential relationship,
-SQLAlchemy needs to be told how many levels deep it should join and/or query;
-otherwise the eager load will not take place at all. This depth setting is
-configured via <code class="xref py py-paramref docutils literal"><span class="pre">join_depth</span></code>:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="self-referential-eager-loading"></span><h2>自己参照型eagerローディングのコンフィグレーション<a class="headerlink" href="#configuring-self-referential-eager-loading" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>通常の照会操作中に親から子表への結合または外部結合を使用して、親およびその直下の子のコレクションまたは参照に1つのSQL文またはすべての直接の子コレクションの2つ目の文を入れることができます。 SQLAlchemyの結合およびサブクエリeagerローディングは、関連項目への結合時にエイリアステーブルを使用するため、自己参照結合と互換性があります。しかし、自己参照関係を持つ熱心な読み込みを使用するには、SQLAlchemyにいくつのレベルの結合やクエリが必要かを伝える必要があります。そうでなければ熱心な負荷はまったく起こりません。この深度の設定は、paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.relationships.join_depth`によって設定されます：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;node&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
     <span class="n">parent_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;node.id&#39;</span><span class="p">))</span>
@@ -394,13 +334,13 @@ FROM node
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="basic_relationships.html" title="previous chapter">Basic Relationship Patterns</a>
+        <a href="basic_relationships.html" title="previous chapter">基本的な関係パターン</a>
         Next:
-        <a href="backref.html" title="next chapter">Linking Relationships with Backref</a>
+        <a href="backref.html" title="next chapter">バックリファレンスとの関係のリンク</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -427,6 +367,7 @@ FROM node
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

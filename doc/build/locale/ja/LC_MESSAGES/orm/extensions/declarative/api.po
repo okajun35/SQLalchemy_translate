@@ -6,28 +6,18 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/declarative/api.rst:5
 msgid "Declarative API"
-msgstr ""
+msgstr "宣言的API"
 
 #: ../../orm/extensions/declarative/api.rst:8
 msgid "API Reference"
-msgstr ""
+msgstr "APIリファレンス"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:1
 msgid "Construct a base class for declarative class definitions."
-msgstr ""
+msgstr "宣言的なクラス定義のための基本クラスを構築します。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:3
 msgid ""
@@ -35,17 +25,17 @@ msgid ""
 ":class:`~sqlalchemy.schema.Table` objects and makes the appropriate "
 ":func:`~sqlalchemy.orm.mapper` calls based on the information provided "
 "declaratively in the class and any subclasses of the class."
-msgstr ""
+msgstr "新しい基本クラスには適切な：class： `〜sqlalchemy.schema.Table`オブジェクトを生成するメタクラスが与えられ、クラス内で宣言的に提供される情報に基づいて適切な：func：`〜sqlalchemy.orm.mapper`呼び出しが行われます。クラスのサブクラス。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:9
 msgid ""
 "An optional :class:`~sqlalchemy.engine.Connectable`, will be assigned the"
 " ``bind`` attribute on the :class:`~sqlalchemy.schema.MetaData` instance."
-msgstr ""
+msgstr "オプション：class： `〜sqlalchemy.engine.Connectable`は：class：`〜sqlalchemy.schema.MetaData`インスタンスの `` bind``属性に割り当てられます。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:14
 msgid ""
@@ -55,26 +45,26 @@ msgid ""
 "will be created if none is provided.  The "
 ":class:`~sqlalchemy.schema.MetaData` instance will be available via the "
 "`metadata` attribute of the generated declarative base class."
-msgstr ""
+msgstr "オプション：class： `〜sqlalchemy.schema.MetaData`インスタンスです。 All：class： `〜sqlalchemy.schema.Table`オブジェクトは、ベースのサブクラスによって暗黙に宣言され、このMetaDataを共有します。何も提供されない場合、MetaDataインスタンスが作成されます。 ：class： `〜sqlalchemy.schema.MetaData`インスタンスは、生成された宣言基本クラスの` metadata`属性を介して利用可能になります。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:22
 msgid ""
 "An optional callable, defaults to :func:`~sqlalchemy.orm.mapper`. Will be"
 " used to map subclasses to their Tables."
-msgstr ""
+msgstr "オプションの呼び出し可能なデフォルトは：func： `〜sqlalchemy.orm.mapper`です。サブクラスをテーブルにマップするために使用されます。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:26
 msgid ""
 "Defaults to :class:`object`. A type to use as the base for the generated "
 "declarative base class. May be a class or tuple of classes."
-msgstr ""
+msgstr "デフォルトは：class： `object`です。生成された宣言基本クラスのベースとして使用する型。クラスまたはクラスのタプルである可能性があります。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:30
 msgid ""
 "Defaults to ``Base``.  The display name for the generated class.  "
 "Customizing this is not required, but can improve clarity in tracebacks "
 "and debugging."
-msgstr ""
+msgstr "デフォルトは `` Base``です。生成されたクラスの表示名。これをカスタマイズする必要はありませんが、トレースバックとデバッグの明快さを向上させることができます。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:35
 msgid ""
@@ -84,7 +74,7 @@ msgid ""
 "relationships to an instance.  If ``None`` is supplied, no __init__ will "
 "be provided and construction will fall back to cls.__init__ by way of the"
 " normal Python semantics."
-msgstr ""
+msgstr "既定値は：func： `〜sqlalchemy.ext.declarative.base._declarative_constructor`で、宣言されたフィールドとインスタンスに対する関係に\\ ** kwargsを割り当てる__init__実装です。 `` None``が与えられていれば、__init__は提供されず、通常のPythonのセマンティクスによって構築がcls .__ init__に戻ります。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:43
 msgid ""
@@ -93,51 +83,51 @@ msgid ""
 ":func:`.relationship` and others.  Allows two or more declarative base "
 "classes to share the same registry of class names for simplified inter-"
 "base relationships."
-msgstr ""
+msgstr "func： `.relationship`などのクラス内でクラスを識別するために文字列名が使用されたときに、クラス名のレジストリとして機能するオプションの辞書です。 2つ以上の宣言ベースクラスが、簡単なベース間の関係のためにクラス名の同じレジストリを共有できるようにします。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:50
 msgid ""
 "Defaults to :class:`.DeclarativeMeta`.  A metaclass or __metaclass__ "
 "compatible callable to use as the meta type of the generated declarative "
 "base class."
-msgstr ""
+msgstr "デフォルトは：class： `.DeclarativeMeta`です。生成された宣言基本クラスのメタタイプとして使用するメタクラスまたは__metaclass__互換の呼び出し可能クラス。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:55
 msgid ""
 "if :paramref:`.declarative_base.cls` is a single class (rather than a "
 "tuple), the constructed base class will inherit its docstring."
-msgstr ""
+msgstr "：paramref： `.declarative_base.cls`が（タプルではなく）単一のクラスである場合、構築された基本クラスはそのdocstringを継承します。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declarative_base:60
 msgid ":func:`.as_declarative`"
-msgstr ""
+msgstr "：func： `.as_declarative`"
 
 #: ../../docstring of sqlalchemy.ext.declarative.as_declarative:1
 msgid "Class decorator for :func:`.declarative_base`."
-msgstr ""
+msgstr "クラスデコレータfor：func： `.declarative_base`。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.as_declarative:3
 msgid ""
 "Provides a syntactical shortcut to the ``cls`` argument sent to "
 ":func:`.declarative_base`, allowing the base class to be converted in-"
 "place to a \"declarative\" base::"
-msgstr ""
+msgstr "：func： `.declarative_base`に送られる` `cls``引数への構文上のショートカットを提供し、ベースクラスをインプレースで\&quot;宣言的な &quot;ベースに変換できるようにします::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.as_declarative:19
 msgid ""
 "All keyword arguments passed to :func:`.as_declarative` are passed along "
 "to :func:`.declarative_base`."
-msgstr ""
+msgstr "：func： `.as_declarative`に渡されるすべてのキーワード引数は：func：` .declarative_base`に渡されます。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.as_declarative:26
 msgid ":func:`.declarative_base`"
-msgstr ""
+msgstr "：func： `.declarative_base`"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr:1
 msgid ""
 "Mark a class-level method as representing the definition of a mapped "
 "property or special declarative member name."
-msgstr ""
+msgstr "クラスレベルのメソッドを、マップされたプロパティまたは特別な宣言的メンバー名の定義を表すものとしてマークします。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr:4
 msgid ""
@@ -147,56 +137,56 @@ msgid ""
 "specific to mapping or declarative table configuration.  The name of the "
 "attribute is that of what the non-dynamic version of the attribute would "
 "be."
-msgstr ""
+msgstr "@declared_attrは、属性をインスタンス化されていないクラスから呼び出せるスカラー型のプロパティに変換します。 Declarativeは@declared_attrで特にマークされた属性を、マッピングまたは宣言的な表の構成に固有の構造体を返すものとして扱います。属性の名前は、属性の非動的バージョンの名前です。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr:12
 msgid ""
 "@declared_attr is more often than not applicable to mixins, to define "
 "relationships that are to be applied to different implementors of the "
 "class::"
-msgstr ""
+msgstr "@declared_attrは、ミックスインには適用できない場合が多く、クラスの異なる実装者に適用されるリレーションシップを定義します。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr:23
 msgid ""
 "It also can be applied to mapped classes, such as to provide a "
 "\"polymorphic\" scheme for inheritance::"
-msgstr ""
+msgstr "また、継承のための\ &quot;polymorphic \&quot;スキームを提供するなど、マップされたクラスにも適用できます::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr:44
 msgid ""
 ":class:`.declared_attr` can be used with non-ORM or extension attributes,"
 " such as user-defined attributes or :func:`.association_proxy` objects, "
 "which will be assigned to the class at class construction time."
-msgstr ""
+msgstr "：class： `.declared_attr`は、ユーザ定義の属性や：func：` .association_proxy`オブジェクトのような非ORM属性や拡張属性で使用できます。これらのオブジェクトは、クラス構築時にクラスに割り当てられます。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr.cascading:1
 msgid "Mark a :class:`.declared_attr` as cascading."
-msgstr ""
+msgstr "a：class： `.declared_attr`をカスケードとしてマークしてください。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr.cascading:3
 msgid ""
 "This is a special-use modifier which indicates that a column or "
 "MapperProperty-based declared attribute should be configured distinctly "
 "per mapped subclass, within a mapped-inheritance scenario."
-msgstr ""
+msgstr "これは、マップされた継承シナリオ内で、マッピングされたサブクラスごとに列またはMapperPropertyベースの宣言された属性を明示的に構成する必要があることを示す特別な使用の修飾子です。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr.cascading:9
 msgid "The :attr:`.declared_attr.cascading` modifier has several limitations:"
-msgstr ""
+msgstr "：attr： `.declared_attr.cascading`修飾子にはいくつかの制限があります："
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr.cascading:12
 msgid ""
 "The flag **only** applies to the use of :class:`.declared_attr` on "
 "declarative mixin classes and ``__abstract__`` classes; it currently has "
 "no effect when used on a mapped class directly."
-msgstr ""
+msgstr "フラグ** only **は、宣言的なmixinクラスと `` __abstract__``クラスのclass： `.declared_attr`の使用に適用されます。マップされたクラスで直接使用されても効果はありません。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr.cascading:16
 msgid ""
 "The flag **only** applies to normally-named attributes, e.g. not any "
 "special underscore attributes such as ``__tablename__``. On these "
 "attributes it has **no** effect."
-msgstr ""
+msgstr "フラグ**のみ**は通常の名前の属性に適用されます。たとえば、 `` __tablename__`のような特殊なアンダースコア属性はありません。これらの属性には、** no **効果があります。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr.cascading:20
 msgid ""
@@ -204,123 +194,123 @@ msgid ""
 "hierarchy; if a subclass tries to override the attribute, a warning is "
 "emitted and the overridden attribute is skipped.  This is a limitation "
 "that it is hoped will be resolved at some point."
-msgstr ""
+msgstr "現在のところ、このフラグは、クラス階層をさらに上書きすることはできません**。サブクラスが属性をオーバーライドしようとすると、警告が発行され、オーバーライドされた属性はスキップされます。これは、ある時点で解決されることが期待される制限です。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr.cascading:26
 msgid ""
 "Below, both MyClass as well as MySubClass will have a distinct ``id`` "
 "Column object established::"
-msgstr ""
+msgstr "以下、MyClassとMySubClassの両方に別個の `` id`` Columnオブジェクトが設定されます::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr.cascading:45
 msgid ""
 "The behavior of the above configuration is that ``MySubClass`` will refer"
 " to both its own ``id`` column as well as that of ``MyClass`` underneath "
 "the attribute named ``some_id``."
-msgstr ""
+msgstr "上記の設定の動作は、 `` MySubClass``は、 `` some_id``という属性の下にある `` MyClass``のものだけでなく、 `` id``カラムも参照することになります。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr.cascading:51
 msgid ":ref:`declarative_inheritance`"
-msgstr ""
+msgstr "：ref： `declarative_inheritance`"
 
 #: ../../docstring of sqlalchemy.ext.declarative.declared_attr.cascading:53
 msgid ":ref:`mixin_inheritance_columns`"
-msgstr ""
+msgstr "：ref： `mixin_inheritance_columns`"
 
 #: ../../docstring of sqlalchemy.ext.declarative.api._declarative_constructor:1
 msgid "A simple constructor that allows initialization from kwargs."
-msgstr ""
+msgstr "kwargsからの初期化を可能にする単純なコンストラクタです。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.api._declarative_constructor:3
 msgid ""
 "Sets attributes on the constructed instance using the names and values in"
 " ``kwargs``."
-msgstr ""
+msgstr "`` kwargs``の名前と値を使って構築されたインスタンスの属性を設定します。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.api._declarative_constructor:6
 msgid ""
 "Only keys that are present as attributes of the instance's class are "
 "allowed. These could be, for example, any mapped columns or "
 "relationships."
-msgstr ""
+msgstr "インスタンスのクラスの属性として存在するキーのみが許可されます。これらは、例えば、マップされた列または関係とすることができる。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.has_inherited_table:1
 msgid ""
 "Given a class, return True if any of the classes it inherits from has a "
 "mapped table, otherwise return False."
-msgstr ""
+msgstr "与えられたクラスがあれば、それが継承するクラスのいずれかにマップされたテーブルがある場合はTrueを返し、そうでない場合はFalseを返します。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.has_inherited_table:4
 msgid ""
 "This is used in declarative mixins to build attributes that behave "
 "differently for the base class vs. a subclass in an inheritance "
 "hierarchy."
-msgstr ""
+msgstr "これは、宣言的なミックスインで、継承階層のサブクラスと基本クラスの動作が異なる属性を構築するために使用されます。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.has_inherited_table:10
 msgid ":ref:`decl_mixin_inheritance`"
-msgstr ""
+msgstr "：ref： `decl_mixin_inheritance`"
 
 #: ../../docstring of sqlalchemy.ext.declarative.synonym_for:1
 msgid ""
 "Decorator that produces an :func:`.orm.synonym` attribute in conjunction "
 "with a Python descriptor."
-msgstr ""
+msgstr "Python記述子と共に：func： `.orm.synonym`属性を生成するDecorator。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.synonym_for:4
 msgid ""
 "The function being decorated is passed to :func:`.orm.synonym` as the "
 ":paramref:`.orm.synonym.descriptor` parameter::"
-msgstr ""
+msgstr "装飾される関数は、：paramref： `.orm.synonym.descriptor`パラメータとして：func：` .orm.synonym`に渡されます::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.synonym_for:18
 msgid ""
 "The :ref:`hybrid properties <mapper_hybrids>` feature of SQLAlchemy is "
 "typically preferred instead of synonyms, which is a more legacy feature."
-msgstr ""
+msgstr "：ref： `ハイブリッドプロパティ<mapper_hybrids> SQLAlchemyの機能は、より多くのレガシー機能である同義語の代わりに一般的に好まれます。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.synonym_for:24
 msgid ":ref:`synonyms` - Overview of synonyms"
-msgstr ""
+msgstr "：ref： `類義語`  - 類義語の概要"
 
 #: ../../docstring of sqlalchemy.ext.declarative.synonym_for:26
 msgid ":func:`.orm.synonym` - the mapper-level function"
-msgstr ""
+msgstr "：func： `.orm.synonym`  - マッパーレベルの関数"
 
 #: ../../docstring of sqlalchemy.ext.declarative.synonym_for:28
 msgid ""
 ":ref:`mapper_hybrids` - The Hybrid Attribute extension provides an "
 "updated approach to augmenting attribute behavior more flexibly than can "
 "be achieved with synonyms."
-msgstr ""
+msgstr "：ref： `mapper_hybrids`  - ハイブリッド属性拡張は、同義語で達成できるよりも柔軟に属性の振る舞いを拡張するための更新されたアプローチを提供します。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.comparable_using:1
 msgid "Decorator, allow a Python @property to be used in query criteria."
-msgstr ""
+msgstr "デコレータは、クエリ条件でPython @propertyを使用できるようにします。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.comparable_using:3
 msgid ""
 "This is a  decorator front end to "
 ":func:`~sqlalchemy.orm.comparable_property` that passes through the "
 "comparator_factory and the function being decorated::"
-msgstr ""
+msgstr "これは、compare_factoryと装飾される関数を通過する：func： `〜sqlalchemy.orm.comparable_property`のデコレータフロントエンドです::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.comparable_using:12
 msgid ""
 "The regular ``comparable_property()`` is also usable directly in a "
 "declarative setting and may be convenient for read/write properties::"
-msgstr ""
+msgstr "通常の `` comparable_property（） ``も宣言的な設定で直接使用でき、読み書き可能なプロパティに便利です::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.instrument_declarative:1
 msgid ""
 "Given a class, configure the class declaratively, using the given "
 "registry, which can be any dictionary, and MetaData object."
-msgstr ""
+msgstr "与えられたクラスを与えられたレジストリを使用して、クラスを宣言的に構成します。辞書は任意の辞書でも、MetaDataオブジェクトでもかまいません。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.AbstractConcreteBase:1
 #: sqlalchemy.ext.declarative.ConcreteBase:1
 msgid "A helper class for 'concrete' declarative mappings."
-msgstr ""
+msgstr "「具体的な」宣言的なマッピングのためのヘルパークラス。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.AbstractConcreteBase:3
 msgid ""
@@ -328,7 +318,7 @@ msgid ""
 "function automatically, against all tables mapped as a subclass to this "
 "class.   The function is called via the ``__declare_last__()`` function, "
 "which is essentially a hook for the :meth:`.after_configured` event."
-msgstr ""
+msgstr "：class： `.AbstractConcreteBase`は：func：` .polymorphic_union`関数を、このクラスのサブクラスとしてマップされたすべてのテーブルに対して自動的に使用します。関数は、 `` __declare_last __（） ``関数を介して呼び出されます。これは、本質的に：meth： `.after_configured`イベントのフックです。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.AbstractConcreteBase:9
 msgid ""
@@ -337,12 +327,12 @@ msgid ""
 "directly to the \"polymorphic\" selectable directly and is only used for "
 "selecting.  Compare to :class:`.ConcreteBase`, which does create a "
 "persisted table for the base class."
-msgstr ""
+msgstr "：class： `.AbstractConcreteBase`は基本クラスのためにマップされたクラスを生成しますが、どのテーブルにも保持されません。その代わりに直接\ &quot;polymorphic \&quot;に直接マップされ、選択にのみ使用されます。比較：class： `.ConcreteBase`：基本クラスの永続テーブルを作成します。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.AbstractConcreteBase:15
 #: sqlalchemy.ext.declarative.ConcreteBase:13
 msgid "Example::"
-msgstr ""
+msgstr "例::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.AbstractConcreteBase:32
 msgid ""
@@ -352,41 +342,41 @@ msgid ""
 "are produced, it then gets mapped itself, but after all of its "
 "decscendants.  This is a very unique system of mapping not found in any "
 "other SQLAlchemy system."
-msgstr ""
+msgstr "抽象基本クラスは宣言的に特別な方法で処理されます。クラス構成時には、宣言的なmixinや `` __abstract__``の基本クラスのように振る舞います。クラスが設定され、マッピングが生成されると、マッピングはそれ自体ではなく、すべてのデスケッチメントの後にマッピングされます。これは、他のSQLAlchemyシステムにはない非常にユニークなマッピングシステムです。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.AbstractConcreteBase:39
 msgid ""
 "Using this approach, we can specify columns and properties that will take"
 " place on mapped subclasses, in the way that we normally do as in "
 ":ref:`declarative_mixins`::"
-msgstr ""
+msgstr "このアプローチを使用すると、マッピングされたサブクラスで行われる列とプロパティを指定できます：ref： `declarative_mixins` ::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.AbstractConcreteBase:68
 msgid ""
 "When we make use of our mappings however, both ``Manager`` and "
 "``Employee`` will have an independently usable ``.company`` attribute::"
-msgstr ""
+msgstr "しかし、マッピングを使用すると、 `` Manager``と `` Employee``は、それぞれ独立して使用できる `` company``属性を持ちます::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.AbstractConcreteBase:73
 msgid ""
 "- The mechanics of :class:`.AbstractConcreteBase` have been reworked to "
 "support relationships established directly on the abstract base, without "
 "any special configurational steps."
-msgstr ""
+msgstr "- クラス： `.AbstractConcreteBase`の仕組みは、特別な構成ステップなしに、抽象基盤上に直接確立された関係をサポートするために修正されました。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.AbstractConcreteBase:79
 msgid ":class:`.ConcreteBase`"
-msgstr ""
+msgstr "：クラス： `.ConcreteBase`"
 
 #: ../../docstring of sqlalchemy.ext.declarative.AbstractConcreteBase:81
 #: sqlalchemy.ext.declarative.ConcreteBase:38
 msgid ":ref:`concrete_inheritance`"
-msgstr ""
+msgstr "：ref： `concrete_inheritance`"
 
 #: ../../docstring of sqlalchemy.ext.declarative.AbstractConcreteBase:83
 #: sqlalchemy.ext.declarative.ConcreteBase:40
 msgid ":ref:`inheritance_concrete_helpers`"
-msgstr ""
+msgstr "：ref： `inheritance_concrete_helpers`"
 
 #: ../../docstring of sqlalchemy.ext.declarative.ConcreteBase:3
 msgid ""
@@ -394,23 +384,23 @@ msgid ""
 "automatically, against all tables mapped as a subclass to this class.   "
 "The function is called via the ``__declare_last__()`` function, which is "
 "essentially a hook for the :meth:`.after_configured` event."
-msgstr ""
+msgstr "：class： `.ConcreteBase`は：func：` .polymorphic_union`関数を、このクラスのサブクラスとしてマップされたすべてのテーブルに対して自動的に使用します。関数は、 `` __declare_last __（） ``関数を介して呼び出されます。これは、本質的に：meth： `.after_configured`イベントのフックです。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.ConcreteBase:9
 msgid ""
 ":class:`.ConcreteBase` produces a mapped table for the class itself.  "
 "Compare to :class:`.AbstractConcreteBase`, which does not."
-msgstr ""
+msgstr "：class： `.ConcreteBase`は、クラス自体のためのマップされたテーブルを生成します。比較：クラス： `.AbstractConcreteBase`、そうではありません。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.ConcreteBase:36
 msgid ":class:`.AbstractConcreteBase`"
-msgstr ""
+msgstr "：クラス： `.AbstractConcreteBase`"
 
 #: ../../docstring of sqlalchemy.ext.declarative.DeferredReflection:1
 msgid ""
 "A helper class for construction of mappings based on a deferred "
 "reflection step."
-msgstr ""
+msgstr "遅延リフレクションステップに基づくマッピングの構築のためのヘルパークラス。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.DeferredReflection:4
 msgid ""
@@ -420,7 +410,7 @@ msgid ""
 "fully reflected, or at the very least have a primary key column, at the "
 "point at which a normal declarative mapping is constructed, meaning the "
 ":class:`.Engine` must be available at class declaration time."
-msgstr ""
+msgstr "通常、宣言型クラスのautoload = Trueを `` __table__``属性として使用して、class： `.Table`オブジェクトを設定することで、宣言型をリフレクションで使用できます。警告：class： `.Table`は、通常の宣言的なマッピングが構築される時点で、少なくとも：class：` .Engine` mustを意味する、主キー列を完全に反映しなければなりませんクラス宣言時に利用できるようにする。"
 
 #: ../../docstring of sqlalchemy.ext.declarative.DeferredReflection:13
 msgid ""
@@ -428,14 +418,14 @@ msgid ""
 "to be at a later point, after a specific method is called which first "
 "reflects all :class:`.Table` objects created so far.   Classes can define"
 " it as such::"
-msgstr ""
+msgstr "：class： `.DeferredReflection` mixinは、特定のメソッドが呼び出された後で、マッパーの構築を後で行うようにします。これは、これまでに作成されたall：class：` .Table`オブジェクトを最初に反映します。クラスはそれを次のように定義できます::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.DeferredReflection:25
 msgid ""
 "Above, ``MyClass`` is not yet mapped.   After a series of classes have "
 "been defined in the above fashion, all tables can be reflected and "
 "mappings created using :meth:`.prepare`::"
-msgstr ""
+msgstr "上記の &quot;MyClass&quot;はまだマップされていません。上記のように一連のクラスが定義された後、すべてのテーブルを反映させることができ、マッピングは：meth： `.prepare` ::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.DeferredReflection:33
 msgid ""
@@ -446,27 +436,27 @@ msgid ""
 "necessary for applications that use more than one engine.  For example, "
 "if an application has two engines, you might use two bases, and prepare "
 "each separately, e.g.::"
-msgstr ""
+msgstr "：class： `.DeferredReflection` mixinは、個々のクラスに適用することも、宣言ベース自体のベースとして使うことも、カスタム抽象クラスで使うこともできます。抽象ベースを使用すると、複数のエンジンを使用するアプリケーションに必要な、特定の準備ステップ用にクラスのサブセットのみを準備することができます。たとえば、アプリケーションにエンジンが2つある場合は、2つのベースを使用し、それぞれを別々に準備することができます（例："
 
 #: ../../docstring of sqlalchemy.ext.declarative.DeferredReflection:59
 msgid ""
 "Above, the class hierarchies for ``ReflectedOne`` and ``ReflectedTwo`` "
 "can be configured separately::"
-msgstr ""
+msgstr "上で、 `` ReflectedOne``と `` ReflectedTwo``のクラス階層を別々に設定することができます::"
 
 #: ../../docstring of sqlalchemy.ext.declarative.DeferredReflection.prepare:1
 msgid ""
 "Reflect all :class:`.Table` objects for all current "
 ":class:`.DeferredReflection` subclasses"
-msgstr ""
+msgstr "class :: `.DeferredReflection`サブクラスのすべてに対して、class：` .Table`オブジェクトをすべて反映します。"
 
 #: ../../orm/extensions/declarative/api.rst:36
 msgid "Special Directives"
-msgstr ""
+msgstr "特別指示"
 
 #: ../../orm/extensions/declarative/api.rst:39
 msgid "``__declare_last__()``"
-msgstr ""
+msgstr "`` __declare_last __（） ``"
 
 #: ../../orm/extensions/declarative/api.rst:41
 msgid ""
@@ -474,21 +464,21 @@ msgid ""
 "function that is automatically called by the "
 ":meth:`.MapperEvents.after_configured` event, which occurs after mappings"
 " are assumed to be completed and the 'configure' step has finished::"
-msgstr ""
+msgstr "`` __declare_last __（） ``フックは：：meth： `.MapperEvents.after_configured`イベントによって自動的に呼び出されるクラスレベル関数の定義を可能にします。これは、マッピングが完了し、 &#39;configure&#39;ステップが終了した後に発生します::"
 
 #: ../../orm/extensions/declarative/api.rst:53
 msgid "``__declare_first__()``"
-msgstr ""
+msgstr "`` __declare_first __（） ``"
 
 #: ../../orm/extensions/declarative/api.rst:55
 msgid ""
 "Like ``__declare_last__()``, but is called at the beginning of mapper "
 "configuration via the :meth:`.MapperEvents.before_configured` event::"
-msgstr ""
+msgstr "`` __declare_last __（） ``と似ていますが、：meth： `.MapperEvents.before_configured`イベントを介してマッパー設定の開始時に呼び出されます::"
 
 #: ../../orm/extensions/declarative/api.rst:69
 msgid "``__abstract__``"
-msgstr ""
+msgstr "`` __abstract__``"
 
 #: ../../orm/extensions/declarative/api.rst:71
 msgid ""
@@ -496,13 +486,13 @@ msgid ""
 "mapper for the class entirely.  A class can be added within a hierarchy "
 "in the same way as mixin (see :ref:`declarative_mixins`), allowing "
 "subclasses to extend just from the special class::"
-msgstr ""
+msgstr "`` __abstract__``は、宣言的にテーブルやマッパーの生成をスキップします。クラスは、mixinと同じ方法で階層内に追加することができます（参照：ref： `declarative_mixins`を参照）。これにより、サブクラスを特別なクラスから拡張することができます::"
 
 #: ../../orm/extensions/declarative/api.rst:89
 msgid ""
 "One possible use of ``__abstract__`` is to use a distinct "
 ":class:`.MetaData` for different bases::"
-msgstr ""
+msgstr "`` __abstract__``の可能な使い方のひとつは、distinct：class： `.MetaData`を異なるbaseに使うことです::"
 
 #: ../../orm/extensions/declarative/api.rst:102
 msgid ""
@@ -510,25 +500,25 @@ msgid ""
 ":class:`.MetaData` as the registry of tables, and those which inherit "
 "from ``OtherBase`` will use a different one. The tables themselves can "
 "then be created perhaps within distinct databases::"
-msgstr ""
+msgstr "`` DefaultBase``を継承したクラスはclass： `.MetaData`をテーブルのレジストリとして使い、` `OtherBase``を継承するクラスは別のものを使います。テーブル自体は、おそらく異なるデータベース内に作成することができます::"
 
 #: ../../orm/extensions/declarative/api.rst:112
 msgid "``__table_cls__``"
-msgstr ""
+msgstr "`` __Table_cls__``"
 
 #: ../../orm/extensions/declarative/api.rst:114
 msgid ""
 "Allows the callable / class used to generate a :class:`.Table` to be "
 "customized. This is a very open-ended hook that can allow special "
 "customizations to a :class:`.Table` that one generates here::"
-msgstr ""
+msgstr "：class： `.Table`を生成するために使用される呼び出し可能/クラスがカスタマイズされることを可能にします。これは非常に自由なフックで、特別なカスタマイズを許可することができます：class： `.Table`ここで生成する::"
 
 #: ../../orm/extensions/declarative/api.rst:126
 msgid ""
 "The above mixin would cause all :class:`.Table` objects generated to "
 "include the prefix ``\"my_\"``, followed by the name normally specified "
 "using the ``__tablename__`` attribute."
-msgstr ""
+msgstr "上記のミックスインは `` \ &quot;my _ \&quot; ``という接頭辞と `` __tablename__``属性を使って通常指定された名前を含むall：class： `.Table`オブジェクトを生成します。"
 
 #: ../../orm/extensions/declarative/api.rst:130
 msgid ""
@@ -538,12 +528,12 @@ msgid ""
 "that single-table inheritance should take place based on the arguments "
 "for the table itself, such as, define as single-inheritance if there is "
 "no primary key present::"
-msgstr ""
+msgstr "`` __table_cls__``は、 `` None``を返す場合もサポートしています。これにより、クラスは単一テーブルの継承とみなされ、そのサブクラスとみなされます。これは、いくつかのカスタマイズスキームでは、プライマリキーが存在しない場合は単一継承として定義するなど、テーブル自体の引数に基づいて単一テーブルの継承を行う必要があることを確認するのに便利です::"
 
 #: ../../orm/extensions/declarative/api.rst:156
 msgid ""
 "The above ``Employee`` class would be mapped as single-table inheritance "
 "against ``Person``; the ``employee_name`` column would be added as a "
 "member of the ``Person`` table."
-msgstr ""
+msgstr "上記の `` Employee``クラスは `` Person``に対して単一テーブルの継承としてマップされます。 `` employee_name``カラムは `` Person``テーブルのメンバとして追加されます。"
 

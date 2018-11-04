@@ -6,35 +6,25 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/compiler.rst:4
 msgid "Custom SQL Constructs and Compilation Extension"
-msgstr ""
+msgstr "カスタムSQLコンストラクトとコンパイル拡張"
 
 #: of sqlalchemy.ext.compiler:1
 msgid "Provides an API for creation of custom ClauseElements and compilers."
-msgstr ""
+msgstr "カスタムClauseElementsとコンパイラの作成のためのAPIを提供します。"
 
 #: of sqlalchemy.ext.compiler:4
 msgid "Synopsis"
-msgstr ""
+msgstr "シノプシス"
 
 #: of sqlalchemy.ext.compiler:6
 msgid ""
 "Usage involves the creation of one or more "
 ":class:`~sqlalchemy.sql.expression.ClauseElement` subclasses and one or "
 "more callables defining its compilation::"
-msgstr ""
+msgstr "使用法は、class： `〜sqlalchemy.sql.expression.ClauseElement`サブクラスとそのコンパイルを定義する1つ以上の呼び出し可能オブジェクトの作成です。"
 
 #: of sqlalchemy.ext.compiler:20
 msgid ""
@@ -43,31 +33,31 @@ msgid ""
 "element for named column objects. The ``compiles`` decorator registers "
 "itself with the ``MyColumn`` class so that it is invoked when the object "
 "is compiled to a string::"
-msgstr ""
+msgstr "上記の `` MyColumn``は、class： `〜sqlalchemy.sql.expression.ColumnClause`（名前付きカラムオブジェクトの基本式要素）を拡張しています。 `` compiles``デコレータは `` MyColumn``クラスに自身を登録し、オブジェクトが文字列にコンパイルされたときに呼び出されます::"
 
 #: of sqlalchemy.ext.compiler:30 sqlalchemy.ext.compiler:88
 msgid "Produces::"
-msgstr ""
+msgstr "プロデュース::"
 
 #: of sqlalchemy.ext.compiler:35
 msgid "Dialect-specific compilation rules"
-msgstr ""
+msgstr "方言固有のコンパイルルール"
 
 #: of sqlalchemy.ext.compiler:37
 msgid ""
 "Compilers can also be made dialect-specific. The appropriate compiler "
 "will be invoked for the dialect in use::"
-msgstr ""
+msgstr "コンパイラは、ダイアレクト固有のものにすることもできます。使用中の方言に対して適切なコンパイラが呼び出されます::"
 
 #: of sqlalchemy.ext.compiler:57
 msgid ""
 "The second ``visit_alter_table`` will be invoked when any ``postgresql`` "
 "dialect is used."
-msgstr ""
+msgstr "2番目の `` visit_alter_table``は、 `` postgresql``の方言が使われたときに呼び出されます。"
 
 #: of sqlalchemy.ext.compiler:61
 msgid "Compiling sub-elements of a custom expression construct"
-msgstr ""
+msgstr "カスタム式の構成要素のサブ要素のコンパイル"
 
 #: of sqlalchemy.ext.compiler:63
 msgid ""
@@ -79,25 +69,25 @@ msgid ""
 ":class:`~sqlalchemy.sql.compiler.DDLCompiler` both include a "
 "``process()`` method which can be used for compilation of embedded "
 "attributes::"
-msgstr ""
+msgstr "`` compiler``引数は、使用中の：class： `〜sqlalchemy.engine.interfaces.Compiled`オブジェクトです。このオブジェクトは、 `` compiler.dialect``、 `` compiler.statement``など、実行中のコンパイルに関する情報を調べることができます。class： `〜sqlalchemy.sql.compiler.SQLCompiler`と：class ： `〜sqlalchemy.sql.compiler.DDLCompiler`には、両方とも埋め込み属性のコンパイルに使用できる` `process（）` `メソッドが含まれています::"
 
 #: of sqlalchemy.ext.compiler:95
 msgid ""
 "The above ``InsertFromSelect`` construct is only an example, this actual "
 "functionality is already available using the :meth:`.Insert.from_select` "
 "method."
-msgstr ""
+msgstr "上記の `` InsertFromSelect``構造体は単なる例であり、この実際の機能は：meth： `.Insert.from_select`メソッドを使って既に利用可能です。"
 
 #: of sqlalchemy.ext.compiler:101
 msgid ""
 "The above ``InsertFromSelect`` construct probably wants to have "
 "\"autocommit\" enabled.  See :ref:`enabling_compiled_autocommit` for this"
 " step."
-msgstr ""
+msgstr "上記の `` InsertFromSelect``構造は、おそらく\ &quot;autocommit \&quot;を有効にしたいと考えています。このステップについては、ref： `enabling_compiled_autocommit`を参照してください。"
 
 #: of sqlalchemy.ext.compiler:105
 msgid "Cross Compiling between SQL and DDL compilers"
-msgstr ""
+msgstr "SQLコンパイラとDDLコンパイラ間のクロスコンパイル"
 
 #: of sqlalchemy.ext.compiler:107
 msgid ""
@@ -107,7 +97,7 @@ msgid ""
 "``DDLCompiler`` includes an accessor ``sql_compiler`` for this reason, "
 "such as below where we generate a CHECK constraint that embeds a SQL "
 "expression::"
-msgstr ""
+msgstr "SQLとDDLの構造体はそれぞれ異なるベースコンパイラ `` SQLCompiler``と `` DDLCompiler``を使ってコンパイルされます。共通の必要性は、DDL式の中からSQL式のコンパイル規則にアクセスすることです。 `` DDLCompiler``には、次のような理由でアクセサの `` sql_compiler``が含まれています.SQLの式を埋め込むCHECK制約を生成する場所"
 
 #: of sqlalchemy.ext.compiler:121
 msgid ""
@@ -118,11 +108,11 @@ msgid ""
 "which refer to strings or integers should be rendered **in-place**, "
 "rather than being referred to as a bound parameter;  when emitting DDL, "
 "bound parameters are typically not supported."
-msgstr ""
+msgstr "上記では、：literal_binds``フラグである：meth： `.SQLCompiler.process`によって呼び出される追加のフラグをプロセスステップに追加します。これは、：class： `.BindParameter`オブジェクトまたは文字列や整数を参照するオブジェクトなどの他の\&quot;リテラル\ &quot;オブジェクトを参照するSQL式は、参照されるのではなく**インプレース**でレンダリングされるべきであることを示しますtoを結合パラメータとして; DDLを発行する場合、通常、バインドされたパラメータはサポートされていません。"
 
 #: of sqlalchemy.ext.compiler:133
 msgid "Enabling Autocommit on a Construct"
-msgstr ""
+msgstr "コンストラクトに対する自動コミットの有効化"
 
 #: of sqlalchemy.ext.compiler:135
 msgid ""
@@ -139,7 +129,7 @@ msgid ""
 "\"autocommit\" option needs to be set in order for the statement to "
 "function with \"connectionless\" execution (as described in "
 ":ref:`dbengine_implicit`)."
-msgstr ""
+msgstr "セクション：ref： `autocommit`を思い出してください：class：` .Engine`は、ユーザ定義のトランザクションがない場合にコンストラクトを実行するように要求されたときに、指定されたコンストラクトがDMLまたはDDLを表すかどうかを検出します。 （DDLの場合には、SQLAlchemyの機能とは無関係にDBAPIが常にトランザクションを実行していることを思い出してください）、DBAPIによって生成されたトランザクションがコミットされることを要求します。これを確認するには、実際にはコンストラクターの\ &quot;autocommit \&quot;実行オプションをチェックしてください。 INSERT派生、新しいDDL型、またはおそらくデータを変更するストアド・プロシージャのような構文を構築するときは、文が\ &quot;コネクションレス\&quot;で機能するように\ &quot;autocommit \&quot;オプションを設定する必要があります。 ：ref： `dbengine_implicit`を参照してください）。"
 
 #: of sqlalchemy.ext.compiler:148
 msgid ""
@@ -147,7 +137,7 @@ msgid ""
 "then add the \"autocommit\" flag to the ``_execution_options`` dictionary"
 " (note this is a \"frozen\" dictionary which supplies a generative "
 "``union()`` method)::"
-msgstr ""
+msgstr "現在、これを行う簡単な方法はclass： `.Executable`をサブクラス化し、\&quot; autocommit \ &quot;フラグを` `_execution_options``ディクショナリに追加することです（これは生成元を提供する\&quot;フリーズ\ &quot;辞書です`` union（） ``メソッド）::"
 
 #: of sqlalchemy.ext.compiler:158
 msgid ""
@@ -155,17 +145,17 @@ msgid ""
 "or DELETE, :class:`.UpdateBase` can be used, which already is a subclass "
 "of :class:`.Executable`, :class:`.ClauseElement` and includes the "
 "``autocommit`` flag::"
-msgstr ""
+msgstr "より簡単には、構造体が本当にINSERT、UPDATE、またはDELETEに類似している場合は、：class： `.UpdateBase`を使用できます。これは既に：class：` .Executable`、：class： `.ClauseElement` `` autocommit``フラグを含みます::"
 
 #: of sqlalchemy.ext.compiler:172
 msgid ""
 "DDL elements that subclass :class:`.DDLElement` already have the "
 "\"autocommit\" flag turned on."
-msgstr ""
+msgstr "サブクラスであるclass： `.DDLElement`のDDL要素はすでに\&quot; autocommit \ &quot;フラグがオンになっています。"
 
 #: of sqlalchemy.ext.compiler:179
 msgid "Changing the default compilation of existing constructs"
-msgstr ""
+msgstr "既存のコンストラクトのデフォルトコンパイルの変更"
 
 #: of sqlalchemy.ext.compiler:181
 msgid ""
@@ -174,7 +164,7 @@ msgid ""
 "@compiles decorator is invoked upon the appropriate class (be sure to use"
 " the class, i.e. ``Insert`` or ``Select``, instead of the creation "
 "function such as ``insert()`` or ``select()``)."
-msgstr ""
+msgstr "コンパイラの拡張機能は、既存の構造体にも同様に適用されます。ビルドされたSQL構文のコンパイルを無効にすると、@ compileデコレータは適切なクラスで呼び出されます（ `` Insert``や `` Select``などのクラスを使用してください） `insert（）` `や` `select（）` `）を実行します。"
 
 #: of sqlalchemy.ext.compiler:187
 msgid ""
@@ -182,27 +172,27 @@ msgid ""
 "compilation routine, use the appropriate visit_XXX method - this because "
 "compiler.process() will call upon the overriding routine and cause an "
 "endless loop.   Such as, to add \"prefix\" to all insert statements::"
-msgstr ""
+msgstr "新しいコンパイル関数の中で、\ &quot;オリジナル\&quot;コンパイルルーチンを呼び出すには、適切なvisit_XXXメソッドを使用します。これは、compiler.process（）がオーバーライドルーチンを呼び出し、無限ループを引き起こすためです。のような、すべての挿入ステートメントに\ &quot;プレフィックス\&quot;を追加する::"
 
 #: of sqlalchemy.ext.compiler:198
 msgid ""
 "The above compiler will prefix all INSERT statements with \"some prefix\""
 " when compiled."
-msgstr ""
+msgstr "上記のコンパイラは、すべてのINSERT文の前に、コンパイル時に\ &quot;some prefix \&quot;を付けます。"
 
 #: of sqlalchemy.ext.compiler:204
 msgid "Changing Compilation of Types"
-msgstr ""
+msgstr "タイプの編集の変更"
 
 #: of sqlalchemy.ext.compiler:206
 msgid ""
 "``compiler`` works for types, too, such as below where we implement the "
 "MS-SQL specific 'max' keyword for ``String``/``VARCHAR``::"
-msgstr ""
+msgstr "`` string`` / `` VARCHAR``にMS-SQL固有の &#39;max&#39;キーワードを実装するところのように、 `` compiler``も型のために働きます::"
 
 #: of sqlalchemy.ext.compiler:222
 msgid "Subclassing Guidelines"
-msgstr ""
+msgstr "サブクラス化ガイドライン"
 
 #: of sqlalchemy.ext.compiler:224
 msgid ""
@@ -210,7 +200,7 @@ msgid ""
 "expression constructs. To make this easier, the expression and schema "
 "packages feature a set of \"bases\" intended for common tasks. A synopsis"
 " is as follows:"
-msgstr ""
+msgstr "コンパイラ拡張を使用する大きな部分は、SQLAlchemyの式構造をサブクラス化することです。これを簡単にするために、式とスキーマのパッケージには、共通のタスク用の\ &quot;塩基\&quot;のセットがあります。概要は次のとおりです。"
 
 #: of sqlalchemy.ext.compiler:229
 msgid ""
@@ -218,7 +208,7 @@ msgid ""
 "expression class. Any SQL expression can be derived from this base, and "
 "is probably the best choice for longer constructs such as specialized "
 "INSERT statements."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.sql.expression.ClauseElement`  - これはルート表現クラスです。どのSQL式もこのベースから派生することができ、特殊なINSERTステートメントのような長い構文の場合はおそらく最良の選択です。"
 
 #: of sqlalchemy.ext.compiler:234
 msgid ""
@@ -227,7 +217,7 @@ msgid ""
 "clause of a SELECT statement (as well as order by and group by) can "
 "derive from this - the object will automatically have Python "
 "\"comparison\" behavior."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.sql.expression.ColumnElement`  - すべての「列のような」要素のルート。 SELECTステートメントの &quot;columns&quot;節（およびby by order byとgroup by）は、これから派生することができます。オブジェクトは自動的にPython \ &quot;comparison \&quot;の動作をします。"
 
 #: of sqlalchemy.ext.compiler:239
 msgid ""
@@ -235,7 +225,7 @@ msgid ""
 "``type`` member which is expression's return type.  This can be "
 "established at the instance level in the constructor, or at the class "
 "level if its generally constant::"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.sql.expression.ColumnElement`クラスは、式の戻り値の型である` `type``メンバを持つことを望みます。これは、コンストラクタのインスタンスレベルで確立することも、クラスレベルで確立することもできます。"
 
 #: of sqlalchemy.ext.compiler:247
 msgid ""
@@ -245,7 +235,7 @@ msgid ""
 "support statements along the line of \"SELECT FROM <some function>\" "
 "``FunctionElement`` adds in the ability to be used in the FROM clause of "
 "a ``select()`` construct::"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.sql.functions.FunctionElement`  - これは` `ColumnElement``と\&quot; from句\ &quot;のようなオブジェクトのハイブリッドであり、SQL関数またはストアドプロシージャの呼び出しのタイプを表します。ほとんどのデータベースは\ &quot;SELECT FROM <some function> \ &quot;` `FunctionElement``は、` `select（）` `の構造体のFROM句で使用できる機能を追加しています::"
 
 #: of sqlalchemy.ext.compiler:269
 msgid ""
@@ -255,7 +245,7 @@ msgid ""
 "``DDLElement`` also features ``Table`` and ``MetaData`` event hooks via "
 "the ``execute_at()`` method, allowing the construct to be invoked during "
 "CREATE TABLE and DROP TABLE sequences."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.schema.DDLElement`  -  CREATE TABLE、ALTER TABLEなどのすべてのDDL式のルートです。` `DDLElement``サブクラスのコンパイルは` `DDLCompiler``の代わりに` `DDLCompiler``によって発行されます。 SQLCompiler``です。 `` DDLElement``は、 `` Table``と `` MetaData``イベントが `` execute_at（） ``メソッドを介してフックし、CREATE TABLEとDROP TABLEのシーケンス中に呼び出されるようにしています。"
 
 #: of sqlalchemy.ext.compiler:276
 msgid ""
@@ -263,15 +253,15 @@ msgid ""
 "should be used with any expression class that represents a \"standalone\""
 " SQL statement that can be passed directly to an ``execute()`` method.  "
 "It is already implicit within ``DDLElement`` and ``FunctionElement``."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.sql.expression.Executable`  - これは、` `execute（）` `メソッドに直接渡すことができるスタンドアロンの\ SQLステートメントを表す任意の式クラスで使用されるミックスインですすでに `` DDLElement``と `` FunctionElement``の中に暗黙のうちに入っています。"
 
 #: of sqlalchemy.ext.compiler:282
 msgid "Further Examples"
-msgstr ""
+msgstr "さらなる例"
 
 #: of sqlalchemy.ext.compiler:285
 msgid "\"UTC timestamp\" function"
-msgstr ""
+msgstr "\ &quot;UTCタイムスタンプ\&quot;機能"
 
 #: of sqlalchemy.ext.compiler:287
 msgid ""
@@ -283,20 +273,20 @@ msgid ""
 "character encodings - they're best applied only at the endpoints of an "
 "application (i.e. convert to UTC upon user input, re-apply desired "
 "timezone upon display)."
-msgstr ""
+msgstr "\ &quot;CURRENT_TIMESTAMP \&quot;のように動作する関数は、時間がUTC時間になるように適切な変換を適用します。タイムスタンプは、タイムゾーンなしでリレーショナルデータベースにUTCとして保存するのが最適です。タイムゾーンが文字エンコードのようなものであるため、データベースでは夏時間が終了した時刻に時間が逆転しているとは考えられません。アプリケーションのエンドポイントでのみ適用するのが最適です（つまり、ユーザー入力時にUTCに変換、表示時に希望のタイムゾーンを再適用する）。"
 
 #: of sqlalchemy.ext.compiler:295
 msgid "For PostgreSQL and Microsoft SQL Server::"
-msgstr ""
+msgstr "PostgreSQLとMicrosoft SQL Serverの場合::"
 
 #: of sqlalchemy.ext.compiler:312 sqlalchemy.ext.compiler:356
 #: sqlalchemy.ext.compiler:387
 msgid "Example usage::"
-msgstr ""
+msgstr "使用例::"
 
 #: of sqlalchemy.ext.compiler:325
 msgid "\"GREATEST\" function"
-msgstr ""
+msgstr "\ &quot;最高の\&quot;機能"
 
 #: of sqlalchemy.ext.compiler:327
 msgid ""
@@ -304,27 +294,27 @@ msgid ""
 "the one that is of the highest value - its equivalent to Python's ``max``"
 " function.  A SQL standard version versus a CASE based version which only"
 " accommodates two arguments::"
-msgstr ""
+msgstr "\ &quot;GREATEST \&quot;関数は任意の数の引数を与えられ、最も高い値のものを返します。これはPythonの `` max``関数に相当します。 SQL標準バージョンとCASEベースバージョンの2つの引数のみを扱う::"
 
 #: of sqlalchemy.ext.compiler:366
 msgid "\"false\" expression"
-msgstr ""
+msgstr "\ &quot;偽\&quot;式"
 
 #: of sqlalchemy.ext.compiler:368
 msgid ""
 "Render a \"false\" constant expression, rendering as \"0\" on platforms "
 "that don't have a \"false\" constant::"
-msgstr ""
+msgstr "\ &quot;false \&quot;定数を持たないプラットフォームで\ &quot;0 \&quot;と表現する\ &quot;false \&quot;定数式をレンダリングする::"
 
 #: of sqlalchemy.ext.compiler.compiles:1
 msgid ""
 "Register a function as a compiler for a given :class:`.ClauseElement` "
 "type."
-msgstr ""
+msgstr "与えられた：class： `.ClauseElement`型のコンパイラとして関数を登録します。"
 
 #: of sqlalchemy.ext.compiler.deregister:1
 msgid ""
 "Remove all custom compilers associated with a given "
 ":class:`.ClauseElement` type."
-msgstr ""
+msgstr "指定された：class： `.ClauseElement`型に関連するすべてのカスタムコンパイラを削除します。"
 

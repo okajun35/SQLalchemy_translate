@@ -6,45 +6,35 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/query.rst:7
 msgid "Query API"
-msgstr ""
+msgstr "クエリAPI"
 
 #: ../../orm/query.rst:9
 msgid ""
 "This section presents the API reference for the ORM :class:`.Query` "
 "object.  For a walkthrough of how to use this object, see "
 ":ref:`ormtutorial_toplevel`."
-msgstr ""
+msgstr "このセクションでは、ORM：class： `.Query`オブジェクトのAPIリファレンスを紹介します。このオブジェクトの使い方のウォークスルーについては、：ref： `ormtutorial_toplevel`を参照してください。"
 
 #: ../../orm/query.rst:13
 msgid "The Query Object"
-msgstr ""
+msgstr "クエリオブジェクト"
 
 #: ../../orm/query.rst:15
 msgid ""
 ":class:`~.Query` is produced in terms of a given :class:`~.Session`, "
 "using the :meth:`~.Session.query` method::"
-msgstr ""
+msgstr "：class： `〜.Query`は、：meth：`〜.Session.query`メソッドを使用して、与えられた：class： `〜.Session`の観点から生成されます::"
 
 #: ../../orm/query.rst:19
 msgid "Following is the full interface for the :class:`.Query` object."
-msgstr ""
+msgstr "以下は：class： `.Query`オブジェクトの完全なインターフェースです。"
 
 #: of sqlalchemy.orm.query.Query:1
 msgid "ORM-level SQL construction object."
-msgstr ""
+msgstr "ORMレベルのSQL構築オブジェクト。"
 
 #: of sqlalchemy.orm.query.Query:3
 msgid ""
@@ -54,7 +44,7 @@ msgid ""
 "features a generative interface whereby successive calls return a new "
 ":class:`.Query` object, a copy of the former with additional criteria and"
 " options associated with it."
-msgstr ""
+msgstr "：class： `.Query`は、ORMによって生成されたすべてのSELECT文のソースです。これらは、エンドユーザのクエリ操作と関連するコレクションのロードなどの高水準な内部操作によって生成されます。これは、連続する呼び出しがnew：class： `.Query`オブジェクトを返す生成的なインタフェースを備えています。これは、前者のコピーであり、それに関連する追加の基準とオプションがあります。"
 
 #: of sqlalchemy.orm.query.Query:10
 msgid ""
@@ -62,92 +52,92 @@ msgid ""
 ":meth:`~.Session.query` method of :class:`.Session`, and in less common "
 "cases by instantiating the :class:`.Query` directly and associating with "
 "a :class:`.Session` using the :meth:`.Query.with_session` method."
-msgstr ""
+msgstr "：class： `.Query`オブジェクトは通常：class：` .Session`の：meth： `〜.Session.query`メソッドを使用して生成され、あまり一般的でない場合は：class：` .Query`を直接インスタンス化します：meth： `.Query.with_session`メソッドを使用してa：class：` .Session`に関連付けます。"
 
 #: of sqlalchemy.orm.query.Query:16
 msgid ""
 "For a full walkthrough of :class:`.Query` usage, see the "
 ":ref:`ormtutorial_toplevel`."
-msgstr ""
+msgstr "：class： `.Query`の使い方については、：ref：` ormtutorial_toplevel`を参照してください。"
 
 #: of sqlalchemy.orm.query.Query.add_column:1
 msgid "Add a column expression to the list of result columns to be returned."
-msgstr ""
+msgstr "戻される結果列のリストに列式を追加します。"
 
 #: of sqlalchemy.orm.query.Query.add_column:4
 msgid ""
 "Pending deprecation: :meth:`.add_column` will be superseded by "
 ":meth:`.add_columns`."
-msgstr ""
+msgstr "保留中の非推奨：：meth： `.add_column`は：meth：` .add_columns`に置き換えられます。"
 
 #: of sqlalchemy.orm.query.Query.add_columns:1
 msgid ""
 "Add one or more column expressions to the list of result columns to be "
 "returned."
-msgstr ""
+msgstr "戻される結果列のリストに1つ以上の列式を追加します。"
 
 #: of sqlalchemy.orm.query.Query.add_entity:1
 msgid "add a mapped entity to the list of result columns to be returned."
-msgstr ""
+msgstr "返される結果列のリストにマッピングされたエンティティを追加します。"
 
 #: of sqlalchemy.orm.query.Query.all:1
 msgid "Return the results represented by this ``Query`` as a list."
-msgstr ""
+msgstr "この `` Query``で表される結果をリストとして返します。"
 
 #: of sqlalchemy.orm.query.Query.all:3 sqlalchemy.orm.query.Query.scalar:16
 msgid "This results in an execution of the underlying query."
-msgstr ""
+msgstr "この結果、基本となるクエリが実行されます。"
 
 #: of sqlalchemy.orm.query.Query.as_scalar:1
 msgid ""
 "Return the full SELECT statement represented by this :class:`.Query`, "
 "converted to a scalar subquery."
-msgstr ""
+msgstr "this：class： `.Query`で表される完全なSELECT文を返し、スカラー副問い合わせに変換します。"
 
 #: of sqlalchemy.orm.query.Query.as_scalar:4
 msgid "Analogous to :meth:`sqlalchemy.sql.expression.SelectBase.as_scalar`."
-msgstr ""
+msgstr "：meth： `sqlalchemy.sql.expression.SelectBase.as_scalar`に似ています。"
 
 #: of sqlalchemy.orm.query.Query.autoflush:1
 msgid "Return a Query with a specific 'autoflush' setting."
-msgstr ""
+msgstr "特定の &#39;autoflush&#39;設定でクエリを返します。"
 
 #: of sqlalchemy.orm.query.Query.autoflush:3
 msgid ""
 "Note that a Session with autoflush=False will not autoflush, even if this"
 " flag is set to True at the Query level.  Therefore this flag is usually "
 "used only to disable autoflush for a specific Query."
-msgstr ""
+msgstr "autoflush = Falseのセッションは、クエリレベルでこのフラグがTrueに設定されていても自動フラッシュしません。したがって、このフラグは通常、特定のクエリに対して自動フラッシュを無効にするためにのみ使用されます。"
 
 #: of sqlalchemy.orm.query.Query.column_descriptions:1
 msgid ""
 "Return metadata about the columns which would be returned by this "
 ":class:`.Query`."
-msgstr ""
+msgstr "this：class： `.Query`によって返される列に関するメタデータを返します。"
 
 #: of sqlalchemy.orm.query.Query.column_descriptions:4
 msgid "Format is a list of dictionaries::"
-msgstr ""
+msgstr "形式は辞書のリストです::"
 
 #: of sqlalchemy.orm.query.Query.correlate:1
 msgid ""
 "Return a :class:`.Query` construct which will correlate the given FROM "
 "clauses to that of an enclosing :class:`.Query` or "
 ":func:`~.expression.select`."
-msgstr ""
+msgstr "与えられたFROM句を囲む：class： `.Query`または：func：`〜.expression.select`のものに関連づけるa：class： `.Query`構文を返します。"
 
 #: of sqlalchemy.orm.query.Query.correlate:5
 msgid ""
 "The method here accepts mapped classes, :func:`.aliased` constructs, and "
 ":func:`.mapper` constructs as arguments, which are resolved into "
 "expression constructs, in addition to appropriate expression constructs."
-msgstr ""
+msgstr "func： `.aliased`構造体と：func：` .mapper`構造体は引数として構築され、適切な式構造体に加えて、式構造体に分解されます。"
 
 #: of sqlalchemy.orm.query.Query.correlate:10
 msgid ""
 "The correlation arguments are ultimately passed to "
 ":meth:`.Select.correlate` after coercion to expression constructs."
-msgstr ""
+msgstr "相関引数は最終的に式構造に強制された後に：meth： `.Select.correlate`に渡されます。"
 
 #: of sqlalchemy.orm.query.Query.correlate:13
 msgid ""
@@ -155,19 +145,19 @@ msgid ""
 ":meth:`.Query.from_self` is used, or when a subquery as returned by "
 ":meth:`.Query.subquery` is embedded in another "
 ":func:`~.expression.select` construct."
-msgstr ""
+msgstr "相関引数は：meth： `.Query.from_self`が使用されるときや、：meth：` .Query.subquery`によって返されるサブクエリが別の：func： `〜.expressionに埋め込まれているときなどに有効です。選択構造。"
 
 #: of sqlalchemy.orm.query.Query.count:1
 msgid "Return a count of rows this Query would return."
-msgstr ""
+msgstr "このQueryが返す行の数を返します。"
 
 #: of sqlalchemy.orm.query.Query.count:3
 msgid "This generates the SQL for this Query as follows::"
-msgstr ""
+msgstr "これは、次のようにこのクエリのSQLを生成します::"
 
 #: of sqlalchemy.orm.query.Query.count:9
 msgid "The above scheme is newly refined as of 0.7b3."
-msgstr ""
+msgstr "上記スキームは0.7b3から新たに改良されました。"
 
 #: of sqlalchemy.orm.query.Query.count:12
 msgid ""
@@ -175,19 +165,19 @@ msgid ""
 "usage of a subquery or otherwise control of the FROM clause, or to use "
 "other aggregate functions, use :attr:`~sqlalchemy.sql.expression.func` "
 "expressions in conjunction with :meth:`~.Session.query`, i.e.::"
-msgstr ""
+msgstr "カウントする特定の列をきめ細かく制御するため、サブクエリの使用をスキップする、またはFROM句を制御する、または他の集約関数を使用するには、attr： `〜sqlalchemy.sql.expression.func`式を：meth： `〜.Session.query`、すなわち::"
 
 #: of sqlalchemy.orm.query.Query.cte:1
 msgid ""
 "Return the full SELECT statement represented by this :class:`.Query` "
 "represented as a common table expression (CTE)."
-msgstr ""
+msgstr "これによって表される完全なSELECT文を返します。class： `.Query`は共通テーブル式（CTE）として表されます。"
 
 #: of sqlalchemy.orm.query.Query.cte:4
 msgid ""
 "Parameters and usage are the same as those of the :meth:`.SelectBase.cte`"
 " method; see that method for further details."
-msgstr ""
+msgstr "パラメータと使用法は：meth： `.SelectBase.cte`メソッドのものと同じです。詳細はその方法を参照してください。"
 
 #: of sqlalchemy.orm.query.Query.cte:8
 msgid ""
@@ -198,19 +188,19 @@ msgid ""
 "via the ``.c.`` attribute.  The ``parts_alias`` object is an "
 ":func:`.orm.aliased` instance of the ``Part`` entity, so column-mapped "
 "attributes are available directly::"
-msgstr ""
+msgstr "`PostgreSQL WITH RECURSIVEの例です<http://www.postgresql.org/docs/8.4/static/queries-with.html> `_。この例では、 `` included_pa​​rts``と `` incl_alias``のエイリアスがコア選択可能であることに注意してください。これは、 `` .c.``属性でカラムにアクセスすることを意味します。 `` parts_alias``オブジェクトは、 `` Part``エンティティの：func： `.orm.aliased`インスタンスです。そのため、カラムマップされた属性は直接利用できます::"
 
 #: of sqlalchemy.orm.query.Query.cte:52
 msgid ":meth:`.HasCTE.cte`"
-msgstr ""
+msgstr "：meth： `.HasCTE.cte`"
 
 #: of sqlalchemy.orm.query.Query.delete:1
 msgid "Perform a bulk delete query."
-msgstr ""
+msgstr "一括削除クエリを実行します。"
 
 #: of sqlalchemy.orm.query.Query.delete:3
 msgid "Deletes rows matched by this query from the database."
-msgstr ""
+msgstr "このクエリで一致した行をデータベースから削除します。"
 
 #: of sqlalchemy.orm.aliased:4 sqlalchemy.orm.query.Query.delete:5
 #: sqlalchemy.orm.query.Query.get:4 sqlalchemy.orm.query.Query.update:5
@@ -218,14 +208,14 @@ msgstr ""
 #: sqlalchemy.orm.query.Query.with_transformation:4
 #: sqlalchemy.util.KeyedTuple:3
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.orm.query.Query.delete:13
 msgid ""
 "The :meth:`.Query.delete` method is a \"bulk\" operation, which bypasses "
 "ORM unit-of-work automation in favor of greater performance.  **Please "
 "read all caveats and warnings below.**"
-msgstr ""
+msgstr "：meth： `.Query.delete`メソッドは、ORM単位作業の自動化を回避してより大きなパフォーマンスを実現する、一括操作です。 **下記のすべての警告と警告をお読みください。**"
 
 #: of sqlalchemy.orm.aliased sqlalchemy.orm.query.Query.delete
 #: sqlalchemy.orm.query.Query.distinct sqlalchemy.orm.query.Query.from_self
@@ -237,7 +227,7 @@ msgstr ""
 #: sqlalchemy.orm.query.Query.with_lockmode
 #: sqlalchemy.orm.query.Query.with_parent sqlalchemy.orm.with_parent
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.orm.query.Query.delete:17
 msgid ""
@@ -255,13 +245,13 @@ msgid ""
 " evaluation of the criteria isn't implemented, an error is raised.  The "
 "expression evaluator currently doesn't account for differing string "
 "collations between the database and Python."
-msgstr ""
+msgstr "セッションから一致したオブジェクトを削除するための戦略を選択します。有効な値は次のとおりです： `` False``  - セッションを同期しません。このオプションは、セッションが期限切れになると最も効率的で信頼性が高くなります。通常、commit（）の後に実行されるか、expire_all（）を明示的に使用します。有効期限が切れる前に、オブジェクトはセッション中に残っている可能性があります。削除されたオブジェクトは、get（）またはすでに読み込まれたコレクションを介してアクセスされると混乱を招く可能性があります。 `` &#39;fetch&#39;``  - 削除の前に選択クエリを実行して、削除クエリと一致するオブジェクトを見つけ出し、セッションから削除する必要があります。一致したオブジェクトはセッションから削除されます。 `` &#39;evaluate&#39;``  - セッション内のオブジェクトに対してPythonのクエリの基準を直接評価します。基準の評価が実装されていない場合、エラーが発生します。エクスプレッションエバリュエーターは現在、データベースとPythonの異なる文字列照合を考慮していません。"
 
 #: of sqlalchemy.orm.query.Query.delete:17
 msgid ""
 "chooses the strategy for the removal of matched objects from the session."
 " Valid values are:"
-msgstr ""
+msgstr "セッションから一致したオブジェクトを削除するための戦略を選択します。有効な値は次のとおりです。"
 
 #: of sqlalchemy.orm.query.Query.delete:20
 msgid ""
@@ -271,42 +261,42 @@ msgid ""
 "expiration, objects may still remain in the session which were in fact "
 "deleted which can lead to confusing results if they are accessed via "
 "get() or already loaded collections."
-msgstr ""
+msgstr "`` False``  - セッションを同期させません。このオプションは、セッションが期限切れになると最も効率的で信頼性が高くなります。通常、commit（）の後に実行されるか、expire_all（）を明示的に使用します。有効期限が切れる前に、オブジェクトはセッション中に残っている可能性があります。削除されたオブジェクトは、get（）またはすでに読み込まれたコレクションを介してアクセスされると混乱を招く可能性があります。"
 
 #: of sqlalchemy.orm.query.Query.delete:28
 msgid ""
 "``'fetch'`` - performs a select query before the delete to find objects "
 "that are matched by the delete query and need to be removed from the "
 "session. Matched objects are removed from the session."
-msgstr ""
+msgstr "`` &#39;fetch&#39;``  - 削除の前に選択クエリを実行して、削除クエリと一致するオブジェクトを見つけ出し、セッションから削除する必要があります。一致したオブジェクトはセッションから削除されます。"
 
 #: of sqlalchemy.orm.query.Query.delete:33
 msgid ""
 "``'evaluate'`` - Evaluate the query's criteria in Python straight on the "
 "objects in the session. If evaluation of the criteria isn't implemented, "
 "an error is raised."
-msgstr ""
+msgstr "`` &#39;evaluate&#39;``  - セッション内のオブジェクトに対してPythonのクエリの基準を直接評価します。基準の評価が実装されていない場合、エラーが発生します。"
 
 #: of sqlalchemy.orm.query.Query.delete:37 sqlalchemy.orm.query.Query.update:51
 msgid ""
 "The expression evaluator currently doesn't account for differing string "
 "collations between the database and Python."
-msgstr ""
+msgstr "エクスプレッションエバリュエーターは現在、データベースとPythonの異なる文字列照合を考慮していません。"
 
 #: of sqlalchemy.orm.query.Query.delete sqlalchemy.orm.query.Query.get
 #: sqlalchemy.orm.query.Query.update
 msgid "戻り値"
-msgstr ""
+msgstr "戻り値"
 
 #: of sqlalchemy.orm.query.Query.delete:40 sqlalchemy.orm.query.Query.update:62
 msgid ""
 "the count of rows matched as returned by the database's \"row count\" "
 "feature."
-msgstr ""
+msgstr "データベースの\ &quot;行数\&quot;機能によって返された行の数が一致します。"
 
 #: of sqlalchemy.orm.query.Query.delete:43
 msgid "**Additional Caveats for bulk query deletes**"
-msgstr ""
+msgstr "**一括クエリ削除の追加の警告**"
 
 #: of sqlalchemy.orm.query.Query.delete:45
 msgid ""
@@ -319,26 +309,26 @@ msgid ""
 "tables, even in mappings where this is normally automatic. E.g. if a "
 "class ``Engineer`` subclasses ``Employee``, a DELETE against the "
 "``Employee`` table would look like::"
-msgstr ""
+msgstr "このメソッドは継承継承マッピング**では機能しません。**複数テーブルの削除はSQL **でサポートされていないだけでなく、継承マッパーの**結合条件は自動的にはレンダリングされません**。関連するテーブルが削除される方法と、これらのテーブル間の結合条件を明示的に含めるために、他の手段を介して最初に対応するには、複数のテーブルの削除に注意する必要があります。例えば ​​`` Engineer``クラスが `` Employee``をサブクラス化している場合、 `` Employee``テーブルに対するDELETEは次のようになります::"
 
 #: of sqlalchemy.orm.query.Query.delete:63
 msgid ""
 "However the above SQL will not delete from the Engineer table, unless an "
 "ON DELETE CASCADE rule is established in the database to handle it."
-msgstr ""
+msgstr "ただし、上記のSQLは、ON DELETE CASCADEルールがデータベースで処理されない限り、エンジニアテーブルから削除されません。"
 
 #: of sqlalchemy.orm.query.Query.delete:67
 msgid ""
 "Short story, **do not use this method for joined inheritance mappings "
 "unless you have taken the additional steps to make this feasible**."
-msgstr ""
+msgstr "ショートストーリー、**これを実行可能にするための追加手順を講じていない限り、結合された継承マッピングにはこのメソッドを使用しないでください。"
 
 #: of sqlalchemy.orm.query.Query.delete:71
 msgid ""
 "The polymorphic identity WHERE criteria is **not** included for single- "
 "or joined- table updates - this must be added **manually** even for "
 "single table inheritance."
-msgstr ""
+msgstr "多相識別WHERE条件は単一テーブルまたは結合テーブルの更新では** **含まれません。単一のテーブル継承の場合でも手動で**追加する必要があります。"
 
 #: of sqlalchemy.orm.query.Query.delete:76
 msgid ""
@@ -346,7 +336,7 @@ msgid ""
 "is assumed that ON DELETE CASCADE/SET NULL/etc. is configured for any "
 "foreign key references which require it, otherwise the database may emit "
 "an integrity violation if foreign key references are being enforced."
-msgstr ""
+msgstr "このメソッドはPythonの中で関係をカスケードしない**を提供していません - それはON DELETE CASCADE / SET NULL /などと仮定されます。それを必要とする任意の外部キー参照に対して構成されます。そうしないと、外部キー参照が強制されている場合、データベースは整合性違反を発生させる可能性があります。"
 
 #: of sqlalchemy.orm.query.Query.delete:83
 msgid ""
@@ -358,13 +348,13 @@ msgid ""
 " whose row has been deleted will invoke a SELECT to locate the row; when "
 "the row is not found, an :class:`~sqlalchemy.orm.exc.ObjectDeletedError` "
 "is raised."
-msgstr ""
+msgstr "DELETEの後、ON DELETEの影響を受けた：class： `.Session`の従属オブジェクトは、現在の状態を含んでいないか、または削除されている可能性があります。この問題は：class： `.Session`が期限切れになると解決されます。これは通常：meth：` .Session.commit`で発生するか、：meth： `.Session.expire_all`を使用して強制できます。行が削除された有効期限の切れたオブジェクトにアクセスすると、その行を特定するためにSELECTが呼び出されます。行が見つからない場合は、：class： `〜sqlalchemy.orm.exc.ObjectDeletedError`が発生します。"
 
 #: of sqlalchemy.orm.query.Query.delete:95 sqlalchemy.orm.query.Query.update:80
 msgid ""
 "The ``'fetch'`` strategy results in an additional SELECT statement "
 "emitted and will significantly reduce performance."
-msgstr ""
+msgstr "`` &#39;fetch``戦略は、追加のSELECT文を発行し、パフォーマンスを大幅に低下させます。"
 
 #: of sqlalchemy.orm.query.Query.delete:99 sqlalchemy.orm.query.Query.update:84
 msgid ""
@@ -372,7 +362,7 @@ msgid ""
 "within the :class:`.Session`; if the contents of the :class:`.Session` "
 "are expired, such as via a proceeding :meth:`.Session.commit` call, "
 "**this will result in SELECT queries emitted for every matching object**."
-msgstr ""
+msgstr "`` &#39;evaluate&#39;``戦略は：class： `.Session`;内のすべての一致するオブジェクトのスキャンを実行します。 proceeding：meth： `.Session.commit`呼び出しのように、：class：` .Session`の内容が期限切れになっている場合、**これは一致するすべてのオブジェクト**に対してSELECTクエリを発行します。"
 
 #: of sqlalchemy.orm.query.Query.delete:105
 msgid ""
@@ -380,22 +370,22 @@ msgid ""
 ":meth:`.MapperEvents.after_delete` events **are not invoked** from this "
 "method.  Instead, the :meth:`.SessionEvents.after_bulk_delete` method is "
 "provided to act upon a mass DELETE of entity rows."
-msgstr ""
+msgstr "：meth： `.MapperEvents.before_delete`と：meth：` .MapperEvents.after_delete`イベント**はこのメソッドから呼び出されません**。代わりに、：meth： `.SessionEvents.after_bulk_delete`メソッドは、エンティティ行の大量削除に作用するために提供されています。"
 
 #: of sqlalchemy.orm.query.Query.delete:113
 msgid ":meth:`.Query.update`"
-msgstr ""
+msgstr "：meth： `.Query.update`"
 
 #: of sqlalchemy.orm.query.Query.delete:115
 #: sqlalchemy.orm.query.Query.update:123
 msgid ":ref:`inserts_and_updates` - Core SQL tutorial"
-msgstr ""
+msgstr "：ref： `inserts_and_updates`  - コアSQLチュートリアル"
 
 #: of sqlalchemy.orm.query.Query.distinct:1
 msgid ""
 "Apply a ``DISTINCT`` to the query and return the newly resulting "
 "``Query``."
-msgstr ""
+msgstr "クエリに `` DISTINCT``を適用し、新しく生成された `` Query``を返します。"
 
 #: of sqlalchemy.orm.query.Query.distinct:7
 msgid ""
@@ -407,17 +397,17 @@ msgid ""
 "the :class:`.Query`, however, so would not affect results. The columns "
 "are passed through when using the :attr:`.Query.statement` accessor, "
 "however."
-msgstr ""
+msgstr "：meth： `.distinct`呼び出しは、ORDER BY列がSELECTの一部であるデータベースバックエンドの一般的な必要性を満たすために、クエリのORDER BYの列をSELECT文のcolumns節に自動的に追加するロジックを含みますDISTINCTが使用されるときにリストします。これらの列*は：class： `.Query`によって実際にフェッチされた列のリストには追加されませんが、結果には影響しません。ただし、：attr： `.Query.statement`アクセサを使用すると、列はパススルーされます。"
 
 #: of sqlalchemy.orm.query.Query.distinct:17
 msgid ""
 "optional column expressions.  When present, the PostgreSQL dialect will "
 "render a ``DISTINCT ON (<expressions>)`` construct."
-msgstr ""
+msgstr "オプションの列式。存在する場合、PostgreSQLの方言は `` DISTINCT ON（ <expressions> ） ``構造体です。"
 
 #: of sqlalchemy.orm.query.Query.enable_assertions:1
 msgid "Control whether assertions are generated."
-msgstr ""
+msgstr "アサーションが生成されるかどうかを制御します。"
 
 #: of sqlalchemy.orm.query.Query.enable_assertions:3
 msgid ""
@@ -427,18 +417,18 @@ msgid ""
 "\"from_statement()\" exists when filter()/order_by()/group_by() etc. is "
 "called.  This more permissive mode is used by custom Query subclasses to "
 "specify criterion or other modifiers outside of the usual usage patterns."
-msgstr ""
+msgstr "Falseに設定すると、filter（）が呼び出されたときにLIMIT / OFFSETが適用されていない、get（）が呼び出されたときに基準が存在しない、from_statement（）が呼び出されていないなど、 \ &quot;はfilter（）/ order_by（）/ group_by（）などが呼び出されたときに存在します。このより許容されるモードは、カスタムQueryサブクラスによって、通常の使用パターンの外に基準または他の修飾子を指定するために使用されます。"
 
 #: of sqlalchemy.orm.query.Query.enable_assertions:13
 msgid ""
 "Care should be taken to ensure that the usage pattern is even possible.  "
 "A statement applied by from_statement() will override any criterion set "
 "by filter() or order_by(), for example."
-msgstr ""
+msgstr "使用パターンが確実に可能であるように注意する必要があります。 from_statement（）によって適用されるステートメントは、たとえばfilter（）またはorder_by（）によって設定された基準をオーバーライドします。"
 
 #: of sqlalchemy.orm.query.Query.enable_eagerloads:1
 msgid "Control whether or not eager joins and subqueries are rendered."
-msgstr ""
+msgstr "熱心な結合とサブクエリがレンダリングされるかどうかを制御します。"
 
 #: of sqlalchemy.orm.query.Query.enable_eagerloads:4
 msgid ""
@@ -446,17 +436,17 @@ msgid ""
 "regardless of :func:`~sqlalchemy.orm.joinedload`, "
 ":func:`~sqlalchemy.orm.subqueryload` options or mapper-level "
 "``lazy='joined'``/``lazy='subquery'`` configurations."
-msgstr ""
+msgstr "Func： `〜sqlalchemy.orm.joinedload`、：func：`〜sqlalchemy.orm.subqueryload`オプション、またはマッパーレベルの `` lazy = &#39;joined&#39; &#39;に関わらず、返されたQueryはeager joinをレンダリングしません。 `` / `` lazy = &#39;subquery&#39;``の設定に従います。"
 
 #: of sqlalchemy.orm.query.Query.enable_eagerloads:10
 msgid ""
 "This is used primarily when nesting the Query's statement into a subquery"
 " or other selectable, or when using :meth:`.Query.yield_per`."
-msgstr ""
+msgstr "これは、主にQueryのステートメントをサブクエリまたは他の選択可能なものにネストするとき、または：meth： `.Query.yield_per`を使用するときに使用されます。"
 
 #: of sqlalchemy.orm.query.Query.except_:1
 msgid "Produce an EXCEPT of this Query against one or more queries."
-msgstr ""
+msgstr "1つまたは複数のクエリに対してこのクエリのEXCEPTを生成します。"
 
 #: of sqlalchemy.orm.query.Query.except_:3
 #: sqlalchemy.orm.query.Query.except_all:3
@@ -466,34 +456,34 @@ msgstr ""
 msgid ""
 "Works the same way as :meth:`~sqlalchemy.orm.query.Query.union`. See that"
 " method for usage examples."
-msgstr ""
+msgstr "：meth： `〜sqlalchemy.orm.query.Query.union`と同じように動作します。使用例については、その方法を参照してください。"
 
 #: of sqlalchemy.orm.query.Query.except_all:1
 msgid "Produce an EXCEPT ALL of this Query against one or more queries."
-msgstr ""
+msgstr "1つまたは複数のクエリに対してこのクエリのすべてを除外します。"
 
 #: of sqlalchemy.orm.query.Query.execution_options:1
 msgid "Set non-SQL options which take effect during execution."
-msgstr ""
+msgstr "実行中に有効になる非SQLオプションを設定します。"
 
 #: of sqlalchemy.orm.query.Query.execution_options:3
 msgid ""
 "The options are the same as those accepted by "
 ":meth:`.Connection.execution_options`."
-msgstr ""
+msgstr "オプションは：meth： `.Connection.execution_options`で受け入れられるオプションと同じです。"
 
 #: of sqlalchemy.orm.query.Query.execution_options:6
 msgid ""
 "Note that the ``stream_results`` execution option is enabled "
 "automatically if the :meth:`~sqlalchemy.orm.query.Query.yield_per()` "
 "method is used."
-msgstr ""
+msgstr "：meth： `〜sqlalchemy.orm.query.Query.yield_per（）`メソッドが使用されている場合、 `` stream_results``実行オプションは自動的に有効になります。"
 
 #: of sqlalchemy.orm.query.Query.exists:1
 msgid ""
 "A convenience method that turns a query into an EXISTS subquery of the "
 "form EXISTS (SELECT 1 FROM ... WHERE ...)."
-msgstr ""
+msgstr "EXISTS（SELECT 1 FROM ... WHERE ...）の形式のEXISTSサブクエリにクエリを変換する簡易メソッドです。"
 
 #: of sqlalchemy.orm.query.Bundle.columns:3 sqlalchemy.orm.query.Query.exists:4
 #: sqlalchemy.orm.query.Query.filter:4 sqlalchemy.orm.query.Query.filter_by:4
@@ -501,15 +491,15 @@ msgstr ""
 #: sqlalchemy.orm.query.Query.prefix_with:7 sqlalchemy.orm.query.Query.union:3
 #: sqlalchemy.orm.query.Query.with_entities:4
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.orm.query.Query.exists:9 sqlalchemy.orm.query.Query.join:136
 msgid "Producing SQL similar to::"
-msgstr ""
+msgstr "::と似たSQLを生成する"
 
 #: of sqlalchemy.orm.query.Query.exists:15
 msgid "The EXISTS construct is usually used in the WHERE clause::"
-msgstr ""
+msgstr "EXISTS構文は通常、WHERE句で使用されます::"
 
 #: of sqlalchemy.orm.query.Query.exists:19
 msgid ""
@@ -517,94 +507,94 @@ msgid ""
 "expression to be present in the columns clause of a SELECT.    To select "
 "a simple boolean value based on the exists as a WHERE, use "
 ":func:`.literal`::"
-msgstr ""
+msgstr "SQL Serverなどの一部のデータベースでは、EXISTS式をSELECTの列句に含めることはできません。存在に基づいて単純なブール値をWHEREとして選択するには、次のようにします：func： `.literal` ::"
 
 #: of sqlalchemy.orm.query.Query.filter:1
 msgid ""
 "apply the given filtering criterion to a copy of this :class:`.Query`, "
 "using SQL expressions."
-msgstr ""
+msgstr "指定されたフィルタリング基準をSQLの式を使ってthis：class： `.Query`のコピーに適用します。"
 
 #: of sqlalchemy.orm.query.Query.filter:8
 #: sqlalchemy.orm.query.Query.filter_by:8
 msgid ""
 "Multiple criteria may be specified as comma separated; the effect is that"
 " they will be joined together using the :func:`.and_` function::"
-msgstr ""
+msgstr "複数の基準はカンマで区切って指定することができます。その効果は：func： `.and_`関数を使用して結合されることです::"
 
 #: of sqlalchemy.orm.query.Query.filter:15
 msgid ""
 "The criterion is any SQL expression object applicable to the WHERE clause"
 " of a select.   String expressions are coerced into SQL expression "
 "constructs via the :func:`.text` construct."
-msgstr ""
+msgstr "この基準は、選択のWHERE句に適用可能なSQL式オブジェクトです。文字列式は：func： `.text`構造体を介してSQL式構造体に強制変換されます。"
 
 #: of sqlalchemy.orm.query.Query.filter:21
 msgid ":meth:`.Query.filter_by` - filter on keyword expressions."
-msgstr ""
+msgstr "：meth： `.Query.filter_by`  - キーワード式をフィルタリングします。"
 
 #: of sqlalchemy.orm.query.Query.filter_by:1
 msgid ""
 "apply the given filtering criterion to a copy of this :class:`.Query`, "
 "using keyword expressions."
-msgstr ""
+msgstr "与えられたフィルタリング基準を、キーワード表現を使ってthis：class： `.Query`のコピーに適用します。"
 
 #: of sqlalchemy.orm.query.Query.filter_by:15
 msgid ""
 "The keyword expressions are extracted from the primary entity of the "
 "query, or the last entity that was the target of a call to "
 ":meth:`.Query.join`."
-msgstr ""
+msgstr "キーワード式は、クエリのプライマリエンティティ、または：meth： `.Query.join`の呼び出しのターゲットであった最後のエンティティから抽出されます。"
 
 #: of sqlalchemy.orm.query.Query.filter_by:21
 msgid ":meth:`.Query.filter` - filter on SQL expressions."
-msgstr ""
+msgstr "：meth： `.Query.filter`  -  SQL式をフィルタリングします。"
 
 #: of sqlalchemy.orm.query.Query.first:1
 msgid ""
 "Return the first result of this ``Query`` or None if the result doesn't "
 "contain any row."
-msgstr ""
+msgstr "この `` Query``の最初の結果を返します。結果に行が含まれていない場合はNoneを返します。"
 
 #: of sqlalchemy.orm.query.Query.first:4
 msgid ""
 "first() applies a limit of one within the generated SQL, so that only one"
 " primary entity row is generated on the server side (note this may "
 "consist of multiple result rows if join-loaded collections are present)."
-msgstr ""
+msgstr "first（）は生成されたSQL内で1の制限を適用し、サーバー側では1つのプライマリエンティティ行のみが生成されます（結合ロードされたコレクションが存在する場合、複数の結果行が含まれます）。"
 
 #: of sqlalchemy.orm.query.Query.first:9
 msgid ""
 "Calling :meth:`.Query.first` results in an execution of the underlying "
 "query."
-msgstr ""
+msgstr "meth： `.Query.first`を呼び出すと、基本となるクエリが実行されます。"
 
 #: of sqlalchemy.orm.query.Query.first:13
 #: sqlalchemy.orm.query.Query.one_or_none:20
 msgid ":meth:`.Query.one`"
-msgstr ""
+msgstr "：meth： `.Query.one`"
 
 #: of sqlalchemy.orm.query.Query.first:15 sqlalchemy.orm.query.Query.one:15
 msgid ":meth:`.Query.one_or_none`"
-msgstr ""
+msgstr "：meth： `.Query.one_or_none`"
 
 #: of sqlalchemy.orm.query.Query.from_self:1
 msgid "return a Query that selects from this Query's SELECT statement."
-msgstr ""
+msgstr "このQueryのSELECT文から選択するQueryを返します。"
 
 #: of sqlalchemy.orm.query.Query.from_self:4
 msgid ""
 ":meth:`.Query.from_self` essentially turns the SELECT statement into a "
 "SELECT of itself.  Given a query such as::"
-msgstr ""
+msgstr "：meth： `.Query.from_self`は基本的にSELECT文をそれ自身のSELECTに変換します。 ::"
 
 #: of sqlalchemy.orm.query.Query.from_self:9
 msgid "Given the :meth:`.Query.from_self` version::"
-msgstr ""
+msgstr "与えられた：meth： `.Query.from_self`バージョン::"
 
 #: of sqlalchemy.orm.query.Query.from_self:13
 msgid "This query renders as:"
-msgstr ""
+msgstr "このクエリは次のようにレンダリングされます。"
 
 #: of sqlalchemy.orm.query.Query.from_self:23
 msgid ""
@@ -612,17 +602,17 @@ msgid ""
 "simple one is where above, we may want to apply a row LIMIT to the set of"
 " user objects we query against, and then apply additional joins against "
 "that row-limited set::"
-msgstr ""
+msgstr "多くのケースがあります：meth： `.Query.from_self`が役に立ちます。簡単な例は上記のところですが、照会するユーザーオブジェクトのセットに行LIMITを適用し、その行限定セットに対して追加の結合を適用することができます。"
 
 #: of sqlalchemy.orm.query.Query.from_self:32
 msgid ""
 "The above query joins to the ``Address`` entity but only against the "
 "first five results of the ``User`` query:"
-msgstr ""
+msgstr "上記のクエリは `` Address``エンティティに参加しますが、 `` User``クエリの最初の5つの結果に対してのみ行われます："
 
 #: of sqlalchemy.orm.query.Query.from_self:46
 msgid "**Automatic Aliasing**"
-msgstr ""
+msgstr "**自動エイリアシング**"
 
 #: of sqlalchemy.orm.query.Query.from_self:48
 msgid ""
@@ -631,13 +621,13 @@ msgid ""
 " referenced on the outside.  Above, if we continue to refer to the "
 "``User`` entity without any additional aliasing applied to it, those "
 "references wil be in terms of the subquery::"
-msgstr ""
+msgstr "：meth： `.Query.from_self`のもう一つの重要な振る舞いは、それらが外部で参照されているときにサブクエリ内のエンティティに**自動エイリアシング**を適用することです。上で、追加のエイリアシングを適用せずに `` User``エンティティを参照し続けると、それらの参照はサブクエリの観点からなります::"
 
 #: of sqlalchemy.orm.query.Query.from_self:59
 msgid ""
 "The ORDER BY against ``User.name`` is aliased to be in terms of the inner"
 " subquery:"
-msgstr ""
+msgstr "`` User.name``に対するORDER BYは、内側の副問い合わせに関して次のようにエイリアスされています："
 
 #: of sqlalchemy.orm.query.Query.from_self:73
 msgid ""
@@ -648,11 +638,11 @@ msgid ""
 "produce an explicit subquery object. Always test the structure of queries"
 " by viewing the SQL to ensure a particular structure does what's "
 "expected!"
-msgstr ""
+msgstr "自動エイリアシング機能は、**限定**の方法でのみ機能し、簡単なフィルタと順序付けが可能です。ジョインでエンティティを参照するなど、もっと野心的な構造は、明示的なサブクエリオブジェクトを使用することを推奨する必要があります。通常は、：meth： `.Query.subquery`メソッドを使用して明示的なサブクエリオブジェクトを生成します。特定の構造が期待どおりに動作するようにSQLを表示して、クエリの構造を常にテストしてください。"
 
 #: of sqlalchemy.orm.query.Query.from_self:81
 msgid "**Changing the Entities**"
-msgstr ""
+msgstr "**エンティティの変更**"
 
 #: of sqlalchemy.orm.query.Query.from_self:83
 msgid ""
@@ -661,15 +651,15 @@ msgid ""
 "by the inner query, so that we can join to the ``Address`` entity on the "
 "outside, but we only wanted the outer query to return the "
 "``Address.email`` column::"
-msgstr ""
+msgstr "：meth： `.Query.from_self`には、どの列が照会されているかを変更する機能も含まれています。この例では、内部クエリによって `` User.id``を照会して、外部の `` Address``エンティティに参加できるようにしたいのですが、外部クエリで `` Address.email``列::"
 
 #: of sqlalchemy.orm.query.Query.from_self:93
 msgid "yielding:"
-msgstr ""
+msgstr "収穫："
 
 #: of sqlalchemy.orm.query.Query.from_self:105
 msgid "**Looking out for Inner / Outer Columns**"
-msgstr ""
+msgstr "**インナー/アウターコラムを探す**"
 
 #: of sqlalchemy.orm.query.Query.from_self:107
 msgid ""
@@ -680,7 +670,7 @@ msgid ""
 ":func:`.contains_eager`, we need to add those columns.   Below "
 "illustrates a join of ``Address`` to ``User``, then a subquery, and then "
 "we'd like :func:`.contains_eager` to access the ``User`` columns::"
-msgstr ""
+msgstr "サブクエリの内部から生成された列を参照する場合、それらがサブクエリ自体のcolumns節に存在することを確認する必要があります。これはSQLの一般的な側面です。たとえば、：func： `.contains_eager`を使用してサブクエリ内の結合されたエンティティからロードする場合は、それらの列を追加する必要があります。以下は `` Address``と `` User``を結合した後、サブクエリを示しています： `` User``カラムにアクセスするfunc： `.contains_eager`："
 
 #: of sqlalchemy.orm.query.Query.from_self:122
 msgid ""
@@ -688,7 +678,7 @@ msgid ""
 ":meth:`.Query.from_self` so that the ``User`` columns are present in the "
 "inner subquery, so that they are available to the :func:`.contains_eager`"
 " modifier we are using on the outside, producing:"
-msgstr ""
+msgstr "**：meth： `.Query.from_self`を呼び出す前に**：meth：` .Query.add_entity`を使います。** `` User``カラムは内側のサブクエリに存在します。外部で使用している：func： `.contains_eager`修飾子を使用して、以下を生成します。"
 
 #: of sqlalchemy.orm.query.Query.from_self:144
 msgid ""
@@ -696,21 +686,21 @@ msgid ""
 ":func:`.contains_eager` to load the ``User`` entity, it would be forced "
 "to add the table on the outside without the correct join criteria - note "
 "the ``anon1, \"user\"`` phrase at the end:"
-msgstr ""
+msgstr "`` add_entity（User） ``と呼ぶのではなく、 `` User``エンティティを読み込むために：func： `.contains_eager`を依頼した場合、正しい結合をせずにテーブルを外部に追加することが強制されますcriteria  - 最後に `` anon1、\ &quot;user \&quot; ``というフレーズに注目してください："
 
 #: of sqlalchemy.orm.query.Query.from_self:165
 msgid "optional list of entities which will replace those being selected."
-msgstr ""
+msgstr "選択されているものと置き換わるエンティティのオプションリスト。"
 
 #: of sqlalchemy.orm.query.Query.from_statement:1
 msgid "Execute the given SELECT statement and return results."
-msgstr ""
+msgstr "指定されたSELECT文を実行し、結果を返します。"
 
 #: of sqlalchemy.orm.query.Query.from_statement:3
 msgid ""
 "This method bypasses all internal statement compilation, and the "
 "statement is executed without modification."
-msgstr ""
+msgstr "このメソッドは、内部ステートメントのコンパイルをすべてバイパスし、ステートメントは変更せずに実行されます。"
 
 #: of sqlalchemy.orm.query.Query.from_statement:6
 msgid ""
@@ -718,17 +708,17 @@ msgid ""
 ":func:`~.expression.select` construct, and should return the set of "
 "columns appropriate to the entity class represented by this "
 ":class:`.Query`."
-msgstr ""
+msgstr "この文は、通常、：func： `〜.expression.text`または：func：`〜.expression.select`のいずれかの構文であり、class： `.Query `。"
 
 #: of sqlalchemy.orm.query.Query.from_statement:13
 msgid ":ref:`orm_tutorial_literal_sql` - usage examples in the ORM tutorial"
-msgstr ""
+msgstr "：ref： `orm_tutorial_literal_sql`  -  ORMチュートリアルの使用例"
 
 #: of sqlalchemy.orm.query.Query.get:1
 msgid ""
 "Return an instance based on the given primary key identifier, or ``None``"
 " if not found."
-msgstr ""
+msgstr "指定された主キー識別子に基づいてインスタンスを返します。見つからなければ `` None``を返します。"
 
 #: of sqlalchemy.orm.query.Query.get:10
 msgid ""
@@ -738,7 +728,7 @@ msgid ""
 "directly from this collection and no SQL is emitted, unless the object "
 "has been marked fully expired. If not present, a SELECT is performed in "
 "order to locate the object."
-msgstr ""
+msgstr "：meth： `〜.Query.get`は、所有する：class：` .Session`のアイデンティティマップに直接アクセスできるという点で特別です。特定の主キー識別子がローカルIDマップに存在する場合、そのオブジェクトはこのコレクションから直接戻され、オブジェクトが完全に期限切れとマークされていない限り、SQLは発行されません。存在しない場合、オブジェクトの位置を特定するためにSELECTが実行されます。"
 
 #: of sqlalchemy.orm.query.Query.get:19
 msgid ""
@@ -746,7 +736,7 @@ msgid ""
 " the identity map and marked as expired - a SELECT is emitted to refresh "
 "the object as well as to ensure that the row is still present. If not, "
 ":class:`~sqlalchemy.orm.exc.ObjectDeletedError` is raised."
-msgstr ""
+msgstr "：meth： `〜.Query.get`は、オブジェクトがアイデンティティマップに存在し、期限切れとマークされているかどうかをチェックします。オブジェクトがリフレッシュされ、行がまだ存在することを確認するためにSELECTが発行されます。そうでなければ、：class： `〜sqlalchemy.orm.exc.ObjectDeletedError`が送出されます。"
 
 #: of sqlalchemy.orm.query.Query.get:26
 msgid ""
@@ -757,7 +747,7 @@ msgid ""
 "additional filtering criterion.  Loading options via "
 ":meth:`~.Query.options` may be applied however, and will be used if the "
 "object is not yet locally present."
-msgstr ""
+msgstr "：meth： `〜.Query.get`は、複数のインスタンスや個々の列構造ではなく、単一の主キー値に厳密に基づいて、単一のマップされたインスタンスを返すためにのみ使用されます。 originating：class： `.Query`は、このようにして、すなわち追加のフィルタリング基準なしで単一のマップされたエンティティに対して構築されなければなりません。しかし、：meth： `〜.Query.options`を介してオプションをロードすることができますが、オブジェクトがまだローカルに存在しない場合に使用されます。"
 
 #: of sqlalchemy.orm.query.Query.get:37
 msgid ""
@@ -767,7 +757,7 @@ msgid ""
 "in order to retrieve the target value from the local identity map before "
 "querying the database.  See :doc:`/orm/loading_relationships` for further"
 " details on relationship loading."
-msgstr ""
+msgstr "：func： `.relationship`で設定された遅延ロード、多対1の属性は、単純な外部キーからプライマリキーの基準を使用して、：meth：`〜.Queryと同等の操作も使用します。データベースを照会する前にローカルアイデンティティマップからターゲット値を検索するために「取得」します。関係ロードの詳細については、doc： `/ orm / loading_relationships`を参照してください。"
 
 #: of sqlalchemy.orm.query.Query.get:45
 msgid ""
@@ -777,69 +767,69 @@ msgid ""
 ":func:`.mapper` that was given the ``primary key`` argument during "
 "construction, the order of identifiers corresponds to the elements "
 "present in this collection."
-msgstr ""
+msgstr "主キーを表すスカラー値またはタプル値。複合主キーの場合、識別子の順序は、ほとんどの場合、mapped：class： `.Table`オブジェクトの主キー列の順序に対応します。構築中に ``主キー `&#39;引数が与えられた：func：` .mapper`の場合、識別子の順序はこのコレクションに存在する要素に対応します。"
 
 #: of sqlalchemy.orm.query.Query.get:54
 msgid "The object instance, or ``None``."
-msgstr ""
+msgstr "オブジェクトインスタンス、または `` None``です。"
 
 #: of sqlalchemy.orm.query.Query.group_by:1
 msgid ""
 "apply one or more GROUP BY criterion to the query and return the newly "
 "resulting :class:`.Query`"
-msgstr ""
+msgstr "クエリに1つ以上のGROUP BY条件を適用し、新しく生成された：class： `.Query`を返します。"
 
 #: of sqlalchemy.orm.query.Query.group_by:4
 msgid ""
 "All existing GROUP BY settings can be suppressed by passing ``None`` - "
 "this will suppress any GROUP BY configured on mappers as well."
-msgstr ""
+msgstr "全ての既存のGROUP BY設定は `` None``を渡すことで抑止できます - これはマッパーで設定されたGROUP BYも抑制します。"
 
 #: of sqlalchemy.orm.query.Query.group_by:8
 msgid "GROUP BY can be cancelled by passing None, in the same way as ORDER BY."
-msgstr ""
+msgstr "GROUP BYは、ORDER BYと同じ方法でNoneを渡すことで取り消すことができます。"
 
 #: of sqlalchemy.orm.query.Query.having:1
 msgid ""
 "apply a HAVING criterion to the query and return the newly resulting "
 ":class:`.Query`."
-msgstr ""
+msgstr "HAVING基準をクエリに適用し、新しく生成された：class： `.Query`を返します。"
 
 #: of sqlalchemy.orm.query.Query.having:4
 msgid ""
 ":meth:`~.Query.having` is used in conjunction with "
 ":meth:`~.Query.group_by`."
-msgstr ""
+msgstr "：meth： `〜.Query.having`は：meth：`〜.Query.group_by`と一緒に使用されます。"
 
 #: of sqlalchemy.orm.query.Query.having:7
 msgid ""
 "HAVING criterion makes it possible to use filters on aggregate functions "
 "like COUNT, SUM, AVG, MAX, and MIN, eg.::"
-msgstr ""
+msgstr "HAVING基準により、COUNT、SUM、AVG、MAX、MINなどの集計関数でフィルタを使用することができます。たとえば、::"
 
 #: of sqlalchemy.orm.query.Query.instances:1
 msgid ""
 "Given a ResultProxy cursor as returned by connection.execute(), return an"
 " ORM result as an iterator."
-msgstr ""
+msgstr "connection.execute（）によって返されるResultProxyカーソルがある場合、ORMの結果をイテレータとして返します。"
 
 #: of sqlalchemy.orm.query.Query.intersect:1
 msgid "Produce an INTERSECT of this Query against one or more queries."
-msgstr ""
+msgstr "1つまたは複数のクエリに対してこのクエリのINTERSECTを生成します。"
 
 #: of sqlalchemy.orm.query.Query.intersect_all:1
 msgid "Produce an INTERSECT ALL of this Query against one or more queries."
-msgstr ""
+msgstr "この問合せのINTERSECT ALLを1つ以上の問合せに対して生成します。"
 
 #: of sqlalchemy.orm.query.Query.join:1
 msgid ""
 "Create a SQL JOIN against this :class:`.Query` object's criterion and "
 "apply generatively, returning the newly resulting :class:`.Query`."
-msgstr ""
+msgstr "この：class： `.Query`オブジェクトの基準に対してSQL JOINを作成し、生成して新たに生成された：class：` .Query`を返します。"
 
 #: of sqlalchemy.orm.query.Query.join:4
 msgid "**Simple Relationship Joins**"
-msgstr ""
+msgstr "**単純な関係の結合**"
 
 #: of sqlalchemy.orm.query.Query.join:6
 msgid ""
@@ -849,13 +839,13 @@ msgid ""
 ":meth:`~.Query.join` is to create a JOIN along this relationship, using "
 "the ``User.addresses`` attribute as an indicator for how this should "
 "occur::"
-msgstr ""
+msgstr "`` User``と `` Address``の2つのクラス間のマッピングを考えてみましょう。それぞれの `` User``に関連付けられた `` Address``オブジェクトのコレクションを表す `` User.addresses``という関係があります。 ：meth： `〜.Query.join`の最も一般的な使い方は、この関係に沿ってJOINを作成することです。これは、どのようにするべきかの指標として` `User.addresses``属性を使用します::"
 
 #: of sqlalchemy.orm.query.Query.join:15
 msgid ""
 "Where above, the call to :meth:`~.Query.join` along ``User.addresses`` "
 "will result in SQL equivalent to::"
-msgstr ""
+msgstr "上記の場合、 `` User.addresses``に沿って：meth： `〜.Query.join`を呼び出すと、SQLは次のようになります::"
 
 #: of sqlalchemy.orm.query.Query.join:20
 msgid ""
@@ -865,25 +855,25 @@ msgid ""
 "query such as the one above (i.e. we start by selecting only from "
 "``User`` and nothing else), the relationship can also be specified by its"
 " string name::"
-msgstr ""
+msgstr "上記の例では、* on節*として：meth： `〜.Query.join`に渡された` `User.addresses``を参照しています。つまり、JOINの\&quot; ON \ &quot;部分構築する必要があります。上記のような単一エンティティクエリの場合（つまり、 `` User``だけから選択することから始まり、他のものは選択しません）、その関係は文字列名::"
 
 #: of sqlalchemy.orm.query.Query.join:29
 msgid ""
 ":meth:`~.Query.join` can also accommodate multiple \"on clause\" "
 "arguments to produce a chain of joins, such as below where a join across "
 "four related entities is constructed::"
-msgstr ""
+msgstr "：meth： `〜.Query.join`は、複数の\ on節\引数を使用して、4つの関連するエンティティ間の結合が構築される場所のような、一連の結合を生成することもできます::"
 
 #: of sqlalchemy.orm.query.Query.join:35
 msgid ""
 "The above would be shorthand for three separate calls to "
 ":meth:`~.Query.join`, each using an explicit attribute to indicate the "
 "source entity::"
-msgstr ""
+msgstr "上記は、meth： `〜.Query.join`への3つの別々の呼び出しの省略形です。それぞれは明示的な属性を使用してソースエンティティを示します::"
 
 #: of sqlalchemy.orm.query.Query.join:44
 msgid "**Joins to a Target Entity or Selectable**"
-msgstr ""
+msgstr "**ターゲットエンティティへの結合または選択可能**"
 
 #: of sqlalchemy.orm.query.Query.join:46
 msgid ""
@@ -891,7 +881,7 @@ msgid ""
 "selectable construct as a target.   In this usage, :meth:`~.Query.join` "
 "will attempt to create a JOIN along the natural foreign key relationship "
 "between two entities::"
-msgstr ""
+msgstr "：meth： `〜.Query.join`の第2の形式は、マップされたエンティティまたはコア選択可能な構造体をターゲットとして許可します。この使用法では、：meth： `〜.Query.join`は2つのエンティティ間の自然な外部キー関係に沿ってJOINを作成しようとします::"
 
 #: of sqlalchemy.orm.query.Query.join:54
 msgid ""
@@ -901,11 +891,11 @@ msgid ""
 "form, :meth:`~.Query.join` is called upon to create the \"on clause\" "
 "automatically for us.  The target can be any mapped entity or selectable,"
 " such as a :class:`.Table`::"
-msgstr ""
+msgstr "上記の：meth： `〜.Query.join`の呼び出し形式は、2つのエンティティ間に外部キーがない場合、またはそれらの間に複数の外部キーリンケージがある場合にエラーを発生させます。上記の呼び出し形式では、：meth： `〜.Query.join`が自動的にon節\を作成するために呼び出されます。ターゲットは任意のマップされたエンティティまたは選択可能です：class： `.Table` ::"
 
 #: of sqlalchemy.orm.query.Query.join:63
 msgid "**Joins to a Target with an ON Clause**"
-msgstr ""
+msgstr "** ON句でターゲットに結合する**"
 
 #: of sqlalchemy.orm.query.Query.join:65
 msgid ""
@@ -916,11 +906,11 @@ msgid ""
 "``Address``, and join to it using the ``target, onclause`` form, so that "
 "the alias can be specified explicitly as the target along with the "
 "relationship to instruct how the ON clause should proceed::"
-msgstr ""
+msgstr "3番目の呼び出し形式では、ON句だけでなくターゲットエンティティも明示的に渡すことができます。たとえば、2回目のエイリアスを使って、 `` Address``に2回参加したいとします。 ：func： `〜sqlalchemy.orm.aliased`を使用して、` `Address``の別名を作成し、` `target、onclause``形式でそれに結合します。これにより、エイリアスを明示的に指定することができますON句をどのように進めるべきかを指示する関係と一緒にターゲットを設定する::"
 
 #: of sqlalchemy.orm.query.Query.join:82
 msgid "Where above, the generated SQL would be similar to::"
-msgstr ""
+msgstr "上記の場合、生成されるSQLは次のようになります。"
 
 #: of sqlalchemy.orm.query.Query.join:90
 msgid ""
@@ -930,7 +920,7 @@ msgid ""
 " be passed as the ON clause when using the two-argument form, which "
 "should refer to the target entity in some way as well as an applicable "
 "source entity::"
-msgstr ""
+msgstr "：meth： `〜.Query.join`という2つの引数を持つ呼び出し形式でも、SQL指向の\&quot; on clause \ &quot;式で任意の結合を構成することができ、構成された関係にはまったく依存しません。 2つの引数をとるフォームを使用する場合、どのSQL式もON句として渡すことができます。これは、対象エンティティを何らかの方法で参照する必要があります。また、適用可能なソースエンティティ::"
 
 #: of sqlalchemy.orm.query.Query.join:99
 msgid ""
@@ -941,11 +931,11 @@ msgid ""
 "unless multiple join conditions are passed to a single "
 ":meth:`~.Query.join` call, which itself is also not generally necessary "
 "as it is now equivalent to multiple calls (this wasn't always the case)."
-msgstr ""
+msgstr "SQLAlchemy 0.6以前では、：meth： `〜.Query.join`の2つの引数形式は、` `query（User）.join（（Address、User.id == Address.user_id））タプルの使用を必要とします。 `` \\。この呼び出し形式は0.7以降で受け入れられますが、複数の結合条件が1つの：meth： `〜.Query.join`呼び出しに渡されない限り、これは必須ではありませんが、複数の呼び出し（これは必ずしもそうではなかった）。"
 
 #: of sqlalchemy.orm.query.Query.join:109
 msgid "**Advanced Join Targeting and Adaption**"
-msgstr ""
+msgstr "**高度な参加とターゲット設定**"
 
 #: of sqlalchemy.orm.query.Query.join:111
 msgid ""
@@ -954,7 +944,7 @@ msgid ""
 ":class:`.Table` constructs and other selectables such as :func:`.alias` "
 "and :func:`.select` constructs, with either the one or two-argument "
 "forms::"
-msgstr ""
+msgstr "：meth： `〜.Query.join`を使うとき、\&quot; target \ &quot;が何になるかには多くの柔軟性があります。前述のように、：class： `.Table`構造体、および：func：` .alias`や：func： `.select`構造体のような、"
 
 #: of sqlalchemy.orm.query.Query.join:124
 msgid ""
@@ -963,17 +953,17 @@ msgid ""
 "selectable. Below we construct a JOIN from ``User`` to a subquery against"
 " ``Address``, allowing the relationship denoted by ``User.addresses`` to "
 "*adapt* itself to the altered target::"
-msgstr ""
+msgstr "：meth： `〜.Query.join`は、*：meth：`〜sqlalchemy.orm.relationship`駆動のON句をターゲット選択可能に適合させる機能も備えています。以下では、 `` User``から `` Address``に対するサブクエリにJOINを構築し、 `` User.addresses``で表される関係を変更されたターゲットに適合させる::"
 
 #: of sqlalchemy.orm.query.Query.join:147
 msgid ""
 "The above form allows one to fall back onto an explicit ON clause at any "
 "time::"
-msgstr ""
+msgstr "上記の形式では、いつでも明示的なON句に戻ることができます::"
 
 #: of sqlalchemy.orm.query.Query.join:153
 msgid "**Controlling what to Join From**"
-msgstr ""
+msgstr "**参加対象の制御**"
 
 #: of sqlalchemy.orm.query.Query.join:155
 msgid ""
@@ -983,15 +973,15 @@ msgid ""
 "query against ``Address`` but can still make usage of ``User.addresses`` "
 "as our ON clause by instructing the :class:`.Query` to select first from "
 "the ``User`` entity::"
-msgstr ""
+msgstr "：meth： `〜.Query.join`はJOINの&quot;右 &quot;側を排他的に扱いますが、必要な場合には：meth：`〜 .Query.select_from`。以下では、 `` Address``に対してクエリを作成しますが、 `` User``エンティティから最初に選択するようにclass： `.Query`に指示することで、ON節として` `User.addresses``を使用することができます： ："
 
 #: of sqlalchemy.orm.query.Query.join:167
 msgid "Which will produce SQL similar to::"
-msgstr ""
+msgstr "次のようなSQLを生成します::"
 
 #: of sqlalchemy.orm.query.Query.join:173
 msgid "**Constructing Aliases Anonymously**"
-msgstr ""
+msgstr "**匿名でエイリアスを作成する**"
 
 #: of sqlalchemy.orm.query.Query.join:175
 msgid ""
@@ -999,7 +989,7 @@ msgid ""
 "``aliased=True`` flag.  This feature is useful when a query is being "
 "joined algorithmically, such as when querying self-referentially to an "
 "arbitrary depth::"
-msgstr ""
+msgstr "：meth： `〜.Query.join`は` `aliased = True``フラグを使って匿名エイリアスを構築できます。この機能は、クエリがアルゴリズム的に結合されている場合に便利です。たとえば、任意の深さに自己参照的にクエリを実行する場合などです。"
 
 #: of sqlalchemy.orm.query.Query.join:183
 msgid ""
@@ -1007,7 +997,7 @@ msgid ""
 "explicitly available.  To work with it, methods such as "
 ":meth:`.Query.filter` will adapt the incoming entity to the last join "
 "point::"
-msgstr ""
+msgstr "`` aliased = True``が使われるとき、実際の\ &quot;エイリアス\&quot;構造は明示的に利用できません。このメソッドを使うには、：meth： `.Query.filter`のようなメソッドが、入ってくるエンティティを最後のジョインポイントに適応させます::"
 
 #: of sqlalchemy.orm.query.Query.join:192
 msgid ""
@@ -1015,20 +1005,20 @@ msgid ""
 "allow a multi-node join to be broken into multiple calls to "
 ":meth:`~.Query.join`, so that each path along the way can be further "
 "filtered::"
-msgstr ""
+msgstr "自動エイリアシングを使用する場合、 `` from_joinpoint = True``引数はマルチノード結合を：meth： `〜.Query.join`への複数の呼び出しに分割して、途中の各パスをさらにフィルタリングできるようにします::"
 
 #: of sqlalchemy.orm.query.Query.join:203
 msgid ""
 "The filtering aliases above can then be reset back to the original "
 "``Node`` entity using :meth:`~.Query.reset_joinpoint`::"
-msgstr ""
+msgstr "上記のフィルタリングエイリアスは、元の `` Node``エンティティにリセットすることができます：meth： `〜.Query.reset_joinpoint` ::"
 
 #: of sqlalchemy.orm.query.Query.join:212
 msgid ""
 "For an example of ``aliased=True``, see the distribution example "
 ":ref:`examples_xmlpersistence` which illustrates an XPath-like query "
 "system using algorithmic joins."
-msgstr ""
+msgstr "`` aliased = True``の例については、アルゴリズム的な結合を使ったXPathのようなクエリシステムを示すディストリビューションの例：ref： `examples_xmlpersistence`を参照してください。"
 
 #: of sqlalchemy.orm.query.Query.join:216
 msgid ""
@@ -1037,7 +1027,7 @@ msgid ""
 "\"on clause\", or a single target entity, or a tuple in the form of "
 "``(target, onclause)``. A special two-argument calling form of the form "
 "``target, onclause`` is also accepted."
-msgstr ""
+msgstr "\ &quot;on節\&quot;を表すリレーションシップバインド属性または文字列リレーションシップ名、または単一のターゲットエンティティ、または ``（target、onclause）の形式のタプルで構成される1つ以上の結合条件の集合。 ``。 `` target、onclause``形式の特別な引数を2つ持つ呼び出し形式も受け入れられます。"
 
 #: of sqlalchemy.orm.query.Query.join:222
 msgid ""
@@ -1045,7 +1035,7 @@ msgid ""
 "Subsequent calls to :meth:`~.Query.filter` and similar will adapt the "
 "incoming criterion to the target alias, until "
 ":meth:`~.Query.reset_joinpoint` is called."
-msgstr ""
+msgstr "Trueの場合、JOINターゲットに匿名でエイリアスを付ける必要があることを示します。それ以降の：meth： `〜.Query.filter`などの呼び出しは、：meth：`〜.Query.reset_joinpoint`が呼び出されるまで、着信基準をターゲット別名に適合させます。"
 
 #: of sqlalchemy.orm.query.Query.join:226
 msgid ""
@@ -1054,7 +1044,7 @@ msgid ""
 "maintain consistency with the same flag as accepted by "
 ":meth:`.FromClause.join` and other Core constructs.   .. versionadded:: "
 "1.0.0"
-msgstr ""
+msgstr "Trueの場合、使用される結合は、：meth： `.Query.outerjoin`メソッドが呼び出されたかのように、左外部結合になります。このフラグは、：meth： `.FromClause.join`と他のCoreコンストラクトで受け入れられているものと同じフラグとの一貫性を維持するためのものです。 .. versionadded :: 1.0.0"
 
 #: of sqlalchemy.orm.query.Query.join:226
 msgid ""
@@ -1062,70 +1052,70 @@ msgid ""
 ":meth:`.Query.outerjoin` method were called.  This flag is here to "
 "maintain consistency with the same flag as accepted by "
 ":meth:`.FromClause.join` and other Core constructs."
-msgstr ""
+msgstr "Trueの場合、使用される結合は、：meth： `.Query.outerjoin`メソッドが呼び出されたかのように、左外部結合になります。このフラグは、：meth： `.FromClause.join`と他のCoreコンストラクトで受け入れられているものと同じフラグとの一貫性を維持するためのものです。"
 
 #: of sqlalchemy.orm.query.Query.join:234
 msgid "render FULL OUTER JOIN; implies ``isouter``.  .. versionadded:: 1.1"
-msgstr ""
+msgstr "レンダリングFULL OUTER JOIN; 「isouter」を意味する。 .. versionadded :: 1.1"
 
 #: of sqlalchemy.orm.query.Query.join:234
 msgid "render FULL OUTER JOIN; implies ``isouter``."
-msgstr ""
+msgstr "レンダリングFULL OUTER JOIN; 「isouter」を意味する。"
 
 #: of sqlalchemy.orm.query.Query.join:238
 msgid ""
 "When using ``aliased=True``, a setting of True here will cause the join "
 "to be from the most recent joined target, rather than starting back from "
 "the original FROM clauses of the query."
-msgstr ""
+msgstr "`` aliased = True``を使用する場合、ここでTrueを設定すると、クエリの元のFROM句から戻ってくるのではなく、最も最近結合したターゲットからの結合になります。"
 
 #: of sqlalchemy.orm.query.Query.join:245
 msgid ":ref:`ormtutorial_joins` in the ORM tutorial."
-msgstr ""
+msgstr "ORMチュートリアルの：ref： `ormtutorial_joins`を参照してください。"
 
 #: of sqlalchemy.orm.query.Query.join:247
 msgid ""
 ":ref:`inheritance_toplevel` for details on how :meth:`~.Query.join` is "
 "used for inheritance relationships."
-msgstr ""
+msgstr "：ref： `inheritance_toplevel`の詳細は：meth：`〜.Query.join`を継承関係に使用します。"
 
 #: of sqlalchemy.orm.query.Query.join:250
 msgid ""
 ":func:`.orm.join` - a standalone ORM-level join function, used internally"
 " by :meth:`.Query.join`, which in previous SQLAlchemy versions was the "
 "primary ORM-level joining interface."
-msgstr ""
+msgstr "：func： `.orm.join`  - ：meth：` .Query.join`によって内部的に使用されるスタンドアロンのORMレベルの結合関数。以前のSQLAlchemyのバージョンでは、ORMレベルの一次結合インターフェースでした。"
 
 #: of sqlalchemy.orm.query.Query.label:1
 msgid ""
 "Return the full SELECT statement represented by this :class:`.Query`, "
 "converted to a scalar subquery with a label of the given name."
-msgstr ""
+msgstr "this：class： `.Query`で表される完全なSELECT文を返します。指定された名前のラベルを持つスカラーサブクエリに変換されます。"
 
 #: of sqlalchemy.orm.query.Query.label:5
 msgid "Analogous to :meth:`sqlalchemy.sql.expression.SelectBase.label`."
-msgstr ""
+msgstr "：meth： `sqlalchemy.sql.expression.SelectBase.label`に似ています。"
 
 #: of sqlalchemy.orm.query.Query.lazy_loaded_from:1
 msgid ""
 "An :class:`.InstanceState` that is using this :class:`.Query` for a lazy "
 "load operation."
-msgstr ""
+msgstr "An：class： `.InstanceState`これは、遅延ロード操作のために：class：` .Query`を使用しています。"
 
 #: of sqlalchemy.orm.query.Query.lazy_loaded_from:4
 msgid ""
 "This can be used for extensions like the horizontal sharding extension as"
 " well as event handlers and custom mapper options to determine when a "
 "query is being used to lazy load a relationship on an object."
-msgstr ""
+msgstr "これは、水平シャーディング拡張のような拡張機能、イベントハンドラとカスタムマッパーオプションを使用して、クエリがオブジェクトの関係を遅延ロードするために使用されているかどうかを判断するために使用できます。"
 
 #: of sqlalchemy.orm.query.Query.limit:1
 msgid "Apply a ``LIMIT`` to the query and return the newly resulting ``Query``."
-msgstr ""
+msgstr "クエリに `` LIMIT``を適用し、新しく生成された `` Query``を返します。"
 
 #: of sqlalchemy.orm.query.Query.merge_result:1
 msgid "Merge a result into this :class:`.Query` object's Session."
-msgstr ""
+msgstr "結果をthis：class： `.Query`オブジェクトのSessionにマージします。"
 
 #: of sqlalchemy.orm.query.Query.merge_result:3
 msgid ""
@@ -1136,18 +1126,18 @@ msgid ""
 " structure of the result rows and unmapped columns with less method "
 "overhead than that of calling :meth:`.Session.merge` explicitly for each "
 "value."
-msgstr ""
+msgstr "これと同じ構造の：class： `.Query`によって返されたイテレータが返された場合、すべてのマップされたインスタンスが：meth：`。Session.merge`を使用してセッションにマージされた結果の同じイテレータを返します。これは、各値に対して明示的に：meth： `。Session.merge`を呼び出すよりもメソッドのオーバーヘッドが少なく、結果の行とマッピングされていない列の構造を保持しながら、すべてのマップされたインスタンスをマージする最適化されたメソッドです。"
 
 #: of sqlalchemy.orm.query.Query.merge_result:11
 msgid ""
 "The structure of the results is determined based on the column list of "
 "this :class:`.Query` - if these do not correspond, unchecked errors will "
 "occur."
-msgstr ""
+msgstr "結果の構造は以下の列リストに基づいて決定されます：class： `.Query`  - これらが一致しない場合、チェックされていないエラーが発生します。"
 
 #: of sqlalchemy.orm.query.Query.merge_result:15
 msgid "The 'load' argument is the same as that of :meth:`.Session.merge`."
-msgstr ""
+msgstr "&#39;load&#39;引数は：meth： `.Session.merge`と同じです。"
 
 #: of sqlalchemy.orm.query.Query.merge_result:17
 msgid ""
@@ -1155,15 +1145,15 @@ msgid ""
 "source code for the example :ref:`examples_caching`, where "
 ":meth:`~.Query.merge_result` is used to efficiently restore state from a "
 "cache back into a target :class:`.Session`."
-msgstr ""
+msgstr "：meth： `〜.Query.merge_result`が使用されている例については、例：ref：` examples_caching`のソースコードを参照してください。ここで、：meth： `〜.Query.merge_result`は状態を効率的に復元しますターゲット：class： `.Session`に戻るキャッシュ。"
 
 #: of sqlalchemy.orm.query.Query.offset:1
 msgid "Apply an ``OFFSET`` to the query and return the newly resulting ``Query``."
-msgstr ""
+msgstr "クエリに `` OFFSET``を適用し、新たに生成された `` Query``を返します。"
 
 #: of sqlalchemy.orm.query.Query.one:1
 msgid "Return exactly one result or raise an exception."
-msgstr ""
+msgstr "結果を1つ返すか、例外を発生させます。"
 
 #: of sqlalchemy.orm.query.Query.one:3
 msgid ""
@@ -1172,20 +1162,20 @@ msgid ""
 "identities are returned, or if multiple rows are returned for a query "
 "that returns only scalar values as opposed to full identity-mapped "
 "entities."
-msgstr ""
+msgstr "クエリが行を選択しない場合、 `` sqlalchemy.orm.exc.NoResultFound``を発生させます。複数のオブジェクトアイデンティティが返された場合、または完全なアイデンティティマップエンティティではなくスカラ値のみを返すクエリに対して複数の行が返された場合は、 `` sqlalchemy.orm.exc.MultipleResultsFound`を発生させます。"
 
 #: of sqlalchemy.orm.query.Query.one:9
 msgid "Calling :meth:`.one` results in an execution of the underlying query."
-msgstr ""
+msgstr "meth： `.one`を呼び出すと、基本となるクエリが実行されます。"
 
 #: of sqlalchemy.orm.query.Query.one:13
 #: sqlalchemy.orm.query.Query.one_or_none:18
 msgid ":meth:`.Query.first`"
-msgstr ""
+msgstr "：meth： `.Query.first`"
 
 #: of sqlalchemy.orm.query.Query.one_or_none:1
 msgid "Return at most one result or raise an exception."
-msgstr ""
+msgstr "多くとも1つの結果を返すか、例外を発生させます。"
 
 #: of sqlalchemy.orm.query.Query.one_or_none:3
 msgid ""
@@ -1193,73 +1183,73 @@ msgid ""
 "``sqlalchemy.orm.exc.MultipleResultsFound`` if multiple object identities"
 " are returned, or if multiple rows are returned for a query that returns "
 "only scalar values as opposed to full identity-mapped entities."
-msgstr ""
+msgstr "問合せが行を選択しない場合は `` None``を返します。複数のオブジェクトアイデンティティが返された場合、または完全なアイデンティティマップエンティティではなくスカラ値のみを返すクエリに対して複数の行が返された場合は、 `` sqlalchemy.orm.exc.MultipleResultsFound`を発生させます。"
 
 #: of sqlalchemy.orm.query.Query.one_or_none:9
 msgid ""
 "Calling :meth:`.Query.one_or_none` results in an execution of the "
 "underlying query."
-msgstr ""
+msgstr "meth： `.Query.one_or_none`を呼び出すと、基本となるクエリが実行されます。"
 
 #: of sqlalchemy.orm.query.Query.one_or_none:14
 msgid "Added :meth:`.Query.one_or_none`"
-msgstr ""
+msgstr "追加：meth： `.Query.one_or_none`"
 
 #: of sqlalchemy.orm.query.Query.only_return_tuples:2
 msgid "When set to True, the query results will always be a tuple,"
-msgstr ""
+msgstr "Trueに設定すると、クエリ結果は常にタプルになります。"
 
 #: of sqlalchemy.orm.query.Query.only_return_tuples:2
 msgid "specifically for single element queries. The default is False."
-msgstr ""
+msgstr "特に単一要素クエリの場合デフォルトはFalseです。"
 
 #: of sqlalchemy.orm.query.Query.only_return_tuples:4
 msgid ".   .. versionadded:: 1.2.5"
-msgstr ""
+msgstr "。 .. versionadded :: 1.2.5"
 
 #: of sqlalchemy.orm.query.Query.options:1
 msgid "Return a new Query object, applying the given list of mapper options."
-msgstr ""
+msgstr "指定されたマッパーオプションのリストを適用して、新しいQueryオブジェクトを返します。"
 
 #: of sqlalchemy.orm.query.Query.options:4
 msgid ""
 "Most supplied options regard changing how column- and relationship-mapped"
 " attributes are loaded. See the sections :ref:`deferred` and "
 ":doc:`/orm/loading_relationships` for reference documentation."
-msgstr ""
+msgstr "提供されるほとんどのオプションは、列とリレーションマップの属性のロード方法の変更に関するものです。リファレンスドキュメントについては、セクション：ref： `deferred`と：doc：` / orm / loading_relationships`を参照してください。"
 
 #: of sqlalchemy.orm.query.Query.order_by:1
 msgid ""
 "apply one or more ORDER BY criterion to the query and return the newly "
 "resulting ``Query``"
-msgstr ""
+msgstr "1つ以上のORDER BY条件をクエリに適用し、新しく生成された `` Query``"
 
 #: of sqlalchemy.orm.query.Query.order_by:4
 msgid ""
 "All existing ORDER BY settings can be suppressed by passing ``None`` - "
 "this will suppress any ORDER BY configured on mappers as well."
-msgstr ""
+msgstr "すべての既存のORDER BY設定は、 `` None``を渡すことで抑止できます - これはマッパーで設定されたORDER BYも抑制します。"
 
 #: of sqlalchemy.orm.query.Query.order_by:8
 msgid ""
 "Alternatively, passing False will reset ORDER BY and additionally re-"
 "allow default mapper.order_by to take place.   Note mapper.order_by is "
 "deprecated."
-msgstr ""
+msgstr "代わりに、Falseを渡すとORDER BYがリセットされ、さらにデフォルトのmapper.order_byが再び有効になります。注意mapper.order_byは非推奨です。"
 
 #: of sqlalchemy.orm.query.Query.outerjoin:1
 msgid ""
 "Create a left outer join against this ``Query`` object's criterion and "
 "apply generatively, returning the newly resulting ``Query``."
-msgstr ""
+msgstr "この `` Query``オブジェクトの基準に対して左外部結合を作成し、新しく生成された `` Query``を生成して生成します。"
 
 #: of sqlalchemy.orm.query.Query.outerjoin:4
 msgid "Usage is the same as the ``join()`` method."
-msgstr ""
+msgstr "使用法は `` join（） ``メソッドと同じです。"
 
 #: of sqlalchemy.orm.query.Query.params:1
 msgid "add values for bind parameters which may have been specified in filter()."
-msgstr ""
+msgstr "filter（）で指定された可能性のあるバインドパラメータの値を追加します。"
 
 #: of sqlalchemy.orm.query.Query.params:4
 msgid ""
@@ -1267,13 +1257,13 @@ msgid ""
 "dictionary as the first positional argument. The reason for both is that "
 "\\**kwargs is convenient, however some parameter dictionaries contain "
 "unicode keys in which case \\**kwargs cannot be used."
-msgstr ""
+msgstr "パラメータは、\\ ** kwargsを使用して指定するか、オプションで単一の辞書を最初の位置引数として指定することができます。 \\ ** kwargsは便利ですが、一部のパラメータ辞書にはユニコードキーが含まれているため、\\ ** kwargsは使用できません。"
 
 #: of sqlalchemy.orm.query.Query.populate_existing:1
 msgid ""
 "Return a :class:`.Query` that will expire and refresh all instances as "
 "they are loaded, or reused from the current :class:`.Session`."
-msgstr ""
+msgstr "すべてのインスタンスがロードされたり、現在の：class： `.Session`から再利用されると、すべてのインスタンスを期限切れにしてリフレッシュするa：class：` .Query`を返します。"
 
 #: of sqlalchemy.orm.query.Query.populate_existing:4
 msgid ""
@@ -1282,51 +1272,51 @@ msgid ""
 "a transaction and expiring all attributes after rollback or commit "
 "handles object state automatically. This method is not intended for "
 "general use."
-msgstr ""
+msgstr "：meth： `.populate_existing`は、ORMが正常に使用されているときの振る舞いを改善しません。 -  class：` .Session`オブジェクトの通常のトランザクション保守動作とロールバックまたはコミット後のすべての属性の期限切れはオブジェクト状態を自動的に処理します。この方法は一般的な使用を意図したものではありません。"
 
 #: of sqlalchemy.orm.query.Query.prefix_with:1
 msgid "Apply the prefixes to the query and return the newly resulting ``Query``."
-msgstr ""
+msgstr "プレフィックスをクエリに適用し、新しく生成された `` Query``を返します。"
 
 #: of sqlalchemy.orm.query.Query.prefix_with:4
 msgid ""
 "optional prefixes, typically strings, not using any commas.   In "
 "particular is useful for MySQL keywords."
-msgstr ""
+msgstr "オプションの接頭辞、通常は文字列で、カンマを使用しません。特に、MySQLのキーワードに便利です。"
 
 #: of sqlalchemy.orm.query.Query.prefix_with:13
 msgid "Would render::"
-msgstr ""
+msgstr "レンダリングするだろう::"
 
 #: of sqlalchemy.orm.query.Query.prefix_with:22
 msgid ":meth:`.HasPrefixes.prefix_with`"
-msgstr ""
+msgstr "：meth： `.HasPrefixes.prefix_with`"
 
 #: of sqlalchemy.orm.query.Query.reset_joinpoint:1
 msgid ""
 "Return a new :class:`.Query`, where the \"join point\" has been reset "
 "back to the base FROM entities of the query."
-msgstr ""
+msgstr "新しい：class： `.Query`を返します。ここで\&quot; join point \ &quot;はクエリのベースFROMエンティティにリセットされています。"
 
 #: of sqlalchemy.orm.query.Query.reset_joinpoint:4
 msgid ""
 "This method is usually used in conjunction with the ``aliased=True`` "
 "feature of the :meth:`~.Query.join` method.  See the example in "
 ":meth:`~.Query.join` for how this is used."
-msgstr ""
+msgstr "このメソッドは、通常：meth： `〜.Query.join`メソッドの` `aliased = True``機能と組み合わせて使用​​されます。これがどのように使われているかについては、：meth： `〜.Query.join`の例を参照してください。"
 
 #: of sqlalchemy.orm.query.Query.scalar:1
 msgid ""
 "Return the first element of the first result or None if no rows present."
 "  If multiple rows are returned, raises MultipleResultsFound."
-msgstr ""
+msgstr "最初の結果の最初の要素を返します。存在しない場合はNoneを返します。複数の行が返された場合、MultipleResultsFoundが発生します。"
 
 #: of sqlalchemy.orm.query.Query.select_entity_from:1
 msgid ""
 "Set the FROM clause of this :class:`.Query` to a core selectable, "
 "applying it as a replacement FROM clause for corresponding mapped "
 "entities."
-msgstr ""
+msgstr "これのFROM句を：class： `.Query`にコアの選択可能なものに設定し、それを対応するマップされたエンティティのFROM句として置き換えます。"
 
 #: of sqlalchemy.orm.query.Query.select_entity_from:5
 msgid ""
@@ -1336,13 +1326,13 @@ msgid ""
 ":func:`.aliased` construct explicitly, :meth:`.Query.select_entity_from` "
 "automatically *adapts* all occurences of the entity to the target "
 "selectable."
-msgstr ""
+msgstr "：meth： `.Query.select_entity_from`メソッドは：func：` .aliased`構造を明示的にクエリ全体に適用するユースケースへの代替アプローチを提供します。 ：func： `.aliased`構造体を明示的に参照する代わりに、：meth：` .Query.select_entity_from`は、エンティティのすべての発生を自動的に*選択可能なターゲットに適合させます。"
 
 #: of sqlalchemy.orm.query.Query.select_entity_from:12
 msgid ""
 "Given a case for :func:`.aliased` such as selecting ``User`` objects from"
 " a SELECT statement::"
-msgstr ""
+msgstr "：func： `.aliased`の場合：SELECT文から` `User``オブジェクトを選択するなど"
 
 #: of sqlalchemy.orm.query.Query.select_entity_from:21
 msgid ""
@@ -1350,13 +1340,13 @@ msgid ""
 "query.  When it's not feasible for ``user_alias`` to be referenced "
 "explicitly in many places, :meth:`.Query.select_entity_from` may be used "
 "at the start of the query to adapt the existing ``User`` entity::"
-msgstr ""
+msgstr "上記では、 `` user_alias``オブジェクトを明示的にクエリ全体に適用します。 `` user_alias``が多くの場所で明示的に参照されない場合、：meth： `.Query.select_entity_from`をクエリの開始時に使用して、既存の` `User``エンティティを適合させることができます::"
 
 #: of sqlalchemy.orm.query.Query.select_entity_from:30
 msgid ""
 "Above, the generated SQL will show that the ``User`` entity is adapted to"
 " our statement, even in the case of the WHERE clause:"
-msgstr ""
+msgstr "上記のように、生成されたSQLは、WHERE句の場合でも、 `` User``エンティティが私たちのステートメントに適合していることを示します："
 
 #: of sqlalchemy.orm.query.Query.select_entity_from:41
 msgid ""
@@ -1366,7 +1356,7 @@ msgid ""
 " other parts of the query that refer to the primary entity.  If above we "
 "had used :meth:`.Query.select_from` instead, the SQL generated would have"
 " been:"
-msgstr ""
+msgstr "：meth： `.Query.select_entity_from`メソッドは：meth：` .Query.select_from`メソッドに似ています。これは、クエリのFROM句を設定する点です。相違点は、主エンティティを参照するクエリの他の部分にさらに適応を適用することです。上記の場合、代わりに：meth： `.Query.select_from`を使用した場合、生成されるSQLは次のようになります。"
 
 #: of sqlalchemy.orm.query.Query.select_entity_from:57
 msgid ""
@@ -1374,7 +1364,7 @@ msgid ""
 " can make use of the :func:`.text` construct.  However, the :func:`.text`"
 " construct needs to be aligned with the columns of our entity, which is "
 "achieved by making use of the :meth:`.TextClause.columns` method::"
-msgstr ""
+msgstr "：meth： `.Query.select_entity_from`メソッドにテキスト形式のSQLを供給するために、：func：` .text`構造体を利用することができます。しかし、：func： `.text`構造体は、：meth：` .TextClause.columns`メソッドを使って実現される、私たちのエンティティの列と整列する必要があります::"
 
 #: of sqlalchemy.orm.query.Query.select_entity_from:67
 msgid ""
@@ -1386,35 +1376,35 @@ msgid ""
 "this view into a :class:`.Table`, this view has no relationship to the "
 ":class:`.Table` to which we are mapped, however we can use name matching "
 "to select from it::"
-msgstr ""
+msgstr "：meth： `.Query.select_entity_from`自体は：func：` .aliased`オブジェクトを受け入れます。したがって、：func： `.aliased`のような特別なオプションがparamref：` .aliased.adapt_on_names`のように使用されます。 ：meth： `.Query.select_entity_from`メソッドの適応サービスのスコープビュー `` user_view``が `` user``から行を返すとします。このビューを：class： `.Table`に反映させると、このビューは：class：` .Table`とは関係がありませんが、名前の照合を使用して選択することができます::"
 
 #: of sqlalchemy.orm.query.Query.select_entity_from:85
 msgid ""
 "The :meth:`.Query.select_entity_from` method now accepts an "
 ":func:`.aliased` object as an alternative to a :class:`.FromClause` "
 "object."
-msgstr ""
+msgstr "：meth： `.Query.select_entity_from`メソッドは：class：` .FromClause`オブジェクトの代わりに：func： `.aliased`オブジェクトを受け入れるようになりました。"
 
 #: of sqlalchemy.orm.query.Query.select_entity_from:89
 msgid ""
 "a :class:`.FromClause` object that will replace the FROM clause of this "
 ":class:`.Query`.  It also may be an instance of :func:`.aliased`."
-msgstr ""
+msgstr "a：class： `.FromClause`オブジェクトで、これはFROM句を置き換えます：class：` .Query`。これは：func： `.aliased`のインスタンスでもあります。"
 
 #: of sqlalchemy.orm.query.Query.select_entity_from:97
 msgid ":meth:`.Query.select_from`"
-msgstr ""
+msgstr "：meth： `.Query.select_from`"
 
 #: of sqlalchemy.orm.query.Query.select_from:1
 msgid "Set the FROM clause of this :class:`.Query` explicitly."
-msgstr ""
+msgstr "これのFROM句を明示的に：class： `.Query`に明示してください。"
 
 #: of sqlalchemy.orm.query.Query.select_from:3
 msgid ""
 ":meth:`.Query.select_from` is often used in conjunction with "
 ":meth:`.Query.join` in order to control which entity is selected from on "
 "the \"left\" side of the join."
-msgstr ""
+msgstr "：meth： `.Query.select_from`は、joinの\&quot; left \ &quot;側から選択されるエンティティを制御するために、：meth：` .Query.join`と組み合わせて使用​​されることがよくあります。"
 
 #: of sqlalchemy.orm.query.Query.select_from:7
 msgid ""
@@ -1423,22 +1413,22 @@ msgid ""
 "otherwise established - usually, the default \"join point\" is the "
 "leftmost entity in the :class:`~.Query` object's list of entities to be "
 "selected."
-msgstr ""
+msgstr "ここでエンティティまたは選択可能なオブジェクトは、：meth： `〜.Query.join`への呼び出しの\&quot;左端\ &quot;を効果的に置き換えます。ジョイントポイントが他に確立されていない場合、通常はデフォルトの\&quot;ジョインポイント\ &quot;が一番左entity：：class： `〜.Query`オブジェクトの選択対象のエンティティのリストです。"
 
 #: of sqlalchemy.orm.query.Query.select_from:13
 msgid "A typical example::"
-msgstr ""
+msgstr "典型的な例::"
 
 #: of sqlalchemy.orm.query.Query.select_from:19
 msgid "Which produces SQL equivalent to::"
-msgstr ""
+msgstr "::と同等のSQLを生成する"
 
 #: of sqlalchemy.orm.query.Query.select_from:25
 msgid ""
 "collection of one or more entities to apply to the FROM clause.  Entities"
 " can be mapped classes, :class:`.AliasedClass` objects, :class:`.Mapper` "
 "objects as well as core :class:`.FromClause` elements like subqueries."
-msgstr ""
+msgstr "FROM句に適用する1つまたは複数のエンティティのコレクション。エンティティは、クラス：class： `.AliasedClass`オブジェクト、：class：` .Mapper`オブジェクト、およびコア：class： `.FromClause`要素（サブクエリなど）にマッピングできます。"
 
 #: of sqlalchemy.orm.query.Query.select_from:30
 msgid ""
@@ -1446,85 +1436,85 @@ msgid ""
 "from which matching entities select from; the :meth:`.select_entity_from`"
 " method now accomplishes this.  See that method for a description of this"
 " behavior."
-msgstr ""
+msgstr "このメソッドは、指定されたFROMオブジェクトを、一致するエンティティの選択元である選択肢に適用しなくなりました。 ：meth： `.select_entity_from`メソッドがこれを実現します。この動作の説明については、そのメソッドを参照してください。"
 
 #: of sqlalchemy.orm.query.Query.select_from:39
 msgid ":meth:`~.Query.join`"
-msgstr ""
+msgstr "：meth： `〜.Query.join`"
 
 #: of sqlalchemy.orm.query.Query.select_from:41
 msgid ":meth:`.Query.select_entity_from`"
-msgstr ""
+msgstr "：meth： `.Query.select_entity_from`"
 
 #: of sqlalchemy.orm.query.Query.selectable:1
 msgid "Return the :class:`.Select` object emitted by this :class:`.Query`."
-msgstr ""
+msgstr "this：class： `.Query`によって生成された：class：` .Select`オブジェクトを返します。"
 
 #: of sqlalchemy.orm.query.Query.selectable:3
 msgid "Used for :func:`.inspect` compatibility, this is equivalent to::"
-msgstr ""
+msgstr "func： `.inspect`との互換性のために使用されます：これは::"
 
 #: of sqlalchemy.orm.query.Query.slice:1
 msgid ""
 "Computes the \"slice\" of the :class:`.Query` represented by the given "
 "indices and returns the resulting :class:`.Query`."
-msgstr ""
+msgstr "指定されたインデックスによって表される：class： `.Query`の\&quot;スライス\ &quot;を計算し、結果：class：` .Query`を返します。"
 
 #: of sqlalchemy.orm.query.Query.slice:4
 msgid ""
 "The start and stop indices behave like the argument to Python's built-in "
 ":func:`range` function. This method provides an alternative to using "
 "``LIMIT``/``OFFSET`` to get a slice of the query."
-msgstr ""
+msgstr "開始インデックスと終了インデックスは、Pythonの組み込み関数：func： `range`関数の引数のように動作します。このメソッドは、 `` LIMIT`` / `` OFFSET``を使ってクエリのスライスを得る代わりの方法を提供します。"
 
 #: of sqlalchemy.orm.query.Query.slice:9
 msgid "For example, ::"
-msgstr ""
+msgstr "例えば、 ：："
 
 #: of sqlalchemy.orm.query.Query.slice:13
 msgid "renders as"
-msgstr ""
+msgstr "レンダリングする"
 
 #: of sqlalchemy.orm.query.Query.slice:25
 msgid ":meth:`.Query.limit`"
-msgstr ""
+msgstr "：meth： `.Query.limit`"
 
 #: of sqlalchemy.orm.query.Query.slice:27
 msgid ":meth:`.Query.offset`"
-msgstr ""
+msgstr "：meth： `.Query.offset`"
 
 #: of sqlalchemy.orm.query.Query.statement:1
 msgid "The full SELECT statement represented by this Query."
-msgstr ""
+msgstr "このQueryによって表される完全なSELECTステートメント。"
 
 #: of sqlalchemy.orm.query.Query.statement:3
 msgid ""
 "The statement by default will not have disambiguating labels applied to "
 "the construct unless with_labels(True) is called first."
-msgstr ""
+msgstr "デフォルトでは、with_labels（True）が最初に呼び出されない限り、文は構造体に適用される曖昧さのないラベルを持ちません。"
 
 #: of sqlalchemy.orm.query.Query.subquery:1
 msgid ""
 "return the full SELECT statement represented by this :class:`.Query`, "
 "embedded within an :class:`.Alias`."
-msgstr ""
+msgstr "：class： `.Alias`の中に埋め込まれた：class：` .Query`で表される完全なSELECT文を返します。"
 
 #: of sqlalchemy.orm.query.Query.subquery:4
 msgid "Eager JOIN generation within the query is disabled."
-msgstr ""
+msgstr "クエリ内のEager JOIN生成は無効になります。"
 
 #: of sqlalchemy.orm.query.Query.subquery:6
 msgid ""
 "string name to be assigned as the alias; this is passed through to "
 ":meth:`.FromClause.alias`. If ``None``, a name will be deterministically "
 "generated at compile time."
-msgstr ""
+msgstr "エイリアスとして割り当てる文字列名。これは：meth： `.FromClause.alias`に渡されます。 `` None``の場合、コンパイル時に名前が確定的に生成されます。"
 
 #: of sqlalchemy.orm.query.Query.subquery:11
 msgid ""
 "if True, :meth:`.with_labels` will be called on the :class:`.Query` first"
 " to apply table-qualified labels to all columns."
-msgstr ""
+msgstr "Trueの場合、：meth： `.with_labels`が最初に：class：` .Query`で呼び出され、すべての列に表修飾ラベルを適用します。"
 
 #: of sqlalchemy.orm.query.Query.subquery:15
 msgid ""
@@ -1533,56 +1523,56 @@ msgid ""
 "refers to the other via foreign key or WHERE clause equivalence.  .. "
 "versionchanged:: 0.8 the ``with_labels`` and ``reduce_columns``    "
 "keyword arguments were added."
-msgstr ""
+msgstr "Trueの場合、：meth： `.Select.reduce_columns`が結果：func：` .select`構文に対して呼び出され、外部キーまたはWHERE句の同値性を介して他のものを参照する同じ名前の列を削除します。 .. versionchanged :: 0.8 `` with_labels``と `` reduce_columns``キーワード引数が追加されました。"
 
 #: of sqlalchemy.orm.query.Query.subquery:15
 msgid ""
 "if True, :meth:`.Select.reduce_columns` will be called on the resulting "
 ":func:`.select` construct, to remove same-named columns where one also "
 "refers to the other via foreign key or WHERE clause equivalence."
-msgstr ""
+msgstr "Trueの場合、：meth： `.Select.reduce_columns`が結果：func：` .select`構文に対して呼び出され、外部キーまたはWHERE句の同値性を介して他のものを参照する同じ名前の列を削除します。"
 
 #: of sqlalchemy.orm.query.Query.subquery:20
 msgid "the ``with_labels`` and ``reduce_columns`` keyword arguments were added."
-msgstr ""
+msgstr "`` with_labels``と `` reduce_columns``のキーワード引数が追加されました。"
 
 #: of sqlalchemy.orm.query.Query.suffix_with:1
 msgid "Apply the suffix to the query and return the newly resulting ``Query``."
-msgstr ""
+msgstr "クエリにサフィックスを適用し、新しく生成された `` Query``を返します。"
 
 #: of sqlalchemy.orm.query.Query.suffix_with:4
 msgid "optional suffixes, typically strings, not using any commas."
-msgstr ""
+msgstr "オプションの接尾辞、通常は文字列で、カンマは使用しません。"
 
 #: of sqlalchemy.orm.query.Query.suffix_with:11
 msgid ":meth:`.Query.prefix_with`"
-msgstr ""
+msgstr "：meth： `.Query.prefix_with`"
 
 #: of sqlalchemy.orm.query.Query.suffix_with:13
 msgid ":meth:`.HasSuffixes.suffix_with`"
-msgstr ""
+msgstr "：meth： `.HasSuffixes.suffix_with`"
 
 #: of sqlalchemy.orm.query.Query.union:1
 msgid "Produce a UNION of this Query against one or more queries."
-msgstr ""
+msgstr "1つまたは複数のクエリに対してこのクエリのUNIONを生成します。"
 
 #: of sqlalchemy.orm.query.Query.union:10
 msgid ""
 "The method accepts multiple Query objects so as to control the level of "
 "nesting.  A series of ``union()`` calls such as::"
-msgstr ""
+msgstr "このメソッドは、複数のQueryオブジェクトを受け入れて、ネスティングのレベルを制御します。次のような一連の `` union（） ``呼び出し："
 
 #: of sqlalchemy.orm.query.Query.union:15
 msgid "will nest on each ``union()``, and produces::"
-msgstr ""
+msgstr "それぞれの `` union（） ``にネストし、次のものを生成します::"
 
 #: of sqlalchemy.orm.query.Query.union:20
 msgid "Whereas::"
-msgstr ""
+msgstr "一方、::"
 
 #: of sqlalchemy.orm.query.Query.union:24
 msgid "produces::"
-msgstr ""
+msgstr "生成::"
 
 #: of sqlalchemy.orm.query.Query.union:29
 msgid ""
@@ -1591,26 +1581,26 @@ msgid ""
 " including those configured on mappers, issue ``query.order_by(None)`` - "
 "the resulting :class:`.Query` object will not render ORDER BY within its "
 "SELECT statement."
-msgstr ""
+msgstr "多くのデータベースバックエンドでは、UNION、EXCEPTなどで呼び出されるクエリでORDER BYをレンダリングできないことに注意してください。マッパーで構成されたORDER BY節を含むすべてのORDER BY節を無効にするには、 `` query.order_by（None） `` ：class： `.Query`オブジェクトは、SELECTステートメント内でORDER BYをレンダリングしません。"
 
 #: of sqlalchemy.orm.query.Query.union_all:1
 msgid "Produce a UNION ALL of this Query against one or more queries."
-msgstr ""
+msgstr "1つ以上のクエリに対してこのクエリのUNION ALLを生成します。"
 
 #: of sqlalchemy.orm.query.Query.update:1
 msgid "Perform a bulk update query."
-msgstr ""
+msgstr "一括更新クエリを実行します。"
 
 #: of sqlalchemy.orm.query.Query.update:3
 msgid "Updates rows matched by this query in the database."
-msgstr ""
+msgstr "データベース内のこのクエリで一致する行を更新します。"
 
 #: of sqlalchemy.orm.query.Query.update:14
 msgid ""
 "The :meth:`.Query.update` method is a \"bulk\" operation, which bypasses "
 "ORM unit-of-work automation in favor of greater performance.  **Please "
 "read all caveats and warnings below.**"
-msgstr ""
+msgstr "：meth： `.Query.update`メソッドはORM作業単位自動化をバイパスして、パフォーマンスを向上させるための\&quot; bulk \ &quot;操作です。 **下記のすべての警告と警告をお読みください。**"
 
 #: of sqlalchemy.orm.query.Query.update:19
 msgid ""
@@ -1625,7 +1615,7 @@ msgid ""
 "dictionary     are now resolved against the mapped entity; previously, "
 "these     strings were passed as literal column names with no mapper-"
 "level     translation."
-msgstr ""
+msgstr "属性名または代替としてマップされた属性またはSQL式をキーとするリテラル値またはSQL式を値として持つ辞書。 if：ref： `パラメータ順モード<updates_order_parameters> `が望ましい場合、値は2タプルのリストとして渡すことができます。これには、：paramref： `〜sqlalchemy.sql.expression.update.preserve_parameter_order`フラグが：paramref：` .Query.update.update_args`ディクショナリにも渡されている必要があります。 .. versionchanged :: 1.0.0  - 値辞書の文字列名がマッピングされたエンティティに対して解決されるようになりました。これらの文字列は、マッパーレベルの変換を行わずにリテラル列名として渡されていました。"
 
 #: of sqlalchemy.orm.query.Query.update:19
 msgid ""
@@ -1637,14 +1627,14 @@ msgid ""
 ":paramref:`~sqlalchemy.sql.expression.update.preserve_parameter_order` "
 "flag is passed to the :paramref:`.Query.update.update_args` dictionary as"
 " well."
-msgstr ""
+msgstr "属性名または代替としてマップされた属性またはSQL式をキーとするリテラル値またはSQL式を値として持つ辞書。 if：ref： `パラメータ順モード<updates_order_parameters> `が望ましい場合、値は2タプルのリストとして渡すことができます。これには、：paramref： `〜sqlalchemy.sql.expression.update.preserve_parameter_order`フラグが：paramref：` .Query.update.update_args`ディクショナリにも渡されている必要があります。"
 
 #: of sqlalchemy.orm.query.Query.update:28
 msgid ""
 "- string names in the values dictionary are now resolved against the "
 "mapped entity; previously, these strings were passed as literal column "
 "names with no mapper-level translation."
-msgstr ""
+msgstr "- 値辞書の文字列名が、マッピングされたエンティティに対して解決されるようになりました。これらの文字列は、マッパーレベルの変換を行わずにリテラル列名として渡されていました。"
 
 #: of sqlalchemy.orm.query.Query.update:33
 msgid ""
@@ -1662,13 +1652,13 @@ msgid ""
 "implemented, an exception is raised.     The expression evaluator "
 "currently doesn't account for differing    string collations between the "
 "database and Python."
-msgstr ""
+msgstr "セッション内のオブジェクトの属性を更新する方法を選択します。有効な値は次のとおりです： `` False``  - セッションを同期しません。このオプションは、セッションが期限切れになると最も効率的で信頼性が高くなります。通常、commit（）の後に実行されるか、expire_all（）を明示的に使用します。期限切れになる前に、更新されたオブジェクトがセッションに残っていて、その属性の古い値が残っていると、結果が混乱する可能性があります。 `` &#39;fetch&#39;``  - 更新の前に選択クエリを実行して、更新クエリと一致するオブジェクトを見つけます。更新された属性は、一致するオブジェクトで期限切れになります。 `` &#39;evaluate&#39;``  - セッション内のオブジェクトに対してPythonのクエリの基準を直接評価します。基準の評価が実装されていない場合、例外が発生します。エクスプレッションエバリュエーターは現在、データベースとPythonの異なる文字列照合を考慮していません。"
 
 #: of sqlalchemy.orm.query.Query.update:33
 msgid ""
 "chooses the strategy to update the attributes on objects in the session. "
 "Valid values are:"
-msgstr ""
+msgstr "セッション内のオブジェクトの属性を更新する方法を選択します。有効な値は次のとおりです。"
 
 #: of sqlalchemy.orm.query.Query.update:36
 msgid ""
@@ -1677,21 +1667,21 @@ msgid ""
 "occurs after a commit(), or explicitly using expire_all(). Before the "
 "expiration, updated objects may still remain in the session with stale "
 "values on their attributes, which can lead to confusing results."
-msgstr ""
+msgstr "`` False``  - セッションを同期させません。このオプションは、セッションが期限切れになると最も効率的で信頼性が高くなります。通常、commit（）の後に実行されるか、expire_all（）を明示的に使用します。期限切れになる前に、更新されたオブジェクトがセッションに残っていて、その属性の古い値が残っていると、結果が混乱する可能性があります。"
 
 #: of sqlalchemy.orm.query.Query.update:43
 msgid ""
 "``'fetch'`` - performs a select query before the update to find objects "
 "that are matched by the update query. The updated attributes are expired "
 "on matched objects."
-msgstr ""
+msgstr "`` &#39;fetch&#39;``  - 更新の前に選択クエリを実行して、更新クエリと一致するオブジェクトを見つけます。更新された属性は、一致するオブジェクトで期限切れになります。"
 
 #: of sqlalchemy.orm.query.Query.update:47
 msgid ""
 "``'evaluate'`` - Evaluate the Query's criteria in Python straight on the "
 "objects in the session. If evaluation of the criteria isn't implemented, "
 "an exception is raised."
-msgstr ""
+msgstr "`` &#39;evaluate&#39;``  - セッション内のオブジェクトに対してPythonのクエリの基準を直接評価します。基準の評価が実装されていない場合、例外が発生します。"
 
 #: of sqlalchemy.orm.query.Query.update:54
 msgid ""
@@ -1701,7 +1691,7 @@ msgid ""
 "other special arguments such as "
 ":paramref:`~sqlalchemy.sql.expression.update.preserve_parameter_order`.  "
 ".. versionadded:: 1.0.0"
-msgstr ""
+msgstr "省略可能な辞書が存在する場合、そのオブジェクトの `` ** kw``として基本的な：func： `.update`構造体に渡されます。 `` mysql_limit``のようなダイアレクト固有の引数だけでなく、paramref： `〜sqlalchemy.sql.expression.update.preserve_parameter_order`のような他の特殊な引数も渡すことができます。 .. versionadded :: 1.0.0"
 
 #: of sqlalchemy.orm.query.Query.update:54
 msgid ""
@@ -1710,11 +1700,11 @@ msgid ""
 " pass dialect-specific arguments such as ``mysql_limit``, as well as "
 "other special arguments such as "
 ":paramref:`~sqlalchemy.sql.expression.update.preserve_parameter_order`."
-msgstr ""
+msgstr "省略可能な辞書が存在する場合、そのオブジェクトの `` ** kw``として基本的な：func： `.update`構造体に渡されます。 `` mysql_limit``のようなダイアレクト固有の引数だけでなく、paramref： `〜sqlalchemy.sql.expression.update.preserve_parameter_order`のような他の特殊な引数も渡すことができます。"
 
 #: of sqlalchemy.orm.query.Query.update:65
 msgid "**Additional Caveats for bulk query updates**"
-msgstr ""
+msgstr "**一括クエリの更新に関する追加の警告**"
 
 #: of sqlalchemy.orm.query.Query.update:67
 msgid ""
@@ -1722,7 +1712,7 @@ msgid ""
 "is assumed that ON UPDATE CASCADE is configured for any foreign key "
 "references which require it, otherwise the database may emit an integrity"
 " violation if foreign key references are being enforced."
-msgstr ""
+msgstr "このメソッドは、Pythonのin-Pythonカスケード関係を提供していません**それを必要とする外部キー参照に対してON UPDATE CASCADEが構成されていると仮定します。そうしないと、外部キー参照が強制されている場合、データベースは整合性違反を発生させる可能性があります。"
 
 #: of sqlalchemy.orm.query.Query.update:73
 msgid ""
@@ -1731,7 +1721,7 @@ msgid ""
 "issue is resolved once the :class:`.Session` is expired, which normally "
 "occurs upon :meth:`.Session.commit` or can be forced by using "
 ":meth:`.Session.expire_all`."
-msgstr ""
+msgstr "UPDATEの後、ON：更新CASCADEの影響を受けた：class： `.Session`の従属オブジェクトに現在の状態が含まれないことがあります。この問題は：class： `.Session`が期限切れになると解決されます。これは通常：meth：` .Session.commit`で発生するか、：meth： `.Session.expire_all`を使って強制できます。"
 
 #: of sqlalchemy.orm.query.Query.update:90
 msgid ""
@@ -1745,14 +1735,14 @@ msgid ""
 "``Engineer`` subclasses ``Employee``, an UPDATE of the ``Engineer`` local"
 " table using criteria against the ``Employee`` local table might look "
 "like::"
-msgstr ""
+msgstr "このメソッドは：ref： `multi_table_updates`で詳述されているように、複数のテーブルの更新をサポートしています。この動作は、継承継承やその他の複数のテーブルマッピングの更新をサポートするために拡張されています。ただし、継承マッパーの**結合条件は自動的にはレンダリングされません**。これが通常自動的なマッピングであっても、これらのテーブル間の結合条件を明示的に含めるためには、複数テーブルの更新に注意する必要があります。例えば ​​`` Engineer``クラスが `` Employee``をサブクラス化している場合、 `` Employee``ローカルテーブルに対する基準を使って `` Engineer``ローカルテーブルの更新は次のようになります::"
 
 #: of sqlalchemy.orm.query.Query.update:108
 msgid ""
 "The polymorphic identity WHERE criteria is **not** included for single- "
 "or joined- table updates - this must be added **manually**, even for "
 "single table inheritance."
-msgstr ""
+msgstr "多相識別WHERE条件は単一または結合テーブルの更新に**含まれません**単一のテーブルの継承の場合でも**手動で**追加する必要があります。"
 
 #: of sqlalchemy.orm.query.Query.update:113
 msgid ""
@@ -1760,45 +1750,45 @@ msgid ""
 ":meth:`.MapperEvents.after_update` events **are not invoked from this "
 "method**.  Instead, the :meth:`.SessionEvents.after_bulk_update` method "
 "is provided to act upon a mass UPDATE of entity rows."
-msgstr ""
+msgstr "：meth： `.MapperEvents.before_update`と：meth：` .MapperEvents.after_update`イベント**はこのメソッドから呼び出されません**。代わりに、：meth： `.SessionEvents.after_bulk_update`メソッドは、エンティティ行の大量更新に作用するために提供されています。"
 
 #: of sqlalchemy.orm.query.Query.update:121
 msgid ":meth:`.Query.delete`"
-msgstr ""
+msgstr "：meth： `.Query.delete`"
 
 #: of sqlalchemy.orm.query.Query.value:1
 msgid "Return a scalar result corresponding to the given column expression."
-msgstr ""
+msgstr "指定された列式に対応するスカラー結果を返します。"
 
 #: of sqlalchemy.orm.query.Query.values:1
 msgid ""
 "Return an iterator yielding result tuples corresponding to the given list"
 " of columns"
-msgstr ""
+msgstr "指定された列のリストに対応する結果タプルを返すイテレータを返します。"
 
 #: of sqlalchemy.orm.query.Query.whereclause:1
 msgid ""
 "A readonly attribute which returns the current WHERE criterion for this "
 "Query."
-msgstr ""
+msgstr "このクエリの現在のWHERE条件を返すreadonly属性。"
 
 #: of sqlalchemy.orm.query.Query.whereclause:4
 msgid ""
 "This returned value is a SQL expression construct, or ``None`` if no "
 "criterion has been established."
-msgstr ""
+msgstr "この戻り値は、SQL式の構文であり、基準が確立されていない場合は `` None``です。"
 
 #: of sqlalchemy.orm.query.Query.with_entities:1
 msgid ""
 "Return a new :class:`.Query` replacing the SELECT list with the given "
 "entities."
-msgstr ""
+msgstr "新しい：class： `.Query`を返し、SELECTリストを指定されたエンティティに置き換えます。"
 
 #: of sqlalchemy.orm.query.Query.with_for_update:1
 msgid ""
 "return a new :class:`.Query` with the specified options for the ``FOR "
 "UPDATE`` clause."
-msgstr ""
+msgstr "`` FOR UPDATE``節に指定されたオプションを使って、新しい：class： `.Query`を返します。"
 
 #: of sqlalchemy.orm.query.Query.with_for_update:4
 msgid ""
@@ -1808,29 +1798,29 @@ msgid ""
 "appended.  When additional arguments are specified, backend-specific "
 "options such as ``FOR UPDATE NOWAIT`` or ``LOCK IN SHARE MODE`` can take "
 "effect."
-msgstr ""
+msgstr "このメソッドの動作は：meth： `.SelectBase.with_for_update`の動作と同じです。引数なしで呼び出されると、結果として得られる `` SELECT``文には、 `` FOR UPDATE``節が追加されます。追加引数を指定すると、 `` FOR UPDATE NOWAIT`や `` LOCK IN SHARE MODE`のようなバックエンド固有のオプションが有効になります。"
 
 #: of sqlalchemy.orm.query.Query.with_for_update:15
 msgid "The above query on a PostgreSQL backend will render like::"
-msgstr ""
+msgstr "PostgreSQLのバックエンドに関する上記のクエリは、次のようにレンダリングされます："
 
 #: of sqlalchemy.orm.query.Query.with_for_update:19
 msgid ""
 ":meth:`.Query.with_for_update` supersedes the "
 ":meth:`.Query.with_lockmode` method."
-msgstr ""
+msgstr "：meth： `.Query.with_for_update`は：meth：` .Query.with_lockmode`メソッドに取って代わるものです。"
 
 #: of sqlalchemy.orm.query.Query.with_for_update:24
 msgid ""
 ":meth:`.GenerativeSelect.with_for_update` - Core level method with full "
 "argument and behavioral description."
-msgstr ""
+msgstr "：meth： `.GenerativeSelect.with_for_update`  - 完全な引数と動作記述を持つコアレベルのメソッド。"
 
 #: of sqlalchemy.orm.query.Query.with_hint:1
 msgid ""
 "Add an indexing or other executional context hint for the given entity or"
 " selectable to this :class:`.Query`."
-msgstr ""
+msgstr "指定されたエンティティに対して索引付けまたはその他の実行コンテキストヒントを追加するか、これをclass： `.Query`に選択できます。"
 
 #: of sqlalchemy.orm.query.Query.with_hint:5
 msgid ""
@@ -1838,15 +1828,15 @@ msgid ""
 ":meth:`~sqlalchemy.sql.expression.Select.with_hint`, with the addition "
 "that ``selectable`` can be a :class:`.Table`, :class:`.Alias`, or ORM "
 "entity / mapped class /etc."
-msgstr ""
+msgstr "機能は：meth： `〜sqlalchemy.sql.expression.Select.with_hint`に直接渡され、` `selectable``は：class：` .Table`、：class： `.Alias`、 ORMエンティティ/マップされたクラス/ etc"
 
 #: of sqlalchemy.orm.query.Query.with_hint:13
 msgid ":meth:`.Query.with_statement_hint`"
-msgstr ""
+msgstr "：meth： `.Query.with_statement_hint`"
 
 #: of sqlalchemy.orm.query.Query.with_labels:1
 msgid "Apply column labels to the return value of Query.statement."
-msgstr ""
+msgstr "Query.statementの戻り値に列ラベルを適用します。"
 
 #: of sqlalchemy.orm.query.Query.with_labels:3
 msgid ""
@@ -1854,13 +1844,13 @@ msgid ""
 "statement that applies labels to all columns in the form "
 "<tablename>_<columnname>; this is commonly used to disambiguate columns "
 "from multiple tables which have the same name."
-msgstr ""
+msgstr "このQueryの `ステートメント`アクセサは、フォーム内のすべてのカラムにラベルを適用するSELECT文を返す必要があることを示します<tablename> _ <columnname> ;これは、同じ名前を持つ複数の表から列を明確にするためによく使用されます。"
 
 #: of sqlalchemy.orm.query.Query.with_labels:9
 msgid ""
 "When the `Query` actually issues SQL to load rows, it always uses column "
 "labeling."
-msgstr ""
+msgstr "`Query`が実際に行をロードするためにSQLを発行するとき、常にカラムのラベリングが使用されます。"
 
 #: of sqlalchemy.orm.query.Query.with_labels:12
 msgid ""
@@ -1870,17 +1860,17 @@ msgid ""
 ":meth:`.Query.all`, etc.   To execute a query using "
 ":meth:`.Query.with_labels`, invoke the :attr:`.Query.statement` using "
 ":meth:`.Session.execute`::"
-msgstr ""
+msgstr "：meth： `.Query.with_labels`メソッドは*：attr：` .Query.statement`の出力を適用します。*：*：*。* * *の結果行呼び出しシステムには* *例えば：meth： `.Query.first`、：meth：` .Query.all`など：meth： `.Query.with_labels`を使用してクエリを実行するには、：attr：` .Query.statement`を呼び出します。 using：meth： `.Session.execute` ::"
 
 #: of sqlalchemy.orm.query.Query.with_lockmode:1
 msgid ""
 "Return a new :class:`.Query` object with the specified \"locking mode\", "
 "which essentially refers to the ``FOR UPDATE`` clause."
-msgstr ""
+msgstr "新しい：class： `.Query`オブジェクトを、指​​定した&quot;ロックモード &quot;で返します。これは基本的に` `FOR UPDATE``節を参照します。"
 
 #: of sqlalchemy.orm.query.Query.with_lockmode:4
 msgid "superseded by :meth:`.Query.with_for_update`."
-msgstr ""
+msgstr "：meth： `.Query.with_for_update`に取って代わる。"
 
 #: of sqlalchemy.orm.query.Query.with_lockmode:6
 msgid ""
@@ -1890,80 +1880,80 @@ msgid ""
 "``'update_nowait'`` - translates to ``FOR UPDATE NOWAIT``   (supported by"
 " Oracle, PostgreSQL 8.1 upwards)  * ``'read'`` - translates to ``LOCK IN "
 "SHARE MODE`` (for MySQL),   and ``FOR SHARE`` (for PostgreSQL)"
-msgstr ""
+msgstr "所望のロックモードを表す文字列有効な値は次のとおりです：* `` None``  - ロックモードにならない* `` &#39;update&#39;``  -  `` FOR UPDATE``（標準SQL、ほとんどの方言でサポートされています）* ``&#39; update_nowait &#39;`` * `` &#39;read&#39;``  -  `` LOCK IN SHARE MODE``（MySQLの場合）、 `` FOR SHARE``（ `` MySQLの場合）&#39; &#39;に変換されます。 PostgreSQL用）"
 
 #: of sqlalchemy.orm.query.Query.with_lockmode:6
 msgid "a string representing the desired locking mode. Valid values are:"
-msgstr ""
+msgstr "所望のロックモードを表す文字列有効な値は次のとおりです。"
 
 #: of sqlalchemy.orm.query.Query.with_lockmode:9
 msgid "``None`` - translates to no lockmode"
-msgstr ""
+msgstr "`` None``  - ロックモードなしに変換します。"
 
 #: of sqlalchemy.orm.query.Query.with_lockmode:11
 msgid ""
 "``'update'`` - translates to ``FOR UPDATE`` (standard SQL, supported by "
 "most dialects)"
-msgstr ""
+msgstr "`` &#39;update&#39;``  -  `` FOR UPDATE``に変換されます（標準SQL、ほとんどの方言でサポートされています）"
 
 #: of sqlalchemy.orm.query.Query.with_lockmode:14
 msgid ""
 "``'update_nowait'`` - translates to ``FOR UPDATE NOWAIT`` (supported by "
 "Oracle, PostgreSQL 8.1 upwards)"
-msgstr ""
+msgstr "`` &#39;update_nowait```は `` FOR UPDATE NOWAIT``に変換されます（Oracle、PostgreSQL 8.1以降でサポートされています）"
 
 #: of sqlalchemy.orm.query.Query.with_lockmode:17
 msgid ""
 "``'read'`` - translates to ``LOCK IN SHARE MODE`` (for MySQL), and ``FOR "
 "SHARE`` (for PostgreSQL)"
-msgstr ""
+msgstr "`` &#39;read&#39;``  -  `` LOCK IN SHARE MODE`（MySQLの場合）と `` FOR SHARE``（PostgreSQLの場合）に変換されます。"
 
 #: of sqlalchemy.orm.query.Query.with_lockmode:22
 msgid ""
 ":meth:`.Query.with_for_update` - improved API for specifying the ``FOR "
 "UPDATE`` clause."
-msgstr ""
+msgstr "：meth： `.Query.with_for_update`  - ` `FOR UPDATE``節を指定するための改良されたAPIです。"
 
 #: of sqlalchemy.orm.query.Query.with_parent:1
 msgid ""
 "Add filtering criterion that relates the given instance to a child object"
 " or collection, using its attribute state as well as an established "
 ":func:`.relationship()` configuration."
-msgstr ""
+msgstr "指定されたインスタンスを子オブジェクトまたはコレクションに関連付けるフィルタリング基準を、その属性状態とestablished：func： `.relationship（）`設定を使用して追加します。"
 
 #: of sqlalchemy.orm.query.Query.with_parent:6
 msgid ""
 "The method uses the :func:`.with_parent` function to generate the clause,"
 " the result of which is passed to :meth:`.Query.filter`."
-msgstr ""
+msgstr "このメソッドは：func： `.with_parent`関数を使用して節を生成します。その結果は：meth：` .Query.filter`に渡されます。"
 
 #: of sqlalchemy.orm.query.Query.with_parent:9
 msgid ""
 "Parameters are the same as :func:`.with_parent`, with the exception that "
 "the given property can be None, in which case a search is performed "
 "against this :class:`.Query` object's target mapper."
-msgstr ""
+msgstr "パラメータは：func： `.with_parent`と同じですが、指定されたプロパティはNoneにすることができます。この場合、class：` .Query`オブジェクトのターゲットマッパーに対して検索が実行されます。"
 
 #: of sqlalchemy.orm.query.Query.with_parent:13 sqlalchemy.orm.with_parent:11
 msgid "An instance which has some :func:`.relationship`."
-msgstr ""
+msgstr "いくつかの：func： `.relationship`を持つインスタンス。"
 
 #: of sqlalchemy.orm.query.Query.with_parent:16 sqlalchemy.orm.with_parent:14
 msgid ""
 "String property name, or class-bound attribute, which indicates what "
 "relationship from the instance should be used to reconcile the "
 "parent/child relationship."
-msgstr ""
+msgstr "親/子関係を調整するためにインスタンスからどのような関係を使用するかを示すStringプロパティ名またはクラスバインド属性。"
 
 #: of sqlalchemy.orm.query.Query.with_parent:21 sqlalchemy.orm.with_parent:20
 msgid ""
 "Entity in which to consider as the left side.  This defaults to the "
 "\"zero\" entity of the :class:`.Query` itself."
-msgstr ""
+msgstr "左辺として考慮するエンティティ。これは、デフォルトでは：class： `.Query`自体の\&quot; zero \ &quot;エンティティになります。"
 
 #: of sqlalchemy.orm.query.Query.with_polymorphic:1
 msgid "Load columns for inheriting classes."
-msgstr ""
+msgstr "クラスを継承する列をロードします。"
 
 #: of sqlalchemy.orm.query.Query.with_polymorphic:3
 msgid ""
@@ -1975,13 +1965,13 @@ msgid ""
 "joined-inheritance subclass are available in the query, both for the "
 "purposes of load-time efficiency as well as the ability to use these "
 "columns at query time."
-msgstr ""
+msgstr "：meth： `.Query.with_polymorphic`は、クラス：` .Query`で表されるマップされたクラスに変換を適用します。マップされたメインクラスは、：class： `.Query`オブジェクトの最初の引数がフルクラス、つまり` `session.query（SomeClass）` `であることを意味します。これらの変換では、FROM句に追加の表が存在するため、ロード時の効率とクエリ時にこれらの列を使用できるように、継承継承サブクラスの列をクエリで使用できるようになります。"
 
 #: of sqlalchemy.orm.query.Query.with_polymorphic:13
 msgid ""
 "See the documentation section :ref:`with_polymorphic` for details on how "
 "this method is used."
-msgstr ""
+msgstr "このメソッドの使い方の詳細については、ドキュメンテーションのsection：ref： `with_polymorphic`を参照してください。"
 
 #: of sqlalchemy.orm.query.Query.with_polymorphic:16
 msgid ""
@@ -1990,11 +1980,11 @@ msgid ""
 "functionality to any set of columns or classes in the :class:`.Query`, "
 "not just the \"zero mapper\".  See that function for a description of "
 "arguments."
-msgstr ""
+msgstr "：class： `.Query`内の任意のカラムまたはクラスのセットに同等の機能を適用できるので、より柔軟で新しい関数func：` .orm.with_polymorphic`は：meth： `.Query.with_polymorphic`を置き換えます。 \ &quot;ゼロマッパ\&quot;だけではありません。引数の説明については、この関数を参照してください。"
 
 #: of sqlalchemy.orm.query.Query.with_session:1
 msgid "Return a :class:`.Query` that will use the given :class:`.Session`."
-msgstr ""
+msgstr "与えられた：class： `.Session`を使う：class：` .Query`を返します。"
 
 #: of sqlalchemy.orm.query.Query.with_session:3
 msgid ""
@@ -2004,40 +1994,40 @@ msgid ""
 ":class:`.Query` object, or any :class:`.Query` already associated with a "
 "different :class:`.Session`, can produce a new :class:`.Query` object "
 "associated with a target session using this method::"
-msgstr ""
+msgstr "：class： `.Query`オブジェクトは通常、：meth：` .Session.query`メソッドを使ってインスタンス化されますが、必ず：class： `.Query`を直接ビルドすることはできません：class：`。Session `。そのような：class： `.Query`オブジェクト、またはすでに：class：` .Query`はすでに異なる：class： `.Session`に関連付けられていますが、ターゲットセッションに関連する新しい：class：` .Query`オブジェクトを生成できますこのメソッドを使用して::"
 
 #: of sqlalchemy.orm.query.Query.with_statement_hint:1
 msgid "add a statement hint to this :class:`.Select`."
-msgstr ""
+msgstr "これに文のヒントを追加してください：class： `.Select`。"
 
 #: of sqlalchemy.orm.query.Query.with_statement_hint:3
 msgid ""
 "This method is similar to :meth:`.Select.with_hint` except that it does "
 "not require an individual table, and instead applies to the statement as "
 "a whole."
-msgstr ""
+msgstr "このメソッドは：meth： `.Select.with_hint`に似ていますが、個々のテーブルを必要とせず、ステートメント全体に適用されます。"
 
 #: of sqlalchemy.orm.query.Query.with_statement_hint:7
 msgid "This feature calls down into :meth:`.Select.with_statement_hint`."
-msgstr ""
+msgstr "この機能は：meth： `.Select.with_statement_hint`を呼び出します。"
 
 #: of sqlalchemy.orm.query.Query.with_statement_hint:13
 msgid ":meth:`.Query.with_hint`"
-msgstr ""
+msgstr "：meth： `.Query.with_hint`"
 
 #: of sqlalchemy.orm.query.Query.with_transformation:1
 msgid "Return a new :class:`.Query` object transformed by the given function."
-msgstr ""
+msgstr "与えられた関数によって変換された新しい：class： `.Query`オブジェクトを返します。"
 
 #: of sqlalchemy.orm.query.Query.with_transformation:13
 msgid ""
 "This allows ad-hoc recipes to be created for :class:`.Query` objects.  "
 "See the example at :ref:`hybrid_transformers`."
-msgstr ""
+msgstr "これにより：class： `.Query`オブジェクトに対してアドホックなレシピを作成することができます。 ：ref： `hybrid_transformers`の例を参照してください。"
 
 #: of sqlalchemy.orm.query.Query.yield_per:1
 msgid "Yield only ``count`` rows at a time."
-msgstr ""
+msgstr "一度に `` count``行だけを返します。"
 
 #: of sqlalchemy.orm.query.Query.yield_per:3
 msgid ""
@@ -2048,7 +2038,7 @@ msgid ""
 "   The performance from fetching hundreds of thousands of rows can often "
 "double when a suitable yield-per setting (e.g. approximately 1000) is "
 "used, even with DBAPIs that buffer rows (which are most)."
-msgstr ""
+msgstr "このメソッドの目的は、非常に大きな結果セット（&gt; 10K行）を取り出し、バッチ処理でサブコレクションを生成し、部分的にそれらを生成するときです。そのため、Pythonインタプリタは非常に大きな領域のメモリを宣言する必要はありません時間がかかり過度のメモリー使用につながります。行をバッファリングするDBAPI（ほとんどの場合）を使用していても、適切なyield-per設定（たとえば約1000）が使用されると、何十万行もフェッチすることによるパフォーマンスが2倍になることがあります。"
 
 #: of sqlalchemy.orm.query.Query.yield_per:12
 msgid ""
@@ -2057,26 +2047,26 @@ msgid ""
 "is potentially compatible with \"select in\" eager loading, **provided "
 "the databse driver supports multiple, independent cursors** (pysqlite and"
 " psycopg2 are known to work, MySQL and SQL Server ODBC drivers do not)."
-msgstr ""
+msgstr "：meth： `.Query.yield_per`メソッド**は、コレクションを使用しているときに、サブクエロイルロードを熱くロードするか、または結合ロードを熱心にロードする**互換性がありません。データベースドライバが複数の独立したカーソルをサポートしていれば**（pysqliteとpsycopg2は動作することが知られていますが、MySQLとSQL ServerのODBCドライバは動作しません）。"
 
 #: of sqlalchemy.orm.query.Query.yield_per:19
 msgid ""
 "Therefore in some cases, it may be helpful to disable eager loads, either"
 " unconditionally with :meth:`.Query.enable_eagerloads`::"
-msgstr ""
+msgstr "したがって、場合によっては、熱心な負荷を無条件に：meth： `.Query.enable_eagerloads` ::で無効にすると便利です"
 
 #: of sqlalchemy.orm.query.Query.yield_per:25
 msgid ""
 "Or more selectively using :func:`.lazyload`; such as with an asterisk to "
 "specify the default loader scheme::"
-msgstr ""
+msgstr "または、より選択的に：func： `.lazyload`;を使用します。アスタリスクを使用してデフォルトのローダースキームを指定するなど、"
 
 #: of sqlalchemy.orm.query.Query.yield_per:33
 msgid ""
 "Use this method with caution; if the same instance is present in more "
 "than one batch of rows, end-user changes to attributes will be "
 "overwritten."
-msgstr ""
+msgstr "この方法は慎重に使用してください。同じインスタンスが複数の行のバッチに存在する場合、属性に対するエンドユーザーの変更は上書きされます。"
 
 #: of sqlalchemy.orm.query.Query.yield_per:37
 msgid ""
@@ -2086,7 +2076,7 @@ msgid ""
 "subsequent result batch. In the case of 'subquery' loading, the full "
 "result for all rows is fetched which generally defeats the purpose of "
 ":meth:`~sqlalchemy.orm.query.Query.yield_per`."
-msgstr ""
+msgstr "特に、後で結果バッチで遭遇したときに、それらのコレクションが新しいロードに対してクリアされるため、熱心にロードされたコレクション（つまり、lazy = &#39;joined&#39;または &#39;subquery&#39;）でこの設定を使用することは通常不可能です。 &#39;サブクエリ&#39;ローディングの場合、すべての行の完全な結果がフェッチされます。これは一般的に：meth： `〜sqlalchemy.orm.query.Query.yield_per`の目的を無効にします。"
 
 #: of sqlalchemy.orm.query.Query.yield_per:45
 msgid ""
@@ -2100,21 +2090,21 @@ msgid ""
 "available.  The memory use of raw database rows is much less than that of"
 " an ORM-mapped object, but should still be taken into consideration when "
 "benchmarking."
-msgstr ""
+msgstr "また、：meth： `〜sqlalchemy.orm.query.Query.yield_per`は` `stream_results``実行オプションをTrueに設定しますが、現在のところmod：`〜sqlalchemy.dialects.postgresql.psycopg2 `、：mod：`〜sqlalchemy.dialects.mysql.mysqldb`とmod： `〜sqlalchemy.dialects.mysql.pymysql`は、このクエリのすべての行をプリバッファするのではなく、サーバ側のカーソルを使って結果をストリームします。他のDBAPI **はすべての行**をプリバッファリングしてから使用可能にします。未処理のデータベース行のメモリ使用量は、ORMでマップされたオブジェクトのメモリ使用量よりもはるかに少ないですが、ベンチマーク時には引き続き考慮する必要があります。"
 
 #: of sqlalchemy.orm.query.Query.yield_per:61
 msgid ":meth:`.Query.enable_eagerloads`"
-msgstr ""
+msgstr "：meth： `.Query.enable_eagerloads`"
 
 #: ../../orm/query.rst:25
 msgid "ORM-Specific Query Constructs"
-msgstr ""
+msgstr "ORM固有のクエリ構文"
 
 #: of sqlalchemy.orm.aliased:1
 msgid ""
 "Produce an alias of the given element, usually an :class:`.AliasedClass` "
 "instance."
-msgstr ""
+msgstr "指定された要素のエイリアスを生成します。通常は：class： `.AliasedClass`インスタンスです。"
 
 #: of sqlalchemy.orm.aliased:10
 msgid ""
@@ -2127,7 +2117,7 @@ msgid ""
 " is intended to specify a so-called \"polymorphic selectable\", that "
 "corresponds to the union of several joined-inheritance subclasses at "
 "once."
-msgstr ""
+msgstr "：func： `.aliased`関数は、マッピングされたクラスを新しい選択可能なものにアドホックマッピングするために使用されます。デフォルトでは、：meth： `.FromClause.alias`メソッドを使用して、通常マップされた選択可能なもの（通常は：class：` .Table`）から選択可能なものが生成されます。しかし、：func： `.aliased`を使ってクラスをnew：func：` .select`ステートメントにリンクすることもできます。また、：func： `.with_polymorphic`関数はfunc：` .aliased`の変形です。これはいわゆる &quot;多形選択可能&quot;を指定することを意図しています。これは複数の継承継承サブクラスの和集合に相当します。一度。"
 
 #: of sqlalchemy.orm.aliased:20
 msgid ""
@@ -2137,13 +2127,13 @@ msgid ""
 ":meth:`.FromClause.alias` method is called on the object and the new "
 ":class:`.Alias` object returned.  The returned :class:`.Alias` is not "
 "ORM-mapped in this case."
-msgstr ""
+msgstr "便宜上、：func： `.aliased`関数は、：class：` .Table`や：func： `.select`などのplain：class：` .FromClause`構文も受け入れます。そのような場合、オブジェクトに対して：meth： `.FromClause.alias`メソッドが呼び出され、new：class：` .Alias`オブジェクトが返されます。この場合、返された：class： `.Alias`はORMマップされません。"
 
 #: of sqlalchemy.orm.aliased:26
 msgid ""
 "element to be aliased.  Is normally a mapped class, but for convenience "
 "can also be a :class:`.FromClause` element."
-msgstr ""
+msgstr "エイリアスする要素。通常はマップされたクラスですが、便宜上、：class： `.FromClause`エレメントにすることもできます。"
 
 #: of sqlalchemy.orm.aliased:29
 msgid ""
@@ -2152,7 +2142,7 @@ msgid ""
 "the class is mapped, or to a :func:`.select` construct that is compatible"
 " with the mapping.   By default, a simple anonymous alias of the mapped "
 "table is generated."
-msgstr ""
+msgstr "要素をマップするオプションの選択可能な単位。これは通常、クラスがマップされる：class： `.Table`に対応する：class：` .Alias`オブジェクト、またはマッピングと互換性のある：func： `.select`構造体です。デフォルトでは、マップされたテーブルの単純な匿名エイリアスが生成されます。"
 
 #: of sqlalchemy.orm.aliased:35
 msgid ""
@@ -2160,7 +2150,7 @@ msgid ""
 "``alias`` parameter.  The name, among other things, forms the attribute "
 "name that will be accessible via tuples returned by a :class:`.Query` "
 "object."
-msgstr ""
+msgstr "`` alias``パラメータで指定されていない場合、エイリアスに使用するオプションの文字列名。名前は、とりわけ：class： `.Query`オブジェクトによって返されるタプルを介してアクセス可能な属性名を形成します。"
 
 #: of sqlalchemy.orm.aliased:40
 msgid ""
@@ -2170,7 +2160,7 @@ msgid ""
 "against a nested JOIN will be rewritten as a JOIN against an aliased "
 "SELECT subquery on backends that don't support this syntax.  .. "
 "versionadded:: 0.9.0  .. seealso:: :meth:`.Join.alias`"
-msgstr ""
+msgstr "Boolean：は：meth： `.FromClause.alias`呼び出しに渡され、class：` .Join`オブジェクトのエイリアスには囲みSELECTが含まれません。これにより、多くの状況でより効率的なクエリにつながる可能性があります。ネストされたJOINに対するJOINは、この構文をサポートしていないバックエンド上のエイリアス化されたSELECTサブクエリに対するJOINとして書き換えられます。 .. versionadded :: 0.9.0 .. seealso :: meth： `.Join.alias`"
 
 #: of sqlalchemy.orm.aliased:40
 msgid ""
@@ -2179,11 +2169,11 @@ msgid ""
 "  This can lead to more efficient queries in many circumstances.  A JOIN "
 "against a nested JOIN will be rewritten as a JOIN against an aliased "
 "SELECT subquery on backends that don't support this syntax."
-msgstr ""
+msgstr "Boolean：は：meth： `.FromClause.alias`呼び出しに渡され、class：` .Join`オブジェクトのエイリアスには囲みSELECTが含まれません。これにより、多くの状況でより効率的なクエリにつながる可能性があります。ネストされたJOINに対するJOINは、この構文をサポートしていないバックエンド上のエイリアス化されたSELECTサブクエリに対するJOINとして書き換えられます。"
 
 #: of sqlalchemy.orm.aliased:49
 msgid ":meth:`.Join.alias`"
-msgstr ""
+msgstr "：meth： `.Join.alias`"
 
 #: of sqlalchemy.orm.aliased:51
 msgid ""
@@ -2205,7 +2195,7 @@ msgid ""
 "the name \"price\".  Ordinarily, the \"price\" function wouldn't have any"
 " \"column correspondence\" to the actual ``UnitPrice.price`` column as it"
 " is not a proxy of the original.  .. versionadded:: 0.7.3"
-msgstr ""
+msgstr "Trueの場合、ORMエンティティのマッピングされた列を指定された選択可能なものにマッピングするときに、よりリベラルな\ &quot;マッチング\&quot;が使用されます - 指定された選択可能なものが、エンティティの1つにこのためのユースケースは、集約関数を使用するような、派生した選択可能なものにエンティティを関連付ける場合です。class UnitPrice（Base）：__tablename__ = &#39;unit_price&#39; ... unit_id =列（整数）price =列（数値）aggregated_unit_price （UnitPrice.unice_price、adapt_on_names = True）上記の関数は以下のようになります：= Session.query（func.sum（UnitPrice.price）.label（ &#39;price&#39;））.group_by（UnitPrice.unit_id）.subquery（）aggregated_unit_price = aliased（UnitPrice、alias = aggregated_unit_price、adapt_on_names = True） `` .price``を参照する `` aggregated_unit_price``は `` func.sum（UnitPrice.price）.label（ &#39;price&#39;） ``カラムを返します。 。通常、\ &quot;price \&quot;関数は元のプロキシではないので、実際の `` UnitPrice.price``列には\ &quot;列の対応\&quot;がありません。 .. versionadded :: 0.7.3"
 
 #: of sqlalchemy.orm.aliased:51
 msgid ""
@@ -2215,7 +2205,7 @@ msgid ""
 " column that corresponds to one on the entity.  The use case for this is "
 "when associating an entity with some derived selectable such as one that "
 "uses aggregate functions::"
-msgstr ""
+msgstr "Trueの場合、ORMエンティティのマッピングされた列を指定された選択可能なものにマッピングするときに、よりリベラルな\ &quot;マッチング\&quot;が使用されます - 指定された選択可能なものが、エンティティの1つにこのためのユースケースは、集約関数を使用するような、派生した選択可能なものにエンティティを関連付けるときです::"
 
 #: of sqlalchemy.orm.aliased:72
 msgid ""
@@ -2224,11 +2214,11 @@ msgid ""
 "it is matched on the name \"price\".  Ordinarily, the \"price\" function "
 "wouldn't have any \"column correspondence\" to the actual "
 "``UnitPrice.price`` column as it is not a proxy of the original."
-msgstr ""
+msgstr "上記の `` .price``を参照する `` aggregated_unit_price``の関数は、 `` func.sum（UnitPrice.price）.label（ &#39;price&#39;） ``カラムを返します。 &quot;価格\&quot;。通常、\ &quot;price \&quot;関数は元のプロキシではないので、実際の `` UnitPrice.price``列には\ &quot;列の対応\&quot;がありません。"
 
 #: of sqlalchemy.orm.util.AliasedClass:1
 msgid "Represents an \"aliased\" form of a mapped class for usage with Query."
-msgstr ""
+msgstr "Queryでの使用のためのマップされたクラスの\ &quot;エイリアス\&quot;形式を表します。"
 
 #: of sqlalchemy.orm.util.AliasedClass:3
 msgid ""
@@ -2236,17 +2226,17 @@ msgid ""
 "construct, this object mimics the mapped class using a __getattr__ scheme"
 " and maintains a reference to a real "
 ":class:`~sqlalchemy.sql.expression.Alias` object."
-msgstr ""
+msgstr "a：func： `sqlalchemy.sql.expression.alias`構造体のORMに相当するこのオブジェクトは、__getattr__体系を使用してマッピングされたクラスを模倣し、real：class：`〜sqlalchemy.sql.expression.Alias`オブジェクトへの参照を保持します。"
 
 #: of sqlalchemy.orm.util.AliasedClass:8
 msgid ""
 "Usage is via the :func:`.orm.aliased` function, or alternatively via the "
 ":func:`.orm.with_polymorphic` function."
-msgstr ""
+msgstr "使用法は、：func： `.orm.aliased`関数か、または：func：` .orm.with_polymorphic`関数を介して行います。"
 
 #: of sqlalchemy.orm.util.AliasedClass:11
 msgid "Usage example::"
-msgstr ""
+msgstr "使用例::"
 
 #: of sqlalchemy.orm.util.AliasedClass:19
 msgid ""
@@ -2256,81 +2246,81 @@ msgid ""
 ":class:`.AliasedClass` to be compatible with any attribute technique "
 "which works on the original class, including hybrid attributes (see "
 ":ref:`hybrids_toplevel`)."
-msgstr ""
+msgstr "結果として得られるオブジェクトは：class： `.AliasedClass`のインスタンスです。このオブジェクトは、元のマップされたクラスと同じ属性およびメソッドインタフェースを生成する属性スキームを実装しています。class： `.AliasedClass`は、ハイブリッド属性を含む元のクラスで動作する属性技法と互換性があります（ref： `hybrids_toplevel`）。"
 
 #: of sqlalchemy.orm.util.AliasedClass:26
 msgid ""
 "The :class:`.AliasedClass` can be inspected for its underlying "
 ":class:`.Mapper`, aliased selectable, and other information using "
 ":func:`.inspect`::"
-msgstr ""
+msgstr "：class： `.AliasedClass`は、class：` .Mapper`、エイリアスセレクト可能、その他の情報を調べることができます：func： `.inspect` ::"
 
 #: of sqlalchemy.orm.util.AliasedClass:34
 msgid "The resulting inspection object is an instance of :class:`.AliasedInsp`."
-msgstr ""
+msgstr "結果の検査オブジェクトは、：class： `.AliasedInsp`のインスタンスです。"
 
 #: of sqlalchemy.orm.util.AliasedClass:36
 msgid ""
 "See :func:`.aliased` and :func:`.with_polymorphic` for construction "
 "argument descriptions."
-msgstr ""
+msgstr "参照：func： `.aliased`と：func：` .with_polymorphic`は構築引数の説明です。"
 
 #: of sqlalchemy.orm.util.AliasedInsp:1
 msgid "Provide an inspection interface for an :class:`.AliasedClass` object."
-msgstr ""
+msgstr "an：class： `.AliasedClass`オブジェクトに対する検査インタフェースを提供します。"
 
 #: of sqlalchemy.orm.util.AliasedInsp:4
 msgid ""
 "The :class:`.AliasedInsp` object is returned given an "
 ":class:`.AliasedClass` using the :func:`.inspect` function::"
-msgstr ""
+msgstr "：class： `.AliasedInsp`オブジェクトは：func：` .inspect`関数を使って：class： `.AliasedClass`を返します::"
 
 #: of sqlalchemy.orm.util.AliasedInsp:14
 msgid "Attributes on :class:`.AliasedInsp` include:"
-msgstr ""
+msgstr "属性：class： `.AliasedInsp` include："
 
 #: of sqlalchemy.orm.util.AliasedInsp:17
 msgid "``entity`` - the :class:`.AliasedClass` represented."
-msgstr ""
+msgstr "`` entity``  - ：class： `.AliasedClass`が表現されています。"
 
 #: of sqlalchemy.orm.util.AliasedInsp:18
 msgid "``mapper`` - the :class:`.Mapper` mapping the underlying class."
-msgstr ""
+msgstr "`` mapper``：class： `.Mapper`は基底のクラスをマッピングします。"
 
 #: of sqlalchemy.orm.util.AliasedInsp:19
 msgid ""
 "``selectable`` - the :class:`.Alias` construct which ultimately "
 "represents an aliased :class:`.Table` or :class:`.Select` construct."
-msgstr ""
+msgstr "class： `.Table`または：class：` .Select`構造体を最終的に表す `` Selectable``：class： `.Alias`構造体です。"
 
 #: of sqlalchemy.orm.util.AliasedInsp:22
 msgid ""
 "``name`` - the name of the alias.  Also is used as the attribute name "
 "when returned in a result tuple from :class:`.Query`."
-msgstr ""
+msgstr "`` name``  - エイリアスの名前。クラス： `.Query`から結果タプルに返されたときの属性名としても使用されます。"
 
 #: of sqlalchemy.orm.util.AliasedInsp:24
 msgid ""
 "``with_polymorphic_mappers`` - collection of :class:`.Mapper` objects "
 "indicating all those mappers expressed in the select construct for the "
 ":class:`.AliasedClass`."
-msgstr ""
+msgstr "`` with_polymorphic_mappers``  - ：class： `.AaasedClass`のselect構造体で表現されたすべてのマッパーを示すclass：` .Mapper`オブジェクトのコレクションです。"
 
 #: of sqlalchemy.orm.util.AliasedInsp:27
 msgid ""
 "``polymorphic_on`` - an alternate column or SQL expression which will be "
 "used as the \"discriminator\" for a polymorphic load."
-msgstr ""
+msgstr "`` polymorphic_on``  - ポリモーフィックなロードのための\ &quot;discriminator \&quot;として使用される代替の列またはSQL式です。"
 
 #: of sqlalchemy.orm.util.AliasedInsp:32
 msgid ":ref:`inspection_toplevel`"
-msgstr ""
+msgstr "：ref： `inspection_toplevel`"
 
 #: of sqlalchemy.orm.query.Bundle:1
 msgid ""
 "A grouping of SQL expressions that are returned by a :class:`.Query` "
 "under one namespace."
-msgstr ""
+msgstr "1つの名前空間の下で：class： `.Query`によって返されるSQL式のグループ化。"
 
 #: of sqlalchemy.orm.query.Bundle:4
 msgid ""
@@ -2340,59 +2330,59 @@ msgid ""
 "override is that of how the set of expressions should be returned, "
 "allowing post-processing as well as custom return types, without "
 "involving ORM identity-mapped classes."
-msgstr ""
+msgstr "：class： `.Bundle`は、本質的に、列指向の：class：` .Query`オブジェクトによって返されたタプルベースの結果のネストを可能にします。また、単純なサブクラス化によって拡張できます。主な機能は、ORM IDマッピング・クラスを使用せずに、後処理およびカスタム戻り型を可能にする式のセットを戻す方法です。"
 
 #: of sqlalchemy.orm.query.Bundle:15
 msgid ":ref:`bundles`"
-msgstr ""
+msgstr "：ref： `bundles`"
 
 #: of sqlalchemy.orm.query.Bundle.c:1
 msgid "An alias for :attr:`.Bundle.columns`."
-msgstr ""
+msgstr "：attr： `.Bundle.columns`の別名です。"
 
 #: of sqlalchemy.orm.query.Bundle.columns:1
 msgid "A namespace of SQL expressions referred to by this :class:`.Bundle`."
-msgstr ""
+msgstr "this：class： `.Bundle`によって参照されるSQL式の名前空間。"
 
 #: of sqlalchemy.orm.query.Bundle.columns:9
 msgid "Nesting of bundles is also supported::"
-msgstr ""
+msgstr "バンドルのネストもサポートされています::"
 
 #: of sqlalchemy.orm.query.Bundle.columns:21
 msgid ":attr:`.Bundle.c`"
-msgstr ""
+msgstr "：attr： `.Bundle.c`"
 
 #: of sqlalchemy.orm.query.Bundle.create_row_processor:1
 msgid "Produce the \"row processing\" function for this :class:`.Bundle`."
-msgstr ""
+msgstr "このために &quot;行処理&quot;関数を生成する：class： `.Bundle`。"
 
 #: of sqlalchemy.orm.query.Bundle.create_row_processor:3
 msgid "May be overridden by subclasses."
-msgstr ""
+msgstr "サブクラスによってオーバーライドされることがあります。"
 
 #: of sqlalchemy.orm.query.Bundle.create_row_processor:7
 msgid ":ref:`bundles` - includes an example of subclassing."
-msgstr ""
+msgstr "：ref： `bundles`  - サブクラス化の例を含んでいます。"
 
 #: of sqlalchemy.orm.query.Bundle.label:1
 msgid "Provide a copy of this :class:`.Bundle` passing a new label."
-msgstr ""
+msgstr "this：class： `.Bundle`のコピーに新しいラベルを渡します。"
 
 #: of sqlalchemy.orm.query.Bundle.single_entity:1
 msgid ""
 "If True, queries for a single Bundle will be returned as a single entity,"
 " rather than an element within a keyed tuple."
-msgstr ""
+msgstr "Trueの場合、単一のBundleに対するクエリは、キー付きタプル内の要素ではなく、単一のエンティティとして返されます。"
 
 #: of sqlalchemy.util.KeyedTuple:1
 msgid "``tuple`` subclass that adds labeled names."
-msgstr ""
+msgstr "ラベル付きの名前を追加する `` tuple``サブクラスです。"
 
 #: of sqlalchemy.util.KeyedTuple:11
 msgid ""
 "Result rows returned by :class:`.Query` that contain multiple ORM "
 "entities and/or column expressions make use of this class to return rows."
-msgstr ""
+msgstr "複数のORMエンティティおよび/または列式を含む結果の行：class： `.Query`は、このクラスを使用して行を返します。"
 
 #: of sqlalchemy.util.KeyedTuple:15
 msgid ""
@@ -2405,53 +2395,53 @@ msgid ""
 "place.   The subtype approach of ``collections.namedtuple()`` introduces "
 "significant complexity and performance overhead, which is not necessary "
 "for the :class:`.Query` object's use case."
-msgstr ""
+msgstr "：class： `.KeyedTuple`は、Python標準ライブラリで提供されている` `collections.namedtuple（）` `構造と似た動作をしますが、非常に異なったアーキテクチャーです。 ：class： `.KeyedTuple`インスタンスは、` `collections.namedtuple（）` `とは異なり、新しい一連のキーを表現するためにカスタムサブタイプの作成に頼るのではなく、のキーの配置。 `` collections.namedtuple（） ``のサブタイプのアプローチは、：class： `.Query`オブジェクトのユースケースでは不要な、かなりの複雑さとパフォーマンスのオーバーヘッドをもたらします。"
 
 #: of sqlalchemy.util.KeyedTuple:26
 msgid ""
 "Compatibility methods with ``collections.namedtuple()`` have been added "
 "including :attr:`.KeyedTuple._fields` and :meth:`.KeyedTuple._asdict`."
-msgstr ""
+msgstr "attr： `.KeyedTuple._fields`と：meth：` .KeyedTuple._asdict`を含む `` collections.namedtuple（） ``との互換性メソッドが追加されました。"
 
 #: of sqlalchemy.util.KeyedTuple:33
 msgid ":ref:`ormtutorial_querying`"
-msgstr ""
+msgstr "：ref： `ormtutorial_querying`"
 
 #: of sqlalchemy.util.KeyedTuple._asdict:1
 msgid "Return the contents of this :class:`.KeyedTuple` as a dictionary."
-msgstr ""
+msgstr "これを辞書としてclass： `.KeyedTuple`の内容を返します。"
 
 #: of sqlalchemy.util.KeyedTuple._asdict:3
 msgid ""
 "This method provides compatibility with ``collections.namedtuple()``, "
 "with the exception that the dictionary returned is **not** ordered."
-msgstr ""
+msgstr "このメソッドは `` collections.namedtuple（） ``との互換性を提供しますが、返される辞書は** not ** orderedです。"
 
 #: of sqlalchemy.util.KeyedTuple._fields:1
 msgid "Return a tuple of string key names for this :class:`.KeyedTuple`."
-msgstr ""
+msgstr "このための文字列キー名のタプルを返します：class： `.KeyedTuple`。"
 
 #: of sqlalchemy.util.KeyedTuple._fields:3
 msgid "This method provides compatibility with ``collections.namedtuple()``."
-msgstr ""
+msgstr "このメソッドは、 `` collections.namedtuple（） ``との互換性を提供します。"
 
 #: of sqlalchemy.util.KeyedTuple._fields:9
 msgid ":meth:`.KeyedTuple.keys`"
-msgstr ""
+msgstr "：meth： `.KeyedTuple.keys`"
 
 #: of sqlalchemy.util.KeyedTuple.keys:1
 msgid "Return a list of string key names for this :class:`.KeyedTuple`."
-msgstr ""
+msgstr "このための文字列キー名のリストを返します：class： `.KeyedTuple`。"
 
 #: of sqlalchemy.util.KeyedTuple.keys:5
 msgid ":attr:`.KeyedTuple._fields`"
-msgstr ""
+msgstr "：attr： `.KeyedTuple._fields`"
 
 #: of sqlalchemy.orm.strategy_options.Load:1
 msgid ""
 "Represents loader options which modify the state of a :class:`.Query` in "
 "order to affect how various mapped attributes are loaded."
-msgstr ""
+msgstr "さまざまなマップされた属性のロード方法に影響を与えるために：class： `.Query`の状態を変更するローダーオプションを表します。"
 
 #: of sqlalchemy.orm.strategy_options.Load:5
 msgid ""
@@ -2459,201 +2449,201 @@ msgid ""
 "scenes when one makes use of a query option like :func:`.joinedload`, "
 ":func:`.defer`, or similar.   However, the :class:`.Load` object can also"
 " be used directly, and in some cases can be useful."
-msgstr ""
+msgstr "：class： `.Load`オブジェクトは、ほとんどの場合、func：` .joinedload`、：func： `.defer`などのようなクエリオプションを使用すると暗黙のうちに暗黙的に使用されます。しかし、：class： `.Load`オブジェクトも直接使用することができ、場合によっては便利です。"
 
 #: of sqlalchemy.orm.strategy_options.Load:10
 msgid ""
 "To use :class:`.Load` directly, instantiate it with the target mapped "
 "class as the argument.   This style of usage is useful when dealing with "
 "a :class:`.Query` that has multiple entities::"
-msgstr ""
+msgstr "：class： `.Load`を直接使用するには、ターゲットとしてマップされたクラスを引数としてインスタンス化します。このスタイルは、複数のエンティティを持つ：class： `.Query`を扱うときに便利です::"
 
 #: of sqlalchemy.orm.strategy_options.Load:16
 msgid ""
 "The above ``myopt`` can now be used with :meth:`.Query.options`, where it"
 " will only take effect for the ``MyClass`` entity::"
-msgstr ""
+msgstr "上記の `` myopt``は：meth： `.Query.options`で使用できるようになりました。ここで` `MyClass``エンティティにのみ有効です::"
 
 #: of sqlalchemy.orm.strategy_options.Load:21
 msgid ""
 "One case where :class:`.Load` is useful as public API is when specifying "
 "\"wildcard\" options that only take effect for a certain class::"
-msgstr ""
+msgstr "class： `.Load`はパブリックAPIとして便利です：特定のクラスに対してのみ有効な\&quot;ワイルドカード\ &quot;オプションを指定する場合::"
 
 #: of sqlalchemy.orm.strategy_options.Load:26
 msgid ""
 "Above, all relationships on ``Order`` will be lazy-loaded, but other "
 "attributes on those descendant objects will load using their normal "
 "loader strategy."
-msgstr ""
+msgstr "上では、 `` Order``のすべてのリレーションシップは遅延ロードされますが、それらの子孫オブジェクトの他のアトリビュートは通常のローダー戦略を使用してロードされます。"
 
 #: of sqlalchemy.orm.strategy_options.Load:32
 msgid ":ref:`loading_toplevel`"
-msgstr ""
+msgstr "：ref： `loading_toplevel`"
 
 #: of sqlalchemy.orm.strategy_options.Load.baked_lazyload:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.baked_lazyload` "
 "option applied."
-msgstr ""
+msgstr "：func： `.orm.baked_lazyload`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.baked_lazyload:4
 msgid "See :func:`.orm.baked_lazyload` for usage examples."
-msgstr ""
+msgstr "使用例はfunc： `.orm.baked_lazyload`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.contains_eager:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.contains_eager` "
 "option applied."
-msgstr ""
+msgstr "：func： `.orm.contains_eager`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.contains_eager:4
 msgid "See :func:`.orm.contains_eager` for usage examples."
-msgstr ""
+msgstr "使用例については、func： `.orm.contains_eager`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.defaultload:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.defaultload` "
 "option applied."
-msgstr ""
+msgstr "：func： `.orm.defaultload`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.defaultload:4
 msgid "See :func:`.orm.defaultload` for usage examples."
-msgstr ""
+msgstr "使用例については、func： `.orm.defaultload`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.defer:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.defer` option "
 "applied."
-msgstr ""
+msgstr "：func： `.orm.defer`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.defer:4
 msgid "See :func:`.orm.defer` for usage examples."
-msgstr ""
+msgstr "使用例はfunc： `.orm.defer`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.immediateload:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.immediateload` "
 "option applied."
-msgstr ""
+msgstr "：func： `.orm.immediateload`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.immediateload:4
 msgid "See :func:`.orm.immediateload` for usage examples."
-msgstr ""
+msgstr "使用例については、func： `.orm.immediateload`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.joinedload:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.joinedload` "
 "option applied."
-msgstr ""
+msgstr "新しい：class： `.Load`オブジェクトを生成します：：func：` .orm.joinedload`オプションが適用されます。"
 
 #: of sqlalchemy.orm.strategy_options.Load.joinedload:4
 msgid "See :func:`.orm.joinedload` for usage examples."
-msgstr ""
+msgstr "使用例については、func： `.orm.joinedload`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.lazyload:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.lazyload` option"
 " applied."
-msgstr ""
+msgstr "：func： `.orm.lazyload`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.lazyload:4
 msgid "See :func:`.orm.lazyload` for usage examples."
-msgstr ""
+msgstr "使用例はfunc： `.orm.lazyload`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.load_only:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.load_only` "
 "option applied."
-msgstr ""
+msgstr "：func： `.orm.load_only`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.load_only:4
 msgid "See :func:`.orm.load_only` for usage examples."
-msgstr ""
+msgstr "使用例はfunc： `.orm.load_only`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.noload:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.noload` option "
 "applied."
-msgstr ""
+msgstr "：func： `.orm.noload`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.noload:4
 msgid "See :func:`.orm.noload` for usage examples."
-msgstr ""
+msgstr "使用例については、func： `.orm.noload`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.raiseload:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.raiseload` "
 "option applied."
-msgstr ""
+msgstr "：func： `.orm.raiseload`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.raiseload:4
 msgid "See :func:`.orm.raiseload` for usage examples."
-msgstr ""
+msgstr "使用例については、func： `.orm.raiseload`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.selectin_polymorphic:1
 msgid ""
 "Produce a new :class:`.Load` object with the "
 ":func:`.orm.selectin_polymorphic` option applied."
-msgstr ""
+msgstr "：func： `.orm.selectin_polymorphic`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.selectin_polymorphic:4
 msgid "See :func:`.orm.selectin_polymorphic` for usage examples."
-msgstr ""
+msgstr "使用例については、func： `.orm.selectin_polymorphic`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.selectinload:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.selectinload` "
 "option applied."
-msgstr ""
+msgstr "：func： `.orm.selectinload`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.selectinload:4
 msgid "See :func:`.orm.selectinload` for usage examples."
-msgstr ""
+msgstr "使用例については、func： `.orm.selectinload`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.subqueryload:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.subqueryload` "
 "option applied."
-msgstr ""
+msgstr "：func： `.orm.subqueryload`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.subqueryload:4
 msgid "See :func:`.orm.subqueryload` for usage examples."
-msgstr ""
+msgstr "使用例はfunc： `.orm.subqueryload`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.undefer:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.undefer` option "
 "applied."
-msgstr ""
+msgstr "：func： `.orm.undefer`オプションを適用して、新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.undefer:4
 msgid "See :func:`.orm.undefer` for usage examples."
-msgstr ""
+msgstr "使用例はfunc： `.orm.undefer`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.undefer_group:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.undefer_group` "
 "option applied."
-msgstr ""
+msgstr "：func： `.orm.undefer_group`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.undefer_group:4
 msgid "See :func:`.orm.undefer_group` for usage examples."
-msgstr ""
+msgstr "使用例については、func： `.orm.undefer_group`を参照してください。"
 
 #: of sqlalchemy.orm.strategy_options.Load.with_expression:1
 msgid ""
 "Produce a new :class:`.Load` object with the :func:`.orm.with_expression`"
 " option applied."
-msgstr ""
+msgstr "：func： `.orm.with_expression`オプションが適用された新しい：class：` .Load`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.strategy_options.Load.with_expression:4
 msgid "See :func:`.orm.with_expression` for usage examples."
-msgstr ""
+msgstr "使用例については、func： `.orm.with_expression`を参照してください。"
 
 #: of sqlalchemy.orm.join:1
 msgid "Produce an inner join between left and right clauses."
-msgstr ""
+msgstr "左節と右節の間で内部結合を作成します。"
 
 #: of sqlalchemy.orm.join:3
 msgid ""
@@ -2663,7 +2653,7 @@ msgid ""
 "mapped classes or :class:`.AliasedClass` instances.   The \"on\" clause "
 "can be a SQL expression, or an attribute or string name referencing a "
 "configured :func:`.relationship`."
-msgstr ""
+msgstr "：func： `.orm.join`は：func：` .sql.expression.join（） `によって提供されるコア結合インタフェースの拡張です。ここで、左と右の選択可能なものは次のようなコア選択可能オブジェクトだけではありません：class ： `.Table`だけでなく、マップされたクラスまたは：class：` .AliasedClass`インスタンスも含みます。 \ &quot;on \&quot;句は、SQL式、またはconfigured：func： `.relationship`を参照する属性または文字列名にすることができます。"
 
 #: of sqlalchemy.orm.join:11
 msgid ""
@@ -2673,39 +2663,39 @@ msgid ""
 ":func:`.orm.join` by itself.  Explicit usage of :func:`.orm.join` with "
 ":class:`.Query` involves usage of the :meth:`.Query.select_from` method, "
 "as in::"
-msgstr ""
+msgstr "：func： `.orm.join`は、その機能が：meth：` .Query.join`メソッドの中にカプセル化されているので、最近の使用法では一般的には必要ありません。 orm.join`それ自身。 ：class： `.Query`を使って：func：` .orm.join`を明示的に使用すると、：meth： `.Query.select_from`メソッドの使用が含まれます："
 
 #: of sqlalchemy.orm.join:24
 msgid "In modern SQLAlchemy the above join can be written more succinctly as::"
-msgstr ""
+msgstr "現代のSQLAlchemyでは、上記の結合はより簡潔に::"
 
 #: of sqlalchemy.orm.join:31
 msgid ""
 "See :meth:`.Query.join` for information on modern usage of ORM level "
 "joins."
-msgstr ""
+msgstr "現代のORMレベル結合の使い方については、：meth： `.Query.join`を参照してください。"
 
 #: of sqlalchemy.orm.join:34
 msgid "- the ``join_to_left`` parameter is no longer used, and is deprecated."
-msgstr ""
+msgstr "-  `` join_to_left``パラメータはもはや使われておらず、廃止予定です。"
 
 #: of sqlalchemy.orm.outerjoin:1
 msgid "Produce a left outer join between left and right clauses."
-msgstr ""
+msgstr "左節と右節の間で左外部結合を作成します。"
 
 #: of sqlalchemy.orm.outerjoin:3
 msgid ""
 "This is the \"outer join\" version of the :func:`.orm.join` function, "
 "featuring the same behavior except that an OUTER JOIN is generated. See "
 "that function's documentation for other usage details."
-msgstr ""
+msgstr "これは：func： `.orm.join`関数の\&quot;外部結合\ &quot;バージョンで、OUTER JOINが生成される以外は同じ動作をします。その他の使用法の詳細については、その関数のドキュメントを参照してください。"
 
 #: of sqlalchemy.orm.with_parent:1
 msgid ""
 "Create filtering criterion that relates this query's primary entity to "
 "the given related instance, using established :func:`.relationship()` "
 "configuration."
-msgstr ""
+msgstr "established：func： `.relationship（）`設定を使用して、このクエリのプライマリエンティティを関連するインスタンスに関連付けるフィルタリング基準を作成します。"
 
 #: of sqlalchemy.orm.with_parent:5
 msgid ""
@@ -2713,11 +2703,11 @@ msgid ""
 "fire off from the given parent on that attribute, meaning that the "
 "appropriate state is taken from the parent object in Python without the "
 "need to render joins to the parent table in the rendered statement."
-msgstr ""
+msgstr "レンダリングされたSQLは、遅延ローダーがその属性の与えられた親から起動するときにレンダリングされるSQLと同じです。つまり、レンダリングで親テーブルへの結合をレンダリングする必要なしにPythonの親オブジェクトから適切な状態が取得されます。ステートメント。"
 
 #: of sqlalchemy.orm.with_parent:19
 msgid ""
 "Entity in which to consider as the left side.  This defaults to the "
 "\"zero\" entity of the :class:`.Query` itself.  .. versionadded:: 1.2"
-msgstr ""
+msgstr "左辺として考慮するエンティティ。これは、デフォルトでは：class： `.Query`自体の\&quot; zero \ &quot;エンティティになります。 .. versionadded :: 1.2"
 

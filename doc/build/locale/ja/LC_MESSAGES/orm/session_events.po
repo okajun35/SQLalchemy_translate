@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/session_events.rst:4
 msgid "Tracking Object and Session Changes with Events"
-msgstr ""
+msgstr "イベントによるオブジェクトおよびセッションの変更の追跡"
 
 #: ../../orm/session_events.rst:6
 msgid ""
@@ -31,11 +21,11 @@ msgid ""
 " older events that aren't as relevant as they once were.  This section "
 "will attempt to introduce the major event hooks and when they might be "
 "used."
-msgstr ""
+msgstr "SQLAlchemyは広範な機能を備えています：ref： `Event Listening <event_toplevel> `システムは、コアとORM全体で使用されます。 ORM内には、さまざまなイベントリスナーフックがあります。これらのフックは、ref： `orm_event_toplevel`のAPIレベルで文書化されています。このイベントのコレクションは、数多くの非常に有用な新イベントのほか、かつてのような関連性のない古いイベントも含まれています。このセクションでは、主要なイベントフックとその使用時期を紹介します。"
 
 #: ../../orm/session_events.rst:18
 msgid "Persistence Events"
-msgstr ""
+msgstr "永続イベント"
 
 #: ../../orm/session_events.rst:20
 msgid ""
@@ -44,11 +34,11 @@ msgid ""
 "The flush is where all the decisions are made about pending changes to "
 "objects and are then emitted out to the database in the form of INSERT, "
 "UPDATE, and DELETE staetments."
-msgstr ""
+msgstr "おそらく最も広く使用されている一連のイベントは、：ref： `flush processに対応する永続性イベントです<session_flushing> `。このフラッシュは、オブジェクトに対する保留中の変更に関するすべての決定が行われ、INSERT、UPDATE、およびDELETEステートメントの形式でデータベースに出力されます。"
 
 #: ../../orm/session_events.rst:27
 msgid "``before_flush()``"
-msgstr ""
+msgstr "`` before_flush（） ``"
 
 #: ../../orm/session_events.rst:29
 msgid ""
@@ -62,7 +52,7 @@ msgid ""
 " to it, objects can be deleted, and indivual attributes on objects can be"
 " changed freely, and these changes will be pulled into the flush process "
 "when the event hook completes."
-msgstr ""
+msgstr "：meth： `.SessionEvents.before_flush`フックは、アプリケーションが、フラッシュが進行したときにデータベースへの追加の永続性変更が確実に行われることを確実にしたい場合に、最も一般的に有用なイベントです。オブジェクトを操作してオブジェクトの状態を検証したり、永続化する前に追加のオブジェクトや参照を作成するには、：meth： `.SessionEvents.before_flush`を使用します。このイベント内では、セッションの状態**を操作することは**安全です。つまり、新しいオブジェクトを添付したり、オブジェクトを削除したり、オブジェクトの個別属性を自由に変更したりできます。これらの変更はイベントフックが完了したときのフラッシュ処理。"
 
 #: ../../orm/session_events.rst:40
 msgid ""
@@ -70,18 +60,18 @@ msgid ""
 "scanning the collections :attr:`.Session.new`, :attr:`.Session.dirty` and"
 " :attr:`.Session.deleted` in order to look for objects where something "
 "will be happening."
-msgstr ""
+msgstr "典型的な：meth： `.SessionEvents.before_flush`フックはattr：` .Session.new`、：attr： `.Session.dirty`と：attr：` .Session.deleted`の順にコレクションをスキャンするタスクです。何かが起きるであろうオブジェクトを探す。"
 
 #: ../../orm/session_events.rst:45
 msgid ""
 "For illustrations of :meth:`.SessionEvents.before_flush`, see examples "
 "such as :ref:`examples_versioned_history` and "
 ":ref:`examples_versioned_rows`."
-msgstr ""
+msgstr "：meth： `.SessionEvents.before_flush`の例については、：ref：` examples_versioned_history`と：ref： `examples_versioned_rows`のような例を参照してください。"
 
 #: ../../orm/session_events.rst:50
 msgid "``after_flush()``"
-msgstr ""
+msgstr "`` after_flush（） ``"
 
 #: ../../orm/session_events.rst:52
 msgid ""
@@ -94,11 +84,11 @@ msgid ""
 "see what changes were just persisted. In the "
 ":meth:`.SessionEvents.after_flush` event, additional SQL can be emitted "
 "to the database based on what's observed to have changed."
-msgstr ""
+msgstr "：meth： `.SessionEvents.after_flush`フックは、フラッシュプロセスのためにSQLが発行された後に呼び出されますが、**フラッシュされるオブジェクトの状態が変更される前に**変更されています。つまり、あなたはまだ：attr： `.Session.new`、：attr：` .Session.dirty`と：attr： `.Session.deleted`コレクションを調べて、何がフラッシュされたのかを見ることができます。クラス： `.AttributeState`で提供されているような履歴追跡機能は、どのような変更が永続化されたのかを確認します。 ：meth： `.SessionEvents.after_flush`イベントでは、変更されたことに基づいて、追加のSQLをデータベースに出力できます。"
 
 #: ../../orm/session_events.rst:63
 msgid "``after_flush_postexec()``"
-msgstr ""
+msgstr "`` after_flush_postexec（） ``"
 
 #: ../../orm/session_events.rst:65
 msgid ""
@@ -119,11 +109,11 @@ msgid ""
 "endless loop in this regard is stopped after 100 iterations, in the case "
 "that an :meth:`.SessionEvents.after_flush_postexec` hook continually adds"
 " new state to be flushed each time it is called."
-msgstr ""
+msgstr "：meth： `.SessionEvents.after_flush_postexec`は：meth：` .SessionEvents.after_flush`の直後に呼び出されますが、**の後に呼び出されます**オブジェクトの状態は、発生したばかりのフラッシュを考慮して変更されています。 ：attr： `.Session.new`、：attr：` .Session.dirty`と：attr： `.Session.deleted`コレクションは通常ここでは完全に空です。 ：meth： `.SessionEvents.after_flush_postexec`を使用して、完成したオブジェクトのアイデンティティマップを検査し、場合によっては追加のSQLを出力します。このフックでは、オブジェクトに新しい変更を加えることができます。これは：class： `.Session`が再び&quot;ダーティー &quot;状態になることを意味します。 ：class： `.Session`の仕組みは：flushが：meth：` .Session.commit`のコンテキストで呼び出された場合、このフックで新しい変更が検出された場合に**再び**フラッシュします**;それ以外の場合、保留中の変更は、次の通常のフラッシュの一部としてバンドルされます。フックが：meth： `.Session.commit`の中で新しい変更を検出すると、カウンターは：meth：` .SessionEvents.after_flush_postexec`フックが連続して100回繰り返されると、この点について無限ループが停止することを保証します呼び出されるたびにフラッシュされる新しい状態を追加します。"
 
 #: ../../orm/session_events.rst:86
 msgid "Mapper-level Events"
-msgstr ""
+msgstr "マッパーレベルのイベント"
 
 #: ../../orm/session_events.rst:88
 msgid ""
@@ -134,35 +124,35 @@ msgid ""
 "need to be approached more cautiously, as they proceed within the context"
 " of the flush process that is already ongoing; many operations are not "
 "safe to proceed here."
-msgstr ""
+msgstr "フラッシュレベルのフックに加えて、オブジェクトごとに呼び出され、INSERT、UPDATEまたはDELETEに基づいて分割されるという点で、より細かいフックのセットもあります。これらはマッパー・パーシネーション・フックであり、あまりにも一般的ですが、すでに進行中のフラッシュ・プロセスのコンテキスト内で処理が進められるため、これらのイベントにはさらに慎重にアプローチする必要があります。多くの操作はここで進めるのは安全ではありません。"
 
 #: ../../orm/session_events.rst:96
 msgid "The events are:"
-msgstr ""
+msgstr "イベントは次のとおりです。"
 
 #: ../../orm/session_events.rst:98
 msgid ":meth:`.MapperEvents.before_insert`"
-msgstr ""
+msgstr "：meth： `.MapperEvents.before_insert`"
 
 #: ../../orm/session_events.rst:99
 msgid ":meth:`.MapperEvents.after_insert`"
-msgstr ""
+msgstr "：meth： `.MapperEvents.after_insert`"
 
 #: ../../orm/session_events.rst:100
 msgid ":meth:`.MapperEvents.before_update`"
-msgstr ""
+msgstr "：meth： `.MapperEvents.before_update`"
 
 #: ../../orm/session_events.rst:101
 msgid ":meth:`.MapperEvents.after_update`"
-msgstr ""
+msgstr "：meth： `.MapperEvents.after_update`"
 
 #: ../../orm/session_events.rst:102
 msgid ":meth:`.MapperEvents.before_delete`"
-msgstr ""
+msgstr "：meth： `.MapperEvents.before_delete`"
 
 #: ../../orm/session_events.rst:103
 msgid ":meth:`.MapperEvents.after_delete`"
-msgstr ""
+msgstr "：meth： `.MapperEvents.after_delete`"
 
 #: ../../orm/session_events.rst:105
 msgid ""
@@ -180,31 +170,31 @@ msgid ""
 "are upon attributes **local** to the object's row.   Any other change to "
 "the object or other objects will impact the state of the "
 ":class:`.Session`, which will fail to function properly."
-msgstr ""
+msgstr "各イベントは、：class： `.Mapper`、マップされたオブジェクト自体、および：class：` .Connection`を渡され、INSERT、UPDATE、またはDELETE文を発行するために使用されます。これらのイベントの魅力は、特定のタイプのオブジェクトがINSERTで永続化されているときにアプリケーションが何らかのアクティビティを結びつけたい場合、フックは非常に限定的であるという点で、明確です。 ：meth： `.SessionEvents.before_flush`イベントとは異なり、ターゲットを見つけるために、attr：` .Session.new`のようなコレクションを検索する必要はありません。ただし、これらのイベントが呼び出されたときに、* INSERT、UPDATE、DELETEステートメントのすべてのリストを表すフラッシュプランが*すでに決定*されており、この段階では変更はできません。したがって、指定されたオブジェクトに対しても可能な変更は、オブジェクトの行の属性**ローカル**にのみ適用されます。オブジェクトや他のオブジェクトに対する他の変更は、：class： `.Session`の状態に影響します。これは正しく機能しません。"
 
 #: ../../orm/session_events.rst:121
 msgid ""
 "Operations that are not supported within these mapper-level persistence "
 "events include:"
-msgstr ""
+msgstr "これらのマッパーレベルの永続化イベントでサポートされていない操作には、次のものがあります。"
 
 #: ../../orm/session_events.rst:124
 msgid ":meth:`.Session.add`"
-msgstr ""
+msgstr "：meth： `.Session.add`"
 
 #: ../../orm/session_events.rst:125
 msgid ":meth:`.Session.delete`"
-msgstr ""
+msgstr "：meth： `.Session.delete`"
 
 #: ../../orm/session_events.rst:126
 msgid "Mapped collection append, add, remove, delete, discard, etc."
-msgstr ""
+msgstr "マップされたコレクションの追加、追加、削除、削除、破棄など"
 
 #: ../../orm/session_events.rst:127
 msgid ""
 "Mapped relationship attribute set/del events, i.e. ``someobject.related ="
 " someotherobject``"
-msgstr ""
+msgstr "マップされた関係属性セット/ delイベント、すなわち `` someobject.related = someotherobject``"
 
 #: ../../orm/session_events.rst:130
 msgid ""
@@ -214,7 +204,7 @@ msgid ""
 "rows within log tables. When dealing with the :class:`.Connection`, it is"
 " expected that Core-level SQL operations will be used; e.g. those "
 "described in :ref:`sqlexpression_toplevel`."
-msgstr ""
+msgstr "：class： `.Connection`が渡されるのは、**単純なSQL操作が**：class：` .Connection`で直接行われることです。つまり、カウンターのインクリメントやログ内の余分な行の挿入などですテーブル。 ：class： `.Connection`を扱う場合、コアレベルのSQL操作が使用されることが期待されます。例えば：ref： `sqlexpression_toplevel`に記述されているものです。"
 
 #: ../../orm/session_events.rst:136
 msgid ""
@@ -228,23 +218,23 @@ msgid ""
 " the target object in response to the attribute change.   With both of "
 "these approaches, the object is in the correct state before it ever gets "
 "to the flush step."
-msgstr ""
+msgstr "また、フラッシュイベント内で処理する必要のない多くのオブジェクト単位の操作もあります。最も一般的な方法は、新しいオブジェクトに関連付けられる追加のオブジェクトを作成するなど、オブジェクトと一緒に `` __init __（） ``メソッド内に追加の状態を設定することです。 ：ref： `simple_validators`で説明されているバリデーターを使用する方法もあります。これらの関数は属性の変更を傍受し、属性の変更に応じてターゲットオブジェクトに追加の状態変更を確立することができます。これらのアプローチの両方を使用すると、オブジェクトはフラッシュステップに至る前に正しい状態になります。"
 
 #: ../../orm/session_events.rst:149
 msgid "Object Lifecycle Events"
-msgstr ""
+msgstr "オブジェクトライフサイクルイベント"
 
 #: ../../orm/session_events.rst:151
 msgid ""
 "Another use case for events is to track the lifecycle of objects.  This "
 "refers to the states first introduced at :ref:`session_object_states`."
-msgstr ""
+msgstr "イベントの別のユースケースは、オブジェクトのライフサイクルを追跡することです。これは：ref： `session_object_states`で最初に導入された状態を参照します。"
 
 #: ../../orm/session_events.rst:154
 msgid ""
 "added a system of events that intercept all possible state transitions of"
 " an object within the :class:`.Session`."
-msgstr ""
+msgstr "：class： `。Session &#39;内のオブジェクトのすべての可能な状態遷移をインターセプトするイベントのシステムを追加しました。"
 
 #: ../../orm/session_events.rst:157
 msgid ""
@@ -254,24 +244,24 @@ msgid ""
 "exception of the initial transient event, all the events are in terms of "
 "the :class:`.Session` object or class, meaning they can be associated "
 "either with a specific :class:`.Session` object::"
-msgstr ""
+msgstr "上記のすべての状態は、イベントで完全に追跡できます。各イベントは別個の状態遷移を表します。つまり、開始状態と宛先状態は両方とも追跡対象の一部です。最初の一時的なイベントを除いて、すべてのイベントは：class： `.Session`オブジェクトまたはクラスの観点からなります。つまり、それらは特定の：class：` .Session`オブジェクトに関連付けることができます::"
 
 #: ../../orm/session_events.rst:173
 msgid ""
 "Or with the :class:`.Session` class itself, as well as with a specific "
 ":class:`.sessionmaker`, which is likely the most useful form::"
-msgstr ""
+msgstr "または、：class： `.Session`クラス自体と、特定の：class：` .sessionmaker`を使用すると、最も有用なフォームです::"
 
 #: ../../orm/session_events.rst:185
 msgid ""
 "The listeners can of course be stacked on top of one function, as is "
 "likely to be common.   For example, to track all objects that are "
 "entering the persistent state::"
-msgstr ""
+msgstr "リスナーはもちろん、共通する可能性が高いので、1つの関数の上に積み重ねることができます。たとえば、永続状態に入っているすべてのオブジェクトを追跡するには::"
 
 #: ../../orm/session_events.rst:197
 msgid "Transient"
-msgstr ""
+msgstr "トランジェント"
 
 #: ../../orm/session_events.rst:199
 msgid ""
@@ -283,11 +273,11 @@ msgid ""
 ":meth:`.InstanceEvents.init` method is probably the best event.  This "
 "event is applied to a specific class or superclass.  For example, to "
 "intercept all new objects for a particular declarative base::"
-msgstr ""
+msgstr "最初に構築されたときにマップされたすべてのオブジェクトは、term： `transient`で始まります。この状態では、オブジェクトは単独で存在し、class： `.Session`のいずれとも関連しません。この初期状態では、class： `.Session`が存在しないため、特定の\&quot; transition \ &quot;イベントはありませんが、一時オブジェクトが作成されたときに傍受したい場合、：meth：` .InstanceEvents.init`メソッドおそらく最高のイベントです。このイベントは、特定のクラスまたはスーパークラスに適用されます。例えば、特定の宣言的な基底に対してすべての新しいオブジェクトをインターセプトするには::"
 
 #: ../../orm/session_events.rst:219
 msgid "Transient to Pending"
-msgstr ""
+msgstr "一時保留中"
 
 #: ../../orm/session_events.rst:221
 msgid ""
@@ -298,11 +288,11 @@ msgid ""
 "<unitofwork_cascades>` from a referencing object that was explicitly "
 "added.   The transient to pending transition is detectable using the "
 ":meth:`.SessionEvents.transient_to_pending` event::"
-msgstr ""
+msgstr "一時オブジェクトは、：meth： `.Session.add`または：meth：` .Session.add_all`メソッドを介して：class： `.Session`と最初に関連づけられたときにterm：` pending`になります。オブジェクトは：ref： `\&quot;カスケード\ &quot;の結果として：class：` .Session`の一部となることもあります： <unitofwork_cascades> `明示的に追加された参照オブジェクトから削除します。トランジェントからペンディングへの遷移は、：meth： `.SessionEvents.transient_to_pending`イベントを使って検出できます::"
 
 #: ../../orm/session_events.rst:234
 msgid "Pending to Persistent"
-msgstr ""
+msgstr "保留中のままにする"
 
 #: ../../orm/session_events.rst:236
 msgid ""
@@ -310,11 +300,11 @@ msgid ""
 "proceeds and an INSERT statement takes place for the instance.  The "
 "object now has an identity key.   Track pending to persistent with the "
 ":meth:`.SessionEvents.pending_to_persistent` event::"
-msgstr ""
+msgstr "：term： `pending`オブジェクトは、フラッシュ：flushが進行し、インスタンスに対してINSERT文が実行されたときにterm：` persistent`になります。オブジェクトにIDキーが追加されました。 ：meth： `.SessionEvents.pending_to_persistent`イベントで永続的に追跡保留中です::"
 
 #: ../../orm/session_events.rst:246
 msgid "Pending to Transient"
-msgstr ""
+msgstr "保留中の一時的"
 
 #: ../../orm/session_events.rst:248
 msgid ""
@@ -323,11 +313,11 @@ msgid ""
 "been flushed, or if the :meth:`.Session.expunge` method is called for the"
 " object before it is flushed.  Track pending to transient with the "
 ":meth:`.SessionEvents.pending_to_transient` event::"
-msgstr ""
+msgstr "保留中のオブジェクトがフラッシュされる前に、：meth： `.Session.rollback`メソッドが呼び出された場合、または：meth：`。Session。 &#39;が返される場合、：term： `pending`オブジェクトは：term：` transient`に戻すことができます。オブジェクトがフラッシュされる前に、そのオブジェクトに対して「expunge」メソッドが呼び出されます。 ：meth： `.SessionEvents.pending_to_transient`イベントで一時的に保留中のトラックを追跡::"
 
 #: ../../orm/session_events.rst:259
 msgid "Loaded as Persistent"
-msgstr ""
+msgstr "永続的に読み込まれる"
 
 #: ../../orm/session_events.rst:261
 msgid ""
@@ -339,11 +329,11 @@ msgid ""
 ":meth:`.SessionEvents.loaded_as_persistent` event is provided as a "
 "session-centric hook for intercepting objects as they enter the "
 "persistent state via this particular avenue::"
-msgstr ""
+msgstr "オブジェクトは、データベースからロードされたときに：term： `persistent`状態で直接：class：` .Session`の中に現れます。この状態遷移を追跡することは、オブジェクトが読み込まれるときの追跡と同義であり、：meth： `.InstanceEvents.load`インスタンスレベルのイベントの使用と同義です。しかし、：meth： `.SessionEvents.loaded_as_persistent`イベントは、オブジェクトがこの特定のavenue経由で永続状態に入るときに、オブジェクトをインターセプトするためのセッション中心のフックとして提供されます。"
 
 #: ../../orm/session_events.rst:275
 msgid "Persistent to Transient"
-msgstr ""
+msgstr "一時的なもの"
 
 #: ../../orm/session_events.rst:277
 msgid ""
@@ -354,11 +344,11 @@ msgid ""
 " object is evicted from the :class:`.Session` to again become transient. "
 "Track objects that were reverted to transient from persistent using the "
 ":meth:`.SessionEvents.persistent_to_transient` event hook::"
-msgstr ""
+msgstr "オブジェクトが最初に保留として追加されたトランザクションに対して：meth： `.Session.rollback`メソッドが呼び出された場合、永続オブジェクトは一時状態に戻ることができます。 ROLLBACKの場合、このオブジェクトを永続化するINSERT文はロールバックされ、オブジェクトは：class： `.Session`から追い出されて再び一時的になります。 ：meth： `.SessionEvents.persistent_to_transient`イベントフックを使用して永続性から一時的に戻されたオブジェクトを追跡する::"
 
 #: ../../orm/session_events.rst:291
 msgid "Persistent to Deleted"
-msgstr ""
+msgstr "永続的な削除済み"
 
 #: ../../orm/session_events.rst:293
 msgid ""
@@ -370,7 +360,7 @@ msgid ""
 "the actual DELETE statement is not emitted until the flush proceeds.  It "
 "is subsequent to the flush that the \"deleted\" state is present for the "
 "target object."
-msgstr ""
+msgstr "永続オブジェクトは、削除のためにマークされたオブジェクトがフラッシュプロセス内のデータベースから削除されたとき、：term： `deleted`状態に入ります。 targetオブジェクトに対して：meth： `.Session.delete`メソッドが呼び出されたときと同じ**ではないことに注意してください。 ：meth： `.Session.delete`メソッドのみ**削除対象のオブジェクトをマークします。実際のDELETE文はフラッシュが行われるまで出力されません。フラッシュに続いて、ターゲットオブジェクトに対して\ &quot;deleted \&quot;状態が存在します。"
 
 #: ../../orm/session_events.rst:301
 msgid ""
@@ -378,24 +368,24 @@ msgid ""
 "with the :class:`.Session`.  It is not present in the identity map nor is"
 " it present in the :attr:`.Session.deleted` collection that refers to "
 "when it was pending for deletion."
-msgstr ""
+msgstr "\ &quot;deleted \&quot;状態では、オブジェクトは：class： `.Session`とわずかに関連付けられます。アイデンティティマップには存在しません。また、削除待ちの時点を参照する：attr： `.Session.deleted`コレクションにも存在しません。"
 
 #: ../../orm/session_events.rst:306
 msgid ""
 "From the \"deleted\" state, the object can go either to the detached "
 "state when the transaction is committed, or back to the persistent state "
 "if the transaction is instead rolled back."
-msgstr ""
+msgstr "\ &quot;deleted \&quot;状態から、オブジェクトは、トランザクションがコミットされたときにdetached状態になるか、トランザクションがロールバックされる場合には永続状態に戻ることができます。"
 
 #: ../../orm/session_events.rst:310
 msgid ""
 "Track the persistent to deleted transition with "
 ":meth:`.SessionEvents.persistent_to_deleted`::"
-msgstr ""
+msgstr "削除された移行を永続的に追跡する：meth： `.SessionEvents.persistent_to_deleted` ::"
 
 #: ../../orm/session_events.rst:319
 msgid "Deleted to Detached"
-msgstr ""
+msgstr "分離された"
 
 #: ../../orm/session_events.rst:321
 msgid ""
@@ -405,7 +395,7 @@ msgid ""
 "fully discards the deleted object and removes all associations to it.   "
 "Track the deleted to detached transition using "
 ":meth:`.SessionEvents.deleted_to_detached`::"
-msgstr ""
+msgstr "削除されたオブジェクトは、セッションのトランザクションがコミットされたときにterm： `detached &#39;になります。 ：meth： `.Session.commit`メソッドが呼び出された後、データベーストランザクションは最後であり、：class：` .Session`は削除されたオブジェクトを完全に破棄し、そのオブジェクトへのすべての関連付けを削除します。 det：削除された遷移を追跡する：meth： `.SessionEvents.deleted_to_detached` ::"
 
 #: ../../orm/session_events.rst:334
 msgid ""
@@ -415,35 +405,35 @@ msgid ""
 "detached, :attr:`.InstanceState.deleted` will again return False.  To "
 "detect that an object was deleted, regardless of whether or not it is "
 "detached, use the :attr:`.InstanceState.was_deleted` accessor."
-msgstr ""
+msgstr "オブジェクトが削除された状態にある間、：attr： `.InstanceState.deleted`属性は` `inspect（object）.deleted``を使ってアクセス可能で、Trueを返します。しかし、オブジェクトがデタッチされると、：attr： `.InstanceState.deleted`は再びFalseを返します。オブジェクトが削除されたかどうかにかかわらず、オブジェクトが削除されたことを検出するには、：attr： `.InstanceState.was_deleted`アクセサを使用します。"
 
 #: ../../orm/session_events.rst:343
 msgid "Persistent to Detached"
-msgstr ""
+msgstr "分離された"
 
 #: ../../orm/session_events.rst:345
 msgid ""
 "The persistent object becomes :term:`detached` when the object is de-"
 "associated with the :class:`.Session`, via the :meth:`.Session.expunge`, "
 ":meth:`.Session.expunge_all`, or :meth:`.Session.close` methods."
-msgstr ""
+msgstr "永続オブジェクトは、：meth： `.Session.expunge`、：meth：` .Session.expunge_all`、または：meth： `.Session.expunge_all`を介して、オブジェクトが：class：` .Session`と関連づけられていないときにterm： `detached` ：meth： `.Session.close`メソッドです。"
 
 #: ../../orm/session_events.rst:351
 msgid ""
 "An object may also become **implicitly detached** if its owning "
 ":class:`.Session` is dereferenced by the application and discarded due to"
 " garbage collection. In this case, **no event is emitted**."
-msgstr ""
+msgstr "オブジェクトは、所有：class： `.Session`がアプリケーションによって参照解除され、ガベージコレクションのために破棄された場合、**暗黙的に分離される**こともあります。この場合、**イベントは発生しません**。"
 
 #: ../../orm/session_events.rst:355
 msgid ""
 "Track objects as they move from persistent to detached using the "
 ":meth:`.SessionEvents.persistent_to_detached` event::"
-msgstr ""
+msgstr "：meth： `.SessionEvents.persistent_to_detached`イベントを使用して永続オブジェクトから分離オブジェクトに移動するオブジェクトを追跡する::"
 
 #: ../../orm/session_events.rst:363
 msgid "Detached to Persistent"
-msgstr ""
+msgstr "永続的に分離"
 
 #: ../../orm/session_events.rst:365
 msgid ""
@@ -451,11 +441,11 @@ msgid ""
 "session using the :meth:`.Session.add` or equivalent method.  Track "
 "objects moving back to persistent from detached using the "
 ":meth:`.SessionEvents.detached_to_persistent` event::"
-msgstr ""
+msgstr "分離されたオブジェクトは、：meth： `.Session.add`または同等のメソッドを使用してセッションに再関連付けされると、永続的になります。 ：meth： `.SessionEvents.detached_to_persistent`イベントを使用して、detachedから永続的に移動するオブジェクトを追跡する::"
 
 #: ../../orm/session_events.rst:376
 msgid "Deleted to Persistent"
-msgstr ""
+msgstr "永続的に削除されました"
 
 #: ../../orm/session_events.rst:378
 msgid ""
@@ -464,11 +454,11 @@ msgid ""
 "the :meth:`.Session.rollback` method.   Track deleted objects moving back"
 " to the persistent state using the "
 ":meth:`.SessionEvents.deleted_to_persistent` event::"
-msgstr ""
+msgstr "：term： `deleted`オブジェクトは、DELETEされたトランザクションが：meth：` .Session.rollback`メソッドを使用してロールバックされたとき、：term： `persistent`状態に戻すことができます。 ：meth： `.SessionEvents.deleted_to_persistent`イベントを使用して、削除されたオブジェクトを永続状態に戻すトラッキング::"
 
 #: ../../orm/session_events.rst:391
 msgid "Transaction Events"
-msgstr ""
+msgstr "トランザクションイベント"
 
 #: ../../orm/session_events.rst:393
 msgid ""
@@ -476,7 +466,7 @@ msgid ""
 "boundaries occur at the :class:`.Session` level as well as when the "
 ":class:`.Session` changes the transactional state on :class:`.Connection`"
 " objects."
-msgstr ""
+msgstr "トランザクションイベントは、：class： `.Session`レベルでトランザクション境界が発生したとき、：class：` .Session`がトランザクション状態を：class： `.Connection`オブジェクトに変更したときに、アプリケーションに通知することを可能にします。"
 
 #: ../../orm/session_events.rst:398
 msgid ""
@@ -490,7 +480,7 @@ msgid ""
 ":class:`.Session`.  These hooks mirror the \"nested\" transactional "
 "behavior of the :class:`.Session`, in that they track logical "
 "\"subtransactions\" as well as \"nested\" (e.g. SAVEPOINT) transactions."
-msgstr ""
+msgstr "：meth： `.SessionEvents.after_transaction_create`、：meth：` .SessionEvents.after_transaction_end`  - これらのイベントは：class： `.Session`の論理トランザクションスコープを個々のデータベース接続に固有の方法で追跡します。これらのイベントは、 `` zope.sqlalchemy``などのトランザクション追跡システムの統合を支援することを目的としています。これらのイベントは、アプリケーションがいくつかの外部スコープを：class： `.Session`のトランザクションスコープと位置合わせする必要がある場合に使用します。これらのフックは：class： `.Session`のトランザクションの振る舞いを反映しています。論理的な&quot;サブトランザクション &quot;と&quot;ネストされた &quot;（例えばSAVEPOINT）トランザクションを追跡します。"
 
 #: ../../orm/session_events.rst:410
 msgid ""
@@ -505,11 +495,11 @@ msgid ""
 "become used within the current transaction. The rollback and commit "
 "events then refer to when the DBAPI connections themselves have received "
 "rollback or commit instructions directly."
-msgstr ""
+msgstr "：meth： `.SessionEvents.before_commit`、：meth：` .SessionEvents.after_commit`、：meth： `.SessionEvents.after_begin`、：meth：` .SessionEvents.after_rollback`、：meth： `.SessionEvents.after_soft_rollback`  - これらのイベントにより、データベース接続の観点からトランザクションイベントを追跡できます。 ：meth： `.SessionEvents.after_begin`は、特に接続ごとのイベントです。 a：class：複数の接続を維持する `.Session`は、現在のトランザクション内でそれらの接続が使用されるように、個々の接続ごとにこのイベントを個別に出力します。ロールバックイベントとコミットイベントは、DBAPI接続自体がロールバックまたはコミットの指示を直接受け取ったときに参照されます。"
 
 #: ../../orm/session_events.rst:422
 msgid "Attribute Change Events"
-msgstr ""
+msgstr "属性変更イベント"
 
 #: ../../orm/session_events.rst:424
 msgid ""
@@ -523,5 +513,5 @@ msgid ""
 "The attribute events are also behind the mechanics of backreferences.   "
 "An example illustrating use of attribute events is in "
 ":ref:`examples_instrumentation`."
-msgstr ""
+msgstr "属性変更イベントは、オブジェクト上の特定の属性がいつ変更されるかの傍受を可能にする。これらのイベントには、meth： `.AttributeEvents.set`、：meth：` .AttributeEvents.append`、：meth： `.AttributeEvents.remove`があります。これらのイベントは、特にオブジェクトごとの検証操作で非常に便利です。ただし、これらのフックを背後で使用する\ &quot;バリデータ\&quot;フックを使用する方がはるかに便利です。これについては、ref： `simple_validators`を参照してください。属性イベントは、後方参照の仕組みの背後にもあります。属性イベントの使用例は：ref： `examples_instrumentation`です。"
 

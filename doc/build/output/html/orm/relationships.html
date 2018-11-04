@@ -10,7 +10,7 @@
         <title>
             
     
-    Relationship Configuration
+    関係の設定
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -36,8 +36,8 @@
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
         <link rel="up" title="SQLAlchemy ORM" href="index.html" />
-        <link rel="next" title="Basic Relationship Patterns" href="basic_relationships.html" />
-        <link rel="prev" title="Class Mapping API" href="mapping_api.html" />
+        <link rel="next" title="基本的な関係パターン" href="basic_relationships.html" />
+        <link rel="prev" title="クラスマッピングAPI" href="mapping_api.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,23 +120,23 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Relationship Configuration</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="basic_relationships.html">Basic Relationship Patterns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="self_referential.html">Adjacency List Relationships</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="backref.html">Linking Relationships with Backref</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="join_conditions.html">Configuring how Relationship Joins</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="collections.html">Collection Configuration and Techniques</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationship_persistence.html">Special Relationship Persistence Patterns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationship_api.html">Relationships API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li class="selected"><span class="link-container first"><strong>関係の設定</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="basic_relationships.html">基本的な関係パターン</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="self_referential.html">隣接関係リストの関係</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="backref.html">バックリファレンスとの関係のリンク</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="join_conditions.html">リレーションシップの参加方法のコンフィグレーション</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="collections.html">コレクションの構成とテクニック</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationship_persistence.html">特別な関係の永続パターン</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationship_api.html">リレーションシップAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -152,58 +152,56 @@
     <div id="docs-body" class="withsidebar" >
         
 <span class="target" id="module-sqlalchemy.orm"></span><div class="section" id="relationship-configuration">
-<span id="relationship-config-toplevel"></span><h1>Relationship Configuration<a class="headerlink" href="#relationship-configuration" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>This section describes the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> function and in depth discussion
-of its usage.   For an introduction to relationships, start with the
-<a class="reference internal" href="tutorial.html"><span class="std std-ref">Object Relational Tutorial</span></a> and head into <a class="reference internal" href="tutorial.html#orm-tutorial-relationship"><span class="std std-ref">Building a Relationship</span></a>.</p>
+<span id="relationship-config-toplevel"></span><h1>関係の設定<a class="headerlink" href="#relationship-configuration" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>この節では、：func： <cite>relationship`関数とその使い方についての深い議論について説明します。関係の紹介については、：ref： `ormtutorial_toplevel`で始まり、：ref：</cite> orm_tutorial_relationship`に向かいましょう。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="basic_relationships.html">Basic Relationship Patterns</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="basic_relationships.html#one-to-many">One To Many</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basic_relationships.html#many-to-one">Many To One</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basic_relationships.html#one-to-one">One To One</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basic_relationships.html#many-to-many">Many To Many</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basic_relationships.html#association-object">Association Object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_relationships.html">基本的な関係パターン</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic_relationships.html#one-to-many">1対多</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_relationships.html#many-to-one">多対1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_relationships.html#one-to-one">1対1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_relationships.html#many-to-many">多対多</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_relationships.html#association-object">関連オブジェクト</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="self_referential.html">Adjacency List Relationships</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="self_referential.html#composite-adjacency-lists">Composite Adjacency Lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="self_referential.html#self-referential-query-strategies">Self-Referential Query Strategies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="self_referential.html#configuring-self-referential-eager-loading">Configuring Self-Referential Eager Loading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="self_referential.html">隣接関係リストの関係</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="self_referential.html#composite-adjacency-lists">複合隣接リスト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="self_referential.html#self-referential-query-strategies">自己参照クエリの戦略</a></li>
+<li class="toctree-l2"><a class="reference internal" href="self_referential.html#configuring-self-referential-eager-loading">自己参照型eagerローディングのコンフィグレーション</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="backref.html">Linking Relationships with Backref</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="backref.html#backref-arguments">Backref Arguments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="backref.html#one-way-backrefs">One Way Backrefs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backref.html">バックリファレンスとの関係のリンク</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="backref.html#backref-arguments">逆引き引数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="backref.html#one-way-backrefs">一方的な逆説</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="join_conditions.html">Configuring how Relationship Joins</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#handling-multiple-join-paths">Handling Multiple Join Paths</a></li>
-<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#specifying-alternate-join-conditions">Specifying Alternate Join Conditions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#creating-custom-foreign-conditions">Creating Custom Foreign Conditions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#using-custom-operators-in-join-conditions">Using custom operators in join conditions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#overlapping-foreign-keys">Overlapping Foreign Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#non-relational-comparisons-materialized-path">Non-relational Comparisons / Materialized Path</a></li>
-<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#self-referential-many-to-many-relationship">Self-Referential Many-to-Many Relationship</a></li>
-<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#composite-secondary-joins">Composite &quot;Secondary&quot; Joins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#relationship-to-non-primary-mapper">Relationship to Non Primary Mapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#row-limited-relationships-with-window-functions">Row-Limited Relationships with Window Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#building-query-enabled-properties">Building Query-Enabled Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="join_conditions.html">リレーションシップの参加方法のコンフィグレーション</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#handling-multiple-join-paths">複数の結合パスの処理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#specifying-alternate-join-conditions">代替結合条件の指定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#creating-custom-foreign-conditions">カスタム外来の作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#using-custom-operators-in-join-conditions">結合条件でカスタム演算子を使用する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#overlapping-foreign-keys">重複する外部キー</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#non-relational-comparisons-materialized-path">非リレーショナル比較/マテリアライズド・パス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#self-referential-many-to-many-relationship">自己参照多対多リレーションシップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#composite-secondary-joins">コンポジット&amp;quot;セカンダリ&amp;quot;の結合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#relationship-to-non-primary-mapper">非プライマリマッパーとの関係</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#row-limited-relationships-with-window-functions">ウィンドウ関数との行限定関係</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join_conditions.html#building-query-enabled-properties">クエリが有効なプロパティの構築</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="collections.html">Collection Configuration and Techniques</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="collections.html#working-with-large-collections">Working with Large Collections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="collections.html#customizing-collection-access">Customizing Collection Access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="collections.html#custom-collection-implementations">Custom Collection Implementations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="collections.html#collection-internals">Collection Internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collections.html">コレクションの構成とテクニック</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collections.html#working-with-large-collections">大規模コレクションの操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collections.html#customizing-collection-access">コレクションアクセスのカスタマイズ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collections.html#custom-collection-implementations">カスタムコレクションの実装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collections.html#collection-internals">コレクション内部</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="relationship_persistence.html">Special Relationship Persistence Patterns</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="relationship_persistence.html#rows-that-point-to-themselves-mutually-dependent-rows">Rows that point to themselves / Mutually Dependent Rows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="relationship_persistence.html#mutable-primary-keys-update-cascades">Mutable Primary Keys / Update Cascades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relationship_persistence.html">特別な関係の永続パターン</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="relationship_persistence.html#rows-that-point-to-themselves-mutually-dependent-rows">自分自身を指す行/相互に依存する行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relationship_persistence.html#mutable-primary-keys-update-cascades">変更可能な主キー/更新カスケード</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="relationship_api.html">Relationships API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relationship_api.html">リレーションシップAPI</a></li>
 </ul>
 </div>
 </div>
@@ -214,13 +212,13 @@ of its usage.   For an introduction to relationships, start with the
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="mapping_api.html" title="previous chapter">Class Mapping API</a>
+        <a href="mapping_api.html" title="previous chapter">クラスマッピングAPI</a>
         Next:
-        <a href="basic_relationships.html" title="next chapter">Basic Relationship Patterns</a>
+        <a href="basic_relationships.html" title="next chapter">基本的な関係パターン</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -247,6 +245,7 @@ of its usage.   For an introduction to relationships, start with the
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

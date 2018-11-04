@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/baked.rst:4
 msgid "Baked Queries"
-msgstr ""
+msgstr "焼いたクエリ"
 
 #: ../../orm/extensions/baked.rst:8
 msgid ""
@@ -31,7 +21,7 @@ msgid ""
 " query from its initial construction up through generating a SQL string "
 "will only occur **once**, rather than for each time that query is built "
 "up and executed."
-msgstr ""
+msgstr "`` baked``は、class： `〜.query.Query`オブジェクトの代わりの生成パターンを提供します。これは、オブジェクトの構築と文字列のコンパイルのステップのキャッシングを可能にします。これは、複数回使用される特定の：class： `〜.query.Query`構築シナリオに対して、初期構造からSQL文字列を生成するまでのクエリの構築に関わるすべてのPython関数呼び出しが発生することを意味します*クエリが構築されて実行されるたびにではなく、* once **を使用します。"
 
 #: ../../orm/extensions/baked.rst:16
 msgid ""
@@ -41,7 +31,7 @@ msgid ""
 "or cache the **return results** from the database.  A technique that "
 "demonstrates the caching of the SQL calls and result sets themselves is "
 "available in :ref:`examples_caching`."
-msgstr ""
+msgstr "このシステムの論理的根拠は、** SQLが発行される前に**発生するすべてのものに対するPythonインタプリタのオーバーヘッドを大幅に削減することです。 \ &quot;焼いた\&quot;システムのキャッシングは、SQL呼び出しを減らしたり、**結果をデータベースからキャッシュしたりしません。 SQL呼び出しと結果セットのキャッシングを示すテクニックは、：ref： `examples_caching`にあります。"
 
 #: ../../orm/extensions/baked.rst:28
 msgid ""
@@ -51,17 +41,17 @@ msgid ""
 "each other.  This extension presents a very specific kind of optimization"
 " that is not ordinarily needed.  As noted above, it **does not cache "
 "queries**, only the string formulation of the SQL itself."
-msgstr ""
+msgstr "：mod： `sqlalchemy.ext.baked`拡張は**初心者ではありません**。正しく使用するには、SQLAlchemy、データベースドライバ、およびバックエンドデータベースの相互作用を高いレベルで理解する必要があります。この拡張は、通常必要とされない非常に特殊な最適化を提供します。上記のように、**はクエリ**をキャッシュせず、SQL自体の文字列定式化のみをキャッシュします。"
 
 #: ../../orm/extensions/baked.rst:36
 msgid "Synopsis"
-msgstr ""
+msgstr "シノプシス"
 
 #: ../../orm/extensions/baked.rst:38
 msgid ""
 "Usage of the baked system starts by producing a so-called \"bakery\", "
 "which represents storage for a particular series of query objects::"
-msgstr ""
+msgstr "焼いたシステムの使い方は、特定の一連のクエリオブジェクトのための記憶域を表すいわゆる\ &quot;bakery \&quot;を生成することから始まります。"
 
 #: ../../orm/extensions/baked.rst:45
 msgid ""
@@ -69,7 +59,7 @@ msgid ""
 " to 200 elements, noting that an ORM query will typically contain one "
 "entry for the ORM query as invoked, as well as one entry per database "
 "dialect for the SQL string."
-msgstr ""
+msgstr "上記の &quot;ベーカリー&quot;は、デフォルトで200個の要素を持つLRUキャッシュにキャッシュされたデータを格納します.ORMクエリには、通常、ORMクエリの1つのエントリが呼び出されます。また、SQL文字列。"
 
 #: ../../orm/extensions/baked.rst:50
 msgid ""
@@ -77,11 +67,11 @@ msgid ""
 "specifying its construction as a series of Python callables, which are "
 "typically lambdas. For succinct usage, it overrides the ``+=`` operator "
 "so that a typical query build-up looks like the following::"
-msgstr ""
+msgstr "ベーカリーでは、class： `〜.query.Query`オブジェクトをビルドすることができます。これは、典型的にはlambdaである一連のPython呼び出し可能オブジェクトとしてその構造を指定します。簡潔な使い方のために、 `` + = ``演算子をオーバーライドして、典型的なクエリのビルドアップが次のようになるようにします::"
 
 #: ../../orm/extensions/baked.rst:71
 msgid "Following are some observations about the above code:"
-msgstr ""
+msgstr "上記のコードに関するいくつかの観察結果は次のとおりです。"
 
 #: ../../orm/extensions/baked.rst:73
 msgid ""
@@ -89,13 +79,13 @@ msgid ""
 "object is essentially the \"builder\" for a real orm "
 ":class:`~.query.Query` object, but it is not itself the *actual* "
 ":class:`~.query.Query` object."
-msgstr ""
+msgstr "`` baked_query``オブジェクトは：class： `.BakedQuery`のインスタンスです。このオブジェクトは本質的に、実際のorm：class： `〜.query.Query`オブジェクトの&quot;ビルダー &quot;ですが、それ自体は*実際の*：class：`〜.query.Query`オブジェクトではありません。"
 
 #: ../../orm/extensions/baked.rst:78
 msgid ""
 "The actual :class:`~.query.Query` object is not built at all, until the "
 "very end of the function when :meth:`.Result.all` is called."
-msgstr ""
+msgstr "実際の：class： `〜.query.Query`オブジェクトは、：meth：` .Result.all`が呼び出されたときに関数の最後まで構築されていません。"
 
 #: ../../orm/extensions/baked.rst:81
 msgid ""
@@ -104,7 +94,7 @@ msgid ""
 ":func:`.bakery` function receives a :class:`.Session` as its argument.  "
 "The remaining lambdas each receive a :class:`~.query.Query` as their "
 "argument."
-msgstr ""
+msgstr "`` baked_query``オブジェクトに追加されるステップは、すべてPython関数、典型的にはlambdaとして表現されます。 ：func： `.bakery`関数に与えられた最初のラムダは：class：` .Session`を引数として受け取ります。残りのラムダは、引数としてそれぞれ：class： `〜.query.Query`を受け取ります。"
 
 #: ../../orm/extensions/baked.rst:87
 msgid ""
@@ -113,7 +103,7 @@ msgid ""
 "we build up an entirely new :class:`.BakedQuery` object, *all of the "
 "lambdas are only called once*.   Each lambda is **never** called a second"
 " time for as long as this query is cached in the bakery."
-msgstr ""
+msgstr "上記のコードでは、アプリケーションが `` search_for_user（） ``を何度も呼び出すかもしれないが、各呼び出しの中で全く新しい：class： `.BakedQuery`オブジェクトを構築しても、すべてのlambdaは一度と呼ばれる*。各ラムダは、このクエリがベーカリーにキャッシュされている限り、**決して** 2回目と呼ばれます。"
 
 #: ../../orm/extensions/baked.rst:93
 msgid ""
@@ -125,7 +115,7 @@ msgid ""
 "is specified, the callable ``lambda q: q.filter(User.email == "
 "bindparam('email'))`` will be part of the cache key that's retrieved; "
 "when ``email`` is ``None``, this callable is not part of the cache key."
-msgstr ""
+msgstr "キャッシングは、**ラムダオブジェクト**への参照をキャッシュキーを定式化するために格納することによって達成される。つまり、PythonインタープリタがPythonのIDをこれらの関数に割り当てるという事実は、連続して実行されたときにクエリをどのように識別するかを決定するものです。 `` email_``パラメータが指定されている `` search_for_user（） ``の呼び出しの場合、呼び出し可能な `` lambda q：q.filter（User.email == bindparam（ &#39;email&#39;）） ``は、検索されたキャッシュキーの値。 `` email``が `` None``のとき、この呼び出し可能なものはキャッシュキーの一部ではありません。"
 
 #: ../../orm/extensions/baked.rst:102
 msgid ""
@@ -134,11 +124,11 @@ msgid ""
 "lambdas; instead, assuming these are values to be bound into the SQL "
 "string, we use :func:`.bindparam` to construct named parameters, where we"
 " apply their actual values later using :meth:`.Result.params`."
-msgstr ""
+msgstr "ラムダはすべて一度だけ呼び出されるので、ラムダ内で**コール内で変化する可能性のある変数は**参照されません。代わりに、これらがSQL文字列にバインドされる値であると仮定して、func： `.bindparam`を使用して名前付きパラメータを構築します。ここでは、後で：meth：` .Result.params`を使用して実際の値を適用します。"
 
 #: ../../orm/extensions/baked.rst:110
 msgid "Performance"
-msgstr ""
+msgstr "パフォーマンス"
 
 #: ../../orm/extensions/baked.rst:112
 msgid ""
@@ -148,21 +138,21 @@ msgid ""
 "   The example suite ``short_selects`` demonstrated in "
 ":ref:`examples_performance` illustrates a comparison of queries which "
 "each return only one row, such as the following regular query::"
-msgstr ""
+msgstr "ベーキングされたクエリはおそらくちょっと奇妙に見えますが、少し厄介で少し冗長です。しかし、アプリケーションで何度も呼び出されるクエリのPythonパフォーマンスの節約は非常に劇的です。 ：ref： `examples_performance`は、次のような通常のクエリ::のように1つの行だけを返すクエリの比較を示しています。"
 
 #: ../../orm/extensions/baked.rst:124
 msgid "compared to the equivalent \"baked\" query::"
-msgstr ""
+msgstr "同等の\ &quot;baked \&quot;クエリと比較します::"
 
 #: ../../orm/extensions/baked.rst:133
 msgid ""
 "The difference in Python function call count for an iteration of 10000 "
 "calls to each block are::"
-msgstr ""
+msgstr "各ブロックへの10000回の呼び出しの反復のためのPython関数呼び出しカウントの違いは::"
 
 #: ../../orm/extensions/baked.rst:142
 msgid "In terms of number of seconds on a powerful laptop, this comes out as::"
-msgstr ""
+msgstr "強力なラップトップの秒数は、次のようになります。"
 
 #: ../../orm/extensions/baked.rst:150
 msgid ""
@@ -175,7 +165,7 @@ msgid ""
 "guarantee to a much faster application; it is only a potentially useful "
 "feature for those applications that have been measured as being impacted "
 "by this particular form of overhead."
-msgstr ""
+msgstr "このテストでは、意図的に1つの行のみを返すクエリが使用されています。多数の行を戻す照会の場合、ベークされた照会のパフォーマンス上の利点は、行をフェッチするために費やされる時間に比例して、影響が少なくなります。 **焼き付けクエリ機能は結果のフェッチではなく、クエリ自体の構築にのみ適用されることに留意することが重要です**。ベークされた機能を使用することは、はるかに高速なアプリケーションへの保証ではありません。この特定のオーバーヘッドの影響を受けると測定されたアプリケーションにとっては、潜在的に有用な機能です。"
 
 #: ../../orm/extensions/baked.rst:161
 msgid ""
@@ -183,11 +173,11 @@ msgid ""
 " section :ref:`faq_performance`.  It is essential that performance "
 "measurement techniques are used when attempting to improve the "
 "performance of an application."
-msgstr ""
+msgstr "SQLAlchemyアプリケーションをプロファイルする方法の背景については、ref： `faq_performance`を参照してください。パフォーマンス測定技術は、アプリケーションのパフォーマンスを向上させるために使用することが不可欠です。"
 
 #: ../../orm/extensions/baked.rst:167
 msgid "Rationale"
-msgstr ""
+msgstr "根拠"
 
 #: ../../orm/extensions/baked.rst:169
 msgid ""
@@ -197,7 +187,7 @@ msgid ""
 "store it in a dictionary for re-use.   This is possible right now by just"
 " building up the query, and removing its :class:`.Session` by calling "
 "``my_cached_query = query.with_session(None)``::"
-msgstr ""
+msgstr "上の\ &quot;ラムダ\&quot;アプローチは、より伝統的な\ &quot;パラメタリゼーション\&quot;アプローチのスーパーセットです。 ：class： `〜.query.Query`を一度構築した後、再利用のために辞書に格納しておくシンプルなシステムを作りたいとします。これは、クエリを構築して、 `` my_cached_query = query.with_session（None） `` ::"
 
 #: ../../orm/extensions/baked.rst:187
 #, python-format
@@ -212,7 +202,7 @@ msgid ""
 "additionally this brand new :class:`.Select` is sent off to the string "
 "compilation step every time, which for a simple case like the above is "
 "probably about 70% of the overhead."
-msgstr ""
+msgstr "上記のアプローチは、パフォーマンスのメリットを最小限に抑えます。 ：class： `〜.query.Query`を再利用することで、` `session.query（Model）` `コンストラクタ内のPythonの作業を保存するだけでなく、` `filter（Model.id == bindparam （ &#39;id&#39;）） ``を実行します。これは、Core式の構築だけでなく、meth： `.Query.filter`への送信をスキップします。しかし、アプローチは：meth： `.Query.all`が呼び出されるたびにfull：class：` .Select`オブジェクトを再生成します。さらに、この新しいnew：class： `.Select`が文字列コンパイルステップに送られます毎回、上記のような単純なケースではおそらくオーバーヘッドの約70％です。"
 
 #: ../../orm/extensions/baked.rst:198
 msgid ""
@@ -228,20 +218,20 @@ msgid ""
 "ourselves a method ``.bake()`` that pre-compiles the SQL for the query, "
 "producing a new object that can be invoked with minimal overhead. Our "
 "example becomes::"
-msgstr ""
+msgstr "追加のオーバーヘッドを減らすには、より特殊化されたロジック、選択オブジェクトの構築とSQLの構築をメモするための何らかの方法が必要です。この例はwikiの `BakedQuery <https://bitbucket.org/zzzeek/sqlalchemy/wiki/UsageRecipes/BakedQuery> `_、この機能の前身ですが、そのシステムではクエリの* construction *をキャッシュしていません。すべてのオーバーヘッドを削除するには、クエリの構築とSQLコンパイルの両方をキャッシュする必要があります。この方法でレシピを採用し、最小限のオーバーヘッドで呼び出せる新しいオブジェクトを生成するために、クエリのSQLをあらかじめコンパイルするメソッド `` .bake（） ``を作ったとしましょう。私たちの例は::"
 
 #: ../../orm/extensions/baked.rst:222
 msgid ""
 "Above, we've fixed the performance situation, but we still have this "
 "string cache key to deal with."
-msgstr ""
+msgstr "上では、パフォーマンス状況を修正しましたが、引き続きこの文字列キャッシュキーを処理しています。"
 
 #: ../../orm/extensions/baked.rst:225
 msgid ""
 "We can use the \"bakery\" approach to re-frame the above in a way that "
 "looks less unusual than the \"building up lambdas\" approach, and more "
 "like a simple improvement upon the simple \"reuse a query\" approach::"
-msgstr ""
+msgstr "私たちは\ &quot;ベーカリー\&quot;アプローチを使って上記の方法を &quot;ラムダ構築&quot;アプローチよりも珍しくないように再構築することができます。単純な\ &quot;再利用クエリ\アプローチ：："
 
 #: ../../orm/extensions/baked.rst:238
 #, python-format
@@ -253,7 +243,7 @@ msgid ""
 "caches 100% of the Python invocation work from the constructor of the "
 "query, to the filter call, to the production of the :class:`.Select` "
 "object, to the string compilation step."
-msgstr ""
+msgstr "上の例では、\ &quot;baked \&quot;システムを、シンプルな\ &quot;cache a query \&quot;システムと非常によく似た方法で使用しています。しかし、これはコード行を2行減らし、 &quot;my_key&quot;のキャッシュキーを作成する必要はなく、Python呼び出し作業の100％をキャッシュするカスタム\ &quot;bake \&quot;関数と同じ機能を含みますクエリのコンストラクタをフィルタ呼び出しに渡して、：class： `.Select`オブジェクトの生成を文字列のコンパイルステップに渡します。"
 
 #: ../../orm/extensions/baked.rst:246
 msgid ""
@@ -264,7 +254,7 @@ msgid ""
 " how we thought baked might work originally), we can build it from *any "
 "number* of functions.  Consider our naive example, if we needed to have "
 "an additional clause in our query on a conditional basis::"
-msgstr ""
+msgstr "上記から、もし &quot;lookupが問い合わせの構造に関して条件付きの決定をする必要があるなら、\&quot;何を\ &quot;baked \&quot;がその方法であるのかということが明らかになったらうれしいです。ちょうど1つの関数（元々は焼き上がったと思われる方法）から構築されたパラメータ化されたクエリの代わりに、*任意の数*の関数から構築することができます。条件付きでクエリーに追加の句を追加する必要がある場合は、わかりやすい例を考えてください::"
 
 #: ../../orm/extensions/baked.rst:273
 msgid ""
@@ -275,7 +265,7 @@ msgid ""
 "apparent that as the complexity of query building goes up, the task of "
 "caching these queries becomes burdensome very quickly.   We can convert "
 "the above example into a direct use of \"bakery\" as follows::"
-msgstr ""
+msgstr "私たちの\ &quot;シンプルな&quot;パラメータ化されたシステムは、\ &quot;include_frobnizzle \&quot;フラグが渡されたかどうかを考慮したキャッシュキーを生成する必要があります。クエリ構築の複雑さが増すにつれて、これらのクエリをキャッシュする作業は非常に迅速になるということは明らかです。上記の例を\ &quot;ベーカリー\&quot;を以下のように直接使用することができます::"
 
 #: ../../orm/extensions/baked.rst:299
 msgid ""
@@ -284,7 +274,7 @@ msgid ""
 "making sure we generate a cache key that accurately takes into account "
 "all of the structural modifications we've made; this is now handled "
 "automatically and without the chance of mistakes."
-msgstr ""
+msgstr "上記では、クエリー・オブジェクトだけでなく、SQLを生成するために必要なすべての作業をキャッシュしています。また、構造変更のすべてを正確に考慮したキャッシュキーを生成するようにする必要もなくなりました。これは自動的に処理され、間違いの可能性はありません。"
 
 #: ../../orm/extensions/baked.rst:305
 msgid ""
@@ -295,14 +285,14 @@ msgid ""
 ":meth:`.BakedQuery.with_criteria` and shorten them into operators, and "
 "encourage (though certainly not require!) using simple lambdas, only as a"
 " means to reduce verbosity::"
-msgstr ""
+msgstr "このコードサンプルは、単純な例よりも数行短く、キャッシュキーを処理する必要性を取り除き、いわゆる &quot;焼いた&quot;機能の膨大なパフォーマンス上の利点があります。しかし、まだ少し冗長です！したがって、私たちは：meth： `.BakedQuery.add_criteria`と：meth：` .BakedQuery.with_criteria`のようなメソッドを取り、それらを演算子に短くし、単純なラムダを使用して冗長性を減らす手段としてのみ推奨します::"
 
 #: ../../orm/extensions/baked.rst:325
 msgid ""
 "Where above, the approach is simpler to implement and much more similar "
 "in code flow to what a non-cached querying function would look like, "
 "hence making code easier to port."
-msgstr ""
+msgstr "上記の場合、アプローチは実装が簡単で、コードフローでは非キャッシュクエリ機能と似ているため、コードの移植が容易になります。"
 
 #: ../../orm/extensions/baked.rst:329
 msgid ""
@@ -312,19 +302,19 @@ msgid ""
 "and management,  removal of all redundant Python execution, and queries "
 "built up with conditionals needed to be addressed, leading to the final "
 "approach."
-msgstr ""
+msgstr "上記の説明は、本質的には、現在の「ベークド」アプローチに到達するために使用される設計プロセスの概要です。 \ &quot;通常の\&quot;アプローチから始めて、キャッシュキーの構築と管理、冗長なPythonのすべての実行の削除、および条件付きで構築されたクエリの追加の問題が解決する必要があり、最終的なアプローチにつながりました。"
 
 #: ../../orm/extensions/baked.rst:336
 msgid "Special Query Techniques"
-msgstr ""
+msgstr "特別なクエリのテクニック"
 
 #: ../../orm/extensions/baked.rst:338
 msgid "This section will describe some techniques for specific query situations."
-msgstr ""
+msgstr "このセクションでは、特定のクエリ状況に関するいくつかの手法について説明します。"
 
 #: ../../orm/extensions/baked.rst:343
 msgid "Using IN expressions"
-msgstr ""
+msgstr "IN式の使用"
 
 #: ../../orm/extensions/baked.rst:345
 msgid ""
@@ -336,19 +326,19 @@ msgid ""
 "rendered IN expression that is safe to be cached inside of baked query.  "
 "The actual list of elements is rendered at statement execution time, "
 "rather than at statement compilation time::"
-msgstr ""
+msgstr "SQLAlchemyの：meth： `.ColumnOperators.in_`メソッドは、メソッドに渡される項目のリストに基づいて、可変パラメータのセットを歴史的にレンダリングします。このリストの長さが異なる呼び出しで変更される可能性があるので、これは焼き付けられたクエリでは機能しません。この問題を解決するために、：paramref： `.bindparam.expanding`パラメータは、ベークされたクエリの中でキャッシュされるのが安全なラストレンダリングされたIN式をサポートしています。要素の実際のリストは、文のコンパイル時ではなく、文の実行時にレンダリングされます::"
 
 #: ../../orm/extensions/baked.rst:365
 msgid ":paramref:`.bindparam.expanding`"
-msgstr ""
+msgstr "：paramref： `.bindparam.expanding`"
 
 #: ../../orm/extensions/baked.rst:367
 msgid ":meth:`.ColumnOperators.in_`"
-msgstr ""
+msgstr "：meth： `.ColumnOperators.in_`"
 
 #: ../../orm/extensions/baked.rst:370
 msgid "Using Subqueries"
-msgstr ""
+msgstr "サブクエリの使用"
 
 #: ../../orm/extensions/baked.rst:372
 msgid ""
@@ -359,24 +349,24 @@ msgid ""
 "the :meth:`.BakedQuery.to_query` method.  This method is passed the "
 ":class:`.Session` or :class:`.Query` that is the argument to the lambda "
 "callable used to generate a particular step of the baked query::"
-msgstr ""
+msgstr "：class： `.Query`オブジェクトを使用する場合、class：` .Query`オブジェクトを使用して別のクラス内でサブクエリを生成する必要があることがよくあります。 ：class： `.Query`が現在焼き付けられている場合、：meth：` .BakedQuery.to_query`メソッドを使用して：class： `.Query`オブジェクトを取得するために暫定メソッドを使用することができます。このメソッドには：class： `.Session`または：class：` .Query`が渡されます。これは、ベークされたクエリの特定のステップを生成するために使用されるラムダ呼び出し可能関数への引数です::"
 
 #: ../../orm/extensions/baked.rst:399
 msgid "Disabling Baked Queries Session-wide"
-msgstr ""
+msgstr "セッション全体の焼き付けクエリの無効化"
 
 #: ../../orm/extensions/baked.rst:401
 msgid ""
 "The flag :paramref:`.Session.enable_baked_queries` may be set to False, "
 "causing all baked queries to not use the cache when used against that "
 ":class:`.Session`::"
-msgstr ""
+msgstr "フラグ：paramref： `.Session.enable_baked_queries`をFalseに設定すると、すべての焼き付けクエリがキャッシュを使用しなくなります。class：` .Session` ::"
 
 #: ../../orm/extensions/baked.rst:407
 msgid ""
 "Like all session flags, it is also accepted by factory objects like "
 ":class:`.sessionmaker` and methods like :meth:`.sessionmaker.configure`."
-msgstr ""
+msgstr "すべてのセッションフラグと同様に、class： `.sessionmaker`やメソッド：meth：` .sessionmaker.configure`のようなファクトリオブジェクトでも受け入れられます。"
 
 #: ../../orm/extensions/baked.rst:410
 msgid ""
@@ -387,11 +377,11 @@ msgid ""
 "defined baked queries or other baked query issues can turn the behavior "
 "off, in order to identify or eliminate baked queries as the cause of an "
 "issue."
-msgstr ""
+msgstr "このフラグの直接的な根拠は、関係ローダーや他のローダーが使用するクエリベーキングが望ましくない場合のメモリ使用を減らすことです。また、ユーザ定義のベークド・クエリやその他のベークド・クエリの問題からキャッシュ・キーの競合によって潜在的に問題を見ているアプリケーションが、ベークされた問合せを原因として特定または除去するために、この動作をオフにすることができる場合にも使用できます。問題。"
 
 #: ../../orm/extensions/baked.rst:420
 msgid "Lazy Loading Integration"
-msgstr ""
+msgstr "レイジーローディング統合"
 
 #: ../../orm/extensions/baked.rst:422
 msgid ""
@@ -400,17 +390,17 @@ msgid ""
 " lazy load conditions.   A small subset of \"lazy loads\" may not be "
 "cached; these involve query options in conjunction with ad-hoc "
 ":obj:`.aliased` structures that cannot produce a repeatable cache key."
-msgstr ""
+msgstr "ベークされたクエリシステムは、：func： `.relationship`によって使用されるSQLAlchemyの遅延ローダ機能に統合され、ほとんどの遅延ロード条件のクエリをキャッシュします。 \ &quot;lazy loads \&quot;の小さなサブセットはキャッシュされません。これには、繰り返し可能なキャッシュキーを生成できないad-hoc：obj： `.aliased`構造体と組み合わせたクエリオプションが含まれます。"
 
 #: ../../orm/extensions/baked.rst:429
 msgid ""
 "\"baked\" queries are now the foundation of the lazy-loader feature of "
 ":func:`.relationship`."
-msgstr ""
+msgstr "\ &quot;baked \&quot;クエリは、func： `.relationship`の遅延ロード機能の基礎となりました。"
 
 #: ../../orm/extensions/baked.rst:433
 msgid "Opting out with the bake_queries flag"
-msgstr ""
+msgstr "bake_queriesフラグでオプトアウトする"
 
 #: ../../orm/extensions/baked.rst:435
 msgid ""
@@ -421,70 +411,70 @@ msgid ""
 "all \"baked query\" use.   These flags can be useful to conserve memory, "
 "when memory conservation is more important than performance for a "
 "particular relationship or for the application overall."
-msgstr ""
+msgstr "：func： `.relationship`コンストラクトにはフラグ：paramref：` .relationship.bake_queries`が含まれています。これをFalseに設定すると、その関係でキャッシングクエリがオプトアウトされます。さらに、：paramref： `.Session.enable_baked_queries`の設定は、\&quot;焼いたクエリ\ &quot;の使用をすべて無効にするために使用できます。これらのフラグは、メモリーの節約が特定の関係やアプリケーション全体のパフォーマンスよりも重要な場合に、メモリーを節約するのに役立ちます。"
 
 #: ../../orm/extensions/baked.rst:444
 msgid "API Documentation"
-msgstr ""
+msgstr "APIドキュメント"
 
 #: of sqlalchemy.ext.baked.BakedQuery.bakery:1 sqlalchemy.ext.baked.bakery:1
 msgid "Construct a new bakery."
-msgstr ""
+msgstr "新しいベーカリーを作る。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.bakery sqlalchemy.ext.baked.bakery
 msgid "戻り値"
-msgstr ""
+msgstr "戻り値"
 
 #: of sqlalchemy.ext.baked.BakedQuery.bakery:3 sqlalchemy.ext.baked.bakery:3
 msgid "an instance of :class:`.Bakery`"
-msgstr ""
+msgstr "インスタンス：class： `.Bakery`"
 
 #: of sqlalchemy.ext.baked.BakedQuery:1
 msgid "A builder object for :class:`.query.Query` objects."
-msgstr ""
+msgstr "：class： `.query.Query`オブジェクト用のビルダーオブジェクト。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.add_criteria:1
 msgid "Add a criteria function to this :class:`.BakedQuery`."
-msgstr ""
+msgstr "criteria関数をclass： `.BakedQuery`に追加します。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.add_criteria:3
 msgid ""
 "This is equivalent to using the ``+=`` operator to modify a "
 ":class:`.BakedQuery` in-place."
-msgstr ""
+msgstr "これは、 `` + = ``演算子を使って：class： `.BakedQuery`をインプレースで変更するのと同じです。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.for_session:1
 msgid "Return a :class:`.Result` object for this :class:`.BakedQuery`."
-msgstr ""
+msgstr "this：class： `.BakedQuery`のために：class：` .Result`オブジェクトを返します。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.for_session:3
 msgid ""
 "This is equivalent to calling the :class:`.BakedQuery` as a Python "
 "callable, e.g. ``result = my_baked_query(session)``."
-msgstr ""
+msgstr "これは：class： `.BakedQuery`をPythonの呼び出し可能関数、例えば` `result = my_baked_query（session）` `と呼ぶのと同じです。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.spoil:1
 msgid "Cancel any query caching that will occur on this BakedQuery object."
-msgstr ""
+msgstr "このBakedQueryオブジェクトで発生するクエリキャッシングをキャンセルします。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.spoil:3
 msgid ""
 "The BakedQuery can continue to be used normally, however additional "
 "creational functions will not be cached; they will be called on every "
 "invocation."
-msgstr ""
+msgstr "BakedQueryは引き続き通常どおり使用できますが、追加の関数はキャッシュされません。彼らはすべての呼び出しで呼び出されます。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.spoil:7
 msgid ""
 "This is to support the case where a particular step in constructing a "
 "baked query disqualifies the query from being cacheable, such as a "
 "variant that relies upon some uncacheable value."
-msgstr ""
+msgstr "これは、ベーキングされたクエリを構築する際の特定のステップが、キャッシュ不可能な値に依存するバリアントなど、キャッシュ可能であることを不適格とするケースをサポートするためです。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.spoil
 #: sqlalchemy.ext.baked.BakedQuery.to_query
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.ext.baked.BakedQuery.spoil:11
 msgid ""
@@ -493,11 +483,11 @@ msgid ""
 ":class:`.BakedQuery` up until this point will be pulled from the cache."
 "   If True, then the entire :class:`.Query` object is built from scratch "
 "each time, with all creational functions being called on each invocation."
-msgstr ""
+msgstr "Falseの場合、これに追加された関数だけ：class： `.BakedQuery`オブジェクトがスポイルステップの後にキャッシュされません。この時点まで：class： `.BakedQuery`の状態がキャッシュから引き出されます。 Trueの場合は、class： `.Query`オブジェクト全体が最初から構築され、各呼び出しですべての作成関数が呼び出されます。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.to_query:1
 msgid "Return the :class:`.Query` object for use as a subquery."
-msgstr ""
+msgstr "サブクエリとして使用する：class： `.Query`オブジェクトを返します。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.to_query:3
 msgid ""
@@ -505,130 +495,130 @@ msgid ""
 "generate a step of an enclosing :class:`.BakedQuery`.   The parameter "
 "should normally be the :class:`.Query` object that is passed to the "
 "lambda::"
-msgstr ""
+msgstr "このメソッドは、囲み：class： `.BakedQuery`のステップを生成するために使用されているラムダ呼び出し可能関数内で使用する必要があります。このパラメータは、通常は：class： `.Query`オブジェクトでなければなりません。これはlambda ::"
 
 #: of sqlalchemy.ext.baked.BakedQuery.to_query:16
 msgid ""
 "In the case where the subquery is used in the first callable against a "
 ":class:`.Session`, the :class:`.Session` is also accepted::"
-msgstr ""
+msgstr "サブクエリが：class： `.Session`に対して最初の呼び出しで使用される場合、：class：` .Session`も受け入れられます::"
 
 #: of sqlalchemy.ext.baked.BakedQuery.to_query:27
 msgid ""
 "a :class:`.Query` object or a class :class:`.Session` object, that is "
 "assumed to be within the context of an enclosing :class:`.BakedQuery` "
 "callable.   .. versionadded:: 1.3"
-msgstr ""
+msgstr "a：class： `.Query`オブジェクトまたはclass：class：` .Session`オブジェクトであり、これはenclosing：class： `.BakedQuery`呼び出しのコンテキスト内にあるとみなされます。 .. versionadded :: 1.3"
 
 #: of sqlalchemy.ext.baked.BakedQuery.to_query:27
 msgid ""
 "a :class:`.Query` object or a class :class:`.Session` object, that is "
 "assumed to be within the context of an enclosing :class:`.BakedQuery` "
 "callable."
-msgstr ""
+msgstr "a：class： `.Query`オブジェクトまたはclass：class：` .Session`オブジェクトであり、これはenclosing：class： `.BakedQuery`呼び出しのコンテキスト内にあるとみなされます。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.with_criteria:1
 msgid "Add a criteria function to a :class:`.BakedQuery` cloned from this one."
-msgstr ""
+msgstr "このクラスからクローン化された：class： `.BakedQuery`にcriteria関数を追加します。"
 
 #: of sqlalchemy.ext.baked.BakedQuery.with_criteria:3
 msgid ""
 "This is equivalent to using the ``+`` operator to produce a new "
 ":class:`.BakedQuery` with modifications."
-msgstr ""
+msgstr "これは `` + ``演算子を使って新しい：class： `.BakedQuery`を生成するのと同じです。"
 
 #: of sqlalchemy.ext.baked.Bakery:1
 msgid "Callable which returns a :class:`.BakedQuery`."
-msgstr ""
+msgstr "Callableは：class： `.BakedQuery`を返します。"
 
 #: of sqlalchemy.ext.baked.Bakery:3
 msgid ""
 "This object is returned by the class method :meth:`.BakedQuery.bakery`.  "
 "It exists as an object so that the \"cache\" can be easily inspected."
-msgstr ""
+msgstr "このオブジェクトは、メソッドmeth： `.BakedQuery.bakery`によって返されます。 \ &quot;キャッシュ\&quot;を容易に検査できるようにオブジェクトとして存在します。"
 
 #: of sqlalchemy.ext.baked.Result:1
 msgid "Invokes a :class:`.BakedQuery` against a :class:`.Session`."
-msgstr ""
+msgstr "：class： `.Session`に対して：class：` .BakedQuery`を呼び出します。"
 
 #: of sqlalchemy.ext.baked.Result:3
 msgid ""
 "The :class:`.Result` object is where the actual :class:`.query.Query` "
 "object gets created, or retrieved from the cache, against a target "
 ":class:`.Session`, and is then invoked for results."
-msgstr ""
+msgstr "：class： `.Result`オブジェクトは、実際の：class：` .query.Query`オブジェクトがtarget：class： `.Session`に対して作成されるか、キャッシュから取得され、結果のために呼び出されます。"
 
 #: of sqlalchemy.ext.baked.Result.all:1
 msgid "Return all rows."
-msgstr ""
+msgstr "すべての行を返します。"
 
 #: of sqlalchemy.ext.baked.Result.all:3
 msgid "Equivalent to :meth:`.Query.all`."
-msgstr ""
+msgstr "：meth： `.Query.all`と等価です。"
 
 #: of sqlalchemy.ext.baked.Result.count:1
 msgid "return the 'count'."
-msgstr ""
+msgstr "&#39;カウント&#39;を返します。"
 
 #: of sqlalchemy.ext.baked.Result.count:3
 msgid "Equivalent to :meth:`.Query.count`."
-msgstr ""
+msgstr "：meth： `.Query.count`と等価です。"
 
 #: of sqlalchemy.ext.baked.Result.count:5
 msgid ""
 "Note this uses a subquery to ensure an accurate count regardless of the "
 "structure of the original statement."
-msgstr ""
+msgstr "これは、サブクエリを使用して元の文の構造に関係なく正確なカウントを保証することに注意してください。"
 
 #: of sqlalchemy.ext.baked.Result.first:1
 msgid "Return the first row."
-msgstr ""
+msgstr "最初の行を返します。"
 
 #: of sqlalchemy.ext.baked.Result.first:3
 msgid "Equivalent to :meth:`.Query.first`."
-msgstr ""
+msgstr "：meth： `.Query.first`と等価です。"
 
 #: of sqlalchemy.ext.baked.Result.get:1
 msgid "Retrieve an object based on identity."
-msgstr ""
+msgstr "アイデンティティに基づいてオブジェクトを取得します。"
 
 #: of sqlalchemy.ext.baked.Result.get:3
 msgid "Equivalent to :meth:`.Query.get`."
-msgstr ""
+msgstr "：meth： `.Query.get`と等価です。"
 
 #: of sqlalchemy.ext.baked.Result.one:1
 msgid "Return exactly one result or raise an exception."
-msgstr ""
+msgstr "結果を1つ返すか、例外を発生させます。"
 
 #: of sqlalchemy.ext.baked.Result.one:3
 msgid "Equivalent to :meth:`.Query.one`."
-msgstr ""
+msgstr "：meth： `.Query.one`と等価です。"
 
 #: of sqlalchemy.ext.baked.Result.one_or_none:1
 msgid "Return one or zero results, or raise an exception for multiple rows."
-msgstr ""
+msgstr "1つまたはゼロの結果を返すか、複数の行の例外を発生させます。"
 
 #: of sqlalchemy.ext.baked.Result.one_or_none:4
 msgid "Equivalent to :meth:`.Query.one_or_none`."
-msgstr ""
+msgstr "：meth： `.Query.one_or_none`に相当します。"
 
 #: of sqlalchemy.ext.baked.Result.params:1
 msgid "Specify parameters to be replaced into the string SQL statement."
-msgstr ""
+msgstr "文字列SQLステートメントに置き換えるパラメーターを指定します。"
 
 #: of sqlalchemy.ext.baked.Result.scalar:1
 msgid ""
 "Return the first element of the first result or None if no rows present."
 "  If multiple rows are returned, raises MultipleResultsFound."
-msgstr ""
+msgstr "最初の結果の最初の要素を返します。存在しない場合はNoneを返します。複数の行が返された場合、MultipleResultsFoundが発生します。"
 
 #: of sqlalchemy.ext.baked.Result.scalar:5
 msgid "Equivalent to :meth:`.Query.scalar`."
-msgstr ""
+msgstr "：meth： `.Query.scalar`と等価です。"
 
 #: of sqlalchemy.ext.baked.Result.with_post_criteria:1
 msgid "Add a criteria function that will be applied post-cache."
-msgstr ""
+msgstr "ポストキャッシュに適用される条件関数を追加します。"
 
 #: of sqlalchemy.ext.baked.Result.with_post_criteria:3
 msgid ""
@@ -637,7 +627,7 @@ msgid ""
 "alter the query in ways that **do not affect the SQL output**, such as "
 "execution options and shard identifiers (when using a shard-enabled query"
 " object)"
-msgstr ""
+msgstr "これは：class： `.Query`オブジェクトがキャッシュから検索された後に実行される関数を追加します。ここの関数は、実行オプションやシャード識別子（シャード対応クエリオブジェクトを使用している場合）など、SQL出力**に影響を与えない方法でクエリを変更するために使用できます**"
 
 #: of sqlalchemy.ext.baked.Result.with_post_criteria:9
 msgid ""
@@ -646,5 +636,5 @@ msgid ""
 "been retrieved from the cache.   Any operations here which intend to "
 "modify the SQL should ensure that :meth:`.BakedQuery.spoil` was called "
 "first."
-msgstr ""
+msgstr "：meth： `.Result.with_post_criteria`関数は、：class：` .Query`オブジェクト**に適用されます** **クエリのSQL文オブジェクトがキャッシュから取得された後。ここでSQLを変更しようとする操作は、：meth： `.BakedQuery.spoil`が最初に呼び出されたことを確認する必要があります。"
 

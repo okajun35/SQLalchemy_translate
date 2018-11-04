@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/session_basics.rst:3
 msgid "Session Basics"
-msgstr ""
+msgstr "セッションの基礎"
 
 #: ../../orm/session_basics.rst:6
 msgid "What does the Session do ?"
-msgstr ""
+msgstr "セッションは何をしていますか？"
 
 #: ../../orm/session_basics.rst:8
 msgid ""
@@ -38,7 +28,7 @@ msgid ""
 "<http://martinfowler.com/eaaCatalog/identityMap.html>`_ - a data "
 "structure that maintains unique copies of each object, where \"unique\" "
 "means \"only one object with a particular primary key\"."
-msgstr ""
+msgstr "最も一般的な意味で、：class： `〜.Session`は、データベースとのすべての会話を確立し、あなたがそのライフスパンの間にロードまたは関連づけたすべてのオブジェクトの\&quot;保持ゾーン\ &quot;を表します。 ：class： `〜.Session`オブジェクトの現在のデータベース接続を使用してクエリをデータベースに送信し、result行を：classに格納されたオブジェクトに取り込むa：class：` .Query`オブジェクトを取得するためのエントリポイントを提供します： `.Session`、`アイデンティティマップ<http://martinfowler.com/eaaCatalog/identityMap.html> `_  - 各オブジェクトの一意のコピーを保持するデータ構造。\&quot;ユニーク\ &quot;は\&quot;特定のプライマリキーを持つ1つのオブジェクト\ &quot;を意味します。"
 
 #: ../../orm/session_basics.rst:19
 msgid ""
@@ -49,7 +39,7 @@ msgid ""
 "objects being operated upon. This connection represents an ongoing "
 "transaction, which remains in effect until the :class:`.Session` is "
 "instructed to commit or roll back its pending state."
-msgstr ""
+msgstr "：class： `.Session`は基本的にステートレスな形式で始まります。クエリが発行されるか、他のオブジェクトがそれと共に永続化されると、：class： `.Session`自体またはmapped：class：` .Tableのいずれかに関連付けられた：class： `.Engine`から接続リソースを要求します。オブジェクトが操作されます。この接続は進行中のトランザクションを表し、：class： `.Session`が保留状態をコミットまたはロールバックするように指示されるまで有効です。"
 
 #: ../../orm/session_basics.rst:27
 msgid ""
@@ -58,7 +48,7 @@ msgid ""
 " committed, it **flushes** all pending changes to the database. This is "
 "known as the `Unit of Work "
 "<http://martinfowler.com/eaaCatalog/unitOfWork.html>`_ pattern."
-msgstr ""
+msgstr "：class： `.Session`によって管理されているオブジェクトに対するすべての変更が追跡されます。データベースが再度照会される前、または現在のトランザクションがコミットされる前に**、保留中のすべての変更がデータベースにフラッシュされます。これは `作業単位（Unit of Work） <http://martinfowler.com/eaaCatalog/unitOfWork.html> `_パターン。"
 
 #: ../../orm/session_basics.rst:32
 msgid ""
@@ -72,11 +62,11 @@ msgid ""
 "objects with another :class:`.Session` when you want to work with them "
 "again, so that they can resume their normal task of representing database"
 " state."
-msgstr ""
+msgstr "：class： `.Session`を使用する場合、関連するオブジェクトは：class：` .Session`が保持するトランザクションの**プロキシオブジェクト**であることに注意することが重要です。同期を維持するためにオブジェクトがデータベースに再アクセスする原因となるイベント。 ：class： `.Session`からオブジェクトを切り離して使用することは可能ですが、このプラクティスには注意が必要です。通常、デタッチされたオブジェクトを別のクラス： `.Session`に再度関連付けることで、データベースの状態を表す通常のタスクを再開できるようにします。"
 
 #: ../../orm/session_basics.rst:45
 msgid "Getting a Session"
-msgstr ""
+msgstr "セッションの取得"
 
 #: ../../orm/session_basics.rst:47
 msgid ""
@@ -86,11 +76,11 @@ msgid ""
 "top level :class:`.Session` configuration which can then be used "
 "throughout an application without the need to repeat the configurational "
 "arguments."
-msgstr ""
+msgstr "：class： `.Session`は、直接インスタンス化できる通常のPythonクラスです。しかし、セッションがどのように設定され取得されるかを標準化するために、：class： `.sessionmaker`クラスは、トップレベルを作成するために通常使用されます：class：` .Session`設定。構成的な議論。"
 
 #: ../../orm/session_basics.rst:54
 msgid "The usage of :class:`.sessionmaker` is illustrated below:"
-msgstr ""
+msgstr "：class： `.sessionmaker`の使い方を以下に示します："
 
 #: ../../orm/session_basics.rst:76
 msgid ""
@@ -100,7 +90,7 @@ msgid ""
 "given the factory.  In this case, as is typical, we've configured the "
 "factory to specify a particular :class:`.Engine` for connection "
 "resources."
-msgstr ""
+msgstr "上の：class： `.sessionmaker`呼び出しは、私たちのために` `Session``という名前に割り当てるファクトリを作成します。このファクトリが呼び出されると、ファクトリを与えたコンフィグレーション引数を使用してnew：class： `.Session`オブジェクトを作成します。この場合、典型的には、接続リソースに対して特定の：class： `.Engine`を指定するようにファクトリを構成しました。"
 
 #: ../../orm/session_basics.rst:83
 msgid ""
@@ -108,7 +98,7 @@ msgid ""
 ":class:`.Engine`, so that each :class:`.Session` generated will use this "
 ":class:`.Engine` to acquire connection resources.   This association can "
 "be set up as in the example above, using the ``bind`` argument."
-msgstr ""
+msgstr "典型的なセットアップでは、：class： `.sessionmaker`を：class：` .Engine`に関連付けます。これにより、それぞれ：class： `.Session`で生成される：class：` .Engine`が接続リソースを取得します。この関連付けは、上記の例のように `` bind``引数を使って設定できます。"
 
 #: ../../orm/session_basics.rst:88
 msgid ""
@@ -117,7 +107,7 @@ msgid ""
 "application as the source of new :class:`.Session` instances, keeping the"
 " configuration for how :class:`.Session` objects are constructed in one "
 "place."
-msgstr ""
+msgstr "アプリケーションを書くときは、：class： `.sessionmaker`ファクトリをグローバルレベルに置きます。このファクトリは、アプリケーションの残りの部分でnew：class： `.Session`インスタンスのソースとして使用することができ、how：class：` .Session`オブジェクトの設定は1つの場所に構築されます。"
 
 #: ../../orm/session_basics.rst:95
 msgid ""
@@ -125,11 +115,11 @@ msgid ""
 "other helpers, which are passed a user-defined :class:`.sessionmaker` "
 "that is then maintained by the helper.  Some of these helpers are "
 "discussed in the section :ref:`session_faq_whentocreate`."
-msgstr ""
+msgstr "：class： `.sessionmaker`ファクトリは、他のヘルパーと一緒に使うこともできます。このヘルパーには、ユーザ定義の：class：` .sessionmaker`が渡され、ヘルパーによって維持されます。これらのヘルパーのいくつかは、ref： `session_faq_whentocreate`セクションで議論されています。"
 
 #: ../../orm/session_basics.rst:101
 msgid "Adding Additional Configuration to an Existing sessionmaker()"
-msgstr ""
+msgstr "既存のsessionmaker（）に追加の設定を追加する"
 
 #: ../../orm/session_basics.rst:103
 msgid ""
@@ -141,11 +131,11 @@ msgid ""
 ":meth:`.sessionmaker.configure` method, which will place additional "
 "configuration directives into an existing :class:`.sessionmaker` that "
 "will take place when the construct is invoked::"
-msgstr ""
+msgstr "一般的なシナリオは、：class： `.sessionmaker`がモジュールのインポート時に呼び出されるところですが、：class：` .sessionmaker`に関連付けられるclass： `.Engine`インスタンスがまだ生成されていません進んだ。このuseの場合、：class： `.sessionmaker`構造体は：meth：` .sessionmaker.configure`メソッドを提供します。これは追加の設定指令を既存の：class： `.sessionmaker`に置きます。これは、呼び出される::"
 
 #: ../../orm/session_basics.rst:128
 msgid "Creating Ad-Hoc Session Objects with Alternate Arguments"
-msgstr ""
+msgstr "代替引数を使用したAd-Hocセッションオブジェクトの作成"
 
 #: ../../orm/session_basics.rst:130
 msgid ""
@@ -160,7 +150,7 @@ msgid ""
 "whatever configurations have already been placed, such as below, where a "
 "new :class:`.Session` is constructed against a specific "
 ":class:`.Connection`::"
-msgstr ""
+msgstr "アプリケーションが、アプリケーション全体で通常使用されているものとは異なる特殊な引数を持つ新しい：class： `.Session`を作成する必要があるユースケースについては、：class：` .Session`などの代替ソースにバインドします。 `` .sessionmaker`ファクトリの：meth：.sessionmaker`ファクトリに渡すことができます。 ： `.sessionmaker .__ call__`メソッド。これらの引数は、以下のように既に配置されている設定を上書きします：new：class： `.Session`が特定のクラスに対して構築されます：class：` .Connection` ::"
 
 #: ../../orm/session_basics.rst:150
 msgid ""
@@ -168,11 +158,11 @@ msgid ""
 "specific :class:`.Connection` is that of a test fixture that maintains an"
 " external transaction - see :ref:`session_external_transaction` for an "
 "example of this."
-msgstr ""
+msgstr "a：class： `.Session`と特定の：class：` .Connection`の関連付けの典型的な根拠は、外部トランザクションを維持するテストフィクスチャのものです。この例は：ref： `session_external_transaction`を参照してください。"
 
 #: ../../orm/session_basics.rst:158
 msgid "Session Frequently Asked Questions"
-msgstr ""
+msgstr "セッションに関するよくある質問"
 
 #: ../../orm/session_basics.rst:160
 msgid ""
@@ -180,11 +170,11 @@ msgid ""
 "section presents a mini-FAQ (note that we have also a :doc:`real FAQ "
 "</faq/index>`) of the most basic issues one is presented with when using "
 "a :class:`.Session`."
-msgstr ""
+msgstr "この時点で、多くのユーザーが既にセッションに関する質問をしています。このセクションでは、ミニFAQを紹介しています（注：doc： `本当のFAQ </faq/index> `）：class：` .Session`を使うときに表示される最も基本的な問題の ``）です。"
 
 #: ../../orm/session_basics.rst:165
 msgid "When do I make a :class:`.sessionmaker`?"
-msgstr ""
+msgstr "いつ私は：class： `.sessionmaker`を作るのですか？"
 
 #: ../../orm/session_basics.rst:167
 msgid ""
@@ -195,7 +185,7 @@ msgid ""
 "that point on your other modules say \"from mypackage import Session\". "
 "That way, everyone else just uses :class:`.Session()`, and the "
 "configuration of that session is controlled by that central point."
-msgstr ""
+msgstr "アプリケーションのグローバルスコープのどこかで、たったの1回です。これは、アプリケーションの構成の一部として検討する必要があります。あなたのアプリケーションがパッケージ内に3つの.pyファイルを持っている場合、たとえば：class： `.sessionmaker`行を` `__init __。py``ファイルに置くことができます。あなたの他のモジュールのその時点から\ &quot;from mypackage import Session \&quot;と言います。そうすれば、誰もが：class： `。Session（）`を使い、そのセッションの設定はその中心点によって制御されます。"
 
 #: ../../orm/session_basics.rst:175
 msgid ""
@@ -203,7 +193,7 @@ msgid ""
 "database it's going to be connecting to, you can bind the "
 ":class:`.Session` at the \"class\" level to the engine later on, using "
 ":meth:`.sessionmaker.configure`."
-msgstr ""
+msgstr "あなたのアプリケーションが起動し、インポートを行いますが、どのデータベースに接続しようとしているのかわからない場合は、：class： `.Session`を後でエンジンにバインドすることができます：meth ： `.sessionmaker.configure`。"
 
 #: ../../orm/session_basics.rst:180
 msgid ""
@@ -213,13 +203,13 @@ msgid ""
 "In reality, the :class:`.sessionmaker` would be somewhere at the module "
 "level.   The calls to instantiate :class:`.Session` would then be placed "
 "at the point in the application where database conversations begin."
-msgstr ""
+msgstr "このセクションの例では、class： `.Sessionmaker`が実際に呼び出される行のすぐ上に作成されることを頻繁に示します：class：` .Session`。しかし、それは単なる例のためです！実際には：class： `.sessionmaker`はモジュールレベルのどこかにあります。 instantiate：class： `.Session`への呼び出しは、データベース会話が始まるアプリケーション内の場所に置かれます。"
 
 #: ../../orm/session_basics.rst:191
 msgid ""
 "When do I construct a :class:`.Session`, when do I commit it, and when do"
 " I close it?"
-msgstr ""
+msgstr "いつ：class： `.Session`を構築すればいいですか？いつコミットしますか？いつ閉じるのですか？"
 
 #: ../../orm/session_basics.rst:195
 msgid ""
@@ -227,20 +217,20 @@ msgid ""
 "external** from functions and objects that access and/or manipulate "
 "database data.  This will greatly help with achieving a predictable and "
 "consistent transactional scope."
-msgstr ""
+msgstr "原則として、セッション**のライフサイクルは、データベースデータにアクセスおよび/または操作する関数およびオブジェクトから分離し、外部**にしてください。これは、予測可能で一貫性のあるトランザクションスコープの達成に大きく役立ちます。"
 
 #: ../../orm/session_basics.rst:200
 msgid ""
 "Make sure you have a clear notion of where transactions begin and end, "
 "and keep transactions **short**, meaning, they end at the series of a "
 "sequence of operations, instead of being held open indefinitely."
-msgstr ""
+msgstr "トランザクションの開始と終了の明確な概念があることを確認し、トランザクション**を短く**維持します。つまり、無期限に開かれるのではなく、一連の一連の操作で終了します。"
 
 #: ../../orm/session_basics.rst:205
 msgid ""
 "A :class:`.Session` is typically constructed at the beginning of a "
 "logical operation where database access is potentially anticipated."
-msgstr ""
+msgstr "A：class： `.Session`は通常、データベースアクセスが潜在的に予想される論理操作の開始時に構築されます。"
 
 #: ../../orm/session_basics.rst:208
 msgid ""
@@ -254,7 +244,7 @@ msgid ""
 "the :class:`.Session` is capable of having a lifespan across many "
 "transactions, though only one at a time.   We refer to these two concepts"
 " as **transaction scope** and **session scope**."
-msgstr ""
+msgstr "：class： `.Session`は、データベースとの会話に使用されるたびに、通信を開始するとすぐにデータベーストランザクションを開始します。 `` autocommit``フラグが推奨デフォルトの `` False``になっていると仮定すると、このトランザクションは：class： `.Session`がロールバック、コミット、クローズされるまで実行され続けます。 ：class： `.Session`は前回のトランザクションが終了した後に再び使用されると新しいトランザクションを開始します。このことから、：class： `.Session`は一度に1つのみではあるが、多くのトランザクションで寿命を持つことができます。これらの2つの概念を**トランザクションスコープ**および**セッションスコープ**と呼びます。"
 
 #: ../../orm/session_basics.rst:219
 msgid ""
@@ -264,7 +254,7 @@ msgid ""
 "scopes, for example should a single :class:`.Session` instance be local "
 "to the execution flow within a function or method, should it be a global "
 "object used by the entire application, or somewhere in between these two."
-msgstr ""
+msgstr "SQLAlchemy ORMは、スコープの開始時と終了時だけでなく、これらのスコープの広がりも含めて、アプリケーションにこれら2つのスコープを設定するようにSQLAlchemy ORMが奨励しています。class： `.Session `インスタンスは、アプリケーション全体またはその2つの間のどこかで使用されるグローバルオブジェクトでなければ、関数またはメソッド内の実行フローに対してローカルでなければなりません。"
 
 #: ../../orm/session_basics.rst:227
 msgid ""
@@ -275,14 +265,14 @@ msgid ""
 "periodically, keeping in-memory state in sync with what's known to be "
 "present in a local transaction. This pattern is only effective when "
 "meaningful transaction scopes are in place."
-msgstr ""
+msgstr "このスコープを決定するために開発者に課される負担は、SQLAlchemy ORMがデータベースの使用方法について強い意見を持っている分野の1つです。 ：term： `作業単位（unit of work） &#39;パターンは、時間の経過と共に変化を累積し、定期的にそれらをフラッシュして、メモリ内の状態をローカルトランザクションに存在するものと同期して保持するものです。このパターンは、意味のあるトランザクションスコープが存在する場合にのみ有効です。"
 
 #: ../../orm/session_basics.rst:235
 msgid ""
 "It's usually not very hard to determine the best points at which to begin"
 " and end the scope of a :class:`.Session`, though the wide variety of "
 "application architectures possible can introduce challenging situations."
-msgstr ""
+msgstr "クラス： `.Session`のスコープを開始したり終了したりする最良のポイントを決定することは、通常困難ではありませんが、アプリケーションアーキテクチャの幅広い可能性は、困難な状況を招く可能性があります。"
 
 #: ../../orm/session_basics.rst:240
 msgid ""
@@ -290,14 +280,14 @@ msgid ""
 "the transaction ends, meaning the transaction and session scopes are the "
 "same.  This is a great choice to start out with as it removes the need to"
 " consider session scope as separate from transaction scope."
-msgstr ""
+msgstr "一般的な選択は、トランザクションが終了すると同時に：class： `.Session`を破棄することです。これは、トランザクションとセッションのスコープが同じであることを意味します。これは、セッションスコープをトランザクションスコープとは別のものとして考慮する必要性を取り除くので、まず始めにすばらしい選択です。"
 
 #: ../../orm/session_basics.rst:246
 msgid ""
 "While there's no one-size-fits-all recommendation for how transaction "
 "scope should be determined, there are common patterns.   Especially if "
 "one is writing a web application, the choice is pretty much established."
-msgstr ""
+msgstr "トランザクションスコープをどのように決定すべきかについてのすべての推奨事項はありませんが、一般的なパターンがあります。特にWebアプリケーションを作成している場合、その選択肢はかなり確立されています。"
 
 #: ../../orm/session_basics.rst:250
 msgid ""
@@ -320,7 +310,7 @@ msgid ""
 "pattern, only committing for those requests where one is warranted, but "
 "still always tearing down the :class:`.Session` unconditionally at the "
 "end."
-msgstr ""
+msgstr "このようなアプリケーションはすでに単一の一貫したスコープの周りに構築されているため、Webアプリケーションは最も簡単なケースです。これは、ブラウザからの着信要求を表す**要求**、応答を作成するためのその要求の処理、および最終的にその応答をクライアントに送り返します。 ：class： `.Session`でWebアプリケーションを統合することは：class：` .Session`のスコープをリクエストのスコープにリンクする簡単な作業です。 ：class： `.Session`はリクエストの開始時に、または：term：` lazy initialization`パターンを使用して確立することができます。アプリケーションロジックが現在の：class： `.Session`に実際の要求オブジェクトがどのようにアクセスされるかに関連した方法でアクセスすることができるシステムがある場所で、リクエストが次に進みます。要求が終了すると、：class： `.Session`も通常、Webフレームワークによって提供されるイベントフックを使用して取り除かれます。 ：class： `.Session`によって使用されるトランザクションは、この時点でコミットされてもよいし、アプリケーションが明示的なコミットパターンを選択して、保証されている要求に対してのみコミットすることもできますが、 ：最後に無条件に `.Session`を実行します。"
 
 #: ../../orm/session_basics.rst:269
 msgid ""
@@ -332,7 +322,7 @@ msgid ""
 "<http://pypi.python.org/pypi/zope.sqlalchemy>`_, typically used with the "
 "Pyramid framework. SQLAlchemy recommends that these products be used as "
 "available."
-msgstr ""
+msgstr "いくつかのWebフレームワークには：class： `.Session`の長さとWebリクエストの長さを調整するためのインフラストラクチャが含まれています。これには、 `Flask-SQLAlchemy <http://flask-sqlalchemy.pocoo.org> FlaskのWebフレームワークと併用するための `_、Zope-SQLAlchemy <http://pypi.python.org/pypi/zope.sqlalchemy> `_、通常はPyramidフレームワークで使用されます。 SQLAlchemyは、これらの製品を使用可能な状態で使用することをお勧めします。"
 
 #: ../../orm/session_basics.rst:277
 msgid ""
@@ -342,7 +332,7 @@ msgid ""
 ":ref:`unitofwork_contextual`.   It provides both a quick way to associate"
 " a :class:`.Session` with the current thread, as well as patterns to "
 "associate :class:`.Session` objects with other kinds of scopes."
-msgstr ""
+msgstr "統合ライブラリが提供されていないか不十分な状況では、SQLAlchemyには、class： `.scoped_session`という独自の\&quot;ヘルパー\ &quot;クラスが含まれています。このオブジェクトの使い方に関するチュートリアルは：ref： `unitofwork_contextual`です。 ：class： `.Session`を現在のスレッドと関連付ける素早い方法と、class：` .Session`オブジェクトを他の種類のスコープと関連付けるパターンの両方を提供します。"
 
 #: ../../orm/session_basics.rst:285
 msgid ""
@@ -352,7 +342,7 @@ msgid ""
 "\"operations\", points at which a particular thread begins to perform a "
 "series of operations for some period of time, which can be committed at "
 "the end.   Some examples:"
-msgstr ""
+msgstr "前にも述べたように、Web以外のアプリケーションでは、アプリケーション自体にアーキテクチャのパターンが1つしかないため、明確なパターンはありません。最善の戦略は、特定のスレッドが一連の操作を一定期間実行し始め、最後にコミットできるポイントである「操作」を画定しようとすることです。いくつかの例："
 
 #: ../../orm/session_basics.rst:292
 msgid ""
@@ -360,14 +350,14 @@ msgid ""
 ":class:`.Session` local to each child process, work with that "
 ":class:`.Session` through the life of the \"job\" that the fork is "
 "handling, then tear it down when the job is completed."
-msgstr ""
+msgstr "子フォークを起動するバックグラウンドデーモンは、各子プロセスに対してローカルな：class： `.Session`を作成し、フォークが存在する\&quot;仕事\ &quot;の人生を通してclass：` .Session`を使って作業したいでしょう。その後、ジョブが完了したときにそれを引き裂きます。"
 
 #: ../../orm/session_basics.rst:297
 msgid ""
 "For a command-line script, the application would create a single, global "
 ":class:`.Session` that is established when the program begins to do its "
 "work, and commits it right as the program is completing its task."
-msgstr ""
+msgstr "コマンドラインスクリプトの場合、アプリケーションは、プログラムが作業を開始するときに確立される単一のグローバル：クラス： `.Session`を作成し、プログラムがそのタスクを完了するとすぐにコミットします。"
 
 #: ../../orm/session_basics.rst:301
 msgid ""
@@ -376,7 +366,7 @@ msgid ""
 " such as a button push.  Or, the scope may correspond to explicit user "
 "interaction, such as the user \"opening\" a series of records, then "
 "\"saving\" them."
-msgstr ""
+msgstr "GUIインタフェース駆動アプリケーションの場合、：class： `.Session`のスコープは、ボタンプッシュなどのユーザー生成イベントの範囲内にあるのが最善です。または、スコープは、ユーザーが一連のレコードを開き &quot;保存する&quot;などの明示的なユーザー対話に対応することができます。"
 
 #: ../../orm/session_basics.rst:306
 msgid ""
@@ -384,17 +374,17 @@ msgid ""
 "session *externally* to functions that deal with specific data.  This is "
 "a fundamental separation of concerns which keeps data-specific operations"
 " agnostic of the context in which they access and manipulate that data."
-msgstr ""
+msgstr "原則として、アプリケーションは特定のデータを扱う関数に対してセッションのライフサイクルを外部から管理する必要があります。これは、データに固有の操作を、データにアクセスして操作するコンテキストには無関係に保つ懸念の基本的な分離です。"
 
 #: ../../orm/session_basics.rst:311
 msgid "E.g. **don't do this**::"
-msgstr ""
+msgstr "例：**これをしない** ::"
 
 #: ../../orm/session_basics.rst:339
 msgid ""
 "Keep the lifecycle of the session (and usually the transaction) "
 "**separate and external**::"
-msgstr ""
+msgstr "セッション（通常はトランザクション）のライフサイクルを**分離して外部に維持**："
 
 #: ../../orm/session_basics.rst:365
 msgid ""
@@ -404,11 +394,11 @@ msgid ""
 "doing its work.   For example, we can further separate concerns using a "
 "`context manager <http://docs.python.org/3/library/co "
 "ntextlib.html#contextlib.contextmanager>`_::"
-msgstr ""
+msgstr "より包括的なアプリケーションに推奨される最も包括的なアプローチは、セッション、トランザクション、および例外管理の詳細を、その作業を行うプログラムの詳細からできるだけ遠ざけようとします。例えば、コンテキストマネージャを使用して懸念をさらに分離することができます<http://docs.python.org/3/library/co ntextlib.html#contextlib.contextmanager> `_ ::"
 
 #: ../../orm/session_basics.rst:397
 msgid "Is the Session a cache?"
-msgstr ""
+msgstr "セッションはキャッシュですか？"
 
 #: ../../orm/session_basics.rst:399
 msgid ""
@@ -422,14 +412,14 @@ msgid ""
 "look in the local identity map and see that the object is already there. "
 "It's only when you say ``query.get({some primary key})`` that the "
 ":class:`~sqlalchemy.orm.session.Session` doesn't have to issue a query."
-msgstr ""
+msgstr "Yeee ...いいえ。これは：term： `identity map`パターンを実装し、主キーにキーを設定したオブジェクトを格納するという点で、キャッシュとして多少使用されています。ただし、どのような種類のクエリキャッシングも行いません。これは、 `` session.query（Foo）.filter_by（name = &#39;bar&#39;） ``と言うと、 `` Foo（name = &#39;bar&#39;） ``がアイデンティティマップの右にあっても、セッションはそれについて全く分かりません。データベースにSQLを発行し、行を戻してから、行の主キーを見たときに*ローカルIDマップを調べて、そのオブジェクトがすでに存在することを確認する必要があります。 ：class： `〜sqlalchemy.orm.session.Session`がクエリを発行する必要がない` `query.get（{何らかの主キー}）` `としか言いません。"
 
 #: ../../orm/session_basics.rst:410
 msgid ""
 "Additionally, the Session stores object instances using a weak reference "
 "by default. This also defeats the purpose of using the Session as a "
 "cache."
-msgstr ""
+msgstr "さらに、セッションは、デフォルトで弱い参照を使用してオブジェクトインスタンスを格納します。これはまた、セッションをキャッシュとして使用する目的を無効にします。"
 
 #: ../../orm/session_basics.rst:413
 msgid ""
@@ -439,33 +429,33 @@ msgid ""
 "second level caching using `dogpile.cache "
 "<https://dogpilecache.readthedocs.io/>`_, via the :ref:`examples_caching`"
 " example."
-msgstr ""
+msgstr "：class： `.Session`は、誰もがオブジェクトの&quot;レジストリ &quot;として参照するグローバルオブジェクトであるようには設計されていません。それは**第2レベルのキャッシュ**の仕事です。 SQLAlchemyは、 `dogpile.cacheを使って第2レベルのキャッシングを実装するためのパターンを提供します<https://dogpilecache.readthedocs.io/> `_：：ref：` examples_caching`の例を参照してください。"
 
 #: ../../orm/session_basics.rst:420
 msgid ""
 "How can I get the :class:`~sqlalchemy.orm.session.Session` for a certain "
 "object?"
-msgstr ""
+msgstr "特定のオブジェクトに対して：class： `〜sqlalchemy.orm.session.Session`を取得するにはどうすればよいですか？"
 
 #: ../../orm/session_basics.rst:422
 msgid ""
 "Use the :meth:`~.Session.object_session` classmethod available on "
 ":class:`~sqlalchemy.orm.session.Session`::"
-msgstr ""
+msgstr "利用できる：meth： `〜.Session.object_session`クラスメソッド：class：`〜sqlalchemy.orm.session.Session` ::"
 
 #: ../../orm/session_basics.rst:427
 msgid "The newer :ref:`core_inspection_toplevel` system can also be used::"
-msgstr ""
+msgstr "新しい：ref： `core_inspection_toplevel`システムも使用できます::"
 
 #: ../../orm/session_basics.rst:435
 msgid "Is the session thread-safe?"
-msgstr ""
+msgstr "セッションはスレッドセーフですか？"
 
 #: ../../orm/session_basics.rst:437
 msgid ""
 "The :class:`.Session` is very much intended to be used in a **non-"
 "concurrent** fashion, which usually means in only one thread at a time."
-msgstr ""
+msgstr "：class： `.Session`は**非同時**の方法で使用されることが非常に意図されています。通常は一度に1つのスレッドしか意味しません。"
 
 #: ../../orm/session_basics.rst:441
 msgid ""
@@ -476,7 +466,7 @@ msgid ""
 ":ref:`unitofwork_contextual` for background).  Another is to use a "
 "pattern where the :class:`.Session` is passed between functions and is "
 "otherwise not shared with other threads."
-msgstr ""
+msgstr "：class： `.Session`は、1つのトランザクション内の一連の操作に対して1つのインスタンスが存在するような方法で使用する必要があります。この効果を得るための便利な方法の1つは、：class： `.Session`を現在のスレッドに関連付けることです（背景については：ref：` unitofwork_contextual`を参照してください）。もう一つは、：class： `.Session`が関数間で渡され、そうでなければ他のスレッドと共有されていないパターンを使うことです。"
 
 #: ../../orm/session_basics.rst:449
 msgid ""
@@ -486,7 +476,7 @@ msgid ""
 "\"workspace\" that you use for a specific set of tasks; you don't want "
 "to, or need to, share that session with other threads who are doing some "
 "other task."
-msgstr ""
+msgstr "より大きなポイントは、複数の同時スレッドでセッションを使用する必要がないことです。それはレストランのみんながすべて同じ食器から食べるようなものです。セッションは、特定のタスクセットに使用するローカルの「作業領域」です。そのセッションを他のスレッドと共有したくない、または共有する必要がありません。"
 
 #: ../../orm/session_basics.rst:455
 msgid ""
@@ -505,7 +495,7 @@ msgid ""
 ":class:`.Session` and all the objects associated with it are all proxies "
 "for that DBAPI connection, the entire graph is essentially not safe for "
 "concurrent access."
-msgstr ""
+msgstr "：class： `.Session`が一度に1つの同時スレッドでのみ使用されることを確認することは、&quot;シェア・ナッシング・エス &quot;という並行性へのアプローチと呼ばれます。しかし、実際には：class： `.Session`を共有しない方がより重要なパターンを意味します。 ：class： `.Session`オブジェクトそのものだけでなく、**そのSession **に関連付けられているすべてのオブジェクトも単一の並行スレッドのスコープ内に保持されなければなりません。 a：class： `.Session`に関連付けられたマップされたオブジェクトのセットは、データベース接続を介してアクセスされるデータベース行内のデータのためのプロキシです。つまり：class：` .Session`自体と同じように、データベース接続（または接続）用の大規模なプロキシです。結局のところ、それは主に同時アクセスから遠ざかっているDBAPI接続自体です。 ：class： `.Session`とそれに関連付けられたすべてのオブジェクトがそのDBAPI接続のすべてのプロキシであるため、グラフ全体は本質的に並行アクセスにとって安全ではありません。"
 
 #: ../../orm/session_basics.rst:470
 msgid ""
@@ -519,19 +509,19 @@ msgid ""
 "from one :class:`.Session` to another, often using the "
 ":meth:`.Session.merge` method to copy the state of an object into a new "
 "object local to a different :class:`.Session`."
-msgstr ""
+msgstr "実際に複数のスレッドが同じタスクに参加している場合、それらのスレッド間でセッションとそのオブジェクトを共有することを検討することができます。しかし、この非常に珍しいシナリオでは、アプリケーションは：class： `.Session`またはその状態への同時アクセス*がないように、適切なロックスキームが実装されていることを保証する必要があります。この状況のより一般的なアプローチは、並行スレッドごとに：class： `.Session`を1つ：class：` .Session`から：meth： `を使用して別のものにコピー*することです。 Session.merge`メソッドを使用して、オブジェクトの状態を別の：class： `.Session`の新しいオブジェクトにコピーします。"
 
 #: ../../orm/session_basics.rst:481
 msgid "Basics of Using a Session"
-msgstr ""
+msgstr "セッションの基本"
 
 #: ../../orm/session_basics.rst:483
 msgid "The most basic :class:`.Session` use patterns are presented here."
-msgstr ""
+msgstr "最も基本的な：class： `.Session`の使用パターンをここに示します。"
 
 #: ../../orm/session_basics.rst:486
 msgid "Querying"
-msgstr ""
+msgstr "クエリ"
 
 #: ../../orm/session_basics.rst:488
 msgid ""
@@ -540,7 +530,7 @@ msgid ""
 "issue mapper queries within the context of this Session. An entity is "
 "defined as a mapped class, a :class:`~sqlalchemy.orm.mapper.Mapper` "
 "object, an orm-enabled *descriptor*, or an ``AliasedClass`` object::"
-msgstr ""
+msgstr "：meth： `〜.Session.query`関数は、1つ以上の*エンティティ*をとり、このセッションのコンテキスト内でマッパークエリを発行するnew：class：`〜sqlalchemy.orm.query.Query`オブジェクトを返します。エンティティはマップされたクラス、：class： `〜sqlalchemy.orm.mapper.Mapper`オブジェクト、orm対応*記述子*、または` `AliasedClass``オブジェクトとして定義されます："
 
 #: ../../orm/session_basics.rst:507
 msgid ""
@@ -554,18 +544,18 @@ msgid ""
 " with a normally isolated transaction, there shouldn't be any issue of "
 "instances representing data which is stale with regards to the current "
 "transaction."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.query.Query`は結果を返します。インスタンス化された各オブジェクトはアイデンティティマップに格納されます。行が既に存在するオブジェクトと一致すると、同じオブジェクトが返されます。後者の場合、行が既存のオブジェクトに移入されるかどうかは、インスタンスの属性が*失効*されているかどうかによって異なります。 default-configured：class： `〜sqlalchemy.orm.session.Session`はトランザクション境界に沿ってすべてのインスタンスを自動的に期限切れにするので、通常は分離されたトランザクションでは、古いデータを表すインスタンスの問題は発生しません現在の取引。"
 
 #: ../../orm/session_basics.rst:517
 msgid ""
 "The :class:`.Query` object is introduced in great detail in "
 ":ref:`ormtutorial_toplevel`, and further documented in "
 ":ref:`query_api_toplevel`."
-msgstr ""
+msgstr "：class： `.Query`オブジェクトは：ref：` ormtutorial_toplevel`で非常に詳細に紹介されています：さらに：ref： `query_api_toplevel`にも書かれています。"
 
 #: ../../orm/session_basics.rst:522
 msgid "Adding New or Existing Items"
-msgstr ""
+msgstr "新しいアイテムまたは既存のアイテムの追加"
 
 #: ../../orm/session_basics.rst:524
 msgid ""
@@ -576,34 +566,34 @@ msgid ""
 " are already present and do not need to be added. Instances which are "
 "*detached* (i.e. have been removed from a session) may be re-associated "
 "with a session using this method::"
-msgstr ""
+msgstr "：meth： `〜.Session.add`は、セッションにインスタンスを配置するために使用されます。 *一時的な（すなわち、新しい）インスタンスの場合、これは、次回のフラッシュ時にそれらのインスタンスに対してINSERTが行われることになります。 * persistent *（このセッションによってロードされたインスタンス）の場合、それらはすでに存在しており、追加する必要はありません。 * detached *（つまりセッションから削除された）インスタンスは、このメソッドを使用してセッションに再関連付けできます。"
 
 #: ../../orm/session_basics.rst:539
 msgid ""
 "To add a list of items to the session at once, use "
 ":meth:`~.Session.add_all`::"
-msgstr ""
+msgstr "セッションのリストを一度にセッションに追加するには、：meth： `〜.Session.add_all` ::"
 
 #: ../../orm/session_basics.rst:544
 msgid ""
 "The :meth:`~.Session.add` operation **cascades** along the ``save-"
 "update`` cascade. For more details see the section "
 ":ref:`unitofwork_cascades`."
-msgstr ""
+msgstr "`` save-update``カスケードに沿った：meth： `〜.Session.add`操作**カスケード**。詳細は、ref： `unitofwork_cascades`を参照してください。"
 
 #: ../../orm/session_basics.rst:550
 msgid "Deleting"
-msgstr ""
+msgstr "削除"
 
 #: ../../orm/session_basics.rst:552
 msgid ""
 "The :meth:`~.Session.delete` method places an instance into the Session's"
 " list of objects to be marked as deleted::"
-msgstr ""
+msgstr "：meth： `〜.Session.delete`メソッドは、Sessionのオブジェクトリストにインスタンスを配置し、deletedとしてマークします::"
 
 #: ../../orm/session_basics.rst:565
 msgid "Deleting Objects Referenced from Collections and Scalar Relationships"
-msgstr ""
+msgstr "コレクションとスカラーの関係から参照されるオブジェクトの削除"
 
 #: ../../orm/session_basics.rst:567
 msgid ""
@@ -617,7 +607,7 @@ msgid ""
 "use of :meth:`.Session.expire`, the referenced object or collection upon "
 "a given object associated with that :class:`.Session` will be cleared and"
 " will re-load itself upon next access."
-msgstr ""
+msgstr "ORMは、一般に、フラッシュ処理中にコレクションまたはスカラー関係の内容を変更することはありません。つまり、クラスにオブジェクトのコレクションを参照する：func： `.relationship`がある場合、または多対1のような単一のオブジェクトへの参照がある場合、この属性の内容はフラッシュ時には変更されません処理が行われます。代わりに、：class： `.Session`が後で期限切れになった場合、：meth：` .Session.commit`のコミット時動作または：meth： `。Session.expire`の明示的な使用によって、クラス： `.Session`はクリアされ、次のアクセス時に再ロードされます。"
 
 #: ../../orm/session_basics.rst:577
 msgid ""
@@ -631,7 +621,7 @@ msgid ""
 "place during direct manipulation of related collections and object "
 "references, which is explicit within the calling application and is "
 "outside of the flush process."
-msgstr ""
+msgstr "この動作は、外部キーと主キー列を参照する列バインド属性へのフラッシュプロセスの影響と混同しないでください。これらの属性は、フラッシュプロセスが管理しようとする属性であるため、フラッシュ内で自由に変更されます。また：ref： `relationships_backref`で説明されているように、逆参照の振る舞いと混同しないでください。後方参照イベントはコレクションまたはスカラーの属性参照を変更しますが、この動作は関連するコレクションおよびオブジェクト参照を直接操作する際に発生します。呼び出し元のアプリケーション内では明示的で、フラッシュ処理の外にあります。"
 
 #: ../../orm/session_basics.rst:587
 msgid ""
@@ -651,21 +641,21 @@ msgid ""
 "Similarly, if the object were referenced via many-to-one or one-to-one "
 "from another object, that reference will remain present on that object "
 "until the object is expired as well."
-msgstr ""
+msgstr "この動作に関する一般的な混乱は：meth： `〜.Session.delete`メソッドの使用を伴います。オブジェクト上で：meth： `.Session.delete`が呼び出され、：class：` .Session`がフラッシュされると、その行はデータベースから削除されます。外部キーを介してターゲット行を参照する行は、2つのマップされたオブジェクト型の間で：func： `.relationship`を使用して追跡されると仮定して、外部キー属性もNULLに更新されます。関連する行も削除されます。ただし、削除されたオブジェクトに関連する行自体も変更される可能性がありますが、フラッシュのスコープ内の操作に関連するオブジェクト**のリレーションシップバインドコレクションまたはオブジェクト参照には何も変更はありません。これは、オブジェクトが関連するコレクションのメンバーであった場合、そのコレクションが期限切れになるまで、Python側に存在することを意味します。同様に、オブジェクトが他のオブジェクトから多対1または一対一で参照された場合、その参照はオブジェクトが期限切れになるまでそのオブジェクトにも存在し続けます。"
 
 #: ../../orm/session_basics.rst:603
 msgid ""
 "Below, we illustrate that after an ``Address`` object is marked for "
 "deletion, it's still present in the collection associated with the parent"
 " ``User``, even after a flush::"
-msgstr ""
+msgstr "以下では、 `` Address``オブジェクトが削除のためにマークされた後でも、それがフラッシュの後であっても親の `` User``に関連付けられたコレクションにまだ残っていることを示しています::"
 
 #: ../../orm/session_basics.rst:613
 msgid ""
 "When the above session is committed, all attributes are expired.  The "
 "next access of ``user.addresses`` will re-load the collection, revealing "
 "the desired state::"
-msgstr ""
+msgstr "上記のセッションがコミットされると、すべての属性が期限切れになります。 `` user.addresses``の次回のアクセスはコレクションを再ロードし、目的の状態を明らかにします::"
 
 #: ../../orm/session_basics.rst:621
 msgid ""
@@ -678,7 +668,7 @@ msgid ""
 "a result of removing the object from the parent collection.  The "
 "``delete-orphan`` cascade accomplishes this, as illustrated in the "
 "example below::"
-msgstr ""
+msgstr "インターセプトのためのレシピがあります：meth： `.Session.delete`と自動的にこの有効期限を呼び出します。 `ExpireRelationshipOnFKChangeを参照してください<http://www.sqlalchemy.org/trac/wiki/UsageRecipes/ExpireRelationshipOnFKChange> `_これのために。しかし、コレクション内のアイテムを削除する通常の方法は、：meth： `〜.Session.delete`の使用を直接避け、カスケード動作を使用して、親コレクションからオブジェクトを削除した結果として自動的に削除を呼び出すことです。以下の例に示すように、 `` delete-orphan``カスケードはこれを実行します::"
 
 #: ../../orm/session_basics.rst:642
 msgid ""
@@ -686,7 +676,7 @@ msgid ""
 "``User.addresses`` collection, the ``delete-orphan`` cascade has the "
 "effect of marking the ``Address`` object for deletion in the same way as "
 "passing it to :meth:`~.Session.delete`."
-msgstr ""
+msgstr "上記の場合、 `` User.addresses``コレクションから `` Address``オブジェクトを削除すると、 `` Delete-orphan``カスケードは、 `` Address``オブジェクトを削除するために同じ方法でマークする効果がありますそれを：meth： `〜.Session.delete`に渡します。"
 
 #: ../../orm/session_basics.rst:646
 msgid ""
@@ -697,21 +687,21 @@ msgid ""
 "flag :paramref:`.relationship.single_parent` which invokes an assertion "
 "that this related object is not to shared with any other parent "
 "simultaneously::"
-msgstr ""
+msgstr "`` delete-orphan``カスケードは多対1または一対一関係にも適用できるので、オブジェクトがその親から分離されたときに自動的に削除マークが付けられます。 many-to-oneまたはone-to-oneで `` delete-orphan``カスケードを使うには、この関連オブジェクトが他と共有されないというアサーションを呼び出すparamref： `.relationship.single_parent`フラグが必要です親は同時に::"
 
 #: ../../orm/session_basics.rst:661
 msgid ""
 "Above, if a hypothetical ``Preference`` object is removed from a "
 "``User``, it will be deleted on flush::"
-msgstr ""
+msgstr "上記の `` Preference``オブジェクトが `` User``から削除された場合、そのオブジェクトはflush ::で削除されます"
 
 #: ../../orm/session_basics.rst:667
 msgid "See also :ref:`unitofwork_cascades` for detail on cascades."
-msgstr ""
+msgstr "カスケードの詳細については、ref： `unitofwork_cascades`も参照してください。"
 
 #: ../../orm/session_basics.rst:671
 msgid "Deleting based on Filter Criterion"
-msgstr ""
+msgstr "フィルタ条件に基づいた削除"
 
 #: ../../orm/session_basics.rst:673
 msgid ""
@@ -719,7 +709,7 @@ msgid ""
 "handy already in order to delete. The Query includes a "
 ":func:`~sqlalchemy.orm.query.Query.delete` method which deletes based on "
 "filtering criteria::"
-msgstr ""
+msgstr "`` Session.delete（） ``の警告は、削除するためにオブジェクトを手元に置く必要があるということです。クエリには、フィルタリング基準に基づいて削除するa：func： `〜sqlalchemy.orm.query.Query.delete`メソッドが含まれています::"
 
 #: ../../orm/session_basics.rst:680
 msgid ""
@@ -729,11 +719,11 @@ msgid ""
 "cascades won't be fully expressed for collections which are already "
 "loaded. See the API docs for :meth:`~sqlalchemy.orm.query.Query.delete` "
 "for more details."
-msgstr ""
+msgstr "`` Query.delete（） ``メソッドには、すでに条件に一致するセッション内のオブジェクトを &quot;期限切れにする&quot;機能が含まれています。しかし、すでにロードされているコレクションに対して\ &quot;delete \&quot;と\ &quot;delete-orphan \&quot;カスケードは完全には表現されないなど、いくつかの注意点があります。詳細については、API docs：meth： `〜sqlalchemy.orm.query.Query.delete`を参照してください。"
 
 #: ../../orm/session_basics.rst:689
 msgid "Flushing"
-msgstr ""
+msgstr "フラッシング"
 
 #: ../../orm/session_basics.rst:691
 msgid ""
@@ -744,31 +734,31 @@ msgid ""
 ":meth:`~.Session.commit` call before the transaction is committed. It "
 "also occurs before a SAVEPOINT is issued when "
 ":meth:`~.Session.begin_nested` is used."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.session.Session`がデフォルト設定で使用されている場合、フラッシュステップはほぼ常に透過的に行われます。具体的には、クラス： `〜sqlalchemy.orm.query.Query`が発行される前に、トランザクションがコミットされる前に：meth：`〜.Session.commit`の呼び出しの前にフラッシュが発生します。これは：meth： `〜.Session.begin_nested`が使用されたときにSAVEPOINTが発行される前に発生します。"
 
 #: ../../orm/session_basics.rst:699
 msgid ""
 "Regardless of the autoflush setting, a flush can always be forced by "
 "issuing :meth:`~.Session.flush`::"
-msgstr ""
+msgstr "autoflushの設定にかかわらず、フラッシュを強制するには、meth： `〜.Session.flush` ::"
 
 #: ../../orm/session_basics.rst:704
 msgid ""
 "The \"flush-on-Query\" aspect of the behavior can be disabled by "
 "constructing :class:`.sessionmaker` with the flag ``autoflush=False``::"
-msgstr ""
+msgstr "振る舞いの\ &quot;flush-on-Query \&quot;は、フラグ `` autoflush = False``を使って：class： `.sessionmaker`を作ることで無効にすることができます::"
 
 #: ../../orm/session_basics.rst:709
 msgid ""
 "Additionally, autoflush can be temporarily disabled by setting the "
 "``autoflush`` flag at any time::"
-msgstr ""
+msgstr "さらに、autoflushは、いつでも `` autoflush``フラグをセットすることで一時的に無効にすることができます::"
 
 #: ../../orm/session_basics.rst:715
 msgid ""
 "Some autoflush-disable recipes are available at `DisableAutoFlush "
 "<http://www.sqlalchemy.org/trac/wiki/UsageRecipes/DisableAutoflush>`_."
-msgstr ""
+msgstr "一部の自動フラッシュ無効化レシピは、DisableAutoFlush <http://www.sqlalchemy.org/trac/wiki/UsageRecipes/DisableAutoflush> `_。"
 
 #: ../../orm/session_basics.rst:718
 msgid ""
@@ -783,11 +773,11 @@ msgid ""
 "flush fails, even though the underlying transaction will have been rolled"
 " back already - this is so that the overall nesting pattern of so-called "
 "\"subtransactions\" is consistently maintained."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.session.Session`が` `autocommit = True``で設定されていても、セッションの永続的なトランザクション状態を無効にする設定です。トランザクションが存在しない場合、：meth： `〜.Session.flush`はそれ自身のトランザクションを作成し、それをコミットします。フラッシュ中にエラーが発生すると、トランザクションが存在する場合でも常にロールバックされます。 Sessionが `` autocommit = True``モードでない場合、基底のトランザクションがすでにロールバックされていても、フラッシュが失敗した後に：meth： `〜.Session.rollback`を明示的に呼び出す必要があります。いわゆる「サブトランザクション」の全体的なネストパターンが一貫して維持されるようにします。"
 
 #: ../../orm/session_basics.rst:733
 msgid "Committing"
-msgstr ""
+msgstr "コミット"
 
 #: ../../orm/session_basics.rst:735
 msgid ""
@@ -799,7 +789,7 @@ msgid ""
 "\"transaction\" is always present; this behavior can be disabled by "
 "setting ``autocommit=True``. In autocommit mode, a transaction can be "
 "initiated by calling the :meth:`~.Session.begin` method."
-msgstr ""
+msgstr "：meth： `〜.Session.commit`は、現在のトランザクションをコミットするために使用されます。それは、常に：meth： `〜。Session.flush`を発行して、残りの状態をデータベースにフラッシュします。これは\ &quot;autoflush \&quot;設定とは無関係です。トランザクションが存在しない場合は、エラーが発生します。 ：class： `〜sqlalchemy.orm.session.Session`のデフォルトの動作は\&quot;トランザクション\ &quot;が常に存在することです。この動作は `` autocommit = True``をセットすることで無効にすることができます。自動コミットモードでは、：meth： `〜.Session.begin`メソッドを呼び出すことでトランザクションを開始できます。"
 
 #: ../../orm/session_basics.rst:746
 msgid ""
@@ -809,7 +799,7 @@ msgid ""
 "participation in the \"transaction\" as it is first used to execute a SQL"
 " statement, then remains present until the session-level \"transaction\" "
 "is completed.  See :ref:`unitofwork_transaction` for further detail."
-msgstr ""
+msgstr "ここでの「トランザクション」という用語は、class： `.Session`自体のトランザクション構造を指し、0以上の実際のデータベース（DBAPI）トランザクションを維持している可能性があります。個々のDBAPI接続は、SQL文の実行に最初に使用されたときに\ &quot;トランザクション\&quot;への参加を開始し、セッション・レベルの\ &quot;トランザクション\&quot;が完了するまで存在し続けます。詳細はref： `unitofwork_transaction`を参照してください。"
 
 #: ../../orm/session_basics.rst:754
 msgid ""
@@ -820,7 +810,7 @@ msgid ""
 ":class:`~sqlalchemy.orm.query.Query` result set, they receive the most "
 "recent state. To disable this behavior, configure :class:`.sessionmaker` "
 "with ``expire_on_commit=False``."
-msgstr ""
+msgstr "：meth： `〜.Session.commit`の別の振る舞いは、デフォルトで、コミットが完了した後に存在するすべてのインスタンスの状態を失効させるということです。これは、インスタンスが次回アクセスされるときに、属性アクセスまたはa：class： `〜sqlalchemy.orm.query.Query`の結果セットに存在する場合に、それらは最も新しい状態を受け取るようになっています。この動作を無効にするには、 `` expire_on_commit = False``で：class： `.sessionmaker`を設定してください。"
 
 #: ../../orm/session_basics.rst:762
 msgid ""
@@ -832,25 +822,25 @@ msgid ""
 "degree since the :class:`~sqlalchemy.orm.session.Session` behaves in "
 "exactly the same way with regard to attribute state, except no "
 "transaction is present."
-msgstr ""
+msgstr "通常、：class： `〜sqlalchemy.orm.session.Session`にロードされたインスタンスは、後続のクエリによって決して変更されません。現在のトランザクションは分離されているため、トランザクションが継続されている限り、直前にロードされた状態は正しいと仮定します。 `` autocommit = True``を設定することは：class： `〜sqlalchemy.orm.session.Session`はトランザクションが存在しないことを除いて、属性状態に関してまったく同じように動作するので、このモデルに対してある程度は機能します。"
 
 #: ../../orm/session_basics.rst:773
 msgid "Rolling Back"
-msgstr ""
+msgstr "ロールバック"
 
 #: ../../orm/session_basics.rst:775
 msgid ""
 ":meth:`~.Session.rollback` rolls back the current transaction. With a "
 "default configured session, the post-rollback state of the session is as "
 "follows:"
-msgstr ""
+msgstr "：meth： `〜.Session.rollback`は、現在のトランザクションをロールバックします。デフォルトの構成セッションでは、セッションのポストロールバック状態は次のようになります。"
 
 #: ../../orm/session_basics.rst:779
 msgid ""
 "All transactions are rolled back and all connections returned to the "
 "connection pool, unless the Session was bound directly to a Connection, "
 "in which case the connection is still maintained (but still rolled back)."
-msgstr ""
+msgstr "セッションがConnectionに直接バインドされている場合を除き、すべてのトランザクションがロールバックされ、すべての接続が接続プールに返されます。この場合、接続はまだ維持されますが、ロールバックされます。"
 
 #: ../../orm/session_basics.rst:782
 msgid ""
@@ -858,7 +848,7 @@ msgid ""
 "to the :class:`~sqlalchemy.orm.session.Session` within the lifespan of "
 "the transaction are expunged, corresponding to their INSERT statement "
 "being rolled back. The state of their attributes remains unchanged."
-msgstr ""
+msgstr "最初に* pending *状態にあったオブジェクトは、トランザクションの有効期間内に：class： `〜sqlalchemy.orm.session.Session`に追加されたときに、それらのINSERT文がロールバックされることに対応して、削除されます。属性の状態は変更されません。"
 
 #: ../../orm/session_basics.rst:786
 msgid ""
@@ -867,17 +857,17 @@ msgid ""
 " their DELETE statement being rolled back. Note that if those objects "
 "were first *pending* within the transaction, that operation takes "
 "precedence instead."
-msgstr ""
+msgstr "トランザクションの有効期間内に* deleted *とマークされたオブジェクトは、DELETE文がロールバックされることに応じて* persistent *状態に戻されます。これらのオブジェクトがトランザクション内で最初に保留中だった場合は、その操作が優先されます。"
 
 #: ../../orm/session_basics.rst:791
 msgid "All objects not expunged are fully expired."
-msgstr ""
+msgstr "期限切れでないオブジェクトはすべて期限切れです。"
 
 #: ../../orm/session_basics.rst:793
 msgid ""
 "With that state understood, the :class:`~sqlalchemy.orm.session.Session` "
 "may safely continue usage after a rollback occurs."
-msgstr ""
+msgstr "その状態を理解すると、：class： `〜sqlalchemy.orm.session.Session`は、ロールバックが発生しても安全に使用を続けることができます。"
 
 #: ../../orm/session_basics.rst:796
 msgid ""
@@ -891,11 +881,11 @@ msgid ""
 " though the database transaction has been rolled back, the end user must "
 "still issue :meth:`~.Session.rollback` to fully reset the state of the "
 ":class:`~sqlalchemy.orm.session.Session`."
-msgstr ""
+msgstr "プライマリキー、外部キー、またはnullではない制約違反のような理由で、：meth： `〜.Session.flush`が失敗すると、：meth：`〜.Session.rollback`が自動的に発行されます現在部分的な障害の後でフラッシュを継続することは不可能です）。しかし、フラッシュ・プロセスは、常に*：サブトランザクション*と呼ばれる独自のトランザクション・デマレーターを使用します。これについては、class： `〜sqlalchemy.orm.session.Session`のdocstringで詳しく説明しています。つまり、データベーストランザクションがロールバックされても、エンドユーザーは：meth： `〜.Session.rollback`を発行して：class：`〜sqlalchemy.orm.sessionの状態を完全にリセットする必要があります。セッション &#39;。"
 
 #: ../../orm/session_basics.rst:809
 msgid "Closing"
-msgstr ""
+msgstr "閉鎖"
 
 #: ../../orm/session_basics.rst:811
 msgid ""
@@ -903,5 +893,5 @@ msgid ""
 ":meth:`~.Session.expunge_all`, and :term:`releases` any "
 "transactional/connection resources. When connections are returned to the "
 "connection pool, transactional state is rolled back as well."
-msgstr ""
+msgstr "：meth： `〜.Session.close`メソッドは、：meth：`〜.Session.expunge_all`を発行し、：term： `任意のトランザクション/接続リソースを解放します。接続プールに接続が戻されると、トランザクション状態もロールバックされます。"
 

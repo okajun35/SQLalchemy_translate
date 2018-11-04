@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/events.rst:4
 msgid "ORM Events"
-msgstr ""
+msgstr "ORMイベント"
 
 #: ../../orm/events.rst:6
 msgid "The ORM includes a wide variety of hooks available for subscription."
-msgstr ""
+msgstr "ORMには、サブスクリプションに利用できるさまざまなフックが含まれています。"
 
 #: ../../orm/events.rst:8
 msgid ""
@@ -32,44 +22,44 @@ msgid ""
 "discussed at :ref:`event_toplevel`.  Non-ORM events such as those "
 "regarding connections and low-level statement execution are described in "
 ":ref:`core_event_toplevel`."
-msgstr ""
+msgstr "最も一般的に使用されるORMイベントについては、ref： `session_events_toplevel`を参照してください。イベントシステムは一般的に：ref： `event_toplevel`で議論されています。接続や低レベルの文の実行などの非ORMイベントは、ref： `core_event_toplevel`に記述されています。"
 
 #: ../../orm/events.rst:14
 msgid "Attribute Events"
-msgstr ""
+msgstr "属性イベント"
 
 #: of sqlalchemy.orm.events.AttributeEvents:1
 msgid "Define events for object attributes."
-msgstr ""
+msgstr "オブジェクト属性のイベントを定義します。"
 
 #: of sqlalchemy.orm.events.AttributeEvents:3
 msgid ""
 "These are typically defined on the class-bound descriptor for the target "
 "class."
-msgstr ""
+msgstr "これらは、通常、ターゲットクラスのクラスバインド記述子で定義されます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents:6
 #: sqlalchemy.orm.events.InstanceEvents:3 sqlalchemy.orm.events.MapperEvents:3
 #: sqlalchemy.orm.events.SessionEvents:3
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.orm.events.AttributeEvents:15
 msgid ""
 "Listeners have the option to return a possibly modified version of the "
 "value, when the ``retval=True`` flag is passed to "
 ":func:`~.event.listen`::"
-msgstr ""
+msgstr "リスナーは `` retval = True``フラグが渡されたときに、値の変更されたバージョンを返すオプションを持っています：func： `〜.event.listen` ::"
 
 #: of sqlalchemy.orm.events.AttributeEvents:28
 msgid ""
 "A validation function like the above can also raise an exception such as "
 ":exc:`ValueError` to halt the operation."
-msgstr ""
+msgstr "上記のような検証関数は、：exc： `ValueError`のような例外を発生させ、操作を中止することもできます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents:31
 msgid "Several modifiers are available to the :func:`~.event.listen` function."
-msgstr ""
+msgstr "：func： `〜.event.listen`関数にはいくつかの修飾子があります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents
 #: sqlalchemy.orm.events.AttributeEvents.append
@@ -117,7 +107,7 @@ msgstr ""
 #: sqlalchemy.orm.events.SessionEvents.persistent_to_transient
 #: sqlalchemy.orm.events.SessionEvents.transient_to_pending
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.orm.events.AttributeEvents:33
 msgid ""
@@ -125,7 +115,7 @@ msgid ""
 "\"old\" value being replaced unconditionally, even if this requires "
 "firing off database loads. Note that ``active_history`` can also be set "
 "directly via :func:`.column_property` and :func:`.relationship`."
-msgstr ""
+msgstr "Trueの場合、データベースのロードを強制的に停止する必要がある場合でも、\ &quot;set \&quot;イベントが無条件に置き換えられる\ &quot;old \&quot;値を受け取ることを示します。 `` active_history``は：func： `.column_property`と：func：` .relationship`を介して直接設定することもできます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents:40
 msgid ""
@@ -134,14 +124,14 @@ msgid ""
 " subclasses of that class, as well as all future subclasses of that "
 "class, using an additional listener that listens for instrumentation "
 "events."
-msgstr ""
+msgstr "Trueの場合、指定されたclass属性だけでなく、そのクラスの現在のすべてのサブクラスと、そのクラスのすべての将来のサブクラスで同じ名前の属性に対して、リスナー関数が確立されます。イベント。"
 
 #: of sqlalchemy.orm.events.AttributeEvents:46
 msgid ""
 "When True, the \"target\" argument to the event will be the "
 ":class:`.InstanceState` management object, rather than the mapped "
 "instance itself."
-msgstr ""
+msgstr "Trueの場合、イベントへの &quot;target&quot;引数は、マップされたインスタンス自体ではなく、：class： `.InstanceState`管理オブジェクトになります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents:49
 msgid ""
@@ -149,11 +139,11 @@ msgid ""
 "argument from the function.  This gives the listening function the "
 "opportunity to change the value that is ultimately used for a \"set\" or "
 "\"append\" event."
-msgstr ""
+msgstr "Trueの場合、ユーザー定義のイベントリスニングは関数からの\ &quot;値\&quot;引数を返す必要があります。これにより、リスニング関数は最終的に\ &quot;set \&quot;または\ &quot;append \&quot;イベントに使用される値を変更することができます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.append:1
 msgid "Receive a collection append event."
-msgstr ""
+msgstr "コレクションの追加イベントを受け取ります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.append:5
 #: sqlalchemy.orm.events.AttributeEvents.bulk_replace:5
@@ -211,14 +201,14 @@ msgstr ""
 #: sqlalchemy.orm.events.SessionEvents.persistent_to_transient:5
 #: sqlalchemy.orm.events.SessionEvents.transient_to_pending:5
 msgid "Example argument forms::"
-msgstr ""
+msgstr "引数フォームの例::"
 
 #: of sqlalchemy.orm.events.AttributeEvents.append:17
 msgid ""
 "The append event is invoked for each element as it is appended to the "
 "collection.  This occurs for single-item appends as well as for a \"bulk "
 "replace\" operation."
-msgstr ""
+msgstr "appendイベントは、各要素がコレクションに追加されるときに呼び出されます。これは単一項目の追加と\ &quot;一括置換\&quot;操作で発生します。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.append:21
 #: sqlalchemy.orm.events.AttributeEvents.bulk_replace:52
@@ -230,14 +220,14 @@ msgstr ""
 msgid ""
 "the object instance receiving the event. If the listener is registered "
 "with ``raw=True``, this will be the :class:`.InstanceState` object."
-msgstr ""
+msgstr "オブジェクトインスタンスはイベントを受け取ります。リスナーが `` raw = True``で登録されている場合、これは：class： `.InstanceState`オブジェクトになります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.append:24
 msgid ""
 "the value being appended.  If this listener is registered with "
 "``retval=True``, the listener function must return this value, or a new "
 "value which replaces it."
-msgstr ""
+msgstr "値が追加されます。このリスナーが `` retval = True``で登録されている場合、リスナー関数はこの値、またはそれを置き換える新しい値を返す必要があります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.append:28
 msgid ""
@@ -245,7 +235,7 @@ msgid ""
 "the event.  May be modified from its original value by backref handlers "
 "in order to control chained event propagation, as well as be inspected "
 "for information about the source of the event."
-msgstr ""
+msgstr "イベントの開始を表す：class： `.attributes.Event`のインスタンスです。チェインされたイベントの伝播を制御するために、バックソースハンドラによって元の値から変更することができます。また、イベントのソースに関する情報を調べることもできます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.append
 #: sqlalchemy.orm.events.AttributeEvents.remove
@@ -257,22 +247,22 @@ msgstr ""
 #: sqlalchemy.orm.events.MapperEvents.before_insert
 #: sqlalchemy.orm.events.MapperEvents.before_update
 msgid "戻り値"
-msgstr ""
+msgstr "戻り値"
 
 #: of sqlalchemy.orm.events.AttributeEvents.append:33
 #: sqlalchemy.orm.events.AttributeEvents.set:49
 msgid ""
 "if the event was registered with ``retval=True``, the given value, or a "
 "new effective value, should be returned."
-msgstr ""
+msgstr "イベントが `` retval = True``で登録されていれば、与えられた値、または新しい実効値が返されます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.append:38
 msgid ":meth:`.AttributeEvents.bulk_replace`"
-msgstr ""
+msgstr "：meth： `.AttributeEvents.bulk_replace`"
 
 #: of sqlalchemy.orm.events.AttributeEvents.bulk_replace:1
 msgid "Receive a collection 'bulk replace' event."
-msgstr ""
+msgstr "コレクションの一括置換イベントを受け取ります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.bulk_replace:17
 msgid ""
@@ -282,7 +272,7 @@ msgid ""
 "before the bulk replace routine attempts to reconcile which objects are "
 "already present in the collection and which are being removed by the net "
 "replace operation."
-msgstr ""
+msgstr "このイベントは、バルク・コレクション・セット操作に入ってくる一連の値に対して呼び出されます。この操作は、値がORMオブジェクトとして扱われる前に変更できます。これは、バルク置換ルーチンがどのオブジェクトがすでにコレクションに存在し、ネット置換操作によって削除されているかを調整しようとする前に実行される「初期フック」です。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.bulk_replace:24
 msgid ""
@@ -294,41 +284,41 @@ msgid ""
 " as a whole.  In order to determine if an :meth:`.AttributeEvents.append`"
 " event is part of a bulk replace, use the symbol "
 ":attr:`~.attributes.OP_BULK_REPLACE` to test the incoming initiator::"
-msgstr ""
+msgstr "このメソッドを：meth： `.AttributeEvents.append`イベントの使用と組み合わせるのが典型的です。これらの両方のイベントを使用する場合、一括置換操作では：meth： `.AttributeEvents.bulk_replace`がコレクションとして呼び出された後でも、すべての新しい項目に対して：meth：` .AttributeEvents.append`イベントが呼び出されることに注意してください。全体。 ：meth： `.AttributeEvents.append`イベントが一括置換の一部であるかどうかを判断するには、シンボル：attr：`〜.attributes.OP_BULK_REPLACE`を使用して、着信イニシエータをテストします::"
 
 #: of sqlalchemy.orm.events.AttributeEvents.bulk_replace:55
 msgid ""
 "a sequence (e.g. a list) of the values being set.  The handler can modify"
 " this list in place."
-msgstr ""
+msgstr "設定されている値のシーケンス（例：リスト）。ハンドラは、このリストを適所で変更することができます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.bulk_replace:57
 #: sqlalchemy.orm.events.AttributeEvents.modified:27
 msgid ""
 "An instance of :class:`.attributes.Event` representing the initiation of "
 "the event."
-msgstr ""
+msgstr "イベントの開始を表す：class： `.attributes.Event`のインスタンスです。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.dispose_collection:1
 msgid "Receive a 'collection dispose' event."
-msgstr ""
+msgstr "「コレクションの廃棄」イベントを受け取ります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.dispose_collection:17
 msgid ""
 "This event is triggered for a collection-based attribute when a "
 "collection is replaced, that is::"
-msgstr ""
+msgstr "このイベントは、コレクションが置き換えられたときにコレクションベースの属性に対してトリガされます。つまり、::"
 
 #: of sqlalchemy.orm.events.AttributeEvents.dispose_collection:24
 msgid "The old collection received will contain its previous contents."
-msgstr ""
+msgstr "受け取った古いコレクションには、以前の内容が含まれます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.dispose_collection:26
 msgid ""
 "The collection passed to :meth:`.AttributeEvents.dispose_collection` will"
 " now have its contents before the dispose intact; previously, the "
 "collection would be empty."
-msgstr ""
+msgstr "：meth： `.AttributeEvents.dispose_collection`に渡されたコレクションは、そのまま処分される前の内容になります。以前は、コレクションは空になりました。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.dispose_collection:31
 #: sqlalchemy.orm.events.AttributeEvents.init_collection:42
@@ -336,11 +326,11 @@ msgid ""
 "the :meth:`.AttributeEvents.init_collection` and "
 ":meth:`.AttributeEvents.dispose_collection` events supersede the "
 ":class:`.collection.linker` hook."
-msgstr ""
+msgstr "：meth： `.AttributeEvents.init_collection`と：meth：` .AttributeEvents.dispose_collection`イベントは：class： `.collection.linker`フックに優先します。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_collection:1
 msgid "Receive a 'collection init' event."
-msgstr ""
+msgstr "&#39;collection init&#39;イベントを受け取ります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_collection:17
 msgid ""
@@ -348,40 +338,40 @@ msgid ""
 "initial \"empty collection\" is first generated for a blank attribute, as"
 " well as for when the collection is replaced with a new one, such as via "
 "a set event."
-msgstr ""
+msgstr "このイベントは、最初の空のコレクション\が空の属性に対して最初に生成されたとき、およびコレクションがsetイベントなどの新しいもので置き換えられたときのコレクションベースの属性に対してトリガーされます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_collection:22
 msgid ""
 "E.g., given that ``User.addresses`` is a relationship-based collection, "
 "the event is triggered here::"
-msgstr ""
+msgstr "たとえば、 `` User.addresses``が関係ベースのコレクションである場合、イベントはここでトリガされます::"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_collection:28
 msgid "and also during replace operations::"
-msgstr ""
+msgstr "交換作業中にも："
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_collection:35
 msgid ""
 "the new collection.  This will always be generated from what was "
 "specified as :paramref:`.RelationshipProperty.collection_class`, and will"
 " always be empty."
-msgstr ""
+msgstr "新しいコレクション。これは常に：paramref： `.RelationshipProperty.collection_class`で指定されたものから生成され、常に空になります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_collection:39
 msgid ""
 "the :class:`.CollectionAdapter` that will mediate internal access to the "
 "collection."
-msgstr ""
+msgstr "コレクションへの内部アクセスを仲介する：class： `.CollectionAdapter`。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:1
 msgid "Receive a scalar \"init\" event."
-msgstr ""
+msgstr "スカラー\ &quot;init \&quot;イベントを受け取ります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:17
 msgid ""
 "This event is invoked when an uninitialized, unpersisted scalar attribute"
 " is accessed, e.g. read::"
-msgstr ""
+msgstr "このイベントは、初期化されていない、固定されていないスカラ属性にアクセスすると呼び出されます。たとえば、read ::"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:23
 msgid ""
@@ -391,7 +381,7 @@ msgid ""
 "can be used to customize what value is actually returned, with the "
 "assumption that the event listener would be mirroring a default generator"
 " that is configured on the Core :class:`.Column` object as well."
-msgstr ""
+msgstr "初期化されていない属性に対してこれが発生した場合のORMのデフォルトの動作は、値 `` None``を返すことです。これは、Pythonの `` AttributeError``を呼び出す通常の動作とは異なります。ここでのイベントは、イベントリスナーがCore：class： `.Column`オブジェクトで設定されているデフォルトのジェネレータをミラーリングするという前提で、実際に返される値をカスタマイズするために使用できます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:31
 msgid ""
@@ -403,20 +393,20 @@ msgid ""
 " is accessed on the non-persisted object.   Normally, no change to the "
 "object's state is made when an uninitialized attribute is accessed (much "
 "older SQLAlchemy versions did in fact change the object's state)."
-msgstr ""
+msgstr "：class： `.Column`のデフォルトジェネレータはタイムスタンプのような変化する値を生成するかもしれないので、：meth：` .AttributeEvents.init_scalar`イベントハンドラを使って**新たに返された値を設定することもできますコアレベルのデフォルト生成関数は効果的に1回のみ実行されますが、その時点で非永続オブジェクトでその属性にアクセスします。通常、初期化されていない属性にアクセスすると、オブジェクトの状態は変更されません（古いSQLAlchemyバージョンでは実際にオブジェクトの状態が変更されました）。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:41
 msgid ""
 "If a default generator on a column returned a particular constant, a "
 "handler might be used as follows::"
-msgstr ""
+msgstr "列のデフォルトのジェネレータが特定の定数を返した場合、ハンドラは次のように使用される可能性があります::"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:58
 msgid ""
 "Above, we initialize the attribute ``MyClass.some_attribute`` to the "
 "value of ``SOME_CONSTANT``.   The above code includes the following "
 "features:"
-msgstr ""
+msgstr "上記では、 `` MyClass.some_attribute``属性を `` SOME_CONSTANT``の値に初期化します。上記のコードには、次の機能が含まれています。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:62
 msgid ""
@@ -428,7 +418,7 @@ msgid ""
 " changing default, e.g. a timestamp generator.    In this particular "
 "example, it is not strictly necessary to do this since ``SOME_CONSTANT`` "
 "would be part of the INSERT statement in either case."
-msgstr ""
+msgstr "与えられた `` dict_``に `` SOME_CONSTANT``を設定することで、この値がデータベースに永続化されることを示します。これは：class： `.Column`のデフォルトジェネレータでの` `SOME_CONSTANT``の使用に取って代わるものです。 ：ref： `examples_instrumentation`で与えられた` `active_column_defaults.py``の例は、タイムスタンプジェネレータなどのデフォルトの変更に対して同じアプローチを使用しています。この特定の例では、どちらの場合でも `` SOME_CONSTANT``がINSERT文の一部であるため、これを行うことは厳密には必要ではありません。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:72
 msgid ""
@@ -436,7 +426,7 @@ msgid ""
 "function will be returned by the attribute getter. Without this flag, the"
 " event is assumed to be a passive observer and the return value of our "
 "function is ignored."
-msgstr ""
+msgstr "`` retval = True``フラグを立てることによって、関数から返された値はgetter属性によって返されます。このフラグがなければ、イベントはパッシブオブザーバとみなされ、関数の戻り値は無視されます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:77
 msgid ""
@@ -444,7 +434,7 @@ msgid ""
 "inheriting subclasses, which would also make use of this event listener."
 "  Without this flag, an inheriting subclass will not use our event "
 "handler."
-msgstr ""
+msgstr "`` propagate = True``フラグは、マッピングされたクラスに継承サブクラスが含まれている場合に重要です。サブクラスもこのイベントリスナーを使用します。このフラグがなければ、継承するサブクラスはイベントハンドラを使用しません。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:82
 msgid ""
@@ -454,7 +444,7 @@ msgid ""
 "value to the given ``dict_``.  To have these events to invoke in response"
 " to our newly generated value, apply the value to the given object as a "
 "normal attribute set operation::"
-msgstr ""
+msgstr "上記の例では、属性セットイベント：meth： `.AttributeEvents.set`と、obj：` .orm.validates`によって提供される関連する検証機能は、私たちの値を`` dict_``を指定します。これらのイベントを新しく生成された値に応答して呼び出すには、与えられたオブジェクトに値を通常の属性セット操作として適用します。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:99
 msgid ""
@@ -462,7 +452,7 @@ msgid ""
 "\"chained\" from one listener to the next by passing the value returned "
 "by the previous listener that specifies ``retval=True`` as the ``value`` "
 "argument of the next listener."
-msgstr ""
+msgstr "複数のリスナーが設定されている場合、 `` retval = True``を指定した前のリスナーから返された値を `` value``引数として渡すことで、値の生成は1つのリスナーから次のリスナーに\ &quot;連鎖&quot;されます次のリスナーの"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:109
 msgid ""
@@ -470,7 +460,7 @@ msgid ""
 "  This value begins as the value ``None``, however will be the return "
 "value of the previous event handler function if multiple listeners are "
 "present."
-msgstr ""
+msgstr "このイベントリスナーが呼び出される前に返される値この値は値 `` None``で始まりますが、複数のリスナーが存在する場合は前のイベントハンドラ関数の戻り値になります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:113
 msgid ""
@@ -479,32 +469,32 @@ msgid ""
 "that the attribute system uses to get at the actual value of this "
 "attribute.  Placing the value in this dictionary has the effect that the "
 "value will be used in the INSERT statement generated by the unit of work."
-msgstr ""
+msgstr "このマップされたオブジェクトの属性ディクショナリこれは通常、オブジェクトの `` __dict__``ですが、すべての場合において、属性システムがこの属性の実際の値を得るために使用する宛先を表します。このディクショナリーに値を置くことは、作業ユニットによって生成されたINSERTステートメントで値が使用されるという効果があります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.init_scalar:123
 msgid ""
 ":ref:`examples_instrumentation` - see the ``active_column_defaults.py`` "
 "example."
-msgstr ""
+msgstr "：ref： `examples_instrumentation`  - ` `active_column_defaults.py``の例を参照してください。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.modified:1
 msgid "Receive a 'modified' event."
-msgstr ""
+msgstr "「変更された」イベントを受信します。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.modified:17
 msgid ""
 "This event is triggered when the :func:`.attributes.flag_modified` "
 "function is used to trigger a modify event on an attribute without any "
 "specific value being set."
-msgstr ""
+msgstr "このイベントは、：func： `.attributes.flag_modified`関数を使用して、特定の値を設定せずに属性の変更イベントをトリガーするときにトリガーされます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.remove:1
 msgid "Receive a collection remove event."
-msgstr ""
+msgstr "コレクションの削除イベントを受け取ります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.remove:20
 msgid "the value being removed."
-msgstr ""
+msgstr "値は削除されます。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.remove:21
 #: sqlalchemy.orm.events.AttributeEvents.set:39
@@ -515,7 +505,7 @@ msgid ""
 " the ``initiator`` argument is now    passed as a "
 ":class:`.attributes.Event` object, and may be    modified by backref "
 "handlers within a chain of backref-linked    events."
-msgstr ""
+msgstr "イベントの開始を表す：class： `.attributes.Event`のインスタンスです。チェインされたイベントの伝搬を制御するために、バックリファレンスハンドラによって元の値から変更される可能性があります。 .. versionchanged :: 0.9.0 `` initiator``引数は、class： `.attributes.Event`オブジェクトとして渡され、バックリファレンスによってリンクされたイベントチェーン内のバックリファレンスハンドラによって変更される可能性があります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.remove:21
 #: sqlalchemy.orm.events.AttributeEvents.set:39
@@ -523,7 +513,7 @@ msgid ""
 "An instance of :class:`.attributes.Event` representing the initiation of "
 "the event.  May be modified from its original value by backref handlers "
 "in order to control chained event propagation."
-msgstr ""
+msgstr "イベントの開始を表す：class： `.attributes.Event`のインスタンスです。チェインされたイベントの伝搬を制御するために、バックリファレンスハンドラによって元の値から変更される可能性があります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.remove:26
 #: sqlalchemy.orm.events.AttributeEvents.set:44
@@ -531,22 +521,22 @@ msgid ""
 "the ``initiator`` argument is now passed as a :class:`.attributes.Event` "
 "object, and may be modified by backref handlers within a chain of "
 "backref-linked events."
-msgstr ""
+msgstr "`` initiator &#39;`引数は、class：` .attributes.Event`オブジェクトとして渡され、バックリファレンスによってリンクされたイベントチェーン内のバックリファレンスハンドラによって変更される可能性があります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.remove:31
 msgid "No return value is defined for this event."
-msgstr ""
+msgstr "このイベントには戻り値が定義されていません。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.set:1
 msgid "Receive a scalar set event."
-msgstr ""
+msgstr "スカラーセットイベントを受け取ります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.set:29
 msgid ""
 "the value being set.  If this listener is registered with "
 "``retval=True``, the listener function must return this value, or a new "
 "value which replaces it."
-msgstr ""
+msgstr "値が設定されます。このリスナーが `` retval = True``で登録されている場合、リスナー関数はこの値、またはそれを置き換える新しい値を返す必要があります。"
 
 #: of sqlalchemy.orm.events.AttributeEvents.set:33
 msgid ""
@@ -555,50 +545,50 @@ msgid ""
 "``active_history=True``, the previous value of the attribute will be "
 "loaded from the database if the existing value is currently unloaded or "
 "expired."
-msgstr ""
+msgstr "前の値が置き換えられます。これはシンボル `` NEVER_SET``または `` NO_VALUE``でもかまいません。リスナーが `` active_history = True``で登録されている場合、既存の値が現在アンロードまたは期限切れの場合、属性の前の値がデータベースからロードされます。"
 
 #: ../../orm/events.rst:20
 msgid "Mapper Events"
-msgstr ""
+msgstr "マッパーイベント"
 
 #: of sqlalchemy.orm.events.MapperEvents:1
 msgid "Define events specific to mappings."
-msgstr ""
+msgstr "マッピングに固有のイベントを定義します。"
 
 #: of sqlalchemy.orm.events.InstanceEvents:12
 #: sqlalchemy.orm.events.MapperEvents:19
 msgid "Available targets include:"
-msgstr ""
+msgstr "使用可能なターゲットは次のとおりです。"
 
 #: of sqlalchemy.orm.events.InstanceEvents:14
 #: sqlalchemy.orm.events.MapperEvents:21
 msgid "mapped classes"
-msgstr ""
+msgstr "マップされたクラス"
 
 #: of sqlalchemy.orm.events.InstanceEvents:15
 #: sqlalchemy.orm.events.MapperEvents:22
 msgid ""
 "unmapped superclasses of mapped or to-be-mapped classes (using the "
 "``propagate=True`` flag)"
-msgstr ""
+msgstr "（ `` propagate = True``フラグを使用して）マップされたクラスまたはマッピングされるべきクラスのマップされていないスーパークラス"
 
 #: of sqlalchemy.orm.events.InstanceEvents:17
 #: sqlalchemy.orm.events.MapperEvents:24
 msgid ":class:`.Mapper` objects"
-msgstr ""
+msgstr "：class： `.Mapper`オブジェクト"
 
 #: of sqlalchemy.orm.events.InstanceEvents:18
 #: sqlalchemy.orm.events.MapperEvents:25
 msgid ""
 "the :class:`.Mapper` class itself and the :func:`.mapper` function "
 "indicate listening for all mappers."
-msgstr ""
+msgstr "：class： `.Mapper`クラスと：func：` .mapper`関数はすべてのマッパーをリッスンします。"
 
 #: of sqlalchemy.orm.events.MapperEvents:28
 msgid ""
 "mapper events can be associated with unmapped superclasses of mapped "
 "classes."
-msgstr ""
+msgstr "マップされたクラスのマップされていないスーパークラスにマッパーイベントを関連付けることができます。"
 
 #: of sqlalchemy.orm.events.MapperEvents:31
 msgid ""
@@ -613,20 +603,20 @@ msgid ""
 ":meth:`.SessionEvents.after_flush` methods as more flexible and user-"
 "friendly hooks in which to apply additional database state during a "
 "flush."
-msgstr ""
+msgstr "マッパーイベントは、オブジェクトの計測、オブジェクトのロード、およびオブジェクトの永続性に関連するものを含め、マッパーのクリティカルセクションにフックを提供します。特に、永続化メソッド：meth： `〜.MapperEvents.before_insert`、および：meth：`〜.MapperEvents.before_update`は、永続化されている状態を増やすための一般的な場所ですが、これらのメソッドはいくつかの重要な制限で動作します。ユーザは、フラッシュ中に追加のデータベース状態を適用するためのより柔軟で使いやすいフックとして：meth： `.SessionEvents.before_flush`と：meth：` .SessionEvents.after_flush`メソッドを評価することが奨励されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents:44
 msgid ""
 "When using :class:`.MapperEvents`, several modifiers are available to the"
 " :func:`.event.listen` function."
-msgstr ""
+msgstr "：class： `.MapperEvents`を使うと、：func：` .event.listen`関数でいくつかの修飾子を利用できます。"
 
 #: of sqlalchemy.orm.events.MapperEvents:47
 msgid ""
 "When True, the event listener should be applied to all inheriting mappers"
 " and/or the mappers of inheriting classes, as well as any mapper which is"
 " the target of this listener."
-msgstr ""
+msgstr "Trueの場合、イベントリスナーは、継承しているすべてのマッパーおよび/または継承クラスのマッパー、およびこのリスナーのターゲットであるマッパーに適用する必要があります。"
 
 #: of sqlalchemy.orm.events.InstanceEvents:34
 #: sqlalchemy.orm.events.MapperEvents:51
@@ -634,7 +624,7 @@ msgid ""
 "When True, the \"target\" argument passed to applicable event listener "
 "functions will be the instance's :class:`.InstanceState` management "
 "object, rather than the mapped instance itself."
-msgstr ""
+msgstr "Trueの場合、該当するイベントリスナー関数に渡される\ &quot;target \&quot;引数は、マップされたインスタンス自体ではなく、インスタンスの：class： `.InstanceState`管理オブジェクトになります。"
 
 #: of sqlalchemy.orm.events.MapperEvents:55
 msgid ""
@@ -646,7 +636,7 @@ msgid ""
 "``sqlalchemy.orm.interfaces.EXT_STOP`` - cancel all subsequent   event "
 "handlers in the chain. * other values - the return value specified by "
 "specific listeners."
-msgstr ""
+msgstr "Trueの場合、ユーザー定義のイベント関数は戻り値を持たなければなりません。その目的は、後続のイベント伝播を制御するか、またはマッパーによって進行中の操作を変更することです。可能な戻り値は次のとおりです。* `` sqlalchemy.orm.interfaces.EXT_CONTINUE``  - イベント処理を正常に継続します。 * `` sqlalchemy.orm.interfaces.EXT_STOP``  - チェーン内の後続のイベントハンドラをすべてキャンセルします。 * other values  - 特定のリスナーによって指定された戻り値。"
 
 #: of sqlalchemy.orm.events.MapperEvents:55
 msgid ""
@@ -654,27 +644,27 @@ msgid ""
 "purpose of which is either to control subsequent event propagation, or to"
 " otherwise alter the operation in progress by the mapper.   Possible "
 "return values are:"
-msgstr ""
+msgstr "Trueの場合、ユーザー定義のイベント関数は戻り値を持たなければなりません。その目的は、後続のイベント伝播を制御するか、またはマッパーによって進行中の操作を変更することです。可能な戻り値は次のとおりです。"
 
 #: of sqlalchemy.orm.events.MapperEvents:61
 msgid ""
 "``sqlalchemy.orm.interfaces.EXT_CONTINUE`` - continue event processing "
 "normally."
-msgstr ""
+msgstr "`` sqlalchemy.orm.interfaces.EXT_CONTINUE``  - イベント処理を正常に継続します。"
 
 #: of sqlalchemy.orm.events.MapperEvents:63
 msgid ""
 "``sqlalchemy.orm.interfaces.EXT_STOP`` - cancel all subsequent event "
 "handlers in the chain."
-msgstr ""
+msgstr "`` sqlalchemy.orm.interfaces.EXT_STOP``  - チェーン内のすべての後続のイベントハンドラを取り消します。"
 
 #: of sqlalchemy.orm.events.MapperEvents:65
 msgid "other values - the return value specified by specific listeners."
-msgstr ""
+msgstr "その他の値 - 特定のリスナーによって指定された戻り値"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_configured:1
 msgid "Called after a series of mappers have been configured."
-msgstr ""
+msgstr "一連のマッパーが設定された後に呼び出されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_configured:17
 msgid ""
@@ -683,7 +673,7 @@ msgid ""
 "has completed its work. :func:`.orm.configure_mappers` is typically "
 "invoked automatically as mappings are first used, as well as each time "
 "new mappers have been made available and new mapper use is detected."
-msgstr ""
+msgstr "：meth： `.MapperEvents.after_configured`イベントは、関数が作業を完了した後、：func：` .orm.configure_mappers`関数が呼び出されるたびに呼び出されます。 ：func： `.orm.configure_mappers`は、通常、マッピングが最初に使用されるときに、新しいマッパーが利用可能になり、新しいマッパー使用が検出されるときに自動的に呼び出されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_configured:25
 msgid ""
@@ -694,7 +684,7 @@ msgid ""
 " mappers that were pending. Also contrast to "
 ":meth:`.MapperEvents.before_configured`, which is invoked before the "
 "series of mappers has been configured."
-msgstr ""
+msgstr "このイベントを：meth： `.MapperEvents.mapper_configured`イベントと比較してください。このイベントは、コンフィグレーション操作の進行中にマッパーごとに呼び出されます。このイベントとは異なり、このイベントが呼び出されると、保留中のすべてのマッパーに対して、すべてのクロス構成（たとえば、バックレフ）も利用可能になります。 ：meth： `.MapperEvents.before_configured`とは対照的に、一連のマッパーが設定される前に呼び出されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_configured:33
 #: sqlalchemy.orm.events.MapperEvents.before_configured:25
@@ -702,7 +692,7 @@ msgid ""
 "This event can **only** be applied to the :class:`.Mapper` class or "
 ":func:`.mapper` function, and not to individual mappings or mapped "
 "classes.  It is only invoked for all mappings as a whole::"
-msgstr ""
+msgstr "このイベントは：class： `.Mapper`クラスまたは：func：` .mapper`関数にのみ** **適用でき、個々のマッピングやマップされたクラスには適用できません。すべてのマッピングに対してのみ呼び出されます::"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_configured:43
 msgid ""
@@ -712,23 +702,23 @@ msgid ""
 "after existing ones have already been used, this event will likely be "
 "called again.  To ensure that a particular event is only called once and "
 "no further, the ``once=True`` argument (new in 0.9.4) can be applied::"
-msgstr ""
+msgstr "理論的には、このイベントはアプリケーションごとに1回呼び出されますが、実際には新しいマッパーが：func： `.orm.configure_mappers`呼び出しの影響を受けるたびに呼び出されます。既存のマッピングがすでに使用された後に新しいマッピングが構築された場合、このイベントは再び呼び出される可能性があります。特定のイベントが一度だけ呼び出されるようにするには、 `` once = True``引数（0.9.4の新機能）を適用することができます::"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_configured:59
 #: sqlalchemy.orm.events.MapperEvents.before_configured:60
 msgid ":meth:`.MapperEvents.mapper_configured`"
-msgstr ""
+msgstr "：meth： `.MapperEvents.mapper_configured`"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_configured:61
 #: sqlalchemy.orm.events.MapperEvents.mapper_configured:59
 msgid ":meth:`.MapperEvents.before_configured`"
-msgstr ""
+msgstr "：meth： `.MapperEvents.before_configured`"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_delete:1
 msgid ""
 "Receive an object instance after a DELETE statement has been emitted "
 "corresponding to that instance."
-msgstr ""
+msgstr "そのインスタンスに対応するDELETE文が発行された後にオブジェクトインスタンスを受け取ります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_delete:18
 #: sqlalchemy.orm.events.MapperEvents.before_delete:18
@@ -736,13 +726,13 @@ msgid ""
 "This event is used to emit additional SQL statements on the given "
 "connection as well as to perform application specific bookkeeping related"
 " to a deletion event."
-msgstr ""
+msgstr "このイベントは、指定された接続で追加のSQL文を発行するとともに、削除イベントに関連するアプリケーション固有の簿記を実行するために使用されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_delete:22
 msgid ""
 "The event is often called for a batch of objects of the same class after "
 "their DELETE statements have been emitted at once in a previous step."
-msgstr ""
+msgstr "イベントは、前のステップで一度にDELETEステートメントが発行された後、同じクラスのオブジェクトのバッチに対して呼び出されることがよくあります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_delete:28
 #: sqlalchemy.orm.events.MapperEvents.after_insert:34
@@ -757,7 +747,7 @@ msgid ""
 "fully** the notes at :ref:`session_persistence_mapper` for guidelines on "
 "using these methods; generally, the :meth:`.SessionEvents.before_flush` "
 "method should be preferred for general on-flush changes."
-msgstr ""
+msgstr "マッパー・レベルのフラッシュ・イベントは、操作されている行のローカル属性のみで**非常に制限された操作**を許可し、与えられた：class： `.Connection`でSQLを発行できるようにします。 **これらのメソッドの使用に関するガイドラインについては、ref： `session_persistence_mapper`を参照してください。一般的には、：meth： `.SessionEvents.before_flush`メソッドは、一般的なon-flushの変更に対して優先されるべきです。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_delete:36
 #: sqlalchemy.orm.events.MapperEvents.after_insert:42
@@ -768,7 +758,7 @@ msgstr ""
 #: sqlalchemy.orm.events.MapperEvents.instrument_class:31
 #: sqlalchemy.orm.events.MapperEvents.mapper_configured:53
 msgid "the :class:`.Mapper` which is the target of this event."
-msgstr ""
+msgstr "このイベントのターゲットである：class： `.Mapper`。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_delete:38
 #: sqlalchemy.orm.events.MapperEvents.before_delete:38
@@ -776,7 +766,7 @@ msgid ""
 "the :class:`.Connection` being used to emit DELETE statements for this "
 "instance.  This provides a handle into the current transaction on the "
 "target database specific to this instance."
-msgstr ""
+msgstr "：class： `.Connection`はこのインスタンスに対してDELETE文を発行するために使われます。これは、このインスタンスに固有のターゲット・データベース上の現在のトランザクションにハンドルを提供します。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_delete:42
 #: sqlalchemy.orm.events.MapperEvents.before_delete:42
@@ -784,7 +774,7 @@ msgid ""
 "the mapped instance being deleted.  If the event is configured with "
 "``raw=True``, this will instead be the :class:`.InstanceState` state-"
 "management object associated with the instance."
-msgstr ""
+msgstr "マップされたインスタンスは削除されます。イベントが `` raw = True``で設定されている場合、これは代わりにインスタンスに関連付けられた：class： `.InstanceState`状態管理オブジェクトになります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_delete:46
 #: sqlalchemy.orm.events.MapperEvents.after_insert:52
@@ -793,7 +783,7 @@ msgstr ""
 #: sqlalchemy.orm.events.MapperEvents.before_insert:52
 #: sqlalchemy.orm.events.MapperEvents.before_update:71
 msgid "No return value is supported by this event."
-msgstr ""
+msgstr "このイベントでは戻り値はサポートされていません。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_delete:50
 #: sqlalchemy.orm.events.MapperEvents.after_insert:56
@@ -805,20 +795,20 @@ msgstr ""
 #: sqlalchemy.orm.events.SessionEvents.after_flush_postexec:34
 #: sqlalchemy.orm.events.SessionEvents.before_flush:30
 msgid ":ref:`session_persistence_events`"
-msgstr ""
+msgstr "：ref： `session_persistence_events`"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_insert:1
 msgid ""
 "Receive an object instance after an INSERT statement is emitted "
 "corresponding to that instance."
-msgstr ""
+msgstr "そのインスタンスに対応するINSERT文が発行された後にオブジェクトインスタンスを受け取ります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_insert:18
 msgid ""
 "This event is used to modify in-Python-only state on the instance after "
 "an INSERT occurs, as well as to emit additional SQL statements on the "
 "given connection."
-msgstr ""
+msgstr "このイベントは、INSERTが発生した後のインスタンス上のPython専用の状態を変更するために使用され、指定された接続で追加のSQL文を発行するためにも使用されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_insert:23
 msgid ""
@@ -828,7 +818,7 @@ msgid ""
 "can be configured with ``batch=False``, which will cause batches of "
 "instances to be broken up into individual (and more poorly performing) "
 "event->persist->event steps."
-msgstr ""
+msgstr "このイベントは、前の手順で一度にINSERTステートメントが発行された後、同じクラスのオブジェクトのバッチに対して呼び出されることがよくあります。非常にまれなケースでは、これが望ましくない場合、：func： `.mapper`を` `batch = False``で構成することができます。これにより、インスタンスのバッチが個々の（そしてパフォーマンスが悪い）イベントに分割されます - &gt;永続 - &gt;イベントステップ。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_insert:44
 #: sqlalchemy.orm.events.MapperEvents.before_insert:44
@@ -836,7 +826,7 @@ msgid ""
 "the :class:`.Connection` being used to emit INSERT statements for this "
 "instance.  This provides a handle into the current transaction on the "
 "target database specific to this instance."
-msgstr ""
+msgstr "：class： `.Connection`はこのインスタンスのINSERT文を発行するために使われます。これは、このインスタンスに固有のターゲット・データベース上の現在のトランザクションにハンドルを提供します。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_insert:48
 #: sqlalchemy.orm.events.MapperEvents.after_update:66
@@ -846,20 +836,20 @@ msgid ""
 "the mapped instance being persisted.  If the event is configured with "
 "``raw=True``, this will instead be the :class:`.InstanceState` state-"
 "management object associated with the instance."
-msgstr ""
+msgstr "マップされたインスタンスは永続化されます。イベントが `` raw = True``で設定されている場合、これは代わりにインスタンスに関連付けられた：class： `.InstanceState`状態管理オブジェクトになります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_update:1
 msgid ""
 "Receive an object instance after an UPDATE statement is emitted "
 "corresponding to that instance."
-msgstr ""
+msgstr "そのインスタンスに対応するUPDATE文が発行された後にオブジェクトインスタンスを受け取ります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_update:18
 msgid ""
 "This event is used to modify in-Python-only state on the instance after "
 "an UPDATE occurs, as well as to emit additional SQL statements on the "
 "given connection."
-msgstr ""
+msgstr "このイベントは、UPDATEが発生した後のインスタンス上のPythonのみの状態を変更したり、指定された接続で追加のSQL文を発行したりするために使用されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_update:23
 msgid ""
@@ -872,7 +862,7 @@ msgid ""
 "statement will be issued. This means that an instance being sent to "
 ":meth:`~.MapperEvents.after_update` is *not* a guarantee that an UPDATE "
 "statement has been issued."
-msgstr ""
+msgstr "このメソッドは、列ベースの属性*に正味の変更がなく、UPDATE文が処理されていない場合でも、\ &quot;ダーティ\&quot;とマークされたすべてのインスタンスに対して呼び出されます。列ベースの属性のいずれかが呼び出されたときに、またはそのコレクションのいずれかが変更されたときに、オブジェクトはダーティとしてマークされます。更新時に列ベースの属性に正味の変更がない場合、UPDATEステートメントは発行されません。つまり、meth： `〜.MapperEvents.after_update`に送られるインスタンスは、UPDATE文が発行されたことを保証するものではありません。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_update:36
 msgid ""
@@ -880,7 +870,7 @@ msgid ""
 "and therefore resulted in an UPDATE statement, use "
 "``object_session(instance).is_modified(instance, "
 "include_collections=False)``."
-msgstr ""
+msgstr "オブジェクトの列ベースの属性に正味の変更があり、その結果UPDATE文が返されたかどうかを検出するには、 `` object_session（インスタンス）.is_modified（インスタンス、include_collections = False） ``を使用します。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_update:41
 msgid ""
@@ -890,7 +880,7 @@ msgid ""
 "can be configured with ``batch=False``, which will cause batches of "
 "instances to be broken up into individual (and more poorly performing) "
 "event->persist->event steps."
-msgstr ""
+msgstr "このイベントは、前のステップでUPDATEステートメントが一度に発行された後、同じクラスのオブジェクトのバッチに対して呼び出されることがよくあります。非常にまれなケースでは、これが望ましくない場合、：func： `.mapper`を` `batch = False``で構成することができます。これにより、インスタンスのバッチが個々の（そしてパフォーマンスが悪い）イベントに分割されます - &gt;永続 - &gt;イベントステップ。"
 
 #: of sqlalchemy.orm.events.MapperEvents.after_update:62
 #: sqlalchemy.orm.events.MapperEvents.before_update:63
@@ -898,11 +888,11 @@ msgid ""
 "the :class:`.Connection` being used to emit UPDATE statements for this "
 "instance.  This provides a handle into the current transaction on the "
 "target database specific to this instance."
-msgstr ""
+msgstr "：class： `.Connection`はこのインスタンスのUPDATE文を発行するために使われます。これは、このインスタンスに固有のターゲット・データベース上の現在のトランザクションにハンドルを提供します。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_configured:1
 msgid "Called before a series of mappers have been configured."
-msgstr ""
+msgstr "一連のマッパーが設定される前に呼び出されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_configured:17
 msgid ""
@@ -912,7 +902,7 @@ msgid ""
 "typically invoked automatically as mappings are first used, as well as "
 "each time new mappers have been made available and new mapper use is "
 "detected."
-msgstr ""
+msgstr "：meth： `.MapperEvents.before_configured`イベントは：func：` .orm.configure_mappers`関数が呼び出されるたびに呼び出されます。 ：func： `.orm.configure_mappers`は、通常、マッピングが最初に使用されるときに、新しいマッパーが利用可能になり、新しいマッパー使用が検出されるときに自動的に呼び出されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_configured:35
 msgid ""
@@ -920,7 +910,7 @@ msgid ""
 "invoked after the series of mappers has been configured, as well as "
 ":meth:`.MapperEvents.mapper_configured`, which is invoked on a per-mapper"
 " basis as each one is configured to the extent possible."
-msgstr ""
+msgstr "このイベントを：meth： `.MapperEvents.after_configured`と比較してください。これは一連のマッパーが設定された後に呼び出され、：meth：` .MapperEvents.mapper_configured`（各マッパーごとに呼び出されます） 1つは可能な限り構成されています。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_configured:40
 msgid ""
@@ -930,37 +920,37 @@ msgid ""
 "after existing ones have already been used, this event will likely be "
 "called again.  To ensure that a particular event is only called once and "
 "no further, the ``once=True`` argument (new in 0.9.4) can be applied::"
-msgstr ""
+msgstr "理論的には、このイベントはアプリケーションごとに1回呼び出されますが、新しいマッパーが：func： `.orm.configure_mappers`呼び出しの影響を受けるたびに実際に呼び出されます。既存のマッピングがすでに使用された後に新しいマッピングが構築された場合、このイベントは再び呼び出される可能性があります。特定のイベントが一度だけ呼び出されるようにするには、 `` once = True``引数（0.9.4の新機能）を適用することができます::"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_configured:62
 #: sqlalchemy.orm.events.MapperEvents.mapper_configured:61
 msgid ":meth:`.MapperEvents.after_configured`"
-msgstr ""
+msgstr "：meth： `.MapperEvents.after_configured`"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_delete:1
 msgid ""
 "Receive an object instance before a DELETE statement is emitted "
 "corresponding to that instance."
-msgstr ""
+msgstr "そのインスタンスに対応するDELETE文が発行される前にオブジェクト・インスタンスを受け取ります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_delete:22
 msgid ""
 "The event is often called for a batch of objects of the same class before"
 " their DELETE statements are emitted at once in a later step."
-msgstr ""
+msgstr "このイベントは、後の手順でDELETE文が一度に発行される前に、同じクラスのオブジェクトのバッチに対して呼び出されることがよくあります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_insert:1
 msgid ""
 "Receive an object instance before an INSERT statement is emitted "
 "corresponding to that instance."
-msgstr ""
+msgstr "そのインスタンスに対応するINSERT文が発行される前にオブジェクトインスタンスを受け取ります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_insert:18
 msgid ""
 "This event is used to modify local, non-object related attributes on the "
 "instance before an INSERT occurs, as well as to emit additional SQL "
 "statements on the given connection."
-msgstr ""
+msgstr "このイベントは、INSERTが発生する前にインスタンス上のローカルで非オブジェクトに関連する属性を変更したり、特定の接続で追加のSQL文を発行したりするために使用されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_insert:23
 msgid ""
@@ -970,20 +960,20 @@ msgid ""
 "be configured with ``batch=False``, which will cause batches of instances"
 " to be broken up into individual (and more poorly performing) "
 "event->persist->event steps."
-msgstr ""
+msgstr "このイベントは、後の手順でINSERT文が一度に発行される前に、同じクラスのオブジェクトのバッチに対して呼び出されることがよくあります。非常にまれなケースでは、これが望ましくない場合、：func： `.mapper`を` `batch = False``で構成することができます。これにより、インスタンスのバッチが個々の（そしてパフォーマンスが悪い）イベントに分割されます - &gt;永続 - &gt;イベントステップ。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_update:1
 msgid ""
 "Receive an object instance before an UPDATE statement is emitted "
 "corresponding to that instance."
-msgstr ""
+msgstr "そのインスタンスに対応するUPDATEステートメントが発行される前にオブジェクトインスタンスを受け取ります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_update:18
 msgid ""
 "This event is used to modify local, non-object related attributes on the "
 "instance before an UPDATE occurs, as well as to emit additional SQL "
 "statements on the given connection."
-msgstr ""
+msgstr "このイベントは、UPDATEが発生する前にインスタンス上のローカルで非オブジェクトに関連する属性を変更したり、指定された接続で追加のSQL文を発行したりするために使用されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_update:23
 msgid ""
@@ -997,7 +987,7 @@ msgid ""
 "that an UPDATE statement will be issued, although you can affect the "
 "outcome here by modifying attributes so that a net change in value does "
 "exist."
-msgstr ""
+msgstr "このメソッドは、列ベースの属性*に正味の変更がない場合でも、\ &quot;ダーティ\&quot;とマークされたすべてのインスタンスに対して呼び出されます。列ベースの属性のいずれかが呼び出されたときに、またはそのコレクションのいずれかが変更されたときに、オブジェクトはダーティとしてマークされます。更新時に列ベースの属性に正味の変更がない場合、UPDATEステートメントは発行されません。つまり、meth： `〜.MapperEvents.before_update`に送信されるインスタンスは、UPDATE文が発行される保証ではありませんが、値の正味の変更が行うように属性を変更することで結果に影響を与えることができます。存在する。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_update:37
 msgid ""
@@ -1005,7 +995,7 @@ msgid ""
 "and will therefore generate an UPDATE statement, use "
 "``object_session(instance).is_modified(instance, "
 "include_collections=False)``."
-msgstr ""
+msgstr "オブジェクトの列ベースの属性に正味の変更があるかどうかを検出し、UPDATE文を生成するかどうかを検出するには、 `` object_session（instance）.is_modified（instance、include_collections = False） ``を使用します。"
 
 #: of sqlalchemy.orm.events.MapperEvents.before_update:42
 msgid ""
@@ -1015,37 +1005,37 @@ msgid ""
 "be configured with ``batch=False``, which will cause batches of instances"
 " to be broken up into individual (and more poorly performing) "
 "event->persist->event steps."
-msgstr ""
+msgstr "このイベントは、UPDATEステートメントが後のステップで同時に発行される前に、同じクラスのオブジェクトのバッチに対して呼び出されることがよくあります。非常にまれなケースでは、これが望ましくない場合、：func： `.mapper`を` `batch = False``で構成することができます。これにより、インスタンスのバッチが個々の（そしてパフォーマンスが悪い）イベントに分割されます - &gt;永続 - &gt;イベントステップ。"
 
 #: of sqlalchemy.orm.events.MapperEvents.instrument_class:1
 msgid ""
 "Receive a class when the mapper is first constructed, before "
 "instrumentation is applied to the mapped class."
-msgstr ""
+msgstr "マップされたクラスに計測が適用される前に、マッパーが最初に構築されたときにクラスを受け取ります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.instrument_class:18
 msgid ""
 "This event is the earliest phase of mapper construction. Most attributes "
 "of the mapper are not yet initialized."
-msgstr ""
+msgstr "このイベントは、マッパー構築の初期段階です。マッパーのほとんどの属性はまだ初期化されていません。"
 
 #: of sqlalchemy.orm.events.MapperEvents.instrument_class:21
 msgid ""
 "This listener can either be applied to the :class:`.Mapper` class "
 "overall, or to any un-mapped class which serves as a base for classes "
 "that will be mapped (using the ``propagate=True`` flag)::"
-msgstr ""
+msgstr "このリスナは、：class： `.Mapper`クラス全体に適用することも、マップされるクラスのベースとして機能するマッピングされていないクラスに適用することもできます（` `propagate = True``フラグを使用します）。"
 
 #: of sqlalchemy.orm.events.MapperEvents.instrument_class:33
 #: sqlalchemy.orm.events.MapperEvents.mapper_configured:55
 msgid "the mapped class."
-msgstr ""
+msgstr "マップされたクラス"
 
 #: of sqlalchemy.orm.events.MapperEvents.mapper_configured:1
 msgid ""
 "Called when a specific mapper has completed its own configuration within "
 "the scope of the :func:`.configure_mappers` call."
-msgstr ""
+msgstr "特定のマッパーが：func： `.configure_mappers`呼び出しの範囲内で独自の設定を完了したときに呼び出されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.mapper_configured:18
 msgid ""
@@ -1055,7 +1045,7 @@ msgid ""
 " :func:`.orm.configure_mappers` is typically invoked automatically as "
 "mappings are first used, as well as each time new mappers have been made "
 "available and new mapper use is detected."
-msgstr ""
+msgstr "：meth： `.MapperEvents.mapper_configured`イベントは、：func：` .orm.configure_mappers`関数が未構成のマッパーの現在のリストを処理するときに発生する各マッパーごとに呼び出されます。 ：func： `.orm.configure_mappers`は、通常、マッピングが最初に使用されるときに、新しいマッパーが利用可能になり、新しいマッパー使用が検出されるときに自動的に呼び出されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.mapper_configured:27
 msgid ""
@@ -1066,7 +1056,7 @@ msgid ""
 ":paramref:`.orm.relationship.back_populates` argument *will* be fully "
 "available, since this style of relationship does not rely upon other "
 "possibly-not-configured mappers to know that they exist."
-msgstr ""
+msgstr "イベントが呼び出されると、マッパーは最終状態になるはずですが、**他のマッパーから呼び出される可能性のあるバックレックス**は含まれません。それらは構成操作内でまだ保留状態になっている可能性があります。 ：paramref： `.orm.relationship.back_populates`引数*で設定されている双方向の関係は、他の設定されていない可能性のあるマッパーがそれらが存在することを知ることに依存しないため、完全に利用可能になります。"
 
 #: of sqlalchemy.orm.events.MapperEvents.mapper_configured:37
 msgid ""
@@ -1074,7 +1064,7 @@ msgid ""
 "including backrefs that are defined only on other mappings, use the "
 ":meth:`.MapperEvents.after_configured` event; this event invokes only "
 "after all known mappings have been fully configured."
-msgstr ""
+msgstr "** all **マッパーが他のマッピングでのみ定義されているバックレックスを含む準備ができていることが保証されているイベントの場合は、：meth： `.MapperEvents.after_configured`イベントを使用します。このイベントは、既知のすべてのマッピングが完全に構成された後にのみ呼び出されます。"
 
 #: of sqlalchemy.orm.events.MapperEvents.mapper_configured:43
 msgid ""
@@ -1086,52 +1076,52 @@ msgid ""
 "useful for configurational steps that benefit from being invoked just "
 "once on a specific mapper basis, which don't require that \"backref\" "
 "configurations are necessarily ready yet."
-msgstr ""
+msgstr "：meth： `.MapperEvents.mapper_configured`イベントは、：meth：` .MapperEvents.before_configured`または：meth： `.MapperEvents.after_configured`とは異なり、マッパー/クラスごとに個別に呼び出され、マッパーはイベントに渡されます自体。また、特定のマッパーのために1回だけ呼び出されます。このイベントは、特定のマッパーベースで一度だけ呼び出されることから利益を得る構成ステップに役立ちます。これは、「バックリファレンス」構成が必ず準備されている必要はありません。"
 
 #: ../../orm/events.rst:26
 msgid "Instance Events"
-msgstr ""
+msgstr "インスタンスイベント"
 
 #: of sqlalchemy.orm.events.InstanceEvents:1
 msgid "Define events specific to object lifecycle."
-msgstr ""
+msgstr "オブジェクトのライフサイクルに固有のイベントを定義します。"
 
 #: of sqlalchemy.orm.events.InstanceEvents:21
 msgid ""
 "instance events can be associated with unmapped superclasses of mapped "
 "classes."
-msgstr ""
+msgstr "インスタンスイベントは、マッピングされたクラスのマップされていないスーパークラスに関連付けることができます。"
 
 #: of sqlalchemy.orm.events.InstanceEvents:24
 msgid ""
 "Instance events are closely related to mapper events, but are more "
 "specific to the instance and its instrumentation, rather than its system "
 "of persistence."
-msgstr ""
+msgstr "インスタンスイベントは、マッパーイベントと密接に関連していますが、永続性システムではなく、インスタンスとその計測に固有のものです。"
 
 #: of sqlalchemy.orm.events.InstanceEvents:28
 msgid ""
 "When using :class:`.InstanceEvents`, several modifiers are available to "
 "the :func:`.event.listen` function."
-msgstr ""
+msgstr "：class： `.InstanceEvents`を使うと、：func：` .event.listen`関数に対していくつかの修飾子が利用できます。"
 
 #: of sqlalchemy.orm.events.InstanceEvents:31
 msgid ""
 "When True, the event listener should be applied to all inheriting classes"
 " as well as the class which is the target of this listener."
-msgstr ""
+msgstr "Trueの場合、イベントリスナーは、継承するすべてのクラスおよびこのリスナーのターゲットであるクラスに適用する必要があります。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.expire:1
 msgid ""
 "Receive an object instance after its attributes or some subset have been "
 "expired."
-msgstr ""
+msgstr "属性または一部のサブセットが期限切れになった後にオブジェクトインスタンスを受信します。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.expire:18
 msgid ""
 "'keys' is a list of attribute names.  If None, the entire state was "
 "expired."
-msgstr ""
+msgstr "&#39;keys&#39;は属性名のリストです。 Noneの場合、状態全体が期限切れになりました。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.expire:21
 #: sqlalchemy.orm.events.InstanceEvents.init:28
@@ -1145,17 +1135,17 @@ msgid ""
 "the mapped instance.  If the event is configured with ``raw=True``, this "
 "will instead be the :class:`.InstanceState` state-management object "
 "associated with the instance."
-msgstr ""
+msgstr "マップされたインスタンスイベントが `` raw = True``で設定されている場合、これは代わりにインスタンスに関連付けられた：class： `.InstanceState`状態管理オブジェクトになります。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.expire:25
 msgid ""
 "sequence of attribute names which were expired, or None if all attributes"
 " were expired."
-msgstr ""
+msgstr "有効期限が切れた属性名のシーケンス、またはすべての属性が期限切れの場合はNone。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.first_init:1
 msgid "Called when the first instance of a particular mapping is called."
-msgstr ""
+msgstr "特定のマッピングの最初のインスタンスが呼び出されたときに呼び出されます。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.first_init:17
 msgid ""
@@ -1163,11 +1153,11 @@ msgid ""
 "the first time for that particular class.    The event invokes before "
 "``__init__`` actually proceeds as well as before the "
 ":meth:`.InstanceEvents.init` event is invoked."
-msgstr ""
+msgstr "このイベントは、クラスの `` __init__``メソッドがその特定のクラスに対して初めて呼び出されたときに呼び出されます。イベントは：meth： `.InstanceEvents.init`イベントが呼び出される前と同様に` `__init__``が実際に処理される前に呼び出されます。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init:1
 msgid "Receive an instance when its constructor is called."
-msgstr ""
+msgstr "コンストラクタが呼び出されたときにインスタンスを受け取ります。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init:17
 msgid ""
@@ -1176,49 +1166,49 @@ msgid ""
 "method.  It is not called when an object is loaded from the database; see"
 " the :meth:`.InstanceEvents.load` event in order to intercept a database "
 "load."
-msgstr ""
+msgstr "このメソッドは、オブジェクトのコンストラクタ（例えば、 `` __init__``メソッド）とともに、オブジェクトのユーザランド構築時にのみ呼び出されます。オブジェクトがデータベースからロードされたときは呼び出されません。 ：meth： `.InstanceEvents.load`イベントを参照して、データベースの負荷を傍受してください。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init:23
 msgid ""
 "The event is called before the actual ``__init__`` constructor of the "
 "object is called.  The ``kwargs`` dictionary may be modified in-place in "
 "order to affect what is passed to ``__init__``."
-msgstr ""
+msgstr "このイベントは、オブジェクトの実際の `` __init__``コンストラクタが呼び出される前に呼び出されます。 `` kwargs``辞書は、 `` __init__``に渡されるものに影響を与えるために、インプレースで修正されるかもしれません。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init:32
 msgid ""
 "positional arguments passed to the ``__init__`` method. This is passed as"
 " a tuple and is currently immutable."
-msgstr ""
+msgstr "`` __init__``メソッドに渡された位置引数です。これはタプルとして渡され、現在は不変です。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init:34
 msgid ""
 "keyword arguments passed to the ``__init__`` method. This structure *can*"
 " be altered in place."
-msgstr ""
+msgstr "キーワード引数は `` __init__``メソッドに渡されます。この構造*は変更することができます。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init:39
 msgid ":meth:`.InstanceEvents.init_failure`"
-msgstr ""
+msgstr "：meth： `.InstanceEvents.init_failure`"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init:41
 #: sqlalchemy.orm.events.InstanceEvents.init_failure:43
 #: sqlalchemy.orm.events.InstanceEvents.refresh:33
 msgid ":meth:`.InstanceEvents.load`"
-msgstr ""
+msgstr "：meth： `.InstanceEvents.load`"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init_failure:1
 msgid ""
 "Receive an instance when its constructor has been called, and raised an "
 "exception."
-msgstr ""
+msgstr "コンストラクタが呼び出されたときにインスタンスを受け取り、例外を送出します。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init_failure:18
 msgid ""
 "This method is only called during a userland construction of an object, "
 "in conjunction with the object's constructor, e.g. its ``__init__`` "
 "method. It is not called when an object is loaded from the database."
-msgstr ""
+msgstr "このメソッドは、オブジェクトのコンストラクタ（例えば、 `` __init__``メソッド）とともに、オブジェクトのユーザランド構築時にのみ呼び出されます。オブジェクトがデータベースからロードされたときには呼び出されません。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init_failure:23
 msgid ""
@@ -1227,32 +1217,32 @@ msgid ""
 "raised outwards, so that the construction of the object still raises an "
 "exception.   The actual exception and stack trace raised should be "
 "present in ``sys.exc_info()``."
-msgstr ""
+msgstr "このイベントは、 `` __init__``メソッドによって発生した例外が捕捉された後に呼び出されます。イベントが呼び出された後、元の例外が外側に再生成され、オブジェクトの構築によって引き続き例外が発生します。実際の例外とスタックトレースは `` sys.exc_info（） ``に存在するはずです。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init_failure:34
 msgid "positional arguments that were passed to the ``__init__`` method."
-msgstr ""
+msgstr "`` __init__``メソッドに渡された位置引数。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init_failure:36
 msgid "keyword arguments that were passed to the ``__init__`` method."
-msgstr ""
+msgstr "`` __init__``メソッドに渡されたキーワード引数。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.init_failure:41
 #: sqlalchemy.orm.events.InstanceEvents.load:42
 msgid ":meth:`.InstanceEvents.init`"
-msgstr ""
+msgstr "：meth： `.InstanceEvents.init`"
 
 #: of sqlalchemy.orm.events.InstanceEvents.load:1
 msgid ""
 "Receive an object instance after it has been created via ``__new__``, and"
 " after initial attribute population has occurred."
-msgstr ""
+msgstr "オブジェクトインスタンスが `` __new__``を介して生成され、初期属性の集合が発生した後にそれを受け取ります。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.load:19
 msgid ""
 "This typically occurs when the instance is created based on incoming "
 "result rows, and is only called once for that instance's lifetime."
-msgstr ""
+msgstr "これは、通常、受信結果の行に基づいてインスタンスが作成され、そのインスタンスの存続時間に対して一度だけ呼び出される場合に発生します。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.load:23
 msgid ""
@@ -1260,72 +1250,72 @@ msgid ""
 "row received for this instance.  Note that some attributes and "
 "collections may or may not be loaded or even initialized, depending on "
 "what's present in the result rows."
-msgstr ""
+msgstr "結果行のロード中、このメソッドはこのインスタンスに対して最初に受信された行で呼び出されることに注意してください。結果行にあるものに応じて、属性やコレクションの一部がロードされたり、初期化されたりされたりすることがあります。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.load:28
 msgid ""
 "The :meth:`.InstanceEvents.load` event is also available in a class-"
 "method decorator format called :func:`.orm.reconstructor`."
-msgstr ""
+msgstr "：meth： `.InstanceEvents.load`イベントは、func：` .orm.reconstructor`というクラスメソッドデコレータフォーマットでも利用できます。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.load:35
 msgid ""
 "the :class:`.QueryContext` corresponding to the current :class:`.Query` "
 "in progress.  This argument may be ``None`` if the load does not "
 "correspond to a :class:`.Query`, such as during :meth:`.Session.merge`."
-msgstr ""
+msgstr "進行中の：class： `.Query`に対応する：class：` .QueryContext`。この引数は、loadが：class： `.Query`に対応しない場合、` `None``とすることができます。例えば、：meth：`。Session.merge`の間です。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.load:44
 msgid ":meth:`.InstanceEvents.refresh`"
-msgstr ""
+msgstr "：meth： `.InstanceEvents.refresh`"
 
 #: of sqlalchemy.orm.events.InstanceEvents.load:46
 msgid ":meth:`.SessionEvents.loaded_as_persistent`"
-msgstr ""
+msgstr "：meth： `.SessionEvents.loaded_as_persistent`"
 
 #: of sqlalchemy.orm.events.InstanceEvents.load:48
 msgid ":ref:`mapping_constructors`"
-msgstr ""
+msgstr "：ref： `mapping_constructors`"
 
 #: of sqlalchemy.orm.events.InstanceEvents.pickle:1
 msgid "Receive an object instance when its associated state is being pickled."
-msgstr ""
+msgstr "関連付けられた状態がピクルされているときにオブジェクトインスタンスを受け取ります。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.pickle:22
 msgid ""
 "the dictionary returned by :class:`.InstanceState.__getstate__`, "
 "containing the state to be pickled."
-msgstr ""
+msgstr "pickleされる状態を含む：class： `.InstanceState .__ getstate__`によって返された辞書。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.refresh:1
 msgid ""
 "Receive an object instance after one or more attributes have been "
 "refreshed from a query."
-msgstr ""
+msgstr "1つまたは複数の属性がクエリからリフレッシュされた後にオブジェクトインスタンスを受け取ります。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.refresh:18
 msgid ""
 "Contrast this to the :meth:`.InstanceEvents.load` method, which is "
 "invoked when the object is first loaded from a query."
-msgstr ""
+msgstr "これを：meth： `.InstanceEvents.load`メソッドと比較してください。このメソッドは、オブジェクトがクエリから最初に読み込まれたときに呼び出されます。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.refresh:25
 msgid ""
 "the :class:`.QueryContext` corresponding to the current :class:`.Query` "
 "in progress."
-msgstr ""
+msgstr "進行中の：class： `.Query`に対応する：class：` .QueryContext`。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.refresh:27
 msgid ""
 "sequence of attribute names which were populated, or None if all column-"
 "mapped, non-deferred attributes were populated."
-msgstr ""
+msgstr "取り込まれた属性名のシーケンス、またはすべての列マップされた非遅延属性が移入された場合はNone。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.refresh_flush:1
 msgid ""
 "Receive an object instance after one or more attributes have been "
 "refreshed within the persistence of the object."
-msgstr ""
+msgstr "オブジェクトの永続性内で1つ以上の属性がリフレッシュされた後、オブジェクトインスタンスを受け取ります。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.refresh_flush:18
 msgid ""
@@ -1333,7 +1323,7 @@ msgid ""
 "invoked within the unit of work flush process, and the values here "
 "typically come from the process of handling an INSERT or UPDATE, such as "
 "via the RETURNING clause or from Python-side default values."
-msgstr ""
+msgstr "このイベントは、作業単位処理内で呼び出される以外は：meth： `.InstanceEvents.refresh`と同じです。ここでの値は、通常、RETURNING句を使用するなど、INSERTまたはUPDATEを処理するプロセスに由来します。 Python側のデフォルト値から"
 
 #: of sqlalchemy.orm.events.InstanceEvents.refresh_flush:30
 #: sqlalchemy.orm.events.SessionEvents.after_flush:23
@@ -1342,50 +1332,50 @@ msgstr ""
 msgid ""
 "Internal :class:`.UOWTransaction` object which handles the details of the"
 " flush."
-msgstr ""
+msgstr "内部：クラス：フラッシュの詳細を扱う `.UOWTransaction`オブジェクトです。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.refresh_flush:32
 msgid "sequence of attribute names which were populated."
-msgstr ""
+msgstr "入力された属性名のシーケンス。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.unpickle:1
 msgid "Receive an object instance after its associated state has been unpickled."
-msgstr ""
+msgstr "関連付けられた状態がアンピクルされた後にオブジェクトインスタンスを受け取ります。"
 
 #: of sqlalchemy.orm.events.InstanceEvents.unpickle:22
 msgid ""
 "the dictionary sent to :class:`.InstanceState.__setstate__`, containing "
 "the state dictionary which was pickled."
-msgstr ""
+msgstr "その辞書は：class： `.InstanceState .__ setstate__`に送られ、ピクルされた状態辞書を含んでいます。"
 
 #: ../../orm/events.rst:32
 msgid "Session Events"
-msgstr ""
+msgstr "セッションイベント"
 
 #: of sqlalchemy.orm.events.SessionEvents:1
 msgid "Define events specific to :class:`.Session` lifecycle."
-msgstr ""
+msgstr "class： `.Session`ライフサイクルに固有のイベントを定義します。"
 
 #: of sqlalchemy.orm.events.SessionEvents:15
 msgid ""
 "The :func:`~.event.listen` function will accept :class:`.Session` objects"
 " as well as the return result of :class:`~.sessionmaker()` and "
 ":class:`~.scoped_session()`."
-msgstr ""
+msgstr "：func： `〜.event.listen`関数は：class：` .Session`オブジェクトと、：class： `〜.sessionmaker（）`と：class： `〜.scoped_session（）`の戻り値を受け付けます。 。"
 
 #: of sqlalchemy.orm.events.SessionEvents:19
 msgid ""
 "Additionally, it accepts the :class:`.Session` class which will apply "
 "listeners to all :class:`.Session` instances globally."
-msgstr ""
+msgstr "さらに、：class： `.Session`インスタンスを受け入れます。このクラスは、すべて：class：` .Session`インスタンスにリスナーをグローバルに適用します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_attach:1
 msgid "Execute after an instance is attached to a session."
-msgstr ""
+msgstr "インスタンスがセッションにアタッチされた後に実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_attach:17
 msgid "This is called after an add, delete or merge."
-msgstr ""
+msgstr "これは、追加、削除、またはマージの後に呼び出されます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_attach:21
 msgid ""
@@ -1394,11 +1384,11 @@ msgid ""
 "For event handlers that require the object not yet be part of session "
 "state (such as handlers which may autoflush while the target object is "
 "not yet complete) consider the new :meth:`.before_attach` event."
-msgstr ""
+msgstr "0.8以降、このイベントは、項目が以前のリリースとは異なるセッションに完全に関連付けられた後に*切断されます。まだセッション状態の一部ではないオブジェクトを必要とするイベントハンドラ（ターゲットオブジェクトがまだ完成していない間に自動実行するハンドラなど）では、new：meth： `.before_attach`イベントを考慮してください。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_attach:32
 msgid ":meth:`~.SessionEvents.before_attach`"
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.before_attach`"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_attach:34
 #: sqlalchemy.orm.events.SessionEvents.before_attach:29
@@ -1413,11 +1403,11 @@ msgstr ""
 #: sqlalchemy.orm.events.SessionEvents.persistent_to_transient:29
 #: sqlalchemy.orm.events.SessionEvents.transient_to_pending:30
 msgid ":ref:`session_lifecycle_events`"
-msgstr ""
+msgstr "：ref： `session_lifecycle_events`"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_begin:1
 msgid "Execute after a transaction is begun on a connection"
-msgstr ""
+msgstr "接続時にトランザクションが開始された後に実行する"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_begin:17
 #: sqlalchemy.orm.events.SessionEvents.after_commit:36
@@ -1428,45 +1418,45 @@ msgstr ""
 #: sqlalchemy.orm.events.SessionEvents.before_commit:28
 #: sqlalchemy.orm.events.SessionEvents.before_flush:17
 msgid "The target :class:`.Session`."
-msgstr ""
+msgstr "target：class： `.Session`です。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_begin:18
 msgid "The :class:`.SessionTransaction`."
-msgstr ""
+msgstr "：class： `.SessionTransaction`です。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_begin:19
 msgid ""
 "The :class:`~.engine.Connection` object which will be used for SQL "
 "statements."
-msgstr ""
+msgstr "：class： `〜.engine.Connection`オブジェクトは、SQL文に使用されます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_begin:24
 #: sqlalchemy.orm.events.SessionEvents.after_commit:40
 msgid ":meth:`~.SessionEvents.before_commit`"
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.before_commit`"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_begin:26
 #: sqlalchemy.orm.events.SessionEvents.before_commit:32
 msgid ":meth:`~.SessionEvents.after_commit`"
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.after_commit`"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_begin:28
 #: sqlalchemy.orm.events.SessionEvents.after_commit:44
 #: sqlalchemy.orm.events.SessionEvents.after_transaction_end:49
 #: sqlalchemy.orm.events.SessionEvents.before_commit:36
 msgid ":meth:`~.SessionEvents.after_transaction_create`"
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.after_transaction_create`"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_begin:30
 #: sqlalchemy.orm.events.SessionEvents.after_commit:46
 #: sqlalchemy.orm.events.SessionEvents.after_transaction_create:52
 #: sqlalchemy.orm.events.SessionEvents.before_commit:38
 msgid ":meth:`~.SessionEvents.after_transaction_end`"
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.after_transaction_end`"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_delete:1
 msgid "Execute after a bulk delete operation to the session."
-msgstr ""
+msgstr "セッションに対する一括削除操作の後に実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_delete:23
 msgid ""
@@ -1474,11 +1464,11 @@ msgid ""
 "``delete_context``. Listener functions which accept the previous argument"
 "  signature(s) listed above will be automatically  adapted to the new "
 "signature."
-msgstr ""
+msgstr "`` after_bulk_delete``イベントは、引数 `` delete_context``を受け付けます。上記の前回の引数署名を受け入れるリスナー関数は、自動的に新しい署名に適合します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_delete:30
 msgid "This is called as a result of the :meth:`.Query.delete` method."
-msgstr ""
+msgstr "これは：meth： `.Query.delete`メソッドの結果として呼び出されます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_delete:32
 msgid ""
@@ -1489,42 +1479,42 @@ msgid ""
 ":class:`.QueryContext` object, corresponding      to the invocation of an"
 " ORM query.    * ``result`` the :class:`.ResultProxy` returned as a "
 "result of the      bulk DELETE operation."
-msgstr ""
+msgstr "* `` session``  - ：class： `.Session`関与*` `query``  - クラス：` .Query`：更新に関する詳細を含むオブジェクトを削除します。この更新操作が呼び出されたオブジェクト。 * `` context``：class： `.QueryContext`オブジェクトで、ORMクエリの呼び出しに対応します。 * `` result``：class：バルクDELETE操作の結果として返される `.ResultProxy`。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_delete:32
 msgid ""
 "a \"delete context\" object which contains details about the update, "
 "including these attributes:"
-msgstr ""
+msgstr "これらの属性を含む、更新に関する詳細を含む\ &quot;コンテキストを削除する\&quot;オブジェクト："
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_delete:35
 #: sqlalchemy.orm.events.SessionEvents.after_bulk_update:35
 msgid "``session`` - the :class:`.Session` involved"
-msgstr ""
+msgstr "`` session``  - ：class： `.Session`に関係します"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_delete:36
 #: sqlalchemy.orm.events.SessionEvents.after_bulk_update:36
 msgid ""
 "``query`` -the :class:`.Query` object that this update operation was "
 "called upon."
-msgstr ""
+msgstr "`` query``：この更新操作が呼び出されたクラス： `.Query`オブジェクトです。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_delete:38
 #: sqlalchemy.orm.events.SessionEvents.after_bulk_update:38
 msgid ""
 "``context`` The :class:`.QueryContext` object, corresponding to the "
 "invocation of an ORM query."
-msgstr ""
+msgstr "`` context``：class： `.QueryContext`オブジェクトで、ORMクエリの呼び出しに対応します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_delete:40
 msgid ""
 "``result`` the :class:`.ResultProxy` returned as a result of the bulk "
 "DELETE operation."
-msgstr ""
+msgstr "`` result``：class： `.ResultProxy`はバルクDELETE操作の結果として返されます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_update:1
 msgid "Execute after a bulk update operation to the session."
-msgstr ""
+msgstr "セッションに対する一括更新操作の後に実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_update:23
 msgid ""
@@ -1532,11 +1522,11 @@ msgid ""
 "``update_context``. Listener functions which accept the previous argument"
 "  signature(s) listed above will be automatically  adapted to the new "
 "signature."
-msgstr ""
+msgstr "`` after_bulk_update``イベントは引数 `` update_context``を受け付けます。上記の前回の引数署名を受け入れるリスナー関数は、自動的に新しい署名に適合します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_update:30
 msgid "This is called as a result of the :meth:`.Query.update` method."
-msgstr ""
+msgstr "これは：meth： `.Query.update`メソッドの結果として呼び出されます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_update:32
 msgid ""
@@ -1547,23 +1537,23 @@ msgid ""
 ":class:`.QueryContext` object, corresponding      to the invocation of an"
 " ORM query.    * ``result`` the :class:`.ResultProxy` returned as a "
 "result of the      bulk UPDATE operation."
-msgstr ""
+msgstr "* `` session``  - ：class： `.Session`関連*` `クエリー` ` - クラス：` .Query`：更新に関する詳細を含む\ &quot;更新コンテキスト\&quot;オブジェクトです。この更新操作が呼び出されたオブジェクト。 * `` context``：class： `.QueryContext`オブジェクトで、ORMクエリの呼び出しに対応します。 * `` result``：class：バルクUPDATE操作の結果として返される `.ResultProxy`。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_update:32
 msgid ""
 "an \"update context\" object which contains details about the update, "
 "including these attributes:"
-msgstr ""
+msgstr "これらの属性を含む更新に関する詳細を含む\ &quot;更新コンテキスト\&quot;オブジェクト："
 
 #: of sqlalchemy.orm.events.SessionEvents.after_bulk_update:40
 msgid ""
 "``result`` the :class:`.ResultProxy` returned as a result of the bulk "
 "UPDATE operation."
-msgstr ""
+msgstr "`` result``：class： `.ResultProxy`は一括UPDATE操作の結果として返されます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_commit:1
 msgid "Execute after a commit has occurred."
-msgstr ""
+msgstr "コミットが発生した後に実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_commit:19
 msgid ""
@@ -1573,7 +1563,7 @@ msgid ""
 ":meth:`~.SessionEvents.before_flush`, "
 ":meth:`~.SessionEvents.after_flush`, or "
 ":meth:`~.SessionEvents.after_flush_postexec` events."
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.after_commit`フックは、フラッシュではなく、つまり、：class：` .Session`は、トランザクションのスコープ内で何度もデータベースにSQLを出すことができます。これらのイベントをインターセプトするには、：meth： `〜.SessionEvents.before_flush`、：meth：`〜.SessionEvents.after_flush`、または：meth： `〜.SessionEvents.after_flush_postexec`イベントを使用します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_commit:30
 msgid ""
@@ -1581,37 +1571,37 @@ msgid ""
 ":meth:`~.SessionEvents.after_commit` event is invoked, and therefore can "
 "not emit SQL.  To emit SQL corresponding to every transaction, use the "
 ":meth:`~.SessionEvents.before_commit` event."
-msgstr ""
+msgstr "：class： `.Session`は、：meth：`〜.SessionEvents.after_commit`イベントが呼び出されたときにアクティブなトランザクションにないため、SQLを出力できません。すべてのトランザクションに対応するSQLを出力するには、：meth： `〜.SessionEvents.before_commit`イベントを使用します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_commit:42
 #: sqlalchemy.orm.events.SessionEvents.before_commit:34
 msgid ":meth:`~.SessionEvents.after_begin`"
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.after_begin`"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_flush:1
 msgid "Execute after flush has completed, but before commit has been called."
-msgstr ""
+msgstr "flushが完了した後、commitが呼び出される前に実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_flush:18
 msgid ""
 "Note that the session's state is still in pre-flush, i.e. 'new', 'dirty',"
 " and 'deleted' lists still show pre-flush state as well as the history "
 "settings on instance attributes."
-msgstr ""
+msgstr "セッションの状態はまだpre-flushであることに注意してください。つまり、 &#39;new&#39;、 &#39;dirty&#39;、 &#39;deleted&#39;リストはプリフラッシュ状態とインスタンス属性の履歴設定を表示します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_flush:28
 #: sqlalchemy.orm.events.SessionEvents.after_flush_postexec:30
 msgid ":meth:`~.SessionEvents.before_flush`"
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.before_flush`"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_flush:30
 #: sqlalchemy.orm.events.SessionEvents.before_flush:28
 msgid ":meth:`~.SessionEvents.after_flush_postexec`"
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.after_flush_postexec`"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_flush_postexec:1
 msgid "Execute after flush has completed, and after the post-exec state occurs."
-msgstr ""
+msgstr "フラッシュが完了した後、および実行後状態が発生した後に実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_flush_postexec:18
 msgid ""
@@ -1619,16 +1609,16 @@ msgid ""
 "final state.  An actual commit() may or may not have occurred, depending "
 "on whether or not the flush started its own transaction or participated "
 "in a larger transaction."
-msgstr ""
+msgstr "これは、「新規」、「ダーティ」、および「削除済み」リストが最終状態にあるときです。フラッシュが自身のトランザクションを開始したかどうか、またはより大きなトランザクションに参加したかどうかによって、実際のcommit（）が発生しているかどうかは不明です。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_flush_postexec:32
 #: sqlalchemy.orm.events.SessionEvents.before_flush:26
 msgid ":meth:`~.SessionEvents.after_flush`"
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.after_flush`"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_rollback:1
 msgid "Execute after a real DBAPI rollback has occurred."
-msgstr ""
+msgstr "実際のDBAPIロールバックが発生した後に実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_rollback:17
 msgid ""
@@ -1641,13 +1631,13 @@ msgid ""
 " which is active after the outermost rollback has proceeded, use the "
 ":meth:`.SessionEvents.after_soft_rollback` event, checking the "
 ":attr:`.Session.is_active` flag."
-msgstr ""
+msgstr "このイベントは、データベースに対する*実際の*ロールバックが発生したときにのみ発生します。基礎のDBAPIトランザクションがすでにロールバックされている場合は、：meth： `.Session.rollback`メソッドが呼び出されるたびに起動されません。多くの場合、：class： `.Session`は、現在のトランザクションが有効でないため、このイベント中は\&quot;アクティブ\ &quot;状態になりません。一番外側のロールバックが進行した後にアクティブである：class： `.Session`を取得するには、：meth：` .SessionEvents.after_soft_rollback`イベントを使用して：attr： `.Session.is_active`フラグをチェックします。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_soft_rollback:1
 msgid ""
 "Execute after any rollback has occurred, including \"soft\" rollbacks "
 "that don't actually emit at the DBAPI level."
-msgstr ""
+msgstr "DBAPIレベルで実際には出力されない\ &quot;ソフト\&quot;ロールバックを含む、ロールバックが発生した後に実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_soft_rollback:18
 msgid ""
@@ -1655,14 +1645,14 @@ msgid ""
 "rollback that calls the DBAPI's rollback() method, as well as the "
 "enclosing rollback calls that only pop themselves from the transaction "
 "stack."
-msgstr ""
+msgstr "これはネストされたロールバックと外側のロールバックの両方に対応します。つまり、DBAPIのrollback（）メソッドを呼び出す最も内側のロールバックと、トランザクションスタックからポップするロールバック呼び出しのみに対応します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_soft_rollback:23
 msgid ""
 "The given :class:`.Session` can be used to invoke SQL and "
 ":meth:`.Session.query` operations after an outermost rollback by first "
 "checking the :attr:`.Session.is_active` flag::"
-msgstr ""
+msgstr "指定された：class： `.Session`は、最初に：attr：` .Session.is_active`フラグをチェックすることによって、最も外側のロールバック後にSQLと：meth： `.Session.query`オペレーションを呼び出すために使用できます::"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_soft_rollback:33
 msgid ""
@@ -1670,11 +1660,11 @@ msgid ""
 "just closed.   The current :class:`.SessionTransaction` for the given "
 ":class:`.Session` is available via the :attr:`.Session.transaction` "
 "attribute."
-msgstr ""
+msgstr "：class： `.SessionTransaction`トランザクションマーカーオブジェクトです。 ：class： `.Session`のcurrent：class：` .SessionTransaction`は、：attr： `.Session.transaction`属性で利用できます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_transaction_create:1
 msgid "Execute when a new :class:`.SessionTransaction` is created."
-msgstr ""
+msgstr "new：class： `.SessionTransaction`が作成されたときに実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_transaction_create:17
 msgid ""
@@ -1684,12 +1674,12 @@ msgid ""
 "invoked for nested transactions and subtransactions, and is always "
 "matched by a corresponding :meth:`~.SessionEvents.after_transaction_end` "
 "event (assuming normal operation of the :class:`.Session`)."
-msgstr ""
+msgstr "このイベントは、：meth： `〜.SessionEvents.after_begin`と異なり、個々のデータベース接続でトランザクションが開始されるときとは異なり、class：` .SessionTransaction`が全体として発生します。またネストされたトランザクションとサブトランザクションに対しても呼び出され、対応する：meth： `〜.SessionEvents.after_transaction_end`イベント（：class：` .Session`の通常の操作を前提とします）と常に一致します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_transaction_create:26
 #: sqlalchemy.orm.events.SessionEvents.after_transaction_end:23
 msgid "the target :class:`.Session`."
-msgstr ""
+msgstr "ターゲット：クラス： `。セッション &#39;。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_transaction_create:27
 msgid ""
@@ -1705,12 +1695,12 @@ msgid ""
 "         @event.listens_for(session, \"after_transaction_create\")"
 "        def after_transaction_create(session, transaction):            if"
 " transaction.nested:                # work with SAVEPOINT transaction"
-msgstr ""
+msgstr "ターゲット：クラス： `.SessionTransaction`。 \ &quot;サブトランザクション\&quot;またはSAVEPOINTとは対照的に、これが最も外側のクラス： `.SessionTransaction`であるかどうかを検出するには、：attr：` .SessionTransaction.parent`属性が `` None``であることをテストします:: @ ：session.listens_for（session、\ &quot;after_transaction_create \&quot;）def after_transaction_create（session、transaction）：transaction.parentがNoneの場合：＃トップレベルトランザクションで動作する：class： `.SessionTransaction`がSAVEPOINTであるかどうかを検出するには、 （セッション、トランザクション）：after transaction_create（セッション、トランザクション）：トランザクション.nestedの場合：＃SAVEPOINTトランザクションで動作します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_transaction_create:27
 #: sqlalchemy.orm.events.SessionEvents.after_transaction_end:24
 msgid "the target :class:`.SessionTransaction`."
-msgstr ""
+msgstr "ターゲット：クラス： `.SessionTransaction`。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_transaction_create:29
 #: sqlalchemy.orm.events.SessionEvents.after_transaction_end:26
@@ -1718,23 +1708,23 @@ msgid ""
 "To detect if this is the outermost :class:`.SessionTransaction`, as "
 "opposed to a \"subtransaction\" or a SAVEPOINT, test that the "
 ":attr:`.SessionTransaction.parent` attribute is ``None``::"
-msgstr ""
+msgstr "：attr： `.SessionTransaction.parent`属性が` `None``であることをテストするために、これが最も外側にあるかどうかを検出するには：class：` .SessionTransaction`：\ &quot;サブトランザクション\&quot;またはSAVEPOINT"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_transaction_create:39
 #: sqlalchemy.orm.events.SessionEvents.after_transaction_end:36
 msgid ""
 "To detect if the :class:`.SessionTransaction` is a SAVEPOINT, use the "
 ":attr:`.SessionTransaction.nested` attribute::"
-msgstr ""
+msgstr "：class： `.SessionTransaction`がSAVEPOINTであるかどうかを検出するには、：attr：` .SessionTransaction.nested`属性を使用します："
 
 #: of sqlalchemy.orm.events.SessionEvents.after_transaction_create:50
 #: sqlalchemy.orm.events.SessionEvents.after_transaction_end:47
 msgid ":class:`.SessionTransaction`"
-msgstr ""
+msgstr "：class： `.SessionTransaction`"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_transaction_end:1
 msgid "Execute when the span of a :class:`.SessionTransaction` ends."
-msgstr ""
+msgstr "：class： `.SessionTransaction`の期間が終了すると実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_transaction_end:17
 msgid ""
@@ -1743,7 +1733,7 @@ msgid ""
 " those for nested transactions and subtransactions, and is always matched"
 " by a corresponding :meth:`~.SessionEvents.after_transaction_create` "
 "event."
-msgstr ""
+msgstr "このイベントは、使用中のall：class： `.SessionTransaction`オブジェクト（ネストされたトランザクションやサブトランザクションのオブジェクトを含む）に対応しています：meth：`〜.SessionEvents.after_commit`とは異なり、常に対応する：meth： ` 〜.SessionEvents.after_transaction_create`イベントです。"
 
 #: of sqlalchemy.orm.events.SessionEvents.after_transaction_end:24
 msgid ""
@@ -1759,32 +1749,32 @@ msgid ""
 "         @event.listens_for(session, \"after_transaction_create\")"
 "        def after_transaction_end(session, transaction):            if "
 "transaction.nested:                # work with SAVEPOINT transaction"
-msgstr ""
+msgstr "ターゲット：クラス： `.SessionTransaction`。 \ &quot;サブトランザクション\&quot;またはSAVEPOINTとは対照的に、これが最も外側のクラス： `.SessionTransaction`であるかどうかを検出するには、：attr：` .SessionTransaction.parent`属性が `` None``であることをテストします:: @ （セッション、トランザクション）：もしtransaction.parentがNoneの場合：＃トップレベルのトランザクションで動作する：class： `.SessionTransaction`がSAVEPOINTであるかどうかを検出するには、次のようにします。 （セッション、トランザクション）：after transaction_nested：＃SAVEPOINTトランザクションで動作します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.before_attach:1
 msgid "Execute before an instance is attached to a session."
-msgstr ""
+msgstr "インスタンスがセッションにアタッチされる前に実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.before_attach:17
 msgid ""
 "This is called before an add, delete or merge causes the object to be "
 "part of the session."
-msgstr ""
+msgstr "これは、追加、削除、またはマージによってオブジェクトがセッションの一部になる前に呼び出されます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.before_attach:20
 msgid ""
 "Note that :meth:`~.SessionEvents.after_attach` now fires off after the "
 "item is part of the session. :meth:`.before_attach` is provided for those"
 " cases where the item should not yet be part of the session state."
-msgstr ""
+msgstr "次のように注意してください：meth： `〜.SessionEvents.after_attach`は、アイテムがセッションの一部になった後に起動します。 ：meth： `.before_attach`は、項目がまだセッション状態の一部であるべきでない場合に提供されます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.before_attach:27
 msgid ":meth:`~.SessionEvents.after_attach`"
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.after_attach`"
 
 #: of sqlalchemy.orm.events.SessionEvents.before_commit:1
 msgid "Execute before commit is called."
-msgstr ""
+msgstr "コミットが呼び出される前に実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.before_commit:19
 msgid ""
@@ -1794,21 +1784,21 @@ msgid ""
 ":meth:`~.SessionEvents.before_flush`, "
 ":meth:`~.SessionEvents.after_flush`, or "
 ":meth:`~.SessionEvents.after_flush_postexec` events."
-msgstr ""
+msgstr "：meth： `〜.SessionEvents.before_commit`フックは、フラッシュではなく、つまり：class：` .Session`はトランザクションのスコープ内で何度もデータベースにSQLを出力できます。これらのイベントをインターセプトするには、：meth： `〜.SessionEvents.before_flush`、：meth：`〜.SessionEvents.after_flush`、または：meth： `〜.SessionEvents.after_flush_postexec`イベントを使用します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.before_flush:1
 msgid "Execute before flush process has started."
-msgstr ""
+msgstr "フラッシュ処理が開始される前に実行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.before_flush:20
 msgid ""
 "Usually ``None``, this is the collection of objects which can be passed "
 "to the :meth:`.Session.flush` method (note this usage is deprecated)."
-msgstr ""
+msgstr "通常 `` None``は：meth： `.Session.flush`メソッドに渡すことができるオブジェクトの集合です（この使用法は非推奨です）。"
 
 #: of sqlalchemy.orm.events.SessionEvents.deleted_to_detached:1
 msgid "Intercept the \"deleted to detached\" transition for a specific object."
-msgstr ""
+msgstr "特定のオブジェクトの「切り離されたものから切り離されたものへ」遷移を代行する。"
 
 #: of sqlalchemy.orm.events.SessionEvents.deleted_to_detached:17
 msgid ""
@@ -1816,7 +1806,7 @@ msgid ""
 "   The typical case when this occurs is when the transaction for a "
 ":class:`.Session` in which the object was deleted is committed; the "
 "object moves from the deleted state to the detached state."
-msgstr ""
+msgstr "このイベントは、削除されたオブジェクトがセッションから削除されたときに呼び出されます。これが発生する典型的なケースは、オブジェクトが削除された：class： `.Session`のトランザクションがコミットされたときです。オブジェクトは削除された状態から分離された状態に移動します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.deleted_to_detached:23
 msgid ""
@@ -1824,11 +1814,11 @@ msgid ""
 ":meth:`.Session.expunge_all` or :meth:`.Session.close` events are called,"
 " as well as if the object is individually expunged from its deleted state"
 " via :meth:`.Session.expunge`."
-msgstr ""
+msgstr "：meth： `.Session.expunge_all`または：meth：` .Session.close`イベントが呼び出されたときにフラッシュされて削除されたオブジェクト、およびオブジェクトが削除された状態から個別に消去される場合にも呼び出されますvia：meth： `。Session.expunge`。"
 
 #: of sqlalchemy.orm.events.SessionEvents.deleted_to_persistent:1
 msgid "Intercept the \"deleted to persistent\" transition for a specific object."
-msgstr ""
+msgstr "特定のオブジェクトの「削除されたものから永続的なものへ」遷移を代行する。"
 
 #: of sqlalchemy.orm.events.SessionEvents.deleted_to_persistent:17
 msgid ""
@@ -1836,11 +1826,11 @@ msgid ""
 "successfully in a flush is restored due to a call to "
 ":meth:`.Session.rollback`.   The event is not called under any other "
 "circumstances."
-msgstr ""
+msgstr "この移行は、フラッシュで正常に削除されたオブジェクトが：meth： `.Session.rollback`の呼び出しのために復元された場合にのみ発生します。このイベントは他の状況では呼び出されません。"
 
 #: of sqlalchemy.orm.events.SessionEvents.detached_to_persistent:1
 msgid "Intercept the \"detached to persistent\" transition for a specific object."
-msgstr ""
+msgstr "特定のオブジェクトの &quot;detached to persistent \&quot;への移行を傍受する。"
 
 #: of sqlalchemy.orm.events.SessionEvents.detached_to_persistent:17
 msgid ""
@@ -1850,7 +1840,7 @@ msgid ""
 ":meth:`.Session.delete` call if the object was not previously associated "
 "with the :class:`.Session` (note that an object marked as \"deleted\" "
 "remains in the \"persistent\" state until the flush proceeds)."
-msgstr ""
+msgstr "このイベントは、この特定の遷移に対してのみ呼び出される：meth： `.SessionEvents.after_attach`イベントの特殊化です。これは典型的に：meth： `.Session.add`呼び出しの間、また：meth：` .Session.delete`呼び出し中に、オブジェクトが以前に：class： `.Session`に関連付けられていなかった場合に呼び出されます\ &quot;deleted \&quot;とマークされたオブジェクトはフラッシュが進むまで\ &quot;persistent \&quot;状態のままです）。"
 
 #: of sqlalchemy.orm.events.SessionEvents.detached_to_persistent:28
 msgid ""
@@ -1861,7 +1851,7 @@ msgid ""
 "after the flush proceeds, or check the :attr:`.Session.deleted` "
 "collection within the :meth:`.SessionEvents.before_flush` event if "
 "deleted objects need to be intercepted before the flush."
-msgstr ""
+msgstr "オブジェクトが：meth： `.Session.delete`の呼び出しの一部として永続的になる場合、このイベントが呼び出されると、オブジェクトは** not **であり、削除されたとしてマークされます。削除されたオブジェクトを検出するには、：meth： `.SessionEvents.persistent_to_detached` toイベントに送信された` `deleted``フラグをチェックしてください。または：meth：：.Session.deleted``コレクション内の：attr： `.SessionEvents.before_flush`イベントは、削除されたオブジェクトをフラッシュする前にインターセプトする必要がある場合に発生します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.detached_to_persistent:37
 #: sqlalchemy.orm.events.SessionEvents.loaded_as_persistent:26
@@ -1871,7 +1861,7 @@ msgstr ""
 #: sqlalchemy.orm.events.SessionEvents.persistent_to_transient:21
 #: sqlalchemy.orm.events.SessionEvents.transient_to_pending:22
 msgid "target :class:`.Session`"
-msgstr ""
+msgstr "target：クラス： `.Session`"
 
 #: of sqlalchemy.orm.events.SessionEvents.detached_to_persistent:39
 #: sqlalchemy.orm.events.SessionEvents.loaded_as_persistent:28
@@ -1881,11 +1871,11 @@ msgstr ""
 #: sqlalchemy.orm.events.SessionEvents.persistent_to_transient:23
 #: sqlalchemy.orm.events.SessionEvents.transient_to_pending:24
 msgid "the ORM-mapped instance being operated upon."
-msgstr ""
+msgstr "ORMでマップされたインスタンスが操作されます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.loaded_as_persistent:1
 msgid "Intercept the \"loaded as persistent\" transition for a specific object."
-msgstr ""
+msgstr "特定のオブジェクトの「永続的にロードされた」遷移を傍受します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.loaded_as_persistent:17
 msgid ""
@@ -1895,13 +1885,13 @@ msgid ""
 "to a mapper or class hierarchy, and integrates with the other session "
 "lifecycle events smoothly.  The object is guaranteed to be present in the"
 " session's identity map when this event is called."
-msgstr ""
+msgstr "このイベントは、ORMロードプロセス内で呼び出され、：meth： `.InstanceEvents.load`イベントと非常によく似ています。ただし、ここでのイベントは、マッパーまたはクラス階層ではなく、：class： `.Session`クラスまたはインスタンスにリンクでき、他のセッションライフサイクルイベントとスムーズに統合されます。このイベントが呼び出されると、オブジェクトはセッションのアイデンティティマップに存在することが保証されます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.pending_to_persistent:1
 msgid ""
 "Intercept the \"pending to persistent\"\" transition for a specific "
 "object."
-msgstr ""
+msgstr "特定のオブジェクトに対する\ &quot;pendingからpersistent \&quot; \ &quot;への遷移を代行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.pending_to_persistent:17
 msgid ""
@@ -1910,11 +1900,11 @@ msgid ""
 ":meth:`.SessionEvents.after_flush` event.  However, in this case the "
 "object has already been moved to the persistent state when the event is "
 "called."
-msgstr ""
+msgstr "このイベントは、フラッシュプロセス内で呼び出され、：meth： `.SessionEvents.after_flush`イベント内で：attr：` .Session.new`コレクションをスキャンするのと同様です。ただし、この場合、イベントが呼び出されると、オブジェクトはすでに永続的な状態に移動されています。"
 
 #: of sqlalchemy.orm.events.SessionEvents.pending_to_transient:1
 msgid "Intercept the \"pending to transient\" transition for a specific object."
-msgstr ""
+msgstr "特定のオブジェクトの &quot;一時的な一時停止&quot;遷移を代行する。"
 
 #: of sqlalchemy.orm.events.SessionEvents.pending_to_transient:17
 msgid ""
@@ -1922,18 +1912,18 @@ msgid ""
 "been flushed is evicted from the session; this can occur when the "
 ":meth:`.Session.rollback` method rolls back the transaction, or when the "
 ":meth:`.Session.expunge` method is used."
-msgstr ""
+msgstr "この一般的でない移行は、フラッシュされていない保留中のオブジェクトがセッションから退去されたときに発生します。これは、：meth： `.Session.rollback`メソッドがトランザクションをロールバックするとき、または：meth：` .Session.expunge`メソッドが使用されたときに発生します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.persistent_to_deleted:1
 msgid "Intercept the \"persistent to deleted\" transition for a specific object."
-msgstr ""
+msgstr "特定のオブジェクトの &quot;永続的に削除された&quot;遷移を代行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.persistent_to_deleted:17
 msgid ""
 "This event is invoked when a persistent object's identity is deleted from"
 " the database within a flush, however the object still remains associated"
 " with the :class:`.Session` until the transaction completes."
-msgstr ""
+msgstr "このイベントは、フラッシュ内で永続オブジェクトのIDがデータベースから削除されたときに呼び出されますが、トランザクションが完了するまでオブジェクトはまだ：class： `.Session`に関連付けられたままです。"
 
 #: of sqlalchemy.orm.events.SessionEvents.persistent_to_deleted:22
 msgid ""
@@ -1942,7 +1932,7 @@ msgid ""
 "event is called. If the transaction is committed, the object becomes "
 "detached, which will emit the :meth:`.SessionEvents.deleted_to_detached` "
 "event."
-msgstr ""
+msgstr "トランザクションがロールバックされると、オブジェクトは永続状態に再び移動し、：meth： `.SessionEvents.deleted_to_persistent`イベントが呼び出されます。トランザクションがコミットされると、オブジェクトはデタッチされ、：meth： `.SessionEvents.deleted_to_detached`イベントを発行します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.persistent_to_deleted:29
 msgid ""
@@ -1953,65 +1943,65 @@ msgid ""
 "until the flush has proceeded. the "
 ":meth:`.SessionEvents.persistent_to_deleted` event is therefore invoked "
 "at the end of a flush."
-msgstr ""
+msgstr "：meth： `.Session.delete`メソッドはオブジェクトを削除済みとしてマークするためのプライマリパブリックインターフェイスですが、多くのオブジェクトはカスケードルールによって削除されますが、これは必ずフラッシュ時間までは決まっていません。したがって、フラッシュが完了するまで、削除されるすべてのオブジェクトをキャッチする方法はありません。したがって、：meth： `.SessionEvents.persistent_to_deleted`イベントは、フラッシュの終了時に呼び出されます。"
 
 #: of sqlalchemy.orm.events.SessionEvents.persistent_to_detached:1
 msgid "Intercept the \"persistent to detached\" transition for a specific object."
-msgstr ""
+msgstr "特定のオブジェクトの「永続化から分離化」への移行を傍受します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.persistent_to_detached:17
 msgid ""
 "This event is invoked when a persistent object is evicted from the "
 "session.  There are many conditions that cause this to happen, including:"
-msgstr ""
+msgstr "このイベントは、永続オブジェクトがセッションから削除されたときに呼び出されます。これには、以下を含む多くの条件があります。"
 
 #: of sqlalchemy.orm.events.SessionEvents.persistent_to_detached:21
 msgid "using a method such as :meth:`.Session.expunge` or :meth:`.Session.close`"
-msgstr ""
+msgstr "：meth： `.Session.expunge`や：meth：` .Session.close`などのメソッドを使用します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.persistent_to_detached:24
 msgid ""
 "Calling the :meth:`.Session.rollback` method, when the object was part of"
 " an INSERT statement for that session's transaction"
-msgstr ""
+msgstr "オブジェクトがそのセッションのトランザクションのINSERT文の一部であったときに：meth： `.Session.rollback`メソッドを呼び出す"
 
 #: of sqlalchemy.orm.events.SessionEvents.persistent_to_detached:32
 msgid ""
 "boolean.  If True, indicates this object moved to the detached state "
 "because it was marked as deleted and flushed."
-msgstr ""
+msgstr "ブール値。 Trueの場合、このオブジェクトは削除済みとしてマークされ、フラッシュされたため、このオブジェクトは分離状態に移行したことを示します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.persistent_to_transient:1
 msgid ""
 "Intercept the \"persistent to transient\" transition for a specific "
 "object."
-msgstr ""
+msgstr "特定のオブジェクトの &quot;一時的な一時的な&quot;遷移を代行する。"
 
 #: of sqlalchemy.orm.events.SessionEvents.persistent_to_transient:17
 msgid ""
 "This less common transition occurs when an pending object that has has "
 "been flushed is evicted from the session; this can occur when the "
 ":meth:`.Session.rollback` method rolls back the transaction."
-msgstr ""
+msgstr "この一般的でない移行は、フラッシュされている保留中のオブジェクトがセッションから退去されたときに発生します。これは、：meth： `.Session.rollback`メソッドがトランザクションをロールバックするときに発生します。"
 
 #: of sqlalchemy.orm.events.SessionEvents.transient_to_pending:1
 msgid "Intercept the \"transient to pending\" transition for a specific object."
-msgstr ""
+msgstr "特定のオブジェクトの\ &quot;トランジェントからペンディング\&quot;への移行を傍受する。"
 
 #: of sqlalchemy.orm.events.SessionEvents.transient_to_pending:17
 msgid ""
 "This event is a specialization of the :meth:`.SessionEvents.after_attach`"
 " event which is only invoked for this specific transition.  It is invoked"
 " typically during the :meth:`.Session.add` call."
-msgstr ""
+msgstr "このイベントは、この特定の遷移に対してのみ呼び出される：meth： `.SessionEvents.after_attach`イベントの特殊化です。これは通常、：meth： `.Session.add`呼び出し中に呼び出されます。"
 
 #: ../../orm/events.rst:38
 msgid "Query Events"
-msgstr ""
+msgstr "クエリイベント"
 
 #: of sqlalchemy.orm.events.QueryEvents:1
 msgid "Represent events within the construction of a :class:`.Query` object."
-msgstr ""
+msgstr "a：：class： `.Query`オブジェクトの構築内のイベントを表します。"
 
 #: of sqlalchemy.orm.events.QueryEvents:3
 msgid ""
@@ -2019,37 +2009,37 @@ msgid ""
 "inspection system for :class:`.Query`.   Some very basic operations are "
 "possible now, however the inspection system is intended to allow complex "
 "query manipulations to be automated."
-msgstr ""
+msgstr "ここでのイベントは、クラス： `.Query`のための未だリリースされていない検査システムで使われることを意図しています。非常に基本的な操作が可能ですが、検査システムは複雑なクエリ操作を自動化できるようになっています。"
 
 #: of sqlalchemy.orm.events.QueryEvents.before_compile:1
 msgid ""
 "Receive the :class:`.Query` object before it is composed into a core "
 ":class:`.Select` object."
-msgstr ""
+msgstr "：class： `.Query`オブジェクトをコア：class：` .Select`オブジェクトに合成する前にそれを受け取ります。"
 
 #: of sqlalchemy.orm.events.QueryEvents.before_compile:18
 msgid "This event is intended to allow changes to the query given::"
-msgstr ""
+msgstr "このイベントは、指定されたクエリに変更を許可することを目的としています::"
 
 #: of sqlalchemy.orm.events.QueryEvents.before_compile:28
 msgid ""
 "The event should normally be listened with the ``retval=True`` parameter "
 "set, so that the modified query may be returned."
-msgstr ""
+msgstr "このイベントは、通常、 `` retval = True``パラメータセットで聴かれるべきで、変更されたクエリが返されるかもしれません。"
 
 #: ../../orm/events.rst:44
 msgid "Instrumentation Events"
-msgstr ""
+msgstr "計装イベント"
 
 #: of sqlalchemy.orm.instrumentation:1
 msgid "Defines SQLAlchemy's system of class instrumentation."
-msgstr ""
+msgstr "SQLAlchemyのクラス計装システムを定義します。"
 
 #: of sqlalchemy.orm.instrumentation:3
 msgid ""
 "This module is usually not directly visible to user applications, but "
 "defines a large part of the ORM's interactivity."
-msgstr ""
+msgstr "このモジュールは通常、ユーザーアプリケーションからは直接見ることができませんが、ORMの対話機能の大部分を定義します。"
 
 #: of sqlalchemy.orm.instrumentation:6
 msgid ""
@@ -2057,7 +2047,7 @@ msgid ""
 "tracking.   It interacts closely with state.py and attributes.py which "
 "establish per-instance and per-class-attribute instrumentation, "
 "respectively."
-msgstr ""
+msgstr "instrumentation.pyは、状態追跡のためのエンドユーザクラスの登録を処理します。 state.pyおよびattributes.pyと密接に相互作用し、それぞれインスタンス単位およびクラス単位の属性計測を確立します。"
 
 #: of sqlalchemy.orm.instrumentation:11
 msgid ""
@@ -2065,11 +2055,11 @@ msgid ""
 "global basis using the :mod:`sqlalchemy.ext.instrumentation` module, "
 "which provides the means to build and specify alternate instrumentation "
 "forms."
-msgstr ""
+msgstr "クラスインストルメンテーションシステムは、：mod： `sqlalchemy.ext.instrumentation`モジュールを使用して、クラスごとまたはグローバルベースでカスタマイズすることができます。モジュールは、別のインストルメンテーションフォームを構築および指定する手段を提供します。"
 
 #: of sqlalchemy.orm.events.InstrumentationEvents:1
 msgid "Events related to class instrumentation events."
-msgstr ""
+msgstr "クラス計測イベントに関連するイベント。"
 
 #: of sqlalchemy.orm.events.InstrumentationEvents:3
 msgid ""
@@ -2078,13 +2068,13 @@ msgid ""
 "fired off for events against that class.  If the \"propagate=True\" flag "
 "is passed to event.listen(), the event will fire off for subclasses of "
 "that class as well."
-msgstr ""
+msgstr "ここでのリスナーは、新しいスタイルクラス、つまり &#39;type&#39;のサブクラスであるオブジェクトに対して確立されることをサポートします。イベントは、そのクラスに対するイベントに対して発動されます。 \ &quot;propagate = True \&quot;フラグがevent.listen（）に渡された場合、そのクラスのサブクラスに対してもイベントが発生します。"
 
 #: of sqlalchemy.orm.events.InstrumentationEvents:10
 msgid ""
 "The Python ``type`` builtin is also accepted as a target, which when used"
 " has the effect of events being emitted for all classes."
-msgstr ""
+msgstr "Pythonの `` type``組み込み関数もターゲットとして受け入れられ、使用されるとすべてのクラスのために放出されるイベントの効果があります。"
 
 #: of sqlalchemy.orm.events.InstrumentationEvents:14
 msgid ""
@@ -2092,7 +2082,7 @@ msgid ""
 "other class level events where it defaults to ``False``.  This means that"
 " new subclasses will also be the subject of these events, when a listener"
 " is established on a superclass."
-msgstr ""
+msgstr "デフォルトで `` False``となっている他のクラスレベルのイベントとは異なり、ここでの\ &quot;propagate \&quot;フラグはデフォルトで `` True``になっています。これは、スーパークラスでリスナーが確立されたときに、新しいサブクラスもこれらのイベントの対象となることを意味します。"
 
 #: of sqlalchemy.orm.events.InstrumentationEvents:20
 msgid ""
@@ -2100,22 +2090,22 @@ msgid ""
 " of class passed to :func:`.event.listen`.  Previously, the event would "
 "fire for any class unconditionally regardless of what class was sent for "
 "listening, despite documentation which stated the contrary."
-msgstr ""
+msgstr "- ここでのイベントは、入ってくるクラスを：func： `.event.listen`に渡されるクラスの型と比較することに基づいて発生します。以前は、反対の記述をしていたにもかかわらず、どのクラスがリスンのために送られたかにかかわらず、無条件にどのクラスでもイベントが発生しました。"
 
 #: of sqlalchemy.orm.events.InstrumentationEvents.attribute_instrument:14
 msgid "Called when an attribute is instrumented."
-msgstr ""
+msgstr "属性がインストルメントされたときに呼び出されます。"
 
 #: of sqlalchemy.orm.events.InstrumentationEvents.class_instrument:1
 msgid "Called after the given class is instrumented."
-msgstr ""
+msgstr "指定されたクラスがインストルメントされた後に呼び出されます。"
 
 #: of sqlalchemy.orm.events.InstrumentationEvents.class_instrument:17
 #: sqlalchemy.orm.events.InstrumentationEvents.class_uninstrument:17
 msgid "To get at the :class:`.ClassManager`, use :func:`.manager_of_class`."
-msgstr ""
+msgstr "：class： `.ClassManager`で取得するには、：func：` .manager_of_class`を使います。"
 
 #: of sqlalchemy.orm.events.InstrumentationEvents.class_uninstrument:1
 msgid "Called before the given class is uninstrumented."
-msgstr ""
+msgstr "指定されたクラスがインストゥルメンテーションされる前に呼び出されます。"
 

@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/constructors.rst:6
 msgid "Constructors and Object Initialization"
-msgstr ""
+msgstr "コンストラクタとオブジェクトの初期化"
 
 #: ../../orm/constructors.rst:8
 msgid ""
@@ -28,7 +18,7 @@ msgid ""
 "arguments for the function that you wish, assign attributes to the "
 "instance that are unknown to the ORM, and generally do anything else you "
 "would normally do when writing a constructor for a Python class."
-msgstr ""
+msgstr "マッピングは、クラスのコンストラクタ（ `` __init__``）メソッドに制限や要件を課すものではありません。あなたは、あなたが望む関数に対して任意の引数を必要とし、ORMには不明なインスタンスに属性を割り当て、Pythonクラス用のコンストラクタを書くときに普通に行う何かを自由に行うことができます。"
 
 #: ../../orm/constructors.rst:14
 msgid ""
@@ -37,7 +27,7 @@ msgid ""
 "standard library's ``pickle`` module, invoking the low level ``__new__`` "
 "method and then quietly restoring attributes directly on the instance "
 "rather than calling ``__init__``."
-msgstr ""
+msgstr "SQLAlchemy ORMは、データベース行からオブジェクトを再作成するときに `` __init__``を呼び出すことはありません。 ORMのプロセスは、Python標準ライブラリの `` pickle``モジュールに似ていますが、低レベルの `` __new__``メソッドを呼び出し、 `` __init__``を呼び出すのではなく、インスタンスに直接属性を静かに復元します。"
 
 #: ../../orm/constructors.rst:20
 msgid ""
@@ -49,7 +39,7 @@ msgid ""
 "method with no arguments every time it loads or reconstructs an instance "
 "of the class. This is useful for recreating transient properties that are"
 " normally assigned in ``__init__``::"
-msgstr ""
+msgstr "使用準備が整う前にデータベースがロードされたインスタンスをセットアップする必要がある場合は、これを実現できるmeth： `.InstanceEvents.load`というイベントフックがあります。 func： `.orm.reconstructor`というクラス固有のデコレータを介して利用することもできます。 ：func： `.orm.reconstructor`を使うと、クラスのインスタンスをロードまたは再構築するたびに、マッパーは引数なしで装飾されたメソッドを呼び出します。これは通常、 `` __init__``で割り当てられる一時的なプロパティを再作成するのに便利です::"
 
 #: ../../orm/constructors.rst:42
 msgid ""
@@ -58,7 +48,7 @@ msgid ""
 "When instances are loaded during a :class:`~sqlalchemy.orm.query.Query` "
 "operation as in ``query(MyMappedClass).one()``, ``init_on_load`` is "
 "called."
-msgstr ""
+msgstr "上記で、 `` obj = MyMappedClass（） ``が実行されると、 `` __init__``コンストラクタが正常に呼び出され、 `` data``引数が必要です。 `` query（MyMappedClass）.one（） ``のようにインスタンスが：class： `〜sqlalchemy.orm.query.Query`のときに読み込まれると、` `init_on_load``が呼び出されます。"
 
 #: ../../orm/constructors.rst:47
 msgid ""
@@ -68,14 +58,14 @@ msgid ""
 "relationships.  Eagerly loaded collections may be only partially "
 "populated or not populated at all, depending on the kind of eager loading"
 " used."
-msgstr ""
+msgstr "どんなメソッドも：func： `.orm.reconstructor`、` `__init__``メソッド自体でさえタグ付けすることができます。これは、すべての直接的な列レベルの属性が読み込まれた後、熱心に読み込まれたスカラ関係の後に呼び出されます。熱心に読み込まれたコレクションは、使用される熱心な読み込みの種類に応じて、部分的に取り込まれるか、まったく取り込まれないことがあります。"
 
 #: ../../orm/constructors.rst:53
 msgid ""
 "ORM state changes made to objects at this stage will not be recorded for "
 "the next flush operation, so the activity within a reconstructor should "
 "be conservative."
-msgstr ""
+msgstr "この段階でオブジェクトに行われたORM状態の変更は、次回のフラッシュ操作では記録されないため、再構築器内のアクティビティは控えめにする必要があります。"
 
 #: ../../orm/constructors.rst:57
 msgid ""
@@ -83,18 +73,18 @@ msgid ""
 "\"instance level\" events, which can be subscribed to using the event API"
 " - see :class:`.InstanceEvents` for the full API description of these "
 "events."
-msgstr ""
+msgstr "：func： `.orm.reconstructor`は、イベントAPIを使用してサブスクライブすることができる、より大きい\&quot;インスタンスレベル\ &quot;イベントシステムへのショートカットです。これらのAPIの完全な説明については、class：` .InstanceEvents`を参照してください。イベント。"
 
 #: of sqlalchemy.orm.reconstructor:1
 msgid "Decorate a method as the 'reconstructor' hook."
-msgstr ""
+msgstr "メソッドを &#39;reconstructor&#39;フックとして飾ります。"
 
 #: of sqlalchemy.orm.reconstructor:3
 msgid ""
 "Designates a method as the \"reconstructor\", an ``__init__``-like method"
 " that will be called by the ORM after the instance has been loaded from "
 "the database or otherwise reconstituted."
-msgstr ""
+msgstr "インスタンスがデータベースからロードされた後、または別の方法で再構成された後に、ORMによって呼び出される、 &quot;再構築者&quot;、メソッド &quot;__init__&quot;のようなメソッドを指定します。"
 
 #: of sqlalchemy.orm.reconstructor:7
 msgid ""
@@ -105,13 +95,13 @@ msgid ""
 "state changes made to objects at this stage will not be recorded for the "
 "next flush() operation, so the activity within a reconstructor should be "
 "conservative."
-msgstr ""
+msgstr "再構成子は引数なしで呼び出されます。インスタンスのスカラー（非コレクション）データベースにマップされた属性は、関数内で使用できるようになります。熱心に読み込まれたコレクションは一般的にはまだ入手できず、通常は最初の要素のみを含みます。この段階でオブジェクトに対して行われたORM状態の変更は、次のflush（）操作では記録されないため、再構成子内のアクティビティは控えめにする必要があります。"
 
 #: of sqlalchemy.orm.reconstructor:17
 msgid ":ref:`mapping_constructors`"
-msgstr ""
+msgstr "：ref： `mapping_constructors`"
 
 #: of sqlalchemy.orm.reconstructor:19
 msgid ":meth:`.InstanceEvents.load`"
-msgstr ""
+msgstr "：meth： `.InstanceEvents.load`"
 

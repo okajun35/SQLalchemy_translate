@@ -10,7 +10,7 @@
         <title>
             
     
-    Declarative API
+    宣言的API
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../../../search.html" />
         <link rel="copyright" title="Copyright" href="../../../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../../../index.html" />
-        <link rel="up" title="Declarative" href="index.html" />
-        <link rel="next" title="Mutation Tracking" href="../mutable.html" />
-        <link rel="prev" title="Mixin and Custom Base Classes" href="mixins.html" />
+        <link rel="up" title="宣言的" href="index.html" />
+        <link rel="next" title="突然変異の追跡" href="../mutable.html" />
+        <link rel="prev" title="ミックスインとカスタムベースクラス" href="mixins.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,29 +120,29 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="../../tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../../mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../../relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../../loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../../session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../../extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../index.html">ORM Extensions</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="../associationproxy.html">Association Proxy</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../automap.html">Automap</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../baked.html">Baked Queries</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="index.html">Declarative</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="basic_use.html">Basic Use</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Configuring Relationships</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="table_config.html">Table Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="inheritance.html">Inheritance Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mixins.html">Mixin and Custom Base Classes</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Declarative API</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#api-reference">API Reference</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#special-directives">Special Directives</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#declare-last"><code class="docutils literal"><span class="pre">__declare_last__()</span></code></a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#declare-first"><code class="docutils literal"><span class="pre">__declare_first__()</span></code></a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#abstract"><code class="docutils literal"><span class="pre">__abstract__</span></code></a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#table-cls"><code class="docutils literal"><span class="pre">__table_cls__</span></code></a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../index.html">ORM拡張</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="../associationproxy.html">アソシエーションプロキシ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../automap.html">オートマップ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../baked.html">焼いたクエリ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="index.html">宣言的</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="basic_use.html">基本的な使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="table_config.html">テーブル構成</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="inheritance.html">継承の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mixins.html">ミックスインとカスタムベースクラス</a></span></li>
+<li class="selected"><span class="link-container first"><strong>宣言的API</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#api-reference">APIリファレンス</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#special-directives">特別指示</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#declare-last">`` __declare_last __（） ``</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#declare-first">`` __declare_first __（） ``</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#abstract">`` __abstract__``</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#table-cls">`` __Table_cls__``</a></span></li>
 </ul>
 </li>
 </ul>
@@ -151,15 +151,15 @@
 </li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="../mutable.html">Mutation Tracking</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../orderinglist.html">Ordering List</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../horizontal_shard.html">Horizontal Sharding</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../hybrid.html">Hybrid Attributes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../indexable.html">Indexable</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../instrumentation.html">Alternate Class Instrumentation</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../mutable.html">突然変異の追跡</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../orderinglist.html">オーダーリスト</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../horizontal_shard.html">水平シャーディング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../hybrid.html">ハイブリッド属性</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../indexable.html">インデックス作成可能</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../instrumentation.html">代替クラスの計装</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="../../examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -175,78 +175,47 @@
     <div id="docs-body" class="withsidebar" >
         
 <span class="target" id="module-sqlalchemy.ext.declarative"></span><div class="section" id="declarative-api">
-<h1>Declarative API<a class="headerlink" href="#declarative-api" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>宣言的API<a class="headerlink" href="#declarative-api" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="api-reference">
-<h2>API Reference<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>APIリファレンス<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="function">
 <dt id="sqlalchemy.ext.declarative.declarative_base">
 <code class="descclassname">sqlalchemy.ext.declarative.</code><code class="descname">declarative_base</code><span class="sig-paren">(</span><em>bind=None</em>, <em>metadata=None</em>, <em>mapper=None</em>, <em>cls=&lt;class 'object'&gt;</em>, <em>name='Base'</em>, <em>constructor=&lt;function _declarative_constructor&gt;</em>, <em>class_registry=None</em>, <em>metaclass=&lt;class 'sqlalchemy.ext.declarative.api.DeclarativeMeta'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.declarative.declarative_base" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Construct a base class for declarative class definitions.</p>
-<p>The new base class will be given a metaclass that produces
-appropriate <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> objects and makes
-the appropriate <a class="reference internal" href="../../mapping_api.html#sqlalchemy.orm.mapper" title="sqlalchemy.orm.mapper"><code class="xref py py-func docutils literal"><span class="pre">mapper()</span></code></a> calls based on the
-information provided declaratively in the class and any subclasses
-of the class.</p>
+<dd><p>宣言的なクラス定義のための基本クラスを構築します。</p>
+<p>新しい基本クラスには適切な：class： <cite>〜sqlalchemy.schema.Table`オブジェクトを生成するメタクラスが与えられ、クラス内で宣言的に提供される情報に基づいて適切な：func：</cite>〜sqlalchemy.orm.mapper`呼び出しが行われます。クラスのサブクラス。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.bind"></span><strong>bind</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.bind">¶</a> -- An optional
-<a class="reference internal" href="../../../core/connections.html#sqlalchemy.engine.Connectable" title="sqlalchemy.engine.Connectable"><code class="xref py py-class docutils literal"><span class="pre">Connectable</span></code></a>, will be assigned
-the <code class="docutils literal"><span class="pre">bind</span></code> attribute on the <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a>
-instance.</li>
-<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.metadata"></span><strong>metadata</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.metadata">¶</a> -- An optional <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a> instance.  All
-<a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> objects implicitly declared by
-subclasses of the base will share this MetaData.  A MetaData instance
-will be created if none is provided.  The
-<a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a> instance will be available via the
-<cite>metadata</cite> attribute of the generated declarative base class.</li>
-<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.mapper"></span><strong>mapper</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.mapper">¶</a> -- An optional callable, defaults to <a class="reference internal" href="../../mapping_api.html#sqlalchemy.orm.mapper" title="sqlalchemy.orm.mapper"><code class="xref py py-func docutils literal"><span class="pre">mapper()</span></code></a>. Will
-be used to map subclasses to their Tables.</li>
-<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.cls"></span><strong>cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.cls">¶</a> -- Defaults to <code class="xref py py-class docutils literal"><span class="pre">object</span></code>. A type to use as the base for the generated
-declarative base class. May be a class or tuple of classes.</li>
-<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.name"></span><strong>name</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.name">¶</a> -- Defaults to <code class="docutils literal"><span class="pre">Base</span></code>.  The display name for the generated
-class.  Customizing this is not required, but can improve clarity in
-tracebacks and debugging.</li>
-<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.constructor"></span><strong>constructor</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.constructor">¶</a> -- Defaults to
-<code class="xref py py-func docutils literal"><span class="pre">_declarative_constructor()</span></code>, an
-__init__ implementation that assigns **kwargs for declared
-fields and relationships to an instance.  If <code class="docutils literal"><span class="pre">None</span></code> is supplied,
-no __init__ will be provided and construction will fall back to
-cls.__init__ by way of the normal Python semantics.</li>
-<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.class_registry"></span><strong>class_registry</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.class_registry">¶</a> -- optional dictionary that will serve as the
-registry of class names-&gt; mapped classes when string names
-are used to identify classes inside of <a class="reference internal" href="../../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>
-and others.  Allows two or more declarative base classes
-to share the same registry of class names for simplified
-inter-base relationships.</li>
-<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.metaclass"></span><strong>metaclass</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.metaclass">¶</a> -- Defaults to <code class="xref py py-class docutils literal"><span class="pre">DeclarativeMeta</span></code>.  A metaclass or __metaclass__
-compatible callable to use as the meta type of the generated
-declarative base class.</li>
+<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.bind"></span><strong>bind</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.bind">¶</a> -- オプション：class： <cite>〜sqlalchemy.engine.Connectable`は：class：</cite>〜sqlalchemy.schema.MetaData`インスタンスの `` bind``属性に割り当てられます。</li>
+<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.metadata"></span><strong>metadata</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.metadata">¶</a> -- オプション：class： <cite>〜sqlalchemy.schema.MetaData`インスタンスです。 All：class： `〜sqlalchemy.schema.Table`オブジェクトは、ベースのサブクラスによって暗黙に宣言され、このMetaDataを共有します。何も提供されない場合、MetaDataインスタンスが作成されます。 ：class： `〜sqlalchemy.schema.MetaData`インスタンスは、生成された宣言基本クラスの</cite> metadata`属性を介して利用可能になります。</li>
+<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.mapper"></span><strong>mapper</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.mapper">¶</a> -- オプションの呼び出し可能なデフォルトは：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.orm.mapper`です。サブクラスをテーブルにマップするために使用されます。</li>
+<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.cls"></span><strong>cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.cls">¶</a> -- デフォルトは：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>object`です。生成された宣言基本クラスのベースとして使用する型。クラスまたはクラスのタプルである可能性があります。</li>
+<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.name"></span><strong>name</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.name">¶</a> -- デフォルトは `` Base``です。生成されたクラスの表示名。これをカスタマイズする必要はありませんが、トレースバックとデバッグの明快さを向上させることができます。</li>
+<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.constructor"></span><strong>constructor</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.constructor">¶</a> -- 既定値は：func： <cite>〜sqlalchemy.ext.declarative.base._declarative_constructor`で、宣言されたフィールドとインスタンスに対する関係に** kwargsを割り当てる__init__実装です。 `</cite> None``が与えられていれば、__init__は提供されず、通常のPythonのセマンティクスによって構築がcls .__ init__に戻ります。</li>
+<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.class_registry"></span><strong>class_registry</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.class_registry">¶</a> -- func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.relationship`などのクラス内でクラスを識別するために文字列名が使用されたときに、クラス名のレジストリとして機能するオプションの辞書です。 2つ以上の宣言ベースクラスが、簡単なベース間の関係のためにクラス名の同じレジストリを共有できるようにします。</li>
+<li><span class="target" id="sqlalchemy.ext.declarative.declarative_base.params.metaclass"></span><strong>metaclass</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.metaclass">¶</a> -- デフォルトは：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.DeclarativeMeta`です。生成された宣言基本クラスのメタタイプとして使用するメタクラスまたは__metaclass__互換の呼び出し可能クラス。</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 1.1 で変更: </span>if <a class="reference internal" href="#sqlalchemy.ext.declarative.declarative_base.params.cls" title="sqlalchemy.ext.declarative.declarative_base"><code class="xref py py-paramref docutils literal"><span class="pre">declarative_base.cls</span></code></a> is a single class (rather
-than a tuple), the constructed base class will inherit its docstring.</p>
+<p><span class="versionmodified">バージョン 1.1 で変更: </span>：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.declarative_base.cls`が（タプルではなく）単一のクラスである場合、構築された基本クラスはそのdocstringを継承します。</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="#sqlalchemy.ext.declarative.as_declarative" title="sqlalchemy.ext.declarative.as_declarative"><code class="xref py py-func docutils literal"><span class="pre">as_declarative()</span></code></a></p>
+<p class="last">：func： <cite>.as_declarative</cite></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="sqlalchemy.ext.declarative.as_declarative">
 <code class="descclassname">sqlalchemy.ext.declarative.</code><code class="descname">as_declarative</code><span class="sig-paren">(</span><em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.declarative.as_declarative" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Class decorator for <a class="reference internal" href="#sqlalchemy.ext.declarative.declarative_base" title="sqlalchemy.ext.declarative.declarative_base"><code class="xref py py-func docutils literal"><span class="pre">declarative_base()</span></code></a>.</p>
-<p>Provides a syntactical shortcut to the <code class="docutils literal"><span class="pre">cls</span></code> argument
-sent to <a class="reference internal" href="#sqlalchemy.ext.declarative.declarative_base" title="sqlalchemy.ext.declarative.declarative_base"><code class="xref py py-func docutils literal"><span class="pre">declarative_base()</span></code></a>, allowing the base class
-to be converted in-place to a &quot;declarative&quot; base:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">as_declarative</span>
+<dd><p>クラスデコレータfor：func： <cite>.declarative_base</cite>。</p>
+<p>：func： <cite>.declarative_base`に送られる</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>cls``引数への構文上のショートカットを提供し、ベースクラスをインプレースで&amp;quot;宣言的な &amp;quot;ベースに変換できるようにします:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">as_declarative</span>
 
 <span class="nd">@as_declarative</span><span class="p">()</span>
 <span class="k">class</span> <span class="nc">Base</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -258,43 +227,32 @@ to be converted in-place to a &quot;declarative&quot; base:</p>
 <span class="k">class</span> <span class="nc">MyMappedClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="c1"># ...</span></pre></div>
 </div>
-<p>All keyword arguments passed to <a class="reference internal" href="#sqlalchemy.ext.declarative.as_declarative" title="sqlalchemy.ext.declarative.as_declarative"><code class="xref py py-func docutils literal"><span class="pre">as_declarative()</span></code></a> are passed
-along to <a class="reference internal" href="#sqlalchemy.ext.declarative.declarative_base" title="sqlalchemy.ext.declarative.declarative_base"><code class="xref py py-func docutils literal"><span class="pre">declarative_base()</span></code></a>.</p>
+<p>：func： <cite>.as_declarative`に渡されるすべてのキーワード引数は：func：</cite> .declarative_base`に渡されます。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 0.8.3 で追加.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="#sqlalchemy.ext.declarative.declarative_base" title="sqlalchemy.ext.declarative.declarative_base"><code class="xref py py-func docutils literal"><span class="pre">declarative_base()</span></code></a></p>
+<p class="last">：func： <cite>.declarative_base</cite></p>
 </div>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.ext.declarative.declared_attr">
 <em class="property">class </em><code class="descclassname">sqlalchemy.ext.declarative.</code><code class="descname">declared_attr</code><span class="sig-paren">(</span><em>fget</em>, <em>cascading=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.declarative.declared_attr" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.orm.base._MappedAttribute</span></code>, <code class="xref py py-class docutils literal"><span class="pre">builtins.property</span></code></p>
-<p>Mark a class-level method as representing the definition of
-a mapped property or special declarative member name.</p>
-<p>&#64;declared_attr turns the attribute into a scalar-like
-property that can be invoked from the uninstantiated class.
-Declarative treats attributes specifically marked with
-&#64;declared_attr as returning a construct that is specific
-to mapping or declarative table configuration.  The name
-of the attribute is that of what the non-dynamic version
-of the attribute would be.</p>
-<p>&#64;declared_attr is more often than not applicable to mixins,
-to define relationships that are to be applied to different
-implementors of the class:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ProvidesUser</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.orm.base._MappedAttribute</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.property</span></code></p>
+<p>クラスレベルのメソッドを、マップされたプロパティまたは特別な宣言的メンバー名の定義を表すものとしてマークします。</p>
+<p>&#64;declared_attrは、属性をインスタンス化されていないクラスから呼び出せるスカラー型のプロパティに変換します。 Declarativeは&#64;declared_attrで特にマークされた属性を、マッピングまたは宣言的な表の構成に固有の構造体を返すものとして扱います。属性の名前は、属性の非動的バージョンの名前です。</p>
+<p>&#64;declared_attrは、ミックスインには適用できない場合が多く、クラスの異なる実装者に適用されるリレーションシップを定義します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ProvidesUser</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="s2">&quot;A mixin that adds a &#39;user&#39; relationship to classes.&quot;</span>
 
     <span class="nd">@declared_attr</span>
     <span class="k">def</span> <span class="nf">user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;User&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>It also can be applied to mapped classes, such as to provide
-a &quot;polymorphic&quot; scheme for inheritance:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>また、継承のための&amp;quot;polymorphic &amp;quot;スキームを提供するなど、マップされたクラスにも適用できます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
@@ -313,39 +271,24 @@ a &quot;polymorphic&quot; scheme for inheritance:</p>
             <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;polymorphic_identity&quot;</span><span class="p">:</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="p">}</span></pre></div>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 0.8 で変更: </span><a class="reference internal" href="#sqlalchemy.ext.declarative.declared_attr" title="sqlalchemy.ext.declarative.declared_attr"><code class="xref py py-class docutils literal"><span class="pre">declared_attr</span></code></a> can be used with
-non-ORM or extension attributes, such as user-defined attributes
-or <a class="reference internal" href="../associationproxy.html#sqlalchemy.ext.associationproxy.association_proxy" title="sqlalchemy.ext.associationproxy.association_proxy"><code class="xref py py-func docutils literal"><span class="pre">association_proxy()</span></code></a> objects, which will be assigned
-to the class at class construction time.</p>
+<p><span class="versionmodified">バージョン 0.8 で変更: </span>：class： <cite>.declared_attr`は、ユーザ定義の属性や：func：</cite> .association_proxy`オブジェクトのような非ORM属性や拡張属性で使用できます。これらのオブジェクトは、クラス構築時にクラスに割り当てられます。</p>
 </div>
 <dl class="attribute">
 <dt id="sqlalchemy.ext.declarative.declared_attr.cascading">
 <code class="descname">cascading</code><a class="headerlink" href="#sqlalchemy.ext.declarative.declared_attr.cascading" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Mark a <a class="reference internal" href="#sqlalchemy.ext.declarative.declared_attr" title="sqlalchemy.ext.declarative.declared_attr"><code class="xref py py-class docutils literal"><span class="pre">declared_attr</span></code></a> as cascading.</p>
-<p>This is a special-use modifier which indicates that a column
-or MapperProperty-based declared attribute should be configured
-distinctly per mapped subclass, within a mapped-inheritance scenario.</p>
+<dd><p>a：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.declared_attr`をカスケードとしてマークしてください。</p>
+<p>これは、マップされた継承シナリオ内で、マッピングされたサブクラスごとに列またはMapperPropertyベースの宣言された属性を明示的に構成する必要があることを示す特別な使用の修飾子です。</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p>The <a class="reference internal" href="#sqlalchemy.ext.declarative.declared_attr.cascading" title="sqlalchemy.ext.declarative.declared_attr.cascading"><code class="xref py py-attr docutils literal"><span class="pre">declared_attr.cascading</span></code></a> modifier has several
-limitations:</p>
+<p>：attr： <a href="#id1"><span class="problematic" id="id2">`</span></a>.declared_attr.cascading`修飾子にはいくつかの制限があります：</p>
 <ul class="last simple">
-<li>The flag <strong>only</strong> applies to the use of <a class="reference internal" href="#sqlalchemy.ext.declarative.declared_attr" title="sqlalchemy.ext.declarative.declared_attr"><code class="xref py py-class docutils literal"><span class="pre">declared_attr</span></code></a>
-on declarative mixin classes and <code class="docutils literal"><span class="pre">__abstract__</span></code> classes; it
-currently has no effect when used on a mapped class directly.</li>
-<li>The flag <strong>only</strong> applies to normally-named attributes, e.g.
-not any special underscore attributes such as <code class="docutils literal"><span class="pre">__tablename__</span></code>.
-On these attributes it has <strong>no</strong> effect.</li>
-<li>The flag currently <strong>does not allow further overrides</strong> down
-the class hierarchy; if a subclass tries to override the
-attribute, a warning is emitted and the overridden attribute
-is skipped.  This is a limitation that it is hoped will be
-resolved at some point.</li>
+<li>フラグ** only <a href="#id1"><span class="problematic" id="id2">**</span></a>は、宣言的なmixinクラスと `` __abstract__``クラスのclass： <a href="#id3"><span class="problematic" id="id4">`</span></a>.declared_attr`の使用に適用されます。マップされたクラスで直接使用されても効果はありません。</li>
+<li>フラグ**のみ**は通常の名前の属性に適用されます。たとえば、 `` __tablename__`のような特殊なアンダースコア属性はありません。これらの属性には、** no <a href="#id1"><span class="problematic" id="id2">**</span></a>効果があります。</li>
+<li>現在のところ、このフラグは、クラス階層をさらに上書きすることはできません**。サブクラスが属性をオーバーライドしようとすると、警告が発行され、オーバーライドされた属性はスキップされます。これは、ある時点で解決されることが期待される制限です。</li>
 </ul>
 </div>
-<p>Below, both MyClass as well as MySubClass will have a distinct
-<code class="docutils literal"><span class="pre">id</span></code> Column object established:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HasIdMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<p>以下、MyClassとMySubClassの両方に別個の `` id`` Columnオブジェクトが設定されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HasIdMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@declared_attr</span><span class="o">.</span><span class="n">cascading</span>
     <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">has_inherited_table</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
@@ -361,13 +304,11 @@ resolved at some point.</li>
     <span class="s2">&quot;&quot;</span>
     <span class="c1"># ...</span></pre></div>
 </div>
-<p>The behavior of the above configuration is that <code class="docutils literal"><span class="pre">MySubClass</span></code>
-will refer to both its own <code class="docutils literal"><span class="pre">id</span></code> column as well as that of
-<code class="docutils literal"><span class="pre">MyClass</span></code> underneath the attribute named <code class="docutils literal"><span class="pre">some_id</span></code>.</p>
+<p>上記の設定の動作は、 `` MySubClass``は、 `` some_id``という属性の下にある `` MyClass``のものだけでなく、 `` id``カラムも参照することになります。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="inheritance.html#declarative-inheritance"><span class="std std-ref">Inheritance Configuration</span></a></p>
-<p class="last"><a class="reference internal" href="mixins.html#mixin-inheritance-columns"><span class="std std-ref">Mixing in Columns in Inheritance Scenarios</span></a></p>
+<p>：ref： <cite>declarative_inheritance</cite></p>
+<p class="last">：ref： <cite>mixin_inheritance_columns</cite></p>
 </div>
 </dd></dl>
 
@@ -376,36 +317,28 @@ will refer to both its own <code class="docutils literal"><span class="pre">id</
 <dl class="function">
 <dt id="sqlalchemy.ext.declarative.api._declarative_constructor">
 <code class="descclassname">sqlalchemy.ext.declarative.api.</code><code class="descname">_declarative_constructor</code><span class="sig-paren">(</span><em>self</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.declarative.api._declarative_constructor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A simple constructor that allows initialization from kwargs.</p>
-<p>Sets attributes on the constructed instance using the names and
-values in <code class="docutils literal"><span class="pre">kwargs</span></code>.</p>
-<p>Only keys that are present as
-attributes of the instance's class are allowed. These could be,
-for example, any mapped columns or relationships.</p>
+<dd><p>kwargsからの初期化を可能にする単純なコンストラクタです。</p>
+<p>`` kwargs``の名前と値を使って構築されたインスタンスの属性を設定します。</p>
+<p>インスタンスのクラスの属性として存在するキーのみが許可されます。これらは、例えば、マップされた列または関係とすることができる。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sqlalchemy.ext.declarative.has_inherited_table">
 <code class="descclassname">sqlalchemy.ext.declarative.</code><code class="descname">has_inherited_table</code><span class="sig-paren">(</span><em>cls</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.declarative.has_inherited_table" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Given a class, return True if any of the classes it inherits from has a
-mapped table, otherwise return False.</p>
-<p>This is used in declarative mixins to build attributes that behave
-differently for the base class vs. a subclass in an inheritance
-hierarchy.</p>
+<dd><p>与えられたクラスがあれば、それが継承するクラスのいずれかにマップされたテーブルがある場合はTrueを返し、そうでない場合はFalseを返します。</p>
+<p>これは、宣言的なミックスインで、継承階層のサブクラスと基本クラスの動作が異なる属性を構築するために使用されます。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="mixins.html#decl-mixin-inheritance"><span class="std std-ref">Controlling table inheritance with mixins</span></a></p>
+<p class="last">：ref： <cite>decl_mixin_inheritance</cite></p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="sqlalchemy.ext.declarative.synonym_for">
 <code class="descclassname">sqlalchemy.ext.declarative.</code><code class="descname">synonym_for</code><span class="sig-paren">(</span><em>name</em>, <em>map_column=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.declarative.synonym_for" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Decorator that produces an <a class="reference internal" href="../../mapped_attributes.html#sqlalchemy.orm.synonym" title="sqlalchemy.orm.synonym"><code class="xref py py-func docutils literal"><span class="pre">orm.synonym()</span></code></a> attribute in conjunction
-with a Python descriptor.</p>
-<p>The function being decorated is passed to <a class="reference internal" href="../../mapped_attributes.html#sqlalchemy.orm.synonym" title="sqlalchemy.orm.synonym"><code class="xref py py-func docutils literal"><span class="pre">orm.synonym()</span></code></a> as the
-<a class="reference internal" href="../../mapped_attributes.html#sqlalchemy.orm.synonym.params.descriptor" title="sqlalchemy.orm.synonym"><code class="xref py py-paramref docutils literal"><span class="pre">orm.synonym.descriptor</span></code></a> parameter:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<dd><p>Python記述子と共に：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.orm.synonym`属性を生成するDecorator。</p>
+<p>装飾される関数は、：paramref： <cite>.orm.synonym.descriptor`パラメータとして：func：</cite> .orm.synonym`に渡されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;my_table&#39;</span>
 
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -416,62 +349,45 @@ with a Python descriptor.</p>
     <span class="k">def</span> <span class="nf">job_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s2">&quot;Status: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_job_status</span></pre></div>
 </div>
-<p>The <a class="reference internal" href="../../mapped_attributes.html#mapper-hybrids"><span class="std std-ref">hybrid properties</span></a> feature of SQLAlchemy
-is typically preferred instead of synonyms, which is a more legacy
-feature.</p>
+<p>：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>ハイブリッドプロパティ&lt;mapper_hybrids&gt; SQLAlchemyの機能は、より多くのレガシー機能である同義語の代わりに一般的に好まれます。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="../../mapped_attributes.html#synonyms"><span class="std std-ref">Synonyms</span></a> - Overview of synonyms</p>
-<p><a class="reference internal" href="../../mapped_attributes.html#sqlalchemy.orm.synonym" title="sqlalchemy.orm.synonym"><code class="xref py py-func docutils literal"><span class="pre">orm.synonym()</span></code></a> - the mapper-level function</p>
-<p class="last"><a class="reference internal" href="../../mapped_attributes.html#mapper-hybrids"><span class="std std-ref">Using Descriptors and Hybrids</span></a> - The Hybrid Attribute extension provides an
-updated approach to augmenting attribute behavior more flexibly than
-can be achieved with synonyms.</p>
+<p>：ref： <cite>類義語</cite>  - 類義語の概要</p>
+<p>：func： <cite>.orm.synonym</cite>  - マッパーレベルの関数</p>
+<p class="last">：ref： <cite>mapper_hybrids</cite>  - ハイブリッド属性拡張は、同義語で達成できるよりも柔軟に属性の振る舞いを拡張するための更新されたアプローチを提供します。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="sqlalchemy.ext.declarative.comparable_using">
 <code class="descclassname">sqlalchemy.ext.declarative.</code><code class="descname">comparable_using</code><span class="sig-paren">(</span><em>comparator_factory</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.declarative.comparable_using" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Decorator, allow a Python &#64;property to be used in query criteria.</p>
-<p>This is a  decorator front end to
-<code class="xref py py-func docutils literal"><span class="pre">comparable_property()</span></code> that passes
-through the comparator_factory and the function being decorated:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@comparable_using</span><span class="p">(</span><span class="n">MyComparatorType</span><span class="p">)</span>
+<dd><p>デコレータは、クエリ条件でPython &#64;propertyを使用できるようにします。</p>
+<p>これは、compare_factoryと装飾される関数を通過する：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.orm.comparable_property`のデコレータフロントエンドです:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@comparable_using</span><span class="p">(</span><span class="n">MyComparatorType</span><span class="p">)</span>
 <span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">prop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="s1">&#39;special sauce&#39;</span></pre></div>
 </div>
-<p>The regular <code class="docutils literal"><span class="pre">comparable_property()</span></code> is also usable directly in a
-declarative setting and may be convenient for read/write properties:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prop</span> <span class="o">=</span> <span class="n">comparable_property</span><span class="p">(</span><span class="n">MyComparatorType</span><span class="p">)</span></pre></div>
+<p>通常の `` comparable_property（） <a href="#id1"><span class="problematic" id="id2">``</span></a>も宣言的な設定で直接使用でき、読み書き可能なプロパティに便利です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prop</span> <span class="o">=</span> <span class="n">comparable_property</span><span class="p">(</span><span class="n">MyComparatorType</span><span class="p">)</span></pre></div>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="sqlalchemy.ext.declarative.instrument_declarative">
 <code class="descclassname">sqlalchemy.ext.declarative.</code><code class="descname">instrument_declarative</code><span class="sig-paren">(</span><em>cls</em>, <em>registry</em>, <em>metadata</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.declarative.instrument_declarative" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Given a class, configure the class declaratively,
-using the given registry, which can be any dictionary, and
-MetaData object.</p>
+<dd><p>与えられたクラスを与えられたレジストリを使用して、クラスを宣言的に構成します。辞書は任意の辞書でも、MetaDataオブジェクトでもかまいません。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.ext.declarative.AbstractConcreteBase">
 <em class="property">class </em><code class="descclassname">sqlalchemy.ext.declarative.</code><code class="descname">AbstractConcreteBase</code><a class="headerlink" href="#sqlalchemy.ext.declarative.AbstractConcreteBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.api.ConcreteBase</span></code></p>
-<p>A helper class for 'concrete' declarative mappings.</p>
-<p><a class="reference internal" href="#sqlalchemy.ext.declarative.AbstractConcreteBase" title="sqlalchemy.ext.declarative.AbstractConcreteBase"><code class="xref py py-class docutils literal"><span class="pre">AbstractConcreteBase</span></code></a> will use the <a class="reference internal" href="../../mapping_api.html#sqlalchemy.orm.util.polymorphic_union" title="sqlalchemy.orm.util.polymorphic_union"><code class="xref py py-func docutils literal"><span class="pre">polymorphic_union()</span></code></a>
-function automatically, against all tables mapped as a subclass
-to this class.   The function is called via the
-<code class="docutils literal"><span class="pre">__declare_last__()</span></code> function, which is essentially
-a hook for the <a class="reference internal" href="../../events.html#sqlalchemy.orm.events.MapperEvents.after_configured" title="sqlalchemy.orm.events.MapperEvents.after_configured"><code class="xref py py-meth docutils literal"><span class="pre">after_configured()</span></code></a> event.</p>
-<p><a class="reference internal" href="#sqlalchemy.ext.declarative.AbstractConcreteBase" title="sqlalchemy.ext.declarative.AbstractConcreteBase"><code class="xref py py-class docutils literal"><span class="pre">AbstractConcreteBase</span></code></a> does produce a mapped class
-for the base class, however it is not persisted to any table; it
-is instead mapped directly to the &quot;polymorphic&quot; selectable directly
-and is only used for selecting.  Compare to <a class="reference internal" href="#sqlalchemy.ext.declarative.ConcreteBase" title="sqlalchemy.ext.declarative.ConcreteBase"><code class="xref py py-class docutils literal"><span class="pre">ConcreteBase</span></code></a>,
-which does create a persisted table for the base class.</p>
-<p>Example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">AbstractConcreteBase</span>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.ConcreteBase</span></code></p>
+<p>「具体的な」宣言的なマッピングのためのヘルパークラス。</p>
+<p>：class： <cite>.AbstractConcreteBase`は：func：</cite> .polymorphic_union`関数を、このクラスのサブクラスとしてマップされたすべてのテーブルに対して自動的に使用します。関数は、 `` __declare_last __（） <a href="#id1"><span class="problematic" id="id2">``</span></a>関数を介して呼び出されます。これは、本質的に：meth： <a href="#id3"><span class="problematic" id="id4">`</span></a>.after_configured`イベントのフックです。</p>
+<p>：class： <cite>.AbstractConcreteBase`は基本クラスのためにマップされたクラスを生成しますが、どのテーブルにも保持されません。その代わりに直接&amp;quot;polymorphic &amp;quot;に直接マップされ、選択にのみ使用されます。比較：class： `.ConcreteBase</cite>：基本クラスの永続テーブルを作成します。</p>
+<p>例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">AbstractConcreteBase</span>
 
 <span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">AbstractConcreteBase</span><span class="p">,</span> <span class="n">Base</span><span class="p">):</span>
     <span class="k">pass</span>
@@ -486,16 +402,9 @@ which does create a persisted table for the base class.</p>
         <span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span><span class="s1">&#39;manager&#39;</span><span class="p">,</span>
         <span class="s1">&#39;concrete&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">}</span></pre></div>
 </div>
-<p>The abstract base class is handled by declarative in a special way;
-at class configuration time, it behaves like a declarative mixin
-or an <code class="docutils literal"><span class="pre">__abstract__</span></code> base class.   Once classes are configured
-and mappings are produced, it then gets mapped itself, but
-after all of its decscendants.  This is a very unique system of mapping
-not found in any other SQLAlchemy system.</p>
-<p>Using this approach, we can specify columns and properties
-that will take place on mapped subclasses, in the way that
-we normally do as in <a class="reference internal" href="mixins.html#declarative-mixins"><span class="std std-ref">Mixin and Custom Base Classes</span></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Company</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>抽象基本クラスは宣言的に特別な方法で処理されます。クラス構成時には、宣言的なmixinや `` __abstract__``の基本クラスのように振る舞います。クラスが設定され、マッピングが生成されると、マッピングはそれ自体ではなく、すべてのデスケッチメントの後にマッピングされます。これは、他のSQLAlchemyシステムにはない非常にユニークなマッピングシステムです。</p>
+<p>このアプローチを使用すると、マッピングされたサブクラスで行われる列とプロパティを指定できます：ref： <cite>declarative_mixins</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Company</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;company&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -520,37 +429,30 @@ we normally do as in <a class="reference internal" href="mixins.html#declarative
         <span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span><span class="s1">&#39;manager&#39;</span><span class="p">,</span>
         <span class="s1">&#39;concrete&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">}</span></pre></div>
 </div>
-<p>When we make use of our mappings however, both <code class="docutils literal"><span class="pre">Manager</span></code> and
-<code class="docutils literal"><span class="pre">Employee</span></code> will have an independently usable <code class="docutils literal"><span class="pre">.company</span></code> attribute:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Employee</span><span class="o">.</span><span class="n">company</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span></pre></div>
+<p>しかし、マッピングを使用すると、 `` Manager``と `` Employee``は、それぞれ独立して使用できる `` company``属性を持ちます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Employee</span><span class="o">.</span><span class="n">company</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span></pre></div>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 1.0.0 で変更: </span>- The mechanics of <a class="reference internal" href="#sqlalchemy.ext.declarative.AbstractConcreteBase" title="sqlalchemy.ext.declarative.AbstractConcreteBase"><code class="xref py py-class docutils literal"><span class="pre">AbstractConcreteBase</span></code></a>
+<p><span class="versionmodified">バージョン 1.0.0 で変更: </span>- The mechanics of <a class="reference internal" href="#sqlalchemy.ext.declarative.AbstractConcreteBase" title="sqlalchemy.ext.declarative.AbstractConcreteBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractConcreteBase</span></code></a>
 have been reworked to support relationships established directly
 on the abstract base, without any special configurational steps.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#sqlalchemy.ext.declarative.ConcreteBase" title="sqlalchemy.ext.declarative.ConcreteBase"><code class="xref py py-class docutils literal"><span class="pre">ConcreteBase</span></code></a></p>
-<p><a class="reference internal" href="../../inheritance.html#concrete-inheritance"><span class="std std-ref">Concrete Table Inheritance</span></a></p>
-<p class="last"><span class="xref std std-ref">inheritance_concrete_helpers</span></p>
+<p>：クラス： <cite>.ConcreteBase</cite></p>
+<p>：ref： <cite>concrete_inheritance</cite></p>
+<p class="last">：ref： <cite>inheritance_concrete_helpers</cite></p>
 </div>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.ext.declarative.ConcreteBase">
 <em class="property">class </em><code class="descclassname">sqlalchemy.ext.declarative.</code><code class="descname">ConcreteBase</code><a class="headerlink" href="#sqlalchemy.ext.declarative.ConcreteBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A helper class for 'concrete' declarative mappings.</p>
-<p><a class="reference internal" href="#sqlalchemy.ext.declarative.ConcreteBase" title="sqlalchemy.ext.declarative.ConcreteBase"><code class="xref py py-class docutils literal"><span class="pre">ConcreteBase</span></code></a> will use the <a class="reference internal" href="../../mapping_api.html#sqlalchemy.orm.util.polymorphic_union" title="sqlalchemy.orm.util.polymorphic_union"><code class="xref py py-func docutils literal"><span class="pre">polymorphic_union()</span></code></a>
-function automatically, against all tables mapped as a subclass
-to this class.   The function is called via the
-<code class="docutils literal"><span class="pre">__declare_last__()</span></code> function, which is essentially
-a hook for the <a class="reference internal" href="../../events.html#sqlalchemy.orm.events.MapperEvents.after_configured" title="sqlalchemy.orm.events.MapperEvents.after_configured"><code class="xref py py-meth docutils literal"><span class="pre">after_configured()</span></code></a> event.</p>
-<p><a class="reference internal" href="#sqlalchemy.ext.declarative.ConcreteBase" title="sqlalchemy.ext.declarative.ConcreteBase"><code class="xref py py-class docutils literal"><span class="pre">ConcreteBase</span></code></a> produces a mapped
-table for the class itself.  Compare to <a class="reference internal" href="#sqlalchemy.ext.declarative.AbstractConcreteBase" title="sqlalchemy.ext.declarative.AbstractConcreteBase"><code class="xref py py-class docutils literal"><span class="pre">AbstractConcreteBase</span></code></a>,
-which does not.</p>
-<p>Example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">ConcreteBase</span>
+<dd><p>「具体的な」宣言的なマッピングのためのヘルパークラス。</p>
+<p>：class： <cite>.ConcreteBase`は：func：</cite> .polymorphic_union`関数を、このクラスのサブクラスとしてマップされたすべてのテーブルに対して自動的に使用します。関数は、 `` __declare_last __（） <a href="#id1"><span class="problematic" id="id2">``</span></a>関数を介して呼び出されます。これは、本質的に：meth： <a href="#id3"><span class="problematic" id="id4">`</span></a>.after_configured`イベントのフックです。</p>
+<p>：class： <cite>.ConcreteBase`は、クラス自体のためのマップされたテーブルを生成します。比較：クラス： `.AbstractConcreteBase</cite>、そうではありません。</p>
+<p>例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">ConcreteBase</span>
 
 <span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">ConcreteBase</span><span class="p">,</span> <span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;employee&#39;</span>
@@ -571,52 +473,31 @@ which does not.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#sqlalchemy.ext.declarative.AbstractConcreteBase" title="sqlalchemy.ext.declarative.AbstractConcreteBase"><code class="xref py py-class docutils literal"><span class="pre">AbstractConcreteBase</span></code></a></p>
-<p><a class="reference internal" href="../../inheritance.html#concrete-inheritance"><span class="std std-ref">Concrete Table Inheritance</span></a></p>
-<p class="last"><span class="xref std std-ref">inheritance_concrete_helpers</span></p>
+<p>：クラス： <cite>.AbstractConcreteBase</cite></p>
+<p>：ref： <cite>concrete_inheritance</cite></p>
+<p class="last">：ref： <cite>inheritance_concrete_helpers</cite></p>
 </div>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.ext.declarative.DeferredReflection">
 <em class="property">class </em><code class="descclassname">sqlalchemy.ext.declarative.</code><code class="descname">DeferredReflection</code><a class="headerlink" href="#sqlalchemy.ext.declarative.DeferredReflection" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A helper class for construction of mappings based on
-a deferred reflection step.</p>
-<p>Normally, declarative can be used with reflection by
-setting a <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> object using autoload=True
-as the <code class="docutils literal"><span class="pre">__table__</span></code> attribute on a declarative class.
-The caveat is that the <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> must be fully
-reflected, or at the very least have a primary key column,
-at the point at which a normal declarative mapping is
-constructed, meaning the <a class="reference internal" href="../../../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> must be available
-at class declaration time.</p>
-<p>The <a class="reference internal" href="#sqlalchemy.ext.declarative.DeferredReflection" title="sqlalchemy.ext.declarative.DeferredReflection"><code class="xref py py-class docutils literal"><span class="pre">DeferredReflection</span></code></a> mixin moves the construction
-of mappers to be at a later point, after a specific
-method is called which first reflects all <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a>
-objects created so far.   Classes can define it as such:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
+<dd><p>遅延リフレクションステップに基づくマッピングの構築のためのヘルパークラス。</p>
+<p>通常、宣言型クラスのautoload = Trueを `` __table__``属性として使用して、class： <cite>.Table`オブジェクトを設定することで、宣言型をリフレクションで使用できます。警告：class： `.Table`は、通常の宣言的なマッピングが構築される時点で、少なくとも：class：</cite> .Engine` mustを意味する、主キー列を完全に反映しなければなりませんクラス宣言時に利用できるようにする。</p>
+<p>：class： <cite>.DeferredReflection</cite> mixinは、特定のメソッドが呼び出された後で、マッパーの構築を後で行うようにします。これは、これまでに作成されたall：class：` .Table`オブジェクトを最初に反映します。クラスはそれを次のように定義できます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">DeferredReflection</span>
 <span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
 
 <span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">DeferredReflection</span><span class="p">,</span> <span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;mytable&#39;</span></pre></div>
 </div>
-<p>Above, <code class="docutils literal"><span class="pre">MyClass</span></code> is not yet mapped.   After a series of
-classes have been defined in the above fashion, all tables
-can be reflected and mappings created using
-<a class="reference internal" href="#sqlalchemy.ext.declarative.DeferredReflection.prepare" title="sqlalchemy.ext.declarative.DeferredReflection.prepare"><code class="xref py py-meth docutils literal"><span class="pre">prepare()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;someengine://...&quot;</span><span class="p">)</span>
+<p>上記の &amp;quot;MyClass&amp;quot;はまだマップされていません。上記のように一連のクラスが定義された後、すべてのテーブルを反映させることができ、マッピングは：meth： <cite>.prepare</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;someengine://...&quot;</span><span class="p">)</span>
 <span class="n">DeferredReflection</span><span class="o">.</span><span class="n">prepare</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span></pre></div>
 </div>
-<p>The <a class="reference internal" href="#sqlalchemy.ext.declarative.DeferredReflection" title="sqlalchemy.ext.declarative.DeferredReflection"><code class="xref py py-class docutils literal"><span class="pre">DeferredReflection</span></code></a> mixin can be applied to individual
-classes, used as the base for the declarative base itself,
-or used in a custom abstract class.   Using an abstract base
-allows that only a subset of classes to be prepared for a
-particular prepare step, which is necessary for applications
-that use more than one engine.  For example, if an application
-has two engines, you might use two bases, and prepare each
-separately, e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ReflectedOne</span><span class="p">(</span><span class="n">DeferredReflection</span><span class="p">,</span> <span class="n">Base</span><span class="p">):</span>
+<p>：class： <cite>.DeferredReflection</cite> mixinは、個々のクラスに適用することも、宣言ベース自体のベースとして使うことも、カスタム抽象クラスで使うこともできます。抽象ベースを使用すると、複数のエンジンを使用するアプリケーションに必要な、特定の準備ステップ用にクラスのサブセットのみを準備することができます。たとえば、アプリケーションにエンジンが2つある場合は、2つのベースを使用し、それぞれを別々に準備することができます（例：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ReflectedOne</span><span class="p">(</span><span class="n">DeferredReflection</span><span class="p">,</span> <span class="n">Base</span><span class="p">):</span>
     <span class="n">__abstract__</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="k">class</span> <span class="nc">ReflectedTwo</span><span class="p">(</span><span class="n">DeferredReflection</span><span class="p">,</span> <span class="n">Base</span><span class="p">):</span>
@@ -633,9 +514,8 @@ separately, e.g.:</p>
 
 <span class="c1"># ... etc.</span></pre></div>
 </div>
-<p>Above, the class hierarchies for <code class="docutils literal"><span class="pre">ReflectedOne</span></code> and
-<code class="docutils literal"><span class="pre">ReflectedTwo</span></code> can be configured separately:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ReflectedOne</span><span class="o">.</span><span class="n">prepare</span><span class="p">(</span><span class="n">engine_one</span><span class="p">)</span>
+<p>上で、 `` ReflectedOne``と `` ReflectedTwo``のクラス階層を別々に設定することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ReflectedOne</span><span class="o">.</span><span class="n">prepare</span><span class="p">(</span><span class="n">engine_one</span><span class="p">)</span>
 <span class="n">ReflectedTwo</span><span class="o">.</span><span class="n">prepare</span><span class="p">(</span><span class="n">engine_two</span><span class="p">)</span></pre></div>
 </div>
 <div class="versionadded">
@@ -644,21 +524,17 @@ separately, e.g.:</p>
 <dl class="classmethod">
 <dt id="sqlalchemy.ext.declarative.DeferredReflection.prepare">
 <em class="property">classmethod </em><code class="descname">prepare</code><span class="sig-paren">(</span><em>engine</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.declarative.DeferredReflection.prepare" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Reflect all <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> objects for all current
-<a class="reference internal" href="#sqlalchemy.ext.declarative.DeferredReflection" title="sqlalchemy.ext.declarative.DeferredReflection"><code class="xref py py-class docutils literal"><span class="pre">DeferredReflection</span></code></a> subclasses</p>
+<dd><p>class :: <cite>.DeferredReflection`サブクラスのすべてに対して、class：</cite> .Table`オブジェクトをすべて反映します。</p>
 </dd></dl>
 
 </dd></dl>
 
 <div class="section" id="special-directives">
-<h3>Special Directives<a class="headerlink" href="#special-directives" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>特別指示<a class="headerlink" href="#special-directives" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="section" id="declare-last">
-<h4><code class="docutils literal"><span class="pre">__declare_last__()</span></code><a class="headerlink" href="#declare-last" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>The <code class="docutils literal"><span class="pre">__declare_last__()</span></code> hook allows definition of
-a class level function that is automatically called by the
-<a class="reference internal" href="../../events.html#sqlalchemy.orm.events.MapperEvents.after_configured" title="sqlalchemy.orm.events.MapperEvents.after_configured"><code class="xref py py-meth docutils literal"><span class="pre">MapperEvents.after_configured()</span></code></a> event, which occurs after mappings are
-assumed to be completed and the 'configure' step has finished:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<h4>`` __declare_last __（） ``<a class="headerlink" href="#declare-last" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>`` __declare_last __（） <a href="#id1"><span class="problematic" id="id2">``</span></a>フックは：：meth： <a href="#id3"><span class="problematic" id="id4">`</span></a>.MapperEvents.after_configured`イベントによって自動的に呼び出されるクラスレベル関数の定義を可能にします。これは、マッピングが完了し、 &amp;#39;configure&amp;#39;ステップが終了した後に発生します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">__declare_last__</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="s2">&quot;&quot;</span>
@@ -666,10 +542,9 @@ assumed to be completed and the 'configure' step has finished:</p>
 </div>
 </div>
 <div class="section" id="declare-first">
-<h4><code class="docutils literal"><span class="pre">__declare_first__()</span></code><a class="headerlink" href="#declare-first" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>Like <code class="docutils literal"><span class="pre">__declare_last__()</span></code>, but is called at the beginning of mapper
-configuration via the <a class="reference internal" href="../../events.html#sqlalchemy.orm.events.MapperEvents.before_configured" title="sqlalchemy.orm.events.MapperEvents.before_configured"><code class="xref py py-meth docutils literal"><span class="pre">MapperEvents.before_configured()</span></code></a> event:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<h4>`` __declare_first __（） ``<a class="headerlink" href="#declare-first" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>`` __declare_last __（） <a href="#id1"><span class="problematic" id="id2">``</span></a>と似ていますが、：meth： <a href="#id3"><span class="problematic" id="id4">`</span></a>.MapperEvents.before_configured`イベントを介してマッパー設定の開始時に呼び出されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">__declare_first__</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="s2">&quot;&quot;</span>
@@ -680,12 +555,9 @@ configuration via the <a class="reference internal" href="../../events.html#sqla
 </div>
 </div>
 <div class="section" id="abstract">
-<span id="declarative-abstract"></span><h4><code class="docutils literal"><span class="pre">__abstract__</span></code><a class="headerlink" href="#abstract" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p><code class="docutils literal"><span class="pre">__abstract__</span></code> causes declarative to skip the production
-of a table or mapper for the class entirely.  A class can be added within a
-hierarchy in the same way as mixin (see <a class="reference internal" href="mixins.html#declarative-mixins"><span class="std std-ref">Mixin and Custom Base Classes</span></a>), allowing
-subclasses to extend just from the special class:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SomeAbstractBase</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="declarative-abstract"></span><h4>`` __abstract__``<a class="headerlink" href="#abstract" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>`` __abstract__``は、宣言的にテーブルやマッパーの生成をスキップします。クラスは、mixinと同じ方法で階層内に追加することができます（参照：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>declarative_mixins`を参照）。これにより、サブクラスを特別なクラスから拡張することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SomeAbstractBase</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__abstract__</span> <span class="o">=</span> <span class="kc">True</span>
 
     <span class="k">def</span> <span class="nf">some_helpful_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -698,9 +570,8 @@ subclasses to extend just from the special class:</p>
 <span class="k">class</span> <span class="nc">MyMappedClass</span><span class="p">(</span><span class="n">SomeAbstractBase</span><span class="p">):</span>
     <span class="s2">&quot;&quot;</span></pre></div>
 </div>
-<p>One possible use of <code class="docutils literal"><span class="pre">__abstract__</span></code> is to use a distinct
-<a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a> for different bases:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
+<p>`` __abstract__``の可能な使い方のひとつは、distinct：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.MetaData`を異なるbaseに使うことです:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
 
 <span class="k">class</span> <span class="nc">DefaultBase</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__abstract__</span> <span class="o">=</span> <span class="kc">True</span>
@@ -710,20 +581,15 @@ subclasses to extend just from the special class:</p>
     <span class="n">__abstract__</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">metadata</span> <span class="o">=</span> <span class="n">MetaData</span><span class="p">()</span></pre></div>
 </div>
-<p>Above, classes which inherit from <code class="docutils literal"><span class="pre">DefaultBase</span></code> will use one
-<a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a> as the registry of tables, and those which inherit from
-<code class="docutils literal"><span class="pre">OtherBase</span></code> will use a different one. The tables themselves can then be
-created perhaps within distinct databases:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">DefaultBase</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">create_all</span><span class="p">(</span><span class="n">some_engine</span><span class="p">)</span>
+<p>`` DefaultBase``を継承したクラスはclass： <cite>.MetaData`をテーブルのレジストリとして使い、</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>OtherBase``を継承するクラスは別のものを使います。テーブル自体は、おそらく異なるデータベース内に作成することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DefaultBase</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">create_all</span><span class="p">(</span><span class="n">some_engine</span><span class="p">)</span>
 <span class="n">OtherBase</span><span class="o">.</span><span class="n">metadata_create_all</span><span class="p">(</span><span class="n">some_other_engine</span><span class="p">)</span></pre></div>
 </div>
 </div>
 <div class="section" id="table-cls">
-<h4><code class="docutils literal"><span class="pre">__table_cls__</span></code><a class="headerlink" href="#table-cls" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>Allows the callable / class used to generate a <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> to be customized.
-This is a very open-ended hook that can allow special customizations
-to a <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> that one generates here:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<h4>`` __Table_cls__``<a class="headerlink" href="#table-cls" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Table`を生成するために使用される呼び出し可能/クラスがカスタマイズされることを可能にします。これは非常に自由なフックで、特別なカスタマイズを許可することができます：class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Table`ここで生成する:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">__table_cls__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">Table</span><span class="p">(</span>
@@ -731,15 +597,9 @@ to a <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.
             <span class="n">metadata</span><span class="p">,</span> <span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span>
         <span class="p">)</span></pre></div>
 </div>
-<p>The above mixin would cause all <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> objects generated to include
-the prefix <code class="docutils literal"><span class="pre">&quot;my_&quot;</span></code>, followed by the name normally specified using the
-<code class="docutils literal"><span class="pre">__tablename__</span></code> attribute.</p>
-<p><code class="docutils literal"><span class="pre">__table_cls__</span></code> also supports the case of returning <code class="docutils literal"><span class="pre">None</span></code>, which
-causes the class to be considered as single-table inheritance vs. its subclass.
-This may be useful in some customization schemes to determine that single-table
-inheritance should take place based on the arguments for the table itself,
-such as, define as single-inheritance if there is no primary key present:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AutoTable</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<p>上記のミックスインは `` &amp;quot;my _ &amp;quot; <a href="#id1"><span class="problematic" id="id2">``</span></a>という接頭辞と `` __tablename__``属性を使って通常指定された名前を含むall：class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Table`オブジェクトを生成します。</p>
+<p>`` __table_cls__``は、 `` None``を返す場合もサポートしています。これにより、クラスは単一テーブルの継承とみなされ、そのサブクラスとみなされます。これは、いくつかのカスタマイズスキームでは、プライマリキーが存在しない場合は単一継承として定義するなど、テーブル自体の引数に基づいて単一テーブルの継承を行う必要があることを確認するのに便利です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AutoTable</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@declared_attr</span>
     <span class="k">def</span> <span class="nf">__tablename__</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span>
@@ -759,9 +619,7 @@ such as, define as single-inheritance if there is no primary key present:</p>
 <span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
     <span class="n">employee_name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span></pre></div>
 </div>
-<p>The above <code class="docutils literal"><span class="pre">Employee</span></code> class would be mapped as single-table inheritance
-against <code class="docutils literal"><span class="pre">Person</span></code>; the <code class="docutils literal"><span class="pre">employee_name</span></code> column would be added as a member
-of the <code class="docutils literal"><span class="pre">Person</span></code> table.</p>
+<p>上記の `` Employee``クラスは `` Person``に対して単一テーブルの継承としてマップされます。 `` employee_name``カラムは `` Person``テーブルのメンバとして追加されます。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.0.0 で追加.</span></p>
 </div>
@@ -776,13 +634,13 @@ of the <code class="docutils literal"><span class="pre">Person</span></code> tab
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="mixins.html" title="previous chapter">Mixin and Custom Base Classes</a>
+        <a href="mixins.html" title="previous chapter">ミックスインとカスタムベースクラス</a>
         Next:
-        <a href="../mutable.html" title="next chapter">Mutation Tracking</a>
+        <a href="../mutable.html" title="next chapter">突然変異の追跡</a>
 
     <div id="docs-copyright">
         &copy; <a href="../../../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -809,6 +667,7 @@ of the <code class="docutils literal"><span class="pre">Person</span></code> tab
         <script type="text/javascript" src="../../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../../../_static/detectmobile.js"></script>

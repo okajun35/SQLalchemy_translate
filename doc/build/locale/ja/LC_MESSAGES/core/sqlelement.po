@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/sqlelement.rst:2
 msgid "Column Elements and Expressions"
-msgstr "(翻訳中)Column Elements and Expressions(列要素と式)"
+msgstr "列要素と式"
 
 #: ../../core/sqlelement.rst:6
 msgid ""
@@ -33,33 +23,27 @@ msgid ""
 "such as in the columns clause, WHERE clause, and ORDER BY clause, and "
 "FromClause, which represents the role of a token that is placed in the "
 "FROM clause of a SELECT statement."
-msgstr ""
-"expressionAPIは、SQL内の特定の語彙項目を表す一連のクラスで構成されています。"
-"大きな構造にまとめてデータベースに渡せる文字列表現にコンパイルされるステートメント構成を形成します。"
-"基底クラスであるClauseElementクラスで始まる階層にクラスは編成されます。"
-"重要なサブクラスには、Column句、WHERE句、ORDER BY句などのSQL文での列ベースの"
-"式の役割を表すColumnElementと、"
-"SELECTステートメントのFROM節に置かれたトークンの役割をするFromClauseがあります。"
+msgstr "式APIは、SQL文字列内の特定の字句要素を表す一連のクラスで構成されています。より大きな構造体にまとめられ、データベースに渡すことができる文字列表現に*コンパイルされた*ステートメント構造を形成します。クラスは、基底クラスClauseElementクラスで始まる階層に編成されます。重要なサブクラスには、Column句、WHERE句、ORDER BY句などのSQL文での列ベースの式の役割を表すColumnElementと、その中に配置されるトークンの役割を表すFromClause SELECTステートメントのFROM節。"
 
 
 #: ../../docstring of sqlalchemy.sql.expression.all_:1
 msgid "Produce an ALL expression."
-msgstr ""
+msgstr "ALL式を生成する。"
 
 #: ../../docstring of sqlalchemy.sql.expression.all_:3
 #: sqlalchemy.sql.expression.any_:3
 msgid ""
 "This may apply to an array type for some dialects (e.g. postgresql), or "
 "to a subquery for others (e.g. mysql).  e.g.::"
-msgstr ""
+msgstr "これは、ある方言（例えばpostgresql）や他のもの（例えばmysql）のためのサブクエリには配列型に適用されるかもしれません。例えば：："
 
 #: ../../docstring of sqlalchemy.sql.expression.all_:16
 msgid ":func:`.expression.any_`"
-msgstr ""
+msgstr "：func： `.expression.any_`"
 
 #: ../../docstring of sqlalchemy.sql.expression.and_:1
 msgid "Produce a conjunction of expressions joined by ``AND``."
-msgstr ""
+msgstr "`` AND``で結合された式の組み合わせを生成します。"
 
 #: ../../docstring of sqlalchemy.sql.base.DialectKWArgs.argument_for:3
 #: sqlalchemy.sql.expression.ColumnElement.contains:8
@@ -78,14 +62,14 @@ msgstr ""
 #: sqlalchemy.sql.operators.ColumnOperators.like:7
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:8
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: ../../docstring of sqlalchemy.sql.expression.and_:14
 msgid ""
 "The :func:`.and_` conjunction is also available using the Python ``&`` "
 "operator (though note that compound expressions need to be parenthesized "
 "in order to function with Python operator precedence behavior)::"
-msgstr ""
+msgstr "Pythonの ``＆ ``演算子を使って：func： `.and_`を使うこともできます（ただし、Python演算子の優先順位の振る舞いをするには、複合式をカッコで囲む必要があります）。"
 
 #: ../../docstring of sqlalchemy.sql.expression.and_:24
 msgid ""
@@ -93,23 +77,23 @@ msgid ""
 ":meth:`.Select.where` method for example can be invoked multiple times "
 "against a statement, which will have the effect of each clause being "
 "combined using :func:`.and_`::"
-msgstr ""
+msgstr "：func： `.and_`操作は暗黙的に行われる場合もあります。例えば：meth： `.Select.where`メソッドは、ある文に対して複数回呼び出すことができます。これは、各節が組み合わされる効果をfunc：` .and_` ::"
 
 #: ../../docstring of sqlalchemy.sql.expression.and_:33
 msgid ":func:`.or_`"
-msgstr ""
+msgstr "：func： `.or_`"
 
 #: ../../docstring of sqlalchemy.sql.expression.any_:1
 msgid "Produce an ANY expression."
-msgstr ""
+msgstr "ANY式を生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.any_:16
 msgid ":func:`.expression.all_`"
-msgstr ""
+msgstr "：func： `.expression.all_`"
 
 #: ../../docstring of sqlalchemy.sql.expression.asc:1
 msgid "Produce an ascending ``ORDER BY`` clause element."
-msgstr ""
+msgstr "昇順の `` ORDER BY``節要素を生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.ColumnCollection.replace:5
 #: sqlalchemy.sql.expression.ColumnElement.op:3 sqlalchemy.sql.expression.asc:3
@@ -117,19 +101,19 @@ msgstr ""
 #: sqlalchemy.sql.operators.ColumnOperators.op:3
 #: sqlalchemy.sql.operators.Operators.op:3
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: ../../docstring of sqlalchemy.sql.expression.asc:8
 #: sqlalchemy.sql.expression.desc:9
 msgid "will produce SQL as::"
-msgstr ""
+msgstr "SQLを次のように生成します::"
 
 #: ../../docstring of sqlalchemy.sql.expression.asc:12
 msgid ""
 "The :func:`.asc` function is a standalone version of the "
 ":meth:`.ColumnElement.asc` method available on all SQL expressions, "
 "e.g.::"
-msgstr ""
+msgstr "：func： `.asc`関数は、すべてのSQL式で利用可能な：meth：` .ColumnElement.asc`メソッドのスタンドアロン版です：例えば::"
 
 #: ../../docstring of sqlalchemy.sql.base.DialectKWArgs.argument_for
 #: sqlalchemy.sql.expression.ClauseElement.compile
@@ -160,50 +144,50 @@ msgstr ""
 #: sqlalchemy.sql.operators.Operators.op
 #: sqlalchemy.sql.operators.Operators.operate
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: ../../docstring of sqlalchemy.sql.expression.asc:19
 msgid ""
 "A :class:`.ColumnElement` (e.g. scalar SQL expression) with which to "
 "apply the :func:`.asc` operation."
-msgstr ""
+msgstr "A：class：：.Func： `.asc`演算を適用する` .ColumnElement`（スカラーSQL式など）です。"
 
 #: ../../docstring of sqlalchemy.sql.expression.asc:24
 #: sqlalchemy.sql.expression.nullsfirst:29
 #: sqlalchemy.sql.expression.nullslast:27
 msgid ":func:`.desc`"
-msgstr ""
+msgstr "：機能： `.desc`"
 
 #: ../../docstring of sqlalchemy.sql.expression.asc:26
 #: sqlalchemy.sql.expression.desc:27 sqlalchemy.sql.expression.nullslast:29
 msgid ":func:`.nullsfirst`"
-msgstr ""
+msgstr "：機能： `.nullsfirst`"
 
 #: ../../docstring of sqlalchemy.sql.expression.asc:28
 #: sqlalchemy.sql.expression.desc:29 sqlalchemy.sql.expression.nullsfirst:31
 msgid ":func:`.nullslast`"
-msgstr ""
+msgstr "：機能： `.nullslast`"
 
 #: ../../docstring of sqlalchemy.sql.expression.asc:30
 #: sqlalchemy.sql.expression.desc:31 sqlalchemy.sql.expression.nullsfirst:33
 #: sqlalchemy.sql.expression.nullslast:31
 msgid ":meth:`.Select.order_by`"
-msgstr ""
+msgstr "：meth： `.Select.order_by`"
 
 #: of sqlalchemy.sql.expression.between:1
 msgid "Produce a ``BETWEEN`` predicate clause."
-msgstr ""
+msgstr "`BETWEEN``述語節を生成します。"
 
 #: of sqlalchemy.sql.expression.between:8
 msgid "Would produce SQL resembling::"
-msgstr ""
+msgstr "SQLのようなものを生成するでしょう::"
 
 #: of sqlalchemy.sql.expression.between:12
 msgid ""
 "The :func:`.between` function is a standalone version of the "
 ":meth:`.ColumnElement.between` method available on all SQL expressions, "
 "as in::"
-msgstr ""
+msgstr "：func： `.between`関数は：:: meth：` .ColumnElement.between`メソッドのスタンドアロン版で、すべてのSQL式で利用できます::"
 
 #: of sqlalchemy.sql.expression.between:18
 msgid ""
@@ -211,50 +195,50 @@ msgid ""
 "expression, are coerced from Python scalar values if a the value is not a"
 " :class:`.ColumnElement` subclass.   For example, three fixed values can "
 "be compared as in::"
-msgstr ""
+msgstr "値がa：：class： `.ColumnElement`サブクラスでない場合、左側の列式を含む：func：` .between`に渡されるすべての引数は、Pythonスカラー値から強制的に取り出されます。たとえば、次のように3つの固定値を比較できます。"
 
 #: of sqlalchemy.sql.expression.between:25
 msgid "Which would produce::"
-msgstr ""
+msgstr "どちらが生成するだろうか::"
 
 #: of sqlalchemy.sql.expression.between:29
 msgid ""
 "a column expression, typically a :class:`.ColumnElement` instance or "
 "alternatively a Python scalar expression to be coerced into a column "
 "expression, serving as the left side of the ``BETWEEN`` expression."
-msgstr ""
+msgstr "典型的には：class： `.ColumnElement`インスタンス、あるいは列表現に強制されるPythonスカラー式であり、` `BETWEEN``式の左辺として機能します。"
 
 #: of sqlalchemy.sql.expression.between:34
 msgid ""
 "a column or Python scalar expression serving as the lower bound of the "
 "right side of the ``BETWEEN`` expression."
-msgstr ""
+msgstr "`BETWEEN``式の右辺の下限として機能するカラムまたはPythonのスカラー式です。"
 
 #: of sqlalchemy.sql.expression.between:37
 msgid ""
 "a column or Python scalar expression serving as the upper bound of the "
 "right side of the ``BETWEEN`` expression."
-msgstr ""
+msgstr "`BETWEEN``式の右辺の上限として機能するカラムまたはPythonのスカラ式です。"
 
 #: of sqlalchemy.sql.expression.between:40
 msgid ""
 "if True, will render \" BETWEEN SYMMETRIC \". Note that not all databases"
 " support this syntax.  .. versionadded:: 0.9.5"
-msgstr ""
+msgstr "Trueの場合、\ &quot;BETWEEN SYMMETRIC \&quot;をレンダリングします。すべてのデータベースがこの構文をサポートするわけではないことに注意してください。 .. versionadded :: 0.9.5"
 
 #: of sqlalchemy.sql.expression.between:40
 msgid ""
 "if True, will render \" BETWEEN SYMMETRIC \". Note that not all databases"
 " support this syntax."
-msgstr ""
+msgstr "Trueの場合、\ &quot;BETWEEN SYMMETRIC \&quot;をレンダリングします。すべてのデータベースがこの構文をサポートするわけではないことに注意してください。"
 
 #: of sqlalchemy.sql.expression.between:47
 msgid ":meth:`.ColumnElement.between`"
-msgstr ""
+msgstr "：meth： `.ColumnElement.between`"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:1
 msgid "Produce a \"bound expression\"."
-msgstr ""
+msgstr "\ &quot;結合式\&quot;を生成する。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:3
 msgid ""
@@ -263,7 +247,7 @@ msgid ""
 "\"placeholder\" value in a SQL expression, the value of which is supplied"
 " at the point at which the statement in executed against a database "
 "connection."
-msgstr ""
+msgstr "戻り値は、class： `.BindParameter`のインスタンスです。これはa：class： `.ColumnElement`サブクラスで、SQL式のいわゆる\&quot;プレースホルダ\ &quot;の値を表します。この値は、データベース接続に対して実行された文のポイントで指定されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:9
 msgid ""
@@ -274,25 +258,25 @@ msgid ""
 "values which should not be rendered directly in a SQL statement, but "
 "rather should be passed along to the :term:`DBAPI` as values which need "
 "to be correctly escaped and potentially handled for type-safety."
-msgstr ""
+msgstr "SQLAlchemyでは、：func： `.bindparam`コンストラクトは、最終的に表現時に使用される実際の値を持ち歩くことができます。このようにして、最終的な人口の &quot;プレースホルダー&quot;としてだけでなく、SQLステートメントで直接表現すべきではなく、いわゆる &quot;安全でない&quot;値を表現する手段としても機能します。 ：term： `DBAPI`を正しくエスケープし、型安全性のために潜在的に処理する必要のある値として渡しました。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:18
 msgid ""
 "When using :func:`.bindparam` explicitly, the use case is typically one "
 "of traditional deferment of parameters; the :func:`.bindparam` construct "
 "accepts a name which can then be referred to at execution time::"
-msgstr ""
+msgstr "：func： `.bindparam`を明示的に使用する場合、ユースケースは通常、伝統的なパラメータの据え置きの1つです。 ：func： `.bindparam`構造体は、実行時に参照できる名前を受け取ります::"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:28
 msgid "The above statement, when rendered, will produce SQL similar to::"
-msgstr ""
+msgstr "上記の文は、レンダリングされると、次のようなSQLを生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:32
 msgid ""
 "In order to populate the value of ``:username`` above, the value would "
 "typically be applied at execution time to a method like "
 ":meth:`.Connection.execute`::"
-msgstr ""
+msgstr "上記の `` username&#39;`の値を設定するために、値は通常、実行時に：meth： `.Connection.execute` ::のようなメソッドに適用されます"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:38
 msgid ""
@@ -300,7 +284,7 @@ msgid ""
 "or DELETE statements that are to be invoked multiple times, where the "
 "WHERE criterion of the statement is to change on each invocation, such "
 "as::"
-msgstr ""
+msgstr "：func： `.bindparam`の明示的な使用は、複数回呼び出されるUPDATEまたはDELETEステートメントを生成する場合にも一般的です。ここで、ステートメントのWHERE条件は各呼び出しで変更することです::"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:54
 msgid ""
@@ -309,7 +293,7 @@ msgid ""
 "to virtually all SQL expression functions are coerced into fixed "
 ":func:`.bindparam` constructs.  For example, given a comparison operation"
 " such as::"
-msgstr ""
+msgstr "SQLAlchemyのコア式システムは：func： `.bindparam`を暗黙の意味で広く使用します。実質的にすべてのSQL式関数に渡されるPythonリテラル値はfixed：func： `.bindparam`構造体に強制されるのが一般的です。たとえば、次のような比較演算があるとします。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:62
 msgid ""
@@ -317,11 +301,11 @@ msgid ""
 " where the left side is the :class:`.Column` object representing the "
 "``name`` column, and the right side is a :class:`.BindParameter` "
 "representing the literal value::"
-msgstr ""
+msgstr "上の式は：class： `.BinaryExpression`構造体を生成します。左側は` `name``列を表す：class：` .Column`オブジェクトで、右側は：class： `.BindParameter `リテラル値を表す::"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:70
 msgid "The expression above will render SQL such as::"
-msgstr ""
+msgstr "上記の式は次のようにSQLをレンダリングします："
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:74
 msgid ""
@@ -329,18 +313,18 @@ msgid ""
 "string ``Wendy`` is not in the rendered string, but is carried along "
 "where it is later used within statement execution.  If we invoke a "
 "statement like the following::"
-msgstr ""
+msgstr "``：name_1``のパラメータ名は匿名の名前です。実際の文字列 `` Wendy``はレンダリングされた文字列には含まれていませんが、後で文の実行で使用される場所に運ばれます。次のようなステートメントを呼び出した場合::"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:82
 msgid "We would see SQL logging output as::"
-msgstr ""
+msgstr "SQLのログ出力は次のようになります::"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:89
 msgid ""
 "Above, we see that ``Wendy`` is passed as a parameter to the database, "
 "while the placeholder ``:name_1`` is rendered in the appropriate form for"
 " the target database, in this case the PostgreSQL database."
-msgstr ""
+msgstr "上の例では、 `` Wendy``がパラメータとしてデータベースに渡され、 ``：name_1``は対象データベース（この場合はPostgreSQLデータベース）の適切な形式でレンダリングされています。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:93
 msgid ""
@@ -349,11 +333,11 @@ msgid ""
 "The :func:`.insert` construct produces an ``INSERT`` expression which "
 "will, at statement execution time, generate bound placeholders based on "
 "the arguments passed, as in::"
-msgstr ""
+msgstr "同様に、：func： `.bindparam`は、\&quot; VALUES \ &quot;部分に関する限り、term：` CRUD`文を使って作業するときに自動的に呼び出されます。 ：func： `.insert`構造体は、文実行時に渡された引数に基づいてバインドされたプレースホルダを生成する` `INSERT``式を生成します::"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:102
 msgid "The above will produce SQL output as::"
-msgstr ""
+msgstr "上記のように、SQLの出力は::"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:107
 msgid ""
@@ -361,7 +345,7 @@ msgid ""
 " single :func:`.bindparam` mirroring the column name ``name`` as a result"
 " of the single ``name`` parameter we passed to the "
 ":meth:`.Connection.execute` method."
-msgstr ""
+msgstr "：class： `.Insert`構造体は、コンパイル/実行時に渡された単一の` `name``パラメータの結果として` `name``という列名をミラーリングする単一の：func：` .bindparam`をレンダリングしました：meth： `.Connection.execute`メソッドです。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:112
 msgid ""
@@ -370,7 +354,7 @@ msgid ""
 "value may be modified when part of a compilation operation, if other "
 ":class:`BindParameter` objects exist with the same key, or if its length "
 "is too long and truncation is required."
-msgstr ""
+msgstr "このバインドパラメータのキー（たとえば、名前）名前付きパラメーターを使用する方言用に生成されたSQLステートメントで使用されます。この値は、他の：class： `BindParameter`オブジェクトが同じキーで存在する場合、または長さが長すぎて切り捨てが必要な場合、コンパイル操作の一部で変更される可能性があります。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:121
 msgid ""
@@ -378,7 +362,7 @@ msgid ""
 "time as the value for this parameter passed to the DBAPI, if no other "
 "value is indicated to the statement execution method for this particular "
 "parameter name.  Defaults to ``None``."
-msgstr ""
+msgstr "このバインドパラメータの初期値。この特定のパラメーター名のステートメント実行メソッドに他の値が指定されていない場合、DBAPIに渡されたこのパラメーターの値としてステートメント実行時に使用されます。デフォルトは `` None``です。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:127
 msgid ""
@@ -387,7 +371,7 @@ msgid ""
 "   Used for scenarios where the actual bind value cannot be determined at"
 " the point at which the clause construct is created, but embedded bind "
 "values are still desirable."
-msgstr ""
+msgstr "\ &quot;値\&quot;に代わる呼び出し可能な関数。この関数は、文の実行時に呼び出され、最終的な値を決定します。節の構成が作成された時点で実際のバインド値を特定できないが、埋め込みバインド値が依然として望ましいシナリオで使用されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:134
 msgid ""
@@ -403,7 +387,7 @@ msgid ""
 "holding the :class:`.DateTime` type, may apply conversion needed to the "
 "value (such as stringification on SQLite) before passing the value to the"
 " database."
-msgstr ""
+msgstr "A：class： `.TypeEngine`クラスまたはこれのためのオプションのデータ型を表すインスタンス：func：` .bindparam`。渡されない場合、指定された値に基づいてバインドの型が自動的に決定されます。例えば、 `` str``、 `` int``、 `` bool``のような単純なPython型では、：class： `.String`、：class：` .Integer`または：class： `となります。ブール型は自動的に選択されます。 a：func： `.bindparam`の型は、型がデータベースに渡される前に値に前処理を適用する点で特に重要です。たとえば：a：func： `.bindparam`は日時の値を参照し、：class：` .DateTime`型を保持するように指定されていますが、値を渡す前に値に必要な変換（SQLiteの文字列化など）を適用することができます。値をデータベースに追加します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:135
 msgid ""
@@ -413,7 +397,7 @@ msgid ""
 "example, trivial Python types such as ``str``, ``int``, ``bool`` may "
 "result in the :class:`.String`, :class:`.Integer` or :class:`.Boolean` "
 "types being automatically selected."
-msgstr ""
+msgstr "A：class： `.TypeEngine`クラスまたはこれのためのオプションのデータ型を表すインスタンス：func：` .bindparam`。渡されない場合、指定された値に基づいてバインドの型が自動的に決定されます。例えば、 `` str``、 `` int``、 `` bool``のような単純なPython型では、：class： `.String`、：class：` .Integer`または：class： `となります。ブール型は自動的に選択されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:143
 msgid ""
@@ -423,7 +407,7 @@ msgid ""
 "value, and is specified as holding the :class:`.DateTime` type, may apply"
 " conversion needed to the value (such as stringification on SQLite) "
 "before passing the value to the database."
-msgstr ""
+msgstr "a：func： `.bindparam`の型は、型がデータベースに渡される前に値に前処理を適用する点で特に重要です。たとえば：a：func： `.bindparam`は日時の値を参照し、：class：` .DateTime`型を保持するように指定されていますが、値を渡す前に値に必要な変換（SQLiteの文字列化など）を適用することができます。値をデータベースに追加します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:151
 msgid ""
@@ -433,7 +417,7 @@ msgid ""
 " the internals when producing so-called \"anonymous\" bound expressions, "
 "it isn't generally applicable to explicitly-named :func:`.bindparam` "
 "constructs."
-msgstr ""
+msgstr "もしTrueであれば、class： `.BindParameter`のキー名は同じ名前の別の：class：` .BindParameter`がすでに包含式の中にある場合に変更されます。このフラグは、一般に内部で\ &quot;匿名\&quot;というバインド式を生成する際に使用されますが、明示的には：func： `.bindparam`構造体には適用できません。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:160
 msgid ""
@@ -445,7 +429,7 @@ msgid ""
 "specified,    it will be set automatically to ``True`` or ``False`` "
 "depending    on whether or not the ``value`` or ``callable`` parameters"
 "    were specified."
-msgstr ""
+msgstr "`` True``の場合、実行時に値が必要です。渡されない場合は、paramref： `.bindparam.value`または：paramref：` .bindparam.callable`のどちらも渡されなかった場合、デフォルトは `` True``になります。これらのパラメータのいずれかが存在する場合、：paramref： `.bindparam.required`のデフォルトは` `False``です。 .. versionchanged :: 0.8 `` required``フラグが指定されていない場合、 `` value``や `` callable``の有無によって自動的に `` True``または `` False``に設定されます``パラメータが指定されました。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:161
 msgid ""
@@ -454,28 +438,28 @@ msgid ""
 ":paramref:`.bindparam.callable` were passed.  If either of these "
 "parameters are present, then :paramref:`.bindparam.required` defaults to "
 "``False``."
-msgstr ""
+msgstr "`` True``の場合、実行時に値が必要です。渡されない場合は、paramref： `.bindparam.value`または：paramref：` .bindparam.callable`のどちらも渡されなかった場合、デフォルトは `` True``になります。これらのパラメータのいずれかが存在する場合、：paramref： `.bindparam.required`のデフォルトは` `False``です。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:167
 msgid ""
 "If the ``required`` flag is not specified, it will be set automatically "
 "to ``True`` or ``False`` depending on whether or not the ``value`` or "
 "``callable`` parameters were specified."
-msgstr ""
+msgstr "`` required``フラグが指定されていない場合、 `` value``または `` callable``パラメータが指定されたかどうかによって自動的に `` True``または `` False``に設定されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:172
 msgid ""
 "True if this parameter name requires quoting and is not currently known "
 "as a SQLAlchemy reserved word; this currently only applies to the Oracle "
 "backend, where bound names must sometimes be quoted."
-msgstr ""
+msgstr "このパラメータ名に引用符が必要で、現在SQLAlchemyの予約語として知られていない場合はTrueです。これは現在、バウンド名を引用符で囲む必要があるOracleバックエンドにのみ適用されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:178
 msgid ""
 "if True, the parameter should be treated like a stored procedure \"OUT\" "
 "parameter.  This applies to backends such as Oracle which support OUT "
 "parameters."
-msgstr ""
+msgstr "Trueの場合、パラメータはストアドプロシージャ\ &quot;OUT \&quot;パラメータのように扱われます。これは、OUTパラメータをサポートするOracleなどのバックエンドに適用されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:183
 msgid ""
@@ -489,7 +473,7 @@ msgid ""
 "note:: The \"expanding\" feature does not support \"executemany\"-    "
 "style parameter sets.  .. versionadded:: 1.2  .. versionchanged:: 1.3 the"
 " \"expanding\" bound parameter feature now    supports empty lists."
-msgstr ""
+msgstr "Trueの場合、このパラメータは実行時に\ &quot;展開\&quot;パラメータとして扱われます。パラメータ値はスカラ値ではなくシーケンスであると予想され、文字列SQL文は実行ごとに変換され、DBAPIに渡される可変長のパラメータスロットを持つシーケンスに対応します。これは、文のキャッシュをIN句と組み合わせて使用​​できるようにするためです。 .. seealso :: meth： `.ColumnOperators.in_`：ref：` baked_in`  - ベーキングクエリ.. note :: \ &quot;拡張\&quot;機能は\ &quot;executemany \&quot;スタイルのパラメータセットをサポートしていません。 .. versionadded :: 1.2 .. versionchanged :: 1.3 \ &quot;拡張\&quot;バウンドパラメータ機能は空のリストをサポートするようになりました。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:184
 msgid ""
@@ -499,61 +483,61 @@ msgid ""
 "a per-execution basis to accomodate the sequence with a variable number "
 "of parameter slots passed to the DBAPI. This is to allow statement "
 "caching to be used in conjunction with an IN clause."
-msgstr ""
+msgstr "Trueの場合、このパラメータは実行時に\ &quot;展開\&quot;パラメータとして扱われます。パラメータ値はスカラ値ではなくシーケンスであると予想され、文字列SQL文は実行ごとに変換され、DBAPIに渡される可変長のパラメータスロットを持つシーケンスに対応します。これは、文のキャッシュをIN句と組み合わせて使用​​できるようにするためです。"
 
 #: ../../docstring of sqlalchemy.sql.expression.ColumnElement.notin_:19
 #: sqlalchemy.sql.expression.bindparam:194
 #: sqlalchemy.sql.operators.ColumnOperators.notin_:19
 msgid ":meth:`.ColumnOperators.in_`"
-msgstr ""
+msgstr "：meth： `.ColumnOperators.in_`"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:196
 msgid ":ref:`baked_in` - with baked queries"
-msgstr ""
+msgstr "：ref： `baked_in`  - 焼いたクエリ"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:198
 msgid ""
 "The \"expanding\" feature does not support \"executemany\"- style "
 "parameter sets."
-msgstr ""
+msgstr "拡張機能は\ &quot;executemany \&quot;スタイルのパラメータセットをサポートしていません。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:203
 msgid "the \"expanding\" bound parameter feature now supports empty lists."
-msgstr ""
+msgstr "\ &quot;拡張\&quot;バウンドパラメータ機能は空のリストをサポートするようになりました。"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:209
 msgid ":ref:`coretutorial_bind_param`"
-msgstr ""
+msgstr "：ref： `coretutorial_bind_param`"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:211
 msgid ":ref:`coretutorial_insert_expressions`"
-msgstr ""
+msgstr "：ref： `coretutorial_insert_expressions`"
 
 #: ../../docstring of sqlalchemy.sql.expression.bindparam:213
 msgid ":func:`.outparam`"
-msgstr ""
+msgstr "：機能： `.outparam`"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:1
 msgid "Produce a ``CASE`` expression."
-msgstr ""
+msgstr "`` CASE``式を生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:3
 msgid ""
 "The ``CASE`` construct in SQL is a conditional object that acts somewhat "
 "analogously to an \"if/then\" construct in other languages.  It returns "
 "an instance of :class:`.Case`."
-msgstr ""
+msgstr "SQLの `` CASE``構造体は、他の言語の\ &quot;if / then \&quot;構造体と幾分類似して動作する条件付きオブジェクトです。 ：class： `.Case`のインスタンスを返します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:7
 msgid ""
 ":func:`.case` in its usual form is passed a list of \"when\" constructs, "
 "that is, a list of conditions and results as tuples::"
-msgstr ""
+msgstr "：func： `.case`は通常の形式で\&quot; when \ &quot;のリスト、つまり条件と結果のリストを渡されます::"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:23
 #: sqlalchemy.sql.expression.cast:13
 msgid "The above statement will produce SQL resembling::"
-msgstr ""
+msgstr "上記のステートメントは、SQLと似ています::"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:32
 msgid ""
@@ -564,7 +548,7 @@ msgid ""
 "parameter is passed as a dictionary containing expressions to be compared"
 " against keyed to result expressions.  The statement below is equivalent "
 "to the preceding statement::"
-msgstr ""
+msgstr "単一の親カラムに対する複数の値の単純な等価式が必要な場合、：func： `.case`は：paramref：` .case.value`パラメータで使用される\ &quot;省略形\&quot;フォーマットを持ちます。比較される式。この形式では、：paramref： `.case.whens`パラメータが、キー付き結果式と比較される式を含む辞書として渡されます。以下のステートメントは、前のステートメントと同じです::"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:50
 msgid ""
@@ -574,13 +558,13 @@ msgid ""
 ":class:`.ColumnElement` constructs, are accepted as well.  To coerce a "
 "literal string expression into a constant expression rendered inline, use"
 " the :func:`.literal_column` construct, as in::"
-msgstr ""
+msgstr "：paramref： `.case.whens`と：：paramref：` .case.else_`の結果値として受け入れられる値は、Pythonリテラルから：func： `.bindparam`構造体に強制変換されます。 SQL式（例：class： `.ColumnElement`）も受け入れられます。リテラル文字列式をインラインでレンダリングされる定数式に変換するには、:: func： `.literal_column`構文を使用します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:74
 msgid ""
 "The above will render the given constants without using bound parameters "
 "for the result values (but still for the comparison values), as in::"
-msgstr ""
+msgstr "上の例では、次のように、結果の値にバインドされたパラメータを使用せずに（ただし、比較値に対して）、与えられた定数をレンダリングします。"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:84
 msgid ""
@@ -595,20 +579,20 @@ msgid ""
 ":paramref:`.case.value` to be present, and values will be compared using "
 "the ``==`` operator, e.g.::     case(        {\"wendy\": \"W\", \"jack\":"
 " \"J\"},        value=users_table.c.name    )"
-msgstr ""
+msgstr "：paramref： `.case.when`は、paramref：` .case.value`が使用されているかどうかに基づいて、2つの異なる形式を受け入れます。最初の形式では、2つのタプルのリストを受け取ります。各2タプルは ``（ <sql expression> 、 <value> ） ``、SQL式はブール式で、\ &quot;value \&quot;は結果の値です。例えば、case（[（users_table.c.name == &#39;wendy&#39;、 &#39;W&#39;）、（users_table.c .name == &#39;jack&#39;、 &#39;J&#39;）]）2番目の形式では、結果値にマッピングされた比較値のPython辞書を受け入れます。このフォームは、paramref： `.case.value`が存在することを要求し、値は` `==` `演算子を使って比較されます。例えば:: case（{\&quot; wendy \ &quot;：\&quot; W \ &quot;、 &quot;jack \&quot;：\ &quot;J \&quot;}、value = users_table.c.name）"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:84
 msgid ""
 "The criteria to be compared against, :paramref:`.case.whens` accepts two "
 "different forms, based on whether or not :paramref:`.case.value` is used."
-msgstr ""
+msgstr "：paramref： `.case.when`は、paramref：` .case.value`が使用されているかどうかに基づいて、2つの異なる形式を受け入れます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:88
 msgid ""
 "In the first form, it accepts a list of 2-tuples; each 2-tuple consists "
 "of ``(<sql expression>, <value>)``, where the SQL expression is a boolean"
 " expression and \"value\" is a resulting value, e.g.::"
-msgstr ""
+msgstr "最初の形式では、2つのタプルのリストを受け取ります。各2タプルは ``（ <sql expression> 、 <value> ） ``、SQL式はブール式で、\ &quot;value \&quot;は結果の値です（例：::）"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:98
 msgid ""
@@ -616,14 +600,14 @@ msgid ""
 "mapped to a resulting value; this form requires :paramref:`.case.value` "
 "to be present, and values will be compared using the ``==`` operator, "
 "e.g.::"
-msgstr ""
+msgstr "2番目の形式では、結果値にマップされた比較値のPython辞書を受け取ります。このフォームは、paramref： `.case.value`が存在することを要求し、値は` `==` `演算子を使って比較されます。例えば::"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:108
 msgid ""
 "An optional SQL expression which will be used as a fixed \"comparison "
 "point\" for candidate values within a dictionary passed to "
 ":paramref:`.case.whens`."
-msgstr ""
+msgstr "paramref： `.case.whens`に渡されるディクショナリ内の候補値の固定&quot;比較ポイント &quot;として使用されるオプションのSQL式。"
 
 #: ../../docstring of sqlalchemy.sql.expression.case:112
 msgid ""
@@ -631,15 +615,15 @@ msgid ""
 "``CASE`` construct if all expressions within :paramref:`.case.whens` "
 "evaluate to false.  When omitted, most databases will produce a result of"
 " NULL if none of the \"when\" expressions evaluate to true."
-msgstr ""
+msgstr "：paramref： `.case.whens`内のすべての式がfalseに評価された場合に、` `CASE``構文の評価結果になるオプションのSQL式です。省略した場合、\ &quot;when \&quot;式が真と評価されない場合、ほとんどのデータベースはNULLの結果を生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.cast:1
 msgid "Produce a ``CAST`` expression."
-msgstr ""
+msgstr "`` CAST``式を生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.cast:3
 msgid ":func:`.cast` returns an instance of :class:`.Cast`."
-msgstr ""
+msgstr "：func： `.cast`は：class：` .Cast`のインスタンスを返します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.cast:17
 msgid ""
@@ -650,60 +634,60 @@ msgid ""
 " Python side, which means the expression will take on the expression "
 "operator behavior associated with that type, as well as the bound-value "
 "handling and result-row-handling behavior of the type."
-msgstr ""
+msgstr "：func： `.cast`関数は、使用時に2つの異なる関数を実行します。 1つは、結果のSQL文字列内に `` CAST``式をレンダリングすることです。 2つ目は、指定された型（例：class： `.TypeEngine`クラスまたはインスタンス）をPython側の列式に関連付けます。つまり、式はその型に関連付けられた式演算子の動作を引き継ぎます。型のバウンド値処理と結果行処理の動作"
 
 #: ../../docstring of sqlalchemy.sql.expression.cast:26
 msgid ""
 ":func:`.cast` now applies the given type to the expression such that it "
 "takes effect on the bound-value, e.g. the Python-to-database direction, "
 "in addition to the result handling, e.g. database-to-Python, direction."
-msgstr ""
+msgstr "：func： `.cast`は与えられた型を式に適用するようになりました。たとえば、データベースからPythonへの方向のような結果の処理に加えて、Pythonからデータベースへの方向のような境界値に影響を与えます。 。"
 
 #: ../../docstring of sqlalchemy.sql.expression.cast:31
 msgid ""
 "An alternative to :func:`.cast` is the :func:`.type_coerce` function. "
 "This function performs the second task of associating an expression with "
 "a specific type, but does not render the ``CAST`` expression in SQL."
-msgstr ""
+msgstr "：func： `.cast`は：func：` .type_coerce`関数です。この関数は、式を特定の型に関連付けるという第2のタスクを実行しますが、SQLで `` CAST``式を表示しません。"
 
 #: ../../docstring of sqlalchemy.sql.expression.cast:36
 #: sqlalchemy.sql.expression.type_coerce:49
 msgid ""
 "A SQL expression, such as a :class:`.ColumnElement` expression or a "
 "Python string which will be coerced into a bound literal value."
-msgstr ""
+msgstr "a：class： `.ColumnElement`式やバインドされたリテラル値に強制変換されるPython文字列などのSQL式。"
 
 #: ../../docstring of sqlalchemy.sql.expression.cast:40
 msgid ""
 "A :class:`.TypeEngine` class or instance indicating the type to which the"
 " ``CAST`` should apply."
-msgstr ""
+msgstr "A：class： `.TypeEngine`クラスまたはインスタンスで、` `CAST``が適用されるべき型を示します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.cast:45
 msgid ":func:`.type_coerce` - Python-side type coercion without emitting CAST."
-msgstr ""
+msgstr "：func： `.type_coerce`  -  CASTを出さないPython側の型強制です。"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:1
 msgid "Produce a :class:`.ColumnClause` object."
-msgstr ""
+msgstr "a：class： `.ColumnClause`オブジェクトを生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:3
 msgid ""
 "The :class:`.ColumnClause` is a lightweight analogue to the "
 ":class:`.Column` class.  The :func:`.column` function can be invoked with"
 " just a name alone, as in::"
-msgstr ""
+msgstr "：class： `.ColumnClause`は：class：` .Column`クラスの軽量アナログです。 ：func： `.column`関数は、次のように名前だけで呼び出すことができます："
 
 #: ../../docstring of sqlalchemy.sql.expression.ColumnClause:12
 #: sqlalchemy.sql.expression.column:12
 msgid "The above statement would produce SQL like::"
-msgstr ""
+msgstr "上記の文は、次のようなSQLを生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:16
 msgid ""
 "Once constructed, :func:`.column` may be used like any other SQL "
 "expression element such as within :func:`.select` constructs::"
-msgstr ""
+msgstr "構築されると、：func： `.column`は、以下のような他のSQL式の要素と同じように使用できます：func：` .select` constructs ::"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:24
 msgid ""
@@ -715,7 +699,7 @@ msgid ""
 "exactly without any quoting, use :func:`.literal_column` instead, or pass"
 " ``True`` as the value of :paramref:`.column.is_literal`.   Additionally,"
 " full SQL statements are best handled using the :func:`.text` construct."
-msgstr ""
+msgstr "：func： `.column`によって処理されるテキストは、データベース列の名前のように扱われます。文字列に大文字小文字、特殊文字が混在している場合、またはターゲットバックエンドの既知の予約語に一致する場合、列式はバックエンドによって決定された引用動作を使用してレンダリングされます。引用符なしで正確にレンダリングされるテキスト形式のSQL式を生成するには、代わりに：func： `.literal_column`を使用するか、paramref：` .column.is_literal`の値として `` True``を渡します。さらに、完全なSQL文は、：func： `.text`構文を使用して処理するのが最適です。"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:34
 msgid ""
@@ -723,7 +707,7 @@ msgid ""
 "the :func:`.table` function (which is the lightweight analogue to "
 ":class:`.Table`) to produce a working table construct with minimal "
 "boilerplate::"
-msgstr ""
+msgstr "：func： `.column`は、：func：` .table`関数（class： `.Table`の軽量アナログです）と組み合わせてテーブルのような使い方で使用することができます。最小限の定型文で::"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:49
 msgid ""
@@ -731,23 +715,23 @@ msgid ""
 "can be created in an ad-hoc fashion and is not associated with any "
 ":class:`.schema.MetaData`, DDL, or events, unlike its :class:`.Table` "
 "counterpart."
-msgstr ""
+msgstr "上記のようなA：func： `.column` /：func：` .table`構造は、非定型の方法で作成することができ、class： `.schema.MetaData`、DDL、またはevents 、：class： `.Table`とは異なります。"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:55
 msgid ""
 ":func:`.expression.column` can now be imported from the plain "
 "``sqlalchemy`` namespace like any other SQL element."
-msgstr ""
+msgstr "：func： `.expression.column`は他のSQL要素と同様に、単純な` `sqlalchemy``名前空間からインポートできます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:59
 msgid "the text of the element."
-msgstr ""
+msgstr "要素のテキスト"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:61
 msgid ""
 ":class:`.types.TypeEngine` object which can associate this "
 ":class:`.ColumnClause` with a type."
-msgstr ""
+msgstr "：class： `.types.TypeEngine`オブジェクトで、これは：class：` .ColumnClause`に型を関連付けることができます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:64
 msgid ""
@@ -756,98 +740,98 @@ msgid ""
 "regardless of case sensitive settings. the :func:`.literal_column()` "
 "function essentially invokes :func:`.column` while passing "
 "``is_literal=True``."
-msgstr ""
+msgstr "Trueの場合、：class： `.ColumnClause`は、大文字と小文字を区別する設定に関係なく、引用規則を適用せずに出力に配信される正確な式と見なされます。 ：func： `.literal_column（）`関数は本質的に、 `` is_literal = True``を渡しながら：func： `.column`を呼び出します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.ColumnClause:31
 #: sqlalchemy.sql.expression.ColumnElement:68
 #: sqlalchemy.sql.expression.column:72
 msgid ":class:`.Column`"
-msgstr ""
+msgstr "：class： `.Column`"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:74
 msgid ":func:`.literal_column`"
-msgstr ""
+msgstr "：func： `.literal_column`"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:76
 msgid ":func:`.table`"
-msgstr ""
+msgstr "：func： `.table`"
 
 #: ../../docstring of sqlalchemy.sql.expression.TextClause:16
 #: sqlalchemy.sql.expression.column:78
 #: sqlalchemy.sql.expression.literal_column:25
 msgid ":func:`.text`"
-msgstr ""
+msgstr "：func： `.text`"
 
 #: ../../docstring of sqlalchemy.sql.expression.column:80
 #: sqlalchemy.sql.expression.literal_column:27
 msgid ":ref:`sqlexpression_literal_column`"
-msgstr ""
+msgstr "：ref： `sqlexpression_literal_column`"
 
 #: of sqlalchemy.sql.expression.collate:1
 msgid "Return the clause ``expression COLLATE collation``."
-msgstr ""
+msgstr "`` COLLATE collat​​ion``という節を返します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:7
 #: sqlalchemy.sql.expression.collate:7
 #: sqlalchemy.sql.operators.ColumnOperators.op:7
 #: sqlalchemy.sql.operators.Operators.op:7
 msgid "produces::"
-msgstr ""
+msgstr "生成::"
 
 #: of sqlalchemy.sql.expression.collate:11
 msgid ""
 "The collation expression is also quoted if it is a case sensitive "
 "identifier, e.g. contains uppercase characters."
-msgstr ""
+msgstr "大文字と小文字を区別する識別子である場合、照合式も引用符で囲みます。"
 
 #: of sqlalchemy.sql.expression.collate:14
 msgid ""
 "quoting is automatically applied to COLLATE expressions if they are case "
 "sensitive."
-msgstr ""
+msgstr "大文字と小文字が区別される場合は、COLLATE式にクォーテーションが自動的に適用されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.desc:1
 msgid "Produce a descending ``ORDER BY`` clause element."
-msgstr ""
+msgstr "下降する `` ORDER BY``節要素を生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.desc:13
 msgid ""
 "The :func:`.desc` function is a standalone version of the "
 ":meth:`.ColumnElement.desc` method available on all SQL expressions, "
 "e.g.::"
-msgstr ""
+msgstr "：func： `.desc`関数は、すべてのSQL式で利用可能な：meth：` .ColumnElement.desc`メソッドのスタンドアロン版です。例えば::"
 
 #: ../../docstring of sqlalchemy.sql.expression.desc:20
 msgid ""
 "A :class:`.ColumnElement` (e.g. scalar SQL expression) with which to "
 "apply the :func:`.desc` operation."
-msgstr ""
+msgstr "A：class：：.Func： `.desc`演算を適用する` .ColumnElement`（スカラーSQL式など）です。"
 
 #: ../../docstring of sqlalchemy.sql.expression.desc:25
 #: sqlalchemy.sql.expression.nullsfirst:27
 #: sqlalchemy.sql.expression.nullslast:25
 msgid ":func:`.asc`"
-msgstr ""
+msgstr "：機能： `.asc`"
 
 #: ../../docstring of sqlalchemy.sql.expression.distinct:1
 msgid "Produce an column-expression-level unary ``DISTINCT`` clause."
-msgstr ""
+msgstr "列式レベル単項 `` DISTINCT``節を生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.distinct:3
 msgid ""
 "This applies the ``DISTINCT`` keyword to an individual column expression,"
 " and is typically contained within an aggregate function, as in::"
-msgstr ""
+msgstr "これは、個々の列式に `` DISTINCT``キーワードを適用し、通常は次のように集合関数内に含まれます："
 
 #: ../../docstring of sqlalchemy.sql.expression.distinct:10
 msgid "The above would produce an expression resembling::"
-msgstr ""
+msgstr "上記のように、次のような式が生成されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.distinct:14
 msgid ""
 "The :func:`.distinct` function is also available as a column-level "
 "method, e.g. :meth:`.ColumnElement.distinct`, as in::"
-msgstr ""
+msgstr "：func： `.distinct`関数は、列レベルのメソッドとしても利用できます。例：meth：` .ColumnElement.distinct`"
 
 #: ../../docstring of sqlalchemy.sql.expression.distinct:19
 msgid ""
@@ -856,47 +840,47 @@ msgid ""
 "``SELECT`` statement with ``DISTINCT`` applied to the result set as a "
 "whole, e.g. a ``SELECT DISTINCT`` expression.  See that method for "
 "further information."
-msgstr ""
+msgstr "：func： `.distinct`演算子は：class：` .Select`の：meth： `.Select.distinct`メソッドとは異なります。これは、` `DISTINCT``が` `DISTINCT``に適用された` `SELECT``文を生成します。結果セット全体、例えば `` SELECT DISTINCT``のようなものです。詳細については、その方法を参照してください。"
 
 #: ../../docstring of sqlalchemy.sql.expression.distinct:28
 msgid ":meth:`.ColumnElement.distinct`"
-msgstr ""
+msgstr "：meth： `.ColumnElement.distinct`"
 
 #: ../../docstring of sqlalchemy.sql.expression.distinct:30
 msgid ":meth:`.Select.distinct`"
-msgstr ""
+msgstr "：meth： `.Select.distinct`"
 
 #: ../../docstring of sqlalchemy.sql.expression.distinct:32
 msgid ":data:`.func`"
-msgstr ""
+msgstr "：データ： `.func`"
 
 #: ../../docstring of sqlalchemy.sql.expression.extract:1
 msgid "Return a :class:`.Extract` construct."
-msgstr ""
+msgstr "a：class： `.Extract`構造体を返します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.extract:3
 msgid ""
 "This is typically available as :func:`.extract` as well as "
 "``func.extract`` from the :data:`.func` namespace."
-msgstr ""
+msgstr "これは通常：data： `.func`名前空間から：func：` .extract`と `` func.extract``として利用できます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.false:1
 msgid "Return a :class:`.False_` construct."
-msgstr ""
+msgstr "a：class： `.False_`構造体を返します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.false:9
 #: sqlalchemy.sql.expression.true:9
 msgid ""
 "A backend which does not support true/false constants will render as an "
 "expression against 1 or 0::"
-msgstr ""
+msgstr "真偽の定数をサポートしていないバックエンドは、1または0に対する式としてレンダリングされます::"
 
 #: ../../docstring of sqlalchemy.sql.expression.false:15
 #: sqlalchemy.sql.expression.true:15
 msgid ""
 "The :func:`.true` and :func:`.false` constants also feature \"short "
 "circuit\" operation within an :func:`.and_` or :func:`.or_` conjunction::"
-msgstr ""
+msgstr "：func： `.true`と：func：` .false`定数は：func： `.and_`または：func：` .or_`の中での\ &quot;短絡\"
 
 #: ../../docstring of sqlalchemy.sql.expression.false:25
 #: sqlalchemy.sql.expression.true:25
@@ -904,27 +888,27 @@ msgid ""
 ":func:`.true` and :func:`.false` feature better integrated behavior "
 "within conjunctions and on dialects that don't support true/false "
 "constants."
-msgstr ""
+msgstr "：func： `.true`と：func：` .false`は、真偽の定数をサポートしていない接続者や方言の方が統合された動作が優れています。"
 
 #: ../../docstring of sqlalchemy.sql.expression.false:31
 msgid ":func:`.true`"
-msgstr ""
+msgstr "：func： `.true`"
 
 #: of sqlalchemy.sql.expression.func:1
 msgid "Generate SQL function expressions."
-msgstr ""
+msgstr "SQL関数式を生成します。"
 
 #: of sqlalchemy.sql.expression.func:3
 msgid ""
 ":data:`.func` is a special object instance which generates SQL functions "
 "based on name-based attributes, e.g.::"
-msgstr ""
+msgstr "：data： `.func`は、名前ベースの属性に基づいてSQL関数を生成する特別なオブジェクトインスタンスです。例えば::"
 
 #: of sqlalchemy.sql.expression.func:9
 msgid ""
 "The element is a column-oriented SQL element like any other, and is used "
 "in that way::"
-msgstr ""
+msgstr "この要素は他の列のような列指向のSQL要素であり、そのように使用されます::"
 
 #: of sqlalchemy.sql.expression.func:15
 msgid ""
@@ -933,13 +917,13 @@ msgid ""
 "functions which SQLAlchemy is aware of, the name may be interpreted as a "
 "*generic function* which will be compiled appropriately to the target "
 "database::"
-msgstr ""
+msgstr "任意の名前をdata： `.func`に与えることができます。関数名がSQLAlchemyに認識されない場合、関数名はそのまま表示されます。 SQLAlchemyが認識している一般的なSQL関数の場合、その名前はターゲットデータベースに適切にコンパイルされる*汎用関数*として解釈されます。"
 
 #: of sqlalchemy.sql.expression.func:23
 msgid ""
 "To call functions which are present in dot-separated packages, specify "
 "them in the same manner::"
-msgstr ""
+msgstr "ドット区切りのパッケージにある関数を呼び出す場合は、同様に指定します。"
 
 #: of sqlalchemy.sql.expression.func:29
 msgid ""
@@ -948,7 +932,7 @@ msgid ""
 "that a string-based function returns a Unicode value and is similarly "
 "treated as a string in expressions, specify "
 ":class:`~sqlalchemy.types.Unicode` as the type:"
-msgstr ""
+msgstr "SQLAlchemyは関数の戻り値の型を認識して、型固有の字句結果ベースおよび結果ベースの動作を可能にすることができます。たとえば、文字列ベースの関数がUnicode値を返し、同様に式で文字列として扱われるようにするには、次のように型を指定します。class： `〜sqlalchemy.types.Unicode`"
 
 #: of sqlalchemy.sql.expression.func:39
 msgid ""
@@ -958,7 +942,7 @@ msgid ""
 ":meth:`~.Connectable.execute` method of a :class:`.Connection` or "
 ":class:`.Engine`, where it will be wrapped inside of a SELECT statement "
 "first::"
-msgstr ""
+msgstr "：data： `.func`呼び出しによって返されるオブジェクトは、通常：class：` .Function`のインスタンスです。このオブジェクトは、比較およびラベリング機能を含む\ &quot;列\&quot;インターフェイスを満たしています。オブジェクトは、：class： `.Connection`または：class：` .Engine`の：meth： `〜.Connectable.execute`メソッドを渡すこともできます。このメソッドは、まずSELECT文の中にラップされます::"
 
 #: of sqlalchemy.sql.expression.func:48
 msgid ""
@@ -966,87 +950,87 @@ msgid ""
 " to a built-in expression such as :func:`.cast` or :func:`.extract`, as "
 "these names have well-known meaning but are not exactly the same as "
 "\"functions\" from a SQLAlchemy perspective."
-msgstr ""
+msgstr "いくつかの例外を除いて、：data： `.func`アクセサは：func：` .cast`や：func： `.extract`のような組み込み式に名前をリダイレクトします。これらの名前はよく知られているので意味はありますが、SQLAlchemyパースペクティブから\ &quot;関数\&quot;とまったく同じではありません。"
 
 #: of sqlalchemy.sql.expression.func:54
 msgid ""
 ":data:`.func` can return non-function expression constructs for common "
 "quasi-functional names like :func:`.cast` and :func:`.extract`."
-msgstr ""
+msgstr "：data： `.func`は：func：` .cast`と：func： `.extract`のような一般的な準機能名の非関数式の構文を返します。"
 
 #: of sqlalchemy.sql.expression.func:58
 msgid ""
 "Functions which are interpreted as \"generic\" functions know how to "
 "calculate their return type automatically. For a listing of known generic"
 " functions, see :ref:`generic_functions`."
-msgstr ""
+msgstr "\ &quot;一般\&quot;関数として解釈される関数は、自動的に戻り値の型を計算する方法を知っています。既知の汎用関数のリストについては、：ref： `generic_functions`を参照してください。"
 
 #: of sqlalchemy.sql.expression.func:64
 msgid ""
 "The :data:`.func` construct has only limited support for calling "
 "standalone \"stored procedures\", especially those with special "
 "parameterization concerns."
-msgstr ""
+msgstr "：data： `.func`構造体は、スタンドアロンの\&quot;ストアドプロシージャ\ &quot;を呼び出すためのサポートが限られています。"
 
 #: of sqlalchemy.sql.expression.func:68
 msgid ""
 "See the section :ref:`stored_procedures` for details on how to use the "
 "DBAPI-level ``callproc()`` method for fully traditional stored "
 "procedures."
-msgstr ""
+msgstr "完全に従来のストアドプロシージャにDBAPIレベルの `` callproc（） ``メソッドを使用する方法の詳細については、ref： `stored_procedures`のセクションを参照してください。"
 
 #: ../../docstring of sqlalchemy.sql.expression.funcfilter:1
 msgid "Produce a :class:`.FunctionFilter` object against a function."
-msgstr ""
+msgstr "関数に対して：class： `.FunctionFilter`オブジェクトを生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.funcfilter:3
 msgid ""
 "Used against aggregate and window functions, for database backends that "
 "support the \"FILTER\" clause."
-msgstr ""
+msgstr "\ &quot;FILTER \&quot;句をサポートするデータベースバックエンドに対して、集約関数およびウィンドウ関数に対して使用されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.funcfilter:11
 msgid "Would produce \"COUNT(1) FILTER (WHERE myclass.name = 'some name')\"."
-msgstr ""
+msgstr "\ &quot;COUNT（1）FILTER（WHERE myclass.name = &#39;some name&#39;）\&quot;を生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.funcfilter:13
 msgid ""
 "This function is also available from the :data:`~.expression.func` "
 "construct itself via the :meth:`.FunctionElement.filter` method."
-msgstr ""
+msgstr "この関数は：data： `〜.expression.func`から：meth：` .FunctionElement.filter`メソッドを使って構築することもできます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.FunctionFilter:16
 #: sqlalchemy.sql.expression.funcfilter:20
 msgid ":meth:`.FunctionElement.filter`"
-msgstr ""
+msgstr "：meth： `.FunctionElement.filter`"
 
 #: ../../docstring of sqlalchemy.sql.expression.label:1
 msgid "Return a :class:`Label` object for the given :class:`.ColumnElement`."
-msgstr ""
+msgstr "与えられた：class： `.ColumnElement`のa：class：` Label`オブジェクトを返します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.label:4
 msgid ""
 "A label changes the name of an element in the columns clause of a "
 "``SELECT`` statement, typically via the ``AS`` SQL keyword."
-msgstr ""
+msgstr "ラベルは、通常 `` AS`` SQLキーワードを介して、 `` SELECT``文のcolumns節にある要素の名前を変更します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.label:7
 msgid ""
 "This functionality is more conveniently available via the "
 ":meth:`.ColumnElement.label` method on :class:`.ColumnElement`."
-msgstr ""
+msgstr "この機能は、class： `.ColumnElement`の：meth：` .ColumnElement.label`メソッドでより便利に利用できます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.label:10
 msgid "label name"
-msgstr ""
+msgstr "ラベル名"
 
 #: ../../docstring of sqlalchemy.sql.expression.label:12
 msgid "a :class:`.ColumnElement`."
-msgstr ""
+msgstr "a：クラス： `.ColumnElement`。"
 
 #: of sqlalchemy.sql.expression.literal:1
 msgid "Return a literal clause, bound to a bind parameter."
-msgstr ""
+msgstr "バインドパラメータにバインドされたリテラル句を返します。"
 
 #: of sqlalchemy.sql.expression.literal:3
 msgid ""
@@ -1056,25 +1040,25 @@ msgid ""
 "such as a :class:`~sqlalchemy.schema.Column` object.  Use this function "
 "to force the generation of a literal clause, which will be created as a "
 ":class:`BindParameter` with a bound value."
-msgstr ""
+msgstr "リテラル句は、：class： `.ClauseElement`オブジェクト（文字列、int、日付など）が、：class：` .ColumnElement`サブクラス（a：classなど）との比較操作で使用されるときに自動的に作成されます： `〜sqlalchemy.schema.Column`オブジェクトです。この関数を使用してリテラル句の生成を強制します。これは、：class： `BindParameter`とバインドされた値で作成されます。"
 
 #: of sqlalchemy.sql.expression.literal:10
 msgid ""
 "the value to be bound. Can be any Python object supported by the "
 "underlying DB-API, or is translatable via the given type argument."
-msgstr ""
+msgstr "バインドされる値基本となるDB-APIでサポートされているPythonオブジェクトでも、指定された型引数で変換可能なPythonオブジェクトでもかまいません。"
 
 #: of sqlalchemy.sql.expression.literal:13
 msgid ""
 "an optional :class:`~sqlalchemy.types.TypeEngine` which will provide "
 "bind-parameter translation for this literal."
-msgstr ""
+msgstr "オプション：class： `〜sqlalchemy.types.TypeEngine`このリテラルのバインド・パラメータ変換を提供します。"
 
 #: of sqlalchemy.sql.expression.literal_column:1
 msgid ""
 "Produce a :class:`.ColumnClause` object that has the "
 ":paramref:`.column.is_literal` flag set to True."
-msgstr ""
+msgstr "：paramref： `.column.is_literal`フラグがTrueに設定されたclass：` .ColumnClause`オブジェクトを生成します。"
 
 #: of sqlalchemy.sql.expression.literal_column:4
 msgid ""
@@ -1084,56 +1068,56 @@ msgid ""
 "be assumed to be part of a table and may be quoted as such, "
 ":func:`.literal_column` can be that, or any other arbitrary column-"
 "oriented expression."
-msgstr ""
+msgstr "：func： `.literal_column`は：func：` .column`と似ていますが、まったく同じようにレンダリングされる\ &quot;スタンドアロン\&quot;の列式としてよく使われます。 while：func： `.column`は、テーブルの一部であると仮定される文字列名を格納します。func：` .literal_column`は、thatまたは任意の他の任意の列指向式です。"
 
 #: of sqlalchemy.sql.expression.literal_column:11
 msgid ""
 "the text of the expression; can be any SQL expression. Quoting rules will"
 " not be applied. To specify a column-name expression which should be "
 "subject to quoting rules, use the :func:`column` function."
-msgstr ""
+msgstr "表現のテキスト。任意のSQL式を指定できます。引用ルールは適用されません。クォートルールの対象となる列名の式を指定するには、：func： `column`関数を使用します。"
 
 #: of sqlalchemy.sql.expression.literal_column:16
 msgid ""
 "an optional :class:`~sqlalchemy.types.TypeEngine` object which will "
 "provide result-set translation and additional expression semantics for "
 "this column. If left as None the type will be NullType."
-msgstr ""
+msgstr "この列に対して結果セット変換と追加の式セマンティクスを提供するオプションの：class： `〜sqlalchemy.types.TypeEngine`オブジェクトです。 Noneのままにすると、型はNullTypeになります。"
 
 #: of sqlalchemy.sql.expression.ColumnClause:29
 #: sqlalchemy.sql.expression.literal_column:23
 msgid ":func:`.column`"
-msgstr ""
+msgstr "：func： `.column`"
 
 #: of sqlalchemy.sql.expression.not_:1
 msgid "Return a negation of the given clause, i.e. ``NOT(clause)``."
-msgstr ""
+msgstr "与えられた節の否定、つまり `` NOT（節） ``を返します。"
 
 #: of sqlalchemy.sql.expression.not_:3
 msgid ""
 "The ``~`` operator is also overloaded on all :class:`.ColumnElement` "
 "subclasses to produce the same result."
-msgstr ""
+msgstr "``〜 ``演算子は、all：class： `.ColumnElement`サブクラスでもオーバーロードされ、同じ結果が得られます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.null:1
 msgid "Return a constant :class:`.Null` construct."
-msgstr ""
+msgstr "定数：class： `.Null`構文を返します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.nullsfirst:1
 msgid "Produce the ``NULLS FIRST`` modifier for an ``ORDER BY`` expression."
-msgstr ""
+msgstr "`` ORDER BY``式の `` NULLS FIRST``修飾子を生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.nullsfirst:3
 msgid ""
 ":func:`.nullsfirst` is intended to modify the expression produced by "
 ":func:`.asc` or :func:`.desc`, and indicates how NULL values should be "
 "handled when they are encountered during ordering::"
-msgstr ""
+msgstr "：func： `.nullsfirst`は：func：` .asc`または：func： `.desc`によって生成された式を修正することを意図しており、順序付け中にNULL値がどのように扱われるべきかを示します::"
 
 #: ../../docstring of sqlalchemy.sql.expression.nullsfirst:12
 #: sqlalchemy.sql.expression.nullslast:12
 msgid "The SQL expression from the above would resemble::"
-msgstr ""
+msgstr "上記のSQL式は次のようになります::"
 
 #: ../../docstring of sqlalchemy.sql.expression.nullsfirst:16
 msgid ""
@@ -1141,18 +1125,18 @@ msgid ""
 "invoked from the column expression itself using "
 ":meth:`.ColumnElement.nullsfirst`, rather than as its standalone function"
 " version, as in::"
-msgstr ""
+msgstr "func： `.asc`と：func：` .desc`、：func： `.nullsfirst`は通常、スタンドアロンの関数バージョンではなく、：meth：` .ColumnElement.nullsfirst`を使用して列式から呼び出されます、と同様::"
 
 #: ../../docstring of sqlalchemy.sql.expression.nullslast:1
 msgid "Produce the ``NULLS LAST`` modifier for an ``ORDER BY`` expression."
-msgstr ""
+msgstr "`` ORDER BY``式の `` NULLS LAST``修飾子を生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.nullslast:3
 msgid ""
 ":func:`.nullslast` is intended to modify the expression produced by "
 ":func:`.asc` or :func:`.desc`, and indicates how NULL values should be "
 "handled when they are encountered during ordering::"
-msgstr ""
+msgstr "：func： `.nullslast`は：func：` .asc`または：func： `.desc`によって生成された式を変更することを意図しており、順序付け中にNULL値がどのように扱われるべきかを示します::"
 
 #: ../../docstring of sqlalchemy.sql.expression.nullslast:16
 msgid ""
@@ -1160,28 +1144,28 @@ msgid ""
 "invoked from the column expression itself using "
 ":meth:`.ColumnElement.nullslast`, rather than as its standalone function "
 "version, as in::"
-msgstr ""
+msgstr "：func： `.asc`と：func：` .desc`、：func： `.nullslast`は通常、スタンドアロンの関数バージョンではなく、：meth：` .ColumnElement.nullslast`を使用して列式から呼び出されます、と同様::"
 
 #: ../../docstring of sqlalchemy.sql.expression.or_:1
 msgid "Produce a conjunction of expressions joined by ``OR``."
-msgstr ""
+msgstr "`` OR``で結合された式の連接を生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.or_:14
 msgid ""
 "The :func:`.or_` conjunction is also available using the Python ``|`` "
 "operator (though note that compound expressions need to be parenthesized "
 "in order to function with Python operator precedence behavior)::"
-msgstr ""
+msgstr "：func： `.or_`結合は、Pythonの` `|` `演算子を使っても利用できます（しかし、Python演算子の優先順位の振る舞いをするには、複合式をカッコで囲む必要があります）。"
 
 #: ../../docstring of sqlalchemy.sql.expression.or_:26
 msgid ":func:`.and_`"
-msgstr ""
+msgstr "：func： `.and_`"
 
 #: of sqlalchemy.sql.expression.outparam:1
 msgid ""
 "Create an 'OUT' parameter for usage in functions (stored procedures), for"
 " databases which support them."
-msgstr ""
+msgstr "関数（ストアドプロシージャ）での使用のための、それらをサポートするデータベースのための &#39;OUT&#39;パラメータを作成します。"
 
 #: of sqlalchemy.sql.expression.outparam:4
 msgid ""
@@ -1189,28 +1173,28 @@ msgid ""
 "\"output\" value will be available from the "
 ":class:`~sqlalchemy.engine.ResultProxy` object via its ``out_parameters``"
 " attribute, which returns a dictionary containing the values."
-msgstr ""
+msgstr "`` outparam``は通常の関数パラメータのように使うことができます。 \ &quot;output \&quot;の値は、class： `〜sqlalchemy.engine.ResultProxy`オブジェクトから、その値を含むディクショナリを返す` `out_parameters``属性を介して利用できます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:1
 msgid "Produce an :class:`.Over` object against a function."
-msgstr ""
+msgstr "関数に対してclass： `.Over`オブジェクトを生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.FunctionFilter.over:3
 #: sqlalchemy.sql.expression.over:3
 msgid ""
 "Used against aggregate or so-called \"window\" functions, for database "
 "backends that support window functions."
-msgstr ""
+msgstr "ウィンドウ関数をサポートするデータベースバックエンドに対して、集約またはいわゆる\ &quot;ウィンドウ\&quot;関数に対して使用されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:6
 msgid ""
 ":func:`~.expression.over` is usually called using the "
 ":meth:`.FunctionElement.over` method, e.g.::"
-msgstr ""
+msgstr "：func： `〜.expression.over`は通常、：meth：` .FunctionElement.over`メソッドを使って呼び出されます。例えば::"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:11
 msgid "Would produce::"
-msgstr ""
+msgstr "生成するだろう::"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:15
 msgid ""
@@ -1218,105 +1202,105 @@ msgid ""
 "and :paramref:`.expression.over.rows` parameters.  These mutually-"
 "exclusive parameters each accept a 2-tuple, which contains a combination "
 "of integers and None::"
-msgstr ""
+msgstr "また、：paramref： `.expression.over.range_`と：paramref：` .expression.over.rows`パラメータを使用して範囲を設定することもできます。これらの相互に排他的なパラメータはそれぞれ2タプルを受け取ります。これは整数とNone ::"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:22
 msgid "The above would produce::"
-msgstr ""
+msgstr "上記は::"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:26
 msgid ""
 "A value of None indicates \"unbounded\", a value of zero indicates "
 "\"current row\", and negative / positive integers indicate \"preceding\" "
 "and \"following\":"
-msgstr ""
+msgstr "Noneの値は\ &quot;無制限\&quot;を示し、0の値は現在の行\ &quot;を示し、負の/正の整数は\&quot;先行\ &quot;と&quot;後続\ &quot;を示します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:30
 msgid "RANGE BETWEEN 5 PRECEDING AND 10 FOLLOWING::"
-msgstr ""
+msgstr "5序列と10序列の範囲::"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:34
 msgid "ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW::"
-msgstr ""
+msgstr "未定義の習慣と現在の行との間の行為::"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:38
 msgid "RANGE BETWEEN 2 PRECEDING AND UNBOUNDED FOLLOWING::"
-msgstr ""
+msgstr "2未定と未定義の範囲::"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:42
 msgid "RANGE BETWEEN 1 FOLLOWING AND 3 FOLLOWING::"
-msgstr ""
+msgstr "1と3の間の範囲::"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:46
 msgid "support for RANGE / ROWS within a window"
-msgstr ""
+msgstr "ウィンドウ内のRANGE / ROWSのサポート"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:49
 msgid ""
 "a :class:`.FunctionElement`, :class:`.WithinGroup`, or other compatible "
 "construct."
-msgstr ""
+msgstr "a：class： `.FunctionElement`、：class：` .WithinGroup`、または他の互換性のある構造体です。"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:51
 msgid ""
 "a column element or string, or a list of such, that will be used as the "
 "PARTITION BY clause of the OVER construct."
-msgstr ""
+msgstr "OVER構成のPARTITION BY句として使用される列要素または文字列、またはそのようなリスト。"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:54
 msgid ""
 "a column element or string, or a list of such, that will be used as the "
 "ORDER BY clause of the OVER construct."
-msgstr ""
+msgstr "OVER構成のORDER BY句として使用される、列要素または文字列、またはそのようなリスト。"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:57
 msgid ""
 "optional range clause for the window.  This is a tuple value which can "
 "contain integer values or None, and will render a RANGE BETWEEN PRECEDING"
 " / FOLLOWING clause  .. versionadded:: 1.1"
-msgstr ""
+msgstr "ウィンドウのオプションの句。これは、整数値またはNoneを含むことができ、RANGE BETWEEN PRECEDING / FOLLOWING節をレンダリングするタプル値です。versionadded :: 1.1"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:57
 msgid ""
 "optional range clause for the window.  This is a tuple value which can "
 "contain integer values or None, and will render a RANGE BETWEEN PRECEDING"
 " / FOLLOWING clause"
-msgstr ""
+msgstr "ウィンドウのオプションの句。これは整数値またはNoneを含むことができるタプル値で、RANGE BETWEEN PRECEDING / FOLLOWING句をレンダリングします"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:63
 msgid ""
 "optional rows clause for the window.  This is a tuple value which can "
 "contain integer values or None, and will render a ROWS BETWEEN PRECEDING "
 "/ FOLLOWING clause.  .. versionadded:: 1.1"
-msgstr ""
+msgstr "ウィンドウのオプションのrows節。これは整数値またはNoneを含むことができ、ROWS BETWEEN PRECEDING / FOLLOWING節をレンダリングするタプル値です。 .. versionadded :: 1.1"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:63
 msgid ""
 "optional rows clause for the window.  This is a tuple value which can "
 "contain integer values or None, and will render a ROWS BETWEEN PRECEDING "
 "/ FOLLOWING clause."
-msgstr ""
+msgstr "ウィンドウのオプションのrows節。これは整数値またはNoneを含むことができ、ROWS BETWEEN PRECEDING / FOLLOWING節をレンダリングするタプル値です。"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:69
 msgid ""
 "This function is also available from the :data:`~.expression.func` "
 "construct itself via the :meth:`.FunctionElement.over` method."
-msgstr ""
+msgstr "この関数は、：data： `〜.expression.func`から：meth：` .FunctionElement.over`メソッドを使って構築することもできます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:74
 #: sqlalchemy.sql.expression.within_group:31
 msgid ":data:`.expression.func`"
-msgstr ""
+msgstr "：データ： `.expression.func`"
 
 #: ../../docstring of sqlalchemy.sql.expression.over:76
 msgid ":func:`.expression.within_group`"
-msgstr ""
+msgstr "：func： `.expression.within_group`"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:1
 msgid ""
 "Construct a new :class:`.TextClause` clause, representing a textual SQL "
 "string directly."
-msgstr ""
+msgstr "文字列のSQL文字列を直接表すclass： `.TextClause`節を新しく構築します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:11
 msgid ""
@@ -1327,17 +1311,17 @@ msgid ""
 " is specified literally.  The construct can also be provided with a "
 "``.c`` collection of column elements, allowing it to be embedded in other"
 " SQL expression constructs as a subquery."
-msgstr ""
+msgstr "利点：func： `.text`は、バインドパラメータ、文単位の実行オプション、バインドパラメータと結果カラム型の振る舞いをバックエンドに中立的にサポートしているため、SQLAlchemy型の構造体が文字通り指定された文を実行します。この構造体には、他のSQL式構造体にサブクエリとして埋め込むことができるように、列要素の `` .c``コレクションを与えることもできます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:20
 msgid "Bind parameters are specified by name, using the format ``:name``. E.g.::"
-msgstr ""
+msgstr "バインドパラメータは ``：name``の形式で名前で指定します。例えば：："
 
 #: ../../docstring of sqlalchemy.sql.expression.text:26
 msgid ""
 "For SQL statements where a colon is required verbatim, as within an "
 "inline string, use a backslash to escape::"
-msgstr ""
+msgstr "インライン文字列内のようにコロンがそのまま必要なSQL文の場合は、バックスラッシュを使用してエスケープします。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:31
 msgid ""
@@ -1348,14 +1332,14 @@ msgid ""
 "method is used to provide bound parameter detail, and "
 ":meth:`.TextClause.columns` method allows specification of return columns"
 " including names and types::"
-msgstr ""
+msgstr "：class： `.TextClause`構造には、実行可能なSELECT型のステートメントであると仮定して、バインドされたパラメータとテキスト文から返される列の値に関する情報を提供できるメソッドが含まれています。 ：meth： `.TextClause.bindparams`メソッドは、バインドされたパラメータの詳細を提供するために使用されます。：meth：` .TextClause.columns`メソッドは、名前と型を含む戻り列の指定を許可します::"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:46
 msgid ""
 "The :func:`.text` construct is used in cases when a literal string SQL "
 "fragment is specified as part of a larger query, such as for the WHERE "
 "clause of a SELECT statement::"
-msgstr ""
+msgstr "：func： `.text`構文は、リテラル文字列のSQLフラグメントがSELECTステートメントのWHERE句のように大きなクエリの一部として指定されている場合に使用されます::"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:53
 msgid ""
@@ -1366,7 +1350,7 @@ msgid ""
 ":func:`.text` construct that should be subject to \"autocommit\" can be "
 "set explicitly so using the "
 ":paramref:`.Connection.execution_options.autocommit` option::"
-msgstr ""
+msgstr "：func： `.text`はプレーンテキストを使った完全なスタンドアロン文の作成にも使われます。そのため、SQLAlchemyは：class： `.Executable`オブジェクトとしてそれを参照し、：meth：` Executable.execution_options`メソッドをサポートします。たとえば、\ &quot;autocommit \&quot;の対象となるa：func： `.text`構文は、：paramref：` .Connection.execution_options.autocommit`オプションを使用して明示的に設定することができます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:65
 msgid ""
@@ -1375,23 +1359,23 @@ msgid ""
 "with a phrase such as ``INSERT``, ``UPDATE``, ``DELETE``, or a variety of"
 " other phrases specific to certain backends, will be eligible for "
 "autocommit if no transaction is in progress."
-msgstr ""
+msgstr "func： `.text`は暗黙的に、つまり` `INSERT``、` `UPDATE``、` `DELETE``のようなフレーズで始まる文を構成します。これは、SQLAlchemyの通常の\&quot; autocommit \ 、または特定のバックエンドに固有のさまざまな他のフレーズは、トランザクションが進行中でない場合に自動コミットの対象となります。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:71
 msgid ""
 "the text of the SQL statement to be created.  use ``:<param>`` to specify"
 " bind parameters; they will be compiled to their engine-specific format."
-msgstr ""
+msgstr "作成されるSQL文のテキスト。 ``を使う： <param>バインドパラメータを指定する。エンジン固有のフォーマットにコンパイルされます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:76
 msgid ""
 "Deprecated.  Use .execution_options(autocommit=<True|False>) to set the "
 "autocommit option."
-msgstr ""
+msgstr "推奨されていません。 .execution_options（autocommit = <True|False> ）を使用して自動コミットオプションを設定します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:80
 msgid "an optional connection or engine to be used for this text query."
-msgstr ""
+msgstr "このテキストクエリに使用されるオプションの接続またはエンジン。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:83
 msgid ""
@@ -1405,7 +1389,7 @@ msgid ""
 "value=5, type_=Integer))  .. deprecated:: 0.9.0 the "
 ":meth:`.TextClause.bindparams` method    supersedes the ``bindparams`` "
 "argument to :func:`.text`."
-msgstr ""
+msgstr "推奨されていません。文の中に埋め込まれたパラメータに関する情報を提供するために使用される：func： `.bindparam`インスタンスのリストです。この引数は、それを返す前に、構造体上で：meth： `.TextClause.bindparams`メソッドを呼び出します。 （例：id =、id = 5、type = = Integer）]）:: stmt = text（\ &quot;SELECT * FROM table WHERE id =：id \&quot;）。\\ bindparams（bindparam（ &#39;id&#39;、value = 5、type_ = Integer））.. deprecated :: 0.9.0 the：meth： `.TextClause.bindparams `メソッドは` `bindparams``引数を：func：` .text`に取って代わるものです。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:84
 msgid ""
@@ -1413,18 +1397,18 @@ msgid ""
 "information about parameters embedded in the statement. This argument now"
 " invokes the :meth:`.TextClause.bindparams` method on the construct "
 "before returning it.  E.g.::"
-msgstr ""
+msgstr "推奨されていません。文の中に埋め込まれたパラメータに関する情報を提供するために使用される：func： `.bindparam`インスタンスのリストです。この引数は、それを返す前に、構造体上で：meth： `.TextClause.bindparams`メソッドを呼び出します。例えば：："
 
 #: ../../docstring of sqlalchemy.sql.expression.text:92
 #: sqlalchemy.sql.expression.text:114
 msgid "Is equivalent to::"
-msgstr ""
+msgstr "::と同等です"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:97
 msgid ""
 "the :meth:`.TextClause.bindparams` method supersedes the ``bindparams`` "
 "argument to :func:`.text`."
-msgstr ""
+msgstr "：meth： `.TextClause.bindparams`メソッドは、` `bindparams``引数を：func：` .text`に取って代わるものです。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:100
 msgid ""
@@ -1444,7 +1428,7 @@ msgid ""
 "                       )  .. deprecated:: 0.9.0 the "
 ":meth:`.TextClause.columns` method    supersedes the ``typemap`` argument"
 " to :func:`.text`."
-msgstr ""
+msgstr "推奨されていません。 `` SELECT``文のcolumns節で表される列の名前を型オブジェクトにマップする辞書。結果セット内の列に対して後処理を実行するために使用されます。このパラメータは、：meth： `.TextClause.columns`メソッドを呼び出します。このメソッドは、` `.c``コレクションを獲得し、他の式に埋め込むことができる：class：` .TextAsFrom`構文を返します。 :: stmt = text（\ &quot;SELECT * FROM table \&quot;と同じですが、 ）.columns（id = Integer、name = String）または代わりに:: from sqlalchemy.sqlインポート列stmt = text（\ &quot;SELECT * FROM table \&quot;）。列（column（ &#39;id&#39;、Integer）、列`meth：` .TextClause.columns`メソッドは `` typemap``引数を：func： `.text`に取って代わるものです。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:101
 msgid ""
@@ -1454,41 +1438,41 @@ msgid ""
 "parameter now invokes the :meth:`.TextClause.columns` method, which "
 "returns a :class:`.TextAsFrom` construct that gains a ``.c`` collection "
 "and can be embedded in other expressions.  E.g.::"
-msgstr ""
+msgstr "推奨されていません。 `` SELECT``文のcolumns節で表される列の名前を型オブジェクトにマップする辞書。結果セット内の列に対して後処理を実行するために使用されます。このパラメータは、：meth： `.TextClause.columns`メソッドを呼び出します。このメソッドは、` `.c``コレクションを獲得し、他の式に埋め込むことができる：class：` .TextAsFrom`構文を返します。例えば：："
 
 #: ../../docstring of sqlalchemy.sql.expression.text:119
 msgid "Or alternatively::"
-msgstr ""
+msgstr "または代わりに::"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:127
 msgid ""
 "the :meth:`.TextClause.columns` method supersedes the ``typemap`` "
 "argument to :func:`.text`."
-msgstr ""
+msgstr "：meth： `.TextClause.columns`メソッドは、` `typemap``引数を：func：` .text`に取って代わるものです。"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:132
 msgid ":ref:`sqlexpression_text` - in the Core tutorial"
-msgstr ""
+msgstr "：ref： `sqlexpression_text`  - コアチュートリアル"
 
 #: ../../docstring of sqlalchemy.sql.expression.text:134
 msgid ":ref:`orm_tutorial_literal_sql` - in the ORM tutorial"
-msgstr ""
+msgstr "：ref： `orm_tutorial_literal_sql`  -  ORMチュートリアル"
 
 #: ../../docstring of sqlalchemy.sql.expression.true:1
 msgid "Return a constant :class:`.True_` construct."
-msgstr ""
+msgstr "定数を返す：class： `.True_`構造体。"
 
 #: ../../docstring of sqlalchemy.sql.expression.true:31
 msgid ":func:`.false`"
-msgstr ""
+msgstr "：機能： `.false`"
 
 #: ../../docstring of sqlalchemy.sql.expression.tuple_:1
 msgid "Return a :class:`.Tuple`."
-msgstr ""
+msgstr "a：class： `.Tuple`を返します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.tuple_:3
 msgid "Main usage is to produce a composite IN construct::"
-msgstr ""
+msgstr "主な使用法は、複合IN構造を生成することです::"
 
 #: ../../docstring of sqlalchemy.sql.expression.tuple_:13
 msgid ""
@@ -1496,20 +1480,20 @@ msgid ""
 "currently known to work on PostgreSQL and MySQL, but not SQLite.   "
 "Unsupported backends will raise a subclass of "
 ":class:`~sqlalchemy.exc.DBAPIError` when such an expression is invoked."
-msgstr ""
+msgstr "複合IN構文はすべてのバックエンドでサポートされていません。現在、PostgreSQLとMySQLでは動作することが知られていますが、SQLiteでは動作しません。このような式が呼び出されると、サポートされていないバックエンドは：class： `〜sqlalchemy.exc.DBAPIError`のサブクラスを生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.type_coerce:1
 msgid ""
 "Associate a SQL expression with a particular type, without rendering "
 "``CAST``."
-msgstr ""
+msgstr "`` CAST``を描画することなく、SQL式を特定の型に関連付けます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.type_coerce:12
 msgid ""
 "The above construct will produce a :class:`.TypeCoerce` object, which "
 "renders SQL that labels the expression, but otherwise does not modify its"
 " value on the SQL side::"
-msgstr ""
+msgstr "上記の構文は：class： `.TypeCoerce`オブジェクトを生成します。このオブジェクトは、式にラベルを付けるSQLをレンダリングしますが、そうでなければSQL側でその値を変更しません::"
 
 #: ../../docstring of sqlalchemy.sql.expression.type_coerce:18
 msgid ""
@@ -1519,7 +1503,7 @@ msgid ""
 "separate in the list of result columns vs. other type-coerced or direct "
 "values of the target column.  In order to provide a named label for the "
 "expression, use :meth:`.ColumnElement.label`::"
-msgstr ""
+msgstr "結果行がフェッチされると、 `` StringDateTime``型が `` date_string``列に代わって結果行に適用されます。 \ &quot;anon_1 \&quot;ラベルの論理的根拠は、タイプ強制列が、結果列のリストと、ターゲット列の他のタイプ強制列または直接値とで分離したままであるようにするためです。式の名前付きラベルを提供するには、：meth： `.ColumnElement.label` ::"
 
 #: ../../docstring of sqlalchemy.sql.expression.type_coerce:32
 msgid ""
@@ -1530,173 +1514,173 @@ msgid ""
 ":meth:`.TypeEngine.bind_processor` method or equivalent, these functions "
 "will take effect at statement compilation/execution time when a literal "
 "value is passed, as in::"
-msgstr ""
+msgstr "バウンド値ハンドリングを特徴とする型は、リテラル値または：func： `.bindparam`構造体がターゲットとして：func：` .type_coerce`に渡されるときに、その動作が有効になります。たとえば、型が：meth： `.TypeEngine.bind_expression`メソッドまたは：meth：` .TypeEngine.bind_processor`メソッドまたは同等のものを実装する場合、これらの関数は、リテラル値が渡されたときにステートメントのコンパイル/実行時に有効になり、次のように："
 
 #: ../../docstring of sqlalchemy.sql.expression.type_coerce:45
 msgid ""
 ":func:`.type_coerce` is similar to the :func:`.cast` function, except "
 "that it does not render the ``CAST`` expression in the resulting "
 "statement."
-msgstr ""
+msgstr "：func： `.type_coerce`は：func：` .cast`関数と似ていますが、結果のステートメントで `` CAST``式を表示しない点が異なります。"
 
 #: ../../docstring of sqlalchemy.sql.expression.type_coerce:53
 msgid ""
 "A :class:`.TypeEngine` class or instance indicating the type to which the"
 " expression is coerced."
-msgstr ""
+msgstr "A：class：式が強制される型を示す `.TypeEngine`クラスまたはインスタンスです。"
 
 #: ../../docstring of sqlalchemy.sql.expression.Cast:16
 #: sqlalchemy.sql.expression.type_coerce:58
 msgid ":func:`.cast`"
-msgstr ""
+msgstr "：func： `.cast`"
 
 #: ../../docstring of sqlalchemy.sql.expression.within_group:1
 msgid "Produce a :class:`.WithinGroup` object against a function."
-msgstr ""
+msgstr "関数に対してclass： `.WithinGroup`オブジェクトを生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.within_group:3
 msgid ""
 "Used against so-called \"ordered set aggregate\" and \"hypothetical set "
 "aggregate\" functions, including :class:`.percentile_cont`, "
 ":class:`.rank`, :class:`.dense_rank`, etc."
-msgstr ""
+msgstr "class： `.percentile_cont`、：class：` .rank`、：class： `.dense_rank`など、いわゆる\&quot;順序集合集合\ &quot;と\&quot;仮集合集約\ &quot;関数に対して使用されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.within_group:7
 msgid ""
 ":func:`~.expression.within_group` is usually called using the "
 ":meth:`.FunctionElement.within_group` method, e.g.::"
-msgstr ""
+msgstr "：func： `〜.expression.within_group`は通常、：meth：` .FunctionElement.within_group`メソッドを使って呼び出されます。例えば::"
 
 #: ../../docstring of sqlalchemy.sql.expression.within_group:18
 msgid ""
 "The above statement would produce SQL similar to ``SELECT department.id, "
 "percentile_cont(0.5) WITHIN GROUP (ORDER BY department.salary DESC)``."
-msgstr ""
+msgstr "上記の文は、 `` SELECT department.id、percentile_cont（0.5）WITHIN GROUP（ORDER BY department.salary DESC） ``のようなSQLを生成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.within_group:22
 msgid ""
 "a :class:`.FunctionElement` construct, typically generated by "
 ":data:`~.expression.func`."
-msgstr ""
+msgstr "a：class： `.FunctionElement`コンストラクトは、通常data：`〜.expression.func`で生成されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.within_group:24
 msgid ""
 "one or more column elements that will be used as the ORDER BY clause of "
 "the WITHIN GROUP construct."
-msgstr ""
+msgstr "WITHIN GROUP構文のORDER BY句として使用される1つ以上の列要素。"
 
 #: ../../docstring of sqlalchemy.sql.expression.within_group:33
 msgid ":func:`.expression.over`"
-msgstr ""
+msgstr "：func： `.expression.over`"
 
 #: of sqlalchemy.sql.expression.BinaryExpression:1
 msgid "Represent an expression that is ``LEFT <operator> RIGHT``."
-msgstr ""
+msgstr "`` LEFT式を表現する<operator>右。"
 
 #: of sqlalchemy.sql.expression.BinaryExpression:3
 msgid ""
 "A :class:`.BinaryExpression` is generated automatically whenever two "
 "column expressions are used in a Python binary expression::"
-msgstr ""
+msgstr "A：class： `.BinaryExpression`は、Pythonバイナリ表現で2つのカラム式が使われると自動的に生成されます::"
 
 #: of sqlalchemy.sql.expression.BinaryExpression.compare:1
 msgid ""
 "Compare this :class:`BinaryExpression` against the given "
 ":class:`BinaryExpression`."
-msgstr ""
+msgstr "これを：class： `BinaryExpression`と比較してください：class：` BinaryExpression`"
 
 #: of sqlalchemy.sql.expression.BindParameter:1
 msgid "Represent a \"bound expression\"."
-msgstr ""
+msgstr "\ &quot;バウンド式\&quot;を表します。"
 
 #: of sqlalchemy.sql.expression.BindParameter:3
 msgid ""
 ":class:`.BindParameter` is invoked explicitly using the "
 ":func:`.bindparam` function, as in::"
-msgstr ""
+msgstr "：class： `.BindParameter`は:: func：` .bindparam`関数を使って明示的に呼び出されます::"
 
 #: of sqlalchemy.sql.expression.BindParameter:11
 msgid ""
 "Detailed discussion of how :class:`.BindParameter` is used is at "
 ":func:`.bindparam`."
-msgstr ""
+msgstr "class： `.BindParameter`がどのように使われているかについての詳細な議論はat：func：` .bindparam`です。"
 
 #: of sqlalchemy.sql.expression.BindParameter:16
 msgid ":func:`.bindparam`"
-msgstr ""
+msgstr "：機能： `.bindparam`"
 
 #: of sqlalchemy.sql.expression.BindParameter.compare:1
 msgid "Compare this :class:`BindParameter` to the given clause."
-msgstr ""
+msgstr "これを：class： `BindParameter`と指定した句と比較してください。"
 
 #: of sqlalchemy.sql.expression.BindParameter.effective_value:1
 msgid ""
 "Return the value of this bound parameter, taking into account if the "
 "``callable`` parameter was set."
-msgstr ""
+msgstr "`` callable``パラメータが設定されているかどうかを考慮して、このバインドされたパラメータの値を返します。"
 
 #: of sqlalchemy.sql.expression.BindParameter.effective_value:5
 msgid ""
 "The ``callable`` value will be evaluated and returned if present, else "
 "``value``."
-msgstr ""
+msgstr "`` callable``値は評価され、存在すれば返されます。それ以外の場合は `` value``です。"
 
 #: of sqlalchemy.sql.expression.Case:1
 msgid "Represent a ``CASE`` expression."
-msgstr ""
+msgstr "`` CASE``式を表します。"
 
 #: of sqlalchemy.sql.expression.Case:3
 msgid ""
 ":class:`.Case` is produced using the :func:`.case` factory function, as "
 "in::"
-msgstr ""
+msgstr "：class： `.Case`は:: func：` .case`ファクトリ関数を使って生成されます："
 
 #: of sqlalchemy.sql.expression.Case:18
 msgid "Details on :class:`.Case` usage is at :func:`.case`."
-msgstr ""
+msgstr "詳細：class： `.Case` usageは：func：` .case`です。"
 
 #: of sqlalchemy.sql.expression.Case:22
 msgid ":func:`.case`"
-msgstr ""
+msgstr "：機能： `.case`"
 
 #: of sqlalchemy.sql.expression.Cast:1
 msgid "Represent a ``CAST`` expression."
-msgstr ""
+msgstr "`` CAST``表現を表します。"
 
 #: of sqlalchemy.sql.expression.Cast:3
 msgid ""
 ":class:`.Cast` is produced using the :func:`.cast` factory function, as "
 "in::"
-msgstr ""
+msgstr "：class： `.Cast`は：:: func：` .cast`ファクトリ関数を使って生成されます："
 
 #: of sqlalchemy.sql.expression.Cast:12
 msgid "Details on :class:`.Cast` usage is at :func:`.cast`."
-msgstr ""
+msgstr "class： `.Cast`の使い方は：func：` .cast`です。"
 
 #: of sqlalchemy.sql.expression.ClauseElement:1
 msgid "Base class for elements of a programmatically constructed SQL expression."
-msgstr ""
+msgstr "プログラムで構築されたSQL式の要素の基本クラス。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compare:1
 msgid "Compare this ClauseElement to the given ClauseElement."
-msgstr ""
+msgstr "このClauseElementと指定されたClauseElementを比較します。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compare:3
 msgid ""
 "Subclasses should override the default behavior, which is a straight "
 "identity comparison."
-msgstr ""
+msgstr "サブクラスはデフォルトの動作を上書きする必要があります。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compare:6
 msgid ""
 "\\**kw are arguments consumed by subclass compare() methods and may be "
 "used to modify the criteria for comparison. (see :class:`.ColumnElement`)"
-msgstr ""
+msgstr "\\ ** kwは、サブクラスのcompare（）メソッドによって消費される引数であり、比較の基準を変更するために使用されます。 （：class： `.ColumnElement`を参照してください）"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compile:1
 #: sqlalchemy.sql.expression.ColumnElement.compile:1
 msgid "Compile this SQL expression."
-msgstr ""
+msgstr "このSQL式をコンパイルします。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compile:3
 #: sqlalchemy.sql.expression.ColumnElement.compile:3
@@ -1705,7 +1689,7 @@ msgid ""
 "``unicode()`` on the returned value will yield a string representation of"
 " the result. The :class:`~.Compiled` object also can return a dictionary "
 "of bind parameter names and values using the ``params`` accessor."
-msgstr ""
+msgstr "戻り値は：class： `〜.Compiled`オブジェクトです。返された値に対して `` str（） ``または `` unicode（） ``を呼び出すと結果の文字列表現が返されます。 ：class： `〜.Compiled`オブジェクトは、` `params``アクセサを使ってバインドパラメータの名前と値の辞書を返すこともできます。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compile:10
 #: sqlalchemy.sql.expression.ColumnElement.compile:10
@@ -1713,7 +1697,7 @@ msgid ""
 "An ``Engine`` or ``Connection`` from which a ``Compiled`` will be "
 "acquired. This argument takes precedence over this "
 ":class:`.ClauseElement`'s bound engine, if any."
-msgstr ""
+msgstr "`` Engine``または `` Connection``から `` Compiled``を取得します。この引数はこれよりも優先されます：class： `.ClauseElement`のバウンドエンジン（もしあれば）。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compile:14
 #: sqlalchemy.sql.expression.ColumnElement.compile:14
@@ -1721,7 +1705,7 @@ msgid ""
 "Used for INSERT and UPDATE statements, a list of column names which "
 "should be present in the VALUES clause of the compiled statement. If "
 "``None``, all columns from the target table object are rendered."
-msgstr ""
+msgstr "INSERTおよびUPDATEステートメントに使用され、コンパイルされたステートメントのVALUES節に存在する列名のリスト。 `` None``の場合、ターゲットテーブルオブジェクトのすべての列がレンダリングされます。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compile:19
 #: sqlalchemy.sql.expression.ColumnElement.compile:19
@@ -1729,7 +1713,7 @@ msgid ""
 "A ``Dialect`` instance from which a ``Compiled`` will be acquired. This "
 "argument takes precedence over the `bind` argument as well as this "
 ":class:`.ClauseElement`'s bound engine, if any."
-msgstr ""
+msgstr "`` Dialect``インスタンスで、 `` Compiled``を取得します。この引数は、 `bind`引数だけでなく、class：` .ClauseElement`のバウンドエンジン（存在する場合）も優先します。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compile:24
 #: sqlalchemy.sql.expression.ColumnElement.compile:24
@@ -1740,7 +1724,7 @@ msgid ""
 " within the INSERT statement's VALUES clause. This typically refers to "
 "Sequence execution but may also refer to any server-side default "
 "generation function associated with a primary key `Column`."
-msgstr ""
+msgstr "新しく生成された主キー列のインライン検索をサポートしていない方言のINSERTステートメントでは、INSERTステートメントのVALUES句内で新しい主キー値の作成式を強制的にインラインで表示します。これは、通常、シーケンスの実行を参照するが、主キー「列」に関連付けられた任意のサーバー側デフォルト生成関数を参照することもできる。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compile:32
 #: sqlalchemy.sql.expression.ColumnElement.compile:32
@@ -1753,7 +1737,7 @@ msgid ""
 "table('t', column('x'))      s = select([t]).where(t.c.x == 5)      print"
 " s.compile(compile_kwargs={\"literal_binds\": True})  .. versionadded:: "
 "0.9.0"
-msgstr ""
+msgstr "すべての\ &quot;visit \&quot;メソッド内でコンパイラに渡される追加パラメータのオプション辞書。これにより、任意のカスタムフラグをカスタムコンパイル構成に渡すことができます。また、 `` literal_binds``フラグを:: sqlalchemy.sqlから渡す場合にも使用されます。import table、column、select t = table（ &#39;t&#39;、column（ &#39;x&#39;））s = select（[t ]））。ここで、（tcx == 5）は、s.compile（compile_kwargs = {\ &quot;literal_binds \&quot;：True）を出力します）.. versionadded :: 0.9.0"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compile:32
 #: sqlalchemy.sql.expression.ColumnElement.compile:32
@@ -1763,22 +1747,22 @@ msgid ""
 "flag to be passed through to a custom compilation construct, for example."
 "  It is also used for the case of passing the ``literal_binds`` flag "
 "through::"
-msgstr ""
+msgstr "すべての\ &quot;visit \&quot;メソッド内でコンパイラに渡される追加パラメータのオプション辞書。これにより、任意のカスタムフラグをカスタムコンパイル構成に渡すことができます。 `` literal_binds``フラグを::に渡す場合にも使用されます"
 
 #: of sqlalchemy.sql.expression.ClauseElement.compile:50
 #: sqlalchemy.sql.expression.ColumnElement.compile:50
 msgid ":ref:`faq_sql_expression_string`"
-msgstr ""
+msgstr "：ref： `faq_sql_expression_string`"
 
 #: of sqlalchemy.sql.expression.ClauseElement.get_children:1
 #: sqlalchemy.sql.expression.ColumnElement.get_children:1
 msgid "Return immediate child elements of this :class:`.ClauseElement`."
-msgstr ""
+msgstr "this：class： `.ClauseElement`の直接の子要素を返します。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.get_children:3
 #: sqlalchemy.sql.expression.ColumnElement.get_children:3
 msgid "This is used for visit traversal."
-msgstr ""
+msgstr "訪問トラバーサルに使用されます。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.get_children:5
 #: sqlalchemy.sql.expression.ColumnElement.get_children:5
@@ -1787,25 +1771,25 @@ msgid ""
 " for example to return a subset of items in order to cut down on larger "
 "traversals, or to return child items from a different context (such as "
 "schema-level collections instead of clause-level)."
-msgstr ""
+msgstr "\\ ** kwargsには、返されるコレクションを変更するフラグが含まれている可能性があります。たとえば、より大きなトラバーサルを減らすためにアイテムのサブセットを返すか、別のコンテキスト（たとえば、スキーマレベルのコレクション節レベルの）。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.params:1
 #: sqlalchemy.sql.expression.ClauseElement.unique_params:1
 #: sqlalchemy.sql.expression.ColumnElement.params:1
 #: sqlalchemy.sql.expression.ColumnElement.unique_params:1
 msgid "Return a copy with :func:`bindparam()` elements replaced."
-msgstr ""
+msgstr "func： `bindparam（）`要素を置き換えてコピーを返します。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.params:3
 #: sqlalchemy.sql.expression.ColumnElement.params:3
 msgid ""
 "Returns a copy of this ClauseElement with :func:`bindparam()` elements "
 "replaced with values taken from the given dictionary::"
-msgstr ""
+msgstr "指定された辞書から取得された値で置き換えられた：func： `bindparam（）`要素を使ってこのClauseElementのコピーを返します::"
 
 #: of sqlalchemy.sql.expression.ClauseElement.self_group:1
 msgid "Apply a 'grouping' to this :class:`.ClauseElement`."
-msgstr ""
+msgstr "これに &#39;grouping&#39;を適用します：class： `.ClauseElement`。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.self_group:3
 msgid ""
@@ -1816,7 +1800,7 @@ msgid ""
 "into the FROM clause of another :func:`.select`.  (Note that subqueries "
 "should be normally created using the :meth:`.Select.alias` method, as "
 "many platforms require nested SELECT statements to be named)."
-msgstr ""
+msgstr "このメソッドはサブクラスによってオーバーライドされ、\ &quot;グループ化\&quot;構造体、つまり括弧を返します。特に、大規模な式に置かれたときには、自分自身の周りにグループ化を提供するために、\ &quot;バイナリ\&quot;式で使用されます。func： `.select`は、別のFROM句に配置されたときに構築されます。func：` .select `。 （サブクエリは、通常は：meth： `.Select.alias`メソッドを使用して作成する必要があります。これは、多くのプラットフォームでネストされたSELECT文の名前を付ける必要があるためです）。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.self_group:13
 msgid ""
@@ -1826,45 +1810,45 @@ msgid ""
 "operator precedence into account - so parenthesis might not be needed, "
 "for example, in an expression like ``x OR (y AND z)`` - AND takes "
 "precedence over OR."
-msgstr ""
+msgstr "式が一緒に構成されるとき、：meth： `self_group`のアプリケーションは自動です - エンドユーザコードはこのメソッドを直接使う必要はありません。 SQLAlchemyの節構文は演算子の優先順位を考慮していることに注意してください。たとえば、 `` x OR（y AND z） ``のような式のようにかっこは必要ないかもしれません。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.self_group:21
 msgid ""
 "The base :meth:`self_group` method of :class:`.ClauseElement` just "
 "returns self."
-msgstr ""
+msgstr "base：meth： `self_group`メソッドの：class：` .ClauseElement`はselfを返します。"
 
 #: of sqlalchemy.sql.expression.ClauseElement.unique_params:3
 #: sqlalchemy.sql.expression.ColumnElement.unique_params:3
 msgid ""
 "Same functionality as ``params()``, except adds `unique=True` to affected"
 " bind parameters so that multiple statements can be used."
-msgstr ""
+msgstr "複数のステートメントを使用できるように、影響を受けるバインドパラメータに `unique = True`を追加する点を除いて、` `params（）` `と同じ機能です。"
 
 #: of sqlalchemy.sql.expression.ClauseList:1
 msgid "Describe a list of clauses, separated by an operator."
-msgstr ""
+msgstr "演算子で区切られた句のリストを記述します。"
 
 #: of sqlalchemy.sql.expression.ClauseList:3
 msgid "By default, is comma-separated, such as a column listing."
-msgstr ""
+msgstr "デフォルトでは、列のリストのようにコンマで区切られます。"
 
 #: of sqlalchemy.sql.expression.ClauseList.compare:1
 msgid ""
 "Compare this :class:`.ClauseList` to the given :class:`.ClauseList`, "
 "including a comparison of all the clause items."
-msgstr ""
+msgstr "これを：class： `.ClauseList`を与えられた：class：` .ClauseList`と比較してください。全ての句項目を比較します。"
 
 #: of sqlalchemy.sql.expression.ColumnClause:1
 msgid "Represents a column expression from any textual string."
-msgstr ""
+msgstr "任意のテキスト文字列からの列式を表します。"
 
 #: of sqlalchemy.sql.expression.ColumnClause:3
 msgid ""
 "The :class:`.ColumnClause`, a lightweight analogue to the "
 ":class:`.Column` class, is typically invoked using the :func:`.column` "
 "function, as in::"
-msgstr ""
+msgstr "：class： `.ColumnClause`は、：class：` .Column`クラスの軽量アナログで、通常は:: func： `.column`関数を使って呼び出されます。"
 
 #: of sqlalchemy.sql.expression.ColumnClause:16
 msgid ""
@@ -1876,53 +1860,53 @@ msgid ""
 "the associations with schema-level metadata or with execution-time "
 "behavior that :class:`.Column` does, so in that sense is a "
 "\"lightweight\" version of :class:`.Column`."
-msgstr ""
+msgstr "：class： `.ColumnClause`は、スキーマ固有の：class：` .Column`オブジェクトのすぐ上のスーパークラスです。 ：class： `.Column`クラスは、class：` .ColumnClause`と同じ機能を持ちますが、class： `.ColumnClause`クラスは、動作要件が単純なSQL式の生成に限定されている場合に単独で使用できます。オブジェクトには、スキーマレベルのメタデータまたは実行時の動作との関連付けがありません。つまり、class： `.Column`はその意味で：class：` .Column`の軽量バージョンです。"
 
 #: of sqlalchemy.sql.expression.ColumnClause:25
 msgid "Full details on :class:`.ColumnClause` usage is at :func:`.column`."
-msgstr ""
+msgstr "詳細は：class： `.ColumnClause`の使用法は：func：` .column`です。"
 
 #: of sqlalchemy.sql.expression.ColumnCollection:1
 msgid "An ordered dictionary that stores a list of ColumnElement instances."
-msgstr ""
+msgstr "ColumnElementインスタンスのリストを格納する順序付き辞書。"
 
 #: of sqlalchemy.sql.expression.ColumnCollection:4
 msgid ""
 "Overrides the ``__eq__()`` method to produce SQL clauses between sets of "
 "correlated columns."
-msgstr ""
+msgstr "`` __eq __（） ``メソッドをオーバーライドして、相関列のセット間にSQL句を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnCollection.add:1
 msgid "Add a column to this collection."
-msgstr ""
+msgstr "このコレクションに列を追加します。"
 
 #: of sqlalchemy.sql.expression.ColumnCollection.add:3
 msgid ""
 "The key attribute of the column will be used as the hash key for this "
 "dictionary."
-msgstr ""
+msgstr "列のキー属性は、この辞書のハッシュキーとして使用されます。"
 
 #: of sqlalchemy.sql.expression.ColumnCollection.replace:1
 msgid ""
 "add the given column to this collection, removing unaliased versions of "
 "this column  as well as existing columns with the same key."
-msgstr ""
+msgstr "指定された列をこのコレクションに追加し、同じ列の既存の列と同じキーを持つ別名のない列を削除します。"
 
 #: of sqlalchemy.sql.expression.ColumnCollection.replace:10
 msgid ""
 "will remove the original 'col1' from the collection, and add the new "
 "column under the name 'columnname'."
-msgstr ""
+msgstr "コレクションから元の &#39;col1&#39;を削除し、新しい列を &#39;columnname&#39;という名前で追加します。"
 
 #: of sqlalchemy.sql.expression.ColumnCollection.replace:13
 msgid "Used by schema.Column to override columns during table reflection."
-msgstr ""
+msgstr "テーブルリフレクション中に列をオーバーライドするためにschema.Columnによって使用されます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement:1
 msgid ""
 "Represent a column-oriented SQL expression suitable for usage in the "
 "\"columns\" clause, WHERE clause etc. of a statement."
-msgstr ""
+msgstr "文の\ &quot;columns \&quot;句、WHERE句などでの使用に適したカラム指向のSQL式を表します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement:4
 msgid ""
@@ -1932,7 +1916,7 @@ msgid ""
 "expressions themselves, SQL functions, bound parameters, literal "
 "expressions, keywords such as ``NULL``, etc. :class:`.ColumnElement` is "
 "the ultimate base class for all such elements."
-msgstr ""
+msgstr "：class： `.ColumnElement`は、class：` .Column`オブジェクトですが、class： `.ColumnElement`は、式を含むSQL式に存在する可能性があるユニットの基礎となりますSQL関数、バインドされたパラメータ、リテラル式、 `` NULL``などのキーワード：class： `.ColumnElement`はすべての要素の究極の基底クラスです。"
 
 #: of sqlalchemy.sql.expression.ColumnElement:11
 msgid ""
@@ -1944,7 +1928,7 @@ msgid ""
 " of a :class:`.ColumnElement` object, or a value which can be **coerced**"
 " into one.  The coercion rules followed by most, but not all, SQLAlchemy "
 "Core functions with regards to SQL expressions are as follows:"
-msgstr ""
+msgstr "多種多様なSQLAlchemy Core関数がSQL式レベルで動作し、引数として：class： `.ColumnElement`のインスタンスを受け入れることを意図しています。これらの関数は、通常、引数として\ &quot;SQL式\&quot;を受け入れることを文書化します。 SQLAlchemyの意味でこれが意味することは、通常、既に：class： `.ColumnElement`オブジェクトの形式である入力、または**強制的に**に変換できる値のいずれかである入力を指します。 SQL式に関するSQLAlchemyのコア関数の大部分が強制変換規則に続きますが、そのほとんどは次のとおりです。"
 
 #: of sqlalchemy.sql.expression.ColumnElement:20
 msgid ""
@@ -1958,7 +1942,7 @@ msgid ""
 " as a parameterized argument to the ``execute()`` or ``executemany()`` "
 "methods, after SQLAlchemy type-specific converters (e.g. those provided "
 "by any associated :class:`.TypeEngine` objects) are applied to the value."
-msgstr ""
+msgstr "文字列、整数、浮動小数点値、ブール値、日時、 `` Decimal``オブジェクト、その他事実上他のPythonオブジェクトのようなリテラルなPython値は\ &quot;リテラル境界値\&quot;に強制されます。これは、一般的に、a：func： `.bindparam`が生成され、与えられた値が構造体に埋め込まれていることを意味します。結果として得られる：class： `.BindParameter`オブジェクトは：class：` .ColumnElement`のインスタンスです。 Pythonの値は、実行時に、SQLAlchemy型固有のコンバータの後に `` execute（） ``や `` executemany（） ``メソッドのパラメータ化された引数として最終的にDBAPIに送られます。クラス： `.TypeEngine`オブジェクト）が値に適用されます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement:32
 msgid ""
@@ -1973,13 +1957,13 @@ msgid ""
 "contains a mapped attribute named ``.name`` will have a method "
 "``User.name.__clause_element__()`` which when invoked returns the "
 ":class:`.Column` called ``name`` associated with the mapped table."
-msgstr ""
+msgstr "任意の特別なオブジェクト値、通常はORMレベルの構造体で、 `` __clause_element __（） ``メソッドがあります。 Core式システムは、そうでなければ未知の型のオブジェクトが、引数を：class： `.ColumnElement`式に強制的に変換しようとする関数に渡されたときに、このメソッドを探します。 `` __clause_element __（） ``メソッドが存在する場合、それは：class： `.ColumnElement`インスタンスを返すべきです。 SQLAlchemy内の `` __clause_element __（） ``の主な用途は、ORMでマップされたクラスのクラスバインド属性の使用です。 `` .name``という名前のマップされた属性を含む `` User``クラスは `` User.name .__ clause_element __（） ``というメソッドを持ちます。これは、呼び出されると、 `` nameマッピングされたテーブルに関連付けられています。"
 
 #: of sqlalchemy.sql.expression.ColumnElement:45
 msgid ""
 "The Python ``None`` value is typically interpreted as ``NULL``, which in "
 "SQLAlchemy Core produces an instance of :func:`.null`."
-msgstr ""
+msgstr "Pythonの `` None``値は、通常、 `` NULL``として解釈されます。これはSQLAlchemy Coreで：func： `.null`のインスタンスを生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement:48
 msgid ""
@@ -1993,16 +1977,16 @@ msgid ""
 "operator ``+`` to produce a :class:`.BinaryExpression`. Both "
 ":class:`.ColumnClause` and :class:`.BinaryExpression` are subclasses of "
 ":class:`.ColumnElement`::"
-msgstr ""
+msgstr "A：class： `.ColumnElement`は、Pythonの式を使ってnew：class：` .ColumnElement`オブジェクトを生成する機能を提供します。これは、 `` == ``、 `` = ``や `` &lt;``のようなPython演算子がSQL演算を模倣するためにオーバーロードされ、さらに：class： `.ColumnElement`インスタンスがインスタンス化されることを意味しますclass： `.ColumnElement`オブジェクトから継承します。たとえば、class： `.ColumnClause`オブジェクトを加算演算子` `+` `と一緒に追加して、：class：` .BinaryExpression`を生成することができます。 class： `.ColumnClause`と：class：` .BinaryExpression`は、class： `.ColumnElement` ::のサブクラスです。"
 
 #: of sqlalchemy.sql.expression.ColumnElement:70
 msgid ":func:`.expression.column`"
-msgstr ""
+msgstr "：func： `.expression.column`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.all_:1
 #: sqlalchemy.sql.operators.ColumnOperators.all_:1
 msgid "Produce a :func:`~.expression.all_` clause against the parent object."
-msgstr ""
+msgstr "親オブジェクトに対してa：func： `〜.expression.all_`句を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.all_:4
 #: sqlalchemy.sql.expression.ColumnElement.any_:4
@@ -2012,21 +1996,21 @@ msgid ""
 "This operator is only appropriate against a scalar subquery object, or "
 "for some backends an column expression that is against the ARRAY type, "
 "e.g.::"
-msgstr ""
+msgstr "この演算子は、スカラーサブクエリオブジェクトに対してのみ適切です。または、いくつかのバックエンドでは、ARRAY型の列式、たとえば::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.all_:16
 #: sqlalchemy.sql.operators.ColumnOperators.all_:16
 msgid ":func:`~.expression.all_` - standalone version"
-msgstr ""
+msgstr "：func： `〜.expression.all_`  - スタンドアロン版"
 
 #: of sqlalchemy.sql.expression.ColumnElement.all_:18
 #: sqlalchemy.sql.operators.ColumnOperators.all_:18
 msgid ":func:`~.expression.any_` - ANY operator"
-msgstr ""
+msgstr "：func： `〜.expression.any_`  -  ANY演算子"
 
 #: of sqlalchemy.sql.expression.ColumnElement.anon_label:1
 msgid "provides a constant 'anonymous label' for this ColumnElement."
-msgstr ""
+msgstr "このColumnElementの定数「匿名ラベル」を提供します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.anon_label:3
 msgid ""
@@ -2034,47 +2018,47 @@ msgid ""
 "same label() is returned each time anon_label is called so that "
 "expressions can reference anon_label multiple times, producing the same "
 "label name at compile time."
-msgstr ""
+msgstr "これはコンパイル時に命名されるlabel（）式です。 anon_labelが呼び出されるたびに同じlabel（）が返されるため、式はanon_labelを複数回参照し、コンパイル時に同じラベル名を生成できます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.anon_label:8
 msgid ""
 "the compiler uses this function automatically at compile time for "
 "expressions that are known to be 'unnamed' like binary expressions and "
 "function calls."
-msgstr ""
+msgstr "コンパイラはコンパイル時にこの関数をバイナリ式や関数呼び出しのような &#39;名前なし&#39;の式で自動的に使用します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.any_:1
 #: sqlalchemy.sql.operators.ColumnOperators.any_:1
 msgid "Produce a :func:`~.expression.any_` clause against the parent object."
-msgstr ""
+msgstr "親オブジェクトに対してa：func： `〜.expression.any_`句を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.any_:16
 #: sqlalchemy.sql.operators.ColumnOperators.any_:16
 msgid ":func:`~.expression.any_` - standalone version"
-msgstr ""
+msgstr "：func： `〜.expression.any_`  - スタンドアロン版"
 
 #: of sqlalchemy.sql.expression.ColumnElement.any_:18
 #: sqlalchemy.sql.operators.ColumnOperators.any_:18
 msgid ":func:`~.expression.all_` - ALL operator"
-msgstr ""
+msgstr "：func： `〜.expression.all_`  - すべての演算子"
 
 #: of sqlalchemy.sql.expression.ColumnElement.asc:1
 #: sqlalchemy.sql.operators.ColumnOperators.asc:1
 msgid "Produce a :func:`~.expression.asc` clause against the parent object."
-msgstr ""
+msgstr "親オブジェクトに対してa：func： `〜.expression.asc`句を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.between:1
 #: sqlalchemy.sql.operators.ColumnOperators.between:1
 msgid ""
 "Produce a :func:`~.expression.between` clause against the parent object, "
 "given the lower and upper range."
-msgstr ""
+msgstr "下位と上位の範囲を指定して、親オブジェクトに対してa：func： `〜.expression.between`句を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.bool_op:1
 #: sqlalchemy.sql.operators.ColumnOperators.bool_op:1
 #: sqlalchemy.sql.operators.Operators.bool_op:1
 msgid "Return a custom boolean operator."
-msgstr ""
+msgstr "カスタムブール演算子を返します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.bool_op:3
 #: sqlalchemy.sql.operators.ColumnOperators.bool_op:3
@@ -2082,48 +2066,48 @@ msgstr ""
 msgid ""
 "This method is shorthand for calling :meth:`.Operators.op` and passing "
 "the :paramref:`.Operators.op.is_comparison` flag with True."
-msgstr ""
+msgstr "このメソッドは、：meth： `.Operators.op`を呼び出し、：paramref：` .Operators.op.is_comparison`フラグをTrueで渡すことを簡略化しています。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.bool_op:12
 #: sqlalchemy.sql.operators.ColumnOperators.bool_op:12
 #: sqlalchemy.sql.operators.Operators.bool_op:12
 #: sqlalchemy.sql.operators.custom_op:20
 msgid ":meth:`.Operators.op`"
-msgstr ""
+msgstr "：meth： `.Operators.op`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.cast:1
 msgid "Produce a type cast, i.e. ``CAST(<expression> AS <type>)``."
-msgstr ""
+msgstr "型キャスト、つまり `` CAST（ <expression>として<type> ） ``。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.cast:3
 msgid "This is a shortcut to the :func:`~.expression.cast` function."
-msgstr ""
+msgstr "これは：func： `〜.expression.cast`関数へのショートカットです。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.collate:1
 #: sqlalchemy.sql.operators.ColumnOperators.collate:1
 msgid ""
 "Produce a :func:`~.expression.collate` clause against the parent object, "
 "given the collation string."
-msgstr ""
+msgstr "照合文字列を指定して、親オブジェクトに対してa：func： `〜.expression.collat​​e`句を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.collate:6
 #: sqlalchemy.sql.operators.ColumnOperators.collate:6
 msgid ":func:`~.expression.collate`"
-msgstr ""
+msgstr "：func： `〜.expression.collat​​e`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.compare:1
 msgid "Compare this ColumnElement to another."
-msgstr ""
+msgstr "このColumnElementと別のColumnElementを比較します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.compare:3
 msgid "Special arguments understood:"
-msgstr ""
+msgstr "特別な議論が理解された："
 
 #: of sqlalchemy.sql.expression.ColumnElement.compare:5
 msgid ""
 "when True, consider two columns that share a common base column as "
 "equivalent (i.e. shares_lineage())"
-msgstr ""
+msgstr "Trueの場合、共通の基底カラムを同等のものとして共有する2つのカラムを考慮してください（すなわち、shares_lineage（））"
 
 #: of sqlalchemy.sql.expression.ColumnElement.compare:8
 msgid ""
@@ -2132,31 +2116,31 @@ msgid ""
 "the corresponding set() pass the comparison test, the result is True. "
 "This is used to expand the comparison to other columns that may be known "
 "to be equivalent to this one via foreign key or other criterion."
-msgstr ""
+msgstr "列のセットにマップされたキーとしての列の辞書。指定された\ &quot;その他\&quot;列がこの辞書に存在する場合、対応する集合（）のいずれかの列が比較テストに合格した場合、結果は真です。これは、外部キーまたは他の基準を介してこれと同等であることが知られている他の列との比較を拡張するために使用されます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.concat:1
 #: sqlalchemy.sql.operators.ColumnOperators.concat:1
 msgid "Implement the 'concat' operator."
-msgstr ""
+msgstr "&#39;concat&#39;演算子を実装します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.concat:3
 #: sqlalchemy.sql.operators.ColumnOperators.concat:3
 msgid ""
 "In a column context, produces the clause ``a || b``, or uses the "
 "``concat()`` operator on MySQL."
-msgstr ""
+msgstr "列コンテキストでは、 `` a || MySQLで `` concat（） ``演算子を使用します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:1
 #: sqlalchemy.sql.operators.ColumnOperators.contains:1
 msgid "Implement the 'contains' operator."
-msgstr ""
+msgstr "&#39;contains&#39;演算子を実装します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:3
 #: sqlalchemy.sql.operators.ColumnOperators.contains:3
 msgid ""
 "Produces a LIKE expression that tests against a match for the middle of a"
 " string value::"
-msgstr ""
+msgstr "文字列値の真ん中との一致に対してテストするLIKE式を生成します::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:13
 #: sqlalchemy.sql.operators.ColumnOperators.contains:13
@@ -2171,7 +2155,7 @@ msgid ""
 ":paramref:`.ColumnOperators.contains.escape` parameter will establish a "
 "given character as an escape character which can be of use when the "
 "target expression is not a literal string."
-msgstr ""
+msgstr "演算子は `` LIKE``を使用するので、演算子の中にはワイルドカード文字 `` \ &quot;％\&quot; ``と `` \ &quot;_ \&quot; `` <other>式はワイルドカードのようにも動作します。リテラル文字列値の場合、：paramref： `.ColumnOperators.contains.autoescape`フラグを` `True``に設定すると、文字列値内でこれらの文字がエスケープされ、ワイルドカード文字としてではなく一致するようになります。あるいは、：paramref： `.ColumnOperators.contains.escape`パラメータは、指定された文字をエスケープ文字として確立します。これは、ターゲット式がリテラル文字列でない場合に使用できます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:24
 #: sqlalchemy.sql.operators.ColumnOperators.contains:24
@@ -2180,7 +2164,7 @@ msgid ""
 "can also be an arbitrary SQL expression.  LIKE wildcard characters ``%`` "
 "and ``_`` are not escaped by default unless the "
 ":paramref:`.ColumnOperators.contains.autoescape` flag is set to True."
-msgstr ""
+msgstr "比較される式。これは普通は普通の文字列値ですが、任意のSQL式でもかまいません。 LIKEワイルドカード文字 ``％ ``と `` _``は、：paramref： `.ColumnOperators.contains.autoescape`フラグがTrueに設定されていない限り、デフォルトでエスケープされません。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:30
 #: sqlalchemy.sql.operators.ColumnOperators.contains:30
@@ -2198,7 +2182,7 @@ msgid ""
 " also escaped, and defaults to a forwards    slash, which itself can be "
 "customized using the    :paramref:`.ColumnOperators.contains.escape` "
 "parameter."
-msgstr ""
+msgstr "ブール値。 Trueの場合、LIKE式内にエスケープ文字を設定し、それを比較値の中の `` \ &quot;％\&quot; ``、 `` \ &quot;_ \&quot; ``とエスケープ文字自体のすべての出現に適用します。 SQL式ではなくリテラル文字列とみなされます。 :: somecolumn.contains（\ &quot;foo％bar \&quot;、autoescape = True）のような式は次のようにレンダリングします:: somecolumn LIKE &#39;％&#39; || ：param || &#39;％&#39; ESCAPE &#39;/&#39;：paramの値を `` \ &quot;foo /％bar \&quot; ``として指定します。 .. versionadded :: 1.2 .. versionchanged :: 1.2.0：paramref： `.ColumnOperators.contains.autoescape`パラメータは、文字ではなく単純なブール値になりました。エスケープ文字自体もエスケープされ、デフォルトは前方スラッシュになります。それ自体は：paramref： `.ColumnOperators.contains.escape`パラメータを使用してカスタマイズできます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:30
 #: sqlalchemy.sql.expression.ColumnElement.endswith:30
@@ -2211,7 +2195,7 @@ msgid ""
 "expression, then applies it to all occurrences of ``\"%\"``, ``\"_\"`` "
 "and the escape character itself within the comparison value, which is "
 "assumed to be a literal string and not a SQL expression."
-msgstr ""
+msgstr "ブール値。 Trueの場合、LIKE式内にエスケープ文字を設定し、それを比較値の中の `` \ &quot;％\&quot; ``、 `` \ &quot;_ \&quot; ``とエスケープ文字自体のすべての出現に適用します。 SQL式ではなくリテラル文字列とみなされます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:36
 #: sqlalchemy.sql.expression.ColumnElement.contains:61
@@ -2226,7 +2210,7 @@ msgstr ""
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:36
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:61
 msgid "An expression such as::"
-msgstr ""
+msgstr "::のような表現"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:40
 #: sqlalchemy.sql.expression.ColumnElement.contains:65
@@ -2241,7 +2225,7 @@ msgstr ""
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:40
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:65
 msgid "Will render as::"
-msgstr ""
+msgstr "レンダリングする::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:44
 #: sqlalchemy.sql.expression.ColumnElement.endswith:44
@@ -2250,7 +2234,7 @@ msgstr ""
 #: sqlalchemy.sql.operators.ColumnOperators.endswith:44
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:44
 msgid "With the value of :param as ``\"foo/%bar\"``."
-msgstr ""
+msgstr "：paramを `` \ &quot;foo /％bar \&quot; ``として指定します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:48
 #: sqlalchemy.sql.operators.ColumnOperators.contains:48
@@ -2260,7 +2244,7 @@ msgid ""
 "also escaped, and defaults to a forwards  slash, which itself can be "
 "customized using the  :paramref:`.ColumnOperators.contains.escape` "
 "parameter."
-msgstr ""
+msgstr "：paramref： `.ColumnOperators.contains.autoescape`パラメータは、文字ではなく単純なブール値になりました。エスケープ文字自体もエスケープされ、デフォルトは前方スラッシュになります。それ自体は：paramref： `.ColumnOperators.contains.escape`パラメータを使用してカスタマイズできます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:55
 #: sqlalchemy.sql.operators.ColumnOperators.contains:55
@@ -2275,7 +2259,7 @@ msgid ""
 "somecolumn.contains(\"foo%bar^bat\", escape=\"^\", autoescape=True)  "
 "Where above, the given literal parameter will be converted to "
 "``\"foo^%bar^^bat\"`` before being passed to the database."
-msgstr ""
+msgstr "その文字をエスケープ文字として確立するために `` ESCAPE``キーワードでレンダリングされる文字を返します。この文字を ``％ ``と `` _``の前に置くことで、ワイルドカード文字ではなく自分自身として動作させることができます。 :: somecolumn.contains（\ &quot;foo /％bar \&quot;、エスケープ= \ &quot;^ \&quot;）などの式は、:: somecolumn LIKE &#39;％&#39; ||をレンダリングします。 ：param || &#39;％&#39; ESCAPE &#39;^&#39;パラメタ： `.ColumnOperators.contains.autoescape` :: somecolumn.contains（\&quot; foo％bar ^ bat \ &quot;、エスケープ= \&quot; ^ \ &quot;、autoescape = True）上記の場合、与えられたリテラルパラメータはデータベースに渡される前に `` \ &quot;foo ^％bar ^^ bat \&quot; ``に変換されます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:55
 #: sqlalchemy.sql.expression.ColumnElement.endswith:55
@@ -2288,14 +2272,14 @@ msgid ""
 "establish that character as the escape character.  This character can "
 "then be placed preceding occurrences of ``%`` and ``_`` to allow them to "
 "act as themselves and not wildcard characters."
-msgstr ""
+msgstr "その文字をエスケープ文字として確立するために `` ESCAPE``キーワードでレンダリングされる文字を返します。この文字を ``％ ``と `` _``の前に置くことで、ワイルドカード文字ではなく自分自身として動作させることができます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:69
 #: sqlalchemy.sql.operators.ColumnOperators.contains:69
 msgid ""
 "The parameter may also be combined with "
 ":paramref:`.ColumnOperators.contains.autoescape`::"
-msgstr ""
+msgstr "パラメータは以下のものと組み合わせることもできます：paramref： `.ColumnOperators.contains.autoescape` ::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:74
 #: sqlalchemy.sql.expression.ColumnElement.endswith:74
@@ -2306,21 +2290,21 @@ msgstr ""
 msgid ""
 "Where above, the given literal parameter will be converted to "
 "``\"foo^%bar^^bat\"`` before being passed to the database."
-msgstr ""
+msgstr "上記の場合、与えられたリテラルパラメータはデータベースに渡される前に `` \ &quot;foo ^％bar ^^ bat \&quot; ``に変換されます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:79
 #: sqlalchemy.sql.expression.ColumnElement.endswith:79
 #: sqlalchemy.sql.operators.ColumnOperators.contains:79
 #: sqlalchemy.sql.operators.ColumnOperators.endswith:79
 msgid ":meth:`.ColumnOperators.startswith`"
-msgstr ""
+msgstr "：meth： `.ColumnOperators.startswith`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:81
 #: sqlalchemy.sql.expression.ColumnElement.startswith:79
 #: sqlalchemy.sql.operators.ColumnOperators.contains:81
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:79
 msgid ":meth:`.ColumnOperators.endswith`"
-msgstr ""
+msgstr "：meth： `.ColumnOperators.endswith`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.contains:83
 #: sqlalchemy.sql.expression.ColumnElement.endswith:83
@@ -2333,29 +2317,29 @@ msgstr ""
 #: sqlalchemy.sql.operators.ColumnOperators.notlike:10
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:83
 msgid ":meth:`.ColumnOperators.like`"
-msgstr ""
+msgstr "：meth： `.ColumnOperators.like`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.desc:1
 #: sqlalchemy.sql.operators.ColumnOperators.desc:1
 msgid "Produce a :func:`~.expression.desc` clause against the parent object."
-msgstr ""
+msgstr "親オブジェクトに対してa：func： `〜.expression.desc`句を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.distinct:1
 #: sqlalchemy.sql.operators.ColumnOperators.distinct:1
 msgid "Produce a :func:`~.expression.distinct` clause against the parent object."
-msgstr ""
+msgstr "親オブジェクトに対してa：func： `〜.expression.distinct`節を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.endswith:1
 #: sqlalchemy.sql.operators.ColumnOperators.endswith:1
 msgid "Implement the 'endswith' operator."
-msgstr ""
+msgstr "&#39;endswith&#39;演算子を実装します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.endswith:3
 #: sqlalchemy.sql.operators.ColumnOperators.endswith:3
 msgid ""
 "Produces a LIKE expression that tests against a match for the end of a "
 "string value::"
-msgstr ""
+msgstr "文字列値の終わりに一致するかどうかをテストするLIKE式を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.endswith:13
 #: sqlalchemy.sql.operators.ColumnOperators.endswith:13
@@ -2370,7 +2354,7 @@ msgid ""
 ":paramref:`.ColumnOperators.endswith.escape` parameter will establish a "
 "given character as an escape character which can be of use when the "
 "target expression is not a literal string."
-msgstr ""
+msgstr "演算子は `` LIKE``を使用するので、演算子の中にはワイルドカード文字 `` \ &quot;％\&quot; ``と `` \ &quot;_ \&quot; `` <other>式はワイルドカードのようにも動作します。リテラル文字列値の場合、：paramref： `.ColumnOperators.endswith.autoescape`フラグを` `True``に設定して、文字列値内のこれらの文字のエスケープを適用し、ワイルドカード文字ではなく一致するようにすることができます。代わりに、：paramref： `.ColumnOperators.endswith.escape`パラメータは、ターゲット式がリテラル文字列でない場合に使用できるエスケープ文字として、指定された文字を確立します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.endswith:24
 #: sqlalchemy.sql.operators.ColumnOperators.endswith:24
@@ -2379,7 +2363,7 @@ msgid ""
 "can also be an arbitrary SQL expression.  LIKE wildcard characters ``%`` "
 "and ``_`` are not escaped by default unless the "
 ":paramref:`.ColumnOperators.endswith.autoescape` flag is set to True."
-msgstr ""
+msgstr "比較される式。これは普通は普通の文字列値ですが、任意のSQL式でもかまいません。 LIKEワイルドカード文字 ``％ ``と `` _``は、：paramref： `.ColumnOperators.endswith.autoescape`フラグがTrueに設定されていない限り、デフォルトでエスケープされません。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.endswith:30
 #: sqlalchemy.sql.operators.ColumnOperators.endswith:30
@@ -2397,7 +2381,7 @@ msgid ""
 " also escaped, and defaults to a forwards    slash, which itself can be "
 "customized using the    :paramref:`.ColumnOperators.endswith.escape` "
 "parameter."
-msgstr ""
+msgstr "ブール値。 Trueの場合、LIKE式内にエスケープ文字を設定し、それを比較値の中の `` \ &quot;％\&quot; ``、 `` \ &quot;_ \&quot; ``とエスケープ文字自体のすべての出現に適用します。 SQL式ではなくリテラル文字列とみなされます。 :: somecolumn.endswith（\ &quot;foo％bar \&quot;、autoescape = True）のような式は次のようにレンダリングします:: somecolumn LIKE &#39;％&#39; || ：param ESCAPE &#39;/&#39;：paramの値を `` \ &quot;foo /％bar \&quot; ``として指定します。 .. versionadded :: 1.2 .. versionchanged :: 1.2.0：paramref： `.ColumnOperators.endswith.autoescape`パラメータは、文字ではなく単純なブール値になりました。エスケープ文字自体もエスケープされ、デフォルトは前方スラッシュになります。それ自体は：paramref： `.ColumnOperators.endswith.escape`パラメータを使用してカスタマイズできます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.endswith:48
 #: sqlalchemy.sql.operators.ColumnOperators.endswith:48
@@ -2407,7 +2391,7 @@ msgid ""
 "also escaped, and defaults to a forwards  slash, which itself can be "
 "customized using the  :paramref:`.ColumnOperators.endswith.escape` "
 "parameter."
-msgstr ""
+msgstr "：paramref： `.ColumnOperators.endswith.autoescape`パラメータは、文字ではなく単純なブール値になりました。エスケープ文字自体もエスケープされ、デフォルトは前方スラッシュになります。それ自体は：paramref： `.ColumnOperators.endswith.escape`パラメータを使用してカスタマイズできます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.endswith:55
 #: sqlalchemy.sql.operators.ColumnOperators.endswith:55
@@ -2422,104 +2406,104 @@ msgid ""
 "somecolumn.endswith(\"foo%bar^bat\", escape=\"^\", autoescape=True)  "
 "Where above, the given literal parameter will be converted to "
 "``\"foo^%bar^^bat\"`` before being passed to the database."
-msgstr ""
+msgstr "その文字をエスケープ文字として確立するために `` ESCAPE``キーワードでレンダリングされる文字を返します。この文字を ``％ ``と `` _``の前に置くことで、ワイルドカード文字ではなく自分自身として動作させることができます。 :: somecolumn.endswith（\ &quot;foo /％bar \&quot;、エスケープ= \ &quot;^ \&quot;）などの式は、:: somecolumn LIKE &#39;％&#39; ||をレンダリングします。 ：paramref： `.ColumnOperators.endswith.autoescape` :: somecolumn.endswith（\&quot; foo％bar ^ bat \ &quot;、エスケープ= \&quot; ^ \ &quot;、autoescape = True）上記の場合、与えられたリテラルパラメータはデータベースに渡される前に `` \ &quot;foo ^％bar ^^ bat \&quot; ``に変換されます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.endswith:69
 #: sqlalchemy.sql.operators.ColumnOperators.endswith:69
 msgid ""
 "The parameter may also be combined with "
 ":paramref:`.ColumnOperators.endswith.autoescape`::"
-msgstr ""
+msgstr "パラメタは以下のものと組み合わせることもできます：paramref： `.ColumnOperators.endswith.autoescape` ::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.endswith:81
 #: sqlalchemy.sql.expression.ColumnElement.startswith:81
 #: sqlalchemy.sql.operators.ColumnOperators.endswith:81
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:81
 msgid ":meth:`.ColumnOperators.contains`"
-msgstr ""
+msgstr "：meth： `.ColumnOperators.contains`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.expression:1
 msgid "Return a column expression."
-msgstr ""
+msgstr "列式を返します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.expression:3
 msgid "Part of the inspection interface; returns self."
-msgstr ""
+msgstr "検査インタフェースの一部。自己を返します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.ilike:1
 #: sqlalchemy.sql.operators.ColumnOperators.ilike:1
 msgid "Implement the ``ilike`` operator, e.g. case insensitive LIKE."
-msgstr ""
+msgstr "`` ilike``演算子を実装します。例えば、大文字小文字を区別しないLIKEです。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.ilike:3
 #: sqlalchemy.sql.operators.ColumnOperators.ilike:3
 msgid "In a column context, produces an expression either of the form::"
-msgstr ""
+msgstr "列コンテキストでは、次の形式の式を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.ilike:7
 #: sqlalchemy.sql.operators.ColumnOperators.ilike:7
 msgid "Or on backends that support the ILIKE operator::"
-msgstr ""
+msgstr "ILIKE演算子をサポートするバックエンドでは::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.ilike:16
 #: sqlalchemy.sql.expression.ColumnElement.like:12
 #: sqlalchemy.sql.operators.ColumnOperators.ilike:16
 #: sqlalchemy.sql.operators.ColumnOperators.like:12
 msgid "expression to be compared"
-msgstr ""
+msgstr "比較される式"
 
 #: of sqlalchemy.sql.expression.ColumnElement.ilike:17
 #: sqlalchemy.sql.operators.ColumnOperators.ilike:17
 msgid ""
 "optional escape character, renders the ``ESCAPE`` keyword, e.g.::    "
 "somecolumn.ilike(\"foo/%bar\", escape=\"/\")"
-msgstr ""
+msgstr "オプションのエスケープ文字は、:: somecolumn.ilike（\ &quot;foo /％bar \&quot;、escape = \ &quot;/ \&quot;）などの `` ESCAPE``キーワードをレンダリングします。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.ilike:17
 #: sqlalchemy.sql.expression.ColumnElement.like:13
 #: sqlalchemy.sql.operators.ColumnOperators.ilike:17
 #: sqlalchemy.sql.operators.ColumnOperators.like:13
 msgid "optional escape character, renders the ``ESCAPE`` keyword, e.g.::"
-msgstr ""
+msgstr "オプションのエスケープ文字で、 `` ESCAPE``キーワードをレンダリングします。例えば::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:1
 #: sqlalchemy.sql.operators.ColumnOperators.in_:1
 msgid "Implement the ``in`` operator."
-msgstr ""
+msgstr "`` in``演算子を実装します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:3
 #: sqlalchemy.sql.operators.ColumnOperators.in_:3
 msgid "In a column context, produces the clause ``column IN <other>``."
-msgstr ""
+msgstr "列コンテキストでは、 `` column IN <other> ``。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:5
 #: sqlalchemy.sql.operators.ColumnOperators.in_:5
 msgid "The given parameter ``other`` may be:"
-msgstr ""
+msgstr "与えられたパラメータ `` other``は次のようになります："
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:7
 #: sqlalchemy.sql.operators.ColumnOperators.in_:7
 msgid "A list of literal values, e.g.::"
-msgstr ""
+msgstr "リテラル値のリスト（例：::）"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:11
 #: sqlalchemy.sql.operators.ColumnOperators.in_:11
 msgid ""
 "In this calling form, the list of items is converted to a set of bound "
 "parameters the same length as the list given::"
-msgstr ""
+msgstr "この呼び出し形式では、アイテムのリストは、与えられたリストと同じ長さのバインドされたパラメータのセットに変換されます::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:16
 #: sqlalchemy.sql.operators.ColumnOperators.in_:16
 msgid "An empty list, e.g.::"
-msgstr ""
+msgstr "空のリスト、例えば::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:20
 #: sqlalchemy.sql.operators.ColumnOperators.in_:20
 msgid ""
 "In this calling form, the expression renders a \"false\" expression, "
 "e.g.::"
-msgstr ""
+msgstr "この呼び出し形式では、式は\ &quot;false \&quot;式をレンダリングします。たとえば、::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:25
 #: sqlalchemy.sql.operators.ColumnOperators.in_:25
@@ -2527,26 +2511,26 @@ msgid ""
 "This \"false\" expression has historically had different behaviors in "
 "older SQLAlchemy versions, see "
 ":paramref:`.create_engine.empty_in_strategy` for behavioral options."
-msgstr ""
+msgstr "この古くからのSQLAlchemyのバージョンでは、この &quot;偽の&quot;表現は異なった振る舞いをしています。paramref： `.create_engine.empty_in_strategy`は動作オプションです。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:29
 #: sqlalchemy.sql.operators.ColumnOperators.in_:29
 msgid "simplified the behavior of \"empty in\" expressions"
-msgstr ""
+msgstr "\ &quot;空の\&quot;式の動作を単純化"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:32
 #: sqlalchemy.sql.operators.ColumnOperators.in_:32
 msgid ""
 "A bound parameter, e.g. :func:`.bindparam`, may be used if it includes "
 "the :paramref:`.bindparam.expanding` flag::"
-msgstr ""
+msgstr "もし：paramref： `.bindparam.expanding`フラグを含んでいれば、バインドされたパラメータ、例えば：func：` .bindparam`を使うことができます："
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:37
 #: sqlalchemy.sql.operators.ColumnOperators.in_:37
 msgid ""
 "In this calling form, the expression renders a special non-SQL "
 "placeholder expression that looks like::"
-msgstr ""
+msgstr "この呼び出し形式では、次のような特別な非SQLプレースホルダ式がレンダリングされます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:42
 #: sqlalchemy.sql.operators.ColumnOperators.in_:42
@@ -2554,39 +2538,39 @@ msgid ""
 "This placeholder expression is intercepted at statement execution time to"
 " be converted into the variable number of bound parameter form "
 "illustrated earlier.   If the statement were executed as::"
-msgstr ""
+msgstr "このプレースホルダー式は、ステートメントの実行時にインターセプトされ、前述の可変数のバインドされたパラメーター・フォームに変換されます。文が次のように実行された場合："
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:48
 #: sqlalchemy.sql.operators.ColumnOperators.in_:48
 msgid "The database would be passed a bound parameter for each value::"
-msgstr ""
+msgstr "データベースには各値のバインドされたパラメータが渡されます::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:52
 #: sqlalchemy.sql.operators.ColumnOperators.in_:52
 msgid "added \"expanding\" bound parameters"
-msgstr ""
+msgstr "バインドされたパラメータを &quot;展開する&quot;ことを追加しました"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:54
 #: sqlalchemy.sql.operators.ColumnOperators.in_:54
 msgid ""
 "If an empty list is passed, a special \"empty list\" expression, which is"
 " specific to the database in use, is rendered.  On SQLite this would be::"
-msgstr ""
+msgstr "空のリストが渡されると、使用中のデータベースに固有の特殊な &quot;空のリスト&quot;表現がレンダリングされます。 SQLiteではこれは::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:60
 #: sqlalchemy.sql.operators.ColumnOperators.in_:60
 msgid "\"expanding\" bound parameters now support empty lists"
-msgstr ""
+msgstr "\ &quot;expanded \&quot;バインドされたパラメータは空のリストをサポートするようになりました。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:63
 #: sqlalchemy.sql.operators.ColumnOperators.in_:63
 msgid "a :func:`.select` construct, which is usually a correlated scalar select::"
-msgstr ""
+msgstr "a：func： `.select`構造体。これは通常、相関スカラー選択::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:73
 #: sqlalchemy.sql.operators.ColumnOperators.in_:73
 msgid "In this calling form, :meth:`.ColumnOperators.in_` renders as given::"
-msgstr ""
+msgstr "この呼び出し形式では、：meth： `.ColumnOperators.in_`は与えられたとおりにレンダリングします::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.in_:78
 #: sqlalchemy.sql.operators.ColumnOperators.in_:78
@@ -2594,12 +2578,12 @@ msgid ""
 "a list of literals, a :func:`.select` construct, or a :func:`.bindparam` "
 "construct that includes the :paramref:`.bindparam.expanding` flag set to "
 "True."
-msgstr ""
+msgstr "リテラルのリスト、a：func： `.select`構造体、または：paramref：` .bindparam.expanding`フラグがTrueに設定されているa：func： `.bindparam`構造体です。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.is_:1
 #: sqlalchemy.sql.operators.ColumnOperators.is_:1
 msgid "Implement the ``IS`` operator."
-msgstr ""
+msgstr "`` IS``演算子を実装してください。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.is_:3
 #: sqlalchemy.sql.operators.ColumnOperators.is_:3
@@ -2607,29 +2591,29 @@ msgid ""
 "Normally, ``IS`` is generated automatically when comparing to a value of "
 "``None``, which resolves to ``NULL``.  However, explicit usage of ``IS`` "
 "may be desirable if comparing to boolean values on certain platforms."
-msgstr ""
+msgstr "通常、 `` IS``は `` None``の値と比較すると自動的に生成され、 `` NULL``に解決されます。しかし、特定のプラットフォーム上のブール値と比較すると、明示的に &quot;IS&quot;を使用することが望ましい場合があります。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.is_:10
 #: sqlalchemy.sql.operators.ColumnOperators.is_:10
 msgid ":meth:`.ColumnOperators.isnot`"
-msgstr ""
+msgstr "：meth： `.ColumnOperators.isnot`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.is_distinct_from:1
 #: sqlalchemy.sql.operators.ColumnOperators.is_distinct_from:1
 msgid "Implement the ``IS DISTINCT FROM`` operator."
-msgstr ""
+msgstr "`` IS DISTINCT FROM``演算子を実装してください。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.is_distinct_from:3
 #: sqlalchemy.sql.operators.ColumnOperators.is_distinct_from:3
 msgid ""
 "Renders \"a IS DISTINCT FROM b\" on most platforms; on some such as "
 "SQLite may render \"a IS NOT b\"."
-msgstr ""
+msgstr "ほとんどのプラットフォームで\ &quot;a DISABLEからFROM \&quot;をレンダリングします。そのようなSQLiteは\ &quot;a IS NOT b \&quot;をレンダリングすることがあります。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.isnot:1
 #: sqlalchemy.sql.operators.ColumnOperators.isnot:1
 msgid "Implement the ``IS NOT`` operator."
-msgstr ""
+msgstr "`` IS NOT``演算子を実装してください。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.isnot:3
 #: sqlalchemy.sql.operators.ColumnOperators.isnot:3
@@ -2638,136 +2622,136 @@ msgid ""
 " of ``None``, which resolves to ``NULL``.  However, explicit usage of "
 "``IS NOT`` may be desirable if comparing to boolean values on certain "
 "platforms."
-msgstr ""
+msgstr "通常、 `` NOT &#39;&#39;は `` NULL``に解決する `` None``の値と比較すると自動的に生成されます。しかし、特定のプラットフォーム上のブール値と比較した場合、明示的に &quot;IS NOT&quot;を使用することが望ましいかもしれません。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.isnot:10
 #: sqlalchemy.sql.operators.ColumnOperators.isnot:10
 msgid ":meth:`.ColumnOperators.is_`"
-msgstr ""
+msgstr "：meth： `.ColumnOperators.is_`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.isnot_distinct_from:1
 #: sqlalchemy.sql.operators.ColumnOperators.isnot_distinct_from:1
 msgid "Implement the ``IS NOT DISTINCT FROM`` operator."
-msgstr ""
+msgstr "`` IS NOT DISTINCT FROM``演算子を実装してください。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.isnot_distinct_from:3
 #: sqlalchemy.sql.operators.ColumnOperators.isnot_distinct_from:3
 msgid ""
 "Renders \"a IS NOT DISTINCT FROM b\" on most platforms; on some such as "
 "SQLite may render \"a IS b\"."
-msgstr ""
+msgstr "ほとんどのプラットフォームで\ &quot;a is not DISTINCT FROM b \&quot;をレンダリングします。そのようなSQLiteは\ &quot;a IS b \&quot;をレンダリングします。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.key:1
 msgid ""
 "the 'key' that in some circumstances refers to this object in a Python "
 "namespace."
-msgstr ""
+msgstr "場合によってはPythonの名前空間でこのオブジェクトを参照する &#39;キー&#39;です。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.key:4
 msgid ""
 "This typically refers to the \"key\" of the column as present in the "
 "``.c`` collection of a selectable, e.g. sometable.c[\"somekey\"] would "
 "return a Column with a .key of \"somekey\"."
-msgstr ""
+msgstr "これは通常、選択可能な `` .c``コレクションに存在するカラムの\ &quot;キー\&quot;を指します。たとえば、sometable.c [\ &quot;somekey \&quot;]は、\ &quot; somekey \ &quot;"
 
 #: of sqlalchemy.sql.expression.ColumnElement.label:1
 msgid "Produce a column label, i.e. ``<columnname> AS <name>``."
-msgstr ""
+msgstr "列ラベル、すなわち `` <columnname>として<name> ``。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.label:3
 msgid "This is a shortcut to the :func:`~.expression.label` function."
-msgstr ""
+msgstr "これは：func： `〜.expression.label`関数へのショートカットです。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.label:5
 msgid "if 'name' is None, an anonymous label name will be generated."
-msgstr ""
+msgstr "&#39;name&#39;がNoneの場合、匿名ラベル名が生成されます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.like:1
 #: sqlalchemy.sql.operators.ColumnOperators.like:1
 msgid "Implement the ``like`` operator."
-msgstr ""
+msgstr "`` like``演算子を実装します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.like:3
 #: sqlalchemy.sql.operators.ColumnOperators.like:3
 msgid "In a column context, produces the expression::"
-msgstr ""
+msgstr "列コンテキストでは、次の式を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.like:13
 #: sqlalchemy.sql.operators.ColumnOperators.like:13
 msgid ""
 "optional escape character, renders the ``ESCAPE`` keyword, e.g.::    "
 "somecolumn.like(\"foo/%bar\", escape=\"/\")"
-msgstr ""
+msgstr "オプションのエスケープ文字は、:: somecolumn.like（\ &quot;foo /％bar \&quot;、escape = \ &quot;/ \&quot;）などの `` ESCAPE``キーワードをレンダリングします。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.like:20
 #: sqlalchemy.sql.expression.ColumnElement.notilike:10
 #: sqlalchemy.sql.operators.ColumnOperators.like:20
 #: sqlalchemy.sql.operators.ColumnOperators.notilike:10
 msgid ":meth:`.ColumnOperators.ilike`"
-msgstr ""
+msgstr "：meth： `.ColumnOperators.ilike`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.match:1
 #: sqlalchemy.sql.operators.ColumnOperators.match:1
 msgid "Implements a database-specific 'match' operator."
-msgstr ""
+msgstr "データベース固有の &#39;match&#39;演算子を実装します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.match:3
 #: sqlalchemy.sql.operators.ColumnOperators.match:3
 msgid ""
 ":meth:`~.ColumnOperators.match` attempts to resolve to a MATCH-like "
 "function or operator provided by the backend. Examples include:"
-msgstr ""
+msgstr "：meth： `〜.ColumnOperators.match`は、バックエンドによって提供されるMATCHのような関数または演算子への解決を試みます。例としては、"
 
 #: of sqlalchemy.sql.expression.ColumnElement.match:7
 #: sqlalchemy.sql.operators.ColumnOperators.match:7
 msgid "PostgreSQL - renders ``x @@ to_tsquery(y)``"
-msgstr ""
+msgstr "PostgreSQL  -  `` @ @ to_tsquery（y） ``をレンダリングします。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.match:8
 #: sqlalchemy.sql.operators.ColumnOperators.match:8
 msgid "MySQL - renders ``MATCH (x) AGAINST (y IN BOOLEAN MODE)``"
-msgstr ""
+msgstr "MySQLは `` MATCH（x）を反対にします（ブーリアンモードではy） ``"
 
 #: of sqlalchemy.sql.expression.ColumnElement.match:9
 #: sqlalchemy.sql.operators.ColumnOperators.match:9
 msgid "Oracle - renders ``CONTAINS(x, y)``"
-msgstr ""
+msgstr "Oracleは `` CONTAINS（x、y） ``をレンダリングします"
 
 #: of sqlalchemy.sql.expression.ColumnElement.match:10
 #: sqlalchemy.sql.operators.ColumnOperators.match:10
 msgid "other backends may provide special implementations."
-msgstr ""
+msgstr "他のバックエンドは特別な実装を提供するかもしれません。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.match:11
 #: sqlalchemy.sql.operators.ColumnOperators.match:11
 msgid ""
 "Backends without any special implementation will emit the operator as "
 "\"MATCH\".  This is compatible with SQlite, for example."
-msgstr ""
+msgstr "特別な実装をしないバックエンドは、演算子を\ &quot;MATCH \&quot;として出力します。これは、例えば、SQliteと互換性があります。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.notilike:1
 #: sqlalchemy.sql.operators.ColumnOperators.notilike:1
 msgid "implement the ``NOT ILIKE`` operator."
-msgstr ""
+msgstr "`` NOT ILIKE``演算子を実装してください。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.notilike:3
 #: sqlalchemy.sql.operators.ColumnOperators.notilike:3
 msgid ""
 "This is equivalent to using negation with :meth:`.ColumnOperators.ilike`,"
 " i.e. ``~x.ilike(y)``."
-msgstr ""
+msgstr "これは：meth： `.ColumnOperators.ilike`、つまり` `〜x.ilike（y）` `で否定を使うのと同じです。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.notin_:1
 #: sqlalchemy.sql.operators.ColumnOperators.notin_:1
 msgid "implement the ``NOT IN`` operator."
-msgstr ""
+msgstr "`` NOT IN``演算子を実装してください。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.notin_:3
 #: sqlalchemy.sql.operators.ColumnOperators.notin_:3
 msgid ""
 "This is equivalent to using negation with :meth:`.ColumnOperators.in_`, "
 "i.e. ``~x.in_(y)``."
-msgstr ""
+msgstr "これは：meth： `.ColumnOperators.in_`、つまり` `〜x.in_（y）` `で否定を使うのと同じです。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.notin_:6
 #: sqlalchemy.sql.operators.ColumnOperators.notin_:6
@@ -2777,7 +2761,7 @@ msgid ""
 " to produce true in all cases.  The "
 ":paramref:`.create_engine.empty_in_strategy` may be used to alter this "
 "behavior."
-msgstr ""
+msgstr "`` other``が空のシーケンスである場合、コンパイラは\ &quot;空ではない\&quot;という式を生成します。これは、すべての場合に真を生成するために、デフォルトでは &quot;1 = 1&quot;という表現になります：paramref： `.create_engine.empty_in_strategy`を使ってこの動作を変更することができます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.notin_:12
 #: sqlalchemy.sql.operators.ColumnOperators.notin_:12
@@ -2785,37 +2769,37 @@ msgid ""
 "The :meth:`.ColumnOperators.in_` and :meth:`.ColumnOperators.notin_` "
 "operators now produce a \"static\" expression for an empty IN sequence by"
 " default."
-msgstr ""
+msgstr "：meth： `.ColumnOperators.in_`と：meth：` .ColumnOperators.notin_`演算子は、デフォルトで空のINシーケンスのための\ &quot;静的\&quot;式を生成するようになりました。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.notlike:1
 #: sqlalchemy.sql.operators.ColumnOperators.notlike:1
 msgid "implement the ``NOT LIKE`` operator."
-msgstr ""
+msgstr "`` NOT LIKE``演算子を実装してください。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.notlike:3
 #: sqlalchemy.sql.operators.ColumnOperators.notlike:3
 msgid ""
 "This is equivalent to using negation with :meth:`.ColumnOperators.like`, "
 "i.e. ``~x.like(y)``."
-msgstr ""
+msgstr "これは：meth： `.ColumnOperators.like`、つまり` `〜x.like（y）` `で否定を使うのと同じです。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.nullsfirst:1
 #: sqlalchemy.sql.operators.ColumnOperators.nullsfirst:1
 msgid ""
 "Produce a :func:`~.expression.nullsfirst` clause against the parent "
 "object."
-msgstr ""
+msgstr "親オブジェクトに対してa：func： `〜.expression.nullsfirst`句を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.nullslast:1
 #: sqlalchemy.sql.operators.ColumnOperators.nullslast:1
 msgid "Produce a :func:`~.expression.nullslast` clause against the parent object."
-msgstr ""
+msgstr "親オブジェクトに対してa：func： `〜.expression.nullslast`句を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:1
 #: sqlalchemy.sql.operators.ColumnOperators.op:1
 #: sqlalchemy.sql.operators.Operators.op:1
 msgid "produce a generic operator function."
-msgstr ""
+msgstr "ジェネリック演算子関数を生成します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:11
 #: sqlalchemy.sql.operators.ColumnOperators.op:11
@@ -2823,13 +2807,13 @@ msgstr ""
 msgid ""
 "This function can also be used to make bitwise operators explicit. For "
 "example::"
-msgstr ""
+msgstr "この関数は、ビット演算子を明示的にするためにも使用できます。例えば：："
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:16
 #: sqlalchemy.sql.operators.ColumnOperators.op:16
 #: sqlalchemy.sql.operators.Operators.op:16
 msgid "is a bitwise AND of the value in ``somecolumn``."
-msgstr ""
+msgstr "`` somecolumn``の値のビット単位のANDです。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:18
 #: sqlalchemy.sql.operators.ColumnOperators.op:18
@@ -2837,7 +2821,7 @@ msgstr ""
 msgid ""
 "a string which will be output as the infix operator between this element "
 "and the expression passed to the generated function."
-msgstr ""
+msgstr "この要素と生成された関数に渡される式との間の中置演算子として出力される文字列。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:22
 #: sqlalchemy.sql.operators.ColumnOperators.op:22
@@ -2850,7 +2834,7 @@ msgid ""
 " operators. A value of 100 will be higher or equal to all operators, and "
 "-100 will be lower than or equal to all operators.  .. versionadded:: 0.8"
 " - added the 'precedence' argument."
-msgstr ""
+msgstr "式をカッコで括るとき、演算子に適用する優先順位。数値が小さいほど優先順位の高い別の演算子に対して適用されたときに式がかっこにされます。デフォルト値 `` 0``はカンマ（ ``、 ``）と `` AS``演算子を除くすべての演算子よりも低くなります。 100の値はすべての演算子より高くなるか等しいことになり、-100はすべての演算子以下になります。 .. versionadded :: 0.8  -  &#39;precedence&#39;引数を追加しました。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:22
 #: sqlalchemy.sql.operators.ColumnOperators.op:22
@@ -2862,13 +2846,13 @@ msgid ""
 "``0`` is lower than all operators except for the comma (``,``) and ``AS``"
 " operators. A value of 100 will be higher or equal to all operators, and "
 "-100 will be lower than or equal to all operators."
-msgstr ""
+msgstr "式をカッコで括るとき、演算子に適用する優先順位。数値が小さいほど優先順位の高い別の演算子に対して適用されたときに式がかっこにされます。デフォルト値 `` 0``はカンマ（ ``、 ``）と `` AS``演算子を除くすべての演算子よりも低くなります。 100の値はすべての演算子より高くなるか等しいことになり、-100はすべての演算子以下になります。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:30
 #: sqlalchemy.sql.operators.ColumnOperators.op:30
 #: sqlalchemy.sql.operators.Operators.op:30
 msgid "- added the 'precedence' argument."
-msgstr ""
+msgstr "-  &#39;precedence&#39;引数を追加しました。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:32
 #: sqlalchemy.sql.operators.ColumnOperators.op:32
@@ -2880,7 +2864,7 @@ msgid ""
 "establish that the operator is a comparison operator when used in a "
 "custom join condition.  .. versionadded:: 0.9.2 - added the    "
 ":paramref:`.Operators.op.is_comparison` flag."
-msgstr ""
+msgstr "Trueの場合、演算子は `` == ``、 `` `` ``などのブール値の真偽値を評価する\ &quot;比較演算子&quot;とみなされます。このフラグは、 ORM関係によって、カスタム結合条件で使用される場合、演算子が比較演算子であることが確認されます。 .. versionadded :: 0.9.2  -  paramref： `.Operators.op.is_comparison`フラグを追加しました。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:32
 #: sqlalchemy.sql.operators.ColumnOperators.op:32
@@ -2891,13 +2875,13 @@ msgid ""
 "``>``, etc.  This flag should be set so that ORM relationships can "
 "establish that the operator is a comparison operator when used in a "
 "custom join condition."
-msgstr ""
+msgstr "Trueの場合、演算子は `` == ``、 `` `` ``などのブール値の真偽値を評価する\ &quot;比較演算子&quot;とみなされます。このフラグは、 ORM関係によって、カスタム結合条件で使用される場合、演算子が比較演算子であることが確認されます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:38
 #: sqlalchemy.sql.operators.ColumnOperators.op:38
 #: sqlalchemy.sql.operators.Operators.op:38
 msgid "- added the :paramref:`.Operators.op.is_comparison` flag."
-msgstr ""
+msgstr "-  paramref： `.Operators.op.is_comparison`フラグを追加しました。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:41
 #: sqlalchemy.sql.operators.ColumnOperators.op:41
@@ -2909,7 +2893,7 @@ msgid ""
 "will resolve to :class:`.Boolean`, and those that do not will be of the "
 "same type as the left-hand operand.  .. versionadded:: 1.2.0b3 - added "
 "the    :paramref:`.Operators.op.return_type` argument."
-msgstr ""
+msgstr "a：class： `.TypeEngine`クラスまたはこの演算子によって生成された式の戻り値の型を強制的にその型にするオブジェクトです。デフォルトでは：paramref： `.Operators.op.is_comparison`を指定する演算子は：class：` .Boolean`に解決され、左オペランドと同じ型にはなりません。 .. versionadded :: 1.2.0b3  - ：paramref： `.Operators.op.return_type`引数を追加しました。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:41
 #: sqlalchemy.sql.operators.ColumnOperators.op:41
@@ -2920,44 +2904,44 @@ msgid ""
 "default, operators that specify :paramref:`.Operators.op.is_comparison` "
 "will resolve to :class:`.Boolean`, and those that do not will be of the "
 "same type as the left-hand operand."
-msgstr ""
+msgstr "a：class： `.TypeEngine`クラスまたはこの演算子によって生成された式の戻り値の型を強制的にその型にするオブジェクトです。デフォルトでは：paramref： `.Operators.op.is_comparison`を指定する演算子は：class：` .Boolean`に解決され、左オペランドと同じ型にはなりません。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:48
 #: sqlalchemy.sql.operators.ColumnOperators.op:48
 #: sqlalchemy.sql.operators.Operators.op:48
 msgid "- added the :paramref:`.Operators.op.return_type` argument."
-msgstr ""
+msgstr "- ：paramref： `.Operators.op.return_type`引数を追加しました。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:53
 #: sqlalchemy.sql.operators.ColumnOperators:28
 #: sqlalchemy.sql.operators.ColumnOperators.op:53
 #: sqlalchemy.sql.operators.Operators.op:53
 msgid ":ref:`types_operators`"
-msgstr ""
+msgstr "：ref： `types_operators`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.op:55
 #: sqlalchemy.sql.operators.ColumnOperators.op:55
 #: sqlalchemy.sql.operators.Operators.op:55
 msgid ":ref:`relationship_custom_operator`"
-msgstr ""
+msgstr "：ref： `relationship_custom_operator`"
 
 #: of sqlalchemy.sql.expression.ColumnElement.shares_lineage:1
 msgid ""
 "Return True if the given :class:`.ColumnElement` has a common ancestor to"
 " this :class:`.ColumnElement`."
-msgstr ""
+msgstr "与えられた：class： `.ColumnElement`がthis：class：` .ColumnElement`に共通の祖先を持つ場合、Trueを返します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.startswith:1
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:1
 msgid "Implement the ``startswith`` operator."
-msgstr ""
+msgstr "`` startswith``演算子を実装してください。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.startswith:3
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:3
 msgid ""
 "Produces a LIKE expression that tests against a match for the start of a "
 "string value::"
-msgstr ""
+msgstr "文字列値の開始の一致をテストするLIKE式を生成します::"
 
 #: of sqlalchemy.sql.expression.ColumnElement.startswith:13
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:13
@@ -2972,7 +2956,7 @@ msgid ""
 ":paramref:`.ColumnOperators.startswith.escape` parameter will establish a"
 " given character as an escape character which can be of use when the "
 "target expression is not a literal string."
-msgstr ""
+msgstr "演算子は `` LIKE``を使用するので、演算子の中にはワイルドカード文字 `` \ &quot;％\&quot; ``と `` \ &quot;_ \&quot; `` <other>式はワイルドカードのようにも動作します。リテラル文字列の場合、：paramref： `.ColumnOperators.startswith.autoescape`フラグを` `True``に設定して、文字列値内のこれらの文字のエスケープを適用し、ワイルドカード文字ではなく自分自身として一致させることができます。代わりに、：paramref： `.ColumnOperators.startswith.escape`パラメータは、ターゲット式がリテラル文字列でない場合に使用できるエスケープ文字として、指定された文字を確立します。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.startswith:24
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:24
@@ -2981,7 +2965,7 @@ msgid ""
 "can also be an arbitrary SQL expression.  LIKE wildcard characters ``%`` "
 "and ``_`` are not escaped by default unless the "
 ":paramref:`.ColumnOperators.startswith.autoescape` flag is set to True."
-msgstr ""
+msgstr "比較される式。これは普通は普通の文字列値ですが、任意のSQL式でもかまいません。 LIKEワイルドカード文字 ``％ ``と `` _``は、：paramref： `.ColumnOperators.startswith.autoescape`フラグがTrueに設定されていない限り、デフォルトではエスケープされません。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.startswith:30
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:30
@@ -2999,7 +2983,7 @@ msgid ""
 " also escaped, and defaults to a forwards    slash, which itself can be "
 "customized using the    :paramref:`.ColumnOperators.startswith.escape` "
 "parameter."
-msgstr ""
+msgstr "ブール値。 Trueの場合、LIKE式内にエスケープ文字を設定し、それを比較値の中の `` \ &quot;％\&quot; ``、 `` \ &quot;_ \&quot; ``とエスケープ文字自体のすべての出現に適用します。 SQL式ではなくリテラル文字列とみなされます。 :: somecolumn.startswith（\ &quot;foo％bar \&quot;、autoescape = True）のような式は、:: somecolumnのようにレンダリングします：param || &#39;％&#39; ESCAPE &#39;/&#39;：paramの値を `` \ &quot;foo /％bar \&quot; ``として指定します。 .. versionadded :: 1.2 .. versionchanged :: 1.2.0：paramref： `.ColumnOperators.startswith.autoescape`パラメータは、文字ではなく単純なブール値になりました。エスケープ文字自体もエスケープされ、デフォルトは前方スラッシュになります。それ自体は：paramref： `.ColumnOperators.startswith.escape`パラメータを使用してカスタマイズできます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.startswith:48
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:48
@@ -3009,7 +2993,7 @@ msgid ""
 " also escaped, and defaults to a forwards  slash, which itself can be "
 "customized using the  :paramref:`.ColumnOperators.startswith.escape` "
 "parameter."
-msgstr ""
+msgstr "：paramref： `.ColumnOperators.startswith.autoescape`パラメータは、文字ではなく単純なブール値になりました。エスケープ文字自体もエスケープされ、デフォルトは前方スラッシュになります。それ自体は：paramref： `.ColumnOperators.startswith.escape`パラメータを使用してカスタマイズできます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.startswith:55
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:55
@@ -3024,20 +3008,20 @@ msgid ""
 "somecolumn.startswith(\"foo%bar^bat\", escape=\"^\", autoescape=True)  "
 "Where above, the given literal parameter will be converted to "
 "``\"foo^%bar^^bat\"`` before being passed to the database."
-msgstr ""
+msgstr "その文字をエスケープ文字として確立するために `` ESCAPE``キーワードでレンダリングされる文字を返します。この文字を ``％ ``と `` _``の前に置くことで、ワイルドカード文字ではなく自分自身として動作させることができます。 :: somecolumn.startswith（\ &quot;foo /％bar \&quot;、escape = \ &quot;^ \&quot;）のような式は、:: somecolumn LIKE：param ||をレンダリングします。 &#39;％&#39; ESCAPE &#39;^&#39;パラメタ： `.ColumnOperators.startswith.autoescape` :: somecolumn.startswith（\&quot; foo％bar ^ bat \ &quot;、escape = \&quot; ^ \ &quot;、autoescape = True）上記の場合、与えられたリテラルパラメータはデータベースに渡される前に `` \ &quot;foo ^％bar ^^ bat \&quot; ``に変換されます。"
 
 #: of sqlalchemy.sql.expression.ColumnElement.startswith:69
 #: sqlalchemy.sql.operators.ColumnOperators.startswith:69
 msgid ""
 "The parameter may also be combined with "
 ":paramref:`.ColumnOperators.startswith.autoescape`::"
-msgstr ""
+msgstr "パラメータは以下のものと組み合わせることもできます：paramref： `.ColumnOperators.startswith.autoescape` ::"
 
 #: of sqlalchemy.sql.operators.ColumnOperators:1
 msgid ""
 "Defines boolean, comparison, and other operators for "
 ":class:`.ColumnElement` expressions."
-msgstr ""
+msgstr "クラス： `.ColumnElement`式のブール値、比較値、およびその他の演算子を定義します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators:4
 msgid ""
@@ -3046,11 +3030,11 @@ msgid ""
 "from the Python builtin ``operator`` module or a SQLAlchemy-specific "
 "operator function from :mod:`sqlalchemy.expression.operators`.   For "
 "example the ``__eq__`` function::"
-msgstr ""
+msgstr "デフォルトでは、すべてのメソッドは：meth： `.operate`または：meth：` .reverse_operate`を呼び出し、Python組み込みの ``演算子 `モジュールまたはSQLAlchemy固有の演算子関数から適切な演算子関数を渡します：mod ： `sqlalchemy.expression.operators`。たとえば `` __eq__``関数::"
 
 #: of sqlalchemy.sql.operators.ColumnOperators:15
 msgid "Where ``operators.eq`` is essentially::"
-msgstr ""
+msgstr "`` operators.eq``は基本的に::"
 
 #: of sqlalchemy.sql.operators.ColumnOperators:20
 msgid ""
@@ -3058,27 +3042,27 @@ msgid ""
 ":meth:`.Operators.operate` and others to return further "
 ":class:`.ColumnElement` constructs, so that the ``==`` operation above is"
 " replaced by a clause construct."
-msgstr ""
+msgstr "中核列表現ユニット：class： `.ColumnElement`は：meth：` .Operators.operate`などを上書きします：class： `.ColumnElement`は上記の` == ``演算が節の構成。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators:26
 msgid "See also:"
-msgstr ""
+msgstr "参照："
 
 #: of sqlalchemy.sql.operators.ColumnOperators:30
 msgid ":attr:`.TypeEngine.comparator_factory`"
-msgstr ""
+msgstr "：attr： `.TypeEngine.comparator_factory`"
 
 #: of sqlalchemy.sql.operators.ColumnOperators:32
 msgid ":class:`.ColumnOperators`"
-msgstr ""
+msgstr "：クラス： `.ColumnOperators`"
 
 #: of sqlalchemy.sql.operators.ColumnOperators:34
 msgid ":class:`.PropComparator`"
-msgstr ""
+msgstr "：クラス： `.PropComparator`"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__add__:1
 msgid "Implement the ``+`` operator."
-msgstr ""
+msgstr "`` + ``演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__add__:3
 msgid ""
@@ -3086,19 +3070,19 @@ msgid ""
 "has non-string affinity. If the parent object has a string affinity, "
 "produces the concatenation operator, ``a || b`` - see "
 ":meth:`.ColumnOperators.concat`."
-msgstr ""
+msgstr "列の文脈では、親オブジェクトが非文字列親和性を有する場合には、節「a + b」を生成する。親オブジェクトが文字列親和性を持つ場合、連結演算子 `` a || b``  - 参照：meth： `.ColumnOperators.concat`。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__and__:1
 #: sqlalchemy.sql.operators.Operators.__and__:1
 msgid "Implement the ``&`` operator."
-msgstr ""
+msgstr "``＆ ``演算子を実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__and__:3
 #: sqlalchemy.sql.operators.Operators.__and__:3
 msgid ""
 "When used with SQL expressions, results in an AND operation, equivalent "
 "to :func:`~.expression.and_`, that is::"
-msgstr ""
+msgstr "SQL式で使用すると、：func： `〜.expression.and_`に相当するAND演算が行われます。これは::"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__and__:9
 #: sqlalchemy.sql.operators.ColumnOperators.__invert__:9
@@ -3107,7 +3091,7 @@ msgstr ""
 #: sqlalchemy.sql.operators.Operators.__invert__:9
 #: sqlalchemy.sql.operators.Operators.__or__:9
 msgid "is equivalent to::"
-msgstr ""
+msgstr "::と同等です"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__and__:14
 #: sqlalchemy.sql.operators.Operators.__and__:14
@@ -3115,175 +3099,175 @@ msgid ""
 "Care should be taken when using ``&`` regarding operator precedence; the "
 "``&`` operator has the highest precedence. The operands should be "
 "enclosed in parenthesis if they contain further sub expressions::"
-msgstr ""
+msgstr "演算子の優先順位に関して ``＆ ``を使うときは注意が必要です。 ``＆ ``演算子が最も高い優先順位を持ちます。さらにサブ式を含む場合、オペランドはかっこで囲む必要があります::"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__delattr__:1
 msgid "Implement delattr(self, name)."
-msgstr ""
+msgstr "delattr（self、name）を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__dir__:1
 msgid "default dir() implementation"
-msgstr ""
+msgstr "デフォルトのdir（）実装"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__div__:1
 msgid "Implement the ``/`` operator."
-msgstr ""
+msgstr "`` / ``演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__div__:3
 #: sqlalchemy.sql.operators.ColumnOperators.__truediv__:3
 msgid "In a column context, produces the clause ``a / b``."
-msgstr ""
+msgstr "列のコンテキストでは、 `` a / b``という節が生成されます。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__eq__:1
 msgid "Implement the ``==`` operator."
-msgstr ""
+msgstr "`` == ``演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__eq__:3
 msgid ""
 "In a column context, produces the clause ``a = b``. If the target is "
 "``None``, produces ``a IS NULL``."
-msgstr ""
+msgstr "列の文脈では、節「a = b``が生成されます。ターゲットが `` None``ならば、 `` a IS NULL``を生成します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__format__:1
 msgid "default object formatter"
-msgstr ""
+msgstr "デフォルトオブジェクトフォーマッタ"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__ge__:1
 msgid "Implement the ``>=`` operator."
-msgstr ""
+msgstr "``&gt; = ``演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__ge__:3
 msgid "In a column context, produces the clause ``a >= b``."
-msgstr ""
+msgstr "列の文脈では、節「a&gt; = b``を生成します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__getattribute__:1
 msgid "Return getattr(self, name)."
-msgstr ""
+msgstr "getattr（self、name）を返します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__getitem__:1
 msgid "Implement the [] operator."
-msgstr ""
+msgstr "[]演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__getitem__:3
 msgid ""
 "This can be used by some database-specific types such as PostgreSQL ARRAY"
 " and HSTORE."
-msgstr ""
+msgstr "これは、PostgreSQLのARRAYやHSTOREなどのデータベース固有の型によって使用されます。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__gt__:1
 msgid "Implement the ``>`` operator."
-msgstr ""
+msgstr "``&gt; ``演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__gt__:3
 msgid "In a column context, produces the clause ``a > b``."
-msgstr ""
+msgstr "列の文脈では、節「a&gt; b``を生成します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__hash__:1
 msgid "Return hash(self)."
-msgstr ""
+msgstr "ハッシュ（自己）を返します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__init__:1
 msgid "Initialize self.  See help(type(self)) for accurate signature."
-msgstr ""
+msgstr "自己を初期化する。正確な署名については、help（type（self））を参照してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__init_subclass__:1
 msgid "This method is called when a class is subclassed."
-msgstr ""
+msgstr "このメソッドは、クラスがサブクラス化されたときに呼び出されます。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__init_subclass__:3
 msgid ""
 "The default implementation does nothing. It may be overridden to extend "
 "subclasses."
-msgstr ""
+msgstr "デフォルト実装は何もしません。サブクラスを拡張するためにオーバーライドされるかもしれません。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__invert__:1
 #: sqlalchemy.sql.operators.Operators.__invert__:1
 msgid "Implement the ``~`` operator."
-msgstr ""
+msgstr "``〜 ``演算子を実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__invert__:3
 #: sqlalchemy.sql.operators.Operators.__invert__:3
 msgid ""
 "When used with SQL expressions, results in a NOT operation, equivalent to"
 " :func:`~.expression.not_`, that is::"
-msgstr ""
+msgstr "SQL式で使用すると、NOT演算が実行されます：func： `〜.expression.not_`、つまり："
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__le__:1
 msgid "Implement the ``<=`` operator."
-msgstr ""
+msgstr "`` &lt;= ``演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__le__:3
 msgid "In a column context, produces the clause ``a <= b``."
-msgstr ""
+msgstr "列の文脈では、節「a &lt;= b``を生成します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__lshift__:1
 msgid "implement the << operator."
-msgstr ""
+msgstr "&lt;&lt;演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__lshift__:3
 msgid ""
 "Not used by SQLAlchemy core, this is provided for custom operator systems"
 " which want to use << as an extension point."
-msgstr ""
+msgstr "SQLAlchemyコアでは使用されていませんが、&lt;&lt;を拡張ポイントとして使用するカスタム演算子システム用に提供されています。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__lt__:1
 msgid "Implement the ``<`` operator."
-msgstr ""
+msgstr "`` &lt;``演算子を実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__lt__:3
 msgid "In a column context, produces the clause ``a < b``."
-msgstr ""
+msgstr "列の文脈では、節「a &lt;b``」を生成する。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__mod__:1
 msgid "Implement the ``%`` operator."
-msgstr ""
+msgstr "``％ ``演算子を実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__mod__:3
 msgid "In a column context, produces the clause ``a % b``."
-msgstr ""
+msgstr "列の文脈では、節「a％b``が生成されます。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__mul__:1
 msgid "Implement the ``*`` operator."
-msgstr ""
+msgstr "`` * ``演算子を実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__mul__:3
 msgid "In a column context, produces the clause ``a * b``."
-msgstr ""
+msgstr "列の文脈では、節「a * b``を生成します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__ne__:1
 msgid "Implement the ``!=`` operator."
-msgstr ""
+msgstr "``！= ``演算子を実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__ne__:3
 msgid ""
 "In a column context, produces the clause ``a != b``. If the target is "
 "``None``, produces ``a IS NOT NULL``."
-msgstr ""
+msgstr "列コンテキストでは、 `` a！= b``という節を生成します。ターゲットが `` None``の場合、 `` a IS NOT NULL``を生成します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__neg__:1
 #: sqlalchemy.sql.operators.ColumnOperators.__sub__:1
 msgid "Implement the ``-`` operator."
-msgstr ""
+msgstr "`` -``演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__neg__:3
 msgid "In a column context, produces the clause ``-a``."
-msgstr ""
+msgstr "列の文脈では、 `` -a``節が生成されます。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__new__:1
 msgid "Create and return a new object.  See help(type) for accurate signature."
-msgstr ""
+msgstr "新しいオブジェクトを作成して返します。正確な署名については、help（type）を参照してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__or__:1
 #: sqlalchemy.sql.operators.Operators.__or__:1
 msgid "Implement the ``|`` operator."
-msgstr ""
+msgstr "`` | ``演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__or__:3
 #: sqlalchemy.sql.operators.Operators.__or__:3
 msgid ""
 "When used with SQL expressions, results in an OR operation, equivalent to"
 " :func:`~.expression.or_`, that is::"
-msgstr ""
+msgstr "SQL式で使用すると、OR演算が実行されます。これは：func： `〜.expression.or_`と同じです。つまり、"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__or__:14
 #: sqlalchemy.sql.operators.Operators.__or__:14
@@ -3291,94 +3275,94 @@ msgid ""
 "Care should be taken when using ``|`` regarding operator precedence; the "
 "``|`` operator has the highest precedence. The operands should be "
 "enclosed in parenthesis if they contain further sub expressions::"
-msgstr ""
+msgstr "演算子の優先順位に関して `` | ``を使うときは注意が必要です。 `` | ``演算子が最も高い優先順位を持ちます。さらにサブ式を含む場合、オペランドはかっこで囲む必要があります::"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__radd__:1
 msgid "Implement the ``+`` operator in reverse."
-msgstr ""
+msgstr "`` + ``演算子を逆に実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__radd__:3
 msgid "See :meth:`.ColumnOperators.__add__`."
-msgstr ""
+msgstr "参照：meth： `.ColumnOperators .__ add__`。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rdiv__:1
 msgid "Implement the ``/`` operator in reverse."
-msgstr ""
+msgstr "`` / ``演算子を逆に実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rdiv__:3
 msgid "See :meth:`.ColumnOperators.__div__`."
-msgstr ""
+msgstr "参照：meth： `.ColumnOperators .__ div__`。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__reduce__:1
 #: sqlalchemy.sql.operators.ColumnOperators.__reduce_ex__:1
 msgid "helper for pickle"
-msgstr ""
+msgstr "ピックルヘルパー"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__repr__:1
 msgid "Return repr(self)."
-msgstr ""
+msgstr "リターンrepr（自己）。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rmod__:1
 msgid "Implement the ``%`` operator in reverse."
-msgstr ""
+msgstr "``％ ``演算子を逆に実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rmod__:3
 msgid "See :meth:`.ColumnOperators.__mod__`."
-msgstr ""
+msgstr "参照：meth： `.ColumnOperators .__ mod__`。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rmul__:1
 msgid "Implement the ``*`` operator in reverse."
-msgstr ""
+msgstr "`` * ``演算子を逆に実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rmul__:3
 msgid "See :meth:`.ColumnOperators.__mul__`."
-msgstr ""
+msgstr "参照：meth： `.ColumnOperators .__ mul__`。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rshift__:1
 msgid "implement the >> operator."
-msgstr ""
+msgstr "&gt;&gt;演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rshift__:3
 msgid ""
 "Not used by SQLAlchemy core, this is provided for custom operator systems"
 " which want to use >> as an extension point."
-msgstr ""
+msgstr "SQLAlchemyコアでは使用されていませんが、&gt;&gt;を拡張ポイントとして使用するカスタム演算子システム用に提供されています。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rsub__:1
 msgid "Implement the ``-`` operator in reverse."
-msgstr ""
+msgstr "`` -``演算子を逆に実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rsub__:3
 msgid "See :meth:`.ColumnOperators.__sub__`."
-msgstr ""
+msgstr "参照：meth： `.ColumnOperators .__ sub__`。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rtruediv__:1
 msgid "Implement the ``//`` operator in reverse."
-msgstr ""
+msgstr "`` // ``演算子を逆に実装してください。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__rtruediv__:3
 msgid "See :meth:`.ColumnOperators.__truediv__`."
-msgstr ""
+msgstr "参照：meth： `.ColumnOperators .__ truediv__`。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__setattr__:1
 msgid "Implement setattr(self, name, value)."
-msgstr ""
+msgstr "setattr（self、name、value）を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__sizeof__:1
 msgid "size of object in memory, in bytes"
-msgstr ""
+msgstr "メモリ内のオブジェクトのサイズ（バイト単位）"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__str__:1
 msgid "Return str(self)."
-msgstr ""
+msgstr "str（self）を返します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__sub__:3
 msgid "In a column context, produces the clause ``a - b``."
-msgstr ""
+msgstr "列コンテキストでは、 `` a  -  b``という節が生成されます。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__subclasshook__:1
 msgid "Abstract classes can override this to customize issubclass()."
-msgstr ""
+msgstr "抽象クラスはこれをオーバーライドしてissubclass（）をカスタマイズできます。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__subclasshook__:3
 msgid ""
@@ -3386,23 +3370,23 @@ msgid ""
 "return True, False or NotImplemented.  If it returns NotImplemented, the "
 "normal algorithm is used.  Otherwise, it overrides the normal algorithm "
 "(and the outcome is cached)."
-msgstr ""
+msgstr "これは早い段階でabc.ABCMeta .__ subclasscheck __（）によって呼び出されます。 True、FalseまたはNotImplementedを返します。 NotImplementedを返す場合は、通常のアルゴリズムが使用されます。それ以外の場合は、通常のアルゴリズムをオーバーライドします（結果はキャッシュされます）。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.__truediv__:1
 msgid "Implement the ``//`` operator."
-msgstr ""
+msgstr "`` // ``演算子を実装します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.operate:1
 #: sqlalchemy.sql.operators.Operators.operate:1
 msgid "Operate on an argument."
-msgstr ""
+msgstr "引数に基づいて操作します。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.operate:3
 #: sqlalchemy.sql.operators.Operators.operate:3
 msgid ""
 "This is the lowest level of operation, raises "
 ":class:`NotImplementedError` by default."
-msgstr ""
+msgstr "これは最低レベルの操作です：class：デフォルトでは `NotImplementedError`です。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.operate:6
 #: sqlalchemy.sql.operators.Operators.operate:6
@@ -3410,60 +3394,60 @@ msgid ""
 "Overriding this on a subclass can allow common behavior to be applied to "
 "all operations. For example, overriding :class:`.ColumnOperators` to "
 "apply ``func.lower()`` to the left and right side::"
-msgstr ""
+msgstr "これをサブクラスでオーバーライドすると、すべての操作に共通の動作を適用できます。たとえば、：class： `.ColumnOperators`をオーバーライドして、` `func.lower（）` `を左右に適用します："
 
 #: of sqlalchemy.sql.operators.ColumnOperators.operate:16
 #: sqlalchemy.sql.operators.Operators.operate:16
 msgid "Operator callable."
-msgstr ""
+msgstr "オペレータ呼び出し可能。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.operate:17
 #: sqlalchemy.sql.operators.Operators.operate:17
 msgid ""
 "the 'other' side of the operation. Will be a single scalar for most "
 "operations."
-msgstr ""
+msgstr "操作の「その他」側ほとんどの操作で単一のスカラーになります。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.operate:19
 #: sqlalchemy.sql.operators.Operators.operate:19
 msgid ""
 "modifiers.  These may be passed by special operators such as "
 ":meth:`ColumnOperators.contains`."
-msgstr ""
+msgstr "修飾語。これらは、次のような特別な演算子によって渡されます：meth： `ColumnOperators.contains`。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.reverse_operate:1
 #: sqlalchemy.sql.operators.Operators.reverse_operate:1
 msgid "Reverse operate on an argument."
-msgstr ""
+msgstr "引数に対して逆演算を行います。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.reverse_operate:3
 #: sqlalchemy.sql.operators.Operators.reverse_operate:3
 msgid "Usage is the same as :meth:`operate`."
-msgstr ""
+msgstr "使い方は：meth： `operate`と同じです。"
 
 #: of sqlalchemy.sql.operators.ColumnOperators.timetuple:1
 msgid "Hack, allows datetime objects to be compared on the LHS."
-msgstr ""
+msgstr "Hackでは、日時オブジェクトをLHS上で比較することができます。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs:1
 msgid ""
 "Establish the ability for a class to have dialect-specific arguments with"
 " defaults and constructor validation."
-msgstr ""
+msgstr "クラスがデフォルトとコンストラクタの検証で方言固有の引数を持つ能力を確立する。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs:4
 msgid ""
 "The :class:`.DialectKWArgs` interacts with the "
 ":attr:`.DefaultDialect.construct_arguments` present on a dialect."
-msgstr ""
+msgstr "：class： `.DialectKWArgs`は、方言の：attr：` .DefaultDialect.construct_arguments`と対話します。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs:9
 msgid ":attr:`.DefaultDialect.construct_arguments`"
-msgstr ""
+msgstr "：attr： `.DefaultDialect.construct_arguments`"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.argument_for:1
 msgid "Add a new kind of dialect-specific keyword argument for this class."
-msgstr ""
+msgstr "このクラスの新しい種類の方言固有のキーワード引数を追加します。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.argument_for:9
 msgid ""
@@ -3471,7 +3455,7 @@ msgid ""
 "adding extra arguments to the :attr:`.DefaultDialect.construct_arguments`"
 " dictionary. This dictionary provides a list of argument names accepted "
 "by various schema-level constructs on behalf of a dialect."
-msgstr ""
+msgstr "：meth： `.DialectKWArgs.argument_for`メソッドは：attr：` .DefaultDialect.construct_arguments`ディクショナリに余分な引数を追加する引数ごとの方法です。この辞書は、方言に代わってさまざまなスキーマレベルの構造によって受け入れられる引数名のリストを提供します。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.argument_for:15
 msgid ""
@@ -3479,7 +3463,7 @@ msgid ""
 "data member of the dialect class.  The use case for ad-hoc addition of "
 "argument names is typically for end-user code that is also using a custom"
 " compilation scheme which consumes the additional arguments."
-msgstr ""
+msgstr "新しい方言は通常、この辞書を一度に方言クラスのデータメンバーとして指定する必要があります。引数名のアドホックな追加のユースケースは、通常、追加の引数を消費するカスタムコンパイルスキームも使用するエンドユーザーコード用です。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.argument_for:20
 msgid ""
@@ -3492,22 +3476,22 @@ msgid ""
 "specified on behalf of this dialect already.  All dialects packaged "
 "within SQLAlchemy include this collection, however for third party "
 "dialects, support may vary."
-msgstr ""
+msgstr "方言の名前。方言はlocatableでなければなりません。さもなければ：class： `.NoSuchModuleError`が送出されます。ダイアレクトには、既存の：attr： `.DefaultDialect.construct_arguments`コレクションも含まれていなければなりません。これはキーワード引数の検証とデフォルトシステムに参加していることを示します。それ以外の場合は：class：` .ArgumentError`が送出されます。方言にこのコレクションが含まれていない場合は、既にこの方言の代わりにキーワード引数を指定できます。 SQLAlchemy内にパッケージ化されたすべての方言にはこのコレクションが含まれていますが、サードパーティの方言ではサポートが異なる場合があります。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.argument_for:31
 msgid "name of the parameter."
-msgstr ""
+msgstr "パラメータの名前。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.argument_for:33
 msgid "default value of the parameter."
-msgstr ""
+msgstr "パラメータのデフォルト値。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.dialect_kwargs:1
 #: sqlalchemy.sql.base.DialectKWArgs.dialect_options:1
 msgid ""
 "A collection of keyword arguments specified as dialect-specific options "
 "to this construct."
-msgstr ""
+msgstr "この構文に対してダイアレクト固有のオプションとして指定されたキーワード引数の集合。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.dialect_kwargs:4
 msgid ""
@@ -3515,164 +3499,164 @@ msgid ""
 "format.  Only arguments that were actually passed are included; unlike "
 "the :attr:`.DialectKWArgs.dialect_options` collection, which contains all"
 " options known by this dialect including defaults."
-msgstr ""
+msgstr "これらの議論は、 <dialect> _ <kwarg> ``フォーマット。実際に渡された引数のみが含まれます。 ：attr： `.DialectKWArgs.dialect_options`コレクションと異なり、デフォルトを含むこの方言で知られているすべてのオプションが含まれています。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.dialect_kwargs:9
 msgid ""
 "The collection is also writable; keys are accepted of the form "
 "``<dialect>_<kwarg>`` where the value will be assembled into the list of "
 "options."
-msgstr ""
+msgstr "コレクションは書き込み可能です。キーは `` <dialect> _ <kwarg> ``は値がオプションのリストに集められる場所です。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.dialect_kwargs:15
 msgid "The :attr:`.DialectKWArgs.dialect_kwargs` collection is now writable."
-msgstr ""
+msgstr "：attr： `.DialectKWArgs.dialect_kwargs`コレクションが書き込み可能になりました。"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.dialect_kwargs:20
 msgid ":attr:`.DialectKWArgs.dialect_options` - nested dictionary form"
-msgstr ""
+msgstr "：attr： `.DialectKWArgs.dialect_options`  - ネストされた辞書形式"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.dialect_options:4
 msgid ""
 "This is a two-level nested registry, keyed to ``<dialect_name>`` and "
 "``<argument_name>``.  For example, the ``postgresql_where`` argument "
 "would be locatable as::"
-msgstr ""
+msgstr "これは2レベルのネストされたレジストリで、 `` <dialect_name> ``と `` <argument_name> ``。たとえば、 `` postgresql_where``引数は::"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.dialect_options:14
 msgid ":attr:`.DialectKWArgs.dialect_kwargs` - flat dictionary form"
-msgstr ""
+msgstr "：attr： `.DialectKWArgs.dialect_kwargs`  - フラット辞書形式"
 
 #: of sqlalchemy.sql.base.DialectKWArgs.kwargs:1
 msgid "A synonym for :attr:`.DialectKWArgs.dialect_kwargs`."
-msgstr ""
+msgstr "attr： `.DialectKWArgs.dialect_kwargs`の同義語です。"
 
 #: of sqlalchemy.sql.expression.Extract:1
 msgid "Represent a SQL EXTRACT clause, ``extract(field FROM expr)``."
-msgstr ""
+msgstr "SQL EXTRACT句、 `` extract（field FROM expr） ``を表します。"
 
 #: of sqlalchemy.sql.elements.False_:1
 msgid "Represent the ``false`` keyword, or equivalent, in a SQL statement."
-msgstr ""
+msgstr "SQL文で `` false``キーワード、またはこれと同等のものを表します。"
 
 #: of sqlalchemy.sql.elements.False_:3
 msgid ""
 ":class:`.False_` is accessed as a constant via the :func:`.false` "
 "function."
-msgstr ""
+msgstr "：class： `.False_`は：func：` .false`関数を介して定数としてアクセスされます。"
 
 #: of sqlalchemy.sql.expression.FunctionFilter:1
 msgid "Represent a function FILTER clause."
-msgstr ""
+msgstr "関数FILTER句を表します。"
 
 #: of sqlalchemy.sql.expression.FunctionFilter:3
 msgid ""
 "This is a special operator against aggregate and window functions, which "
 "controls which rows are passed to it. It's supported only by certain "
 "database backends."
-msgstr ""
+msgstr "これは、集計関数とウィンドウ関数に対する特別な演算子で、渡される行を制御します。特定のデータベースバックエンドだけがサポートしています。"
 
 #: of sqlalchemy.sql.expression.FunctionFilter:7
 msgid ""
 "Invocation of :class:`.FunctionFilter` is via "
 ":meth:`.FunctionElement.filter`::"
-msgstr ""
+msgstr "：class： `.FunctionFilter`の呼び出しは、via：meth：` .FunctionElement.filter` ::"
 
 #: of sqlalchemy.sql.expression.FunctionFilter.filter:1
 msgid "Produce an additional FILTER against the function."
-msgstr ""
+msgstr "機能に対して追加のFILTERを生成します。"
 
 #: of sqlalchemy.sql.expression.FunctionFilter.filter:3
 msgid ""
 "This method adds additional criteria to the initial criteria set up by "
 ":meth:`.FunctionElement.filter`."
-msgstr ""
+msgstr "このメソッドは、：meth： `.FunctionElement.filter`によって設定された初期条件に追加の基準を追加します。"
 
 #: of sqlalchemy.sql.expression.FunctionFilter.filter:6
 msgid "Multiple criteria are joined together at SQL render time via ``AND``."
-msgstr ""
+msgstr "SQLのレンダリング時に、複数の基準が「AND」で結合されます。"
 
 #: of sqlalchemy.sql.expression.FunctionFilter.over:1
 msgid "Produce an OVER clause against this filtered function."
-msgstr ""
+msgstr "このフィルタ処理された関数に対してOVER句を生成します。"
 
 #: of sqlalchemy.sql.expression.FunctionFilter.over:6
 msgid "The expression::"
-msgstr ""
+msgstr "表現：："
 
 #: of sqlalchemy.sql.expression.FunctionFilter.over:10
 msgid "is shorthand for::"
-msgstr ""
+msgstr "::の省略形です"
 
 #: of sqlalchemy.sql.expression.FunctionFilter.over:15
 msgid "See :func:`~.expression.over` for a full description."
-msgstr ""
+msgstr "See：func： `〜.expression.over`で詳しく説明しています。"
 
 #: of sqlalchemy.sql.expression.Label:1
 msgid "Represents a column label (AS)."
-msgstr ""
+msgstr "列ラベル（AS）を表します。"
 
 #: of sqlalchemy.sql.expression.Label:3
 msgid ""
 "Represent a label, as typically applied to any column-level element using"
 " the ``AS`` sql keyword."
-msgstr ""
+msgstr "`` AS``のsqlキーワードを使用して、通常はどの列レベルの要素にも適用されるラベルを表します。"
 
 #: of sqlalchemy.sql.elements.Null:1
 msgid "Represent the NULL keyword in a SQL statement."
-msgstr ""
+msgstr "SQL文でNULLキーワードを表します。"
 
 #: of sqlalchemy.sql.elements.Null:3
 msgid ":class:`.Null` is accessed as a constant via the :func:`.null` function."
-msgstr ""
+msgstr "：class： `.Null`は：func：` .null`関数を介して定数としてアクセスされます。"
 
 #: of sqlalchemy.sql.expression.Over:1
 msgid "Represent an OVER clause."
-msgstr ""
+msgstr "OVER句を表します。"
 
 #: of sqlalchemy.sql.expression.Over:3
 msgid ""
 "This is a special operator against a so-called \"window\" function, as "
 "well as any aggregate function, which produces results relative to the "
 "result set itself.  It's supported only by certain database backends."
-msgstr ""
+msgstr "これは、いわゆる\ &quot;window \&quot;関数に対する特別な演算子であり、結果セット自体に関連する結果を生成する集約関数です。特定のデータベースバックエンドだけがサポートしています。"
 
 #: of sqlalchemy.sql.expression.Over.func:1
 msgid "the element referred to by this :class:`.Over` clause."
-msgstr ""
+msgstr "this：class： `.Over`節で参照される要素です。"
 
 #: of sqlalchemy.sql.expression.Over.func:4
 msgid ""
 "the ``func`` element has been renamed to ``.element``.  The two "
 "attributes are synonymous though ``.func`` is read-only."
-msgstr ""
+msgstr "`` func``要素の名前が `` .element``に変更されました。 `` .func``は読み込み専用ですが、2つの属性は同義です。"
 
 #: of sqlalchemy.sql.expression.TextClause:1
 msgid "Represent a literal SQL text fragment."
-msgstr ""
+msgstr "リテラルSQLテキスト断片を表します。"
 
 #: of sqlalchemy.sql.expression.TextClause:11
 msgid ""
 "The :class:`.Text` construct is produced using the :func:`.text` "
 "function; see that function for full documentation."
-msgstr ""
+msgstr "：class： `.Text`構造体は、：func：` .text`関数を使って生成されます。詳しくはその関数を見てください。"
 
 #: of sqlalchemy.sql.expression.TextClause.bindparams:1
 msgid ""
 "Establish the values and/or types of bound parameters within this "
 ":class:`.TextClause` construct."
-msgstr ""
+msgstr "この：class： `.TextClause`構造の中で、バウンド・パラメーターの値や型を確立してください。"
 
 #: of sqlalchemy.sql.expression.TextClause.bindparams:4
 msgid "Given a text construct such as::"
-msgstr ""
+msgstr "::のようなテキスト構造を与えられた"
 
 #: of sqlalchemy.sql.expression.TextClause.bindparams:10
 msgid ""
 "the :meth:`.TextClause.bindparams` method can be used to establish the "
 "initial value of ``:name`` and ``:timestamp``, using simple keyword "
 "arguments::"
-msgstr ""
+msgstr "：meth： `.TextClause.bindparams`メソッドは、単純なキーワード引数を使って、` `：name``と` `：timestamp``の初期値を確立するために使用できます::"
 
 #: of sqlalchemy.sql.expression.TextClause.bindparams:17
 msgid ""
@@ -3681,7 +3665,7 @@ msgid ""
 "``datetime.datetime(2012, 10, 8, 15, 12, 5)``, respectively.  The types "
 "will be inferred from the values given, in this case :class:`.String` and"
 " :class:`.DateTime`."
-msgstr ""
+msgstr "上記の場合、new：class： `.BindParameter`オブジェクトは` `name``と` `timestamp``という名前で生成され、` `jack``と` `datetime.datetime（2012,10,8 、15、12、5） ``である。型は与えられた値から推論されます。この場合は、class： `.String`と：class：` .DateTime`です。"
 
 #: of sqlalchemy.sql.expression.TextClause.bindparams:24
 msgid ""
@@ -3689,20 +3673,20 @@ msgid ""
 "argument can be used in which to specify :func:`.bindparam` constructs "
 "directly.  These constructs must include at least the ``key`` argument, "
 "then an optional value and type::"
-msgstr ""
+msgstr "特定の型指定の振る舞いが必要な場合は、位置指定の `` * binds``引数を使用して、func： `.bindparam`を直接指定することができます。これらの構造体は、少なくとも `` key``引数と、オプションの値と型::"
 
 #: of sqlalchemy.sql.expression.TextClause.bindparams:35
 msgid ""
 "Above, we specified the type of :class:`.DateTime` for the ``timestamp`` "
 "bind, and the type of :class:`.String` for the ``name`` bind.  In the "
 "case of ``name`` we also set the default value of ``\"jack\"``."
-msgstr ""
+msgstr "上記では、 `` timestamp``バインドには：class： `.DateTime`の型を指定し、` `name``バインドには：class：` .String``の型を指定しました。 `` name``の場合、 `` \ &quot;jack \&quot; ``のデフォルト値も設定します。"
 
 #: of sqlalchemy.sql.expression.TextClause.bindparams:40
 msgid ""
 "Additional bound parameters can be supplied at statement execution time, "
 "e.g.::"
-msgstr ""
+msgstr "追加のバインドされたパラメータは、文の実行時に指定することができます（例："
 
 #: of sqlalchemy.sql.expression.TextClause.bindparams:46
 msgid ""
@@ -3711,26 +3695,26 @@ msgid ""
 "information.  For example, we can call :meth:`.TextClause.bindparams` "
 "first with typing information, and a second time with value information, "
 "and it will be combined::"
-msgstr ""
+msgstr "：meth： `.TextClause.bindparams`メソッドは繰り返し呼び出され、既存の：class：` .BindParameter`オブジェクトを再利用して新しい情報を追加します。たとえば、typing情報で最初に：meth： `.TextClause.bindparams`を呼び出すことができます。また、値情報を使用して2回目に呼び出すことができます。"
 
 #: of sqlalchemy.sql.expression.TextClause.bindparams:64
 msgid ""
 "The :meth:`.TextClause.bindparams` method supersedes the argument "
 "``bindparams`` passed to :func:`~.expression.text`."
-msgstr ""
+msgstr "：meth： `.TextClause.bindparams`メソッドは：func：`〜.expression.text`に渡された引数 `` bindparams``に取って代わるものです。"
 
 #: of sqlalchemy.sql.expression.TextClause.columns:1
 msgid ""
 "Turn this :class:`.TextClause` object into a :class:`.TextAsFrom` object "
 "that can be embedded into another statement."
-msgstr ""
+msgstr "this：class： `.TextClause`オブジェクトを別の文に埋め込むことができる：class：` .TextAsFrom`オブジェクトに入れます。"
 
 #: of sqlalchemy.sql.expression.TextClause.columns:4
 msgid ""
 "This function essentially bridges the gap between an entirely textual "
 "SELECT statement and the SQL expression language concept of a "
 "\"selectable\"::"
-msgstr ""
+msgstr "この関数は、完全にテキストのSELECT文とSQL式言語の概念「\」の間のギャップを本質的に橋渡しします::"
 
 #: of sqlalchemy.sql.expression.TextClause.columns:17
 msgid ""
@@ -3738,7 +3722,7 @@ msgid ""
 ":meth:`.TextClause.columns` method positionally.  These :func:`.column` "
 "elements now become first class elements upon the :attr:`.TextAsFrom.c` "
 "column collection, just like any other selectable."
-msgstr ""
+msgstr "上では、一連の：func： `.column`要素を：meth：` .TextClause.columns`メソッドに位置的に渡します。これら：func： `.column`要素は、他の選択肢と同様に、：attr：` .TextAsFrom.c`列コレクションのファーストクラスの要素になりました。"
 
 #: of sqlalchemy.sql.expression.TextClause.columns:22
 msgid ""
@@ -3748,13 +3732,13 @@ msgid ""
 "processing systems may be used on the return values. This is often needed"
 " for types such as date or boolean types, as well as for unicode "
 "processing on some dialect configurations::"
-msgstr ""
+msgstr "私たちが：meth： `.TextClause.columns`に渡す列式も入力することができます。これを行うと、class： `.TypeEngine`オブジェクトがカラムの有効な戻り型になり、SQLAlchemyの結果セット処理システムが戻り値で使用されるようになります。これは、日付やブール型などの型や、いくつかの方言構成でのUnicode処理に必要なことがよくあります。"
 
 #: of sqlalchemy.sql.expression.TextClause.columns:39
 msgid ""
 "As a shortcut to the above syntax, keyword arguments referring to types "
 "alone may be used, if only type conversion is needed::"
-msgstr ""
+msgstr "上記のシンタックスのショートカットとして、タイプ変換のみが必要な場合は、タイプを参照するキーワード引数を使用することができます。"
 
 #: of sqlalchemy.sql.expression.TextClause.columns:52
 msgid ""
@@ -3764,99 +3748,99 @@ msgid ""
 " columns from our model to :meth:`.TextClause.columns`, the result set "
 "will match to those columns positionally, meaning the name or origin of "
 "the column in the textual SQL doesn't matter::"
-msgstr ""
+msgstr "位置の形式：meth： `.TextClause.columns`は、**ポジション列ターゲティング**のユニークな機能も提供します。これは、複雑なテキストクエリでORMを使用する場合に特に便利です。モデルの列を：meth： `.TextClause.columns`に指定すると、結果セットはそれらの列に位置的に一致します。これは、テキストSQLの列の名前または起点が問題ではないことを意味します。"
 
 #: of sqlalchemy.sql.expression.TextClause.columns:73
 msgid ""
 "the :meth:`.TextClause.columns` method now offers positional column "
 "targeting in the result set when the column expressions are passed purely"
 " positionally."
-msgstr ""
+msgstr "：meth： `.TextClause.columns`メソッドは、列式が純粋に位置的に渡されたときに、結果セットに位置指定の列ターゲットを提供するようになりました。"
 
 #: of sqlalchemy.sql.expression.TextClause.columns:77
 msgid ""
 "The :meth:`.TextClause.columns` method provides a direct route to calling"
 " :meth:`.FromClause.alias` as well as :meth:`.SelectBase.cte` against a "
 "textual SELECT statement::"
-msgstr ""
+msgstr "：meth： `.TextClause.columns`メソッドは：meth：` .FromClause.alias`だけでなく、：meth： `.SelectBase.cte`をテキストSELECTステートメントに対して呼び出すための直接ルートを提供します::"
 
 #: of sqlalchemy.sql.expression.TextClause.columns:85
 msgid ""
 ":func:`.text` can now be converted into a fully featured \"selectable\" "
 "construct using the :meth:`.TextClause.columns` method.  This method "
 "supersedes the ``typemap`` argument to :func:`.text`."
-msgstr ""
+msgstr "：func： `.text`は：meth：` .TextClause.columns`メソッドを使って完全に機能する\ &quot;選択可能な&quot;構造に変換できるようになりました。このメソッドは、 `` typemap``引数を：func： `.text`に取って代わるものです。"
 
 #: of sqlalchemy.sql.expression.Tuple:1
 msgid "Represent a SQL tuple."
-msgstr ""
+msgstr "SQLタプルを表します。"
 
 #: of sqlalchemy.sql.expression.WithinGroup:1
 msgid "Represent a WITHIN GROUP (ORDER BY) clause."
-msgstr ""
+msgstr "WITHIN GROUP（ORDER BY）節を表します。"
 
 #: of sqlalchemy.sql.expression.WithinGroup:3
 msgid ""
 "This is a special operator against so-called \"ordered set aggregate\" "
 "and \"hypothetical set aggregate\" functions, including "
 "``percentile_cont()``, ``rank()``, ``dense_rank()``, etc."
-msgstr ""
+msgstr "これは、 `` percentile_cont（） ``、 `` rank（） ``、 `` dense_rank（） ``を含む、いわゆる\ &quot;順序集合集約\&quot;と\ &quot;仮集合集約\&quot;関数に対する特別な演算子です。等"
 
 #: of sqlalchemy.sql.expression.WithinGroup:8
 msgid ""
 "It's supported only by certain database backends, such as PostgreSQL, "
 "Oracle and MS SQL Server."
-msgstr ""
+msgstr "これはPostgreSQL、Oracle、MS SQL Serverなどの特定のデータベースバックエンドでのみサポートされています。"
 
 #: of sqlalchemy.sql.expression.WithinGroup:11
 msgid ""
 "The :class:`.WithinGroup` construct extracts its type from the method "
 ":meth:`.FunctionElement.within_group_type`.  If this returns ``None``, "
 "the function's ``.type`` is used."
-msgstr ""
+msgstr "：class： `.WithinGroup`構造体は、メソッド：meth：` .FunctionElement.within_group_type`から型を抽出します。これが `` None``を返すと、関数の `` .type``が使われます。"
 
 #: of sqlalchemy.sql.expression.WithinGroup.over:1
 msgid "Produce an OVER clause against this :class:`.WithinGroup` construct."
-msgstr ""
+msgstr "これに対して：class： `.WithinGroup`構造体に対してOVER句を生成します。"
 
 #: of sqlalchemy.sql.expression.WithinGroup.over:4
 msgid ""
 "This function has the same signature as that of "
 ":meth:`.FunctionElement.over`."
-msgstr ""
+msgstr "この関数は：meth： `.FunctionElement.over`と同じシグネチャを持ちます。"
 
 #: of sqlalchemy.sql.elements.True_:1
 msgid "Represent the ``true`` keyword, or equivalent, in a SQL statement."
-msgstr ""
+msgstr "SQL文中の `` true``キーワード、またはこれと同等のものを表します。"
 
 #: of sqlalchemy.sql.elements.True_:3
 msgid ":class:`.True_` is accessed as a constant via the :func:`.true` function."
-msgstr ""
+msgstr "：class： `.True_`は：func：` .true`関数によって定数としてアクセスされます。"
 
 #: of sqlalchemy.sql.expression.TypeCoerce:1
 msgid "Represent a Python-side type-coercion wrapper."
-msgstr ""
+msgstr "Python側の型強制変換ラッパーを表します。"
 
 #: of sqlalchemy.sql.expression.TypeCoerce:3
 msgid ""
 ":class:`.TypeCoerce` supplies the :func:`.expression.type_coerce` "
 "function; see that function for usage details."
-msgstr ""
+msgstr "：class： `.TypeCoerce`は：func：` .expression.type_coerce`関数を提供します。使用法の詳細については、その関数を参照してください。"
 
 #: of sqlalchemy.sql.expression.TypeCoerce:6
 msgid ""
 "The :func:`.type_coerce` function now produces a persistent "
 ":class:`.TypeCoerce` wrapper object rather than translating the given "
 "object in place."
-msgstr ""
+msgstr "：func： `.type_coerce`関数は、指定されたオブジェクトを所定の位置に翻訳するのではなく、persist：class：` .TypeCoerce`ラッパーオブジェクトを生成するようになりました。"
 
 #: of sqlalchemy.sql.expression.TypeCoerce:12
 msgid ":func:`.expression.type_coerce`"
-msgstr ""
+msgstr "：func： `.expression.type_coerce`"
 
 #: of sqlalchemy.sql.operators.custom_op:1
 msgid "Represent a 'custom' operator."
-msgstr ""
+msgstr "「カスタム」演算子を表します。"
 
 #: of sqlalchemy.sql.operators.custom_op:3
 msgid ""
@@ -3865,15 +3849,15 @@ msgid ""
 "create a custom operator callable.  The class can also be used directly "
 "when programmatically constructing expressions.   E.g. to represent the "
 "\"factorial\" operation::"
-msgstr ""
+msgstr "：class： `.custom_op`は通常、：meth：` .Operators.op`または：meth： `.Operators.bool_op`メソッドを使用して呼び出し可能なカスタム演算子を作成するときにインスタンス化されます。このクラスは、プログラムで式を構築するときに直接使用することもできます。例：\ &quot;階乗\&quot;演算を表現する::"
 
 #: of sqlalchemy.sql.operators.custom_op:22
 msgid ":meth:`.Operators.bool_op`"
-msgstr ""
+msgstr "：meth： `.Operators.bool_op`"
 
 #: of sqlalchemy.sql.operators.Operators:1
 msgid "Base of comparison and logical operators."
-msgstr ""
+msgstr "比較演算子と論理演算子のベース。"
 
 #: of sqlalchemy.sql.operators.Operators:3
 msgid ""
@@ -3883,15 +3867,15 @@ msgid ""
 ":meth:`~sqlalchemy.sql.operators.Operators.__and__`, "
 ":meth:`~sqlalchemy.sql.operators.Operators.__or__`, "
 ":meth:`~sqlalchemy.sql.operators.Operators.__invert__`."
-msgstr ""
+msgstr "基本メソッドを実装します：meth： `〜sqlalchemy.sql.operators.Operators.operate`と：meth：`〜sqlalchemy.sql.operators.Operators.reverse_operate`だけでなく、：meth： `〜sqlalchemy.sql.operators.Operators .metric： `〜sqlalchemy.sql.operators.Operators .__ or__`、：meth：`〜sqlalchemy.sql.operators.Operators .__ invert__`を使用します。"
 
 #: of sqlalchemy.sql.operators.Operators:10
 msgid "Usually is used via its most common subclass :class:`.ColumnOperators`."
-msgstr ""
+msgstr "通常は、最も一般的なサブクラスであるclass： `.ColumnOperators`を介して使用されます。"
 
 #: of sqlalchemy.sql.elements.quoted_name:1
 msgid "Represent a SQL identifier combined with quoting preferences."
-msgstr ""
+msgstr "クォーテーション設定と組み合わせたSQL識別子を表します。"
 
 #: of sqlalchemy.sql.elements.quoted_name:3
 msgid ""
@@ -3902,7 +3886,7 @@ msgid ""
 "to not quote the name.  If left at its default of ``None``, quoting "
 "behavior is applied to the identifier on a per-backend basis based on an "
 "examination of the token itself."
-msgstr ""
+msgstr "：class： `.quoted_name`はPythonのunicode / strサブクラスで、特定の識別子名と` `quote``フラグを表します。この `` quote``フラグは、 `` True``または `` False``に設定されている場合、無条件に引用するか、引用しないためにこの識別子の自動引用動作を無効にします。デフォルトの `` None``のままにすると、トークン自体の検査に基づいて、バックエンドごとに識別子に識別子の動作が適用されます。"
 
 #: of sqlalchemy.sql.elements.quoted_name:12
 msgid ""
@@ -3915,7 +3899,7 @@ msgid ""
 " those backends. The ``quote=True`` flag here will prevent this "
 "conversion from occurring to support an identifier that's quoted as all "
 "lower case against such a backend."
-msgstr ""
+msgstr "A：class： `` quote = True``を持つ `.quoted_name`オブジェクトも、いわゆる\&quot; name normalize \ &quot;オプションの場合には変更できません。 Oracle、Firebird、DB2などの特定のデータベースバックエンドでは、大文字と小文字を区別しない名前を大文字で「正規化」します。これらのバックエンドのSQLAlchemy方言は、SQLAlchemyの小文字を区別しない大文字と小文字を区別しない慣習から、それらのバックエンドの大文字と小文字を区別しない慣習的な慣習に変換します。 `` quote = True``フラグは、このようなバックエンドに対してすべて小文字で引用される識別子をサポートするために、この変換が行われないようにします。"
 
 #: of sqlalchemy.sql.elements.quoted_name:23
 msgid ""
@@ -3925,43 +3909,43 @@ msgid ""
 " the name to any function that receives a name which can be quoted.  Such"
 " as to use the :meth:`.Engine.has_table` method with an unconditionally "
 "quoted name::"
-msgstr ""
+msgstr "：class： `.quoted_name`オブジェクトは通常：class：` .Table`、：class： `.Column`などのようなキースキーマ構造の名前を指定するときに自動的に作成されます。クラスは、引用可能な名前を受け取る関数の名前として明示的に渡すこともできます。無条件に引用された名前を持つ：meth： `.Engine.has_table`メソッドのようなもの::"
 
 #: of sqlalchemy.sql.elements.quoted_name:36
 msgid ""
 "The above logic will run the \"has table\" logic against the Oracle "
 "backend, passing the name exactly as ``\"some_table\"`` without "
 "converting to upper case."
-msgstr ""
+msgstr "上記のロジックは、Oracleのバックエンドに対して\ &quot;has table \&quot;ロジックを実行し、名前を `` \ &quot;some_table \&quot; ``としてそのまま大文字に変換せずに渡します。"
 
 #: of sqlalchemy.sql.elements.quoted_name:42
 msgid ""
 "The :class:`.quoted_name` construct is now importable from "
 "``sqlalchemy.sql``, in addition to the previous location of "
 "``sqlalchemy.sql.elements``."
-msgstr ""
+msgstr "：class： `.quoted_name`構造体は、` `sqlalchemy.sql.elements``の以前の場所に加えて、` `sqlalchemy.sql``からインポート可能になりました。"
 
 #: of sqlalchemy.sql.expression.UnaryExpression:1
 msgid "Define a 'unary' expression."
-msgstr ""
+msgstr "「単項式」の式を定義します。"
 
 #: of sqlalchemy.sql.expression.UnaryExpression:3
 msgid ""
 "A unary expression has a single column expression and an operator.  The "
 "operator can be placed on the left (where it is called the 'operator') or"
 " right (where it is called the 'modifier') of the column expression."
-msgstr ""
+msgstr "単項式は、単一の列式と演算子を持ちます。演算子は、列式の左側（「演算子」と呼ばれます）または右側（「修飾子」と呼ばれます）に配置できます。"
 
 #: of sqlalchemy.sql.expression.UnaryExpression:8
 msgid ""
 ":class:`.UnaryExpression` is the basis for several unary operators "
 "including those used by :func:`.desc`, :func:`.asc`, :func:`.distinct`, "
 ":func:`.nullsfirst` and :func:`.nullslast`."
-msgstr ""
+msgstr "：class： `.UnaryExpression`は：func：` .desc`、：func： `.asc`、：func：` .distinct`、：func： `.nullsfirst`およびで使用されるものを含むいくつかの単項演算子の基礎です。 ：func： `.nullslast`。"
 
 #: of sqlalchemy.sql.expression.UnaryExpression.compare:1
 msgid ""
 "Compare this :class:`UnaryExpression` against the given "
 ":class:`.ClauseElement`."
-msgstr ""
+msgstr "これを：class： `UnaryExpression`と比較してください：class：` .ClauseElement`。"
 

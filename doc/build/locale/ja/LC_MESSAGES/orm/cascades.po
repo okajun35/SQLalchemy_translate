@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/cascades.rst:4
 msgid "Cascades"
-msgstr ""
+msgstr "カスケード"
 
 #: ../../orm/cascades.rst:6
 msgid ""
@@ -29,7 +19,7 @@ msgid ""
 ":class:`.Session` should be propagated to items referred to by that "
 "relationship (e.g. \"child\" objects), and is affected by the "
 ":paramref:`.relationship.cascade` option."
-msgstr ""
+msgstr "マッパーは：func： `〜sqlalchemy.orm.relationship`構造体に対して、設定可能：term：` cascade`の動作をサポートしています。これは特定の：class： `.Session`に関連する\&quot;親\ &quot;オブジェクトに対する操作が、その関係（例えば\&quot;子\ &quot;オブジェクト）によって参照される項目にどのように伝播され、 ：paramref： `.relationship.cascade`オプションです。"
 
 #: ../../orm/cascades.rst:13
 msgid ""
@@ -39,21 +29,21 @@ msgid ""
 "and :ref:`cascade_delete_orphan` options; these settings are appropriate "
 "for related objects which only exist as long as they are attached to "
 "their parent, and are otherwise deleted."
-msgstr ""
+msgstr "カスケードのデフォルト動作は、いわゆる：ref： `cascade_save_update`と：ref：` cascade_merge`設定のカスケードに限定されています。カスケードの典型的な &quot;代替&quot;設定は、：ref： `cascade_delete`と：ref：` cascade_delete_orphan`オプションを追加することです。これらの設定は、親にアタッチされている限り存在し、そうでない場合は削除される関連オブジェクトに適しています。"
 
 #: ../../orm/cascades.rst:20
 msgid ""
 "Cascade behavior is configured using the "
 ":paramref:`~.relationship.cascade` option on "
 ":func:`~sqlalchemy.orm.relationship`::"
-msgstr ""
+msgstr "カスケードの動作は：func： `〜sqlalchemy.orm.relationship` :: paramref：`〜.relationship.cascade`オプションを使って設定します"
 
 #: ../../orm/cascades.rst:30
 msgid ""
 "To set cascades on a backref, the same flag can be used with the "
 ":func:`~.sqlalchemy.orm.backref` function, which ultimately feeds its "
 "arguments back into :func:`~sqlalchemy.orm.relationship`::"
-msgstr ""
+msgstr "バックリファレンスでカスケードを設定するには、同じフラグを：func： `〜.sqlalchemy.orm.backref`関数で使用することができます。これは最終的に引数をfunc：`〜sqlalchemy.orm.relationship` ::に戻します。"
 
 #: ../../orm/cascades.rst:43
 msgid ""
@@ -65,7 +55,7 @@ msgid ""
 "parentchild.html>`_. If cascades are confusing, we'll refer to their "
 "conclusion, stating \"The sections we have just covered can be a bit "
 "confusing. However, in practice, it all works out nicely.\""
-msgstr ""
+msgstr "SQLAlchemyのリレーションシップに関するカスケード動作の概念とそれらを構成するオプションは、主にHibernate ORMの同様の機能から導出されます。 Hibernateは、「例：親/子」のようないくつかの場所で\ &quot;カスケード\&quot;を参照します。 <https://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/example-parentchild.html> `_。カスケードが混乱している場合は、「ここで取り上げたセクションはちょっと混乱するかもしれませんが、実際にはうまくいきます。"
 
 #: ../../orm/cascades.rst:52
 msgid ""
@@ -76,18 +66,18 @@ msgid ""
 " using it in conjunction with ``delete-orphan`` indicates that the child "
 "object should follow along with its parent in all cases, and be deleted "
 "once it is no longer associated with that parent."
-msgstr ""
+msgstr "デフォルト値：paramref： `〜.relationship.cascade`は` `save-update、merge``です。このパラメータの典型的な設定は、 ``すべて ``またはより一般的に ``すべて、削除孤立した ``のいずれかです。 `` all``シンボルは、 `` save-update、merge、refresh-expire、expunge、delete`の同義語で、 `` delete-orphan``と組み合わせて使用​​すると、子オブジェクトがその親はすべての場合において、その親とはもはや関連付けられなくなると削除される。"
 
 #: ../../orm/cascades.rst:60
 msgid ""
 "The list of available values which can be specified for the "
 ":paramref:`~.relationship.cascade` parameter are described in the "
 "following subsections."
-msgstr ""
+msgstr "：paramref： `〜.relationship.cascade`パラメータで指定できる使用可能な値のリストは、次のサブセクションで説明しています。"
 
 #: ../../orm/cascades.rst:66
 msgid "save-update"
-msgstr ""
+msgstr "セーブ・アップデート"
 
 #: ../../orm/cascades.rst:68
 msgid ""
@@ -96,13 +86,13 @@ msgid ""
 "with it via this :func:`.relationship` should also be added to that same "
 ":class:`.Session`.  Suppose we have an object ``user1`` with two related "
 "objects ``address1``, ``address2``::"
-msgstr ""
+msgstr "`` save-update``カスケードは、：meth： `.Session.add`を介してオブジェクトが：class：` .Session`に置かれたときに、this：func： `.relationship`クラス： `.Session`：同じものに追加する必要があります。 2つの関連するオブジェクト `` address1``、 `` address2`` ::を持つオブジェクト `` user1``を持っているとします。"
 
 #: ../../orm/cascades.rst:78
 msgid ""
 "If we add ``user1`` to a :class:`.Session`, it will also add "
 "``address1``, ``address2`` implicitly::"
-msgstr ""
+msgstr "：class： `.Session`に` `user1``を追加すると、` `address1``、` `address2``が暗黙的に追加されます::"
 
 #: ../../orm/cascades.rst:86
 msgid ""
@@ -110,7 +100,7 @@ msgid ""
 "that are already present in a :class:`.Session`.  If we add a third "
 "object, ``address3`` to the ``user1.addresses`` collection, it becomes "
 "part of the state of that :class:`.Session`::"
-msgstr ""
+msgstr "`` save-update``カスケードは：class： `.Session`に既に存在するオブジェクトの属性操作にも影響します。 3番目のオブジェクト `` address3``を `` user1.addresses``コレクションに追加すると、その状態の一部になります：class： `.Session` ::"
 
 #: ../../orm/cascades.rst:96
 msgid ""
@@ -120,7 +110,7 @@ msgid ""
 " a parent object; this is so that the flush process may handle that "
 "related object appropriately. This case can usually only arise if an "
 "object is removed from one :class:`.Session` and added to another::"
-msgstr ""
+msgstr "`` save-update``はコレクションから削除された永続オブジェクトであるか、場合によってはスカラー属性も親オブジェクトの：class： `.Session`に引っ張られるという驚くべき振る舞いをします。これは、フラッシュ処理が関連するオブジェクトを適切に処理できるようにするためです。このケースは通常、オブジェクトがクラス： `.Session`から削除され、別のオブジェクトに追加された場合にのみ発生します::"
 
 #: ../../orm/cascades.rst:113
 msgid ""
@@ -129,7 +119,7 @@ msgid ""
 ":meth:`.Session.add` to register an entire structure of objects within "
 "that :class:`.Session` at once.   While it can be disabled, there is "
 "usually not a need to do so."
-msgstr ""
+msgstr "`` save-update``カスケードはデフォルトでオンになっており、通常は当然のことです。 ：meth： `.Session.add`を一回呼び出すだけで、class：` .Session`内のオブジェクトの構造体全体を一度に登録することができるので、コードが簡単になります。それは無効にすることができますが、通常そうする必要はありません。"
 
 #: ../../orm/cascades.rst:119
 msgid ""
@@ -141,11 +131,11 @@ msgid ""
 "this pattern, as well as how to modify its behavior using the "
 ":paramref:`~.relationship.cascade_backrefs` flag, is discussed in the "
 "section :ref:`backref_cascade`."
-msgstr ""
+msgstr "`` save-update``カスケードが途中で時々起こる1つのケースは、双方向関係（例えば、バックレファレンス）の両方向で起こるということです。つまり、特定の親との子オブジェクトの関連が、親オブジェクトのエフェクトはその子オブジェクトの暗黙的に関連付けられています：class： `.Session`;このパターンと、：paramref： `〜.relationship.cascade_backrefs`フラグを使って動作を変更する方法については、ref：` backref_cascade`のセクションで説明します。"
 
 #: ../../orm/cascades.rst:130
 msgid "delete"
-msgstr ""
+msgstr "削除"
 
 #: ../../orm/cascades.rst:132
 msgid ""
@@ -153,19 +143,19 @@ msgid ""
 "for deletion, its related \"child\" objects should also be marked for "
 "deletion.   If for example we we have a relationship ``User.addresses`` "
 "with ``delete`` cascade configured::"
-msgstr ""
+msgstr "`` delete``カスケードは、\ &quot;親\&quot;オブジェクトが削除対象としてマークされている場合、その関連する &quot;子&quot;オブジェクトも削除対象としてマークする必要があることを示します。たとえば、 `` User.addresses``と `` delete``カスケードを設定した関係があるとします::"
 
 #: ../../orm/cascades.rst:142
 msgid ""
 "If using the above mapping, we have a ``User`` object and two related "
 "``Address`` objects::"
-msgstr ""
+msgstr "上記のマッピングを使用する場合、 `` User``オブジェクトと2つの関連する `` Address``オブジェクトがあります::"
 
 #: ../../orm/cascades.rst:148
 msgid ""
 "If we mark ``user1`` for deletion, after the flush operation proceeds, "
 "``address1`` and ``address2`` will also be deleted:"
-msgstr ""
+msgstr "`` user1``に削除をマークすると、フラッシュ操作が行われた後、 `` address1``と `` address2``も削除されます："
 
 #: ../../orm/cascades.rst:161
 msgid ""
@@ -173,13 +163,13 @@ msgid ""
 "``delete`` cascade, SQLAlchemy's default behavior is to instead de-"
 "associate ``address1`` and ``address2`` from ``user1`` by setting their "
 "foreign key reference to ``NULL``.  Using a mapping as follows::"
-msgstr ""
+msgstr "あるいは、もし `` User.addresses``の関係が `` delete``カスケードを持っていなければ、SQLAlchemyのデフォルトの振る舞いは、 `` address1``と `` address2``を `` user1``から切り離すことですそれらの外部キー参照を `` NULL``に設定することによって、次のようなマッピングを使用する::"
 
 #: ../../orm/cascades.rst:171
 msgid ""
 "Upon deletion of a parent ``User`` object, the rows in ``address`` are "
 "not deleted, but are instead de-associated:"
-msgstr ""
+msgstr "親の `` User``オブジェクトを削除すると、 `` address``の行は削除されませんが、代わりに関連付け解除されます："
 
 #: ../../orm/cascades.rst:186
 msgid ""
@@ -189,7 +179,7 @@ msgid ""
 " combination of ``delete`` and ``delete-orphan`` cascade covers both "
 "situations where SQLAlchemy has to decide between setting a foreign key "
 "column to NULL versus deleting the row entirely."
-msgstr ""
+msgstr "`` delete``カスケードは：ref： `cascade_delete_orphan`カスケードと組み合わせて使用​​されることはよくありません。カスケードは、\&quot;子\ &quot;オブジェクトが親から分離されている場合、関連する行のDELETEを出します。 `` delete``と `` delete-orphan``カスケードの組み合わせは、SQLAlchemyが外部キー列をNULLに設定するか、行全体を削除するかを決める必要がある状況をカバーします。"
 
 #: ../../orm/cascades.rst:195
 msgid ""
@@ -202,14 +192,14 @@ msgid ""
 "constructs at the :term:`DDL` level using options on "
 ":class:`.ForeignKeyConstraint` which are described at "
 ":ref:`on_update_on_delete`."
-msgstr ""
+msgstr "SQLAlchemyの\ &quot;delete \&quot;カスケードの動作は、データベースの外部キーの `` ON DELETE CASCADE``機能と、 `` ON DELETE SET NULL``の外部キーの設定とのオーバーラップが大きくなります\ &quot;delete \&quot;カスケードは指定されていません。データベースレベル\ &quot;ON DELETE \&quot;カスケードは、リレーショナルデータベースの\ &quot;FOREIGN KEY \&quot;構造に固有です。 SQLAlchemyでは：term： `DDL`レベルでこれらのスキーマレベルのコンストラクトを設定することができます：class：` .ForeignKeyConstraint`：ref： `on_update_on_delete`に記述されているオプションを使用します。"
 
 #: ../../orm/cascades.rst:204
 msgid ""
 "It is important to note the differences between the ORM and the "
 "relational database's notion of \"cascade\" as well as how they "
 "integrate:"
-msgstr ""
+msgstr "ORMとリレーショナルデータベースの\ &quot;カスケード\&quot;という概念とそれらの統合方法の違いに注意することは重要です。"
 
 #: ../../orm/cascades.rst:207
 msgid ""
@@ -220,7 +210,7 @@ msgid ""
 "SQLAlchemy handles the deletion of \"child\" objects relative to a "
 "\"parent\" from the \"parent\" side, which means that ``delete`` and "
 "``delete-orphan`` cascade are configured on the **one-to-many** side."
-msgstr ""
+msgstr "データベースレベルの `` ON DELETE``カスケードは、関係の** many-to-one **の側で効果的に設定されます。つまり、リレーションシップの\ &quot;many \&quot;側の &quot;FOREIGN KEY&quot;制約に関連してそれを設定します。 ORMレベルで**この方向は逆になります**。 SQLAlchemyは\ &quot;親\&quot;側から\ &quot;親\&quot;側への\ &quot;子\&quot;オブジェクトの削除を処理します。つまり、 `` delete``と `` delete-orphan``カスケードは* * 1対多**側。"
 
 #: ../../orm/cascades.rst:216
 msgid ""
@@ -229,7 +219,7 @@ msgid ""
 "leave an unhandled related row present.  If this behavior is desired in a"
 " one-to-many relationship, SQLAlchemy's default behavior of setting a "
 "foreign key to ``NULL`` can be caught in one of two ways:"
-msgstr ""
+msgstr "`` ON DELETE``が設定されていないデータベースレベルの外部キーは、処理されていない関連する行が残っているため、親行が削除されないようにするためによく使用されます。この動作が一対多の関係で必要な場合、外部キーを `` NULL``に設定するSQLAlchemyのデフォルト動作は、次の2つの方法のいずれかで捕捉できます："
 
 #: ../../orm/cascades.rst:223
 msgid ""
@@ -237,7 +227,7 @@ msgid ""
 " to ``NOT NULL`` at the database schema level.  An attempt by SQLAlchemy "
 "to set the column to NULL will fail with a simple NOT NULL constraint "
 "exception."
-msgstr ""
+msgstr "最も簡単で最も一般的なのは、データベーススキーマレベルで外部キー保持列を `` NOT NULL``に設定するだけです。列をNULLに設定しようとすると、SQLAlchemyは単純なNOT NULL制約の例外で失敗します。"
 
 #: ../../orm/cascades.rst:228
 msgid ""
@@ -250,7 +240,7 @@ msgid ""
 "when database-level foreign key triggers, either special ``ON DELETE`` "
 "settings or otherwise, need to be activated in all cases when a parent "
 "row is deleted."
-msgstr ""
+msgstr "もう一つの特別な場合は、：paramref： `〜.relationship.passive_deletes`フラグを文字列` `\&quot; all \ &quot;` `に設定することです。これは、外部キー列をNULLに設定するSQLAlchemyの動作を完全に無効にし、子行がメモリに存在していても子行に影響を与えずに親行に対してDELETEを発行するという効果があります。これは、特別な `` ON DELETE` &quot;設定などのデータベースレベルの外部キーのトリガが、親の行が削除されるすべての場合にアクティブにする必要がある場合に望ましい場合があります。"
 
 #: ../../orm/cascades.rst:237
 msgid ""
@@ -265,7 +255,7 @@ msgid ""
 "further related collections.  That is, SQLAlchemy isn't sophisticated "
 "enough to emit a DELETE for all those related rows at once within this "
 "context."
-msgstr ""
+msgstr "データベースレベルの `` ON DELETE``カスケードは** SQLAlchemyよりもはるかに効率的です**。データベースは一連のカスケード操作を多数の関係にわたって一度に連鎖させることができます。行Aが削除されると、表Bのすべての関連行が削除され、すべてのC行が単一のDELETE文の有効範囲内にあるこれらのB行にそれぞれ関連しています。一方、SQLAlchemyでは、カスケード削除操作を完全にサポートするために、関連する各コレクションを個別にロードして、すべての行をターゲットにしてから関連するコレクションを追加する必要があります。つまり、SQLAlchemyは、このコンテキスト内で関連するすべての行に対して一度にDELETEを発行するほど洗練されていません。"
 
 #: ../../orm/cascades.rst:248
 msgid ""
@@ -278,7 +268,7 @@ msgid ""
 " that are unloaded, it leaves them to the database to handle, rather than"
 " emitting a SELECT for them.  The section :ref:`passive_deletes` provides"
 " an example of this use."
-msgstr ""
+msgstr "SQLAlchemyは、このような洗練されたものである必要はありません。代わりに：paramref： `〜.relationship.passive_deletes`オプションを適切に使用することによって、データベース自身の` `ON DELETE``機能とのスムーズな統合を提供します構成された外部キー制約。この動作では、SQLAlchemyは：class： `.Session`;に既にローカルに存在する行に対してのみDELETEを発行します。アンロードされたコレクションの場合は、SELECTを発行するのではなく、処理するデータベースにデータベースを残します。セクション：ref： `passive_deletes`は、この使用例です。"
 
 #: ../../orm/cascades.rst:257
 msgid ""
@@ -292,7 +282,7 @@ msgid ""
 "typically is only useful when a relationship is in fact a \"one to one\"."
 "  The :paramref:`~.relationship.single_parent` flag should be used to "
 "establish an in-Python assertion for this case."
-msgstr ""
+msgstr "データベースレベルの `` ON DELETE``機能はリレーションシップの\ &quot;many \&quot;側でのみ機能しますが、SQLAlchemyの\ &quot;delete \&quot;カスケードは** reverse * \ &quot;many \&quot;側の参照が削除されたときに\ &quot;one \&quot;側のオブジェクトを削除するには\ &quot;many \&quot;側に設定することができます。しかし、これは、 &quot;many \&quot;からこの &quot;one&quot;側を参照する他のオブジェクトがあると、制約の違反につながりやすいので、通常、関係が実際には &quot;one to one&quot; 。 ：paramref： `〜.relationship.single_parent`フラグは、この場合のPythonアサーションを確立するために使われます。"
 
 #: ../../orm/cascades.rst:269
 msgid ""
@@ -305,11 +295,11 @@ msgid ""
 " a row in the many-to-many table, the ``delete`` cascade, when activated "
 "as the result of a parent object delete operation, will DELETE not just "
 "the row in the \"child\" table but also in the many-to-many table."
-msgstr ""
+msgstr "：paruncref： `〜.relationship.secondary`オプションを使用して多対多テーブルも含む：：func：` .relationship`を使用すると、SQLAlchemyのdeleteカスケードはこの多対多テーブルの行を自動的に処理します。 ：ref： `relationships_many_to_many_deletion`で説明したように、多対多コレクションからオブジェクトを追加または削除すると、多対多テーブルの行のINSERTまたはDELETEが発生し、` `delete ``カスケードは、親オブジェクトの削除操作の結果として起動されると、\ &quot;子\&quot;テーブルの行だけでなく多対多テーブルも削除します。"
 
 #: ../../orm/cascades.rst:282
 msgid "delete-orphan"
-msgstr ""
+msgstr "孤児を削除する"
 
 #: ../../orm/cascades.rst:284
 msgid ""
@@ -319,7 +309,7 @@ msgid ""
 "is a common feature when dealing with a related object that is \"owned\" "
 "by its parent, with a NOT NULL foreign key, so that removal of the item "
 "from the parent collection results in its deletion."
-msgstr ""
+msgstr "`` delete-orphan``カスケードは `` delete``カスケードに振る舞いを追加します。これにより、親オブジェクトが削除マークされたときだけでなく、親オブジェクトとの関連付けが解除されたときに子オブジェクトが削除マークされます。これは、その親によって &quot;所有されている&quot;関連するオブジェクトをNOT NULL外部キーで扱う場合の共通の機能であるため、親コレクションからアイテムを削除すると削除されます。"
 
 #: ../../orm/cascades.rst:292
 msgid ""
@@ -331,11 +321,11 @@ msgid ""
 ":paramref:`~.relationship.single_parent` argument, establishes Python-"
 "side validation that ensures the object is associated with only one "
 "parent at a time."
-msgstr ""
+msgstr "`` delete-orphan``カスケードは、各子オブジェクトが一度に1つの親しか持つことができないことを意味します。そのため、大多数の場合、1対多の関係で設定されます。多対1または多対多の関係に設定するのはもっと厄介です。この使用例では、SQLAlchemyは：func： `〜sqlalchemy.orm.relationship`を：paramref：`〜.relationship.single_parent`引数で設定し、オブジェクトが1つだけに関連付けられていることを確認するPython側の検証を行います親は一度に。"
 
 #: ../../orm/cascades.rst:304
 msgid "merge"
-msgstr ""
+msgstr "行きます"
 
 #: ../../orm/cascades.rst:306
 msgid ""
@@ -343,11 +333,11 @@ msgid ""
 "should be propagated from a parent that's the subject of the "
 ":meth:`.Session.merge` call down to referred objects. This cascade is "
 "also on by default."
-msgstr ""
+msgstr "`` merge``カスケードは、：meth： `.Session.merge`オペレーションが：meth：` .Session.merge`呼び出しの対象となる親から参照されるオブジェクトに伝播されるべきであることを示します。このカスケードもデフォルトでオンになっています。"
 
 #: ../../orm/cascades.rst:314
 msgid "refresh-expire"
-msgstr ""
+msgstr "リフレッシュ期限切れ"
 
 #: ../../orm/cascades.rst:316
 msgid ""
@@ -355,22 +345,22 @@ msgid ""
 ":meth:`.Session.expire` operation should be propagated from a parent down"
 " to referred objects.   When using :meth:`.Session.refresh`, the referred"
 " objects are expired only, but not actually refreshed."
-msgstr ""
+msgstr "`` refresh-expire``は一般的ではないオプションで、：meth： `.Session.expire`操作が親から参照されたオブジェクトに伝播されるべきであることを示します。 ：meth： `.Session.refresh`を使用すると、参照されるオブジェクトは期限切れになりますが、実際にはリフレッシュされません。"
 
 #: ../../orm/cascades.rst:324
 msgid "expunge"
-msgstr ""
+msgstr "消滅"
 
 #: ../../orm/cascades.rst:326
 msgid ""
 "``expunge`` cascade indicates that when the parent object is removed from"
 " the :class:`.Session` using :meth:`.Session.expunge`, the operation "
 "should be propagated down to referred objects."
-msgstr ""
+msgstr "`` expunge``カスケードは、：meth： `.Session.expunge`を使って親オブジェクトが：class：` .Session`から削除されたとき、操作は参照されるオブジェクトに伝播されるべきであることを示します。"
 
 #: ../../orm/cascades.rst:333
 msgid "Controlling Cascade on Backrefs"
-msgstr ""
+msgstr "後方参照のカスケードの制御"
 
 #: ../../orm/cascades.rst:335
 msgid ""
@@ -378,7 +368,7 @@ msgid ""
 "attribute change events emitted from backrefs.  This is probably a "
 "confusing statement more easily described through demonstration; it means"
 " that, given a mapping such as this::"
-msgstr ""
+msgstr "：ref： `cascade_save_update`カスケードは、デフォルトではバックグラウンドから放出される属性変更イベントに対して行われます。これはおそらく、デモンストレーションを通じてより簡単に説明される混乱したステートメントです。これは、次のようなマッピングが与えられたことを意味します::"
 
 #: ../../orm/cascades.rst:343
 msgid ""
@@ -386,13 +376,13 @@ msgid ""
 "``order`` attribute of an ``Item``, the backref appends the ``Item`` to "
 "the ``items`` collection of that ``Order``, resulting in the ``save-"
 "update`` cascade taking place::"
-msgstr ""
+msgstr "セッション中に `` Order``が既に存在し、 `` Item``の `` order``属性に割り当てられている場合、バックレファレンスは `` Items``のコレクションに `` Item``を追加します`` Order``を実行し、 `` save-update``カスケードが発生します::"
 
 #: ../../orm/cascades.rst:360
 msgid ""
 "This behavior can be disabled using the "
 ":paramref:`~.relationship.cascade_backrefs` flag::"
-msgstr ""
+msgstr "この動作は、：paramref： `〜.relationship.cascade_backrefs`フラグを使って無効にすることができます::"
 
 #: ../../orm/cascades.rst:367
 msgid ""
@@ -403,5 +393,5 @@ msgid ""
 "needs to be kept out of a session until it's construction is completed, "
 "but still needs to be given associations to objects which are already "
 "persistent in the target session."
-msgstr ""
+msgstr "上のように、 `` i1.order = o1``の割り当ては、 `` o1``の `` items``コレクションに `` i1``を追加しますが、セッションに `` i1``を追加しません。もちろん、：meth： `〜.Session.add`` `i1``を後でセッションに追加できます。このオプションは、オブジェクトの構築が完了するまでオブジェクトをセッションから外しておく必要があるが、ターゲットセッションですでに永続化しているオブジェクトへの関連付けを行う必要がある場合に役立ちます。"
 

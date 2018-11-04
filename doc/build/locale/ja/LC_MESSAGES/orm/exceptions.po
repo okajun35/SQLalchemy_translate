@@ -6,52 +6,42 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/exceptions.rst:4
 msgid "ORM Exceptions"
-msgstr ""
+msgstr "ORMの例外"
 
 #: of sqlalchemy.orm.exc:1
 msgid "SQLAlchemy ORM exceptions."
-msgstr ""
+msgstr "SQLAlchemy ORM例外。"
 
 #: of sqlalchemy.orm.exc.DetachedInstanceError:1
 msgid ""
 "An attempt to access unloaded attributes on a mapped instance that is "
 "detached."
-msgstr ""
+msgstr "デタッチされたマップされたインスタンスでアンロードされた属性にアクセスしようとしました。"
 
 #: of sqlalchemy.orm.exc.FlushError:1
 msgid "A invalid condition was detected during flush()."
-msgstr ""
+msgstr "flush（）中に無効な条件が検出されました。"
 
 #: of sqlalchemy.orm.exc.MultipleResultsFound:1
 msgid "A single database result was required but more than one were found."
-msgstr ""
+msgstr "単一のデータベース結果が必要でしたが、複数の結果が見つかりました。"
 
 #: of sqlalchemy.orm.exc.NO_STATE:1
 msgid "Exception types that may be raised by instrumentation implementations."
-msgstr ""
+msgstr "インスツルメンテーション実装によって発生する可能性のある例外の型。"
 
 #: of sqlalchemy.orm.exc.NoResultFound:1
 msgid "A database result was required but none was found."
-msgstr ""
+msgstr "データベースの結果は必要でしたが、何も見つかりませんでした。"
 
 #: of sqlalchemy.orm.exc.ObjectDeletedError:1
 msgid ""
 "A refresh operation failed to retrieve the database row corresponding to "
 "an object's known primary key identity."
-msgstr ""
+msgstr "リフレッシュ操作で、オブジェクトの既知の主キーIDに対応するデータベース行を取得できませんでした。"
 
 #: of sqlalchemy.orm.exc.ObjectDeletedError:4
 msgid ""
@@ -60,7 +50,7 @@ msgid ""
 "is, upon retrieval, detected as expired.   A SELECT is emitted for the "
 "target row based on primary key; if no row is returned, this exception is"
 " raised."
-msgstr ""
+msgstr "期限切れの属性がオブジェクト上でアクセスされるとき、または：meth： `.Query.get`が検索時に期限切れとして検出されたオブジェクトを検索するとき、リフレッシュ動作が進行する。主キーに基づいてターゲット行に対してSELECTが発行されます。行が返されない場合、この例外が送出されます。"
 
 #: of sqlalchemy.orm.exc.ObjectDeletedError:11
 msgid ""
@@ -68,19 +58,19 @@ msgid ""
 "primary key identifier associated with a persistent object.   The row may"
 " have been deleted, or in some cases the primary key updated to a new "
 "value, outside of the ORM's management of the target object."
-msgstr ""
+msgstr "この例外の真の意味は、永続オブジェクトに関連付けられた主キー識別子の行が存在しないことです。行が削除されたか、場合によってはORMのターゲットオブジェクトの管理外で、プライマリキーが新しい値に更新された可能性があります。"
 
 #: of sqlalchemy.orm.exc.ObjectDereferencedError:1
 msgid "An operation cannot complete due to an object being garbage collected."
-msgstr ""
+msgstr "オブジェクトがガベージコレクションされているため、操作を完了できません。"
 
 #: of sqlalchemy.orm.exc.StaleDataError:1
 msgid "An operation encountered database state that is unaccounted for."
-msgstr ""
+msgstr "操作に不一致が発生したデータベースの状態が発生しました。"
 
 #: of sqlalchemy.orm.exc.StaleDataError:3
 msgid "Conditions which cause this to happen include:"
-msgstr ""
+msgstr "これが発生する原因には次のようなものがあります。"
 
 #: of sqlalchemy.orm.exc.StaleDataError:5
 msgid ""
@@ -88,13 +78,13 @@ msgid ""
 "number of rows were matched during the UPDATE or DELETE statement.   Note"
 " that when version_id_col is used, rows in UPDATE or DELETE statements "
 "are also matched against the current known version identifier."
-msgstr ""
+msgstr "フラッシュで行を更新または削除しようとした可能性があり、予期しない行数がUPDATEまたはDELETEステートメントで一致しました。 version_id_colを使用すると、UPDATE文またはDELETE文の行も、現在の既知のバージョン識別子と照合されます。"
 
 #: of sqlalchemy.orm.exc.StaleDataError:12
 msgid ""
 "A mapped object with version_id_col was refreshed, and the version number"
 " coming back from the database does not match that of the object itself."
-msgstr ""
+msgstr "version_id_colのマップされたオブジェクトがリフレッシュされ、データベースから戻ってくるバージョン番号がオブジェクト自体のバージョン番号と一致しません。"
 
 #: of sqlalchemy.orm.exc.StaleDataError:16
 msgid ""
@@ -102,21 +92,21 @@ msgid ""
 "previously attached to a different parent identity which was garbage "
 "collected, and a decision cannot be made if the new parent was really the"
 " most recent \"parent\"."
-msgstr ""
+msgstr "オブジェクトは親オブジェクトから切り離されますが、オブジェクトは以前はガベージコレクトされた別の親アイデンティティにアタッチされていました。新しい親が実際には最新の\ &quot;親\&quot;であるかどうかは判断できません。"
 
 #: of sqlalchemy.orm.exc.UnmappedClassError:1
 msgid "An mapping operation was requested for an unknown class."
-msgstr ""
+msgstr "未知のクラスに対してマッピング操作が要求されました。"
 
 #: of sqlalchemy.orm.exc.UnmappedColumnError:1
 msgid "Mapping operation was requested on an unknown column."
-msgstr ""
+msgstr "未知の列に対してマッピング操作が要求されました。"
 
 #: of sqlalchemy.orm.exc.UnmappedError:1
 msgid "Base for exceptions that involve expected mappings not present."
-msgstr ""
+msgstr "期待されたマッピングが存在しない例外に関するベース。"
 
 #: of sqlalchemy.orm.exc.UnmappedInstanceError:1
 msgid "An mapping operation was requested for an unknown instance."
-msgstr ""
+msgstr "未知のインスタンスに対してマッピング操作が要求されました。"
 

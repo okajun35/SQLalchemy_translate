@@ -6,54 +6,44 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../dialects/oracle.rst:4
 msgid "Oracle"
-msgstr ""
+msgstr "オラクル"
 
 #: of sqlalchemy.dialects.oracle.base:8
 msgid "Connect Arguments"
-msgstr ""
+msgstr "接続引数"
 
 #: of sqlalchemy.dialects.oracle.base:10
 msgid ""
 "The dialect supports several :func:`~sqlalchemy.create_engine()` "
 "arguments which affect the behavior of the dialect regardless of driver "
 "in use."
-msgstr ""
+msgstr "この方言は、使用中のドライバに関係なく方言の動作に影響を与えるいくつかの：func： `〜sqlalchemy.create_engine（）`引数をサポートしています。"
 
 #: of sqlalchemy.dialects.oracle.base:13
 msgid ""
 "``use_ansi`` - Use ANSI JOIN constructs (see the section on Oracle 8). "
 "Defaults to ``True``.  If ``False``, Oracle-8 compatible constructs are "
 "used for joins."
-msgstr ""
+msgstr "`` use_ansi``  -  ANSI JOIN構造体を使用します（Oracle 8のセクションを参照）。デフォルトは `` True``です。 `` False``の場合、Oracle-8互換の構造体が結合に使用されます。"
 
 #: of sqlalchemy.dialects.oracle.base:17
 msgid ""
 "``optimize_limits`` - defaults to ``False``. see the section on "
 "LIMIT/OFFSET."
-msgstr ""
+msgstr "`` optimize_limits``  - デフォルトは `` False``です。 LIMIT / OFFSETのセクションを参照してください。"
 
 #: of sqlalchemy.dialects.oracle.base:20
 msgid ""
 "``use_binds_for_limits`` - defaults to ``True``.  see the section on "
 "LIMIT/OFFSET."
-msgstr ""
+msgstr "`` use_binds_for_limits``  - デフォルトは `` True``です。 LIMIT / OFFSETのセクションを参照してください。"
 
 #: of sqlalchemy.dialects.oracle.base:24
 msgid "Auto Increment Behavior"
-msgstr ""
+msgstr "自動インクリメント動作"
 
 #: of sqlalchemy.dialects.oracle.base:26
 msgid ""
@@ -66,17 +56,17 @@ msgid ""
 "the majority of documentation examples which assume the usage of an "
 "autoincrement-capable database.   To specify sequences, use the "
 "sqlalchemy.schema.Sequence object which is passed to a Column construct::"
-msgstr ""
+msgstr "整数プライマリキーを含むSQLAlchemyテーブルオブジェクトは、通常、「自動インクリメント」の動作を持つとみなされます。つまり、INSERT時にプライマリキー値を生成できます。 Oracleには\ &quot;自動インクリメント\&quot;機能がないため、SQLAlchemyはシーケンスに依存してこれらの値を生成します。 Oracleの方言では、*オートインクリメントを有効にするためには、シーケンスを常に明示的に指定する必要があります。これは、自動インクリメントが可能なデータベースの使用を想定したドキュメントの例の大部分とは異なります。シーケンスを指定するには、Columnコンストラクトに渡されるsqlalchemy.schema.Sequenceオブジェクトを使用します。"
 
 #: of sqlalchemy.dialects.oracle.base:41
 msgid ""
 "This step is also required when using table reflection, i.e. "
 "autoload=True::"
-msgstr ""
+msgstr "このステップは、表のリフレクションを使用する場合にも必要です。つまり、autoload = True ::"
 
 #: of sqlalchemy.dialects.oracle.base:49
 msgid "Identifier Casing"
-msgstr ""
+msgstr "識別子ケーシング"
 
 #: of sqlalchemy.dialects.oracle.base:51
 msgid ""
@@ -91,11 +81,11 @@ msgid ""
 "so unless identifier names have been truly created as case sensitive "
 "(i.e. using quoted names), all lowercase names should be used on the "
 "SQLAlchemy side."
-msgstr ""
+msgstr "Oracleでは、データ・ディクショナリは、大文字小文字を区別しないすべての識別子名を大文字のテキストで表します。一方、SQLAlchemyでは、すべて小文字の識別子名は大文字小文字を区別しないものとみなされます。 Oracle Dialectは、表と索引の反映など、スキーマ・レベルの通信中に、大/小文字を区別しないすべての識別子をこれらの2つの形式に変換します。 SQLAlchemy側でUPPERCASE名を使用すると、大文字と小文字を区別する識別子が示され、SQLAlchemyはその名前を引用します。これにより、Oracleから受信したデータ辞書データとの不一致が発生します。すべての小文字の名前をSQLAlchemy側で使用する必要があります。"
 
 #: of sqlalchemy.dialects.oracle.base:64
 msgid "LIMIT/OFFSET Support"
-msgstr ""
+msgstr "LIMIT / OFFSETのサポート"
 
 #: of sqlalchemy.dialects.oracle.base:66
 msgid ""
@@ -103,18 +93,18 @@ msgid ""
 "a wrapped subquery approach in conjunction with ROWNUM.  The exact "
 "methodology is taken from http://www.oracle.com/technetwork/issue-"
 "archive/2006/06-sep/o56asktom-086197.html ."
-msgstr ""
+msgstr "Oracleでは、LIMITまたはOFFSETキーワードはサポートされていません。 SQLAlchemyは、ROWNUMと組み合わせてラップされたサブクエリ手法を使用します。正確な方法論については、http：//www.oracle.com/technetwork/issue-archive/2006/06-sep/o56asktom-086197.htmlを参照してください。"
 
 #: of sqlalchemy.dialects.oracle.base:71
 msgid "There are two options which affect its behavior:"
-msgstr ""
+msgstr "その動作に影響する2つのオプションがあります。"
 
 #: of sqlalchemy.dialects.oracle.base:73
 msgid ""
 "the \"FIRST ROWS()\" optimization keyword is not used by default.  To "
 "enable the usage of this optimization directive, specify "
 "``optimize_limits=True`` to :func:`.create_engine`."
-msgstr ""
+msgstr "\ &quot;FIRST ROWS（）\&quot;最適化キーワードはデフォルトでは使用されません。この最適化ディレクティブの使用を有効にするには、func： `.create_engine`に対して` `optimize_limits = True``を指定します。"
 
 #: of sqlalchemy.dialects.oracle.base:76
 msgid ""
@@ -123,7 +113,7 @@ msgid ""
 "values are sent as binds and not rendered literally.   To render the "
 "limit/offset values literally within the SQL statement, specify "
 "``use_binds_for_limits=False`` to :func:`.create_engine`."
-msgstr ""
+msgstr "リミット/オフセット用に渡された値はバインドされたパラメータとして送信されます。一部のユーザーは、値がバインドとして送信され、文字通りレンダリングされないと、Oracleが不適切な問合せプランを生成することを確認しています。 SQLステートメント内でリミット/オフセット値を文字どおりに表示するには、：use_binds_for_limits = False``を：func： `.create_engine`に指定します。"
 
 #: of sqlalchemy.dialects.oracle.base:82
 msgid ""
@@ -135,12 +125,12 @@ msgid ""
 "http://www.sqlalchemy.org/trac/wiki/UsageRecipes/WindowFunctionsByDefault"
 " which installs a select compiler that overrides the generation of "
 "limit/offset with a window function."
-msgstr ""
+msgstr "RIM_NUMBER（）OVER（ORDER BY）を使用してLIMIT / OFFSET（大部分のユーザーはこれを観察しないことに注意してください）を提供するために、ウィンドウクエリの全く異なるアプローチが使用された場合、この場合に合わせて、LIMIT / OFFSETの方法を完全に置き換えることができます。 http://www.sqlalchemy.org/trac/wiki/UsageRecipes/WindowFunctionsByDefaultのレシピを参照してください。このレシピは、ウィンドウ関数を使って制限/オフセットの生成を無効にする選択コンパイラをインストールします。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.base:94
 #: sqlalchemy.dialects.oracle.cx_oracle:160
 msgid "RETURNING Support"
-msgstr ""
+msgstr "戻り値のサポート"
 
 #: of sqlalchemy.dialects.oracle.base:96
 msgid ""
@@ -150,7 +140,7 @@ msgid ""
 "returned, as it relies upon OUT parameters in order to function.  In "
 "addition, supported DBAPIs have further limitations (see "
 ":ref:`cx_oracle_returning`)."
-msgstr ""
+msgstr "Oracleデータベースは、一致した行の結果セットをINSERT文、UPDATE文およびDELETE文から取り出すために、限られた形式のRETURNINGをサポートしています。 OracleのRETURNING..INTO構文は、機能するためにOUTパラメータに依存するため、戻される行は1つのみサポートされます。さらに、サポートされているDBAPIにはさらなる制限があります（ref： `cx_oracle_returning`を参照）。"
 
 #: of sqlalchemy.dialects.oracle.base:102
 msgid ""
@@ -163,30 +153,30 @@ msgid ""
 "increment a sequence within an INSERT statement and get the value back at"
 " the same time. To disable this feature across the board, specify "
 "``implicit_returning=False`` to :func:`.create_engine`::"
-msgstr ""
+msgstr "新しく生成されたプライマリキー値やその他のSQLのデフォルトと式をフェッチするために、INSERTや場合によってはUPDATEステートメント内でRETURNINGを使用するSQLAlchemyの\ &quot;暗黙的な復帰\&quot;機能は、通常、Oracleのバックエンドで有効になります。デフォルトでは、\ &quot;暗黙的に返す\&quot;は通常、INSERTステートメント内のシーケンスをインクリメントして同時に値を取得するために、INSERTに埋め込まれた単一の `` nextval（some_seq） ``式の値を取り出します。この機能を無効にするには、 `` implicit_returning = False``を以下のように指定します：func： `.create_engine` ::"
 
 #: of sqlalchemy.dialects.oracle.base:114
 msgid ""
 "Implicit returning can also be disabled on a table-by-table basis as a "
 "table option::"
-msgstr ""
+msgstr "暗黙的な返却は、テーブルオプションとしてテーブルごとに無効にすることもできます::"
 
 #: of sqlalchemy.dialects.oracle.base:128
 msgid ""
 ":ref:`cx_oracle_returning` - additional cx_oracle-specific restrictions "
 "on implicit returning."
-msgstr ""
+msgstr "：ref： `cx_oracle_returning`  - 暗黙的に返される追加のcx_oracle固有の制限。"
 
 #: of sqlalchemy.dialects.oracle.base:132
 msgid "ON UPDATE CASCADE"
-msgstr ""
+msgstr "更新カスケード"
 
 #: of sqlalchemy.dialects.oracle.base:134
 msgid ""
 "Oracle doesn't have native ON UPDATE CASCADE functionality.  A trigger "
 "based solution is available at "
 "http://asktom.oracle.com/tkyte/update_cascade/index.html ."
-msgstr ""
+msgstr "オラクルにはネイティブのON UPDATE CASCADE機能はありません。トリガー・ベースのソリューションはhttp://asktom.oracle.com/tkyte/update_cascade/index.htmlから入手できます。"
 
 #: of sqlalchemy.dialects.oracle.base:138
 msgid ""
@@ -194,24 +184,24 @@ msgid ""
 "issue cascading updates - specify ForeignKey objects using the "
 "\"deferrable=True, initially='deferred'\" keyword arguments, and specify "
 "\"passive_updates=False\" on each relationship()."
-msgstr ""
+msgstr "SQLAlchemy ORMを使用する場合、ORMはカスケード更新を手動で発行する機能が制限されています -  \ &quot;deferrable = True、初期値= \&quot;遅延\ &quot;キーワード引数を使用してForeignKeyオブジェクトを指定し、各リレーションシップに対して\&quot; passive_updates = False \ （）。"
 
 #: of sqlalchemy.dialects.oracle.base:144
 msgid "Oracle 8 Compatibility"
-msgstr ""
+msgstr "Oracle 8の互換性"
 
 #: of sqlalchemy.dialects.oracle.base:146
 msgid ""
 "When Oracle 8 is detected, the dialect internally configures itself to "
 "the following behaviors:"
-msgstr ""
+msgstr "Oracle 8が検出されると、ダイアレクトは内部的に次のように動作します。"
 
 #: of sqlalchemy.dialects.oracle.base:149
 msgid ""
 "the use_ansi flag is set to False.  This has the effect of converting all"
 " JOIN phrases into the WHERE clause, and in the case of LEFT OUTER JOIN "
 "makes use of Oracle's (+) operator."
-msgstr ""
+msgstr "use_ansiフラグはFalseに設定されます。これは、すべてのJOIN句をWHERE句に変換する効果があり、LEFT OUTER JOINの場合はOracleの（+）演算子を使用します。"
 
 #: of sqlalchemy.dialects.oracle.base:153
 msgid ""
@@ -222,18 +212,18 @@ msgid ""
 ":class:`~sqlalchemy.types.NVARCHAR` and "
 ":class:`~sqlalchemy.dialects.oracle.NCLOB` types will always generate "
 "NVARCHAR2 and NCLOB."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.types.Unicode`を使用すると、NVARCHAR2およびNCLOBデータ型はDDLとして生成されなくなりました。代わりにVARCHAR2およびCLOBが発行されます。これは、これらのタイプが使用可能であっても、Oracle 8では正しく動作しないためです。 ：class： `〜sqlalchemy.types.NVARCHAR`と：class：`〜sqlalchemy.dialects.oracle.NCLOB`型は、常にNVARCHAR2とNCLOBを生成します。"
 
 #: of sqlalchemy.dialects.oracle.base:161
 msgid ""
 "the \"native unicode\" mode is disabled when using cx_oracle, i.e. "
 "SQLAlchemy encodes all Python unicode objects to \"string\" before "
 "passing in as bind parameters."
-msgstr ""
+msgstr "cx_oracleを使用しているとき、\ &quot;native unicode \&quot;モードは無効になります。つまり、SQLAlchemyはバインドパラメータとして渡す前にすべてのPython unicodeオブジェクトを\ &quot;string \&quot;にエンコードします。"
 
 #: of sqlalchemy.dialects.oracle.base:166
 msgid "Synonym/DBLINK Reflection"
-msgstr ""
+msgstr "同義語/ DBLINKリフレクション"
 
 #: of sqlalchemy.dialects.oracle.base:168
 msgid ""
@@ -242,7 +232,7 @@ msgid ""
 "schemas or accessed over DBLINK, by passing the flag "
 "``oracle_resolve_synonyms=True`` as a keyword argument to the "
 ":class:`.Table` construct::"
-msgstr ""
+msgstr "表オブジェクトでリフレクションを使用する場合、ダイアレクトはオプションで、キーワードoracle_resolve_synonyms = True``をキーワード：class： `にoracle_resolve_synonyms = True`を渡すことで、シノニムで指定された表をローカルスキーマまたはリモートスキーマで検索するか、DBLINKを介してアクセスできます。 .Table` construct ::"
 
 #: of sqlalchemy.dialects.oracle.base:177
 msgid ""
@@ -252,28 +242,28 @@ msgid ""
 "another name.  If the synonym is located and refers to a DBLINK, the "
 "oracle dialect knows how to locate the table's information using DBLINK "
 "syntax(e.g. ``@dblink``)."
-msgstr ""
+msgstr "このフラグが設定されていると、 `` ALL_TABLES``ビューだけでなく、 `` ALL_SYNONYMS``ビュー内で指定された名前（上記の `` some_table`など）も検索され、別の名前と同義語。シノニムが見つかってDBLINKを参照している場合、oracleの方言はDBLINK構文（たとえば `` @ dblink``）を使用してテーブルの情報を見つける方法を知っています。"
 
 #: of sqlalchemy.dialects.oracle.base:184
 msgid ""
 "``oracle_resolve_synonyms`` is accepted wherever reflection arguments are"
 " accepted, including methods such as :meth:`.MetaData.reflect` and "
 ":meth:`.Inspector.get_columns`."
-msgstr ""
+msgstr "`` oracle_resolve_synonyms``は：meth： `.MetaData.reflect`と：meth：` .Inspector.get_columns`のようなメソッドを含むリフレクション引数が受け入れられるところであればどこでも受け入れられます。"
 
 #: of sqlalchemy.dialects.oracle.base:188
 msgid "If synonyms are not in use, this flag should be left disabled."
-msgstr ""
+msgstr "シノニムが使用されていない場合は、このフラグを使用不可にしてください。"
 
 #: of sqlalchemy.dialects.oracle.base:193
 msgid "Constraint Reflection"
-msgstr ""
+msgstr "制約の反映"
 
 #: of sqlalchemy.dialects.oracle.base:195
 msgid ""
 "The Oracle dialect can return information about foreign key, unique, and "
 "CHECK constraints, as well as indexes on tables."
-msgstr ""
+msgstr "Oracle Dialectは、外部キー、一意性制約、CHECK制約、および表の索引に関する情報を戻すことができます。"
 
 #: of sqlalchemy.dialects.oracle.base:198
 msgid ""
@@ -282,21 +272,21 @@ msgid ""
 ":meth:`.Inspector.get_unique_constraints`, "
 ":meth:`.Inspector.get_check_constraints`, and "
 ":meth:`.Inspector.get_indexes`."
-msgstr ""
+msgstr "これらの制約に関する生の情報は、：meth： `.Inspector.get_foreign_keys`、：meth：` .Inspector.get_unique_constraints`、：meth： `.Inspector.get_check_constraints`、および：meth：` .Inspector.get_indexes`を使用して取得できます。"
 
 #: of sqlalchemy.dialects.oracle.base:202
 msgid "The Oracle dialect can now reflect UNIQUE and CHECK constraints."
-msgstr ""
+msgstr "オラクルの方言は、UNIQUEおよびCHECK制約を反映できるようになりました。"
 
 #: of sqlalchemy.dialects.oracle.base:205
 msgid ""
 "When using reflection at the :class:`.Table` level, the :class:`.Table` "
 "will also include these constraints."
-msgstr ""
+msgstr "：class： `.Table`レベルでリフレクションを使用する場合、：class：` .Table`にはこれらの制約も含まれます。"
 
 #: of sqlalchemy.dialects.oracle.base:208
 msgid "Note the following caveats:"
-msgstr ""
+msgstr "次の点に注意してください。"
 
 #: of sqlalchemy.dialects.oracle.base:210
 msgid ""
@@ -304,7 +294,7 @@ msgid ""
 "builds a special \"IS NOT NULL\" constraint for columns that specify "
 "\"NOT NULL\".  This constraint is **not** returned by default; to include"
 " the \"IS NOT NULL\" constraints, pass the flag ``include_all=True``::"
-msgstr ""
+msgstr "：meth： `.Inspector.get_check_constraints`メソッドを使用する場合、Oracleは\&quot; NOT NULL \ &quot;を指定する列に対して特別な&quot; IS NOT NULL &quot;制約を作成します。この制約は**デフォルトで返されません**。 \ &quot;IS NOT NULL \&quot;制約を含めるには、フラグ `` include_all = True``を渡します::"
 
 #: of sqlalchemy.dialects.oracle.base:222
 msgid ""
@@ -314,23 +304,23 @@ msgid ""
 "exception seems to be when two or more unique constraints represent the "
 "same columns); the :class:`.Table` will instead represent these using "
 ":class:`.Index` with the ``unique=True`` flag set."
-msgstr ""
+msgstr "ほとんどの場合、class： `.Table`を反映すると、UNIQUE制約は、class：` .UniqueConstraint`オブジェクトとして利用できません。ほとんどの場合、Oracleはユニークな制約をUNIQUEインデックスで反映します2つ以上のユニーク制約が同じ列を表す場合は例外があるように見えます）。 ：class： `.Table`は` `unique = True``フラグがセットされたclass：` .Index`を使ってこれらを表現します。"
 
 #: of sqlalchemy.dialects.oracle.base:229
 msgid ""
 "Oracle creates an implicit index for the primary key of a table; this "
 "index is **excluded** from all index results."
-msgstr ""
+msgstr "Oracleは、表の主キーの暗黙的な索引を作成します。このインデックスはすべてのインデックス結果から**除外**されます。"
 
 #: of sqlalchemy.dialects.oracle.base:232
 msgid ""
 "the list of columns reflected for an index will not include column names "
 "that start with SYS_NC."
-msgstr ""
+msgstr "索引に反映される列のリストには、SYS_NCで始まる列名は含まれません。"
 
 #: of sqlalchemy.dialects.oracle.base:236
 msgid "Table names with SYSTEM/SYSAUX tablespaces"
-msgstr ""
+msgstr "SYSTEM / SYSAUX表領域を持つ表名"
 
 #: of sqlalchemy.dialects.oracle.base:238
 msgid ""
@@ -342,11 +332,11 @@ msgid ""
 "``SYSTEM`` and ``SYSAUX`` tablespaces from the operation.   In order to "
 "change this, the default list of tablespaces excluded can be changed at "
 "the engine level using the ``exclude_tablespaces`` parameter::"
-msgstr ""
+msgstr "：meth： `.Inspector.get_table_names`と：meth：` .Inspector.get_temp_table_names`メソッドは、それぞれ現在のエンジンのテーブル名のリストを返します。これらのメソッドは：meth： `.MetaData.reflect`のような操作内で発生するリフレクションの一部です。デフォルトでは、これらの操作は、 `` SYSTEM``と `` SYSAUX``表スペースを操作から除外します。これを変更するには、exclude_tablespacesパラメータを使用してエンジン・レベルで除外される表領域のデフォルト・リストを変更できます。"
 
 #: of sqlalchemy.dialects.oracle.base:255
 msgid "DateTime Compatibility"
-msgstr ""
+msgstr "DateTimeの互換性"
 
 #: of sqlalchemy.dialects.oracle.base:257
 msgid ""
@@ -357,7 +347,7 @@ msgid ""
 "and is only present as a \"marker\" for this type; additionally, when a "
 "database column is reflected and the type is reported as ``DATE``, the "
 "time-supporting :class:`.oracle.DATE` type is used."
-msgstr ""
+msgstr "Oracleには「DATETIME」というデータ型はありません。代わりに、実際に日付と時刻の値を格納できる `` DATE``のみがあります。このため、Oracle Dialectは、class： `.DateTime`のサブクラスであるclass：` .oracle.DATE`型を提供します。この型は特殊な振舞いを持たず、この型の\ &quot;marker \&quot;としてのみ存在します。さらに、データベース列が反映され、その型が `` DATE``として報告された場合、time-supporting：class： `.oracle.DATE`型が使用されます。"
 
 #: of sqlalchemy.dialects.oracle.base:265
 msgid ""
@@ -367,56 +357,56 @@ msgid ""
 "significance here is for schemes that are examining the type of column "
 "for use in special Python translations or for migrating schemas to other "
 "database backends."
-msgstr ""
+msgstr "追加：class： `.oracle.DATE`をサブクラスに追加：class：` .DateTime`。これは、以前のバージョンでは `` DATE``カラムを：class： `.types.DATE`として反映するように変更されたもので、class：` .Date`をサブクラス化しています。ここでの唯一の重要な点は、特別なPython変換で使用する列の型を調べるスキームや、スキーマを他のデータベースバックエンドに移行するスキームです。"
 
 #: of sqlalchemy.dialects.oracle.base:275
 msgid "Oracle Table Options"
-msgstr ""
+msgstr "Oracle表オプション"
 
 #: of sqlalchemy.dialects.oracle.base:277
 msgid ""
 "The CREATE TABLE phrase supports the following options with Oracle in "
 "conjunction with the :class:`.Table` construct:"
-msgstr ""
+msgstr "CREATE TABLE句は、Oracleで：class： `.Table`構文と組み合わせて次のオプションをサポートします。"
 
 #: of sqlalchemy.dialects.oracle.base:281
 msgid "``ON COMMIT``::"
-msgstr ""
+msgstr "`` ON COMMIT` ::"
 
 #: of sqlalchemy.dialects.oracle.base:289
 msgid "``COMPRESS``::"
-msgstr ""
+msgstr "`` COMPRESS`` ::"
 
 #: of sqlalchemy.dialects.oracle.base:305
 msgid "Oracle Specific Index Options"
-msgstr ""
+msgstr "Oracle固有の索引オプション"
 
 #: of sqlalchemy.dialects.oracle.base:308
 msgid "Bitmap Indexes"
-msgstr ""
+msgstr "ビットマップインデックス"
 
 #: of sqlalchemy.dialects.oracle.base:310
 msgid ""
 "You can specify the ``oracle_bitmap`` parameter to create a bitmap index "
 "instead of a B-tree index::"
-msgstr ""
+msgstr "`` oracle_bitmap``パラメータを指定すると、Bツリー索引の代わりにビットマップ索引を作成できます。"
 
 #: of sqlalchemy.dialects.oracle.base:315
 msgid ""
 "Bitmap indexes cannot be unique and cannot be compressed. SQLAlchemy will"
 " not check for such limitations, only the database will."
-msgstr ""
+msgstr "ビットマップ索引は一意ではなく、圧縮できません。 SQLAlchemyはそのような制限をチェックしません。データベースのみがチェックされます。"
 
 #: of sqlalchemy.dialects.oracle.base:321
 msgid "Index compression"
-msgstr ""
+msgstr "インデックスの圧縮"
 
 #: of sqlalchemy.dialects.oracle.base:323
 msgid ""
 "Oracle has a more efficient storage mode for indexes containing lots of "
 "repeated values. Use the ``oracle_compress`` parameter to turn on key c "
 "ompression::"
-msgstr ""
+msgstr "Oracleには、多数の反復値を含む索引に対して、より効率的な記憶域モードがあります。 `` oracle_compress``パラメータを使用して、キーcのompressionを有効にします::"
 
 #: of sqlalchemy.dialects.oracle.base:332
 msgid ""
@@ -424,28 +414,28 @@ msgid ""
 "the number of prefix columns to compress, or ``True`` to use the default "
 "(all columns for non-unique indexes, all but the last column for unique "
 "indexes)."
-msgstr ""
+msgstr "`` oracle_compress``パラメータは、圧縮する接頭辞列の数を指定する整数か、デフォルトを使用するための `` True``（一意でない索引の場合はすべての列、一意の索引の場合は最後の列を除く）を受け入れます。"
 
 #: ../../dialects/oracle.rst:9
 msgid "Oracle Data Types"
-msgstr ""
+msgstr "Oracleデータ型"
 
 #: ../../dialects/oracle.rst:11
 msgid ""
 "As with all SQLAlchemy dialects, all UPPERCASE types that are known to be"
 " valid with Oracle are importable from the top level dialect, whether "
 "they originate from :mod:`sqlalchemy.types` or from the local dialect::"
-msgstr ""
+msgstr "すべてのSQLAlchemyの方言と同様に、Oracleで有効であることが知られているすべてのUPPERCASE型は、from：mod： `sqlalchemy.types`またはローカルの方言から上位の方言からインポートできます::"
 
 #: ../../dialects/oracle.rst:21
 msgid ""
 "Types which are specific to Oracle, or have Oracle-specific construction "
 "arguments, are as follows:"
-msgstr ""
+msgstr "Oracleに固有の型、またはOracle固有の構成引数を持つ型は、次のとおりです。"
 
 #: of sqlalchemy.dialects.oracle.BFILE.__init__:1
 msgid "Construct a LargeBinary type."
-msgstr ""
+msgstr "LargeBinary型を構築します。"
 
 #: of sqlalchemy.dialects.oracle.BFILE.__init__
 #: sqlalchemy.dialects.oracle.DATE.__init__
@@ -454,28 +444,28 @@ msgstr ""
 #: sqlalchemy.dialects.oracle.LONG.__init__
 #: sqlalchemy.dialects.oracle.NCLOB.__init__
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.dialects.oracle.BFILE.__init__:3
 msgid ""
 "optional, a length for the column for use in DDL statements, for those "
 "binary types that accept a length, such as the MySQL BLOB type."
-msgstr ""
+msgstr "オプションで、長さを受け入れるバイナリ型（MySQL BLOB型など）のDDL文で使用する列の長さ。"
 
 #: of sqlalchemy.dialects.oracle.DATE:1
 msgid "Provide the oracle DATE type."
-msgstr ""
+msgstr "oracle DATEタイプを指定します。"
 
 #: of sqlalchemy.dialects.oracle.DATE:3
 msgid ""
 "This type has no special Python behavior, except that it subclasses "
 ":class:`.types.DateTime`; this is to suit the fact that the Oracle "
 "``DATE`` type supports a time value."
-msgstr ""
+msgstr "この型には特別なPythonの動作はありませんが、class： `.types.DateTime`;というサブクラスがあります。これは、Oracleの `` DATE``型が時間値をサポートしているという事実に適しています。"
 
 #: of sqlalchemy.dialects.oracle.DATE.__init__:1
 msgid "Construct a new :class:`.DateTime`."
-msgstr ""
+msgstr "新しい：class： `.DateTime`を作ります。"
 
 #: of sqlalchemy.dialects.oracle.DATE.__init__:3
 msgid ""
@@ -485,22 +475,22 @@ msgid ""
 "directly when using this flag, as some databases include separate generic"
 " date/time-holding types distinct from the timezone-capable TIMESTAMP "
 "datatype, such as Oracle."
-msgstr ""
+msgstr "ブール値。 ** datetime型で**タイムゾーンのサポートを有効にする必要があることを示します。一部のデータベースには、Oracleなどのタイムゾーン対応のTIMESTAMPデータ型とは異なる別の汎用日付/時刻保持タイプが含まれているため、：class： `〜.types.TIMESTAMP`データ型を直接使用することをお薦めします。"
 
 #: of sqlalchemy.dialects.oracle.DOUBLE_PRECISION.__init__:1
 msgid "Construct a Float."
-msgstr ""
+msgstr "Floatを構築します。"
 
 #: of sqlalchemy.dialects.oracle.DOUBLE_PRECISION.__init__:3
 msgid "the numeric precision for use in DDL ``CREATE TABLE``."
-msgstr ""
+msgstr "`` CREATE TABLE`` DDLで使用する数値精度。"
 
 #: of sqlalchemy.dialects.oracle.DOUBLE_PRECISION.__init__:6
 msgid ""
 "the same flag as that of :class:`.Numeric`, but defaults to ``False``.   "
 "Note that setting this flag to ``True`` results in floating point "
 "conversion."
-msgstr ""
+msgstr "：class： `.Numeric`と同じフラグですが、デフォルトは` `False``です。このフラグを &quot;True&quot;に設定すると、浮動小数点変換が行われることに注意してください。"
 
 #: of sqlalchemy.dialects.oracle.DOUBLE_PRECISION.__init__:10
 msgid ""
@@ -512,7 +502,7 @@ msgid ""
 "  Note that the MySQL float types, which do include \"scale\", will use "
 "\"scale\" as the default for decimal_return_scale, if not otherwise "
 "specified.  .. versionadded:: 0.9.0"
-msgstr ""
+msgstr "浮動小数点数からPython小数値に変換するときに使用するデフォルトの位取り。浮動小数点の値は、通常、小数の不正確さのために非常に長くなり、ほとんどの浮動小数点データベース型は\ &quot;スケール\&quot;という概念を持たないため、デフォルトで浮動小数点型は変換時に小数点以下10桁を探します。この値を指定すると、その長さがオーバーライドされます。 \ &quot;scale \&quot;を含むMySQLのfloat型は、特に指定がない限り、decimal_return_scaleのデフォルトとして\ &quot;scale \&quot;を使用することに注意してください。 .. versionadded :: 0.9.0"
 
 #: of sqlalchemy.dialects.oracle.DOUBLE_PRECISION.__init__:10
 msgid ""
@@ -524,7 +514,7 @@ msgid ""
 "  Note that the MySQL float types, which do include \"scale\", will use "
 "\"scale\" as the default for decimal_return_scale, if not otherwise "
 "specified."
-msgstr ""
+msgstr "浮動小数点数からPython小数値に変換するときに使用するデフォルトの位取り。浮動小数点の値は、通常、小数の不正確さのために非常に長くなり、ほとんどの浮動小数点データベース型は\ &quot;スケール\&quot;という概念を持たないため、デフォルトで浮動小数点型は変換時に小数点以下10桁を探します。この値を指定すると、その長さがオーバーライドされます。 \ &quot;scale \&quot;を含むMySQLのfloat型は、特に指定がない限り、decimal_return_scaleのデフォルトとして\ &quot;scale \&quot;を使用することに注意してください。"
 
 #: of sqlalchemy.dialects.oracle.DOUBLE_PRECISION.__init__:21
 msgid ""
@@ -532,35 +522,35 @@ msgid ""
 ":class:`.Float` type.  For database specific floats that support "
 "additional arguments, see that dialect's documentation for details, such "
 "as :class:`sqlalchemy.dialects.mysql.FLOAT`."
-msgstr ""
+msgstr "推奨されていません。ここでの追加引数は、デフォルトでは無視されます：class： `.Float`型。追加の引数をサポートするデータベース固有の浮動小数点数については、その方言の詳細については、class： `sqlalchemy.dialects.mysql.FLOAT`などのドキュメントを参照してください。"
 
 #: of sqlalchemy.dialects.oracle.INTERVAL.__init__:1
 msgid "Construct an INTERVAL."
-msgstr ""
+msgstr "INTERVALを構築します。"
 
 #: of sqlalchemy.dialects.oracle.INTERVAL.__init__:3
 msgid ""
 "Note that only DAY TO SECOND intervals are currently supported. This is "
 "due to a lack of support for YEAR TO MONTH intervals within available "
 "DBAPIs (cx_oracle and zxjdbc)."
-msgstr ""
+msgstr "DAY TO SECONDの間隔だけが現在サポートされていることに注意してください。これは、使用可能なDBAPI（cx_oracleおよびzxjdbc）内のYEAR TO MONTH間隔のサポートが不足しているためです。"
 
 #: of sqlalchemy.dialects.oracle.INTERVAL.__init__:7
 msgid ""
 "the day precision value.  this is the number of digits to store for the "
 "day field.  Defaults to \"2\""
-msgstr ""
+msgstr "日の精度値。これは、日フィールドに格納する桁数です。デフォルトは\ &quot;2 \"
 
 #: of sqlalchemy.dialects.oracle.INTERVAL.__init__:9
 msgid ""
 "the second precision value.  this is the number of digits to store for "
 "the fractional seconds field. Defaults to \"6\"."
-msgstr ""
+msgstr "2番目の精度値です。これは分数秒のフィールドに格納する桁数です。デフォルトは\ &quot;6 \&quot;です。"
 
 #: of sqlalchemy.dialects.oracle.LONG.__init__:1
 #: sqlalchemy.dialects.oracle.NCLOB.__init__:1
 msgid "Create a string-holding type."
-msgstr ""
+msgstr "文字列保持型を作成します。"
 
 #: of sqlalchemy.dialects.oracle.LONG.__init__:3
 #: sqlalchemy.dialects.oracle.NCLOB.__init__:3
@@ -571,7 +561,7 @@ msgid ""
 "exception when the ``CREATE TABLE`` DDL is issued if a ``VARCHAR`` with "
 "no length is included.  Whether the value is interpreted as bytes or "
 "characters is database specific."
-msgstr ""
+msgstr "オプションで、DDLおよびCAST式で使用する列の長さ。 `` CREATE TABLE``が発行されない場合は、安全に省略することができます。特定のデータベースでは、DDLで使用するために `` length``が必要な場合があります。長さのない `` VARCHAR``が含まれている場合は、 `` CREATE TABLE`` DDLが発行されると例外が発生します。値がバイトまたは文字として解釈されるかどうかは、データベース固有です。"
 
 #: of sqlalchemy.dialects.oracle.LONG.__init__:11
 #: sqlalchemy.dialects.oracle.NCLOB.__init__:11
@@ -582,7 +572,7 @@ msgid ""
 ">>> print select([cast('some string', String(collation='utf8'))])   "
 "SELECT CAST(:param_1 AS VARCHAR COLLATE utf8) AS anon_1  .. "
 "versionadded:: 0.8 Added support for COLLATE to all    string types."
-msgstr ""
+msgstr "オプションで、DDLおよびCAST式で使用する列レベルの照合。 SQLite、MySQL、PostgreSQLでサポートされているCOLLATEキーワードを使用してレンダリングします。 SELECT CAST（：param_1 AS VARCHAR COLLATE utf8）ASを使用する場合は、次のように入力します。 anon_1 .. versionadded :: 0.8すべての文字列型に対するCOLLATEのサポートが追加されました。"
 
 #: of sqlalchemy.dialects.oracle.LONG.__init__:11
 #: sqlalchemy.dialects.oracle.NCLOB.__init__:11
@@ -590,12 +580,12 @@ msgid ""
 "Optional, a column-level collation for use in DDL and CAST expressions.  "
 "Renders using the COLLATE keyword supported by SQLite, MySQL, and "
 "PostgreSQL. E.g.::"
-msgstr ""
+msgstr "オプションで、DDLおよびCAST式で使用する列レベルの照合。 SQLite、MySQL、PostgreSQLでサポートされているCOLLATEキーワードを使用してレンダリングします。例えば：："
 
 #: of sqlalchemy.dialects.oracle.LONG.__init__:20
 #: sqlalchemy.dialects.oracle.NCLOB.__init__:20
 msgid "Added support for COLLATE to all string types."
-msgstr ""
+msgstr "すべての文字列型に対するCOLLATEのサポートが追加されました。"
 
 #: of sqlalchemy.dialects.oracle.LONG.__init__:23
 #: sqlalchemy.dialects.oracle.NCLOB.__init__:23
@@ -616,7 +606,7 @@ msgid ""
 "backend that does natively support Python ``unicode``, the value "
 "``force`` can be passed here which will cause SQLAlchemy's encode/decode "
 "services to be used unconditionally."
-msgstr ""
+msgstr "`` True``に設定すると、：class： `.String`型は入力がPythonの` `unicode``オブジェクトとして渡され、結果がPythonの` `unicode``オブジェクトとして返されると想定します。使用しているDBAPIがPython unicodeをサポートしていない場合（最近はこれよりも少ない）、SQLAlchemyは：func： `.create_engine`に渡された` `encoding``パラメータの値を使用して値をエンコード/デコードしますエンコーディング。 PythonのUnicodeオブジェクトをネイティブにサポートするDBAPIを使用する場合、このフラグは一般に設定する必要はありません。非ASCIIデータを明示的に格納するカラムの場合、：class： `.Unicode`または：class：` .UnicodeText`型は、 `` convert_unicode``と同じ動作をしますが、 `` NVARCHAR``のような、Unicodeを直接サポートする基底のカラム型です。非常にまれにPython `` unicode``がPython `` unicode``をネイティブにサポートするバックエンドでSQLAlchemyによってエンコード/デコードされることになっている場合、 `` force``をここに渡すとSQLAlchemyのエンコードが行われます/無条件に使用されるサービスをデコードします。"
 
 #: of sqlalchemy.dialects.oracle.LONG.__init__:23
 #: sqlalchemy.dialects.oracle.NCLOB.__init__:23
@@ -627,7 +617,7 @@ msgid ""
 "unicode (which is fewer and fewer these days), SQLAlchemy will "
 "encode/decode the value, using the value of the ``encoding`` parameter "
 "passed to :func:`.create_engine` as the encoding."
-msgstr ""
+msgstr "`` True``に設定すると、：class： `.String`型は入力がPythonの` `unicode``オブジェクトとして渡され、結果がPythonの` `unicode``オブジェクトとして返されると想定します。使用しているDBAPIがPython unicodeをサポートしていない場合（最近はこれよりも少ない）、SQLAlchemyは：func： `.create_engine`に渡された` `encoding``パラメータの値を使用して値をエンコード/デコードしますエンコーディング。"
 
 #: of sqlalchemy.dialects.oracle.LONG.__init__:33
 #: sqlalchemy.dialects.oracle.NCLOB.__init__:33
@@ -638,7 +628,7 @@ msgid ""
 ":class:`.UnicodeText` types should be used regardless, which feature the "
 "same behavior of ``convert_unicode`` but also indicate an underlying "
 "column type that directly supports unicode, such as ``NVARCHAR``."
-msgstr ""
+msgstr "PythonのUnicodeオブジェクトをネイティブにサポートするDBAPIを使用する場合、このフラグは一般に設定する必要はありません。非ASCIIデータを明示的に格納するカラムの場合、：class： `.Unicode`または：class：` .UnicodeText`型は、 `` convert_unicode``と同じ動作をしますが、 `` NVARCHAR``のような、Unicodeを直接サポートする基底のカラム型です。"
 
 #: of sqlalchemy.dialects.oracle.LONG.__init__:43
 #: sqlalchemy.dialects.oracle.NCLOB.__init__:43
@@ -647,7 +637,7 @@ msgid ""
 "encoded/decoded by SQLAlchemy on a backend that does natively support "
 "Python ``unicode``, the value ``force`` can be passed here which will "
 "cause SQLAlchemy's encode/decode services to be used unconditionally."
-msgstr ""
+msgstr "非常にまれにPython `` unicode``がPython `` unicode``をネイティブにサポートするバックエンドでSQLAlchemyによってエンコード/デコードされることになっている場合、 `` force``をここに渡すとSQLAlchemyのエンコードが行われます/無条件に使用されるサービスをデコードします。"
 
 #: of sqlalchemy.dialects.oracle.LONG.__init__:50
 #: sqlalchemy.dialects.oracle.NCLOB.__init__:50
@@ -661,29 +651,29 @@ msgid ""
 " backends that already return unicode objects natively (which most DBAPIs"
 " do).  This flag should only be used as a last resort for reading strings"
 " from a column with varied or corrupted encodings."
-msgstr ""
+msgstr "オプションで、Unicode変換エラーの処理に使用するメソッド。標準ライブラリの `` string.decode（） ``関数の `` errors``キーワード引数のように動作します。このフラグは、 `` convert_unicode``が `` force``に設定されている必要があります。そうでなければ、SQLAlchemyはUnicode変換のタスクを処理することは保証されていません。このフラグは、ユニコードオブジェクトをネイティブに返すバックエンド（ほとんどのDBAPIが行う）の行取得操作に大きなパフォーマンスオーバーヘッドを追加することに注意してください。このフラグは、可変または壊れたエンコーディングを持つ列から文字列を読み取る最後の手段としてのみ使用してください。"
 
 #: ../../dialects/oracle.rst:57
 msgid "cx_Oracle"
-msgstr ""
+msgstr "cx_Oracle"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:8
 msgid "Additional Connect Arguments"
-msgstr ""
+msgstr "追加の接続引数"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:10
 msgid ""
 "When connecting with ``dbname`` present, the host, port, and dbname "
 "tokens are converted to a TNS name using the cx_oracle ``makedsn()`` "
 "function.  Otherwise, the host token is taken directly as a TNS name."
-msgstr ""
+msgstr "`` dbname``で接続すると、cx_oracle `` makedsn（） ``関数を使用して、ホスト、ポート、およびdbnameトークンがTNS名に変換されます。それ以外の場合、ホストトークンはTNS名として直接取得されます。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:15
 msgid ""
 "Additional arguments which may be specified either as query string "
 "arguments on the URL, or as keyword arguments to :func:`.create_engine()`"
 " are:"
-msgstr ""
+msgstr "追加の引数は、URL上のクエリ文字列引数として、または：func： `.create_engine（）`のキーワード引数として指定することができます："
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:18
 msgid ""
@@ -691,33 +681,33 @@ msgid ""
 "to 50.  This setting is significant with cx_Oracle as the contents of LOB"
 " objects are only readable within a \"live\" row (e.g. within a batch of "
 "50 rows)."
-msgstr ""
+msgstr "`` arraysize``  - カーソルのcx_oracle.arraysizeの値を50に設定します。この設定は、LOBオブジェクトの内容が\ &quot;ライブ\&quot;行（例えば、50行のバッチ内でのみ読み込み可能）であるため、cx_Oracleで重要です。 ）。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:23
 msgid "``auto_convert_lobs`` - defaults to True; See :ref:`cx_oracle_lob`."
-msgstr ""
+msgstr "`` auto_convert_lobs``  - デフォルトはTrueです。参照：ref： `cx_oracle_lob`を参照してください。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:25
 msgid "``coerce_to_unicode`` - see :ref:`cx_oracle_unicode` for detail."
-msgstr ""
+msgstr "`` coerce_to_unicode``  - 詳細はref： `cx_oracle_unicode`を参照してください。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:27
 msgid "``coerce_to_decimal`` - see :ref:`cx_oracle_numeric` for detail."
-msgstr ""
+msgstr "`` coerce_to_decimal``  - 詳細はref： `cx_oracle_numeric`を参照してください。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:29
 msgid ""
 "``mode`` - This is given the string value of SYSDBA or SYSOPER, or "
 "alternatively an integer value.  This value is only available as a URL "
 "query string argument."
-msgstr ""
+msgstr "`` mode``  - これにはSYSDBAまたはSYSOPERの文字列値、あるいは整数値が与えられます。この値は、URLクエリ文字列引数としてのみ使用できます。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:33
 msgid ""
 "``threaded`` - enable multithreaded access to cx_oracle connections. "
 "Defaults to ``True``.  Note that this is the opposite default of the "
 "cx_Oracle DBAPI itself."
-msgstr ""
+msgstr "`` threaded``  -  cx_oracle接続へのマルチスレッドアクセスを可能にします。デフォルトは `` True``です。これは、cx_Oracle DBAPI自体の反対のデフォルトであることに注意してください。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:37
 msgid ""
@@ -726,17 +716,17 @@ msgid ""
 "``database`` part is given. E.g. "
 "``oracle+cx_oracle://scott:tiger@host:1521/?service_name=hr`` is a valid "
 "url. This value is only available as a URL query string argument."
-msgstr ""
+msgstr "`` service_name``  -  `` SID``ではなく `` SERVICE_NAME``で接続文字列（DSN）を使うオプションです。 `` database``部分が与えられたときに渡すことはできません。たとえば、oracle + cx_oracle：// scott：tiger @ host：1521 /？service_name = hr``は有効なURLです。この値は、URLクエリ文字列引数としてのみ使用できます。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:48
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:50
 msgid ""
 "The cx_Oracle DBAPI as of version 5 fully supports Unicode, and has the "
 "ability to return string results as Python Unicode objects natively."
-msgstr ""
+msgstr "バージョン5のcx_Oracle DBAPIは、Unicodeを完全にサポートしており、文字列結果をPython Unicodeオブジェクトとしてネイティブに返すことができます。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:53
 msgid ""
@@ -748,7 +738,7 @@ msgid ""
 "a Unicode-aware character set, as well as that the ``NLS_LANG`` "
 "environment variable is set appropriately, so that the VARCHAR2 and CLOB "
 "datatypes can accommodate the data."
-msgstr ""
+msgstr "明示的なUnicodeのサポートは：class： `.Unicode`データ型とSQLAlchemy Core式言語を使用して、：class：` .UnicodeText`データ型を使用することで利用できます。これらの型は、デフォルトでVARCHAR2およびCLOBのOracleデータ型に対応します。 Unicodeデータでこれらのデータ型を使用する場合、OracleデータベースはUnicode対応のキャラクタ・セットで構成され、環境変数「NLS_LANG」が適切に設定され、VARCHAR2およびCLOBデータ型に対応できるようになりますデータ。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:61
 msgid ""
@@ -758,7 +748,7 @@ msgid ""
 "``use_nchar_for_unicode=True`` to :func:`.create_engine`, which will "
 "cause the SQLAlchemy dialect to use NCHAR/NCLOB for the :class:`.Unicode`"
 " / :class:`.UnicodeText` datatypes instead of VARCHAR/CLOB."
-msgstr ""
+msgstr "OracleデータベースがUnicode文字セットで構成されていない場合、2つのオプションは：class： `.oracle.NCHAR`と：class：` .oracle.NCLOB`データ型を明示的に使用するか、またはフラグを渡すことです：use_nchar_for_unicode = True``を：func： `.create_engine`とすると、VARCHAR / CLOBではなくclass：` .Unicode` /：class： `.UnicodeText`データ型に対してSQLAlchemyダイアレクトがNCHAR / NCLOBを使用します。 。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:68
 msgid ""
@@ -766,7 +756,7 @@ msgid ""
 "to the ``VARCHAR2`` and ``CLOB`` Oracle datatypes unless the "
 "``use_nchar_for_unicode=True`` is passed to the dialect when "
 ":func:`.create_engine` is called."
-msgstr ""
+msgstr "：class： `.Unicode`と：class：` .UnicodeText`データ型は、次のときにuse_nchar_for_unicode = True``が方言に渡されない限り、 `` VARCHAR2``と `` CLOB``のOracleデータ型に対応するようになりました： func： `.create_engine`が呼び出されます。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:73
 msgid ""
@@ -782,7 +772,7 @@ msgid ""
 "  To disable the Python 2 Unicode conversion for VARCHAR2, CHAR, and "
 "CLOB, the flag ``coerce_to_unicode=False`` can be passed to "
 ":func:`.create_engine`."
-msgstr ""
+msgstr "結果セットが文字列を含むものをフェッチすると、Python 3ではcx_Oracle DBAPIはすべての文字列をPython Unicodeオブジェクトとして返します。Python 3はUnicode文字列型しか持たないからです。これは、VARCHAR2、CHAR、CLOB、NCHAR、NCLOBなどのデータ型からフェッチされたデータに対して発生します。Python 2の下で相互互換性を提供するために、SQLAlchemy cx_Oracle方言はPython 2の下でもUnicode変換を文字列データに追加します。これまでは、これはcx_Oracleによって提供されたものの、パフォーマンスの良いものではないコンバータが使用されていました。 SQLAlchemy独自のコンバータは、Python 2の文字列からUnicodeへの変換に使用されます。VARCHAR2、CHAR、およびCLOBのPython 2 Unicode変換を無効にするには、フラグ `` coerce_to_unicode = False``をfunc： `.create_engine` 。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:85
 msgid ""
@@ -790,13 +780,13 @@ msgid ""
 "python 2.  The ``coerce_to_unicode`` now defaults to True and can be set "
 "to False to disable the Unicode coersion of strings that are delivered as"
 " VARCHAR2/CHAR/CLOB data."
-msgstr ""
+msgstr "Unicode変換は、デフォルトではすべての文字列値に適用されます（Python 2の場合）。 `` coerce_to_unicode``はデフォルトでTrueに設定され、VARCHAR2 / CHAR / CLOBデータとして渡される文字列のUnicodeコーディングを無効にするにはFalseに設定できます。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:94
 msgid ""
 "Fine grained control over cx_Oracle data binding and performance with "
 "setinputsizes"
-msgstr ""
+msgstr "cx_Oracleデータバインディングとsetinputsizesによるパフォーマンスの詳細な制御"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:96
 msgid ""
@@ -810,7 +800,7 @@ msgid ""
 "know exactly how data should be bound, as some settings can cause "
 "profoundly different performance characteristics, while altering the type"
 " coercion behavior at the same time."
-msgstr ""
+msgstr "cx_Oracle DBAPIは、DBAPIの `` setinputsizes（） ``コールの使用に深く根本的に依存しています。この呼び出しの目的は、パラメータとして渡されるPython値のSQL文にバインドされたデータ型を確立することです。 cx_Oracle DBAPIは、setinputsizes（）の呼び出しに他のDBAPIを使用することは事実上ありませんが、Oracleクライアントインターフェイスとのやりとりに大きく依存しています。また、SQLAlchemyでは、いくつかの設定では、タイプ強制動作を同時に変更しながら、大幅に異なるパフォーマンス特性を引き起こす可能性があるため、バインドする必要があります。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:106
 msgid ""
@@ -819,7 +809,7 @@ msgid ""
 "oracle.readthedocs.io/en/latest/module.html#types. Note that in some "
 "cases, signficant performance degradation can occur when using these "
 "types vs. not, in particular when specifying ``cx_Oracle.CLOB``."
-msgstr ""
+msgstr "cx_Oracleの方言のユーザーは、http：//cx-oracle.readthedocs.io/ja/latest/module.html#typesにあるcx_Oracleの組み込みデータ型シンボルのリストを読み出すことを強くお勧めします。場合によっては、これらの型を使用しない場合、特に `` cx_Oracle.CLOB``を指定する場合に、パフォーマンスの低下が顕著になることに注意してください。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:111
 msgid ""
@@ -827,15 +817,15 @@ msgid ""
 " can be used both for runtime visibliity (e.g. logging) of the "
 "setinputsizes step as well as to fully control how ``setinputsizes()`` is"
 " used on a per-statement basis."
-msgstr ""
+msgstr "SQLAlchemy側では、：meth： `.DialectEvents.do_setinputsizes`イベントは、setinputsizesステップのランタイム可視性（例えばロギング）と、` `setinputsizes（）` `がどのように使用されるかを完全に制御するために使用できます記述ベース。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:116
 msgid "Added :meth:`.DialectEvents.setinputsizes`"
-msgstr ""
+msgstr "追加：meth： `.DialectEvents.setinputsizes`"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:120
 msgid "Example 1 - logging all setinputsizes calls"
-msgstr ""
+msgstr "例1  - すべてのsetinputsizes呼び出しを記録する"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:122
 msgid ""
@@ -844,29 +834,29 @@ msgid ""
 "``setinputsizes()`` parameter dictionary.  The keys of the dictionary are"
 " :class:`.BindParameter` objects which have a ``.key`` and a ``.type`` "
 "attribute::"
-msgstr ""
+msgstr "次の例は、中間の値を生の `` setinputsizes（） ``パラメータ辞書に変換する前にSQLAlchemyパースペクティブからログ出力する方法を示しています。辞書のキーは、 `` .key``属性と `` .type``属性を持つclass： `.BindParameter`オブジェクトです::"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:140
 msgid "Example 2 - remove all bindings to CLOB"
-msgstr ""
+msgstr "例2  - すべてのバインディングをCLOBに削除する"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:142
 msgid ""
 "The ``CLOB`` datatype in cx_Oracle incurs a significant performance "
 "overhead, however is set by default for the ``Text`` type within the "
 "SQLAlchemy 1.2 series.   This setting can be modified as follows::"
-msgstr ""
+msgstr "cx_Oracleの `` CLOB``データ型は、かなりのパフォーマンスオーバーヘッドを招きますが、SQLAlchemy 1.2シリーズ内の `` Text``型のためにデフォルトで設定されています。この設定は次のように変更できます::"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:162
 msgid ""
 "The cx_Oracle dialect implements RETURNING using OUT parameters. The "
 "dialect supports RETURNING fully, however cx_Oracle 6 is recommended for "
 "complete support."
-msgstr ""
+msgstr "cx_Oracleダイアレクトは、OUTパラメータを使用してRETURNINGを実装します。方言は完全にRETURNINGをサポートしていますが、cx_Oracle 6は完全サポートを推奨します。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:169
 msgid "LOB Objects"
-msgstr ""
+msgstr "LOBオブジェクト"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:171
 msgid ""
@@ -874,7 +864,7 @@ msgid ""
 " converts these to strings so that the interface of the Binary type is "
 "consistent with that of other backends, which takes place within a "
 "cx_Oracle outputtypehandler."
-msgstr ""
+msgstr "cx_oracleは、cx_oracle.LOBオブジェクトを使用してoracle LOBを戻します。 SQLAlchemyはこれらを文字列に変換して、バイナリ型のインタフェースがcx_Oracle出力型ハンドラ内で行われる他のバックエンドのインタフェースと一貫性を保つようにします。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:176
 msgid ""
@@ -883,7 +873,7 @@ msgid ""
 "``cursor.arraysize``. As of the 6 series, this limitation has been "
 "lifted.  Nevertheless, because SQLAlchemy pre-reads these LOBs up front, "
 "this issue is avoided in any case."
-msgstr ""
+msgstr "バージョン6より前のcx_Oracleでは、 `` cursor.arraysize``で指定された行の新しいバッチを読み取る前にLOBオブジェクトを読み取る必要があります。 6シリーズ以降、この制限は解除されました。それにもかかわらず、SQLAlchemyはこれらのLOBを先読みするため、この問題は回避されます。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:181
 msgid ""
@@ -892,18 +882,18 @@ msgid ""
 "Under the cx_Oracle 5 series, having this flag turned off means there is "
 "the chance of reading from a stale LOB object if not read as it is "
 "fetched.   With cx_Oracle 6, this issue is resolved."
-msgstr ""
+msgstr "方言のauto \ &quot;read（）\&quot;機能を無効にするには、フラグ `` auto_convert_lobs = False``をfunc： `.create_engine`に渡すことができます。 cx_Oracle 5シリーズの下では、このフラグをオフにすると、フェッチされたときに読み取られないと失効したLOBオブジェクトから読み取る可能性があります。 cx_Oracle 6では、この問題は解決されています。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:187
 msgid ""
 "the LOB handling system has been greatly simplified internally to make "
 "use of outputtypehandlers, and no longer makes use of alternate "
 "\"buffered\" result set objects."
-msgstr ""
+msgstr "LOB処理システムは、出力タイプ・ハンドラを使用するために内部的に大幅に簡素化されており、もはや代替の &quot;バッファリングされた&quot;結果セット・オブジェクトを使用しません。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:192
 msgid "Two Phase Transactions Not Supported"
-msgstr ""
+msgstr "サポートされていない2フェーズトランザクション"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:194
 msgid ""
@@ -912,11 +902,11 @@ msgid ""
 "transactions has been changed to be more of a direct pass-through to the "
 "underlying OCI layer with less automation.  The additional logic to "
 "support this system is not implemented in SQLAlchemy."
-msgstr ""
+msgstr "** cx_Oracleの下では、ドライバーのサポートが貧弱なため、2フェーズトランザクションは**サポートされません**。 cx_Oracle 6.0b1以降、2フェーズ・トランザクションのインタフェースは、より少ない自動化で基礎となるOCIレイヤーへのダイレクト・パススルーに変更されました。このシステムをサポートする追加ロジックは、SQLAlchemyでは実装されていません。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:203
 msgid "Precision Numerics"
-msgstr ""
+msgstr "精密数値"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:205
 msgid ""
@@ -929,7 +919,7 @@ msgid ""
 "make matters more complicated under Oracle, Oracle's ``NUMBER`` type can "
 "also represent integer values if the \"scale\" is zero, so the Oracle-"
 "specific :class:`.oracle.NUMBER` type takes this into account as well."
-msgstr ""
+msgstr "SQLAlchemyの数値型は、PythonのDecimalオブジェクトやfloatオブジェクトとして値を受け取ったり返したりすることができます。 ：class： `.Numeric`オブジェクト、または：class：` .Float`、：class： `.oracle.DOUBLE_PRECISION`などのサブクラスが使用されている場合、：paramref：` .Numeric.asdecimal`フラグ返り値を `` Decimal``に強制するか、floatオブジェクトとして返すべきかを決定します。 Oracleの場合、問題を複雑にするために、Oracleの `` NUMBER``型は、\ &quot;scale \&quot;がゼロの場合は整数値を表すことができるので、Oracle固有の：class： `.oracle.NUMBER`型はこれをよく"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:214
 msgid ""
@@ -943,7 +933,7 @@ msgid ""
 "subquery.  The type handlers do their best to make the right decision in "
 "all cases, deferring to the underlying cx_Oracle DBAPI for all those "
 "cases where the driver can make the best decision."
-msgstr ""
+msgstr "cx_Oracle方言は、要求されたように数値を強制するために、接続レベルとカーソルレベルの\ &quot;outputtypehandler \&quot;呼び出しを大量に使用します。これらの呼び出しは、使用中のclass： `.Numeric`とSQLAlchemy型指定オブジェクトが存在しない場合の特定のフレーバーに固有のものです。 Oracleが複数のレベルの副問合せの下に埋もれている問合せなど、返される数値型に関する不完全またはあいまいな情報をOracleが送信する場合があります。タイプハンドラは、すべての場合において適切な決定を下すために最善を尽くし、ドライバが最良の決定を下すことができるすべてのケースについて基礎となるcx_Oracle DBAPIを延期します。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:224
 msgid ""
@@ -952,23 +942,23 @@ msgid ""
 "numeric values which specify precision and scale as Python ``Decimal`` "
 "objects.  To disable this coercion to decimal for performance reasons, "
 "pass the flag ``coerce_to_decimal=False`` to :func:`.create_engine`::"
-msgstr ""
+msgstr "プレーンなSQL文字列を実行するときのように、型指定オブジェクトが存在しないときには、一般に精度と位取りを指定する数値をPythonの `` Decimal``オブジェクトとして返すデフォルトの\ &quot;outputtypehandler \&quot;が存在します。パフォーマンス上の理由からこの強制変換を10進数で無効にするには、フラグ `` coerce_to_decimal = False``を：func： `.create_engine` ::に渡します。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:232
 msgid ""
 "The ``coerce_to_decimal`` flag only impacts the results of plain string "
 "SQL staements that are not otherwise associated with a :class:`.Numeric` "
 "SQLAlchemy type (or a subclass of such)."
-msgstr ""
+msgstr "`` coerce_to_decimal``フラグは他の点では：class： `.Numeric` SQLAlchemy型（またはそのようなサブクラス）に関連していない普通の文字列SQLステージメントの結果にのみ影響します。"
 
 #: ../../docstring of sqlalchemy.dialects.oracle.cx_oracle:236
 msgid ""
 "The numeric handling system for cx_Oracle has been reworked to take "
 "advantage of newer cx_Oracle features as well as better integration of "
 "outputtypehandlers."
-msgstr ""
+msgstr "cx_Oracleの数値処理システムは、最新のcx_Oracle機能を利用し、さらには出力タイプハンドラの統合を改善するために改訂されました。"
 
 #: ../../dialects/oracle.rst:62
 msgid "zxjdbc"
-msgstr ""
+msgstr "zxjdbc"
 

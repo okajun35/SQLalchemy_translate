@@ -6,47 +6,37 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/session_api.rst:4
 msgid "Session API"
-msgstr ""
+msgstr "セッションAPI"
 
 #: ../../orm/session_api.rst:7
 msgid "Session and sessionmaker()"
-msgstr ""
+msgstr "セッションとsessionmaker（）"
 
 #: of sqlalchemy.orm.session.sessionmaker:1
 msgid "A configurable :class:`.Session` factory."
-msgstr ""
+msgstr "設定可能な：class： `.Session`ファクトリです。"
 
 #: of sqlalchemy.orm.session.sessionmaker:3
 msgid ""
 "The :class:`.sessionmaker` factory generates new :class:`.Session` "
 "objects when called, creating them given the configurational arguments "
 "established here."
-msgstr ""
+msgstr "：class： `.sessionmaker`ファクトリはnew：class：` .Session`オブジェクトを生成します。ここで設定された設定引数を使って作成します。"
 
 #: of sqlalchemy.orm.session.Session.no_autoflush:3
 #: sqlalchemy.orm.session.sessionmaker:7
 #: sqlalchemy.orm.session.sessionmaker.configure:3
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.orm.session.sessionmaker:15
 msgid ""
 "Any keyword arguments sent to the constructor itself will override the "
 "\"configured\" keywords::"
-msgstr ""
+msgstr "コンストラクタ自体に送られたキーワード引数は、\ &quot;configured \&quot;キーワードを上書きします::"
 
 #: of sqlalchemy.orm.session.sessionmaker:23
 msgid ""
@@ -55,66 +45,66 @@ msgid ""
 "effect for subsequent :class:`.Session` objects generated. This is "
 "usually used to associate one or more :class:`.Engine` objects with an "
 "existing :class:`.sessionmaker` factory before it is first used::"
-msgstr ""
+msgstr "このクラスにはメソッド：meth： `.configure`も含まれています。これはファクトリへの追加のキーワード引数を指定するために使用でき、それは生成された後の：class：` .Session`オブジェクトに対して有効になります。これは、通常、クラス： `.Engine`オブジェクトを既存の：class：` .sessionmaker`ファクトリと最初に使用する前に関連付けるために使用されます::"
 
 #: of sqlalchemy.orm.session.Session.close_all:1
 #: sqlalchemy.orm.session.sessionmaker.close_all:1
 msgid "Close *all* sessions in memory."
-msgstr ""
+msgstr "メモリ内の*すべての*セッションを閉じます。"
 
 #: of sqlalchemy.orm.session.sessionmaker.configure:1
 msgid "(Re)configure the arguments for this sessionmaker."
-msgstr ""
+msgstr "（Re）このセッションメーカーの引数を設定します。"
 
 #: of sqlalchemy.orm.session.Session.identity_key:1
 #: sqlalchemy.orm.session.sessionmaker.identity_key:1
 msgid "Return an identity key."
-msgstr ""
+msgstr "IDキーを返します。"
 
 #: of sqlalchemy.orm.session.Session.identity_key:3
 #: sqlalchemy.orm.session.sessionmaker.identity_key:3
 msgid "This is an alias of :func:`.util.identity_key`."
-msgstr ""
+msgstr "これは：func： `.util.identity_key`のエイリアスです。"
 
 #: of sqlalchemy.orm.session.Session.object_session:1
 #: sqlalchemy.orm.session.sessionmaker.object_session:1
 msgid "Return the :class:`.Session` to which an object belongs."
-msgstr ""
+msgstr "オブジェクトが属する：class： `.Session`を返します。"
 
 #: of sqlalchemy.orm.session.Session.object_session:3
 #: sqlalchemy.orm.session.sessionmaker.object_session:3
 msgid "This is an alias of :func:`.object_session`."
-msgstr ""
+msgstr "これは：func： `.object_session`のエイリアスです。"
 
 #: of sqlalchemy.orm.session.Session:1
 msgid "Manages persistence operations for ORM-mapped objects."
-msgstr ""
+msgstr "ORMでマップされたオブジェクトの永続操作を管理します。"
 
 #: of sqlalchemy.orm.session.Session:3
 msgid "The Session's usage paradigm is described at :doc:`/orm/session`."
-msgstr ""
+msgstr "セッションの使用パラダイムは、doc： `/ orm / session`に記述されています。"
 
 #: of sqlalchemy.orm.session.Session.add:1
 msgid "Place an object in the ``Session``."
-msgstr ""
+msgstr "オブジェクトを `` Session``に配置します。"
 
 #: of sqlalchemy.orm.session.Session.add:3
 msgid "Its state will be persisted to the database on the next flush operation."
-msgstr ""
+msgstr "その状態は、次のフラッシュ操作でデータベースに保持されます。"
 
 #: of sqlalchemy.orm.session.Session.add:6
 msgid ""
 "Repeated calls to ``add()`` will be ignored. The opposite of ``add()`` is"
 " ``expunge()``."
-msgstr ""
+msgstr "`` add（） ``への繰り返し呼び出しは無視されます。 `` add（） ``の反対は `` expunge（） ``です。"
 
 #: of sqlalchemy.orm.session.Session.add_all:1
 msgid "Add the given collection of instances to this ``Session``."
-msgstr ""
+msgstr "指定されたインスタンスのコレクションをこの `` Session``に追加します。"
 
 #: of sqlalchemy.orm.session.Session.begin:1
 msgid "Begin a transaction on this :class:`.Session`."
-msgstr ""
+msgstr "this：class： `.Session`でトランザクションを開始します。"
 
 #: of sqlalchemy.orm.session.Session.begin:5
 msgid ""
@@ -130,7 +120,7 @@ msgid ""
 "transaction, so as soon as you call :meth:`.Session.commit`, the next "
 "transaction is implicitly started when the next database operation is "
 "invoked.  See :ref:`session_autocommit` for further background."
-msgstr ""
+msgstr "：meth： `.Session.begin`メソッドは** autocommitモード**と呼ばれる：class：` .Session`でのより大きなパターンの一部です。基本的に**従来の使用モード**であり、新しいアプリケーションには必要ありません。 ：class： `.Session`は通常、\&quot; begin \ &quot;の作業を透過的に処理します。これはPython DBAPIに依存してトランザクションを透過的に\&quot;開始\ &quot;します。現代的な：class： `.Session`プログラミングパターンを使用しているときにトランザクションを明示的に開始する必要はありません**。 `` autocommit = False``のデフォルトモードでは、：class： `.Session`はトランザクションのコンテキスト内ですべての作業を行います。つまり：meth：` .Session.commit`を呼び出すとすぐに次のデータベース操作が呼び出されると、次のトランザクションが暗黙的に開始されます。さらなる背景については：ref： `session_autocommit`を参照してください。"
 
 #: of sqlalchemy.orm.session.Session.begin:20
 msgid ""
@@ -143,7 +133,7 @@ msgid ""
 "emitted, in which case the whole transaction is rolled back.  For "
 "documentation on subtransactions, please see "
 ":ref:`session_subtransactions`."
-msgstr ""
+msgstr "paramref： `〜.Session.begin.subtransactions`または：paramref：`〜.Session.begin.nested`が指定されていない限り、class： `.Session`が既にトランザクションの内部にある場合、このメソッドはエラーを発生させます。 。 \ &quot;サブトランザクション\&quot;は基本的に、ロールバックが発行されない限りデータベース接続のトランザクション状態に影響を与えないコード埋め込みパターンです。この場合、トランザクション全体がロールバックされます。サブトランザクションのドキュメントについては、ref： `session_subtransactions`を参照してください。"
 
 #: of sqlalchemy.orm.attributes.get_history
 #: sqlalchemy.orm.attributes.set_attribute sqlalchemy.orm.session.Session.begin
@@ -156,25 +146,25 @@ msgstr ""
 #: sqlalchemy.orm.session.Session.is_modified
 #: sqlalchemy.orm.session.Session.merge sqlalchemy.orm.session.Session.refresh
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.orm.session.Session.begin:30
 msgid ""
 "if True, indicates that this :meth:`~.Session.begin` can create a "
 "\"subtransaction\"."
-msgstr ""
+msgstr "Trueの場合、this：meth： `〜.Session.begin`が\&quot;サブトランザクション\ &quot;を作成できることを示します。"
 
 #: of sqlalchemy.orm.session.Session.begin:33
 msgid ""
 "if True, begins a SAVEPOINT transaction and is equivalent to calling "
 ":meth:`~.Session.begin_nested`. For documentation on SAVEPOINT "
 "transactions, please see :ref:`session_begin_nested`."
-msgstr ""
+msgstr "Trueの場合はSAVEPOINTトランザクションを開始し、これは：meth： `〜.Session.begin_nested`を呼び出すのと同じです。 SAVEPOINTトランザクションのドキュメントについては、ref： `session_begin_nested`を参照してください。"
 
 #: of sqlalchemy.orm.session.Session.begin
 #: sqlalchemy.orm.session.Session.begin_nested
 msgid "戻り値"
-msgstr ""
+msgstr "戻り値"
 
 #: of sqlalchemy.orm.session.Session.begin:37
 msgid ""
@@ -182,32 +172,32 @@ msgid ""
 ":class:`.SessionTransaction` acts as a Python context manager, allowing "
 ":meth:`.Session.begin` to be used in a \"with\" block.  See "
 ":ref:`session_autocommit` for an example."
-msgstr ""
+msgstr "：class： `.SessionTransaction`オブジェクトです。 class： `.SessionTransaction`はPythonコンテキストマネージャーとして働き、meth：` .Session.begin`を\ &quot;with \&quot;ブロックで使用できるようにします。例を参照してください：ref： `session_autocommit`"
 
 #: of sqlalchemy.orm.session.Session.begin:45
 msgid ":ref:`session_autocommit`"
-msgstr ""
+msgstr "：ref： `session_autocommit`"
 
 #: of sqlalchemy.orm.session.Session.begin:47
 #: sqlalchemy.orm.session.SessionTransaction:101
 msgid ":meth:`.Session.begin_nested`"
-msgstr ""
+msgstr "：meth： `.Session.begin_nested`"
 
 #: of sqlalchemy.orm.session.Session.begin_nested:1
 msgid "Begin a \"nested\" transaction on this Session, e.g. SAVEPOINT."
-msgstr ""
+msgstr "SAVEPOINTのように、このセッションで\ &quot;ネスト\&quot;トランザクションを開始してください。"
 
 #: of sqlalchemy.orm.session.Session.begin_nested:3
 msgid ""
 "The target database(s) and associated drivers must support SQL SAVEPOINT "
 "for this method to function correctly."
-msgstr ""
+msgstr "このメソッドが正しく機能するには、ターゲット・データベースおよび関連ドライバーがSQL SAVEPOINTをサポートしていなければなりません。"
 
 #: of sqlalchemy.orm.session.Session.begin_nested:6
 msgid ""
 "For documentation on SAVEPOINT transactions, please see "
 ":ref:`session_begin_nested`."
-msgstr ""
+msgstr "SAVEPOINTトランザクションのドキュメントについては、ref： `session_begin_nested`を参照してください。"
 
 #: of sqlalchemy.orm.session.Session.begin_nested:9
 msgid ""
@@ -215,40 +205,40 @@ msgid ""
 ":class:`.SessionTransaction` acts as a context manager, allowing "
 ":meth:`.Session.begin_nested` to be used in a \"with\" block. See "
 ":ref:`session_begin_nested` for a usage example."
-msgstr ""
+msgstr "：class： `.SessionTransaction`オブジェクトです。 class： `.SessionTransaction`はコンテキストマネージャとして機能し、meth：` .Session.begin_nested`を\ &quot;with \&quot;ブロックで使用できるようにします。使用例については：ref： `session_begin_nested`を参照してください。"
 
 #: of sqlalchemy.orm.session.Session.begin_nested:16
 msgid ":ref:`session_begin_nested`"
-msgstr ""
+msgstr "：ref： `session_begin_nested`"
 
 #: of sqlalchemy.orm.session.Session.begin_nested:18
 msgid ""
 ":ref:`pysqlite_serializable` - special workarounds required with the "
 "SQLite driver in order for SAVEPOINT to work correctly."
-msgstr ""
+msgstr "：ref： `pysqlite_serializable`  -  SAVEPOINTが正しく動作するためには、SQLiteドライバで特別な回避策が必要です。"
 
 #: of sqlalchemy.orm.session.Session.bind_mapper:1
 msgid ""
 "Associate a :class:`.Mapper` with a \"bind\", e.g. a :class:`.Engine` or "
 ":class:`.Connection`."
-msgstr ""
+msgstr "class： `.Mapper`を\&quot; bind \ &quot;に関連付けます。たとえば、：class：` .Engine`または：class： `.Connection`です。"
 
 #: of sqlalchemy.orm.session.Session.bind_mapper:4
 #: sqlalchemy.orm.session.Session.bind_table:4
 msgid ""
 "The given mapper is added to a lookup used by the "
 ":meth:`.Session.get_bind` method."
-msgstr ""
+msgstr "指定されたマッパーは、：meth： `.Session.get_bind`メソッドによって使用されるルックアップに追加されます。"
 
 #: of sqlalchemy.orm.session.Session.bind_table:1
 msgid ""
 "Associate a :class:`.Table` with a \"bind\", e.g. a :class:`.Engine` or "
 ":class:`.Connection`."
-msgstr ""
+msgstr "class： `.Table`を\&quot; bind \ &quot;に関連付けます。たとえば、：class：` .Engine`や：class： `.Connection`です。"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:1
 msgid "Perform a bulk insert of the given list of mapping dictionaries."
-msgstr ""
+msgstr "指定されたマッピング辞書のリストの一括挿入を実行します。"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:3
 msgid ""
@@ -258,14 +248,14 @@ msgid ""
 "dictionaries, there is no \"history\" or session state management "
 "features in use, reducing latency when inserting large numbers of simple "
 "rows."
-msgstr ""
+msgstr "一括挿入機能は、単純なINSERT操作のソースとしてプレーンなPython辞書を使用することを可能にします。これらの辞書は、より高性能な「executemany」操作にグループ化されやすくなります。辞書を使用すると、\ &quot;履歴\&quot;またはセッション状態管理機能が使用されず、多数の単純な行を挿入するときの待ち時間が短縮されます。"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:10
 msgid ""
 "The values within the dictionaries as given are typically passed without "
 "modification into Core :meth:`.Insert` constructs, after organizing the "
 "values within them across the tables to which the given mapper is mapped."
-msgstr ""
+msgstr "指定された辞書内の値は、通常、指定されたマッパーがマップされているテーブル全体の値を整理した後、変更なしでCore：meth： `.Insert`構造体に渡されます。"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:19
 msgid ""
@@ -273,7 +263,7 @@ msgid ""
 "expense of most other unit-of-work features. Features such as object "
 "management, relationship handling, and SQL clause support are **silently "
 "omitted** in favor of raw INSERT of records."
-msgstr ""
+msgstr "バルク挿入機能を使用すると、他のほとんどの作業単位機能を犠牲にして、ローのINSERTを行えるようになります。オブジェクト管理、リレーションシップ・ハンドリング、SQL文サポートなどの機能は、レコードの生のINSERTに賛成**しています。"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:25
 #: sqlalchemy.orm.session.Session.bulk_save_objects:26
@@ -282,14 +272,14 @@ msgid ""
 "**Please read the list of caveats at** :ref:`bulk_operations` **before "
 "using this method, and fully test and confirm the functionality of all "
 "code developed using these systems.**"
-msgstr ""
+msgstr "**このメソッドを使用する前に、**：ref： `bulk_operations` **の警告リストを読み、これらのシステムを使用して開発されたすべてのコードの機能を完全にテストして確認してください。"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:29
 #: sqlalchemy.orm.session.Session.bulk_update_mappings:24
 msgid ""
 "a mapped class, or the actual :class:`.Mapper` object, representing the "
 "single kind of object represented within the mapping list."
-msgstr ""
+msgstr "マッピングされたクラス、または実際の：class： `.Mapper`オブジェクトであり、マッピングリスト内で表される単一の種類のオブジェクトを表します。"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:33
 msgid ""
@@ -298,7 +288,7 @@ msgid ""
 " the mapping refers to multiple tables, such as a joined-inheritance "
 "mapping, each dictionary must contain all keys to be populated into all "
 "tables."
-msgstr ""
+msgstr "マッピングされたクラスの属性名の観点から、挿入されるべきマップされた行の状態を含む辞書のリスト。マッピングが継承継承マッピングなどの複数の表を参照する場合、各ディクショナリにはすべての表に移入するすべてのキーが含まれている必要があります。"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:39
 msgid ""
@@ -311,7 +301,7 @@ msgid ""
 "**greatly reduces the performance gains** of the method overall. If the "
 "rows to be inserted only refer to a single table, then there is no reason"
 " this flag should be set as the returned default information is not used."
-msgstr ""
+msgstr "Trueの場合、デフォルトを生成する値が欠落している行、つまり整数の主キーのデフォルトと順序が一度に** **挿入され、主キー値が使用可能になります。特にこれにより、結合継承および他のマルチテーブルマッピングが、主キー値を事前に提供する必要なく正しく挿入できるようになります。しかし、：paramref： `.Session.bulk_insert_mappings.return_defaults` **メソッド全体のパフォーマンスの向上**を大幅に削減します。挿入される行が1つのテーブルのみを参照する場合、返されるデフォルト情報が使用されないため、このフラグを設定する必要はありません。"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:53
 msgid ""
@@ -331,7 +321,7 @@ msgid ""
 "the NULL value will be sent explicitly.   Care must be taken    to ensure"
 " that no server-side default functions need to be    invoked for the "
 "operation as a whole.  .. versionadded:: 1.1"
-msgstr ""
+msgstr "Trueの場合、 `` None``の値は、INSERT文で省略されている列ではなく、INSERT文にNULL値が含まれるようになります。これにより、INSERTされるすべての行に、列の完全なセットがDBAPIにバッチ処理されることを許可する同一の列のセットを持つことができます。通常、前の行とは異なるNULL値の組み合わせを含む各列セットは、レンダリングされたINSERT文とは異なる一連の列を省略する必要があります。つまり、別の文として発行する必要があります。このフラグを渡すことによって、行の完全なセットが1つのバッチにバッチ可能であることが保証されます。ただし、省略された列によって呼び出されるサーバー側の既定値はスキップされるため、これらが必要でないことを確認する必要があります。 .. warning ::このフラグが設定されていると、**サーバ側のデフォルトのSQL値は呼び出されません**。 NULL値が明示的に送信されます。サーバー側のデフォルト関数を操作全体に対して呼び出す必要がないように注意する必要があります。 .. versionadded :: 1.1"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:53
 msgid ""
@@ -346,7 +336,7 @@ msgid ""
 "rows are guaranteed to be batchable into one batch; the cost however is "
 "that server-side defaults which are invoked by an omitted column will be "
 "skipped, so care must be taken to ensure that these are not necessary."
-msgstr ""
+msgstr "Trueの場合、 `` None``の値は、INSERT文で省略されている列ではなく、INSERT文にNULL値が含まれるようになります。これにより、INSERTされるすべての行に、列の完全なセットがDBAPIにバッチ処理されることを許可する同一の列のセットを持つことができます。通常、前の行とは異なるNULL値の組み合わせを含む各列セットは、レンダリングされたINSERT文とは異なる一連の列を省略する必要があります。つまり、別の文として発行する必要があります。このフラグを渡すことによって、行の完全なセットが1つのバッチにバッチ可能であることが保証されます。ただし、省略された列によって呼び出されるサーバー側の既定値はスキップされるため、これらが必要でないことを確認する必要があります。"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:69
 msgid ""
@@ -354,27 +344,27 @@ msgid ""
 "invoked** for those columns that are inserted as NULL; the NULL value "
 "will be sent explicitly.   Care must be taken to ensure that no server-"
 "side default functions need to be invoked for the operation as a whole."
-msgstr ""
+msgstr "このフラグが設定されていると、NULLとして挿入されている列に対して**サーバー側のデフォルトSQL値は呼び出されません**。 NULL値が明示的に送信されます。サーバー側のデフォルト関数を操作全体に対して呼び出す必要がないように注意する必要があります。"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:79
 #: sqlalchemy.orm.session.Session.bulk_save_objects:72
 #: sqlalchemy.orm.session.Session.bulk_update_mappings:40
 msgid ":ref:`bulk_operations`"
-msgstr ""
+msgstr "：ref： `bulk_operations`"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:81
 #: sqlalchemy.orm.session.Session.bulk_update_mappings:44
 msgid ":meth:`.Session.bulk_save_objects`"
-msgstr ""
+msgstr "：meth： `.Session.bulk_save_objects`"
 
 #: of sqlalchemy.orm.session.Session.bulk_insert_mappings:83
 #: sqlalchemy.orm.session.Session.bulk_save_objects:76
 msgid ":meth:`.Session.bulk_update_mappings`"
-msgstr ""
+msgstr "：meth： `。Session.bulk_update_mappings`"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:1
 msgid "Perform a bulk save of the given list of objects."
-msgstr ""
+msgstr "指定されたオブジェクトのリストの一括保存を実行します。"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:3
 msgid ""
@@ -384,7 +374,7 @@ msgid ""
 "extraction of data from the objects is also performed using a lower-"
 "latency process that ignores whether or not attributes have actually been"
 " modified in the case of UPDATEs, and also ignores SQL expressions."
-msgstr ""
+msgstr "バルク保存機能を使用すると、マップされたオブジェクトを簡単なINSERTおよびUPDATE操作のソースとして使用できます。これらの操作は、より簡単にグループ化してより高いパフォーマンスのexecutemany操作にすることができます。オブジェクトからのデータの抽出は、UPDATEの場合に属性が実際に変更されたかどうかを無視する低レイテンシ・プロセスを使用して実行され、SQL式も無視されます。"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:11
 msgid ""
@@ -392,7 +382,7 @@ msgid ""
 " is established on them, unless the ``return_defaults`` flag is also set,"
 " in which case primary key attributes and server-side default values will"
 " be populated."
-msgstr ""
+msgstr "指定されたオブジェクトはセッションに追加されず、 `` return_defaults``フラグも設定されていない限り、追加の状態は確立されません。この場合、主キーの属性とサーバー側のデフォルト値が設定されます。"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:20
 msgid ""
@@ -400,7 +390,7 @@ msgid ""
 " the expense of most other unit-of-work features. Features such as object"
 " management, relationship handling, and SQL clause support are **silently"
 " omitted** in favor of raw INSERT/UPDATES of records."
-msgstr ""
+msgstr "バルク・セーブ機能は、ほとんどの他の作業単位機能を犠牲にして、ローのINSERT / UPDATEローを可能にします。オブジェクト管理、リレーションシップ・ハンドリング、SQL文サポートなどの機能は、レコードの生のINSERT / UPDATESを優先して**自動的に省略されます**。"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:30
 msgid ""
@@ -417,13 +407,13 @@ msgid ""
 " UPDATE statement, which may help in allowing the statements to be "
 "grouped together into a larger executemany(), and will also reduce the "
 "overhead of checking history on attributes."
-msgstr ""
+msgstr "マップされたオブジェクトインスタンスのリストマップされたオブジェクトはそのまま維持され、後で：class： `.Session`に関連付けられません**。オブジェクトごとに、オブジェクトがINSERTまたはUPDATEとして送信されるかどうかは、従来の操作では：class： `.Session`で使用されているものと同じです。オブジェクトに：attr： `.InstanceState.key`属性が設定されている場合、オブジェクトは\&quot; detached \ &quot;とみなされ、UPDATEになります。それ以外の場合は、INSERTが使用されます。 UPDATEの場合、ステートメントはどの属性が変更されたかに基づいてグループ化され、各SET句の対象となります。 `` update_changed_only``がFalseの場合、各オブジェクト内に存在するすべての属性がUPDATE文に適用され、より大きなexecutemany（）にグループ化されるのを助け、履歴のチェックオーバーヘッドを削減します属性に関する。"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:30
 msgid ""
 "a list of mapped object instances.  The mapped objects are persisted as "
 "is, and are **not** associated with the :class:`.Session` afterwards."
-msgstr ""
+msgstr "マップされたオブジェクトインスタンスのリストマップされたオブジェクトはそのまま維持され、後で：class： `.Session`に関連付けられません**。"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:34
 msgid ""
@@ -432,7 +422,7 @@ msgid ""
 "operation; if the object has the :attr:`.InstanceState.key` attribute "
 "set, then the object is assumed to be \"detached\" and will result in an "
 "UPDATE.  Otherwise, an INSERT is used."
-msgstr ""
+msgstr "オブジェクトごとに、オブジェクトがINSERTまたはUPDATEとして送信されるかどうかは、従来の操作では：class： `.Session`で使用されているものと同じです。オブジェクトに：attr： `.InstanceState.key`属性が設定されている場合、オブジェクトは\&quot; detached \ &quot;とみなされ、UPDATEになります。それ以外の場合は、INSERTが使用されます。"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:41
 msgid ""
@@ -443,7 +433,7 @@ msgid ""
 "in allowing the statements to be grouped together into a larger "
 "executemany(), and will also reduce the overhead of checking history on "
 "attributes."
-msgstr ""
+msgstr "UPDATEの場合、ステートメントはどの属性が変更されたかに基づいてグループ化され、各SET句の対象となります。 `` update_changed_only``がFalseの場合、各オブジェクト内に存在するすべての属性がUPDATE文に適用され、より大きなexecutemany（）にグループ化されるのを助け、履歴のチェックオーバーヘッドを削減します属性に関する。"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:49
 msgid ""
@@ -454,7 +444,7 @@ msgid ""
 "correctly without the need to provide primary key values ahead of time; "
 "however, :paramref:`.Session.bulk_save_objects.return_defaults` **greatly"
 " reduces the performance gains** of the method overall."
-msgstr ""
+msgstr "Trueの場合、デフォルトを生成する値が欠落している行、つまり整数の主キーのデフォルトと順序が一度に** **挿入され、主キー値が使用可能になります。特にこれにより、結合継承および他のマルチテーブルマッピングが、主キー値を事前に提供する必要なく正しく挿入できるようになります。しかし、：paramref： `.Session.bulk_save_objects.return_defaults` **メソッド全体のパフォーマンスの向上**を大幅に削減します。"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:58
 msgid ""
@@ -462,7 +452,7 @@ msgid ""
 "each state that have logged changes. When False, all attributes present "
 "are rendered into the SET clause with the exception of primary key "
 "attributes."
-msgstr ""
+msgstr "Trueの場合、変更を記録した各状態の属性に基づいてUPDATEステートメントがレンダリングされます。 Falseの場合、存在するすべての属性は主キー属性を除いてSET句に表示されます。"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:63
 msgid ""
@@ -470,7 +460,7 @@ msgid ""
 "which the objects are given.   When False, common types of objects are "
 "grouped into inserts and updates, to allow for more batching "
 "opportunities.  .. versionadded:: 1.3"
-msgstr ""
+msgstr "Trueの場合、挿入と更新の順序は、オブジェクトが指定された順序と正確に一致します。 Falseの場合、一般的なタイプのオブジェクトは、バッチ処理の機会を増やすために、挿入と更新にグループ化されます。 .. versionadded :: 1.3"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:63
 msgid ""
@@ -478,16 +468,16 @@ msgid ""
 "which the objects are given.   When False, common types of objects are "
 "grouped into inserts and updates, to allow for more batching "
 "opportunities."
-msgstr ""
+msgstr "Trueの場合、挿入と更新の順序は、オブジェクトが指定された順序と正確に一致します。 Falseの場合、一般的なタイプのオブジェクトは、バッチ処理の機会を増やすために、挿入と更新にグループ化されます。"
 
 #: of sqlalchemy.orm.session.Session.bulk_save_objects:74
 #: sqlalchemy.orm.session.Session.bulk_update_mappings:42
 msgid ":meth:`.Session.bulk_insert_mappings`"
-msgstr ""
+msgstr "：meth： `。Session.bulk_insert_mappings`"
 
 #: of sqlalchemy.orm.session.Session.bulk_update_mappings:1
 msgid "Perform a bulk update of the given list of mapping dictionaries."
-msgstr ""
+msgstr "指定されたマッピング辞書のリストの一括更新を実行します。"
 
 #: of sqlalchemy.orm.session.Session.bulk_update_mappings:3
 msgid ""
@@ -497,7 +487,7 @@ msgid ""
 "dictionaries, there is no \"history\" or session state management "
 "features in use, reducing latency when updating large numbers of simple "
 "rows."
-msgstr ""
+msgstr "一括更新機能により、単純なUPDATE操作のソースとしてプレーンなPython辞書を使用することが可能になります。これらの辞書は、より簡単にグループ化してより高いパフォーマンスのexecutemany操作にすることができます。辞書を使用すると、\ &quot;履歴\&quot;またはセッション状態管理機能が使用されず、多数の単純な行を更新するときの待ち時間が短縮されます。"
 
 #: of sqlalchemy.orm.session.Session.bulk_update_mappings:14
 msgid ""
@@ -505,7 +495,7 @@ msgid ""
 "expense of most other unit-of-work features. Features such as object "
 "management, relationship handling, and SQL clause support are **silently "
 "omitted** in favor of raw UPDATES of records."
-msgstr ""
+msgstr "一括更新機能を使用すると、ほとんどの他の作業単位機能を犠牲にして、ロー待機時間の更新が可能になります。オブジェクト管理、リレーションシップ・ハンドリング、SQL文サポートなどの機能は、レコードの未処理の更新を優先して**自動的に省略されます**。"
 
 #: of sqlalchemy.orm.session.Session.bulk_update_mappings:28
 msgid ""
@@ -516,16 +506,16 @@ msgid ""
 "All those keys which are present and are not part of the primary key are "
 "applied to the SET clause of the UPDATE statement; the primary key "
 "values, which are required, are applied to the WHERE clause."
-msgstr ""
+msgstr "マッピングされたクラスの属性名に関して、更新されるべきマップされた行の状態をそれぞれ含む辞書のリスト。マッピングが継承継承マッピングなどの複数の表を参照する場合、各ディクショナリにはすべての表に対応するキーが含まれる場合があります。存在し、主キーの一部ではないこれらのキーはすべて、UPDATEステートメントのSET節に適用されます。必須の主キー値はWHERE句に適用されます。"
 
 #: of sqlalchemy.orm.session.Session.close:1
 msgid "Close this Session."
-msgstr ""
+msgstr "このセッションを閉じます。"
 
 #: of sqlalchemy.orm.session.Session.close:3
 #: sqlalchemy.orm.session.Session.invalidate:22
 msgid "This clears all items and ends any transaction in progress."
-msgstr ""
+msgstr "これにより、すべての明細がクリアされ、進行中のトランザクションは終了します。"
 
 #: of sqlalchemy.orm.session.Session.close:5
 #: sqlalchemy.orm.session.Session.invalidate:24
@@ -533,18 +523,18 @@ msgid ""
 "If this session were created with ``autocommit=False``, a new transaction"
 " is immediately begun.  Note that this new transaction does not use any "
 "connection resources until they are first needed."
-msgstr ""
+msgstr "このセッションが `` autocommit = False``で作成された場合、新しいトランザクションが直ちに開始されます。この新しいトランザクションは、最初に必要とされるまで接続リソースを使用しないことに注意してください。"
 
 #: of sqlalchemy.orm.session.Session.commit:1
 msgid "Flush pending changes and commit the current transaction."
-msgstr ""
+msgstr "保留中の変更をフラッシュし、現在のトランザクションをコミットします。"
 
 #: of sqlalchemy.orm.session.Session.commit:3
 #: sqlalchemy.orm.session.Session.prepare:3
 msgid ""
 "If no transaction is in progress, this method raises an "
 ":exc:`~sqlalchemy.exc.InvalidRequestError`."
-msgstr ""
+msgstr "進行中のトランザクションがない場合、このメソッドは：exc： `〜sqlalchemy.exc.InvalidRequestError`を送出します。"
 
 #: of sqlalchemy.orm.session.Session.commit:6
 msgid ""
@@ -553,14 +543,14 @@ msgid ""
 "subsequent operations load the most recent data from the database.   This"
 " behavior can be disabled using the ``expire_on_commit=False`` option to "
 ":class:`.sessionmaker` or the :class:`.Session` constructor."
-msgstr ""
+msgstr "デフォルトでは、：class： `.Session`はトランザクションコミット後にすべてのORM管理属性のすべてのデータベースロード状態を満了します。これにより、後続の操作でデータベースから最新のデータがロードされます。この動作は、class： `.sessionmaker`または：class：` .Session`コンストラクタに対する `` expire_on_commit = False``オプションを使用して無効にすることができます。"
 
 #: of sqlalchemy.orm.session.Session.commit:13
 msgid ""
 "If a subtransaction is in effect (which occurs when begin() is called "
 "multiple times), the subtransaction will be closed, and the next call to "
 "``commit()`` will operate on the enclosing transaction."
-msgstr ""
+msgstr "（begin（）が複数回呼び出されたときに起こる）サブトランザクションが有効な場合、サブトランザクションは閉じられ、次の `` commit（） ``の呼び出しは、囲みトランザクションで動作します。"
 
 #: of sqlalchemy.orm.session.Session.commit:17
 msgid ""
@@ -568,17 +558,17 @@ msgid ""
 "``autocommit=False``, a new transaction will be begun immediately after "
 "the commit, but note that the newly begun transaction does *not* use any "
 "connection resources until the first SQL is actually emitted."
-msgstr ""
+msgstr "：class： `.Session`をデフォルトモードの` `autocommit = False``で使用すると、新しいトランザクションがコミットの直後に開始されますが、新たに開始されたトランザクションは接続リソースを使用しません最初のSQLが実際に出力されます。"
 
 #: of sqlalchemy.orm.session.Session.commit:25
 msgid ":ref:`session_committing`"
-msgstr ""
+msgstr "：ref： `session_committing`"
 
 #: of sqlalchemy.orm.session.Session.connection:1
 msgid ""
 "Return a :class:`.Connection` object corresponding to this "
 ":class:`.Session` object's transactional state."
-msgstr ""
+msgstr "この：class： `.Session`オブジェクトのトランザクション状態に対応するa：class：` .Connection`オブジェクトを返します。"
 
 #: of sqlalchemy.orm.session.Session.connection:4
 msgid ""
@@ -587,41 +577,41 @@ msgid ""
 "returned, or if no transaction is in progress, a new one is begun and the"
 " :class:`.Connection` returned (note that no transactional state is "
 "established with the DBAPI until the first SQL statement is emitted)."
-msgstr ""
+msgstr "this：class： `.Session`が` `autocommit = False``で設定されている場合、現在のトランザクションに対応する：class：` .Connection`が返されるか、またはトランザクションが進行中でなければ、新しいトランザクションが開始されます：class： `.Connection`が返されました（最初のSQL文が発行されるまでDBAPIとのトランザクション状態は確立されません）。"
 
 #: of sqlalchemy.orm.session.Session.connection:11
 msgid ""
 "Alternatively, if this :class:`.Session` is configured with "
 "``autocommit=True``, an ad-hoc :class:`.Connection` is returned using "
 ":meth:`.Engine.contextual_connect` on the underlying :class:`.Engine`."
-msgstr ""
+msgstr "代わりに、もし：class： `.Session`が` `autocommit = True``で設定されていれば、基底クラス：meth：` .Engine.contextual_connect`を使ってad-hoc：class： `.Connection`を返します。 ： `.Engine`。"
 
 #: of sqlalchemy.orm.session.Session.connection:16
 msgid ""
 "Ambiguity in multi-bind or unbound :class:`.Session` objects can be "
 "resolved through any of the optional keyword arguments.   This ultimately"
 " makes usage of the :meth:`.get_bind` method for resolution."
-msgstr ""
+msgstr "マルチバインドまたはアンバインドのあいまいさ：class： `.Session`オブジェクトは任意のキーワード引数のいずれかによって解決できます。最終的には解決のために：meth： `.get_bind`メソッドを使用します。"
 
 #: of sqlalchemy.orm.session.Session.connection:20
 msgid ""
 "Optional :class:`.Engine` to be used as the bind.  If this engine is "
 "already involved in an ongoing transaction, that connection will be used."
 "  This argument takes precedence over ``mapper``, ``clause``."
-msgstr ""
+msgstr "オプション：クラス： `.Engine`をバインドとして使用します。このエンジンがすでに進行中のトランザクションに関与している場合、その接続が使用されます。この引数は `` mapper``、 `` clause``よりも優先されます。"
 
 #: of sqlalchemy.orm.session.Session.connection:26
 msgid ""
 "Optional :func:`.mapper` mapped class, used to identify the appropriate "
 "bind.  This argument takes precedence over ``clause``."
-msgstr ""
+msgstr "オプション：func： `.mapper`マップクラス。適切なバインドを識別するために使用されます。この引数は `` clause``よりも優先されます。"
 
 #: of sqlalchemy.orm.session.Session.connection:31
 msgid ""
 "A :class:`.ClauseElement` (i.e. :func:`~.sql.expression.select`, "
 ":func:`~.sql.expression.text`, etc.) which will be used to locate a bind,"
 " if a bind cannot otherwise be identified."
-msgstr ""
+msgstr "A：class： `.ClauseElement`（つまり：func：`〜.sql.expression.select`、：func： `〜.sql.expression.text`など）は、バインドの位置を特定するために使用されます。バインドは他の方法では特定できません。"
 
 #: of sqlalchemy.orm.session.Session.connection:37
 msgid ""
@@ -630,7 +620,7 @@ msgid ""
 " result set is closed.  This flag only has an effect if this "
 ":class:`.Session` is configured with ``autocommit=True`` and does not "
 "already have a transaction in progress."
-msgstr ""
+msgstr "：meth： `.Engine.connect`に渡され、：class：` .Connection`は\ &quot;一回使用\&quot;とみなされ、最初の結果セットが閉じられると自動的に閉じます。このフラグは、class： `.Session`が` `autocommit = True``で設定されており、まだ処理中のトランザクションがない場合にのみ有効です。"
 
 #: of sqlalchemy.orm.session.Session.connection:44
 msgid ""
@@ -640,7 +630,7 @@ msgid ""
 ":class:`.Session`, a warning is emitted and the arguments are ignored.  "
 ".. versionadded:: 0.9.9  .. seealso::     "
 ":ref:`session_transaction_isolation`"
-msgstr ""
+msgstr "実行オプションの辞書：meth： `.Connection.execution_options`、**接続が最初に唯一調達されたとき**。 ：class： `.Session`内にすでに接続が存在する場合、警告が発行され、引数は無視されます。 .. versionadded :: 0.9.9 .. seealso ::：ref： `session_transaction_isolation`"
 
 #: of sqlalchemy.orm.session.Session.connection:44
 msgid ""
@@ -648,45 +638,45 @@ msgid ""
 ":meth:`.Connection.execution_options`, **when the connection is first "
 "procured only**.   If the connection is already present within the "
 ":class:`.Session`, a warning is emitted and the arguments are ignored."
-msgstr ""
+msgstr "実行オプションの辞書：meth： `.Connection.execution_options`、**接続が最初に唯一調達されたとき**。 ：class： `.Session`内にすでに接続が存在する場合、警告が発行され、引数は無視されます。"
 
 #: of sqlalchemy.orm.session.Session.connection:54
 msgid ":ref:`session_transaction_isolation`"
-msgstr ""
+msgstr "：ref： `session_transaction_isolation`"
 
 #: of sqlalchemy.orm.session.Session.connection:56
 msgid ""
 "Additional keyword arguments are sent to :meth:`get_bind()`, allowing "
 "additional arguments to be passed to custom implementations of "
 ":meth:`get_bind`."
-msgstr ""
+msgstr "追加のキーワード引数は：meth： `get_bind（）`に送られ、追加の引数を：meth： `get_bind`のカスタム実装に渡すことができます。"
 
 #: of sqlalchemy.orm.session.Session.delete:1
 msgid "Mark an instance as deleted."
-msgstr ""
+msgstr "インスタンスを削除済みとしてマークします。"
 
 #: of sqlalchemy.orm.session.Session.delete:3
 msgid "The database delete operation occurs upon ``flush()``."
-msgstr ""
+msgstr "データベースの削除操作は、 `` flush（） ``で発生します。"
 
 #: of sqlalchemy.orm.session.Session.deleted:1
 msgid "The set of all instances marked as 'deleted' within this ``Session``"
-msgstr ""
+msgstr "この「セッション」内で「削除済み」とマークされたすべてのインスタンスのセット"
 
 #: of sqlalchemy.orm.session.Session.dirty:1
 msgid "The set of all persistent instances considered dirty."
-msgstr ""
+msgstr "dirtyとみなされるすべての永続インスタンスのセット。"
 
 #: of sqlalchemy.orm.session.Session.dirty:3
 #: sqlalchemy.orm.session.Session.execute:9
 #: sqlalchemy.orm.session.Session.invalidate:9
 #: sqlalchemy.orm.session.Session.is_modified:13
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.orm.session.Session.dirty:7
 msgid "Instances are considered dirty when they were modified but not deleted."
-msgstr ""
+msgstr "インスタンスは変更されたものの、削除されていない場合はダーティと見なされます。"
 
 #: of sqlalchemy.orm.session.Session.dirty:10
 msgid ""
@@ -697,25 +687,25 @@ msgid ""
 "compared to its previously saved value, and if there's no net change, no "
 "SQL operation will occur (this is a more expensive operation so it's only"
 " done at flush time)."
-msgstr ""
+msgstr "この「汚い」計算は「楽観的」であることに注意してください。ほとんどの属性設定やコレクションの変更操作では、属性の値が正味に変更されていなくても、インスタンスは「ダーティ」としてマークされ、このセットに配置されます。フラッシュ時には、各属性の値が以前に保存された値と比較され、正味の変更がない場合、SQL操作は行われません（これはより高価な操作なので、フラッシュ時のみに行われます）。"
 
 #: of sqlalchemy.orm.session.Session.dirty:19
 msgid ""
 "To check if an instance has actionable net changes to its attributes, use"
 " the :meth:`.Session.is_modified` method."
-msgstr ""
+msgstr "インスタンスがその属性に対する実効的な正味の変更を有するかどうかをチェックするには、：meth： `.Session.is_modified`メソッドを使用します。"
 
 #: of sqlalchemy.orm.session.Session.enable_relationship_loading:1
 msgid ""
 "Associate an object with this :class:`.Session` for related object "
 "loading."
-msgstr ""
+msgstr "関連オブジェクトロードのためにオブジェクトをthis：class： `.Session`に関連付けます。"
 
 #: of sqlalchemy.orm.session.Session.enable_relationship_loading:6
 msgid ""
 ":meth:`.enable_relationship_loading` exists to serve special use cases "
 "and is not recommended for general use."
-msgstr ""
+msgstr "：meth： `.enable_relationship_loading`は特殊なユースケースに対応するために存在し、一般的な使用には推奨されません。"
 
 #: of sqlalchemy.orm.session.Session.enable_relationship_loading:9
 msgid ""
@@ -724,7 +714,7 @@ msgid ""
 " of connectivity.  The values will be loaded based on foreign key and "
 "primary key values present on this object - if not present, then those "
 "relationships will be unavailable."
-msgstr ""
+msgstr "：func： `.relationship`でマップされた属性のアクセスは、接続：class：` .Session`を使用してデータベースから値をロードしようとします。値は、このオブジェクトに存在する外部キーと主キーの値に基づいてロードされます。存在しない場合、それらの関係は使用できなくなります。"
 
 #: of sqlalchemy.orm.session.Session.enable_relationship_loading:16
 msgid ""
@@ -732,7 +722,7 @@ msgid ""
 " in any persistence operations; its state for almost all purposes will "
 "remain either \"transient\" or \"detached\", except for the case of "
 "relationship loading."
-msgstr ""
+msgstr "オブジェクトはこのセッションにアタッチされますが、**永続性操作には参加しません**。ほぼすべての目的のための状態は、関係ロードの場合を除いて、 &quot;一時的&quot;または &quot;分離された&quot;のままになります。"
 
 #: of sqlalchemy.orm.session.Session.enable_relationship_loading:21
 msgid ""
@@ -740,7 +730,7 @@ msgid ""
 "relationship-bound attribute on the target object may not fire off a "
 "backref event, if the effective value is what was already loaded from a "
 "foreign-key-holding value."
-msgstr ""
+msgstr "また、バックファイルはしばしば期待どおりに動作しないことに注意してください。実効値が既に外部キー保持値からロードされているものである場合、ターゲット・オブジェクトのリレーションシップ・バインド属性を変更してもbackrefイベントが発生することはありません。"
 
 #: of sqlalchemy.orm.session.Session.enable_relationship_loading:26
 msgid ""
@@ -748,7 +738,7 @@ msgid ""
 " ``load_on_pending`` flag on :func:`.relationship`. Unlike that flag, "
 ":meth:`.Session.enable_relationship_loading` allows an object to remain "
 "transient while still being able to load related items."
-msgstr ""
+msgstr "：meth： `.Session.enable_relationship_loading`メソッドは：func：` .relationship`の `` load_on_pending``フラグに似ています。このフラグとは異なり、：meth： `.Session.enable_relationship_loading`は、オブジェクトが一時的なままで、関連するアイテムを読み込めるようにします。"
 
 #: of sqlalchemy.orm.session.Session.enable_relationship_loading:32
 msgid ""
@@ -757,7 +747,7 @@ msgid ""
 ":class:`.Session` using :meth:`.Session.add` normally. If the object "
 "instead represents an existing idenity in the database, it should be "
 "merged using :meth:`.Session.merge`."
-msgstr ""
+msgstr "一時オブジェクトを：class： `.Session`に関連付けるには：meth：` .Session.enable_relationship_loading`を保留にして、：class： `.Session`に：meth：` .Session.add`を通常追加してください。オブジェクトが代わりにデータベースの既存のidenityを表す場合は、：meth： `.Session.merge`を使用してマージする必要があります。"
 
 #: of sqlalchemy.orm.session.Session.enable_relationship_loading:38
 msgid ""
@@ -766,33 +756,33 @@ msgid ""
 "at the object level, not at the foreign key level, so that they are "
 "present in an ordinary way before flush() proceeds.  This method is not "
 "intended for general use."
-msgstr ""
+msgstr "：meth： `.Session.enable_relationship_loading`は、ORMが通常使用されているときの動作を改善しません。オブジェクト参照は、外部キーレベルではなくオブジェクトレベルで構築する必要があります。進む。この方法は一般的な使用を意図したものではありません。"
 
 #: of sqlalchemy.orm.session.Session.enable_relationship_loading:48
 msgid ""
 "``load_on_pending`` at :func:`.relationship` - this flag allows per-"
 "relationship loading of many-to-ones on items that are pending."
-msgstr ""
+msgstr "`` load_on_pending`` at：func： `.relationship`  - このフラグは、保留中のアイテムに対する多対1の関係ごとの読み込みを許可します。"
 
 #: of sqlalchemy.orm.session.Session.enable_relationship_loading:52
 msgid ""
 ":func:`.make_transient_to_detached` - allows for an object to be added to"
 " a :class:`.Session` without SQL emitted, which then will unexpire "
 "attributes on access."
-msgstr ""
+msgstr "：func： `.make_transient_to_detached`  - オブジェクトは、SQLの発行なしで：class：` .Session`に追加することができます。これにより、アクセス時に属性が失効します。"
 
 #: of sqlalchemy.orm.session.Session.execute:1
 msgid ""
 "Execute a SQL expression construct or string statement within the current"
 " transaction."
-msgstr ""
+msgstr "現在のトランザクション内でSQL式構文または文字列ステートメントを実行します。"
 
 #: of sqlalchemy.orm.session.Session.execute:4
 msgid ""
 "Returns a :class:`.ResultProxy` representing results of the statement "
 "execution, in the same manner as that of an :class:`.Engine` or "
 ":class:`.Connection`."
-msgstr ""
+msgstr "：class： `.Engine`や：class：` .Connection`と同じように、文の実行結果を表す：class： `.ResultProxy`を返します。"
 
 #: of sqlalchemy.orm.session.Session.execute:15
 msgid ""
@@ -803,11 +793,11 @@ msgid ""
 "which in the case of :meth:`.Session.execute` only will be interpreted "
 "the same as if it were passed via a :func:`~.expression.text` construct."
 "  That is, the following usage::"
-msgstr ""
+msgstr "：meth： `〜.Session.execute`は：func：`〜.sql.expression.select`、：func： `〜.sql.expression.insert`、：func：`〜のような実行可能な節の構文を受け入れます。 sql.expression.update`、：func： `〜.sql.expression.delete`、および：func：`〜.sql.expression.text`。プレーンなSQL文字列も渡すことができます。：meth： `.Session.execute`の場合は：func：`〜.expression.text`構造体を渡された場合と同じように解釈されます。つまり、以下の使用法です::"
 
 #: of sqlalchemy.orm.session.Session.execute:30
 msgid "is equivalent to::"
-msgstr ""
+msgstr "::と同等です"
 
 #: of sqlalchemy.orm.session.Session.execute:38
 msgid ""
@@ -817,11 +807,11 @@ msgid ""
 "determines whether the DBAPI cursor's ``execute()`` or ``executemany()`` "
 "is used to execute the statement.   An INSERT construct may be invoked "
 "for a single row::"
-msgstr ""
+msgstr "：meth： `.Session.execute`の2番目の位置引数はオプションのパラメータセットです。 ：meth： `.Connection.execute`の場合と同様に、これが単一の辞書または辞書のリストとして渡されるかどうかは、DBAPIカーソルの` `execute（）` `または` `executemany（）` `が文の実行に使用されます。 INSERTコンストラクトは、単一の行に対して呼び出すことができます::"
 
 #: of sqlalchemy.orm.session.Session.execute:48
 msgid "or for multiple rows::"
-msgstr ""
+msgstr "または複数行の場合::"
 
 #: of sqlalchemy.orm.session.Session.execute:56
 msgid ""
@@ -835,11 +825,11 @@ msgid ""
 ":func:`.mapper` and :class:`.Table` objects passed to the method; see the"
 " documentation for :meth:`.Session.get_bind` for a full description of "
 "this scheme."
-msgstr ""
+msgstr "この文は、class： `.Session`の現在のトランザクションコンテキスト内で実行されます。ステートメントの実行に使用される：class： `.Connection`は、：meth：` .Session.connection`メソッドを呼び出すことによって直接取得することもできます。どちらのメソッドも、：class： `.Connection`を決定するためにルールベースの解決スキームを使用します。これは、平均では：class：` .Session`自身の\ &quot;bind \&quot;から直接得られます。メソッドに渡される：func： `.mapper`と：class：` .Table`オブジェクトに基づいている場合もあります。このスキームの詳細については、：meth： `.Session.get_bind`のドキュメントを参照してください。"
 
 #: of sqlalchemy.orm.session.Session.execute:68
 msgid "The :meth:`.Session.execute` method does *not* invoke autoflush."
-msgstr ""
+msgstr "：meth： `.Session.execute`メソッドはautoflushを呼び出しません*。"
 
 #: of sqlalchemy.orm.session.Session.execute:70
 msgid ""
@@ -853,13 +843,13 @@ msgid ""
 "consumed all available data. This applies *only* when the "
 ":class:`.Session` is configured with autocommit=True and no transaction "
 "has been started."
-msgstr ""
+msgstr "：meth： `.Session.execute`メソッドによって返される：class：` .ResultProxy`は、\ &quot;close_with_result \&quot;フラグがtrueに設定された状態で返されます。このフラグの意味は：class： `.Session`が自動コミットで、transaction-dedicated：class：` .Connection`を使用できない場合、一時的な：class： `.Connection`が文の実行のために確立されていますこれは：class： `.ResultProxy`が利用可能なすべてのデータを消費したときに閉じられます（つまり、接続プールに返されます）。これは：class： `.Session`がautocommit = Trueで設定されていて、トランザクションが開始されていない場合にのみ*適用されます。"
 
 #: of sqlalchemy.orm.session.Session.execute:81
 msgid ""
 "An executable statement (i.e. an :class:`.Executable` expression such as "
 ":func:`.expression.select`) or string SQL statement to be executed."
-msgstr ""
+msgstr "実行可能な文（すなわち、：class： `.Executable`のような：func：` .expression.select`）または実行される文字列SQL文。"
 
 #: of sqlalchemy.orm.session.Session.execute:86
 msgid ""
@@ -867,14 +857,14 @@ msgid ""
 "values.   If a single dictionary, single-row execution occurs; if a list "
 "of dictionaries, an \"executemany\" will be invoked.  The keys in each "
 "dictionary must correspond to parameter names present in the statement."
-msgstr ""
+msgstr "オプションの辞書、または辞書のリスト。バインドされたパラメータ値を含む。単一の辞書の場合は、単一行の実行が発生します。辞書のリストであれば、\ &quot;executemany \&quot;が呼び出されます。各ディクショナリのキーは、文にあるパラメータ名に対応していなければなりません。"
 
 #: of sqlalchemy.orm.session.Session.execute:93
 msgid ""
 "Optional :func:`.mapper` or mapped class, used to identify the "
 "appropriate bind.  This argument takes precedence over ``clause`` when "
 "locating a bind.   See :meth:`.Session.get_bind` for more details."
-msgstr ""
+msgstr "オプション：func： `.mapper`またはマップされたクラス。適切なバインドを識別するために使用されます。この引数は、バインドを見つけるときに `` clause``よりも優先されます。詳細は、：meth： `.Session.get_bind`を参照してください。"
 
 #: of sqlalchemy.orm.session.Session.execute:99
 msgid ""
@@ -882,34 +872,34 @@ msgid ""
 "already involved in an ongoing transaction, that connection will be used."
 "  This argument takes precedence over ``mapper`` and ``clause`` when "
 "locating a bind."
-msgstr ""
+msgstr "オプション：クラス： `.Engine`をバインドとして使用します。このエンジンがすでに進行中のトランザクションに関与している場合、その接続が使用されます。この引数は、バインドを見つけるときに `` mapper``と `` clause``よりも優先されます。"
 
 #: of sqlalchemy.orm.session.Session.execute:106
 msgid ""
 "Additional keyword arguments are sent to :meth:`.Session.get_bind()` to "
 "allow extensibility of \"bind\" schemes."
-msgstr ""
+msgstr "追加のキーワード引数は：meth： `.Session.get_bind（）`に送られ、\ &quot;バインド\&quot;体系の拡張性を可能にします。"
 
 #: of sqlalchemy.orm.session.Session.execute:112
 msgid ":ref:`sqlexpression_toplevel` - Tutorial on using Core SQL constructs."
-msgstr ""
+msgstr "：ref： `sqlexpression_toplevel`  - コアSQL構文の使用に関するチュートリアル。"
 
 #: of sqlalchemy.orm.session.Session.execute:115
 msgid ""
 ":ref:`connections_toplevel` - Further information on direct statement "
 "execution."
-msgstr ""
+msgstr "：ref： `connections_toplevel`  - 直接ステートメント実行の詳細。"
 
 #: of sqlalchemy.orm.session.Session.execute:118
 msgid ""
 ":meth:`.Connection.execute` - core level statement execution method, "
 "which is :meth:`.Session.execute` ultimately uses in order to execute the"
 " statement."
-msgstr ""
+msgstr "：meth： `.Connection.execute`  - コアレベルの文の実行メソッド。これは：meth：` .Session.execute`は最終的に文を実行するために使用します。"
 
 #: of sqlalchemy.orm.session.Session.expire:1
 msgid "Expire the attributes on an instance."
-msgstr ""
+msgstr "インスタンスの属性を期限切れにします。"
 
 #: of sqlalchemy.orm.session.Session.expire:3
 msgid ""
@@ -920,13 +910,13 @@ msgid ""
 "isolated transaction will return the same values as were previously read "
 "in that same transaction, regardless of changes in database state outside"
 " of that transaction."
-msgstr ""
+msgstr "インスタンスの属性を古いものとしてマークします。期限切れの属性が次にアクセスされると、：class： `.Session`オブジェクトの現在のトランザクションコンテキストに対してクエリが発行され、指定されたインスタンスのすべての期限切れ属性をロードします。高度に分離されたトランザクションは、そのトランザクション外のデータベース状態の変化にかかわらず、同じトランザクションで以前に読み取られたものと同じ値を返します。"
 
 #: of sqlalchemy.orm.session.Session.expire:11
 msgid ""
 "To expire all objects in the :class:`.Session` simultaneously, use "
 ":meth:`Session.expire_all`."
-msgstr ""
+msgstr "：class： `.Session`内のすべてのオブジェクトを同時に期限切れにするには、：meth：` Session.expire_all`を使います。"
 
 #: of sqlalchemy.orm.session.Session.expire:14
 msgid ""
@@ -936,38 +926,38 @@ msgid ""
 "For this reason, calling :meth:`Session.expire` only makes sense for the "
 "specific case that a non-ORM SQL statement was emitted in the current "
 "transaction."
-msgstr ""
+msgstr "：class： `.Session`オブジェクトのデフォルトの振る舞いは、：meth：` Session.rollback`メソッドまたは：meth： `Session.commit`メソッドが呼び出されるたびにすべてのステートを期限切れにすることで、新しいトランザクションに新しいステートをロードすることができます。この理由から、：meth： `Session.expire`を呼び出すことは、ORM以外のSQL文が現在のトランザクションで発行されたという特定の場合にのみ意味があります。"
 
 #: of sqlalchemy.orm.session.Session.expire:22
 msgid "The instance to be refreshed."
-msgstr ""
+msgstr "リフレッシュするインスタンス。"
 
 #: of sqlalchemy.orm.session.Session.expire:23
 msgid ""
 "optional list of string attribute names indicating a subset of attributes"
 " to be expired."
-msgstr ""
+msgstr "有効期限が切れる属性のサブセットを示す文字列属性名のオプションのリスト。"
 
 #: of sqlalchemy.orm.session.Session.expire:28
 #: sqlalchemy.orm.session.Session.expire_all:23
 #: sqlalchemy.orm.session.Session.refresh:38
 msgid ":ref:`session_expire` - introductory material"
-msgstr ""
+msgstr "：ref： `session_expire`  - 入門資料"
 
 #: of sqlalchemy.orm.session.Session.expire:30
 #: sqlalchemy.orm.session.Session.expire_all:25
 #: sqlalchemy.orm.session.Session.refresh:40
 msgid ":meth:`.Session.expire`"
-msgstr ""
+msgstr "：meth： `。Session.expire`"
 
 #: of sqlalchemy.orm.session.Session.expire:32
 #: sqlalchemy.orm.session.Session.expire_all:27
 msgid ":meth:`.Session.refresh`"
-msgstr ""
+msgstr "：meth： `.Session.refresh`"
 
 #: of sqlalchemy.orm.session.Session.expire_all:1
 msgid "Expires all persistent instances within this Session."
-msgstr ""
+msgstr "このセッション内の永続インスタンスをすべて期限切れにします。"
 
 #: of sqlalchemy.orm.session.Session.expire_all:3
 msgid ""
@@ -977,13 +967,13 @@ msgid ""
 "   Note that a highly isolated transaction will return the same values as"
 " were previously read in that same transaction, regardless of changes in "
 "database state outside of that transaction."
-msgstr ""
+msgstr "永続インスタンス上の属性が次にアクセスされると、与えられたインスタンスのすべての期限切れ属性をロードするために、：class： `.Session`オブジェクトの現在のトランザクションコンテキストを使用してクエリが発行されます。高度に分離されたトランザクションは、そのトランザクション外のデータベース状態の変化にかかわらず、同じトランザクションで以前に読み取られたものと同じ値を返します。"
 
 #: of sqlalchemy.orm.session.Session.expire_all:11
 msgid ""
 "To expire individual objects and individual attributes on those objects, "
 "use :meth:`Session.expire`."
-msgstr ""
+msgstr "それらのオブジェクトの個々のオブジェクトと個々の属性を期限切れにするには、：meth： `Session.expire`を使います。"
 
 #: of sqlalchemy.orm.session.Session.expire_all:14
 msgid ""
@@ -992,38 +982,38 @@ msgid ""
 "are called, so that new state can be loaded for the new transaction.   "
 "For this reason, calling :meth:`Session.expire_all` should not be needed "
 "when autocommit is ``False``, assuming the transaction is isolated."
-msgstr ""
+msgstr "：class： `.Session`オブジェクトのデフォルトの振る舞いは、：meth：` Session.rollback`メソッドまたは：meth： `Session.commit`メソッドが呼び出されるたびにすべてのステートを期限切れにすることで、新しいトランザクションに新しいステートをロードすることができます。このため、トランザクションが分離されていると仮定して、自動コミットが `` False``のときは：meth： `Session.expire_all`を呼び出す必要はありません。"
 
 #: of sqlalchemy.orm.session.Session.expunge:1
 msgid "Remove the `instance` from this ``Session``."
-msgstr ""
+msgstr "この `` Session``から `instance`を削除してください。"
 
 #: of sqlalchemy.orm.session.Session.expunge:3
 msgid ""
 "This will free all internal references to the instance.  Cascading will "
 "be applied according to the *expunge* cascade rule."
-msgstr ""
+msgstr "これにより、インスタンスへの内部参照がすべて解放されます。カスケーディングは* expunge *カスケード規則に従って適用されます。"
 
 #: of sqlalchemy.orm.session.Session.expunge_all:1
 msgid "Remove all object instances from this ``Session``."
-msgstr ""
+msgstr "この `` Session``からすべてのオブジェクトインスタンスを削除してください。"
 
 #: of sqlalchemy.orm.session.Session.expunge_all:3
 msgid ""
 "This is equivalent to calling ``expunge(obj)`` on all objects in this "
 "``Session``."
-msgstr ""
+msgstr "これは、この `` Session``内のすべてのオブジェクトに対して `` expunge（obj） ``を呼び出すのと同じです。"
 
 #: of sqlalchemy.orm.session.Session.flush:1
 msgid "Flush all the object changes to the database."
-msgstr ""
+msgstr "すべてのオブジェクトの変更をデータベースにフラッシュします。"
 
 #: of sqlalchemy.orm.session.Session.flush:3
 msgid ""
 "Writes out all pending object creations, deletions and modifications to "
 "the database as INSERTs, DELETEs, UPDATEs, etc.  Operations are "
 "automatically ordered by the Session's unit of work dependency solver."
-msgstr ""
+msgstr "保留中のオブジェクトの作成、削除、および変更をINSERT、DELETE、UPDATEなどとしてデータベースに書き込みます。操作は、セッションの作業単位依存ソルバーによって自動的に行われます。"
 
 #: of sqlalchemy.orm.session.Session.flush:8
 msgid ""
@@ -1032,14 +1022,14 @@ msgid ""
 "in which case the entire transaction is rolled back. You may flush() as "
 "often as you like within a transaction to move changes from Python to the"
 " database's transaction buffer."
-msgstr ""
+msgstr "データベース操作は現在のトランザクションコンテキストで発行され、エラーが発生しない限りトランザクションの状態には影響しません。この場合、トランザクション全体がロールバックされます。変更をPythonからデータベースのトランザクションバッファに移すために、トランザクション内で好きなだけ頻繁にflush（）することができます。"
 
 #: of sqlalchemy.orm.session.Session.flush:14
 msgid ""
 "For ``autocommit`` Sessions with no active manual transaction, flush() "
 "will create a transaction on the fly that surrounds the entire set of "
 "operations into the flush."
-msgstr ""
+msgstr "アクティブな手動トランザクションを持たない `` autocommit``セッションの場合、flush（）は、一連の操作の集合をフラッシュに囲むオンザフライでトランザクションを作成します。"
 
 #: of sqlalchemy.orm.session.Session.flush:18
 msgid ""
@@ -1047,38 +1037,38 @@ msgid ""
 "are in the given collection.  This feature is for an extremely narrow set"
 " of use cases where particular objects may need to be operated upon "
 "before the full flush() occurs.  It is not intended for general use."
-msgstr ""
+msgstr "オプション。指定されたコレクション内にある要素に対してのみ動作するようにフラッシュ操作を制限します。この機能は、フルフラッシュ（）が発生する前に特定のオブジェクトを操作する必要がある非常に狭い一連のユースケース用です。一般的な使用を意図したものではありません。"
 
 #: of sqlalchemy.orm.session.Session.flush:18
 msgid ""
 "Optional; restricts the flush operation to operate only on elements that "
 "are in the given collection."
-msgstr ""
+msgstr "オプション。指定されたコレクション内にある要素に対してのみ動作するようにフラッシュ操作を制限します。"
 
 #: of sqlalchemy.orm.session.Session.flush:21
 msgid ""
 "This feature is for an extremely narrow set of use cases where particular"
 " objects may need to be operated upon before the full flush() occurs.  It"
 " is not intended for general use."
-msgstr ""
+msgstr "この機能は、フルフラッシュ（）が発生する前に特定のオブジェクトを操作する必要がある非常に狭い一連のユースケース用です。一般的な使用を意図したものではありません。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:1
 msgid "Return a \"bind\" to which this :class:`.Session` is bound."
-msgstr ""
+msgstr "this：class： `.Session`がバインドされた\&quot; bind \ &quot;を返します。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:3
 msgid ""
 "The \"bind\" is usually an instance of :class:`.Engine`, except in the "
 "case where the :class:`.Session` has been explicitly bound directly to a "
 ":class:`.Connection`."
-msgstr ""
+msgstr "\ &quot;bind \&quot;は通常：class： `.Engine`のインスタンスです。：class：` .Session`が：class： `.Connection`に明示的に直接バインドされている場合を除きます。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:7
 msgid ""
 "For a multiply-bound or unbound :class:`.Session`, the ``mapper`` or "
 "``clause`` arguments are used to determine the appropriate bind to "
 "return."
-msgstr ""
+msgstr "multiply-boundまたはunbound：class： `.Session`の場合、返される適切なバインドを決定するために` `mapper``または` `clause``引数が使用されます。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:11
 msgid ""
@@ -1086,47 +1076,47 @@ msgid ""
 ":meth:`.Session.get_bind` is called via an ORM operation such as a "
 ":meth:`.Session.query`, each individual INSERT/UPDATE/DELETE operation "
 "within a :meth:`.Session.flush`, call, etc."
-msgstr ""
+msgstr "meth： `.Session.get_bind`が：meth：` .Session.query`のようなORM操作を介して呼び出されたときに、\ &quot;mapper \&quot;引数が通常存在することに注意してください。その中で、個々のINSERT / UPDATE / DELETE操作a：meth： `.Session.flush`、呼び出しなど"
 
 #: of sqlalchemy.orm.session.Session.get_bind:17
 msgid "The order of resolution is:"
-msgstr ""
+msgstr "解決の順序は次のとおりです。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:19
 msgid ""
 "if mapper given and session.binds is present, locate a bind based on "
 "mapper."
-msgstr ""
+msgstr "mapperとsession.bindsが存在する場合、マッパーに基づいてバインドを探します。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:21
 msgid ""
 "if clause given and session.binds is present, locate a bind based on "
 ":class:`.Table` objects found in the given clause present in "
 "session.binds."
-msgstr ""
+msgstr "指定されたif節とsession.bindsが存在する場合、session.bindsにある指定された句で見つかった：class： `.Table`オブジェクトに基づいてバインドを探します。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:24
 msgid "if session.bind is present, return that."
-msgstr ""
+msgstr "session.bindが存在する場合は、それを返します。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:25
 msgid ""
 "if clause given, attempt to return a bind linked to the "
 ":class:`.MetaData` ultimately associated with the clause."
-msgstr ""
+msgstr "指定されたif節は、最終的に節に関連付けられた：class： `.MetaData`にリンクされたバインドを返そうとします。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:28
 msgid ""
 "if mapper given, attempt to return a bind linked to the "
 ":class:`.MetaData` ultimately associated with the :class:`.Table` or "
 "other selectable to which the mapper is mapped."
-msgstr ""
+msgstr "マッパーが指定されている場合は、：class： `.Table`またはマッパーがマップされる他の選択肢に最終的に関連付けられた：class：` .MetaData`にリンクされたバインドを返します。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:32
 msgid ""
 "No bind can be found, :exc:`~sqlalchemy.exc.UnboundExecutionError` is "
 "raised."
-msgstr ""
+msgstr "バインドは見つかりません：exc： `〜sqlalchemy.exc.UnboundExecutionError`が送出されます。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:35
 msgid ""
@@ -1135,7 +1125,7 @@ msgid ""
 "\"binds\" map associated with this :class:`.Session`, and secondly by "
 "consulting the :class:`.MetaData` associated with the :class:`.Table` to "
 "which the :class:`.Mapper` is mapped for a bind."
-msgstr ""
+msgstr "オプション：func： `.mapper`マップされたクラスまたはインスタンス：class：` .Mapper`。このバインドは、class： `.Session`に関連付けられた\&quot; binds \ &quot;マップを参照することによって、class：` .Mapper`から最初に導かれます。次に、そのクラスに関連付けられた：class： `.MetaData`を参照します。 ：class： `.Table`には、：class：` .Mapper`がバインドのためにマップされます。"
 
 #: of sqlalchemy.orm.session.Session.get_bind:43
 msgid ""
@@ -1144,28 +1134,28 @@ msgid ""
 "present or could not produce a bind, the given expression construct will "
 "be searched for a bound element, typically a :class:`.Table` associated "
 "with bound :class:`.MetaData`."
-msgstr ""
+msgstr "A：class： `.ClauseElement`（つまり：func：`〜.sql.expression.select`、：func： `〜.sql.expression.text`など）。 `` mapper``引数が存在しない場合、またはバインドを生成できなかった場合、指定された式構造体は、バインドされた要素、通常は：class： `.Table`をbound：class：` .MetaData`に関連付けて検索されます。"
 
 #: of sqlalchemy.orm.session.Session.identity_map:1
 msgid "A mapping of object identities to objects themselves."
-msgstr ""
+msgstr "オブジェクトアイデンティティのオブジェクト自体へのマッピング。"
 
 #: of sqlalchemy.orm.session.Session.identity_map:3
 msgid ""
 "Iterating through ``Session.identity_map.values()`` provides access to "
 "the full set of persistent objects (i.e., those that have row identity) "
 "currently in the session."
-msgstr ""
+msgstr "`` Session.identity_map.values（） ``を反復すると、セッション中に現在存在する永続オブジェクト（つまり行IDを持つオブジェクト）の完全なセットへのアクセスが提供されます。"
 
 #: of sqlalchemy.orm.session.Session.identity_map:9
 msgid ""
 ":func:`.identity_key` - helper function to produce the keys used in this "
 "dictionary."
-msgstr ""
+msgstr "：func： `.identity_key`  - この辞書で使われているキーを生成するヘルパー関数。"
 
 #: of sqlalchemy.orm.session.Session.info:1
 msgid "A user-modifiable dictionary."
-msgstr ""
+msgstr "ユーザが変更可能な辞書。"
 
 #: of sqlalchemy.orm.session.Session.info:3
 msgid ""
@@ -1174,11 +1164,11 @@ msgid ""
 "constructor or factory methods.  The dictionary here is always local to "
 "this :class:`.Session` and can be modified independently of all other "
 ":class:`.Session` objects."
-msgstr ""
+msgstr "この辞書の初期値は：class： `.Session`コンストラクタまたは：class：` .sessionmaker`コンストラクタまたはファクトリメソッドに対する `` info``引数を使って設定できます。ここの辞書は常にclass： `.Session`のローカルであり、他の：class：` .Session`オブジェクトとは独立して変更することができます。"
 
 #: of sqlalchemy.orm.session.Session.invalidate:1
 msgid "Close this Session, using connection invalidation."
-msgstr ""
+msgstr "接続の無効化を使用して、このセッションを閉じます。"
 
 #: of sqlalchemy.orm.session.Session.invalidate:3
 msgid ""
@@ -1187,13 +1177,13 @@ msgid ""
 ":class:`.Connection` objects.  This can be called when the database is "
 "known to be in a state where the connections are no longer safe to be "
 "used."
-msgstr ""
+msgstr "これは：meth： `.Session.close`の変種であり、：meth：` .Connection.invalidate`メソッドがall：class： `.Connection`オブジェクトに対して呼び出されることを保証します。これは、データベースが接続が安全に使用できなくなった状態にあることがわかっている場合に呼び出すことができます。"
 
 #: of sqlalchemy.orm.session.Session.is_active:1
 msgid ""
 "True if this :class:`.Session` is in \"transaction mode\" and is not in "
 "\"partial rollback\" state."
-msgstr ""
+msgstr "これは：class： `.Session`が\&quot;トランザクションモード\ &quot;で、\&quot;部分的なロールバック\ &quot;状態ではない場合に真です。"
 
 #: of sqlalchemy.orm.session.Session.is_active:4
 msgid ""
@@ -1203,7 +1193,7 @@ msgid ""
 "instantiated.  This :class:`.SessionTransaction` is immediately replaced "
 "with a new one as soon as it is ended, due to a rollback, commit, or "
 "close operation."
-msgstr ""
+msgstr "：class： `.Session`はデフォルトモードの` `autocommit = False``にあり、基本的には常に\&quot;トランザクションモード\ &quot;になっています：class：` .SessionTransaction`はすぐにそれに関連付けられますインスタンス化されます。これは：class： `.SessionTransaction`は、ロールバック、コミット、またはクローズ操作のために、直ちに新しいものに置き換えられます。"
 
 #: of sqlalchemy.orm.session.Session.is_active:11
 msgid ""
@@ -1216,7 +1206,7 @@ msgid ""
 " to implement a listener using the :meth:`.SessionEvents.after_begin` "
 "method, which will deliver both the :class:`.Session` as well as the "
 "target :class:`.Connection` to a user-defined event listener."
-msgstr ""
+msgstr "\ &quot;トランザクションモード\&quot;は、実際のデータベース接続リソースが使用されているかどうかを示しません。 ：class： `.SessionTransaction`オブジェクトは、ゼロまたはそれ以上の実際のデータベーストランザクションの間で調整され、noneで始まり、異なるデータソースがそのスコープ内で使用されるときに個々のDBAPI接続を蓄積します。特定の：class： `.Session`が実際にDBAPIリソースを使用し始めた時を追跡する最良の方法は、：meth：` .SessionEvents.after_begin`メソッドを使用してリスナーを実装することです。これは：class： `の両方を提供します。 Session`とターゲット：class： `.Connection`をユーザ定義のイベントリスナに渡します。"
 
 #: of sqlalchemy.orm.session.Session.is_active:22
 msgid ""
@@ -1229,7 +1219,7 @@ msgid ""
 "flag returns False.  After the call to :meth:`.Session.rollback`, the "
 ":class:`.SessionTransaction` is replaced with a new one and "
 ":attr:`.is_active` returns ``True`` again."
-msgstr ""
+msgstr "\ &quot;部分ロールバック\&quot;状態は、フラッシュ中に通常使用される\ &quot;内部\&quot;トランザクションがエラーに遭遇し、DBAPI接続のロールバックを発行するときに参照されます。この時点で、：class： `.Session`は\&quot; partial rollback \ &quot;にあり、トランザクションスタックを閉じるために：meth：` .Session.rollback`を呼び出すのを待っています。この &quot;部分的なロールバック&quot;期間には、：attr： `.is_active`フラグがFalseを返します。 ：meth： `.Session.rollback`の呼び出しの後、：class：` .SessionTransaction`は新しいものに置き換えられ、：attr： `.is_active`は再び` `True``を返します。"
 
 #: of sqlalchemy.orm.session.Session.is_active:32
 msgid ""
@@ -1240,7 +1230,7 @@ msgid ""
 ":meth:`.Session.begin` block in this mode, and will be ``True`` within "
 "the :meth:`.Session.begin` block as long as it doesn't enter \"partial "
 "rollback\" state."
-msgstr ""
+msgstr "class： `.Session`が` `autocommit = True``モードで使われるとき、：class：` .SessionTransaction`は、フラッシュ呼び出しのスコープ内でインスタンス化されるか、または：meth： `。Session.begin `が呼び出されます。だから：attr： `.is_active`は、このモードでフラッシュまたは：meth：` .Session.begin`ブロックの外側では常に `` False``であり、：meth： `では` `True``になります。 Session.begin`は\ &quot;部分的ロールバック\&quot;状態に入らない限りブロックします。"
 
 #: of sqlalchemy.orm.session.Session.is_active:40
 msgid ""
@@ -1251,7 +1241,7 @@ msgid ""
 "integration case, this is also not necessary as it is standard practice "
 "to emit :meth:`.Session.rollback` unconditionally within the outermost "
 "exception catch."
-msgstr ""
+msgstr "上記のすべてから、このフラグの唯一の目的は、一般的なエラー処理ルーチン内で、\ &quot;ロールバック\&quot;を検出するアプリケーションフレームワークが、class： `.Session`オブジェクトに対して必要であることです。 \ &quot;部分的ロールバック\&quot;モードにしてください。典型的な統合のケースでは、最も外側の例外キャッチ内で：meth： `.Session.rollback`を無条件に発行するのが標準的な方法であるため、これも必要ではありません。"
 
 #: of sqlalchemy.orm.session.Session.is_active:49
 msgid ""
@@ -1259,25 +1249,25 @@ msgid ""
 "listeners, primarily the :meth:`.SessionEvents.after_begin`, "
 ":meth:`.SessionEvents.after_commit`, "
 ":meth:`.SessionEvents.after_rollback` and related events."
-msgstr ""
+msgstr "：class： `.Session`のトランザクション状態を完全に追跡するには、主に：meth：` .SessionEvents.after_begin`、：meth： `.SessionEvents.after_commit`、：meth：` .SessionEvents.after_rollback `と関連するイベント。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:1
 msgid "Return ``True`` if the given instance has locally modified attributes."
-msgstr ""
+msgstr "指定されたインスタンスにローカルに変更された属性がある場合は、 `` True``を返します。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:4
 msgid ""
 "This method retrieves the history for each instrumented attribute on the "
 "instance and performs a comparison of the current value to its previously"
 " committed value, if any."
-msgstr ""
+msgstr "このメソッドは、インスタンス上の計測された各属性の履歴を取得し、現在の値と以前にコミットされた値（存在する場合）との比較を実行します。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:8
 msgid ""
 "It is in effect a more expensive and accurate version of checking for the"
 " given instance in the :attr:`.Session.dirty` collection; a full test for"
 " each attribute's net \"dirty\" status is performed."
-msgstr ""
+msgstr "実際には：attr： `.Session.dirty`コレクションの中で指定されたインスタンスをチェックするのにより高価で正確なバージョンです。各属性のネット &quot;ダーティー&quot;ステータスの完全なテストが実行されます。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:17
 msgid ""
@@ -1286,11 +1276,11 @@ msgid ""
 "proceed which can affect the modified state itself: "
 "``session.is_modified(someobject, passive=True)``\\ . In 0.8 and above, "
 "the behavior is corrected and this flag is ignored."
-msgstr ""
+msgstr "SQLAlchemy 0.7以前のバージョンを使用している場合、 `` passive``フラグは**常に**明示的に `` True``に設定する必要があります。そうしないと、SQLロード/オートフロスが進行し、変更された状態自体に影響します： `` session.is_modified （someobject、パッシブ= True） `` \\。 0.8以上では、動作は修正され、このフラグは無視されます。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:26
 msgid "A few caveats to this method apply:"
-msgstr ""
+msgstr "この方法のいくつかの注意点が適用されます。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:28
 msgid ""
@@ -1299,7 +1289,7 @@ msgid ""
 "have received change events via attribute mutation, thus placing it in "
 ":attr:`.Session.dirty`, but ultimately the state is the same as that "
 "loaded from the database, resulting in no net change here."
-msgstr ""
+msgstr "：attr： `.Session.dirty`コレクションに存在するインスタンスは、このメソッドでテストすると` `False``を返します。これは、オブジェクトが属性の突然変異によって変更イベントを受け取ったため、attr： `.Session.dirty`に配置される可能性がありますが、最終的に状態はデータベースからロードされたものと同じであり、ここでは実質的な変更はありません。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:34
 msgid ""
@@ -1313,7 +1303,7 @@ msgid ""
 "UPDATE of the scalar value is usually needed, and in those few cases "
 "where it isn't, is less expensive on average than issuing a defensive "
 "SELECT."
-msgstr ""
+msgstr "新しい値が適用されたとき、属性がロードされなかったとき、または新しい値が受信されたときに期限切れになった場合、スカラ属性は以前に設定された値を記録していない可能性があります。たとえ最終的にデータベース値に対して正味の変化がないとしても、ほとんどの場合、SQLAlchemyは、setイベントが発生したときに\ &quot;old \&quot;値を必要としないので、スカラー値のUPDATEが前提であるという前提に基づいて、古い値が存在しなければSQLコールの費用をスキップします通常必要とされ、そうでない場合は防御的なSELECTを発行するよりも平均的に安価です。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:45
 msgid ""
@@ -1323,11 +1313,11 @@ msgid ""
 "references that are not a simple many-to-one.  To set this flag for any "
 "arbitrary mapped column, use the ``active_history`` argument with "
 ":func:`.column_property`."
-msgstr ""
+msgstr "属性コンテナの `` active_history``フラグが `` True``にセットされている場合のみ、\ &quot;old \&quot;値はセット時に無条件にフェッチされます。このフラグは、通常、単純な多対1ではない主キー属性およびスカラー・オブジェクト参照に対して設定されます。任意のマップされた列に対してこのフラグを設定するには、：func： `.column_property`で` `active_history``引数を使用します。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:52
 msgid "mapped instance to be tested for pending changes."
-msgstr ""
+msgstr "保留中の変更をテストするためにマップされたインスタンス。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:53
 msgid ""
@@ -1335,26 +1325,26 @@ msgid ""
 "  Setting this to ``False`` is a way to detect only local-column based "
 "properties (i.e. scalar columns or many-to-one foreign keys) that would "
 "result in an UPDATE for this instance upon flush."
-msgstr ""
+msgstr "操作に複数値のコレクションを含めるかどうかを示します。これを `` False``にセットするのは、フラッシュ時にこのインスタンスのUPDATEをもたらすローカル列ベースのプロパティ（スカラーカラムまたは多対1の外部キー）だけを検出する方法です。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:58
 msgid ""
 ".. versionchanged:: 0.8     Ignored for backwards compatibility.     When"
 " using SQLAlchemy 0.7 and earlier, this flag should always     be set to "
 "``True``."
-msgstr ""
+msgstr ".. versionchanged :: 0.8下位互換性のために無視されます。 SQLAlchemy 0.7以前を使用する場合、このフラグは常に &quot;True&quot;に設定する必要があります。"
 
 #: of sqlalchemy.orm.session.Session.is_modified:60
 msgid ""
 "Ignored for backwards compatibility. When using SQLAlchemy 0.7 and "
 "earlier, this flag should always be set to ``True``."
-msgstr ""
+msgstr "下位互換性のために無視されます。 SQLAlchemy 0.7以前を使用する場合、このフラグは常に &quot;True&quot;に設定する必要があります。"
 
 #: of sqlalchemy.orm.session.Session.merge:1
 msgid ""
 "Copy the state of a given instance into a corresponding instance within "
 "this :class:`.Session`."
-msgstr ""
+msgstr "指定されたインスタンスの状態をthis：class： `.Session`内の対応するインスタンスにコピーします。"
 
 #: of sqlalchemy.orm.session.Session.merge:4
 msgid ""
@@ -1367,28 +1357,28 @@ msgid ""
 "target instance is then returned by the method; the original source "
 "instance is left unmodified, and un-associated with the :class:`.Session`"
 " if not already."
-msgstr ""
+msgstr "：meth： `.Session.merge`は、ソースインスタンスの主キー属性を調べ、それをセッション内の同じ主キーのインスタンスと照合しようとします。ローカルに見つからない場合は、主キーに基づいてデータベースからオブジェクトをロードしようとします。存在しない場合は、新しいインスタンスを作成します。次に、ソースインスタンスの各属性の状態がターゲットインスタンスにコピーされます。結果のターゲットインスタンスは、メソッドによって返されます。元のソースインスタンスは変更されず、：class： `.Session`と関連付けられていません。"
 
 #: of sqlalchemy.orm.session.Session.merge:14
 msgid ""
 "This operation cascades to associated instances if the association is "
 "mapped with ``cascade=\"merge\"``."
-msgstr ""
+msgstr "アソシエーションが `` cascade = \ &quot;merge \&quot; ``でマップされている場合、この操作は関連するインスタンスにカスケードします。"
 
 #: of sqlalchemy.orm.session.Session.merge:17
 msgid "See :ref:`unitofwork_merging` for a detailed discussion of merging."
-msgstr ""
+msgstr "マージの詳細については、ref： `unitofwork_merging`を参照してください。"
 
 #: of sqlalchemy.orm.session.Session.merge:19
 msgid ""
 "- :meth:`.Session.merge` will now reconcile pending objects with "
 "overlapping primary keys in the same way as persistent.  See "
 ":ref:`change_3601` for discussion."
-msgstr ""
+msgstr "- ：meth： `.Session.merge`は、永続化と同じ方法で、保留中のオブジェクトと重複する主キーを調整します。議論のために：ref： `change_3601`を参照してください。"
 
 #: of sqlalchemy.orm.session.Session.merge:23
 msgid "Instance to be merged."
-msgstr ""
+msgstr "マージするインスタンス。"
 
 #: of sqlalchemy.orm.session.Session.merge:24
 msgid ""
@@ -1409,7 +1399,7 @@ msgid ""
 "objects from ``load=False`` are always produced as \"clean\", so it is "
 "only appropriate that the given objects should be \"clean\" as well, else"
 " this suggests a mis-use of the method."
-msgstr ""
+msgstr "ブール、Falseの場合、：meth： `.merge`は\&quot;高性能\ &quot;モードに切り替わり、すべてのデータベースアクセスだけでなく、履歴イベントも排出しません。このフラグは、オブジェクトのグラフを第2レベルのキャッシュから：class： `.Session`に転送する場合や、ワーカースレッドまたはプロセスが所有する：class：` .Session`にジャストロードされたオブジェクトを転送する場合などに使用されますデータベースに再クエリする必要はありません。 `` load = False``ユースケースは、指定されたオブジェクトが\ &quot;クリーン\&quot;状態でなければならない警告を追加します。つまり、着信オブジェクトがanyから切り離されていても、クラス： `.Session`。これは、マージ操作でローカル属性とカスケードが関連するオブジェクトやコレクションに移入されたときに、ヒストリやアトリビュートイベントを生成せずに、その値をそのまま「スタンプする」ことができます。既存の関連オブジェクトまたはロードされていないコレクションを含む受信データ`` load = False``から得られるオブジェクトは常に\ &quot;clean \&quot;として生成されるので、指定されたオブジェクトも\ &quot;clean \&quot;でなければならないのは妥当です。そうしないと、メソッドの誤った使い方が示唆されます。"
 
 #: of sqlalchemy.orm.session.Session.merge:24
 msgid ""
@@ -1419,7 +1409,7 @@ msgid ""
 " of objects into a :class:`.Session` from a second level cache, or to "
 "transfer just-loaded objects into the :class:`.Session` owned by a worker"
 " thread or process without re-querying the database."
-msgstr ""
+msgstr "ブール、Falseの場合、：meth： `.merge`は\&quot;高性能\ &quot;モードに切り替わり、すべてのデータベースアクセスだけでなく、履歴イベントも排出しません。このフラグは、オブジェクトのグラフを第2レベルのキャッシュから：class： `.Session`に転送する場合や、ワーカースレッドまたはプロセスが所有する：class：` .Session`にジャストロードされたオブジェクトを転送する場合などに使用されますデータベースに再クエリする必要はありません。"
 
 #: of sqlalchemy.orm.session.Session.merge:32
 msgid ""
@@ -1434,21 +1424,21 @@ msgid ""
 "loaded.  The resulting objects from ``load=False`` are always produced as"
 " \"clean\", so it is only appropriate that the given objects should be "
 "\"clean\" as well, else this suggests a mis-use of the method."
-msgstr ""
+msgstr "`` load = False``ユースケースは、指定されたオブジェクトが\ &quot;クリーン\&quot;状態でなければならない警告を追加します。つまり、着信オブジェクトがanyから切り離されていても、クラス： `.Session`。これは、マージ操作でローカル属性とカスケードが関連するオブジェクトやコレクションに移入されたときに、ヒストリやアトリビュートイベントを生成せずに、その値をそのまま「スタンプする」ことができます。既存の関連オブジェクトまたはロードされていないコレクションを含む受信データ`` load = False``から得られるオブジェクトは常に\ &quot;clean \&quot;として生成されるので、指定されたオブジェクトも\ &quot;clean \&quot;でなければならないのは妥当です。そうしないと、メソッドの誤った使い方が示唆されます。"
 
 #: of sqlalchemy.orm.session.Session.merge:50
 msgid ""
 ":func:`.make_transient_to_detached` - provides for an alternative means "
 "of \"merging\" a single object into the :class:`.Session`"
-msgstr ""
+msgstr "：func： `.make_transient_to_detached`  - 一つのオブジェクトを：class：` .Session`に &quot;マージする&quot;手段を提供します。"
 
 #: of sqlalchemy.orm.session.Session.new:1
 msgid "The set of all instances marked as 'new' within this ``Session``."
-msgstr ""
+msgstr "この `` Session``内で &#39;new&#39;とマークされた全てのインスタンスの集合。"
 
 #: of sqlalchemy.orm.session.Session.no_autoflush:1
 msgid "Return a context manager that disables autoflush."
-msgstr ""
+msgstr "autoflushを無効にするコンテキストマネージャを返します。"
 
 #: of sqlalchemy.orm.session.Session.no_autoflush:12
 msgid ""
@@ -1456,68 +1446,68 @@ msgid ""
 " flushes occurring upon query access.  This is useful when initializing a"
 " series of objects which involve existing database queries, where the "
 "uncompleted object should not yet be flushed."
-msgstr ""
+msgstr "`` with： ``ブロック内で実行される操作は、クエリアクセス時にフラッシュが発生することはありません。これは、未完了のオブジェクトをまだフラッシュしてはいけない既存のデータベースクエリを含む一連のオブジェクトを初期化する場合に便利です。"
 
 #: of sqlalchemy.orm.session.Session.prepare:1
 msgid "Prepare the current transaction in progress for two phase commit."
-msgstr ""
+msgstr "2フェーズコミットの進行中の現在のトランザクションを準備します。"
 
 #: of sqlalchemy.orm.session.Session.prepare:6
 msgid ""
 "Only root transactions of two phase sessions can be prepared. If the "
 "current transaction is not such, an "
 ":exc:`~sqlalchemy.exc.InvalidRequestError` is raised."
-msgstr ""
+msgstr "2つのフェーズセッションのルートトランザクションのみが準備できます。現在のトランザクションがそうでない場合、：exc： `〜sqlalchemy.exc.InvalidRequestError`が発生します。"
 
 #: of sqlalchemy.orm.session.Session.prune:1
 msgid "Remove unreferenced instances cached in the identity map."
-msgstr ""
+msgstr "アイデンティティマップにキャッシュされている参照されていないインスタンスを削除します。"
 
 #: of sqlalchemy.orm.session.Session.prune:3
 msgid "The non-weak-referencing identity map feature is no longer needed."
-msgstr ""
+msgstr "非弱参照アイデンティティマップ機能はもはや必要ではありません。"
 
 #: of sqlalchemy.orm.session.Session.prune:5
 msgid ""
 "Note that this method is only meaningful if \"weak_identity_map\" is set "
 "to False.  The default weak identity map is self-pruning."
-msgstr ""
+msgstr "このメソッドは、\ &quot;weak_identity_map \&quot;がFalseに設定されている場合にのみ意味があることに注意してください。デフォルトの弱いアイデンティティマップは自己刈り込みです。"
 
 #: of sqlalchemy.orm.session.Session.prune:8
 msgid ""
 "Removes any object in this Session's identity map that is not referenced "
 "in user code, modified, new or scheduled for deletion. Returns the number"
 " of objects pruned."
-msgstr ""
+msgstr "このセッションのアイデンティティマップ内で、ユーザーコードで参照されていないオブジェクト、変更されたオブジェクト、新しいオブジェクト、またはスケジュールされたオブジェクトを削除します。整理されたオブジェクトの数を返します。"
 
 #: of sqlalchemy.orm.session.Session.query:1
 msgid ""
 "Return a new :class:`.Query` object corresponding to this "
 ":class:`.Session`."
-msgstr ""
+msgstr "this：class： `.Session`に対応する新しい：class：` .Query`オブジェクトを返します。"
 
 #: of sqlalchemy.orm.session.Session.refresh:1
 msgid "Expire and refresh the attributes on the given instance."
-msgstr ""
+msgstr "指定されたインスタンスの属性を期限切れにして更新します。"
 
 #: of sqlalchemy.orm.session.Session.refresh:3
 msgid ""
 "A query will be issued to the database and all attributes will be "
 "refreshed with their current database value."
-msgstr ""
+msgstr "クエリがデータベースに発行され、すべての属性が現在のデータベース値でリフレッシュされます。"
 
 #: of sqlalchemy.orm.session.Session.refresh:6
 msgid ""
 "Lazy-loaded relational attributes will remain lazily loaded, so that the "
 "instance-wide refresh operation will be followed immediately by the lazy "
 "load of that attribute."
-msgstr ""
+msgstr "遅延ロードされたリレーショナル属性は遅延ロードされたままになるため、インスタンス全体のリフレッシュ操作の直後にその属性の遅延ロードが続きます。"
 
 #: of sqlalchemy.orm.session.Session.refresh:10
 msgid ""
 "Eagerly-loaded relational attributes will eagerly load within the single "
 "refresh operation."
-msgstr ""
+msgstr "積極的にロードされたリレーショナル属性は、単一のリフレッシュ操作内に熱心に読み込まれます。"
 
 #: of sqlalchemy.orm.session.Session.refresh:13
 msgid ""
@@ -1527,13 +1517,13 @@ msgid ""
 ":meth:`~Session.refresh` usually only makes sense if non-ORM SQL "
 "statement were emitted in the ongoing transaction, or if autocommit mode "
 "is turned on."
-msgstr ""
+msgstr "高度に分離されたトランザクションは、トランザクション外のデータベース状態の変化に関係なく、同じトランザクションで以前に読み込まれたものと同じ値を返すことに注意してください。 -  meth： `〜Session.refresh`の使用法は通常、ORM以外のSQLステートメントは、進行中のトランザクションで、または自動コミット・モードがオンになっている場合に出されました。"
 
 #: of sqlalchemy.orm.session.Session.refresh:20
 msgid ""
 "optional.  An iterable collection of string attribute names indicating a "
 "subset of attributes to be refreshed."
-msgstr ""
+msgstr "オプション。リフレッシュされる属性のサブセットを示す文字列属性名の反復可能なコレクション。"
 
 #: of sqlalchemy.orm.session.Session.refresh:24
 msgid ""
@@ -1542,7 +1532,7 @@ msgid ""
 "UPDATE flags for the SELECT; flags should match the parameters of "
 ":meth:`.Query.with_for_update`. Supersedes the "
 ":paramref:`.Session.refresh.lockmode` parameter.  .. versionadded:: 1.2"
-msgstr ""
+msgstr "FOR UPDATEを使用する必要があるオプションのブール値「True」が使用されるか、SELECTのより特定のFOR UPDATEフラグのセットを示すフラグを含むディクショナリです。フラグは：meth： `.Query.with_for_update`のパラメータと一致する必要があります。 paramref： `.Session.refresh.lockmode`パラメータを置き換えます。 .. versionadded :: 1.2"
 
 #: of sqlalchemy.orm.session.Session.refresh:24
 msgid ""
@@ -1551,26 +1541,26 @@ msgid ""
 "UPDATE flags for the SELECT; flags should match the parameters of "
 ":meth:`.Query.with_for_update`. Supersedes the "
 ":paramref:`.Session.refresh.lockmode` parameter."
-msgstr ""
+msgstr "FOR UPDATEを使用する必要があるオプションのブール値「True」が使用されるか、SELECTのより特定のFOR UPDATEフラグのセットを示すフラグを含むディクショナリです。フラグは：meth： `.Query.with_for_update`のパラメータと一致する必要があります。 paramref： `.Session.refresh.lockmode`パラメータを置き換えます。"
 
 #: of sqlalchemy.orm.session.Session.refresh:32
 msgid ""
 "Passed to the :class:`~sqlalchemy.orm.query.Query` as used by "
 ":meth:`~sqlalchemy.orm.query.Query.with_lockmode`. Superseded by "
 ":paramref:`.Session.refresh.with_for_update`."
-msgstr ""
+msgstr "：meth： `〜sqlalchemy.orm.query.Query.with_lockmode`で使われている：class：`〜sqlalchemy.orm.query.Query`に渡されました。パラメタ： `.Session.refresh.with_for_update`によって置き換えられました。"
 
 #: of sqlalchemy.orm.session.Session.refresh:42
 msgid ":meth:`.Session.expire_all`"
-msgstr ""
+msgstr "：meth： `.Session.expire_all`"
 
 #: of sqlalchemy.orm.session.Session.rollback:1
 msgid "Rollback the current transaction in progress."
-msgstr ""
+msgstr "進行中の現在のトランザクションをロールバックします。"
 
 #: of sqlalchemy.orm.session.Session.rollback:3
 msgid "If no transaction is in progress, this method is a pass-through."
-msgstr ""
+msgstr "進行中のトランザクションがない場合、このメソッドはパススルーです。"
 
 #: of sqlalchemy.orm.session.Session.rollback:5
 msgid ""
@@ -1578,23 +1568,23 @@ msgid ""
 "regardless of subtransactions being in effect.  All subtransactions up to"
 " the first real transaction are closed.  Subtransactions occur when "
 ":meth:`.begin` is called multiple times."
-msgstr ""
+msgstr "このメソッドは、サブトランザクションが有効であるかどうかに関係なく、現在のトランザクションまたはネストされたトランザクションをロールバックします。最初の実トランザクションまでのすべてのサブトランザクションはクローズされます。サブトランザクションは：meth： `.begin`が複数回呼び出されたときに発生します。"
 
 #: of sqlalchemy.orm.session.Session.rollback:12
 msgid ":ref:`session_rollback`"
-msgstr ""
+msgstr "：ref： `session_rollback`"
 
 #: of sqlalchemy.orm.session.Session.scalar:1
 msgid "Like :meth:`~.Session.execute` but return a scalar result."
-msgstr ""
+msgstr "like：meth： `〜。Session.execute`しかし、スカラー結果を返します。"
 
 #: of sqlalchemy.orm.session.Session.transaction:1
 msgid "The current active or inactive :class:`.SessionTransaction`."
-msgstr ""
+msgstr "現在のアクティブまたは非アクティブ：class： `.SessionTransaction`。"
 
 #: of sqlalchemy.orm.session.SessionTransaction:1
 msgid "A :class:`.Session`-level transaction."
-msgstr ""
+msgstr "A：class： `.Session`レベルのトランザクションです。"
 
 #: of sqlalchemy.orm.session.SessionTransaction:3
 msgid ""
@@ -1604,7 +1594,7 @@ msgid ""
 " for each one individually, committing or rolling them back all at once."
 "   It also provides optional two-phase commit behavior which can augment "
 "this coordination operation."
-msgstr ""
+msgstr "：class： `.SessionTransaction`は、通常はアプリケーションコードによって直接参照されない背後のオブジェクトです。これはmultiple：class： `.Connection`オブジェクト間で調整し、それぞれ個別にデータベーストランザクションを維持し、一度にコミットまたはロールバックします。また、この調整操作を補うことができるオプションの2フェーズコミット動作も提供します。"
 
 #: of sqlalchemy.orm.session.SessionTransaction:10
 msgid ""
@@ -1620,11 +1610,11 @@ msgid ""
 "indicated when the :attr:`.SessionTransaction.nested` attribute is also "
 "True, indicates that this :class:`.SessionTransaction` corresponds to a "
 "SAVEPOINT."
-msgstr ""
+msgstr "：class： `.Session`の：attr：` .Session.transaction`属性は、現在使用中のclass： `.SessionTransaction`オブジェクトを参照しています。 ：attr： `.SessionTransaction.parent`属性は：class：` .SessionTransaction`オブジェクトのスタック内の親：class： `.SessionTransaction`を参照します。この属性が `` None``の場合、これはスタックの先頭です。 `` None``でなければ、これは：class： `.SessionTransaction`は、いわゆる&quot;サブトランザクション &quot;または&quot;ネストされた &quot;トランザクションを指します。 \ &quot;サブトランザクション\&quot;は、一番外側の\ &quot;実\&quot;トランザクションの内側部分を区切るスコープの概念です。ネストされたトランザクションは、：attr： `.SessionTransaction.nested`属性がTrueの場合に表示され、これは：class：` .SessionTransaction`がSAVEPOINTに対応することを示します。"
 
 #: of sqlalchemy.orm.session.SessionTransaction:23
 msgid "**Life Cycle**"
-msgstr ""
+msgstr "**ライフサイクル**"
 
 #: of sqlalchemy.orm.session.SessionTransaction:25
 msgid ""
@@ -1639,7 +1629,7 @@ msgid ""
 ":class:`.SessionTransaction`.  The start of a "
 ":class:`.SessionTransaction` can be tracked using the "
 ":meth:`.SessionEvents.after_transaction_create` event."
-msgstr ""
+msgstr "A：class： `.SessionTransaction`は、デフォルトで` `autocommit = False``のデフォルトモードでclass：` .Session`に直ちに関連付けられます。 ：class： `.Session`は、さまざまな：class：` .Engine`または：class： `.Connection`オブジェクトに代わってSQLを発行するために呼び出されます：対応する：class：` .Connection`およびassociated：class： `.Transaction`は：class：` .SessionTransaction`オブジェクト内のコレクションに追加され、：class： `.SessionTransaction`によって維持される接続/トランザクションのペアの1つになります。 a：class： `.SessionTransaction`の開始点は：meth：` .SessionEvents.after_transaction_create`イベントを使って追跡できます。"
 
 #: of sqlalchemy.orm.session.SessionTransaction:37
 msgid ""
@@ -1654,11 +1644,11 @@ msgid ""
 ":meth:`.Session.begin` method is called.  The end of a "
 ":class:`.SessionTransaction` can be tracked using the "
 ":meth:`.SessionEvents.after_transaction_end` event."
-msgstr ""
+msgstr "：class： `.SessionTransaction`の有効期間は、：meth：` .Session.commit`、：meth： `.Session.rollback`または：meth：` .Session.close`メソッドが呼び出されたときに終了します。この時点で、：class： `.SessionTransaction`は親：class：` .Session`との関連付けを解除します。 A：class： `` autocommit = False``モードの `` Session .``は `：` .SessionTransaction`という新しいクラスを作成して直ちに置き換えますが、 `：autosommit = True： `モードは、：meth：` .Session.begin`メソッドが呼び出されるまで、：class： `.SessionTransaction`なしで残ります。 a：class： `.SessionTransaction`の終わりは：meth：` .SessionEvents.after_transaction_end`イベントを使って追跡できます。"
 
 #: of sqlalchemy.orm.session.SessionTransaction:49
 msgid "**Nesting and Subtransactions**"
-msgstr ""
+msgstr "**ネストとサブトランザクション**"
 
 #: of sqlalchemy.orm.session.SessionTransaction:51
 msgid ""
@@ -1675,7 +1665,7 @@ msgid ""
 "stack, and the :attr:`.SessionTransaction.parent` attribute allows "
 "traversal up the stack until :attr:`.SessionTransaction.parent` is "
 "``None``, indicating the top of the stack."
-msgstr ""
+msgstr "class： `.SessionTransaction`のもう一つの詳細は、\&quot;ネスティング\ &quot;ができることです。つまり、：meth： `.Session.begin`メソッドは、既存の：class：` .SessionTransaction`が既に存在している間に呼び出すことができ、一時的に親を置き換える新しい：class： `.SessionTransaction`を生成します：class：` .SessionTransaction`。 a：class： `.SessionTransaction`がネストされて生成されると、自身を：attr：` .Session.transaction`属性に割り当て、それに前の：class： `.SessionTransaction`をそれに割り当てます：attr：` .Session.parent`属性です。この振る舞いは事実上スタックになります。attr： `.Session.transaction`はスタックの現在のヘッドを参照し、：attr：` .SessionTransaction.parent`属性はスタックまでトラバーサルを許可します：attr： `.SessionTransaction .parent`はスタックの一番上を示す `` None``です。"
 
 #: of sqlalchemy.orm.session.SessionTransaction:65
 msgid ""
@@ -1683,7 +1673,7 @@ msgid ""
 ":meth:`.Session.commit` or :meth:`.Session.rollback`, it restores its "
 "parent :class:`.SessionTransaction` back onto the "
 ":attr:`.Session.transaction` attribute."
-msgstr ""
+msgstr "クラス： `.SessionTransaction`のスコープが：meth：` .Session.commit`または：meth： `.Session.rollback`で終了すると、親：class：` .SessionTransaction`を：attrに戻します。 ： `.Session.transaction`属性です。"
 
 #: of sqlalchemy.orm.session.SessionTransaction:70
 msgid ""
@@ -1699,7 +1689,7 @@ msgid ""
 " that it wishes to guarantee that it works within in a transaction block "
 "regardless of whether or not the :class:`.Session` is in transactional "
 "mode when the method is called."
-msgstr ""
+msgstr "このスタックの目的は、：meth： `.Session.rollback`や：meth：` .Session.commit`のネストを、：meth： `。Session.begin`のさまざまなフレーバーで呼び出すことです。このネスト動作は、：meth： `.Session.begin_nested`がSAVEPOINTトランザクションを発行するために使用され、コードブロックがbegin / rollbackを使用できるようにする、いわゆる&quot;サブトランザクション &quot;を生成するためにも使用されます/コミットシーケンスを含むことができる。 ：meth： `.flush`メソッドは、明示的に呼び出されても、autoflush経由で呼び出されても、トランザクションブロック内で動作するかどうかにかかわらず、トランザクションブロック内で動作することを保証したいという点で、\&quot;サブトランザクション\ ：class： `.Session`は、メソッドが呼び出されるとトランザクションモードになります。"
 
 #: of sqlalchemy.orm.session.SessionTransaction:83
 msgid ""
@@ -1712,59 +1702,59 @@ msgid ""
 "to take into account whether a :class:`.SessionTransaction` is the "
 "outermost transaction, a subtransaction, or a \"nested\" / SAVEPOINT "
 "transaction."
-msgstr ""
+msgstr "\ &quot;autoflush \&quot;機能内で発生するフラッシュ処理と、：meth： `.Session.flush`メソッドが使用されている場合** **常に**：class：` .SessionTransaction`オブジェクトを作成します。このオブジェクトは：class： `.Session`が自動コミットモードで、トランザクションが全く存在しない限り、通常はサブトランザクションです。この場合、トランザクションは最も外側のトランザクションです。イベント処理ロジックやその他の検査ロジックは、class： `.SessionTransaction`が最も外側のトランザクション、サブトランザクション、または\&quot;入れ子\ &quot;/ SAVEPOINTトランザクションのいずれかを考慮する必要があります。"
 
 #: of sqlalchemy.orm.session.SessionTransaction:95
 msgid ":meth:`.Session.rollback`"
-msgstr ""
+msgstr "：meth： `.Session.rollback`"
 
 #: of sqlalchemy.orm.session.SessionTransaction:97
 msgid ":meth:`.Session.commit`"
-msgstr ""
+msgstr "：meth： `.Session.commit`"
 
 #: of sqlalchemy.orm.session.SessionTransaction:99
 msgid ":meth:`.Session.begin`"
-msgstr ""
+msgstr "：meth： `.Session.begin`"
 
 #: of sqlalchemy.orm.session.SessionTransaction:103
 msgid ":attr:`.Session.is_active`"
-msgstr ""
+msgstr "：attr： `.Session.is_active`"
 
 #: of sqlalchemy.orm.session.SessionTransaction:105
 msgid ":meth:`.SessionEvents.after_transaction_create`"
-msgstr ""
+msgstr "：meth： `.SessionEvents.after_transaction_create`"
 
 #: of sqlalchemy.orm.session.SessionTransaction:107
 msgid ":meth:`.SessionEvents.after_transaction_end`"
-msgstr ""
+msgstr "：meth： `.SessionEvents.after_transaction_end`"
 
 #: of sqlalchemy.orm.session.SessionTransaction:109
 msgid ":meth:`.SessionEvents.after_commit`"
-msgstr ""
+msgstr "：meth： `.SessionEvents.after_commit`"
 
 #: of sqlalchemy.orm.session.SessionTransaction:111
 msgid ":meth:`.SessionEvents.after_rollback`"
-msgstr ""
+msgstr "：meth： `.SessionEvents.after_rollback`"
 
 #: of sqlalchemy.orm.session.SessionTransaction:113
 msgid ":meth:`.SessionEvents.after_soft_rollback`"
-msgstr ""
+msgstr "：meth： `.SessionEvents.after_soft_rollback`"
 
 #: of sqlalchemy.orm.session.SessionTransaction.nested:1
 msgid "Indicates if this is a nested, or SAVEPOINT, transaction."
-msgstr ""
+msgstr "これがネストされたトランザクションかSAVEPOINTトランザクションかを示します。"
 
 #: of sqlalchemy.orm.session.SessionTransaction.nested:3
 msgid ""
 "When :attr:`.SessionTransaction.nested` is True, it is expected that "
 ":attr:`.SessionTransaction.parent` will be True as well."
-msgstr ""
+msgstr "：attr： `.SessionTransaction.nested`がTrueの場合、attr：` .SessionTransaction.parent`もTrueになります。"
 
 #: of sqlalchemy.orm.session.SessionTransaction.parent:1
 msgid ""
 "The parent :class:`.SessionTransaction` of this "
 ":class:`.SessionTransaction`."
-msgstr ""
+msgstr "このクラスの親クラス：class： `.SessionTransaction`：class：` .SessionTransaction`。"
 
 #: of sqlalchemy.orm.session.SessionTransaction.parent:4
 msgid ""
@@ -1774,25 +1764,25 @@ msgid ""
 "either a \"subtransaction\" or a \"nested\" / SAVEPOINT transaction.  If "
 "the :attr:`.SessionTransaction.nested` attribute is ``True``, then this "
 "is a SAVEPOINT, and if ``False``, indicates this a subtransaction."
-msgstr ""
+msgstr "この属性が `` None``の場合、class： `.SessionTransaction`はスタックの先頭にあり、実際の\&quot; COMMIT \ &quot;/ \&quot; ROLLBACK \ &quot;ブロックに対応します。 `` None``以外の場合、これは\ &quot;サブトランザクション\&quot;または\ &quot;ネスト\&quot; / SAVEPOINTトランザクションです。 ：attr： `.SessionTransaction.nested`属性が` `True``であればSAVEPOINTであり、` `False``ならばこれがサブトランザクションであることを示します。"
 
 #: of sqlalchemy.orm.session.SessionTransaction.parent:12
 msgid "- use ._parent for previous versions"
-msgstr ""
+msgstr "- 以前のバージョンでは._parentを使用する"
 
 #: ../../orm/session_api.rst:21
 msgid "Session Utilities"
-msgstr ""
+msgstr "セッションユーティリティ"
 
 #: of sqlalchemy.orm.session.make_transient:1
 msgid "Alter the state of the given instance so that it is :term:`transient`."
-msgstr ""
+msgstr "指定されたインスタンスの状態を、term： `transient`に変更します。"
 
 #: of sqlalchemy.orm.session.make_transient:5
 msgid ""
 ":func:`.make_transient` is a special-case function for advanced use cases"
 " only."
-msgstr ""
+msgstr "：func： `.make_transient`は高度なユースケースのための特別なケースの関数です。"
 
 #: of sqlalchemy.orm.session.make_transient:8
 msgid ""
@@ -1804,38 +1794,38 @@ msgid ""
 " loaded at the time of the call.   The :attr:`.InstanceState.deleted` "
 "flag is also reset if this object had been deleted as a result of using "
 ":meth:`.Session.delete`."
-msgstr ""
+msgstr "与えられたマップされたインスタンスは、：term： `persistent`または：term：` detached`状態にあるとみなされます。この関数は：class： `.Session`とその：attr：` .InstanceState.identity`との関連付けを削除します。その効果は、コール時にロードされた属性/コレクション値を保持する以外は、オブジェクトが新しく構築されたかのように動作することです。 ：attr： `.InstanceState.deleted`フラグは：meth：` .Session.delete`を使った結果、このオブジェクトが削除された場合にもリセットされます。"
 
 #: of sqlalchemy.orm.session.make_transient:19
 msgid ""
 ":func:`.make_transient` does **not** \"unexpire\" or otherwise eagerly "
 "load ORM-mapped attributes that are not currently loaded at the time the "
 "function is called.   This includes attributes which:"
-msgstr ""
+msgstr "：func： `.make_transient`は、** \&#39;expire \ &#39;をしません。そうでなければ、関数呼び出し時に現在ロードされていないORMマップされた属性を熱心に読み込みます。これには、次の属性が含まれます。"
 
 #: of sqlalchemy.orm.session.make_transient:23
 msgid "were expired via :meth:`.Session.expire`"
-msgstr ""
+msgstr "via：meth： `。Session.expire`で期限切れになりました"
 
 #: of sqlalchemy.orm.session.make_transient:25
 msgid ""
 "were expired as the natural effect of committing a session transaction, "
 "e.g. :meth:`.Session.commit`"
-msgstr ""
+msgstr "セッショントランザクションをコミットするという自然な効果として期限切れになりました。例えば：meth： `.Session.commit`"
 
 #: of sqlalchemy.orm.session.make_transient:28
 msgid "are normally :term:`lazy loaded` but are not currently loaded"
-msgstr ""
+msgstr "通常は：term： `lazy loaded`ですが、現在ロードされていません"
 
 #: of sqlalchemy.orm.session.make_transient:30
 msgid "are \"deferred\" via :ref:`deferred` and are not yet loaded"
-msgstr ""
+msgstr "：ref： `deferred`を介して\&quot;遅延 &quot;されており、まだ読み込まれていません"
 
 #: of sqlalchemy.orm.session.make_transient:32
 msgid ""
 "were not present in the query which loaded this object, such as that "
 "which is common in joined table inheritance and other scenarios."
-msgstr ""
+msgstr "結合された表の継承および他のシナリオで一般的なものなど、このオブジェクトをロードした問合せには存在しませんでした。"
 
 #: of sqlalchemy.orm.session.make_transient:35
 msgid ""
@@ -1844,21 +1834,21 @@ msgid ""
 " an empty collection for a collection-oriented attribute. As the object "
 "is transient and un-associated with any database identity, it will no "
 "longer retrieve these values."
-msgstr ""
+msgstr "後：func： `.make_transient`が呼び出されると、上記のようなアンロードされた属性は通常、アクセス時には` `None``値に、またはコレクション指向属性の空のコレクションに解決されます。オブジェクトは一時的なものでデータベースIDとの関連付けが解除されているため、これらの値は取得されません。"
 
 #: of sqlalchemy.orm.session.make_transient:43
 msgid ":func:`.make_transient_to_detached`"
-msgstr ""
+msgstr "：func： `.make_transient_to_detached`"
 
 #: of sqlalchemy.orm.session.make_transient_to_detached:1
 msgid "Make the given transient instance :term:`detached`."
-msgstr ""
+msgstr "指定された一時インスタンスを作成する：term： `detached`。"
 
 #: of sqlalchemy.orm.session.make_transient_to_detached:5
 msgid ""
 ":func:`.make_transient_to_detached` is a special-case function for "
 "advanced use cases only."
-msgstr ""
+msgstr "：func： `.make_transient_to_detached`は高度なユースケースのための特別なケースの関数です。"
 
 #: of sqlalchemy.orm.session.make_transient_to_detached:8
 msgid ""
@@ -1866,55 +1856,55 @@ msgid ""
 "instance were freshly loaded from a query.  Missing attributes will be "
 "marked as expired. The primary key attributes of the object, which are "
 "required, will be made into the \"key\" of the instance."
-msgstr ""
+msgstr "指定されたインスタンスのすべての属性履歴は、インスタンスがクエリから新しく読み込まれたかのようにリセットされます。不足している属性は期限切れとマークされます。必要なオブジェクトの主キー属性は、インスタンスの\ &quot;キー\&quot;に作成されます。"
 
 #: of sqlalchemy.orm.session.make_transient_to_detached:14
 msgid ""
 "The object can then be added to a session, or merged possibly with the "
 "load=False flag, at which point it will look as if it were loaded that "
 "way, without emitting SQL."
-msgstr ""
+msgstr "オブジェクトをセッションに追加するか、またはload = Falseフラグを使用してマージすることができます。この時点で、SQLを出力せずにロードされたように見えます。"
 
 #: of sqlalchemy.orm.session.make_transient_to_detached:18
 msgid ""
 "This is a special use case function that differs from a normal call to "
 ":meth:`.Session.merge` in that a given persistent state can be "
 "manufactured without any SQL calls."
-msgstr ""
+msgstr "これは特別なユースケース関数で、通常の：meth： `。Session.merge`の呼び出しとは異なり、SQL呼び出しを行わずに永続状態を作成することができます。"
 
 #: of sqlalchemy.orm.session.make_transient_to_detached:26
 msgid ":func:`.make_transient`"
-msgstr ""
+msgstr "：func： `.make_transient`"
 
 #: of sqlalchemy.orm.session.make_transient_to_detached:28
 msgid ":meth:`.Session.enable_relationship_loading`"
-msgstr ""
+msgstr "：meth： `.Session.enable_relationship_loading`"
 
 #: of sqlalchemy.orm.session.object_session:1
 msgid "Return the :class:`.Session` to which the given instance belongs."
-msgstr ""
+msgstr "指定されたインスタンスが属する：class： `.Session`を返します。"
 
 #: of sqlalchemy.orm.session.object_session:3
 msgid ""
 "This is essentially the same as the :attr:`.InstanceState.session` "
 "accessor.  See that attribute for details."
-msgstr ""
+msgstr "これは基本的に：attr： `.InstanceState.session`アクセサと同じです。詳細については、その属性を参照してください。"
 
 #: of sqlalchemy.orm.util.was_deleted:1
 msgid "Return True if the given object was deleted within a session flush."
-msgstr ""
+msgstr "指定されたオブジェクトがセッションフラッシュ内で削除された場合はTrueを返します。"
 
 #: of sqlalchemy.orm.util.was_deleted:4
 msgid "This is regardless of whether or not the object is persistent or detached."
-msgstr ""
+msgstr "これは、オブジェクトが永続的であるかデタッチされているかにかかわらずです。"
 
 #: of sqlalchemy.orm.util.was_deleted:11
 msgid ":attr:`.InstanceState.was_deleted`"
-msgstr ""
+msgstr "：attr： `.InstanceState.was_deleted`"
 
 #: ../../orm/session_api.rst:32
 msgid "Attribute and State Management Utilities"
-msgstr ""
+msgstr "属性および状態管理ユーティリティ"
 
 #: ../../orm/session_api.rst:34
 msgid ""
@@ -1922,36 +1912,36 @@ msgid ""
 "API to provide a detailed interface for dealing with instances, attribute"
 " values, and history.  Some of them are useful when constructing event "
 "listener functions, such as those described in :doc:`/orm/events`."
-msgstr ""
+msgstr "これらの関数はSQLAlchemy属性計装APIによって提供され、インスタンス、属性値、および履歴を処理するための詳細なインターフェイスを提供します。それらのうちのいくつかは、：doc： `/ orm / events`に記述されているようなイベントリスナー関数を構築するときに便利です。"
 
 #: of sqlalchemy.orm.util.object_state:1
 msgid ""
 "Given an object, return the :class:`.InstanceState` associated with the "
 "object."
-msgstr ""
+msgstr "オブジェクトがあれば、オブジェクトに関連付けられた：class： `.InstanceState`を返します。"
 
 #: of sqlalchemy.orm.util.object_state:4
 msgid ""
 "Raises :class:`sqlalchemy.orm.exc.UnmappedInstanceError` if no mapping is"
 " configured."
-msgstr ""
+msgstr "マッピングが設定されていない場合は、class： `sqlalchemy.orm.exc.UnmappedInstanceError`を送出します。"
 
 #: of sqlalchemy.orm.util.object_state:7
 msgid ""
 "Equivalent functionality is available via the :func:`.inspect` function "
 "as::"
-msgstr ""
+msgstr "同等の機能は、：func： `.inspect`関数として利用できます::"
 
 #: of sqlalchemy.orm.util.object_state:12
 msgid ""
 "Using the inspection system will raise "
 ":class:`sqlalchemy.exc.NoInspectionAvailable` if the instance is not part"
 " of a mapping."
-msgstr ""
+msgstr "インスペクションシステムを使用すると、インスタンスがマッピングの一部でない場合、class： `sqlalchemy.exc.NoInspectionAvailable`が生成されます。"
 
 #: of sqlalchemy.orm.attributes.del_attribute:1
 msgid "Delete the value of an attribute, firing history events."
-msgstr ""
+msgstr "属性の値を削除し、履歴イベントを発生させます。"
 
 #: of sqlalchemy.orm.attributes.del_attribute:3
 #: sqlalchemy.orm.attributes.set_attribute:3
@@ -1960,11 +1950,11 @@ msgid ""
 "to the class, i.e. no descriptors are required. Custom attribute "
 "management schemes will need to make usage of this method to establish "
 "attribute state as understood by SQLAlchemy."
-msgstr ""
+msgstr "この関数は、クラスに直接適用された計装にかかわらず使用することができます。つまり、記述子は必要ありません。カスタム属性管理スキームは、SQLAlchemyが理解するように属性状態を確立するためにこのメソッドを使用する必要があります。"
 
 #: of sqlalchemy.orm.attributes.get_attribute:1
 msgid "Get the value of an attribute, firing any callables required."
-msgstr ""
+msgstr "アトリビュートの値を取得し、必要なコールバックをすべて発生させます。"
 
 #: of sqlalchemy.orm.attributes.get_attribute:3
 msgid ""
@@ -1972,74 +1962,74 @@ msgid ""
 "to the class, i.e. no descriptors are required. Custom attribute "
 "management schemes will need to make usage of this method to make usage "
 "of attribute state as understood by SQLAlchemy."
-msgstr ""
+msgstr "この関数は、クラスに直接適用された計装にかかわらず使用することができます。つまり、記述子は必要ありません。カスタム属性管理スキームは、SQLAlchemyが理解するように属性状態を使用するためにこのメソッドを使用する必要があります。"
 
 #: of sqlalchemy.orm.attributes.get_history:1
 msgid "Return a :class:`.History` record for the given object and attribute key."
-msgstr ""
+msgstr "与えられたオブジェクトと属性キーのa：class： `.History`レコードを返します。"
 
 #: of sqlalchemy.orm.attributes.get_history:4
 msgid "an object whose class is instrumented by the attributes package."
-msgstr ""
+msgstr "属性パッケージによってクラスが実装されているオブジェクト"
 
 #: of sqlalchemy.orm.attributes.get_history:7
 msgid "string attribute name."
-msgstr ""
+msgstr "文字列属性名。"
 
 #: of sqlalchemy.orm.attributes.get_history:9
 msgid ""
 "indicates loading behavior for the attribute if the value is not already "
 "present.   This is a bitflag attribute, which defaults to the symbol "
 ":attr:`.PASSIVE_OFF` indicating all necessary SQL should be emitted."
-msgstr ""
+msgstr "値がまだ存在しない場合、属性の読み込み動作を示します。これはビットフラグ属性です。デフォルトでは：attr： `.PASSIVE_OFF`というシンボルがあり、必要なすべてのSQLを発行する必要があることを示します。"
 
 #: of sqlalchemy.orm.attributes.init_collection:1
 msgid "Initialize a collection attribute and return the collection adapter."
-msgstr ""
+msgstr "コレクション属性を初期化し、コレクションアダプターを返します。"
 
 #: of sqlalchemy.orm.attributes.init_collection:3
 msgid ""
 "This function is used to provide direct access to collection internals "
 "for a previously unloaded attribute.  e.g.::"
-msgstr ""
+msgstr "この関数は、以前にアンロードされた属性のコレクション内部への直接アクセスを提供するために使用されます。例えば：："
 
 #: of sqlalchemy.orm.attributes.init_collection:10
 msgid ""
 "For an easier way to do the above, see "
 ":func:`~sqlalchemy.orm.attributes.set_committed_value`."
-msgstr ""
+msgstr "上記を簡単に行う方法は、func： `〜sqlalchemy.orm.attributes.set_committed_value`を参照してください。"
 
 #: of sqlalchemy.orm.attributes.init_collection:13
 msgid ""
 "obj is an instrumented object instance.  An InstanceState is accepted "
 "directly for backwards compatibility but this usage is deprecated."
-msgstr ""
+msgstr "objはインストゥルメントされたオブジェクトインスタンスです。 InstanceStateは下位互換性のために直接受け入れられますが、この使用法は推奨されていません。"
 
 #: of sqlalchemy.orm.attributes.flag_modified:1
 msgid "Mark an attribute on an instance as 'modified'."
-msgstr ""
+msgstr "インスタンスの属性を「変更済み」としてマークします。"
 
 #: of sqlalchemy.orm.attributes.flag_modified:3
 msgid ""
 "This sets the 'modified' flag on the instance and establishes an "
 "unconditional change event for the given attribute. The attribute must "
 "have a value present, else an :class:`.InvalidRequestError` is raised."
-msgstr ""
+msgstr "これは、インスタンスに対して &#39;modified&#39;フラグを設定し、指定された属性に対して無条件変更イベントを確立します。属性には値がなければなりません。それ以外の場合は：class： `.InvalidRequestError`が送出されます。"
 
 #: of sqlalchemy.orm.attributes.flag_modified:8
 msgid ""
 "To mark an object \"dirty\" without referring to any specific attribute "
 "so that it is considered within a flush, use the "
 ":func:`.attributes.flag_dirty` call."
-msgstr ""
+msgstr "特定の属性を参照せずにオブジェクトを &quot;ダーティ\&quot;にマークして、フラッシュ内にあるとみなすには、：func： `.attributes.flag_dirty`呼び出しを使用します。"
 
 #: of sqlalchemy.orm.attributes.flag_modified:14
 msgid ":func:`.attributes.flag_dirty`"
-msgstr ""
+msgstr "：func： `.attributes.flag_dirty`"
 
 #: of sqlalchemy.orm.attributes.flag_dirty:1
 msgid "Mark an instance as 'dirty' without any specific attribute mentioned."
-msgstr ""
+msgstr "特定の属性を記述することなく、インスタンスを「ダーティ」としてマークします。"
 
 #: of sqlalchemy.orm.attributes.flag_dirty:3
 msgid ""
@@ -2051,15 +2041,15 @@ msgid ""
 "handler will be able to see the object in the :attr:`.Session.dirty` "
 "collection and may establish changes on it, which will then be included "
 "in the SQL emitted."
-msgstr ""
+msgstr "これはオブジェクトが：meth： `.SessionEvents.before_flush`のようなイベントによって傍受のためにフラッシュプロセスを通過することを可能にする特別な操作です。このメソッドでダーティとマークされていても、変更のないオブジェクトのフラッシュ処理では、SQLは送出されません。しかし、a：meth： `.SessionEvents.before_flush`ハンドラーは、：attr：` .Session.dirty`コレクション内のオブジェクトを見ることができ、その上に変更を加えることができます。"
 
 #: of sqlalchemy.orm.attributes.flag_dirty:16
 msgid ":func:`.attributes.flag_modified`"
-msgstr ""
+msgstr "：func： `.attributes.flag_modified`"
 
 #: ../../orm/session_api.rst:60
 msgid "Return the :class:`.InstanceState` for a given mapped object."
-msgstr ""
+msgstr "与えられたマップされたオブジェクトに対して：class： `.InstanceState`を返します。"
 
 #: ../../orm/session_api.rst:63
 msgid ""
@@ -2067,35 +2057,35 @@ msgid ""
 ":func:`.object_state` and/or the :func:`.inspect` function is preferred "
 "here as they each emit an informative exception if the given object is "
 "not mapped."
-msgstr ""
+msgstr "この関数は：func： `.object_state`の内部バージョンです。 ：func： `.object_state`および/または：func：` .inspect`関数は、指定されたオブジェクトがマップされていない場合にそれぞれ有益な例外を送出するので、ここでは優先されます。"
 
 #: of sqlalchemy.orm.instrumentation.is_instrumented:1
 msgid ""
 "Return True if the given attribute on the given instance is instrumented "
 "by the attributes package."
-msgstr ""
+msgstr "指定されたインスタンスの指定された属性が属性パッケージによってインスツルメントされている場合はTrueを返します。"
 
 #: of sqlalchemy.orm.instrumentation.is_instrumented:4
 msgid ""
 "This function may be used regardless of instrumentation applied directly "
 "to the class, i.e. no descriptors are required."
-msgstr ""
+msgstr "この関数は、クラスに直接適用された計装にかかわらず使用することができます。つまり、記述子は必要ありません。"
 
 #: of sqlalchemy.orm.attributes.set_attribute:1
 msgid "Set the value of an attribute, firing history events."
-msgstr ""
+msgstr "属性の値を設定し、履歴イベントを発生させます。"
 
 #: of sqlalchemy.orm.attributes.set_attribute:9
 msgid "the object that will be modified"
-msgstr ""
+msgstr "変更されるオブジェクト"
 
 #: of sqlalchemy.orm.attributes.set_attribute:11
 msgid "string name of the attribute"
-msgstr ""
+msgstr "属性の文字列名"
 
 #: of sqlalchemy.orm.attributes.set_attribute:13
 msgid "value to assign"
-msgstr ""
+msgstr "割り当てる値"
 
 #: of sqlalchemy.orm.attributes.set_attribute:15
 msgid ""
@@ -2105,7 +2095,7 @@ msgid ""
 "listening function where an :class:`.Event` object is being supplied; the"
 " object may be used to track the origin of the chain of events.  .. "
 "versionadded:: 1.2.3"
-msgstr ""
+msgstr "以前のイベントリスナーから伝播されたclass： `.Event`のインスタンスです。この引数は、：func： `.set_attribute`関数が既存のイベントリスニング関数内で使用されている場合に使用されます。ここで：class：` .Event`オブジェクトが供給されています。オブジェクトを使用して一連のイベントの起点を追跡することができます。 .. versionadded :: 1.2.3"
 
 #: of sqlalchemy.orm.attributes.set_attribute:15
 msgid ""
@@ -2114,18 +2104,18 @@ msgid ""
 ":func:`.set_attribute` function is being used within an existing event "
 "listening function where an :class:`.Event` object is being supplied; the"
 " object may be used to track the origin of the chain of events."
-msgstr ""
+msgstr "以前のイベントリスナーから伝播されたclass： `.Event`のインスタンスです。この引数は、：func： `.set_attribute`関数が既存のイベントリスニング関数内で使用されている場合に使用されます。ここで：class：` .Event`オブジェクトが供給されています。オブジェクトを使用して一連のイベントの起点を追跡することができます。"
 
 #: of sqlalchemy.orm.attributes.set_committed_value:1
 msgid "Set the value of an attribute with no history events."
-msgstr ""
+msgstr "履歴イベントのない属性の値を設定します。"
 
 #: of sqlalchemy.orm.attributes.set_committed_value:3
 msgid ""
 "Cancels any previous history present.  The value should be a scalar value"
 " for scalar-holding attributes, or an iterable for any collection-holding"
 " attribute."
-msgstr ""
+msgstr "以前の履歴があれば取​​り消します。値は、スカラー保持属性のスカラー値、またはコレクション保持属性の反復可能値でなければなりません。"
 
 #: of sqlalchemy.orm.attributes.set_committed_value:7
 msgid ""
@@ -2134,61 +2124,61 @@ msgid ""
 "be used by application code which has loaded additional attributes or "
 "collections through separate queries, which can then be attached to an "
 "instance as though it were part of its original loaded state."
-msgstr ""
+msgstr "これは、レイジーローダが起動してデータベースから追​​加のデータをロードするときに使用される同じ基本的な方法です。特に、このメソッドは、追加の属性またはコレクションを別のクエリによってロードしたアプリケーションコードで使用できます。アプリケーションコードは、元のロード済み状態の一部であるかのようにインスタンスにアタッチできます。"
 
 #: of sqlalchemy.orm.attributes.History:1
 msgid ""
 "A 3-tuple of added, unchanged and deleted values, representing the "
 "changes which have occurred on an instrumented attribute."
-msgstr ""
+msgstr "追加された、変更されていない、削除された値の3タプルで、計測された属性で発生した変更を表します。"
 
 #: of sqlalchemy.orm.attributes.History:5
 msgid ""
 "The easiest way to get a :class:`.History` object for a particular "
 "attribute on an object is to use the :func:`.inspect` function::"
-msgstr ""
+msgstr "オブジェクト上の特定の属性に対して：class： `.History`オブジェクトを取得する最も簡単な方法は、：func：` .inspect`関数を使用することです::"
 
 #: of sqlalchemy.orm.attributes.History:12
 msgid "Each tuple member is an iterable sequence:"
-msgstr ""
+msgstr "各タプルメンバは反復可能なシーケンスです。"
 
 #: of sqlalchemy.orm.attributes.History:14
 msgid ""
 "``added`` - the collection of items added to the attribute (the first "
 "tuple element)."
-msgstr ""
+msgstr "`` added``  - 属性に追加された項目のコレクション（最初のタプル要素）。"
 
 #: of sqlalchemy.orm.attributes.History:17
 msgid ""
 "``unchanged`` - the collection of items that have not changed on the "
 "attribute (the second tuple element)."
-msgstr ""
+msgstr "`` unchanged``  - 属性（2番目のタプル要素）上で変更されていない項目の集合。"
 
 #: of sqlalchemy.orm.attributes.History:20
 msgid ""
 "``deleted`` - the collection of items that have been removed from the "
 "attribute (the third tuple element)."
-msgstr ""
+msgstr "`` deleted``  - 属性から削除されたアイテムのコレクション（3番目のタプル要素）。"
 
 #: of sqlalchemy.orm.attributes.History.empty:1
 msgid ""
 "Return True if this :class:`.History` has no changes and no existing, "
 "unchanged state."
-msgstr ""
+msgstr "Trueを返します。class： `.History`には変更がなく、変更されていない状態はありません。"
 
 #: of sqlalchemy.orm.attributes.History.has_changes:1
 msgid "Return True if this :class:`.History` has changes."
-msgstr ""
+msgstr "次のような場合にTrueを返します：class： `.History`に変更があります。"
 
 #: of sqlalchemy.orm.attributes.History.non_added:1
 msgid "Return a collection of unchanged + deleted."
-msgstr ""
+msgstr "変更されていない+コレクションのコレクションを返します。"
 
 #: of sqlalchemy.orm.attributes.History.non_deleted:1
 msgid "Return a collection of added + unchanged."
-msgstr ""
+msgstr "追加+変更なしのコレクションを返します。"
 
 #: of sqlalchemy.orm.attributes.History.sum:1
 msgid "Return a collection of added + unchanged + deleted."
-msgstr ""
+msgstr "追加された+変更されていない+削除されたコレクションを返します。"
 

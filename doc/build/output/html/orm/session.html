@@ -10,7 +10,7 @@
         <title>
             
     
-    Using the Session
+    セッションの使用
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -36,8 +36,8 @@
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
         <link rel="up" title="SQLAlchemy ORM" href="index.html" />
-        <link rel="next" title="Session Basics" href="session_basics.html" />
-        <link rel="prev" title="Query API" href="query.html" />
+        <link rel="next" title="セッションの基礎" href="session_basics.html" />
+        <link rel="prev" title="クエリAPI" href="query.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,24 +120,24 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Using the Session</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="session_basics.html">Session Basics</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session_state_management.html">State Management</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="cascades.html">Cascades</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session_transaction.html">Transactions and Connection Management</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="persistence_techniques.html">Additional Persistence Techniques</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="contextual.html">Contextual/Thread-local Sessions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session_events.html">Tracking Object and Session Changes with Events</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session_api.html">Session API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li class="selected"><span class="link-container first"><strong>セッションの使用</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="session_basics.html">セッションの基礎</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_state_management.html">状態管理</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="cascades.html">カスケード</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_transaction.html">トランザクションと接続管理</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="persistence_techniques.html">追加の永続化手法</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="contextual.html">コンテキスト/スレッドローカルセッション</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_events.html">イベントによるオブジェクトおよびセッションの変更の追跡</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_api.html">セッションAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -153,72 +153,69 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="module-sqlalchemy.orm.session">
-<span id="using-the-session"></span><span id="session-toplevel"></span><h1>Using the Session<a class="headerlink" href="#module-sqlalchemy.orm.session" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper" title="sqlalchemy.orm.mapper"><code class="xref py py-func docutils literal"><span class="pre">orm.mapper()</span></code></a> function and <a class="reference internal" href="extensions/declarative/api.html#module-sqlalchemy.ext.declarative" title="sqlalchemy.ext.declarative"><code class="xref py py-mod docutils literal"><span class="pre">declarative</span></code></a> extensions
-are the primary configurational interface for the ORM. Once mappings are
-configured, the primary usage interface for persistence operations is the
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>.</p>
+<span id="using-the-session"></span><span id="session-toplevel"></span><h1>セッションの使用<a class="headerlink" href="#module-sqlalchemy.orm.session" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>：func： <cite>.orm.mapper`関数と：mod：</cite>〜sqlalchemy.ext.declarative`拡張は、ORMの主要な構成インタフェースです。マッピングが設定されると、永続性操作の主な使い方インタフェースは：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`です。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="session_basics.html">Session Basics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="session_basics.html#what-does-the-session-do">What does the Session do ?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_basics.html#getting-a-session">Getting a Session</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_basics.html#session-frequently-asked-questions">Session Frequently Asked Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_basics.html#basics-of-using-a-session">Basics of Using a Session</a></li>
+<li class="toctree-l1"><a class="reference internal" href="session_basics.html">セッションの基礎</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="session_basics.html#what-does-the-session-do">セッションは何をしていますか？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_basics.html#getting-a-session">セッションの取得</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_basics.html#session-frequently-asked-questions">セッションに関するよくある質問</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_basics.html#basics-of-using-a-session">セッションの基本</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="session_state_management.html">State Management</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#quickie-intro-to-object-states">Quickie Intro to Object States</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#session-attributes">Session Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#session-referencing-behavior">Session Referencing Behavior</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#merging">Merging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#expunging">Expunging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#refreshing-expiring">Refreshing / Expiring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="session_state_management.html">状態管理</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#quickie-intro-to-object-states">Quickieオブジェクトの状態の紹介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#session-attributes">セッション属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#session-referencing-behavior">セッション参照動作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#merging">マージ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#expunging">絶滅</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_state_management.html#refreshing-expiring">リフレッシュ/期限切れ</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="cascades.html">Cascades</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cascades.html#save-update">save-update</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cascades.html#delete">delete</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cascades.html#delete-orphan">delete-orphan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cascades.html#merge">merge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cascades.html#refresh-expire">refresh-expire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cascades.html#expunge">expunge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cascades.html#controlling-cascade-on-backrefs">Controlling Cascade on Backrefs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cascades.html">カスケード</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cascades.html#save-update">セーブ・アップデート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cascades.html#delete">削除</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cascades.html#delete-orphan">孤児を削除する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cascades.html#merge">行きます</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cascades.html#refresh-expire">リフレッシュ期限切れ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cascades.html#expunge">消滅</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cascades.html#controlling-cascade-on-backrefs">後方参照のカスケードの制御</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="session_transaction.html">Transactions and Connection Management</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="session_transaction.html#managing-transactions">Managing Transactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_transaction.html#joining-a-session-into-an-external-transaction-such-as-for-test-suites">Joining a Session into an External Transaction (such as for test suites)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="session_transaction.html">トランザクションと接続管理</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="session_transaction.html#managing-transactions">トランザクションの管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_transaction.html#joining-a-session-into-an-external-transaction-such-as-for-test-suites">外部トランザクションへのセッションの参加（テストスイートなど）</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="persistence_techniques.html">Additional Persistence Techniques</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#embedding-sql-insert-update-expressions-into-a-flush">Embedding SQL Insert/Update Expressions into a Flush</a></li>
-<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#using-sql-expressions-with-sessions">Using SQL Expressions with Sessions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#forcing-null-on-a-column-with-a-default">Forcing NULL on a column with a default</a></li>
-<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#fetching-server-generated-defaults">Fetching Server-Generated Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#partitioning-strategies">Partitioning Strategies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#bulk-operations">Bulk Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistence_techniques.html">追加の永続化手法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#embedding-sql-insert-update-expressions-into-a-flush">SQL Insert / Update式をフラッシュに埋め込む</a></li>
+<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#using-sql-expressions-with-sessions">セッションでのSQL式の使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#forcing-null-on-a-column-with-a-default">デフォルトで列にNULLを強制する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#fetching-server-generated-defaults">サーバー生成のデフォルトの取得</a></li>
+<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#partitioning-strategies">パーティショニング戦略</a></li>
+<li class="toctree-l2"><a class="reference internal" href="persistence_techniques.html#bulk-operations">バルク操作</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="contextual.html">Contextual/Thread-local Sessions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="contextual.html#implicit-method-access">Implicit Method Access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contextual.html#thread-local-scope">Thread-Local Scope</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contextual.html#using-thread-local-scope-with-web-applications">Using Thread-Local Scope with Web Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contextual.html#using-custom-created-scopes">Using Custom Created Scopes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contextual.html#contextual-session-api">Contextual Session API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contextual.html">コンテキスト/スレッドローカルセッション</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contextual.html#implicit-method-access">暗黙的メソッドアクセス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contextual.html#thread-local-scope">スレッドローカルスコープ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contextual.html#using-thread-local-scope-with-web-applications">Webアプリケーションでのスレッドローカルスコープの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contextual.html#using-custom-created-scopes">カスタム作成スコープの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contextual.html#contextual-session-api">コンテクストセッションAPI</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="session_events.html">Tracking Object and Session Changes with Events</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="session_events.html#persistence-events">Persistence Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_events.html#object-lifecycle-events">Object Lifecycle Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_events.html#transaction-events">Transaction Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_events.html#attribute-change-events">Attribute Change Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="session_events.html">イベントによるオブジェクトおよびセッションの変更の追跡</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="session_events.html#persistence-events">永続イベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_events.html#object-lifecycle-events">オブジェクトライフサイクルイベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_events.html#transaction-events">トランザクションイベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_events.html#attribute-change-events">属性変更イベント</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="session_api.html">Session API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="session_api.html#session-and-sessionmaker">Session and sessionmaker()</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_api.html#session-utilities">Session Utilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="session_api.html#attribute-and-state-management-utilities">Attribute and State Management Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="session_api.html">セッションAPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="session_api.html#session-and-sessionmaker">セッションとsessionmaker（）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_api.html#session-utilities">セッションユーティリティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="session_api.html#attribute-and-state-management-utilities">属性および状態管理ユーティリティ</a></li>
 </ul>
 </li>
 </ul>
@@ -231,13 +228,13 @@ configured, the primary usage interface for persistence operations is the
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="query.html" title="previous chapter">Query API</a>
+        <a href="query.html" title="previous chapter">クエリAPI</a>
         Next:
-        <a href="session_basics.html" title="next chapter">Session Basics</a>
+        <a href="session_basics.html" title="next chapter">セッションの基礎</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -264,6 +261,7 @@ configured, the primary usage interface for persistence operations is the
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

@@ -6,28 +6,18 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/internals.rst:4
 msgid "Core Internals"
-msgstr ""
+msgstr "コア内部"
 
 #: ../../core/internals.rst:6
 msgid "Some key internal constructs are listed here."
-msgstr ""
+msgstr "いくつかの重要な内部構造がここにリストされています。"
 
 #: of sqlalchemy.engine.interfaces.Compiled:1
 msgid "Represent a compiled SQL or DDL expression."
-msgstr ""
+msgstr "コンパイルされたSQLまたはDDL式を表します。"
 
 #: of sqlalchemy.engine.interfaces.Compiled:3
 msgid ""
@@ -38,23 +28,23 @@ msgid ""
 "case should the ``Compiled`` object be dependent on the actual values of "
 "those bind parameters, even though it may reference those values as "
 "defaults."
-msgstr ""
+msgstr "`` Compiled``オブジェクトの `` __str__``メソッドは、文の実際のテキストを生成するはずです。 `` Compiled``オブジェクトは、基礎となるデータベース方言に固有であり、特定のバインドパラメータセット内で参照されるカラムに固有である場合もあれば、そうでない場合もあります。 `` Compiled``オブジェクトは、それらの値をデフォルトとして参照することはできますが、それらのバインドパラメータの実際の値に依存してはいけません。"
 
 #: of sqlalchemy.engine.interfaces.Compiled.compile:1
 #: sqlalchemy.sql.compiler.DDLCompiler.compile:1
 msgid "Produce the internal string representation of this element."
-msgstr ""
+msgstr "この要素の内部文字列表現を生成します。"
 
 #: of sqlalchemy.engine.interfaces.Compiled.compile:3
 #: sqlalchemy.sql.compiler.DDLCompiler.compile:3
 msgid ":class:`.Compiled` objects now compile within the constructor."
-msgstr ""
+msgstr "：class： `.Compiled`オブジェクトがコンストラクタ内でコンパイルされるようになりました。"
 
 #: of sqlalchemy.engine.interfaces.Compiled.construct_params:1
 #: sqlalchemy.engine.interfaces.Compiled.params:1
 #: sqlalchemy.sql.compiler.DDLCompiler.params:1
 msgid "Return the bind params for this compiled object."
-msgstr ""
+msgstr "このコンパイルされたオブジェクトのバインドパラメータを返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.do_begin_twophase
 #: sqlalchemy.engine.default.DefaultDialect.do_commit_twophase
@@ -75,55 +65,55 @@ msgstr ""
 #: sqlalchemy.engine.interfaces.Dialect.do_rollback_twophase
 #: sqlalchemy.engine.interfaces.Dialect.do_savepoint
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.engine.interfaces.Compiled.construct_params:3
 msgid ""
 "a dict of string/object pairs whose values will override bind values "
 "compiled in to the statement."
-msgstr ""
+msgstr "ステートメントにコンパイルされたバインド値を値がオーバーライドする文字列とオブジェクトのペアを指定します。"
 
 #: of sqlalchemy.engine.interfaces.Compiled.execute:1
 #: sqlalchemy.sql.compiler.DDLCompiler.execute:1
 msgid "Execute this compiled object."
-msgstr ""
+msgstr "このコンパイルされたオブジェクトを実行します。"
 
 #: of sqlalchemy.engine.interfaces.Compiled.execution_options:1
 msgid ""
 "Execution options propagated from the statement.   In some cases, sub-"
 "elements of the statement can modify these."
-msgstr ""
+msgstr "ステートメントから伝播された実行オプション。場合によっては、ステートメントのサブ要素でこれらを変更することができます。"
 
 #: of sqlalchemy.engine.interfaces.Compiled.scalar:1
 #: sqlalchemy.sql.compiler.DDLCompiler.scalar:1
 msgid "Execute this compiled object and return the result's scalar value."
-msgstr ""
+msgstr "このコンパイルされたオブジェクトを実行し、結果のスカラー値を返します。"
 
 #: of sqlalchemy.engine.interfaces.Compiled.sql_compiler:1
 msgid "Return a Compiled that is capable of processing SQL expressions."
-msgstr ""
+msgstr "SQL式を処理できるコンパイルを返します。"
 
 #: of sqlalchemy.engine.interfaces.Compiled.sql_compiler:3
 msgid "If this compiler is one, it would likely just return 'self'."
-msgstr ""
+msgstr "このコンパイラが1つの場合、おそらく &#39;self&#39;が返されます。"
 
 #: of sqlalchemy.sql.compiler.DDLCompiler.define_constraint_remote_table:1
 msgid "Format the remote table clause of a CREATE CONSTRAINT clause."
-msgstr ""
+msgstr "CREATE CONSTRAINT句のリモート表の句をフォーマットします。"
 
 #: of sqlalchemy.engine.default.DefaultDialect:1
 msgid "Default implementation of Dialect"
-msgstr ""
+msgstr "Dialectのデフォルト実装"
 
 #: of sqlalchemy.engine.default.DefaultDialect.construct_arguments:1
 msgid ""
 "Optional set of argument specifiers for various SQLAlchemy constructs, "
 "typically schema items."
-msgstr ""
+msgstr "さまざまなSQLAlchemy構文（通常はスキーマ項目）の引数指定子のオプションセット。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.construct_arguments:4
 msgid "To implement, establish as a series of tuples, as in::"
-msgstr ""
+msgstr "実装するには、次のように一連のタプルとして確立します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.construct_arguments:14
 msgid ""
@@ -132,7 +122,7 @@ msgid ""
 "``postgresql_using``, ``postgresql_where``, nad ``postgresql_ops``. Any "
 "other argument specified to the constructor of :class:`.Index` which is "
 "prefixed with ``postgresql_`` will raise :class:`.ArgumentError`."
-msgstr ""
+msgstr "上記の構文がPostgreSQLの方言で確立されていれば、：class： `.Index`構造体はキーワード引数` `postgresql_using``、` `postgresql_where``、そして` `postgresql_ops``を受け入れます。 ：class： `.Index`のコンストラクタに指定された他の引数は、` `postgresql_``という接頭辞が付いています：class：` .ArgumentError`。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.construct_arguments:20
 msgid ""
@@ -142,38 +132,38 @@ msgid ""
 " namespace of arguments prefixed with that dialect name.  The rationale "
 "here is so that third-party dialects that haven't yet implemented this "
 "feature continue to function in the old way."
-msgstr ""
+msgstr "`` construct_arguments``メンバーを含まない方言は、引数検証システムに参加しません。そのような方言の場合、引数名は、その方言名が前に付いた引数の名前空間内のすべての関与する構造体によって受け入れられます。ここでの理論的根拠は、まだこの機能を実装していないサードパーティの方言が、古い方法で機能し続けるためです。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.construct_arguments:31
 msgid ""
 ":class:`.DialectKWArgs` - implementing base class which consumes "
 ":attr:`.DefaultDialect.construct_arguments`"
-msgstr ""
+msgstr "：class： `.DialectKWArgs`  - 消費する基本クラスを実装する：attr：` .DefaultDialect.construct_arguments`"
 
 #: of sqlalchemy.engine.default.DefaultDialect.create_xid:1
 msgid "Create a random two-phase transaction ID."
-msgstr ""
+msgstr "ランダムな2相トランザクションIDを作成します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.create_xid:3
 #: sqlalchemy.engine.interfaces.Dialect.create_xid:3
 msgid ""
 "This id will be passed to do_begin_twophase(), do_rollback_twophase(), "
 "do_commit_twophase().  Its format is unspecified."
-msgstr ""
+msgstr "このIDは、do_begin_twophase（）、do_rollback_twophase（）、do_commit_twophase（）に渡されます。その形式は不特定である。"
 
 #: of
 #: sqlalchemy.engine.default.DefaultDialect.dbapi_exception_translation_map:1
 msgid ""
 "mapping used in the extremely unusual case that a DBAPI's published "
 "exceptions don't actually have the __name__ that they are linked towards."
-msgstr ""
+msgstr "DBAPIの公開されている例外には、実際にリンクされている__name__がないという非常に珍しいケースで使用されます。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.denormalize_name:1
 #: sqlalchemy.engine.interfaces.Dialect.denormalize_name:1
 msgid ""
 "convert the given name to a case insensitive identifier for the backend "
 "if it is an all-lowercase name."
-msgstr ""
+msgstr "指定された名前を、すべて小文字の名前であれば、バックエンドの大文字と小文字を区別しない識別子に変換します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.denormalize_name:4
 #: sqlalchemy.engine.default.DefaultDialect.normalize_name:4
@@ -182,12 +172,12 @@ msgstr ""
 msgid ""
 "this method is only used if the dialect defines "
 "requires_name_normalize=True."
-msgstr ""
+msgstr "このメソッドは、dialectがrequires_name_normalize = Trueを定義している場合にのみ使用されます。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.do_begin_twophase:1
 #: sqlalchemy.engine.interfaces.Dialect.do_begin_twophase:1
 msgid "Begin a two phase transaction on the given connection."
-msgstr ""
+msgstr "指定された接続で2フェーズトランザクションを開始します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.do_begin_twophase:3
 #: sqlalchemy.engine.default.DefaultDialect.do_commit_twophase:4
@@ -203,7 +193,7 @@ msgstr ""
 #: sqlalchemy.engine.interfaces.Dialect.do_rollback_twophase:3
 #: sqlalchemy.engine.interfaces.Dialect.do_savepoint:3
 msgid "a :class:`.Connection`."
-msgstr ""
+msgstr "a：クラス： `.Connection`。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.do_begin_twophase:4
 #: sqlalchemy.engine.default.DefaultDialect.do_commit_twophase:5
@@ -214,48 +204,48 @@ msgstr ""
 #: sqlalchemy.engine.interfaces.Dialect.do_prepare_twophase:4
 #: sqlalchemy.engine.interfaces.Dialect.do_rollback_twophase:4
 msgid "xid"
-msgstr ""
+msgstr "xid"
 
 #: of sqlalchemy.engine.default.DefaultDialect.do_commit_twophase:1
 #: sqlalchemy.engine.interfaces.Dialect.do_commit_twophase:1
 msgid "Commit a two phase transaction on the given connection."
-msgstr ""
+msgstr "指定された接続で2フェーズトランザクションをコミットします。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.do_commit_twophase:6
 #: sqlalchemy.engine.default.DefaultDialect.do_rollback_twophase:5
 #: sqlalchemy.engine.interfaces.Dialect.do_commit_twophase:6
 #: sqlalchemy.engine.interfaces.Dialect.do_rollback_twophase:5
 msgid "whether or not :meth:`.TwoPhaseTransaction.prepare` was called."
-msgstr ""
+msgstr "または：meth： `.TwoPhaseTransaction.prepare`が呼び出されたかどうか。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.do_commit_twophase:8
 #: sqlalchemy.engine.default.DefaultDialect.do_rollback_twophase:7
 #: sqlalchemy.engine.interfaces.Dialect.do_commit_twophase:8
 #: sqlalchemy.engine.interfaces.Dialect.do_rollback_twophase:7
 msgid "if the recover flag was passed."
-msgstr ""
+msgstr "回復フラグが渡された場合"
 
 #: of sqlalchemy.engine.default.DefaultDialect.do_prepare_twophase:1
 #: sqlalchemy.engine.interfaces.Dialect.do_prepare_twophase:1
 msgid "Prepare a two phase transaction on the given connection."
-msgstr ""
+msgstr "指定された接続で2フェーズトランザクションを準備します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.do_recover_twophase:1
 #: sqlalchemy.engine.interfaces.Dialect.do_recover_twophase:1
 msgid ""
 "Recover list of uncommitted prepared two phase transaction identifiers on"
 " the given connection."
-msgstr ""
+msgstr "指定された接続上のコミットされていない2フェーズトランザクション識別子のリストを復元します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.do_rollback_twophase:1
 #: sqlalchemy.engine.interfaces.Dialect.do_rollback_twophase:1
 msgid "Rollback a two phase transaction on the given connection."
-msgstr ""
+msgstr "指定された接続で2フェーズトランザクションをロールバックします。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.engine_created:1
 #: sqlalchemy.engine.interfaces.Dialect.engine_created:1
 msgid "A convenience hook called before returning the final :class:`.Engine`."
-msgstr ""
+msgstr "final：class： `.Engine`を返す前に呼び出される便利なフックです。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.engine_created:3
 #: sqlalchemy.engine.interfaces.Dialect.engine_created:3
@@ -264,7 +254,7 @@ msgid ""
 ":meth:`.get_dialect_cls` method, then the hook is called on both classes,"
 " first on the dialect class returned by the :meth:`.get_dialect_cls` "
 "method and then on the class on which the method was called."
-msgstr ""
+msgstr "方言が：meth： `.get_dialect_cls`メソッドとは異なるクラスを返した場合、フックは両方のクラスで呼び出されます：最初は：meth：` .get_dialect_cls`メソッドによって返された方言クラスで呼び出され、次にこのメソッドが呼び出されました。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.engine_created:9
 #: sqlalchemy.engine.interfaces.Dialect.engine_created:9
@@ -272,19 +262,19 @@ msgid ""
 "The hook should be used by dialects and/or wrappers to apply special "
 "events to the engine or its components.   In particular, it allows a "
 "dialect-wrapping class to apply dialect-level events."
-msgstr ""
+msgstr "フックは、エンジンやそのコンポーネントに特別なイベントを適用するために、方言やラッパーによって使用されるべきです。特に、ダイアレクト・ラッピング・クラスでは、ダイアレクト・レベルのイベントを適用できます。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_check_constraints:1
 #: sqlalchemy.engine.interfaces.Dialect.get_check_constraints:1
 msgid "Return information about check constraints in `table_name`."
-msgstr ""
+msgstr "`table_name`のチェック制約に関する情報を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_check_constraints:3
 #: sqlalchemy.engine.interfaces.Dialect.get_check_constraints:3
 msgid ""
 "Given a string `table_name` and an optional string `schema`, return check"
 " constraint information as a list of dicts with these keys:"
-msgstr ""
+msgstr "文字列 `table_name`とオプションの文字列` schema`が与えられた場合、これらのキーを持つdictsのリストとしてcheck制約情報を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_check_constraints:7
 #: sqlalchemy.engine.default.DefaultDialect.get_columns:8
@@ -299,39 +289,39 @@ msgstr ""
 #: sqlalchemy.engine.interfaces.Dialect.get_pk_constraint:11
 #: sqlalchemy.engine.interfaces.Dialect.get_unique_constraints:7
 msgid "name"
-msgstr ""
+msgstr "名"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_check_constraints:7
 #: sqlalchemy.engine.interfaces.Dialect.get_check_constraints:7
 msgid "the check constraint's name"
-msgstr ""
+msgstr "チェック制約の名前"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_check_constraints:10
 #: sqlalchemy.engine.interfaces.Dialect.get_check_constraints:10
 msgid "sqltext"
-msgstr ""
+msgstr "sqltext"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_check_constraints:10
 #: sqlalchemy.engine.interfaces.Dialect.get_check_constraints:10
 msgid "the check constraint's SQL expression"
-msgstr ""
+msgstr "チェック制約のSQL式"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_check_constraints:14
 #: sqlalchemy.engine.default.DefaultDialect.get_unique_constraints:14
 #: sqlalchemy.engine.interfaces.Dialect.get_check_constraints:14
 #: sqlalchemy.engine.interfaces.Dialect.get_unique_constraints:14
 msgid "\\**kw"
-msgstr ""
+msgstr "\\ ** kw"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_check_constraints:13
 #: sqlalchemy.engine.interfaces.Dialect.get_check_constraints:13
 msgid "other options passed to the dialect's get_check_constraints() method."
-msgstr ""
+msgstr "dialectのget_check_constraints（）メソッドに渡される他のオプション"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:1
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:1
 msgid "Return information about columns in `table_name`."
-msgstr ""
+msgstr "`table_name`の列に関する情報を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:3
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:3
@@ -339,27 +329,27 @@ msgid ""
 "Given a :class:`.Connection`, a string `table_name`, and an optional "
 "string `schema`, return column information as a list of dictionaries with"
 " these keys:"
-msgstr ""
+msgstr "与えられたa：class： `.Connection`、文字列` table_name`、およびオプションの文字列 `schema`は、これらのキーを持つ辞書のリストとしてカラム情報を返します："
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:8
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:8
 msgid "the column's name"
-msgstr ""
+msgstr "列の名前"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:11
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:11
 msgid "type"
-msgstr ""
+msgstr "タイプ"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:11
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:11
 msgid "[sqlalchemy.types#TypeEngine]"
-msgstr ""
+msgstr "[sqlalchemy.types＃TypeEngine]"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:14
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:14
 msgid "nullable"
-msgstr ""
+msgstr "ヌル可能"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:14
 #: sqlalchemy.engine.default.DefaultDialect.get_columns:20
@@ -368,59 +358,59 @@ msgstr ""
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:20
 #: sqlalchemy.engine.interfaces.Dialect.get_indexes:14
 msgid "boolean"
-msgstr ""
+msgstr "ブール値"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:17
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:17
 msgid "default"
-msgstr ""
+msgstr "デフォルト"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:17
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:17
 msgid "the column's default value"
-msgstr ""
+msgstr "列のデフォルト値"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:20
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:20
 msgid "autoincrement"
-msgstr ""
+msgstr "自動増加"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:26
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:26
 msgid "sequence"
-msgstr ""
+msgstr "シーケンス"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:26
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:26
 msgid "a dictionary of the form"
-msgstr ""
+msgstr "形式の辞書"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:26
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:26
 msgid "{'name'"
-msgstr ""
+msgstr "{&#39;名&#39;"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:25
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:25
 msgid "str, 'start' :int, 'increment': int, 'minvalue': int,"
-msgstr ""
+msgstr "str、 &#39;start&#39;：int、 &#39;increment&#39;：int、 &#39;minvalue&#39;：int、"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:25
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:25
 msgid ""
 "'maxvalue': int, 'nominvalue': bool, 'nomaxvalue': bool, 'cycle': bool, "
 "'cache': int, 'order': bool}"
-msgstr ""
+msgstr "&#39;nomvalue&#39;：bool、 &#39;nomaxvalue&#39;：bool、 &#39;cycle&#39;：bool、 &#39;cache&#39;：int、 &#39;order&#39;：bool}"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_columns:28
 #: sqlalchemy.engine.interfaces.Dialect.get_columns:28
 msgid "Additional column attributes may be present."
-msgstr ""
+msgstr "追加の列属性が存在する可能性があります。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_dialect_cls:1
 #: sqlalchemy.engine.interfaces.Dialect.get_dialect_cls:1
 msgid "Given a URL, return the :class:`.Dialect` that will be used."
-msgstr ""
+msgstr "URLを指定すると、使用される：class： `.Dialect`を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_dialect_cls:3
 #: sqlalchemy.engine.interfaces.Dialect.get_dialect_cls:3
@@ -429,17 +419,17 @@ msgid ""
 "around an existing dialect, by allowing the plugin to be loaded from the "
 "url based on an entrypoint, and then the plugin returns the actual "
 "dialect to be used."
-msgstr ""
+msgstr "これは、プラグインがエントリポイントに基づいてURLからロードされるようにすることによって、外部プラグインが既存の方言の周りに機能を提供することを可能にするフックであり、プラグインは使用される実際の方言を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_dialect_cls:8
 #: sqlalchemy.engine.interfaces.Dialect.get_dialect_cls:8
 msgid "By default this just returns the cls."
-msgstr ""
+msgstr "デフォルトでは、これは単にclsを返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_foreign_keys:1
 #: sqlalchemy.engine.interfaces.Dialect.get_foreign_keys:1
 msgid "Return information about foreign_keys in `table_name`."
-msgstr ""
+msgstr "`table_name`のforeign_keysに関する情報を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_foreign_keys:3
 #: sqlalchemy.engine.interfaces.Dialect.get_foreign_keys:3
@@ -447,60 +437,60 @@ msgid ""
 "Given a :class:`.Connection`, a string `table_name`, and an optional "
 "string `schema`, return foreign key information as a list of dicts with "
 "these keys:"
-msgstr ""
+msgstr "与えられたa：class： `.Connection`、文字列` table_name`、およびオプションの文字列 `schema`は、これらのキーを持つdictsのリストとして外部キー情報を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_foreign_keys:8
 #: sqlalchemy.engine.interfaces.Dialect.get_foreign_keys:8
 msgid "the constraint's name"
-msgstr ""
+msgstr "制約の名前"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_foreign_keys:11
 #: sqlalchemy.engine.interfaces.Dialect.get_foreign_keys:11
 #: sqlalchemy.engine.interfaces.Dialect.get_pk_constraint:9
 msgid "constrained_columns"
-msgstr ""
+msgstr "constrained_columns"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_foreign_keys:11
 #: sqlalchemy.engine.interfaces.Dialect.get_foreign_keys:11
 msgid "a list of column names that make up the foreign key"
-msgstr ""
+msgstr "外部キーを構成する列名のリスト"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_foreign_keys:14
 #: sqlalchemy.engine.interfaces.Dialect.get_foreign_keys:14
 msgid "referred_schema"
-msgstr ""
+msgstr "参照スキーマ"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_foreign_keys:14
 #: sqlalchemy.engine.interfaces.Dialect.get_foreign_keys:14
 msgid "the name of the referred schema"
-msgstr ""
+msgstr "参照されるスキーマの名前"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_foreign_keys:17
 #: sqlalchemy.engine.interfaces.Dialect.get_foreign_keys:17
 msgid "referred_table"
-msgstr ""
+msgstr "被引用文献"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_foreign_keys:17
 #: sqlalchemy.engine.interfaces.Dialect.get_foreign_keys:17
 msgid "the name of the referred table"
-msgstr ""
+msgstr "参照される表の名前"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_foreign_keys:20
 #: sqlalchemy.engine.interfaces.Dialect.get_foreign_keys:20
 msgid "referred_columns"
-msgstr ""
+msgstr "referenced_columns"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_foreign_keys:20
 #: sqlalchemy.engine.interfaces.Dialect.get_foreign_keys:20
 msgid ""
 "a list of column names in the referred table that correspond to "
 "constrained_columns"
-msgstr ""
+msgstr "constrained_columnsに対応する参照先テーブルの列名のリスト"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_indexes:1
 #: sqlalchemy.engine.interfaces.Dialect.get_indexes:1
 msgid "Return information about indexes in `table_name`."
-msgstr ""
+msgstr "`table_name`のインデックスに関する情報を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_indexes:3
 #: sqlalchemy.engine.interfaces.Dialect.get_indexes:3
@@ -508,36 +498,36 @@ msgid ""
 "Given a :class:`.Connection`, a string `table_name` and an optional "
 "string `schema`, return index information as a list of dictionaries with "
 "these keys:"
-msgstr ""
+msgstr "与えられたa：class： `.Connection`文字列` table_name`とオプションの文字列 `schema`は、これらのキーを持つ辞書のリストとしてインデックス情報を返します："
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_indexes:8
 #: sqlalchemy.engine.interfaces.Dialect.get_indexes:8
 msgid "the index's name"
-msgstr ""
+msgstr "インデックスの名前"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_indexes:11
 #: sqlalchemy.engine.default.DefaultDialect.get_unique_constraints:10
 #: sqlalchemy.engine.interfaces.Dialect.get_indexes:11
 #: sqlalchemy.engine.interfaces.Dialect.get_unique_constraints:10
 msgid "column_names"
-msgstr ""
+msgstr "column_names"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_indexes:11
 #: sqlalchemy.engine.default.DefaultDialect.get_unique_constraints:10
 #: sqlalchemy.engine.interfaces.Dialect.get_indexes:11
 #: sqlalchemy.engine.interfaces.Dialect.get_unique_constraints:10
 msgid "list of column names in order"
-msgstr ""
+msgstr "列名のリスト"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_indexes:13
 #: sqlalchemy.engine.interfaces.Dialect.get_indexes:13
 msgid "unique"
-msgstr ""
+msgstr "ユニークな"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_isolation_level:1
 #: sqlalchemy.engine.interfaces.Dialect.get_isolation_level:1
 msgid "Given a DBAPI connection, return its isolation level."
-msgstr ""
+msgstr "DBAPI接続を指定すると、分離レベルが返されます。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_isolation_level:3
 #: sqlalchemy.engine.interfaces.Dialect.get_isolation_level:3
@@ -545,7 +535,7 @@ msgid ""
 "When working with a :class:`.Connection` object, the corresponding DBAPI "
 "connection may be procured using the :attr:`.Connection.connection` "
 "accessor."
-msgstr ""
+msgstr "：class： `.Connection`オブジェクトを操作する場合、対応するDBAPI接続は：attr：` .Connection.connection`アクセサを使用して調達できます。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_isolation_level:7
 #: sqlalchemy.engine.default.DefaultDialect.set_isolation_level:3
@@ -557,7 +547,7 @@ msgid ""
 "implementation of the :class:`.Connection` and :class:`.Engine` isolation"
 " level facilities; these APIs should be preferred for most typical use "
 "cases."
-msgstr ""
+msgstr "これは、：class： `.Connection`と：class：` .Engine`分離レベル機能の実装の一部として使用される方言レベルのメソッドです。最も一般的な使用例では、これらのAPIを優先する必要があります。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_isolation_level:15
 #: sqlalchemy.engine.default.DefaultDialect.set_isolation_level:11
@@ -565,7 +555,7 @@ msgstr ""
 #: sqlalchemy.engine.interfaces.Dialect.reset_isolation_level:11
 #: sqlalchemy.engine.interfaces.Dialect.set_isolation_level:11
 msgid ":meth:`.Connection.get_isolation_level` - view current level"
-msgstr ""
+msgstr "：meth： `.Connection.get_isolation_level`  - 現在のレベルを表示する"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_isolation_level:17
 #: sqlalchemy.engine.default.DefaultDialect.set_isolation_level:13
@@ -573,7 +563,7 @@ msgstr ""
 #: sqlalchemy.engine.interfaces.Dialect.reset_isolation_level:13
 #: sqlalchemy.engine.interfaces.Dialect.set_isolation_level:13
 msgid ":attr:`.Connection.default_isolation_level` - view default level"
-msgstr ""
+msgstr "：attr： `.Connection.default_isolation_level`  - デフォルトのレベルを表示する"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_isolation_level:19
 #: sqlalchemy.engine.default.DefaultDialect.set_isolation_level:15
@@ -583,7 +573,7 @@ msgstr ""
 msgid ""
 ":paramref:`.Connection.execution_options.isolation_level` - set per "
 ":class:`.Connection` isolation level"
-msgstr ""
+msgstr "：paramref： `.Connection.execution_options.isolation_level`  -  per：class：` .Connection`の分離レベル"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_isolation_level:22
 #: sqlalchemy.engine.default.DefaultDialect.set_isolation_level:18
@@ -593,18 +583,18 @@ msgstr ""
 msgid ""
 ":paramref:`.create_engine.isolation_level` - set per :class:`.Engine` "
 "isolation level"
-msgstr ""
+msgstr "：paramref： `.create_engine.isolation_level`  -  per：class：` .Engine`分離レベル"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_pk_constraint:1
 msgid ""
 "Compatibility method, adapts the result of get_primary_keys() for those "
 "dialects which don't implement get_pk_constraint()."
-msgstr ""
+msgstr "互換性メソッドは、get_prime_keys（）の結果をget_pk_constraint（）を実装していない方言に適応させます。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_primary_keys:1
 #: sqlalchemy.engine.interfaces.Dialect.get_primary_keys:1
 msgid "Return information about primary keys in `table_name`."
-msgstr ""
+msgstr "`table_name`の主キーに関する情報を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_primary_keys:4
 #: sqlalchemy.engine.interfaces.Dialect.get_primary_keys:4
@@ -612,119 +602,119 @@ msgid ""
 "Deprecated.  This method is only called by the default implementation of "
 ":meth:`.Dialect.get_pk_constraint`.  Dialects should instead implement "
 "the :meth:`.Dialect.get_pk_constraint` method directly."
-msgstr ""
+msgstr "推奨されていません。このメソッドは、：meth： `.Dialect.get_pk_constraint`のデフォルトの実装によってのみ呼び出されます。代わりに、方言は：meth： `.Dialect.get_pk_constraint`メソッドを直接実装するべきです。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_table_comment:1
 #: sqlalchemy.engine.interfaces.Dialect.get_table_comment:1
 msgid "Return the \"comment\" for the table identified by `table_name`."
-msgstr ""
+msgstr "`table_name`で指定されたテーブルの&quot;コメント &quot;を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_table_comment:3
 #: sqlalchemy.engine.interfaces.Dialect.get_table_comment:3
 msgid ""
 "Given a string `table_name` and an optional string `schema`, return table"
 " comment information as a dictionary with this key:"
-msgstr ""
+msgstr "文字列 `table_name`とオプションの文字列` schema`が与えられた場合、このキーを持つ辞書としてのテーブルコメント情報を返します："
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_table_comment:7
 #: sqlalchemy.engine.interfaces.Dialect.get_table_comment:7
 msgid "text"
-msgstr ""
+msgstr "テキスト"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_table_comment:7
 #: sqlalchemy.engine.interfaces.Dialect.get_table_comment:7
 msgid "text of the comment"
-msgstr ""
+msgstr "コメントのテキスト"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_table_comment:9
 #: sqlalchemy.engine.interfaces.Dialect.get_table_comment:9
 msgid "Raises ``NotImplementedError`` for dialects that don't support comments."
-msgstr ""
+msgstr "コメントをサポートしない方言に対して `` NotImplementedError``を発生させます。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_table_names:1
 #: sqlalchemy.engine.interfaces.Dialect.get_table_names:1
 msgid "Return a list of table names for `schema`."
-msgstr ""
+msgstr "`schema`のテーブル名のリストを返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_temp_table_names:1
 #: sqlalchemy.engine.interfaces.Dialect.get_temp_table_names:1
 msgid ""
 "Return a list of temporary table names on the given connection, if "
 "supported by the underlying backend."
-msgstr ""
+msgstr "基になるバックエンドによってサポートされている場合は、指定された接続の一時テーブル名のリストを返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_temp_view_names:1
 #: sqlalchemy.engine.interfaces.Dialect.get_temp_view_names:1
 msgid ""
 "Return a list of temporary view names on the given connection, if "
 "supported by the underlying backend."
-msgstr ""
+msgstr "基になるバックエンドによってサポートされている場合、指定された接続の一時ビュー名のリストを返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_unique_constraints:1
 #: sqlalchemy.engine.interfaces.Dialect.get_unique_constraints:1
 msgid "Return information about unique constraints in `table_name`."
-msgstr ""
+msgstr "`table_name`の一意の制約に関する情報を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_unique_constraints:3
 #: sqlalchemy.engine.interfaces.Dialect.get_unique_constraints:3
 msgid ""
 "Given a string `table_name` and an optional string `schema`, return "
 "unique constraint information as a list of dicts with these keys:"
-msgstr ""
+msgstr "文字列 `table_name`とオプションの文字列` schema`が与えられた場合、これらのキーを持つdictsのリストとして一意制約情報を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_unique_constraints:7
 #: sqlalchemy.engine.interfaces.Dialect.get_unique_constraints:7
 msgid "the unique constraint's name"
-msgstr ""
+msgstr "一意制約の名前"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_unique_constraints:13
 #: sqlalchemy.engine.interfaces.Dialect.get_unique_constraints:13
 msgid "other options passed to the dialect's get_unique_constraints() method."
-msgstr ""
+msgstr "dialectのget_unique_constraints（）メソッドに渡される他のオプション"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_view_definition:1
 #: sqlalchemy.engine.interfaces.Dialect.get_view_definition:1
 msgid "Return view definition."
-msgstr ""
+msgstr "ビューの定義を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_view_definition:3
 #: sqlalchemy.engine.interfaces.Dialect.get_view_definition:3
 msgid ""
 "Given a :class:`.Connection`, a string `view_name`, and an optional "
 "string `schema`, return the view definition."
-msgstr ""
+msgstr "与えられた：class： `.Connection`、文字列` view_name`、およびオプションの文字列 `schema`は、ビュー定義を返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_view_names:1
 #: sqlalchemy.engine.interfaces.Dialect.get_view_names:1
 msgid "Return a list of all view names available in the database."
-msgstr ""
+msgstr "データベースで使用可能なすべてのビュー名のリストを返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_view_names:3
 #: sqlalchemy.engine.interfaces.Dialect.get_view_names:3
 msgid "schema:"
-msgstr ""
+msgstr "スキーマ："
 
 #: of sqlalchemy.engine.default.DefaultDialect.get_view_names:4
 #: sqlalchemy.engine.interfaces.Dialect.get_view_names:4
 msgid "Optional, retrieve names from a non-default schema."
-msgstr ""
+msgstr "オプションで、デフォルト以外のスキーマから名前を取得します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.has_sequence:1
 #: sqlalchemy.engine.interfaces.Dialect.has_sequence:1
 msgid "Check the existence of a particular sequence in the database."
-msgstr ""
+msgstr "データベース内の特定のシーケンスの存在を確認します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.has_sequence:3
 #: sqlalchemy.engine.interfaces.Dialect.has_sequence:3
 msgid ""
 "Given a :class:`.Connection` object and a string `sequence_name`, return "
 "True if the given sequence exists in the database, False otherwise."
-msgstr ""
+msgstr "a：class： `.Connection`オブジェクトと` sequence_name`という文字列があれば、指定されたシーケンスがデータベースに存在すればTrueを返し、それ以外の場合はFalseを返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.has_table:1
 #: sqlalchemy.engine.interfaces.Dialect.has_table:1
 msgid "Check the existence of a particular table in the database."
-msgstr ""
+msgstr "データベース内の特定のテーブルの存在を確認します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.has_table:3
 #: sqlalchemy.engine.interfaces.Dialect.has_table:3
@@ -732,57 +722,57 @@ msgid ""
 "Given a :class:`.Connection` object and a string `table_name`, return "
 "True if the given table (possibly within the specified `schema`) exists "
 "in the database, False otherwise."
-msgstr ""
+msgstr "a：class： `.Connection`オブジェクトと` table_name`という文字列があれば、指定されたテーブル（指定された `schema &#39;の中にある可能性があります）がデータベースに存在すればTrueを返し、それ以外の場合はFalseを返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.normalize_name:1
 #: sqlalchemy.engine.interfaces.Dialect.normalize_name:1
 msgid "convert the given name to lowercase if it is detected as case insensitive."
-msgstr ""
+msgstr "大文字小文字を区別しないと検出された場合は、指定された名前を小文字に変換します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.on_connect:1
 #: sqlalchemy.engine.interfaces.Dialect.connect:1
 msgid "return a callable which sets up a newly created DBAPI connection."
-msgstr ""
+msgstr "新しく作成されたDBAPI接続を設定する呼び出し可能オブジェクトを返します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.on_connect:3
 #: sqlalchemy.engine.interfaces.Dialect.connect:6
 msgid ""
 "This is used to set dialect-wide per-connection options such as isolation"
 " modes, unicode modes, etc."
-msgstr ""
+msgstr "これは、隔離モード、ユニコードモードなど、ダイアレクト全体の接続ごとのオプションを設定するために使用されます。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.on_connect:6
 #: sqlalchemy.engine.interfaces.Dialect.connect:9
 msgid ""
 "If a callable is returned, it will be assembled into a pool listener that"
 " receives the direct DBAPI connection, with all wrappers removed."
-msgstr ""
+msgstr "呼び出し可能なものが戻された場合は、ダイレクトDBAPI接続を受け取り、すべてのラッパーが除去されたプール・リスナーにアセンブルされます。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.on_connect:9
 #: sqlalchemy.engine.interfaces.Dialect.connect:12
 msgid "If None is returned, no listener will be generated."
-msgstr ""
+msgstr "Noneが返された場合、リスナーは生成されません。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.set_isolation_level:1
 #: sqlalchemy.engine.interfaces.Dialect.set_isolation_level:1
 msgid "Given a DBAPI connection, set its isolation level."
-msgstr ""
+msgstr "DBAPI接続を指定すると、その分離レベルを設定します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.type_descriptor:1
 msgid ""
 "Provide a database-specific :class:`.TypeEngine` object, given the "
 "generic object which comes from the types module."
-msgstr ""
+msgstr "typesモジュールに由来する汎用オブジェクトを指定して、データベース固有の：class： `.TypeEngine`オブジェクトを提供します。"
 
 #: of sqlalchemy.engine.default.DefaultDialect.type_descriptor:4
 msgid ""
 "This method looks for a dictionary called ``colspecs`` as a class or "
 "instance-level variable, and passes on to :func:`.types.adapt_type`."
-msgstr ""
+msgstr "このメソッドは、 `` colspecs``という名前の辞書をクラスまたはインスタンスレベルの変数として探し、func： `.types.adapt_type`に渡します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:1
 msgid "Define the behavior of a specific database and DB-API combination."
-msgstr ""
+msgstr "特定のデータベースとDB-APIの組み合わせの動作を定義します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:3
 msgid ""
@@ -791,194 +781,194 @@ msgid ""
 "defined under the general category of the Dialect.  The Dialect acts as a"
 " factory for other database-specific object implementations including "
 "ExecutionContext, Compiled, DefaultGenerator, and TypeEngine."
-msgstr ""
+msgstr "メタデータ定義、SQL問合せ生成、実行、結果セット処理、またはデータベース間で変化するその他の事項は、Dialectの一般カテゴリで定義されています。 Dialectは、ExecutionContext、Compiled、DefaultGenerator、およびTypeEngineなどの他のデータベース固有のオブジェクト実装のファクトリとして機能します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:10
 msgid "All Dialects implement the following attributes:"
-msgstr ""
+msgstr "すべての方言は、次の属性を実装しています。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:13
 msgid ""
 "identifying name for the dialect from a DBAPI-neutral point of view (i.e."
 " 'sqlite')"
-msgstr ""
+msgstr "DBAPI中立的な観点から方言の名前を識別する（すなわち &#39;sqlite&#39;）"
 
 #: of sqlalchemy.engine.interfaces.Dialect:17
 msgid "driver"
-msgstr ""
+msgstr "ドライバ"
 
 #: of sqlalchemy.engine.interfaces.Dialect:17
 msgid "identifying name for the dialect's DBAPI"
-msgstr ""
+msgstr "方言のDBAPIの名前を識別する"
 
 #: of sqlalchemy.engine.interfaces.Dialect:20
 msgid "positional"
-msgstr ""
+msgstr "定位置"
 
 #: of sqlalchemy.engine.interfaces.Dialect:20
 msgid "True if the paramstyle for this Dialect is positional."
-msgstr ""
+msgstr "このDialectのparamstyleが定位置にある場合は真です。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:24
 msgid "paramstyle"
-msgstr ""
+msgstr "パラームスタイル"
 
 #: of sqlalchemy.engine.interfaces.Dialect:23
 msgid "the paramstyle to be used (some DB-APIs support multiple paramstyles)."
-msgstr ""
+msgstr "使用されるパラスタイル（一部のDB-APIは複数のパラスタイルをサポートします）。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:28
 msgid "convert_unicode"
-msgstr ""
+msgstr "convert_unicode"
 
 #: of sqlalchemy.engine.interfaces.Dialect:27
 msgid "True if Unicode conversion should be applied to all ``str`` types."
-msgstr ""
+msgstr "すべての `` str``型にUnicode変換を適用する必要がある場合はtrueです。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:32
 msgid "encoding"
-msgstr ""
+msgstr "エンコーディング"
 
 #: of sqlalchemy.engine.interfaces.Dialect:31
 msgid "type of encoding to use for unicode, usually defaults to 'utf-8'."
-msgstr ""
+msgstr "Unicodeに使用するエンコーディングのタイプは、通常はデフォルトで &#39;utf-8&#39;になります。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:35
 msgid "statement_compiler"
-msgstr ""
+msgstr "statement_compiler"
 
 #: of sqlalchemy.engine.interfaces.Dialect:35
 msgid "a :class:`.Compiled` class used to compile SQL statements"
-msgstr ""
+msgstr "a：class：SQL文のコンパイルに使用される `.Compiled`クラス"
 
 #: of sqlalchemy.engine.interfaces.Dialect:38
 msgid "ddl_compiler"
-msgstr ""
+msgstr "ddl_compiler"
 
 #: of sqlalchemy.engine.interfaces.Dialect:38
 msgid "a :class:`.Compiled` class used to compile DDL statements"
-msgstr ""
+msgstr "a：class：DDL文のコンパイルに使用される `.Compiled`クラス"
 
 #: of sqlalchemy.engine.interfaces.Dialect:43
 msgid "server_version_info"
-msgstr ""
+msgstr "server_version_info"
 
 #: of sqlalchemy.engine.interfaces.Dialect:41
 msgid ""
 "a tuple containing a version number for the DB backend in use. This value"
 " is only available for supporting dialects, and is typically populated "
 "during the initial connection to the database."
-msgstr ""
+msgstr "使用中のDBバックエンドのバージョン番号を含むタプル。この値はダイアレクトをサポートするためにのみ使用でき、通常はデータベースへの最初の接続時に入力されます。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:48
 msgid "default_schema_name"
-msgstr ""
+msgstr "default_schema_name"
 
 #: of sqlalchemy.engine.interfaces.Dialect:46
 msgid ""
 "the name of the default schema.  This value is only available for "
 "supporting dialects, and is typically populated during the initial "
 "connection to the database."
-msgstr ""
+msgstr "デフォルトのスキーマの名前この値はダイアレクトをサポートするためにのみ使用でき、通常はデータベースへの最初の接続時に入力されます。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:51
 msgid "execution_ctx_cls"
-msgstr ""
+msgstr "execution_ctx_cls"
 
 #: of sqlalchemy.engine.interfaces.Dialect:51
 msgid "a :class:`.ExecutionContext` class used to handle statement execution"
-msgstr ""
+msgstr "a：class：ステートメント実行の処理に使用される `.ExecutionContext`クラス"
 
 #: of sqlalchemy.engine.interfaces.Dialect:55
 msgid "execute_sequence_format"
-msgstr ""
+msgstr "execute_sequence_format"
 
 #: of sqlalchemy.engine.interfaces.Dialect:54
 msgid ""
 "either the 'tuple' or 'list' type, depending on what cursor.execute() "
 "accepts for the second argument (they vary)."
-msgstr ""
+msgstr "cursor.execute（）が第2引数に対して受け入れるもの（それらは異なる）に応じて、 &#39;tuple&#39;または &#39;list&#39;型のいずれかです。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:59
 msgid "preparer"
-msgstr ""
+msgstr "作成者"
 
 #: of sqlalchemy.engine.interfaces.Dialect:58
 msgid ""
 "a :class:`~sqlalchemy.sql.compiler.IdentifierPreparer` class used to "
 "quote identifiers."
-msgstr ""
+msgstr "a：class： `〜sqlalchemy.sql.compiler.IdentifierPreparer`クラスは、識別子を引用するために使用されます。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:62
 msgid "supports_alter"
-msgstr ""
+msgstr "supports_alter"
 
 #: of sqlalchemy.engine.interfaces.Dialect:62
 msgid "``True`` if the database supports ``ALTER TABLE``."
-msgstr ""
+msgstr "データベースが `` ALTER TABLE``をサポートしている場合は `` True``を返します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:65
 msgid "max_identifier_length"
-msgstr ""
+msgstr "max_identifier_length"
 
 #: of sqlalchemy.engine.interfaces.Dialect:65
 msgid "The maximum length of identifier names."
-msgstr ""
+msgstr "識別子名の最大長。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:69
 msgid "supports_unicode_statements"
-msgstr ""
+msgstr "supports_unicode_statements"
 
 #: of sqlalchemy.engine.interfaces.Dialect:68
 msgid ""
 "Indicate whether the DB-API can receive SQL statements as Python unicode "
 "strings"
-msgstr ""
+msgstr "DB-APIがPythonのUnicode文字列としてSQL文を受け取ることができるかどうかを示します"
 
 #: of sqlalchemy.engine.interfaces.Dialect:73
 msgid "supports_unicode_binds"
-msgstr ""
+msgstr "supports_unicode_binds"
 
 #: of sqlalchemy.engine.interfaces.Dialect:72
 msgid ""
 "Indicate whether the DB-API can receive string bind parameters as Python "
 "unicode strings"
-msgstr ""
+msgstr "DB-APIが文字列バインドパラメータをPythonのUnicode文字列として受け取ることができるかどうかを示します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:77
 msgid "supports_sane_rowcount"
-msgstr ""
+msgstr "supports_sane_rowcount"
 
 #: of sqlalchemy.engine.interfaces.Dialect:76
 msgid ""
 "Indicate whether the dialect properly implements rowcount for ``UPDATE`` "
 "and ``DELETE`` statements."
-msgstr ""
+msgstr "方言が `` UPDATE``と `` DELETE``文に対して行数を適切に実装しているかどうかを示します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:82
 msgid "supports_sane_multi_rowcount"
-msgstr ""
+msgstr "supports_sane_multi_rowcount"
 
 #: of sqlalchemy.engine.interfaces.Dialect:80
 msgid ""
 "Indicate whether the dialect properly implements rowcount for ``UPDATE`` "
 "and ``DELETE`` statements when executed via executemany."
-msgstr ""
+msgstr "executemanyを介して実行されたときに、方言が行数を「UPDATE」および「DELETE」ステートメントに対して適切に実装するかどうかを指定します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:87
 msgid "preexecute_autoincrement_sequences"
-msgstr ""
+msgstr "preexecute_autoincrement_sequences"
 
 #: of sqlalchemy.engine.interfaces.Dialect:85
 msgid ""
 "True if 'implicit' primary key functions must be executed separately in "
 "order to get their value.   This is currently oriented towards "
 "PostgreSQL."
-msgstr ""
+msgstr "&#39;暗黙的な&#39;主キー関数を別々に実行してその値を取得する必要がある場合は真です。これは現在PostgreSQLに向けられています。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:95
 msgid "implicit_returning"
-msgstr ""
+msgstr "暗黙の復帰"
 
 #: of sqlalchemy.engine.interfaces.Dialect:90
 msgid ""
@@ -987,40 +977,40 @@ msgid ""
 "which are then available via inserted_primary_key. If an insert statement"
 " has returning() specified explicitly, the \"implicit\" functionality is "
 "not used and inserted_primary_key will not be available."
-msgstr ""
+msgstr "新しく生成された主キーおよび他の列のデフォルトを一度にロードするために、INSERT実行中にRETURNINGまたは同等のものを使用します。これはinserted_primary_keyを介して使用できます。 insert文がreturns（）を明示的に指定している場合、\ &quot;暗黙的な\&quot;機能は使用されず、inserted_primary_keyは使用できません。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:101
 msgid "colspecs"
-msgstr ""
+msgstr "colspecs"
 
 #: of sqlalchemy.engine.interfaces.Dialect:98
 msgid ""
 "A dictionary of TypeEngine classes from sqlalchemy.types mapped to "
 "subclasses that are specific to the dialect class.  This dictionary is "
 "class-level only and is not accessed from the dialect instance itself."
-msgstr ""
+msgstr "Dialectクラスに固有のサブクラスにマップされたsqlalchemy.typesのTypeEngineクラスの辞書。この辞書はクラスレベルのみであり、方言インスタンス自体からはアクセスされません。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:105
 msgid "supports_default_values"
-msgstr ""
+msgstr "supports_default_values"
 
 #: of sqlalchemy.engine.interfaces.Dialect:104
 msgid ""
 "Indicates if the construct ``INSERT INTO tablename DEFAULT VALUES`` is "
 "supported"
-msgstr ""
+msgstr "`` INSERT INTO tablename DEFAULT VALUES`の構文がサポートされているかどうかを示します"
 
 #: of sqlalchemy.engine.interfaces.Dialect:108
 msgid "supports_sequences"
-msgstr ""
+msgstr "supports_sequences"
 
 #: of sqlalchemy.engine.interfaces.Dialect:108
 msgid "Indicates if the dialect supports CREATE SEQUENCE or similar."
-msgstr ""
+msgstr "ダイアレクトがCREATE SEQUENCEなどをサポートするかどうかを示します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:115
 msgid "sequences_optional"
-msgstr ""
+msgstr "sequences_optional"
 
 #: of sqlalchemy.engine.interfaces.Dialect:111
 msgid ""
@@ -1029,33 +1019,33 @@ msgid ""
 " that support sequences. Currently used only to allow PostgreSQL SERIAL "
 "to be used on a column that specifies Sequence() for usage on other "
 "backends."
-msgstr ""
+msgstr "Trueの場合、Sequence（）構文の\ &quot;optional \&quot;フラグがCREATE SEQUENCEを生成しないように通知するかどうかを示します。シーケンスをサポートする方言にのみ適用されます。現在、PostgreSQL SERIALを他のバックエンドで使用するためにSequence（）を指定するカラムで使用できるようにするためにのみ使用されます。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:120
 msgid "supports_native_enum"
-msgstr ""
+msgstr "supports_native_enum"
 
 #: of sqlalchemy.engine.interfaces.Dialect:118
 msgid ""
 "Indicates if the dialect supports a native ENUM construct. This will "
 "prevent types.Enum from generating a CHECK constraint when that type is "
 "used."
-msgstr ""
+msgstr "ダイアレクトがネイティブENUM構造をサポートしているかどうかを示します。これにより、その型が使用されるときに、types.EnumがCHECK制約を生成するのを防ぐことができます。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:125
 msgid "supports_native_boolean"
-msgstr ""
+msgstr "supports_native_boolean"
 
 #: of sqlalchemy.engine.interfaces.Dialect:123
 msgid ""
 "Indicates if the dialect supports a native boolean construct. This will "
 "prevent types.Boolean from generating a CHECK constraint when that type "
 "is used."
-msgstr ""
+msgstr "ダイアレクトがネイティブのブール構造をサポートしているかどうかを示します。これにより、型が使用されるときにtypes.BooleanがCHECK制約を生成しなくなります。"
 
 #: of sqlalchemy.engine.interfaces.Dialect:137
 msgid "dbapi_exception_translation_map"
-msgstr ""
+msgstr "dbapi_exception_translation_map"
 
 #: of sqlalchemy.engine.interfaces.Dialect:128
 msgid ""
@@ -1064,41 +1054,41 @@ msgid ""
 "alternate class names, to support the case where a DBAPI has exception "
 "classes that aren't named as they are referred to (e.g. IntegrityError = "
 "MyException).   In the vast majority of cases this dictionary is empty."
-msgstr ""
+msgstr "DBAPIに例外クラスが存在しない場合をサポートするために、pep-249例外の名前（\ &quot;IntegrityError \&quot;、\ &quot;OperationalError \&quot;など） （例えば、IntegrityError = MyException）。大多数の場合、この辞書は空です。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.connect:3
 msgid ""
 "The callable accepts a single argument \"conn\" which is the DBAPI "
 "connection itself.  It has no return value."
-msgstr ""
+msgstr "呼び出し可能関数は、DBAPI接続自体である1つの引数 &quot;conn \&quot;を受け入れます。戻り値はありません。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.create_connect_args:1
 msgid "Build DB-API compatible connection arguments."
-msgstr ""
+msgstr "DB-API互換の接続引数をビルドします。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.create_connect_args:3
 msgid ""
 "Given a :class:`~sqlalchemy.engine.url.URL` object, returns a tuple "
 "consisting of a `*args`/`**kwargs` suitable to send directly to the "
 "dbapi's connect function."
-msgstr ""
+msgstr "与えられたa：class： `〜sqlalchemy.engine.url.URL`オブジェクトは、dbapiのconnect関数に直接送るのに適した` * args` / `** kwargs`からなるタプルを返します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.create_xid:1
 msgid "Create a two-phase transaction ID."
-msgstr ""
+msgstr "2フェーズトランザクションIDを作成します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_begin:1
 msgid ""
 "Provide an implementation of ``connection.begin()``, given a DB-API "
 "connection."
-msgstr ""
+msgstr "DB-API接続を指定すると、 `` connection.begin（） ``の実装を提供します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_begin:4
 msgid ""
 "The DBAPI has no dedicated \"begin\" method and it is expected that "
 "transactions are implicit.  This hook is provided for those DBAPIs that "
 "might need additional help in this area."
-msgstr ""
+msgstr "DBAPIには専用の &quot;begin&quot;メソッドはなく、トランザクションが暗黙的に行われることが期待されます。このフックは、この領域で追加のヘルプが必要なDBAPIに提供されています。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_begin:8
 msgid ""
@@ -1108,165 +1098,165 @@ msgid ""
 " extra commands emitted after a commit in order to enter the next "
 "transaction, when the SQLAlchemy :class:`.Connection` is used in its "
 "default \"autocommit\" mode."
-msgstr ""
+msgstr "注：meth： `.Dialect.do_begin`は：class：` .Transaction`オブジェクトが使用されていない限り呼び出されません。 ：meth： `.Dialect.do_autocommit`フックは、SQLAlchemy：class：` .Connection`がデフォルトの\ &quot;autocommitで使用されているときに、次のトランザクションを入力するためにコミット後にいくつかの余分なコマンドを発行する必要のあるDBAPIに対して提供されています\ &quot;モードです。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_begin:16
 #: sqlalchemy.engine.interfaces.Dialect.do_commit:4
 #: sqlalchemy.engine.interfaces.Dialect.do_rollback:4
 msgid "a DBAPI connection, typically proxied within a :class:`.ConnectionFairy`."
-msgstr ""
+msgstr "典型的には：class： `.ConnectionFairy`内でプロキシされるDBAPI接続です。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_close:1
 msgid ""
 "Provide an implementation of ``connection.close()``, given a DBAPI "
 "connection."
-msgstr ""
+msgstr "DBAPI接続を指定すると、 `` connection.close（） ``の実装を提供します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_close:4
 msgid ""
 "This hook is called by the :class:`.Pool` when a connection has been "
 "detached from the pool, or is being returned beyond the normal capacity "
 "of the pool."
-msgstr ""
+msgstr "このフックは、接続がプールから切り離されたとき、またはプールの通常の容量を超えて返されているときに：class： `.Pool`によって呼び出されます。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_commit:1
 msgid ""
 "Provide an implementation of ``connection.commit()``, given a DB-API "
 "connection."
-msgstr ""
+msgstr "DB-API接続を指定すると、 `` connection.commit（） ``の実装を提供します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_execute:1
 msgid "Provide an implementation of ``cursor.execute(statement, parameters)``."
-msgstr ""
+msgstr "`` cursor.execute（statement、parameters） ``の実装を提供します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_execute_no_params:1
 msgid "Provide an implementation of ``cursor.execute(statement)``."
-msgstr ""
+msgstr "`` cursor.execute（statement） ``の実装を提供します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_execute_no_params:3
 msgid "The parameter collection should not be sent."
-msgstr ""
+msgstr "パラメータコレクションは送信しないでください。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_executemany:1
 msgid ""
 "Provide an implementation of ``cursor.executemany(statement, "
 "parameters)``."
-msgstr ""
+msgstr "`` cursor.executemany（statement、parameters） ``の実装を提供します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_release_savepoint:1
 msgid "Release the named savepoint on a connection."
-msgstr ""
+msgstr "接続上の名前付きセーブポイントを解放します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_release_savepoint:4
 #: sqlalchemy.engine.interfaces.Dialect.do_rollback_to_savepoint:4
 #: sqlalchemy.engine.interfaces.Dialect.do_savepoint:4
 msgid "savepoint name."
-msgstr ""
+msgstr "セーブポイント名。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_rollback:1
 msgid ""
 "Provide an implementation of ``connection.rollback()``, given a DB-API "
 "connection."
-msgstr ""
+msgstr "DB-API接続を指定すると、 `` connection.rollback（） ``の実装を提供します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_rollback_to_savepoint:1
 msgid "Rollback a connection to the named savepoint."
-msgstr ""
+msgstr "名前付きセーブポイントへの接続をロールバックします。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.do_savepoint:1
 msgid "Create a savepoint with the given name."
-msgstr ""
+msgstr "指定された名前でセーブポイントを作成します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.get_pk_constraint:1
 msgid "Return information about the primary key constraint on table_name`."
-msgstr ""
+msgstr "table_name`の主キー制約に関する情報を返します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.get_pk_constraint:4
 msgid ""
 "Given a :class:`.Connection`, a string `table_name`, and an optional "
 "string `schema`, return primary key information as a dictionary with "
 "these keys:"
-msgstr ""
+msgstr "与えられたa：class： `.Connection`、文字列` table_name`、およびオプションの文字列 `schema`があると、これらのキーを持つ辞書としての主キー情報を返します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.get_pk_constraint:9
 msgid "a list of column names that make up the primary key"
-msgstr ""
+msgstr "主キーを構成する列名のリスト"
 
 #: of sqlalchemy.engine.interfaces.Dialect.get_pk_constraint:12
 msgid "optional name of the primary key constraint."
-msgstr ""
+msgstr "主キー制約のオプションの名前。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.initialize:1
 msgid "Called during strategized creation of the dialect with a connection."
-msgstr ""
+msgstr "接続された方言の戦略作成中に呼び出されます。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.initialize:4
 msgid ""
 "Allows dialects to configure options based on server version info or "
 "other properties."
-msgstr ""
+msgstr "方言がサーバーのバージョン情報やその他のプロパティに基づいてオプションを構成できるようにします。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.initialize:7
 msgid ""
 "The connection passed here is a SQLAlchemy Connection object, with full "
 "capabilities."
-msgstr ""
+msgstr "ここで渡される接続は、すべての機能を備えたSQLAlchemy Connectionオブジェクトです。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.initialize:10
 msgid "The initialize() method of the base dialect should be called via super()."
-msgstr ""
+msgstr "基本方言のinitialize（）メソッドは、super（）を介して呼び出す必要があります。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.is_disconnect:1
 msgid "Return True if the given DB-API error indicates an invalid connection"
-msgstr ""
+msgstr "指定されたDB-APIエラーが無効な接続を示している場合はTrueを返します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.reflecttable:1
 msgid "Load table description from the database."
-msgstr ""
+msgstr "データベースからテーブルの説明をロードします。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.reflecttable:3
 msgid ""
 "Given a :class:`.Connection` and a :class:`~sqlalchemy.schema.Table` "
 "object, reflect its columns and properties from the database."
-msgstr ""
+msgstr "与えられたa：class： `.Connection`とa：class：`〜sqlalchemy.schema.Table`オブジェクトは、データベースからカラムとプロパティを反映します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.reflecttable:7
 msgid ""
 "The implementation of this method is provided by "
 ":meth:`.DefaultDialect.reflecttable`, which makes use of "
 ":class:`.Inspector` to retrieve column information."
-msgstr ""
+msgstr "このメソッドの実装は、：meth： `.DefaultDialect.reflecttable`によって提供されます。これは：class：` .Inspector`を使用して列情報を取得します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.reflecttable:11
 msgid ""
 "Dialects should **not** seek to implement this method, and should instead"
 " implement individual schema inspection operations such as "
 ":meth:`.Dialect.get_columns`, :meth:`.Dialect.get_pk_constraint`, etc."
-msgstr ""
+msgstr "方言は**このメソッドを実装しようとはしません**代わりに、meth： `.Dialect.get_columns`、：meth：` .Dialect.get_pk_constraint`などの個別のスキーマ検査操作を実装する必要があります。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.reset_isolation_level:1
 msgid "Given a DBAPI connection, revert its isolation to the default."
-msgstr ""
+msgstr "DBAPI接続がある場合は、その分離をデフォルトに戻します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.type_descriptor:1
 msgid "Transform a generic type to a dialect-specific type."
-msgstr ""
+msgstr "ジェネリック型を方言固有の型に変換します。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.type_descriptor:3
 msgid ""
 "Dialect classes will usually use the :func:`.types.adapt_type` function "
 "in the types module to accomplish this."
-msgstr ""
+msgstr "Dialectクラスは通常、これを行うためにtypesモジュールで：func： `.types.adapt_type`関数を使います。"
 
 #: of sqlalchemy.engine.interfaces.Dialect.type_descriptor:7
 msgid ""
 "The returned result is cached *per dialect class* so can contain no "
 "dialect-instance state."
-msgstr ""
+msgstr "返された結果は、ダイアレクトクラス*ごとにキャッシュされる*ので、ダイアレクトインスタンスの状態は含まれません。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.current_parameters:1
 msgid "A dictionary of parameters applied to the current row."
-msgstr ""
+msgstr "現在の行に適用されるパラメータの辞書。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.current_parameters:3
 msgid ""
@@ -1277,7 +1267,7 @@ msgid ""
 "INSERT or UPDATE statement. The keys of the dictionary will be the key "
 "value of each :class:`.Column`, which is usually synonymous with the "
 "name."
-msgstr ""
+msgstr "この属性は、例えば：ref： `context_default_functions`に記述されているように、ユーザ定義のデフォルト生成関数のコンテキストでのみ利用可能です。これは、INSERTまたはUPDATEステートメントの一部となる各列/値のペアのエントリを含むディクショナリで構成されます。辞書のキーは、それぞれ：class： `.Column`のキー値です。これは通常、その名前と同義です。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.current_parameters:10
 msgid ""
@@ -1286,21 +1276,21 @@ msgid ""
 ":meth:`.Insert.values` method.  The "
 ":meth:`.DefaultExecutionContext.get_current_parameters` method should be "
 "preferred."
-msgstr ""
+msgstr "：attr： `.DefaultExecutionContext.current_parameters`属性は：meth：` .Insert.values`メソッドの\ &quot;multi-values \&quot;機能に対応していません。 ：meth： `.DefaultExecutionContext.get_current_parameters`メソッドが優先されるべきです。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.current_parameters:18
 msgid ":meth:`.DefaultExecutionContext.get_current_parameters`"
-msgstr ""
+msgstr "：meth： `.DefaultExecutionContext.get_current_parameters`"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.current_parameters:20
 #: sqlalchemy.engine.default.DefaultExecutionContext.get_current_parameters:28
 msgid ":ref:`context_default_functions`"
-msgstr ""
+msgstr "：ref： `context_default_functions`"
 
 #: of
 #: sqlalchemy.engine.default.DefaultExecutionContext.get_current_parameters:1
 msgid "Return a dictionary of parameters applied to the current row."
-msgstr ""
+msgstr "現在の行に適用されたパラメータの辞書を返します。"
 
 #: of
 #: sqlalchemy.engine.default.DefaultExecutionContext.get_current_parameters:3
@@ -1312,7 +1302,7 @@ msgid ""
 "INSERT or UPDATE statement. The keys of the dictionary will be the key "
 "value of each :class:`.Column`, which is usually synonymous with the "
 "name."
-msgstr ""
+msgstr "このメソッドは、例えば：ref： `context_default_functions`で説明されているように、ユーザ定義のデフォルト生成関数のコンテキストでのみ使用できます。呼び出されると、INSERTステートメントまたはUPDATEステートメントの一部である各列/値ペアの項目を含む辞書が戻されます。辞書のキーは、それぞれ：class： `.Column`のキー値です。これは通常、その名前と同義です。"
 
 #: of
 #: sqlalchemy.engine.default.DefaultExecutionContext.get_current_parameters:11
@@ -1322,7 +1312,7 @@ msgid ""
 "parameters that are local to the current column default invocation.   "
 "When ``False``, the raw parameters of the statement are returned "
 "including the naming convention used in the case of multi-valued INSERT."
-msgstr ""
+msgstr "：meth： `.Insert.values`を使用して作成された複数の値のINSERTコンストラクトは、現在のカラムのデフォルト呼び出しに対してローカルなパラメータのサブセットのみを返すことによって処理される必要があることを示します。 `` False``の場合、複数値のINSERTの場合に使用される命名規則を含む文の生のパラメータが返されます。"
 
 #: of
 #: sqlalchemy.engine.default.DefaultExecutionContext.get_current_parameters:18
@@ -1330,30 +1320,30 @@ msgid ""
 "added :meth:`.DefaultExecutionContext.get_current_parameters` which "
 "provides more functionality over the existing "
 ":attr:`.DefaultExecutionContext.current_parameters` attribute."
-msgstr ""
+msgstr "：meth： `.DefaultExecutionContext.get_current_parameters`は、既存の：attr：` .DefaultExecutionContext.current_parameters`属性より多くの機能を提供します。"
 
 #: of
 #: sqlalchemy.engine.default.DefaultExecutionContext.get_current_parameters:26
 msgid ":attr:`.DefaultExecutionContext.current_parameters`"
-msgstr ""
+msgstr "：attr： `.DefaultExecutionContext.current_parameters`"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.get_lastrowid:1
 msgid "return self.cursor.lastrowid, or equivalent, after an INSERT."
-msgstr ""
+msgstr "INSERTの後にself.cursor.lastrowidまたは同等のものを返します。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.get_lastrowid:3
 msgid ""
 "This may involve calling special cursor functions, issuing a new SELECT "
 "on the cursor (or a new one), or returning a stored value that was "
 "calculated within post_exec()."
-msgstr ""
+msgstr "これには、特別なカーソル関数の呼び出し、カーソル（または新しいカーソル）の新しいSELECTの発行、またはpost_exec（）内で計算された格納値の戻しが含まれます。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.get_lastrowid:8
 msgid ""
 "This function will only be called for dialects which support \"implicit\""
 " primary key generation, keep preexecute_autoincrement_sequences set to "
 "False, and when no explicit id value was bound to the statement."
-msgstr ""
+msgstr "この関数は、暗黙的\主キーの生成をサポートする方言、preexecute_autoincrement_sequencesをFalseに設定したまま、明示的なid値がステートメントにバインドされていない場合にのみ呼び出されます。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.get_lastrowid:14
 msgid ""
@@ -1361,110 +1351,110 @@ msgid ""
 "transaction is committed or ResultProxy is generated.   If the "
 "post_exec() method assigns a value to `self._lastrowid`, the value is "
 "used in place of calling get_lastrowid()."
-msgstr ""
+msgstr "この関数は、post_exec（）の直後、およびトランザクションがコミットされる前、またはResultProxyが生成される前に、一度呼び出されます。 post_exec（）メソッドが `self._lastrowid`に値を代入すると、その値はget_lastrowid（）を呼び出す代わりに使用されます。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.get_lastrowid:20
 msgid ""
 "Note that this method is *not* equivalent to the ``lastrowid`` method on "
 "``ResultProxy``, which is a direct proxy to the DBAPI ``lastrowid`` "
 "accessor in all cases."
-msgstr ""
+msgstr "このメソッドは、 `` ResultProxy``の `` lastrowid``メソッドと同等ではないことに注意してください。これはすべての場合にDBAPIの `` lastrowid``アクセサへの直接プロキシです。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.get_result_processor:1
 msgid ""
 "Return a 'result processor' for a given type as present in "
 "cursor.description."
-msgstr ""
+msgstr "cursor.descriptionの中にある特定の型の「結果プロセッサ」を返します。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.get_result_processor:4
 msgid ""
 "This has a default implementation that dialects can override for context-"
 "sensitive result type handling."
-msgstr ""
+msgstr "これは、ダイアレクトがコンテキスト依存型の結果型処理のためにオーバーライドできるデフォルトの実装を持っています。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.set_input_sizes:1
 msgid ""
 "Given a cursor and ClauseParameters, call the appropriate style of "
 "``setinputsizes()`` on the cursor, using DB-API types from the bind "
 "parameter's ``TypeEngine`` objects."
-msgstr ""
+msgstr "カーソルとClauseParametersを指定すると、バインド・パラメータの `` TypeEngine``オブジェクトからDB-API型を使用して、カーソル上の適切なスタイルの `` setinputsizes（） ``を呼び出します。"
 
 #: of sqlalchemy.engine.default.DefaultExecutionContext.set_input_sizes:5
 msgid ""
 "This method only called by those dialects which require it, currently "
 "cx_oracle."
-msgstr ""
+msgstr "このメソッドは、それを必要とする方言（現在はcx_oracle）によってのみ呼び出されます。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:1
 msgid "A messenger object for a Dialect that corresponds to a single execution."
-msgstr ""
+msgstr "単一の実行に対応するDialectのメッセンジャーオブジェクト。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:4
 msgid "ExecutionContext should have these data members:"
-msgstr ""
+msgstr "ExecutionContextには、次のデータメンバーが必要です。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:10
 msgid "connection"
-msgstr ""
+msgstr "接続"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:7
 msgid ""
 "Connection object which can be freely used by default value generators to"
 " execute SQL.  This Connection should reference the same underlying "
 "connection/transactional resources of root_connection."
-msgstr ""
+msgstr "SQLを実行するためにデフォルト値ジェネレータが自由に使用できるConnectionオブジェクト。このConnectionは、root_connectionと同じ基本接続/トランザクションリソースを参照する必要があります。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:15
 msgid "root_connection"
-msgstr ""
+msgstr "root_connection"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:13
 msgid ""
 "Connection object which is the source of this ExecutionContext.  This "
 "Connection may have close_with_result=True set, in which case it can only"
 " be used once."
-msgstr ""
+msgstr "このExecutionContextのソースであるConnectionオブジェクトこのConnectionにはclose_with_result = Trueが設定されていることがあります。この場合、一度しか使用できません。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:18
 msgid "dialect"
-msgstr ""
+msgstr "方言"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:18
 msgid "dialect which created this ExecutionContext."
-msgstr ""
+msgstr "このExecutionContextを作成した方言。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:21
 msgid "cursor"
-msgstr ""
+msgstr "カーソル"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:21
 msgid "DB-API cursor procured from the connection,"
-msgstr ""
+msgstr "接続から調達されたDB-APIカーソル、"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:25
 msgid "compiled"
-msgstr ""
+msgstr "コンパイルされた"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:24
 msgid ""
 "if passed to constructor, sqlalchemy.engine.base.Compiled object being "
 "executed,"
-msgstr ""
+msgstr "実行中のコンストラクタsqlalchemy.engine.base.Compiledオブジェクトに渡された場合、"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:30
 msgid "statement"
-msgstr ""
+msgstr "ステートメント"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:28
 msgid ""
 "string version of the statement to be executed.  Is either passed to the "
 "constructor, or must be created from the sql.Compiled object by the time "
 "pre_exec() has completed."
-msgstr ""
+msgstr "実行されるステートメントの文字列バージョン。コンストラクタに渡されるか、pre_exec（）が完了するまでにsql.Compiledオブジェクトから作成する必要があります。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:37
 msgid "parameters"
-msgstr ""
+msgstr "パラメーター"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:33
 msgid ""
@@ -1473,210 +1463,210 @@ msgid ""
 "it should be in a format suitable for the dialect's paramstyle (i.e. dict"
 " or list of dicts for non positional, list or list of lists/tuples for "
 "positional)."
-msgstr ""
+msgstr "execute（）メソッドに渡されるパラメータをバインドします。コンパイルされたステートメントの場合、これは辞書または辞書のリストです。テキスト文の場合は、方言のparamstyle（すなわち、dictまたはdictのリスト（位置、リスト、リストのタプルのリスト/位置のリスト）に適した形式でなければなりません。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:40
 msgid "isinsert"
-msgstr ""
+msgstr "isinsert"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:40
 msgid "True if the statement is an INSERT."
-msgstr ""
+msgstr "文がINSERTの場合はtrue。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:43
 msgid "isupdate"
-msgstr ""
+msgstr "更新日"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:43
 msgid "True if the statement is an UPDATE."
-msgstr ""
+msgstr "文がUPDATEの場合はtrue。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:46
 msgid "should_autocommit"
-msgstr ""
+msgstr "should_autocommit"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:46
 msgid "True if the statement is a \"committable\" statement."
-msgstr ""
+msgstr "その文が\ &quot;コミット可能\&quot;であれば真。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:50
 msgid "prefetch_cols"
-msgstr ""
+msgstr "prefetch_cols"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:49
 msgid ""
 "a list of Column objects for which a client-side default was fired off.  "
 "Applies to inserts and updates."
-msgstr ""
+msgstr "クライアント側のデフォルトが強制終了されたColumnオブジェクトのリスト。挿入および更新に適用されます。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:56
 msgid "postfetch_cols"
-msgstr ""
+msgstr "postfetch_cols"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext:53
 msgid ""
 "a list of Column objects for which a server-side default or inline SQL "
 "expression value was fired off.  Applies to inserts and updates."
-msgstr ""
+msgstr "サーバー側のデフォルトまたはインラインSQL式の値がオフになったColumnオブジェクトのリスト。挿入および更新に適用されます。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.create_cursor:1
 msgid "Return a new cursor generated from this ExecutionContext's connection."
-msgstr ""
+msgstr "このExecutionContextの接続から生成された新しいカーソルを返します。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.create_cursor:4
 msgid ""
 "Some dialects may wish to change the behavior of connection.cursor(), "
 "such as postgresql which may return a PG \"server side\" cursor."
-msgstr ""
+msgstr "いくつかの方言は、PG \ &quot;サーバー側\&quot;カーソルを返すpostgresqlのようなconnection.cursor（）の振る舞いを変更したいかもしれません。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.exception:1
 msgid ""
 "A DBAPI-level exception that was caught when this ExecutionContext "
 "attempted to execute a statement."
-msgstr ""
+msgstr "このExecutionContextが文を実行しようとしたときに捕捉されたDBAPIレベルの例外です。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.exception:4
 #: sqlalchemy.engine.interfaces.ExecutionContext.is_disconnect:4
 msgid ""
 "This attribute is meaningful only within the "
 ":meth:`.ConnectionEvents.dbapi_error` event."
-msgstr ""
+msgstr "この属性は：meth： `.ConnectionEvents.dbapi_error`イベント内でのみ意味があります。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.exception:11
 msgid ":attr:`.ExecutionContext.is_disconnect`"
-msgstr ""
+msgstr "：attr： `.ExecutionContext.is_disconnect`"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.exception:13
 #: sqlalchemy.engine.interfaces.ExecutionContext.is_disconnect:13
 msgid ":meth:`.ConnectionEvents.dbapi_error`"
-msgstr ""
+msgstr "：meth： `.ConnectionEvents.dbapi_error`"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.get_rowcount:1
 msgid ""
 "Return the DBAPI ``cursor.rowcount`` value, or in some cases an "
 "interpreted value."
-msgstr ""
+msgstr "DBAPIの `` cursor.rowcount``値、または場合によっては解釈された値を返します。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.get_rowcount:4
 msgid "See :attr:`.ResultProxy.rowcount` for details on this."
-msgstr ""
+msgstr "これに関する詳細は、attr： `.ResultProxy.rowcount`を参照してください。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.handle_dbapi_exception:1
 msgid "Receive a DBAPI exception which occurred upon execute, result fetch, etc."
-msgstr ""
+msgstr "実行、結果フェッチなどで発生したDBAPI例外を受け取ります。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.is_disconnect:1
 msgid ""
 "Boolean flag set to True or False when a DBAPI-level exception is caught "
 "when this ExecutionContext attempted to execute a statement."
-msgstr ""
+msgstr "このExecutionContextが文を実行しようとしたときにDBAPIレベルの例外がキャッチされると、ブールフラグがTrueまたはFalseに設定されます。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.is_disconnect:11
 msgid ":attr:`.ExecutionContext.exception`"
-msgstr ""
+msgstr "：attr： `.ExecutionContext.exception`"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.lastrow_has_defaults:1
 msgid ""
 "Return True if the last INSERT or UPDATE row contained inlined or "
 "database-side defaults."
-msgstr ""
+msgstr "最後のINSERTまたはUPDATE行に、インラインまたはデータベース側のデフォルトが含まれている場合はTrueを返します。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.post_exec:1
 msgid "Called after the execution of a compiled statement."
-msgstr ""
+msgstr "コンパイルされたステートメントの実行後に呼び出されます。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.post_exec:3
 msgid ""
 "If a compiled statement was passed to this ExecutionContext, the "
 "`last_insert_ids`, `last_inserted_params`, etc. datamembers should be "
 "available after this method completes."
-msgstr ""
+msgstr "コンパイルされた文がこのExecutionContextに渡された場合、このメソッドが完了した後、 `last_insert_ids`、` last_inserted_pa​​rams`などのデータ・メンバが使用可能になります。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.pre_exec:1
 msgid "Called before an execution of a compiled statement."
-msgstr ""
+msgstr "コンパイルされたステートメントの実行前に呼び出されます。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.pre_exec:3
 msgid ""
 "If a compiled statement was passed to this ExecutionContext, the "
 "`statement` and `parameters` datamembers must be initialized after this "
 "statement is complete."
-msgstr ""
+msgstr "コンパイルされた文がこのExecutionContextに渡された場合、この文が完了した後に `statement`および` parameters`データメンバを初期化する必要があります。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.result:1
 msgid "Return a result object corresponding to this ExecutionContext."
-msgstr ""
+msgstr "このExecutionContextに対応する結果オブジェクトを返します。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.result:3
 msgid "Returns a ResultProxy."
-msgstr ""
+msgstr "ResultProxyを返します。"
 
 #: of sqlalchemy.engine.interfaces.ExecutionContext.should_autocommit_text:1
 msgid ""
 "Parse the given textual statement and return True if it refers to a "
 "\"committable\" statement"
-msgstr ""
+msgstr "指定されたテキスト文を解析し、\ &quot;committable \&quot;文を参照する場合はTrueを返します。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer:1
 msgid "Handle quoting and case-folding of identifiers based on options."
-msgstr ""
+msgstr "オプションに基づいて識別子の引用や大文字小文字の区別を処理します。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer.format_column:1
 msgid "Prepare a quoted column name."
-msgstr ""
+msgstr "引用符で囲まれた列名を準備します。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer.format_schema:1
 msgid "Prepare a quoted schema name."
-msgstr ""
+msgstr "引用されたスキーマ名を準備します。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer.format_table:1
 msgid "Prepare a quoted table and schema name."
-msgstr ""
+msgstr "引用符付きの表とスキーマ名を準備します。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer.format_table_seq:1
 msgid "Format table name and schema as a tuple."
-msgstr ""
+msgstr "テーブル名とスキーマをタプルとしてフォーマットします。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer.quote:1
 msgid "Conditionally quote an identifier."
-msgstr ""
+msgstr "条件付きで識別子を引用します。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer.quote:3
 #: sqlalchemy.sql.compiler.IdentifierPreparer.quote_schema:6
 msgid "the 'force' flag should be considered deprecated."
-msgstr ""
+msgstr "&#39;force&#39;フラグは廃止予定とみなされます。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer.quote_identifier:1
 msgid "Quote an identifier."
-msgstr ""
+msgstr "識別子を引用します。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer.quote_identifier:3
 msgid ""
 "Subclasses should override this to provide database-dependent quoting "
 "behavior."
-msgstr ""
+msgstr "サブクラスはこれをオーバーライドして、データベース依存の引用動作を提供する必要があります。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer.quote_schema:1
 msgid "Conditionally quote a schema."
-msgstr ""
+msgstr "条件付きでスキーマを引用します。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer.quote_schema:3
 msgid ""
 "Subclasses can override this to provide database-dependent quoting "
 "behavior for schema names."
-msgstr ""
+msgstr "サブクラスはこれをオーバーライドして、スキーマ名にデータベース依存の引用動作を提供できます。"
 
 #: of sqlalchemy.sql.compiler.IdentifierPreparer.unformat_identifiers:1
 msgid "Unpack 'schema.table.column'-like strings into components."
-msgstr ""
+msgstr "&#39;schema.table.column&#39;のような文字列をコンポーネントに展開します。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler:1
 msgid "Default implementation of :class:`.Compiled`."
-msgstr ""
+msgstr "デフォルトの実装は：class： `.Compiled`です。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler:3
 msgid "Compiles :class:`.ClauseElement` objects into SQL strings."
-msgstr ""
+msgstr "クラス： `.ClauseElement`オブジェクトをSQL文字列にコンパイルします。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.ansi_bind_rules:1
 msgid ""
@@ -1684,54 +1674,54 @@ msgid ""
 "a SELECT, nor does it allow ambiguous expressions like \"? = ?\".  A "
 "compiler subclass can set this flag to False if the target driver/DB "
 "enforces this"
-msgstr ""
+msgstr "SQL 92では、バインドパラメータをSELECTのcolumns句で使用することはできません。また、\ &quot;？=？\&quot;のようなあいまいな式も使用できません。コンパイラサブクラスは、ターゲットドライバ/ DBがこれを強制する場合、このフラグをFalseに設定できます"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.construct_params:1
 msgid "return a dictionary of bind parameter keys and values"
-msgstr ""
+msgstr "バインドパラメータのキーと値の辞書を返す"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.contains_expanding_parameters:1
 msgid "True if we've encountered bindparam(..., expanding=True)."
-msgstr ""
+msgstr "bindparam（...、expanding = True）が発生した場合はtrueです。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.contains_expanding_parameters:3
 msgid ""
 "These need to be converted before execution time against the string "
 "statement."
-msgstr ""
+msgstr "これらは、実行時間の前に文字列ステートメントに対して変換する必要があります。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.default_from:1
 msgid ""
 "Called when a SELECT statement has no froms, and no FROM clause is to be "
 "appended."
-msgstr ""
+msgstr "SELECT文にfromsがなく、FROM句を追加しない場合に呼び出されます。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.default_from:4
 msgid "Gives Oracle a chance to tack on a ``FROM DUAL`` to the string output."
-msgstr ""
+msgstr "オラクルは文字列出力に対して `` FROM DUAL``を実行する機会を与えます。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.delete_extra_from_clause:1
 msgid "Provide a hook to override the generation of an DELETE..FROM clause."
-msgstr ""
+msgstr "DELETE..FROM句の生成をオーバーライドするためのフックを提供します。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.delete_extra_from_clause:4
 msgid "This can be used to implement DELETE..USING for example."
-msgstr ""
+msgstr "これはDELETE..USINGなどの実装に使用できます。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.delete_extra_from_clause:6
 #: sqlalchemy.sql.compiler.SQLCompiler.update_from_clause:4
 msgid "MySQL and MSSQL override this."
-msgstr ""
+msgstr "MySQLとMSSQLはこれをオーバーライドします。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.get_select_precolumns:1
 msgid ""
 "Called when building a ``SELECT`` statement, position is just before "
 "column list."
-msgstr ""
+msgstr "`` SELECT`文を作成するときに呼び出されます。positionは列リストの直前です。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.group_by_clause:1
 msgid "allow dialects to customize how GROUP BY is rendered."
-msgstr ""
+msgstr "GROUP BYのレンダリング方法を方言でカスタマイズできるようになりました。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.isdelete:1
 #: sqlalchemy.sql.compiler.SQLCompiler.isinsert:1
@@ -1739,68 +1729,68 @@ msgstr ""
 msgid ""
 "class-level defaults which can be set at the instance level to define if "
 "this Compiled instance represents INSERT/UPDATE/DELETE"
-msgstr ""
+msgstr "このコンパイルされたインスタンスがINSERT / UPDATE / DELETEを表すかどうかを定義するためにインスタンスレベルで設定できるクラスレベルのデフォルト"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.order_by_clause:1
 msgid "allow dialects to customize how ORDER BY is rendered."
-msgstr ""
+msgstr "DialectがORDER BYのレンダリング方法をカスタマイズできるようにします。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.params:1
 msgid ""
 "Return the bind param dictionary embedded into this compiled object, for "
 "those values that are present."
-msgstr ""
+msgstr "このコンパイルされたオブジェクトに埋め込まれているバインド・パラメータ・ディクショナリを、存在する値に対して返します。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.render_literal_value:1
 msgid "Render the value of a bind parameter as a quoted literal."
-msgstr ""
+msgstr "バインドパラメータの値を引用符付きリテラルとしてレンダリングします。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.render_literal_value:3
 msgid ""
 "This is used for statement sections that do not accept bind parameters on"
 " the target driver/database."
-msgstr ""
+msgstr "これは、ターゲットドライバ/データベース上のバインドパラメータを受け付けないステートメントセクションで使用されます。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.render_literal_value:6
 msgid ""
 "This should be implemented by subclasses using the quoting services of "
 "the DBAPI."
-msgstr ""
+msgstr "これは、DBAPIのクォートサービスを使用してサブクラスで実装する必要があります。"
 
 #: of
 #: sqlalchemy.sql.compiler.SQLCompiler.render_table_with_column_in_update_from:1
 msgid ""
 "set to True classwide to indicate the SET clause in a multi-table UPDATE "
 "statement should qualify columns with the table name (i.e. MySQL only)"
-msgstr ""
+msgstr "Trueをclassに設定すると、複数テーブルのUPDATEステートメントのSET句がテーブル名で列を修飾する必要があることを示す（つまり、MySQLのみ）"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.returning:1
 msgid ""
 "holds the \"returning\" collection of columns if the statement is CRUD "
 "and defines returning columns either implicitly or explicitly"
-msgstr ""
+msgstr "文がCRUDの場合は列の\ &quot;returning \&quot;コレクションを保持し、暗黙的または明示的に列を返すことを定義します"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.returning_precedes_values:1
 msgid ""
 "set to True classwide to generate RETURNING clauses before the VALUES or "
 "WHERE clause (i.e. MSSQL)"
-msgstr ""
+msgstr "VALUESまたはWHERE句（つまりMSSQL）の前にRETURNING句を生成するには、クラス全体をTrueに設定します。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.update_from_clause:1
 msgid "Provide a hook to override the generation of an UPDATE..FROM clause."
-msgstr ""
+msgstr "UPDATE..FROM節の生成をオーバーライドするためのフックを提供します。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.update_limit_clause:1
 msgid "Provide a hook for MySQL to add LIMIT to the UPDATE"
-msgstr ""
+msgstr "LIMITをUPDATEに追加するためのMySQLへのフックを提供する"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.update_tables_clause:1
 msgid ""
 "Provide a hook to override the initial table clause in an UPDATE "
 "statement."
-msgstr ""
+msgstr "UPDATEステートメントで初期テーブル節をオーバーライドするためのフックを提供します。"
 
 #: of sqlalchemy.sql.compiler.SQLCompiler.update_tables_clause:4
 msgid "MySQL overrides this."
-msgstr ""
+msgstr "MySQLはこれを上書きします。"
 

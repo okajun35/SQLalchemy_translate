@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/persistence_techniques.rst:3
 msgid "Additional Persistence Techniques"
-msgstr ""
+msgstr "追加の永続化手法"
 
 #: ../../orm/persistence_techniques.rst:8
 msgid "Embedding SQL Insert/Update Expressions into a Flush"
-msgstr ""
+msgstr "SQL Insert / Update式をフラッシュに埋め込む"
 
 #: ../../orm/persistence_techniques.rst:10
 msgid ""
@@ -31,7 +21,7 @@ msgid ""
 "expression instead of a literal value. It's especially useful for atomic "
 "updates, calling stored procedures, etc. All you do is assign an "
 "expression to an attribute::"
-msgstr ""
+msgstr "この機能を使用すると、データベース列の値をリテラル値ではなくSQL式に設定できます。アトミック更新、ストアドプロシージャの呼び出しなどに特に便利です。属性に式を代入するだけです。"
 
 #: ../../orm/persistence_techniques.rst:27
 msgid ""
@@ -39,11 +29,11 @@ msgid ""
 "flush/commit operation, the ``value`` attribute on ``someobject`` above "
 "is expired, so that when next accessed the newly generated value will be "
 "loaded from the database."
-msgstr ""
+msgstr "この技法は、INSERTステートメントとUPDATEステートメントの両方で機能します。 flush / commit操作の後、上記の `` someobject``の `` value``属性は期限切れです。次回アクセス時に新しく生成された値がデータベースからロードされます。"
 
 #: ../../orm/persistence_techniques.rst:35
 msgid "Using SQL Expressions with Sessions"
-msgstr ""
+msgstr "セッションでのSQL式の使用"
 
 #: ../../orm/persistence_techniques.rst:37
 msgid ""
@@ -54,14 +44,14 @@ msgid ""
 ":class:`~sqlalchemy.engine.ResultProxy` in the same manner as an "
 ":class:`~sqlalchemy.engine.Engine` or "
 ":class:`~sqlalchemy.engine.Connection`::"
-msgstr ""
+msgstr "SQL式と文字列は、トランザクションコンテキスト内で：class： `〜sqlalchemy.orm.session.Session`を介して実行できます。これは：meth： `〜.Session.execute`メソッドを使って最も簡単に達成できます。このメソッドは：class：`〜sqlalchemy.engine.ResultProxy`を：class： `〜sqlalchemy.engine.Engine`と同じ方法で返します。または：class： `〜sqlalchemy.engine.Connection` ::"
 
 #: ../../orm/persistence_techniques.rst:54
 msgid ""
 "The current :class:`~sqlalchemy.engine.Connection` held by the "
 ":class:`~sqlalchemy.orm.session.Session` is accessible using the "
 ":meth:`~.Session.connection` method::"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.session.Session`によって保持されている現在の：class：`〜sqlalchemy.engine.Connection`は：meth： `〜.Session.connection`メソッドを使ってアクセスできます::"
 
 #: ../../orm/persistence_techniques.rst:60
 msgid ""
@@ -74,18 +64,18 @@ msgid ""
 "``mapper`` keyword argument, which is passed a mapped class or "
 ":class:`~sqlalchemy.orm.mapper.Mapper` instance, which is used to locate "
 "the proper context for the desired engine::"
-msgstr ""
+msgstr "上記の例は：class： `〜sqlalchemy.orm.session.Session`を扱っています：class：`〜sqlalchemy.engine.Engine`または：class： `〜sqlalchemy.engine.Connection`です。 ：class： `〜sqlalchemy.orm.session.Session`を使ってステートメントを実行するには、複数のエンジンにバインドされているか、まったくバインドされていない（つまり、バインドされたメタデータに依存しています）、meth：`〜。Session.execute`と：meth： `〜.Session.connection`は、マップされたクラスまたは：class：`〜sqlalchemy.orm.mapper.Mapper`インスタンスを渡す `` mapper``キーワード引数を受け取ります。これは適切なコンテキストを見つけるために使用されます希望のエンジン用::"
 
 #: ../../orm/persistence_techniques.rst:84
 msgid "Forcing NULL on a column with a default"
-msgstr ""
+msgstr "デフォルトで列にNULLを強制する"
 
 #: ../../orm/persistence_techniques.rst:86
 msgid ""
 "The ORM considers any attribute that was never set on an object as a "
 "\"default\" case; the attribute will be omitted from the INSERT "
 "statement::"
-msgstr ""
+msgstr "ORMは、オブジェクトに対して決して設定されなかった属性を\ &quot;デフォルト\&quot;の大文字とみなします。属性はINSERT文から省略されます::"
 
 #: ../../orm/persistence_techniques.rst:99
 msgid ""
@@ -95,14 +85,14 @@ msgid ""
 "SQL perspective with server-side defaults, as well as the behavior of "
 "SQLAlchemy's insert behavior with both client-side and server-side "
 "defaults::"
-msgstr ""
+msgstr "INSERTから列を省略すると、列にデフォルト値が設定されている場合を除いて、列にはNULL値が設定されます。*この場合、既定値は保持されます。これは、クライアント側とサーバー側の両方の既定のSQLAlchemyの挿入動作の動作と同様に、サーバー側の既定の純粋なSQLパースペクティブと、"
 
 #: ../../orm/persistence_techniques.rst:116
 msgid ""
 "However, in the ORM, even if one assigns the Python value ``None`` "
 "explicitly to the object, this is treated the **same** as though the "
 "value were never assigned::"
-msgstr ""
+msgstr "しかし、ORMでは、オブジェクトに明示的にPythonの値 `` None``を割り当てたとしても、値が決して割り当てられなかったように、**同じ**として扱われます::"
 
 #: ../../orm/persistence_techniques.rst:131
 msgid ""
@@ -110,7 +100,7 @@ msgid ""
 "default value of ``\"default\"`` and not SQL NULL, even though ``None`` "
 "was passed; this is a long-standing behavior of the ORM that many "
 "applications hold as an assumption."
-msgstr ""
+msgstr "上記の操作は、サーバのデフォルト値 `` \ &quot;default \&quot; ``を `` data``カラムに残し、 `` None``が渡されたとしてもSQL NULLではありません。これは、多くのアプリケーションが前提として保持しているORMの長年にわたる動作です。"
 
 #: ../../orm/persistence_techniques.rst:136
 msgid ""
@@ -118,13 +108,13 @@ msgid ""
 " column has a default value?  There are two approaches.  One is that on a"
 " per-instance level, we assign the attribute using the "
 ":obj:`~.expression.null` SQL construct::"
-msgstr ""
+msgstr "では、たとえカラムにデフォルト値があっても、実際にこのカラムにNULLを入れたいのですが？ 2つのアプローチがあります。ひとつはインスタンスごとのレベルで、それは：obj： `〜.expression.null` SQL構文を使って属性を割り当てます："
 
 #: ../../orm/persistence_techniques.rst:150
 msgid ""
 "The :obj:`~.expression.null` SQL construct always translates into the SQL"
 " NULL value being directly present in the target INSERT statement."
-msgstr ""
+msgstr "：obj： `〜.expression.null` SQL構造体は、常にターゲットのINSERT文に直接存在するSQL NULL値に変換されます。"
 
 #: ../../orm/persistence_techniques.rst:153
 msgid ""
@@ -134,7 +124,7 @@ msgid ""
 ":meth:`.TypeEngine.evaluates_none`, which indicates a type where the ORM "
 "should treat the value ``None`` the same as any other value and pass it "
 "through, rather than omitting it as a \"missing\" value::"
-msgstr ""
+msgstr "Pythonの値 `` None``を使用して、カラムのデフォルトが存在してもNULLとして永続化させたい場合は、コアレベルの修飾子を使ってORMに設定することができます：meth： ` .TypeEngine.evaluates_none`：ORMは値 &quot;` None``を他の値と同じように扱い、\ &quot;missing \&quot;値として省略するのではなく、渡すべき型を示します::"
 
 #: ../../orm/persistence_techniques.rst:176
 msgid ""
@@ -145,17 +135,17 @@ msgid ""
 " to signal to the ORM that we'd like ``None`` to be passed into the type "
 "whenever present, even though no special type-level behaviors are "
 "assigned to it."
-msgstr ""
+msgstr "：meth： `.TypeEngine.evaluates_none`修飾子は、Python値\&quot; None \ &quot;が重要な型を通知することを主な目的としています。主な例はJSON型で、JSONの` `null``値SQL NULLではなく特別な型レベルの振る舞いが割り当てられていなくても、存在しているときは常に &quot;None&quot;を渡すことをORMに知らせるために、ここで少しこれを再利用しています。"
 
 #: ../../orm/persistence_techniques.rst:183
 msgid ""
 "added the :meth:`.TypeEngine.evaluates_none` method in order to indicate "
 "that a \"None\" value should be treated as significant."
-msgstr ""
+msgstr "\ &quot;None \&quot;の値を重要なものとして扱うべきであることを示すために：meth： `.TypeEngine.evaluates_none`メソッドを追加しました。"
 
 #: ../../orm/persistence_techniques.rst:189
 msgid "Fetching Server-Generated Defaults"
-msgstr ""
+msgstr "サーバー生成のデフォルトの取得"
 
 #: ../../orm/persistence_techniques.rst:191
 msgid ""
@@ -167,7 +157,7 @@ msgid ""
 "values upon flush.   This behavior is required in the case of primary key"
 " columns that are generated by the server, since the ORM has to know the "
 "primary key of an object once it is persisted."
-msgstr ""
+msgstr "セクション：ref： `server_defaults`と：ref：` triggered_columns`で紹介したように、コアはデータベース自体がINSERT時に値を生成するデータベース列の概念をサポートしています。 ORMは、フラッシュ時にこれらの新しく生成された値をフェッチすることができるというこのような列のサポートを特徴とする。この動作は、ORMが永続化されたオブジェクトの主キーを知る必要があるため、サーバーによって生成された主キー列の場合に必要です。"
 
 #: ../../orm/persistence_techniques.rst:199
 msgid ""
@@ -181,7 +171,7 @@ msgid ""
 "database like Oracle that requires us to specify a :class:`.Sequence` "
 "explicitly.   There is more documentation regarding this at "
 ":paramref:`.Column.autoincrement`."
-msgstr ""
+msgstr "大部分の場合、データベースによって自動的に生成される値を持つ主キー列は、単純な整数列です。これは、データベースによっていわゆる &quot;自動インクリメント&quot;列として、またはカラム。 SQLAlchemy Core内のすべてのデータベースダイアレクトは、Python DBAPI固有のこれらの主キー値を取得する方法をサポートしています。一般に、このプロセスは自動的です。ただし、Oracleのようなデータベースを除いて、 .Sequence`明示的に。これに関する詳細は、paramref： `.Column.autoincrement`を参照してください。"
 
 #: ../../orm/persistence_techniques.rst:209
 msgid ""
@@ -197,11 +187,11 @@ msgid ""
 "INSERT or UPDATE statement is invoked. Databases that support RETURNING "
 "or equivalent include PostgreSQL, Oracle, and SQL Server.  Databases that"
 " do not include SQLite and MySQL."
-msgstr ""
+msgstr "プライマリキー列ではないサーバー生成列、または単純自動インクリメント整数列でない列の場合、ORMは、ORMがこの値を取得できる適切なserver_defaultディレクティブでこれらの列をマークする必要があります。ただし、すべてのメソッドがすべてのバックエンドでサポートされているわけではありません。したがって、適切なメソッドを使用するように注意する必要があります。返される2つの質問は、1.主キーのこの列の部分かどうか、2.データベースがRETURNINGまたは同等のもの、たとえば\ OUTPUT inserted \をサポートしているかどうか。これらは、INSERT文またはUPDATE文が呼び出されるのと同時にサーバ生成値を返すSQL文です。 RETURNINGまたは同等のものをサポートするデータベースには、PostgreSQL、Oracle、およびSQL Serverが含まれます。 SQLiteとMySQLを含まないデータベース。"
 
 #: ../../orm/persistence_techniques.rst:222
 msgid "Case 1: non primary key, RETURNING or equivalent is supported"
-msgstr ""
+msgstr "ケース1：非主キー、RETURNINGまたは同等のものがサポートされている"
 
 #: ../../orm/persistence_techniques.rst:224
 msgid ""
@@ -210,7 +200,7 @@ msgid ""
 ":paramref:`.orm.mapper.eager_defaults` flag may be used to indicate that "
 "these columns should be fetched immediately upon INSERT and sometimes "
 "UPDATE::"
-msgstr ""
+msgstr "この場合、列は：class： `.FetchedValue`または明示的に：paramref：` .Column.server_default`とマークする必要があります。 ：paramref： `.orm.mapper.eager_defaults`フラグは、これらの列をINSERT時にすぐにフェッチし、時にはUPDATE ::"
 
 #: ../../orm/persistence_techniques.rst:242
 msgid ""
@@ -219,19 +209,19 @@ msgid ""
 " the \"timestamp\" and \"special_identifier\" columns within the "
 "RETURNING clause so they are available immediately. On the PostgreSQL "
 "database, an INSERT for the above table will look like:"
-msgstr ""
+msgstr "上記では、クライアント側から\ &quot;タイムスタンプ\&quot;または\ &quot;special_identifier \&quot;の明示的な値を指定しないINSERT文は、RETURNING句内の\ &quot;タイムスタンプ\&quot;と\ &quot;special_identifier \すぐに。 PostgreSQLデータベースでは、上記の表のINSERTは次のようになります。"
 
 #: ../../orm/persistence_techniques.rst:253
 msgid ""
 "Case 2: non primary key, RETURNING or equivalent is not supported or not "
 "needed"
-msgstr ""
+msgstr "ケース2：非主キー、RETURNINGまたはそれと同等のものはサポートされていないか、必要ない"
 
 #: ../../orm/persistence_techniques.rst:255
 msgid ""
 "This case is the same as case 1 above, except we don't specify "
 ":paramref:`.orm.mapper.eager_defaults`::"
-msgstr ""
+msgstr "このケースは上記のケース1と同じですが、指定しない点が異なります。paramref： `.orm.mapper.eager_defaults` ::"
 
 #: ../../orm/persistence_techniques.rst:268
 msgid ""
@@ -239,7 +229,7 @@ msgid ""
 "\"special_identifier\" columns will remain empty, and will be fetched via"
 " a second SELECT statement when they are first accessed after the flush, "
 "e.g. they are marked as \"expired\"."
-msgstr ""
+msgstr "上記のマッピングを持つレコードがINSERTされた後、\ &quot;タイムスタンプ\&quot;と\ &quot;special_identifier \&quot;カラムは空のままで、フラッシュの後に最初にアクセスされたときに2番目のSELECTステートメントによってフェッチされます。 \ &quot;expired \&quot;です。"
 
 #: ../../orm/persistence_techniques.rst:273
 msgid ""
@@ -251,11 +241,11 @@ msgid ""
 "mapping with the :paramref:`.orm.mapper.eager_defaults` flag set to True "
 "against MySQL results in SQL like this upon flush (minus the comment, "
 "which is for clarification only):"
-msgstr ""
+msgstr "：paramref： `.orm.mapper.eager_defaults`が引き続き使用され、バックエンドデータベースがRETURNINGまたは同等のものをサポートしていない場合、ORMはINSERT文の直後にこのSELECT文を発行します。これは、不要な可能性のあるフラッシュ・プロセスに追加のSELECT文を追加するため、しばしば望ましくありません。上記のマッピングを：paramref： `.orm.mapper.eager_defaults`フラグがTrueに設定されているMySQLに対して使用すると、フラッシュ時にSQLが次のようになります（コメントを除いて、これは説明のためのみです）。"
 
 #: ../../orm/persistence_techniques.rst:290
 msgid "Case 3: primary key, RETURNING or equivalent is supported"
-msgstr ""
+msgstr "ケース3：主キー、RETURNINGまたは同等のものがサポートされている"
 
 #: ../../orm/persistence_techniques.rst:292
 msgid ""
@@ -264,7 +254,7 @@ msgid ""
 "primary key value, so if the primary key is generated by the server, the "
 "ORM needs a way for the database to give us that new value immediately "
 "upon INSERT."
-msgstr ""
+msgstr "サーバー生成値を持つ主キー列は、INSERTの直後にフェッチする必要があります。 ORMはプライマリキー値を持つ行にのみアクセスできます。したがって、プライマリキーがサーバーによって生成された場合、ORMはINSERT時に新しい値をデータベースに与える方法を必要とします。"
 
 #: ../../orm/persistence_techniques.rst:297
 msgid ""
@@ -273,30 +263,30 @@ msgid ""
 "databases include functions for fetching the \"last inserted id\" where "
 "RETURNING is not supported, and where RETURNING is supported SQLAlchemy "
 "will use that."
-msgstr ""
+msgstr "上記のように、整数\ &quot;自動インクリメント\&quot;カラムとPostgreSQL SERIALの場合、これらのタイプはコアによって自動的に処理されます。データベースにはRETURNINGがサポートされていない\ &quot;最後に挿入されたID \&quot;を取得する関数があり、RETURNINGがサポートされている場合はSQLAlchemyがそれを使用します。"
 
 #: ../../orm/persistence_techniques.rst:302
 msgid ""
 "However, for non-integer values, as well as for integer values that must "
 "be explicitly linked to a sequence or other triggered routine,  the "
 "server default generation must be marked in the table metadata."
-msgstr ""
+msgstr "ただし、整数以外の値や、シーケンスやその他のトリガーされたルーチンに明示的にリンクする必要がある整数値の場合は、サーバーのデフォルト生成を表メタデータにマークする必要があります。"
 
 #: ../../orm/persistence_techniques.rst:306
 msgid ""
 "For an explicit sequence as we use with Oracle, this just means we are "
 "using the :class:`.Sequence` construct::"
-msgstr ""
+msgstr "Oracleで使用するような明示的なシーケンスについては、これは単に：class： `.Sequence`構造体を使用していることを意味します::"
 
 #: ../../orm/persistence_techniques.rst:315
 msgid "The INSERT for a model as above on Oracle looks like:"
-msgstr ""
+msgstr "上記のようなモデルのINSERTは、次のようになります。"
 
 #: ../../orm/persistence_techniques.rst:321
 msgid ""
 "Where above, SQLAlchemy renders ``my_sequence.nextval`` for the primary "
 "key column and also uses RETURNING to get the new value back immediately."
-msgstr ""
+msgstr "上記の場合、SQLAlchemyは主キー列に `` my_sequence.nextval``をレンダリングし、RETURNINGを使用して新しい値を直ちに取得します。"
 
 #: ../../orm/persistence_techniques.rst:324
 msgid ""
@@ -304,15 +294,15 @@ msgid ""
 "populated by a trigger, we use :class:`.FetchedValue`.  Below is a model "
 "that uses a SQL Server TIMESTAMP column as the primary key, which "
 "generates values automatically::"
-msgstr ""
+msgstr "自動的に値を生成するデータ型、またはトリガーによって生成される列の場合、class： `.FetchedValue`を使用します。以下は、SQL ServerのTIMESTAMP列をプライマリキーとして使用して、自動的に値を生成するモデルです。"
 
 #: ../../orm/persistence_techniques.rst:333
 msgid "An INSERT for the above table on SQL Server looks like:"
-msgstr ""
+msgstr "SQL Server上の上記の表のINSERTは次のようになります。"
 
 #: ../../orm/persistence_techniques.rst:340
 msgid "Case 4: primary key, RETURNING or equivalent is not supported"
-msgstr ""
+msgstr "ケース4：主キー、RETURNINGまたはそれに相当するものはサポートされていません"
 
 #: ../../orm/persistence_techniques.rst:342
 msgid ""
@@ -321,7 +311,7 @@ msgid ""
 "server, but is outside of the database's usual autoincrement routine. In "
 "this case, we have to make sure SQLAlchemy can \"pre-execute\" the "
 "default, which means it has to be an explicit SQL expression."
-msgstr ""
+msgstr "この領域では、SQLiteやMySQLなどのデータベース用の行を生成しています。ここでは、デフォルト値を生成する手段がサーバー上で発生していますが、データベースの通常の自動インクリメントルーチンの外にあります。この場合、SQLAlchemyがデフォルトの\ &quot;pre-execute \ \&quot;を実行できることを確認する必要があります。つまり、明示的なSQL式でなければなりません。"
 
 #: ../../orm/persistence_techniques.rst:348
 msgid ""
@@ -332,27 +322,27 @@ msgid ""
 "explicit \"pre-executed\" default generator for *any* auto-generated "
 "datatype used as the primary key other than the usual single-column "
 "autoincrementing integer value."
-msgstr ""
+msgstr "このセクションでは、MySQLとSQLiteのdatetime値を含む複数のレシピを説明します。これらの2つのバックエンドのdatetimeデータ型には、説明に役立つ特別な特殊な要件があるためです。しかし、SQLiteとMySQLは、通常の単一列自動インクリメント整数値以外のプライマリキーとして使用される*任意の*自動生成データ型に対して、明示的に &quot;事前実行済み&quot;デフォルトジェネレータを必要とすることに注意してください。"
 
 #: ../../orm/persistence_techniques.rst:357
 msgid "MySQL with DateTime primary key"
-msgstr ""
+msgstr "DateTime主キーを持つMySQL"
 
 #: ../../orm/persistence_techniques.rst:359
 msgid ""
 "Using the example of a :class:`.DateTime` column for MySQL, we add an "
 "explicit pre-execute-supported default using the \"NOW()\" SQL function::"
-msgstr ""
+msgstr "MySQLのa：class： `DateTime`カラムの例を使用して、SQL関数NOW（）を使用して明示的に実行前サポートのデフォルトを追加します::"
 
 #: ../../orm/persistence_techniques.rst:367
 msgid ""
 "Where above, we select the \"NOW()\" function to deliver a datetime value"
 " to the column.  The SQL generated by the above is:"
-msgstr ""
+msgstr "上記の場合、\ &quot;NOW（）\&quot;関数を選択して、列に日時の値を渡します。上記で生成されたSQLは次のとおりです。"
 
 #: ../../orm/persistence_techniques.rst:377
 msgid "MySQL with TIMESTAMP primary key"
-msgstr ""
+msgstr "TIMESTAMP主キーを持つMySQL"
 
 #: ../../orm/persistence_techniques.rst:379
 msgid ""
@@ -363,7 +353,7 @@ msgid ""
 ":class:`.TIMESTAMP` on MySQL actually stores a binary value, we need to "
 "add an additional \"CAST\" to our usage of \"NOW()\" so that we retrieve "
 "a binary value that can be persisted into the column::"
-msgstr ""
+msgstr "MySQLで：class： `.TIMESTAMP`データ型を使用する場合、MySQLは通常、サーバ側のデフォルトをこのデータ型に自動的に関連付けます。しかし、私たちが主キーとして使うとき、Coreは自分自身で関数を実行しないかぎり、新しく生成された値を取り出すことはできません。として：class： `.TIMESTAMP`はバイナリ値を実際に保存します。永続化できるバイナリ値を取得するために、\&quot; NOW（）\ &quot;の使用に\&quot; CAST \ &quot;を追加する必要があります。列::"
 
 #: ../../orm/persistence_techniques.rst:397
 msgid ""
@@ -371,11 +361,11 @@ msgid ""
 "make use of the :class:`.Binary` datatype in conjunction with "
 ":func:`.cast` so that the returned value is binary.  SQL rendered from "
 "the above within an INSERT looks like:"
-msgstr ""
+msgstr "上記では、\ &quot;NOW（）\&quot;関数を選択するだけでなく、：class： `.Binary`データ型を：func：` .cast`と組み合わせて使用​​し、戻り値がバイナリであるようにします。上記のINSERT内でレンダリングされたSQLは次のようになります。"
 
 #: ../../orm/persistence_techniques.rst:409
 msgid "SQLite with DateTime primary key"
-msgstr ""
+msgstr "DateTime主キーを持つSQLite"
 
 #: ../../orm/persistence_techniques.rst:411
 msgid ""
@@ -388,101 +378,101 @@ msgid ""
 "therefore must also specify that we'd like to coerce the return value to "
 ":class:`.DateTime` when it is returned from the function, which we "
 "achieve by passing this as the ``type_`` parameter::"
-msgstr ""
+msgstr "SQLiteの場合、SQL関数 `` datetime（ &#39;now&#39;、 &#39;localtime&#39;） ``を使用して新しいタイムスタンプを生成することができます（またはUTCの場合は `` utc&#39;``を指定します）。これはSQLAlchemyの：class： `.DateTime`データ型と互換性がありません（データ型が情報をSQLiteバックエンドの文字列に変換しても、Pythonのdatetimeとして渡す必要があります）。したがって、戻り値を：class： `.DateTime`に返すように指定する必要があります。これは関数から返されます。これを` type_``パラメータとして渡します::"
 
 #: ../../orm/persistence_techniques.rst:429
 msgid "The above mapping upon INSERT will look like:"
-msgstr ""
+msgstr "上記のINSERTのマッピングは次のようになります："
 
 #: ../../orm/persistence_techniques.rst:441
 msgid ":ref:`metadata_defaults_toplevel`"
-msgstr ""
+msgstr "：ref： `metadata_defaults_toplevel`"
 
 #: ../../orm/persistence_techniques.rst:447
 msgid "Partitioning Strategies"
-msgstr ""
+msgstr "パーティショニング戦略"
 
 #: ../../orm/persistence_techniques.rst:450
 msgid "Simple Vertical Partitioning"
-msgstr ""
+msgstr "単純な垂直パーティショニング"
 
 #: ../../orm/persistence_techniques.rst:452
 msgid ""
 "Vertical partitioning places different kinds of objects, or different "
 "tables, across multiple databases::"
-msgstr ""
+msgstr "垂直パーティショニングは、さまざまな種類のオブジェクトまたは異なるテーブルを複数のデータベースに配置します。"
 
 #: ../../orm/persistence_techniques.rst:465
 msgid ""
 "Above, operations against either class will make usage of the "
 ":class:`.Engine` linked to that class.   Upon a flush operation, similar "
 "rules take place to ensure each class is written to the right database."
-msgstr ""
+msgstr "上のいずれかのクラスに対する操作では、：class： `.Engine`をそのクラスにリンクして使用します。フラッシュ操作時には、各クラスが正しいデータベースに確実に書き込まれるように同様の規則が適用されます。"
 
 #: ../../orm/persistence_techniques.rst:469
 msgid ""
 "The transactions among the multiple databases can optionally be "
 "coordinated via two phase commit, if the underlying backend supports it."
 "  See :ref:`session_twophase` for an example."
-msgstr ""
+msgstr "基礎となるバックエンドがサポートしている場合、複数のデータベース間のトランザクションは、2フェーズコミットを介して任意で調整できます。例を参照してください：ref： `session_twophase`"
 
 #: ../../orm/persistence_techniques.rst:474
 msgid "Custom Vertical Partitioning"
-msgstr ""
+msgstr "カスタム垂直パーティショニング"
 
 #: ../../orm/persistence_techniques.rst:476
 msgid ""
 "More comprehensive rule-based class-level partitioning can be built by "
 "overriding the :meth:`.Session.get_bind` method.   Below we illustrate a "
 "custom :class:`.Session` which delivers the following rules:"
-msgstr ""
+msgstr "：meth： `.Session.get_bind`メソッドをオーバーライドすることで、より包括的なルールベースのクラスレベルのパーティショニングを構築できます。以下に、カスタム：class： `.Session`を示します。このクラスは以下のルールを提供します："
 
 #: ../../orm/persistence_techniques.rst:480
 msgid "Flush operations are delivered to the engine named ``master``."
-msgstr ""
+msgstr "フラッシュ操作はエンジン `` master``に渡されます。"
 
 #: ../../orm/persistence_techniques.rst:482
 msgid ""
 "Operations on objects that subclass ``MyOtherClass`` all occur on the "
 "``other`` engine."
-msgstr ""
+msgstr "`` MyOtherClass``をサブクラス化するオブジェクトに対する操作はすべて、 `` other``エンジンで行われます。"
 
 #: ../../orm/persistence_techniques.rst:485
 msgid ""
 "Read operations for all other classes occur on a random choice of the "
 "``slave1`` or ``slave2`` database."
-msgstr ""
+msgstr "他のすべてのクラスに対する読み込み操作は、 `` slave1``または `` slave2``データベースのランダムな選択で発生します。"
 
 #: ../../orm/persistence_techniques.rst:511
 msgid ""
 "The above :class:`.Session` class is plugged in using the ``class_`` "
 "argument to :class:`.sessionmaker`::"
-msgstr ""
+msgstr "上記の：class： `.Session`クラスは、` `class_``引数を使ってプラグインされています：class：` .sessionmaker` ::"
 
 #: ../../orm/persistence_techniques.rst:516
 msgid ""
 "This approach can be combined with multiple :class:`.MetaData` objects, "
 "using an approach such as that of using the declarative ``__abstract__`` "
 "keyword, described at :ref:`declarative_abstract`."
-msgstr ""
+msgstr "このアプローチは、複数の：class： `.MetaData`オブジェクトと組み合わせることができます。これは、：ref：` declarative_abstract`で説明されている宣言的な `` __abstract__``キーワードを使用するアプローチを使用します。"
 
 #: ../../orm/persistence_techniques.rst:521
 msgid "Horizontal Partitioning"
-msgstr ""
+msgstr "水平パーティショニング"
 
 #: ../../orm/persistence_techniques.rst:523
 msgid ""
 "Horizontal partitioning partitions the rows of a single table (or a set "
 "of tables) across multiple databases."
-msgstr ""
+msgstr "水平パーティショニングは、単一のテーブル（またはテーブルのセット）の行を複数のデータベースに分割します。"
 
 #: ../../orm/persistence_techniques.rst:526
 msgid "See the \"sharding\" example: :ref:`examples_sharding`."
-msgstr ""
+msgstr "\ &quot;sharding \&quot;の例：：ref： `examples_sharding`を参照してください。"
 
 #: ../../orm/persistence_techniques.rst:531
 msgid "Bulk Operations"
-msgstr ""
+msgstr "バルク操作"
 
 #: ../../orm/persistence_techniques.rst:533
 msgid ""
@@ -492,7 +482,7 @@ msgid ""
 "less functionality, automation, and error checking. As of SQLAlchemy 1.0,"
 " these features should be considered as \"beta\", and additionally are "
 "intended for advanced users."
-msgstr ""
+msgstr "一括操作モードは、機能が少なくて済み、自動化、エラーチェックを犠牲にして、大幅に削減されたPythonオーバーヘッドでINSERTステートメントとUPDATEステートメントを呼び出す目的で、class： `.Session`オブジェクトで利用できる新しい一連の操作です。 SQLAlchemy 1.0以降、これらの機能は\ &quot;ベータ\&quot;とみなすべきであり、さらに上級者を対象としています。"
 
 #: ../../orm/persistence_techniques.rst:542
 msgid ""
@@ -505,7 +495,7 @@ msgid ""
 "or object states can be utilized alone, bypassing the normal unit of work"
 " mechanics of state, relationship and attribute management.   The "
 "advantages to this approach is strictly one of reduced Python overhead:"
-msgstr ""
+msgstr "：class： `.Session`：：meth：` .Session.bulk_save_objects`、：meth： `.Session.bulk_insert_mappings`、：meth：` .Session.bulk_update_mappings`のバルク操作です。これらのメソッドの目的は、作業単位システムの内部要素を直接的に公開することであり、INSERTステートメントやUPDATEステートメントを発行するための機能が、状態や関係、属性の通常の作業単位をバイパスして、辞書やオブジェクト状態を単独で利用できる管理。このアプローチの利点は厳密にはPythonのオーバーヘッドの削減の1つです："
 
 #: ../../orm/persistence_techniques.rst:550
 msgid ""
@@ -514,7 +504,7 @@ msgid ""
 ":func:`.relationship`, and the topological sort of all operations to be "
 "performed is completely bypassed.  This reduces a great amount of Python "
 "overhead."
-msgstr ""
+msgstr "全てのオブジェクト、それらの状態、それらのカスケード状態、func： `.relationship`を介してそれらに関連するすべてのオブジェクトの状態を含むflush（）プロセス、実行されるすべての操作のトポロジカルなソートを完全にバイパスします。これにより、大量のPythonオーバーヘッドが削減されます。"
 
 #: ../../orm/persistence_techniques.rst:556
 msgid ""
@@ -522,7 +512,7 @@ msgid ""
 ":class:`.Session`, even when the operation is complete, meaning there's "
 "no overhead in attaching them or managing their state in terms of the "
 "identity map or session."
-msgstr ""
+msgstr "与えられたオブジェクトはtarget：class： `.Session`との関係は定義されていません。操作が完了しても、それらをアタッチしたり、アイデンティティマップやセッションに関して状態を管理するオーバーヘッドはありません。"
 
 #: ../../orm/persistence_techniques.rst:561
 msgid ""
@@ -532,7 +522,7 @@ msgid ""
 "overhead associated with instantiating mapped objects and assigning state"
 " to them, which normally is also subject to expensive tracking of history"
 " on a per-attribute basis."
-msgstr ""
+msgstr "：meth： `.Session.bulk_insert_mappings`と：meth：` .Session.bulk_update_mappings`メソッドは、オブジェクトではなくプレーンなPython辞書のリストを受け入れます。これは、マッピングされたオブジェクトをインスタンス化し、それらに状態を割り当てることに関連した大量のオーバヘッドをさらに低減する。これは、通常、属性ごとに履歴の高価な追跡が行われる。"
 
 #: ../../orm/persistence_techniques.rst:567
 msgid ""
@@ -542,7 +532,7 @@ msgid ""
 "statements are necessarily broken up into per-type groups.  In order to "
 "reduce the number of batch INSERT or UPDATE statements passed to the "
 "DBAPI, ensure that the incoming list of objects are grouped by type."
-msgstr ""
+msgstr "すべてのバルクメソッドに渡されたオブジェクトのセットは、受け取った順に処理されます。 ：meth： `.Session.bulk_save_objects`の場合、異なる型のオブジェクトが渡されると、INSERT文とUPDATE文は必然的に型ごとのグループに分割されます。 DBAPIに渡されるバッチINSERT文またはUPDATE文の数を減らすには、オブジェクトの着信リストがタイプ別にグループ化されていることを確認してください。"
 
 #: ../../orm/persistence_techniques.rst:575
 msgid ""
@@ -551,14 +541,14 @@ msgid ""
 "readily be batched by the unit of work process into ``executemany()`` "
 "blocks, which perform vastly better than individual statement "
 "invocations."
-msgstr ""
+msgstr "INSERT後に主キーをフェッチするプロセスも、デフォルトでは無効になっています。 INSERT文を正しく実行すると、作業単位プロセスによって、より簡単に個々の文の呼び出しよりも優れた `` executemany（） ``ブロックにバッチ処理できるようになりました。"
 
 #: ../../orm/persistence_techniques.rst:580
 msgid ""
 "UPDATE statements can similarly be tailored such that all attributes are "
 "subject to the SET clase unconditionally, again making it much more "
 "likely that ``executemany()`` blocks can be used."
-msgstr ""
+msgstr "同様に、UPDATEステートメントは、すべての属性が無条件にSETクラスの対象になるように調整することができ、 `` executemany（） ``ブロックを使用する可能性をさらに高めます。"
 
 #: ../../orm/persistence_techniques.rst:584
 msgid ""
@@ -566,46 +556,46 @@ msgid ""
 " :ref:`examples_performance` example suite.  This is a series of example "
 "scripts which illustrate Python call-counts across a variety of "
 "scenarios, including bulk insert and update scenarios."
-msgstr ""
+msgstr "バルク・ルーチンのパフォーマンスの振る舞いは、：ref： `examples_performance`サンプル・スイートを使用して調べる必要があります。これは、バルク挿入シナリオや更新シナリオなど、さまざまなシナリオでPython呼び出しカウントを示す一連のサンプルスクリプトです。"
 
 #: ../../orm/persistence_techniques.rst:591
 msgid ""
 ":ref:`examples_performance` - includes detailed examples of bulk "
 "operations contrasted against traditional Core and ORM methods, including"
 " performance metrics."
-msgstr ""
+msgstr "：ref： `examples_performance`  - 従来のコアやORMメソッドとは対照的に、パフォーマンスメトリックを含む一括操作の詳細な例が含まれています。"
 
 #: ../../orm/persistence_techniques.rst:596
 msgid "Usage"
-msgstr ""
+msgstr "使用法"
 
 #: ../../orm/persistence_techniques.rst:598
 msgid ""
 "The methods each work in the context of the :class:`.Session` object's "
 "transaction, like any other::"
-msgstr ""
+msgstr "これらのメソッドは：class： `.Session`オブジェクトのトランザクションのコンテキストで動作します。"
 
 #: ../../orm/persistence_techniques.rst:609
 msgid ""
 "For :meth:`.Session.bulk_insert_mappings`, and "
 ":meth:`.Session.bulk_update_mappings`, dictionaries are passed::"
-msgstr ""
+msgstr "：meth： `.Session.bulk_insert_mappings`と：meth：` .Session.bulk_update_mappings`、辞書が渡されます::"
 
 #: ../../orm/persistence_techniques.rst:618
 msgid ":meth:`.Session.bulk_save_objects`"
-msgstr ""
+msgstr "：meth： `.Session.bulk_save_objects`"
 
 #: ../../orm/persistence_techniques.rst:620
 msgid ":meth:`.Session.bulk_insert_mappings`"
-msgstr ""
+msgstr "：meth： `。Session.bulk_insert_mappings`"
 
 #: ../../orm/persistence_techniques.rst:622
 msgid ":meth:`.Session.bulk_update_mappings`"
-msgstr ""
+msgstr "：meth： `。Session.bulk_update_mappings`"
 
 #: ../../orm/persistence_techniques.rst:626
 msgid "Comparison to Core Insert / Update Constructs"
-msgstr ""
+msgstr "コア挿入/更新構文との比較"
 
 #: ../../orm/persistence_techniques.rst:628
 msgid ""
@@ -618,62 +608,62 @@ msgid ""
 "disabled so that rows can be batched together.   The example suite in "
 ":ref:`examples_performance` should be carefully studied in order to gain "
 "familiarity with how fast bulk performance can be achieved."
-msgstr ""
+msgstr "バルクメソッドは、特定の状況下でcore：class： `.Insert`と：class：` .Update`コンストラクトを\ &quot;executemany \&quot;コンテキストで構築するパフォーマンスに近いパフォーマンスを提供します（executemanyコアチュートリアルで：ref： `execute_multiple`を参照してください）。これを実現するには、：paramref： `.Session.bulk_insert_mappings.return_defaults`フラグを無効にして、行をまとめてバッチ処理できるようにする必要があります。 ：ref： `examples_performance`のサンプルスイートは、いかに速いバルクパフォーマンスが達成できるかを知るために慎重に検討する必要があります。"
 
 #: ../../orm/persistence_techniques.rst:639
 msgid "ORM Compatibility"
-msgstr ""
+msgstr "ORMの互換性"
 
 #: ../../orm/persistence_techniques.rst:641
 msgid ""
 "The bulk insert / update methods lose a significant amount of "
 "functionality versus traditional ORM use.   The following is a listing of"
 " features that are **not available** when using these methods:"
-msgstr ""
+msgstr "バルク挿入/更新方法は、従来のORMの使用とは異なり、かなりの量の機能を失います。これらのメソッドを使用している場合、**利用できない**機能のリストは次のとおりです。"
 
 #: ../../orm/persistence_techniques.rst:645
 msgid "persistence along :func:`.relationship` linkages"
-msgstr ""
+msgstr "func： `.relationship`リンケージに沿った永続性"
 
 #: ../../orm/persistence_techniques.rst:647
 msgid ""
 "sorting of rows within order of dependency; rows are inserted or updated "
 "directly in the order in which they are passed to the methods"
-msgstr ""
+msgstr "依存関係の順序内で行をソートする。行はメソッドに渡される順序で直接挿入または更新されます"
 
 #: ../../orm/persistence_techniques.rst:650
 msgid ""
 "Session-management on the given objects, including attachment to the "
 "session, identity map management."
-msgstr ""
+msgstr "セッションへのアタッチ、アイデンティティマップ管理を含む、指定されたオブジェクトに対するセッション管理。"
 
 #: ../../orm/persistence_techniques.rst:653
 msgid "Functionality related to primary key mutation, ON UPDATE cascade"
-msgstr ""
+msgstr "主キー突然変異に関する機能、ON UPDATEカスケード"
 
 #: ../../orm/persistence_techniques.rst:655
 msgid ""
 "SQL expression inserts / updates (e.g. "
 ":ref:`flush_embedded_sql_expressions`)"
-msgstr ""
+msgstr "SQL式の挿入/更新（例：ref： `flush_embedded_sql_expressions`）"
 
 #: ../../orm/persistence_techniques.rst:657
 msgid ""
 "ORM events such as :meth:`.MapperEvents.before_insert`, etc.  The bulk "
 "session methods have no event support."
-msgstr ""
+msgstr "：meth： `.MapperEvents.before_insert`などのORMイベント。バルクセッションメソッドはイベントをサポートしていません。"
 
 #: ../../orm/persistence_techniques.rst:660
 msgid "Features that **are available** include:"
-msgstr ""
+msgstr "**利用できる**機能は次のとおりです。"
 
 #: ../../orm/persistence_techniques.rst:662
 msgid "INSERTs and UPDATEs of mapped objects"
-msgstr ""
+msgstr "マップされたオブジェクトのINSERTおよびUPDATE"
 
 #: ../../orm/persistence_techniques.rst:664
 msgid "Version identifier support"
-msgstr ""
+msgstr "バージョン識別子のサポート"
 
 #: ../../orm/persistence_techniques.rst:666
 msgid ""
@@ -682,5 +672,5 @@ msgid ""
 "identifiers fully populated ahead of time, else the "
 ":paramref:`.Session.bulk_save_objects.return_defaults` flag must be used,"
 " which will greatly reduce the performance benefits"
-msgstr ""
+msgstr "結合継承のようなマルチテーブルマッピングでは、複数のテーブルにまたがって挿入されるオブジェクトは、事前に主キー識別子が完全に格納されている必要があります。それ以外の場合は：paramref： `.Session.bulk_save_objects.return_defaults`フラグは使用すると、パフォーマンス上のメリットが大幅に削減されます"
 

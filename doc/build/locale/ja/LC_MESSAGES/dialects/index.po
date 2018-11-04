@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../dialects/index.rst:4
 msgid "Dialects"
-msgstr ""
+msgstr "方言"
 
 #: ../../dialects/index.rst:6
 msgid ""
@@ -27,19 +17,19 @@ msgid ""
 " types of :term:`DBAPI` implementations and databases. The sections that "
 "follow contain reference documentation and notes specific to the usage of"
 " each backend, as well as notes for the various DBAPIs."
-msgstr ""
+msgstr "** dialect **は、SQLAlchemyがさまざまなタイプの：term： `DBAPI`実装とデータベースと通信するために使用するシステムです。以下のセクションでは、各バックエンドの使用方法やさまざまなDBAPIのメモに固有の参照ドキュメントと注意事項が記載されています。"
 
 #: ../../dialects/index.rst:10
 msgid "All dialects require that an appropriate DBAPI driver is installed."
-msgstr ""
+msgstr "すべての方言では、適切なDBAPIドライバがインストールされている必要があります。"
 
 #: ../../dialects/index.rst:13
 msgid "Included Dialects"
-msgstr ""
+msgstr "含まれている方言"
 
 #: ../../dialects/index.rst:30
 msgid "External Dialects"
-msgstr ""
+msgstr "外部の方言"
 
 #: ../../dialects/index.rst:32
 msgid ""
@@ -47,106 +37,106 @@ msgid ""
 "projects, and dialects for new databases will also be published as "
 "external projects.   The rationale here is to keep the base SQLAlchemy "
 "install and test suite from growing inordinately large."
-msgstr ""
+msgstr "SQLAlchemy 0.8以降、いくつかの方言が外部プロジェクトに移され、新しいデータベース用の方言も外部プロジェクトとして公開されます。ここでの根拠は、基本的なSQLAlchemyのインストールとテストスイートが過度に大きくならないようにすることです。"
 
 #: ../../dialects/index.rst:38
 msgid ""
 "The \"classic\" dialects such as SQLite, MySQL, PostgreSQL, Oracle, SQL "
 "Server, and Firebird will remain in the Core for the time being."
-msgstr ""
+msgstr "SQLite、MySQL、PostgreSQL、Oracle、SQL Server、Firebirdなどの古典的な方言は、当面はコアに残ります。"
 
 #: ../../dialects/index.rst:41
 msgid "The Drizzle dialect has been moved into the third party system."
-msgstr ""
+msgstr "Drizzle方言は第三者システムに移動されました。"
 
 #: ../../dialects/index.rst:44
 msgid "Current external dialect projects for SQLAlchemy include:"
-msgstr ""
+msgstr "SQLAlchemyの現在の外部ダイアレクトプロジェクトは次のとおりです。"
 
 #: ../../dialects/index.rst:47
 msgid "Production Ready"
-msgstr ""
+msgstr "プロダクションレディ"
 
 #: ../../dialects/index.rst:49
 msgid ""
 "`ibm_db_sa <http://code.google.com/p/ibm-db/wiki/README>`_ - driver for "
 "IBM DB2 and Informix, developed jointly by IBM and SQLAlchemy developers."
-msgstr ""
+msgstr "`ibm_db_sa <http://code.google.com/p/ibm-db/wiki/README> `_  -  IBM DB2とInformix用のドライバ.IBMとSQLAlchemyの開発者が共同開発しました。"
 
 #: ../../dialects/index.rst:51
 msgid ""
 "`sqlalchemy-redshift <https://pypi.python.org/pypi/sqlalchemy-redshift>`_"
 " - driver for Amazon Redshift, adapts the existing PostgreSQL/psycopg2 "
 "driver."
-msgstr ""
+msgstr "`sqlalchemy-redshift <https://pypi.python.org/pypi/sqlalchemy-redshift> `_  -  Redshiftの_ _ドライバは、既存のPostgreSQL / psycopg2ドライバを採用しています。"
 
 #: ../../dialects/index.rst:53
 msgid ""
 "`sqlalchemy-hana <https://github.com/SAP/sqlalchemy-hana>`_ - driver for "
 "SAP Hana."
-msgstr ""
+msgstr "`sqlalchemy-hana <https://github.com/SAP/sqlalchemy-hana> `_  -  SAP Hanaのドライバ。"
 
 #: ../../dialects/index.rst:54
 msgid ""
 "`sqlalchemy_exasol <https://github.com/blue-yonder/sqlalchemy_exasol>`_ -"
 " driver for EXASolution."
-msgstr ""
+msgstr "`sqlalchemy_exasol <https://github.com/blue-yonder/sqlalchemy_exasol> `_  -  EXASolutionのドライバ。"
 
 #: ../../dialects/index.rst:55
 msgid ""
 "`sqlalchemy-sqlany <https://github.com/sqlanywhere/sqlalchemy-sqlany>`_ -"
 " driver for SAP Sybase SQL Anywhere, developed by SAP."
-msgstr ""
+msgstr "`sqlalchemy-sqlany <https://github.com/sqlanywhere/sqlalchemy-sqlany> `_  -  SAP用のSybaseドライバSQL Anywhere。SAPによって開発されました。"
 
 #: ../../dialects/index.rst:57
 msgid ""
 "`sqlalchemy-monetdb <https://github.com/gijzelaerr/sqlalchemy-monetdb>`_ "
 "- driver for MonetDB."
-msgstr ""
+msgstr "`sqlalchemy-monetdb <https://github.com/gijzelaerr/sqlalchemy-monetdb> `_ MonetDBのためのドライバ。"
 
 #: ../../dialects/index.rst:58
 msgid ""
 "`snowflake-sqlalchemy <https://github.com/snowflakedb/snowflake-"
 "sqlalchemy>`_ - driver for `Snowflake <https://www.snowflake.net/>`_."
-msgstr ""
+msgstr "`snowflake-sqlalchemy <https://github.com/snowflakedb/snowflake-sqlalchemy> `_ Snowflakeのドライバ<https://www.snowflake.net/> `_。"
 
 #: ../../dialects/index.rst:59
 msgid ""
 "`sqlalchemy-tds <https://github.com/m32/sqlalchemy-tds>`_ - driver for "
 "MS-SQL, on top of `pythone-tds <https://github.com/denisenkom/pytds>`_."
-msgstr ""
+msgstr "`sqlalchemy-tds <https://github.com/m32/sqlalchemy-tds> `_ pythone-tdsの上にMS-SQL用の_ドライバ<https://github.com/denisenkom/pytds> `_。"
 
 #: ../../dialects/index.rst:61
 msgid ""
 "`crate <https://github.com/crate/crate-python>`_ - driver for `CrateDB "
 "<https://crate.io/>`_."
-msgstr ""
+msgstr "`クレート<https://github.com/crate/crate-python> `_ CrateDB用ドライバ<https://crate.io/> `_。"
 
 #: ../../dialects/index.rst:64
 msgid "Experimental / Incomplete"
-msgstr ""
+msgstr "実験的/不完全な"
 
 #: ../../dialects/index.rst:66
 msgid ""
 "Dialects that are in an incomplete state or are considered somewhat "
 "experimental."
-msgstr ""
+msgstr "不完全な状態にあるか、やや実験的であると考えられる方言。"
 
 #: ../../dialects/index.rst:68
 msgid ""
 "`CALCHIPAN <https://bitbucket.org/zzzeek/calchipan/>`_ - Adapts `Pandas "
 "<http://pandas.pydata.org/>`_ dataframes to SQLAlchemy."
-msgstr ""
+msgstr "`カルチパン<https://bitbucket.org/zzzeek/calchipan/> `_  -  Pandasを適応させる<http://pandas.pydata.org/> `_ dataframes to SQLAlchemy。"
 
 #: ../../dialects/index.rst:69
 msgid ""
 "`sqlalchemy-cubrid <https://bitbucket.org/zzzeek/sqlalchemy-cubrid>`_ - "
 "driver for the CUBRID database."
-msgstr ""
+msgstr "`sqlalchemy-cubrid <https://bitbucket.org/zzzeek/sqlalchemy-cubrid> `_  -  CUBRIDデータベースのドライバ。"
 
 #: ../../dialects/index.rst:72
 msgid "Attic"
-msgstr ""
+msgstr "屋根裏"
 
 #: ../../dialects/index.rst:74
 msgid ""
@@ -155,29 +145,29 @@ msgid ""
 " now moved out to their own repositories in at best a semi-working state."
 " Community members interested in these dialects should feel free to pick "
 "up on their current codebase and fork off into working libraries."
-msgstr ""
+msgstr "\ &quot;屋根裏部屋\&quot;の方言は、ずっと前にSQLAlchemyに寄稿されたものですが、それ以来ほとんど注目を集めていませんでした。そして今半分の状態で自分のリポジトリに移動しています。これらの方言に興味のあるコミュニティメンバーは、現在のコードベースを自由に取り上げて作業ライブラリに自由に置くべきです。"
 
 #: ../../dialects/index.rst:80
 msgid ""
 "`sqlalchemy-access <https://bitbucket.org/zzzeek/sqlalchemy-access>`_ - "
 "driver for Microsoft Access."
-msgstr ""
+msgstr "`sqlalchemy-access <https://bitbucket.org/zzzeek/sqlalchemy-access> `_  -  Microsoft Access用のドライバ。"
 
 #: ../../dialects/index.rst:81
 msgid ""
 "`sqlalchemy-drizzle <https://bitbucket.org/zzzeek/sqlalchemy-drizzle>`_ -"
 " driver for the Drizzle MySQL variant."
-msgstr ""
+msgstr "`sqlalchemy-drizzle <https://bitbucket.org/zzzeek/sqlalchemy-drizzle> `_ Drizzle MySQLの亜種のための` _  - ドライバ。"
 
 #: ../../dialects/index.rst:82
 msgid ""
 "`sqlalchemy-informixdb <https://bitbucket.org/zzzeek/sqlalchemy-"
 "informixdb>`_ - driver for the informixdb DBAPI."
-msgstr ""
+msgstr "`sqlalchemy-informixdb <https://bitbucket.org/zzzeek/sqlalchemy-informixdb> `_ informixdb DBAPIのドライバ。"
 
 #: ../../dialects/index.rst:83
 msgid ""
 "`sqlalchemy-maxdb <https://bitbucket.org/zzzeek/sqlalchemy-maxdb>`_ - "
 "driver for the MaxDB database"
-msgstr ""
+msgstr "`sqlalchemy-maxdb <https://bitbucket.org/zzzeek/sqlalchemy-maxdb> `_ MaxDBデータベースのドライバ"
 

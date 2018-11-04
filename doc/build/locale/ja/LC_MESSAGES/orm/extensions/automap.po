@@ -6,31 +6,21 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/automap.rst:4
 msgid "Automap"
-msgstr ""
+msgstr "オートマップ"
 
 #: of sqlalchemy.ext.automap:1
 msgid ""
 "Define an extension to the :mod:`sqlalchemy.ext.declarative` system which"
 " automatically generates mapped classes and relationships from a database"
 " schema, typically though not necessarily one which is reflected."
-msgstr ""
+msgstr "：mod： `sqlalchemy.ext.declarative`システムの拡張を定義します。システムは、データベーススキーマからマップされたクラスと関係を自動的に生成します。"
 
 #: of sqlalchemy.ext.automap:5
 msgid "Added :mod:`sqlalchemy.ext.automap`."
-msgstr ""
+msgstr "追加：mod： `sqlalchemy.ext.automap`。"
 
 #: of sqlalchemy.ext.automap:7
 msgid ""
@@ -43,11 +33,11 @@ msgid ""
 "class techniques, :class:`.AutomapBase` seeks to provide a well-"
 "integrated approach to the issue of expediently auto-generating ad-hoc "
 "mappings."
-msgstr ""
+msgstr "：class： `.AutomapBase`システムは、非常に有名な` `SQLSoup <https://sqlsoup.readthedocs.io/en/latest/>また、既存のデータベースから迅速かつ素早く素早くオブジェクトモデルを生成することを解決しようとしています。問題をマッパー設定レベルで厳密に扱い、既存の宣言クラス技法と完全に統合することによって、クラス： `.AutomapBase`は、便宜的に自動生成アドホックマッピングの問題に十分に統合されたアプローチを提供しようとします。"
 
 #: of sqlalchemy.ext.automap:19
 msgid "Basic Use"
-msgstr ""
+msgstr "基本的な使用"
 
 #: of sqlalchemy.ext.automap:21
 msgid ""
@@ -56,7 +46,7 @@ msgid ""
 " we create a declarative base class, using :func:`.automap_base`. We then"
 " call :meth:`.AutomapBase.prepare` on the resulting base class, asking it"
 " to reflect the schema and produce mappings::"
-msgstr ""
+msgstr "最も簡単な使用法は、既存のデータベースを新しいモデルに反映させることです。新しい：class： `.AutomapBase`クラスを作成します：func：` .automap_base`を使用して、宣言的な基本クラスを作成する方法と同様の方法で作成します。次に、生成された基本クラスに対して：meth： `.AutomapBase.prepare`を呼び出し、スキーマを反映してマッピングを生成するよう要求します::"
 
 #: of sqlalchemy.ext.automap:54
 msgid ""
@@ -71,7 +61,7 @@ msgid ""
 "classes and relationships follow along a default naming scheme that we "
 "can customize.  At this point, our basic mapping consisting of related "
 "``User`` and ``Address`` classes is ready to use in the traditional way."
-msgstr ""
+msgstr "上記の：paramref： `.AutomapBase.prepare.reflect`パラメータを渡している間：meth：` .AutomapBase.prepare`を呼び出すと、：meth： `.MetaData.reflect`メソッドがこの宣言的な基本クラスの &#39; ：クラス： `.MetaData`コレクション; ：class： `.MetaData`の中で各**実行可能な**：class：` .Table`は新しいマップされたクラスを自動的に生成します。さまざまなテーブルをリンクする：class： `.ForeignKeyConstraint`オブジェクトは、クラス間で新しい双方向：func：` .relationship`オブジェクトを生成するために使用されます。クラスとリレーションシップは、カスタマイズ可能なデフォルトの命名規則に従っています。この時点で、関連する `` User``と `` Address``クラスからなる私たちの基本的なマッピングは、従来の方法で使用する準備ができています。"
 
 #: of sqlalchemy.ext.automap:66
 msgid ""
@@ -80,11 +70,11 @@ msgid ""
 "association table between two other tables, it will not be directly "
 "mapped and will instead be configured as a many-to-many table between the"
 " mappings for the two referring tables."
-msgstr ""
+msgstr "**実行可能**とは、マッピングされる表に対して主キーを指定する必要があることを意味します。さらに、テーブルが2つの他のテーブル間の純粋な関連テーブルであると検出された場合は、直接マップされず、代わりに2つの参照テーブルのマッピング間に多対多テーブルとして構成されます。"
 
 #: of sqlalchemy.ext.automap:73
 msgid "Generating Mappings from an Existing MetaData"
-msgstr ""
+msgstr "既存のメタデータからのマッピングの生成"
 
 #: of sqlalchemy.ext.automap:75
 msgid ""
@@ -93,11 +83,11 @@ msgid ""
 "including programmatically, from a serialized file, or from itself being "
 "reflected using :meth:`.MetaData.reflect`.  Below we illustrate a "
 "combination of reflection and explicit table declaration::"
-msgstr ""
+msgstr "事前宣言された：class： `.MetaData`オブジェクトを：func：` .automap_base`に渡すことができます。このオブジェクトは、プログラムによって、シリアライズされたファイルから、あるいは：meth： `.MetaData.reflect`を使って反映されるものから、どのような方法でも構築できます。以下では、リフレクションと明示的なテーブル宣言の組み合わせについて説明します::"
 
 #: of sqlalchemy.ext.automap:109
 msgid "Specifying Classes Explicitly"
-msgstr ""
+msgstr "クラスを明示的に指定する"
 
 #: of sqlalchemy.ext.automap:111
 msgid ""
@@ -110,7 +100,7 @@ msgid ""
 "will make use of the classes we've established based on the table name we"
 " use.  If our schema contains tables ``user`` and ``address``, we can "
 "define one or both of the classes to be used::"
-msgstr ""
+msgstr "：mod： `.sqlalchemy.ext.automap`拡張は：class：` .DeferredReflection`クラスのような方法で明示的にクラスを定義できるようにします。 class： `.AutomapBase`から継承したクラスは、通常の宣言的なクラスと同じように動作しますが、構築後すぐにはマッピングされず、代わりに：meth：` .AutomapBase.prepare`を呼び出すときにマップされます。 ：meth： `.AutomapBase.prepare`メソッドは、使用するテーブル名に基づいて確立したクラスを使用します。スキーマにテーブル `` user``と `` address``が含まれている場合、使用するクラスの1つまたは両方を定義することができます::"
 
 #: of sqlalchemy.ext.automap:155
 msgid ""
@@ -121,11 +111,11 @@ msgid ""
 " be ``User.address_collection`` and the name of the class referred to, "
 "from automap's perspective, is called ``address``, even though we are "
 "referring to it as ``Address`` within our usage of this class."
-msgstr ""
+msgstr "上の、より複雑な詳細の1つは、automapが作成した：func： `.relationship`オブジェクトのうちの1つをオーバーライドすることを示したことです。これを行うために、我々は名前がautomapが通常生成するものと一致するようにする必要がありました。関係名は `` User.address_collection``であり、automapの観点から参照されるクラスの名前は ` `` Address``と呼ばれています。"
 
 #: of sqlalchemy.ext.automap:164
 msgid "Overriding Naming Schemes"
-msgstr ""
+msgstr "名前付けスキームのオーバーライド"
 
 #: of sqlalchemy.ext.automap:166
 msgid ""
@@ -139,18 +129,18 @@ msgid ""
 " are provided as in the example below, where we use a \"camel case\" "
 "scheme for class names and a \"pluralizer\" for collection names using "
 "the `Inflect <https://pypi.python.org/pypi/inflect>`_ package::"
-msgstr ""
+msgstr "：mod： `.sqlalchemy.ext.automap`は、スキーマに基づいてマップされたクラスと関係名を生成することを任されています。つまり、これらの名前の決定方法に決定点があります。これらの3つの決定ポイントは、：meth： `.AutomapBase.prepare`メソッドに渡すことができる関数を使って提供され、func：` .classname_for_table`、：func： `.name_for_scalar_relationship`、：func：` .name_for_collection_relationship`。これらの関数のいずれかまたはすべては、以下の例のように提供されています。ここでは、クラス名には &quot;camel case&quot;スキームを使用し、コレクション名には &quot;Multipleizer&quot; <https://pypi.python.org/pypi/inflect> `_パッケージ::"
 
 #: of sqlalchemy.ext.automap:210
 msgid ""
 "From the above mapping, we would now have classes ``User`` and "
 "``Address``, where the collection from ``User`` to ``Address`` is called "
 "``User.addresses``::"
-msgstr ""
+msgstr "上記のマッピングから、クラス `` User``と `` Address``があります。ここで `` User``から `` Address``までのコレクションは `` User.addresses``と呼ばれます::"
 
 #: of sqlalchemy.ext.automap:219
 msgid "Relationship Detection"
-msgstr ""
+msgstr "関係の検出"
 
 #: of sqlalchemy.ext.automap:221
 msgid ""
@@ -158,20 +148,20 @@ msgid ""
 ":func:`.relationship` structures based on foreign keys.  The mechanism by"
 " which this works for many-to-one and one-to-many relationships is as "
 "follows:"
-msgstr ""
+msgstr "automapが達成することの大部分は、外部キーに基づいた：func： `.relationship`構造の生成です。これが多対1および多対1の関係で機能するメカニズムは次のとおりです。"
 
 #: of sqlalchemy.ext.automap:226
 msgid ""
 "A given :class:`.Table`, known to be mapped to a particular class, is "
 "examined for :class:`.ForeignKeyConstraint` objects."
-msgstr ""
+msgstr "与えられた：class： `.Table`は特定のクラスにマップされることが知られています：class：` .ForeignKeyConstraint`オブジェクト。"
 
 #: of sqlalchemy.ext.automap:229
 msgid ""
 "From each :class:`.ForeignKeyConstraint`, the remote :class:`.Table` "
 "object present is matched up to the class to which it is to be mapped, if"
 " any, else it is skipped."
-msgstr ""
+msgstr "それぞれ：class： `.ForeignKeyConstraint`から、存在するremote：class：` .Table`オブジェクトは、それがマッピングされるクラスまでマッチします。存在しない場合はスキップされます。"
 
 #: of sqlalchemy.ext.automap:233
 msgid ""
@@ -180,7 +170,7 @@ msgid ""
 "up as a many-to-one referring to the referred class; a corresponding one-"
 "to-many backref will be created on the referred class referring to this "
 "class."
-msgstr ""
+msgstr "私たちが調べている：class： `.ForeignKeyConstraint`は、直接マッピングされたクラスからの参照に対応しているので、関係は、参照されるクラスを参照する多対1として設定されます。このクラスを参照する参照されたクラスに、対応する一対多のバックリファレンスが作成されます。"
 
 #: of sqlalchemy.ext.automap:239
 msgid ""
@@ -194,7 +184,7 @@ msgid ""
 ":paramref:`~.relationship.passive_deletes` flag is set to ``True`` in the"
 " set of relationship keyword arguments. Note that not all backends "
 "support reflection of ON DELETE."
-msgstr ""
+msgstr "：class： `.ForeignKeyConstraint`の一部であるカラムのいずれかがヌル入力可能でない場合（例えば、` `ヌル可能= False``）、` `all、deleteのキーワード引数：paramref：`〜.relationship.cascade` -orphan``がキーワード引数に追加され、関係またはバックリファレンスに渡されます。 ：class： `.ForeignKeyConstraint`が次のことを報告している場合：paramref：` .ForeignKeyConstraint.ondelete`がnullでない場合は `` CASCADE``に設定され、NULLのセットの場合は `` SET NULL``に設定されます。 ： `〜.relationship.passive_deletes`フラグは、関係キーワード引数のセットで` `True``に設定されます。すべてのバックエンドがON DELETEの反映をサポートするわけではないことに注意してください。"
 
 #: of sqlalchemy.ext.automap:251
 msgid ""
@@ -204,7 +194,7 @@ msgid ""
 ":paramref:`.ForeignKeyConstraint.ondelete` of ``CASCADE`` for non-"
 "nullable or ``SET NULL`` for nullable columns, the "
 "``passive_deletes=True`` option is also added."
-msgstr ""
+msgstr "-  automapは、1対多の関係を生成するときにnullableでない外部キー制約を検出し、もしあれば `all、delete-orphan`のデフォルトカスケードを設定します。さらに、制約がNULLでない列に対して `` CASCADE``のparamref： `.ForeignKeyConstraint.oldlete`またはNULL可能な列に対して` `SET NULL``を指定する場合、` `passive_deletes = True``オプションも追加されます。"
 
 #: of sqlalchemy.ext.automap:258
 msgid ""
@@ -216,7 +206,7 @@ msgid ""
 "  If you've given a particular class an explicit name by declaring it, or"
 " specified an alternate class naming scheme, that's the name from which "
 "the relationship name will be derived."
-msgstr ""
+msgstr "関係の名前は：paramref： `.AutomapBase.prepare.name_for_scalar_relationship`と：paramref：` .AutomapBase.prepare.name_for_collection_relationship`呼び出し可能関数を使用して決定されます。デフォルトの関係の命名は、**実際のクラス名**から名前を導出することに注意することが重要です。特定のクラスに宣言することによって明示的な名前を与えた場合、または代替のクラス命名スキームを指定した場合、その名前から関係名が導出されます。"
 
 #: of sqlalchemy.ext.automap:267
 msgid ""
@@ -225,7 +215,7 @@ msgid ""
 ":class:`.AutomapBase` attempts to create a relationship on the missing "
 "side, then uses the :paramref:`.relationship.back_populates` parameter in"
 " order to point the new relationship to the other side."
-msgstr ""
+msgstr "クラスは、これらの名前に一致する既存のマップされたプロパティを調べられます。一方が検出され、他方が検出されない場合、：class： `.AutomapBase`は、欠落している側に関係を作成しようとします。：paramref：` .relationship.back_populates`パラメータを使用して、相手側との新たな関係。"
 
 #: of sqlalchemy.ext.automap:273
 msgid ""
@@ -233,7 +223,7 @@ msgid ""
 ":meth:`.AutomapBase.prepare` produces a :func:`.relationship` on the "
 "\"many-to-one\" side and matches it to the other using the "
 ":paramref:`.relationship.backref` parameter."
-msgstr ""
+msgstr "通常、どちらの側にも関係がない場合、：meth： `.AutomapBase.prepare`は\&quot; many-to-one \ &quot;側で：func：` .relationship`を生成し、 ：paramref： `.relationship.backref`パラメータ。"
 
 #: of sqlalchemy.ext.automap:278
 msgid ""
@@ -243,11 +233,11 @@ msgid ""
 "can be supplied by the end-user in order to augment the arguments passed "
 "to :func:`.relationship` or :func:`.backref` or to make use of custom "
 "implementations of these functions."
-msgstr ""
+msgstr "：func： `.relationship`とオプションで：func：` .backref`の生成は、：paramref： `.AutomapBase.prepare.generate_relationship`関数に渡されます。これはエンドユーザが提供することができます。 ：func： `.relationship`または：func：` .backref`に渡された引数を増やしたり、これらの関数のカスタム実装を利用したりすることができます。"
 
 #: of sqlalchemy.ext.automap:285
 msgid "Custom Relationship Arguments"
-msgstr ""
+msgstr "カスタム関係の引数"
 
 #: of sqlalchemy.ext.automap:287
 msgid ""
@@ -256,31 +246,31 @@ msgid ""
 " of the existing :func:`.automap.generate_relationship` function to "
 "return the object, after augmenting the given keyword dictionary with our"
 " own arguments."
-msgstr ""
+msgstr "：paramref： `.AutomapBase.prepare.generate_relationship`フックを使って、関係にパラメータを追加できます。ほとんどの場合、既存の：func： `.automap.generate_relationship`関数を使用して、与えられたキーワード辞書を独自の引数で拡張した後にオブジェクトを返すことができます。"
 
 #: of sqlalchemy.ext.automap:293
 msgid ""
 "Below is an illustration of how to send :paramref:`.relationship.cascade`"
 " and :paramref:`.relationship.passive_deletes` options along to all one-"
 "to-many relationships::"
-msgstr ""
+msgstr "以下は、paramref： `.relationship.cascade`と：paramref：` .relationship.passive_deletes`オプションをすべての一対多関係に沿って送る方法の例です。"
 
 #: of sqlalchemy.ext.automap:321
 msgid "Many-to-Many relationships"
-msgstr ""
+msgstr "多対多の関係"
 
 #: of sqlalchemy.ext.automap:323
 msgid ""
 ":mod:`.sqlalchemy.ext.automap` will generate many-to-many relationships, "
 "e.g. those which contain a ``secondary`` argument.  The process for "
 "producing these is as follows:"
-msgstr ""
+msgstr "：mod： `.sqlalchemy.ext.automap`は多対多の関係を生成します。例えば、` `secondary``引数を含むものです。これらの製造方法は以下の通りである。"
 
 #: of sqlalchemy.ext.automap:327
 msgid ""
 "A given :class:`.Table` is examined for :class:`.ForeignKeyConstraint` "
 "objects, before any mapped class has been assigned to it."
-msgstr ""
+msgstr "与えられた：class： `.Table`は：class：` .ForeignKeyConstraint`オブジェクトのために検査され、マップされたクラスがそれに割り当てられます。"
 
 #: of sqlalchemy.ext.automap:330
 msgid ""
@@ -288,21 +278,21 @@ msgid ""
 "objects, and all columns within this table are members of these two "
 ":class:`.ForeignKeyConstraint` objects, the table is assumed to be a "
 "\"secondary\" table, and will **not be mapped directly**."
-msgstr ""
+msgstr "テーブルに2つの厳密に2つの：class： `.ForeignKeyConstraint`オブジェクトが含まれ、このテーブル内のすべてのカラムがclass：` .ForeignKeyConstraint`オブジェクトのメンバーである場合、テーブルは\ &quot;セカンダリ\&quot;テーブルとみなされます**直接マップされません**。"
 
 #: of sqlalchemy.ext.automap:335
 msgid ""
 "The two (or one, for self-referential) external tables to which the "
 ":class:`.Table` refers to are matched to the classes to which they will "
 "be mapped, if any."
-msgstr ""
+msgstr "：class： `.Table`が参照する2つ（または自己参照のための1つ）の外部テーブルは、それらがマッピングされるクラス（存在する場合）に一致します。"
 
 #: of sqlalchemy.ext.automap:339
 msgid ""
 "If mapped classes for both sides are located, a many-to-many bi-"
 "directional :func:`.relationship` / :func:`.backref` pair is created "
 "between the two classes."
-msgstr ""
+msgstr "両側のマッピングされたクラスが見つかった場合、多対多双方向：func： `.relationship` /：func：` .backref`のペアが2つのクラスの間に作成されます。"
 
 #: of sqlalchemy.ext.automap:343
 msgid ""
@@ -310,25 +300,25 @@ msgid ""
 "many/ many-to-one; the :func:`.generate_relationship` function is called "
 "upon to generate the strucures and existing attributes will be "
 "maintained."
-msgstr ""
+msgstr "多対多のオーバーライドロジックは、1対多/多対1のオーバーライドロジックと同じです。構造体を生成するために：func： `.generate_relationship`関数が呼び出され、既存の属性が維持されます。"
 
 #: of sqlalchemy.ext.automap:348
 msgid "Relationships with Inheritance"
-msgstr ""
+msgstr "継承との関係"
 
 #: of sqlalchemy.ext.automap:350
 msgid ""
 ":mod:`.sqlalchemy.ext.automap` will not generate any relationships "
 "between two classes that are in an inheritance relationship.   That is, "
 "with two classes given as follows::"
-msgstr ""
+msgstr "：mod： `.sqlalchemy.ext.automap`は、継承関係にある2つのクラス間の関係を生成しません。つまり、次の2つのクラスがあります::"
 
 #: of sqlalchemy.ext.automap:369
 msgid ""
 "The foreign key from ``Engineer`` to ``Employee`` is used not for a "
 "relationship, but to establish joined inheritance between the two "
 "classes."
-msgstr ""
+msgstr "「エンジニア」から「従業員」までの外部キーは、関係ではなく、2つのクラス間の継承継承を確立するために使用されます。"
 
 #: of sqlalchemy.ext.automap:372
 msgid ""
@@ -339,11 +329,11 @@ msgid ""
 "``Engineer`` to ``Employee``, we need to set up both the relationship we "
 "want as well as the ``inherit_condition``, as these are not things "
 "SQLAlchemy can guess::"
-msgstr ""
+msgstr "つまり、automapは、サブクラスからスーパークラスにリンクする外部キーの*関係を生成しません。マッピングがサブクラスからスーパークラスへの実際の関係をも持っている場合、マッピングは明示的である必要があります。以下では、「エンジニア」から「従業員」までの2つの別個の外部キーがあるため、SQLAlchemyが推測できるものではないため、必要な関係と「継承条件」の両方を設定する必要があります::"
 
 #: of sqlalchemy.ext.automap:403
 msgid "Handling Simple Naming Conflicts"
-msgstr ""
+msgstr "単純な名前の競合の処理"
 
 #: of sqlalchemy.ext.automap:405
 msgid ""
@@ -353,7 +343,7 @@ msgid ""
 "automap is attempting to name a many-to-one relationship the same as an "
 "existing column, an alternate convention can be conditionally selected.  "
 "Given a schema:"
-msgstr ""
+msgstr "マッピング中に名前の競合が発生した場合、必要に応じて：func： `.classname_for_table`、：func：` .name_for_scalar_relationship`、：func： `.name_for_collection_relationship`のいずれかをオーバーライドします。たとえば、automapが既存の列と多対1の関係を同じ名前で指定しようとしている場合、条件を選択することができます。与えられたスキーマ："
 
 #: of sqlalchemy.ext.automap:424
 msgid ""
@@ -362,11 +352,11 @@ msgid ""
 " ``table_b`` with the same name as this related class, e.g. ``table_a``."
 "  This relationship name conflicts with the mapping column "
 "``table_b.table_a``, and will emit an error on mapping."
-msgstr ""
+msgstr "上記のスキーマは、 `` table_a``テーブルを `` table_a``という名前のクラスとして最初に自動マッピングします。 `` table_a``のような関連するクラスと同じ名前の `` table_b``のクラスへの関係を自動化します。この関係名は、マッピング列 `` table_b.table_a``と競合し、マッピング時にエラーを出します。"
 
 #: of sqlalchemy.ext.automap:430
 msgid "We can resolve this conflict by using an underscore as follows::"
-msgstr ""
+msgstr "この競合は、次のようにアンダースコアを使用して解決できます。"
 
 #: of sqlalchemy.ext.automap:447
 msgid ""
@@ -374,11 +364,11 @@ msgid ""
 "that are mapped can be modified using the technique described at "
 ":ref:`mapper_column_distinct_names`, by assigning the column explicitly "
 "to a new name::"
-msgstr ""
+msgstr "また、列側の名前を変更することもできます。マップされた列は、ref： `mapper_column_distinct_names`で説明されている手法を使用して、列を明示的に新しい名前に割り当てることによって変更できます::"
 
 #: of sqlalchemy.ext.automap:462
 msgid "Using Automap with Explicit Declarations"
-msgstr ""
+msgstr "明示的な宣言を伴うオートマップの使用"
 
 #: of sqlalchemy.ext.automap:464
 msgid ""
@@ -387,7 +377,7 @@ msgid ""
 ":class:`.MetaData` collection.  From this, it follows that automap can "
 "also be used generate missing relationships given an otherwise complete "
 "model that fully defines table metadata::"
-msgstr ""
+msgstr "前述のように、automapはリフレクションに依存せず、：class： `.Table`オブジェクトのコレクションを：class：` .MetaData`コレクション内で使用することができます。このことから、automapは、テーブルのメタデータを完全に定義する他の完全なモデルを使って、欠けている関係を生成するためにも使用できます。"
 
 #: of sqlalchemy.ext.automap:498
 msgid ""
@@ -395,36 +385,36 @@ msgid ""
 ":class:`.ForeignKey` which we defined on ``Address.user_id`` allowed a "
 "bidirectional relationship pair ``Address.user`` and "
 "``User.address_collection`` to be generated on the mapped classes."
-msgstr ""
+msgstr "上では、ほとんどすべての `` User``と `` Address``マッピングが与えられているので、 `` Address.user_id``で定義した：class： `.ForeignKey`は、双方向関係のペア` `Address.user``と`` User.address_collection``がマップされたクラスに対して生成されます。"
 
 #: of sqlalchemy.ext.automap:503
 msgid ""
 "Note that when subclassing :class:`.AutomapBase`, the "
 ":meth:`.AutomapBase.prepare` method is required; if not called, the "
 "classes we've declared are in an un-mapped state."
-msgstr ""
+msgstr "class： `.AutomapBase`をサブクラス化するときは、：meth：` .AutomapBase.prepare`メソッドが必要です。呼び出されなければ、宣言したクラスはマップされていない状態になります。"
 
 #: ../../orm/extensions/automap.rst:9
 msgid "API Reference"
-msgstr ""
+msgstr "APIリファレンス"
 
 #: of sqlalchemy.ext.automap.automap_base:1
 msgid "Produce a declarative automap base."
-msgstr ""
+msgstr "宣言的なオートマップベースを作成します。"
 
 #: of sqlalchemy.ext.automap.automap_base:3
 msgid ""
 "This function produces a new base class that is a product of the "
 ":class:`.AutomapBase` class as well a declarative base produced by "
 ":func:`.declarative.declarative_base`."
-msgstr ""
+msgstr "この関数は：class： `.AutomapBase`クラスと：func：` .declarative.declarative_base`によって生成される宣言ベースの生成物である新しい基本クラスを生成します。"
 
 #: of sqlalchemy.ext.automap.automap_base:7
 msgid ""
 "All parameters other than ``declarative_base`` are keyword arguments that"
 " are passed directly to the :func:`.declarative.declarative_base` "
 "function."
-msgstr ""
+msgstr "`` declarative_base`以外のすべてのパラメータは：func： `.declarative.declarative_base`関数に直接渡されるキーワード引数です。"
 
 #: of sqlalchemy.ext.automap.AutomapBase.prepare
 #: sqlalchemy.ext.automap.automap_base
@@ -433,7 +423,7 @@ msgstr ""
 #: sqlalchemy.ext.automap.name_for_collection_relationship
 #: sqlalchemy.ext.automap.name_for_scalar_relationship
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.ext.automap.automap_base:11
 msgid ""
@@ -441,17 +431,17 @@ msgid ""
 "When this is passed, the function no longer invokes "
 ":func:`.declarative.declarative_base` itself, and all other keyword "
 "arguments are ignored."
-msgstr ""
+msgstr "func： `.declarative.declarative_base`によって生成される既存のクラスです。これが渡されると、関数はもはや：func： `.declarative.declarative_base`自体を呼び出さなくなり、他のすべてのキーワード引数は無視されます。"
 
 #: of sqlalchemy.ext.automap.automap_base:16
 msgid ""
 "keyword arguments are passed along to "
 ":func:`.declarative.declarative_base`."
-msgstr ""
+msgstr "キーワード引数は：func： `.declarative.declarative_base`に渡されます。"
 
 #: of sqlalchemy.ext.automap.AutomapBase:1
 msgid "Base class for an \"automap\" schema."
-msgstr ""
+msgstr "\ &quot;automap \&quot;スキーマの基本クラス。"
 
 #: of sqlalchemy.ext.automap.AutomapBase:3
 msgid ""
@@ -460,40 +450,40 @@ msgid ""
 ":func:`.declarative.declarative_base` function.  In practice, the "
 ":class:`.AutomapBase` class is always used as a mixin along with an "
 "actual declarative base."
-msgstr ""
+msgstr "：class： `.AutomapBase`クラスは、：func：` .declarative.declarative_base`関数によって生成される &quot;宣言的なベース&quot;クラスと比較できます。実際には：class： `.AutomapBase`クラスは、実際の宣言的な基底と共にmixinとして常に使用されます。"
 
 #: of sqlalchemy.ext.automap.AutomapBase:8
 msgid ""
 "A new subclassable :class:`.AutomapBase` is typically instantated using "
 "the :func:`.automap_base` function."
-msgstr ""
+msgstr "新しいサブクラス：class： `.AutomapBase`は通常、：func：` .automap_base`関数を使ってインスタンス化されます。"
 
 #: of sqlalchemy.ext.automap.AutomapBase:13
 msgid ":ref:`automap_toplevel`"
-msgstr ""
+msgstr "：ref： `automap_toplevel`"
 
 #: of sqlalchemy.ext.automap.AutomapBase.classes:1
 msgid "An instance of :class:`.util.Properties` containing classes."
-msgstr ""
+msgstr "：class： `.util.Properties`のクラスのインスタンスです。"
 
 #: of sqlalchemy.ext.automap.AutomapBase.classes:3
 msgid ""
 "This object behaves much like the ``.c`` collection on a table.  Classes "
 "are present under the name they were given, e.g.::"
-msgstr ""
+msgstr "このオブジェクトはテーブル上の `` .c``コレクションのように動作します。クラスは与えられた名前の下に存在します。例えば："
 
 #: of sqlalchemy.ext.automap.AutomapBase.prepare:1
 msgid ""
 "Extract mapped classes and relationships from the :class:`.MetaData` and "
 "perform mappings."
-msgstr ""
+msgstr "マッピングされたクラスと関係を：class： `.MetaData`から抽出し、マッピングを実行します。"
 
 #: of sqlalchemy.ext.automap.AutomapBase.prepare:4
 msgid ""
 "an :class:`.Engine` or :class:`.Connection` with which to perform schema "
 "reflection, if specified. If the :paramref:`.AutomapBase.prepare.reflect`"
 " argument is False, this object is not used."
-msgstr ""
+msgstr "：class： `.Engine`または：class：` .Connection`：指定されている場合、スキーマリフレクションを実行します。 ：paramref： `.AutomapBase.prepare.reflect`引数がFalseの場合、このオブジェクトは使用されません。"
 
 #: of sqlalchemy.ext.automap.AutomapBase.prepare:9
 msgid ""
@@ -503,40 +493,40 @@ msgid ""
 "be used to perform the reflection if present; else, the "
 ":class:`.MetaData` should already be bound to some engine else the "
 "operation will fail."
-msgstr ""
+msgstr "Trueの場合、：meth： `.MetaData.reflect`メソッドは、class：` .AutomapBase`に関連付けられた：class： `.MetaData`で呼び出されます。存在する場合、リフレクションを実行するために：class： `.Engine`：paramref：` .AutomapBase.prepare.engine`が使用されます。そうでなければ、：class： `.MetaData`は既にいくつかのエンジンにバインドされているはずです。そうでないと操作は失敗します。"
 
 #: of sqlalchemy.ext.automap.AutomapBase.prepare:16
 msgid ""
 "callable function which will be used to produce new class names, given a "
 "table name.  Defaults to :func:`.classname_for_table`."
-msgstr ""
+msgstr "テーブル名を指定すると、新しいクラス名を生成するために使用される呼び出し可能な関数です。デフォルトは：func： `.classname_for_table`です。"
 
 #: of sqlalchemy.ext.automap.AutomapBase.prepare:20
 msgid ""
 "callable function which will be used to produce relationship names for "
 "scalar relationships.  Defaults to :func:`.name_for_scalar_relationship`."
-msgstr ""
+msgstr "スカラー関係の関係名を生成するために使用される呼び出し可能な関数。デフォルトは：func： `.name_for_scalar_relationship`です。"
 
 #: of sqlalchemy.ext.automap.AutomapBase.prepare:24
 msgid ""
 "callable function which will be used to produce relationship names for "
 "collection-oriented relationships.  Defaults to "
 ":func:`.name_for_collection_relationship`."
-msgstr ""
+msgstr "コレクション指向の関係の関係名を生成するために使用されるコール可能な関数。デフォルトは：func： `.name_for_collection_relationship`です。"
 
 #: of sqlalchemy.ext.automap.AutomapBase.prepare:28
 msgid ""
 "callable function which will be used to actually generate "
 ":func:`.relationship` and :func:`.backref` constructs.  Defaults to "
 ":func:`.generate_relationship`."
-msgstr ""
+msgstr "func： `.relationship`と：func：` .backref`構造体を実際に生成するために使用される呼び出し可能な関数です。デフォルトは：func： `.generate_relationship`です。"
 
 #: of sqlalchemy.ext.automap.AutomapBase.prepare:32
 msgid ""
 "the Python collection class that will be used when a new "
 ":func:`.relationship` object is created that represents a collection.  "
 "Defaults to ``list``."
-msgstr ""
+msgstr "コレクションを表すnew：func： `.relationship`オブジェクトが作成されたときに使用されるPythonコレクションクラスです。デフォルトは `` list``です。"
 
 #: of sqlalchemy.ext.automap.AutomapBase.prepare:36
 msgid ""
@@ -545,7 +535,7 @@ msgid ""
 ":meth:`.MetaData.reflect` to indicate the primary schema where tables "
 "should be reflected from.  When omitted, the default schema in use by the"
 " database connection is used.  .. versionadded:: 1.1"
-msgstr ""
+msgstr "：paramref： `.AutomapBase.prepare.reflect`フラグと一緒に存在する場合は、：meth：` .MetaData.reflect`に渡され、テーブルを反映させるべきプライマリスキーマを示します。省略すると、データベース接続で使用されているデフォルトのスキーマが使用されます。 .. versionadded :: 1.1"
 
 #: of sqlalchemy.ext.automap.AutomapBase.prepare:36
 msgid ""
@@ -554,43 +544,43 @@ msgid ""
 ":meth:`.MetaData.reflect` to indicate the primary schema where tables "
 "should be reflected from.  When omitted, the default schema in use by the"
 " database connection is used."
-msgstr ""
+msgstr "：paramref： `.AutomapBase.prepare.reflect`フラグと一緒に存在する場合は、：meth：` .MetaData.reflect`に渡され、テーブルを反映させるべきプライマリスキーマを示します。省略すると、データベース接続で使用されているデフォルトのスキーマが使用されます。"
 
 #: of sqlalchemy.ext.automap.classname_for_table:1
 msgid "Return the class name that should be used, given the name of a table."
-msgstr ""
+msgstr "テーブルの名前を指定して、使用するクラス名を返します。"
 
 #: of sqlalchemy.ext.automap.classname_for_table:4
 #: sqlalchemy.ext.automap.name_for_collection_relationship:4
 #: sqlalchemy.ext.automap.name_for_scalar_relationship:4
 msgid "The default implementation is::"
-msgstr ""
+msgstr "デフォルト実装は::"
 
 #: of sqlalchemy.ext.automap.classname_for_table:8
 msgid ""
 "Alternate implementations can be specified using the "
 ":paramref:`.AutomapBase.prepare.classname_for_table` parameter."
-msgstr ""
+msgstr "代替実装は、：paramref： `.AutomapBase.prepare.classname_for_table`パラメータを使用して指定できます。"
 
 #: of sqlalchemy.ext.automap.classname_for_table:12
 #: sqlalchemy.ext.automap.generate_relationship:16
 #: sqlalchemy.ext.automap.name_for_collection_relationship:13
 #: sqlalchemy.ext.automap.name_for_scalar_relationship:12
 msgid "the :class:`.AutomapBase` class doing the prepare."
-msgstr ""
+msgstr "：class： `.AutomapBase`クラスは準備をしています。"
 
 #: of sqlalchemy.ext.automap.classname_for_table:14
 msgid "string name of the :class:`.Table`."
-msgstr ""
+msgstr "：class： `.Table`の文字列名です。"
 
 #: of sqlalchemy.ext.automap.classname_for_table:16
 msgid "the :class:`.Table` object itself."
-msgstr ""
+msgstr "：class： `.Table`オブジェクト自体です。"
 
 #: of sqlalchemy.ext.automap.classname_for_table
 #: sqlalchemy.ext.automap.generate_relationship
 msgid "戻り値"
-msgstr ""
+msgstr "戻り値"
 
 #: of sqlalchemy.ext.automap.classname_for_table:18
 msgid ""
@@ -599,11 +589,11 @@ msgid ""
 "  The ``.name`` attribute    of :class:`.Table` is typically a Python "
 "unicode subclass, so the    ``str()`` function should be applied to this "
 "name, after accounting for    any non-ASCII characters."
-msgstr ""
+msgstr "文字列クラス名.. note :: Python 2では、クラス名**に使用される文字列は、非Unicodeオブジェクト、例えば `` str（） ``オブジェクトでなければなりません。 ：class： `.Table`の` `.name``属性は通常PythonのUnicodeサブクラスなので、非ASCII文字を考慮した上で、この名前に` `str（）` `関数を適用する必要があります。"
 
 #: of sqlalchemy.ext.automap.classname_for_table:18
 msgid "a string class name."
-msgstr ""
+msgstr "文字列クラス名"
 
 #: of sqlalchemy.ext.automap.classname_for_table:22
 msgid ""
@@ -612,71 +602,71 @@ msgid ""
 ":class:`.Table` is typically a Python unicode subclass, so the ``str()`` "
 "function should be applied to this name, after accounting for any non-"
 "ASCII characters."
-msgstr ""
+msgstr "Python 2では、クラス名**に使用される文字列は、非Unicodeオブジェクト、例えば `` str（） ``オブジェクトでなければなりません。 ：class： `.Table`の` `.name``属性は通常PythonのUnicodeサブクラスなので、非ASCII文字を考慮した上で、この名前に` `str（）` `関数を適用する必要があります。"
 
 #: of sqlalchemy.ext.automap.name_for_scalar_relationship:1
 msgid ""
 "Return the attribute name that should be used to refer from one class to "
 "another, for a scalar object reference."
-msgstr ""
+msgstr "1つのクラスから別のクラスへの参照に使用する属性名を返します。"
 
 #: of sqlalchemy.ext.automap.name_for_scalar_relationship:8
 msgid ""
 "Alternate implementations can be specified using the "
 ":paramref:`.AutomapBase.prepare.name_for_scalar_relationship` parameter."
-msgstr ""
+msgstr "代替実装は、：paramref： `.AutomapBase.prepare.name_for_scalar_relationship`パラメータを使用して指定できます。"
 
 #: of sqlalchemy.ext.automap.name_for_collection_relationship:15
 #: sqlalchemy.ext.automap.name_for_scalar_relationship:14
 msgid "the class to be mapped on the local side."
-msgstr ""
+msgstr "ローカル側でマッピングされるクラス"
 
 #: of sqlalchemy.ext.automap.name_for_collection_relationship:17
 #: sqlalchemy.ext.automap.name_for_scalar_relationship:16
 msgid "the class to be mapped on the referring side."
-msgstr ""
+msgstr "参照側にマップされるクラス"
 
 #: of sqlalchemy.ext.automap.name_for_collection_relationship:19
 #: sqlalchemy.ext.automap.name_for_scalar_relationship:18
 msgid ""
 "the :class:`.ForeignKeyConstraint` that is being inspected to produce "
 "this relationship."
-msgstr ""
+msgstr "この関係を生成するために検査される：class： `.ForeignKeyConstraint`。"
 
 #: of sqlalchemy.ext.automap.name_for_collection_relationship:1
 msgid ""
 "Return the attribute name that should be used to refer from one class to "
 "another, for a collection reference."
-msgstr ""
+msgstr "コレクション参照のためにあるクラスから別のクラスへの参照に使用する属性名を返します。"
 
 #: of sqlalchemy.ext.automap.name_for_collection_relationship:8
 msgid ""
 "Alternate implementations can be specified using the "
 ":paramref:`.AutomapBase.prepare.name_for_collection_relationship` "
 "parameter."
-msgstr ""
+msgstr "代替実装は、：paramref： `.AutomapBase.prepare.name_for_collection_relationship`パラメータを使用して指定できます。"
 
 #: of sqlalchemy.ext.automap.generate_relationship:1
 msgid ""
 "Generate a :func:`.relationship` or :func:`.backref` on behalf of two "
 "mapped classes."
-msgstr ""
+msgstr "2つのマップされたクラスの代わりに：func： `.relationship`または：func：` .backref`を生成します。"
 
 #: of sqlalchemy.ext.automap.generate_relationship:4
 msgid ""
 "An alternate implementation of this function can be specified using the "
 ":paramref:`.AutomapBase.prepare.generate_relationship` parameter."
-msgstr ""
+msgstr "この関数の別の実装は、：paramref： `.AutomapBase.prepare.generate_relationship`パラメータを使用して指定できます。"
 
 #: of sqlalchemy.ext.automap.generate_relationship:7
 msgid "The default implementation of this function is as follows::"
-msgstr ""
+msgstr "この関数のデフォルトの実装は次のとおりです::"
 
 #: of sqlalchemy.ext.automap.generate_relationship:18
 msgid ""
 "indicate the \"direction\" of the relationship; this will be one of "
 ":data:`.ONETOMANY`, :data:`.MANYTOONE`, :data:`.MANYTOMANY`."
-msgstr ""
+msgstr "関係の「方向」を示す。これはdata： `.ONETOMANY`、：data：` .MANYTOONE`、：data： `.MANYTOMANY`のいずれかになります。"
 
 #: of sqlalchemy.ext.automap.generate_relationship:21
 msgid ""
@@ -686,7 +676,7 @@ msgid ""
 ":func:`.relationship` in a second step, so it is critical that user-"
 "defined implementations correctly differentiate between the two "
 "functions, if a custom relationship function is being used."
-msgstr ""
+msgstr "関係を作成するためにデフォルトで使用される関数。これは、func： `.relationship`または：func：` .backref`です。 ：func： `.backref`関数の結果は、新しい：func：` .relationship`を2番目のステップで生成するために使用されるので、ユーザー定義の実装では、2つの関数を正しく区別することが重要です。使用中です。"
 
 #: of sqlalchemy.ext.automap.generate_relationship:28
 msgid ""
@@ -694,25 +684,25 @@ msgid ""
 "value of :paramref:`.generate_relationship.return_fn` is the "
 ":func:`.backref` function, then this name is the name that is being "
 "assigned to the backref."
-msgstr ""
+msgstr "この関係が割り当てられる属性名：paramref： `.generate_relationship.return_fn`の値が：func：` .backref`関数である場合、この名前はバックリファレンスに割り当てられる名前です。"
 
 #: of sqlalchemy.ext.automap.generate_relationship:33
 msgid ""
 "the \"local\" class to which this relationship or backref will be locally"
 " present."
-msgstr ""
+msgstr "この関係またはバックレファレンスがローカルに存在する\ &quot;ローカル\&quot;クラス。"
 
 #: of sqlalchemy.ext.automap.generate_relationship:36
 msgid "the \"referred\" class to which the relationship or backref refers to."
-msgstr ""
+msgstr "関係またはバックリファレンスが参照する\ &quot;参照\&quot;クラス。"
 
 #: of sqlalchemy.ext.automap.generate_relationship:39
 msgid "all additional keyword arguments are passed along to the function."
-msgstr ""
+msgstr "すべての追加のキーワード引数が関数に渡されます。"
 
 #: of sqlalchemy.ext.automap.generate_relationship:42
 msgid ""
 "a :func:`.relationship` or :func:`.backref` construct, as dictated by the"
 " :paramref:`.generate_relationship.return_fn` parameter."
-msgstr ""
+msgstr "：paramref： `.generate_relationship.return_fn`パラメータで指定されているように、：func：` .relationship`または：func： `.backref`構造体です。"
 

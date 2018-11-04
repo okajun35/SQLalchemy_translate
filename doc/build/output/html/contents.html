@@ -10,7 +10,7 @@
         <title>
             
     
-    Table of Contents
+    目次
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,7 +35,7 @@
     <link rel="search" title="Search" href="search.html" />
         <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="index.html" />
-        <link rel="next" title="Overview" href="intro.html" />
+        <link rel="next" title="概要" href="intro.html" />
     <!-- end layout.mako headers -->
 
 
@@ -118,12 +118,12 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="intro.html">Overview</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="intro.html">概要</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="orm/index.html">SQLAlchemy ORM</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="core/index.html">SQLAlchemy Core</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="dialects/index.html">Dialects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="faq/index.html">Frequently Asked Questions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="errors.html">Error Messages</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="core/index.html">SQLAlchemyコア</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="dialects/index.html">方言</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="faq/index.html">よくある質問</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="errors.html">エラーメッセージ</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="changelog/index.html">Changes and Migration</a></span></li>
 </ul>
 
@@ -140,151 +140,150 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="table-of-contents">
-<span id="contents"></span><h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Full table of contents.  For a high level overview of all
-documentation, see <a class="reference internal" href="index.html"><span class="std std-ref">SQLAlchemy Documentation</span></a>.</p>
+<span id="contents"></span><h1>目次<a class="headerlink" href="#table-of-contents" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>目次すべてのドキュメントの概要については、：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>index_toplevel`を参照してください。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">概要</a></li>
 <li class="toctree-l1"><a class="reference internal" href="orm/index.html">SQLAlchemy ORM</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="orm/tutorial.html">Object Relational Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="orm/mapper_config.html">Mapper Configuration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="orm/mapping_styles.html">Types of Mappings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/scalar_mapping.html">Mapping Columns and Expressions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="orm/mapping_columns.html">Mapping Table Columns</a></li>
-<li class="toctree-l4"><a class="reference internal" href="orm/mapped_sql_expr.html">SQL Expressions as Mapped Attributes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="orm/mapped_attributes.html">Changing Attribute Behavior</a></li>
-<li class="toctree-l4"><a class="reference internal" href="orm/composites.html">Composite Column Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orm/tutorial.html">オブジェクトリレーショナルチュートリアル</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orm/mapper_config.html">マッパー設定</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="orm/mapping_styles.html">マッピングのタイプ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/scalar_mapping.html">列と式のマッピング</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="orm/mapping_columns.html">マッピング表の列</a></li>
+<li class="toctree-l4"><a class="reference internal" href="orm/mapped_sql_expr.html">マップされた属性としてのSQL式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="orm/mapped_attributes.html">属性の動作の変更</a></li>
+<li class="toctree-l4"><a class="reference internal" href="orm/composites.html">コンポジット列の種類</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="orm/inheritance.html">Mapping Class Inheritance Hierarchies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/nonstandard_mappings.html">Non-Traditional Mappings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/versioning.html">Configuring a Version Counter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/mapping_api.html">Class Mapping API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/inheritance.html">クラス継承階層のマッピング</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/nonstandard_mappings.html">非伝統的なマッピング</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/versioning.html">バージョンカウンタの設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/mapping_api.html">クラスマッピングAPI</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="orm/relationships.html">Relationship Configuration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="orm/basic_relationships.html">Basic Relationship Patterns</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/self_referential.html">Adjacency List Relationships</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/backref.html">Linking Relationships with Backref</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/join_conditions.html">Configuring how Relationship Joins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/collections.html">Collection Configuration and Techniques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/relationship_persistence.html">Special Relationship Persistence Patterns</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/relationship_api.html">Relationships API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orm/relationships.html">関係の設定</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="orm/basic_relationships.html">基本的な関係パターン</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/self_referential.html">隣接関係リストの関係</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/backref.html">バックリファレンスとの関係のリンク</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/join_conditions.html">リレーションシップの参加方法のコンフィグレーション</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/collections.html">コレクションの構成とテクニック</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/relationship_persistence.html">特別な関係の永続パターン</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/relationship_api.html">リレーションシップAPI</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="orm/loading_objects.html">Loading Objects</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="orm/loading_columns.html">Loading Columns</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/loading_relationships.html">Relationship Loading Techniques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/inheritance_loading.html">Loading Inheritance Hierarchies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/constructors.html">Constructors and Object Initialization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/query.html">Query API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orm/loading_objects.html">オブジェクトの読み込み</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="orm/loading_columns.html">列の読み込み</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/loading_relationships.html">関係の読み込み手法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/inheritance_loading.html">継承階層のロード</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/constructors.html">コンストラクタとオブジェクトの初期化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/query.html">クエリAPI</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="orm/session.html">Using the Session</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="orm/session_basics.html">Session Basics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/session_state_management.html">State Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/cascades.html">Cascades</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/session_transaction.html">Transactions and Connection Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/persistence_techniques.html">Additional Persistence Techniques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/contextual.html">Contextual/Thread-local Sessions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/session_events.html">Tracking Object and Session Changes with Events</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/session_api.html">Session API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orm/session.html">セッションの使用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="orm/session_basics.html">セッションの基礎</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/session_state_management.html">状態管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/cascades.html">カスケード</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/session_transaction.html">トランザクションと接続管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/persistence_techniques.html">追加の永続化手法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/contextual.html">コンテキスト/スレッドローカルセッション</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/session_events.html">イベントによるオブジェクトおよびセッションの変更の追跡</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/session_api.html">セッションAPI</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="orm/extending.html">Events and Internals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="orm/events.html">ORM Events</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/internals.html">ORM Internals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/exceptions.html">ORM Exceptions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/deprecated.html">Deprecated ORM Event Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orm/extending.html">イベントと内部</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="orm/events.html">ORMイベント</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/internals.html">ORM内部</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/exceptions.html">ORMの例外</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/deprecated.html">非推奨のORMイベントインターフェイス</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="orm/extensions/index.html">ORM Extensions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="orm/extensions/associationproxy.html">Association Proxy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/extensions/automap.html">Automap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/extensions/baked.html">Baked Queries</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/extensions/declarative/index.html">Declarative</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/basic_use.html">Basic Use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/relationships.html">Configuring Relationships</a></li>
-<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/table_config.html">Table Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/inheritance.html">Inheritance Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/mixins.html">Mixin and Custom Base Classes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/api.html">Declarative API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orm/extensions/index.html">ORM拡張</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="orm/extensions/associationproxy.html">アソシエーションプロキシ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/extensions/automap.html">オートマップ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/extensions/baked.html">焼いたクエリ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/extensions/declarative/index.html">宣言的</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/basic_use.html">基本的な使用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/relationships.html">関係の設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/table_config.html">テーブル構成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/inheritance.html">継承の設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/mixins.html">ミックスインとカスタムベースクラス</a></li>
+<li class="toctree-l4"><a class="reference internal" href="orm/extensions/declarative/api.html">宣言的API</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="orm/extensions/mutable.html">Mutation Tracking</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/extensions/orderinglist.html">Ordering List</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/extensions/horizontal_shard.html">Horizontal Sharding</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/extensions/hybrid.html">Hybrid Attributes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/extensions/indexable.html">Indexable</a></li>
-<li class="toctree-l3"><a class="reference internal" href="orm/extensions/instrumentation.html">Alternate Class Instrumentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/extensions/mutable.html">突然変異の追跡</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/extensions/orderinglist.html">オーダーリスト</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/extensions/horizontal_shard.html">水平シャーディング</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/extensions/hybrid.html">ハイブリッド属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/extensions/indexable.html">インデックス作成可能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="orm/extensions/instrumentation.html">代替クラスの計装</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="orm/examples.html">ORM Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orm/examples.html">ORMの例</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="core/index.html">SQLAlchemy Core</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="core/tutorial.html">SQL Expression Language Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="core/expression_api.html">SQL Statements and Expressions API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="core/sqlelement.html">列要素と式(機械翻訳)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/selectable.html">Selectables, Tables, FROM objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/dml.html">Insert, Updates, Deletes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/functions.html">SQL and Generic Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/compiler.html">Custom SQL Constructs and Compilation Extension</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/serializer.html">Expression Serializer Extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core/index.html">SQLAlchemyコア</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="core/tutorial.html">SQL式言語チュートリアル</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/expression_api.html">SQL文と式API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core/sqlelement.html">列要素と式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/selectable.html">選択可能オブジェクト、テーブル、FROMオブジェクト</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/dml.html">挿入、更新、削除</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/functions.html">SQLと汎用関数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/compiler.html">カスタムSQLコンストラクトとコンパイル拡張</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/serializer.html">式シリアライザ拡張</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="core/schema.html">Schema Definition Language</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="core/metadata.html">Describing Databases with MetaData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/reflection.html">Reflecting Database Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/defaults.html">Column Insert/Update Defaults</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/constraints.html">Defining Constraints and Indexes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/ddl.html">Customizing DDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/schema.html">スキーマ定義言語</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core/metadata.html">MetaDataを使用したデータベースの記述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/reflection.html">データベースオブジェクトの反映</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/defaults.html">列の挿入/更新のデフォルト</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/constraints.html">制約とインデックスの定義</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/ddl.html">DDLのカスタマイズ</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="core/types.html">Column and Data Types</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="core/type_basics.html">Column and Data Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/custom_types.html">Custom Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/type_api.html">Base Type API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/types.html">列とデータ型</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core/type_basics.html">列とデータ型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/custom_types.html">カスタムタイプ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/type_api.html">ベースタイプAPI</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="core/engines_connections.html">Engine and Connection Use</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="core/engines.html">Engine Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/connections.html">Working with Engines and Connections</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/pooling.html">Connection Pooling</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/events.html">Core Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/engines_connections.html">エンジンと接続の使用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core/engines.html">エンジン構成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/connections.html">エンジンと接続の操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/pooling.html">接続プーリング</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/events.html">コアイベント</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="core/api_basics.html">Core API Basics</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="core/event.html">Events</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/inspection.html">Runtime Inspection API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/interfaces.html">Deprecated Event Interfaces</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/exceptions.html">Core Exceptions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/internals.html">Core Internals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core/api_basics.html">コアAPIの基礎</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="core/event.html">イベント</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/inspection.html">ランタイム検査API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/interfaces.html">推奨されないイベントインターフェイス</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/exceptions.html">コア例外</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/internals.html">コア内部</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="dialects/index.html">Dialects</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="dialects/firebird.html">Firebird</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dialects/index.html">方言</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dialects/firebird.html">ファイアバード</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dialects/mssql.html">Microsoft SQL Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dialects/mysql.html">MySQL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dialects/oracle.html">Oracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dialects/oracle.html">オラクル</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dialects/postgresql.html">PostgreSQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dialects/sqlite.html">SQLite</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dialects/sybase.html">Sybase</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="faq/index.html">Frequently Asked Questions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="faq/connections.html">Connections / Engines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq/metadata_schema.html">MetaData / Schema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq/sqlexpressions.html">SQL Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq/ormconfiguration.html">ORM Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq/performance.html">Performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq/sessions.html">Sessions / Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">よくある質問</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq/connections.html">接続/エンジン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/metadata_schema.html">メタデータ/スキーマ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/sqlexpressions.html">SQL式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/ormconfiguration.html">ORM設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/performance.html">パフォーマンス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq/sessions.html">セッション/クエリ</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="errors.html">Error Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">エラーメッセージ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog/index.html">Changes and Migration</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="changelog/migration_13.html">What's New in SQLAlchemy 1.3?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="changelog/changelog_13.html">1.3 Changelog</a></li>
@@ -314,10 +313,10 @@ documentation, see <a class="reference internal" href="index.html"><span class="
 </ul>
 </div>
 <div class="section" id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>指数と表<a class="headerlink" href="#indices-and-tables" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="glossary.html#glossary"><span class="std std-ref">Glossary</span></a></li>
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></li>
+<li>：ref： <cite>glossary</cite></li>
+<li>：参考： <cite>genindex</cite></li>
 </ul>
 </div>
 </div>
@@ -328,11 +327,11 @@ documentation, see <a class="reference internal" href="index.html"><span class="
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Next:
-        <a href="intro.html" title="next chapter">Overview</a>
+        <a href="intro.html" title="next chapter">概要</a>
 
     <div id="docs-copyright">
         &copy; <a href="copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -359,6 +358,7 @@ documentation, see <a class="reference internal" href="index.html"><span class="
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="_static/detectmobile.js"></script>

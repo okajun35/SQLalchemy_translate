@@ -10,7 +10,7 @@
         <title>
             
     
-    ORM Exceptions
+    ORMの例外
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Events and Internals" href="extending.html" />
-        <link rel="next" title="Deprecated ORM Event Interfaces" href="deprecated.html" />
-        <link rel="prev" title="ORM Internals" href="internals.html" />
+        <link rel="up" title="イベントと内部" href="extending.html" />
+        <link rel="next" title="非推奨のORMイベントインターフェイス" href="deprecated.html" />
+        <link rel="prev" title="ORM内部" href="internals.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,20 +120,20 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="events.html">ORM Events</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="internals.html">ORM Internals</a></span></li>
-<li class="selected"><span class="link-container first"><strong>ORM Exceptions</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="deprecated.html">Deprecated ORM Event Interfaces</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="events.html">ORMイベント</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="internals.html">ORM内部</a></span></li>
+<li class="selected"><span class="link-container first"><strong>ORMの例外</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="deprecated.html">非推奨のORMイベントインターフェイス</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -149,93 +149,69 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="module-sqlalchemy.orm.exc">
-<span id="orm-exceptions"></span><span id="orm-exceptions-toplevel"></span><h1>ORM Exceptions<a class="headerlink" href="#module-sqlalchemy.orm.exc" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>SQLAlchemy ORM exceptions.</p>
+<span id="orm-exceptions"></span><span id="orm-exceptions-toplevel"></span><h1>ORMの例外<a class="headerlink" href="#module-sqlalchemy.orm.exc" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>SQLAlchemy ORM例外。</p>
 <dl class="attribute">
 <dt id="sqlalchemy.orm.exc.ConcurrentModificationError">
 <code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">ConcurrentModificationError</code><a class="headerlink" href="#sqlalchemy.orm.exc.ConcurrentModificationError" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><a class="reference internal" href="#sqlalchemy.orm.exc.StaleDataError" title="sqlalchemy.orm.exc.StaleDataError"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.orm.exc.StaleDataError</span></code></a> のエイリアス</p>
+<dd><p><a class="reference internal" href="#sqlalchemy.orm.exc.StaleDataError" title="sqlalchemy.orm.exc.StaleDataError"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.orm.exc.StaleDataError</span></code></a> のエイリアス</p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="sqlalchemy.orm.exc.DetachedInstanceError">
 <em class="property">exception </em><code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">DetachedInstanceError</code><span class="sig-paren">(</span><em>*arg</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.exc.DetachedInstanceError" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>An attempt to access unloaded attributes on a
-mapped instance that is detached.</p>
+<dd><p>デタッチされたマップされたインスタンスでアンロードされた属性にアクセスしようとしました。</p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="sqlalchemy.orm.exc.FlushError">
 <em class="property">exception </em><code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">FlushError</code><span class="sig-paren">(</span><em>*arg</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.exc.FlushError" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A invalid condition was detected during flush().</p>
+<dd><p>flush（）中に無効な条件が検出されました。</p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="sqlalchemy.orm.exc.MultipleResultsFound">
 <em class="property">exception </em><code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">MultipleResultsFound</code><span class="sig-paren">(</span><em>*arg</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.exc.MultipleResultsFound" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A single database result was required but more than one were found.</p>
+<dd><p>単一のデータベース結果が必要でしたが、複数の結果が見つかりました。</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="sqlalchemy.orm.exc.NO_STATE">
 <code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">NO_STATE</code><em class="property"> = (&lt;class 'AttributeError'&gt;, &lt;class 'KeyError'&gt;)</em><a class="headerlink" href="#sqlalchemy.orm.exc.NO_STATE" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Exception types that may be raised by instrumentation implementations.</p>
+<dd><p>インスツルメンテーション実装によって発生する可能性のある例外の型。</p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="sqlalchemy.orm.exc.NoResultFound">
 <em class="property">exception </em><code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">NoResultFound</code><span class="sig-paren">(</span><em>*arg</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.exc.NoResultFound" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A database result was required but none was found.</p>
+<dd><p>データベースの結果は必要でしたが、何も見つかりませんでした。</p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="sqlalchemy.orm.exc.ObjectDeletedError">
 <em class="property">exception </em><code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">ObjectDeletedError</code><span class="sig-paren">(</span><em>base</em>, <em>state</em>, <em>msg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.exc.ObjectDeletedError" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A refresh operation failed to retrieve the database
-row corresponding to an object's known primary key identity.</p>
-<p>A refresh operation proceeds when an expired attribute is
-accessed on an object, or when <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.get" title="sqlalchemy.orm.query.Query.get"><code class="xref py py-meth docutils literal"><span class="pre">Query.get()</span></code></a> is
-used to retrieve an object which is, upon retrieval, detected
-as expired.   A SELECT is emitted for the target row
-based on primary key; if no row is returned, this
-exception is raised.</p>
-<p>The true meaning of this exception is simply that
-no row exists for the primary key identifier associated
-with a persistent object.   The row may have been
-deleted, or in some cases the primary key updated
-to a new value, outside of the ORM's management of the target
-object.</p>
+<dd><p>リフレッシュ操作で、オブジェクトの既知の主キーIDに対応するデータベース行を取得できませんでした。</p>
+<p>期限切れの属性がオブジェクト上でアクセスされるとき、または：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Query.get`が検索時に期限切れとして検出されたオブジェクトを検索するとき、リフレッシュ動作が進行する。主キーに基づいてターゲット行に対してSELECTが発行されます。行が返されない場合、この例外が送出されます。</p>
+<p>この例外の真の意味は、永続オブジェクトに関連付けられた主キー識別子の行が存在しないことです。行が削除されたか、場合によってはORMのターゲットオブジェクトの管理外で、プライマリキーが新しい値に更新された可能性があります。</p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="sqlalchemy.orm.exc.ObjectDereferencedError">
 <em class="property">exception </em><code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">ObjectDereferencedError</code><span class="sig-paren">(</span><em>*arg</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.exc.ObjectDereferencedError" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>An operation cannot complete due to an object being garbage
-collected.</p>
+<dd><p>オブジェクトがガベージコレクションされているため、操作を完了できません。</p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="sqlalchemy.orm.exc.StaleDataError">
 <em class="property">exception </em><code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">StaleDataError</code><span class="sig-paren">(</span><em>*arg</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.exc.StaleDataError" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>An operation encountered database state that is unaccounted for.</p>
-<p>Conditions which cause this to happen include:</p>
+<dd><p>操作に不一致が発生したデータベースの状態が発生しました。</p>
+<p>これが発生する原因には次のようなものがあります。</p>
 <ul>
-<li><p class="first">A flush may have attempted to update or delete rows
-and an unexpected number of rows were matched during
-the UPDATE or DELETE statement.   Note that when
-version_id_col is used, rows in UPDATE or DELETE statements
-are also matched against the current known version
-identifier.</p>
+<li><p class="first">フラッシュで行を更新または削除しようとした可能性があり、予期しない行数がUPDATEまたはDELETEステートメントで一致しました。 version_id_colを使用すると、UPDATE文またはDELETE文の行も、現在の既知のバージョン識別子と照合されます。</p>
 </li>
-<li><p class="first">A mapped object with version_id_col was refreshed,
-and the version number coming back from the database does
-not match that of the object itself.</p>
+<li><p class="first">version_id_colのマップされたオブジェクトがリフレッシュされ、データベースから戻ってくるバージョン番号がオブジェクト自体のバージョン番号と一致しません。</p>
 </li>
-<li><p class="first">A object is detached from its parent object, however
-the object was previously attached to a different parent
-identity which was garbage collected, and a decision
-cannot be made if the new parent was really the most
-recent &quot;parent&quot;.</p>
+<li><p class="first">オブジェクトは親オブジェクトから切り離されますが、オブジェクトは以前はガベージコレクトされた別の親アイデンティティにアタッチされていました。新しい親が実際には最新の&amp;quot;親&amp;quot;であるかどうかは判断できません。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 0.7.4 で追加.</span></p>
 </div>
@@ -246,25 +222,25 @@ recent &quot;parent&quot;.</p>
 <dl class="exception">
 <dt id="sqlalchemy.orm.exc.UnmappedClassError">
 <em class="property">exception </em><code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">UnmappedClassError</code><span class="sig-paren">(</span><em>cls</em>, <em>msg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.exc.UnmappedClassError" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>An mapping operation was requested for an unknown class.</p>
+<dd><p>未知のクラスに対してマッピング操作が要求されました。</p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="sqlalchemy.orm.exc.UnmappedColumnError">
 <em class="property">exception </em><code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">UnmappedColumnError</code><span class="sig-paren">(</span><em>*arg</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.exc.UnmappedColumnError" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Mapping operation was requested on an unknown column.</p>
+<dd><p>未知の列に対してマッピング操作が要求されました。</p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="sqlalchemy.orm.exc.UnmappedError">
 <em class="property">exception </em><code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">UnmappedError</code><span class="sig-paren">(</span><em>*arg</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.exc.UnmappedError" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Base for exceptions that involve expected mappings not present.</p>
+<dd><p>期待されたマッピングが存在しない例外に関するベース。</p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="sqlalchemy.orm.exc.UnmappedInstanceError">
 <em class="property">exception </em><code class="descclassname">sqlalchemy.orm.exc.</code><code class="descname">UnmappedInstanceError</code><span class="sig-paren">(</span><em>base</em>, <em>obj</em>, <em>msg=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.exc.UnmappedInstanceError" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>An mapping operation was requested for an unknown instance.</p>
+<dd><p>未知のインスタンスに対してマッピング操作が要求されました。</p>
 </dd></dl>
 
 </div>
@@ -275,13 +251,13 @@ recent &quot;parent&quot;.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="internals.html" title="previous chapter">ORM Internals</a>
+        <a href="internals.html" title="previous chapter">ORM内部</a>
         Next:
-        <a href="deprecated.html" title="next chapter">Deprecated ORM Event Interfaces</a>
+        <a href="deprecated.html" title="next chapter">非推奨のORMイベントインターフェイス</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -308,6 +284,7 @@ recent &quot;parent&quot;.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

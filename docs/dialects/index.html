@@ -10,7 +10,7 @@
         <title>
             
     
-    Dialects
+    方言
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,8 +35,8 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="next" title="Firebird" href="firebird.html" />
-        <link rel="prev" title="Core Internals" href="../core/internals.html" />
+        <link rel="next" title="ファイアバード" href="firebird.html" />
+        <link rel="prev" title="コア内部" href="../core/internals.html" />
     <!-- end layout.mako headers -->
 
 
@@ -119,28 +119,28 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="../intro.html">Overview</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../intro.html">概要</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="../orm/index.html">SQLAlchemy ORM</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../core/index.html">SQLAlchemy Core</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Dialects</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#included-dialects">Included Dialects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#external-dialects">External Dialects</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#production-ready">Production Ready</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#experimental-incomplete">Experimental / Incomplete</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#attic">Attic</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../core/index.html">SQLAlchemyコア</a></span></li>
+<li class="selected"><span class="link-container first"><strong>方言</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#included-dialects">含まれている方言</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#external-dialects">外部の方言</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#production-ready">プロダクションレディ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#experimental-incomplete">実験的/不完全な</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#attic">屋根裏</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="firebird.html">Firebird</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="firebird.html">ファイアバード</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="mssql.html">Microsoft SQL Server</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="mysql.html">MySQL</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="oracle.html">Oracle</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="oracle.html">オラクル</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="postgresql.html">PostgreSQL</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="sqlite.html">SQLite</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="sybase.html">Sybase</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="../faq/index.html">Frequently Asked Questions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../errors.html">Error Messages</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../faq/index.html">よくある質問</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../errors.html">エラーメッセージ</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="../changelog/index.html">Changes and Migration</a></span></li>
 </ul>
 
@@ -157,19 +157,17 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="dialects">
-<span id="dialect-toplevel"></span><h1>Dialects<a class="headerlink" href="#dialects" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The <strong>dialect</strong> is the system SQLAlchemy uses to communicate with various types of <a class="reference internal" href="../glossary.html#term-dbapi"><span class="xref std std-term">DBAPI</span></a> implementations and databases.
-The sections that follow contain reference documentation and notes specific to the usage of each backend, as well as notes
-for the various DBAPIs.</p>
-<p>All dialects require that an appropriate DBAPI driver is installed.</p>
+<span id="dialect-toplevel"></span><h1>方言<a class="headerlink" href="#dialects" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>** dialect <a href="#id1"><span class="problematic" id="id2">**</span></a>は、SQLAlchemyがさまざまなタイプの：term： <a href="#id3"><span class="problematic" id="id4">`</span></a>DBAPI`実装とデータベースと通信するために使用するシステムです。以下のセクションでは、各バックエンドの使用方法やさまざまなDBAPIのメモに固有の参照ドキュメントと注意事項が記載されています。</p>
+<p>すべての方言では、適切なDBAPIドライバがインストールされている必要があります。</p>
 <div class="section" id="included-dialects">
-<h2>Included Dialects<a class="headerlink" href="#included-dialects" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>含まれている方言<a class="headerlink" href="#included-dialects" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="firebird.html">Firebird</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firebird.html">ファイアバード</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mssql.html">Microsoft SQL Server</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mysql.html">MySQL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oracle.html">Oracle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oracle.html">オラクル</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postgresql.html">PostgreSQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sqlite.html">SQLite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sybase.html">Sybase</a></li>
@@ -177,57 +175,45 @@ for the various DBAPIs.</p>
 </div>
 </div>
 <div class="section" id="external-dialects">
-<span id="external-toplevel"></span><h2>External Dialects<a class="headerlink" href="#external-dialects" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="external-toplevel"></span><h2>外部の方言<a class="headerlink" href="#external-dialects" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 0.8 で変更: </span>As of SQLAlchemy 0.8, several dialects have been moved to external
-projects, and dialects for new databases will also be published
-as external projects.   The rationale here is to keep the base
-SQLAlchemy install and test suite from growing inordinately large.</p>
-<p>The &quot;classic&quot; dialects such as SQLite, MySQL, PostgreSQL, Oracle,
-SQL Server, and Firebird will remain in the Core for the time being.</p>
+<p><span class="versionmodified">バージョン 0.8 で変更: </span>SQLAlchemy 0.8以降、いくつかの方言が外部プロジェクトに移され、新しいデータベース用の方言も外部プロジェクトとして公開されます。ここでの根拠は、基本的なSQLAlchemyのインストールとテストスイートが過度に大きくならないようにすることです。</p>
+<p>SQLite、MySQL、PostgreSQL、Oracle、SQL Server、Firebirdなどの古典的な方言は、当面はコアに残ります。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 1.0 で変更: </span>The Drizzle dialect has been moved into the third party system.</p>
+<p><span class="versionmodified">バージョン 1.0 で変更: </span>Drizzle方言は第三者システムに移動されました。</p>
 </div>
-<p>Current external dialect projects for SQLAlchemy include:</p>
+<p>SQLAlchemyの現在の外部ダイアレクトプロジェクトは次のとおりです。</p>
 <div class="section" id="production-ready">
-<h3>Production Ready<a class="headerlink" href="#production-ready" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>プロダクションレディ<a class="headerlink" href="#production-ready" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
-<li><a class="reference external" href="http://code.google.com/p/ibm-db/wiki/README">ibm_db_sa</a> - driver for IBM DB2 and Informix,
-developed jointly by IBM and SQLAlchemy developers.</li>
-<li><a class="reference external" href="https://pypi.python.org/pypi/sqlalchemy-redshift">sqlalchemy-redshift</a> - driver for Amazon Redshift, adapts
-the existing PostgreSQL/psycopg2 driver.</li>
-<li><a class="reference external" href="https://github.com/SAP/sqlalchemy-hana">sqlalchemy-hana</a> - driver for SAP Hana.</li>
-<li><a class="reference external" href="https://github.com/blue-yonder/sqlalchemy_exasol">sqlalchemy_exasol</a> - driver for EXASolution.</li>
-<li><a class="reference external" href="https://github.com/sqlanywhere/sqlalchemy-sqlany">sqlalchemy-sqlany</a> - driver for SAP Sybase SQL
-Anywhere, developed by SAP.</li>
-<li><a class="reference external" href="https://github.com/gijzelaerr/sqlalchemy-monetdb">sqlalchemy-monetdb</a> - driver for MonetDB.</li>
-<li><a class="reference external" href="https://github.com/snowflakedb/snowflake-sqlalchemy">snowflake-sqlalchemy</a> - driver for <a class="reference external" href="https://www.snowflake.net/">Snowflake</a>.</li>
-<li><a class="reference external" href="https://github.com/m32/sqlalchemy-tds">sqlalchemy-tds</a> - driver for MS-SQL,
-on top of <a class="reference external" href="https://github.com/denisenkom/pytds">pythone-tds</a>.</li>
-<li><a class="reference external" href="https://github.com/crate/crate-python">crate</a> - driver for <a class="reference external" href="https://crate.io/">CrateDB</a>.</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>ibm_db_sa &lt;<a class="reference external" href="http://code.google.com/p/ibm-db/wiki/README">http://code.google.com/p/ibm-db/wiki/README</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  IBM DB2とInformix用のドライバ.IBMとSQLAlchemyの開発者が共同開発しました。</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy-redshift &lt;<a class="reference external" href="https://pypi.python.org/pypi/sqlalchemy-redshift">https://pypi.python.org/pypi/sqlalchemy-redshift</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  <a href="#id1"><span class="problematic" id="id2">Redshiftの_</span></a> _ドライバは、既存のPostgreSQL / psycopg2ドライバを採用しています。</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy-hana &lt;<a class="reference external" href="https://github.com/SAP/sqlalchemy-hana">https://github.com/SAP/sqlalchemy-hana</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  SAP Hanaのドライバ。</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy_exasol &lt;<a class="reference external" href="https://github.com/blue-yonder/sqlalchemy_exasol">https://github.com/blue-yonder/sqlalchemy_exasol</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  EXASolutionのドライバ。</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy-sqlany &lt;<a class="reference external" href="https://github.com/sqlanywhere/sqlalchemy-sqlany">https://github.com/sqlanywhere/sqlalchemy-sqlany</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  SAP用のSybaseドライバSQL Anywhere。SAPによって開発されました。</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy-monetdb &lt;<a class="reference external" href="https://github.com/gijzelaerr/sqlalchemy-monetdb">https://github.com/gijzelaerr/sqlalchemy-monetdb</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_ MonetDBのためのドライバ。</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>snowflake-sqlalchemy &lt;<a class="reference external" href="https://github.com/snowflakedb/snowflake-sqlalchemy">https://github.com/snowflakedb/snowflake-sqlalchemy</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_ Snowflakeのドライバ&lt;<a class="reference external" href="https://www.snowflake.net/">https://www.snowflake.net/</a>&gt; <a href="#id5"><span class="problematic" id="id6">`</span></a>_。</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy-tds &lt;<a class="reference external" href="https://github.com/m32/sqlalchemy-tds">https://github.com/m32/sqlalchemy-tds</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_ pythone-tdsの上にMS-SQL用の_ドライバ&lt;<a class="reference external" href="https://github.com/denisenkom/pytds">https://github.com/denisenkom/pytds</a>&gt; <a href="#id5"><span class="problematic" id="id6">`</span></a>_。</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>クレート&lt;<a class="reference external" href="https://github.com/crate/crate-python">https://github.com/crate/crate-python</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_ CrateDB用ドライバ&lt;<a class="reference external" href="https://crate.io/">https://crate.io/</a>&gt; <a href="#id5"><span class="problematic" id="id6">`</span></a>_。</li>
 </ul>
 </div>
 <div class="section" id="experimental-incomplete">
-<h3>Experimental / Incomplete<a class="headerlink" href="#experimental-incomplete" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Dialects that are in an incomplete state or are considered somewhat experimental.</p>
+<h3>実験的/不完全な<a class="headerlink" href="#experimental-incomplete" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>不完全な状態にあるか、やや実験的であると考えられる方言。</p>
 <ul class="simple">
-<li><a class="reference external" href="https://bitbucket.org/zzzeek/calchipan/">CALCHIPAN</a> - Adapts <a class="reference external" href="http://pandas.pydata.org/">Pandas</a> dataframes to SQLAlchemy.</li>
-<li><a class="reference external" href="https://bitbucket.org/zzzeek/sqlalchemy-cubrid">sqlalchemy-cubrid</a> - driver for the CUBRID database.</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>カルチパン&lt;<a class="reference external" href="https://bitbucket.org/zzzeek/calchipan/">https://bitbucket.org/zzzeek/calchipan/</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  Pandasを適応させる&lt;<a class="reference external" href="http://pandas.pydata.org/">http://pandas.pydata.org/</a>&gt; <a href="#id5"><span class="problematic" id="id6">`</span></a>_ dataframes to SQLAlchemy。</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy-cubrid &lt;<a class="reference external" href="https://bitbucket.org/zzzeek/sqlalchemy-cubrid">https://bitbucket.org/zzzeek/sqlalchemy-cubrid</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  CUBRIDデータベースのドライバ。</li>
 </ul>
 </div>
 <div class="section" id="attic">
-<h3>Attic<a class="headerlink" href="#attic" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Dialects in the &quot;attic&quot; are those that were contributed for SQLAlchemy long ago
-but have received little attention or demand since then, and are now moved out to
-their own repositories in at best a semi-working state.
-Community members interested in these dialects should feel free to pick up on
-their current codebase and fork off into working libraries.</p>
+<h3>屋根裏<a class="headerlink" href="#attic" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>&amp;quot;屋根裏部屋&amp;quot;の方言は、ずっと前にSQLAlchemyに寄稿されたものですが、それ以来ほとんど注目を集めていませんでした。そして今半分の状態で自分のリポジトリに移動しています。これらの方言に興味のあるコミュニティメンバーは、現在のコードベースを自由に取り上げて作業ライブラリに自由に置くべきです。</p>
 <ul class="simple">
-<li><a class="reference external" href="https://bitbucket.org/zzzeek/sqlalchemy-access">sqlalchemy-access</a> - driver for Microsoft Access.</li>
-<li><a class="reference external" href="https://bitbucket.org/zzzeek/sqlalchemy-drizzle">sqlalchemy-drizzle</a> - driver for the Drizzle MySQL variant.</li>
-<li><a class="reference external" href="https://bitbucket.org/zzzeek/sqlalchemy-informixdb">sqlalchemy-informixdb</a> - driver for the informixdb DBAPI.</li>
-<li><a class="reference external" href="https://bitbucket.org/zzzeek/sqlalchemy-maxdb">sqlalchemy-maxdb</a> - driver for the MaxDB database</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy-access &lt;<a class="reference external" href="https://bitbucket.org/zzzeek/sqlalchemy-access">https://bitbucket.org/zzzeek/sqlalchemy-access</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  Microsoft Access用のドライバ。</li>
+<li><cite>sqlalchemy-drizzle &lt;https://bitbucket.org/zzzeek/sqlalchemy-drizzle&gt; `_ Drizzle MySQLの亜種のための</cite> _  - ドライバ。</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy-informixdb &lt;<a class="reference external" href="https://bitbucket.org/zzzeek/sqlalchemy-informixdb">https://bitbucket.org/zzzeek/sqlalchemy-informixdb</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_ informixdb DBAPIのドライバ。</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy-maxdb &lt;<a class="reference external" href="https://bitbucket.org/zzzeek/sqlalchemy-maxdb">https://bitbucket.org/zzzeek/sqlalchemy-maxdb</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_ MaxDBデータベースのドライバ</li>
 </ul>
 </div>
 </div>
@@ -239,13 +225,13 @@ their current codebase and fork off into working libraries.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="../core/internals.html" title="previous chapter">Core Internals</a>
+        <a href="../core/internals.html" title="previous chapter">コア内部</a>
         Next:
-        <a href="firebird.html" title="next chapter">Firebird</a>
+        <a href="firebird.html" title="next chapter">ファイアバード</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -272,6 +258,7 @@ their current codebase and fork off into working libraries.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

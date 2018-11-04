@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/declarative/inheritance.rst:4
 msgid "Inheritance Configuration"
-msgstr ""
+msgstr "継承の設定"
 
 #: ../../orm/extensions/declarative/inheritance.rst:6
 msgid ""
@@ -28,7 +18,7 @@ msgid ""
 "declarative will determine this from the class itself.   The various "
 "\"polymorphic\" keyword arguments are specified using "
 "``__mapper_args__``."
-msgstr ""
+msgstr "宣言は、可能な限り直感的に継承の3つの形式をサポートします。宣言はクラス自体からこれを判断するので、 `` inherits``マッパーキーワード引数は必要ありません。様々な &quot;多形&quot;キーワード引数は `` __mapper_args__``を使って指定します。"
 
 #: ../../orm/extensions/declarative/inheritance.rst:13
 msgid ""
@@ -36,17 +26,17 @@ msgid ""
 "system interacts with SQLAlchemy ORM inheritance configuration.  See "
 ":ref:`inheritance_toplevel` for a general introduction to inheritance "
 "mapping."
-msgstr ""
+msgstr "このセクションでは、宣言システムがSQLAlchemy ORM継承設定とどのようにやりとりするかについて具体的に説明します。継承マッピングの概要については、：ref： `inheritance_toplevel`を参照してください。"
 
 #: ../../orm/extensions/declarative/inheritance.rst:19
 msgid "Joined Table Inheritance"
-msgstr ""
+msgstr "結合されたテーブル継承"
 
 #: ../../orm/extensions/declarative/inheritance.rst:21
 msgid ""
 "Joined table inheritance is defined as a subclass that defines its own "
 "table::"
-msgstr ""
+msgstr "結合されたテーブルの継承は、独自のテーブルを定義するサブクラスとして定義されます::"
 
 #: ../../orm/extensions/declarative/inheritance.rst:36
 msgid ""
@@ -56,18 +46,18 @@ msgid ""
 "\"Engineer.id\" column taking precedence if queried directly. To provide "
 "the ``Engineer`` class with an attribute that represents only the "
 "``engineers.id`` column, give it a different attribute name::"
-msgstr ""
+msgstr "上記の `` Engineer.id``属性は、 `` Person.id``属性と同じ属性名を共有しているので、実際には `` people.id``と `` engineers.id \ &quot;Engineer.id \&quot;列が直接照会された場合に優先されます。 `` engineers.id``列のみを表す属性を持つ `` Engineer``クラスを提供するには、それに別の属性名::"
 
 #: ../../orm/extensions/declarative/inheritance.rst:54
 msgid "Single Table Inheritance"
-msgstr ""
+msgstr "単一テーブル継承"
 
 #: ../../orm/extensions/declarative/inheritance.rst:56
 msgid ""
 "Single table inheritance is defined as a subclass that does not have its "
 "own table; you just leave out the ``__table__`` and ``__tablename__`` "
 "attributes::"
-msgstr ""
+msgstr "単一テーブルの継承は、独自のテーブルを持たないサブクラスとして定義されます。あなたは `` __table__``と `` __tablename__``属性を残しておきます::"
 
 #: ../../orm/extensions/declarative/inheritance.rst:70
 msgid ""
@@ -82,7 +72,7 @@ msgid ""
 "``exclude_properties`` mapper argument.  Below, ``Manager`` will have all"
 " the attributes of ``Person`` and ``Manager`` but *not* the "
 "``primary_language`` attribute of ``Engineer``::"
-msgstr ""
+msgstr "上記のマッパーが設定されている場合、 `` Person``クラスは、 `` primary_language``カラムが定義される前の `` people``テーブル*にマップされ、このカラムはそれ自身のマッピングには含まれません。 `` Engineer``が `` primary_language``カラムを定義すると、カラムは `` people``テーブルに追加され、 `` Engineer``のマッピングに含まれ、テーブルのフル列のセット。 `` Person``にマップされていない列は、 `` exclude_properties``マッパー引数を使って、他の単独クラスまたは結合された継承クラスからも除外されます。下の `` Manager``は `` Person``と `` Manager``のすべての属性を持ちますが、 `` Engineer``の `` primary_language``属性ではありません::"
 
 #: ../../orm/extensions/declarative/inheritance.rst:86
 msgid ""
@@ -90,11 +80,11 @@ msgid ""
 "mapper argument, and declarative's default behavior can be disabled by "
 "passing an explicit ``exclude_properties`` collection (empty or "
 "otherwise) to the ``__mapper_args__``."
-msgstr ""
+msgstr "属性除外ロジックは `` exclude_properties``マッパー引数で提供され、 `` __mapper_args__``に明示的な `` exclude_properties``コレクション（空かどうか）を渡すことで、宣言のデフォルト動作を無効にすることができます。"
 
 #: ../../orm/extensions/declarative/inheritance.rst:92
 msgid "Resolving Column Conflicts"
-msgstr ""
+msgstr "列の衝突の解決"
 
 #: ../../orm/extensions/declarative/inheritance.rst:94
 msgid ""
@@ -103,13 +93,13 @@ msgid ""
 "declaration on a subclass that has no table of its own.   A tricky case "
 "comes up when two subclasses want to specify *the same* column, as "
 "below::"
-msgstr ""
+msgstr "`` Person .__ table__``に適用される `` primary_language``と `` golf_swing``カラムは、 `` person.__ table__``のテーブルを持たないサブクラスでの宣言の結果、\ &quot;上に移動します。自分の。 2つのサブクラスが*同じ*列を指定したい場合、以下のようにトリッキーなケースが発生します::"
 
 #: ../../orm/extensions/declarative/inheritance.rst:113
 msgid ""
 "Above, the ``start_date`` column declared on both ``Engineer`` and "
 "``Manager`` will result in an error::"
-msgstr ""
+msgstr "上記の `` Engineer``と `` Manager``の両方で宣言された `` start_date``カラムはエラーになります::"
 
 #: ../../orm/extensions/declarative/inheritance.rst:120
 msgid ""
@@ -119,7 +109,7 @@ msgid ""
 ":class:`.declared_attr` to define the :class:`.Column` conditionally, "
 "taking care to return the **existing column** via the parent "
 "``__table__`` if it already exists::"
-msgstr ""
+msgstr "このような状況では、特に `` start_date``列に異なる型があった場合、Declarativeは意図を確認できません。このような状況は：class： `.declared_attr`を使用して：class：` .Column`を条件付きで定義することで解決できます。既に存在する場合は**既存の列**を親の `` __table__``で返すよう注意してください存在する::"
 
 #: ../../orm/extensions/declarative/inheritance.rst:151
 msgid ""
@@ -132,7 +122,7 @@ msgid ""
 "fixing ``start_date``), an error is raised which indicates an existing "
 ":class:`.Column` is trying to be re-assigned to a different owning "
 ":class:`.Table`."
-msgstr ""
+msgstr "上記の `` Manager``がマップされているとき、 `` Person``クラスに `` start_date``カラムはすでに存在しています。 Declarativeは、この場合、class： `.Column`を返します。この場合、同じ列の再割り当てをスキップすることがわかります。 `` start_date``カラムが誤って別のテーブルに再割り当てされるようなマッピングが誤って設定されている場合（例えば `` Manager``を `` start_date``を修正せずに継承結合するように変更した場合）既存の：class： `.Column`が別の所有：class：` .Table`に再割り当てしようとしていることを示すエラーが発生します。"
 
 #: ../../orm/extensions/declarative/inheritance.rst:161
 msgid ""
@@ -141,7 +131,7 @@ msgid ""
 "the mapping as any other attribute.  Previously, the resulting attribute "
 "would be ignored, and also result in a warning being emitted when a "
 "subclass was created."
-msgstr ""
+msgstr "：class： `.declared_attr`はnon-mixinクラスで使うことができ、返される：class：` .Column`や他のマップされた属性は他の属性と同様にマッピングに適用されます。以前は、結果の属性は無視され、サブクラスの作成時に警告が出力されていました。"
 
 #: ../../orm/extensions/declarative/inheritance.rst:167
 msgid ""
@@ -151,13 +141,13 @@ msgid ""
 "assignment of the :class:`.Column` should be skipped, however should "
 "still be mapped on the target class, in order to resolve duplicate column"
 " conflicts."
-msgstr ""
+msgstr "：class： `.declared_attr`は、mixinまたはnon-mixinの宣言的なクラスのいずれかと一緒に使われると、既存の：class：` .Column`を既に親：class： `.Table`に返して、re ：class： `.Column`の割り当てはスキップする必要がありますが、重複するカラムの競合を解決するためには、ターゲットクラスにマッピングする必要があります。"
 
 #: ../../orm/extensions/declarative/inheritance.rst:174
 msgid ""
 "The same concept can be used with mixin classes (see "
 ":ref:`declarative_mixins`)::"
-msgstr ""
+msgstr "mixinクラスでも同じコンセプトを使用できます（ref： `declarative_mixins`を参照）::"
 
 #: ../../orm/extensions/declarative/inheritance.rst:194
 msgid ""
@@ -167,17 +157,17 @@ msgid ""
 "mixing joined- and single-table inheritance, we might want our mixin to "
 "check more carefully if ``cls.__table__`` is really the :class:`.Table` "
 "we're looking for."
-msgstr ""
+msgstr "上記のmixinは、その列のローカルの `` __table__``属性をチェックします。単一のテーブル継承を使用しているので、この場合、 `` cls .__ table__``は `` Person .__ table__``を参照していると確信しています。結合表と単一表の継承を混在させていた場合、 `` cls .__ table__``が実際には：class： `.Table`であるかどうかを確認することができます。"
 
 #: ../../orm/extensions/declarative/inheritance.rst:203
 msgid "Concrete Table Inheritance"
-msgstr ""
+msgstr "具体的なテーブル継承"
 
 #: ../../orm/extensions/declarative/inheritance.rst:205
 msgid ""
 "Concrete is defined as a subclass which has its own table and sets the "
 "``concrete`` keyword argument to ``True``::"
-msgstr ""
+msgstr "Concreteは独自のテーブルを持ち、 `` concrete``キーワード引数を `` True``に設定するサブクラスとして定義されています::"
 
 #: ../../orm/extensions/declarative/inheritance.rst:220
 msgid ""
@@ -185,7 +175,7 @@ msgid ""
 "requires usage of :func:`~sqlalchemy.orm.util.polymorphic_union`, which "
 "needs to be created with the :class:`.Table` objects before the class is "
 "built::"
-msgstr ""
+msgstr "抽象基本クラスの使用法は、func： `〜sqlalchemy.orm.util.polymorphic_union`の使用を必要とするため、少し難解です。クラスをビルドする前に：class：` .Table`オブジェクトで作成する必要があります::"
 
 #: ../../orm/extensions/declarative/inheritance.rst:253
 msgid ""
@@ -193,13 +183,13 @@ msgid ""
 ":class:`.ConcreteBase` provide automation for the above system of "
 "creating a polymorphic union. See the documentation for these helpers as "
 "well as the main ORM documentation on concrete inheritance for details."
-msgstr ""
+msgstr "ヘルパークラス：class： `.AbstractConcreteBase`と：class：` .ConcreteBase`は、上記の多態的な共用体を作るシステムを自動化します。詳細については、これらのヘルパーのドキュメントと、具体的な継承に関する主要なORMのドキュメントを参照してください。"
 
 #: ../../orm/extensions/declarative/inheritance.rst:260
 msgid ":ref:`concrete_inheritance`"
-msgstr ""
+msgstr "：ref： `concrete_inheritance`"
 
 #: ../../orm/extensions/declarative/inheritance.rst:262
 msgid ":ref:`inheritance_concrete_helpers`"
-msgstr ""
+msgstr "：ref： `inheritance_concrete_helpers`"
 

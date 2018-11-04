@@ -10,7 +10,7 @@
         <title>
             
     
-    SQLAlchemy Core
+    SQLAlchemyコア
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,8 +35,8 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="next" title="SQL Expression Language Tutorial" href="tutorial.html" />
-        <link rel="prev" title="ORM Examples" href="../orm/examples.html" />
+        <link rel="next" title="SQL式言語チュートリアル" href="tutorial.html" />
+        <link rel="prev" title="ORMの例" href="../orm/examples.html" />
     <!-- end layout.mako headers -->
 
 
@@ -119,20 +119,20 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="../intro.html">Overview</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../intro.html">概要</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="../orm/index.html">SQLAlchemy ORM</a></span></li>
-<li class="selected"><span class="link-container first"><strong>SQLAlchemy Core</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">SQL Expression Language Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="expression_api.html">SQL Statements and Expressions API</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="schema.html">Schema Definition Language</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="types.html">Column and Data Types</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="engines_connections.html">Engine and Connection Use</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="api_basics.html">Core API Basics</a></span></li>
+<li class="selected"><span class="link-container first"><strong>SQLAlchemyコア</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">SQL式言語チュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="expression_api.html">SQL文と式API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="schema.html">スキーマ定義言語</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="types.html">列とデータ型</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="engines_connections.html">エンジンと接続の使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="api_basics.html">コアAPIの基礎</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="../dialects/index.html">Dialects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../faq/index.html">Frequently Asked Questions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../errors.html">Error Messages</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../dialects/index.html">方言</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../faq/index.html">よくある質問</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../errors.html">エラーメッセージ</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="../changelog/index.html">Changes and Migration</a></span></li>
 </ul>
 
@@ -149,67 +149,64 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="sqlalchemy-core">
-<span id="core-toplevel"></span><h1>SQLAlchemy Core<a class="headerlink" href="#sqlalchemy-core" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The breadth of SQLAlchemy’s SQL rendering engine, DBAPI integration,
-transaction integration, and schema description services are documented here.
-In contrast to the ORM’s domain-centric mode of usage, the SQL Expression
-Language provides a schema-centric usage paradigm.</p>
+<span id="core-toplevel"></span><h1>SQLAlchemyコア<a class="headerlink" href="#sqlalchemy-core" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>SQLAlchemyのSQLレンダリングエンジン、DBAPI統合、トランザクション統合、およびスキーマ記述サービスの幅広い情報がここに記載されています。 ORMのドメイン中心の使用モードとは対照的に、SQL式言語はスキーマ中心の使用パラダイムを提供します。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">SQL Expression Language Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#version-check">Version Check</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#connecting">Connecting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#define-and-create-tables">Define and Create Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#insert-expressions">Insert Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#executing">Executing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#executing-multiple-statements">Executing Multiple Statements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#selecting">Selecting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#operators">Operators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#conjunctions">Conjunctions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#using-textual-sql">Using Textual SQL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#using-aliases">Using Aliases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#using-joins">Using Joins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#everything-else">Everything Else</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#inserts-updates-and-deletes">Inserts, Updates and Deletes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#further-reference">Further Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">SQL式言語チュートリアル</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#version-check">バージョンチェック</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#connecting">接続する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#define-and-create-tables">表の定義と作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#insert-expressions">式の挿入</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#executing">実行中</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#executing-multiple-statements">複数のステートメントの実行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#selecting">選択</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#operators">演算子</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#conjunctions">結合詞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#using-textual-sql">テキストSQLの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#using-aliases">エイリアスの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#using-joins">結合の使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#everything-else">ほかのすべて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#inserts-updates-and-deletes">挿入、更新、および削除</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#further-reference">さらなる参照</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="expression_api.html">SQL Statements and Expressions API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sqlelement.html">Column Elements and Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="selectable.html">Selectables, Tables, FROM objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dml.html">Insert, Updates, Deletes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html">SQL and Generic Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compiler.html">Custom SQL Constructs and Compilation Extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="serializer.html">Expression Serializer Extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expression_api.html">SQL文と式API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sqlelement.html">列要素と式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="selectable.html">選択可能オブジェクト、テーブル、FROMオブジェクト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dml.html">挿入、更新、削除</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html">SQLと汎用関数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiler.html">カスタムSQLコンストラクトとコンパイル拡張</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer.html">式シリアライザ拡張</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="schema.html">Schema Definition Language</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="metadata.html">Describing Databases with MetaData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reflection.html">Reflecting Database Objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="defaults.html">Column Insert/Update Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="constraints.html">Defining Constraints and Indexes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ddl.html">Customizing DDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schema.html">スキーマ定義言語</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">MetaDataを使用したデータベースの記述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reflection.html">データベースオブジェクトの反映</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html">列の挿入/更新のデフォルト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraints.html">制約とインデックスの定義</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ddl.html">DDLのカスタマイズ</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="types.html">Column and Data Types</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="type_basics.html">Column and Data Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom_types.html">Custom Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="type_api.html">Base Type API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types.html">列とデータ型</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="type_basics.html">列とデータ型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_types.html">カスタムタイプ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type_api.html">ベースタイプAPI</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="engines_connections.html">Engine and Connection Use</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="engines.html">Engine Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="connections.html">Working with Engines and Connections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pooling.html">Connection Pooling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="events.html">Core Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="engines_connections.html">エンジンと接続の使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="engines.html">エンジン構成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connections.html">エンジンと接続の操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pooling.html">接続プーリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">コアイベント</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api_basics.html">Core API Basics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="event.html">Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inspection.html">Runtime Inspection API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interfaces.html">Deprecated Event Interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exceptions.html">Core Exceptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="internals.html">Core Internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_basics.html">コアAPIの基礎</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="event.html">イベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspection.html">ランタイム検査API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces.html">推奨されないイベントインターフェイス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exceptions.html">コア例外</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html">コア内部</a></li>
 </ul>
 </li>
 </ul>
@@ -222,13 +219,13 @@ Language provides a schema-centric usage paradigm.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="../orm/examples.html" title="previous chapter">ORM Examples</a>
+        <a href="../orm/examples.html" title="previous chapter">ORMの例</a>
         Next:
-        <a href="tutorial.html" title="next chapter">SQL Expression Language Tutorial</a>
+        <a href="tutorial.html" title="next chapter">SQL式言語チュートリアル</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -255,6 +252,7 @@ Language provides a schema-centric usage paradigm.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

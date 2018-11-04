@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/collections.rst:7
 msgid "Collection Configuration and Techniques"
-msgstr ""
+msgstr "コレクションの構成とテクニック"
 
 #: ../../orm/collections.rst:9
 msgid ""
@@ -28,11 +18,11 @@ msgid ""
 "it's represented as a Python collection when objects are loaded and "
 "manipulated. This section presents additional information about "
 "collection configuration and techniques."
-msgstr ""
+msgstr "：func： `.relationship`関数は、2つのクラス間のリンケージを定義します。リンケージが一対多または多対多の関係を定義するとき、オブジェクトがロードされて操作されるとき、それはPythonコレクションとして表されます。このセクションでは、コレクションの構成とテクニックに関する追加情報を示します。"
 
 #: ../../orm/collections.rst:19
 msgid "Working with Large Collections"
-msgstr ""
+msgstr "大規模コレクションの操作"
 
 #: ../../orm/collections.rst:21
 msgid ""
@@ -46,11 +36,11 @@ msgid ""
 "this is to avoid constraint violations. For large collections of child "
 "items, there are several strategies to bypass full loading of child items"
 " both at load time as well as deletion time."
-msgstr ""
+msgstr "：func： `.relationship`のデフォルトの振る舞いは、関係のローディング戦略に従ってアイテムのコレクションを完全にロードすることです。さらに：class： `.Session`は、デフォルトではセッション内に実際に存在するオブジェクトを削除する方法しか知りません。親インスタンスが削除のためにマークされ、フラッシュされると、：class： `.Session`は子項目の完全なリストをロードして、削除されるか、または外部キー値がnullに設定されるようにします。これは制約違反を避けるためです。子アイテムの大規模なコレクションの場合、ロード時と削除時の両方で子アイテムの完全ロードをバイパスするいくつかの戦略があります。"
 
 #: ../../orm/collections.rst:34
 msgid "Dynamic Relationship Loaders"
-msgstr ""
+msgstr "ダイナミックリレーションシップローダー"
 
 #: ../../orm/collections.rst:36
 msgid ""
@@ -61,13 +51,13 @@ msgid ""
 " accessed. :func:`~sqlalchemy.orm.query.Query.filter` criterion may be "
 "applied as well as limits and offsets, either explicitly or via array "
 "slices::"
-msgstr ""
+msgstr "大規模なコレクションの管理を可能にする重要な機能は、いわゆる「ダイナミック」な関係です。これはオプションの：func： `〜sqlalchemy.orm.relationship`です。これはアクセス時にコレクションの代わりに：class：`〜sqlalchemy.orm.query.Query`オブジェクトを返します。 ：func： `〜sqlalchemy.orm.query.Query.filter`基準を、明示的にまたは配列スライスを介して制限とオフセットだけでなく適用することもできます::"
 
 #: ../../orm/collections.rst:55
 msgid ""
 "The dynamic relationship supports limited write operations, via the "
 "``append()`` and ``remove()`` methods::"
-msgstr ""
+msgstr "動的関係では、 `` append（） ``と `` remove（） ``メソッドを使って制限付きの書き込み操作をサポートしています::"
 
 #: ../../orm/collections.rst:63
 msgid ""
@@ -76,26 +66,26 @@ msgid ""
 "the data has been flushed.  However, as long as \"autoflush\" is enabled "
 "on the :class:`.Session` in use, this will occur automatically each time "
 "the collection is about to emit a query."
-msgstr ""
+msgstr "動的関係の読み取り側は常にデータベースに照会するため、データがフラッシュされるまで、基礎となるコレクションの変更は表示されません。しかし、use：class： `.Session`で\&quot; autoflush \ &quot;が有効になっている限り、コレクションがクエリを送出しようとするたびに自動的に発生します。"
 
 #: ../../orm/collections.rst:70
 msgid ""
 "To place a dynamic relationship on a backref, use the "
 ":func:`~.orm.backref` function in conjunction with ``lazy='dynamic'``::"
-msgstr ""
+msgstr "バックレファレンスに動的関係を置くには、 `` lazy = &#39;dynamic``` :: func： `〜.orm.backref`関数を使用してください。"
 
 #: ../../orm/collections.rst:80
 msgid ""
 "Note that eager/lazy loading options cannot be used in conjunction "
 "dynamic relationships at this time."
-msgstr ""
+msgstr "現時点では、eager / lazyローディングオプションは動的な関係では使用できません。"
 
 #: ../../orm/collections.rst:84
 msgid ""
 "The :func:`~.orm.dynamic_loader` function is essentially the same as "
 ":func:`~.orm.relationship` with the ``lazy='dynamic'`` argument "
 "specified."
-msgstr ""
+msgstr "：func： `〜.orm.dynamic_loader`関数は、基本的に` `lazy = &#39;dynamic&#39;``引数を指定して：func：`〜.orm.relationship`と同じです。"
 
 #: ../../orm/collections.rst:89
 msgid ""
@@ -103,17 +93,17 @@ msgid ""
 " to use \"dynamic\" loaders with many-to-one, one-to-one, or "
 "uselist=False relationships.   Newer versions of SQLAlchemy emit warnings"
 " or exceptions in these cases."
-msgstr ""
+msgstr "\ &quot;ダイナミック\&quot;ローダーは**コレクションのみ**に適用されます。多対1、1対1、またはuselist = Falseの関係を持つ\ &quot;ダイナミック\&quot;ローダーを使用することは有効ではありません。新しいバージョンのSQLAlchemyでは、これらのケースで警告または例外が発生します。"
 
 #: ../../orm/collections.rst:97
 msgid "Setting Noload, RaiseLoad"
-msgstr ""
+msgstr "Noload、RaiseLoadの設定"
 
 #: ../../orm/collections.rst:99
 msgid ""
 "A \"noload\" relationship never loads from the database, even when "
 "accessed.   It is configured using ``lazy='noload'``::"
-msgstr ""
+msgstr "\ &quot;noload \&quot;関係は、たとえアクセスされても、データベースからロードされることはありません。 `` lazy = &#39;noload&#39;`` ::を使って設定されています"
 
 #: ../../orm/collections.rst:107
 msgid ""
@@ -123,14 +113,14 @@ msgid ""
 " are freshly loaded from the database, the ``children`` collection stays "
 "empty.   The noload strategy is also available on a query option basis "
 "using the :func:`.orm.noload` loader option."
-msgstr ""
+msgstr "上記の `` children``コレクションは完全に書き込み可能で、その変更はデータベースに永続化されるだけでなく、追加された時点でローカルで利用可能になります。しかし、 `` MyClass``のインスタンスがデータベースから新しく読み込まれると、 `` children``コレクションは空のままです。 noload戦略は：func： `.orm.noload`ローダーオプションを使用してクエリオプションベースでも利用できます。"
 
 #: ../../orm/collections.rst:114
 msgid ""
 "Alternatively, a \"raise\"-loaded relationship will raise an "
 ":exc:`~sqlalchemy.exc.InvalidRequestError` where the attribute would "
 "normally emit a lazy load::"
-msgstr ""
+msgstr "代わりに、\ &quot;raise \&quot;ロードされた関係では、：exc： `〜sqlalchemy.exc.InvalidRequestError`が発生します。この属性では通常、遅延ロードが発生します::"
 
 #: ../../orm/collections.rst:123
 msgid ""
@@ -144,19 +134,19 @@ msgid ""
 "strategy will cause unloaded attributes to raise immediately if accessed."
 "  The raise strategy is also available on a query option basis using the "
 ":func:`.orm.raiseload` loader option."
-msgstr ""
+msgstr "上で、 `` children``コレクションの属性アクセスは、それが以前にeagerloadedされていなかった場合、例外を送出します。これには読み取りアクセスが含まれますが、コレクションを最初にロードせずにコレクションに変更を加えることはできないため、コレクションは書き込みアクセスにも影響します。これの根拠は、アプリケーションが特定のコンテキスト内で予期しない遅延ロードを発生しないようにすることです。すべての必要な属性が熱心に読み込まれているかどうかを判断するためにSQLログを読み取るのではなく、アクセスするとアンロードされた属性が即座に引き上げられます。 raise戦略は：func： `.orm.raiseload`ローダーオプションを使用してクエリオプションベースでも利用できます。"
 
 #: ../../orm/collections.rst:134
 msgid "added the \"raise\" loader strategy."
-msgstr ""
+msgstr "\ &quot;raise \&quot;ローダー戦略を追加しました。"
 
 #: ../../orm/collections.rst:138
 msgid ":ref:`prevent_lazy_with_raiseload`"
-msgstr ""
+msgstr "：ref： `prevent_lazy_with_raiseload`"
 
 #: ../../orm/collections.rst:143
 msgid "Using Passive Deletes"
-msgstr ""
+msgstr "パッシブ削除の使用"
 
 #: ../../orm/collections.rst:145
 msgid ""
@@ -164,25 +154,25 @@ msgid ""
 "loading on a DELETE operation, in conjunction with \"ON DELETE "
 "(CASCADE|SET NULL)\" on your database to automatically cascade deletes to"
 " child objects::"
-msgstr ""
+msgstr "データベース上の\ &quot;ON DELETE（CASCADE | SET NULL）\&quot;と一緒に、子オブジェクトへの削除を自動的にカスケードするために、paramref： `〜.relationship.passive_deletes`を使用して、"
 
 #: ../../orm/collections.rst:166
 msgid ""
 "To use \"ON DELETE CASCADE\", the underlying database engine must support"
 " foreign keys."
-msgstr ""
+msgstr "\ &quot;ON DELETE CASCADE \&quot;を使用するには、基礎となるデータベースエンジンが外部キーをサポートしていなければなりません。"
 
 #: ../../orm/collections.rst:169
 msgid ""
 "When using MySQL, an appropriate storage engine must be selected.  See "
 ":ref:`mysql_storage_engines` for details."
-msgstr ""
+msgstr "MySQLを使用する場合は、適切なストレージエンジンを選択する必要があります。詳細はref： `mysql_storage_engines`を参照してください。"
 
 #: ../../orm/collections.rst:172
 msgid ""
 "When using SQLite, foreign key support must be enabled explicitly. See "
 ":ref:`sqlite_foreign_keys` for details."
-msgstr ""
+msgstr "SQLiteを使用する場合は、外部キーのサポートを明示的に有効にする必要があります。詳細はref： `sqlite_foreign_keys`を参照してください。"
 
 #: ../../orm/collections.rst:175
 msgid ""
@@ -194,24 +184,24 @@ msgid ""
 "``MyOtherClass`` which are not loaded, SQLAlchemy assumes that \"ON "
 "DELETE CASCADE\" rules will ensure that those rows are deleted by the "
 "database."
-msgstr ""
+msgstr "：paramref： `〜.relationship.passive_deletes`が適用されたとき、` `MyClass``のインスタンスが削除マークされているとき、` `children``関係はメモリにロードされません。セッション中に現在存在する `` MyOtherClass``のインスタンスに対して、 ``カスケード= \ &quot;すべて、削除 - オーファン\&quot; `* *が有効になります。しかし、ロードされていない `` MyOtherClass``のインスタンスの場合、SQLAlchemyは\ &quot;ON DELETE CASCADE \&quot;ルールによってそれらの行がデータベースによって確実に削除されることを保証します。"
 
 #: ../../orm/collections.rst:185
 msgid ""
 ":paramref:`.orm.mapper.passive_deletes` - similar feature on "
 ":func:`.mapper`"
-msgstr ""
+msgstr "：paramref： `.orm.mapper.passive_deletes`  - 類似機能：func：` .mapper`"
 
 #: ../../orm/collections.rst:191
 msgid "Customizing Collection Access"
-msgstr ""
+msgstr "コレクションアクセスのカスタマイズ"
 
 #: ../../orm/collections.rst:193
 msgid ""
 "Mapping a one-to-many or many-to-many relationship results in a "
 "collection of values accessible through an attribute on the parent "
 "instance. By default, this collection is a ``list``::"
-msgstr ""
+msgstr "1対多または多対多の関係をマッピングすると、親インスタンスの属性を介してアクセス可能な値の集合になります。デフォルトでは、このコレクションは `` list`` ::"
 
 #: ../../orm/collections.rst:207
 msgid ""
@@ -220,11 +210,11 @@ msgid ""
 "of the default list, by specifying the "
 ":paramref:`~.relationship.collection_class` option on "
 ":func:`~sqlalchemy.orm.relationship`::"
-msgstr ""
+msgstr "コレクションはリストに限定されません。デフォルトのリストの代わりに、：paramref： `〜.relationship.collection_class`オプションを：func：`〜sqlalchemy.ormに指定することで、セット、変更可能なシーケンス、およびコンテナとして機能することができる他のほぼすべてのPythonオブジェクトをデフォルトリストの代わりに使用できます。関係性::"
 
 #: ../../orm/collections.rst:225
 msgid "Dictionary Collections"
-msgstr ""
+msgstr "辞書コレクション"
 
 #: ../../orm/collections.rst:227
 msgid ""
@@ -236,11 +226,11 @@ msgid ""
 "produces a dictionary class that will apply a particular attribute of the"
 " mapped class as a key.   Below we map an ``Item`` class containing a "
 "dictionary of ``Note`` items keyed to the ``Note.keyword`` attribute::"
-msgstr ""
+msgstr "ディクショナリをコレクションとして使用する場合は、少し詳細が必要です。これは、オブジェクトは常にデータベースからリストとしてロードされるため、キー生成戦略を使用してディクショナリを正しく読み込む必要があるためです。 ：func： `.attribute_mapped_collection`関数は、単純な辞書コレクションを実現する最も一般的な方法です。マップされたクラスの特定の属性をキーとして適用する辞書クラスを生成します。以下では、 `` Note.keyword``属性にキー入力された `` Note``アイテムの辞書を含む `` Item``クラスをマップします::"
 
 #: ../../orm/collections.rst:260
 msgid "``Item.notes`` is then a dictionary::"
-msgstr ""
+msgstr "`` Item.notes``は辞書です::"
 
 #: ../../orm/collections.rst:267
 msgid ""
@@ -248,7 +238,7 @@ msgid ""
 "attribute of each ``Note`` complies with the key in the dictionary.   "
 "Such as, when assigning to ``Item.notes``, the dictionary key we supply "
 "must match that of the actual ``Note`` object::"
-msgstr ""
+msgstr "：func： `.attribute_mapped_collection`は、各` `Note``の` `.keyword``属性が辞書のキーに従っていることを保証します。 `` Item.notes``に代入するときのように、私たちが供給する辞書キーは実際の `` Note``オブジェクトのものと一致しなければなりません::"
 
 #: ../../orm/collections.rst:278
 msgid ""
@@ -257,14 +247,14 @@ msgid ""
 "allows virtually any detail or combination of details about the object to"
 " be used as the key, as below when we establish it as a tuple of "
 "``Note.keyword`` and the first ten letters of the ``Note.text`` field::"
-msgstr ""
+msgstr "：func： `.attribute_mapped_collection`がキーとして使う属性は、全くマッピングする必要はありません！通常のPython `` @ property``を使うと、以下のように、 `` Note.keyword``のタプルと最初の10文字`` Note.text``フィールドの::"
 
 #: ../../orm/collections.rst:307
 msgid ""
 "Above we added a ``Note.item`` backref.  Assigning to this reverse "
 "relationship, the ``Note`` is added to the ``Item.notes`` dictionary and "
 "the key is generated for us automatically::"
-msgstr ""
+msgstr "上記では、 `` Note.item``バックリファレンスを追加しました。この逆の関係に代入すると、 `` Note``が `` Item.notes``辞書に追加され、キーが自動的に生成されます::"
 
 #: ../../orm/collections.rst:316
 msgid ""
@@ -272,7 +262,7 @@ msgid ""
 ":func:`.column_mapped_collection`, which is almost like "
 ":func:`.attribute_mapped_collection` except given the :class:`.Column` "
 "object directly::"
-msgstr ""
+msgstr "他の組み込みの辞書型には、func： `.column_mapped_collection`があります：func：` .attribute_mapped_collection`とほぼ同じです：class： `.Column`オブジェクトを直接渡します::"
 
 #: ../../orm/collections.rst:329
 msgid ""
@@ -280,7 +270,7 @@ msgid ""
 "function. Note that it's usually easier to use "
 ":func:`.attribute_mapped_collection` along with a ``@property`` as "
 "mentioned earlier::"
-msgstr ""
+msgstr "：func： `.mapped_collection`は呼び出し可能な関数に渡されます。 func： `.attribute_mapped_collection`と前述の` `@ property``を使うのが普通です："
 
 #: ../../orm/collections.rst:342
 msgid ""
@@ -288,18 +278,18 @@ msgid ""
 "extension to produce streamlined dictionary views.  See "
 ":ref:`proxying_dictionaries` and :ref:`composite_association_proxy` for "
 "examples."
-msgstr ""
+msgstr "ディクショナリマッピングは\ &quot;Association Proxy \&quot;拡張と組み合わせて使用​​され、効率的な辞書ビューを生成します。例えば：ref： `proxying_dictionaries`と：ref：` composite_association_proxy`を参照してください。"
 
 #: of sqlalchemy.orm.collections.attribute_mapped_collection:1
 msgid "A dictionary-based collection type with attribute-based keying."
-msgstr ""
+msgstr "属性ベースのキーイングを使用する辞書ベースのコレクション型。"
 
 #: of sqlalchemy.orm.collections.attribute_mapped_collection:3
 msgid ""
 "Returns a :class:`.MappedCollection` factory with a keying based on the "
 "'attr_name' attribute of entities in the collection, where ``attr_name`` "
 "is the string name of the attribute."
-msgstr ""
+msgstr "コレクション内のエンティティの &#39;attr_name&#39;属性に基づいたキーイングを持つa：class： `.MappedCollection`ファクトリを返します。ここで` `attr_name``は属性の文字列名です。"
 
 #: of sqlalchemy.orm.collections.attribute_mapped_collection:7
 #: sqlalchemy.orm.collections.column_mapped_collection:7
@@ -309,33 +299,33 @@ msgid ""
 "not, for example, map on foreign key values if those key values will "
 "change during the session, i.e. from None to a database-assigned integer "
 "after a session flush."
-msgstr ""
+msgstr "キー値は、オブジェクトの存続期間中不変でなければなりません。たとえば、セッション中にキー値が変更されると、外部キー値をマップすることはできません。セッションフラッシュ後に、Noneからデータベースに割り当てられた整数に変更することはできません。"
 
 #: of sqlalchemy.orm.collections.column_mapped_collection:1
 msgid "A dictionary-based collection type with column-based keying."
-msgstr ""
+msgstr "列ベースのキーイングを使用する辞書ベースのコレクション型。"
 
 #: of sqlalchemy.orm.collections.column_mapped_collection:3
 msgid ""
 "Returns a :class:`.MappedCollection` factory with a keying function "
 "generated from mapping_spec, which may be a Column or a sequence of "
 "Columns."
-msgstr ""
+msgstr "mapping_specから生成されたキーイング関数を持つa：class： `.MappedCollection`ファクトリを返します。このファンクションは、ColumnまたはColumnの列です。"
 
 #: of sqlalchemy.orm.collections.mapped_collection:1
 msgid "A dictionary-based collection type with arbitrary keying."
-msgstr ""
+msgstr "任意のキーイングを持つ辞書ベースのコレクション型。"
 
 #: of sqlalchemy.orm.collections.mapped_collection:3
 msgid ""
 "Returns a :class:`.MappedCollection` factory with a keying function "
 "generated from keyfunc, a callable that takes an entity and returns a key"
 " value."
-msgstr ""
+msgstr "keyfuncから生成されたキーイング関数を持つa：class： `.MappedCollection`ファクトリを返します。これはエンティティを取り、キー値を返すコール可能です。"
 
 #: ../../orm/collections.rst:353
 msgid "Custom Collection Implementations"
-msgstr ""
+msgstr "カスタムコレクションの実装"
 
 #: ../../orm/collections.rst:355
 msgid ""
@@ -343,7 +333,7 @@ msgid ""
 "inherting from ``list`` or ``set``, adding custom behavior, is all that's"
 " needed. In other cases, special decorators are needed to tell SQLAlchemy"
 " more detail about how the collection operates."
-msgstr ""
+msgstr "コレクションには独自のタイプを使用することもできます。単純なケースでは、 `` list``や `` set``から継承し、カスタム動作を追加するだけで十分です。他のケースでは、コレクションがどのように動作するかについてSQLAlchemyに詳細を知らせるために特別なデコレータが必要です。"
 
 #: ../../orm/collections.rst:362
 msgid ""
@@ -352,7 +342,7 @@ msgid ""
 "form, such as a string that becomes a class instance, or one which goes a"
 " step beyond and represents the data internally in some fashion, "
 "presenting a \"view\" of that data on the outside of a different form."
-msgstr ""
+msgstr "ほとんどの場合、全くありません！ \ &quot;カスタム\&quot;コレクションの最も一般的な使用例は、クラスインスタンスになる文字列や、あるステップを超えていくつかの内部的にデータを表すような、新しいフォームに入力値を検証またはマーシャリングするものですファッション、別のフォームの外側にそのデータの\ &quot;ビュー\&quot;を提示する。"
 
 #: ../../orm/collections.rst:368
 msgid ""
@@ -360,7 +350,7 @@ msgid ""
 "the simplest way to intercept incoming values in all cases for the "
 "purposes of validation and simple marshaling.  See "
 ":ref:`simple_validators` for an example of this."
-msgstr ""
+msgstr "最初のユースケースの場合、：func： `.orm.validates`デコレータは、検証と単純マーシャリングの目的で、すべてのケースで入力値をインターセプトする最も簡単な方法です。これの例は：ref： `simple_validators`を参照してください。"
 
 #: ../../orm/collections.rst:373
 msgid ""
@@ -372,7 +362,7 @@ msgid ""
 "constructed with just a few functions. This approach leaves the "
 "underlying mapped collection unaffected and avoids the need to carefully "
 "tailor collection behavior on a method-by-method basis."
-msgstr ""
+msgstr "2番目のユースケースの場合、：ref： `associationproxy_toplevel`拡張は、テスト対象のオブジェクトに存在するいくつかの属性の観点から、コレクションの読み取り/書き込み\&quot;ビュー\ &quot;を提供する充分にテストされ、広く使われているシステムです。ターゲット属性は事実上何かを返す `` @ property``であることができるので、少数の関数だけでコレクションの\ &quot;代替\&quot;ビューの幅広い配列を構築することができます。このアプローチでは、基になるマップされたコレクションに影響を与えず、メソッドごとにコレクションの振る舞いを慎重に調整する必要がありません。"
 
 #: ../../orm/collections.rst:382
 msgid ""
@@ -380,7 +370,7 @@ msgid ""
 "special behaviors upon access or mutation operations that can't otherwise"
 " be modeled externally to the collection.   They can of course be "
 "combined with the above two approaches."
-msgstr ""
+msgstr "カスタマイズされたコレクションは、コレクションが外部でモデル化されないアクセス操作や突然変異操作で特殊な動作を行う必要がある場合に便利です。もちろん、それらは上記の2つのアプローチと組み合わせることができます。"
 
 #: ../../orm/collections.rst:387
 msgid ""
@@ -393,7 +383,7 @@ msgid ""
 ":class:`~sqlalchemy.orm.session.Session` (i.e. the ``save-update`` "
 "cascade), as well as synchronizing the state of a bi-directional "
 "relationship (i.e. a :func:`.backref`)."
-msgstr ""
+msgstr "SQLAlchemyのコレクションは透過的に計装*されています。計装とは、コレクションの通常の操作が追跡され、フラッシュ時に変更がデータベースに書き込まれることを意味します。さらに、収集操作では、いくつかの2次操作が行われなければならないことを示す*イベント*を発生させることができます。二次操作の例としては、親アイテムのclass： `〜sqlalchemy.orm.session.Session`（つまり` `save-update``カスケード）に子アイテムを保存することと、双方向の状態を同期させる関係（つまり、a：func： `.backref`）です。"
 
 #: ../../orm/collections.rst:396
 msgid ""
@@ -401,28 +391,28 @@ msgid ""
 "and dicts and will automatically apply instrumentation to those built-in "
 "types and their subclasses. Object-derived types that implement a basic "
 "collection interface are detected and instrumented via duck-typing:"
-msgstr ""
+msgstr "collectionsパッケージは、リスト、セット、およびディクテーションの基本インターフェースを理解し、それらの組み込みタイプとそのサブクラスに自動的にインストゥルメンテーションを適用します。基本コレクションインターフェイスを実装するオブジェクト派生型は、ダックタイピングによって検出され計測されます。"
 
 #: ../../orm/collections.rst:417
 msgid ""
 "``append``, ``remove``, and ``extend`` are known list-like methods, and "
 "will be instrumented automatically. ``__iter__`` is not a mutator method "
 "and won't be instrumented, and ``foo`` won't be either."
-msgstr ""
+msgstr "`` append``、 `` remove``、 `` extend``はリスト形式のメソッドであり、自動的にインストルメントされます。 `` __iter__``はミューテータメソッドではなく、インストゥルメントされませんし、 `` foo``もそれにはなりません。"
 
 #: ../../orm/collections.rst:421
 msgid ""
 "Duck-typing (i.e. guesswork) isn't rock-solid, of course, so you can be "
 "explicit about the interface you are implementing by providing an "
 "``__emulates__`` class attribute::"
-msgstr ""
+msgstr "もちろん、ダックタイピング（guesswork）は固いものではないので、あなたは `` __emulates__``クラス属性を提供することで実装しているインターフェースを明示することができます::"
 
 #: ../../orm/collections.rst:437
 msgid ""
 "This class looks list-like because of ``append``, but ``__emulates__`` "
 "forces it to set-like. ``remove`` is known to be part of the set "
 "interface and will be instrumented."
-msgstr ""
+msgstr "このクラスは `` append``のためにリストのように見えますが、 `` __emulates__``はそれを強制的にset-likeにします。 `` remove``は設定されたインターフェースの一部であることが知られており、インストルメントされます。"
 
 #: ../../orm/collections.rst:441
 msgid ""
@@ -433,11 +423,11 @@ msgid ""
 " used automatically when present. This set-like class does not provide "
 "the expected ``add`` method, so we must supply an explicit mapping for "
 "the ORM via a decorator."
-msgstr ""
+msgstr "しかし、このクラスはまだ動作しません。SQLAlchemyで使用するためには少し接着剤が必要です。 ORMは、コレクションのメンバーを追加、削除、反復するために使用するメソッドを知る必要があります。 `` list``や `` set``のような型を使うとき、適切なメソッドはよく知られていて、自動的に使われます。このset-likeクラスは期待される `` add``メソッドを提供しないので、デコレータを介してORMの明示的なマッピングを提供する必要があります。"
 
 #: ../../orm/collections.rst:450
 msgid "Annotating Custom Collections via Decorators"
-msgstr ""
+msgstr "デコレータを使用してカスタムコレクションに注釈を付ける"
 
 #: ../../orm/collections.rst:452
 msgid ""
@@ -445,7 +435,7 @@ msgid ""
 "manage collections. Use them when your class doesn't quite meet the "
 "regular interface for its container type, or when you otherwise would "
 "like to use a different method to get the job done."
-msgstr ""
+msgstr "デコレータを使用すると、ORMがコレクションを管理するために必要な個々のメソッドにタグを付けることができます。あなたのクラスがそのコンテナタイプの通常のインターフェースをまったく満たしていないときや、そうでなければ別のメソッドを使って仕事をやりたいときに使います。"
 
 #: ../../orm/collections.rst:477
 msgid ""
@@ -453,7 +443,7 @@ msgid ""
 " instances via the ``append`` method. ``remove`` and ``__iter__`` are the"
 " default methods for sets and will be used for removing and iteration. "
 "Default methods can be changed as well:"
-msgstr ""
+msgstr "この例を完了するために必要なのはこれだけです。 SQLAlchemyは `` append``メソッドでインスタンスを追加します。 `` remove``と `` __iter__``はセットのデフォルトメソッドであり、削除と反復に使用されます。デフォルトのメソッドも同様に変更できます。"
 
 #: ../../orm/collections.rst:495
 msgid ""
@@ -462,32 +452,32 @@ msgid ""
 "iterate interface marked for SQLAlchemy's use. Append and remove methods "
 "will be called with a mapped entity as the single argument, and iterator "
 "methods are called with no arguments and must return an iterator."
-msgstr ""
+msgstr "リストやセットにする必要は全くありません。コレクションクラスは、SQLAlchemyの使用のためにマークされたインタフェースを追加、削除、反復する限り、任意の形状にすることができます。メソッドの追加と削除は、マッピングされたエンティティを単一の引数として呼び出され、イテレータメソッドは引数なしで呼び出され、イテレータを返す必要があります。"
 
 #: of sqlalchemy.orm.collections.collection:1
 msgid "Decorators for entity collection classes."
-msgstr ""
+msgstr "エンティティコレクションクラスのデコレータ。"
 
 #: of sqlalchemy.orm.collections.collection:3
 msgid "The decorators fall into two groups: annotations and interception recipes."
-msgstr ""
+msgstr "デコレータは、アノテーションとインターセプトレシピという2つのグループに分類されます。"
 
 #: of sqlalchemy.orm.collections.collection:5
 msgid ""
 "The annotating decorators (appender, remover, iterator, linker, "
 "converter, internally_instrumented) indicate the method's purpose and "
 "take no arguments.  They are not written with parens::"
-msgstr ""
+msgstr "注釈デコレータ（appender、remover、iterator、linker、converter、internally_instrumented）は、メソッドの目的を示し、引数をとりません。彼らはparensと書かれていません::"
 
 #: of sqlalchemy.orm.collections.collection:12
 msgid ""
 "The recipe decorators all require parens, even those that take no "
 "arguments::"
-msgstr ""
+msgstr "レシピデコレータはすべて引数を取らないものであっても括弧を必要とします::"
 
 #: of sqlalchemy.orm.collections.collection.adds:1
 msgid "Mark the method as adding an entity to the collection."
-msgstr ""
+msgstr "メソッドを、コレクションにエンティティを追加するものとしてマークします。"
 
 #: of sqlalchemy.orm.collections.collection.adds:3
 msgid ""
@@ -495,18 +485,18 @@ msgid ""
 "argument indicates which method argument holds the SQLAlchemy-relevant "
 "value.  Arguments can be specified positionally (i.e. integer) or by "
 "name::"
-msgstr ""
+msgstr "メソッドへの &quot;コレクションへの追加&quot;処理を追加します。 decorator引数は、SQLAlchemy関連値を保持するメソッド引数を示します。引数は位置的（すなわち整数）または名前で指定することができます::"
 
 #: of sqlalchemy.orm.collections.collection.appender:1
 msgid "Tag the method as the collection appender."
-msgstr ""
+msgstr "メソッドをコレクションアペンダーとしてタグ付けします。"
 
 #: of sqlalchemy.orm.collections.collection.appender:3
 msgid ""
 "The appender method is called with one positional argument: the value to "
 "append. The method will be automatically decorated with 'adds(1)' if not "
 "already decorated::"
-msgstr ""
+msgstr "appenderメソッドは、1つの位置引数、つまり追加する値で呼び出されます。メソッドは自動的に &#39;adds（1）&#39;が装飾されていなければ装飾されます::"
 
 #: of sqlalchemy.orm.collections.collection.appender:28
 msgid ""
@@ -515,28 +505,28 @@ msgid ""
 "for each object mapped by a database query.  If the database contains "
 "rows that violate your collection semantics, you will need to get "
 "creative to fix the problem, as access via the collection will not work."
-msgstr ""
+msgstr "追加する値がコレクション内で許可されていない場合は、例外を発生させることができます。覚えておかなければならないのは、アペンダーがデータベースクエリによってマップされた各オブジェクトに対して呼び出されるということです。データベースにコレクションのセマンティクスに違反する行が含まれている場合は、コレクションを介したアクセスが機能しないため、問題を解決するために創造的に対応する必要があります。"
 
 #: of sqlalchemy.orm.collections.collection.appender:35
 msgid ""
 "If the appender method is internally instrumented, you must also receive "
 "the keyword argument '_sa_initiator' and ensure its promulgation to "
 "collection events."
-msgstr ""
+msgstr "アペンダーメソッドが内部で計装されている場合は、キーワード引数 &#39;_sa_initiator&#39;も受け取らなければならず、コレクションイベントへの公布が確実に行われなければなりません。"
 
 #: of sqlalchemy.orm.collections.collection.converter:1
 msgid "Tag the method as the collection converter."
-msgstr ""
+msgstr "メソッドをコレクションコンバータとしてタグ付けします。"
 
 #: of sqlalchemy.orm.collections.collection.converter:3
 msgid "Use the bulk_replace event handler"
-msgstr ""
+msgstr "bulk_replaceイベントハンドラを使用する"
 
 #: of sqlalchemy.orm.collections.collection.converter:5
 msgid ""
 "This optional method will be called when a collection is being replaced "
 "entirely, as in::"
-msgstr ""
+msgstr "このオプションのメソッドは、コレクションが完全に置き換えられるときに呼び出されます。::"
 
 #: of sqlalchemy.orm.collections.collection.converter:10
 msgid ""
@@ -545,31 +535,31 @@ msgid ""
 "  A converter must not assign values or mutate the collection, its sole "
 "job is to adapt the value the user provides into an iterable of values "
 "for the ORM's use."
-msgstr ""
+msgstr "コンバータメソッドは割り当てられているオブジェクトを受け取り、 `` appender``メソッドで使用するのに適した値の繰り返し可能性を返さなければなりません。コンバーターは値を割り当てたり、コレクションを変更したりしてはいけません。その唯一の仕事は、ユーザーが提供する値をORMの使用のための反復可能な値に適合させることです。"
 
 #: of sqlalchemy.orm.collections.collection.converter:16
 msgid ""
 "The default converter implementation will use duck-typing to do the "
 "conversion.  A dict-like collection will be convert into an iterable of "
 "dictionary values, and other types will simply be iterated::"
-msgstr ""
+msgstr "デフォルトのコンバータの実装では、ダックタイピングを使用して変換が行われます。 dict-likeコレクションは辞書値の繰り返し可能性に変換され、他の型は単純に反復されます::"
 
 #: of sqlalchemy.orm.collections.collection.converter:23
 msgid ""
 "If the duck-typing of the object does not match the type of this "
 "collection, a TypeError is raised."
-msgstr ""
+msgstr "オブジェクトのダックタイピングがこのコレクションの型と一致しない場合、TypeErrorが発生します。"
 
 #: of sqlalchemy.orm.collections.collection.converter:26
 msgid ""
 "Supply an implementation of this method if you want to expand the range "
 "of possible types that can be assigned in bulk or perform validation on "
 "the values about to be assigned."
-msgstr ""
+msgstr "バルクで割り当てることができる可能な型の範囲を拡張したい場合や、割り当てようとしている値に対して検証を実行する場合は、このメソッドの実装を指定します。"
 
 #: of sqlalchemy.orm.collections.collection.internally_instrumented:1
 msgid "Tag the method as instrumented."
-msgstr ""
+msgstr "メソッドに計測器としてタグを付けます。"
 
 #: of sqlalchemy.orm.collections.collection.internally_instrumented:3
 msgid ""
@@ -578,26 +568,26 @@ msgid ""
 ":func:`.collection_adapter` in one of the basic SQLAlchemy interface "
 "methods, or to prevent an automatic ABC method decoration from wrapping "
 "your implementation::"
-msgstr ""
+msgstr "このタグは、装飾がメソッドに適用されないようにします。基本的なSQLAlchemyインターフェースメソッドの1つでfunc： `.collection_adapter`への呼び出しをオーケストレーションする場合や、自動ABCメソッドのデコレーションが実装をラップしないようにする場合に使用します::"
 
 #: of sqlalchemy.orm.collections.collection.iterator:1
 #: sqlalchemy.orm.collections.collection.remover:1
 msgid "Tag the method as the collection remover."
-msgstr ""
+msgstr "メソッドをコレクションリムーバとしてタグ付けします。"
 
 #: of sqlalchemy.orm.collections.collection.iterator:3
 msgid ""
 "The iterator method is called with no arguments.  It is expected to "
 "return an iterator over all collection members::"
-msgstr ""
+msgstr "反復子メソッドは引数なしで呼び出されます。すべてのコレクションメンバーに対してイテレータを返すことが期待されています::"
 
 #: of sqlalchemy.orm.collections.collection.link:1
 msgid "deprecated; synonym for :meth:`.collection.linker`."
-msgstr ""
+msgstr "廃止されました。 ：meth： `.collection.linker`の同義語です。"
 
 #: of sqlalchemy.orm.collections.collection.linker:1
 msgid "Tag the method as a \"linked to attribute\" event handler."
-msgstr ""
+msgstr "このメソッドに\ &quot;リンクされた属性\&quot;イベントハンドラとしてタグを付けます。"
 
 #: of sqlalchemy.orm.collections.collection.linker:3
 msgid ""
@@ -606,39 +596,39 @@ msgid ""
 "immediately after the '_sa_adapter' property is set on the instance.  A "
 "single argument is passed: the collection adapter that has been linked, "
 "or None if unlinking."
-msgstr ""
+msgstr "このオプションのイベントハンドラは、コレクションクラスがInstrumentedAttributeにリンクされているか、リンクされていないときに呼び出されます。これは、インスタンスに &#39;_sa_adapter&#39;プロパティが設定された直後に呼び出されます。 1つの引数が渡されます：リンクされたコレクションアダプタ、またはリンクを解除する場合はNoneです。"
 
 #: of sqlalchemy.orm.collections.collection.linker:9
 msgid ""
 "- the :meth:`.collection.linker` handler is superseded by the "
 ":meth:`.AttributeEvents.init_collection` and "
 ":meth:`.AttributeEvents.dispose_collection` handlers."
-msgstr ""
+msgstr "- ：meth： `.collection.linker`ハンドラーは、：meth：` .AttributeEvents.init_collection`ハンドラーと：meth： `.AttributeEvents.dispose_collection`ハンドラーによって置き換えられます。"
 
 #: of sqlalchemy.orm.collections.collection.remover:3
 msgid ""
 "The remover method is called with one positional argument: the value to "
 "remove. The method will be automatically decorated with "
 ":meth:`removes_return` if not already decorated::"
-msgstr ""
+msgstr "除去メソッドは、1つの位置引数、つまり削除する値で呼び出されます。メソッドは自動的に装飾されます：meth： `remov_return`まだ装飾されていない場合::"
 
 #: of sqlalchemy.orm.collections.collection.remover:15
 msgid ""
 "If the value to remove is not present in the collection, you may raise an"
 " exception or return None to ignore the error."
-msgstr ""
+msgstr "削除する値がコレクションに存在しない場合は、例外を発生させるか、Noneを返してエラーを無視することができます。"
 
 #: of sqlalchemy.orm.collections.collection.remover:18
 msgid ""
 "If the remove method is internally instrumented, you must also receive "
 "the keyword argument '_sa_initiator' and ensure its promulgation to "
 "collection events."
-msgstr ""
+msgstr "removeメソッドが内部的にインスツルメンテーションされている場合は、キーワード引数 &#39;_sa_initiator&#39;も受け取らなければならず、コレクションイベントへの宣言が確実に行われなければなりません。"
 
 #: of sqlalchemy.orm.collections.collection.removes:1
 #: sqlalchemy.orm.collections.collection.removes_return:1
 msgid "Mark the method as removing an entity in the collection."
-msgstr ""
+msgstr "メソッドをコレクション内のエンティティを削除するものとしてマークします。"
 
 #: of sqlalchemy.orm.collections.collection.removes:3
 msgid ""
@@ -646,30 +636,30 @@ msgid ""
 "argument indicates which method argument holds the SQLAlchemy-relevant "
 "value to be removed. Arguments can be specified positionally (i.e. "
 "integer) or by name::"
-msgstr ""
+msgstr "メソッドへの &quot;コレクションからの削除&quot;処理を追加します。デコレータ引数は、削除されるSQLAlchemy関連値を保持するメソッド引数を示します。引数は位置的（すなわち整数）または名前で指定することができます::"
 
 #: of sqlalchemy.orm.collections.collection.removes:11
 msgid ""
 "For methods where the value to remove is not known at call-time, use "
 "collection.removes_return."
-msgstr ""
+msgstr "コール時に削除する値がわからないメソッドの場合は、collection.removes_returnを使用します。"
 
 #: of sqlalchemy.orm.collections.collection.removes_return:3
 msgid ""
 "Adds \"remove from collection\" handling to the method.  The return value"
 " of the method, if any, is considered the value to remove.  The method "
 "arguments are not inspected::"
-msgstr ""
+msgstr "メソッドへの &quot;コレクションからの削除&quot;処理を追加します。メソッドの戻り値があれば、削除する値とみなされます。メソッド引数は検査されません::"
 
 #: of sqlalchemy.orm.collections.collection.removes_return:10
 msgid ""
 "For methods where the value to remove is known at call-time, use "
 "collection.remove."
-msgstr ""
+msgstr "削除する値がコール時にわかっているメソッドの場合は、collection.removeを使用します。"
 
 #: of sqlalchemy.orm.collections.collection.replaces:1
 msgid "Mark the method as replacing an entity in the collection."
-msgstr ""
+msgstr "メソッドをコレクション内のエンティティを置き換えるものとしてマークします。"
 
 #: of sqlalchemy.orm.collections.collection.replaces:3
 msgid ""
@@ -677,15 +667,15 @@ msgid ""
 " method.  The decorator argument indicates which method argument holds "
 "the SQLAlchemy-relevant value to be added, and return value, if any will "
 "be considered the value to remove."
-msgstr ""
+msgstr "\ &quot;コレクションに追加\&quot;と\ &quot;コレクションから削除\&quot;をメソッドに追加します。 decorator引数は、追加するSQLAlchemy関連値を保持するメソッド引数と、削除する値があるとみなされる場合は戻り値を示します。"
 
 #: of sqlalchemy.orm.collections.collection.replaces:8
 msgid "Arguments can be specified positionally (i.e. integer) or by name::"
-msgstr ""
+msgstr "引数は位置的（すなわち整数）または名前で指定することができます::"
 
 #: ../../orm/collections.rst:507
 msgid "Custom Dictionary-Based Collections"
-msgstr ""
+msgstr "カスタム辞書ベースのコレクション"
 
 #: ../../orm/collections.rst:509
 msgid ""
@@ -693,7 +683,7 @@ msgid ""
 " custom types or as a mix-in to quickly add ``dict`` collection support "
 "to other classes. It uses a keying function to delegate to "
 "``__setitem__`` and ``__delitem__``:"
-msgstr ""
+msgstr "：class： `.MappedCollection`クラスは、あなたのカスタムタイプの基本クラスとして使うことも、他のクラスに` `dict``コレクションのサポートを素早く追加するためのミックスインとして使うこともできます。これはキーイング関数を使って `` __setitem__``と `` __delitem__``に委譲します："
 
 #: ../../orm/collections.rst:526
 msgid ""
@@ -705,7 +695,7 @@ msgid ""
 "them from within an already instrumented call can cause events to be "
 "fired off repeatedly, or inappropriately, leading to internal state "
 "corruption in rare cases::"
-msgstr ""
+msgstr "class： `.MappedCollection`をサブクラス化するとき、` `__setitem __（）` `や` `__delitem __（）` `のユーザ定義バージョンは：meth：` .collection.internally_instrumented`、** if ** they同じメソッドを：class： `.MappedCollection`で呼び出してください。これは：class： `.MappedCollection`のメソッドが既にインスツルメンテーションされているためです。すでにインストルメントされているコールの中からそれらを呼び出すと、イベントが繰り返し発生したり、不適切に発生したりすることがあります。"
 
 #: ../../orm/collections.rst:554
 msgid ""
@@ -716,7 +706,7 @@ msgid ""
 "there are no compatible methods in the basic dictionary interface for "
 "SQLAlchemy to use by default. Iteration will go through ``itervalues()`` "
 "unless otherwise decorated."
-msgstr ""
+msgstr "ORMはリストやセットと同様に `` dict``インターフェースを理解し、 `` dict``をサブクラス化するか、duck-typedクラスでdict-likeコレクション動作を提供するかを選択すると、自動的にすべてのdict-likeメソッドを計測します。あなたはアペンダーとリムーバーメソッドを装飾する必要がありますが、デフォルトで使用するSQLAlchemyの基本辞書インターフェイスには互換性のあるメソッドはありません。反復は、別途装飾されていない限り、 `` itervalues（） ``を実行します。"
 
 #: ../../orm/collections.rst:563
 msgid ""
@@ -724,18 +714,18 @@ msgid ""
 "usually needs to be called before a custom subclass of "
 ":class:`.MappedCollection` which uses "
 ":meth:`.collection.internally_instrumented` can be used::"
-msgstr ""
+msgstr "バージョン0.7.6より前のMappedCollectionのバグのため、この回避策は、通常：class： `.MappedCollection`のカスタムサブクラスの前に呼び出される必要があります：meth：` .collection.internally_instrumented`を使用することができます::"
 
 #: ../../orm/collections.rst:571
 msgid ""
 "This will ensure that the :class:`.MappedCollection` has been properly "
 "initialized with custom ``__setitem__()`` and ``__delitem__()`` methods "
 "before used in a custom subclass."
-msgstr ""
+msgstr "これにより、：class： `.MappedCollection`がカスタムサブクラスで使用される前にカスタムの` `__setitem __（）` `と` `__delitem __（）` `メソッドで適切に初期化されていることを保証します。"
 
 #: of sqlalchemy.orm.collections.MappedCollection:1
 msgid "A basic dictionary-based collection class."
-msgstr ""
+msgstr "基本的な辞書ベースのコレクションクラス。"
 
 #: of sqlalchemy.orm.collections.MappedCollection:3
 msgid ""
@@ -743,34 +733,34 @@ msgid ""
 "require. ``set`` and ``remove`` are implemented in terms of a keying "
 "function: any callable that takes an object and returns an object for use"
 " as a dictionary key."
-msgstr ""
+msgstr "コレクションクラスに必要な最小限のバッグセマンティクスで補完します。 `` set``と `` remove``は、キーイング関数の形で実装されています。オブジェクトを取って辞書キーとして使うオブジェクトを返す呼び出し可能なものです。"
 
 #: of sqlalchemy.orm.collections.MappedCollection.pop:1
 msgid "If key is not found, d is returned if given, otherwise KeyError is raised"
-msgstr ""
+msgstr "keyが見つからなければ、与えられればdが返され、そうでなければKeyErrorが発生します"
 
 #: of sqlalchemy.orm.collections.MappedCollection.popitem:1
 msgid "2-tuple; but raise KeyError if D is empty."
-msgstr ""
+msgstr "2タプル; Dが空の場合はKeyErrorを上げます。"
 
 #: of sqlalchemy.orm.collections.MappedCollection.remove:1
 msgid "Remove an item by value, consulting the keyfunc for the key."
-msgstr ""
+msgstr "値で項目を削除し、キーのkeyfuncと相談します。"
 
 #: of sqlalchemy.orm.collections.MappedCollection.set:1
 msgid "Add an item by value, consulting the keyfunc for the key."
-msgstr ""
+msgstr "値で項目を追加し、キーのkeyfuncと相談します。"
 
 #: of sqlalchemy.orm.collections.MappedCollection.update:1
 msgid ""
 "If E is present and has a .keys() method, then does:  for k in E: D[k] = "
 "E[k] If E is present and lacks a .keys() method, then does:  for k, v in "
 "E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]"
-msgstr ""
+msgstr "もしEが存在し、そして.keys（）メソッドを持っていれば、E：D [k] = E [k] F [k] = F [k]であるとき、E：D [k] = vのいずれかの場合、"
 
 #: ../../orm/collections.rst:579
 msgid "Instrumentation and Custom Types"
-msgstr ""
+msgstr "計装とカスタムタイプ"
 
 #: ../../orm/collections.rst:581
 msgid ""
@@ -778,7 +768,7 @@ msgid ""
 "collection type as-is without further ado. However, it is important to "
 "note that the instrumentation process will modify the type, adding "
 "decorators around methods automatically."
-msgstr ""
+msgstr "多くのカスタムタイプと既存のライブラリクラスは、そのままのエンティティコレクションタイプとしてそのまま使用できます。しかし、インストルメンテーションプロセスはタイプを変更し、メソッドの周りにデコレータを自動的に追加することに注意することが重要です。"
 
 #: ../../orm/collections.rst:586
 msgid ""
@@ -787,25 +777,25 @@ msgid ""
 "library class as a collection, it can be good practice to use the "
 "\"trivial subclass\" trick to restrict the decorations to just your usage"
 " in relationships. For example:"
-msgstr ""
+msgstr "デコレーションは軽量で、関係の外では何も操作しませんが、他の場所でトリガされると不要なオーバーヘッドが追加されます。ライブラリクラスをコレクションとして使用する場合、\ &quot;トリビアルサブクラス\&quot;トリックを使用して装飾をリレーションシップでの使用に限定することをお勧めします。例えば："
 
 #: ../../orm/collections.rst:598
 msgid ""
 "The ORM uses this approach for built-ins, quietly substituting a trivial "
 "subclass when a ``list``, ``set`` or ``dict`` is used directly."
-msgstr ""
+msgstr "ORMは、 `` list``、 `` set``または `` dict``を直接使用するとき、静かにサブクラスに置き換えて、組み込み関数にこのアプローチを使用します。"
 
 #: ../../orm/collections.rst:602
 msgid "Collection Internals"
-msgstr ""
+msgstr "コレクション内部"
 
 #: ../../orm/collections.rst:604
 msgid "Various internal methods."
-msgstr ""
+msgstr "さまざまな内部メソッド。"
 
 #: of sqlalchemy.orm.collections.bulk_replace:1
 msgid "Load a new collection, firing events based on prior like membership."
-msgstr ""
+msgstr "新しいコレクションを読み込み、以前のメンバーシップに基づいてイベントを発生させます。"
 
 #: of sqlalchemy.orm.collections.bulk_replace:3
 msgid ""
@@ -813,71 +803,71 @@ msgid ""
 "fired for any instance not present in the ``existing_adapter``.  Any "
 "instances in ``existing_adapter`` not present in ``values`` will have "
 "remove events fired upon them."
-msgstr ""
+msgstr "`` values``のインスタンスを `` new_adapter``に追加します。イベントは `` existing_adapter``に存在しないインスタンスに対して起動されます。 `` values``に存在しない `` existing_adapter``内のインスタンスはすべて削除イベントが発生します。"
 
 #: of sqlalchemy.orm.collections.bulk_replace
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.orm.collections.bulk_replace:8
 msgid "An iterable of collection member instances"
-msgstr ""
+msgstr "コレクションメンバーインスタンスの繰り返し可能"
 
 #: of sqlalchemy.orm.collections.bulk_replace:10
 msgid "A :class:`.CollectionAdapter` of instances to be replaced"
-msgstr ""
+msgstr "A：class：置き換えられるインスタンスの `.CollectionAdapter`"
 
 #: of sqlalchemy.orm.collections.bulk_replace:13
 msgid "An empty :class:`.CollectionAdapter` to load with ``values``"
-msgstr ""
+msgstr "空の：class： `` Values``でロードする `.CollectionAdapter`"
 
 #: of sqlalchemy.orm.collections.collection_adapter:1
 msgid "Fetch the :class:`.CollectionAdapter` for a collection."
-msgstr ""
+msgstr "Collection：class： `.CollectionAdapter`を取得します。"
 
 #: of sqlalchemy.orm.collections.CollectionAdapter:1
 msgid "Bridges between the ORM and arbitrary Python collections."
-msgstr ""
+msgstr "ORMと任意のPythonコレクションとの間のブリッジ。"
 
 #: of sqlalchemy.orm.collections.CollectionAdapter:3
 msgid ""
 "Proxies base-level collection operations (append, remove, iterate) to the"
 " underlying Python collection, and emits add/remove events for entities "
 "entering or leaving the collection."
-msgstr ""
+msgstr "基底のPythonコレクションに基本レベルのコレクション操作（追加、削除、反復）をプロキシし、コレクションに入ったり出るエンティティの追加/削除イベントを発行します。"
 
 #: of sqlalchemy.orm.collections.CollectionAdapter:7
 msgid ""
 "The ORM uses :class:`.CollectionAdapter` exclusively for interaction with"
 " entity collections."
-msgstr ""
+msgstr "ORMは、class： `.CollectionAdapter`をエンティティコレクションとの相互作用のために排他的に使用します。"
 
 #: of sqlalchemy.orm.collections.InstrumentedDict:1
 msgid "An instrumented version of the built-in dict."
-msgstr ""
+msgstr "組み込み命令のインストルメント版。"
 
 #: of sqlalchemy.orm.collections.InstrumentedList:1
 msgid "An instrumented version of the built-in list."
-msgstr ""
+msgstr "組み込みリストのインストルメント版。"
 
 #: of sqlalchemy.orm.collections.InstrumentedSet:1
 msgid "An instrumented version of the built-in set."
-msgstr ""
+msgstr "組み込みセットの計装版。"
 
 #: of sqlalchemy.orm.collections.prepare_instrumentation:1
 msgid "Prepare a callable for future use as a collection class factory."
-msgstr ""
+msgstr "コレクションクラスファクトリとしての将来の使用のためにコールバックを準備する。"
 
 #: of sqlalchemy.orm.collections.prepare_instrumentation:3
 msgid ""
 "Given a collection class factory (either a type or no-arg callable), "
 "return another factory that will produce compatible instances when "
 "called."
-msgstr ""
+msgstr "コレクションクラスファクトリ（型または無引数呼び出し可能）を指定すると、呼び出されると互換性のあるインスタンスを生成する別のファクトリを返します。"
 
 #: of sqlalchemy.orm.collections.prepare_instrumentation:7
 msgid ""
 "This function is responsible for converting collection_class=list into "
 "the run-time behavior of collection_class=InstrumentedList."
-msgstr ""
+msgstr "この関数は、collection_class = listをcollection_class = InstrumentedListの実行時動作に変換する役割を担います。"
 

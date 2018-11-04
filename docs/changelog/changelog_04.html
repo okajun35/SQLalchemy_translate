@@ -323,7 +323,7 @@ Released: Thu Jul 31 2008<div class="section" id="change-0.4.7p1-orm">
 <h3>orm<a class="headerlink" href="#change-0.4.7p1-orm" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
 <li><p id="change-0.4.7p1-0"><span class="target" id="change-8845ae575ef66cb76fb504e32b6b0e26"><strong>[orm] </strong></span>Added &quot;add()&quot; and &quot;add_all()&quot; to scoped_session
-methods.  Workaround for 0.4.7:<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.scoping</span> <span class="k">import</span> <span class="n">ScopedSession</span><span class="p">,</span> <span class="n">instrument</span>
+methods.  Workaround for 0.4.7:<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.scoping</span> <span class="k">import</span> <span class="n">ScopedSession</span><span class="p">,</span> <span class="n">instrument</span>
 <span class="nb">setattr</span><span class="p">(</span><span class="n">ScopedSession</span><span class="p">,</span> <span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="n">instrument</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">))</span>
 <span class="nb">setattr</span><span class="p">(</span><span class="n">ScopedSession</span><span class="p">,</span> <span class="s2">&quot;add_all&quot;</span><span class="p">,</span> <span class="n">instrument</span><span class="p">(</span><span class="s2">&quot;add_all&quot;</span><span class="p">))</span></pre></div>
 </div>
@@ -696,7 +696,7 @@ more flexible approach.</p>
 <p>The new approach also automatically allows eager loads
 to work for subclasses, if they are present, for
 example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sess</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Company</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sess</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Company</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span>
  <span class="n">eagerload_all</span><span class="p">(</span>
 <span class="p">))</span></pre></div>
 </div>
@@ -1812,7 +1812,7 @@ would use for that value.<a class="changeset-link headerlink reference internal"
 </p>
 </li>
 <li><p id="change-0.4.2-26"><span class="target" id="change-228dca0bafaa198350cfc39cb6561e8c"><strong>[orm] [newval1] [newval2] </strong></span>Custom collections can now specify a &#64;converter method to translate
-objects used in &quot;bulk&quot; assignment into a stream of values, as in:<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">col</span> <span class="o">=</span>
+objects used in &quot;bulk&quot; assignment into a stream of values, as in:<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">col</span> <span class="o">=</span>
 <span class="c1"># or</span>
 <span class="n">obj</span><span class="o">.</span><span class="n">dictcol</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span> <span class="n">newval1</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">:</span> <span class="n">newval2</span><span class="p">}</span></pre></div>
 </div>
@@ -3219,7 +3219,7 @@ isn't present anymore, need to use join().<a class="changeset-link headerlink re
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -3246,6 +3246,7 @@ isn't present anymore, need to use join().<a class="changeset-link headerlink re
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

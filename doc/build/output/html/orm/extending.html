@@ -10,7 +10,7 @@
         <title>
             
     
-    Events and Internals
+    イベントと内部
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -36,8 +36,8 @@
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
         <link rel="up" title="SQLAlchemy ORM" href="index.html" />
-        <link rel="next" title="ORM Events" href="events.html" />
-        <link rel="prev" title="Session API" href="session_api.html" />
+        <link rel="next" title="ORMイベント" href="events.html" />
+        <link rel="prev" title="セッションAPI" href="session_api.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,20 +120,20 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Events and Internals</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="events.html">ORM Events</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="internals.html">ORM Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="exceptions.html">ORM Exceptions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="deprecated.html">Deprecated ORM Event Interfaces</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li class="selected"><span class="link-container first"><strong>イベントと内部</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="events.html">ORMイベント</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="internals.html">ORM内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="exceptions.html">ORMの例外</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="deprecated.html">非推奨のORMイベントインターフェイス</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -149,24 +149,24 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="events-and-internals">
-<h1>Events and Internals<a class="headerlink" href="#events-and-internals" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>イベントと内部<a class="headerlink" href="#events-and-internals" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="events.html">ORM Events</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="events.html#attribute-events">Attribute Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="events.html#mapper-events">Mapper Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="events.html#instance-events">Instance Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="events.html#session-events">Session Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="events.html#query-events">Query Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="events.html#module-sqlalchemy.orm.instrumentation">Instrumentation Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">ORMイベント</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="events.html#attribute-events">属性イベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html#mapper-events">マッパーイベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html#instance-events">インスタンスイベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html#session-events">セッションイベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html#query-events">クエリイベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html#module-sqlalchemy.orm.instrumentation">計装イベント</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="internals.html">ORM Internals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exceptions.html">ORM Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deprecated.html">Deprecated ORM Event Interfaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deprecated.html#mapper-events">Mapper Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deprecated.html#session-events">Session Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deprecated.html#attribute-events">Attribute Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">ORM内部</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">ORMの例外</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deprecated.html">非推奨のORMイベントインターフェイス</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deprecated.html#mapper-events">マッパーイベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deprecated.html#session-events">セッションイベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deprecated.html#attribute-events">属性イベント</a></li>
 </ul>
 </li>
 </ul>
@@ -179,13 +179,13 @@
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="session_api.html" title="previous chapter">Session API</a>
+        <a href="session_api.html" title="previous chapter">セッションAPI</a>
         Next:
-        <a href="events.html" title="next chapter">ORM Events</a>
+        <a href="events.html" title="next chapter">ORMイベント</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -212,6 +212,7 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

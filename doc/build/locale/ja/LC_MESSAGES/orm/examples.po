@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/examples.rst:5
 msgid "ORM Examples"
-msgstr ""
+msgstr "ORMの例"
 
 #: ../../orm/examples.rst:7
 msgid ""
@@ -28,47 +18,47 @@ msgid ""
 "typical.   All are runnable and can be found in the ``/examples`` "
 "directory of the distribution.   Descriptions and source code for all can"
 " be found here."
-msgstr ""
+msgstr "SQLAlchemyディストリビューションには、典型的なものとそれほど典型的でないものの選択されたパターンセットを示すさまざまなコード例が含まれています。すべては実行可能で、配布物の `` / examples``ディレクトリにあります。すべての説明とソースコードはここにあります。"
 
 #: ../../orm/examples.rst:12
 msgid ""
 "Additional SQLAlchemy examples, some user contributed, are available on "
 "the wiki at `<http://www.sqlalchemy.org/trac/wiki/UsageRecipes>`_."
-msgstr ""
+msgstr "追加のSQLAlchemyの例（一部のユーザが投稿したもの）は、wikiの ` <http://www.sqlalchemy.org/trac/wiki/UsageRecipes> `_。"
 
 #: ../../orm/examples.rst:17
 msgid "Mapping Recipes"
-msgstr ""
+msgstr "マッピングレシピ"
 
 #: ../../orm/examples.rst:22
 msgid "Adjacency List"
-msgstr ""
+msgstr "隣接リスト"
 
 #: examples.adjacency_list:1 of
 msgid ""
 "An example of a dictionary-of-dictionaries structure mapped using an "
 "adjacency list model."
-msgstr ""
+msgstr "隣接関係リストモデルを使用してマップされたディクショナリ辞書構造の例。"
 
 #: examples.adjacency_list:4 examples.dogpile_caching:22 examples.elementtree:9
 #: examples.postgis:32 of
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: ../../orm/examples.rst:29
 msgid "Associations"
-msgstr ""
+msgstr "団体"
 
 #: examples.association:1 of
 msgid ""
 "Examples illustrating the usage of the \"association object\" pattern, "
 "where an intermediary class mediates the relationship between two classes"
 " that are associated in a many-to-many pattern."
-msgstr ""
+msgstr "仲介クラスが多対多のパターンで関連付けられた2つのクラス間の関係を仲介する\ &quot;関連オブジェクト\&quot;パターンの使用例を示す例。"
 
 #: ../../orm/examples.rst:34
 msgid "Directed Graphs"
-msgstr ""
+msgstr "指向グラフ"
 
 #: examples.graphs:1 of
 msgid ""
@@ -76,11 +66,11 @@ msgid ""
 "stored as a collection of edges, each referencing both a \"lower\" and an"
 " \"upper\" node in a table of nodes.  Basic persistence and querying for "
 "lower- and upper- neighbors are illustrated::"
-msgstr ""
+msgstr "有向グラフ構造の永続性の例。グラフはエッジの集まりとして格納され、各ノードはノードのテーブルの\ &quot;lower \&quot;と\ &quot;upper \&quot;ノードの両方を参照します。下位および上位ネイバの基本的な永続性およびクエリの例を示します。"
 
 #: ../../orm/examples.rst:39
 msgid "Dynamic Relations as Dictionaries"
-msgstr ""
+msgstr "辞書としての動的関係"
 
 #: examples.dynamic_dict:1 of
 msgid ""
@@ -88,17 +78,17 @@ msgid ""
 " relation, so that dictionary operations (assuming simple string keys) "
 "can operate upon a large collection without loading the full collection "
 "at once."
-msgstr ""
+msgstr "ディクショナリ操作（単純な文字列キーを前提とする）が大量のコレクションを一度に読み込むことなく動作できるように、辞書のようなファサードを\ &quot;動的\関係の上に置く方法を説明しています。"
 
 #: ../../orm/examples.rst:46
 msgid "Generic Associations"
-msgstr ""
+msgstr "ジェネリック協会"
 
 #: examples.generic_associations:1 of
 msgid ""
 "Illustrates various methods of associating multiple types of parents with"
 " a particular child object."
-msgstr ""
+msgstr "複数のタイプの親を特定の子オブジェクトに関連付けるさまざまな方法を示します。"
 
 #: examples.generic_associations:4 of
 msgid ""
@@ -107,7 +97,7 @@ msgid ""
 "classes, ``Customer`` and ``Supplier``, both subclassing the "
 "``HasAddresses`` mixin, which ensures that the parent class is provided "
 "with an ``addresses`` collection which contains ``Address`` objects."
-msgstr ""
+msgstr "これらの例はすべて、宣言的なミックスインとともに宣言的な拡張を使用しています。それぞれが `` Customer``と `` Supplier``の最後の2つのクラスで同じ使用事例を提示し、両方とも `` HasAddresses``ミックスインをサブクラス化します。これは、親クラスに `` addresses`` `` Address``オブジェクトを含むコレクションです。"
 
 #: examples.generic_associations:11 of
 msgid ""
@@ -116,82 +106,82 @@ msgid ""
 "presented in the 2007 blog post `Polymorphic Associations with SQLAlchemy"
 " <http://techspot.zzzeek.org/2007/05/29/polymorphic-associations-with-"
 "sqlalchemy/>`_."
-msgstr ""
+msgstr "：viewsource： `.discriminator_on_association`と：viewsource：` .generic_fk`スクリプトは、2007年のブログ記事「SQLAlchemyとの多相協会」で提示されたレシピの最新版です<http://techspot.zzzeek.org/2007/05/29/polymorphic-associations-with-sqlalchemy/> `_。"
 
 #: ../../orm/examples.rst:51
 msgid "Large Collections"
-msgstr ""
+msgstr "大規模なコレクション"
 
 #: examples.large_collection:1 of
 msgid "Large collection example."
-msgstr ""
+msgstr "大規模なコレクションの例。"
 
 #: examples.large_collection:3 of
 msgid ""
 "Illustrates the options to use with "
 ":func:`~sqlalchemy.orm.relationship()` when the list of related objects "
 "is very large, including:"
-msgstr ""
+msgstr "関連するオブジェクトのリストが非常に大きい場合に、：func： `〜sqlalchemy.orm.relationship（）`で使用するオプションを示します。"
 
 #: examples.large_collection:7 of
 msgid "\"dynamic\" relationships which query slices of data as accessed"
-msgstr ""
+msgstr "アクセスされたデータのスライスを問い合わせる\ &quot;動的\&quot;関係"
 
 #: examples.large_collection:8 of
 msgid ""
 "how to use ON DELETE CASCADE in conjunction with ``passive_deletes=True``"
 " to greatly improve the performance of related collection deletion."
-msgstr ""
+msgstr "`` passive_deletes = True``と一緒にON DELETE CASCADEを使用して、関連するコレクションの削除のパフォーマンスを大幅に改善する方法。"
 
 #: ../../orm/examples.rst:56
 msgid "Materialized Paths"
-msgstr ""
+msgstr "マテリアライズド・パス"
 
 #: examples.materialized_paths:1 of
 msgid ""
 "Illustrates the \"materialized paths\" pattern for hierarchical data "
 "using the SQLAlchemy ORM."
-msgstr ""
+msgstr "SQLAlchemy ORMを使用して階層データの\ &quot;マテリアライズドパス\&quot;パターンを示します。"
 
 #: ../../orm/examples.rst:61
 msgid "Nested Sets"
-msgstr ""
+msgstr "ネストセット"
 
 #: examples.nested_sets:1 of
 msgid ""
 "Illustrates a rudimentary way to implement the \"nested sets\" pattern "
 "for hierarchical data using the SQLAlchemy ORM."
-msgstr ""
+msgstr "SQLAlchemy ORMを使用して階層データの\ &quot;ネストセット\&quot;パターンを実装する初歩的な方法を示します。"
 
 #: ../../orm/examples.rst:68
 msgid "Performance"
-msgstr ""
+msgstr "パフォーマンス"
 
 #: examples.performance:1 of
 msgid "A performance profiling suite for a variety of SQLAlchemy use cases."
-msgstr ""
+msgstr "さまざまなSQLAlchemyユースケース用のパフォーマンスプロファイリングスイート。"
 
 #: examples.performance:3 of
 msgid ""
 "Each suite focuses on a specific use case with a particular performance "
 "profile and associated implications:"
-msgstr ""
+msgstr "各スイートは、特定のパフォーマンスプロファイルと関連する影響に関する特定のユースケースに焦点を当てています。"
 
 #: examples.performance:6 of
 msgid "bulk inserts"
-msgstr ""
+msgstr "バルクインサート"
 
 #: examples.performance:7 of
 msgid "individual inserts, with or without transactions"
-msgstr ""
+msgstr "個別の挿入、トランザクションの有無"
 
 #: examples.performance:8 of
 msgid "fetching large numbers of rows"
-msgstr ""
+msgstr "多数の行をフェッチする"
 
 #: examples.performance:9 of
 msgid "running lots of short queries"
-msgstr ""
+msgstr "たくさんの短いクエリを実行しています"
 
 #: examples.performance:11 of
 msgid ""
@@ -200,66 +190,66 @@ msgid ""
 "greatest, inversely based on amount of functionality provided by "
 "SQLAlchemy, greatest to least (these two things generally correspond "
 "perfectly)."
-msgstr ""
+msgstr "すべてのスイートには、CoreとORMの両方の使用方法を示すさまざまな使用パターンが含まれています。一般に、SQLAlchemyによって提供される機能の量に基づいて、パフォーマンスが最悪から最大に順にソートされます。"
 
 #: examples.performance:16 of
 msgid ""
 "A command line tool is presented at the package level which allows "
 "individual suites to be run::"
-msgstr ""
+msgstr "個々のスイートを実行できるコマンドラインツールがパッケージレベルで提供されています::"
 
 #: examples.performance:41 of
 msgid "An example run looks like::"
-msgstr ""
+msgstr "実行例は次のようになります::"
 
 #: examples.performance:45 of
 msgid "Or with options::"
-msgstr ""
+msgstr "またはオプションを使用する::"
 
 #: examples.performance:53 of
 msgid ":ref:`faq_how_to_profile`"
-msgstr ""
+msgstr "：ref： `faq_how_to_profile`"
 
 #: examples.performance:56 of
 msgid "File Listing"
-msgstr ""
+msgstr "ファイルリスト"
 
 #: examples.performance:62 of
 msgid "Running all tests with time"
-msgstr ""
+msgstr "すべてのテストを時間通りに実行する"
 
 #: examples.performance:64 of
 msgid "This is the default form of run::"
-msgstr ""
+msgstr "これはデフォルトの実行形式です::"
 
 #: examples.performance:89 of
 msgid "Dumping Profiles for Individual Tests"
-msgstr ""
+msgstr "個々のテストのプロファイルのダンプ"
 
 #: examples.performance:91 of
 msgid ""
 "A Python profile output can be dumped for all tests, or more commonly "
 "individual tests::"
-msgstr ""
+msgstr "Pythonプロファイルの出力は、すべてのテスト、またはより一般的には個々のテストでダンプできます::"
 
 #: examples.performance:111 of
 msgid "Using RunSnake"
-msgstr ""
+msgstr "RunSnakeの使用"
 
 #: examples.performance:113 of
 msgid ""
 "This option requires the `RunSnake "
 "<https://pypi.python.org/pypi/RunSnakeRun>`_ command line tool be "
 "installed::"
-msgstr ""
+msgstr "このオプションは `RunSnake <https://pypi.python.org/pypi/RunSnakeRun> `_コマンドラインツールをインストールする::"
 
 #: examples.performance:118 of
 msgid "A graphical RunSnake output will be displayed."
-msgstr ""
+msgstr "グラフィカルなRunSnake出力が表示されます。"
 
 #: examples.performance:123 of
 msgid "Writing your Own Suites"
-msgstr ""
+msgstr "自分のスイートを書く"
 
 #: examples.performance:125 of
 msgid ""
@@ -269,58 +259,58 @@ msgid ""
 "example, if we wanted to profile the difference between several kinds of "
 "loading, we can create a file ``test_loads.py``, with the following "
 "content::"
-msgstr ""
+msgstr "プロファイラスイートシステムは拡張性があり、独自のテストセットに適用できます。これは、パフォーマンスに重要な一連のルーチンの適切なアプローチを決める際に役立つ貴重なテクニックです。たとえば、いくつかの種類のローディングの違いをプロファイルしたい場合、次のコンテンツを含むファイル `` test_loads.py``を作成することができます::"
 
 #: examples.performance:207 of
 msgid "We can run our new script directly::"
-msgstr ""
+msgstr "新しいスクリプトを直接実行することができます::"
 
 #: examples.performance:216 of
 msgid "As well as see RunSnake output for an individual test::"
-msgstr ""
+msgstr "個々のテストでRunSnakeの出力を見ることもできます::"
 
 #: ../../orm/examples.rst:75
 msgid "Relationship Join Conditions"
-msgstr ""
+msgstr "関係の結合条件"
 
 #: examples.join_conditions:1 of
 msgid ""
 "Examples of various :func:`.orm.relationship` configurations, which make "
 "use of the ``primaryjoin`` argument to compose special types of join "
 "conditions."
-msgstr ""
+msgstr "様々な：func： `.orm.relationship`設定の例。特別なタイプの結合条件を組み立てるために` `primaryjoin``引数を利用しています。"
 
 #: ../../orm/examples.rst:82
 msgid "Space Invaders"
-msgstr ""
+msgstr "スペースインベーダーズ"
 
 #: examples.space_invaders:1 of
 msgid "A Space Invaders game using SQLite as the state machine."
-msgstr ""
+msgstr "状態機械としてSQLiteを使用するSpace Invadersゲーム。"
 
 #: examples.space_invaders:3 of
 msgid "Originally developed in 2012.  Adapted to work in Python 3."
-msgstr ""
+msgstr "もともとは2012年に開発されました。Python 3で動作するように修正されました。"
 
 #: examples.space_invaders:5 of
 msgid "Runs in a textual console using ASCII art."
-msgstr ""
+msgstr "ASCIIアートを使用してテキストコンソールで実行されます。"
 
 #: examples.space_invaders:11 of
 msgid "To run::"
-msgstr ""
+msgstr "走る：："
 
 #: examples.space_invaders:15 of
 msgid "While it runs, watch the SQL output in the log::"
-msgstr ""
+msgstr "それが実行されている間、ログのSQL出力を見る::"
 
 #: examples.space_invaders:19 of
 msgid "enjoy!"
-msgstr ""
+msgstr "楽しい！"
 
 #: ../../orm/examples.rst:89
 msgid "XML Persistence"
-msgstr ""
+msgstr "XML永続性"
 
 #: examples.elementtree:1 of
 msgid ""
@@ -330,15 +320,15 @@ msgid ""
 "compatible with the native cElementTree as well as lxml, and can be "
 "adapted to suit any kind of DOM representation system. Querying along "
 "xpath-like strings is illustrated as well."
-msgstr ""
+msgstr "リレーショナルデータベースのElementTreeで表されるようなXML文書の永続化とクエリのための3つの戦略を示します。このテクニックは、ElementTreeオブジェクトに直接マッピングを適用しないため、ネイティブのcElementTreeおよびlxmlと互換性があり、あらゆる種類のDOM表現システムに適合させることができます。 xpathのような文字列に沿ったクエリも同様に説明されています。"
 
 #: ../../orm/examples.rst:94
 msgid "Versioning Objects"
-msgstr ""
+msgstr "オブジェクトのバージョン管理"
 
 #: ../../orm/examples.rst:99
 msgid "Versioning with a History Table"
-msgstr ""
+msgstr "履歴テーブルによるバージョン管理"
 
 #: examples.versioned_history:1 of
 msgid ""
@@ -346,35 +336,35 @@ msgid ""
 "stores records for each change. The given extensions generate an "
 "anonymous \"history\" class which represents historical versions of the "
 "target object."
-msgstr ""
+msgstr "エンティティのバージョンテーブルを作成し、各変更のレコードを格納する拡張機能を示します。指定された拡張機能は、ターゲットオブジェクトの履歴バージョンを表す匿名\ &quot;履歴\&quot;クラスを生成します。"
 
 #: examples.versioned_history:5 of
 msgid ""
 "Compare to the :ref:`examples_versioned_rows` examples which write "
 "updates as new rows in the same table, without using a separate history "
 "table."
-msgstr ""
+msgstr "別の履歴テーブルを使用せずに、同じテーブルに新しい行として更新を書き込む：ref： `examples_versioned_rows`の例と比較してください。"
 
 #: examples.versioned_history:8 of
 msgid ""
 "Usage is illustrated via a unit test module ``test_versioning.py``, which"
 " can be run via nose::"
-msgstr ""
+msgstr "使い方はユニットテストモジュール `` test_versioning.py``を使って説明しています。これはnoseで実行できます::"
 
 #: examples.versioned_history:14 of
 msgid "A fragment of example usage, using declarative::"
-msgstr ""
+msgstr "declarative ::を使用した使用例の断片"
 
 #: examples.versioned_history:49 of
 msgid ""
 "The ``Versioned`` mixin is designed to work with declarative.  To use the"
 " extension with classical mappers, the ``_history_mapper`` function can "
 "be applied::"
-msgstr ""
+msgstr "`` Versioned``のmixinは、宣言型で動作するように設計されています。拡張機能を古典的なマッパーで使用するには、 `` _history_mapper``関数を適用することができます::"
 
 #: ../../orm/examples.rst:106
 msgid "Versioning using Temporal Rows"
-msgstr ""
+msgstr "時系列を使ったバージョン管理"
 
 #: examples.versioned_rows:1 of
 msgid ""
@@ -382,21 +372,21 @@ msgid ""
 "that would be first interpreted as an UPDATE on a row, and instead "
 "turning it into an INSERT of a new row, leaving the previous row intact "
 "as a historical version."
-msgstr ""
+msgstr "行のUPDATEとして最初に解釈される変更をインターセプトする技法を説明し、その代わりに新しい行のINSERTに変換し、前の行を履歴バージョンとしてそのまま残しておく例をいくつか示します。"
 
 #: examples.versioned_rows:6 of
 msgid ""
 "Compare to the :ref:`examples_versioned_history` example which writes a "
 "history row to a separate history table."
-msgstr ""
+msgstr "別の履歴テーブルに履歴行を書き込む：ref： `examples_versioned_history`の例と比較してください。"
 
 #: ../../orm/examples.rst:113
 msgid "Vertical Attribute Mapping"
-msgstr ""
+msgstr "垂直属性マッピング"
 
 #: examples.vertical:1 of
 msgid "Illustrates \"vertical table\" mappings."
-msgstr ""
+msgstr "\ &quot;垂直テーブル\&quot;マッピングを示します。"
 
 #: examples.vertical:3 of
 msgid ""
@@ -406,84 +396,84 @@ msgid ""
 "attributes, at the expense of simple query control and brevity. It is "
 "commonly found in content/document management systems in order to "
 "represent user-created structures flexibly."
-msgstr ""
+msgstr "\ &quot;垂直テーブル\&quot;とは、オブジェクトの個々の属性がテーブル内の別個の行として格納される手法を指します。 \ &quot;垂直テーブル\技術は、簡単なクエリ制御と簡潔さを犠牲にして、様々な属性セットを持つことができるオブジェクトを永続化するために使用されます。コンテンツ/ドキュメント管理システムでは、ユーザ作成構造を柔軟に表現するために。"
 
 #: examples.vertical:10 of
 msgid ""
 "Two variants on the approach are given.  In the second, each row "
 "references a \"datatype\" which contains information about the type of "
 "information stored in the attribute, such as integer, string, or date."
-msgstr ""
+msgstr "このアプローチには2つのバリエーションがあります。 2番目の行では、各行は、整数、文字列、または日付など、属性に格納されている情報の種類に関する情報を含む\ &quot;データ型\&quot;を参照します。"
 
 #: examples.vertical:15 of
 msgid "Example::"
-msgstr ""
+msgstr "例::"
 
 #: ../../orm/examples.rst:121
 msgid "Inheritance Mapping Recipes"
-msgstr ""
+msgstr "継承マッピングのレシピ"
 
 #: ../../orm/examples.rst:124
 msgid "Basic Inheritance Mappings"
-msgstr ""
+msgstr "基本継承マッピング"
 
 #: examples.inheritance:1 of
 msgid ""
 "Working examples of single-table, joined-table, and concrete-table "
 "inheritance as described in :ref:`inheritance_toplevel`."
-msgstr ""
+msgstr "：ref： `inheritance_toplevel`で説明した単一テーブル、結合テーブル、具象テーブル継承の実例"
 
 #: ../../orm/examples.rst:129
 msgid "Special APIs"
-msgstr ""
+msgstr "特別なAPI"
 
 #: ../../orm/examples.rst:134
 msgid "Attribute Instrumentation"
-msgstr ""
+msgstr "属性計測"
 
 #: examples.custom_attributes:1 of
 msgid ""
 "Examples illustrating modifications to SQLAlchemy's attribute management "
 "system."
-msgstr ""
+msgstr "SQLAlchemyの属性管理システムの変更例"
 
 #: ../../orm/examples.rst:141
 msgid "Horizontal Sharding"
-msgstr ""
+msgstr "水平シャーディング"
 
 #: examples.sharding:1 of
 msgid ""
 "A basic example of using the SQLAlchemy Sharding API. Sharding refers to "
 "horizontally scaling data across multiple databases."
-msgstr ""
+msgstr "SQLAlchemy Sharding APIの基本的な使用例。シャーディングとは、複数のデータベース間でデータを水平にスケーリングすることを指します。"
 
 #: examples.sharding:5 of
 msgid "The basic components of a \"sharded\" mapping are:"
-msgstr ""
+msgstr "\ &quot;sharded \&quot;マッピングの基本的な構成要素は次のとおりです。"
 
 #: examples.sharding:7 of
 msgid "multiple databases, each assigned a 'shard id'"
-msgstr ""
+msgstr "それぞれが「シャードID」を割り当てられた複数のデータベース"
 
 #: examples.sharding:8 of
 msgid ""
 "a function which can return a single shard id, given an instance to be "
 "saved; this is called \"shard_chooser\""
-msgstr ""
+msgstr "保存されるインスタンスがあれば、単一のシャードIDを返すことができる関数。これは\ &quot;shard_chooser \"
 
 #: examples.sharding:10 of
 msgid ""
 "a function which can return a list of shard ids which apply to a "
 "particular instance identifier; this is called \"id_chooser\".  If it "
 "returns all shard ids, all shards will be searched."
-msgstr ""
+msgstr "特定のインスタンス識別子に適用されるシャードIDのリストを返すことができる関数。これは\ &quot;id_chooser \&quot;と呼ばれます。すべてのシャードIDを返すと、すべてのシャードが検索されます。"
 
 #: examples.sharding:13 of
 msgid ""
 "a function which can return a list of shard ids to try, given a "
 "particular Query (\"query_chooser\").  If it returns all shard ids, all "
 "shards will be queried and the results joined together."
-msgstr ""
+msgstr "特定のQuery（\ &quot;query_chooser \&quot;）を指定すると、シャードIDのリストを返すことができる関数です。すべてのシャードIDを返すと、すべてのシャードが照会され、結果が結合されます。"
 
 #: examples.sharding:17 of
 msgid ""
@@ -492,7 +482,7 @@ msgid ""
 "shard_chooser, id_chooser and query_chooser functions. The query_chooser "
 "illustrates inspection of the SQL expression element in order to attempt "
 "to determine a single shard being requested."
-msgstr ""
+msgstr "この例では、4つのsqliteデータベースが天気データに関する情報をデータベースごとに大陸ごとに格納します。 shard_chooser、id_chooser、query_chooser関数の例を示します。 query_chooserは、単一のシャードが要求されているかどうかを判断するためにSQL式要素の検査を示します。"
 
 #: examples.sharding:23 of
 msgid ""
@@ -502,15 +492,15 @@ msgid ""
 "method of assigning objects to different tables (and potentially database"
 " nodes) in an explicit way - described on the wiki at `EntityName "
 "<http://www.sqlalchemy.org/trac/wiki/UsageRecipes/EntityName>`_."
-msgstr ""
+msgstr "一般的なシャーディングルーチンの構築は、複数のデータベース間でのインスタンスの整理の問題に対する野心的なアプローチです。より明白な代替手段として、\ &quot;distinct entity \&quot;アプローチは、異なるテーブル（および潜在的にデータベースノード）にオブジェクトを明示的に割り当てる簡単な方法です。これは、 `EntityName <http://www.sqlalchemy.org/trac/wiki/UsageRecipes/EntityName> `_。"
 
 #: ../../orm/examples.rst:146
 msgid "Extending the ORM"
-msgstr ""
+msgstr "ORMの拡張"
 
 #: ../../orm/examples.rst:151
 msgid "Dogpile Caching"
-msgstr ""
+msgstr "ドッグファイルのキャッシング"
 
 #: examples.dogpile_caching:1 of
 msgid ""
@@ -518,40 +508,40 @@ msgid ""
 "<https://dogpilecache.readthedocs.io/>`_ functionality within the "
 ":class:`.Query` object, allowing full cache control as well as the "
 "ability to pull \"lazy loaded\" attributes from long term cache as well."
-msgstr ""
+msgstr "`dogpile.cacheを埋め込む方法を説明しています<https://dogpilecache.readthedocs.io/> &#39;：class： `.Query`オブジェクト内の機能を使用することで、完全なキャッシュ制御だけでなく、長期キャッシュからも遅延ロードされた属性を引き出すことができます。"
 
 #: examples.dogpile_caching:7 of
 msgid ""
 "The example was modernized to use dogpile.cache, replacing Beaker as the "
 "caching library in use."
-msgstr ""
+msgstr "この例では、dogpile.cacheを使用するように近代化され、使用中のキャッシングライブラリとしてBeakerを置き換えました。"
 
 #: examples.dogpile_caching:11 of
 msgid "In this demo, the following techniques are illustrated:"
-msgstr ""
+msgstr "このデモでは、以下のテクニックが示されています。"
 
 #: examples.dogpile_caching:13 of
 msgid "Using custom subclasses of :class:`.Query`"
-msgstr ""
+msgstr "：class： `.Query`のカスタムサブクラスを使用する"
 
 #: examples.dogpile_caching:14 of
 msgid ""
 "Basic technique of circumventing Query to pull from a custom cache source"
 " instead of the database."
-msgstr ""
+msgstr "クエリを回避してデー​​タベースの代わりにカスタムキャッシュソースから取得する基本的な手法。"
 
 #: examples.dogpile_caching:16 of
 msgid ""
 "Rudimental caching with dogpile.cache, using \"regions\" which allow "
 "global control over a fixed set of configurations."
-msgstr ""
+msgstr "dogpile.cacheを使ったRudimentalのキャッシュ。\ &quot;regions \&quot;を使って固定設定のセットをグローバルに制御できます。"
 
 #: examples.dogpile_caching:18 of
 msgid ""
 "Using custom :class:`.MapperOption` objects to configure options on a "
 "Query, including the ability to invoke the options deep within an object "
 "graph when lazy loads occur."
-msgstr ""
+msgstr "カスタム：class： `.MapperOption`オブジェクトを使用して、遅延ロードが発生したときにオブジェクトグラフの深いオプションを呼び出す機能を含む、クエリのオプションを設定します。"
 
 #: examples.dogpile_caching:34 of
 msgid ""
@@ -561,23 +551,23 @@ msgid ""
 "utilize the cache files already present, and exactly one SQL statement "
 "against two tables will be emitted - the displayed result however will "
 "utilize dozens of lazyloads that all pull from cache."
-msgstr ""
+msgstr "実行するには、SQLAlchemyとdogpile.cacheの両方をインストールするか、現在のPYTHONPATHにインストールする必要があります。このデモでは、データファイルのローカルディレクトリを作成し、初期データを挿入して実行します。デモをもう一度実行すると、すでに存在するキャッシュファイルが使用され、2つのテーブルに対する1つのSQL文が出力されますが、表示された結果はすべてキャッシュからプルする数十のlazyloadsを使用します。"
 
 #: examples.dogpile_caching:42 of
 msgid ""
 "The demo scripts themselves, in order of complexity, are run as Python "
 "modules so that relative imports work::"
-msgstr ""
+msgstr "デモスクリプト自体は、複雑さの順に、Pythonモジュールとして実行されるため、相対的なインポートが機能します::"
 
 #: ../../orm/examples.rst:158
 msgid "PostGIS Integration"
-msgstr ""
+msgstr "PostGISインテグレーション"
 
 #: examples.postgis:1 of
 msgid ""
 "A naive example illustrating techniques to help embed PostGIS "
 "functionality."
-msgstr ""
+msgstr "PostGISの機能を組み込むためのテクニックを紹介する素朴な例です。"
 
 #: examples.postgis:4 of
 msgid ""
@@ -585,49 +575,49 @@ msgid ""
 "extrapolated into a comprehensive PostGIS integration layer.  We are "
 "pleased to announce that this has come to fruition as `GeoAlchemy "
 "<http://www.geoalchemy.org/>`_."
-msgstr ""
+msgstr "この例はもともと包括的なPostGISインテグレーション層に外挿されることを期待して開発されました。我々はこれが「GeoAlchemy」として成果を上げたことを発表することをうれしく思います<http://www.geoalchemy.org/> `_。"
 
 #: examples.postgis:9 of
 msgid "The example illustrates:"
-msgstr ""
+msgstr "この例では、"
 
 #: examples.postgis:11 of
 msgid ""
 "a DDL extension which allows CREATE/DROP to work in conjunction with "
 "AddGeometryColumn/DropGeometryColumn"
-msgstr ""
+msgstr "AddGeometryColumn / DropGeometryColumnと連携してCREATE / DROPを動作させるDDL拡張"
 
 #: examples.postgis:14 of
 msgid ""
 "a Geometry type, as well as a few subtypes, which convert result row "
 "values to a GIS-aware object, and also integrates with the DDL extension."
-msgstr ""
+msgstr "ジオメトリタイプ、および結果行の値をGIS対応オブジェクトに変換するいくつかのサブタイプのほか、DDL拡張機能と統合します。"
 
 #: examples.postgis:18 of
 msgid ""
 "a GIS-aware object which stores a raw geometry value and provides a "
 "factory for functions such as AsText()."
-msgstr ""
+msgstr "生のジオメトリ値を格納し、AsText（）などの関数のファクトリを提供するGIS対応オブジェクトです。"
 
 #: examples.postgis:21 of
 msgid ""
 "an ORM comparator which can override standard column methods on mapped "
 "objects to produce GIS operators."
-msgstr ""
+msgstr "マッピングされたオブジェクトの標準列メソッドをオーバーライドしてGIS演算子を生成できるORMコンパレータ"
 
 #: examples.postgis:24 of
 msgid ""
 "an attribute event listener that intercepts strings and converts to "
 "GeomFromText()."
-msgstr ""
+msgstr "文字列をインターセプトしてGeomFromText（）に変換する属性イベントリスナーです。"
 
 #: examples.postgis:27 of
 msgid "a standalone operator example."
-msgstr ""
+msgstr "スタンドアロンの演算子の例"
 
 #: examples.postgis:29 of
 msgid ""
 "The implementation is limited to only public, well known and simple to "
 "use extension points."
-msgstr ""
+msgstr "この実装は、一般的な、よく知られている使い易い拡張ポイントに限定されています。"
 

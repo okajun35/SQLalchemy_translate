@@ -10,7 +10,7 @@
         <title>
             
     
-    Automap
+    オートマップ
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../../search.html" />
         <link rel="copyright" title="Copyright" href="../../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../../index.html" />
-        <link rel="up" title="ORM Extensions" href="index.html" />
-        <link rel="next" title="Baked Queries" href="baked.html" />
-        <link rel="prev" title="Association Proxy" href="associationproxy.html" />
+        <link rel="up" title="ORM拡張" href="index.html" />
+        <link rel="next" title="焼いたクエリ" href="baked.html" />
+        <link rel="prev" title="アソシエーションプロキシ" href="associationproxy.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,41 +120,41 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="../tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="index.html">ORM Extensions</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="associationproxy.html">Association Proxy</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Automap</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#basic-use">Basic Use</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#generating-mappings-from-an-existing-metadata">Generating Mappings from an Existing MetaData</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#specifying-classes-explicitly">Specifying Classes Explicitly</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#overriding-naming-schemes">Overriding Naming Schemes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#relationship-detection">Relationship Detection</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#custom-relationship-arguments">Custom Relationship Arguments</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#many-to-many-relationships">Many-to-Many relationships</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#relationships-with-inheritance">Relationships with Inheritance</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#handling-simple-naming-conflicts">Handling Simple Naming Conflicts</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="index.html">ORM拡張</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="associationproxy.html">アソシエーションプロキシ</a></span></li>
+<li class="selected"><span class="link-container first"><strong>オートマップ</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#basic-use">基本的な使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#generating-mappings-from-an-existing-metadata">既存のメタデータからのマッピングの生成</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#specifying-classes-explicitly">クラスを明示的に指定する</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#overriding-naming-schemes">名前付けスキームのオーバーライド</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#relationship-detection">関係の検出</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#custom-relationship-arguments">カスタム関係の引数</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#many-to-many-relationships">多対多の関係</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#relationships-with-inheritance">継承との関係</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#handling-simple-naming-conflicts">単純な名前の競合の処理</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#using-automap-with-explicit-declarations">Using Automap with Explicit Declarations</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#api-reference">API Reference</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#using-automap-with-explicit-declarations">明示的な宣言を伴うオートマップの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#api-reference">APIリファレンス</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="baked.html">Baked Queries</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="declarative/index.html">Declarative</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mutable.html">Mutation Tracking</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="orderinglist.html">Ordering List</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="horizontal_shard.html">Horizontal Sharding</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="hybrid.html">Hybrid Attributes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="indexable.html">Indexable</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="instrumentation.html">Alternate Class Instrumentation</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="baked.html">焼いたクエリ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="declarative/index.html">宣言的</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mutable.html">突然変異の追跡</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="orderinglist.html">オーダーリスト</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="horizontal_shard.html">水平シャーディング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="hybrid.html">ハイブリッド属性</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="indexable.html">インデックス作成可能</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="instrumentation.html">代替クラスの計装</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="../examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -170,30 +170,16 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="module-sqlalchemy.ext.automap">
-<span id="automap"></span><span id="automap-toplevel"></span><h1>Automap<a class="headerlink" href="#module-sqlalchemy.ext.automap" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Define an extension to the <a class="reference internal" href="declarative/api.html#module-sqlalchemy.ext.declarative" title="sqlalchemy.ext.declarative"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.ext.declarative</span></code></a> system
-which automatically generates mapped classes and relationships from a database
-schema, typically though not necessarily one which is reflected.</p>
+<span id="automap"></span><span id="automap-toplevel"></span><h1>オートマップ<a class="headerlink" href="#module-sqlalchemy.ext.automap" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>：mod： <a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy.ext.declarative`システムの拡張を定義します。システムは、データベーススキーマからマップされたクラスと関係を自動的に生成します。</p>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 0.9.1 で追加: </span>Added <a class="reference internal" href="#module-sqlalchemy.ext.automap" title="sqlalchemy.ext.automap"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.ext.automap</span></code></a>.</p>
+<p><span class="versionmodified">バージョン 0.9.1 で追加: </span>追加：mod： <cite>sqlalchemy.ext.automap</cite>。</p>
 </div>
-<p>It is hoped that the <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> system provides a quick
-and modernized solution to the problem that the very famous
-<a class="reference external" href="https://sqlsoup.readthedocs.io/en/latest/">SQLSoup</a>
-also tries to solve, that of generating a quick and rudimentary object
-model from an existing database on the fly.  By addressing the issue strictly
-at the mapper configuration level, and integrating fully with existing
-Declarative class techniques, <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> seeks to provide
-a well-integrated approach to the issue of expediently auto-generating ad-hoc
-mappings.</p>
+<p>：class： <cite>.AutomapBase`システムは、非常に有名な</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>SQLSoup &lt;<a class="reference external" href="https://sqlsoup.readthedocs.io/en/latest/">https://sqlsoup.readthedocs.io/en/latest/</a>&gt;また、既存のデータベースから迅速かつ素早く素早くオブジェクトモデルを生成することを解決しようとしています。問題をマッパー設定レベルで厳密に扱い、既存の宣言クラス技法と完全に統合することによって、クラス： <a href="#id3"><span class="problematic" id="id4">`</span></a>.AutomapBase`は、便宜的に自動生成アドホックマッピングの問題に十分に統合されたアプローチを提供しようとします。</p>
 <div class="section" id="basic-use">
-<h2>Basic Use<a class="headerlink" href="#basic-use" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The simplest usage is to reflect an existing database into a new model.
-We create a new <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> class in a similar manner as to how
-we create a declarative base class, using <a class="reference internal" href="#sqlalchemy.ext.automap.automap_base" title="sqlalchemy.ext.automap.automap_base"><code class="xref py py-func docutils literal"><span class="pre">automap_base()</span></code></a>.
-We then call <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-meth docutils literal"><span class="pre">AutomapBase.prepare()</span></code></a> on the resulting base class,
-asking it to reflect the schema and produce mappings:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.automap</span> <span class="k">import</span> <span class="n">automap_base</span>
+<h2>基本的な使用<a class="headerlink" href="#basic-use" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>最も簡単な使用法は、既存のデータベースを新しいモデルに反映させることです。新しい：class： <cite>.AutomapBase`クラスを作成します：func：</cite> .automap_base`を使用して、宣言的な基本クラスを作成する方法と同様の方法で作成します。次に、生成された基本クラスに対して：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase.prepare`を呼び出し、スキーマを反映してマッピングを生成するよう要求します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.automap</span> <span class="k">import</span> <span class="n">automap_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">Session</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span>
 
@@ -220,34 +206,16 @@ asking it to reflect the schema and produce mappings:</p>
 <span class="c1"># &quot;&lt;classname&gt;_collection&quot;</span>
 <span class="nb">print</span> <span class="p">(</span><span class="n">u1</span><span class="o">.</span><span class="n">address_collection</span><span class="p">)</span></pre></div>
 </div>
-<p>Above, calling <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-meth docutils literal"><span class="pre">AutomapBase.prepare()</span></code></a> while passing along the
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.reflect" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.reflect</span></code></a> parameter indicates that the
-<a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.MetaData.reflect" title="sqlalchemy.schema.MetaData.reflect"><code class="xref py py-meth docutils literal"><span class="pre">MetaData.reflect()</span></code></a> method will be called on this declarative base
-classes' <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a> collection; then, each <strong>viable</strong>
-<a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> within the <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a> will get a new mapped class
-generated automatically.  The <a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a> objects which
-link the various tables together will be used to produce new, bidirectional
-<a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> objects between classes.   The classes and relationships
-follow along a default naming scheme that we can customize.  At this point,
-our basic mapping consisting of related <code class="docutils literal"><span class="pre">User</span></code> and <code class="docutils literal"><span class="pre">Address</span></code> classes is
-ready to use in the traditional way.</p>
+<p>上記の：paramref： <cite>.AutomapBase.prepare.reflect`パラメータを渡している間：meth：</cite> .AutomapBase.prepare`を呼び出すと、：meth： <cite>.MetaData.reflect`メソッドがこの宣言的な基本クラスの &amp;#39; ：クラス： `.MetaData`コレクション; ：class： `.MetaData`の中で各**実行可能な**：class：</cite> .Table`は新しいマップされたクラスを自動的に生成します。さまざまなテーブルをリンクする：class： <cite>.ForeignKeyConstraint`オブジェクトは、クラス間で新しい双方向：func：</cite> .relationship`オブジェクトを生成するために使用されます。クラスとリレーションシップは、カスタマイズ可能なデフォルトの命名規則に従っています。この時点で、関連する `` User``と `` Address``クラスからなる私たちの基本的なマッピングは、従来の方法で使用する準備ができています。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">By <strong>viable</strong>, we mean that for a table to be mapped, it must
-specify a primary key.  Additionally, if the table is detected as being
-a pure association table between two other tables, it will not be directly
-mapped and will instead be configured as a many-to-many table between
-the mappings for the two referring tables.</p>
+<p class="last"><a href="#id1"><span class="problematic" id="id2">**</span></a>実行可能**とは、マッピングされる表に対して主キーを指定する必要があることを意味します。さらに、テーブルが2つの他のテーブル間の純粋な関連テーブルであると検出された場合は、直接マップされず、代わりに2つの参照テーブルのマッピング間に多対多テーブルとして構成されます。</p>
 </div>
 </div>
 <div class="section" id="generating-mappings-from-an-existing-metadata">
-<h2>Generating Mappings from an Existing MetaData<a class="headerlink" href="#generating-mappings-from-an-existing-metadata" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>We can pass a pre-declared <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a> object to <a class="reference internal" href="#sqlalchemy.ext.automap.automap_base" title="sqlalchemy.ext.automap.automap_base"><code class="xref py py-func docutils literal"><span class="pre">automap_base()</span></code></a>.
-This object can be constructed in any way, including programmatically, from
-a serialized file, or from itself being reflected using
-<a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.MetaData.reflect" title="sqlalchemy.schema.MetaData.reflect"><code class="xref py py-meth docutils literal"><span class="pre">MetaData.reflect()</span></code></a>.  Below we illustrate a combination of reflection and
-explicit table declaration:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">MetaData</span><span class="p">,</span> <span class="n">Table</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">ForeignKey</span>
+<h2>既存のメタデータからのマッピングの生成<a class="headerlink" href="#generating-mappings-from-an-existing-metadata" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>事前宣言された：class： <cite>.MetaData`オブジェクトを：func：</cite> .automap_base`に渡すことができます。このオブジェクトは、プログラムによって、シリアライズされたファイルから、あるいは：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.MetaData.reflect`を使って反映されるものから、どのような方法でも構築できます。以下では、リフレクションと明示的なテーブル宣言の組み合わせについて説明します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">MetaData</span><span class="p">,</span> <span class="n">Table</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">ForeignKey</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.automap</span> <span class="k">import</span> <span class="n">automap_base</span>
 <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;sqlite:///mydatabase.db&quot;</span><span class="p">)</span>
 
@@ -276,16 +244,9 @@ explicit table declaration:</p>
 </div>
 </div>
 <div class="section" id="specifying-classes-explicitly">
-<h2>Specifying Classes Explicitly<a class="headerlink" href="#specifying-classes-explicitly" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The <a class="reference internal" href="#module-sqlalchemy.ext.automap" title="sqlalchemy.ext.automap"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.ext.automap</span></code></a> extension allows classes to be defined
-explicitly, in a way similar to that of the <a class="reference internal" href="declarative/api.html#sqlalchemy.ext.declarative.DeferredReflection" title="sqlalchemy.ext.declarative.DeferredReflection"><code class="xref py py-class docutils literal"><span class="pre">DeferredReflection</span></code></a> class.
-Classes that extend from <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> act like regular declarative
-classes, but are not immediately mapped after their construction, and are
-instead mapped when we call <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-meth docutils literal"><span class="pre">AutomapBase.prepare()</span></code></a>.  The
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-meth docutils literal"><span class="pre">AutomapBase.prepare()</span></code></a> method will make use of the classes we've
-established based on the table name we use.  If our schema contains tables
-<code class="docutils literal"><span class="pre">user</span></code> and <code class="docutils literal"><span class="pre">address</span></code>, we can define one or both of the classes to be used:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.automap</span> <span class="k">import</span> <span class="n">automap_base</span>
+<h2>クラスを明示的に指定する<a class="headerlink" href="#specifying-classes-explicitly" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>：mod： <cite>.sqlalchemy.ext.automap`拡張は：class：</cite> .DeferredReflection`クラスのような方法で明示的にクラスを定義できるようにします。 class： <cite>.AutomapBase`から継承したクラスは、通常の宣言的なクラスと同じように動作しますが、構築後すぐにはマッピングされず、代わりに：meth：</cite> .AutomapBase.prepare`を呼び出すときにマップされます。 ：meth： <cite>.AutomapBase.prepare`メソッドは、使用するテーブル名に基づいて確立したクラスを使用します。スキーマにテーブル `</cite> user``と `` address``が含まれている場合、使用するクラスの1つまたは両方を定義することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.automap</span> <span class="k">import</span> <span class="n">automap_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span>
 
 <span class="c1"># automap base</span>
@@ -320,27 +281,12 @@ established based on the table name we use.  If our schema contains tables
 <span class="n">a1</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Address</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
 <span class="nb">print</span> <span class="p">(</span><span class="n">a1</span><span class="o">.</span><span class="n">user</span><span class="p">)</span></pre></div>
 </div>
-<p>Above, one of the more intricate details is that we illustrated overriding
-one of the <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> objects that automap would have created.
-To do this, we needed to make sure the names match up with what automap
-would normally generate, in that the relationship name would be
-<code class="docutils literal"><span class="pre">User.address_collection</span></code> and the name of the class referred to, from
-automap's perspective, is called <code class="docutils literal"><span class="pre">address</span></code>, even though we are referring to
-it as <code class="docutils literal"><span class="pre">Address</span></code> within our usage of this class.</p>
+<p>上の、より複雑な詳細の1つは、automapが作成した：func： <cite>.relationship`オブジェクトのうちの1つをオーバーライドすることを示したことです。これを行うために、我々は名前がautomapが通常生成するものと一致するようにする必要がありました。関係名は `</cite> User.address_collection``であり、automapの観点から参照されるクラスの名前は ` `` Address``と呼ばれています。</p>
 </div>
 <div class="section" id="overriding-naming-schemes">
-<h2>Overriding Naming Schemes<a class="headerlink" href="#overriding-naming-schemes" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><a class="reference internal" href="#module-sqlalchemy.ext.automap" title="sqlalchemy.ext.automap"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.ext.automap</span></code></a> is tasked with producing mapped classes and
-relationship names based on a schema, which means it has decision points in how
-these names are determined.  These three decision points are provided using
-functions which can be passed to the <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-meth docutils literal"><span class="pre">AutomapBase.prepare()</span></code></a> method, and
-are known as <a class="reference internal" href="#sqlalchemy.ext.automap.classname_for_table" title="sqlalchemy.ext.automap.classname_for_table"><code class="xref py py-func docutils literal"><span class="pre">classname_for_table()</span></code></a>,
-<a class="reference internal" href="#sqlalchemy.ext.automap.name_for_scalar_relationship" title="sqlalchemy.ext.automap.name_for_scalar_relationship"><code class="xref py py-func docutils literal"><span class="pre">name_for_scalar_relationship()</span></code></a>,
-and <a class="reference internal" href="#sqlalchemy.ext.automap.name_for_collection_relationship" title="sqlalchemy.ext.automap.name_for_collection_relationship"><code class="xref py py-func docutils literal"><span class="pre">name_for_collection_relationship()</span></code></a>.  Any or all of these
-functions are provided as in the example below, where we use a &quot;camel case&quot;
-scheme for class names and a &quot;pluralizer&quot; for collection names using the
-<a class="reference external" href="https://pypi.python.org/pypi/inflect">Inflect</a> package:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<h2>名前付けスキームのオーバーライド<a class="headerlink" href="#overriding-naming-schemes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>：mod： <cite>.sqlalchemy.ext.automap`は、スキーマに基づいてマップされたクラスと関係名を生成することを任されています。つまり、これらの名前の決定方法に決定点があります。これらの3つの決定ポイントは、：meth： `.AutomapBase.prepare`メソッドに渡すことができる関数を使って提供され、func：</cite> .classname_for_table`、：func： <cite>.name_for_scalar_relationship</cite>、：func：` .name_for_collection_relationship`。これらの関数のいずれかまたはすべては、以下の例のように提供されています。ここでは、クラス名には &amp;quot;camel case&amp;quot;スキームを使用し、コレクション名には &amp;quot;Multipleizer&amp;quot; &lt;<a class="reference external" href="https://pypi.python.org/pypi/inflect">https://pypi.python.org/pypi/inflect</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_パッケージ:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">inflect</span>
 
 <span class="k">def</span> <span class="nf">camelize_classname</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">tablename</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
@@ -373,93 +319,46 @@ scheme for class names and a &quot;pluralizer&quot; for collection names using t
             <span class="n">name_for_collection_relationship</span><span class="o">=</span><span class="n">pluralize_collection</span>
     <span class="p">)</span></pre></div>
 </div>
-<p>From the above mapping, we would now have classes <code class="docutils literal"><span class="pre">User</span></code> and <code class="docutils literal"><span class="pre">Address</span></code>,
-where the collection from <code class="docutils literal"><span class="pre">User</span></code> to <code class="docutils literal"><span class="pre">Address</span></code> is called
-<code class="docutils literal"><span class="pre">User.addresses</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">User</span><span class="p">,</span> <span class="n">Address</span> <span class="o">=</span> <span class="n">Base</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">Base</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">Address</span>
+<p>上記のマッピングから、クラス `` User``と `` Address``があります。ここで `` User``から `` Address``までのコレクションは `` User.addresses``と呼ばれます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">User</span><span class="p">,</span> <span class="n">Address</span> <span class="o">=</span> <span class="n">Base</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">Base</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">Address</span>
 
 <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">addresses</span><span class="o">=</span><span class="p">[</span><span class="n">Address</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="s2">&quot;foo@bar.com&quot;</span><span class="p">)])</span></pre></div>
 </div>
 </div>
 <div class="section" id="relationship-detection">
-<h2>Relationship Detection<a class="headerlink" href="#relationship-detection" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The vast majority of what automap accomplishes is the generation of
-<a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> structures based on foreign keys.  The mechanism
-by which this works for many-to-one and one-to-many relationships is as
-follows:</p>
+<h2>関係の検出<a class="headerlink" href="#relationship-detection" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>automapが達成することの大部分は、外部キーに基づいた：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.relationship`構造の生成です。これが多対1および多対1の関係で機能するメカニズムは次のとおりです。</p>
 <ol class="arabic">
-<li><p class="first">A given <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a>, known to be mapped to a particular class,
-is examined for <a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a> objects.</p>
+<li><p class="first">与えられた：class： <cite>.Table`は特定のクラスにマップされることが知られています：class：</cite> .ForeignKeyConstraint`オブジェクト。</p>
 </li>
-<li><p class="first">From each <a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a>, the remote <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a>
-object present is matched up to the class to which it is to be mapped,
-if any, else it is skipped.</p>
+<li><p class="first">それぞれ：class： <cite>.ForeignKeyConstraint`から、存在するremote：class：</cite> .Table`オブジェクトは、それがマッピングされるクラスまでマッチします。存在しない場合はスキップされます。</p>
 </li>
-<li><p class="first">As the <a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a> we are examining corresponds to a
-reference from the immediate mapped class,  the relationship will be set up
-as a many-to-one referring to the referred class; a corresponding
-one-to-many backref will be created on the referred class referring
-to this class.</p>
+<li><p class="first">私たちが調べている：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.ForeignKeyConstraint`は、直接マッピングされたクラスからの参照に対応しているので、関係は、参照されるクラスを参照する多対1として設定されます。このクラスを参照する参照されたクラスに、対応する一対多のバックリファレンスが作成されます。</p>
 </li>
-<li><p class="first">If any of the columns that are part of the <a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a>
-are not nullable (e.g. <code class="docutils literal"><span class="pre">nullable=False</span></code>), a
-<a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship.params.cascade" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">cascade</span></code></a> keyword argument
-of <code class="docutils literal"><span class="pre">all,</span> <span class="pre">delete-orphan</span></code> will be added to the keyword arguments to
-be passed to the relationship or backref.  If the
-<a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a> reports that
-<a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint.params.ondelete" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-paramref docutils literal"><span class="pre">ForeignKeyConstraint.ondelete</span></code></a>
-is set to <code class="docutils literal"><span class="pre">CASCADE</span></code> for a not null or <code class="docutils literal"><span class="pre">SET</span> <span class="pre">NULL</span></code> for a nullable
-set of columns, the option <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship.params.passive_deletes" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">passive_deletes</span></code></a>
-flag is set to <code class="docutils literal"><span class="pre">True</span></code> in the set of relationship keyword arguments.
-Note that not all backends support reflection of ON DELETE.</p>
+<li><p class="first">：class： <cite>.ForeignKeyConstraint`の一部であるカラムのいずれかがヌル入力可能でない場合（例えば、</cite> <cite>ヌル可能= False`</cite>）、` <cite>all、deleteのキーワード引数：paramref：</cite>〜.relationship.cascade` -orphan``がキーワード引数に追加され、関係またはバックリファレンスに渡されます。 ：class： <cite>.ForeignKeyConstraint`が次のことを報告している場合：paramref：</cite> .ForeignKeyConstraint.ondelete`がnullでない場合は `` CASCADE``に設定され、NULLのセットの場合は `` SET NULL``に設定されます。 ： <cite>〜.relationship.passive_deletes`フラグは、関係キーワード引数のセットで</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>True``に設定されます。すべてのバックエンドがON DELETEの反映をサポートするわけではないことに注意してください。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.0.0 で追加: </span>- automap will detect non-nullable foreign key
 constraints when producing a one-to-many relationship and establish
-a default cascade of <code class="docutils literal"><span class="pre">all,</span> <span class="pre">delete-orphan</span></code> if so; additionally,
-if the constraint specifies <a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint.params.ondelete" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-paramref docutils literal"><span class="pre">ForeignKeyConstraint.ondelete</span></code></a>
-of <code class="docutils literal"><span class="pre">CASCADE</span></code> for non-nullable or <code class="docutils literal"><span class="pre">SET</span> <span class="pre">NULL</span></code> for nullable columns,
-the <code class="docutils literal"><span class="pre">passive_deletes=True</span></code> option is also added.</p>
+a default cascade of <code class="docutils literal notranslate"><span class="pre">all,</span> <span class="pre">delete-orphan</span></code> if so; additionally,
+if the constraint specifies <a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint.params.ondelete" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">ForeignKeyConstraint.ondelete</span></code></a>
+of <code class="docutils literal notranslate"><span class="pre">CASCADE</span></code> for non-nullable or <code class="docutils literal notranslate"><span class="pre">SET</span> <span class="pre">NULL</span></code> for nullable columns,
+the <code class="docutils literal notranslate"><span class="pre">passive_deletes=True</span></code> option is also added.</p>
 </div>
 </li>
-<li><p class="first">The names of the relationships are determined using the
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_scalar_relationship" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.name_for_scalar_relationship</span></code></a> and
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_collection_relationship" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.name_for_collection_relationship</span></code></a>
-callable functions.  It is important to note that the default relationship
-naming derives the name from the <strong>the actual class name</strong>.  If you've
-given a particular class an explicit name by declaring it, or specified an
-alternate class naming scheme, that's the name from which the relationship
-name will be derived.</p>
+<li><p class="first">関係の名前は：paramref： <cite>.AutomapBase.prepare.name_for_scalar_relationship`と：paramref：</cite> .AutomapBase.prepare.name_for_collection_relationship`呼び出し可能関数を使用して決定されます。デフォルトの関係の命名は、<a href="#id1"><span class="problematic" id="id2">**</span></a>実際のクラス名**から名前を導出することに注意することが重要です。特定のクラスに宣言することによって明示的な名前を与えた場合、または代替のクラス命名スキームを指定した場合、その名前から関係名が導出されます。</p>
 </li>
-<li><p class="first">The classes are inspected for an existing mapped property matching these
-names.  If one is detected on one side, but none on the other side,
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> attempts to create a relationship on the missing side,
-then uses the <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship.params.back_populates" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">relationship.back_populates</span></code></a> parameter in order to
-point the new relationship to the other side.</p>
+<li><p class="first">クラスは、これらの名前に一致する既存のマップされたプロパティを調べられます。一方が検出され、他方が検出されない場合、：class： <cite>.AutomapBase`は、欠落している側に関係を作成しようとします。：paramref：</cite> .relationship.back_populates`パラメータを使用して、相手側との新たな関係。</p>
 </li>
-<li><p class="first">In the usual case where no relationship is on either side,
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-meth docutils literal"><span class="pre">AutomapBase.prepare()</span></code></a> produces a <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> on the
-&quot;many-to-one&quot; side and matches it to the other using the
-<a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship.params.backref" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">relationship.backref</span></code></a> parameter.</p>
+<li><p class="first">通常、どちらの側にも関係がない場合、：meth： <cite>.AutomapBase.prepare`は&amp;quot; many-to-one &amp;quot;側で：func：</cite> .relationship`を生成し、 ：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.relationship.backref`パラメータ。</p>
 </li>
-<li><p class="first">Production of the <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> and optionally the <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a>
-is handed off to the <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.generate_relationship" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.generate_relationship</span></code></a>
-function, which can be supplied by the end-user in order to augment
-the arguments passed to <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> or <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a> or to
-make use of custom implementations of these functions.</p>
+<li><p class="first">：func： <cite>.relationship`とオプションで：func：</cite> .backref`の生成は、：paramref： <cite>.AutomapBase.prepare.generate_relationship`関数に渡されます。これはエンドユーザが提供することができます。 ：func： `.relationship`または：func：</cite> .backref`に渡された引数を増やしたり、これらの関数のカスタム実装を利用したりすることができます。</p>
 </li>
 </ol>
 <div class="section" id="custom-relationship-arguments">
-<h3>Custom Relationship Arguments<a class="headerlink" href="#custom-relationship-arguments" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.generate_relationship" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.generate_relationship</span></code></a> hook can be used
-to add parameters to relationships.  For most cases, we can make use of the
-existing <a class="reference internal" href="#sqlalchemy.ext.automap.generate_relationship" title="sqlalchemy.ext.automap.generate_relationship"><code class="xref py py-func docutils literal"><span class="pre">automap.generate_relationship()</span></code></a> function to return
-the object, after augmenting the given keyword dictionary with our own
-arguments.</p>
-<p>Below is an illustration of how to send
-<a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship.params.cascade" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">relationship.cascade</span></code></a> and
-<a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship.params.passive_deletes" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">relationship.passive_deletes</span></code></a>
-options along to all one-to-many relationships:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.automap</span> <span class="k">import</span> <span class="n">generate_relationship</span>
+<h3>カスタム関係の引数<a class="headerlink" href="#custom-relationship-arguments" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase.prepare.generate_relationship`フックを使って、関係にパラメータを追加できます。ほとんどの場合、既存の：func： <a href="#id3"><span class="problematic" id="id4">`</span></a>.automap.generate_relationship`関数を使用して、与えられたキーワード辞書を独自の引数で拡張した後にオブジェクトを返すことができます。</p>
+<p>以下は、paramref： <cite>.relationship.cascade`と：paramref：</cite> .relationship.passive_deletes`オプションをすべての一対多関係に沿って送る方法の例です。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.automap</span> <span class="k">import</span> <span class="n">generate_relationship</span>
 
 <span class="k">def</span> <span class="nf">_gen_relationship</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">return_fn</span><span class="p">,</span>
                                 <span class="n">attrname</span><span class="p">,</span> <span class="n">local_cls</span><span class="p">,</span> <span class="n">referred_cls</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
@@ -483,34 +382,20 @@ options along to all one-to-many relationships:</p>
 </div>
 </div>
 <div class="section" id="many-to-many-relationships">
-<h3>Many-to-Many relationships<a class="headerlink" href="#many-to-many-relationships" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p><a class="reference internal" href="#module-sqlalchemy.ext.automap" title="sqlalchemy.ext.automap"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.ext.automap</span></code></a> will generate many-to-many relationships, e.g.
-those which contain a <code class="docutils literal"><span class="pre">secondary</span></code> argument.  The process for producing these
-is as follows:</p>
+<h3>多対多の関係<a class="headerlink" href="#many-to-many-relationships" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>：mod： <cite>.sqlalchemy.ext.automap`は多対多の関係を生成します。例えば、</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>secondary``引数を含むものです。これらの製造方法は以下の通りである。</p>
 <ol class="arabic simple">
-<li>A given <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> is examined for <a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a>
-objects, before any mapped class has been assigned to it.</li>
-<li>If the table contains two and exactly two <a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a>
-objects, and all columns within this table are members of these two
-<a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a> objects, the table is assumed to be a
-&quot;secondary&quot; table, and will <strong>not be mapped directly</strong>.</li>
-<li>The two (or one, for self-referential) external tables to which the
-<a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> refers to are matched to the classes to which they will be
-mapped, if any.</li>
-<li>If mapped classes for both sides are located, a many-to-many bi-directional
-<a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> / <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a> pair is created between the two
-classes.</li>
-<li>The override logic for many-to-many works the same as that of one-to-many/
-many-to-one; the <a class="reference internal" href="#sqlalchemy.ext.automap.generate_relationship" title="sqlalchemy.ext.automap.generate_relationship"><code class="xref py py-func docutils literal"><span class="pre">generate_relationship()</span></code></a> function is called upon
-to generate the strucures and existing attributes will be maintained.</li>
+<li>与えられた：class： <cite>.Table`は：class：</cite> .ForeignKeyConstraint`オブジェクトのために検査され、マップされたクラスがそれに割り当てられます。</li>
+<li>テーブルに2つの厳密に2つの：class： <cite>.ForeignKeyConstraint`オブジェクトが含まれ、このテーブル内のすべてのカラムがclass：</cite> .ForeignKeyConstraint`オブジェクトのメンバーである場合、テーブルは&amp;quot;セカンダリ&amp;quot;テーブルとみなされます**直接マップされません**。</li>
+<li>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Table`が参照する2つ（または自己参照のための1つ）の外部テーブルは、それらがマッピングされるクラス（存在する場合）に一致します。</li>
+<li>両側のマッピングされたクラスが見つかった場合、多対多双方向：func： <cite>.relationship</cite> /：func：` .backref`のペアが2つのクラスの間に作成されます。</li>
+<li>多対多のオーバーライドロジックは、1対多/多対1のオーバーライドロジックと同じです。構造体を生成するために：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.generate_relationship`関数が呼び出され、既存の属性が維持されます。</li>
 </ol>
 </div>
 <div class="section" id="relationships-with-inheritance">
-<h3>Relationships with Inheritance<a class="headerlink" href="#relationships-with-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p><a class="reference internal" href="#module-sqlalchemy.ext.automap" title="sqlalchemy.ext.automap"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.ext.automap</span></code></a> will not generate any relationships between
-two classes that are in an inheritance relationship.   That is, with two
-classes given as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<h3>継承との関係<a class="headerlink" href="#relationships-with-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>：mod： <a href="#id1"><span class="problematic" id="id2">`</span></a>.sqlalchemy.ext.automap`は、継承関係にある2つのクラス間の関係を生成しません。つまり、次の2つのクラスがあります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;employee&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -525,16 +410,9 @@ classes given as follows:</p>
         <span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span><span class="s1">&#39;engineer&#39;</span><span class="p">,</span>
     <span class="p">}</span></pre></div>
 </div>
-<p>The foreign key from <code class="docutils literal"><span class="pre">Engineer</span></code> to <code class="docutils literal"><span class="pre">Employee</span></code> is used not for a
-relationship, but to establish joined inheritance between the two classes.</p>
-<p>Note that this means automap will not generate <em>any</em> relationships
-for foreign keys that link from a subclass to a superclass.  If a mapping
-has actual relationships from subclass to superclass as well, those
-need to be explicit.  Below, as we have two separate foreign keys
-from <code class="docutils literal"><span class="pre">Engineer</span></code> to <code class="docutils literal"><span class="pre">Employee</span></code>, we need to set up both the relationship
-we want as well as the <code class="docutils literal"><span class="pre">inherit_condition</span></code>, as these are not things
-SQLAlchemy can guess:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>「エンジニア」から「従業員」までの外部キーは、関係ではなく、2つのクラス間の継承継承を確立するために使用されます。</p>
+<p>つまり、automapは、サブクラスからスーパークラスにリンクする外部キーの*関係を生成しません。マッピングがサブクラスからスーパークラスへの実際の関係をも持っている場合、マッピングは明示的である必要があります。以下では、「エンジニア」から「従業員」までの2つの別個の外部キーがあるため、SQLAlchemyが推測できるものではないため、必要な関係と「継承条件」の両方を設定する必要があります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;employee&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -558,14 +436,9 @@ SQLAlchemy can guess:</p>
 </div>
 </div>
 <div class="section" id="handling-simple-naming-conflicts">
-<h3>Handling Simple Naming Conflicts<a class="headerlink" href="#handling-simple-naming-conflicts" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>In the case of naming conflicts during mapping, override any of
-<a class="reference internal" href="#sqlalchemy.ext.automap.classname_for_table" title="sqlalchemy.ext.automap.classname_for_table"><code class="xref py py-func docutils literal"><span class="pre">classname_for_table()</span></code></a>, <a class="reference internal" href="#sqlalchemy.ext.automap.name_for_scalar_relationship" title="sqlalchemy.ext.automap.name_for_scalar_relationship"><code class="xref py py-func docutils literal"><span class="pre">name_for_scalar_relationship()</span></code></a>,
-and <a class="reference internal" href="#sqlalchemy.ext.automap.name_for_collection_relationship" title="sqlalchemy.ext.automap.name_for_collection_relationship"><code class="xref py py-func docutils literal"><span class="pre">name_for_collection_relationship()</span></code></a> as needed.  For example, if
-automap is attempting to name a many-to-one relationship the same as an
-existing column, an alternate convention can be conditionally selected.  Given
-a schema:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">table_a</span> <span class="p">(</span>
+<h3>単純な名前の競合の処理<a class="headerlink" href="#handling-simple-naming-conflicts" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>マッピング中に名前の競合が発生した場合、必要に応じて：func： <cite>.classname_for_table</cite>、：func：` .name_for_scalar_relationship`、：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.name_for_collection_relationship`のいずれかをオーバーライドします。たとえば、automapが既存の列と多対1の関係を同じ名前で指定しようとしている場合、条件を選択することができます。与えられたスキーマ：</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">table_a</span> <span class="p">(</span>
     <span class="n">id</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span>
 <span class="p">);</span>
 
@@ -575,13 +448,9 @@ a schema:</p>
     <span class="k">FOREIGN</span> <span class="k">KEY</span><span class="p">(</span><span class="n">table_a</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">table_a</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">);</span></pre></div>
 </div>
-<p>The above schema will first automap the <code class="docutils literal"><span class="pre">table_a</span></code> table as a class named
-<code class="docutils literal"><span class="pre">table_a</span></code>; it will then automap a relationship onto the class for <code class="docutils literal"><span class="pre">table_b</span></code>
-with the same name as this related class, e.g. <code class="docutils literal"><span class="pre">table_a</span></code>.  This
-relationship name conflicts with the mapping column <code class="docutils literal"><span class="pre">table_b.table_a</span></code>,
-and will emit an error on mapping.</p>
-<p>We can resolve this conflict by using an underscore as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">name_for_scalar_relationship</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">local_cls</span><span class="p">,</span> <span class="n">referred_cls</span><span class="p">,</span> <span class="n">constraint</span><span class="p">):</span>
+<p>上記のスキーマは、 `` table_a``テーブルを `` table_a``という名前のクラスとして最初に自動マッピングします。 `` table_a``のような関連するクラスと同じ名前の `` table_b``のクラスへの関係を自動化します。この関係名は、マッピング列 `` table_b.table_a``と競合し、マッピング時にエラーを出します。</p>
+<p>この競合は、次のようにアンダースコアを使用して解決できます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">name_for_scalar_relationship</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">local_cls</span><span class="p">,</span> <span class="n">referred_cls</span><span class="p">,</span> <span class="n">constraint</span><span class="p">):</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">referred_cls</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
     <span class="n">local_table</span> <span class="o">=</span> <span class="n">local_cls</span><span class="o">.</span><span class="n">__table__</span>
     <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">local_table</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
@@ -596,11 +465,8 @@ and will emit an error on mapping.</p>
 <span class="n">Base</span><span class="o">.</span><span class="n">prepare</span><span class="p">(</span><span class="n">engine</span><span class="p">,</span> <span class="n">reflect</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">name_for_scalar_relationship</span><span class="o">=</span><span class="n">name_for_scalar_relationship</span><span class="p">)</span></pre></div>
 </div>
-<p>Alternatively, we can change the name on the column side.   The columns
-that are mapped can be modified using the technique described at
-<a class="reference internal" href="../mapping_columns.html#mapper-column-distinct-names"><span class="std std-ref">Naming Columns Distinctly from Attribute Names</span></a>, by assigning the column explicitly
-to a new name:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Base</span> <span class="o">=</span> <span class="n">automap_base</span><span class="p">()</span>
+<p>また、列側の名前を変更することもできます。マップされた列は、ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>mapper_column_distinct_names`で説明されている手法を使用して、列を明示的に新しい名前に割り当てることによって変更できます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Base</span> <span class="o">=</span> <span class="n">automap_base</span><span class="p">()</span>
 
 <span class="k">class</span> <span class="nc">TableB</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;table_b&#39;</span>
@@ -611,13 +477,9 @@ to a new name:</p>
 </div>
 </div>
 <div class="section" id="using-automap-with-explicit-declarations">
-<h2>Using Automap with Explicit Declarations<a class="headerlink" href="#using-automap-with-explicit-declarations" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>As noted previously, automap has no dependency on reflection, and can make
-use of any collection of <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> objects within a <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a>
-collection.  From this, it follows that automap can also be used
-generate missing relationships given an otherwise complete model that fully
-defines table metadata:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.automap</span> <span class="k">import</span> <span class="n">automap_base</span>
+<h2>明示的な宣言を伴うオートマップの使用<a class="headerlink" href="#using-automap-with-explicit-declarations" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>前述のように、automapはリフレクションに依存せず、：class： <cite>.Table`オブジェクトのコレクションを：class：</cite> .MetaData`コレクション内で使用することができます。このことから、automapは、テーブルのメタデータを完全に定義する他の完全なモデルを使って、欠けている関係を生成するためにも使用できます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.automap</span> <span class="k">import</span> <span class="n">automap_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">ForeignKey</span>
 
 <span class="n">Base</span> <span class="o">=</span> <span class="n">automap_base</span><span class="p">()</span>
@@ -645,37 +507,24 @@ defines table metadata:</p>
 <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">address_collection</span><span class="o">=</span><span class="p">[</span><span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">])</span>
 <span class="k">assert</span> <span class="n">a1</span><span class="o">.</span><span class="n">user</span> <span class="ow">is</span> <span class="n">u1</span></pre></div>
 </div>
-<p>Above, given mostly complete <code class="docutils literal"><span class="pre">User</span></code> and <code class="docutils literal"><span class="pre">Address</span></code> mappings, the
-<a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKey" title="sqlalchemy.schema.ForeignKey"><code class="xref py py-class docutils literal"><span class="pre">ForeignKey</span></code></a> which we defined on <code class="docutils literal"><span class="pre">Address.user_id</span></code> allowed a
-bidirectional relationship pair <code class="docutils literal"><span class="pre">Address.user</span></code> and
-<code class="docutils literal"><span class="pre">User.address_collection</span></code> to be generated on the mapped classes.</p>
-<p>Note that when subclassing <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a>,
-the <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-meth docutils literal"><span class="pre">AutomapBase.prepare()</span></code></a> method is required; if not called, the classes
-we've declared are in an un-mapped state.</p>
+<p>上では、ほとんどすべての `` User``と `` Address``マッピングが与えられているので、 `` Address.user_id``で定義した：class： <cite>.ForeignKey`は、双方向関係のペア</cite> <cite>Address.user``と`</cite> User.address_collection``がマップされたクラスに対して生成されます。</p>
+<p>class： <cite>.AutomapBase`をサブクラス化するときは、：meth：</cite> .AutomapBase.prepare`メソッドが必要です。呼び出されなければ、宣言したクラスはマップされていない状態になります。</p>
 </div>
 <div class="section" id="api-reference">
-<h2>API Reference<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>APIリファレンス<a class="headerlink" href="#api-reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="function">
 <dt id="sqlalchemy.ext.automap.automap_base">
 <code class="descclassname">sqlalchemy.ext.automap.</code><code class="descname">automap_base</code><span class="sig-paren">(</span><em>declarative_base=None</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.automap.automap_base" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Produce a declarative automap base.</p>
-<p>This function produces a new base class that is a product of the
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> class as well a declarative base produced by
-<a class="reference internal" href="declarative/api.html#sqlalchemy.ext.declarative.declarative_base" title="sqlalchemy.ext.declarative.declarative_base"><code class="xref py py-func docutils literal"><span class="pre">declarative.declarative_base()</span></code></a>.</p>
-<p>All parameters other than <code class="docutils literal"><span class="pre">declarative_base</span></code> are keyword arguments
-that are passed directly to the <a class="reference internal" href="declarative/api.html#sqlalchemy.ext.declarative.declarative_base" title="sqlalchemy.ext.declarative.declarative_base"><code class="xref py py-func docutils literal"><span class="pre">declarative.declarative_base()</span></code></a>
-function.</p>
+<dd><p>宣言的なオートマップベースを作成します。</p>
+<p>この関数は：class： <cite>.AutomapBase`クラスと：func：</cite> .declarative.declarative_base`によって生成される宣言ベースの生成物である新しい基本クラスを生成します。</p>
+<p>`` declarative_base`以外のすべてのパラメータは：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.declarative.declarative_base`関数に直接渡されるキーワード引数です。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.ext.automap.automap_base.params.declarative_base"></span><strong>declarative_base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.automap_base.params.declarative_base">¶</a> -- an existing class produced by
-<a class="reference internal" href="declarative/api.html#sqlalchemy.ext.declarative.declarative_base" title="sqlalchemy.ext.declarative.declarative_base"><code class="xref py py-func docutils literal"><span class="pre">declarative.declarative_base()</span></code></a>.  When this is passed, the function
-no longer invokes <a class="reference internal" href="declarative/api.html#sqlalchemy.ext.declarative.declarative_base" title="sqlalchemy.ext.declarative.declarative_base"><code class="xref py py-func docutils literal"><span class="pre">declarative.declarative_base()</span></code></a> itself, and all
-other keyword arguments are ignored.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.automap_base.params.**kw"></span><strong>**kw</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.automap_base.params.**kw">¶</a> -- keyword arguments are passed along to
-<a class="reference internal" href="declarative/api.html#sqlalchemy.ext.declarative.declarative_base" title="sqlalchemy.ext.declarative.declarative_base"><code class="xref py py-func docutils literal"><span class="pre">declarative.declarative_base()</span></code></a>.</li>
+<li><span class="target" id="sqlalchemy.ext.automap.automap_base.params.declarative_base"></span><strong>declarative_base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.automap_base.params.declarative_base">¶</a> -- func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.declarative.declarative_base`によって生成される既存のクラスです。これが渡されると、関数はもはや：func： <a href="#id3"><span class="problematic" id="id4">`</span></a>.declarative.declarative_base`自体を呼び出さなくなり、他のすべてのキーワード引数は無視されます。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.automap_base.params.**kw"></span><strong>**kw</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.automap_base.params.**kw">¶</a> -- キーワード引数は：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.declarative.declarative_base`に渡されます。</li>
 </ul>
 </td>
 </tr>
@@ -686,24 +535,19 @@ other keyword arguments are ignored.</li>
 <dl class="class">
 <dt id="sqlalchemy.ext.automap.AutomapBase">
 <em class="property">class </em><code class="descclassname">sqlalchemy.ext.automap.</code><code class="descname">AutomapBase</code><a class="headerlink" href="#sqlalchemy.ext.automap.AutomapBase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Base class for an &quot;automap&quot; schema.</p>
-<p>The <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> class can be compared to the &quot;declarative base&quot;
-class that is produced by the <a class="reference internal" href="declarative/api.html#sqlalchemy.ext.declarative.declarative_base" title="sqlalchemy.ext.declarative.declarative_base"><code class="xref py py-func docutils literal"><span class="pre">declarative.declarative_base()</span></code></a>
-function.  In practice, the <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> class is always used
-as a mixin along with an actual declarative base.</p>
-<p>A new subclassable <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> is typically instantated
-using the <a class="reference internal" href="#sqlalchemy.ext.automap.automap_base" title="sqlalchemy.ext.automap.automap_base"><code class="xref py py-func docutils literal"><span class="pre">automap_base()</span></code></a> function.</p>
+<dd><p>&amp;quot;automap &amp;quot;スキーマの基本クラス。</p>
+<p>：class： <cite>.AutomapBase`クラスは、：func：</cite> .declarative.declarative_base`関数によって生成される &amp;quot;宣言的なベース&amp;quot;クラスと比較できます。実際には：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase`クラスは、実際の宣言的な基底と共にmixinとして常に使用されます。</p>
+<p>新しいサブクラス：class： <cite>.AutomapBase`は通常、：func：</cite> .automap_base`関数を使ってインスタンス化されます。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="#"><span class="std std-ref">Automap</span></a></p>
+<p class="last">：ref： <cite>automap_toplevel</cite></p>
 </div>
 <dl class="attribute">
 <dt id="sqlalchemy.ext.automap.AutomapBase.classes">
 <code class="descname">classes</code><em class="property"> = None</em><a class="headerlink" href="#sqlalchemy.ext.automap.AutomapBase.classes" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>An instance of <code class="xref py py-class docutils literal"><span class="pre">util.Properties</span></code> containing classes.</p>
-<p>This object behaves much like the <code class="docutils literal"><span class="pre">.c</span></code> collection on a table.  Classes
-are present under the name they were given, e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Base</span> <span class="o">=</span> <span class="n">automap_base</span><span class="p">()</span>
+<dd><p>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.util.Properties`のクラスのインスタンスです。</p>
+<p>このオブジェクトはテーブル上の `` .c``コレクションのように動作します。クラスは与えられた名前の下に存在します。例えば：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Base</span> <span class="o">=</span> <span class="n">automap_base</span><span class="p">()</span>
 <span class="n">Base</span><span class="o">.</span><span class="n">prepare</span><span class="p">(</span><span class="n">engine</span><span class="o">=</span><span class="n">some_engine</span><span class="p">,</span> <span class="n">reflect</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">User</span><span class="p">,</span> <span class="n">Address</span> <span class="o">=</span> <span class="n">Base</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">Base</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">Address</span></pre></div>
@@ -713,47 +557,20 @@ are present under the name they were given, e.g.:</p>
 <dl class="classmethod">
 <dt id="sqlalchemy.ext.automap.AutomapBase.prepare">
 <em class="property">classmethod </em><code class="descname">prepare</code><span class="sig-paren">(</span><em>engine=None</em>, <em>reflect=False</em>, <em>schema=None</em>, <em>classname_for_table=&lt;function classname_for_table&gt;</em>, <em>collection_class=&lt;class 'list'&gt;</em>, <em>name_for_scalar_relationship=&lt;function name_for_scalar_relationship&gt;</em>, <em>name_for_collection_relationship=&lt;function name_for_collection_relationship&gt;</em>, <em>generate_relationship=&lt;function generate_relationship&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.automap.AutomapBase.prepare" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Extract mapped classes and relationships from the <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a> and
-perform mappings.</p>
+<dd><p>マッピングされたクラスと関係を：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.MetaData`から抽出し、マッピングを実行します。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.engine"></span><strong>engine</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.engine">¶</a> -- an <a class="reference internal" href="../../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> or <a class="reference internal" href="../../core/connections.html#sqlalchemy.engine.Connection" title="sqlalchemy.engine.Connection"><code class="xref py py-class docutils literal"><span class="pre">Connection</span></code></a> with which
-to perform schema reflection, if specified.
-If the <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.reflect" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.reflect</span></code></a> argument is False,
-this object is not used.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.reflect"></span><strong>reflect</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.reflect">¶</a> -- if True, the <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.MetaData.reflect" title="sqlalchemy.schema.MetaData.reflect"><code class="xref py py-meth docutils literal"><span class="pre">MetaData.reflect()</span></code></a> method is called
-on the <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a> associated with this <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a>.
-The <a class="reference internal" href="../../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> passed via
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.engine" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.engine</span></code></a> will be used to perform the
-reflection if present; else, the <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.MetaData" title="sqlalchemy.schema.MetaData"><code class="xref py py-class docutils literal"><span class="pre">MetaData</span></code></a> should already be
-bound to some engine else the operation will fail.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.classname_for_table"></span><strong>classname_for_table</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.classname_for_table">¶</a> -- callable function which will be used to
-produce new class names, given a table name.  Defaults to
-<a class="reference internal" href="#sqlalchemy.ext.automap.classname_for_table" title="sqlalchemy.ext.automap.classname_for_table"><code class="xref py py-func docutils literal"><span class="pre">classname_for_table()</span></code></a>.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_scalar_relationship"></span><strong>name_for_scalar_relationship</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_scalar_relationship">¶</a> -- callable function which will be
-used to produce relationship names for scalar relationships.  Defaults
-to <a class="reference internal" href="#sqlalchemy.ext.automap.name_for_scalar_relationship" title="sqlalchemy.ext.automap.name_for_scalar_relationship"><code class="xref py py-func docutils literal"><span class="pre">name_for_scalar_relationship()</span></code></a>.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_collection_relationship"></span><strong>name_for_collection_relationship</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_collection_relationship">¶</a> -- callable function which will
-be used to produce relationship names for collection-oriented
-relationships.  Defaults to <a class="reference internal" href="#sqlalchemy.ext.automap.name_for_collection_relationship" title="sqlalchemy.ext.automap.name_for_collection_relationship"><code class="xref py py-func docutils literal"><span class="pre">name_for_collection_relationship()</span></code></a>.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.generate_relationship"></span><strong>generate_relationship</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.generate_relationship">¶</a> -- callable function which will be used to
-actually generate <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> and <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a>
-constructs.  Defaults to <a class="reference internal" href="#sqlalchemy.ext.automap.generate_relationship" title="sqlalchemy.ext.automap.generate_relationship"><code class="xref py py-func docutils literal"><span class="pre">generate_relationship()</span></code></a>.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.collection_class"></span><strong>collection_class</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.collection_class">¶</a> -- the Python collection class that will be used
-when a new <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> object is created that represents a
-collection.  Defaults to <code class="docutils literal"><span class="pre">list</span></code>.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.schema"></span><strong>schema</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.schema">¶</a> -- <p>When present in conjunction with the
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.reflect" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.reflect</span></code></a> flag, is passed to
-<a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.MetaData.reflect" title="sqlalchemy.schema.MetaData.reflect"><code class="xref py py-meth docutils literal"><span class="pre">MetaData.reflect()</span></code></a> to indicate the primary schema where tables
-should be reflected from.  When omitted, the default schema in use
-by the database connection is used.</p>
-<div class="versionadded">
-<p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
-</div>
-</li>
+<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.engine"></span><strong>engine</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.engine">¶</a> -- ：class： <cite>.Engine`または：class：</cite> .Connection`：指定されている場合、スキーマリフレクションを実行します。 ：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase.prepare.reflect`引数がFalseの場合、このオブジェクトは使用されません。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.reflect"></span><strong>reflect</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.reflect">¶</a> -- Trueの場合、：meth： <cite>.MetaData.reflect`メソッドは、class：</cite> .AutomapBase`に関連付けられた：class： <cite>.MetaData`で呼び出されます。存在する場合、リフレクションを実行するために：class： `.Engine</cite>：paramref：` .AutomapBase.prepare.engine`が使用されます。そうでなければ、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.MetaData`は既にいくつかのエンジンにバインドされているはずです。そうでないと操作は失敗します。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.classname_for_table"></span><strong>classname_for_table</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.classname_for_table">¶</a> -- テーブル名を指定すると、新しいクラス名を生成するために使用される呼び出し可能な関数です。デフォルトは：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.classname_for_table`です。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_scalar_relationship"></span><strong>name_for_scalar_relationship</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_scalar_relationship">¶</a> -- スカラー関係の関係名を生成するために使用される呼び出し可能な関数。デフォルトは：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.name_for_scalar_relationship`です。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_collection_relationship"></span><strong>name_for_collection_relationship</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_collection_relationship">¶</a> -- コレクション指向の関係の関係名を生成するために使用されるコール可能な関数。デフォルトは：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.name_for_collection_relationship`です。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.generate_relationship"></span><strong>generate_relationship</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.generate_relationship">¶</a> -- func： <cite>.relationship`と：func：</cite> .backref`構造体を実際に生成するために使用される呼び出し可能な関数です。デフォルトは：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.generate_relationship`です。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.collection_class"></span><strong>collection_class</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.collection_class">¶</a> -- コレクションを表すnew：func： <cite>.relationship`オブジェクトが作成されたときに使用されるPythonコレクションクラスです。デフォルトは `</cite> list``です。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.AutomapBase.prepare.params.schema"></span><strong>schema</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.schema">¶</a> -- ：paramref： <cite>.AutomapBase.prepare.reflect`フラグと一緒に存在する場合は、：meth：</cite> .MetaData.reflect`に渡され、テーブルを反映させるべきプライマリスキーマを示します。省略すると、データベース接続で使用されているデフォルトのスキーマが使用されます。 .. versionadded :: 1.1</li>
 </ul>
 </td>
 </tr>
@@ -766,35 +583,23 @@ by the database connection is used.</p>
 <dl class="function">
 <dt id="sqlalchemy.ext.automap.classname_for_table">
 <code class="descclassname">sqlalchemy.ext.automap.</code><code class="descname">classname_for_table</code><span class="sig-paren">(</span><em>base</em>, <em>tablename</em>, <em>table</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.automap.classname_for_table" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the class name that should be used, given the name
-of a table.</p>
-<p>The default implementation is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">tablename</span><span class="p">)</span></pre></div>
+<dd><p>テーブルの名前を指定して、使用するクラス名を返します。</p>
+<p>デフォルト実装は:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">tablename</span><span class="p">)</span></pre></div>
 </div>
-<p>Alternate implementations can be specified using the
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.classname_for_table" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.classname_for_table</span></code></a>
-parameter.</p>
+<p>代替実装は、：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase.prepare.classname_for_table`パラメータを使用して指定できます。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><span class="target" id="sqlalchemy.ext.automap.classname_for_table.params.base"></span><strong>base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.classname_for_table.params.base">¶</a> -- the <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> class doing the prepare.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.classname_for_table.params.tablename"></span><strong>tablename</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.classname_for_table.params.tablename">¶</a> -- string name of the <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a>.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.classname_for_table.params.table"></span><strong>table</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.classname_for_table.params.table">¶</a> -- the <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> object itself.</li>
+<li><span class="target" id="sqlalchemy.ext.automap.classname_for_table.params.base"></span><strong>base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.classname_for_table.params.base">¶</a> -- ：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase`クラスは準備をしています。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.classname_for_table.params.tablename"></span><strong>tablename</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.classname_for_table.params.tablename">¶</a> -- ：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Table`の文字列名です。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.classname_for_table.params.table"></span><strong>table</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.classname_for_table.params.table">¶</a> -- ：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Table`オブジェクト自体です。</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last"><p>a string class name.</p>
-<div class="admonition note">
-<p class="first admonition-title">注釈</p>
-<p class="last">In Python 2, the string used for the class name <strong>must</strong> be a
-non-Unicode object, e.g. a <code class="docutils literal"><span class="pre">str()</span></code> object.  The <code class="docutils literal"><span class="pre">.name</span></code> attribute
-of <a class="reference internal" href="../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> is typically a Python unicode subclass, so the
-<code class="docutils literal"><span class="pre">str()</span></code> function should be applied to this name, after accounting for
-any non-ASCII characters.</p>
-</div>
-</p>
+<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">文字列クラス名.. note :: Python 2では、クラス名**に使用される文字列は、非Unicodeオブジェクト、例えば `` str（） <a href="#id1"><span class="problematic" id="id2">``</span></a>オブジェクトでなければなりません。 ：class： <cite>.Table`の</cite> <cite>.name``属性は通常PythonのUnicodeサブクラスなので、非ASCII文字を考慮した上で、この名前に</cite> <cite>str（）</cite> <a href="#id3"><span class="problematic" id="id4">`</span></a>関数を適用する必要があります。</p>
 </td>
 </tr>
 </tbody>
@@ -804,24 +609,20 @@ any non-ASCII characters.</p>
 <dl class="function">
 <dt id="sqlalchemy.ext.automap.name_for_scalar_relationship">
 <code class="descclassname">sqlalchemy.ext.automap.</code><code class="descname">name_for_scalar_relationship</code><span class="sig-paren">(</span><em>base</em>, <em>local_cls</em>, <em>referred_cls</em>, <em>constraint</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.automap.name_for_scalar_relationship" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the attribute name that should be used to refer from one
-class to another, for a scalar object reference.</p>
-<p>The default implementation is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">referred_cls</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></pre></div>
+<dd><p>1つのクラスから別のクラスへの参照に使用する属性名を返します。</p>
+<p>デフォルト実装は:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">referred_cls</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></pre></div>
 </div>
-<p>Alternate implementations can be specified using the
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_scalar_relationship" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.name_for_scalar_relationship</span></code></a>
-parameter.</p>
+<p>代替実装は、：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase.prepare.name_for_scalar_relationship`パラメータを使用して指定できます。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.ext.automap.name_for_scalar_relationship.params.base"></span><strong>base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_scalar_relationship.params.base">¶</a> -- the <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> class doing the prepare.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.name_for_scalar_relationship.params.local_cls"></span><strong>local_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_scalar_relationship.params.local_cls">¶</a> -- the class to be mapped on the local side.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.name_for_scalar_relationship.params.referred_cls"></span><strong>referred_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_scalar_relationship.params.referred_cls">¶</a> -- the class to be mapped on the referring side.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.name_for_scalar_relationship.params.constraint"></span><strong>constraint</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_scalar_relationship.params.constraint">¶</a> -- the <a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a> that is being
-inspected to produce this relationship.</li>
+<li><span class="target" id="sqlalchemy.ext.automap.name_for_scalar_relationship.params.base"></span><strong>base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_scalar_relationship.params.base">¶</a> -- ：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase`クラスは準備をしています。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.name_for_scalar_relationship.params.local_cls"></span><strong>local_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_scalar_relationship.params.local_cls">¶</a> -- ローカル側でマッピングされるクラス</li>
+<li><span class="target" id="sqlalchemy.ext.automap.name_for_scalar_relationship.params.referred_cls"></span><strong>referred_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_scalar_relationship.params.referred_cls">¶</a> -- 参照側にマップされるクラス</li>
+<li><span class="target" id="sqlalchemy.ext.automap.name_for_scalar_relationship.params.constraint"></span><strong>constraint</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_scalar_relationship.params.constraint">¶</a> -- この関係を生成するために検査される：class： <cite>.ForeignKeyConstraint</cite>。</li>
 </ul>
 </td>
 </tr>
@@ -832,25 +633,20 @@ inspected to produce this relationship.</li>
 <dl class="function">
 <dt id="sqlalchemy.ext.automap.name_for_collection_relationship">
 <code class="descclassname">sqlalchemy.ext.automap.</code><code class="descname">name_for_collection_relationship</code><span class="sig-paren">(</span><em>base</em>, <em>local_cls</em>, <em>referred_cls</em>, <em>constraint</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.automap.name_for_collection_relationship" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the attribute name that should be used to refer from one
-class to another, for a collection reference.</p>
-<p>The default implementation is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">referred_cls</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;_collection&quot;</span></pre></div>
+<dd><p>コレクション参照のためにあるクラスから別のクラスへの参照に使用する属性名を返します。</p>
+<p>デフォルト実装は:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">referred_cls</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;_collection&quot;</span></pre></div>
 </div>
-<p>Alternate implementations
-can be specified using the
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.name_for_collection_relationship" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.name_for_collection_relationship</span></code></a>
-parameter.</p>
+<p>代替実装は、：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase.prepare.name_for_collection_relationship`パラメータを使用して指定できます。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.ext.automap.name_for_collection_relationship.params.base"></span><strong>base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_collection_relationship.params.base">¶</a> -- the <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> class doing the prepare.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.name_for_collection_relationship.params.local_cls"></span><strong>local_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_collection_relationship.params.local_cls">¶</a> -- the class to be mapped on the local side.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.name_for_collection_relationship.params.referred_cls"></span><strong>referred_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_collection_relationship.params.referred_cls">¶</a> -- the class to be mapped on the referring side.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.name_for_collection_relationship.params.constraint"></span><strong>constraint</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_collection_relationship.params.constraint">¶</a> -- the <a class="reference internal" href="../../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a> that is being
-inspected to produce this relationship.</li>
+<li><span class="target" id="sqlalchemy.ext.automap.name_for_collection_relationship.params.base"></span><strong>base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_collection_relationship.params.base">¶</a> -- ：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase`クラスは準備をしています。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.name_for_collection_relationship.params.local_cls"></span><strong>local_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_collection_relationship.params.local_cls">¶</a> -- ローカル側でマッピングされるクラス</li>
+<li><span class="target" id="sqlalchemy.ext.automap.name_for_collection_relationship.params.referred_cls"></span><strong>referred_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_collection_relationship.params.referred_cls">¶</a> -- 参照側にマップされるクラス</li>
+<li><span class="target" id="sqlalchemy.ext.automap.name_for_collection_relationship.params.constraint"></span><strong>constraint</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.name_for_collection_relationship.params.constraint">¶</a> -- この関係を生成するために検査される：class： <cite>.ForeignKeyConstraint</cite>。</li>
 </ul>
 </td>
 </tr>
@@ -861,12 +657,10 @@ inspected to produce this relationship.</li>
 <dl class="function">
 <dt id="sqlalchemy.ext.automap.generate_relationship">
 <code class="descclassname">sqlalchemy.ext.automap.</code><code class="descname">generate_relationship</code><span class="sig-paren">(</span><em>base</em>, <em>direction</em>, <em>return_fn</em>, <em>attrname</em>, <em>local_cls</em>, <em>referred_cls</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.ext.automap.generate_relationship" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Generate a <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> or <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a> on behalf of two
-mapped classes.</p>
-<p>An alternate implementation of this function can be specified using the
-<a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase.prepare.params.generate_relationship" title="sqlalchemy.ext.automap.AutomapBase.prepare"><code class="xref py py-paramref docutils literal"><span class="pre">AutomapBase.prepare.generate_relationship</span></code></a> parameter.</p>
-<p>The default implementation of this function is as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">return_fn</span> <span class="ow">is</span> <span class="n">backref</span><span class="p">:</span>
+<dd><p>2つのマップされたクラスの代わりに：func： <cite>.relationship`または：func：</cite> .backref`を生成します。</p>
+<p>この関数の別の実装は、：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase.prepare.generate_relationship`パラメータを使用して指定できます。</p>
+<p>この関数のデフォルトの実装は次のとおりです:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">return_fn</span> <span class="ow">is</span> <span class="n">backref</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">return_fn</span><span class="p">(</span><span class="n">attrname</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">return_fn</span> <span class="ow">is</span> <span class="n">relationship</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">return_fn</span><span class="p">(</span><span class="n">referred_cls</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
@@ -878,30 +672,17 @@ mapped classes.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.base"></span><strong>base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.base">¶</a> -- the <a class="reference internal" href="#sqlalchemy.ext.automap.AutomapBase" title="sqlalchemy.ext.automap.AutomapBase"><code class="xref py py-class docutils literal"><span class="pre">AutomapBase</span></code></a> class doing the prepare.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.direction"></span><strong>direction</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.direction">¶</a> -- indicate the &quot;direction&quot; of the relationship; this will
-be one of <a class="reference internal" href="../internals.html#sqlalchemy.orm.interfaces.ONETOMANY" title="sqlalchemy.orm.interfaces.ONETOMANY"><code class="xref py py-data docutils literal"><span class="pre">ONETOMANY</span></code></a>, <a class="reference internal" href="../internals.html#sqlalchemy.orm.interfaces.MANYTOONE" title="sqlalchemy.orm.interfaces.MANYTOONE"><code class="xref py py-data docutils literal"><span class="pre">MANYTOONE</span></code></a>, <a class="reference internal" href="../internals.html#sqlalchemy.orm.interfaces.MANYTOMANY" title="sqlalchemy.orm.interfaces.MANYTOMANY"><code class="xref py py-data docutils literal"><span class="pre">MANYTOMANY</span></code></a>.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.return_fn"></span><strong>return_fn</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.return_fn">¶</a> -- the function that is used by default to create the
-relationship.  This will be either <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> or
-<a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a>.  The <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a> function's result will be used to
-produce a new <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> in a second step, so it is critical
-that user-defined implementations correctly differentiate between the two
-functions, if a custom relationship function is being used.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.attrname"></span><strong>attrname</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.attrname">¶</a> -- the attribute name to which this relationship is being
-assigned. If the value of <a class="reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.return_fn" title="sqlalchemy.ext.automap.generate_relationship"><code class="xref py py-paramref docutils literal"><span class="pre">generate_relationship.return_fn</span></code></a> is
-the <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a> function, then this name is the name that is being
-assigned to the backref.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.local_cls"></span><strong>local_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.local_cls">¶</a> -- the &quot;local&quot; class to which this relationship or backref
-will be locally present.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.referred_cls"></span><strong>referred_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.referred_cls">¶</a> -- the &quot;referred&quot; class to which the relationship or
-backref refers to.</li>
-<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.**kw"></span><strong>**kw</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.**kw">¶</a> -- all additional keyword arguments are passed along to the
-function.</li>
+<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.base"></span><strong>base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.base">¶</a> -- ：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AutomapBase`クラスは準備をしています。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.direction"></span><strong>direction</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.direction">¶</a> -- 関係の「方向」を示す。これはdata： <cite>.ONETOMANY</cite>、：data：` .MANYTOONE`、：data： <a href="#id1"><span class="problematic" id="id2">`</span></a>.MANYTOMANY`のいずれかになります。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.return_fn"></span><strong>return_fn</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.return_fn">¶</a> -- 関係を作成するためにデフォルトで使用される関数。これは、func： <cite>.relationship`または：func：</cite> .backref`です。 ：func： <cite>.backref`関数の結果は、新しい：func：</cite> .relationship`を2番目のステップで生成するために使用されるので、ユーザー定義の実装では、2つの関数を正しく区別することが重要です。使用中です。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.attrname"></span><strong>attrname</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.attrname">¶</a> -- この関係が割り当てられる属性名：paramref： <cite>.generate_relationship.return_fn`の値が：func：</cite> .backref`関数である場合、この名前はバックリファレンスに割り当てられる名前です。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.local_cls"></span><strong>local_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.local_cls">¶</a> -- この関係またはバックレファレンスがローカルに存在する&amp;quot;ローカル&amp;quot;クラス。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.referred_cls"></span><strong>referred_cls</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.referred_cls">¶</a> -- 関係またはバックリファレンスが参照する&amp;quot;参照&amp;quot;クラス。</li>
+<li><span class="target" id="sqlalchemy.ext.automap.generate_relationship.params.**kw"></span><strong>**kw</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.**kw">¶</a> -- すべての追加のキーワード引数が関数に渡されます。</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">a <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> or <a class="reference internal" href="../relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a> construct, as dictated
-by the <a class="reference internal" href="#sqlalchemy.ext.automap.generate_relationship.params.return_fn" title="sqlalchemy.ext.automap.generate_relationship"><code class="xref py py-paramref docutils literal"><span class="pre">generate_relationship.return_fn</span></code></a> parameter.</p>
+<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">：paramref： <cite>.generate_relationship.return_fn`パラメータで指定されているように、：func：</cite> .relationship`または：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.backref`構造体です。</p>
 </td>
 </tr>
 </tbody>
@@ -917,13 +698,13 @@ by the <a class="reference internal" href="#sqlalchemy.ext.automap.generate_rela
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="associationproxy.html" title="previous chapter">Association Proxy</a>
+        <a href="associationproxy.html" title="previous chapter">アソシエーションプロキシ</a>
         Next:
-        <a href="baked.html" title="next chapter">Baked Queries</a>
+        <a href="baked.html" title="next chapter">焼いたクエリ</a>
 
     <div id="docs-copyright">
         &copy; <a href="../../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -950,6 +731,7 @@ by the <a class="reference internal" href="#sqlalchemy.ext.automap.generate_rela
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../../_static/detectmobile.js"></script>

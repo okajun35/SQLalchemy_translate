@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/declarative/table_config.rst:5
 msgid "Table Configuration"
-msgstr ""
+msgstr "テーブル構成"
 
 #: ../../orm/extensions/declarative/table_config.rst:9
 msgid ""
@@ -27,7 +17,7 @@ msgid ""
 " :class:`.Table` objects that are to be mapped with the SQLAlchemy ORM.  "
 "For general information on :class:`.Table` objects see "
 ":ref:`metadata_describing_toplevel`."
-msgstr ""
+msgstr "このセクションでは、宣言システムがSQLAlchemy ORMにマップされるクラス： `.Table`オブジェクトをどのように定義するかについて説明します。 ：class： `.Table`オブジェクトに関する一般的な情報は：ref：` metadata_describing_toplevel`を参照してください。"
 
 #: ../../orm/extensions/declarative/table_config.rst:14
 msgid ""
@@ -37,23 +27,23 @@ msgid ""
 "that are normally sent to the :class:`~sqlalchemy.schema.Table` "
 "constructor. The attribute can be specified in one of two forms. One is "
 "as a dictionary::"
-msgstr ""
+msgstr "名前、メタデータ、マップされたColumn引数以外のテーブル引数は、 `` __table_args__``クラス属性を使って指定されます。この属性は、通常は：class： `〜sqlalchemy.schema.Table`コンストラクタに送信される位置とキーワードの両方の引数に対応します。属性は、2つの形式のいずれかで指定できます。 1つは辞書です::"
 
 #: ../../orm/extensions/declarative/table_config.rst:26
 msgid ""
 "The other, a tuple, where each argument is positional (usually "
 "constraints)::"
-msgstr ""
+msgstr "もう1つは、各引数が定位置であるタプル（通常は制約）::"
 
 #: ../../orm/extensions/declarative/table_config.rst:36
 msgid ""
 "Keyword arguments can be specified with the above form by specifying the "
 "last argument as a dictionary::"
-msgstr ""
+msgstr "最後の引数を辞書として指定することにより、上記の形式でキーワード引数を指定することができます::"
 
 #: ../../orm/extensions/declarative/table_config.rst:48
 msgid "Using a Hybrid Approach with __table__"
-msgstr ""
+msgstr "__table__を使用したハイブリッドアプローチの使用"
 
 #: ../../orm/extensions/declarative/table_config.rst:50
 msgid ""
@@ -62,7 +52,7 @@ msgid ""
 ":class:`~sqlalchemy.schema.Column` objects, which in this case require "
 "their names, will be added to the mapping just like a regular mapping to "
 "a table::"
-msgstr ""
+msgstr "`` __tablename__``の代わりに、direct：class： `〜sqlalchemy.schema.Table`構文を使うこともできます。 ：class： `〜sqlalchemy.schema.Column`オブジェクト（この場合は名前が必要です）は、テーブルへの通常のマッピングと同じようにマッピングに追加されます::"
 
 #: ../../orm/extensions/declarative/table_config.rst:62
 msgid ""
@@ -70,7 +60,7 @@ msgid ""
 "table metadata, while still getting most of the benefits of using "
 "declarative. An application that uses reflection might want to load table"
 " metadata elsewhere and pass it to declarative classes::"
-msgstr ""
+msgstr "`` __table__``は、表のメタデータを確立するためのより集中的な制御ポイントを提供しますが、宣言型の使用の利点の大半を得ています。リフレクションを使用するアプリケーションでは、テーブルのメタデータを別の場所に読み込んで宣言的なクラスに渡すことができます。"
 
 #: ../../orm/extensions/declarative/table_config.rst:78
 msgid ""
@@ -78,7 +68,7 @@ msgid ""
 "``__table__``, such as those which already take advantage of the data-"
 "driven nature of :class:`.Table` to customize and/or automate schema "
 "definition."
-msgstr ""
+msgstr "スキーマ定義のカスタマイズや自動化のために：class： `.Table`のデータ駆動型の性質を既に利用しているような、` `__table__``を使う方が適切かもしれません。"
 
 #: ../../orm/extensions/declarative/table_config.rst:82
 msgid ""
@@ -87,24 +77,24 @@ msgid ""
 "declaration body itself, as a Python class is only another syntactical "
 "block.  Below this is illustrated by using the ``id`` column in the "
 "``primaryjoin`` condition of a :func:`.relationship`::"
-msgstr ""
+msgstr "`` __table__``アプローチが使われると、Pythonクラスは別の構文ブロックであるため、オブジェクトはクラス宣言本体自体のなかでplain：class： `.Table`としてすぐに使用できます。以下はa：func： `.relationship` ::の` `primaryjoin``条件で` `id``カラムを使って説明しています"
 
 #: ../../orm/extensions/declarative/table_config.rst:97
 msgid ""
 "Similarly, mapped attributes which refer to ``__table__`` can be placed "
 "inline, as below where we assign the ``name`` column to the attribute "
 "``_name``, generating a synonym for ``name``::"
-msgstr ""
+msgstr "同様に、 `` __table__``を参照するマップされた属性は、 `` name``の同義語を生成する属性 `` _name``に `` name``カラムを割り当てるところで、以下のようにインラインに置くことができます::"
 
 #: ../../orm/extensions/declarative/table_config.rst:116
 msgid "Using Reflection with Declarative"
-msgstr ""
+msgstr "宣言でのリフレクションの使用"
 
 #: ../../orm/extensions/declarative/table_config.rst:118
 msgid ""
 "It's easy to set up a :class:`.Table` that uses ``autoload=True`` in "
 "conjunction with a mapped class::"
-msgstr ""
+msgstr "`` autoload = True``をマッピングされたクラスと組み合わせて使う：class： `.Table`を簡単に設定できます::"
 
 #: ../../orm/extensions/declarative/table_config.rst:125
 msgid ""
@@ -113,9 +103,9 @@ msgid ""
 "   To achieve this, use the :class:`.DeferredReflection` mixin, which "
 "sets up mappings only after a special ``prepare(engine)`` step is "
 "called::"
-msgstr ""
+msgstr "しかし、ここで行うことができる改善の1つは、クラスが最初に宣言されているときに：class： `.Engine`が利用可能であることを要求しないことです。これを実現するには、：class： `.DeferredReflection` mixinを使用します。これは特別な` `prepare（engine）` `ステップが呼び出された後にのみマッピングを設定します::"
 
 #: ../../orm/extensions/declarative/table_config.rst:149
 msgid "Added :class:`.DeferredReflection`."
-msgstr ""
+msgstr "追加されたクラス： `.DeferredReflection`。"
 

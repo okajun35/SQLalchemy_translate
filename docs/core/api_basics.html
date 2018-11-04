@@ -10,7 +10,7 @@
         <title>
             
     
-    Core API Basics
+    コアAPIの基礎
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="SQLAlchemy Core" href="index.html" />
-        <link rel="next" title="Events" href="event.html" />
-        <link rel="prev" title="Core Events" href="events.html" />
+        <link rel="up" title="SQLAlchemyコア" href="index.html" />
+        <link rel="next" title="イベント" href="event.html" />
+        <link rel="prev" title="コアイベント" href="events.html" />
     <!-- end layout.mako headers -->
 
 
@@ -116,21 +116,21 @@
 
         
         <h3>
-            <a href="index.html" title="SQLAlchemy Core">SQLAlchemy Core</a>
+            <a href="index.html" title="SQLAlchemyコア">SQLAlchemyコア</a>
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">SQL Expression Language Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="expression_api.html">SQL Statements and Expressions API</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="schema.html">Schema Definition Language</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="types.html">Column and Data Types</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="engines_connections.html">Engine and Connection Use</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Core API Basics</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="event.html">Events</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="inspection.html">Runtime Inspection API</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="interfaces.html">Deprecated Event Interfaces</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="exceptions.html">Core Exceptions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="internals.html">Core Internals</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">SQL式言語チュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="expression_api.html">SQL文と式API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="schema.html">スキーマ定義言語</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="types.html">列とデータ型</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="engines_connections.html">エンジンと接続の使用</a></span></li>
+<li class="selected"><span class="link-container first"><strong>コアAPIの基礎</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="event.html">イベント</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="inspection.html">ランタイム検査API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="interfaces.html">推奨されないイベントインターフェイス</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="exceptions.html">コア例外</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="internals.html">コア内部</a></span></li>
 </ul>
 </li>
 </ul>
@@ -148,29 +148,29 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="core-api-basics">
-<h1>Core API Basics<a class="headerlink" href="#core-api-basics" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>コアAPIの基礎<a class="headerlink" href="#core-api-basics" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="event.html">Events</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="event.html#event-registration">Event Registration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="event.html#named-argument-styles">Named Argument Styles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="event.html#targets">Targets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="event.html#modifiers">Modifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="event.html#event-reference">Event Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="event.html#api-reference">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="event.html">イベント</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="event.html#event-registration">イベント登録</a></li>
+<li class="toctree-l2"><a class="reference internal" href="event.html#named-argument-styles">名前付き引数のスタイル</a></li>
+<li class="toctree-l2"><a class="reference internal" href="event.html#targets">ターゲット</a></li>
+<li class="toctree-l2"><a class="reference internal" href="event.html#modifiers">修飾子</a></li>
+<li class="toctree-l2"><a class="reference internal" href="event.html#event-reference">イベントリファレンス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="event.html#api-reference">APIリファレンス</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="inspection.html">Runtime Inspection API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="inspection.html#available-inspection-targets">Available Inspection Targets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inspection.html">ランタイム検査API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inspection.html#available-inspection-targets">利用可能な検査対象</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="interfaces.html">Deprecated Event Interfaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="interfaces.html#execution-connection-and-cursor-events">Execution, Connection and Cursor Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interfaces.html#connection-pool-events">Connection Pool Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interfaces.html">推奨されないイベントインターフェイス</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interfaces.html#execution-connection-and-cursor-events">実行、接続、およびカーソルイベント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interfaces.html#connection-pool-events">接続プールのイベント</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Core Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="internals.html">Core Internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">コア例外</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">コア内部</a></li>
 </ul>
 </div>
 </div>
@@ -181,13 +181,13 @@
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="events.html" title="previous chapter">Core Events</a>
+        <a href="events.html" title="previous chapter">コアイベント</a>
         Next:
-        <a href="event.html" title="next chapter">Events</a>
+        <a href="event.html" title="next chapter">イベント</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -214,6 +214,7 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

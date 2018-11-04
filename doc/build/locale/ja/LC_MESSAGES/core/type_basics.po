@@ -6,26 +6,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/type_basics.rst:2
 msgid "Column and Data Types"
-msgstr ""
+msgstr "列とデータ型"
 
 #: ../../core/type_basics.rst:6
 msgid ""
 "SQLAlchemy provides abstractions for most common database data types, and"
 " a mechanism for specifying your own custom data types."
-msgstr ""
+msgstr "SQLAlchemyは、最も一般的なデータベースデータ型の抽象化と、独自のカスタムデータ型を指定するためのメカニズムを提供します。"
 
 #: ../../core/type_basics.rst:9
 msgid ""
@@ -33,7 +23,7 @@ msgid ""
 " objects are supplied to :class:`~sqlalchemy.schema.Table` definitions "
 "and can be supplied as type hints to `functions` for occasions where the "
 "database driver returns an incorrect type."
-msgstr ""
+msgstr "型オブジェクトのメソッドと属性は、ほとんど直接使用されません。型オブジェクトは：class： `〜sqlalchemy.schema.Table`定義に渡され、データベースドライバが間違った型を返す場合に`関数 `に型ヒントとして提供することができます。"
 
 #: ../../core/type_basics.rst:22
 msgid ""
@@ -43,11 +33,11 @@ msgid ""
 " type (such as :func:`~sqlalchemy.schema.Column`) will typically accept a"
 " type class or instance; ``Integer`` is equivalent to ``Integer()`` with "
 "no construction arguments in this case."
-msgstr ""
+msgstr "SQLAlchemyは、 `` Integer``と `` String（32） ``型情報を `` CREATE TABLE``文を発行するときに使用し、データベースから `` SELECTED``行を読み戻すときに再び使用します。型を受け入れる関数（：func： `〜sqlalchemy.schema.Column`など）は、通常、型クラスまたはインスタンスを受け入れます。 `` Integer``は、この場合は構造引数を持たない `` Integer（） ``に相当します。"
 
 #: ../../core/type_basics.rst:32
 msgid "Generic Types"
-msgstr ""
+msgstr "一般的なタイプ"
 
 #: ../../core/type_basics.rst:34
 msgid ""
@@ -57,27 +47,27 @@ msgid ""
 "TABLE`` statement.  For complete control over which column type is "
 "emitted in ``CREATE TABLE``, such as ``VARCHAR`` see "
 ":ref:`types_sqlstandard` and the other sections of this chapter."
-msgstr ""
+msgstr "汎用タイプは、特定のタイプのPythonデータを読み書きし、格納できるカラムを指定します。 SQLAlchemyは、 `` CREATE TABLE``文を発行するときに、ターゲットデータベース上で利用可能な最良のデータベースカラムタイプを選択します。 `` VARCHAR``のような `` CREATE TABLE``でどのカラム型が出力されるかを完全に制御するには：ref： `types_sqlstandard`とこの章の他のセクションを参照してください。"
 
 #: of sqlalchemy.types.BigInteger:1
 msgid "A type for bigger ``int`` integers."
-msgstr ""
+msgstr "より大きい `` int``整数の型。"
 
 #: of sqlalchemy.types.BigInteger:3
 msgid ""
 "Typically generates a ``BIGINT`` in DDL, and otherwise acts like a normal"
 " :class:`.Integer` on the Python side."
-msgstr ""
+msgstr "通常はDDLに `` BIGINT``を生成し、そうでない場合はPython側でclass： `.Integer`のように動作します。"
 
 #: of sqlalchemy.types.Boolean:1
 msgid "A bool datatype."
-msgstr ""
+msgstr "boolデータ型。"
 
 #: of sqlalchemy.types.Boolean:3
 msgid ""
 ":class:`.Boolean` typically uses BOOLEAN or SMALLINT on the DDL side, and"
 " on the Python side deals in ``True`` or ``False``."
-msgstr ""
+msgstr "：class： `.Boolean`は通常DDL側でBOOLEANまたはSMALLINTを使い、Python側では` `True``や` `False``を扱います。"
 
 #: of sqlalchemy.types.Boolean:6
 msgid ""
@@ -88,21 +78,21 @@ msgid ""
 "\"native boolean\" datatype, a CHECK constraint is also created on the "
 "target column.   Production of the CHECK constraint can be disabled by "
 "passing the :paramref:`.Boolean.create_constraint` flag set to ``False``."
-msgstr ""
+msgstr "：class： `.Boolean`データ型は現在、2つのレベルのアサーションを持ち、永続化された値は単純な真偽値です。すべてのバックエンドについて、Pythonの値 `` None``````````````````````````````````または `` `` `` `` 0``のみがパラメータ値として受け入れられます。 \ &quot;ネイティブブール\&quot;データ型をサポートしていないバックエンドの場合、CHECK制約もターゲット列に作成されます。 CHECK制約の生成は、：paramref： `.Boolean.create_constraint`フラグを` `False``に設定することで無効にすることができます。"
 
 #: of sqlalchemy.types.Boolean:15
 msgid ""
 "the :class:`.Boolean` datatype now asserts that incoming Python values "
 "are already in pure boolean form."
-msgstr ""
+msgstr "：class： `.Boolean`データ型は、入ってくるPythonの値が既に純粋なブール形式になっていることを宣言します。"
 
 #: of sqlalchemy.types.Date:1
 msgid "A type for ``datetime.date()`` objects."
-msgstr ""
+msgstr "`` datetime.date（） ``オブジェクトの型。"
 
 #: of sqlalchemy.types.DateTime:1
 msgid "A type for ``datetime.datetime()`` objects."
-msgstr ""
+msgstr "`` datetime.datetime（） ``オブジェクトの型。"
 
 #: of sqlalchemy.types.DateTime:3
 msgid ""
@@ -111,7 +101,7 @@ msgid ""
 " exception of SQLite.  In the case of SQLite, date and time types are "
 "stored as strings which are then converted back to datetime objects when "
 "rows are returned."
-msgstr ""
+msgstr "日付と時刻の型は、Pythonの `` datetime``モジュールからオブジェクトを返します。ほとんどのDBAPIはdatetimeモジュールをサポートしていますが、SQLiteの例外はあります。 SQLiteの場合、日付と時刻の型は文字列として格納され、行が返されるとdatetimeオブジェクトに変換されます。"
 
 #: of sqlalchemy.types.DateTime:9
 msgid ""
@@ -121,17 +111,17 @@ msgid ""
 "datatype, such as :class:`.mysql.TIME`.  For timezone support, use at "
 "least the :class:`~.types.TIMESTAMP` datatype, if not the dialect-"
 "specific datatype object."
-msgstr ""
+msgstr "datetime型の時間表現の場合、バックエンドの中には、タイムゾーンのサポートや分数秒のサポートなどの追加オプションがあります。分数秒の場合は、class： `.mysql.TIME`のような方言固有のデータ型を使用します。タイムゾーンをサポートするには、少なくとも：class： `〜.types.TIMESTAMP`データ型を使用してください（もし方言固有のデータ型オブジェクトでない場合）。"
 
 #: of sqlalchemy.types.Enum:1
 msgid "Generic Enum Type."
-msgstr ""
+msgstr "一般的な列挙型。"
 
 #: of sqlalchemy.types.Enum:3
 msgid ""
 "The :class:`.Enum` type provides a set of possible string values which "
 "the column is constrained towards."
-msgstr ""
+msgstr "：class： `.Enum`型は、列が制約されている可能性のある文字列値のセットを提供します。"
 
 #: of sqlalchemy.types.Enum:6
 msgid ""
@@ -141,7 +131,7 @@ msgid ""
 "disabled using the :paramref:`.Enum.native_enum` flag, and the production"
 " of the CHECK constraint is configurable using the "
 ":paramref:`.Enum.create_constraint` flag."
-msgstr ""
+msgstr "：class： `.Enum`タイプは、バックエンドのネイティブ\&quot; ENUM \ &quot;タイプが利用可能な場合はそのタイプを使用します。それ以外の場合は、VARCHARデータ型を使用してCHECK制約が生成されます。バックエンドネイティブenum型の使用は、：paramref： `.Enum.native_enum`フラグを使用して無効にすることができ、CHECK制約の生成は：paramref：` .Enum.create_constraint`フラグを使用して設定できます。"
 
 #: of sqlalchemy.types.Enum:13
 msgid ""
@@ -154,13 +144,13 @@ msgid ""
 "set to True, a ``LookupError`` is raised for any string value that's not "
 "located in the given list of possible values; note that this impacts "
 "usage of LIKE expressions with enumerated values (an unusual use case)."
-msgstr ""
+msgstr "：class： `.Enum`型は、読み取りと書き込みの両方の操作中に文字列値をPythonで検証します。結果セット内のデータベースから値を読み取るとき、文字列値は常に可能な値のリストと照合され、一致するものが見つからなければ `` LookupError``が生成されます。 ：paramref： `.Enum.validate_strings`パラメータがTrueに設定されていると、SQL文内のプレーンな文字列としてデータベースに値を渡すと、その文字列の値に&quot; LookupError &quot;が生成されます。可能な値のリストを指定します。これは列挙された値を持つLIKE式の使用に影響を与えることに注意してください（珍しい使用例）。"
 
 #: of sqlalchemy.types.Enum:25
 msgid ""
 "the :class:`.Enum` type now provides in-Python validation of input values"
 " as well as on data being returned by the database."
-msgstr ""
+msgstr "：class： `.Enum`型は、入力値とデータベースから返されるデータのPythonでの妥当性検証を提供するようになりました。"
 
 #: of sqlalchemy.types.Enum:29
 msgid ""
@@ -168,14 +158,14 @@ msgid ""
 "alternatively a PEP-435-compliant enumerated class.  For the purposes of "
 "the :class:`.Enum` datatype, this class need only provide a "
 "``__members__`` method."
-msgstr ""
+msgstr "列挙された値のソースは、文字列値のリスト、あるいはPEP-435に準拠した列挙されたクラスです。 ：class： `.Enum`データ型のために、このクラスは` `__members__``メソッドを提供するだけです。"
 
 #: of sqlalchemy.types.Enum:34
 msgid ""
 "When using an enumerated class, the enumerated objects are used both for "
 "input and output, rather than strings as is the case with a plain-string "
 "enumerated type::"
-msgstr ""
+msgstr "列挙型クラスを使用する場合、列挙型オブジェクトは文字列ではなく入力と出力の両方に使用されます。単純文字列の列挙型の場合と同様です。"
 
 #: of sqlalchemy.types.Enum:52
 msgid ""
@@ -183,7 +173,7 @@ msgid ""
 "\"three\", are persisted to the database; the values of the Python Enum, "
 "here indicated as integers, are **not** used; the value of each enum can "
 "therefore be any kind of Python object whether or not it is persistable."
-msgstr ""
+msgstr "上の例では、\ &quot;one \&quot;、\ &quot;two \&quot;、\ &quot;three \&quot;などの各要素の文字列名はデータベースに保持されます。ここで整数として示されるPython Enumの値は**使用されません**。したがって、各列挙型の値は、永続性があるかどうかに関係なく、あらゆる種類のPythonオブジェクトにすることができます。"
 
 #: of sqlalchemy.types.Enum:57
 msgid ""
@@ -194,36 +184,36 @@ msgid ""
 "values to be persisted.   For a simple enumeration that uses string "
 "values, a callable such as  ``lambda x: [e.value for e in x]`` is "
 "sufficient."
-msgstr ""
+msgstr "名前ではなく値を永続化するために、：paramref： `.Enum.values_callable`パラメータを使用することができます。このパラメータの値は、PEP-435準拠の列挙型クラスで使用することを目的とし、永続化する文字列値のリストを返す、ユーザー提供の呼び出し可能です。文字列の値を使用する単純な列挙では、 `` lambda x：[e.value in e]のような呼び出し可能で十分です。"
 
 #: of sqlalchemy.types.Enum:64
 msgid "- support for PEP-435-style enumerated classes."
-msgstr ""
+msgstr "-  PEP-435スタイルの列挙クラスのサポート。"
 
 #: of sqlalchemy.types.Enum:70
 msgid ""
 ":class:`.postgresql.ENUM` - PostgreSQL-specific type, which has "
 "additional functionality."
-msgstr ""
+msgstr "：class： `.postgresql.ENUM`  - 追加の機能を持つPostgreSQL固有の型。"
 
 #: of sqlalchemy.types.Enum:73
 msgid ":class:`.mysql.ENUM` - MySQL-specific type"
-msgstr ""
+msgstr "：class： `.mysql.ENUM`  -  MySQL固有の型"
 
 #: of sqlalchemy.types.Enum.__init__:1
 msgid "Construct an enum."
-msgstr ""
+msgstr "列挙型を構築します。"
 
 #: of sqlalchemy.types.Enum.__init__:3
 msgid ""
 "Keyword arguments which don't apply to a specific backend are ignored by "
 "that backend."
-msgstr ""
+msgstr "特定のバックエンドに適用されないキーワード引数は、そのバックエンドによって無視されます。"
 
 #: of sqlalchemy.types.ARRAY.Comparator.all
 #: sqlalchemy.types.ARRAY.Comparator.any sqlalchemy.types.Enum.__init__
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.types.Enum.__init__:6
 msgid ""
@@ -231,25 +221,25 @@ msgid ""
 "string or unicode enumeration labels. If unicode labels are present, the "
 "`convert_unicode` flag is auto-enabled.  .. versionadded:: 1.1 a PEP-435 "
 "style enumerated class may be    passed."
-msgstr ""
+msgstr "厳密に1つのPEP-435準拠の列挙型または1つ以上の文字列またはユニコード列挙ラベルのいずれかです。ユニコードラベルが存在する場合、 `convert_unicode`フラグは自動的に有効になります。 .. versionadded :: 1.1 PEP-435スタイルの列挙型クラスを渡すことができます。"
 
 #: of sqlalchemy.types.Enum.__init__:6
 msgid ""
 "either exactly one PEP-435 compliant enumerated type or one or more "
 "string or unicode enumeration labels. If unicode labels are present, the "
 "`convert_unicode` flag is auto-enabled."
-msgstr ""
+msgstr "厳密に1つのPEP-435準拠の列挙型または1つ以上の文字列またはユニコード列挙ラベルのいずれかです。ユニコードラベルが存在する場合、 `convert_unicode`フラグは自動的に有効になります。"
 
 #: of sqlalchemy.types.Enum.__init__:10
 msgid "a PEP-435 style enumerated class may be passed."
-msgstr ""
+msgstr "PEP-435スタイルの列挙型クラスを渡すことができます。"
 
 #: of sqlalchemy.types.Enum.__init__:13
 msgid ""
 "Enable unicode-aware bind parameter and result-set processing for this "
 "Enum's data. This is set automatically based on the presence of unicode "
 "label strings."
-msgstr ""
+msgstr "この列挙型のデータに対するユニコード対応のバインドパラメータと結果セットの処理を有効にします。これは、Unicodeラベル文字列の存在に基づいて自動的に設定されます。"
 
 #: of sqlalchemy.types.Enum.__init__:17
 msgid ""
@@ -258,20 +248,20 @@ msgid ""
 "versionadded:: 1.1 - added :paramref:`.Enum.create_constraint`    which "
 "provides the option to disable the production of the    CHECK constraint "
 "for a non-native enumerated type."
-msgstr ""
+msgstr "デフォルトはTrueです。非ネイティブの列挙型を作成する場合は、有効な値に対してデータベースに対してCHECK制約を作成します。 .. versionadded :: 1.1  - 追加：paramref： `.Enum.create_constraint`  - 非ネイティブな列挙型のCHECK制約の生成を無効にするオプションを提供します。"
 
 #: of sqlalchemy.types.Enum.__init__:17
 msgid ""
 "defaults to True.  When creating a non-native enumerated type, also build"
 " a CHECK constraint on the database against the valid values."
-msgstr ""
+msgstr "デフォルトはTrueです。非ネイティブの列挙型を作成する場合は、有効な値に対してデータベースに対してCHECK制約を作成します。"
 
 #: of sqlalchemy.types.Enum.__init__:21
 msgid ""
 "- added :paramref:`.Enum.create_constraint` which provides the option to "
 "disable the production of the CHECK constraint for a non-native "
 "enumerated type."
-msgstr ""
+msgstr "- 追加：paramref： `.Enum.create_constraint`  - 非ネイティブな列挙型のCHECK制約の生成を無効にするオプションを提供します。"
 
 #: of sqlalchemy.types.Enum.__init__:25
 msgid ""
@@ -284,7 +274,7 @@ msgid ""
 " individual tables are created, after a check is performed for its "
 "existence. The type is only dropped when ``drop_all()`` is called for "
 "that ``Table`` object's metadata, however."
-msgstr ""
+msgstr "この型を直接 `` MetaData``オブジェクトに関連付けます。ターゲットデータベースに独立したスキーマ構造（PostgreSQL）として存在する型の場合、この型は `` create_all（） ``と `` drop_all（） ``操作で作成され、削除されます。型が `` MetaData``オブジェクトに関連付けられていない場合は、それが使用されている各 `` Table``に自身を関連づけ、チェックが行われた後にそれらの個々のテーブルのいずれかが作成されると作成されますその存在のために。ただし、 `` Table``オブジェクトのメタデータに対して `` drop_all（） ``が呼び出されたときにのみ型が削除されます。"
 
 #: of sqlalchemy.types.Enum.__init__:36
 msgid ""
@@ -293,13 +283,13 @@ msgid ""
 "explicitly named constraint in order to generate the type and/or a table "
 "that uses it. If a PEP-435 enumerated class was used, its name (converted"
 " to lower case) is used by default."
-msgstr ""
+msgstr "このタイプの名前。これは、明示的に名前付きの型または明示的に名前付きの制約を必要とするPostgreSQLおよび将来サポートされるデータベースで、型および/またはそれを使用するテーブルを生成するために必要です。 PEP-435列挙型クラスが使用された場合、その名前（小文字に変換されます）がデフォルトで使用されます。"
 
 #: of sqlalchemy.types.Enum.__init__:43
 msgid ""
 "Use the database's native ENUM type when available. Defaults to True. "
 "When False, uses VARCHAR + check constraint for all backends."
-msgstr ""
+msgstr "使用可能な場合は、データベースのネイティブENUMタイプを使用します。デフォルトはTrueです。 Falseの場合、すべてのバックエンドに対してVARCHAR + check制約を使用します。"
 
 #: of sqlalchemy.types.Enum.__init__:47
 msgid ""
@@ -310,25 +300,25 @@ msgid ""
 "of the ``schema`` established on the      owning :class:`.Table`.  If "
 "this behavior is desired,      set the ``inherit_schema`` flag to "
 "``True``."
-msgstr ""
+msgstr "この型のスキーマ名ターゲットデータベースに独立したスキーマ構造（PostgreSQL）として存在する型の場合、このパラメータは型が存在する名前付きスキーマを指定します。 .. note :: class： `.Enum`型の` `schema``は、デフォルトでは、owning：class：` .Table`で確立された `` schema``を使用しません。この動作が必要な場合は、 `` inherit_schema``フラグを `` True``に設定してください。"
 
 #: of sqlalchemy.types.Enum.__init__:47
 msgid ""
 "Schema name of this type. For types that exist on the target database as "
 "an independent schema construct (PostgreSQL), this parameter specifies "
 "the named schema in which the type is present."
-msgstr ""
+msgstr "この型のスキーマ名ターゲットデータベースに独立したスキーマ構造（PostgreSQL）として存在する型の場合、このパラメータは型が存在する名前付きスキーマを指定します。"
 
 #: of sqlalchemy.types.Enum.__init__:54
 msgid ""
 "The ``schema`` of the :class:`.Enum` type does not by default make use of"
 " the ``schema`` established on the owning :class:`.Table`.  If this "
 "behavior is desired, set the ``inherit_schema`` flag to ``True``."
-msgstr ""
+msgstr "：class： `.Enum`型の` `schema``は、デフォルトでは、owning：class：` .Table`で確立された `` schema``を使用しません。この動作が必要な場合は、 `` inherit_schema``フラグを `` True``に設定してください。"
 
 #: of sqlalchemy.types.Enum.__init__:59
 msgid "Set explicit quoting preferences for the type's name."
-msgstr ""
+msgstr "型の名前に明示的な引用設定を設定します。"
 
 #: of sqlalchemy.types.Enum.__init__:61
 msgid ""
@@ -336,7 +326,7 @@ msgid ""
 "copied to the \"schema\" attribute of this :class:`.Enum`, replacing "
 "whatever value was passed for the ``schema`` attribute.   This also takes"
 " effect when using the :meth:`.Table.tometadata` operation."
-msgstr ""
+msgstr "`` True``を指定すると、owning：class： `.Table`の\&quot; schema \ &quot;がclass：` .Enum`属性にコピーされます。 `` schema``属性です。これは：meth： `.Table.tometadata`操作を使用するときにも有効です。"
 
 #: of sqlalchemy.types.Enum.__init__:67
 msgid ""
@@ -344,7 +334,7 @@ msgid ""
 "statement will be checked for validity against the list of enumerated "
 "values.  Unrecognized values will result in a ``LookupError`` being "
 "raised.  .. versionadded:: 1.1.0b2"
-msgstr ""
+msgstr "Trueの場合、SQL文でデータベースに渡される文字列値は、列挙値のリストに対して有効かどうかがチェックされます。認識できない値は `` LookupError``が発生します。 .. versionadded :: 1.1.0b2"
 
 #: of sqlalchemy.types.Enum.__init__:67
 msgid ""
@@ -352,7 +342,7 @@ msgid ""
 "statement will be checked for validity against the list of enumerated "
 "values.  Unrecognized values will result in a ``LookupError`` being "
 "raised."
-msgstr ""
+msgstr "Trueの場合、SQL文でデータベースに渡される文字列値は、列挙値のリストに対して有効かどうかがチェックされます。認識できない値は `` LookupError``が発生します。"
 
 #: of sqlalchemy.types.Enum.__init__:74
 msgid ""
@@ -361,7 +351,7 @@ msgid ""
 "allows for alternate usages such as using the string value of an enum to "
 "be persisted to the database instead of its name.  .. versionadded:: "
 "1.2.3"
-msgstr ""
+msgstr "PEP-435に準拠した列挙型を渡すコール可能オブジェクト。永続化する文字列値のリストを返す必要があります。これにより、列挙型の文字列値を名前の代わりにデータベースに保持するなどの代替的な使用が可能になります。 .. versionadded :: 1.2.3"
 
 #: of sqlalchemy.types.Enum.__init__:74
 msgid ""
@@ -369,26 +359,26 @@ msgid ""
 "which should then return a list of string values to be persisted. This "
 "allows for alternate usages such as using the string value of an enum to "
 "be persisted to the database instead of its name."
-msgstr ""
+msgstr "PEP-435に準拠した列挙型を渡すコール可能オブジェクト。永続化する文字列値のリストを返す必要があります。これにより、列挙型の文字列値を名前の代わりにデータベースに保持するなどの代替的な使用が可能になります。"
 
 #: of sqlalchemy.types.Enum.create:1 sqlalchemy.types.SchemaType.create:1
 msgid "Issue CREATE ddl for this type, if applicable."
-msgstr ""
+msgstr "該当する場合は、このタイプのCREATE ddlを発行します。"
 
 #: of sqlalchemy.types.Enum.drop:1 sqlalchemy.types.SchemaType.drop:1
 msgid "Issue DROP ddl for this type, if applicable."
-msgstr ""
+msgstr "該当する場合は、このタイプのDROP ddlを発行します。"
 
 #: of sqlalchemy.types.Float:1
 msgid "Type representing floating point types, such as ``FLOAT`` or ``REAL``."
-msgstr ""
+msgstr "`` FLOAT``や `` REAL``のような浮動小数点型を表す型です。"
 
 #: of sqlalchemy.types.Float:3
 msgid ""
 "This type returns Python ``float`` objects by default, unless the "
 ":paramref:`.Float.asdecimal` flag is set to True, in which case they are "
 "coerced to ``decimal.Decimal`` objects."
-msgstr ""
+msgstr "この型は、：paramref： `.Float.asdecimal`フラグがTrueに設定されていない限り、デフォルトでPythonの` `float``オブジェクトを返します。この場合、それらは` `decimal.Decimal``オブジェクトに強制されます。"
 
 #: of sqlalchemy.types.Float:9
 msgid ""
@@ -399,22 +389,22 @@ msgid ""
 "such as ``DECIMAL`` or ``NUMERIC``, use the :class:`.Numeric` type or a "
 "subclass, otherwise numeric coercion between ``float``/``Decimal`` may or"
 " may not function as expected."
-msgstr ""
+msgstr "：class： `.Float`型は、明示的に浮動小数点型（例えば、` `FLOAT``、` `REAL``など）で、十進数型ではないことが知られているデータベース型からデータを受け取るように設計されています`` DECIMAL``、 `` NUMERIC``など）を使用することができます。サーバ上のデータベースカラムが実際に `` DECIMAL``や `` NUMERIC``のような数値型である場合は、：class： `.Numeric`型またはサブクラスを使用します。それ以外の場合は` `float` `/` `Decimal``は期待どおりに機能するかもしれません。"
 
 #: of sqlalchemy.types.Integer:1
 msgid "A type for ``int`` integers."
-msgstr ""
+msgstr "`` int``型の型です。"
 
 #: of sqlalchemy.types.Interval:1
 msgid "A type for ``datetime.timedelta()`` objects."
-msgstr ""
+msgstr "`` datetime.timedelta（） ``オブジェクトの型。"
 
 #: of sqlalchemy.types.Interval:3
 msgid ""
 "The Interval type deals with ``datetime.timedelta`` objects.  In "
 "PostgreSQL, the native ``INTERVAL`` type is used; for others, the value "
 "is stored as a date which is relative to the \"epoch\" (Jan. 1, 1970)."
-msgstr ""
+msgstr "Interval型は `` datetime.timedelta``オブジェクトを扱います。 PostgreSQLでは、ネイティブの `` INTERVAL``型が使用されます。他の場合、値は\ &quot;epoch \&quot;（1970年1月1日）に関連する日付として格納されます。"
 
 #: of sqlalchemy.types.Interval:8
 msgid ""
@@ -424,22 +414,22 @@ msgid ""
 " the expression (such as, conversion of both sides into integer epoch "
 "values first) which currently is a manual procedure (such as via "
 ":attr:`~sqlalchemy.sql.expression.func`)."
-msgstr ""
+msgstr "`` Interval``型は現在インターバル型をネイティブにサポートしていないプラットフォームでは日付演算を提供していないことに注意してください。このような操作では、通常、現在の手続き（via：attr： `〜sqlalchemy.sql.expression.func`など）である式の両辺の変換（最初に両辺を整数エポック値に変換するなど）が必要です。"
 
 #: of sqlalchemy.types.LargeBinary:1
 msgid "A type for large binary byte data."
-msgstr ""
+msgstr "大きなバイナリバイトデータの型。"
 
 #: of sqlalchemy.types.LargeBinary:3
 msgid ""
 "The :class:`.LargeBinary` type corresponds to a large and/or unlengthed "
 "binary type for the target platform, such as BLOB on MySQL and BYTEA for "
 "PostgreSQL.  It also handles the necessary conversions for the DBAPI."
-msgstr ""
+msgstr "：class： `.LargeBinary`型は、MySQL上のBLOBやPostgreSQL用のBYTEAのように、ターゲットプラットフォームのための大きなバイナリ型や無限型のバイナリ型に対応します。また、DBAPIに必要な変換も処理します。"
 
 #: of sqlalchemy.types.MatchType:1
 msgid "Refers to the return type of the MATCH operator."
-msgstr ""
+msgstr "MATCH演算子の戻り値の型を参照します。"
 
 #: of sqlalchemy.types.MatchType:3
 msgid ""
@@ -450,18 +440,18 @@ msgid ""
 "a placeholder, currently subclassing :class:`.Boolean`. The type allows "
 "dialects to inject result-processing functionality if needed, and on "
 "MySQL will return floating-point values."
-msgstr ""
+msgstr "：meth： `.ColumnOperators.match`は多分一般的なSQLAlchemy Coreの中で最もオープンな演算子であるため、MySQLが浮動小数点を返すので、SQLの評価時には返り値の型を仮定することはできません。バックエンドは何か違うことがあります。したがって、この型はプレースホルダとして機能し、現在はclass： `.Boolean`をサブクラス化しています。この型では、必要に応じて方言が結果処理機能を注入することができ、MySQLは浮動小数点値を返します。"
 
 #: of sqlalchemy.types.Numeric:1
 msgid "A type for fixed precision numbers, such as ``NUMERIC`` or ``DECIMAL``."
-msgstr ""
+msgstr "`` NUMERIC``や `` DECIMAL``のような固定精度の数値の型です。"
 
 #: of sqlalchemy.types.Numeric:3
 msgid ""
 "This type returns Python ``decimal.Decimal`` objects by default, unless "
 "the :paramref:`.Numeric.asdecimal` flag is set to False, in which case "
 "they are coerced to Python ``float`` objects."
-msgstr ""
+msgstr "この型は：paramref： `.Numeric.asdecimal`フラグがFalseに設定されていない限り、デフォルトでPythonの` `decimal.Decimal``オブジェクトを返します。この場合、それらはPythonの` `float``オブジェクトに強制されます。"
 
 #: of sqlalchemy.types.Numeric:9
 msgid ""
@@ -472,7 +462,7 @@ msgid ""
 "floating-point type type, such as ``FLOAT`` or ``REAL``, use the "
 ":class:`.Float` type or a subclass, otherwise numeric coercion between "
 "``float``/``Decimal`` may or may not function as expected."
-msgstr ""
+msgstr "：class： `.Numeric`型は、明示的に小数点型（例えば` DECIMAL`、 `NUMERIC`など）であり、浮動小数点型ではないというデータ型からデータを受け取るように設計されています「FLOAT」、「REAL」など）。サーバのデータベースカラムが実際に `` FLOAT``や `` REAL``のような浮動小数点タイプの型である場合、：class： `.Float`型またはサブクラスを使用します。それ以外の場合は` `float`` /` `Decimal``は期待どおりに機能するかもしれません。"
 
 #: of sqlalchemy.types.Numeric:20
 msgid ""
@@ -483,7 +473,7 @@ msgid ""
 "application where it will replace the ``decimal`` library fully, however "
 "this needs to be applied globally and before any other modules have been "
 "imported, as follows::"
-msgstr ""
+msgstr "Pythonの `` decimal.Decimal``クラスは一般的に遅いです。 cPython 3.3は、現在、 `cdecimal <http://pypi.python.org/pypi/cdecimal/> `_ライブラリネイティブ。古いPythonバージョンでは、 `` decimal``ライブラリを完全に置き換えるアプリケーションに `` cdecimal``ライブラリをパッチすることができますが、これはグローバルに適用され、他のモジュールがインポートされる前に、 ："
 
 #: of sqlalchemy.types.Numeric:32
 msgid ""
@@ -491,11 +481,11 @@ msgid ""
 " with each other**, so patching ``cdecimal`` at the global level is the "
 "only way it can be used effectively with various DBAPIs that hardcode to "
 "import the ``decimal`` library."
-msgstr ""
+msgstr "`` cdecimal``と `` decimal``ライブラリは**互いに互換性がありません**ので、グローバルレベルで `` cdecimal``をパッチすることは、それがさまざまなDBAPIで効果的に使用できる唯一の方法です`` decimal``ライブラリをインポートするためのハードコードです。"
 
 #: of sqlalchemy.types.PickleType:1
 msgid "Holds Python objects, which are serialized using pickle."
-msgstr ""
+msgstr "pickleを使用してシリアル化されるPythonオブジェクトを保持します。"
 
 #: of sqlalchemy.types.PickleType:3
 msgid ""
@@ -503,24 +493,24 @@ msgid ""
 "``pickle.dumps()`` to incoming objects, and ``pickle.loads()`` on the way"
 " out, allowing any pickleable Python object to be stored as a serialized "
 "binary field."
-msgstr ""
+msgstr "Pythonの `` pickle.dumps（） ``を入ってくるオブジェクトに適用するために、PickleTypeはバイナリ型をベースに構築され、ピック可能なPythonオブジェクトを直列化されたバイナリフィールドとして格納できるようにするために、 `` pickle.loads（） 。"
 
 #: of sqlalchemy.types.PickleType:8
 msgid ""
 "To allow ORM change events to propagate for elements associated with "
 ":class:`.PickleType`, see :ref:`mutable_toplevel`."
-msgstr ""
+msgstr "：class： `.PickleType`に関連する要素のORM変更イベントを伝播させるには、：ref：` mutable_toplevel`を参照してください。"
 
 #: of sqlalchemy.types.SchemaType:1
 msgid "Mark a type as possibly requiring schema-level DDL for usage."
-msgstr ""
+msgstr "タイプに、使用のためにスキーマレベルのDDLが必要な可能性があるとマークします。"
 
 #: of sqlalchemy.types.SchemaType:3
 msgid ""
 "Supports types that must be explicitly created/dropped (i.e. PG ENUM "
 "type) as well as types that are complimented by table or schema level "
 "constraints, triggers, and other rules."
-msgstr ""
+msgstr "明示的に作成/削除する必要のあるタイプ（つまり、PG ENUMタイプ）と、テーブルやスキーマレベルの制約、トリガ、その他のルールによって補完されるタイプをサポートします。"
 
 #: of sqlalchemy.types.SchemaType:7
 msgid ""
@@ -529,47 +519,47 @@ msgid ""
 ":meth:`.DDLEvents.after_parent_attach` events, where the events fire off "
 "surrounding the association of the type object with a parent "
 ":class:`.Column`."
-msgstr ""
+msgstr "：class： `.SchemaType`クラスは、：meth：` .DDLEvents.before_parent_attach`と：meth： `.DDLEvents.after_parent_attach`イベントのターゲットにすることもできます。イベントは、タイプオブジェクトと親：クラス： `.Column`。"
 
 #: of sqlalchemy.types.SchemaType:15
 msgid ":class:`.Enum`"
-msgstr ""
+msgstr "：class： `.Enum`"
 
 #: of sqlalchemy.types.SchemaType:17
 msgid ":class:`.Boolean`"
-msgstr ""
+msgstr "：クラス： `.Boolean`"
 
 #: of sqlalchemy.types.SmallInteger:1
 msgid "A type for smaller ``int`` integers."
-msgstr ""
+msgstr "より小さい `` int``整数の型です。"
 
 #: of sqlalchemy.types.SmallInteger:3
 msgid ""
 "Typically generates a ``SMALLINT`` in DDL, and otherwise acts like a "
 "normal :class:`.Integer` on the Python side."
-msgstr ""
+msgstr "通常、DDLに `` SMALLINT``を生成し、そうでなければPython側でclass： `.Integer`のように動作します。"
 
 #: of sqlalchemy.types.String:1
 msgid "The base for all string and character types."
-msgstr ""
+msgstr "すべての文字列と文字種のベース。"
 
 #: of sqlalchemy.types.String:3
 msgid ""
 "In SQL, corresponds to VARCHAR.  Can also take Python unicode objects and"
 " encode to the database's encoding in bind params (and the reverse for "
 "result sets.)"
-msgstr ""
+msgstr "SQLでは、VARCHARに対応します。 PythonのUnicodeオブジェクトを取得し、バインドパラメータでデータベースのエンコーディングにエンコードすることもできます（結果セットの逆も可能です）。"
 
 #: of sqlalchemy.types.String:7
 msgid ""
 "The `length` field is usually required when the `String` type is used "
 "within a CREATE TABLE statement, as VARCHAR requires a length on most "
 "databases."
-msgstr ""
+msgstr "`length`フィールドは、通常、VARCHARがほとんどのデータベースで長さを必要とするため、CREATE TABLEステートメント内で` String`タイプが使用されるときに必要です。"
 
 #: of sqlalchemy.types.Text:1
 msgid "A variably sized string type."
-msgstr ""
+msgstr "可変サイズの文字列型。"
 
 #: of sqlalchemy.types.Text:3
 msgid ""
@@ -578,15 +568,15 @@ msgid ""
 "reverse for result sets.)  In general, TEXT objects do not have a length;"
 " while some databases will accept a length argument here, it will be "
 "rejected by others."
-msgstr ""
+msgstr "SQLでは、通常、CLOBまたはTEXTに対応します。 PythonのUnicodeオブジェクトを取得し、bind paramsでデータベースのエンコーディングにエンコードすることもできます（結果セットの逆もあります）。一般に、TEXTオブジェクトには長さがありません。一部のデータベースはここで長さの引数を受け入れますが、他のデータベースによって拒否されます。"
 
 #: of sqlalchemy.types.Time:1
 msgid "A type for ``datetime.time()`` objects."
-msgstr ""
+msgstr "`` datetime.time（） ``オブジェクトの型。"
 
 #: of sqlalchemy.types.Unicode:1
 msgid "A variable length Unicode string type."
-msgstr ""
+msgstr "可変長のUnicode文字列型。"
 
 #: of sqlalchemy.types.Unicode:3
 msgid ""
@@ -599,7 +589,7 @@ msgid ""
 "impact the output of ``CREATE TABLE`` statements and ``CAST`` functions "
 "at the dialect level, and can also affect the handling of bound "
 "parameters in some specific DBAPI scenarios."
-msgstr ""
+msgstr "：class： `.Unicode`型は、Pythonの` `unicode``データとしての入出力を前提とした` class： `.String`サブクラスであり、` `convert_unicode``フラグの使用法と同じです：class： `.String`型を使います。しかし、plain：class： `.String`とは異なり、OracleやSQL Server上の` `NVARCHAR``のように、非ASCIIデータを明示的にサポートしている基底のカラム型をも意味します。これは、方言レベルでの `` CREATE TABLE``文と `` CAST``関数の出力に影響を与える可能性があり、特定のDBAPIシナリオではバインドされたパラメータの処理にも影響します。"
 
 #: of sqlalchemy.types.Unicode:15
 msgid ""
@@ -608,7 +598,7 @@ msgid ""
 "``unicode`` objects as bound values and result set values, and the "
 "encoding should be configured as detailed in the notes for the target "
 "DBAPI in the :ref:`dialect_toplevel` section."
-msgstr ""
+msgstr "：class： `.Unicode`型で使用されるエンコーディングは通常、DBAPI自体によって決まります。最新のDBAPIは、Pythonの `` unicode``オブジェクトをバウンド値と結果セットの値としてサポートしています：エンコーディングは、：ref： `dialect_toplevel`セクションのターゲットDBAPIの注釈で詳細に設定されていなければなりません。"
 
 #: of sqlalchemy.types.Unicode:22
 msgid ""
@@ -617,7 +607,7 @@ msgid ""
 "encoding and decoding outside of the DBAPI.   The encoding in this "
 "scenario is determined by the ``encoding`` flag passed to "
 ":func:`.create_engine`."
-msgstr ""
+msgstr "Pythonの `` unicode``オブジェクトを直接サポートするように構成されていないDBAPIの場合、SQLAlchemyはDBAPIの外部でエンコードとデコードを行います。このシナリオでのエンコーディングは：func： `.create_engine`に渡される` `encoding``フラグによって決まります。"
 
 #: of sqlalchemy.types.Unicode:29
 msgid ""
@@ -628,7 +618,7 @@ msgid ""
 "them, the Python ``warnings`` filter, documented at "
 "http://docs.python.org/library/warnings.html, can be used to turn these "
 "warnings into exceptions which will illustrate a stack trace::"
-msgstr ""
+msgstr "：class： `.Unicode`型を使うときは、Pythonの` `unicode``オブジェクトを渡すのが適切で、` `str``は普通ではありません。普通の `` str``がPython 2の下で渡されると、警告が出されます。あなたのアプリケーションがこれらの警告を出すが、そのソースが分からない場合は、http://docs.python.org/library/warnings.htmlに記載されているPythonの `` warnings``フィルタを使用できますこれらの警告をスタックトレースを示す例外にする："
 
 #: of sqlalchemy.types.Unicode:42
 msgid ""
@@ -636,36 +626,36 @@ msgid ""
 "``unicode`` objects to the ``Unicode`` type equally, the bytestrings must"
 " first be decoded into unicode.  The recipe at :ref:`coerce_to_unicode` "
 "illustrates how this is done."
-msgstr ""
+msgstr "プレーンなバイトコードとPythonの `` unicode``オブジェクトを `` Unicode``型に等しく渡したいアプリケーションでは、バイトコードを最初にUnicodeにデコードする必要があります。レシピ：ref： `coerce_to_unicode`はこれがどのように行われるかを示しています。"
 
 #: of sqlalchemy.types.Unicode:48
 msgid "See also:"
-msgstr ""
+msgstr "参照："
 
 #: of sqlalchemy.types.Unicode:50
 msgid ""
 ":class:`.UnicodeText` - unlengthed textual counterpart to "
 ":class:`.Unicode`."
-msgstr ""
+msgstr "：class： `.UnicodeText`  -  class：` .Unicode`のテキストに対応しています。"
 
 #: of sqlalchemy.types.UnicodeText:1
 msgid "An unbounded-length Unicode string type."
-msgstr ""
+msgstr "無限の長さのUnicode文字列型です。"
 
 #: of sqlalchemy.types.UnicodeText:3
 msgid "See :class:`.Unicode` for details on the unicode behavior of this object."
-msgstr ""
+msgstr "このオブジェクトのユニコード動作の詳細については、class： `.Unicode`を参照してください。"
 
 #: of sqlalchemy.types.UnicodeText:6
 msgid ""
 "Like :class:`.Unicode`, usage the :class:`.UnicodeText` type implies a "
 "unicode-capable type being used on the backend, such as ``NCLOB``, "
 "``NTEXT``."
-msgstr ""
+msgstr "class： `.Unicode`のように、use：class：` .UnicodeText`型は、 `` NCLOB``、 `` NTEXT``など、バックエンドで使用されているUnicode対応型を意味します。"
 
 #: ../../core/type_basics.rst:102
 msgid "SQL Standard and Multiple Vendor Types"
-msgstr ""
+msgstr "SQL標準および複数のベンダータイプ"
 
 #: ../../core/type_basics.rst:104
 msgid ""
@@ -675,11 +665,11 @@ msgid ""
 "**no** guarantee of working on all backends, and will only work on those "
 "backends that explicitly support them by name.  That is, the type will "
 "always emit its exact name in DDL with ``CREATE TABLE`` is issued."
-msgstr ""
+msgstr "このタイプのタイプは、SQL標準の一部であるか、データベースバックエンドのサブセット内に潜在的に存在するタイプを指します。 \ &quot;一般的な\&quot;タイプとは異なり、SQL標準/マルチベンダタイプはすべてのバックエンドで**の**保証を保証しており、明示的にサポートするバックエンドでのみ動作します。つまり、型は常に `` CREATE TABLE``が発行されたDDLで正確な名前を出します。"
 
 #: of sqlalchemy.types.ARRAY:1
 msgid "Represent a SQL Array type."
-msgstr ""
+msgstr "SQL配列型を表します。"
 
 #: of sqlalchemy.types.ARRAY:3
 msgid ""
@@ -688,7 +678,7 @@ msgid ""
 "SQLAlchemy**.  It is recommended to use the :class:`.postgresql.ARRAY` "
 "type directly when using ARRAY types with PostgreSQL, as it provides "
 "additional operators specific to that backend."
-msgstr ""
+msgstr "このタイプは、すべてのARRAY操作の基礎となります。しかし、現在** PostgreSQLバックエンドだけがSQLAlchemy **のSQL配列をサポートしています。 PostgreSQLでARRAY型を使用する場合は、：class： `.postgresql.ARRAY`型を直接使用することをお勧めします。これは、そのバックエンドに固有の追加演算子を提供するためです。"
 
 #: of sqlalchemy.types.ARRAY:10
 msgid ""
@@ -697,13 +687,13 @@ msgid ""
 "arrays; however, with the exception of the PostgreSQL backend and "
 "possibly some third-party dialects, no other SQLAlchemy built-in dialect "
 "has support for this type."
-msgstr ""
+msgstr "：class： `.types.ARRAY`は、明示的に配列を含むclass：` .array_agg`のようなさまざまなSQL標準関数をサポートするCoreの一部です。しかし、PostgreSQLのバックエンドと場合によってはサードパーティの方言を除いて、他のSQLAlchemy組み込み方言はこのタイプをサポートしていません。"
 
 #: of sqlalchemy.types.ARRAY:16
 msgid ""
 "An :class:`.types.ARRAY` type is constructed given the \"type\" of "
 "element::"
-msgstr ""
+msgstr "An：class： `.types.ARRAY`型は、要素の\&quot;型\ &quot;を指定して構築されます::"
 
 #: of sqlalchemy.types.ARRAY:23
 msgid ""
@@ -711,26 +701,26 @@ msgid ""
 "backend such as PostgreSQL will interpret values with any number of "
 "dimensions automatically.   To produce an INSERT construct that passes in"
 " a 1-dimensional array of integers::"
-msgstr ""
+msgstr "上記の型はN次元の配列を表します。つまり、PostgreSQLなどのサポートバックエンドは自動的に任意の次元数の値を解釈します。 1次元の整数配列を渡すINSERT構文を生成するには::"
 
 #: of sqlalchemy.types.ARRAY:33
 msgid ""
 "The :class:`.types.ARRAY` type can be constructed given a fixed number of"
 " dimensions::"
-msgstr ""
+msgstr "：class： `.types.ARRAY`型は、固定数の次元を与えて構築することができます::"
 
 #: of sqlalchemy.types.ARRAY:40
 msgid ""
 "Sending a number of dimensions is optional, but recommended if the "
 "datatype is to represent arrays of more than one dimension.  This number "
 "is used:"
-msgstr ""
+msgstr "複数のディメンションを送信することはオプションですが、データ型が複数のディメンションの配列を表す場合に推奨されます。この番号が使用されます："
 
 #: of sqlalchemy.types.ARRAY:44
 msgid ""
 "When emitting the type declaration itself to the database, e.g. "
 "``INTEGER[][]``"
-msgstr ""
+msgstr "型宣言自体をデータベースに出力するときは、 `` INTEGER [] [] ``"
 
 #: of sqlalchemy.types.ARRAY:47
 msgid ""
@@ -738,20 +728,20 @@ msgid ""
 "an ARRAY of :class:`.Unicode` objects uses this number to efficiently "
 "access the string values inside of array structures without resorting to "
 "per-row type inspection"
-msgstr ""
+msgstr "：class： `.Unicode`オブジェクトのARRAYのようにPythonの値をデータベースの値に変換するときは、行ごとの型検査に頼らずに配列構造内の文字列値に効率的にアクセスするためにこの値を使用します"
 
 #: of sqlalchemy.types.ARRAY:52
 msgid ""
 "When used with the Python ``getitem`` accessor, the number of dimensions "
 "serves to define the kind of type that the ``[]`` operator should return,"
 " e.g. for an ARRAY of INTEGER with two dimensions::"
-msgstr ""
+msgstr "Pythonの `` getitem``アクセサで使用する場合、ディメンションの数は、 `` [] ``演算子が返すべき型の種類を定義するのに役立ちます。例えば、2次元のINTEGERのARRAYの場合::"
 
 #: of sqlalchemy.types.ARRAY:59
 msgid ""
 "For 1-dimensional arrays, an :class:`.types.ARRAY` instance with no "
 "dimension parameter will generally assume single-dimensional behaviors."
-msgstr ""
+msgstr "1次元配列の場合、次元パラメータを持たないclass： `.types.ARRAY`インスタンスは、一般に一次元の動作を仮定します。"
 
 #: of sqlalchemy.types.ARRAY:62
 msgid ""
@@ -760,13 +750,13 @@ msgid ""
 "given integer indexes or slices.  Arrays default to 1-based indexing. The"
 " operator produces binary expression constructs which will produce the "
 "appropriate SQL, both for SELECT statements::"
-msgstr ""
+msgstr "：class： `.types.ARRAY`型のSQL式は、\&quot; index \ &quot;と\&quot; slice \ &quot;の動作をサポートしています。整数インデックスやスライスを指定すると、Pythonの `` [] ``演算子は通常ここで動作します。配列の既定値は1から始まります。演算子は、適切なSQLを生成するバイナリ式の構文を生成します。両方のSELECT文には"
 
 #: of sqlalchemy.types.ARRAY:71
 msgid ""
 "as well as UPDATE statements when the :meth:`.Update.values` method is "
 "used::"
-msgstr ""
+msgstr "：meth： `.Update.values`メソッドが使用されているときのUPDATE文"
 
 #: of sqlalchemy.types.ARRAY:79
 msgid ""
@@ -774,173 +764,173 @@ msgid ""
 ":meth:`.types.ARRAY.Comparator.any` and "
 ":meth:`.types.ARRAY.Comparator.all`. The PostgreSQL-specific version of "
 ":class:`.types.ARRAY` also provides additional operators."
-msgstr ""
+msgstr "：class： `.types.ARRAY`型は：meth：` .types.ARRAY.Comparator.any`と：meth： `.types.ARRAY.Comparator.all`の演算子も提供します。 PostgreSQL固有のバージョン：class： `.types.ARRAY`は、追加の演算子も提供します。"
 
 #: of sqlalchemy.types.ARRAY:88
 msgid ":class:`.postgresql.ARRAY`"
-msgstr ""
+msgstr "：クラス： `.postgresql.ARRAY`"
 
 #: of sqlalchemy.types.ARRAY.Comparator:1
 msgid "Define comparison operations for :class:`.types.ARRAY`."
-msgstr ""
+msgstr "：class： `.types.ARRAY`の比較演算を定義します。"
 
 #: of sqlalchemy.types.ARRAY.Comparator:3
 msgid ""
 "More operators are available on the dialect-specific form of this type.  "
 "See :class:`.postgresql.ARRAY.Comparator`."
-msgstr ""
+msgstr "このタイプの方言固有の形式では、より多くの演算子を使用できます。参照：class： `.postgresql.ARRAY.Comparator`。"
 
 #: of sqlalchemy.types.ARRAY.Comparator.all:1
 msgid "Return ``other operator ALL (array)`` clause."
-msgstr ""
+msgstr "``他の演算子ALL（配列） ``節を返します。"
 
 #: of sqlalchemy.types.ARRAY.Comparator.all:3
 msgid ""
 "Argument places are switched, because ALL requires array expression to be"
 " on the right hand-side."
-msgstr ""
+msgstr "ALLは配列式が右辺にある必要があるため、引数の場所が切り替わります。"
 
 #: of sqlalchemy.types.ARRAY.Comparator.all:6
 #: sqlalchemy.types.ARRAY.Comparator.any:6
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.types.ARRAY.Comparator.all:16
 #: sqlalchemy.types.ARRAY.Comparator.any:16
 msgid "expression to be compared"
-msgstr ""
+msgstr "比較される式"
 
 #: of sqlalchemy.types.ARRAY.Comparator.all:17
 #: sqlalchemy.types.ARRAY.Comparator.any:17
 msgid ""
 "an operator object from the :mod:`sqlalchemy.sql.operators` package, "
 "defaults to :func:`.operators.eq`."
-msgstr ""
+msgstr "：mod： `sqlalchemy.sql.operators`パッケージの演算子オブジェクトは、デフォルトで：func：` .operators.eq`になります。"
 
 #: of sqlalchemy.types.ARRAY.Comparator.all:23
 msgid ":func:`.sql.expression.all_`"
-msgstr ""
+msgstr "：func： `.sql.expression.all_`"
 
 #: of sqlalchemy.types.ARRAY.Comparator.all:25
 msgid ":meth:`.types.ARRAY.Comparator.any`"
-msgstr ""
+msgstr "：meth： `.types.ARRAY.Comparator.any`"
 
 #: of sqlalchemy.types.ARRAY.Comparator.any:1
 msgid "Return ``other operator ANY (array)`` clause."
-msgstr ""
+msgstr "``他の演算子ANY（配列） ``節を返します。"
 
 #: of sqlalchemy.types.ARRAY.Comparator.any:3
 msgid ""
 "Argument places are switched, because ANY requires array expression to be"
 " on the right hand-side."
-msgstr ""
+msgstr "ANYでは配列式が右辺にある必要があるため、引数の場所が切り替わります。"
 
 #: of sqlalchemy.types.ARRAY.Comparator.any:23
 msgid ":func:`.sql.expression.any_`"
-msgstr ""
+msgstr "：func： `.sql.expression.any_`"
 
 #: of sqlalchemy.types.ARRAY.Comparator.any:25
 msgid ":meth:`.types.ARRAY.Comparator.all`"
-msgstr ""
+msgstr "：meth： `.types.ARRAY.Comparator.all`"
 
 #: of sqlalchemy.types.ARRAY.zero_indexes:1
 msgid ""
 "if True, Python zero-based indexes should be interpreted as one-based on "
 "the SQL expression side."
-msgstr ""
+msgstr "Trueの場合、Pythonのゼロベースのインデックスは、SQL式の側で1に基づいて解釈される必要があります。"
 
 #: of sqlalchemy.types.BIGINT:1
 msgid "The SQL BIGINT type."
-msgstr ""
+msgstr "SQL BIGINT型。"
 
 #: of sqlalchemy.types.BINARY:1
 msgid "The SQL BINARY type."
-msgstr ""
+msgstr "SQL BINARY型。"
 
 #: of sqlalchemy.types.BLOB:1
 msgid "The SQL BLOB type."
-msgstr ""
+msgstr "SQL BLOB型。"
 
 #: of sqlalchemy.types.BOOLEAN:1
 msgid "The SQL BOOLEAN type."
-msgstr ""
+msgstr "SQL BOOLEAN型。"
 
 #: of sqlalchemy.types.CHAR:1
 msgid "The SQL CHAR type."
-msgstr ""
+msgstr "SQL CHAR型。"
 
 #: of sqlalchemy.types.CLOB:1
 msgid "The CLOB type."
-msgstr ""
+msgstr "CLOBタイプ。"
 
 #: of sqlalchemy.types.CLOB:3
 msgid "This type is found in Oracle and Informix."
-msgstr ""
+msgstr "このタイプは、OracleおよびInformixにあります。"
 
 #: of sqlalchemy.types.DATE:1
 msgid "The SQL DATE type."
-msgstr ""
+msgstr "SQL DATE型。"
 
 #: of sqlalchemy.types.DATETIME:1
 msgid "The SQL DATETIME type."
-msgstr ""
+msgstr "SQL DATETIME型です。"
 
 #: of sqlalchemy.types.DECIMAL:1
 msgid "The SQL DECIMAL type."
-msgstr ""
+msgstr "SQL DECIMAL型。"
 
 #: of sqlalchemy.types.FLOAT:1
 msgid "The SQL FLOAT type."
-msgstr ""
+msgstr "SQLのFLOAT型。"
 
 #: of sqlalchemy.types.JSON:1
 msgid "Represent a SQL JSON type."
-msgstr ""
+msgstr "SQL JSON型を表します。"
 
 #: of sqlalchemy.types.JSON:3
 msgid ""
 ":class:`.types.JSON` is provided as a facade for vendor-specific JSON "
 "types.  Since it supports JSON SQL operations, it only works on backends "
 "that have an actual JSON type, currently:"
-msgstr ""
+msgstr "：class： `.types.JSON`はベンダー固有のJSON型のファサードとして提供されています。 JSON SQL操作をサポートしているので、実際のJSONタイプを持つバックエンドでのみ動作します。"
 
 #: of sqlalchemy.types.JSON:7
 msgid "PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL"
 
 #: of sqlalchemy.types.JSON:9
 msgid "MySQL as of version 5.7 (MariaDB as of the 10.2 series does not)"
-msgstr ""
+msgstr "バージョン5.7のMySQL（10.2シリーズのMariaDBはありません）"
 
 #: of sqlalchemy.types.JSON:11
 msgid "SQLite as of version 3.9"
-msgstr ""
+msgstr "バージョン3.9以降のSQLite"
 
 #: of sqlalchemy.types.JSON:13
 msgid ""
 ":class:`.types.JSON` is part of the Core in support of the growing "
 "popularity of native JSON datatypes."
-msgstr ""
+msgstr "：class： `.types.JSON`は、ネイティブJSONデータ型の人気が高まる中、Coreの一部です。"
 
 #: of sqlalchemy.types.JSON:16
 msgid "The :class:`.types.JSON` type stores arbitrary JSON format data, e.g.::"
-msgstr ""
+msgstr "：class： `.types.JSON`型は任意のJSON形式のデータを格納します::"
 
 #: of sqlalchemy.types.JSON:29
 msgid "The base :class:`.types.JSON` provides these two operations:"
-msgstr ""
+msgstr "base：class： `.types.JSON`は、次の2つの操作を提供します。"
 
 #: of sqlalchemy.types.JSON:31
 msgid "Keyed index operations::"
-msgstr ""
+msgstr "キー付きインデックス操作::"
 
 #: of sqlalchemy.types.JSON:35
 msgid "Integer index operations::"
-msgstr ""
+msgstr "整数インデックス操作::"
 
 #: of sqlalchemy.types.JSON:39
 msgid "Path index operations::"
-msgstr ""
+msgstr "パスインデックス操作::"
 
 #: of sqlalchemy.types.JSON:43
 msgid ""
@@ -948,7 +938,7 @@ msgid ""
 " :class:`.types.JSON`, such as :class:`.postgresql.JSON` and "
 ":class:`.postgresql.JSONB`, each of which offer more operators than just "
 "the basic type."
-msgstr ""
+msgstr "追加の操作は：class： `.types.JSON`のような：：class：` .postgresql.JSON`と：class： `.postgresql.JSONB`の方言固有のバージョンから利用できます。ちょうど基本的なタイプ。"
 
 #: of sqlalchemy.types.JSON:48
 msgid ""
@@ -964,22 +954,22 @@ msgid ""
 "string** and the **right hand side is rendered as a json string**; a "
 "future SQLAlchemy feature such as a generic \"astext\" modifier may "
 "simplify this at some point:"
-msgstr ""
+msgstr "インデックス操作は、デフォルトでtypeが：class： `.JSON`に設定されている式オブジェクトを返します。これにより、JSON指向のさらなる命令が結果タイプに対して呼び出されるようになります。 PostgreSQLデータベースは、一般に、型キャストなしで\ &quot;json \&quot;構造と\ &quot;json \&quot;構造を比較しないことを含め、バックエンド固有の特異性があることに注意してください。これらの特質は、：func： `.cast`と：func：` .type_coerce`構造を明示的に使用することで、バックエンドに中立な方法で対応できます。 a：class： `.JSON`オブジェクトの特定のインデックス要素と他のオブジェクトとの比較は、左辺が文字列**にキャストされ、**右辺がjson文字列**としてレンダリングされる場合に最も効果的です。ジェネリック\ &quot;astext \&quot;修飾子のような将来のSQLAlchemy機能は、ある時点でこれを単純化するかもしれません："
 
 #: of sqlalchemy.types.JSON:60
 msgid "**Compare an element of a JSON structure to a string**::"
-msgstr ""
+msgstr "** JSON構造体の要素を文字列と比較** ::"
 
 #: of sqlalchemy.types.JSON:73
 msgid "**Compare an element of a JSON structure to an integer**::"
-msgstr ""
+msgstr "** JSON構造体の要素を整数と比較する** ::"
 
 #: of sqlalchemy.types.JSON:84
 msgid ""
 "**Compare an element of a JSON structure to some other JSON structure** -"
 " note that Python dictionaries are typically not ordered so care should "
 "be taken here to assert that the JSON structures are identical::"
-msgstr ""
+msgstr "** JSON構造体の要素を他のJSON構造体と比較する**  -  Python辞書は通常は順序付けされていないので、ここではJSON構造体が同一であることを注意してください。"
 
 #: of sqlalchemy.types.JSON:100
 msgid ""
@@ -989,7 +979,7 @@ msgid ""
 " will allow \"in-place\" changes to the datastructure to produce events "
 "which will be detected by the unit of work.  See the example at "
 ":class:`.HSTORE` for a simple example involving a dictionary."
-msgstr ""
+msgstr "：class： `.JSON`型は、SQLAlchemy ORMと一緒に使用すると、構造体に対するインプレースの突然変異を検出しません。これらを検出するには、：mod： `sqlalchemy.ext.mutable`拡張子を使用する必要があります。この拡張は、作業単位によって検出されるイベントを生成するために、データ構造に対する\ &quot;インプレース\&quot;の変更を可能にします。辞書を含む簡単な例については、class： `.HSTORE`の例を参照してください。"
 
 #: of sqlalchemy.types.JSON:107
 msgid ""
@@ -998,13 +988,13 @@ msgid ""
 "that evaluates to SQL NULL, e.g. no value, vs. the JSON-encoded string of"
 " ``\"null\"``.   To insert or select against a value that is SQL NULL, "
 "use the constant :func:`.null`::"
-msgstr ""
+msgstr "NULL値を扱う場合、：class： `.JSON`型は、SQL NULLに評価される列（例えば値なし）とJSONでエンコードされた文字列` `\ &#39;&#39;を区別するために、2つの特定の定数の使用を推奨します。 &quot;null \&quot; ``。 SQL NULL値を挿入または選択するには、定数：func： `.null` ::を使用します。"
 
 #: of sqlalchemy.types.JSON:116
 msgid ""
 "To insert or select against a value that is JSON ``\"null\"``, use the "
 "constant :attr:`.JSON.NULL`::"
-msgstr ""
+msgstr "JSON `` \ &quot;null \&quot; ``の値を挿入または選択するには、定数attr： `.JSON.NULL` ::を使用します。"
 
 #: of sqlalchemy.types.JSON:121
 msgid ""
@@ -1016,51 +1006,51 @@ msgid ""
 ":attr:`.JSON.NULL` and :func:`.null` in order to indicate NULL values, "
 "but care must be taken as to the value of the "
 ":paramref:`.JSON.none_as_null` in these cases."
-msgstr ""
+msgstr "：class： `.JSON`型は、フラグ：paramref：` .JSON.none_as_null`をサポートします。これをTrueに設定すると、SQL NULLの値を評価するPython定数 `` None``が生成され、False JSONの `` \ &quot;null \&quot; ``の値に評価されるPython定数 `` None``が返されます。 Pythonの値 `` None``は、NULL値を示すために：attr： `.JSON.NULL`と：func：` .null`のどちらかと一緒に使うことができますが、 ：paramref： `.JSON.none_as_null`これらの場合"
 
 #: of sqlalchemy.types.JSON:133
 msgid ":class:`.postgresql.JSON`"
-msgstr ""
+msgstr "：クラス： `.postgresql.JSON`"
 
 #: of sqlalchemy.types.JSON:135
 msgid ":class:`.postgresql.JSONB`"
-msgstr ""
+msgstr "：クラス： `.postgresql.JSONB`"
 
 #: of sqlalchemy.types.JSON:137
 msgid ":class:`.mysql.JSON`"
-msgstr ""
+msgstr "：クラス： `.mysql.JSON`"
 
 #: of sqlalchemy.types.JSON.Comparator:1
 msgid "Define comparison operations for :class:`.types.JSON`."
-msgstr ""
+msgstr "：class： `.types.JSON`の比較演算を定義します。"
 
 #: of sqlalchemy.types.JSON.JSONElementType:1
 msgid "common function for index / path elements in a JSON expression."
-msgstr ""
+msgstr "JSON式のインデックス/パス要素の共通関数です。"
 
 #: of sqlalchemy.types.JSON.JSONIndexType:1
 msgid "Placeholder for the datatype of a JSON index value."
-msgstr ""
+msgstr "JSONインデックス値のデータ型のプレースホルダ。"
 
 #: of sqlalchemy.types.JSON.JSONIndexType:3
 msgid ""
 "This allows execution-time processing of JSON index values for special "
 "syntaxes."
-msgstr ""
+msgstr "これにより、特殊な構文のJSONインデックス値の実行時処理が可能になります。"
 
 #: of sqlalchemy.types.JSON.JSONPathType:1
 msgid "Placeholder type for JSON path operations."
-msgstr ""
+msgstr "JSONパス操作のプレースホルダタイプ。"
 
 #: of sqlalchemy.types.JSON.JSONPathType:3
 msgid ""
 "This allows execution-time processing of a path-based index value into a "
 "specific SQL syntax."
-msgstr ""
+msgstr "これにより、パスベースのインデックス値を特定のSQL構文に実行時処理することができます。"
 
 #: of sqlalchemy.types.JSON.NULL:1
 msgid "Describe the json value of NULL."
-msgstr ""
+msgstr "NULLのjson値を記述します。"
 
 #: of sqlalchemy.types.JSON.NULL:3
 msgid ""
@@ -1071,13 +1061,13 @@ msgid ""
 "be used to always resolve to JSON ``\"null\"`` regardless of this "
 "setting.  This is in contrast to the :func:`.sql.null` construct, which "
 "always resolves to SQL NULL.  E.g.::"
-msgstr ""
+msgstr "この値は、 `` \ &quot;null&quot; &quot;のJSON値を強制的に値として使用するために使用されます。 Pythonの `` None``の値は：paramref： `.JSON.none_as_null`フラグの設定に基づいて、SQL NULLまたはJSON` `\&quot; null \ &quot;` `として認識されます。 ：attr： `.JSON.NULL`定数は、この設定に関係なく常にJSON` `\&quot; null \ &quot;` `に解決するために使用できます。これは：func： `.sql.null`構文とは対照的です。これは常にSQL NULLに解決されます。例えば：："
 
 #: of sqlalchemy.types.JSON.NULL:20
 msgid ""
 "In order to set JSON NULL as a default value for a column, the most "
 "transparent method is to use :func:`.text`::"
-msgstr ""
+msgstr "列のデフォルト値としてJSON NULLを設定するには、最も透過的な方法は：func： `.text` ::"
 
 #: of sqlalchemy.types.JSON.NULL:28
 msgid ""
@@ -1087,43 +1077,43 @@ msgid ""
 "value, may not be desirable.  Using a SQL expression means the value will"
 " be re-fetched from the database within the context of retrieving "
 "generated defaults."
-msgstr ""
+msgstr "このコンテキストでは：attr： `.JSON.NULL`を使用することができますが、：attr：` .JSON.NULL`の値は列の値として返されます。これは、ORMやその他の再利用デフォルト値の、望ましくない可能性があります。 SQL式を使用すると、生成されたデフォルト値を取得するコンテキスト内で値がデータベースから再フェッチされることを意味します。"
 
 #: of sqlalchemy.types.INTEGER:1
 msgid "The SQL INT or INTEGER type."
-msgstr ""
+msgstr "SQL INTまたはINTEGER型。"
 
 #: of sqlalchemy.types.NCHAR:1
 msgid "The SQL NCHAR type."
-msgstr ""
+msgstr "SQL NCHAR型。"
 
 #: of sqlalchemy.types.NVARCHAR:1
 msgid "The SQL NVARCHAR type."
-msgstr ""
+msgstr "SQLのNVARCHAR型です。"
 
 #: of sqlalchemy.types.NUMERIC:1
 msgid "The SQL NUMERIC type."
-msgstr ""
+msgstr "SQL NUMERIC型。"
 
 #: of sqlalchemy.types.REAL:1
 msgid "The SQL REAL type."
-msgstr ""
+msgstr "SQL REAL型。"
 
 #: of sqlalchemy.types.SMALLINT:1
 msgid "The SQL SMALLINT type."
-msgstr ""
+msgstr "SQL SMALLINT型。"
 
 #: of sqlalchemy.types.TEXT:1
 msgid "The SQL TEXT type."
-msgstr ""
+msgstr "SQL TEXT型。"
 
 #: of sqlalchemy.types.TIME:1
 msgid "The SQL TIME type."
-msgstr ""
+msgstr "SQL TIME型。"
 
 #: of sqlalchemy.types.TIMESTAMP:1
 msgid "The SQL TIMESTAMP type."
-msgstr ""
+msgstr "SQL TIMESTAMP型。"
 
 #: of sqlalchemy.types.TIMESTAMP:3
 msgid ""
@@ -1131,49 +1121,49 @@ msgid ""
 " some backends, such as PostgreSQL and Oracle.  Use the "
 ":paramref:`~types.TIMESTAMP.timezone` argument in order to enable "
 "\"TIMESTAMP WITH TIMEZONE\" for these backends."
-msgstr ""
+msgstr "：class： `〜.types.TIMESTAMP`データ型は、PostgreSQLやOracleなどのいくつかのバックエンドでのタイムゾーン格納をサポートしています。これらのバックエンドに\ &quot;TIMESTAMP WITH TIMEZONE \&quot;を有効にするには、：paramref： `〜types.TIMESTAMP.timezone`引数を使用します。"
 
 #: of sqlalchemy.types.VARBINARY:1
 msgid "The SQL VARBINARY type."
-msgstr ""
+msgstr "SQL VARBINARY型。"
 
 #: of sqlalchemy.types.VARCHAR:1
 msgid "The SQL VARCHAR type."
-msgstr ""
+msgstr "SQL VARCHAR型。"
 
 #: ../../core/type_basics.rst:188
 msgid "Vendor-Specific Types"
-msgstr ""
+msgstr "ベンダー固有のタイプ"
 
 #: ../../core/type_basics.rst:190
 msgid ""
 "Database-specific types are also available for import from each "
 "database's dialect module. See the :ref:`dialect_toplevel` reference for "
 "the database you're interested in."
-msgstr ""
+msgstr "データベース固有の型は、各データベースのダイアレクトモジュールからインポートすることもできます。興味のあるデータベースの：ref： `dialect_toplevel`リファレンスを参照してください。"
 
 #: ../../core/type_basics.rst:194
 msgid ""
 "For example, MySQL has a ``BIGINT`` type and PostgreSQL has an ``INET`` "
 "type.  To use these, import them from the module explicitly::"
-msgstr ""
+msgstr "たとえば、MySQLには `` BIGINT``型があり、PostgreSQLには `` INET``型があります。これらを使用するには、モジュールから明示的にインポートする::"
 
 #: ../../core/type_basics.rst:204
 msgid "Or some PostgreSQL types::"
-msgstr ""
+msgstr "またはいくつかのPostgreSQLの種類::"
 
 #: ../../core/type_basics.rst:213
 msgid ""
 "Each dialect provides the full set of typenames supported by that backend"
 " within its `__all__` collection, so that a simple `import *` or similar "
 "will import all supported types as implemented for that backend::"
-msgstr ""
+msgstr "各方言は、そのバックエンドが `__all__`コレクション内でサポートしている完全な型名を提供します。そのため、単純な` import * `や類似のものは、そのバックエンドに実装されたすべてのサポートされている型をインポートします::"
 
 #: ../../core/type_basics.rst:226
 msgid ""
 "Where above, the INTEGER and VARCHAR types are ultimately from "
 "sqlalchemy.types, and INET is specific to the PostgreSQL dialect."
-msgstr ""
+msgstr "上記の場合、INTEGER型とVARCHAR型は最終的にsqlalchemy.typesにあり、INETはPostgreSQL方言に固有の型です。"
 
 #: ../../core/type_basics.rst:229
 msgid ""
@@ -1181,5 +1171,5 @@ msgid ""
 " also provide additional arguments.  For example, MySQL implements the "
 "full range of character and string types including additional arguments "
 "such as `collation` and `charset`::"
-msgstr ""
+msgstr "いくつかの方言レベル型は、SQL標準型と同じ名前を持つだけでなく、追加の引数を提供します。例えば、MySQLは、 `collat​​ion`や` charset` ::などの追加の引数を含む、文字列と文字列型の全範囲を実装しています"
 

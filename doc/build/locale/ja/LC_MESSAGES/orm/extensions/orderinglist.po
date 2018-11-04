@@ -6,34 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/orderinglist.rst:2
 msgid "Ordering List"
-msgstr ""
+msgstr "オーダーリスト"
 
 #: of sqlalchemy.ext.orderinglist:1
 msgid ""
 "A custom list that manages index/position information for contained "
 "elements."
-msgstr ""
+msgstr "含まれる要素のインデックス/位置情報を管理するカスタムリスト。"
 
 #: of sqlalchemy.ext.orderinglist
 msgid "author"
-msgstr ""
+msgstr "著者"
 
 #: of sqlalchemy.ext.orderinglist:4
 msgid "Jason Kirtland"
-msgstr ""
+msgstr "Jason Kirtland"
 
 #: of sqlalchemy.ext.orderinglist:6
 msgid ""
@@ -41,7 +31,7 @@ msgid ""
 "intercept list operations performed on a :func:`.relationship`-managed "
 "collection and automatically synchronize changes in list position onto a "
 "target scalar attribute."
-msgstr ""
+msgstr "`` orderinglist``は、変更可能な順序関係のヘルパーです。それは：func： `.relationship`管理コレクションで実行されるリスト操作をインターセプトし、リスト位置の変更をターゲットスカラー属性に自動的に同期させます。"
 
 #: of sqlalchemy.ext.orderinglist:12
 msgid ""
@@ -50,7 +40,7 @@ msgid ""
 "displayed in order based on the value of the ``position`` column in the "
 "``bullet`` table.   As entries are reordered in memory, the value of the "
 "``position`` attribute should be updated to reflect the new sort order::"
-msgstr ""
+msgstr "例： `` slide``テーブル。ここで、各行は関連する `` bullet``テーブル内のゼロ個以上のエントリを参照します。スライド内の箇条書きは、 `` bullet``テーブルの `` position``カラムの値に基づいて順番に表示されます。エントリがメモリ内で再配列されるとき、 `` position``属性の値は新しいソート順を反映するように更新されるべきです::"
 
 #: of sqlalchemy.ext.orderinglist:36
 msgid ""
@@ -61,18 +51,18 @@ msgid ""
 " remain unset until manually assigned.   When the ``Bullet`` is inserted "
 "into the middle of the list, the following ``Bullet`` objects will also "
 "need to be renumbered."
-msgstr ""
+msgstr "標準的なリレーションシップマッピングでは、すべての関連する `` Bullet``オブジェクトを含む各スライド上にリストのような属性が生成されますが、順序の変更に対処することは自動的には処理されません。 `` Sllet.bullets``に `` Bullet``を追加すると、 `` Bullet.position``属性は手動で割り当てられるまで設定されません。 `` Bullet``がリストの途中に挿入されると、次の `` Bullet``オブジェクトの番号も変更する必要があります。"
 
 #: of sqlalchemy.ext.orderinglist:44
 msgid ""
 "The :class:`.OrderingList` object automates this task, managing the "
 "``position`` attribute on all ``Bullet`` objects in the collection.  It "
 "is constructed using the :func:`.ordering_list` factory::"
-msgstr ""
+msgstr "：class： `.OrderingList`オブジェクトは、このタスクを自動化し、コレクション内のすべての` `Bullet``オブジェクトの` `position``属性を管理します。 ：func： `.ordering_list`ファクトリを使用して構築されます::"
 
 #: of sqlalchemy.ext.orderinglist:68
 msgid "With the above mapping the ``Bullet.position`` attribute is managed::"
-msgstr ""
+msgstr "上記のマッピングでは、 `` Bullet.position``属性が管理されます::"
 
 #: of sqlalchemy.ext.orderinglist:79
 msgid ""
@@ -81,14 +71,14 @@ msgid ""
 " the list be sorted when loaded.  Therefore, be sure to specify "
 "``order_by`` on the :func:`.relationship` against the target ordering "
 "attribute, so that the ordering is correct when first loaded."
-msgstr ""
+msgstr "：class： `.OrderingList`コンストラクトは、データベースからの最初のロードではなく、** changes **のコレクションに対してのみ機能し、ロード時にリストをソートする必要があります。したがって、ターゲット順序付け属性に対して：func： `.relationship`を指定して、順序付けが正しく行われるようにしてください。"
 
 #: of sqlalchemy.ext.orderinglist:87
 msgid ""
 ":class:`.OrderingList` only provides limited functionality when a primary"
 " key column or unique column is the target of the sort.  Operations that "
 "are unsupported or are problematic include:"
-msgstr ""
+msgstr "：class： `.OrderingList`は、主キー列または一意の列がソートの対象である場合にのみ機能が制限されます。サポートされていない、または問題がある操作には、"
 
 #: of sqlalchemy.ext.orderinglist:91
 msgid ""
@@ -96,7 +86,7 @@ msgid ""
 "case of a primary key or unique constraint because it means at least one "
 "row would need to be temporarily removed first, or changed to a third, "
 "neutral value while the switch occurs."
-msgstr ""
+msgstr "2つのエントリは値を交換する必要があります。これは、主キーまたはユニーク制約の場合は直接サポートされません。これは、少なくとも1つの行を最初に一時的に削除するか、スイッチが発生している間に3番目の中立値に変更する必要があるためです。"
 
 #: of sqlalchemy.ext.orderinglist:96
 msgid ""
@@ -109,7 +99,7 @@ msgid ""
 "INSERT\" behavior to be possible, allevating this limitation, though this"
 " feature will require explicit configuration at the mapper level for sets"
 " of columns that are to be handled in this way."
-msgstr ""
+msgstr "新しいエントリのためのスペースを確保するためにエントリを削除する必要があります。 SQLAlchemyの作業ユニットは、一回のフラッシュでDELETEの前にすべてのINSERTを実行します。主キーの場合、この制限の影響を軽減するためにUPDATEステートメントの同じ主キーのINSERT / DELETEを交換しますが、これはUNIQUE列では発生しません。将来の機能では、このような制限を緩和するために\ &quot;DELETE before INSERT \&quot;ビヘイビアを可能にしますが、この方法で処理される列セットのマッパーレベルで明示的な設定が必要です。"
 
 #: of sqlalchemy.ext.orderinglist:107
 msgid ""
@@ -119,31 +109,31 @@ msgid ""
 "the ordering attribute: index 0 will get position 0, index 1 position 1, "
 "etc.  To start numbering at 1 or some other integer, provide "
 "``count_from=1``."
-msgstr ""
+msgstr "：func： `.ordering_list`は、関連オブジェクトの順序付け属性の名前を引数として取ります。デフォルトでは、：func： `.ordering_list`内のオブジェクトの位置の0から始まる整数インデックスは、順序付け属性と同期されます。インデックス0は位置0、インデックス1の位置1などを取得します。他の整数は、 `` count_from = 1``を提供します。"
 
 #: ../../orm/extensions/orderinglist.rst:7
 msgid "API Reference"
-msgstr ""
+msgstr "APIリファレンス"
 
 #: of sqlalchemy.ext.orderinglist.ordering_list:1
 msgid "Prepares an :class:`OrderingList` factory for use in mapper definitions."
-msgstr ""
+msgstr "マッパー定義で使用する：class： `OrderingList`ファクトリーを準備します。"
 
 #: of sqlalchemy.ext.orderinglist.ordering_list:3
 msgid ""
 "Returns an object suitable for use as an argument to a Mapper "
 "relationship's ``collection_class`` option.  e.g.::"
-msgstr ""
+msgstr "Mapper関係の `` collection_class``オプションへの引数として使用するのに適したオブジェクトを返します。例えば：："
 
 #: of sqlalchemy.ext.orderinglist.ordering_list
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.ext.orderinglist.ordering_list:17
 msgid ""
 "Name of the mapped attribute to use for storage and retrieval of ordering"
 " information"
-msgstr ""
+msgstr "注文情報の保存および取得に使用するマップされた属性の名前"
 
 #: of sqlalchemy.ext.orderinglist.ordering_list:21
 msgid ""
@@ -151,54 +141,54 @@ msgid ""
 "example, ``ordering_list('pos', count_from=1)`` would create a 1-based "
 "list in SQL, storing the value in the 'pos' column.  Ignored if "
 "``ordering_func`` is supplied."
-msgstr ""
+msgstr "`` count_from``で始まる整数ベースの順序付けを設定します。たとえば、 `` ordering_list（ &#39;pos&#39;、count_from = 1） ``は、SQLで1ベースのリストを作成し、その値を &#39;pos&#39;カラムに格納します。 `` ordering_func``が与えられている場合は無視されます。"
 
 #: of sqlalchemy.ext.orderinglist.ordering_list:27
 msgid "Additional arguments are passed to the :class:`.OrderingList` constructor."
-msgstr ""
+msgstr "追加の引数は：class： `.OrderingList`コンストラクタに渡されます。"
 
 #: of sqlalchemy.ext.orderinglist.count_from_0:1
 msgid "Numbering function: consecutive integers starting at 0."
-msgstr ""
+msgstr "番号付け関数：0から始まる連続する整数。"
 
 #: of sqlalchemy.ext.orderinglist.count_from_1:1
 msgid "Numbering function: consecutive integers starting at 1."
-msgstr ""
+msgstr "番号付け関数：1から始まる連続した整数。"
 
 #: of sqlalchemy.ext.orderinglist.count_from_n_factory:1
 msgid "Numbering function: consecutive integers starting at arbitrary start."
-msgstr ""
+msgstr "番号付け関数：任意の開始点から始まる連続した整数。"
 
 #: of sqlalchemy.ext.orderinglist.OrderingList:1
 msgid "A custom list that manages position information for its children."
-msgstr ""
+msgstr "子の位置情報を管理するカスタムリスト。"
 
 #: of sqlalchemy.ext.orderinglist.OrderingList:3
 msgid ""
 "The :class:`.OrderingList` object is normally set up using the "
 ":func:`.ordering_list` factory function, used in conjunction with the "
 ":func:`.relationship` function."
-msgstr ""
+msgstr "：class： `.OrderingList`オブジェクトは：func：` .ordering_list`ファクトリ関数を使って通常セットアップされ、：func： `.relationship`関数と共に使用されます。"
 
 #: of sqlalchemy.ext.orderinglist.OrderingList.insert:1
 msgid "L.insert(index, object) -- insert object before index"
-msgstr ""
+msgstr "L.insert（index、object） - インデックスの前にオブジェクトを挿入する"
 
 #: of sqlalchemy.ext.orderinglist.OrderingList.pop:1
 msgid "Raises IndexError if list is empty or index is out of range."
-msgstr ""
+msgstr "リストが空であるかインデックスが範囲外の場合、IndexErrorを発生させます。"
 
 #: of sqlalchemy.ext.orderinglist.OrderingList.remove:1
 msgid "Raises ValueError if the value is not present."
-msgstr ""
+msgstr "値が存在しない場合、ValueErrorを発生させます。"
 
 #: of sqlalchemy.ext.orderinglist.OrderingList.reorder:1
 msgid "Synchronize ordering for the entire collection."
-msgstr ""
+msgstr "コレクション全体の順序を同期させる。"
 
 #: of sqlalchemy.ext.orderinglist.OrderingList.reorder:3
 msgid ""
 "Sweeps through the list and ensures that each object has accurate "
 "ordering information set."
-msgstr ""
+msgstr "リストをスイープし、各オブジェクトに正確な注文情報が設定されていることを確認します。"
 

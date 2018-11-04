@@ -6,26 +6,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/schema.rst:5
 msgid "Schema Definition Language"
-msgstr ""
+msgstr "スキーマ定義言語"
 
 #: ../../core/schema.rst:9
 msgid ""
 "This section references SQLAlchemy **schema metadata**, a comprehensive "
 "system of describing and inspecting database schemas."
-msgstr ""
+msgstr "このセクションでは、データベーススキーマの記述と検査の包括的なシステムであるSQLAlchemy **スキーマメタデータ**を参照しています。"
 
 #: ../../core/schema.rst:12
 msgid ""
@@ -35,7 +25,7 @@ msgid ""
 " the core of three major types of operations - issuing CREATE and DROP "
 "statements (known as *DDL*), constructing SQL queries, and expressing "
 "information about structures that already exist within the database."
-msgstr ""
+msgstr "SQLAlchemyのクエリとオブジェクトマッピング操作の中核は、テーブルや他のスキーマレベルのオブジェクトを記述するPythonオブジェクトで構成される*データベースメタデータ*によってサポートされています。これらのオブジェクトは、CREATEおよびDROPステートメント（* DDL *と呼ばれる）の発行、SQL照会の作成、およびデータベース内にすでに存在する構造に関する情報の表現の3つの主なタイプの操作の中核を成しています。"
 
 #: ../../core/schema.rst:19
 msgid ""
@@ -49,7 +39,7 @@ msgid ""
 "object such as :class:`~sqlalchemy.schema.Table`, assign it a name, and "
 "then instruct SQLAlchemy to load all the additional information related "
 "to that name from a particular engine source."
-msgstr ""
+msgstr "データベースメタデータは、class： `〜sqlalchemy.schema.Table`、：class：`〜sqlalchemy.schema.Column`、：class： `〜sqlalchemyなどの構文を使用して、さまざまなコンポーネントとそのプロパティを明示的に命名することで表現できます。スキーマ.ForeignKey`と：class： `〜sqlalchemy.schema.Sequence`を含み、これらはすべて` `sqlalchemy.schema``パッケージからインポートされます。 * reflection *という名前のプロセスを使ってSQLAlchemyで生成することもできます。つまり、class： `〜sqlalchemy.schema.Table`のような単一のオブジェクトから始め、名前を付けてからSQLAlchemyにすべての特定のエンジンソースからその名前に関連する追加情報。"
 
 #: ../../core/schema.rst:30
 msgid ""
@@ -57,5 +47,5 @@ msgid ""
 "are designed to be used in a *declarative* style which closely resembles "
 "that of real DDL. They are therefore most intuitive to those who have "
 "some background in creating real schema generation scripts."
-msgstr ""
+msgstr "SQLAlchemyのデータベースメタデータコンストラクトの主な特徴は、実際のDDLと似ている*宣言型*スタイルで使用するように設計されていることです。したがって、実際のスキーマ生成スクリプトを作成する背景を持っている人にとっては、最も直感的です。"
 

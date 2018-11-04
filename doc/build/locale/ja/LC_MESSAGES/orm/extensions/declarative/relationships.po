@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/declarative/relationships.rst:5
 msgid "Configuring Relationships"
-msgstr ""
+msgstr "関係の設定"
 
 #: ../../orm/extensions/declarative/relationships.rst:9
 msgid ""
@@ -27,7 +17,7 @@ msgid ""
 "interacts with SQLAlchemy ORM relationship constructs.  For general "
 "information about setting up relationships between mappings, see "
 ":ref:`ormtutorial_toplevel` and :ref:`relationship_patterns`."
-msgstr ""
+msgstr "このセクションでは、宣言システムがSQLAlchemy ORM関係構造とどのように対話するかについて説明します。マッピング間の関係の設定に関する一般的な情報については、：ref： `ormtutorial_toplevel`と：ref：` relationship_patterns`を参照してください。"
 
 #: ../../orm/extensions/declarative/relationships.rst:14
 msgid ""
@@ -37,14 +27,14 @@ msgid ""
 " used at mapper compilation time to resolve the name into the actual "
 "class object, which is expected to have been defined once the mapper "
 "configuration is used::"
-msgstr ""
+msgstr "他のクラスとの関係は通常の方法で行われ、func： `〜sqlalchemy.orm.relationship`に指定されたクラスは文字列名でもよいという追加機能があります。 `` Base``に関連付けられた\ &quot;class registry \&quot;は、マッパー設定時に定義されると予想される実際のクラスオブジェクトに名前を解決するためにマッパーコンパイル時に使用されます::"
 
 #: ../../orm/extensions/declarative/relationships.rst:35
 msgid ""
 "Column constructs, since they are just that, are immediately usable, as "
 "below where we define a primary join condition on the ``Address`` class "
 "using them::"
-msgstr ""
+msgstr "Column構造体は、それだけであるので、すぐに使用できます。以下のように、 `` Address``クラスでPrimary Join条件を定義します::"
 
 #: ../../orm/extensions/declarative/relationships.rst:47
 msgid ""
@@ -57,14 +47,14 @@ msgid ""
 "package, including expression functions like "
 ":func:`~sqlalchemy.sql.expression.desc` and "
 ":attr:`~sqlalchemy.sql.expression.func`::"
-msgstr ""
+msgstr "：func： `〜sqlalchemy.orm.relationship`の主な引数に加えて、まだ未定義のクラスに存在するカラムに依存する他の引数も文字列として指定することができます。これらの文字列はPythonの式として評価されます。この評価の中で利用可能な完全な名前空間には、この宣言的な基底に対してマップされたすべてのクラスと、func： `〜sqlalchemy.sql.expression.desc`と：attrのような式関数を含む` `sqlalchemy``パッケージの内容が含まれます： `〜sqlalchemy.sql.expression.func` ::"
 
 #: ../../orm/extensions/declarative/relationships.rst:62
 msgid ""
 "For the case where more than one module contains a class of the same "
 "name, string class names can also be specified as module-qualified paths "
 "within any of these string expressions::"
-msgstr ""
+msgstr "複数のモジュールに同じ名前のクラスが含まれている場合、文字列クラス名は、これらの文字列式のいずれかでモジュール修飾パスとして指定することもできます。"
 
 #: ../../orm/extensions/declarative/relationships.rst:73
 msgid ""
@@ -72,30 +62,30 @@ msgid ""
 " the names.  For example, to disambiguate between "
 "``myapp.model.address.Address`` and ``myapp.model.lookup.Address``, we "
 "can specify ``address.Address`` or ``lookup.Address``::"
-msgstr ""
+msgstr "修飾されたパスは、名前間のあいまいさを取り除く部分パスにすることができます。たとえば、 `` myapp.model.address.Address``と `` myapp.model.lookup.Address``を区別するために、 `` address.Address``または `` lookup.Address`` ::を指定することができます。"
 
 #: ../../orm/extensions/declarative/relationships.rst:85
 msgid ""
 "module-qualified paths can be used when specifying string arguments with "
 "Declarative, in order to specify specific modules."
-msgstr ""
+msgstr "特定のモジュールを指定するために、Declarativeで文字列引数を指定するときは、モジュール修飾パスを使用できます。"
 
 #: ../../orm/extensions/declarative/relationships.rst:89
 msgid ""
 "Two alternatives also exist to using string-based attributes.  A lambda "
 "can also be used, which will be evaluated after all mappers have been "
 "configured::"
-msgstr ""
+msgstr "文字列ベースの属性を使用する方法には2つの方法があります。ラムダも使用できます。ラムダはすべてのマッパーが設定された後に評価されます::"
 
 #: ../../orm/extensions/declarative/relationships.rst:99
 msgid ""
 "Or, the relationship can be added to the class explicitly after the "
 "classes are available::"
-msgstr ""
+msgstr "または、クラスが使用可能になった後に明示的に関係をクラスに追加することができます。"
 
 #: ../../orm/extensions/declarative/relationships.rst:110
 msgid "Configuring Many-to-Many Relationships"
-msgstr ""
+msgstr "多対多リレーションシップの構成"
 
 #: ../../orm/extensions/declarative/relationships.rst:112
 msgid ""
@@ -105,14 +95,14 @@ msgid ""
 "is typically declared in the traditional way.  The :class:`.Table` "
 "usually shares the :class:`.MetaData` object used by the declarative "
 "base::"
-msgstr ""
+msgstr "多対多の関係も、伝統的なマッピングと同じように宣言的に宣言されます。 ：func： `.relationship`の` `secondary``引数は通常通りclass：` .Table`オブジェクトを渡します。これは通常伝統的な方法で宣言されています。 ：class： `.Table`は通常：宣言的な基底で使われる：class：` .MetaData`オブジェクトを共有します::"
 
 #: ../../orm/extensions/declarative/relationships.rst:131
 msgid ""
 "Like other :func:`~sqlalchemy.orm.relationship` arguments, a string is "
 "accepted as well, passing the string name of the table as defined in the "
 "``Base.metadata.tables`` collection::"
-msgstr ""
+msgstr "他の：func： `〜sqlalchemy.orm.relationship`引数と同様に、文字列も受け入れられ、` `Base.metadata.tables``コレクションに定義されているようにテーブルの文字列名を渡します::"
 
 #: ../../orm/extensions/declarative/relationships.rst:140
 msgid ""
@@ -121,5 +111,5 @@ msgid ""
 "class, unless the :func:`.relationship` is declared with "
 "``viewonly=True``. Otherwise, the unit-of-work system may attempt "
 "duplicate INSERT and DELETE statements against the underlying table."
-msgstr ""
+msgstr "伝統的なマッピングと同様に、：class： `.Table`を\&quot;セカンダリ\ &quot;の引数として使用するのは良い考えではありません。これは：func：` .relationship`が ` `viewonly = True``です。それ以外の場合、作業単位システムは、基になるテーブルに対して重複INSERTおよびDELETEステートメントを試行することがあります。"
 

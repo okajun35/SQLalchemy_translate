@@ -10,7 +10,7 @@
         <title>
             
     
-    Special Relationship Persistence Patterns
+    特別な関係の永続パターン
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Relationship Configuration" href="relationships.html" />
-        <link rel="next" title="Relationships API" href="relationship_api.html" />
-        <link rel="prev" title="Collection Configuration and Techniques" href="collections.html" />
+        <link rel="up" title="関係の設定" href="relationships.html" />
+        <link rel="next" title="リレーションシップAPI" href="relationship_api.html" />
+        <link rel="prev" title="コレクションの構成とテクニック" href="collections.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,30 +120,30 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="basic_relationships.html">Basic Relationship Patterns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="self_referential.html">Adjacency List Relationships</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="backref.html">Linking Relationships with Backref</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="join_conditions.html">Configuring how Relationship Joins</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="collections.html">Collection Configuration and Techniques</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Special Relationship Persistence Patterns</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#rows-that-point-to-themselves-mutually-dependent-rows">Rows that point to themselves / Mutually Dependent Rows</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#mutable-primary-keys-update-cascades">Mutable Primary Keys / Update Cascades</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#simulating-limited-on-update-cascade-without-foreign-key-support">Simulating limited ON UPDATE CASCADE without foreign key support</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="basic_relationships.html">基本的な関係パターン</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="self_referential.html">隣接関係リストの関係</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="backref.html">バックリファレンスとの関係のリンク</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="join_conditions.html">リレーションシップの参加方法のコンフィグレーション</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="collections.html">コレクションの構成とテクニック</a></span></li>
+<li class="selected"><span class="link-container first"><strong>特別な関係の永続パターン</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#rows-that-point-to-themselves-mutually-dependent-rows">自分自身を指す行/相互に依存する行</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#mutable-primary-keys-update-cascades">変更可能な主キー/更新カスケード</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#simulating-limited-on-update-cascade-without-foreign-key-support">外部キーのサポートなしで限定的なON UPDATE CASCADEをシミュレート</a></span></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="relationship_api.html">Relationships API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationship_api.html">リレーションシップAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -159,57 +159,30 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="special-relationship-persistence-patterns">
-<h1>Special Relationship Persistence Patterns<a class="headerlink" href="#special-relationship-persistence-patterns" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>特別な関係の永続パターン<a class="headerlink" href="#special-relationship-persistence-patterns" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="rows-that-point-to-themselves-mutually-dependent-rows">
-<span id="post-update"></span><h2>Rows that point to themselves / Mutually Dependent Rows<a class="headerlink" href="#rows-that-point-to-themselves-mutually-dependent-rows" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>This is a very specific case where relationship() must perform an INSERT and a
-second UPDATE in order to properly populate a row (and vice versa an UPDATE
-and DELETE in order to delete without violating foreign key constraints). The
-two use cases are:</p>
+<span id="post-update"></span><h2>自分自身を指す行/相互に依存する行<a class="headerlink" href="#rows-that-point-to-themselves-mutually-dependent-rows" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>これは、関係（）が行を適切に埋めるためにINSERTと2番目のUPDATEを実行しなければならない非常に特殊なケースです（また、外部キー制約に違反することなく削除するためにUPDATEとDELETEの逆も同様です）。 2つのユースケースは次のとおりです。</p>
 <ul class="simple">
-<li>A table contains a foreign key to itself, and a single row will
-have a foreign key value pointing to its own primary key.</li>
-<li>Two tables each contain a foreign key referencing the other
-table, with a row in each table referencing the other.</li>
+<li>テーブルには、それ自身の外部キーが含まれています.1つの行には、それ自身のプライマリキーを指す外部キー値があります。</li>
+<li>2つのテーブルには、それぞれ他のテーブルを参照する外部キーが含まれ、各テーブル内の行は他のテーブルを参照します。</li>
 </ul>
-<p>For example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>          <span class="n">user</span>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>          <span class="n">user</span>
 <span class="o">---------------------------------</span>
 <span class="n">user_id</span>    <span class="n">name</span>   <span class="n">related_user_id</span>
    <span class="mi">1</span>       <span class="s1">&#39;ed&#39;</span>          <span class="mi">1</span></pre></div>
 </div>
-<p>Or:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>             <span class="n">widget</span>                                                  <span class="n">entry</span>
+<p>または:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>             <span class="n">widget</span>                                                  <span class="n">entry</span>
 <span class="o">-------------------------------------------</span>             <span class="o">---------------------------------</span>
 <span class="n">widget_id</span>     <span class="n">name</span>        <span class="n">favorite_entry_id</span>             <span class="n">entry_id</span>      <span class="n">name</span>      <span class="n">widget_id</span>
    <span class="mi">1</span>       <span class="s1">&#39;somewidget&#39;</span>          <span class="mi">5</span>                         <span class="mi">5</span>       <span class="s1">&#39;someentry&#39;</span>     <span class="mi">1</span></pre></div>
 </div>
-<p>In the first case, a row points to itself. Technically, a database that uses
-sequences such as PostgreSQL or Oracle can INSERT the row at once using a
-previously generated value, but databases which rely upon autoincrement-style
-primary key identifiers cannot. The <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>
-always assumes a &quot;parent/child&quot; model of row population during flush, so
-unless you are populating the primary key/foreign key columns directly,
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> needs to use two statements.</p>
-<p>In the second case, the &quot;widget&quot; row must be inserted before any referring
-&quot;entry&quot; rows, but then the &quot;favorite_entry_id&quot; column of that &quot;widget&quot; row
-cannot be set until the &quot;entry&quot; rows have been generated. In this case, it's
-typically impossible to insert the &quot;widget&quot; and &quot;entry&quot; rows using just two
-INSERT statements; an UPDATE must be performed in order to keep foreign key
-constraints fulfilled. The exception is if the foreign keys are configured as
-&quot;deferred until commit&quot; (a feature some databases support) and if the
-identifiers were populated manually (again essentially bypassing
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>).</p>
-<p>To enable the usage of a supplementary UPDATE statement,
-we use the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.post_update" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">post_update</span></code></a> option
-of <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>.  This specifies that the linkage between the
-two rows should be created using an UPDATE statement after both rows
-have been INSERTED; it also causes the rows to be de-associated with
-each other via UPDATE before a DELETE is emitted.  The flag should
-be placed on just <em>one</em> of the relationships, preferably the
-many-to-one side.  Below we illustrate
-a complete example, including two <a class="reference internal" href="../core/constraints.html#sqlalchemy.schema.ForeignKey" title="sqlalchemy.schema.ForeignKey"><code class="xref py py-class docutils literal"><span class="pre">ForeignKey</span></code></a> constructs:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">Column</span>
+<p>最初のケースでは、行はそれ自身を指しています。技術的には、PostgreSQLやOracleなどのシーケンスを使用するデータベースでは、以前に生成された値を使用して一度に行をINSERTできますが、自動インクリメントスタイルの主キー識別子に依存するデータベースではできません。 ：func： <cite>〜sqlalchemy.orm.relationship`は、flush中に行母集団の&amp;quot;親/子&amp;quot;モデルを常に仮定しているので、主キー/外部キー列に直接入力しない限り、：func：</cite>〜sqlalchemy。 orm.relationship`は2つのステートメントを使用する必要があります。</p>
+<p>2番目のケースでは、&amp;quot;ウィジェット&amp;quot;の行は参照&amp;quot;エントリ&amp;quot;行の前に挿入する必要がありますが、&amp;quot;ウィジェット&amp;quot;行の&amp;quot;favorite_entry_id &amp;quot;列は&amp;quot;エントリ&amp;quot;行が生成されました。この場合、通常は2つのINSERT文を使用して&amp;quot;widget &amp;quot;と&amp;quot;entry &amp;quot;行を挿入することは不可能です。外部キーの制約を満たすためにUPDATEを実行する必要があります。例外は、外部キーが&amp;quot;コミットまで延期されました&amp;quot;（一部のデータベースでサポートされている機能）として設定されていて、識別子が手動で設定されていた場合です（func： <cite>〜sqlalchemy.orm.relationship</cite>）。</p>
+<p>補足的なUPDATE文の使用を可能にするために、：func： <cite>.relationship`の：paramref：</cite>〜.relationship.post_update`オプションを使用します。両方の行がINSERTEDされた後、UPDATE文を使用して2つの行間のリンケージを作成する必要があることを指定します。 DELETEが発行される前に、UPDATEを介して行が相互に関連付け解除されます。フラグはリレーションシップの* one <a href="#id1"><span class="problematic" id="id2">*</span></a>、好ましくはmany-to-oneサイドに配置する必要があります。以下は、2つの例を含む完全な例です：class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.ForeignKey`構造体:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">Column</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span>
 
@@ -237,12 +210,8 @@ a complete example, including two <a class="reference internal" href="../core/co
                                     <span class="n">favorite_entry_id</span><span class="o">==</span><span class="n">Entry</span><span class="o">.</span><span class="n">entry_id</span><span class="p">,</span>
                                 <span class="n">post_update</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></pre></div>
 </div>
-<p>When a structure against the above configuration is flushed, the &quot;widget&quot; row will be
-INSERTed minus the &quot;favorite_entry_id&quot; value, then all the &quot;entry&quot; rows will
-be INSERTed referencing the parent &quot;widget&quot; row, and then an UPDATE statement
-will populate the &quot;favorite_entry_id&quot; column of the &quot;widget&quot; table (it's one
-row at a time for the time being):</p>
-<div class="highlight-pycon+sql"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">w1</span> <span class="o">=</span> <span class="n">Widget</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;somewidget&#39;</span><span class="p">)</span>
+<p>上記の構成に対する構造体がフラッシュされると、&amp;quot;widget &amp;quot;行がINSERTされて&amp;quot;favorite_entry_id &amp;quot;の値から差し引かれ、すべての&amp;quot;entry &amp;quot;行が親&amp;quot;widget &amp;quot;行それからUPDATEステートメントは、&amp;quot;widget &amp;quot;テーブルの&amp;quot;favorite_entry_id &amp;quot;カラムに値を設定します（これは一度に1行です）。</p>
+<div class="highlight-pycon+sql notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">w1</span> <span class="o">=</span> <span class="n">Widget</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;somewidget&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">e1</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;someentry&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">w1</span><span class="o">.</span><span class="n">favorite_entry</span> <span class="o">=</span> <span class="n">e1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">w1</span><span class="o">.</span><span class="n">entries</span> <span class="o">=</span> <span class="p">[</span><span class="n">e1</span><span class="p">]</span>
@@ -257,12 +226,8 @@ UPDATE widget SET favorite_entry_id=? WHERE widget.widget_id = ?
 (1, 1)
 COMMIT</div></pre></div>
 </div>
-<p>An additional configuration we can specify is to supply a more
-comprehensive foreign key constraint on <code class="docutils literal"><span class="pre">Widget</span></code>, such that
-it's guaranteed that <code class="docutils literal"><span class="pre">favorite_entry_id</span></code> refers to an <code class="docutils literal"><span class="pre">Entry</span></code>
-that also refers to this <code class="docutils literal"><span class="pre">Widget</span></code>.  We can use a composite foreign key,
-as illustrated below:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> \
+<p>もう一つの設定として、 <a href="#id1"><span class="problematic" id="id2">``</span></a>ウィジェット <a href="#id3"><span class="problematic" id="id4">``</span></a>にはより包括的な外部キー制約を与えることができます。 `` favorite_entry_id``が <a href="#id5"><span class="problematic" id="id6">``</span></a>ウィジェット &amp;#39;&amp;#39;を参照する <a href="#id7"><span class="problematic" id="id8">``</span></a>エントリー &amp;#39;&amp;#39;を参照することが保証されています。以下に示すように、複合外部キーを使用できます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> \
         <span class="n">Column</span><span class="p">,</span> <span class="n">UniqueConstraint</span><span class="p">,</span> <span class="n">ForeignKeyConstraint</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span>
@@ -303,29 +268,13 @@ as illustrated below:</p>
                                 <span class="n">foreign_keys</span><span class="o">=</span><span class="n">favorite_entry_id</span><span class="p">,</span>
                                 <span class="n">post_update</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></pre></div>
 </div>
-<p>The above mapping features a composite <a class="reference internal" href="../core/constraints.html#sqlalchemy.schema.ForeignKeyConstraint" title="sqlalchemy.schema.ForeignKeyConstraint"><code class="xref py py-class docutils literal"><span class="pre">ForeignKeyConstraint</span></code></a>
-bridging the <code class="docutils literal"><span class="pre">widget_id</span></code> and <code class="docutils literal"><span class="pre">favorite_entry_id</span></code> columns.  To ensure
-that <code class="docutils literal"><span class="pre">Widget.widget_id</span></code> remains an &quot;autoincrementing&quot; column we specify
-<a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column.params.autoincrement" title="sqlalchemy.schema.Column"><code class="xref py py-paramref docutils literal"><span class="pre">autoincrement</span></code></a> to the value <code class="docutils literal"><span class="pre">&quot;ignore_fk&quot;</span></code>
-on <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a>, and additionally on each
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> we must limit those columns considered as part of
-the foreign key for the purposes of joining and cross-population.</p>
+<p>上記のマッピングは、 `` widget_id``と `` favorite_entry_id``カラムを橋渡しする複合：クラス： <cite>.ForeignKeyConstraint`を特徴としています。 `</cite> Widget.widget_id``が&amp;quot;autoincrementing &amp;quot;カラムのままであることを保証するために、paramref： <cite>〜.Column.autoincrement`を値</cite> <cite>&amp;quot; ignore_fk &amp;quot;</cite> <cite>on：class：</cite> .Column` func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.relationship`のそれぞれには、結合およびクロス・ポピュレーションの目的で外部キーの一部と見なされる列を制限する必要があります。</p>
 </div>
 <div class="section" id="mutable-primary-keys-update-cascades">
-<span id="passive-updates"></span><h2>Mutable Primary Keys / Update Cascades<a class="headerlink" href="#mutable-primary-keys-update-cascades" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>When the primary key of an entity changes, related items
-which reference the primary key must also be updated as
-well. For databases which enforce referential integrity,
-the best strategy is to use the database's ON UPDATE CASCADE
-functionality in order to propagate primary key changes
-to referenced foreign keys - the values cannot be out
-of sync for any moment unless the constraints are marked as &quot;deferrable&quot;,
-that is, not enforced until the transaction completes.</p>
-<p>It is <strong>highly recommended</strong> that an application which seeks to employ
-natural primary keys with mutable values to use the <code class="docutils literal"><span class="pre">ON</span> <span class="pre">UPDATE</span> <span class="pre">CASCADE</span></code>
-capabilities of the database.   An example mapping which
-illustrates this is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="passive-updates"></span><h2>変更可能な主キー/更新カスケード<a class="headerlink" href="#mutable-primary-keys-update-cascades" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>エンティティの主キーが変更されると、主キーを参照する関連項目も更新する必要があります。参照整合性を実施するデータベースの場合、データベースのON UPDATE CASCADE機能を使用して、主キーの変更を参照先の外部キーに伝播することが最善の方法です。制約が &amp;quot;遅延可能&amp;quot; &amp;quot;、つまり、トランザクションが完了するまで強制されません。</p>
+<p>データベースの &amp;quot;ON UPDATE CASCADE&amp;quot;機能を使用するために、変更可能な値を持つ自然な主キーを採用しようとするアプリケーションを**強くお勧めします**。これを示すマッピング例は:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span>
     <span class="n">__table_args__</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;mysql_engine&#39;</span><span class="p">:</span> <span class="s1">&#39;InnoDB&#39;</span><span class="p">}</span>
 
@@ -344,42 +293,18 @@ illustrates this is:</p>
                 <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;user.username&#39;</span><span class="p">,</span> <span class="n">onupdate</span><span class="o">=</span><span class="s2">&quot;cascade&quot;</span><span class="p">)</span>
             <span class="p">)</span></pre></div>
 </div>
-<p>Above, we illustrate <code class="docutils literal"><span class="pre">onupdate=&quot;cascade&quot;</span></code> on the <a class="reference internal" href="../core/constraints.html#sqlalchemy.schema.ForeignKey" title="sqlalchemy.schema.ForeignKey"><code class="xref py py-class docutils literal"><span class="pre">ForeignKey</span></code></a>
-object, and we also illustrate the <code class="docutils literal"><span class="pre">mysql_engine='InnoDB'</span></code> setting
-which, on a MySQL backend, ensures that the <code class="docutils literal"><span class="pre">InnoDB</span></code> engine supporting
-referential integrity is used.  When using SQLite, referential integrity
-should be enabled, using the configuration described at
-<a class="reference internal" href="../dialects/sqlite.html#sqlite-foreign-keys"><span class="std std-ref">Foreign Key Support</span></a>.</p>
+<p>上記では、：class： <cite>.ForeignKey`オブジェクトの</cite> <cite>onupdate = &amp;quot; cascade &amp;quot;</cite> <cite>を示し、</cite> <cite>mysql_engine = &amp;#39;InnoDB``の設定を示します。参照整合性をサポートする `</cite> InnoDB``エンジンが使用されています。 SQLiteを使用する場合、参照：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>sqlite_foreign_keys`で説明されている設定を使用して、参照整合性を有効にする必要があります。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="collections.html#passive-deletes"><span class="std std-ref">Using Passive Deletes</span></a> - supporting ON DELETE CASCADE with relationships</p>
-<p class="last"><a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.passive_updates" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">orm.mapper.passive_updates</span></code></a> - similar feature on <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper" title="sqlalchemy.orm.mapper"><code class="xref py py-func docutils literal"><span class="pre">mapper()</span></code></a></p>
+<p>：ref： <cite>passive_deletes</cite>  - 関係と一緒にDELETE CASCADEをサポートする</p>
+<p class="last">：paramref： <cite>.orm.mapper.passive_updates</cite>  - 類似機能：func：` .mapper`</p>
 </div>
 <div class="section" id="simulating-limited-on-update-cascade-without-foreign-key-support">
-<h3>Simulating limited ON UPDATE CASCADE without foreign key support<a class="headerlink" href="#simulating-limited-on-update-cascade-without-foreign-key-support" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>In those cases when a database that does not support referential integrity
-is used, and natural primary keys with mutable values are in play,
-SQLAlchemy offers a feature in order to allow propagation of primary key
-values to already-referenced foreign keys to a <strong>limited</strong> extent,
-by emitting an UPDATE statement against foreign key columns that immediately
-reference a primary key column whose value has changed.
-The primary platforms without referential integrity features are
-MySQL when the <code class="docutils literal"><span class="pre">MyISAM</span></code> storage engine is used, and SQLite when the
-<code class="docutils literal"><span class="pre">PRAGMA</span> <span class="pre">foreign_keys=ON</span></code> pragma is not used.  The Oracle database also
-has no support for <code class="docutils literal"><span class="pre">ON</span> <span class="pre">UPDATE</span> <span class="pre">CASCADE</span></code>, but because it still enforces
-referential integrity, needs constraints to be marked as deferrable
-so that SQLAlchemy can emit UPDATE statements.</p>
-<p>The feature is enabled by setting the
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.passive_updates" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">passive_updates</span></code></a> flag to <code class="docutils literal"><span class="pre">False</span></code>,
-most preferably on a one-to-many or
-many-to-many <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>.  When &quot;updates&quot; are no longer
-&quot;passive&quot; this indicates that SQLAlchemy will
-issue UPDATE statements individually for
-objects referenced in the collection referred to by the parent object
-with a changing primary key value.  This also implies that collections
-will be fully loaded into memory if not already locally present.</p>
-<p>Our previous mapping using <code class="docutils literal"><span class="pre">passive_updates=False</span></code> looks like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<h3>外部キーのサポートなしで限定的なON UPDATE CASCADEをシミュレート<a class="headerlink" href="#simulating-limited-on-update-cascade-without-foreign-key-support" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>参照整合性をサポートしていないデータベースが使用され、変更可能な値を持つ自然な主キーが有効な場合、SQLAlchemyは主キー値をすでに参照されている外部キーに**限定された**エクステントは、値が変更された主キー列を即座に参照する外部キー列に対してUPDATEステートメントを発行します。参照整合性機能を持たない主なプラットフォームは、 `` MyISAM``ストレージエンジンを使用している場合はMySQL、 `` PRAGMA foreign_keys = ON``プラグマを使用しない場合はSQLiteです。 Oracleデータベースでは、「ON UPDATE CASCADE」はサポートされていませんが、依然として参照整合性が強制されているため、SQLAlchemyがUPDATE文を発行できるように遅延制約としてマークする必要があります。</p>
+<p>この機能は：paramref： <cite>〜.relationship.passive_updates`フラグを</cite> <cite>False``に、最も好ましくは一対多多対多：func：</cite> .relationship`に設定することで有効になります。 &amp;quot;更新&amp;quot;がもはや&amp;quot;パッシブ&amp;quot;でなければ、SQLAlchemyは主キー値の変更を伴う親オブジェクトによって参照されるコレクションで参照されるオブジェクトに対して個別にUPDATEステートメントを発行することを示します。これはまた、コレクションがまだローカルに存在していない場合、メモリに完全にロードされることを意味します。</p>
+<p>`` passive_updates = False``を使った以前のマッピングは次のようになります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span>
 
     <span class="n">username</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -395,27 +320,13 @@ will be fully loaded into memory if not already locally present.</p>
     <span class="n">email</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">username</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;user.username&#39;</span><span class="p">))</span></pre></div>
 </div>
-<p>Key limitations of <code class="docutils literal"><span class="pre">passive_updates=False</span></code> include:</p>
+<p>`` passive_updates = False``の重要な制限は次のとおりです：</p>
 <ul class="simple">
-<li>it performs much more poorly than direct database ON UPDATE CASCADE,
-because it needs to fully pre-load affected collections using SELECT
-and also must emit  UPDATE statements against those values, which it
-will attempt to run  in &quot;batches&quot; but still runs on a per-row basis
-at the DBAPI level.</li>
-<li>the feature cannot &quot;cascade&quot; more than one level.  That is,
-if mapping X has a foreign key which refers to the primary key
-of mapping Y, but then mapping Y's primary key is itself a foreign key
-to mapping Z, <code class="docutils literal"><span class="pre">passive_updates=False</span></code> cannot cascade a change in
-primary key value from <code class="docutils literal"><span class="pre">Z</span></code> to <code class="docutils literal"><span class="pre">X</span></code>.</li>
-<li>Configuring <code class="docutils literal"><span class="pre">passive_updates=False</span></code> only on the many-to-one
-side of a relationship will not have a full effect, as the
-unit of work searches only through the current identity
-map for objects that may be referencing the one with a
-mutating primary key, not throughout the database.</li>
+<li>SELECTを使用して影響を受けるコレクションを完全に事前ロードする必要があるため、UPDATEステートメントを&amp;quot;バッチ&amp;quot;で実行しようとするUPDATEステートメントを発行する必要があるため、ダイレクトデータベースのON UPDATE CASCADEよりもはるかにパフォーマンスが劣ります行単位でDBAPIレベルで実行されます。</li>
+<li>この機能は複数のレベルでカスケードすることはできません。つまり、マッピングXがマッピングYの主キーを参照する外部キーを持っているが、Yの主キーをマッピングすること自体がZをマッピングする外部キーである場合、 `` passive_updates = False``は主キー値の変更をカスケードすることができません「Z」から「X」まで</li>
+<li>関係の多対1側でのみ `` passive_updates = False``を設定することは、作業単位が、変化しているものを参照している可能性のあるオブジェクトの現在のアイデンティティマップを介してのみ検索するので、完全な効果を持ちません主キーであり、データベース全体ではありません。</li>
 </ul>
-<p>As virtually all databases other than Oracle now support <code class="docutils literal"><span class="pre">ON</span> <span class="pre">UPDATE</span> <span class="pre">CASCADE</span></code>,
-it is highly recommended that traditional <code class="docutils literal"><span class="pre">ON</span> <span class="pre">UPDATE</span> <span class="pre">CASCADE</span></code> support be used
-in the case that natural and mutable primary key values are in use.</p>
+<p>事実上、Oracle以外のすべてのデータベースが「ON UPDATE CASCADE」をサポートしているので、自然かつ変更可能な主キー値が使用されている場合には、従来の「ON UPDATE CASCADE」サポートを使用することを強く推奨します。</p>
 </div>
 </div>
 </div>
@@ -426,13 +337,13 @@ in the case that natural and mutable primary key values are in use.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="collections.html" title="previous chapter">Collection Configuration and Techniques</a>
+        <a href="collections.html" title="previous chapter">コレクションの構成とテクニック</a>
         Next:
-        <a href="relationship_api.html" title="next chapter">Relationships API</a>
+        <a href="relationship_api.html" title="next chapter">リレーションシップAPI</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -459,6 +370,7 @@ in the case that natural and mutable primary key values are in use.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

@@ -10,7 +10,7 @@
         <title>
             
     
-    ORM Examples
+    ORMの例
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -36,8 +36,8 @@
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
         <link rel="up" title="SQLAlchemy ORM" href="index.html" />
-        <link rel="next" title="SQLAlchemy Core" href="../core/index.html" />
-        <link rel="prev" title="Alternate Class Instrumentation" href="extensions/instrumentation.html" />
+        <link rel="next" title="SQLAlchemyコア" href="../core/index.html" />
+        <link rel="prev" title="代替クラスの計装" href="extensions/instrumentation.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,54 +120,54 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li class="selected"><span class="link-container first"><strong>ORM Examples</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#mapping-recipes">Mapping Recipes</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.adjacency_list">Adjacency List</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.association">Associations</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.graphs">Directed Graphs</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.dynamic_dict">Dynamic Relations as Dictionaries</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.generic_associations">Generic Associations</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.large_collection">Large Collections</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.materialized_paths">Materialized Paths</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.nested_sets">Nested Sets</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.performance">Performance</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#file-listing">File Listing</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#running-all-tests-with-time">Running all tests with time</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#dumping-profiles-for-individual-tests">Dumping Profiles for Individual Tests</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#using-runsnake">Using RunSnake</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#writing-your-own-suites">Writing your Own Suites</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li class="selected"><span class="link-container first"><strong>ORMの例</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#mapping-recipes">マッピングレシピ</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.adjacency_list">隣接リスト</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.association">団体</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.graphs">指向グラフ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.dynamic_dict">辞書としての動的関係</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.generic_associations">ジェネリック協会</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.large_collection">大規模なコレクション</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.materialized_paths">マテリアライズド・パス</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.nested_sets">ネストセット</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.performance">パフォーマンス</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#file-listing">ファイルリスト</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#running-all-tests-with-time">すべてのテストを時間通りに実行する</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#dumping-profiles-for-individual-tests">個々のテストのプロファイルのダンプ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#using-runsnake">RunSnakeの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#writing-your-own-suites">自分のスイートを書く</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.join_conditions">Relationship Join Conditions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.space_invaders">Space Invaders</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.elementtree">XML Persistence</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#versioning-objects">Versioning Objects</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.versioned_history">Versioning with a History Table</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.versioned_rows">Versioning using Temporal Rows</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.join_conditions">関係の結合条件</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.space_invaders">スペースインベーダーズ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.elementtree">XML永続性</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#versioning-objects">オブジェクトのバージョン管理</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.versioned_history">履歴テーブルによるバージョン管理</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.versioned_rows">時系列を使ったバージョン管理</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.vertical">Vertical Attribute Mapping</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.vertical">垂直属性マッピング</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#inheritance-mapping-recipes">Inheritance Mapping Recipes</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.inheritance">Basic Inheritance Mappings</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#inheritance-mapping-recipes">継承マッピングのレシピ</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.inheritance">基本継承マッピング</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#special-apis">Special APIs</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.custom_attributes">Attribute Instrumentation</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.sharding">Horizontal Sharding</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#special-apis">特別なAPI</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.custom_attributes">属性計測</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.sharding">水平シャーディング</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#extending-the-orm">Extending the ORM</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.dogpile_caching">Dogpile Caching</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#module-examples.postgis">PostGIS Integration</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#extending-the-orm">ORMの拡張</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.dogpile_caching">ドッグファイルのキャッシング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#module-examples.postgis">PostGISインテグレーション</a></span></li>
 </ul>
 </li>
 </ul>
@@ -187,21 +187,16 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="orm-examples">
-<span id="examples-toplevel"></span><h1>ORM Examples<a class="headerlink" href="#orm-examples" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The SQLAlchemy distribution includes a variety of code examples illustrating
-a select set of patterns, some typical and some not so typical.   All are
-runnable and can be found in the <code class="docutils literal"><span class="pre">/examples</span></code> directory of the
-distribution.   Descriptions and source code for all can be found here.</p>
-<p>Additional SQLAlchemy examples, some user contributed, are available on the
-wiki at <a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes">http://www.sqlalchemy.org/trac/wiki/UsageRecipes</a>.</p>
+<span id="examples-toplevel"></span><h1>ORMの例<a class="headerlink" href="#orm-examples" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>SQLAlchemyディストリビューションには、典型的なものとそれほど典型的でないものの選択されたパターンセットを示すさまざまなコード例が含まれています。すべては実行可能で、配布物の `` / examples``ディレクトリにあります。すべての説明とソースコードはここにあります。</p>
+<p>追加のSQLAlchemyの例（一部のユーザが投稿したもの）は、wikiの ` &lt;<a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes">http://www.sqlalchemy.org/trac/wiki/UsageRecipes</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_。</p>
 <div class="section" id="mapping-recipes">
-<h2>Mapping Recipes<a class="headerlink" href="#mapping-recipes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>マッピングレシピ<a class="headerlink" href="#mapping-recipes" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="module-examples.adjacency_list">
-<span id="adjacency-list"></span><span id="examples-adjacencylist"></span><h3>Adjacency List<a class="headerlink" href="#module-examples.adjacency_list" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>An example of a dictionary-of-dictionaries structure mapped using
-an adjacency list model.</p>
-<p>E.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">TreeNode</span><span class="p">(</span><span class="s1">&#39;rootnode&#39;</span><span class="p">)</span>
+<span id="adjacency-list"></span><span id="examples-adjacencylist"></span><h3>隣接リスト<a class="headerlink" href="#module-examples.adjacency_list" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>隣接関係リストモデルを使用してマップされたディクショナリ辞書構造の例。</p>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">TreeNode</span><span class="p">(</span><span class="s1">&#39;rootnode&#39;</span><span class="p">)</span>
 <span class="n">node</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;node1&#39;</span><span class="p">)</span>
 <span class="n">node</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;node3&#39;</span><span class="p">)</span>
 <span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
@@ -215,10 +210,8 @@ an adjacency list model.</p>
 </p>
 </div>
 <div class="section" id="module-examples.association">
-<span id="associations"></span><span id="examples-associations"></span><h3>Associations<a class="headerlink" href="#module-examples.association" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Examples illustrating the usage of the &quot;association object&quot; pattern,
-where an intermediary class mediates the relationship between two
-classes that are associated in a many-to-many pattern.</p>
+<span id="associations"></span><span id="examples-associations"></span><h3>団体<a class="headerlink" href="#module-examples.association" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>仲介クラスが多対多のパターンで関連付けられた2つのクラス間の関係を仲介する&amp;quot;関連オブジェクト&amp;quot;パターンの使用例を示す例。</p>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/association/basic_association.html">basic_association.py</a></li>
 <li><a class="reference external" href="../_modules/examples/association/dict_of_sets_with_default.html">dict_of_sets_with_default.py</a></li>
@@ -227,12 +220,9 @@ classes that are associated in a many-to-many pattern.</p>
 </p>
 </div>
 <div class="section" id="module-examples.graphs">
-<span id="directed-graphs"></span><h3>Directed Graphs<a class="headerlink" href="#module-examples.graphs" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>An example of persistence for a directed graph structure.   The
-graph is stored as a collection of edges, each referencing both a
-&quot;lower&quot; and an &quot;upper&quot; node in a table of nodes.  Basic persistence
-and querying for lower- and upper- neighbors are illustrated:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">n2</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span id="directed-graphs"></span><h3>指向グラフ<a class="headerlink" href="#module-examples.graphs" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>有向グラフ構造の永続性の例。グラフはエッジの集まりとして格納され、各ノードはノードのテーブルの&amp;quot;lower &amp;quot;と&amp;quot;upper &amp;quot;ノードの両方を参照します。下位および上位ネイバの基本的な永続性およびクエリの例を示します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n2</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">n5</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">n2</span><span class="o">.</span><span class="n">add_neighbor</span><span class="p">(</span><span class="n">n5</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">n2</span><span class="o">.</span><span class="n">higher_neighbors</span><span class="p">()</span></pre></div>
@@ -243,29 +233,18 @@ and querying for lower- and upper- neighbors are illustrated:</p>
 </p>
 </div>
 <div class="section" id="module-examples.dynamic_dict">
-<span id="dynamic-relations-as-dictionaries"></span><h3>Dynamic Relations as Dictionaries<a class="headerlink" href="#module-examples.dynamic_dict" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Illustrates how to place a dictionary-like facade on top of a
-&quot;dynamic&quot; relation, so that dictionary operations (assuming simple
-string keys) can operate upon a large collection without loading the
-full collection at once.</p>
+<span id="dynamic-relations-as-dictionaries"></span><h3>辞書としての動的関係<a class="headerlink" href="#module-examples.dynamic_dict" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ディクショナリ操作（単純な文字列キーを前提とする）が大量のコレクションを一度に読み込むことなく動作できるように、辞書のようなファサードを&amp;quot;動的関係の上に置く方法を説明しています。</p>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/dynamic_dict/dynamic_dict.html">dynamic_dict.py</a></li>
 </ul>
 </p>
 </div>
 <div class="section" id="module-examples.generic_associations">
-<span id="generic-associations"></span><span id="examples-generic-associations"></span><h3>Generic Associations<a class="headerlink" href="#module-examples.generic_associations" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Illustrates various methods of associating multiple types of
-parents with a particular child object.</p>
-<p>The examples all use the declarative extension along with
-declarative mixins.   Each one presents the identical use
-case at the end - two classes, <code class="docutils literal"><span class="pre">Customer</span></code> and <code class="docutils literal"><span class="pre">Supplier</span></code>, both
-subclassing the <code class="docutils literal"><span class="pre">HasAddresses</span></code> mixin, which ensures that the
-parent class is provided with an <code class="docutils literal"><span class="pre">addresses</span></code> collection
-which contains <code class="docutils literal"><span class="pre">Address</span></code> objects.</p>
-<p>The <a class="reference external" href="../_modules/examples/generic_associations/discriminator_on_association.html">discriminator_on_association.py</a> and <a class="reference external" href="../_modules/examples/generic_associations/generic_fk.html">generic_fk.py</a> scripts
-are modernized versions of recipes presented in the 2007 blog post
-<a class="reference external" href="http://techspot.zzzeek.org/2007/05/29/polymorphic-associations-with-sqlalchemy/">Polymorphic Associations with SQLAlchemy</a>.</p>
+<span id="generic-associations"></span><span id="examples-generic-associations"></span><h3>ジェネリック協会<a class="headerlink" href="#module-examples.generic_associations" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>複数のタイプの親を特定の子オブジェクトに関連付けるさまざまな方法を示します。</p>
+<p>これらの例はすべて、宣言的なミックスインとともに宣言的な拡張を使用しています。それぞれが `` Customer``と `` Supplier``の最後の2つのクラスで同じ使用事例を提示し、両方とも `` HasAddresses``ミックスインをサブクラス化します。これは、親クラスに `` addresses`` `` Address``オブジェクトを含むコレクションです。</p>
+<p>：viewsource： <cite>.discriminator_on_association`と：viewsource：</cite> .generic_fk`スクリプトは、2007年のブログ記事「SQLAlchemyとの多相協会」で提示されたレシピの最新版です&lt;<a class="reference external" href="http://techspot.zzzeek.org/2007/05/29/polymorphic-associations-with-sqlalchemy/">http://techspot.zzzeek.org/2007/05/29/polymorphic-associations-with-sqlalchemy/</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_。</p>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/generic_associations/discriminator_on_association.html">discriminator_on_association.py</a></li>
 <li><a class="reference external" href="../_modules/examples/generic_associations/generic_fk.html">generic_fk.py</a></li>
@@ -275,16 +254,12 @@ are modernized versions of recipes presented in the 2007 blog post
 </p>
 </div>
 <div class="section" id="module-examples.large_collection">
-<span id="large-collections"></span><h3>Large Collections<a class="headerlink" href="#module-examples.large_collection" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Large collection example.</p>
-<p>Illustrates the options to use with
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> when the list of related
-objects is very large, including:</p>
+<span id="large-collections"></span><h3>大規模なコレクション<a class="headerlink" href="#module-examples.large_collection" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>大規模なコレクションの例。</p>
+<p>関連するオブジェクトのリストが非常に大きい場合に、：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.orm.relationship（）`で使用するオプションを示します。</p>
 <ul class="simple">
-<li>&quot;dynamic&quot; relationships which query slices of data as accessed</li>
-<li>how to use ON DELETE CASCADE in conjunction with
-<code class="docutils literal"><span class="pre">passive_deletes=True</span></code> to greatly improve the performance of
-related collection deletion.</li>
+<li>アクセスされたデータのスライスを問い合わせる&amp;quot;動的&amp;quot;関係</li>
+<li>`` passive_deletes = True``と一緒にON DELETE CASCADEを使用して、関連するコレクションの削除のパフォーマンスを大幅に改善する方法。</li>
 </ul>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/large_collection/large_collection.html">large_collection.py</a></li>
@@ -292,41 +267,34 @@ related collection deletion.</li>
 </p>
 </div>
 <div class="section" id="module-examples.materialized_paths">
-<span id="materialized-paths"></span><h3>Materialized Paths<a class="headerlink" href="#module-examples.materialized_paths" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Illustrates the &quot;materialized paths&quot; pattern for hierarchical data using the
-SQLAlchemy ORM.</p>
+<span id="materialized-paths"></span><h3>マテリアライズド・パス<a class="headerlink" href="#module-examples.materialized_paths" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SQLAlchemy ORMを使用して階層データの&amp;quot;マテリアライズドパス&amp;quot;パターンを示します。</p>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/materialized_paths/materialized_paths.html">materialized_paths.py</a></li>
 </ul>
 </p>
 </div>
 <div class="section" id="module-examples.nested_sets">
-<span id="nested-sets"></span><h3>Nested Sets<a class="headerlink" href="#module-examples.nested_sets" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Illustrates a rudimentary way to implement the &quot;nested sets&quot;
-pattern for hierarchical data using the SQLAlchemy ORM.</p>
+<span id="nested-sets"></span><h3>ネストセット<a class="headerlink" href="#module-examples.nested_sets" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SQLAlchemy ORMを使用して階層データの&amp;quot;ネストセット&amp;quot;パターンを実装する初歩的な方法を示します。</p>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/nested_sets/nested_sets.html">nested_sets.py</a></li>
 </ul>
 </p>
 </div>
 <div class="section" id="module-examples.performance">
-<span id="performance"></span><span id="examples-performance"></span><h3>Performance<a class="headerlink" href="#module-examples.performance" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>A performance profiling suite for a variety of SQLAlchemy use cases.</p>
-<p>Each suite focuses on a specific use case with a particular performance
-profile and associated implications:</p>
+<span id="performance"></span><span id="examples-performance"></span><h3>パフォーマンス<a class="headerlink" href="#module-examples.performance" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>さまざまなSQLAlchemyユースケース用のパフォーマンスプロファイリングスイート。</p>
+<p>各スイートは、特定のパフォーマンスプロファイルと関連する影響に関する特定のユースケースに焦点を当てています。</p>
 <ul class="simple">
-<li>bulk inserts</li>
-<li>individual inserts, with or without transactions</li>
-<li>fetching large numbers of rows</li>
-<li>running lots of short queries</li>
+<li>バルクインサート</li>
+<li>個別の挿入、トランザクションの有無</li>
+<li>多数の行をフェッチする</li>
+<li>たくさんの短いクエリを実行しています</li>
 </ul>
-<p>All suites include a variety of use patterns illustrating both Core
-and ORM use, and are generally sorted in order of performance from worst
-to greatest, inversely based on amount of functionality provided by SQLAlchemy,
-greatest to least (these two things generally correspond perfectly).</p>
-<p>A command line tool is presented at the package level which allows
-individual suites to be run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ python -m examples.performance --help
+<p>すべてのスイートには、CoreとORMの両方の使用方法を示すさまざまな使用パターンが含まれています。一般に、SQLAlchemyによって提供される機能の量に基づいて、パフォーマンスが最悪から最大に順にソートされます。</p>
+<p>個々のスイートを実行できるコマンドラインツールがパッケージレベルで提供されています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m examples.performance --help
 usage: python -m examples.performance [-h] [--test TEST] [--dburl DBURL]
                                       [--num NUM] [--profile] [--dump]
                                       [--runsnake] [--echo]
@@ -348,20 +316,20 @@ optional arguments:
   --runsnake            invoke runsnakerun (implies --profile)
   --echo                Echo SQL output</pre></div>
 </div>
-<p>An example run looks like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ python -m examples.performance bulk_inserts</pre></div>
+<p>実行例は次のようになります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m examples.performance bulk_inserts</pre></div>
 </div>
-<p>Or with options:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ python -m examples.performance bulk_inserts \
+<p>またはオプションを使用する:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m examples.performance bulk_inserts \
     --dburl mysql+mysqldb://scott:tiger@localhost/test \
     --profile --num 1000</pre></div>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="../faq/performance.html#faq-how-to-profile"><span class="std std-ref">How can I profile a SQLAlchemy powered application?</span></a></p>
+<p class="last">：ref： <cite>faq_how_to_profile</cite></p>
 </div>
 <div class="section" id="file-listing">
-<h4>File Listing<a class="headerlink" href="#file-listing" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>ファイルリスト<a class="headerlink" href="#file-listing" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/performance/bulk_inserts.html">bulk_inserts.py</a></li>
 <li><a class="reference external" href="../_modules/examples/performance/bulk_updates.html">bulk_updates.py</a></li>
@@ -373,9 +341,9 @@ optional arguments:
 </p>
 </div>
 <div class="section" id="running-all-tests-with-time">
-<h4>Running all tests with time<a class="headerlink" href="#running-all-tests-with-time" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>This is the default form of run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ python -m examples.performance single_inserts
+<h4>すべてのテストを時間通りに実行する<a class="headerlink" href="#running-all-tests-with-time" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>これはデフォルトの実行形式です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m examples.performance single_inserts
 Tests to run: test_orm_commit, test_bulk_save,
               test_bulk_insert_dictionaries, test_core,
               test_core_query_caching, test_dbapi_raw_w_connect,
@@ -399,10 +367,9 @@ test_dbapi_raw_w_pool : Individual INSERT/COMMIT pairs w/ DBAPI +
 </div>
 </div>
 <div class="section" id="dumping-profiles-for-individual-tests">
-<h4>Dumping Profiles for Individual Tests<a class="headerlink" href="#dumping-profiles-for-individual-tests" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>A Python profile output can be dumped for all tests, or more commonly
-individual tests:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ python -m examples.performance single_inserts --test test_core --num 1000 --dump
+<h4>個々のテストのプロファイルのダンプ<a class="headerlink" href="#dumping-profiles-for-individual-tests" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>Pythonプロファイルの出力は、すべてのテスト、またはより一般的には個々のテストでダンプできます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m examples.performance single_inserts --test test_core --num 1000 --dump
 Tests to run: test_core
 test_core : Individual INSERT/COMMIT pairs using Core. (1000 iterations); total fn calls 186109
          186109 function calls (186102 primitive calls) in 1.089 seconds
@@ -420,21 +387,16 @@ test_core : Individual INSERT/COMMIT pairs using Core. (1000 iterations); total 
 </div>
 </div>
 <div class="section" id="using-runsnake">
-<h4>Using RunSnake<a class="headerlink" href="#using-runsnake" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>This option requires the <a class="reference external" href="https://pypi.python.org/pypi/RunSnakeRun">RunSnake</a>
-command line tool be installed:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ python -m examples.performance single_inserts --test test_core --num 1000 --runsnake</pre></div>
+<h4>RunSnakeの使用<a class="headerlink" href="#using-runsnake" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>このオプションは <a href="#id1"><span class="problematic" id="id2">`</span></a>RunSnake &lt;<a class="reference external" href="https://pypi.python.org/pypi/RunSnakeRun">https://pypi.python.org/pypi/RunSnakeRun</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_コマンドラインツールをインストールする:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m examples.performance single_inserts --test test_core --num 1000 --runsnake</pre></div>
 </div>
-<p>A graphical RunSnake output will be displayed.</p>
+<p>グラフィカルなRunSnake出力が表示されます。</p>
 </div>
 <div class="section" id="writing-your-own-suites">
-<span id="examples-profiling-writeyourown"></span><h4>Writing your Own Suites<a class="headerlink" href="#writing-your-own-suites" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>The profiler suite system is extensible, and can be applied to your own set
-of tests.  This is a valuable technique to use in deciding upon the proper
-approach for some performance-critical set of routines.  For example,
-if we wanted to profile the difference between several kinds of loading,
-we can create a file <code class="docutils literal"><span class="pre">test_loads.py</span></code>, with the following content:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">examples.performance</span> <span class="k">import</span> <span class="n">Profiler</span>
+<span id="examples-profiling-writeyourown"></span><h4>自分のスイートを書く<a class="headerlink" href="#writing-your-own-suites" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>プロファイラスイートシステムは拡張性があり、独自のテストセットに適用できます。これは、パフォーマンスに重要な一連のルーチンの適切なアプローチを決める際に役立つ貴重なテクニックです。たとえば、いくつかの種類のローディングの違いをプロファイルしたい場合、次のコンテンツを含むファイル `` test_loads.py``を作成することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">examples.performance</span> <span class="k">import</span> <span class="n">Profiler</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">ForeignKey</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span><span class="p">,</span> <span class="n">joinedload</span><span class="p">,</span> <span class="n">subqueryload</span><span class="p">,</span> <span class="n">Session</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
@@ -510,24 +472,22 @@ we can create a file <code class="docutils literal"><span class="pre">test_loads
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">Profiler</span><span class="o">.</span><span class="n">main</span><span class="p">()</span></pre></div>
 </div>
-<p>We can run our new script directly:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ python test_loads.py  --dburl postgresql+psycopg2://scott:tiger@localhost/test
+<p>新しいスクリプトを直接実行することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python test_loads.py  --dburl postgresql+psycopg2://scott:tiger@localhost/test
 Running setup once...
 Tests to run: test_lazyload, test_joinedload, test_subqueryload
 test_lazyload : load everything, no eager loading. (1000 iterations); total time 11.971159 sec
 test_joinedload : load everything, joined eager loading. (1000 iterations); total time 2.754592 sec
 test_subqueryload : load everything, subquery eager loading. (1000 iterations); total time 2.977696 sec</pre></div>
 </div>
-<p>As well as see RunSnake output for an individual test:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ python test_loads.py  --num 100 --runsnake --test test_joinedload</pre></div>
+<p>個々のテストでRunSnakeの出力を見ることもできます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python test_loads.py  --num 100 --runsnake --test test_joinedload</pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="module-examples.join_conditions">
-<span id="relationship-join-conditions"></span><span id="examples-relationships"></span><h3>Relationship Join Conditions<a class="headerlink" href="#module-examples.join_conditions" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Examples of various <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">orm.relationship()</span></code></a> configurations,
-which make use of the <code class="docutils literal"><span class="pre">primaryjoin</span></code> argument to compose special types
-of join conditions.</p>
+<span id="relationship-join-conditions"></span><span id="examples-relationships"></span><h3>関係の結合条件<a class="headerlink" href="#module-examples.join_conditions" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>様々な：func： <cite>.orm.relationship`設定の例。特別なタイプの結合条件を組み立てるために</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>primaryjoin``引数を利用しています。</p>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/join_conditions/cast.html">cast.py</a></li>
 <li><a class="reference external" href="../_modules/examples/join_conditions/threeway.html">threeway.py</a></li>
@@ -535,34 +495,28 @@ of join conditions.</p>
 </p>
 </div>
 <div class="section" id="module-examples.space_invaders">
-<span id="space-invaders"></span><span id="examples-spaceinvaders"></span><h3>Space Invaders<a class="headerlink" href="#module-examples.space_invaders" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>A Space Invaders game using SQLite as the state machine.</p>
-<p>Originally developed in 2012.  Adapted to work in Python 3.</p>
-<p>Runs in a textual console using ASCII art.</p>
+<span id="space-invaders"></span><span id="examples-spaceinvaders"></span><h3>スペースインベーダーズ<a class="headerlink" href="#module-examples.space_invaders" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>状態機械としてSQLiteを使用するSpace Invadersゲーム。</p>
+<p>もともとは2012年に開発されました。Python 3で動作するように修正されました。</p>
+<p>ASCIIアートを使用してテキストコンソールで実行されます。</p>
 <img alt="../_images/space_invaders.jpg" src="../_images/space_invaders.jpg" />
-<p>To run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">examples</span><span class="o">.</span><span class="n">space_invaders</span><span class="o">.</span><span class="n">space_invaders</span></pre></div>
+<p>走る：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">examples</span><span class="o">.</span><span class="n">space_invaders</span><span class="o">.</span><span class="n">space_invaders</span></pre></div>
 </div>
-<p>While it runs, watch the SQL output in the log:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="n">space_invaders</span><span class="o">.</span><span class="n">log</span></pre></div>
+<p>それが実行されている間、ログのSQL出力を見る:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="n">space_invaders</span><span class="o">.</span><span class="n">log</span></pre></div>
 </div>
-<p>enjoy!</p>
+<p>楽しい！</p>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/space_invaders/space_invaders.html">space_invaders.py</a></li>
 </ul>
 </p>
 </div>
 <div class="section" id="module-examples.elementtree">
-<span id="xml-persistence"></span><span id="examples-xmlpersistence"></span><h3>XML Persistence<a class="headerlink" href="#module-examples.elementtree" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Illustrates three strategies for persisting and querying XML
-documents as represented by ElementTree in a relational
-database. The techniques do not apply any mappings to the
-ElementTree objects directly, so are compatible with the
-native cElementTree as well as lxml, and can be adapted to
-suit any kind of DOM representation system. Querying along
-xpath-like strings is illustrated as well.</p>
-<p>E.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># parse an XML file and persist in the database</span>
+<span id="xml-persistence"></span><span id="examples-xmlpersistence"></span><h3>XML永続性<a class="headerlink" href="#module-examples.elementtree" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>リレーショナルデータベースのElementTreeで表されるようなXML文書の永続化とクエリのための3つの戦略を示します。このテクニックは、ElementTreeオブジェクトに直接マッピングを適用しないため、ネイティブのcElementTreeおよびlxmlと互換性があり、あらゆる種類のDOM表現システムに適合させることができます。 xpathのような文字列に沿ったクエリも同様に説明されています。</p>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># parse an XML file and persist in the database</span>
 <span class="n">doc</span> <span class="o">=</span> <span class="n">ElementTree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;test.xml&quot;</span><span class="p">)</span>
 <span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Document</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">doc</span><span class="p">))</span>
 <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
@@ -580,21 +534,17 @@ xpath-like strings is illustrated as well.</p>
 </p>
 </div>
 <div class="section" id="versioning-objects">
-<h3>Versioning Objects<a class="headerlink" href="#versioning-objects" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>オブジェクトのバージョン管理<a class="headerlink" href="#versioning-objects" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="section" id="module-examples.versioned_history">
-<span id="versioning-with-a-history-table"></span><span id="examples-versioned-history"></span><h4>Versioning with a History Table<a class="headerlink" href="#module-examples.versioned_history" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>Illustrates an extension which creates version tables for entities and stores
-records for each change. The given extensions generate an anonymous &quot;history&quot; class which
-represents historical versions of the target object.</p>
-<p>Compare to the <a class="reference internal" href="#examples-versioned-rows"><span class="std std-ref">Versioning using Temporal Rows</span></a> examples which write updates
-as new rows in the same table, without using a separate history table.</p>
-<p>Usage is illustrated via a unit test module <code class="docutils literal"><span class="pre">test_versioning.py</span></code>, which can
-be run via nose:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">examples</span><span class="o">/</span><span class="n">versioning</span>
+<span id="versioning-with-a-history-table"></span><span id="examples-versioned-history"></span><h4>履歴テーブルによるバージョン管理<a class="headerlink" href="#module-examples.versioned_history" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>エンティティのバージョンテーブルを作成し、各変更のレコードを格納する拡張機能を示します。指定された拡張機能は、ターゲットオブジェクトの履歴バージョンを表す匿名&amp;quot;履歴&amp;quot;クラスを生成します。</p>
+<p>別の履歴テーブルを使用せずに、同じテーブルに新しい行として更新を書き込む：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>examples_versioned_rows`の例と比較してください。</p>
+<p>使い方はユニットテストモジュール `` test_versioning.py``を使って説明しています。これはnoseで実行できます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">examples</span><span class="o">/</span><span class="n">versioning</span>
 <span class="n">nosetests</span> <span class="o">-</span><span class="n">v</span></pre></div>
 </div>
-<p>A fragment of example usage, using declarative:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">history_meta</span> <span class="k">import</span> <span class="n">Versioned</span><span class="p">,</span> <span class="n">versioned_session</span>
+<p>declarative ::を使用した使用例の断片</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">history_meta</span> <span class="k">import</span> <span class="n">Versioned</span><span class="p">,</span> <span class="n">versioned_session</span>
 
 <span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
 
@@ -627,10 +577,8 @@ be run via nose:</p>
             <span class="nb">all</span><span class="p">()</span> \
             <span class="o">==</span> <span class="p">[</span><span class="n">SomeClassHistory</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sc1&#39;</span><span class="p">)]</span></pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">Versioned</span></code> mixin is designed to work with declarative.  To use
-the extension with classical mappers, the <code class="docutils literal"><span class="pre">_history_mapper</span></code> function
-can be applied:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">history_meta</span> <span class="k">import</span> <span class="n">_history_mapper</span>
+<p>`` Versioned``のmixinは、宣言型で動作するように設計されています。拡張機能を古典的なマッパーで使用するには、 `` _history_mapper``関数を適用することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">history_meta</span> <span class="k">import</span> <span class="n">_history_mapper</span>
 
 <span class="n">m</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">SomeClass</span><span class="p">,</span> <span class="n">sometable</span><span class="p">)</span>
 <span class="n">_history_mapper</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
@@ -644,13 +592,9 @@ can be applied:</p>
 </p>
 </div>
 <div class="section" id="module-examples.versioned_rows">
-<span id="versioning-using-temporal-rows"></span><span id="examples-versioned-rows"></span><h4>Versioning using Temporal Rows<a class="headerlink" href="#module-examples.versioned_rows" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>Several examples that illustrate the technique of intercepting changes
-that would be first interpreted as an UPDATE on a row, and instead turning
-it into an INSERT of a new row, leaving the previous row intact as
-a historical version.</p>
-<p>Compare to the <a class="reference internal" href="#examples-versioned-history"><span class="std std-ref">Versioning with a History Table</span></a> example which writes a
-history row to a separate history table.</p>
+<span id="versioning-using-temporal-rows"></span><span id="examples-versioned-rows"></span><h4>時系列を使ったバージョン管理<a class="headerlink" href="#module-examples.versioned_rows" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>行のUPDATEとして最初に解釈される変更をインターセプトする技法を説明し、その代わりに新しい行のINSERTに変換し、前の行を履歴バージョンとしてそのまま残しておく例をいくつか示します。</p>
+<p>別の履歴テーブルに履歴行を書き込む：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>examples_versioned_history`の例と比較してください。</p>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/versioned_rows/versioned_map.html">versioned_map.py</a></li>
 <li><a class="reference external" href="../_modules/examples/versioned_rows/versioned_rows.html">versioned_rows.py</a></li>
@@ -660,19 +604,12 @@ history row to a separate history table.</p>
 </div>
 </div>
 <div class="section" id="module-examples.vertical">
-<span id="vertical-attribute-mapping"></span><span id="examples-vertical-tables"></span><h3>Vertical Attribute Mapping<a class="headerlink" href="#module-examples.vertical" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Illustrates &quot;vertical table&quot; mappings.</p>
-<p>A &quot;vertical table&quot; refers to a technique where individual attributes
-of an object are stored as distinct rows in a table. The &quot;vertical
-table&quot; technique is used to persist objects which can have a varied
-set of attributes, at the expense of simple query control and brevity.
-It is commonly found in content/document management systems in order
-to represent user-created structures flexibly.</p>
-<p>Two variants on the approach are given.  In the second, each row
-references a &quot;datatype&quot; which contains information about the type of
-information stored in the attribute, such as integer, string, or date.</p>
-<p>Example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">shrew</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;shrew&#39;</span><span class="p">)</span>
+<span id="vertical-attribute-mapping"></span><span id="examples-vertical-tables"></span><h3>垂直属性マッピング<a class="headerlink" href="#module-examples.vertical" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>&amp;quot;垂直テーブル&amp;quot;マッピングを示します。</p>
+<p>&amp;quot;垂直テーブル&amp;quot;とは、オブジェクトの個々の属性がテーブル内の別個の行として格納される手法を指します。 &amp;quot;垂直テーブル技術は、簡単なクエリ制御と簡潔さを犠牲にして、様々な属性セットを持つことができるオブジェクトを永続化するために使用されます。コンテンツ/ドキュメント管理システムでは、ユーザ作成構造を柔軟に表現するために。</p>
+<p>このアプローチには2つのバリエーションがあります。 2番目の行では、各行は、整数、文字列、または日付など、属性に格納されている情報の種類に関する情報を含む&amp;quot;データ型&amp;quot;を参照します。</p>
+<p>例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shrew</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;shrew&#39;</span><span class="p">)</span>
 <span class="n">shrew</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;cuteness&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">shrew</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;weasel-like&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">shrew</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;poisonous&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
@@ -694,11 +631,10 @@ information stored in the attribute, such as integer, string, or date.</p>
 </div>
 </div>
 <div class="section" id="inheritance-mapping-recipes">
-<span id="examples-inheritance"></span><h2>Inheritance Mapping Recipes<a class="headerlink" href="#inheritance-mapping-recipes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="examples-inheritance"></span><h2>継承マッピングのレシピ<a class="headerlink" href="#inheritance-mapping-recipes" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="module-examples.inheritance">
-<span id="basic-inheritance-mappings"></span><h3>Basic Inheritance Mappings<a class="headerlink" href="#module-examples.inheritance" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Working examples of single-table, joined-table, and concrete-table
-inheritance as described in <a class="reference internal" href="inheritance.html"><span class="std std-ref">Mapping Class Inheritance Hierarchies</span></a>.</p>
+<span id="basic-inheritance-mappings"></span><h3>基本継承マッピング<a class="headerlink" href="#module-examples.inheritance" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>inheritance_toplevel`で説明した単一テーブル、結合テーブル、具象テーブル継承の実例</p>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/inheritance/concrete.html">concrete.py</a></li>
 <li><a class="reference external" href="../_modules/examples/inheritance/joined.html">joined.py</a></li>
@@ -708,11 +644,10 @@ inheritance as described in <a class="reference internal" href="inheritance.html
 </div>
 </div>
 <div class="section" id="special-apis">
-<h2>Special APIs<a class="headerlink" href="#special-apis" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>特別なAPI<a class="headerlink" href="#special-apis" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="module-examples.custom_attributes">
-<span id="attribute-instrumentation"></span><span id="examples-instrumentation"></span><h3>Attribute Instrumentation<a class="headerlink" href="#module-examples.custom_attributes" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Examples illustrating modifications to SQLAlchemy's attribute management
-system.</p>
+<span id="attribute-instrumentation"></span><span id="examples-instrumentation"></span><h3>属性計測<a class="headerlink" href="#module-examples.custom_attributes" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SQLAlchemyの属性管理システムの変更例</p>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/custom_attributes/active_column_defaults.html">active_column_defaults.py</a></li>
 <li><a class="reference external" href="../_modules/examples/custom_attributes/custom_management.html">custom_management.py</a></li>
@@ -721,33 +656,17 @@ system.</p>
 </p>
 </div>
 <div class="section" id="module-examples.sharding">
-<span id="horizontal-sharding"></span><span id="examples-sharding"></span><h3>Horizontal Sharding<a class="headerlink" href="#module-examples.sharding" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>A basic example of using the SQLAlchemy Sharding API.
-Sharding refers to horizontally scaling data across multiple
-databases.</p>
-<p>The basic components of a &quot;sharded&quot; mapping are:</p>
+<span id="horizontal-sharding"></span><span id="examples-sharding"></span><h3>水平シャーディング<a class="headerlink" href="#module-examples.sharding" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SQLAlchemy Sharding APIの基本的な使用例。シャーディングとは、複数のデータベース間でデータを水平にスケーリングすることを指します。</p>
+<p>&amp;quot;sharded &amp;quot;マッピングの基本的な構成要素は次のとおりです。</p>
 <ul class="simple">
-<li>multiple databases, each assigned a 'shard id'</li>
-<li>a function which can return a single shard id, given an instance
-to be saved; this is called &quot;shard_chooser&quot;</li>
-<li>a function which can return a list of shard ids which apply to a particular
-instance identifier; this is called &quot;id_chooser&quot;.  If it returns all shard ids,
-all shards will be searched.</li>
-<li>a function which can return a list of shard ids to try, given a particular
-Query (&quot;query_chooser&quot;).  If it returns all shard ids, all shards will be
-queried and the results joined together.</li>
+<li>それぞれが「シャードID」を割り当てられた複数のデータベース</li>
+<li>保存されるインスタンスがあれば、単一のシャードIDを返すことができる関数。これは&amp;quot;shard_chooser </li>
+<li>特定のインスタンス識別子に適用されるシャードIDのリストを返すことができる関数。これは&amp;quot;id_chooser &amp;quot;と呼ばれます。すべてのシャードIDを返すと、すべてのシャードが検索されます。</li>
+<li>特定のQuery（&amp;quot;query_chooser &amp;quot;）を指定すると、シャードIDのリストを返すことができる関数です。すべてのシャードIDを返すと、すべてのシャードが照会され、結果が結合されます。</li>
 </ul>
-<p>In this example, four sqlite databases will store information about weather
-data on a database-per-continent basis. We provide example shard_chooser,
-id_chooser and query_chooser functions. The query_chooser illustrates
-inspection of the SQL expression element in order to attempt to determine a
-single shard being requested.</p>
-<p>The construction of generic sharding routines is an ambitious approach
-to the issue of organizing instances among multiple databases.   For a
-more plain-spoken alternative, the &quot;distinct entity&quot; approach
-is a simple method of assigning objects to different tables (and potentially
-database nodes) in an explicit way - described on the wiki at
-<a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes/EntityName">EntityName</a>.</p>
+<p>この例では、4つのsqliteデータベースが天気データに関する情報をデータベースごとに大陸ごとに格納します。 shard_chooser、id_chooser、query_chooser関数の例を示します。 query_chooserは、単一のシャードが要求されているかどうかを判断するためにSQL式要素の検査を示します。</p>
+<p>一般的なシャーディングルーチンの構築は、複数のデータベース間でのインスタンスの整理の問題に対する野心的なアプローチです。より明白な代替手段として、&amp;quot;distinct entity &amp;quot;アプローチは、異なるテーブル（および潜在的にデータベースノード）にオブジェクトを明示的に割り当てる簡単な方法です。これは、 <a href="#id1"><span class="problematic" id="id2">`</span></a>EntityName &lt;<a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes/EntityName">http://www.sqlalchemy.org/trac/wiki/UsageRecipes/EntityName</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_。</p>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/sharding/attribute_shard.html">attribute_shard.py</a></li>
 </ul>
@@ -755,32 +674,22 @@ database nodes) in an explicit way - described on the wiki at
 </div>
 </div>
 <div class="section" id="extending-the-orm">
-<h2>Extending the ORM<a class="headerlink" href="#extending-the-orm" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>ORMの拡張<a class="headerlink" href="#extending-the-orm" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="module-examples.dogpile_caching">
-<span id="dogpile-caching"></span><span id="examples-caching"></span><h3>Dogpile Caching<a class="headerlink" href="#module-examples.dogpile_caching" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Illustrates how to embed <a class="reference external" href="https://dogpilecache.readthedocs.io/">dogpile.cache</a>
-functionality within
-the <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> object, allowing full cache control as well as the
-ability to pull &quot;lazy loaded&quot; attributes from long term cache
-as well.</p>
+<span id="dogpile-caching"></span><span id="examples-caching"></span><h3>ドッグファイルのキャッシング<a class="headerlink" href="#module-examples.dogpile_caching" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>dogpile.cacheを埋め込む方法を説明しています&lt;<a class="reference external" href="https://dogpilecache.readthedocs.io/">https://dogpilecache.readthedocs.io/</a>&gt; &amp;#39;：class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Query`オブジェクト内の機能を使用することで、完全なキャッシュ制御だけでなく、長期キャッシュからも遅延ロードされた属性を引き出すことができます。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 0.8 で変更: </span>The example was modernized to use
-dogpile.cache, replacing Beaker as the caching library in
-use.</p>
+<p><span class="versionmodified">バージョン 0.8 で変更: </span>この例では、dogpile.cacheを使用するように近代化され、使用中のキャッシングライブラリとしてBeakerを置き換えました。</p>
 </div>
-<p>In this demo, the following techniques are illustrated:</p>
+<p>このデモでは、以下のテクニックが示されています。</p>
 <ul class="simple">
-<li>Using custom subclasses of <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a></li>
-<li>Basic technique of circumventing Query to pull from a
-custom cache source instead of the database.</li>
-<li>Rudimental caching with dogpile.cache, using &quot;regions&quot; which allow
-global control over a fixed set of configurations.</li>
-<li>Using custom <code class="xref py py-class docutils literal"><span class="pre">MapperOption</span></code> objects to configure options on
-a Query, including the ability to invoke the options
-deep within an object graph when lazy loads occur.</li>
+<li>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Query`のカスタムサブクラスを使用する</li>
+<li>クエリを回避してデー​​タベースの代わりにカスタムキャッシュソースから取得する基本的な手法。</li>
+<li>dogpile.cacheを使ったRudimentalのキャッシュ。&amp;quot;regions &amp;quot;を使って固定設定のセットをグローバルに制御できます。</li>
+<li>カスタム：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.MapperOption`オブジェクトを使用して、遅延ロードが発生したときにオブジェクトグラフの深いオプションを呼び出す機能を含む、クエリのオプションを設定します。</li>
 </ul>
-<p>E.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># query for Person objects, specifying cache</span>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># query for Person objects, specifying cache</span>
 <span class="n">q</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Person</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span><span class="n">FromCache</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">))</span>
 
 <span class="c1"># specify that each Person&#39;s &quot;addresses&quot; collection comes from</span>
@@ -790,16 +699,9 @@ deep within an object graph when lazy loads occur.</li>
 <span class="c1"># query</span>
 <span class="nb">print</span> <span class="n">q</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></pre></div>
 </div>
-<p>To run, both SQLAlchemy and dogpile.cache must be
-installed or on the current PYTHONPATH. The demo will create a local
-directory for datafiles, insert initial data, and run. Running the
-demo a second time will utilize the cache files already present, and
-exactly one SQL statement against two tables will be emitted - the
-displayed result however will utilize dozens of lazyloads that all
-pull from cache.</p>
-<p>The demo scripts themselves, in order of complexity, are run as Python
-modules so that relative imports work:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">examples</span><span class="o">.</span><span class="n">dogpile_caching</span><span class="o">.</span><span class="n">helloworld</span>
+<p>実行するには、SQLAlchemyとdogpile.cacheの両方をインストールするか、現在のPYTHONPATHにインストールする必要があります。このデモでは、データファイルのローカルディレクトリを作成し、初期データを挿入して実行します。デモをもう一度実行すると、すでに存在するキャッシュファイルが使用され、2つのテーブルに対する1つのSQL文が出力されますが、表示された結果はすべてキャッシュからプルする数十のlazyloadsを使用します。</p>
+<p>デモスクリプト自体は、複雑さの順に、Pythonモジュールとして実行されるため、相対的なインポートが機能します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">examples</span><span class="o">.</span><span class="n">dogpile_caching</span><span class="o">.</span><span class="n">helloworld</span>
 
 <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">examples</span><span class="o">.</span><span class="n">dogpile_caching</span><span class="o">.</span><span class="n">relationship_caching</span>
 
@@ -820,31 +722,21 @@ modules so that relative imports work:</p>
 </p>
 </div>
 <div class="section" id="module-examples.postgis">
-<span id="postgis-integration"></span><span id="examples-postgis"></span><h3>PostGIS Integration<a class="headerlink" href="#module-examples.postgis" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>A naive example illustrating techniques to help
-embed PostGIS functionality.</p>
-<p>This example was originally developed in the hopes that it would be
-extrapolated into a comprehensive PostGIS integration layer.  We are
-pleased to announce that this has come to fruition as <a class="reference external" href="http://www.geoalchemy.org/">GeoAlchemy</a>.</p>
-<p>The example illustrates:</p>
+<span id="postgis-integration"></span><span id="examples-postgis"></span><h3>PostGISインテグレーション<a class="headerlink" href="#module-examples.postgis" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>PostGISの機能を組み込むためのテクニックを紹介する素朴な例です。</p>
+<p>この例はもともと包括的なPostGISインテグレーション層に外挿されることを期待して開発されました。我々はこれが「GeoAlchemy」として成果を上げたことを発表することをうれしく思います&lt;<a class="reference external" href="http://www.geoalchemy.org/">http://www.geoalchemy.org/</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_。</p>
+<p>この例では、</p>
 <ul class="simple">
-<li>a DDL extension which allows CREATE/DROP to work in
-conjunction with AddGeometryColumn/DropGeometryColumn</li>
-<li>a Geometry type, as well as a few subtypes, which
-convert result row values to a GIS-aware object,
-and also integrates with the DDL extension.</li>
-<li>a GIS-aware object which stores a raw geometry value
-and provides a factory for functions such as AsText().</li>
-<li>an ORM comparator which can override standard column
-methods on mapped objects to produce GIS operators.</li>
-<li>an attribute event listener that intercepts strings
-and converts to GeomFromText().</li>
-<li>a standalone operator example.</li>
+<li>AddGeometryColumn / DropGeometryColumnと連携してCREATE / DROPを動作させるDDL拡張</li>
+<li>ジオメトリタイプ、および結果行の値をGIS対応オブジェクトに変換するいくつかのサブタイプのほか、DDL拡張機能と統合します。</li>
+<li>生のジオメトリ値を格納し、AsText（）などの関数のファクトリを提供するGIS対応オブジェクトです。</li>
+<li>マッピングされたオブジェクトの標準列メソッドをオーバーライドしてGIS演算子を生成できるORMコンパレータ</li>
+<li>文字列をインターセプトしてGeomFromText（）に変換する属性イベントリスナーです。</li>
+<li>スタンドアロンの演算子の例</li>
 </ul>
-<p>The implementation is limited to only public, well known
-and simple to use extension points.</p>
-<p>E.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Road</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Road</span><span class="o">.</span><span class="n">road_geom</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">r1</span><span class="o">.</span><span class="n">road_geom</span><span class="p">))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></pre></div>
+<p>この実装は、一般的な、よく知られている使い易い拡張ポイントに限定されています。</p>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Road</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Road</span><span class="o">.</span><span class="n">road_geom</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">r1</span><span class="o">.</span><span class="n">road_geom</span><span class="p">))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></pre></div>
 </div>
 <p>Listing of files:<ul class="simple">
 <li><a class="reference external" href="../_modules/examples/postgis/postgis.html">postgis.py</a></li>
@@ -860,13 +752,13 @@ and simple to use extension points.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="extensions/instrumentation.html" title="previous chapter">Alternate Class Instrumentation</a>
+        <a href="extensions/instrumentation.html" title="previous chapter">代替クラスの計装</a>
         Next:
-        <a href="../core/index.html" title="next chapter">SQLAlchemy Core</a>
+        <a href="../core/index.html" title="next chapter">SQLAlchemyコア</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -893,6 +785,7 @@ and simple to use extension points.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

@@ -10,7 +10,7 @@
         <title>
             
     
-    Mapper Configuration
+    マッパー設定
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -36,8 +36,8 @@
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
         <link rel="up" title="SQLAlchemy ORM" href="index.html" />
-        <link rel="next" title="Types of Mappings" href="mapping_styles.html" />
-        <link rel="prev" title="Object Relational Tutorial" href="tutorial.html" />
+        <link rel="next" title="マッピングのタイプ" href="mapping_styles.html" />
+        <link rel="prev" title="オブジェクトリレーショナルチュートリアル" href="tutorial.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,22 +120,22 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Mapper Configuration</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="mapping_styles.html">Types of Mappings</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="scalar_mapping.html">Mapping Columns and Expressions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="inheritance.html">Mapping Class Inheritance Hierarchies</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="nonstandard_mappings.html">Non-Traditional Mappings</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="versioning.html">Configuring a Version Counter</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapping_api.html">Class Mapping API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li class="selected"><span class="link-container first"><strong>マッパー設定</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="mapping_styles.html">マッピングのタイプ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="scalar_mapping.html">列と式のマッピング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="inheritance.html">クラス継承階層のマッピング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="nonstandard_mappings.html">非伝統的なマッピング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="versioning.html">バージョンカウンタの設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapping_api.html">クラスマッピングAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -151,45 +151,43 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="mapper-configuration">
-<span id="mapper-config-toplevel"></span><h1>Mapper Configuration<a class="headerlink" href="#mapper-configuration" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>This section describes a variety of configurational patterns that are usable
-with mappers. It assumes you've worked through <a class="reference internal" href="tutorial.html"><span class="std std-ref">Object Relational Tutorial</span></a> and
-know how to construct and use rudimentary mappers and relationships.</p>
+<span id="mapper-config-toplevel"></span><h1>マッパー設定<a class="headerlink" href="#mapper-configuration" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>このセクションでは、マッパーで使用可能なさまざまな構成パターンについて説明します。これは、あなたが：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>ormtutorial_toplevel`を通して作業し、初歩的なマッパーと関係を構築し、使用する方法を知っていることを前提としています。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mapping_styles.html">Types of Mappings</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapping_styles.html#declarative-mapping">Declarative Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapping_styles.html#classical-mappings">Classical Mappings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapping_styles.html#runtime-introspection-of-mappings-objects">Runtime Introspection of Mappings, Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping_styles.html">マッピングのタイプ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapping_styles.html#declarative-mapping">宣言的マッピング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping_styles.html#classical-mappings">古典的なマッピング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping_styles.html#runtime-introspection-of-mappings-objects">マッピング、オブジェクトの実行時イントロスペクション</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="scalar_mapping.html">Mapping Columns and Expressions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html">Mapping Table Columns</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapped_sql_expr.html">SQL Expressions as Mapped Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapped_attributes.html">Changing Attribute Behavior</a></li>
-<li class="toctree-l2"><a class="reference internal" href="composites.html">Composite Column Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scalar_mapping.html">列と式のマッピング</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html">マッピング表の列</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapped_sql_expr.html">マップされた属性としてのSQL式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapped_attributes.html">属性の動作の変更</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composites.html">コンポジット列の種類</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="inheritance.html">Mapping Class Inheritance Hierarchies</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="inheritance.html#joined-table-inheritance">Joined Table Inheritance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inheritance.html#single-table-inheritance">Single Table Inheritance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inheritance.html#concrete-table-inheritance">Concrete Table Inheritance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inheritance.html">クラス継承階層のマッピング</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inheritance.html#joined-table-inheritance">結合されたテーブル継承</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritance.html#single-table-inheritance">単一テーブル継承</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritance.html#concrete-table-inheritance">具体的なテーブル継承</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="nonstandard_mappings.html">Non-Traditional Mappings</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nonstandard_mappings.html#mapping-a-class-against-multiple-tables">Mapping a Class against Multiple Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nonstandard_mappings.html#mapping-a-class-against-arbitrary-selects">Mapping a Class against Arbitrary Selects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nonstandard_mappings.html#multiple-mappers-for-one-class">Multiple Mappers for One Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nonstandard_mappings.html">非伝統的なマッピング</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nonstandard_mappings.html#mapping-a-class-against-multiple-tables">クラスを複数のテーブルにマッピングする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nonstandard_mappings.html#mapping-a-class-against-arbitrary-selects">任意の選択肢に対するクラスのマッピング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nonstandard_mappings.html#multiple-mappers-for-one-class">1クラスの複数のマッパー</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="versioning.html">Configuring a Version Counter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="versioning.html#simple-version-counting">Simple Version Counting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="versioning.html#custom-version-counters-types">Custom Version Counters / Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="versioning.html#server-side-version-counters">Server Side Version Counters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="versioning.html#programmatic-or-conditional-version-counters">Programmatic or Conditional Version Counters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">バージョンカウンタの設定</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#simple-version-counting">単純なバージョンのカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#custom-version-counters-types">カスタムバージョンのカウンタ/タイプ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#server-side-version-counters">サーバー側バージョンカウンタ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html#programmatic-or-conditional-version-counters">プログラム型または条件付きバージョンのカウンタ</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapping_api.html">Class Mapping API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping_api.html">クラスマッピングAPI</a></li>
 </ul>
 </div>
 </div>
@@ -200,13 +198,13 @@ know how to construct and use rudimentary mappers and relationships.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="tutorial.html" title="previous chapter">Object Relational Tutorial</a>
+        <a href="tutorial.html" title="previous chapter">オブジェクトリレーショナルチュートリアル</a>
         Next:
-        <a href="mapping_styles.html" title="next chapter">Types of Mappings</a>
+        <a href="mapping_styles.html" title="next chapter">マッピングのタイプ</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -233,6 +231,7 @@ know how to construct and use rudimentary mappers and relationships.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

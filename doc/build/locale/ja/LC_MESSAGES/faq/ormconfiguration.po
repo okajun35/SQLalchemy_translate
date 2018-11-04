@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../faq/ormconfiguration.rst:2
 msgid "ORM Configuration"
-msgstr ""
+msgstr "ORM設定"
 
 #: ../../faq/ormconfiguration.rst:12
 msgid "How do I map a table that has no primary key?"
-msgstr ""
+msgstr "プライマリキーを持たないテーブルをどのようにマップするのですか？"
 
 #: ../../faq/ormconfiguration.rst:14
 msgid ""
@@ -34,7 +24,7 @@ msgid ""
 "primary key columns, though it's a good idea that they are.  It's only "
 "necessary that the columns *behave* as a primary key does, e.g. as a "
 "unique and not nullable identifier for a row."
-msgstr ""
+msgstr "SQLAlchemy ORMは、特定のテーブルにマップするために、プライマリキーカラムと呼ばれる少なくとも1つのカラムが必要です。もちろん、複数列の複合キー、主キーももちろん完全に実現可能です。これらの列は、データベースに実際にプライマリキー列として認識される必要はありませんが、それが良い考えです。列*が主キーとして動作することが必要なのは、たとえば行の一意のnullableではない識別子です。"
 
 #: ../../faq/ormconfiguration.rst:22
 msgid ""
@@ -48,7 +38,7 @@ msgid ""
 "database row using a pattern called the :term:`identity map`, a pattern "
 "that's central to the unit of work system employed by SQLAlchemy, and is "
 "also key to the most common (and not-so-common) patterns of ORM usage."
-msgstr ""
+msgstr "ほとんどのORMでは、メモリ内のオブジェクトがデータベーステーブルの一意の識別可能な行に対応している必要があるため、オブジェクトには一種の主キーが定義されている必要があります。最低でも、これはオブジェクトがUPDATEとDELETEステートメントの対象になることを可能にします。このステートメントは、そのオブジェクトの行だけに影響し、他には影響しません。しかし、主キーの重要性はそれをはるかに超えています。 SQLAlchemyでは、すべてのORMでマップされたオブジェクトは、：term： `identity map`というパターンを使用して、特定のデータベース行に対して常にclass：` .Session`内で一意にリンクされます。これは作業ユニットの中心的なパターンですSQLAlchemyによって採用されているシステムであり、ORMの使用法の最も一般的な（それほど一般的ではない）パターンの鍵でもあります。"
 
 #: ../../faq/ormconfiguration.rst:36
 msgid ""
@@ -58,7 +48,7 @@ msgid ""
 "primary key to be present on or associated with a table in any way "
 "(though again, in SQL, all tables should really have some kind of primary"
 " key, lest you need to actually update or delete specific rows)."
-msgstr ""
+msgstr "SQLAlchemy ORMについてのみ話していることに注意してください。 class： `.Table`オブジェクト、：func：` .select`構造体などを扱うアプリケーションでは、**テーブルに存在する、またはテーブルに関連するプライマリキーは必要ありません（実際には、特定の行を実際に更新または削除する必要がないため、SQLではすべてのテーブルに何らかのプライマリキーが必要です）。"
 
 #: ../../faq/ormconfiguration.rst:43
 msgid ""
@@ -69,52 +59,52 @@ msgid ""
 "<http://en.wikipedia.org/wiki/First_normal_form>`_ and cannot be mapped."
 "   Otherwise, whatever columns comprise the best candidate key can be "
 "applied directly to the mapper::"
-msgstr ""
+msgstr "ほとんどの場合、テーブルには、いわゆる：term： `候補キー（candidate key） &#39;があります。これは、行を一意に識別する列または列の列です。テーブルに本当にこれがなく、実際に完全に重複する行がある場合、テーブルは `最初の正規形に対応していません<http://en.wikipedia.org/wiki/First_normal_form> `_とマップすることはできません。そうでなければ、最良の候補キーを構成するどの列をマッパーにも直接適用することができます::"
 
 #: ../../faq/ormconfiguration.rst:54
 msgid ""
 "Better yet is when using fully declared table metadata, use the "
 "``primary_key=True`` flag on those columns::"
-msgstr ""
+msgstr "さらに完全に宣言されたテーブルのメタデータを使用するときは、それらのカラムで `` primary_key = True``フラグを使用してください::"
 
 #: ../../faq/ormconfiguration.rst:63
 msgid ""
 "All tables in a relational database should have primary keys.   Even a "
 "many-to-many association table - the primary key would be the composite "
 "of the two association columns::"
-msgstr ""
+msgstr "リレーショナルデータベースのすべてのテーブルには主キーが必要です。多対多関連テーブルであっても、主キーは2つの関連列の複合です::"
 
 #: ../../faq/ormconfiguration.rst:75
 msgid "How do I configure a Column that is a Python reserved word or similar?"
-msgstr ""
+msgstr "Pythonの予約語などの列を設定するにはどうすればよいですか？"
 
 #: ../../faq/ormconfiguration.rst:77
 msgid ""
 "Column-based attributes can be given any name desired in the mapping. See"
 " :ref:`mapper_column_distinct_names`."
-msgstr ""
+msgstr "列ベースの属性には、マッピングで必要な任意の名前を付けることができます。参照：ref： `mapper_column_distinct_names`を参照してください。"
 
 #: ../../faq/ormconfiguration.rst:81
 msgid ""
 "How do I get a list of all columns, relationships, mapped attributes, "
 "etc. given a mapped class?"
-msgstr ""
+msgstr "マッピングされたクラスが与えられた場合、どのようにして列、関係、マップされた属性などのリストを取得できますか？"
 
 #: ../../faq/ormconfiguration.rst:83
 msgid "This information is all available from the :class:`.Mapper` object."
-msgstr ""
+msgstr "この情報はすべて：class： `.Mapper`オブジェクトから利用できます。"
 
 #: ../../faq/ormconfiguration.rst:85
 msgid ""
 "To get at the :class:`.Mapper` for a particular mapped class, call the "
 ":func:`.inspect` function on it::"
-msgstr ""
+msgstr "特定のマップされたクラスの：class： `.Mapper`を取得するには、：func：` .inspect`関数を呼び出します::"
 
 #: ../../faq/ormconfiguration.rst:92
 msgid ""
 "From there, all information about the class can be accessed through "
 "properties such as:"
-msgstr ""
+msgstr "そこからクラスに関するすべての情報にアクセスできます。"
 
 #: ../../faq/ormconfiguration.rst:95
 msgid ""
@@ -122,52 +112,52 @@ msgid ""
 "attributes themselves are instances of :class:`.MapperProperty`, which "
 "contain additional attributes that can lead to the mapped SQL expression "
 "or column, if applicable."
-msgstr ""
+msgstr "：attr： `.Mapper.attrs`  - マップされたすべての属性の名前空間。属性自体は：class： `.MapperProperty`のインスタンスです。これらは、適用可能な場合、マップされたSQL式または列につながる追加の属性を含んでいます。"
 
 #: ../../faq/ormconfiguration.rst:99
 msgid ""
 ":attr:`.Mapper.column_attrs` - the mapped attribute namespace limited to "
 "column and SQL expression attributes.   You might want to use "
 ":attr:`.Mapper.columns` to get at the :class:`.Column` objects directly."
-msgstr ""
+msgstr "：attr： `.Mapper.column_attrs`  - カラムとSQL式の属性に限定されたマップされた属性の名前空間。 ：class： `.Column`オブジェクトを直接取得するには、attr：` .Mapper.columns`を使用します。"
 
 #: ../../faq/ormconfiguration.rst:103
 msgid ""
 ":attr:`.Mapper.relationships` - namespace of all "
 ":class:`.RelationshipProperty` attributes."
-msgstr ""
+msgstr "：attr： `.Mapper.relationships`  -  all：class：` .RelationshipProperty`属性の名前空間です。"
 
 #: ../../faq/ormconfiguration.rst:105
 msgid ""
 ":attr:`.Mapper.all_orm_descriptors` - namespace of all mapped attributes,"
 " plus user-defined attributes defined using systems such as "
 ":class:`.hybrid_property`, :class:`.AssociationProxy` and others."
-msgstr ""
+msgstr "：attr： `.Mapper.all_orm_descriptors`  - すべてのマップされた属性の名前空間と、class：` .hybrid_property`、：class： `.AssociationProxy`などのシステムを使って定義されたユーザ定義属性。"
 
 #: ../../faq/ormconfiguration.rst:108
 msgid ""
 ":attr:`.Mapper.columns` - A namespace of :class:`.Column` objects and "
 "other named SQL expressions associated with the mapping."
-msgstr ""
+msgstr "：attr： `.Mapper.columns`  - ：class：` .Column`オブジェクトとそのマッピングに関連する他の名前付きSQL式の名前空間。"
 
 #: ../../faq/ormconfiguration.rst:111
 msgid ""
 ":attr:`.Mapper.mapped_table` - The :class:`.Table` or other selectable to"
 " which this mapper is mapped."
-msgstr ""
+msgstr "：attr： `.Mapper.mapped_table`  - ：class：` .Table`またはこのマッパーがマップされる他の選択肢。"
 
 #: ../../faq/ormconfiguration.rst:114
 msgid ""
 ":attr:`.Mapper.local_table` - The :class:`.Table` that is \"local\" to "
 "this mapper; this differs from :attr:`.Mapper.mapped_table` in the case "
 "of a mapper mapped using inheritance to a composed selectable."
-msgstr ""
+msgstr "：attr： `.Mapper.local_table`：このマッパーには：class：` .table`があります。これは、作成された選択可能オブジェクトに継承を使用してマップされたマッパーの場合は、：attr： `.Mapper.mapped_table`とは異なります。"
 
 #: ../../faq/ormconfiguration.rst:121
 msgid ""
 "I'm getting a warning or error about \"Implicitly combining column X "
 "under attribute Y\""
-msgstr ""
+msgstr "\ &quot;属性Xの下に列Xを暗黙的に結合することについての警告またはエラーが表示されます。"
 
 #: ../../faq/ormconfiguration.rst:123
 msgid ""
@@ -179,7 +169,7 @@ msgid ""
 "under the same attribute and the effect is that the value from one column"
 " is **copied** into the other, based on which column was assigned to the "
 "attribute first."
-msgstr ""
+msgstr "この条件は、名前のために同じ属性名の下にマッピングされている2つの列がマッピングに含まれている場合を指しますが、これが意図的であるという指示はありません。マップされたクラスは、独立した値を格納するすべての属性に対して明示的な名前を持つ必要があります。 2つの列が同じ名前で曖昧さがない場合、それらは同じ属性に属し、その結果、ある列の値は最初にその属性に割り当てられた列に基づいて**コピー**されます。"
 
 #: ../../faq/ormconfiguration.rst:131
 msgid ""
@@ -189,11 +179,11 @@ msgid ""
 "exception occurs, the issue can be resolved by either assigning the "
 "columns to differently-named attributes, or if combining them together is"
 " desired, by using :func:`.column_property` to make this explicit."
-msgstr ""
+msgstr "この動作はしばしば望ましいことであり、2つの列が継承マッピング内で外部キー関係を介して一緒にリンクされている場合は警告なしで許可されます。警告または例外が発生した場合、この問題を解決するには、：func： `.column_property`を使用して異なる名前の属性に列を割り当てるか、またはそれらを組み合わせることが望ましい場合に解決します。"
 
 #: ../../faq/ormconfiguration.rst:138
 msgid "Given the example as follows::"
-msgstr ""
+msgstr "与えられた例を次に示します::"
 
 #: ../../faq/ormconfiguration.rst:156
 msgid ""
@@ -202,29 +192,29 @@ msgid ""
 "the same-named attribute ``id``, which above is a serious issue since it "
 "means that a ``B`` object's primary key will always mirror that of its "
 "``A``."
-msgstr ""
+msgstr "SQLAlchemyのバージョン0.9.5では、上記の条件が検出され、 `` A``と `` B``の `` id``カラムが同じ名前の属性 `` id``の下で結合されていることを警告します`これは重大な問題です。なぜなら、` `B``オブジェクトの主キーは、常に` `A``の主キーと同じであるからです。"
 
 #: ../../faq/ormconfiguration.rst:161
 msgid "A mapping which resolves this is as follows::"
-msgstr ""
+msgstr "これを解決するマッピングは次のとおりです::"
 
 #: ../../faq/ormconfiguration.rst:174
 msgid ""
 "Suppose we did want ``A.id`` and ``B.id`` to be mirrors of each other, "
 "despite the fact that ``B.a_id`` is where ``A.id`` is related.  We could "
 "combine them together using :func:`.column_property`::"
-msgstr ""
+msgstr "`` A.id``が `` A.id``と関連しているにもかかわらず、 `` A.id``と `` B.id``を鏡のようにしたいとしましょう。 func： `.column_property` ::を使ってそれらを組み合わせることができます。"
 
 #: ../../faq/ormconfiguration.rst:193
 msgid ""
 "I'm using Declarative and setting primaryjoin/secondaryjoin using an "
 "``and_()`` or ``or_()``, and I am getting an error message about foreign "
 "keys."
-msgstr ""
+msgstr "私はDeclarativeを使い、 `` and _（） ``や `` _（） ``を使ってprimaryjoin / secondaryjoinを設定しています。私は外部キーに関するエラーメッセージを受け取ります。"
 
 #: ../../faq/ormconfiguration.rst:195
 msgid "Are you doing this?::"
-msgstr ""
+msgstr "あなたはこれをやっていますか？::"
 
 #: ../../faq/ormconfiguration.rst:202
 msgid ""
@@ -235,23 +225,23 @@ msgid ""
 "``and_()`` expression - it's a special operation declarative applies only"
 " to the *entirety* of what's passed to primaryjoin or other arguments as "
 "a string::"
-msgstr ""
+msgstr "これは、2つの文字列式の ``と_（） ``です。SQLAlchemyはそれに対してどんなマッピングも適用できません。 Declarativeは：func： `.relationship`引数を文字列として指定し、` `eval（）` `を使って式オブジェクトに変換します。しかし、これは `` and _（） ``の式の中では発生しません。特別な演算宣言は、primaryjoinや他の引数に文字列として渡されるものの*全体にのみ適用されます::"
 
 #: ../../faq/ormconfiguration.rst:209
 msgid "Or if the objects you need are already available, skip the strings::"
-msgstr ""
+msgstr "または、必要なオブジェクトがすでに利用可能な場合は、文字列をスキップしてください::"
 
 #: ../../faq/ormconfiguration.rst:216
 msgid ""
 "The same idea applies to all the other arguments, such as "
 "``foreign_keys``::"
-msgstr ""
+msgstr "`` foreign_keys``のような他のすべての引数にも同じ考え方が適用されます::"
 
 #: ../../faq/ormconfiguration.rst:238
 msgid ""
 "Why is ``ORDER BY`` required with ``LIMIT`` (especially with "
 "``subqueryload()``)?"
-msgstr ""
+msgstr "`` LIMIT``（特に `` subqueryload（） ``で `` ORDER BY``が必要なのはなぜですか？"
 
 #: ../../faq/ormconfiguration.rst:240
 msgid ""
@@ -262,7 +252,7 @@ msgid ""
 "that limits rows using ``LIMIT`` or ``OFFSET`` should **always** specify "
 "an ``ORDER BY``. Otherwise, it is not deterministic which rows will "
 "actually be returned."
-msgstr ""
+msgstr "リレーショナル・データベースは、明示的な順序付けが設定されていない場合、任意の順序で行を戻すことができます。この順序付けは、テーブル内の行の自然順序に非常によく対応しますが、これはすべてのデータベースおよびすべてのクエリでは当てはまりません。その結果、 `` LIMIT``または `` OFFSET``を使って行を制限するクエリは常に** `ORDER BY``を指定する必要があります。それ以外の場合、実際に返される行は確定的ではありません。"
 
 #: ../../faq/ormconfiguration.rst:248
 msgid ""
@@ -273,27 +263,27 @@ msgid ""
 "rows in their natural order, it becomes much more of an issue if we also "
 "use :func:`.orm.subqueryload` to load related collections, and we may not"
 " be loading the collections as intended."
-msgstr ""
+msgstr "：meth： `.Query.first`のようなSQLAlchemyメソッドを使用すると、実際には` `LIMIT``をクエリに適用しているので、明示的な順序付けをしなくても、実際にどの行に戻るかは確定的ではありません。通常は自然順序で行を返すデータベースに対する簡単なクエリではこれを気付かないかもしれませんが、関連するコレクションを読み込むために：func： `.orm.subqueryload`を使用すると、もっと問題になります。コレクションを意図したとおりに読み込みます。"
 
 #: ../../faq/ormconfiguration.rst:257
 msgid ""
 "SQLAlchemy implements :func:`.orm.subqueryload` by issuing a separate "
 "query, the results of which are matched up to the results from the first "
 "query. We see two queries emitted like this:"
-msgstr ""
+msgstr "SQLAlchemyは：func： `.orm.subqueryload`を実装します。その結果は最初のクエリの結果と一致します。次のように2つのクエリが生成されています。"
 
 #: ../../faq/ormconfiguration.rst:276
 msgid ""
 "The second query embeds the first query as a source of rows. When the "
 "inner query uses ``OFFSET`` and/or ``LIMIT`` without ordering, the two "
 "queries may not see the same results:"
-msgstr ""
+msgstr "2番目のクエリは、最初のクエリを行のソースとして埋め込みます。内側のクエリが順序付けせずに `` OFFSET``や `` LIMIT``を使うとき、2つのクエリは同じ結果を見ることができません："
 
 #: ../../faq/ormconfiguration.rst:296
 msgid ""
 "Depending on database specifics, there is a chance we may get a result "
 "like the following for the two queries::"
-msgstr ""
+msgstr "データベースの特性によっては、2つのクエリで次のような結果が得られる可能性があります。"
 
 #: ../../faq/ormconfiguration.rst:315
 msgid ""
@@ -303,7 +293,7 @@ msgid ""
 "results, the ORM will not show that there's any issue; if we access the "
 "``addresses`` for the ``User`` we have, it will emit a lazy load for the "
 "collection and we won't see that anything actually went wrong."
-msgstr ""
+msgstr "上の例では、2つの `` user.id``の2つの `` addresses``行を受け取ります.1つでは2つの行を無駄にしました。 SQLと結果を見ることなく、ORMは問題がないことを示すため、これは陰謀のエラーです。私たちが持っている `` User``の `` addresses``にアクセスすると、コレクションの遅延ロードが発生し、実際に何かが間違っていることはありません。"
 
 #: ../../faq/ormconfiguration.rst:322
 msgid ""
@@ -311,7 +301,7 @@ msgid ""
 "order, so that the main query always returns the same set of rows. This "
 "generally means that you should :meth:`.Query.order_by` on a unique "
 "column on the table. The primary key is a good choice for this::"
-msgstr ""
+msgstr "この問題を解決するには、常に決定論的なソート順を指定して、メインクエリが常に同じ行セットを返すようにします。これは一般的に、テーブルの一意の列に：meth： `.Query.order_by`を指定することを意味します。プライマリキーはこれに適しています::"
 
 #: ../../faq/ormconfiguration.rst:329
 msgid ""
@@ -321,9 +311,9 @@ msgid ""
 ":func:`.selectinload` eager loader strategy also does not have this issue"
 " as it links its collection loads directly to primary key values just "
 "loaded."
-msgstr ""
+msgstr "：func： `.joinedload` eagerローダー戦略は、1つのクエリーしか発行されていないので、ロードクエリーはメインクエリーと異なることができないため、同じ問題が発生しません。同様に、：func： `.selectinload` eagerローダー戦略も、ロードされたばかりの主キー値にコレクションのロードを直接リンクするので、この問題はありません。"
 
 #: ../../faq/ormconfiguration.rst:337
 msgid ":ref:`subqueryload_ordering`"
-msgstr ""
+msgstr "：ref： `subqueryload_ordering`"
 

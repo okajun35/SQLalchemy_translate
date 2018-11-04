@@ -10,7 +10,7 @@
         <title>
             
     
-    Sessions / Queries
+    セッション/クエリ
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Frequently Asked Questions" href="index.html" />
-        <link rel="next" title="Error Messages" href="../errors.html" />
-        <link rel="prev" title="Performance" href="performance.html" />
+        <link rel="up" title="よくある質問" href="index.html" />
+        <link rel="next" title="エラーメッセージ" href="../errors.html" />
+        <link rel="prev" title="パフォーマンス" href="performance.html" />
     <!-- end layout.mako headers -->
 
 
@@ -116,34 +116,34 @@
 
         
         <h3>
-            <a href="index.html" title="Frequently Asked Questions">Frequently Asked Questions</a>
+            <a href="index.html" title="よくある質問">よくある質問</a>
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="connections.html">Connections / Engines</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="metadata_schema.html">MetaData / Schema</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="sqlexpressions.html">SQL Expressions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="ormconfiguration.html">ORM Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="performance.html">Performance</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Sessions / Queries</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#i-m-re-loading-data-with-my-session-but-it-isn-t-seeing-changes-that-i-committed-elsewhere">I'm re-loading data with my Session but it isn't seeing changes that I committed elsewhere</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#this-session-s-transaction-has-been-rolled-back-due-to-a-previous-exception-during-flush-or-similar">&quot;This Session's transaction has been rolled back due to a previous exception during flush.&quot; (or similar)</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#but-why-does-flush-insist-on-issuing-a-rollback">But why does flush() insist on issuing a ROLLBACK?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#but-why-isn-t-the-one-automatic-call-to-rollback-enough-why-must-i-rollback-again">But why isn't the one automatic call to ROLLBACK enough?  Why must I ROLLBACK again?</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="connections.html">接続/エンジン</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="metadata_schema.html">メタデータ/スキーマ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="sqlexpressions.html">SQL式</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="ormconfiguration.html">ORM設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="performance.html">パフォーマンス</a></span></li>
+<li class="selected"><span class="link-container first"><strong>セッション/クエリ</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#i-m-re-loading-data-with-my-session-but-it-isn-t-seeing-changes-that-i-committed-elsewhere">セッションでデータを再ロードしていますが、他の場所でコミットした変更は表示されません</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#this-session-s-transaction-has-been-rolled-back-due-to-a-previous-exception-during-flush-or-similar">&amp;quot;このセッションのトランザクションは、フラッシュ中の以前の例外のためにロールバックされました。</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#but-why-does-flush-insist-on-issuing-a-rollback">しかし、なぜflush（）はROLLBACKを発行することを主張しているのですか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#but-why-isn-t-the-one-automatic-call-to-rollback-enough-why-must-i-rollback-again">しかし、なぜROLLBACKへの1回の自動呼び出しでは十分ではありませんか？なぜ私はもう一度ROLLBACKする必要がありますか？</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#how-do-i-make-a-query-that-always-adds-a-certain-filter-to-every-query">How do I make a Query that always adds a certain filter to every query?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#i-ve-created-a-mapping-against-an-outer-join-and-while-the-query-returns-rows-no-objects-are-returned-why-not">I've created a mapping against an Outer Join, and while the query returns rows, no objects are returned.  Why not?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#i-m-using-joinedload-or-lazy-false-to-create-a-join-outer-join-and-sqlalchemy-is-not-constructing-the-correct-query-when-i-try-to-add-a-where-order-by-limit-etc-which-relies-upon-the-outer-join">I'm using <code class="docutils literal"><span class="pre">joinedload()</span></code> or <code class="docutils literal"><span class="pre">lazy=False</span></code> to create a JOIN/OUTER JOIN and SQLAlchemy is not constructing the correct query when I try to add a WHERE, ORDER BY, LIMIT, etc. (which relies upon the (OUTER) JOIN)</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#query-has-no-len-why-not">Query has no <code class="docutils literal"><span class="pre">__len__()</span></code>, why not?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#how-do-i-use-textual-sql-with-orm-queries">How Do I use Textual SQL with ORM Queries?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#i-m-calling-session-delete-myobject-and-it-isn-t-removed-from-the-parent-collection">I'm calling <code class="docutils literal"><span class="pre">Session.delete(myobject)</span></code> and it isn't removed from the parent collection!</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#why-isn-t-my-init-called-when-i-load-objects">why isn't my <code class="docutils literal"><span class="pre">__init__()</span></code> called when I load objects?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#how-do-i-use-on-delete-cascade-with-sa-s-orm">how do I use ON DELETE CASCADE with SA's ORM?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#i-set-the-foo-id-attribute-on-my-instance-to-7-but-the-foo-attribute-is-still-none-shouldn-t-it-have-loaded-foo-with-id-7">I set the &quot;foo_id&quot; attribute on my instance to &quot;7&quot;, but the &quot;foo&quot; attribute is still <code class="docutils literal"><span class="pre">None</span></code> - shouldn't it have loaded Foo with id #7?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#how-do-i-walk-all-objects-that-are-related-to-a-given-object">How do I walk all objects that are related to a given object?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#is-there-a-way-to-automagically-have-only-unique-keywords-or-other-kinds-of-objects-without-doing-a-query-for-the-keyword-and-getting-a-reference-to-the-row-containing-that-keyword">Is there a way to automagically have only unique keywords (or other kinds of objects) without doing a query for the keyword and getting a reference to the row containing that keyword?</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#why-does-post-update-emit-update-in-addition-to-the-first-update">Why does post_update emit UPDATE in addition to the first UPDATE?</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#how-do-i-make-a-query-that-always-adds-a-certain-filter-to-every-query">すべてのクエリに特定のフィルタを追加するクエリを作成するにはどうすればよいですか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#i-ve-created-a-mapping-against-an-outer-join-and-while-the-query-returns-rows-no-objects-are-returned-why-not">私はOuter Joinに対するマッピングを作成しましたが、クエリが行を返す間はオブジェクトは返されません。何故なの？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#i-m-using-joinedload-or-lazy-false-to-create-a-join-outer-join-and-sqlalchemy-is-not-constructing-the-correct-query-when-i-try-to-add-a-where-order-by-limit-etc-which-relies-upon-the-outer-join">JOIN / OUTER JOINを作成するために `` joinedload（） ``や `` lazy = False``を使用しています.SQLAlchemyはWHERE、ORDER BY、LIMITなどを追加しようとすると正しいクエリを構築しません（OUTER）JOINに依存する）</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#query-has-no-len-why-not">クエリに `` __len __（） ``はありません。どうしてですか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#how-do-i-use-textual-sql-with-orm-queries">ORMクエリでテキストSQLを使用するにはどうすればよいですか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#i-m-calling-session-delete-myobject-and-it-isn-t-removed-from-the-parent-collection">私は `` Session.delete（myobject） ``と呼びますが、親コレクションからは削除されません！</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#why-isn-t-my-init-called-when-i-load-objects">オブジェクトをロードするときに私の `` __init __（） ``が呼び出されないのはなぜですか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#how-do-i-use-on-delete-cascade-with-sa-s-orm">SAのORMでON DELETE CASCADEを使用するにはどうすればよいですか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#i-set-the-foo-id-attribute-on-my-instance-to-7-but-the-foo-attribute-is-still-none-shouldn-t-it-have-loaded-foo-with-id-7">私はインスタンスの&amp;quot;foo_id &amp;quot;属性を&amp;quot;7 &amp;quot;に設定しますが、&amp;quot;foo &amp;quot;属性は &amp;quot;` None``です -  Fooにid＃7をロードしてはいけませんか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#how-do-i-walk-all-objects-that-are-related-to-a-given-object">特定のオブジェクトに関連するすべてのオブジェクトをどのように歩くのですか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#is-there-a-way-to-automagically-have-only-unique-keywords-or-other-kinds-of-objects-without-doing-a-query-for-the-keyword-and-getting-a-reference-to-the-row-containing-that-keyword">キーワードのクエリを実行せずに、そのキーワードを含む行への参照を取得せずに、一意のキーワード（または他の種類のオブジェクト）のみを自動的に持つ方法はありますか？</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#why-does-post-update-emit-update-in-addition-to-the-first-update">post_updateが最初のUPDATEに加えてUPDATEを発行するのはなぜですか？</a></span></li>
 </ul>
 </li>
 </ul>
@@ -161,92 +161,52 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="sessions-queries">
-<h1>Sessions / Queries<a class="headerlink" href="#sessions-queries" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>セッション/クエリ<a class="headerlink" href="#sessions-queries" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="contents faq local topic" id="id1">
 <ul class="simple">
-<li><a class="reference internal" href="#i-m-re-loading-data-with-my-session-but-it-isn-t-seeing-changes-that-i-committed-elsewhere" id="id2">I'm re-loading data with my Session but it isn't seeing changes that I committed elsewhere</a></li>
-<li><a class="reference internal" href="#this-session-s-transaction-has-been-rolled-back-due-to-a-previous-exception-during-flush-or-similar" id="id3">&quot;This Session's transaction has been rolled back due to a previous exception during flush.&quot; (or similar)</a><ul>
-<li><a class="reference internal" href="#but-why-does-flush-insist-on-issuing-a-rollback" id="id4">But why does flush() insist on issuing a ROLLBACK?</a></li>
-<li><a class="reference internal" href="#but-why-isn-t-the-one-automatic-call-to-rollback-enough-why-must-i-rollback-again" id="id5">But why isn't the one automatic call to ROLLBACK enough?  Why must I ROLLBACK again?</a></li>
+<li><a class="reference internal" href="#i-m-re-loading-data-with-my-session-but-it-isn-t-seeing-changes-that-i-committed-elsewhere" id="id2">セッションでデータを再ロードしていますが、他の場所でコミットした変更は表示されません</a></li>
+<li><a class="reference internal" href="#this-session-s-transaction-has-been-rolled-back-due-to-a-previous-exception-during-flush-or-similar" id="id3">&amp;quot;このセッションのトランザクションは、フラッシュ中の以前の例外のためにロールバックされました。</a><ul>
+<li><a class="reference internal" href="#but-why-does-flush-insist-on-issuing-a-rollback" id="id4">しかし、なぜflush（）はROLLBACKを発行することを主張しているのですか？</a></li>
+<li><a class="reference internal" href="#but-why-isn-t-the-one-automatic-call-to-rollback-enough-why-must-i-rollback-again" id="id5">しかし、なぜROLLBACKへの1回の自動呼び出しでは十分ではありませんか？なぜ私はもう一度ROLLBACKする必要がありますか？</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#how-do-i-make-a-query-that-always-adds-a-certain-filter-to-every-query" id="id6">How do I make a Query that always adds a certain filter to every query?</a></li>
-<li><a class="reference internal" href="#i-ve-created-a-mapping-against-an-outer-join-and-while-the-query-returns-rows-no-objects-are-returned-why-not" id="id7">I've created a mapping against an Outer Join, and while the query returns rows, no objects are returned.  Why not?</a></li>
-<li><a class="reference internal" href="#i-m-using-joinedload-or-lazy-false-to-create-a-join-outer-join-and-sqlalchemy-is-not-constructing-the-correct-query-when-i-try-to-add-a-where-order-by-limit-etc-which-relies-upon-the-outer-join" id="id8">I'm using <code class="docutils literal"><span class="pre">joinedload()</span></code> or <code class="docutils literal"><span class="pre">lazy=False</span></code> to create a JOIN/OUTER JOIN and SQLAlchemy is not constructing the correct query when I try to add a WHERE, ORDER BY, LIMIT, etc. (which relies upon the (OUTER) JOIN)</a></li>
-<li><a class="reference internal" href="#query-has-no-len-why-not" id="id9">Query has no <code class="docutils literal"><span class="pre">__len__()</span></code>, why not?</a></li>
-<li><a class="reference internal" href="#how-do-i-use-textual-sql-with-orm-queries" id="id10">How Do I use Textual SQL with ORM Queries?</a></li>
-<li><a class="reference internal" href="#i-m-calling-session-delete-myobject-and-it-isn-t-removed-from-the-parent-collection" id="id11">I'm calling <code class="docutils literal"><span class="pre">Session.delete(myobject)</span></code> and it isn't removed from the parent collection!</a></li>
-<li><a class="reference internal" href="#why-isn-t-my-init-called-when-i-load-objects" id="id12">why isn't my <code class="docutils literal"><span class="pre">__init__()</span></code> called when I load objects?</a></li>
-<li><a class="reference internal" href="#how-do-i-use-on-delete-cascade-with-sa-s-orm" id="id13">how do I use ON DELETE CASCADE with SA's ORM?</a></li>
-<li><a class="reference internal" href="#i-set-the-foo-id-attribute-on-my-instance-to-7-but-the-foo-attribute-is-still-none-shouldn-t-it-have-loaded-foo-with-id-7" id="id14">I set the &quot;foo_id&quot; attribute on my instance to &quot;7&quot;, but the &quot;foo&quot; attribute is still <code class="docutils literal"><span class="pre">None</span></code> - shouldn't it have loaded Foo with id #7?</a></li>
-<li><a class="reference internal" href="#how-do-i-walk-all-objects-that-are-related-to-a-given-object" id="id15">How do I walk all objects that are related to a given object?</a></li>
-<li><a class="reference internal" href="#is-there-a-way-to-automagically-have-only-unique-keywords-or-other-kinds-of-objects-without-doing-a-query-for-the-keyword-and-getting-a-reference-to-the-row-containing-that-keyword" id="id16">Is there a way to automagically have only unique keywords (or other kinds of objects) without doing a query for the keyword and getting a reference to the row containing that keyword?</a></li>
-<li><a class="reference internal" href="#why-does-post-update-emit-update-in-addition-to-the-first-update" id="id17">Why does post_update emit UPDATE in addition to the first UPDATE?</a></li>
+<li><a class="reference internal" href="#how-do-i-make-a-query-that-always-adds-a-certain-filter-to-every-query" id="id6">すべてのクエリに特定のフィルタを追加するクエリを作成するにはどうすればよいですか？</a></li>
+<li><a class="reference internal" href="#i-ve-created-a-mapping-against-an-outer-join-and-while-the-query-returns-rows-no-objects-are-returned-why-not" id="id7">私はOuter Joinに対するマッピングを作成しましたが、クエリが行を返す間はオブジェクトは返されません。何故なの？</a></li>
+<li><a class="reference internal" href="#i-m-using-joinedload-or-lazy-false-to-create-a-join-outer-join-and-sqlalchemy-is-not-constructing-the-correct-query-when-i-try-to-add-a-where-order-by-limit-etc-which-relies-upon-the-outer-join" id="id8">JOIN / OUTER JOINを作成するために `` joinedload（） ``や `` lazy = False``を使用しています.SQLAlchemyはWHERE、ORDER BY、LIMITなどを追加しようとすると正しいクエリを構築しません（OUTER）JOINに依存する）</a></li>
+<li><a class="reference internal" href="#query-has-no-len-why-not" id="id9">クエリに `` __len __（） ``はありません。どうしてですか？</a></li>
+<li><a class="reference internal" href="#how-do-i-use-textual-sql-with-orm-queries" id="id10">ORMクエリでテキストSQLを使用するにはどうすればよいですか？</a></li>
+<li><a class="reference internal" href="#i-m-calling-session-delete-myobject-and-it-isn-t-removed-from-the-parent-collection" id="id11">私は `` Session.delete（myobject） ``と呼びますが、親コレクションからは削除されません！</a></li>
+<li><a class="reference internal" href="#why-isn-t-my-init-called-when-i-load-objects" id="id12">オブジェクトをロードするときに私の `` __init __（） ``が呼び出されないのはなぜですか？</a></li>
+<li><a class="reference internal" href="#how-do-i-use-on-delete-cascade-with-sa-s-orm" id="id13">SAのORMでON DELETE CASCADEを使用するにはどうすればよいですか？</a></li>
+<li><a class="reference internal" href="#i-set-the-foo-id-attribute-on-my-instance-to-7-but-the-foo-attribute-is-still-none-shouldn-t-it-have-loaded-foo-with-id-7" id="id14">私はインスタンスの&amp;quot;foo_id &amp;quot;属性を&amp;quot;7 &amp;quot;に設定しますが、&amp;quot;foo &amp;quot;属性は &amp;quot;` None``です -  Fooにid＃7をロードしてはいけませんか？</a></li>
+<li><a class="reference internal" href="#how-do-i-walk-all-objects-that-are-related-to-a-given-object" id="id15">特定のオブジェクトに関連するすべてのオブジェクトをどのように歩くのですか？</a></li>
+<li><a class="reference internal" href="#is-there-a-way-to-automagically-have-only-unique-keywords-or-other-kinds-of-objects-without-doing-a-query-for-the-keyword-and-getting-a-reference-to-the-row-containing-that-keyword" id="id16">キーワードのクエリを実行せずに、そのキーワードを含む行への参照を取得せずに、一意のキーワード（または他の種類のオブジェクト）のみを自動的に持つ方法はありますか？</a></li>
+<li><a class="reference internal" href="#why-does-post-update-emit-update-in-addition-to-the-first-update" id="id17">post_updateが最初のUPDATEに加えてUPDATEを発行するのはなぜですか？</a></li>
 </ul>
 </div>
 <div class="section" id="i-m-re-loading-data-with-my-session-but-it-isn-t-seeing-changes-that-i-committed-elsewhere">
-<h2>I'm re-loading data with my Session but it isn't seeing changes that I committed elsewhere<a class="headerlink" href="#i-m-re-loading-data-with-my-session-but-it-isn-t-seeing-changes-that-i-committed-elsewhere" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The main issue regarding this behavior is that the session acts as though
-the transaction is in the <em>serializable</em> isolation state, even if it's not
-(and it usually is not).   In practical terms, this means that the session
-does not alter any data that it's already read within the scope of a transaction.</p>
-<p>If the term &quot;isolation level&quot; is unfamiliar, then you first need to read this link:</p>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Isolation_%28database_systems%29">Isolation Level</a></p>
-<p>In short, serializable isolation level generally means
-that once you SELECT a series of rows in a transaction, you will get
-<em>the identical data</em> back each time you re-emit that SELECT.   If you are in
-the next-lower isolation level, &quot;repeatable read&quot;, you'll
-see newly added rows (and no longer see deleted rows), but for rows that
-you've <em>already</em> loaded, you won't see any change.   Only if you are in a
-lower isolation level, e.g. &quot;read committed&quot;, does it become possible to
-see a row of data change its value.</p>
-<p>For information on controlling the isolation level when using the
-SQLAlchemy ORM, see <a class="reference internal" href="../orm/session_transaction.html#session-transaction-isolation"><span class="std std-ref">Setting Transaction Isolation Levels</span></a>.</p>
-<p>To simplify things dramatically, the <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> itself works in
-terms of a completely isolated transaction, and doesn't overwrite any mapped attributes
-it's already read unless you tell it to.  The use case of trying to re-read
-data you've already loaded in an ongoing transaction is an <em>uncommon</em> use
-case that in many cases has no effect, so this is considered to be the
-exception, not the norm; to work within this exception, several methods
-are provided to allow specific data to be reloaded within the context
-of an ongoing transaction.</p>
-<p>To understand what we mean by &quot;the transaction&quot; when we talk about the
-<a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>, your <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> is intended to only work within
-a transaction.  An overview of this is at <a class="reference internal" href="../orm/session_transaction.html#unitofwork-transaction"><span class="std std-ref">Managing Transactions</span></a>.</p>
-<p>Once we've figured out what our isolation level is, and we think that
-our isolation level is set at a low enough level so that if we re-SELECT a row,
-we should see new data in our <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>, how do we see it?</p>
-<p>Three ways, from most common to least:</p>
+<h2>セッションでデータを再ロードしていますが、他の場所でコミットした変更は表示されません<a class="headerlink" href="#i-m-re-loading-data-with-my-session-but-it-isn-t-seeing-changes-that-i-committed-elsewhere" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>この振る舞いに関する主な問題は、セッションが、トランザクションが*シリアライズ可能な*分離状態にあるかのように動作することです。現実的に言えば、セッションがトランザクションの範囲内で既に読み取られたデータを変更しないことを意味します。</p>
+<p>「分離レベル」という用語が不慣れな場合は、まずこのリンクを読む必要があります。</p>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>分離レベル&lt;<a class="reference external" href="https://en.wikipedia.org/wiki/Isolation_%28database_systems%29">https://en.wikipedia.org/wiki/Isolation_%28database_systems%29</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_</p>
+<p>簡単に言えば、シリアライズ可能な分離レベルは、一般に、トランザクション内の一連の行を選択すると、そのSELECTを再発行するたびに同じデータ*を返すことを意味します。次の低い隔離レベルである &amp;quot;反復可能な読み取り&amp;quot;の場合は、新しく追加された行が表示されます（削除された行は表示されません）が、既にロードされている行については、変更を参照してください。 &amp;quot;read committed &amp;quot;のような低い隔離レベルにある場合にのみ、データの行がその値を変更するのを見ることが可能になります。</p>
+<p>SQLAlchemy ORMを使用する際の分離レベルの制御については、ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>session_transaction_isolation`を参照してください。</p>
+<p>劇的に物事を簡素化するために、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`自体は、完全に分離されたトランザクションの観点から動作し、あなたが指示しない限り、既に読み込まれているマップされた属性を上書きしません。すでに進行中のトランザクションで既にロードしたデータを再読み込みしようとするユースケースは、多くの場合効果がない*珍しい*ユースケースです。したがって、これは例外ではなくノルムです。この例外内で動作するには、進行中のトランザクションのコンテキスト内で特定のデータを再ロードできるようにするためのいくつかのメソッドが用意されています。</p>
+<p>私たちが：class： <cite>.Session`について話すとき、&amp;quot;トランザクション&amp;quot;が意味することを理解するために、あなたの：class：</cite> .Session`はトランザクション内でのみ動作するようになっています。これの概要は：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>unitofwork_transaction`です。</p>
+<p>分離レベルが何であるかを把握したら、分離レベルが十分低いレベルに設定されているので、行を再選択すると、新しいデータがクラス： <cite>.Session</cite> 、どうやって見ますか？</p>
+<p>最も一般的なものから最も少ないものへの3つの方法：</p>
 <ol class="arabic simple">
-<li>We simply end our transaction and start a new one on next access
-with our <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> by calling <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.commit" title="sqlalchemy.orm.session.Session.commit"><code class="xref py py-meth docutils literal"><span class="pre">Session.commit()</span></code></a> (note
-that if the <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> is in the lesser-used &quot;autocommit&quot;
-mode, there would be a call to <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.begin" title="sqlalchemy.orm.session.Session.begin"><code class="xref py py-meth docutils literal"><span class="pre">Session.begin()</span></code></a> as well). The
-vast majority of applications and use cases do not have any issues
-with not being able to &quot;see&quot; data in other transactions because
-they stick to this pattern, which is at the core of the best practice of
-<strong>short lived transactions</strong>.
-See <a class="reference internal" href="../orm/session_basics.html#session-faq-whentocreate"><span class="std std-ref">When do I construct a Session, when do I commit it, and when do I close it?</span></a> for some thoughts on this.</li>
-<li>We tell our <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> to re-read rows that it has already read,
-either when we next query for them using <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.expire_all" title="sqlalchemy.orm.session.Session.expire_all"><code class="xref py py-meth docutils literal"><span class="pre">Session.expire_all()</span></code></a>
-or <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.expire" title="sqlalchemy.orm.session.Session.expire"><code class="xref py py-meth docutils literal"><span class="pre">Session.expire()</span></code></a>, or immediately on an object using
-<code class="xref py py-class docutils literal"><span class="pre">Session.refresh</span></code>.  See <a class="reference internal" href="../orm/session_state_management.html#session-expire"><span class="std std-ref">Refreshing / Expiring</span></a> for detail on this.</li>
-<li>We can run whole queries while setting them to definitely overwrite
-already-loaded objects as they read rows by using
-<a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query.populate_existing" title="sqlalchemy.orm.query.Query.populate_existing"><code class="xref py py-meth docutils literal"><span class="pre">Query.populate_existing()</span></code></a>.</li>
+<li>私たちは単にトランザクションを終了し、次のアクセス時に：class： <cite>.Session`を呼び出して新しいものを開始します：meth：</cite> .Session.commit`（：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`がless- &amp;quot;autocommit &amp;quot;モードを使用すると、：meth： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Session.begin`も呼び出されます）。アプリケーションやユースケースの大部分は、<a href="#id5"><span class="problematic" id="id6">**</span></a>短命トランザクションのベストプラクティスの中核であるこのパターンに固執しているため、他のトランザクションのデータを見ることができないという問題はありません* <a href="#id7"><span class="problematic" id="id8">*</span></a>。これに関するいくつかの考え方については：ref： <a href="#id9"><span class="problematic" id="id10">`</span></a>session_faq_whentocreate`を参照してください。</li>
+<li>クラス： <cite>.Session`は、すでに読み込んだ行を：meth：</cite> .Session.expire_all`または：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session.expire`を使って次に問い合わせるときに読み込みます。クラス： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Session.refresh`を使用してオブジェクト上で直ちに実行します。詳しくは：ref： <a href="#id5"><span class="problematic" id="id6">`</span></a>session_expire`を参照してください。</li>
+<li>クエリー全体を実行することができます。クエリーは、：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Query.populate_existing`を使って行を読み込んだときにすでにロードされているオブジェクトを確実に上書きするように設定します。</li>
 </ol>
-<p>But remember, <strong>the ORM cannot see changes in rows if our isolation
-level is repeatable read or higher, unless we start a new transaction</strong>.</p>
+<p>ただし、新しいトランザクション**を開始しない限り、ORMは分離レベルが再現可能な読取り以上であれば行の変更を認識できません**。</p>
 </div>
 <div class="section" id="this-session-s-transaction-has-been-rolled-back-due-to-a-previous-exception-during-flush-or-similar">
-<h2>&quot;This Session's transaction has been rolled back due to a previous exception during flush.&quot; (or similar)<a class="headerlink" href="#this-session-s-transaction-has-been-rolled-back-due-to-a-previous-exception-during-flush-or-similar" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>This is an error that occurs when a <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.flush" title="sqlalchemy.orm.session.Session.flush"><code class="xref py py-meth docutils literal"><span class="pre">Session.flush()</span></code></a> raises an exception, rolls back
-the transaction, but further commands upon the <cite>Session</cite> are called without an
-explicit call to <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.rollback" title="sqlalchemy.orm.session.Session.rollback"><code class="xref py py-meth docutils literal"><span class="pre">Session.rollback()</span></code></a> or <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.close" title="sqlalchemy.orm.session.Session.close"><code class="xref py py-meth docutils literal"><span class="pre">Session.close()</span></code></a>.</p>
-<p>It usually corresponds to an application that catches an exception
-upon <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.flush" title="sqlalchemy.orm.session.Session.flush"><code class="xref py py-meth docutils literal"><span class="pre">Session.flush()</span></code></a> or <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.commit" title="sqlalchemy.orm.session.Session.commit"><code class="xref py py-meth docutils literal"><span class="pre">Session.commit()</span></code></a> and
-does not properly handle the exception.    For example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span>
+<h2>&amp;quot;このセッションのトランザクションは、フラッシュ中の以前の例外のためにロールバックされました。<a class="headerlink" href="#this-session-s-transaction-has-been-rolled-back-due-to-a-previous-exception-during-flush-or-similar" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>これは、：meth： <cite>.Session.flush`が例外を発生させ、トランザクションをロールバックしますが、</cite> Session`のさらなるコマンドが：meth： <cite>.Session.rollback`を明示的に呼び出さずに呼び出されたときに発生するエラーです。または：meth： `.Session.close</cite>。</p>
+<p>これは通常：meth： <cite>.Session.flush`または：meth：</cite> .Session.commit`に例外をキャッチし、例外を適切に処理しないアプリケーションに対応します。例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">sessionmaker</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
 
@@ -272,8 +232,8 @@ does not properly handle the exception.    For example:</p>
 <span class="c1"># continue using session without rolling back</span>
 <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></pre></div>
 </div>
-<p>The usage of the <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> should fit within a structure similar to this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<p>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`の使い方は、次のような構造体に収まる必要があります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">use</span> <span class="n">session</span><span class="o">&gt;</span>
     <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 <span class="k">except</span><span class="p">:</span>
@@ -282,27 +242,12 @@ does not properly handle the exception.    For example:</p>
 <span class="k">finally</span><span class="p">:</span>
    <span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># optional, depends on use case</span></pre></div>
 </div>
-<p>Many things can cause a failure within the try/except besides flushes. You
-should always have some kind of &quot;framing&quot; of your session operations so that
-connection and transaction resources have a definitive boundary, otherwise
-your application doesn't really have its usage of resources under control.
-This is not to say that you need to put try/except blocks all throughout your
-application - on the contrary, this would be a terrible idea.  You should
-architect your application such that there is one (or few) point(s) of
-&quot;framing&quot; around session operations.</p>
-<p>For a detailed discussion on how to organize usage of the <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>,
-please see <a class="reference internal" href="../orm/session_basics.html#session-faq-whentocreate"><span class="std std-ref">When do I construct a Session, when do I commit it, and when do I close it?</span></a>.</p>
+<p>多くのことが、フラッシュ以外にtry / except内で失敗を引き起こす可能性があります。接続とトランザクションのリソースが明確な境界を持つように、セッション操作には常に何らかの&amp;quot;フレーミング&amp;quot;があるべきです。そうでなければ、アプリケーションは制御下にあるリソースの使用を本当に持っていません。これは、あなたのアプリケーション全体にtry / exceptブロックを置く必要があると言っているのではなく、これはひどい考えです。セッション操作の周りに&amp;quot;フレーミング&amp;quot;が1つ（またはいくつか）あるようにアプリケーションを設計するべきです。</p>
+<p>：class： <cite>.Session`の使い方を整理する方法の詳細については、ref：</cite> session_faq_whentocreate`を参照してください。</p>
 <div class="section" id="but-why-does-flush-insist-on-issuing-a-rollback">
-<h3>But why does flush() insist on issuing a ROLLBACK?<a class="headerlink" href="#but-why-does-flush-insist-on-issuing-a-rollback" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>It would be great if <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.flush" title="sqlalchemy.orm.session.Session.flush"><code class="xref py py-meth docutils literal"><span class="pre">Session.flush()</span></code></a> could partially complete and then not roll
-back, however this is beyond its current capabilities since its internal
-bookkeeping would have to be modified such that it can be halted at any time
-and be exactly consistent with what's been flushed to the database. While this
-is theoretically possible, the usefulness of the enhancement is greatly
-decreased by the fact that many database operations require a ROLLBACK in any
-case. Postgres in particular has operations which, once failed, the
-transaction is not allowed to continue:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">test</span><span class="o">=&gt;</span> <span class="n">create</span> <span class="n">table</span> <span class="n">foo</span><span class="p">(</span><span class="nb">id</span> <span class="n">integer</span> <span class="n">primary</span> <span class="n">key</span><span class="p">);</span>
+<h3>しかし、なぜflush（）はROLLBACKを発行することを主張しているのですか？<a class="headerlink" href="#but-why-does-flush-insist-on-issuing-a-rollback" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session.flush`が部分的に完了してからロールバックしないと良いでしょうが、内部の簿記をいつでも停止してデータベースにフラッシュされたものと正確に一致します。理論的には可能ですが、多くのデータベース操作ではROLLBACKが必要な場合が多いため、拡張の有用性は大幅に低下します。特にPostgresは、一度失敗したトランザクションは、トランザクションが続行されないようにしています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="o">=&gt;</span> <span class="n">create</span> <span class="n">table</span> <span class="n">foo</span><span class="p">(</span><span class="nb">id</span> <span class="n">integer</span> <span class="n">primary</span> <span class="n">key</span><span class="p">);</span>
 <span class="n">NOTICE</span><span class="p">:</span>  <span class="n">CREATE</span> <span class="n">TABLE</span> <span class="o">/</span> <span class="n">PRIMARY</span> <span class="n">KEY</span> <span class="n">will</span> <span class="n">create</span> <span class="n">implicit</span> <span class="n">index</span> <span class="s2">&quot;foo_pkey&quot;</span> <span class="k">for</span> <span class="n">table</span> <span class="s2">&quot;foo&quot;</span>
 <span class="n">CREATE</span> <span class="n">TABLE</span>
 <span class="n">test</span><span class="o">=&gt;</span> <span class="n">begin</span><span class="p">;</span>
@@ -318,18 +263,12 @@ transaction is not allowed to continue:</p>
 <span class="n">test</span><span class="o">=&gt;</span> <span class="n">insert</span> <span class="n">into</span> <span class="n">foo</span> <span class="n">values</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 <span class="n">ERROR</span><span class="p">:</span>  <span class="n">current</span> <span class="n">transaction</span> <span class="ow">is</span> <span class="n">aborted</span><span class="p">,</span> <span class="n">commands</span> <span class="n">ignored</span> <span class="n">until</span> <span class="n">end</span> <span class="n">of</span> <span class="n">transaction</span> <span class="n">block</span></pre></div>
 </div>
-<p>What SQLAlchemy offers that solves both issues is support of SAVEPOINT, via
-<a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.begin_nested" title="sqlalchemy.orm.session.Session.begin_nested"><code class="xref py py-meth docutils literal"><span class="pre">Session.begin_nested()</span></code></a>. Using <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.begin_nested" title="sqlalchemy.orm.session.Session.begin_nested"><code class="xref py py-meth docutils literal"><span class="pre">Session.begin_nested()</span></code></a>, you can frame an operation that may
-potentially fail within a transaction, and then &quot;roll back&quot; to the point
-before its failure while maintaining the enclosing transaction.</p>
+<p>両方の問題を解決するSQLAlchemyが提供するものは、meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session.begin_nested`を介して、SAVEPOINTのサポートです。 ：meth： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Session.begin_nested`を使用すると、トランザクション内で失敗する可能性のある操作をフレーム化し、その後、そのトランザクションの前にそのトランザクションを維持しながらロールバックすることができます。</p>
 </div>
 <div class="section" id="but-why-isn-t-the-one-automatic-call-to-rollback-enough-why-must-i-rollback-again">
-<h3>But why isn't the one automatic call to ROLLBACK enough?  Why must I ROLLBACK again?<a class="headerlink" href="#but-why-isn-t-the-one-automatic-call-to-rollback-enough-why-must-i-rollback-again" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>This is again a matter of the <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> providing a consistent interface and
-refusing to guess about what context its being used. For example, the
-<a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> supports &quot;framing&quot; above within multiple levels. Such as, suppose
-you had a decorator <code class="docutils literal"><span class="pre">&#64;with_session()</span></code>, which did this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">with_session</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+<h3>しかし、なぜROLLBACKへの1回の自動呼び出しでは十分ではありませんか？なぜ私はもう一度ROLLBACKする必要がありますか？<a class="headerlink" href="#but-why-isn-t-the-one-automatic-call-to-rollback-enough-why-must-i-rollback-again" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>これはやはり：class： <cite>.Session`の一貫したインターフェースを提供し、どのコンテキストが使用されているかを推測するのを拒否します。たとえば、：class： `.Session`は、複数のレベルの中で上記の&amp;quot;フレーミング&amp;quot;をサポートします。例えば、これを行ったデコレータ `</cite> &#64;with_session（） <a href="#id1"><span class="problematic" id="id2">``</span></a>があるとします：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">with_session</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
    <span class="k">def</span> <span class="nf">go</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
        <span class="n">session</span><span class="o">.</span><span class="n">begin</span><span class="p">(</span><span class="n">subtransactions</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
        <span class="k">try</span><span class="p">:</span>
@@ -341,13 +280,8 @@ you had a decorator <code class="docutils literal"><span class="pre">&#64;with_s
            <span class="k">raise</span>
    <span class="k">return</span> <span class="n">go</span></pre></div>
 </div>
-<p>The above decorator begins a transaction if one does not exist already, and
-then commits it, if it were the creator. The &quot;subtransactions&quot; flag means that
-if <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.begin" title="sqlalchemy.orm.session.Session.begin"><code class="xref py py-meth docutils literal"><span class="pre">Session.begin()</span></code></a> were already called by an enclosing function, nothing happens
-except a counter is incremented - this counter is decremented when <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.commit" title="sqlalchemy.orm.session.Session.commit"><code class="xref py py-meth docutils literal"><span class="pre">Session.commit()</span></code></a>
-is called and only when it goes back to zero does the actual COMMIT happen. It
-allows this usage pattern:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@with_session</span>
+<p>上記のデコレータは、すでに存在しない場合はトランザクションを開始し、作成者の場合はトランザクションをコミットします。 &amp;quot;subtransactions &amp;quot;フラグは、：meth： <cite>.Session.begin`が既に囲み関数によって呼び出されている場合、カウンタがインクリメントされている以外は何も起こらないことを意味します。このカウンタは、：meth：</cite> .Session.commit`が呼び出され、ゼロに戻ったときだけ、実際のCOMMITが実行されます。これは、この使用パターンを許可します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@with_session</span>
 <span class="k">def</span> <span class="nf">one</span><span class="p">():</span>
    <span class="c1"># do stuff</span>
    <span class="n">two</span><span class="p">()</span>
@@ -361,68 +295,29 @@ allows this usage pattern:</p>
 
 <span class="n">two</span><span class="p">()</span></pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">one()</span></code> can call <code class="docutils literal"><span class="pre">two()</span></code>, or <code class="docutils literal"><span class="pre">two()</span></code> can be called by itself, and the
-<code class="docutils literal"><span class="pre">&#64;with_session</span></code> decorator ensures the appropriate &quot;framing&quot; - the transaction
-boundaries stay on the outermost call level. As you can see, if <code class="docutils literal"><span class="pre">two()</span></code> calls
-<code class="docutils literal"><span class="pre">flush()</span></code> which throws an exception and then issues a <code class="docutils literal"><span class="pre">rollback()</span></code>, there will
-<em>always</em> be a second <code class="docutils literal"><span class="pre">rollback()</span></code> performed by the decorator, and possibly a
-third corresponding to two levels of decorator. If the <code class="docutils literal"><span class="pre">flush()</span></code> pushed the
-<code class="docutils literal"><span class="pre">rollback()</span></code> all the way out to the top of the stack, and then we said that
-all remaining <code class="docutils literal"><span class="pre">rollback()</span></code> calls are moot, there is some silent behavior going
-on there. A poorly written enclosing method might suppress the exception, and
-then call <code class="docutils literal"><span class="pre">commit()</span></code> assuming nothing is wrong, and then you have a silent
-failure condition. The main reason people get this error in fact is because
-they didn't write clean &quot;framing&quot; code and they would have had other problems
-down the road.</p>
-<p>If you think the above use case is a little exotic, the same kind of thing
-comes into play if you want to SAVEPOINT- you might call <code class="docutils literal"><span class="pre">begin_nested()</span></code>
-several times, and the <code class="docutils literal"><span class="pre">commit()</span></code>/<code class="docutils literal"><span class="pre">rollback()</span></code> calls each resolve the most
-recent <code class="docutils literal"><span class="pre">begin_nested()</span></code>. The meaning of <code class="docutils literal"><span class="pre">rollback()</span></code> or <code class="docutils literal"><span class="pre">commit()</span></code> is
-dependent upon which enclosing block it is called, and you might have any
-sequence of <code class="docutils literal"><span class="pre">rollback()</span></code>/<code class="docutils literal"><span class="pre">commit()</span></code> in any order, and its the level of nesting
-that determines their behavior.</p>
-<p>In both of the above cases, if <code class="docutils literal"><span class="pre">flush()</span></code> broke the nesting of transaction
-blocks, the behavior is, depending on scenario, anywhere from &quot;magic&quot; to
-silent failure to blatant interruption of code flow.</p>
-<p><code class="docutils literal"><span class="pre">flush()</span></code> makes its own &quot;subtransaction&quot;, so that a transaction is started up
-regardless of the external transactional state, and when complete it calls
-<code class="docutils literal"><span class="pre">commit()</span></code>, or <code class="docutils literal"><span class="pre">rollback()</span></code> upon failure - but that <code class="docutils literal"><span class="pre">rollback()</span></code> corresponds
-to its own subtransaction - it doesn't want to guess how you'd like to handle
-the external &quot;framing&quot; of the transaction, which could be nested many levels
-with any combination of subtransactions and real SAVEPOINTs. The job of
-starting/ending the &quot;frame&quot; is kept consistently with the code external to the
-<code class="docutils literal"><span class="pre">flush()</span></code>, and we made a decision that this was the most consistent approach.</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>（） <a href="#id3"><span class="problematic" id="id4">``</span></a>は `` two（） <a href="#id5"><span class="problematic" id="id6">``</span></a>を呼び出すことができ、 `` two（） <a href="#id7"><span class="problematic" id="id8">``</span></a>はそれ自身で呼び出すことができ、 `` &#64; with_session``デコレータは適切な&amp;quot;フレーミングトランザクションの境界は最も外側のコールレベルにとどまります。あなたが見ることができるように、 `` two（） <a href="#id9"><span class="problematic" id="id10">``</span></a>が例外をスローして `` rollback（） <a href="#id11"><span class="problematic" id="id12">``</span></a>を発行する `` flush（） <a href="#id13"><span class="problematic" id="id14">``</span></a>を呼び出すと、<a href="#id15"><span class="problematic" id="id16">*</span></a>常にロールバック（） <a href="#id17"><span class="problematic" id="id18">``</span></a>とデコレータの2つのレベルに対応する可能性があります。 `` flush（） <a href="#id19"><span class="problematic" id="id20">``</span></a>が `` rollback（） <a href="#id21"><span class="problematic" id="id22">``</span></a>をスタックの一番上まで押し出し、残りの <a href="#id23"><span class="problematic" id="id24">``</span></a>ロールバック（） <a href="#id25"><span class="problematic" id="id26">``</span></a>の呼び出しが間違っていると言った場合、静かな行動が続いている。正しく書かれていない囲みメソッドは例外を抑制し、何も間違っていないと仮定して `` commit（） <a href="#id27"><span class="problematic" id="id28">``</span></a>を呼び出すと、サイレントエラー状態になります。人々がこのエラーを実際に受け取る主な理由は、クリーンな &amp;quot;フレーミング&amp;quot;コードを書かなかったためであり、他の問題が残っていたからでしょう。</p>
+<p>上記のユースケースがちょっとエキゾチックであると思うなら、SAVEPOINTをしたいならば同じ種類のものが出てくるでしょう。あなたは `` begin_nested（） <a href="#id1"><span class="problematic" id="id2">``</span></a>を何回か呼び出すかもしれないし、 `` commit（） `` / ` <cite>rollback（）</cite> <cite>の呼び出しは、それぞれ最新の</cite> <cite>begin_nested（）</cite> <cite>を解決します。 `</cite> rollback（） <a href="#id3"><span class="problematic" id="id4">``</span></a>や `` commit（） <a href="#id5"><span class="problematic" id="id6">``</span></a>の意味は、それが呼び出されているブロックに依存しており、 `` rollback（） `` / `` commit（） <a href="#id7"><span class="problematic" id="id8">``</span></a>どのような順序であっても、その振る舞いを決定するネスティングのレベルです。</p>
+<p>上記のどちらの場合でも、 `` flush（） <a href="#id1"><span class="problematic" id="id2">``</span></a>がトランザクションブロックのネストを壊した場合、シナリオに応じて、&amp;quot;マジック&amp;quot;から静かな失敗まで、コードフローの中断までどこでも可能です。</p>
+<p>`` commit（） <a href="#id1"><span class="problematic" id="id2">``</span></a>や `` rollback（） <cite>を呼び出すと、トランザクションは外部トランザクション状態に関係なく起動されるように、</cite> <cite>flush（）</cite> <cite>自身のサブトランザクションを行います。 `失敗時 - しかし、</cite> <cite>rollback（）</cite> <a href="#id3"><span class="problematic" id="id4">`</span></a>はそれ自身のサブトランザクションに対応しています - トランザクションの外部&amp;quot;フレーミング&amp;quot;をどのように扱うかを推測したくはありません。サブトランザクションと実際のSAVEPOINTの任意の組み合わせを使用します。 &amp;quot;フレーム&amp;quot;の開始/終了の仕事は、 &amp;quot;flush（）&amp;quot;の外部のコードと一貫して保持されており、これが最も一貫したアプローチであると判断しました。</p>
 </div>
 </div>
 <div class="section" id="how-do-i-make-a-query-that-always-adds-a-certain-filter-to-every-query">
-<h2>How do I make a Query that always adds a certain filter to every query?<a class="headerlink" href="#how-do-i-make-a-query-that-always-adds-a-certain-filter-to-every-query" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>See the recipe at <a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes/PreFilteredQuery">PreFilteredQuery</a>.</p>
+<h2>すべてのクエリに特定のフィルタを追加するクエリを作成するにはどうすればよいですか？<a class="headerlink" href="#how-do-i-make-a-query-that-always-adds-a-certain-filter-to-every-query" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>PreFilteredQueryのレシピを参照してください。 &lt;<a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes/PreFilteredQuery">http://www.sqlalchemy.org/trac/wiki/UsageRecipes/PreFilteredQuery</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_。</p>
 </div>
 <div class="section" id="i-ve-created-a-mapping-against-an-outer-join-and-while-the-query-returns-rows-no-objects-are-returned-why-not">
-<h2>I've created a mapping against an Outer Join, and while the query returns rows, no objects are returned.  Why not?<a class="headerlink" href="#i-ve-created-a-mapping-against-an-outer-join-and-while-the-query-returns-rows-no-objects-are-returned-why-not" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Rows returned by an outer join may contain NULL for part of the primary key,
-as the primary key is the composite of both tables.  The <a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> object ignores incoming rows
-that don't have an acceptable primary key.   Based on the setting of the <code class="docutils literal"><span class="pre">allow_partial_pks</span></code>
-flag on <a class="reference internal" href="../orm/mapping_api.html#sqlalchemy.orm.mapper" title="sqlalchemy.orm.mapper"><code class="xref py py-func docutils literal"><span class="pre">mapper()</span></code></a>, a primary key is accepted if the value has at least one non-NULL
-value, or alternatively if the value has no NULL values.  See <code class="docutils literal"><span class="pre">allow_partial_pks</span></code>
-at <a class="reference internal" href="../orm/mapping_api.html#sqlalchemy.orm.mapper" title="sqlalchemy.orm.mapper"><code class="xref py py-func docutils literal"><span class="pre">mapper()</span></code></a>.</p>
+<h2>私はOuter Joinに対するマッピングを作成しましたが、クエリが行を返す間はオブジェクトは返されません。何故なの？<a class="headerlink" href="#i-ve-created-a-mapping-against-an-outer-join-and-while-the-query-returns-rows-no-objects-are-returned-why-not" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>主キーは両方のテーブルのコンポジットなので、外部結合によって戻された行には主キーの一部としてNULLが含まれることがあります。 ：class： <cite>.Query`オブジェクトは、受け入れ可能な主キーを持たない入力行を無視します。 ：func： `.mapper`の</cite> <cite>allow_partial_pks``フラグの設定に基づいて、値に少なくとも1つの非NULL値がある場合、または値にNULL値がない場合は主キーが受け入れられます。 `</cite> allow_partial_pks``：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.mapper`を参照してください。</p>
 </div>
 <div class="section" id="i-m-using-joinedload-or-lazy-false-to-create-a-join-outer-join-and-sqlalchemy-is-not-constructing-the-correct-query-when-i-try-to-add-a-where-order-by-limit-etc-which-relies-upon-the-outer-join">
-<h2>I'm using <code class="docutils literal"><span class="pre">joinedload()</span></code> or <code class="docutils literal"><span class="pre">lazy=False</span></code> to create a JOIN/OUTER JOIN and SQLAlchemy is not constructing the correct query when I try to add a WHERE, ORDER BY, LIMIT, etc. (which relies upon the (OUTER) JOIN)<a class="headerlink" href="#i-m-using-joinedload-or-lazy-false-to-create-a-join-outer-join-and-sqlalchemy-is-not-constructing-the-correct-query-when-i-try-to-add-a-where-order-by-limit-etc-which-relies-upon-the-outer-join" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The joins generated by joined eager loading are only used to fully load related
-collections, and are designed to have no impact on the primary results of the query.
-Since they are anonymously aliased, they cannot be referenced directly.</p>
-<p>For detail on this beahvior, see <a class="reference internal" href="../orm/loading_relationships.html#zen-of-eager-loading"><span class="std std-ref">The Zen of Joined Eager Loading</span></a>.</p>
+<h2>JOIN / OUTER JOINを作成するために `` joinedload（） <a href="#id1"><span class="problematic" id="id2">``</span></a>や `` lazy = False``を使用しています.SQLAlchemyはWHERE、ORDER BY、LIMITなどを追加しようとすると正しいクエリを構築しません（OUTER）JOINに依存する）<a class="headerlink" href="#i-m-using-joinedload-or-lazy-false-to-create-a-join-outer-join-and-sqlalchemy-is-not-constructing-the-correct-query-when-i-try-to-add-a-where-order-by-limit-etc-which-relies-upon-the-outer-join" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>結合されたeagerローディングによって生成された結合は、関連するコレクションを完全にロードするためにのみ使用され、クエリの主な結果に影響を与えないように設計されています。彼らは匿名でエイリアス化されているため、直接参照することはできません。</p>
+<p>このbeahviorの詳細は：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>zen_of_eager_loading`を参照してください。</p>
 </div>
 <div class="section" id="query-has-no-len-why-not">
-<h2>Query has no <code class="docutils literal"><span class="pre">__len__()</span></code>, why not?<a class="headerlink" href="#query-has-no-len-why-not" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The Python <code class="docutils literal"><span class="pre">__len__()</span></code> magic method applied to an object allows the <code class="docutils literal"><span class="pre">len()</span></code>
-builtin to be used to determine the length of the collection. It's intuitive
-that a SQL query object would link <code class="docutils literal"><span class="pre">__len__()</span></code> to the <a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query.count" title="sqlalchemy.orm.query.Query.count"><code class="xref py py-meth docutils literal"><span class="pre">Query.count()</span></code></a>
-method, which emits a <cite>SELECT COUNT</cite>. The reason this is not possible is
-because evaluating the query as a list would incur two SQL calls instead of
-one:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Iterates</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<h2>クエリに `` __len __（） <a href="#id1"><span class="problematic" id="id2">``</span></a>はありません。どうしてですか？<a class="headerlink" href="#query-has-no-len-why-not" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>オブジェクトに適用されるPythonの `` __len __（） <a href="#id1"><span class="problematic" id="id2">``</span></a>マジックメソッドは、 `` len（） <a href="#id3"><span class="problematic" id="id4">``</span></a>組み込み関数を使ってコレクションの長さを判断することを可能にします。 SQLクエリオブジェクトは、 `` __len __（） <a href="#id5"><span class="problematic" id="id6">``</span></a>を：meth： <a href="#id7"><span class="problematic" id="id8">`</span></a>.Query.count`メソッドにリンクすることは直感的です。これはSELECT COUNTを送出します。これが不可能な理由は、クエリをリストとして評価すると、1つではなく2つのSQL呼び出しが発生するためです。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Iterates</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LEN!&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="mi">5</span>
@@ -433,77 +328,57 @@ one:</p>
 
 <span class="nb">list</span><span class="p">(</span><span class="n">Iterates</span><span class="p">())</span></pre></div>
 </div>
-<p>output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>ITER!
+<p>出力：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ITER!
 LEN!</pre></div>
 </div>
 </div>
 <div class="section" id="how-do-i-use-textual-sql-with-orm-queries">
-<h2>How Do I use Textual SQL with ORM Queries?<a class="headerlink" href="#how-do-i-use-textual-sql-with-orm-queries" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>See:</p>
+<h2>ORMクエリでテキストSQLを使用するにはどうすればよいですか？<a class="headerlink" href="#how-do-i-use-textual-sql-with-orm-queries" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>見る：</p>
 <ul class="simple">
-<li><a class="reference internal" href="../orm/tutorial.html#orm-tutorial-literal-sql"><span class="std std-ref">Using Textual SQL</span></a> - Ad-hoc textual blocks with <a class="reference internal" href="../orm/query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a></li>
-<li><a class="reference internal" href="../orm/persistence_techniques.html#session-sql-expressions"><span class="std std-ref">Using SQL Expressions with Sessions</span></a> - Using <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> with textual SQL directly.</li>
+<li>：ref： <cite>orm_tutorial_literal_sql</cite>  - アドホックテキストブロック：class：` .Query`</li>
+<li>：ref： <cite>session_sql_expressions</cite>  - ：class：` .Session`とテキストSQLを直接使用します。</li>
 </ul>
 </div>
 <div class="section" id="i-m-calling-session-delete-myobject-and-it-isn-t-removed-from-the-parent-collection">
-<h2>I'm calling <code class="docutils literal"><span class="pre">Session.delete(myobject)</span></code> and it isn't removed from the parent collection!<a class="headerlink" href="#i-m-calling-session-delete-myobject-and-it-isn-t-removed-from-the-parent-collection" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>See <a class="reference internal" href="../orm/session_basics.html#session-deleting-from-collections"><span class="std std-ref">Deleting Objects Referenced from Collections and Scalar Relationships</span></a> for a description of this behavior.</p>
+<h2>私は `` Session.delete（myobject） <a href="#id1"><span class="problematic" id="id2">``</span></a>と呼びますが、親コレクションからは削除されません！<a class="headerlink" href="#i-m-calling-session-delete-myobject-and-it-isn-t-removed-from-the-parent-collection" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>この動作の説明については：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>session_deleting_from_collections`を参照してください。</p>
 </div>
 <div class="section" id="why-isn-t-my-init-called-when-i-load-objects">
-<h2>why isn't my <code class="docutils literal"><span class="pre">__init__()</span></code> called when I load objects?<a class="headerlink" href="#why-isn-t-my-init-called-when-i-load-objects" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>See <a class="reference internal" href="../orm/constructors.html#mapping-constructors"><span class="std std-ref">Constructors and Object Initialization</span></a> for a description of this behavior.</p>
+<h2>オブジェクトをロードするときに私の `` __init __（） <a href="#id1"><span class="problematic" id="id2">``</span></a>が呼び出されないのはなぜですか？<a class="headerlink" href="#why-isn-t-my-init-called-when-i-load-objects" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>この動作の説明については：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>mapping_constructors`を参照してください。</p>
 </div>
 <div class="section" id="how-do-i-use-on-delete-cascade-with-sa-s-orm">
-<h2>how do I use ON DELETE CASCADE with SA's ORM?<a class="headerlink" href="#how-do-i-use-on-delete-cascade-with-sa-s-orm" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>SQLAlchemy will always issue UPDATE or DELETE statements for dependent
-rows which are currently loaded in the <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>.  For rows which
-are not loaded, it will by default issue SELECT statements to load
-those rows and update/delete those as well; in other words it assumes
-there is no ON DELETE CASCADE configured.
-To configure SQLAlchemy to cooperate with ON DELETE CASCADE, see
-<a class="reference internal" href="../orm/collections.html#passive-deletes"><span class="std std-ref">Using Passive Deletes</span></a>.</p>
+<h2>SAのORMでON DELETE CASCADEを使用するにはどうすればよいですか？<a class="headerlink" href="#how-do-i-use-on-delete-cascade-with-sa-s-orm" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQLAlchemyは、現在：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`にロードされている依存行に対して、常にUPDATEまたはDELETE文を発行します。ロードされていない行については、デフォルトでSELECT文を発行してそれらの行をロードし、それらの行を更新/削除します。つまり、ON DELETE CASCADEが構成されていないとみなします。 ON DELETE CASCADEと協力するようにSQLAlchemyを設定するには、：ref： <a href="#id3"><span class="problematic" id="id4">`</span></a>passive_deletes`を参照してください。</p>
 </div>
 <div class="section" id="i-set-the-foo-id-attribute-on-my-instance-to-7-but-the-foo-attribute-is-still-none-shouldn-t-it-have-loaded-foo-with-id-7">
-<h2>I set the &quot;foo_id&quot; attribute on my instance to &quot;7&quot;, but the &quot;foo&quot; attribute is still <code class="docutils literal"><span class="pre">None</span></code> - shouldn't it have loaded Foo with id #7?<a class="headerlink" href="#i-set-the-foo-id-attribute-on-my-instance-to-7-but-the-foo-attribute-is-still-none-shouldn-t-it-have-loaded-foo-with-id-7" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The ORM is not constructed in such a way as to support
-immediate population of relationships driven from foreign
-key attribute changes - instead, it is designed to work the
-other way around - foreign key attributes are handled by the
-ORM behind the scenes, the end user sets up object
-relationships naturally. Therefore, the recommended way to
-set <code class="docutils literal"><span class="pre">o.foo</span></code> is to do just that - set it!:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Foo</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<h2>私はインスタンスの&amp;quot;foo_id &amp;quot;属性を&amp;quot;7 &amp;quot;に設定しますが、&amp;quot;foo &amp;quot;属性は &amp;quot;` None``です -  Fooにid＃7をロードしてはいけませんか？<a class="headerlink" href="#i-set-the-foo-id-attribute-on-my-instance-to-7-but-the-foo-attribute-is-still-none-shouldn-t-it-have-loaded-foo-with-id-7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ORMは、外部キー属性の変更に起因する関係の即時の集団をサポートするような方法で構築されているのではなく、逆の働きをするように設計されています。外部キー属性は、オブジェクト関係を自然に設定します。したがって、 `` o.foo``を設定するための推奨される方法は、これを行うことです - それを設定する！:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Foo</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="n">o</span><span class="o">.</span><span class="n">foo</span> <span class="o">=</span> <span class="n">foo</span>
 <span class="n">Session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></pre></div>
 </div>
-<p>Manipulation of foreign key attributes is of course entirely legal.  However,
-setting a foreign-key attribute to a new value currently does not trigger
-an &quot;expire&quot; event of the <a class="reference internal" href="../orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> in which it's involved.  This means
-that for the following sequence:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SomeClass</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<p>もちろん、外部キー属性の操作は完全に合法です。しかし、外部キー属性を新しい値に設定しても、それが関与している：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.relationship`の&amp;quot; expire &amp;quot;イベントは発生しません。これは、以下のシーケンスのために：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SomeClass</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
 <span class="k">assert</span> <span class="n">o</span><span class="o">.</span><span class="n">foo</span> <span class="ow">is</span> <span class="kc">None</span>  <span class="c1"># accessing an un-set attribute sets it to None</span>
 <span class="n">o</span><span class="o">.</span><span class="n">foo_id</span> <span class="o">=</span> <span class="mi">7</span></pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">o.foo</span></code> is initialized to <code class="docutils literal"><span class="pre">None</span></code> when we first accessed it.  Setting
-<code class="docutils literal"><span class="pre">o.foo_id</span> <span class="pre">=</span> <span class="pre">7</span></code> will have the value of &quot;7&quot; as pending, but no flush
-has occurred - so <code class="docutils literal"><span class="pre">o.foo</span></code> is still <code class="docutils literal"><span class="pre">None</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># attribute is already set to None, has not been</span>
+<p>`` o.foo``は最初にアクセスしたときに `` None``に初期化されます。 `` o.foo_id = 7``を設定すると、保留中の&amp;quot;7 &amp;quot;の値を持ちますが、フラッシュは発生していません - したがって `` o.foo``は `` None``です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># attribute is already set to None, has not been</span>
 <span class="c1"># reconciled with o.foo_id = 7 yet</span>
 <span class="k">assert</span> <span class="n">o</span><span class="o">.</span><span class="n">foo</span> <span class="ow">is</span> <span class="kc">None</span></pre></div>
 </div>
-<p>For <code class="docutils literal"><span class="pre">o.foo</span></code> to load based on the foreign key mutation is usually achieved
-naturally after the commit, which both flushes the new foreign key value
-and expires all state:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>  <span class="c1"># expires all attributes</span>
+<p>`` o.foo``が外部キーに基づいてロードするためには、突然変異は通常、新しい外部キー値をフラッシュしてすべての状態を期限切れにするコミット後に自然に達成されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>  <span class="c1"># expires all attributes</span>
 
 <span class="n">foo_7</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Foo</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">o</span><span class="o">.</span><span class="n">foo</span> <span class="ow">is</span> <span class="n">foo_7</span>  <span class="c1"># o.foo lazyloads on access</span></pre></div>
 </div>
-<p>A more minimal operation is to expire the attribute individually - this can
-be performed for any <a class="reference internal" href="../glossary.html#term-persistent"><span class="xref std std-term">persistent</span></a> object using <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.expire" title="sqlalchemy.orm.session.Session.expire"><code class="xref py py-meth docutils literal"><span class="pre">Session.expire()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SomeClass</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<p>最小限の操作で属性を個別に期限切れにすることができます。これは：term： <cite>persistent`オブジェクトに対して：meth：</cite> .Session.expire` ::を使用して実行できます</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SomeClass</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
 <span class="n">o</span><span class="o">.</span><span class="n">foo_id</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">Session</span><span class="o">.</span><span class="n">expire</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">])</span>  <span class="c1"># object must be persistent for this</span>
 
@@ -511,11 +386,8 @@ be performed for any <a class="reference internal" href="../glossary.html#term-p
 
 <span class="k">assert</span> <span class="n">o</span><span class="o">.</span><span class="n">foo</span> <span class="ow">is</span> <span class="n">foo_7</span>  <span class="c1"># o.foo lazyloads on access</span></pre></div>
 </div>
-<p>Note that if the object is not persistent but present in the <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>,
-it's known as <a class="reference internal" href="../glossary.html#term-pending"><span class="xref std std-term">pending</span></a>.   This means the row for the object has not been
-INSERTed into the database yet.  For such an object, setting <code class="docutils literal"><span class="pre">foo_id</span></code> does not
-have meaning until the row is inserted; otherwise there is no row yet:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">new_obj</span> <span class="o">=</span> <span class="n">SomeClass</span><span class="p">()</span>
+<p>オブジェクトが永続的ではなく、：class： <cite>.Session`に存在する場合、それは：term：</cite> pending`と呼ばれます。これは、オブジェクトの行がまだデータベースにINSERTされていないことを意味します。このようなオブジェクトの場合、 `` foo_id``は行が挿入されるまで意味を持ちません。そうでなければまだ行はありません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">new_obj</span> <span class="o">=</span> <span class="n">SomeClass</span><span class="p">()</span>
 <span class="n">new_obj</span><span class="o">.</span><span class="n">foo_id</span> <span class="o">=</span> <span class="mi">7</span>
 
 <span class="n">Session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_obj</span><span class="p">)</span>
@@ -532,27 +404,14 @@ have meaning until the row is inserted; otherwise there is no row yet:</p>
 </div>
 <div class="topic">
 <p class="topic-title first">Attribute loading for non-persistent objects</p>
-<p>One variant on the &quot;pending&quot; behavior above is if we use the flag
-<code class="docutils literal"><span class="pre">load_on_pending</span></code> on <a class="reference internal" href="../orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>.   When this flag is set, the
-lazy loader will emit for <code class="docutils literal"><span class="pre">new_obj.foo</span></code> before the INSERT proceeds; another
-variant of this is to use the <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.enable_relationship_loading" title="sqlalchemy.orm.session.Session.enable_relationship_loading"><code class="xref py py-meth docutils literal"><span class="pre">Session.enable_relationship_loading()</span></code></a>
-method, which can &quot;attach&quot; an object to a <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> in such a way that
-many-to-one relationships load as according to foreign key attributes
-regardless of the object being in any particular state.
-Both techniques are <strong>not recommended for general use</strong>; they were added to suit
-specific programming scenarios encountered by users which involve the repurposing
-of the ORM's usual object states.</p>
+<p>func： <cite>.relationship`でフラグ</cite> <cite>load_on_pending``を使用すると、上の&amp;quot; pending &amp;quot;の動作の変種があります。このフラグが設定されると、INSERTが進む前に `</cite> new_obj.foo``のために遅延ローダが出力します。これの別の変形は、：meth： <cite>.Session.enable_relationship_loading`メソッドを使用することです。このメソッドは、多対1の関係が以下のようにロードするようにオブジェクトをa：class：</cite> .Session`にアタッチすることができますどちらのテクニックも**一般的な使用には推奨されていません**; ORMの通常のオブジェクト状態の再利用を伴うユーザーが遭遇する特定のプログラミングシナリオに合うように追加されました。</p>
 </div>
-<p>The recipe <a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes/ExpireRelationshipOnFKChange">ExpireRelationshipOnFKChange</a> features an example using SQLAlchemy events
-in order to coordinate the setting of foreign key attributes with many-to-one
-relationships.</p>
+<p>レシピ <a href="#id1"><span class="problematic" id="id2">`</span></a>ExpireRelationshipOnFKChange &lt;<a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes/ExpireRelationshipOnFKChange">http://www.sqlalchemy.org/trac/wiki/UsageRecipes/ExpireRelationshipOnFKChange</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_には、SQLAlchemyイベントを使用して、多対1の関係で外部キー属性の設定を調整する例があります。</p>
 </div>
 <div class="section" id="how-do-i-walk-all-objects-that-are-related-to-a-given-object">
-<span id="faq-walk-objects"></span><h2>How do I walk all objects that are related to a given object?<a class="headerlink" href="#how-do-i-walk-all-objects-that-are-related-to-a-given-object" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>An object that has other objects related to it will correspond to the
-<a class="reference internal" href="../orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> constructs set up between mappers.  This code fragment will
-iterate all the objects, correcting for cycles as well:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">inspect</span>
+<span id="faq-walk-objects"></span><h2>特定のオブジェクトに関連するすべてのオブジェクトをどのように歩くのですか？<a class="headerlink" href="#how-do-i-walk-all-objects-that-are-related-to-a-given-object" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>それに関連する他のオブジェクトを持つオブジェクトは、マッパーの間に設定された：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.relationship`コンストラクトに対応します。このコードフラグメントは、すべてのオブジェクトを繰り返し処理し、サイクルも修正します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">inspect</span>
 
 
 <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
@@ -575,8 +434,8 @@ iterate all the objects, correcting for cycles as well:</p>
             <span class="k">elif</span> <span class="n">related</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="n">deque</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">related</span><span class="p">)</span></pre></div>
 </div>
-<p>The function can be demonstrated as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
+<p>この機能は次のように示すことができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
 
 
 <span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
@@ -604,44 +463,23 @@ iterate all the objects, correcting for cycles as well:</p>
 <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">walk</span><span class="p">(</span><span class="n">a1</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></pre></div>
 </div>
-<p>Output:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">A</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x10303b190</span><span class="o">&gt;</span>
+<p>出力：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">A</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x10303b190</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">B</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x103025210</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">B</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x10303b0d0</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">C</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x103025490</span><span class="o">&gt;</span></pre></div>
 </div>
 </div>
 <div class="section" id="is-there-a-way-to-automagically-have-only-unique-keywords-or-other-kinds-of-objects-without-doing-a-query-for-the-keyword-and-getting-a-reference-to-the-row-containing-that-keyword">
-<h2>Is there a way to automagically have only unique keywords (or other kinds of objects) without doing a query for the keyword and getting a reference to the row containing that keyword?<a class="headerlink" href="#is-there-a-way-to-automagically-have-only-unique-keywords-or-other-kinds-of-objects-without-doing-a-query-for-the-keyword-and-getting-a-reference-to-the-row-containing-that-keyword" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>When people read the many-to-many example in the docs, they get hit with the
-fact that if you create the same <code class="docutils literal"><span class="pre">Keyword</span></code> twice, it gets put in the DB twice.
-Which is somewhat inconvenient.</p>
-<p>This <a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes/UniqueObject">UniqueObject</a> recipe was created to address this issue.</p>
+<h2>キーワードのクエリを実行せずに、そのキーワードを含む行への参照を取得せずに、一意のキーワード（または他の種類のオブジェクト）のみを自動的に持つ方法はありますか？<a class="headerlink" href="#is-there-a-way-to-automagically-have-only-unique-keywords-or-other-kinds-of-objects-without-doing-a-query-for-the-keyword-and-getting-a-reference-to-the-row-containing-that-keyword" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>人々がドキュメントの多対多の例を読むと、同じ `` Keyword``を2回作成するとDBに2回置かれます。これはやや不便です。</p>
+<p>この <a href="#id1"><span class="problematic" id="id2">`</span></a>UniqueObject &lt;<a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes/UniqueObject">http://www.sqlalchemy.org/trac/wiki/UsageRecipes/UniqueObject</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_このレシピに対処するためのレシピが作成されました。</p>
 </div>
 <div class="section" id="why-does-post-update-emit-update-in-addition-to-the-first-update">
-<span id="faq-post-update-update"></span><h2>Why does post_update emit UPDATE in addition to the first UPDATE?<a class="headerlink" href="#why-does-post-update-emit-update-in-addition-to-the-first-update" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The post_update feature, documented at <a class="reference internal" href="../orm/relationship_persistence.html#post-update"><span class="std std-ref">Rows that point to themselves / Mutually Dependent Rows</span></a>, involves that an
-UPDATE statement is emitted in response to changes to a particular
-relationship-bound foreign key, in addition to the INSERT/UPDATE/DELETE that
-would normally be emitted for the target row.  While the primary purpose of this
-UPDATE statement is that it pairs up with an INSERT or DELETE of that row, so
-that it can post-set or pre-unset a foreign key reference in order to break a
-cycle with a mutually dependent foreign key, it currently is also bundled as a
-second UPDATE that emits when the target row itself is subject to an UPDATE.
-In this case, the UPDATE emitted by post_update is <em>usually</em> unnecessary
-and will often appear wasteful.</p>
-<p>However, some research into trying to remove this &quot;UPDATE / UPDATE&quot; behavior
-reveals that major changes to the unit of work process would need to occur  not
-just throughout the post_update implementation, but also in areas that aren't
-related to post_update for this to work, in that the order of operations would
-need to be reversed on the non-post_update side in some cases, which in turn
-can impact other cases, such as correctly handling an UPDATE of a referenced
-primary key value (see <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/1063">#1063</a> for a proof of concept).</p>
-<p>The answer is that &quot;post_update&quot; is used to break a cycle between two
-mutually dependent foreign keys, and to have this cycle breaking be limited
-to just INSERT/DELETE of the target table implies that the ordering of UPDATE
-statements elsewhere would need to be liberalized, leading to breakage
-in other edge cases.</p>
+<span id="faq-post-update-update"></span><h2>post_updateが最初のUPDATEに加えてUPDATEを発行するのはなぜですか？<a class="headerlink" href="#why-does-post-update-emit-update-in-addition-to-the-first-update" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>post_update`に記載されているpost_update機能は、通常、ターゲットに対して発行されるINSERT / UPDATE / DELETEに加えて、特定のリレーションバインドされた外部キーへの変更に応じてUPDATE文が発行される行。このUPDATE文の主な目的は、その行のINSERTまたはDELETEとペアにして、相互に依存する外部キーを使用してサイクルを中断するために外部キー参照をポストセットまたは事前設定解除できるようにすることですが、現在は、ターゲット行自体がUPDATEの対象となるときに発行される2番目のUPDATEとしてバンドルされています。この場合、post_updateによって発行されるUPDATEは通常は不要*であり、多くの場合無駄に見えます。</p>
+<p>しかし、この &amp;quot;UPDATE / UPDATE&amp;quot;動作を削除しようとするいくつかの研究では、作業単位プロセスの大きな変更は、post_updateの実装全体だけでなく、post_updateに関連しない領域これは動作するためには、非post_update側で操作の順序を逆にする必要があり、参照される主キー値のUPDATEを正しく処理するなどの他のケースに影響を与える可能性があります（ticket：概念の証明のために「1063」）。</p>
+<p>答えは、&amp;quot;post_update &amp;quot;が相互に依存する2つの外部キーの間のサイクルを壊し、このサイクルを分割することがターゲットテーブルのINSERT / DELETEに限定されるようにするために、UPDATEステートメントの順序が自由化され、他の縁の場合に破損につながる。</p>
 </div>
 </div>
 
@@ -651,13 +489,13 @@ in other edge cases.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="performance.html" title="previous chapter">Performance</a>
+        <a href="performance.html" title="previous chapter">パフォーマンス</a>
         Next:
-        <a href="../errors.html" title="next chapter">Error Messages</a>
+        <a href="../errors.html" title="next chapter">エラーメッセージ</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -684,6 +522,7 @@ in other edge cases.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

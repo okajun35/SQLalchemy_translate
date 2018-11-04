@@ -6,26 +6,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/index.rst:5
 msgid "ORM Extensions"
-msgstr ""
+msgstr "ORM拡張"
 
 #: ../../orm/extensions/index.rst:7
 msgid ""
 "SQLAlchemy has a variety of ORM extensions available, which add "
 "additional functionality to the core behavior."
-msgstr ""
+msgstr "SQLAlchemyにはさまざまなORM拡張が用意されており、コア動作に追加の機能が追加されています。"
 
 #: ../../orm/extensions/index.rst:10
 msgid ""
@@ -34,5 +24,5 @@ msgid ""
 "understanding of their behavior.   In particular the \"Horizontal "
 "Sharding\", \"Hybrid Attributes\", and \"Mutation Tracking\" extensions "
 "are very succinct."
-msgstr ""
+msgstr "この拡張は、ほぼ完全に公的なコアとORMのAPIに基づいており、ユーザはソースコードを読んで行動の理解を深めるよう奨励されるべきです。特に、\ &quot;Horizo​​ntal Sharding \&quot;、\ &quot;Hybrid Attributes \&quot;、\ &quot;Mutation Tracking \&quot;という拡張は非常に簡潔です。"
 

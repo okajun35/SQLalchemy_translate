@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/session_transaction.rst:3
 msgid "Transactions and Connection Management"
-msgstr ""
+msgstr "トランザクションと接続管理"
 
 #: ../../orm/session_transaction.rst:8
 msgid "Managing Transactions"
-msgstr ""
+msgstr "トランザクションの管理"
 
 #: ../../orm/session_transaction.rst:10
 msgid ""
@@ -31,7 +21,7 @@ msgid ""
 "state. In this state, the :class:`.Session` has not established any "
 "connection or transactional state with any of the :class:`.Engine` "
 "objects that may be associated with it."
-msgstr ""
+msgstr "新しく構築された：class： `.Session`は\&quot; begin \ &quot;状態にあると言えるでしょう。この状態では、：class： `.Session`は：class：` .Engine`オブジェクトのどれかと結びついていたり、接続状態やトランザクション状態を確立していません。"
 
 #: ../../orm/session_transaction.rst:15
 msgid ""
@@ -41,7 +31,7 @@ msgid ""
 ":meth:`.Session.query`, :meth:`.Session.execute`, or within a flush "
 "operation of pending data, which occurs when such state exists and "
 ":meth:`.Session.commit` or :meth:`.Session.flush` is called."
-msgstr ""
+msgstr "：class： `.Session`はデータベース接続時の操作要求を受け取ります。通常、これは：class： `.Engine`（これは：meth：` .Session.query`、：meth： `.Session.execute`、またはa：の中にあるかもしれない）を使用してSQLステートメントを実行するよう呼び出されます。この状態が存在し、：meth： `.Session.commit`または：meth：` .Session.flush`が呼び出されたときに発生する保留中のデータの操作をフラッシュします。"
 
 #: ../../orm/session_transaction.rst:21
 msgid ""
@@ -55,7 +45,7 @@ msgid ""
 " directly associated with the :class:`.Session` (see "
 ":ref:`session_external_transaction` for an example of this), it is added "
 "to the transactional state directly."
-msgstr ""
+msgstr "これらの要求が受け取られると、新しい：class： `.Engine`が発生しました：class：` .Session`によって維持されている進行中のトランザクション状態に関連付けられます。最初の：class： `.Engine`が操作されると、：class：` .Session`は\ begin状態を残し、\ transactional \状態に入ったと言えるでしょう。それぞれ：class： `.Engine`が見つかりました。：class：` .Connection`は：meth： `.Engine.contextual_connect`メソッドを介して取得された、それに関連付けられています。 a：class： `.Connection`が：class：` .Session`（これの例については：ref： `session_external_transaction`を参照）に直接関連付けられていた場合、それはトランザクション状態に直接追加されます。"
 
 #: ../../orm/session_transaction.rst:31
 msgid ""
@@ -69,7 +59,7 @@ msgid ""
 ":meth:`.Session.commit` and :meth:`.Session.rollback` methods.   A commit"
 " operation will also call the :meth:`.TwoPhaseTransaction.prepare` method"
 " on all transactions if applicable."
-msgstr ""
+msgstr "それぞれ：class： `.Connection`の場合、：class：` .Session`は：class： `.Transaction`オブジェクトも保持します。これは、それぞれ：meth：` .Connection.begin`を呼び出すことによって取得されます：class： ` `` Twophase = True``を使って：class： `.Session`オブジェクトが確立されていれば、：class：` .TwoPhaseTransaction`オブジェクトは：meth： `.Connection.begin_twophase`で取得されます。これらのトランザクションは、：meth： `.Session.commit`メソッドと：meth：` .Session.rollback`メソッドの呼び出しに対応して、すべてコミットまたはロールバックされます。該当する場合、コミット操作はすべてのトランザクションに対して：meth： `.TwoPhaseTransaction.prepare`メソッドも呼び出します。"
 
 #: ../../orm/session_transaction.rst:40
 msgid ""
@@ -79,21 +69,21 @@ msgid ""
 "which will again invoke new :class:`.Connection` and "
 ":class:`.Transaction` objects as new requests to emit SQL statements are "
 "received."
-msgstr ""
+msgstr "トランザクション状態がロールバックまたはコミット後に完了すると、：class： `.Session`：term：` releases` all：class： `.Transaction`と：class：` .Connection`リソースが返され、 &quot;begin&quot;ステートで、新しい：class： `.Connection`と：class：` .Transaction`オブジェクトを、SQL文を発行する新しいリクエストとして再度呼び出すことになります。"
 
 #: ../../orm/session_transaction.rst:46
 msgid "The example below illustrates this lifecycle::"
-msgstr ""
+msgstr "以下の例はこのライフサイクルを示しています::"
 
 #: ../../orm/session_transaction.rst:91
 msgid "Using SAVEPOINT"
-msgstr ""
+msgstr "SAVEPOINTの使用"
 
 #: ../../orm/session_transaction.rst:93
 msgid ""
 "SAVEPOINT transactions, if supported by the underlying engine, may be "
 "delineated using the :meth:`~.Session.begin_nested` method::"
-msgstr ""
+msgstr "基盤となるエンジンでサポートされている場合、SAVEPOINTトランザクションは：meth： `〜.Session.begin_nested`メソッドを使用して記述することができます::"
 
 #: ../../orm/session_transaction.rst:108
 msgid ""
@@ -104,7 +94,7 @@ msgid ""
 "(But note that if the return value is used as a context manager, i.e. in "
 "a with-statement, then this rollback/commit is issued by the context "
 "manager upon exiting the context, and so should not be added explicitly.)"
-msgstr ""
+msgstr "：meth： `〜.Session.begin_nested`は何度も呼び出すことができ、呼び出しごとに一意の識別子を持つ新しいSAVEPOINTを発行します。それぞれ：meth： `〜.Session.begin_nested`呼び出しに対して、対応する：meth：`〜.Session.rollback`または：meth： `〜.Session.commit`を発行する必要があります。 （ただし、戻り値がコンテキストマネージャ、つまりwith文で使用される場合、このロールバック/コミットはコンテキストを終了するときにコンテキストマネージャによって発行されるため、明示的に追加しないでください。"
 
 #: ../../orm/session_transaction.rst:117
 msgid ""
@@ -115,7 +105,7 @@ msgid ""
 "access to reference the full state of the "
 ":class:`~sqlalchemy.orm.session.Session` right before "
 ":meth:`~.Session.begin_nested` was called."
-msgstr ""
+msgstr "：meth： `〜.Session.begin_nested`が呼び出されると、` `autoflush``の設定に関係なく、：meth：`〜.Session.flush`が無条件で発行されます。これは、a：meth： `〜.Session.rollback`が発生したときにセッションの完全状態が満了し、それ以降のすべての属性/インスタンスアクセスが：class：`〜sqlalchemy.orm .session.Session`の直前：meth： `〜。Session.begin_nested`が呼び出されました。"
 
 #: ../../orm/session_transaction.rst:125
 msgid ""
@@ -124,11 +114,11 @@ msgid ""
 "object which works as a context manager. It can be succinctly used around"
 " individual record inserts in order to catch things like unique "
 "constraint exceptions::"
-msgstr ""
+msgstr "：meth： `〜。Session.begin_nested`は、less：meth：`〜.Session.begin`メソッドと同じように、コンテキストマネージャとして機能する：class： `.SessionTransaction`オブジェクトを返します。ユニークな制約の例外のようなものを捕まえるために、個々のレコードの挿入の周りで簡潔に使用することができます::"
 
 #: ../../orm/session_transaction.rst:142
 msgid "Autocommit Mode"
-msgstr ""
+msgstr "自動コミットモード"
 
 #: ../../orm/session_transaction.rst:144
 msgid ""
@@ -138,7 +128,7 @@ msgid ""
 "transactions automatically as soon as it needs to do work upon a database"
 " connection; the transaction then stays in progress until the "
 ":meth:`.Session.commit` or :meth:`.Session.rollback` methods are called."
-msgstr ""
+msgstr "：ref： `unitofwork_transaction`のセッションライフサイクルの例は、` `autocommit = False``のデフォルトモードで動作するclass：` .Session`を参照しています。このモードでは、：class： `.Session`は、データベース接続時に作業が必要になると自動的に新しいトランザクションを開始します。 ：meth： `.Session.commit`または：meth：` .Session.rollback`メソッドが呼び出されるまで、トランザクションは進行中です。"
 
 #: ../../orm/session_transaction.rst:151
 msgid ""
@@ -152,7 +142,7 @@ msgid ""
 "query returned by :meth:`.Session.query`.  For a flush operation, the "
 ":class:`.Session` starts a new transaction for the duration of the flush,"
 " and commits it when complete."
-msgstr ""
+msgstr "：class： `.Session`は、トランザクションが暗黙的に開始されない、** autocommitモード**と呼ばれる古いレガシー使用モードも備えています。：meth：` .Session.begin`メソッドが呼び出されない限り、 ：class： `.Session`は、接続プールからチェックアウトされた新しい接続上で各データベース操作を実行し、操作が完了した直後にプールに戻されます。これは、：meth： `.Session.query`で返されたクエリを実行するときと同様に：meth：`。Session.execute`のようなメソッドを参照します。フラッシュ操作の場合、：class： `.Session`は、フラッシュ中に新しいトランザクションを開始し、完了するとコミットします。"
 
 #: ../../orm/session_transaction.rst:164
 msgid ""
@@ -161,7 +151,7 @@ msgid ""
 " advised that the application at least ensure that tranasction scope is "
 "made present via the :meth:`.Session.begin` method, rather than using the"
 " session in pure autocommit mode."
-msgstr ""
+msgstr "\ &quot;autocommit \&quot;モードは**従来の使用モード**であり、新しいプロジェクトでは使用しないでください。自動コミットモードが使用されている場合、純粋な自動コミットモードでセッションを使用するのではなく、少なくとも：meth： `.Session.begin`メソッドを使用して、トランザクションのスコープが存在することを確認することを強くお勧めします。"
 
 #: ../../orm/session_transaction.rst:170
 msgid ""
@@ -170,7 +160,7 @@ msgid ""
 "then the application probably should set ``autoflush=False, "
 "expire_on_commit=False``, since these features are intended to be used "
 "only within the context of a database transaction."
-msgstr ""
+msgstr "：meth： `.Session.begin`メソッドが使用されておらず、即時の自動コミットを伴うアドホック接続を使用して操作を続行できる場合、アプリケーションはおそらく` `autoflush = False、expire_on_commit = False``を設定する必要があります。これらの機能は、データベーストランザクションのコンテキスト内でのみ使用されることを意図しています。"
 
 #: ../../orm/session_transaction.rst:176
 msgid ""
@@ -182,17 +172,17 @@ msgid ""
 ":meth:`.Session.rollback`, connection and transaction resources are "
 ":term:`released` and the :class:`.Session` goes back into \"autocommit\" "
 "mode, until :meth:`.Session.begin` is called again::"
-msgstr ""
+msgstr "最近の\ &quot;自動コミットモード\&quot;の使用は、\ &quot;開始\&quot;状態が発生したときに特に制御したいフレームワーク統合の傾向があります。 `` autocommit = True``で設定されたセッションは：meth： `.Session.begin`メソッドを使って\&quot; begin \ &quot;状態に置くことができます。サイクルが：meth： `.Session.commit`または：meth：` .Session.rollback`で完了すると、接続およびトランザクションリソースはterm： `released`で、：class：` .Session`は\ autocommit \ &quot;mode、until：meth：` .Session.begin`をもう一度呼び出す::"
 
 #: ../../orm/session_transaction.rst:197
 msgid ""
 "The :meth:`.Session.begin` method also returns a transactional token "
 "which is compatible with the ``with`` statement::"
-msgstr ""
+msgstr "：meth： `.Session.begin`メソッドは` `with``ステートメントと互換性のあるトランザクショントークンを返します::"
 
 #: ../../orm/session_transaction.rst:211
 msgid "Using Subtransactions with Autocommit"
-msgstr ""
+msgstr "自動コミットでのサブトランザクションの使用"
 
 #: ../../orm/session_transaction.rst:213
 msgid ""
@@ -203,7 +193,7 @@ msgid ""
 "allow the construction of code that can function within a transaction "
 "both independently of any external code that starts a transaction, as "
 "well as within a block that has already demarcated a transaction."
-msgstr ""
+msgstr "サブトランザクションは：meth： `.Session.begin`メソッドを` `subtransactions = True``フラグと共に使用することを示します。これにより、非トランザクション型の区切り構造が生成され、：meth： `〜.Session.begin`と：meth：`〜.Session.commit`の呼び出しをネストすることができます。その目的は、トランザクションを開始する外部コードと、トランザクションを既に定義したブロック内の両方とは独立して、トランザクション内で機能するコードの構築を可能にすることです。"
 
 #: ../../orm/session_transaction.rst:220
 msgid ""
@@ -213,7 +203,7 @@ msgid ""
 " call :meth:`.Connection.begin` and :meth:`.Transaction.commit` as though"
 " they are the initiator of the transaction, but in fact may be "
 "participating in an already ongoing transaction::"
-msgstr ""
+msgstr "`` subtransactions = True``は一般的に自動コミットとの組み合わせでのみ有効で、ref： `connections_nested_transactions`に記述されているパターンと同等です。ここで任意の数の関数が：meth：` .Connection.begin`と：meth ： `.Transaction.commit`があたかもトランザクションのイニシエータであるかのように、実際には既に進行中のトランザクションに参加している可能性があります::"
 
 #: ../../orm/session_transaction.rst:254
 msgid ""
@@ -223,11 +213,11 @@ msgid ""
 "forces the :class:`.Session` into a \"pending rollback\" state, as a "
 "failed flush cannot be resumed in mid-operation, where the end user still"
 " maintains the \"scope\" of the transaction overall."
-msgstr ""
+msgstr "サブトランザクションは、：meth： `.Session.flush`プロセスによって使用され、自動コミットに関係なく、トランザクション内でフラッシュ操作が確実に行われます。自動コミットが無効になっているときは、：class： `.Session`を強制的に\&quot; pending rollback \ &quot;状態にしておくと便利です。途中で失敗したフラッシュを再開することはできません。トランザクションの全体的な &quot;スコープ&quot;。"
 
 #: ../../orm/session_transaction.rst:263
 msgid "Enabling Two-Phase Commit"
-msgstr ""
+msgstr "2フェーズコミットの有効化"
 
 #: ../../orm/session_transaction.rst:265
 msgid ""
@@ -238,11 +228,11 @@ msgid ""
 "all databases. You can also :meth:`~.Session.prepare` the session for "
 "interacting with transactions not managed by SQLAlchemy. To use two phase"
 " transactions set the flag ``twophase=True`` on the session::"
-msgstr ""
+msgstr "2フェーズオペレーション（現在のMySQLとPostgreSQL）をサポートするバックエンドの場合、セッションは2フェーズコミットセマンティクスを使用するように指示できます。これは、トランザクションがすべてのデータベースでコミットまたはロールバックされるように、データベース間のトランザクションのコミットを調整します。 SQLAlchemyによって管理されていないトランザクションと対話するためのセッションをmeth： `〜.Session.prepare`することもできます。 2つのフェーズトランザクションを使用するには、セッションでフラグ `` twophase = True``を設定します::"
 
 #: ../../orm/session_transaction.rst:293
 msgid "Setting Transaction Isolation Levels"
-msgstr ""
+msgstr "トランザクション分離レベルの設定"
 
 #: ../../orm/session_transaction.rst:295
 msgid ""
@@ -251,7 +241,7 @@ msgid ""
 "  There are four well-known modes of isolation, and typically the Python "
 "DBAPI allows these to be set on a per-connection basis, either through "
 "explicit APIs or via database-specific calls."
-msgstr ""
+msgstr "：term： `Isolation`は、並行して発生する他のトランザクションに関連した、データベースレベルでのトランザクションの振る舞いを指します。 4つのよく知られた分離モードがあります。通常、Python DBAPIでは、明示的なAPIまたはデータベース固有の呼び出しを介して、接続ごとにこれらを設定できます。"
 
 #: ../../orm/session_transaction.rst:301
 msgid ""
@@ -259,7 +249,7 @@ msgid ""
 "per-:class:`.Engine` or per-:class:`.Connection` basis, using flags at "
 "both the :func:`.create_engine` level as well as at the "
 ":meth:`.Connection.execution_options` level."
-msgstr ""
+msgstr "SQLAlchemyの方言は：：class： `.Engine`またはper-：class：` .Connection`ベースで設定可能な分離モードをサポートしています。：func： `.create_engine`レベルと：meth： `.Connection.execution_options`レベルです。"
 
 #: ../../orm/session_transaction.rst:306
 msgid ""
@@ -267,38 +257,38 @@ msgid ""
 "and connections, but does not expose transaction isolation directly.  So "
 "in order to affect transaction isolation level, we need to act upon the "
 ":class:`.Engine` or :class:`.Connection` as appropriate."
-msgstr ""
+msgstr "ORM：class： `.Session`を使用すると、エンジンと接続の* facade *として機能しますが、トランザクションの分離は直接的には公開されません。だから、トランザクションの分離レベルに影響を与えるためには、必要に応じて：class： `.Engine`または：class：` .Connection`を実行する必要があります。"
 
 #: ../../orm/session_transaction.rst:313
 msgid ":paramref:`.create_engine.isolation_level`"
-msgstr ""
+msgstr "：paramref： `.create_engine.isolation_level`"
 
 #: ../../orm/session_transaction.rst:315
 msgid ":ref:`SQLite Transaction Isolation <sqlite_isolation_level>`"
-msgstr ""
+msgstr "：ref： `SQLiteトランザクションの分離<sqlite_isolation_level> `"
 
 #: ../../orm/session_transaction.rst:317
 msgid ":ref:`PostgreSQL Isolation Level <postgresql_isolation_level>`"
-msgstr ""
+msgstr "：ref： `PostgreSQLの分離レベル<postgresql_isolation_level> `"
 
 #: ../../orm/session_transaction.rst:319
 msgid ":ref:`MySQL Isolation Level <mysql_isolation_level>`"
-msgstr ""
+msgstr "：ref： `MySQL分離レベル<mysql_isolation_level> `"
 
 #: ../../orm/session_transaction.rst:322
 msgid "Setting Isolation Engine-Wide"
-msgstr ""
+msgstr "分離エンジン全体を設定する"
 
 #: ../../orm/session_transaction.rst:324
 msgid ""
 "To set up a :class:`.Session` or :class:`.sessionmaker` with a specific "
 "isolation level globally, use the "
 ":paramref:`.create_engine.isolation_level` parameter::"
-msgstr ""
+msgstr "class： `.Session`または：class：` .sessionmaker`を特定の分離レベルでグローバルに設定するには、：paramref： `.create_engine.isolation_level`パラメータを使用します::"
 
 #: ../../orm/session_transaction.rst:341
 msgid "Setting Isolation for Individual Sessions"
-msgstr ""
+msgstr "個々のセッションの分離を設定する"
 
 #: ../../orm/session_transaction.rst:343
 msgid ""
@@ -308,7 +298,7 @@ msgid ""
 "overriding the pre-existing bind. We can combine this with the "
 ":meth:`.Engine.execution_options` method in order to produce a copy of "
 "the original :class:`.Engine` that will add this option::"
-msgstr ""
+msgstr "new：class： `.Session`をコンストラクタを直接使用するか、または：class：` .sessionmaker`によって生成された呼び出し可能関数を呼び出すときに、 `` bind``引数を直接渡すことができます。既存のバインド。これを：meth： `.Engine.execution_options`メソッドと組み合わせて、元の：class：` .Engine`のコピーを生成することができます。これはこのオプションを追加します::"
 
 #: ../../orm/session_transaction.rst:353
 msgid ""
@@ -317,15 +307,15 @@ msgid ""
 "``binds`` argument fully, or if we want to only replace specific binds, "
 "we can use the :meth:`.Session.bind_mapper` or "
 ":meth:`.Session.bind_table` methods::"
-msgstr ""
+msgstr "：class： `.Session`や：class：` .sessionmaker`が複数の &quot;binds&quot;で構成されている場合、 `` binds``引数を完全に再指定するか、あるいは特定のバインドを置き換えるだけで、：meth： `.Session.bind_mapper`または：meth：` .Session.bind_table`メソッドを使用できます::"
 
 #: ../../orm/session_transaction.rst:363
 msgid "We can also use the individual transaction method that follows."
-msgstr ""
+msgstr "後続の個々のトランザクションメソッドを使用することもできます。"
 
 #: ../../orm/session_transaction.rst:366
 msgid "Setting Isolation for Individual Transactions"
-msgstr ""
+msgstr "個々のトランザクションの隔離の設定"
 
 #: ../../orm/session_transaction.rst:368
 msgid ""
@@ -342,7 +332,7 @@ msgid ""
 "execution options to the :class:`.Session` at the start of a transaction "
 "by passing :paramref:`.Session.connection.execution_options` provided by "
 "the :meth:`.Session.connection` method::"
-msgstr ""
+msgstr "分離レベルに関する重要な注意点は、トランザクションが既に開始されているクラス： `.Connection`で設定を安全に変更できないことです。データベースは進行中のトランザクションの分離レベルを変更することができず、一部のDBAPIとSQLAlchemyの方言はこの領域で矛盾した動作をします。いくつかは暗黙的にROLLBACKを発行し、あるものは暗黙的にCOMMITを発行し、他のものは次のトランザクションまで設定を無視することがあります。したがって、SQLAlchemyは、トランザクションが既に実行されているときにこのオプションが設定されていると警告を出します。 ：class： `.Session`オブジェクトは、トランザクションがまだ開始されていないトランザクションで使用するためにclass：` .Connection`を提供しません。ここでは、：meth： `.Session.connection`メソッドによって提供された：paramref：` .Session.connection.execution_options`を渡すことによって、トランザクションの開始時に：class： `.Session`に実行オプションを渡す必要があります。 ::"
 
 #: ../../orm/session_transaction.rst:393
 msgid ""
@@ -354,7 +344,7 @@ msgid ""
 "has multiple binds or some other custom scheme for "
 ":meth:`.Session.get_bind`, we can pass additional arguments to "
 ":meth:`.Session.connection` in order to affect how the bind is procured::"
-msgstr ""
+msgstr "上では、まず、：class： `.session`をコンストラクタまたはa：class：` .sessionmaker`を使って生成します。次に、：meth： `.Session.connection`を呼び出して明示的にトランザクションの開始を設定します。これは、トランザクションが開始される前に接続に渡される実行オプションを提供します。複数のバインドや：meth： `.Session.get_bind`のカスタムスキームを持つ：class：` .Session`を使って作業している場合は、meth： `.Session.connection`に追加の引数を順番に渡すことができますバインドの調達方法に影響を与える::"
 
 #: ../../orm/session_transaction.rst:416
 msgid ""
@@ -362,27 +352,27 @@ msgid ""
 "accepted on the **first** call to :meth:`.Session.connection` for a "
 "particular bind within a transaction.  If a transaction is already begun "
 "on the target connection, a warning is emitted::"
-msgstr ""
+msgstr "：paramref： `.Session.connection.execution_options`引数は、トランザクション内の特定のバインドに対して：meth：` .Session.connection`への**最初の**呼び出しでのみ受け入れられます。ターゲット接続ですでにトランザクションが開始されている場合、警告が発行されます。"
 
 #: ../../orm/session_transaction.rst:428
 msgid ""
 "Added the :paramref:`.Session.connection.execution_options` parameter to "
 ":meth:`.Session.connection`."
-msgstr ""
+msgstr "：meth： `.Session.connection`に：paramref：` .Session.connection.execution_options`パラメータを追加しました。"
 
 #: ../../orm/session_transaction.rst:433
 msgid "Tracking Transaction State with Events"
-msgstr ""
+msgstr "イベントによるトランザクション状態の追跡"
 
 #: ../../orm/session_transaction.rst:435
 msgid ""
 "See the section :ref:`session_transaction_events` for an overview of the "
 "available event hooks for session transaction state changes."
-msgstr ""
+msgstr "セッショントランザクション状態の変更のための利用可能なイベントフックの概要については、参照：ref： `session_transaction_events`を参照してください。"
 
 #: ../../orm/session_transaction.rst:441
 msgid "Joining a Session into an External Transaction (such as for test suites)"
-msgstr ""
+msgstr "外部トランザクションへのセッションの参加（テストスイートなど）"
 
 #: ../../orm/session_transaction.rst:443
 msgid ""
@@ -394,7 +384,7 @@ msgid ""
 "freely with a :class:`.Session`, including the ability to call "
 ":meth:`.Session.commit`, where afterwards the entire database interaction"
 " is rolled back::"
-msgstr ""
+msgstr "もし：class： `.Connection`がすでにトランザクション状態にある（すなわち、：class：` .Transaction`が設定されています）場合、：class： `.Session`をそのトランザクション内に参加させることができます。 ：class： `.Session`をそれにバインドするだけです：class：` .Connection`。このための通常の論理的根拠は、ORMコードが：class： `.Session`で自由に動作することを可能にするテストスイートです：meth：` .Session.commit`を呼び出す機能を含みます。その後、データベース相互作用全体がロールバックされます::"
 
 #: ../../orm/session_transaction.rst:488
 msgid ""
@@ -404,7 +394,7 @@ msgid ""
 "*subtransactions*, or nested begin/commit-or-rollback pairs where only "
 "the outermost begin/commit pair actually commits the transaction, or if "
 "the outermost block rolls back, everything is rolled back."
-msgstr ""
+msgstr "上では、：meth： `.Session.commit`と：meth：` .Transaction.rollback`を発行します。これは、class： `.Connection`オブジェクトの* subtransactions *を維持する機能、または一番外側のbegin / commitペアのみが実際にトランザクションをコミットするネストされたbegin / commitまたはrollbackのペアを利用する例です。一番外側のブロックがロールバックすると、すべてがロールバックされます。"
 
 #: ../../orm/session_transaction.rst:497
 msgid ""
@@ -416,5 +406,5 @@ msgid ""
 "transaction, so that tests can also rollback the \"transaction\" as well "
 "while still remaining in the scope of a larger \"transaction\" that's "
 "never committed, using two extra events::"
-msgstr ""
+msgstr "上記のレシピは、テスト自体のスコープ内で：meth： `.Session.rollback`を実際に呼び出す必要があるテストを除いて、あらゆる種類のデータベース対応テストでうまく機能します。上記のレシピは展開することができます：class： `.Session`は、各トランザクションの開始時に確立されるSAVEPOINTのスコープ内のすべての操作を常に実行するので、\&quot;トランザクション\ &quot;もロールバックできます。 2つの余分なイベントを使って決してコミットされないより大きな\ &quot;トランザクション\&quot;の範囲にとどまっています::"
 

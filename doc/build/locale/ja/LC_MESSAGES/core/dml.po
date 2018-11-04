@@ -6,40 +6,27 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/dml.rst:2
 msgid "Insert, Updates, Deletes"
-msgstr "(翻訳中)Insert, Updates, Deletes(インサート、アップデート、デリート)"
+msgstr "挿入、更新、削除"
 
 #: ../../core/dml.rst:4
 msgid ""
 "INSERT, UPDATE and DELETE statements build on a hierarchy starting with "
 ":class:`.UpdateBase`.   The :class:`.Insert` and :class:`.Update` "
 "constructs build on the intermediary :class:`.ValuesBase`."
-msgstr ""
-"INSERT、UPDATEおよびDELETEステートメントは、:class:`.UpdateBase` で始まる"
-"階層に基づいて作成されます。 :class:`.Insert` および :class:`.Update` の"
-"コンストラクトは、中間の :class:`.ValuesBase` に基づいて構築されています。"
+msgstr "INSERT文、UPDATE文、DELETE文は、class： `.UpdateBase`で始まる階層構造に基づいています。 ：class： `.Insert`と：class：` .Update`の構文は中間：class： `.ValuesBase`に基づいています。"
 
 #: ../../docstring of sqlalchemy.sql.expression.delete:1
 msgid "Construct :class:`.Delete` object."
-msgstr ""
+msgstr "コンストラクト：class： `.Delete`オブジェクトです。"
 
 #: ../../docstring of sqlalchemy.sql.expression.delete:3
 msgid ""
 "Similar functionality is available via the :meth:`~.TableClause.delete` "
 "method on :class:`~.schema.Table`."
-msgstr ""
+msgstr "同様の機能が：class： `〜.schema.Table`の：meth：`〜.TableClause.delete`メソッドで利用できます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.Delete.argument_for
 #: sqlalchemy.sql.expression.Delete.compile
@@ -70,11 +57,11 @@ msgstr ""
 #: sqlalchemy.sql.expression.ValuesBase.values sqlalchemy.sql.expression.delete
 #: sqlalchemy.sql.expression.insert sqlalchemy.sql.expression.update
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: ../../docstring of sqlalchemy.sql.expression.delete:7
 msgid "The table to delete rows from."
-msgstr ""
+msgstr "行を削除するテーブル。"
 
 #: ../../docstring of sqlalchemy.sql.expression.delete:9
 msgid ""
@@ -91,17 +78,17 @@ msgid ""
 "                                as_scalar()            )  .. "
 "versionchanged:: 1.2.0     The WHERE clause of DELETE can refer to "
 "multiple tables."
-msgstr ""
+msgstr "A：class： `` DELETE``文の `` WHERE``条件を記述する `.ClauseElement`です。代わりに：meth： `〜Delete.where（）`生成メソッドを使用することができます。 WHERE句は複数のテーブルを参照できます。これをサポートするデータベースでは、 `` DELETE..USING``または同様の節が生成されます。この文は、複数表の削除文をサポートしていないデータベースでは失敗します。 WHERE句で追加のテーブルを参照するSQL標準の方法は、相関サブクエリ:: users.delete（）を使用することです。where（users.c.name == select（[addresses.c.email_address]）。where（ addresses.c.user_id == users.c.id）。as_scalar（））.. versionchanged :: 1.2.0 DELETEのWHERE句は複数のテーブルを参照できます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.delete:11
 msgid "A :class:`.ClauseElement` describing the ``WHERE``"
-msgstr ""
+msgstr "A：class： `` WHERE``を記述する `.ClauseElement`"
 
 #: ../../docstring of sqlalchemy.sql.expression.delete:10
 msgid ""
 "condition of the ``DELETE`` statement. Note that the "
 ":meth:`~Delete.where()` generative method may be used instead."
-msgstr ""
+msgstr "`` DELETE``文の条件です。代わりに：meth： `〜Delete.where（）`生成メソッドを使用することができます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.delete:13
 msgid ""
@@ -110,29 +97,29 @@ msgid ""
 "The statement will fail on databases that don't have support for multi-"
 "table delete statements.  A SQL-standard method of referring to "
 "additional tables in the WHERE clause is to use a correlated subquery::"
-msgstr ""
+msgstr "WHERE句は複数のテーブルを参照できます。これをサポートするデータベースでは、 `` DELETE..USING``または同様の節が生成されます。この文は、複数表の削除文をサポートしていないデータベースでは失敗します。 WHERE句の追加テーブルを参照するSQL標準の方法は、相関サブクエリ::を使用することです"
 
 #: ../../docstring of sqlalchemy.sql.expression.delete:25
 msgid "The WHERE clause of DELETE can refer to multiple tables."
-msgstr ""
+msgstr "DELETEのWHERE句は、複数のテーブルを参照できます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.delete:30
 msgid ":ref:`deletes` - SQL Expression Tutorial"
-msgstr ""
+msgstr "：ref： `deletes`  -  SQL式チュートリアル"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:1
 msgid "Construct an :class:`.Insert` object."
-msgstr ""
+msgstr "：class： `.Insert`オブジェクトを作成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:3
 msgid ""
 "Similar functionality is available via the :meth:`~.TableClause.insert` "
 "method on :class:`~.schema.Table`."
-msgstr ""
+msgstr "同様の機能が：class： `〜.schema.Table`の：meth：`〜.TableClause.insert`メソッドで利用できます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:7
 msgid ":class:`.TableClause` which is the subject of the insert."
-msgstr ""
+msgstr "：クラス： `.TableClause`は挿入の対象です。"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:10
 msgid ""
@@ -141,7 +128,7 @@ msgid ""
 ":class:`.Insert` construct will also dynamically render the VALUES clause"
 " at execution time based on the parameters passed to "
 ":meth:`.Connection.execute`."
-msgstr ""
+msgstr "挿入される値の集合。ここで許可される書式の説明については：meth： `.Insert.values`を参照してください。完全に省略することができます。 a：class： `.Insert`コンストラクトは：meth：` .Connection.execute`に渡されるパラメータに基づいて、実行時にVALUES句を動的にレンダリングします。"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:16
 msgid ""
@@ -151,51 +138,51 @@ msgid ""
 "need to pre-execute them beforehand; for backends that support "
 "\"returning\", this turns off the \"implicit returning\" feature for the "
 "statement."
-msgstr ""
+msgstr "Trueの場合、ステートメント内で提供されるSQL生成のデフォルト値を取得する試みは行われません。特に、これにより、事前にSQL文を事前に実行する必要はなく、SQL式を文内で「インライン」でレンダリングすることができます。 \ &quot;返す\&quot;をサポートするバックエンドでは、この文の\ &quot;暗黙的な復帰\&quot;機能が無効になります。"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:24
 msgid ""
 "If both `values` and compile-time bind parameters are present, the "
 "compile-time bind parameters override the information specified within "
 "`values` on a per-key basis."
-msgstr ""
+msgstr "`values`とコンパイル時バインドパラメタの両方が存在する場合、コンパイル時バインドパラメタはキー単位で` values`で指定された情報をオーバーライドします。"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:28
 msgid ""
 "The keys within `values` can be either :class:`~sqlalchemy.schema.Column`"
 " objects or their string identifiers. Each key may reference one of:"
-msgstr ""
+msgstr "`values`内のキーは、class：`〜sqlalchemy.schema.Column`オブジェクトまたはその文字列識別子のいずれかです。各キーは、次のいずれかを参照します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:32
 msgid "a literal data value (i.e. string, number, etc.);"
-msgstr ""
+msgstr "リテラルデータ値（すなわち、文字列、数字など）。"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:33
 msgid "a Column object;"
-msgstr ""
+msgstr "Columnオブジェクト。"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:34
 msgid "a SELECT statement."
-msgstr ""
+msgstr "SELECTステートメント"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:36
 msgid ""
 "If a ``SELECT`` statement is specified which references this ``INSERT`` "
 "statement's table, the statement will be correlated against the "
 "``INSERT`` statement."
-msgstr ""
+msgstr "この `` INSERT``文のテーブルを参照する `` SELECT``文が指定されている場合、その文は `` INSERT``文と関連づけられます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:42
 msgid ":ref:`coretutorial_insert_expressions` - SQL Expression Tutorial"
-msgstr ""
+msgstr "：ref： `coretutorial_insert_expressions`  -  SQL式チュートリアル"
 
 #: ../../docstring of sqlalchemy.sql.expression.insert:44
 msgid ":ref:`inserts_and_updates` - SQL Expression Tutorial"
-msgstr ""
+msgstr "：ref： `inserts_and_updates`  -  SQL式チュートリアル"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:1
 msgid "Construct an :class:`.Update` object."
-msgstr ""
+msgstr "：class： `.Update`オブジェクトを作成します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.Delete.argument_for:3
 #: sqlalchemy.sql.expression.Delete.prefix_with:7
@@ -210,17 +197,17 @@ msgstr ""
 #: sqlalchemy.sql.expression.ValuesBase.return_defaults:4
 #: sqlalchemy.sql.expression.update:3
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: ../../docstring of sqlalchemy.sql.expression.update:10
 msgid ""
 "Similar functionality is available via the :meth:`~.TableClause.update` "
 "method on :class:`.Table`::"
-msgstr ""
+msgstr "同様の機能が、：meth： `〜.TableClause.update`メソッドで利用できます：class：` .Table`："
 
 #: ../../docstring of sqlalchemy.sql.expression.update:18
 msgid "A :class:`.Table` object representing the database table to be updated."
-msgstr ""
+msgstr "A：class：更新されるデータベーステーブルを表す `.Table`オブジェクトです。"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:21
 msgid ""
@@ -237,7 +224,7 @@ msgid ""
 "                        where(addresses.c.user_id==users.c.id).\\"
 "                        as_scalar()            )  .. versionchanged:: "
 "0.7.4     The WHERE clause of UPDATE can refer to multiple tables."
-msgstr ""
+msgstr "`` UPDATE``文の `` WHERE``条件を記述するオプションのSQL式です。最近のアプリケーションでは、生成する：meth： `〜Update.where（）`メソッドを使用して `` WHERE``節を指定する方が好きかもしれません。 WHERE句は複数のテーブルを参照できます。これをサポートするデータベースでは、 `` UPDATE FROM``節が生成されるか、MySQLの複数のテーブルの更新が生成されます。マルチテーブル更新ステートメントをサポートしていないデータベースでは、ステートメントは失敗します。 WHERE句で追加のテーブルを参照するSQL標準の方法は、相関サブクエリ:: users.update（）。values（name = &#39;ed&#39;）を使用することです。where（users.c.name == select（[addresses .changemail_address]）。\\ where（addresses.c.user_id == users.c.id）。\\ as_scalar（））.. versionchanged :: 0.7.4 UPDATEのWHERE節は複数のテーブルを参照できます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:21
 msgid ""
@@ -245,7 +232,7 @@ msgid ""
 "``UPDATE`` statement.   Modern applications may prefer to use the "
 "generative :meth:`~Update.where()` method to specify the ``WHERE`` "
 "clause."
-msgstr ""
+msgstr "`` UPDATE``文の `` WHERE``条件を記述するオプションのSQL式です。最近のアプリケーションでは、生成する：meth： `〜Update.where（）`メソッドを使用して `` WHERE``節を指定する方が好きかもしれません。"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:26
 msgid ""
@@ -255,11 +242,11 @@ msgid ""
 "have support for multi-table update statements.  A SQL-standard method of"
 " referring to additional tables in the WHERE clause is to use a "
 "correlated subquery::"
-msgstr ""
+msgstr "WHERE句は複数のテーブルを参照できます。これをサポートするデータベースでは、 `` UPDATE FROM``節が生成されるか、MySQLの複数のテーブルの更新が生成されます。マルチテーブル更新ステートメントをサポートしていないデータベースでは、ステートメントは失敗します。 WHERE句の追加テーブルを参照するSQL標準の方法は、相関サブクエリ::を使用することです"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:40
 msgid "The WHERE clause of UPDATE can refer to multiple tables."
-msgstr ""
+msgstr "UPDATEのWHERE句は、複数のテーブルを参照できます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:43
 msgid ""
@@ -270,7 +257,7 @@ msgid ""
 "parameters, the ``SET`` clause generates for all columns.  Modern "
 "applications may prefer to use the generative :meth:`.Update.values` "
 "method to set the values of the UPDATE statement."
-msgstr ""
+msgstr "`` UPDATE``の `` SET``条件を指定するオプションの辞書です。 `` None``のままにした場合、 `` SET``条件は、文の実行やコンパイル中に文に渡されるパラメータから決定されます。パラメータなしでスタンドアロンでコンパイルされると、 `` SET``節がすべての列に対して生成されます。最近のアプリケーションでは、generate：meth： `.Update.values`メソッドを使用してUPDATEステートメントの値を設定する方が好きかもしれません。"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:44
 msgid ""
@@ -279,13 +266,13 @@ msgid ""
 "from those parameters passed to the statement during the execution and/or"
 " compilation of the statement.   When compiled standalone without any "
 "parameters, the ``SET`` clause generates for all columns."
-msgstr ""
+msgstr "`` UPDATE``の `` SET``条件を指定するオプションの辞書です。 `` None``のままにした場合、 `` SET``条件は、文の実行やコンパイル中に文に渡されるパラメータから決定されます。パラメータなしでスタンドアロンでコンパイルされると、 `` SET``節がすべての列に対して生成されます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:51
 msgid ""
 "Modern applications may prefer to use the generative "
 ":meth:`.Update.values` method to set the values of the UPDATE statement."
-msgstr ""
+msgstr "最近のアプリケーションでは、generate：meth： `.Update.values`メソッドを使用してUPDATEステートメントの値を設定する方が好きかもしれません。"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:55
 msgid ""
@@ -293,7 +280,7 @@ msgid ""
 "``default`` keyword will be compiled 'inline' into the statement and not "
 "pre-executed.  This means that their values will not be available in the "
 "dictionary returned from :meth:`.ResultProxy.last_updated_params`."
-msgstr ""
+msgstr "Trueの場合、SQL defaults on：class： `.Column`オブジェクトは、` `default``キーワードを介してステートメント内に &#39;インライン&#39;でコンパイルされ、事前実行されません。これは、それらの値が：meth： `.ResultProxy.last_updated_pa​​rams`から返された辞書で利用できないことを意味します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:62
 msgid ""
@@ -305,7 +292,7 @@ msgid ""
 "full example of the   "
 ":paramref:`~sqlalchemy.sql.expression.update.preserve_parameter_order` "
 "flag"
-msgstr ""
+msgstr "Trueの場合、更新ステートメントは：meth： `.Update.values`メソッドを介して** only **パラメータを受け取ることが期待され、それらは2タプルのPython` `list``として渡されなければなりません。レンダリングされたUPDATEステートメントは、この順序を維持している参照される列ごとにSET句を発行します。 .. version.10ded .. 1.0.10 .. seealso :: ref： `updates_order_parameters`  - 完全な例：paramref：`〜sqlalchemy.sql.expression.update.preserve_parameter_order`フラグ"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:62
 msgid ""
@@ -313,7 +300,7 @@ msgid ""
 "via the :meth:`.Update.values` method, and they must be passed as a "
 "Python ``list`` of 2-tuples. The rendered UPDATE statement will emit the "
 "SET clause for each referenced column maintaining this order."
-msgstr ""
+msgstr "Trueの場合、更新ステートメントは：meth： `.Update.values`メソッドを介して** only **パラメータを受け取ることが期待され、それらは2タプルのPython` `list``として渡されなければなりません。レンダリングされたUPDATEステートメントは、この順序を維持している参照される列ごとにSET句を発行します。"
 
 #: ../../docstring of sqlalchemy.sql.expression.Insert.values:111
 #: sqlalchemy.sql.expression.Update.values:111
@@ -323,14 +310,14 @@ msgid ""
 ":ref:`updates_order_parameters` - full example of the "
 ":paramref:`~sqlalchemy.sql.expression.update.preserve_parameter_order` "
 "flag"
-msgstr ""
+msgstr "：ref： `updates_order_parameters`  - 完全な例：paramref：`〜sqlalchemy.sql.expression.update.preserve_parameter_order`フラグ"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:75
 msgid ""
 "If both ``values`` and compile-time bind parameters are present, the "
 "compile-time bind parameters override the information specified within "
 "``values`` on a per-key basis."
-msgstr ""
+msgstr "`` values``とコンパイル時バインドパラメタの両方が存在する場合、コンパイル時バインドパラメタは `` values``で指定された情報をキー単位でオーバーライドします。"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:79
 msgid ""
@@ -341,21 +328,21 @@ msgid ""
 " to be part of the target :class:`.Table` that is the table to be "
 "updated.  However when using MySQL, a multiple-table UPDATE statement can"
 " refer to columns from any of the tables referred to in the WHERE clause."
-msgstr ""
+msgstr "`` values``内のキーは：class： `.Column`オブジェクトまたはその文字列識別子（特に：class：` .Column`の\ &quot;key \&quot;、通常は必ずしも\ &quot;。名\&quot;）。通常は、ここで使用される：class： `.Column`オブジェクトは、更新されるテーブルであるtarget：class：` .Table`の一部であると予想されます。しかし、MySQLを使用する場合、複数テーブルのUPDATEステートメントは、WHERE句で参照されているテーブルのいずれかのカラムを参照できます。"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:89
 msgid "The values referred to in ``values`` are typically:"
-msgstr ""
+msgstr "`` values``で参照される値は、典型的には："
 
 #: ../../docstring of sqlalchemy.sql.expression.update:91
 msgid "a literal data value (i.e. string, number, etc.)"
-msgstr ""
+msgstr "リテラルデータ値（すなわち、文字列、数字など）"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:92
 msgid ""
 "a SQL expression, such as a related :class:`.Column`, a scalar-returning "
 ":func:`.select` construct, etc."
-msgstr ""
+msgstr "関連：class： `.Column`、スカラー返り：func：` .select`などのSQL式です。"
 
 #: ../../docstring of sqlalchemy.sql.expression.update:96
 msgid ""
@@ -364,31 +351,31 @@ msgid ""
 ":func:`.select` should be *correlated* to the parent table, that is, "
 "providing criterion which links the table inside the subquery to the "
 "outer table being updated::"
-msgstr ""
+msgstr "：func： `.select`を：func：` .update`構文のvalues節の中で組み立てるとき、：func： `.select`で表されるサブクエリは、親テーブルに*関連付ける*サブクエリ内のテーブルを更新中の外部テーブルにリンクする基準を提供する::"
 
 #: ../../docstring of sqlalchemy.sql.expression.Insert.values:117
 #: sqlalchemy.sql.expression.Update.values:117
 #: sqlalchemy.sql.expression.ValuesBase.values:117
 #: sqlalchemy.sql.expression.update:111
 msgid ":ref:`inserts_and_updates` - SQL Expression Language Tutorial"
-msgstr ""
+msgstr "：ref： `inserts_and_updates`  -  SQL式言語チュートリアル"
 
 #: of sqlalchemy.sql.expression.Delete:1
 msgid "Represent a DELETE construct."
-msgstr ""
+msgstr "DELETE構文を表します。"
 
 #: of sqlalchemy.sql.expression.Delete:3
 msgid ""
 "The :class:`.Delete` object is created using the :func:`delete()` "
 "function."
-msgstr ""
+msgstr "：class： `.Delete`オブジェクトは、：func：` delete（） `関数を使って作成されます。"
 
 #: of sqlalchemy.sql.expression.Delete.argument_for:1
 #: sqlalchemy.sql.expression.Insert.argument_for:1
 #: sqlalchemy.sql.expression.Update.argument_for:1
 #: sqlalchemy.sql.expression.UpdateBase.argument_for:1
 msgid "Add a new kind of dialect-specific keyword argument for this class."
-msgstr ""
+msgstr "このクラスの新しい種類の方言固有のキーワード引数を追加します。"
 
 #: of sqlalchemy.sql.expression.Delete.argument_for:9
 #: sqlalchemy.sql.expression.Insert.argument_for:9
@@ -399,7 +386,7 @@ msgid ""
 "adding extra arguments to the :attr:`.DefaultDialect.construct_arguments`"
 " dictionary. This dictionary provides a list of argument names accepted "
 "by various schema-level constructs on behalf of a dialect."
-msgstr ""
+msgstr "：meth： `.DialectKWArgs.argument_for`メソッドは：attr：` .DefaultDialect.construct_arguments`ディクショナリに余分な引数を追加する引数ごとの方法です。この辞書は、方言に代わってさまざまなスキーマレベルの構造によって受け入れられる引数名のリストを提供します。"
 
 #: of sqlalchemy.sql.expression.Delete.argument_for:15
 #: sqlalchemy.sql.expression.Insert.argument_for:15
@@ -410,7 +397,7 @@ msgid ""
 "data member of the dialect class.  The use case for ad-hoc addition of "
 "argument names is typically for end-user code that is also using a custom"
 " compilation scheme which consumes the additional arguments."
-msgstr ""
+msgstr "新しい方言は通常、この辞書を一度に方言クラスのデータメンバーとして指定する必要があります。引数名のアドホックな追加のユースケースは、通常、追加の引数を消費するカスタムコンパイルスキームも使用するエンドユーザーコード用です。"
 
 #: of sqlalchemy.sql.expression.Delete.argument_for:20
 #: sqlalchemy.sql.expression.Insert.argument_for:20
@@ -426,21 +413,21 @@ msgid ""
 "specified on behalf of this dialect already.  All dialects packaged "
 "within SQLAlchemy include this collection, however for third party "
 "dialects, support may vary."
-msgstr ""
+msgstr "方言の名前。方言はlocatableでなければなりません。さもなければ：class： `.NoSuchModuleError`が送出されます。ダイアレクトには、既存の：attr： `.DefaultDialect.construct_arguments`コレクションも含まれていなければなりません。これはキーワード引数の検証とデフォルトシステムに参加していることを示します。それ以外の場合は：class：` .ArgumentError`が送出されます。方言にこのコレクションが含まれていない場合は、既にこの方言の代わりにキーワード引数を指定できます。 SQLAlchemy内にパッケージ化されたすべての方言にはこのコレクションが含まれていますが、サードパーティの方言ではサポートが異なる場合があります。"
 
 #: of sqlalchemy.sql.expression.Delete.argument_for:31
 #: sqlalchemy.sql.expression.Insert.argument_for:31
 #: sqlalchemy.sql.expression.Update.argument_for:31
 #: sqlalchemy.sql.expression.UpdateBase.argument_for:31
 msgid "name of the parameter."
-msgstr ""
+msgstr "パラメータの名前。"
 
 #: of sqlalchemy.sql.expression.Delete.argument_for:33
 #: sqlalchemy.sql.expression.Insert.argument_for:33
 #: sqlalchemy.sql.expression.Update.argument_for:33
 #: sqlalchemy.sql.expression.UpdateBase.argument_for:33
 msgid "default value of the parameter."
-msgstr ""
+msgstr "パラメータのデフォルト値。"
 
 #: of sqlalchemy.sql.expression.Delete.bind:1
 #: sqlalchemy.sql.expression.Insert.bind:1
@@ -449,14 +436,14 @@ msgstr ""
 msgid ""
 "Return a 'bind' linked to this :class:`.UpdateBase` or a :class:`.Table` "
 "associated with it."
-msgstr ""
+msgstr "this：class： `.UpdateBase`またはそれに関連するa：class：` .Table`にリンクされた &#39;bind&#39;を返します。"
 
 #: of sqlalchemy.sql.expression.Delete.compare:1
 #: sqlalchemy.sql.expression.Insert.compare:1
 #: sqlalchemy.sql.expression.Update.compare:1
 #: sqlalchemy.sql.expression.UpdateBase.compare:1
 msgid "Compare this ClauseElement to the given ClauseElement."
-msgstr ""
+msgstr "このClauseElementと指定されたClauseElementを比較します。"
 
 #: of sqlalchemy.sql.expression.Delete.compare:3
 #: sqlalchemy.sql.expression.Insert.compare:3
@@ -465,7 +452,7 @@ msgstr ""
 msgid ""
 "Subclasses should override the default behavior, which is a straight "
 "identity comparison."
-msgstr ""
+msgstr "サブクラスはデフォルトの動作を上書きする必要があります。"
 
 #: of sqlalchemy.sql.expression.Delete.compare:6
 #: sqlalchemy.sql.expression.Insert.compare:6
@@ -474,14 +461,14 @@ msgstr ""
 msgid ""
 "\\**kw are arguments consumed by subclass compare() methods and may be "
 "used to modify the criteria for comparison. (see :class:`.ColumnElement`)"
-msgstr ""
+msgstr "\\ ** kwは、サブクラスのcompare（）メソッドによって消費される引数であり、比較の基準を変更するために使用されます。 （：class： `.ColumnElement`を参照してください）"
 
 #: of sqlalchemy.sql.expression.Delete.compile:1
 #: sqlalchemy.sql.expression.Insert.compile:1
 #: sqlalchemy.sql.expression.Update.compile:1
 #: sqlalchemy.sql.expression.UpdateBase.compile:1
 msgid "Compile this SQL expression."
-msgstr ""
+msgstr "このSQL式をコンパイルします。"
 
 #: of sqlalchemy.sql.expression.Delete.compile:3
 #: sqlalchemy.sql.expression.Insert.compile:3
@@ -492,7 +479,7 @@ msgid ""
 "``unicode()`` on the returned value will yield a string representation of"
 " the result. The :class:`~.Compiled` object also can return a dictionary "
 "of bind parameter names and values using the ``params`` accessor."
-msgstr ""
+msgstr "戻り値は：class： `〜.Compiled`オブジェクトです。返された値に対して `` str（） ``または `` unicode（） ``を呼び出すと結果の文字列表現が返されます。 ：class： `〜.Compiled`オブジェクトは、` `params``アクセサを使ってバインドパラメータの名前と値の辞書を返すこともできます。"
 
 #: of sqlalchemy.sql.expression.Delete.compile:10
 #: sqlalchemy.sql.expression.Insert.compile:10
@@ -502,7 +489,7 @@ msgid ""
 "An ``Engine`` or ``Connection`` from which a ``Compiled`` will be "
 "acquired. This argument takes precedence over this "
 ":class:`.ClauseElement`'s bound engine, if any."
-msgstr ""
+msgstr "`` Engine``または `` Connection``から `` Compiled``を取得します。この引数はこれよりも優先されます：class： `.ClauseElement`のバウンドエンジン（もしあれば）。"
 
 #: of sqlalchemy.sql.expression.Delete.compile:14
 #: sqlalchemy.sql.expression.Insert.compile:14
@@ -512,7 +499,7 @@ msgid ""
 "Used for INSERT and UPDATE statements, a list of column names which "
 "should be present in the VALUES clause of the compiled statement. If "
 "``None``, all columns from the target table object are rendered."
-msgstr ""
+msgstr "INSERTおよびUPDATEステートメントに使用され、コンパイルされたステートメントのVALUES節に存在する列名のリスト。 `` None``の場合、ターゲットテーブルオブジェクトのすべての列がレンダリングされます。"
 
 #: of sqlalchemy.sql.expression.Delete.compile:19
 #: sqlalchemy.sql.expression.Insert.compile:19
@@ -522,7 +509,7 @@ msgid ""
 "A ``Dialect`` instance from which a ``Compiled`` will be acquired. This "
 "argument takes precedence over the `bind` argument as well as this "
 ":class:`.ClauseElement`'s bound engine, if any."
-msgstr ""
+msgstr "`` Dialect``インスタンスで、 `` Compiled``を取得します。この引数は、 `bind`引数だけでなく、class：` .ClauseElement`のバウンドエンジン（存在する場合）も優先します。"
 
 #: of sqlalchemy.sql.expression.Delete.compile:24
 #: sqlalchemy.sql.expression.Insert.compile:24
@@ -535,7 +522,7 @@ msgid ""
 " within the INSERT statement's VALUES clause. This typically refers to "
 "Sequence execution but may also refer to any server-side default "
 "generation function associated with a primary key `Column`."
-msgstr ""
+msgstr "新しく生成された主キー列のインライン検索をサポートしていない方言のINSERTステートメントでは、INSERTステートメントのVALUES句内で新しい主キー値の作成式を強制的にインラインで表示します。これは、通常、シーケンスの実行を参照するが、主キー「列」に関連付けられた任意のサーバー側デフォルト生成関数を参照することもできる。"
 
 #: of sqlalchemy.sql.expression.Delete.compile:32
 #: sqlalchemy.sql.expression.Insert.compile:32
@@ -550,7 +537,7 @@ msgid ""
 "table('t', column('x'))      s = select([t]).where(t.c.x == 5)      print"
 " s.compile(compile_kwargs={\"literal_binds\": True})  .. versionadded:: "
 "0.9.0"
-msgstr ""
+msgstr "すべての\ &quot;visit \&quot;メソッド内でコンパイラに渡される追加パラメータのオプション辞書。これにより、任意のカスタムフラグをカスタムコンパイル構成に渡すことができます。また、 `` literal_binds``フラグを:: sqlalchemy.sqlから渡す場合にも使用されます。import table、column、select t = table（ &#39;t&#39;、column（ &#39;x&#39;））s = select（[t ]））。ここで、（tcx == 5）は、s.compile（compile_kwargs = {\ &quot;literal_binds \&quot;：True）を出力します）.. versionadded :: 0.9.0"
 
 #: of sqlalchemy.sql.expression.Delete.compile:32
 #: sqlalchemy.sql.expression.Insert.compile:32
@@ -562,21 +549,21 @@ msgid ""
 "flag to be passed through to a custom compilation construct, for example."
 "  It is also used for the case of passing the ``literal_binds`` flag "
 "through::"
-msgstr ""
+msgstr "すべての\ &quot;visit \&quot;メソッド内でコンパイラに渡される追加パラメータのオプション辞書。これにより、任意のカスタムフラグをカスタムコンパイル構成に渡すことができます。 `` literal_binds``フラグを::に渡す場合にも使用されます"
 
 #: of sqlalchemy.sql.expression.Delete.compile:50
 #: sqlalchemy.sql.expression.Insert.compile:50
 #: sqlalchemy.sql.expression.Update.compile:50
 #: sqlalchemy.sql.expression.UpdateBase.compile:50
 msgid ":ref:`faq_sql_expression_string`"
-msgstr ""
+msgstr "：ref： `faq_sql_expression_string`"
 
 #: of sqlalchemy.sql.expression.Delete.cte:1
 #: sqlalchemy.sql.expression.Insert.cte:1
 #: sqlalchemy.sql.expression.Update.cte:1
 #: sqlalchemy.sql.expression.UpdateBase.cte:1
 msgid "Return a new :class:`.CTE`, or Common Table Expression instance."
-msgstr ""
+msgstr "新しい：class： `.CTE`またはCommon Table Expressionインスタンスを返します。"
 
 #: of sqlalchemy.sql.expression.Delete.cte:3
 #: sqlalchemy.sql.expression.Insert.cte:3
@@ -589,7 +576,7 @@ msgid ""
 "UNION can also be employed to allow \"recursive\" queries, where a SELECT"
 " statement can draw upon the set of rows that have previously been "
 "selected."
-msgstr ""
+msgstr "共通テーブル式はSQL標準であり、SELECTステートメントは\ &quot;WITH \&quot;という句を使用してプライマリステートメントとともに指定された2次ステートメントを引き出すことができます。 SELECT文が以前に選択された行のセットを引き出すことができる「再帰的な」問合せを可能にするために、UNIONに関する特別なセマンティクスを使用することもできます。"
 
 #: of sqlalchemy.sql.expression.Delete.cte:10
 #: sqlalchemy.sql.expression.Insert.cte:10
@@ -599,7 +586,7 @@ msgid ""
 "CTEs can also be applied to DML constructs UPDATE, INSERT and DELETE on "
 "some databases, both as a source of CTE rows when combined with "
 "RETURNING, as well as a consumer of CTE rows."
-msgstr ""
+msgstr "CTEは、RTEURNINGと組み合わされたときのCTE行のソースとしても、CTE行のコンシューマとしても、一部のデータベースのDML構成UPDATE、INSERTおよびDELETEに適用できます。"
 
 #: of sqlalchemy.sql.expression.Delete.cte:15
 #: sqlalchemy.sql.expression.Insert.cte:15
@@ -610,7 +597,7 @@ msgid ""
 ":class:`.Alias` objects, as special elements to be delivered to the FROM "
 "clause of the statement as well as to a WITH clause at the top of the "
 "statement."
-msgstr ""
+msgstr "SQLAlchemyは、：class： `.Alias`オブジェクトと同様に扱われる：class：` .CTE`オブジェクトを検出します。これは、文のFROM句にも、ステートメント。"
 
 #: of sqlalchemy.sql.expression.Delete.cte:20
 #: sqlalchemy.sql.expression.Insert.cte:20
@@ -619,7 +606,7 @@ msgstr ""
 msgid ""
 "Added support for UPDATE/INSERT/DELETE as CTE, CTEs added to "
 "UPDATE/INSERT/DELETE."
-msgstr ""
+msgstr "CTEとしてUPDATE / INSERT / DELETE、UPDATE / INSERT / DELETEにCTEが追加されました。"
 
 #: of sqlalchemy.sql.expression.Delete.cte:23
 #: sqlalchemy.sql.expression.Insert.cte:23
@@ -629,7 +616,7 @@ msgid ""
 "name given to the common table expression.  Like "
 ":meth:`._FromClause.alias`, the name can be left as ``None`` in which "
 "case an anonymous symbol will be used at query compile time."
-msgstr ""
+msgstr "共通テーブル式に与えられた名前。 ：meth： `._FromClause.alias`のように、名前は` `None``のままにすることができます。この場合、クエリコンパイル時に匿名シンボルが使用されます。"
 
 #: of sqlalchemy.sql.expression.Delete.cte:27
 #: sqlalchemy.sql.expression.Insert.cte:27
@@ -639,7 +626,7 @@ msgid ""
 "if ``True``, will render ``WITH RECURSIVE``. A recursive common table "
 "expression is intended to be used in conjunction with UNION ALL in order "
 "to derive rows from those already selected."
-msgstr ""
+msgstr "`` True``なら `` WITH RECURSIVE``を返します。再帰的共通表式は、既に選択されている行から行を派生させるために、UNION ALLと一緒に使用することを意図しています。"
 
 #: of sqlalchemy.sql.expression.Delete.cte:32
 #: sqlalchemy.sql.expression.Insert.cte:32
@@ -649,35 +636,35 @@ msgid ""
 "The following examples include two from PostgreSQL's documentation at "
 "http://www.postgresql.org/docs/current/static/queries-with.html, as well "
 "as additional examples."
-msgstr ""
+msgstr "次の例には、PostgreSQLのドキュメント（http://www.postgresql.org/docs/current/static/queries-with.html）の2つの例と追加の例が含まれています。"
 
 #: of sqlalchemy.sql.expression.Delete.cte:36
 #: sqlalchemy.sql.expression.Insert.cte:36
 #: sqlalchemy.sql.expression.Update.cte:36
 #: sqlalchemy.sql.expression.UpdateBase.cte:36
 msgid "Example 1, non recursive::"
-msgstr ""
+msgstr "例1、非再帰::"
 
 #: of sqlalchemy.sql.expression.Delete.cte:75
 #: sqlalchemy.sql.expression.Insert.cte:75
 #: sqlalchemy.sql.expression.Update.cte:75
 #: sqlalchemy.sql.expression.UpdateBase.cte:75
 msgid "Example 2, WITH RECURSIVE::"
-msgstr ""
+msgstr "例2、RECURSIVE ::"
 
 #: of sqlalchemy.sql.expression.Delete.cte:116
 #: sqlalchemy.sql.expression.Insert.cte:116
 #: sqlalchemy.sql.expression.Update.cte:116
 #: sqlalchemy.sql.expression.UpdateBase.cte:116
 msgid "Example 3, an upsert using UPDATE and INSERT with CTEs::"
-msgstr ""
+msgstr "例3、CTEでのUPDATEとINSERTを使用するアップサンプリング::"
 
 #: of sqlalchemy.sql.expression.Delete.cte:154
 #: sqlalchemy.sql.expression.Insert.cte:154
 #: sqlalchemy.sql.expression.Update.cte:154
 #: sqlalchemy.sql.expression.UpdateBase.cte:154
 msgid ":meth:`.orm.query.Query.cte` - ORM version of :meth:`.HasCTE.cte`."
-msgstr ""
+msgstr "：meth： `.orm.query.Query.cte`  -  ORM版の：meth：` .HasCTE.cte`。"
 
 #: of sqlalchemy.sql.expression.Delete.dialect_kwargs:1
 #: sqlalchemy.sql.expression.Delete.dialect_options:1
@@ -690,7 +677,7 @@ msgstr ""
 msgid ""
 "A collection of keyword arguments specified as dialect-specific options "
 "to this construct."
-msgstr ""
+msgstr "この構文に対してダイアレクト固有のオプションとして指定されたキーワード引数の集合。"
 
 #: of sqlalchemy.sql.expression.Delete.dialect_kwargs:4
 #: sqlalchemy.sql.expression.Insert.dialect_kwargs:4
@@ -701,7 +688,7 @@ msgid ""
 "format.  Only arguments that were actually passed are included; unlike "
 "the :attr:`.DialectKWArgs.dialect_options` collection, which contains all"
 " options known by this dialect including defaults."
-msgstr ""
+msgstr "これらの議論は、 <dialect> _ <kwarg> ``フォーマット。実際に渡された引数のみが含まれます。 ：attr： `.DialectKWArgs.dialect_options`コレクションと異なり、デフォルトを含むこの方言で知られているすべてのオプションが含まれています。"
 
 #: of sqlalchemy.sql.expression.Delete.dialect_kwargs:9
 #: sqlalchemy.sql.expression.Insert.dialect_kwargs:9
@@ -711,21 +698,21 @@ msgid ""
 "The collection is also writable; keys are accepted of the form "
 "``<dialect>_<kwarg>`` where the value will be assembled into the list of "
 "options."
-msgstr ""
+msgstr "コレクションは書き込み可能です。キーは `` <dialect> _ <kwarg> ``は値がオプションのリストに集められる場所です。"
 
 #: of sqlalchemy.sql.expression.Delete.dialect_kwargs:15
 #: sqlalchemy.sql.expression.Insert.dialect_kwargs:15
 #: sqlalchemy.sql.expression.Update.dialect_kwargs:15
 #: sqlalchemy.sql.expression.UpdateBase.dialect_kwargs:15
 msgid "The :attr:`.DialectKWArgs.dialect_kwargs` collection is now writable."
-msgstr ""
+msgstr "：attr： `.DialectKWArgs.dialect_kwargs`コレクションが書き込み可能になりました。"
 
 #: of sqlalchemy.sql.expression.Delete.dialect_kwargs:20
 #: sqlalchemy.sql.expression.Insert.dialect_kwargs:20
 #: sqlalchemy.sql.expression.Update.dialect_kwargs:20
 #: sqlalchemy.sql.expression.UpdateBase.dialect_kwargs:20
 msgid ":attr:`.DialectKWArgs.dialect_options` - nested dictionary form"
-msgstr ""
+msgstr "：attr： `.DialectKWArgs.dialect_options`  - ネストされた辞書形式"
 
 #: of sqlalchemy.sql.expression.Delete.dialect_options:4
 #: sqlalchemy.sql.expression.Insert.dialect_options:4
@@ -735,28 +722,28 @@ msgid ""
 "This is a two-level nested registry, keyed to ``<dialect_name>`` and "
 "``<argument_name>``.  For example, the ``postgresql_where`` argument "
 "would be locatable as::"
-msgstr ""
+msgstr "これは2レベルのネストされたレジストリで、 `` <dialect_name> ``と `` <argument_name> ``。たとえば、 `` postgresql_where``引数は::"
 
 #: of sqlalchemy.sql.expression.Delete.dialect_options:14
 #: sqlalchemy.sql.expression.Insert.dialect_options:14
 #: sqlalchemy.sql.expression.Update.dialect_options:14
 #: sqlalchemy.sql.expression.UpdateBase.dialect_options:14
 msgid ":attr:`.DialectKWArgs.dialect_kwargs` - flat dictionary form"
-msgstr ""
+msgstr "：attr： `.DialectKWArgs.dialect_kwargs`  - フラット辞書形式"
 
 #: of sqlalchemy.sql.expression.Delete.execute:1
 #: sqlalchemy.sql.expression.Insert.execute:1
 #: sqlalchemy.sql.expression.Update.execute:1
 #: sqlalchemy.sql.expression.UpdateBase.execute:1
 msgid "Compile and execute this :class:`.Executable`."
-msgstr ""
+msgstr "これをコンパイルして実行します：class： `.Executable`。"
 
 #: of sqlalchemy.sql.expression.Delete.execution_options:1
 #: sqlalchemy.sql.expression.Insert.execution_options:1
 #: sqlalchemy.sql.expression.Update.execution_options:1
 #: sqlalchemy.sql.expression.UpdateBase.execution_options:1
 msgid "Set non-SQL options for the statement which take effect during execution."
-msgstr ""
+msgstr "実行中に有効になる文の非SQLオプションを設定します。"
 
 #: of sqlalchemy.sql.expression.Delete.execution_options:4
 #: sqlalchemy.sql.expression.Insert.execution_options:4
@@ -767,7 +754,7 @@ msgid ""
 ":class:`.Connection` basis.   Additionally, the :class:`.Engine` and ORM "
 ":class:`~.orm.query.Query` objects provide access to execution options "
 "which they in turn configure upon connections."
-msgstr ""
+msgstr "実行オプションは、文ごとまたは：class： `.Connection`ベースで設定できます。さらに：class： `.Engine`とORM：class：`〜.orm.query.Query`オブジェクトは実行オプションにアクセスし、実行オプションは接続時に設定します。"
 
 #: of sqlalchemy.sql.expression.Delete.execution_options:10
 #: sqlalchemy.sql.expression.Insert.execution_options:10
@@ -776,7 +763,7 @@ msgstr ""
 msgid ""
 "The :meth:`execution_options` method is generative.  A new instance of "
 "this statement is returned that contains the options::"
-msgstr ""
+msgstr "：meth： `execution_options`メソッドは生成されます。このステートメントの新しいインスタンスが返されます。このインスタンスにはオプション::"
 
 #: of sqlalchemy.sql.expression.Delete.execution_options:16
 #: sqlalchemy.sql.expression.Insert.execution_options:16
@@ -788,35 +775,35 @@ msgid ""
 " \"isolation_level\" or \"compiled_cache\". See "
 ":meth:`.Connection.execution_options` for a full list of possible "
 "options."
-msgstr ""
+msgstr "ステートメントには、\ &quot;自動コミット\&quot;と\ &quot;stream_results \&quot;は含めることができますが、\ &quot;isolation_level \&quot;や\ &quot;compiled_cache \&quot;は含めることはできません。可能なオプションの完全なリストについては：meth： `.Connection.execution_options`を参照してください。"
 
 #: of sqlalchemy.sql.expression.Delete.execution_options:24
 #: sqlalchemy.sql.expression.Insert.execution_options:24
 #: sqlalchemy.sql.expression.Update.execution_options:24
 #: sqlalchemy.sql.expression.UpdateBase.execution_options:24
 msgid ":meth:`.Connection.execution_options()`"
-msgstr ""
+msgstr "：meth： `.Connection.execution_options（）`"
 
 #: of sqlalchemy.sql.expression.Delete.execution_options:26
 #: sqlalchemy.sql.expression.Insert.execution_options:26
 #: sqlalchemy.sql.expression.Update.execution_options:26
 #: sqlalchemy.sql.expression.UpdateBase.execution_options:26
 msgid ":meth:`.Query.execution_options()`"
-msgstr ""
+msgstr "：meth： `.Query.execution_options（）`"
 
 #: of sqlalchemy.sql.expression.Delete.kwargs:1
 #: sqlalchemy.sql.expression.Insert.kwargs:1
 #: sqlalchemy.sql.expression.Update.kwargs:1
 #: sqlalchemy.sql.expression.UpdateBase.kwargs:1
 msgid "A synonym for :attr:`.DialectKWArgs.dialect_kwargs`."
-msgstr ""
+msgstr "attr： `.DialectKWArgs.dialect_kwargs`の同義語です。"
 
 #: of sqlalchemy.sql.expression.Delete.params:1
 #: sqlalchemy.sql.expression.Insert.params:1
 #: sqlalchemy.sql.expression.Update.params:1
 #: sqlalchemy.sql.expression.UpdateBase.params:1
 msgid "Set the parameters for the statement."
-msgstr ""
+msgstr "ステートメントのパラメーターを設定します。"
 
 #: of sqlalchemy.sql.expression.Delete.params:3
 #: sqlalchemy.sql.expression.Insert.params:3
@@ -826,7 +813,7 @@ msgid ""
 "This method raises ``NotImplementedError`` on the base class, and is "
 "overridden by :class:`.ValuesBase` to provide the SET/VALUES clause of "
 "UPDATE and INSERT."
-msgstr ""
+msgstr "このメソッドは、基本クラスで `` NotImplementedError``を発生させ、UPDATEとINSERTのSET / VALUES節を提供するために：class： `.ValuesBase`によってオーバーライドされます。"
 
 #: of sqlalchemy.sql.expression.Delete.prefix_with:1
 #: sqlalchemy.sql.expression.Insert.prefix_with:1
@@ -835,7 +822,7 @@ msgstr ""
 msgid ""
 "Add one or more expressions following the statement keyword, i.e. SELECT,"
 " INSERT, UPDATE, or DELETE. Generative."
-msgstr ""
+msgstr "ステートメントキーワードに続く1つ以上の式、つまりSELECT、INSERT、UPDATE、またはDELETEを追加します。 Generative。"
 
 #: of sqlalchemy.sql.expression.Delete.prefix_with:4
 #: sqlalchemy.sql.expression.Insert.prefix_with:4
@@ -844,7 +831,7 @@ msgstr ""
 msgid ""
 "This is used to support backend-specific prefix keywords such as those "
 "provided by MySQL."
-msgstr ""
+msgstr "これは、MySQLが提供するようなバックエンド固有のプレフィックスキーワードをサポートするために使用されます。"
 
 #: of sqlalchemy.sql.expression.Delete.prefix_with:11
 #: sqlalchemy.sql.expression.Insert.prefix_with:11
@@ -853,7 +840,7 @@ msgstr ""
 msgid ""
 "Multiple prefixes can be specified by multiple calls to "
 ":meth:`.prefix_with`."
-msgstr ""
+msgstr "複数の接頭辞は：meth： `.prefix_with`を複数回呼び出すことで指定できます。"
 
 #: of sqlalchemy.sql.expression.Delete.prefix_with:14
 #: sqlalchemy.sql.expression.Insert.prefix_with:14
@@ -862,7 +849,7 @@ msgstr ""
 msgid ""
 "textual or :class:`.ClauseElement` construct which will be rendered "
 "following the INSERT, UPDATE, or DELETE keyword."
-msgstr ""
+msgstr "text：or：class： `.ClauseElement`構文で、INSERT、UPDATE、またはDELETEキーワードの後に​​表示されます。"
 
 #: of sqlalchemy.sql.expression.Delete.prefix_with:17
 #: sqlalchemy.sql.expression.Insert.prefix_with:17
@@ -872,14 +859,14 @@ msgid ""
 "A single keyword 'dialect' is accepted.  This is an optional string "
 "dialect name which will limit rendering of this prefix to only that "
 "dialect."
-msgstr ""
+msgstr "単一のキーワード「方言」が受け入れられます。これは省略可能な文字列の名前であり、この接頭辞のその方言へのレンダリングを制限します。"
 
 #: of sqlalchemy.sql.expression.Delete.returning:1
 #: sqlalchemy.sql.expression.Insert.returning:1
 #: sqlalchemy.sql.expression.Update.returning:1
 #: sqlalchemy.sql.expression.UpdateBase.returning:1
 msgid "Add a :term:`RETURNING` or equivalent clause to this statement."
-msgstr ""
+msgstr "この文にa：term： `RETURNING`または同等の句を追加します。"
 
 #: of sqlalchemy.sql.expression.Delete.returning:3
 #: sqlalchemy.sql.expression.Insert.from_select:4
@@ -887,7 +874,7 @@ msgstr ""
 #: sqlalchemy.sql.expression.Update.returning:3
 #: sqlalchemy.sql.expression.UpdateBase.returning:3
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.sql.expression.Delete.returning:14
 #: sqlalchemy.sql.expression.Insert.returning:14
@@ -898,7 +885,7 @@ msgid ""
 "table that is the target of the INSERT, UPDATE, or DELETE.  While "
 ":class:`.Column` objects are typical, the elements can also be "
 "expressions::"
-msgstr ""
+msgstr "指定された列式のコレクションは、INSERT、UPDATEまたはDELETEのターゲットである表から派生する必要があります。 while：class： `.Column`オブジェクトは典型的ですが、要素は式でもあります::"
 
 #: of sqlalchemy.sql.expression.Delete.returning:23
 #: sqlalchemy.sql.expression.Insert.returning:23
@@ -909,7 +896,7 @@ msgid ""
 "rendered within the statement.   For INSERT and UPDATE, the values are "
 "the newly inserted/updated values.  For DELETE, the values are those of "
 "the rows which were deleted."
-msgstr ""
+msgstr "コンパイル時には、RETURNING句、またはそれに相当するデータベースがステートメント内でレンダリングされます。 INSERTとUPDATEの場合、値は新しく挿入/更新された値です。 DELETEの場合、値は削除された行の値です。"
 
 #: of sqlalchemy.sql.expression.Delete.returning:28
 #: sqlalchemy.sql.expression.Insert.returning:28
@@ -922,7 +909,7 @@ msgid ""
 "natively support returning values (i.e. cx_oracle), SQLAlchemy will "
 "approximate this behavior at the result level so that a reasonable amount"
 " of behavioral neutrality is provided."
-msgstr ""
+msgstr "実行時に、返される列の値は結果セットを介して利用可能になり、：meth： `.ResultProxy.fetchone`などを使用して反復することができます。戻り値（つまりcx_oracle）をネイティブにサポートしていないDBAPIの場合、SQLAlchemyは結果のレベルでこの動作を近似し、妥当な量の中立性が提供されます。"
 
 #: of sqlalchemy.sql.expression.Delete.returning:35
 #: sqlalchemy.sql.expression.Insert.returning:35
@@ -936,7 +923,7 @@ msgid ""
 "statements which return multiple rows. Please read the documentation "
 "notes for the database in use in order to determine the availability of "
 "RETURNING."
-msgstr ""
+msgstr "すべてのデータベース/ DBAPIがRETURNINGをサポートしているわけではないことに注意してください。サポートされていないバックエンドの場合、コンパイルおよび/または実行時に例外が発生します。 executemany（）の制限や複数の行を返すその他のステートメントなど、バックエンドの機能は大きく異なります。 RETURNINGの可用性を判断するには、使用中のデータベースのドキュメントを参照してください。"
 
 #: of sqlalchemy.sql.expression.Delete.returning:46
 #: sqlalchemy.sql.expression.Insert.returning:46
@@ -946,7 +933,7 @@ msgid ""
 ":meth:`.ValuesBase.return_defaults` - an alternative method tailored "
 "towards efficient fetching of server-side defaults and triggers for "
 "single-row INSERTs or UPDATEs."
-msgstr ""
+msgstr "：meth： `.ValuesBase.return_defaults`  - 単一行のINSERTやUPDATEのためのサーバサイドのデフォルトとトリガを効率的にフェッチするための代替メソッドです。"
 
 #: of sqlalchemy.sql.expression.Delete.scalar:1
 #: sqlalchemy.sql.expression.Insert.scalar:1
@@ -955,14 +942,14 @@ msgstr ""
 msgid ""
 "Compile and execute this :class:`.Executable`, returning the result's "
 "scalar representation."
-msgstr ""
+msgstr "これをコンパイルして実行します：class： `.Executable`、結果のスカラ表現を返します。"
 
 #: of sqlalchemy.sql.expression.Delete.self_group:1
 #: sqlalchemy.sql.expression.Insert.self_group:1
 #: sqlalchemy.sql.expression.Update.self_group:1
 #: sqlalchemy.sql.expression.UpdateBase.self_group:1
 msgid "Apply a 'grouping' to this :class:`.ClauseElement`."
-msgstr ""
+msgstr "これに &#39;grouping&#39;を適用します：class： `.ClauseElement`。"
 
 #: of sqlalchemy.sql.expression.Delete.self_group:3
 #: sqlalchemy.sql.expression.Insert.self_group:3
@@ -976,7 +963,7 @@ msgid ""
 "into the FROM clause of another :func:`.select`.  (Note that subqueries "
 "should be normally created using the :meth:`.Select.alias` method, as "
 "many platforms require nested SELECT statements to be named)."
-msgstr ""
+msgstr "このメソッドはサブクラスによってオーバーライドされ、\ &quot;グループ化\&quot;構造体、つまり括弧を返します。特に、大規模な式に置かれたときには、自分自身の周りにグループ化を提供するために、\ &quot;バイナリ\&quot;式で使用されます。func： `.select`は、別のFROM句に配置されたときに構築されます。func：` .select `。 （サブクエリは、通常は：meth： `.Select.alias`メソッドを使用して作成する必要があります。これは、多くのプラットフォームでネストされたSELECT文の名前を付ける必要があるためです）。"
 
 #: of sqlalchemy.sql.expression.Delete.self_group:13
 #: sqlalchemy.sql.expression.Insert.self_group:13
@@ -989,7 +976,7 @@ msgid ""
 "operator precedence into account - so parenthesis might not be needed, "
 "for example, in an expression like ``x OR (y AND z)`` - AND takes "
 "precedence over OR."
-msgstr ""
+msgstr "式が一緒に構成されるとき、：meth： `self_group`のアプリケーションは自動です - エンドユーザコードはこのメソッドを直接使う必要はありません。 SQLAlchemyの節構文は演算子の優先順位を考慮していることに注意してください。たとえば、 `` x OR（y AND z） ``のような式のようにかっこは必要ないかもしれません。"
 
 #: of sqlalchemy.sql.expression.Delete.self_group:21
 #: sqlalchemy.sql.expression.Insert.self_group:21
@@ -998,14 +985,14 @@ msgstr ""
 msgid ""
 "The base :meth:`self_group` method of :class:`.ClauseElement` just "
 "returns self."
-msgstr ""
+msgstr "base：meth： `self_group`メソッドの：class：` .ClauseElement`はselfを返します。"
 
 #: of sqlalchemy.sql.expression.Delete.unique_params:1
 #: sqlalchemy.sql.expression.Insert.unique_params:1
 #: sqlalchemy.sql.expression.Update.unique_params:1
 #: sqlalchemy.sql.expression.UpdateBase.unique_params:1
 msgid "Return a copy with :func:`bindparam()` elements replaced."
-msgstr ""
+msgstr "func： `bindparam（）`要素を置き換えてコピーを返します。"
 
 #: of sqlalchemy.sql.expression.Delete.unique_params:3
 #: sqlalchemy.sql.expression.Insert.unique_params:3
@@ -1014,11 +1001,11 @@ msgstr ""
 msgid ""
 "Same functionality as ``params()``, except adds `unique=True` to affected"
 " bind parameters so that multiple statements can be used."
-msgstr ""
+msgstr "複数のステートメントを使用できるように、影響を受けるバインドパラメータに `unique = True`を追加する点を除いて、` `params（）` `と同じ機能です。"
 
 #: of sqlalchemy.sql.expression.Delete.where:1
 msgid "Add the given WHERE clause to a newly returned delete construct."
-msgstr ""
+msgstr "指定したWHERE句を新しく返された削除構文に追加します。"
 
 #: of sqlalchemy.sql.expression.Delete.with_hint:1
 #: sqlalchemy.sql.expression.Insert.with_hint:1
@@ -1027,7 +1014,7 @@ msgstr ""
 msgid ""
 "Add a table hint for a single table to this INSERT/UPDATE/DELETE "
 "statement."
-msgstr ""
+msgstr "このINSERT / UPDATE / DELETEステートメントに単一テーブルのテーブルヒントを追加します。"
 
 #: of sqlalchemy.sql.expression.Delete.with_hint:6
 #: sqlalchemy.sql.expression.Insert.with_hint:6
@@ -1037,7 +1024,7 @@ msgid ""
 ":meth:`.UpdateBase.with_hint` currently applies only to Microsoft SQL "
 "Server.  For MySQL INSERT/UPDATE/DELETE hints, use "
 ":meth:`.UpdateBase.prefix_with`."
-msgstr ""
+msgstr "：meth： `.UpdateBase.with_hint`は現在、Microsoft SQL Serverにのみ適用されます。 MySQLのINSERT / UPDATE / DELETEヒントについては、：meth： `.UpdateBase.prefix_with`を使用してください。"
 
 #: of sqlalchemy.sql.expression.Delete.with_hint:10
 #: sqlalchemy.sql.expression.Insert.with_hint:10
@@ -1048,7 +1035,7 @@ msgid ""
 "database backend in use, relative to the :class:`.Table` that is the "
 "subject of this statement, or optionally to that of the given "
 ":class:`.Table` passed as the ``selectable`` argument."
-msgstr ""
+msgstr "ヒントのテキストは、使用中のデータベースバックエンドの適切な場所にレンダリングされます。これは、このステートメントの主題である：class： `.Table`を基準にして、または任意で：class：` .Table` `` selectable``引数として渡されました。"
 
 #: of sqlalchemy.sql.expression.Delete.with_hint:16
 #: sqlalchemy.sql.expression.Insert.with_hint:16
@@ -1058,14 +1045,14 @@ msgid ""
 "The ``dialect_name`` option will limit the rendering of a particular hint"
 " to a particular backend. Such as, to add a hint that only takes effect "
 "for SQL Server::"
-msgstr ""
+msgstr "`` dialect_name``オプションは、特定のヒントを特定のバックエンドにレンダリングすることを制限します。のような、SQL Serverにのみ有効なヒントを追加する::"
 
 #: of sqlalchemy.sql.expression.Delete.with_hint:24
 #: sqlalchemy.sql.expression.Insert.with_hint:24
 #: sqlalchemy.sql.expression.Update.with_hint:24
 #: sqlalchemy.sql.expression.UpdateBase.with_hint:24
 msgid "Text of the hint."
-msgstr ""
+msgstr "ヒントのテキスト。"
 
 #: of sqlalchemy.sql.expression.Delete.with_hint:25
 #: sqlalchemy.sql.expression.Insert.with_hint:25
@@ -1075,7 +1062,7 @@ msgid ""
 "optional :class:`.Table` that specifies an element of the FROM clause "
 "within an UPDATE or DELETE to be the subject of the hint - applies only "
 "to certain backends."
-msgstr ""
+msgstr "オプション：クラス：ヒントの対象となるUPDATEまたはDELETE内のFROM句の要素を指定する `.Table`  - 特定のバックエンドのみに適用されます。"
 
 #: of sqlalchemy.sql.expression.Delete.with_hint:28
 #: sqlalchemy.sql.expression.Insert.with_hint:28
@@ -1084,33 +1071,33 @@ msgstr ""
 msgid ""
 "defaults to ``*``, if specified as the name of a particular dialect, will"
 " apply these hints only when that dialect is in use."
-msgstr ""
+msgstr "デフォルトで `` * ``は、特定の方言の名前として指定された場合、その方言が使用されている場合にのみ、これらのヒントを適用します。"
 
 #: of sqlalchemy.sql.expression.Insert:1
 msgid "Represent an INSERT construct."
-msgstr ""
+msgstr "INSERT構文を表します。"
 
 #: of sqlalchemy.sql.expression.Insert:3
 msgid ""
 "The :class:`.Insert` object is created using the "
 ":func:`~.expression.insert()` function."
-msgstr ""
+msgstr "：class： `.Insert`オブジェクトは、：func：`〜.expression.insert（） `関数を使って作成されます。"
 
 #: of sqlalchemy.sql.expression.Insert:8
 msgid ":ref:`coretutorial_insert_expressions`"
-msgstr ""
+msgstr "：ref： `coretutorial_insert_expressions`"
 
 #: of sqlalchemy.sql.expression.Insert.from_select:1
 msgid ""
 "Return a new :class:`.Insert` construct which represents an "
 "``INSERT...FROM SELECT`` statement."
-msgstr ""
+msgstr "INSERT ... FROM SELECT`文を表す新しい：class： `.Insert`構文を返します。"
 
 #: of sqlalchemy.sql.expression.Insert.from_select:9
 msgid ""
 "a sequence of string column names or :class:`.Column` objects "
 "representing the target columns."
-msgstr ""
+msgstr "文字列の列名のシーケンス、またはターゲット列を表す：class： `.Column`オブジェクト。"
 
 #: of sqlalchemy.sql.expression.Insert.from_select:11
 msgid ""
@@ -1121,7 +1108,7 @@ msgid ""
 "``names`` parameter;  while this is not checked before passing along to "
 "the database, the database would normally raise an exception if these "
 "column lists don't correspond."
-msgstr ""
+msgstr "a：func： `.select`構造体、：class：` .FromClause`、または：class： `.FromClause`に解決する他の構造体、例えばORM：class：` .Query`オブジェクトなどです。このFROM句から返される列は、 `` names``パラメータとして送信される列の順序に対応する必要があります。これはデータベースに渡される前にチェックされませんが、データベースは通常、これらの列リストが一致しない場合に例外を発生させます。"
 
 #: of sqlalchemy.sql.expression.Insert.from_select:19
 msgid ""
@@ -1135,7 +1122,7 @@ msgid ""
 "versionadded:: 1.0.0 - :meth:`.Insert.from_select` now renders    Python-"
 "side and SQL expression column defaults into the    SELECT statement for "
 "columns otherwise not included in the    list of column names."
-msgstr ""
+msgstr "Trueの場合、名前のリストに別途指定されていない：class： `.Column`オブジェクト（：ref：` metadata_defaults_toplevel`に記載されています）で指定されたサーバ以外のデフォルト値とSQL式は、INSERT文とSELECT文に表示されますこれらの値は、挿入されるデータにも含まれる。 .. note :: Python呼び出し可能関数を使用するPython側のデフォルトは、文全体に対して一度**、行ごとには**だけ呼び出されます。 .. versionadded :: 1.0.0  - ：meth： `.Insert.from_select`はPython側を表現し、SQL式の列は、カラム名のリストに含まれていないカラムのSELECT文にデフォルトで設定されるようになりました。"
 
 #: of sqlalchemy.sql.expression.Insert.from_select:19
 msgid ""
@@ -1144,20 +1131,20 @@ msgid ""
 ":ref:`metadata_defaults_toplevel`) not otherwise specified in the list of"
 " names will be rendered into the INSERT and SELECT statements, so that "
 "these values are also included in the data to be inserted."
-msgstr ""
+msgstr "Trueの場合、名前のリストに別途指定されていない：class： `.Column`オブジェクト（：ref：` metadata_defaults_toplevel`に記載されています）で指定されたサーバ以外のデフォルト値とSQL式は、INSERT文とSELECT文に表示されますこれらの値は、挿入されるデータにも含まれる。"
 
 #: of sqlalchemy.sql.expression.Insert.from_select:26
 msgid ""
 "A Python-side default that uses a Python callable function will only be "
 "invoked **once** for the whole statement, and **not per row**."
-msgstr ""
+msgstr "Python呼び出し可能関数を使用するPython側のデフォルトは、文全体に対して** once **だけ呼び出され、**は行**では呼び出されません。"
 
 #: of sqlalchemy.sql.expression.Insert.from_select:30
 msgid ""
 "- :meth:`.Insert.from_select` now renders Python-side and SQL expression "
 "column defaults into the SELECT statement for columns otherwise not "
 "included in the list of column names."
-msgstr ""
+msgstr "- ：meth： `.Insert.from_select`はPython側を表示し、SQL式の列は、列名のリストに含まれていない列のSELECT文にデフォルトで表示されるようになりました。"
 
 #: of sqlalchemy.sql.expression.Insert.from_select:35
 msgid ""
@@ -1166,7 +1153,7 @@ msgid ""
 "statement will not attempt to fetch the \"last inserted primary key\" or "
 "other defaults.  The statement deals with an arbitrary number of rows, so"
 " the :attr:`.ResultProxy.inserted_primary_key` accessor does not apply."
-msgstr ""
+msgstr "FROM SELECTを使用するINSERTは、：paramref： `.insert.inline`フラグがTrueに設定されていることを意味し、ステートメントが\&quot;最後に挿入された主キー\ &quot;または他のデフォルト値をフェッチしないことを示します。ステートメントは任意の数の行を処理するため、：attr： `.ResultProxy.inserted_primary_key`アクセサは適用されません。"
 
 #: of sqlalchemy.sql.expression.Insert.return_defaults:1
 #: sqlalchemy.sql.expression.Update.return_defaults:1
@@ -1174,7 +1161,7 @@ msgstr ""
 msgid ""
 "Make use of a :term:`RETURNING` clause for the purpose of fetching "
 "server-side expressions and defaults."
-msgstr ""
+msgstr "サーバー側の式とデフォルトを取得するために、：term： `RETURNING`節を使用してください。"
 
 #: of sqlalchemy.sql.expression.Insert.return_defaults:12
 #: sqlalchemy.sql.expression.Update.return_defaults:12
@@ -1187,13 +1174,13 @@ msgid ""
 "the result using the :attr:`.ResultProxy.returned_defaults` accessor as a"
 " dictionary, referring to values keyed to the :class:`.Column` object as "
 "well as its ``.key``."
-msgstr ""
+msgstr "RETURNINGをサポートするバックエンドに対して使用すると、SQL式またはサーバー側のデフォルトによって生成されたすべての列の値は、既存のRETURNING句に追加されます。ただし、：meth： `.UpdateBase.returning`は同時に使用されません。次に、：attr： `.ResultProxy.returned_defaults`アクセサをディクショナリとして使用して、：class：` .Column`オブジェクトとその `` .key``オブジェクトにキー入力された値を参照して、カラム値を結果で利用できます。"
 
 #: of sqlalchemy.sql.expression.Insert.return_defaults:21
 #: sqlalchemy.sql.expression.Update.return_defaults:21
 #: sqlalchemy.sql.expression.ValuesBase.return_defaults:21
 msgid "This method differs from :meth:`.UpdateBase.returning` in these ways:"
-msgstr ""
+msgstr "このメソッドは、以下の点で：meth： `.UpdateBase.returning`と異なります。"
 
 #: of sqlalchemy.sql.expression.Insert.return_defaults:23
 #: sqlalchemy.sql.expression.Update.return_defaults:23
@@ -1210,7 +1197,7 @@ msgid ""
 ":meth:`.ValuesBase.return_defaults` is used.  By contrast, "
 ":meth:`.UpdateBase.returning` leaves the RETURNING result-set intact with"
 " a collection of any number of rows."
-msgstr ""
+msgstr "：meth： `.ValuesBase.return_defaults`は、ちょうど1つの行と一致するINSERT文またはUPDATE文での使用を意図しています。一般的な意味でのRETURNING構文は、複数行のUPDATEまたはDELETE文、または複数の行を返すINSERTの特別な場合（SELECTからのINSERT、複数値のVALUES句）の複数の行をサポートしますが、：meth： `.ValuesBase .return_defaults`は\ &quot;ORMスタイル\&quot;の単一行のINSERT / UPDATE文だけを対象としています。ステートメントによって返された行は、：meth： `.ValuesBase.return_defaults`が使用されたときに暗黙的に消費されます。対照的に、：meth： `.UpdateBase.returning`は、RETURNING結果セットをそのままの数の行のコレクションで残します。"
 
 #: of sqlalchemy.sql.expression.Insert.return_defaults:36
 #: sqlalchemy.sql.expression.Update.return_defaults:36
@@ -1222,7 +1209,7 @@ msgid ""
 "value of newly generated primary keys; while the "
 ":meth:`.UpdateBase.returning` method circumvents this behavior, "
 ":meth:`.ValuesBase.return_defaults` leaves it intact."
-msgstr ""
+msgstr "既存のロジックと互換性があり、自動的に生成されたプライマリキー値を取得します。これは\ &quot;暗黙的な戻り値\&quot;とも呼ばれます。 RETURNINGをサポートするバックエンドは、新しく生成された主キーの値を取得するために自動的にRETURNINGを使用します。 ：meth： `.UpdateBase.returning`メソッドはこの動作を回避しますが、：meth：` .ValuesBase.return_defaults`はそのまま残します。"
 
 #: of sqlalchemy.sql.expression.Insert.return_defaults:43
 #: sqlalchemy.sql.expression.Update.return_defaults:43
@@ -1232,7 +1219,7 @@ msgid ""
 "RETURNING will skip the usage of the feature, rather than raising an "
 "exception.  The return value of :attr:`.ResultProxy.returned_defaults` "
 "will be ``None``"
-msgstr ""
+msgstr "バックエンドに対して呼び出すことができます。 RETURNINGをサポートしていないバックエンドは、例外を発生させるのではなく、その機能の使用をスキップします。 ：attr： `.ResultProxy.returned_defaults`の戻り値は` `None``になります。"
 
 #: of sqlalchemy.sql.expression.Insert.return_defaults:48
 #: sqlalchemy.sql.expression.Update.return_defaults:48
@@ -1241,7 +1228,7 @@ msgid ""
 ":meth:`.ValuesBase.return_defaults` is used by the ORM to provide an "
 "efficient implementation for the ``eager_defaults`` feature of "
 ":func:`.mapper`."
-msgstr ""
+msgstr "：meth： `.ValuesBase.return_defaults`は：func：` .mapper`の `` eager_defaults``機能の効率的な実装を提供するためにORMによって使用されます。"
 
 #: of sqlalchemy.sql.expression.Insert.return_defaults:52
 #: sqlalchemy.sql.expression.Update.return_defaults:52
@@ -1250,19 +1237,19 @@ msgid ""
 "optional list of column key names or :class:`.Column` objects.  If "
 "omitted, all column expressions evaluated on the server are added to the "
 "returning list."
-msgstr ""
+msgstr "列キー名または：class： `.Column`オブジェクトのオプションリスト。省略すると、サーバー上で評価されたすべての列式が戻りリストに追加されます。"
 
 #: of sqlalchemy.sql.expression.Insert.return_defaults:60
 #: sqlalchemy.sql.expression.Update.return_defaults:60
 #: sqlalchemy.sql.expression.ValuesBase.return_defaults:60
 msgid ":meth:`.UpdateBase.returning`"
-msgstr ""
+msgstr "：meth： `.UpdateBase.returning`"
 
 #: of sqlalchemy.sql.expression.Insert.return_defaults:62
 #: sqlalchemy.sql.expression.Update.return_defaults:62
 #: sqlalchemy.sql.expression.ValuesBase.return_defaults:62
 msgid ":attr:`.ResultProxy.returned_defaults`"
-msgstr ""
+msgstr "：attr： `.ResultProxy.returned_defaults`"
 
 #: of sqlalchemy.sql.expression.Insert.values:1
 #: sqlalchemy.sql.expression.Update.values:1
@@ -1270,7 +1257,7 @@ msgstr ""
 msgid ""
 "specify a fixed VALUES clause for an INSERT statement, or the SET clause "
 "for an UPDATE."
-msgstr ""
+msgstr "INSERT文には固定VALUES句を、UPDATEにはSET句を指定します。"
 
 #: of sqlalchemy.sql.expression.Insert.values:4
 #: sqlalchemy.sql.expression.Update.values:4
@@ -1281,7 +1268,7 @@ msgid ""
 "the arguments passed to :meth:`.Connection.execute`. However, the "
 ":meth:`.ValuesBase.values` method can be used to \"fix\" a particular set"
 " of parameters into the statement."
-msgstr ""
+msgstr "：class： `.Insert`と：class：` .Update`は、：meth： `.Connection.execute`に渡された引数に基づいて、VALUESおよび/またはSET節の実行時フォーマットをサポートしています。しかし、：meth： `.ValuesBase.values`メソッドは、特定のパラメータセットをステートメントに&quot;修正 &quot;するために使用できます。"
 
 #: of sqlalchemy.sql.expression.Insert.values:10
 #: sqlalchemy.sql.expression.Update.values:10
@@ -1294,7 +1281,7 @@ msgid ""
 "previous construct.  In the case of a list-based \"multiple values\" "
 "construct, each new list of values is extended onto the existing list of "
 "values."
-msgstr ""
+msgstr "：meth： `.ValuesBase.values`を複数呼び出すと、送信された新しいパラメータを含むようにパラメータリストが変更された新しい構造が生成されます。パラメータの辞書の典型的な例では、新しく渡されたキーは、前の構造の同じキーを置き換えます。リストベースの\ &quot;複数値\&quot;構成の場合、新しい値リストはそれぞれ、既存の値リストに拡張されます。"
 
 #: of sqlalchemy.sql.expression.Insert.values:18
 #: sqlalchemy.sql.expression.Update.values:18
@@ -1304,7 +1291,7 @@ msgid ""
 "to the value to be rendered into the VALUES or SET clause::        "
 "users.insert().values(name=\"some name\")        "
 "users.update().where(users.c.id==5).values(name=\"some name\")"
-msgstr ""
+msgstr "VALUEESまたはSET句:: users.insert（）。values（name = \ &quot;some name \&quot;）ユーザにレンダリングされる値にマッピングされた：class： `.Column`の文字列キーを表すキー値ペア。 update（）。ここで（users.c.id == 5）.values（name = \ &quot;some name \&quot;）"
 
 #: of sqlalchemy.sql.expression.Insert.values:18
 #: sqlalchemy.sql.expression.Update.values:18
@@ -1312,7 +1299,7 @@ msgstr ""
 msgid ""
 "key value pairs representing the string key of a :class:`.Column` mapped "
 "to the value to be rendered into the VALUES or SET clause::"
-msgstr ""
+msgstr "VALUESまたはSET句にレンダリングされる値にマッピングされた：class： `.Column`の文字列キーを表すキー値のペア::"
 
 #: of sqlalchemy.sql.expression.Insert.values:26
 #: sqlalchemy.sql.expression.Update.values:26
@@ -1373,7 +1360,7 @@ msgid ""
 "example of the      "
 ":paramref:`~sqlalchemy.sql.expression.update.preserve_parameter_order`"
 "      flag"
-msgstr ""
+msgstr "キー/値パラメーターを渡す代わりに、ステートメントのVALUES節またはSET節を形成するために、辞書、タプル、または辞書またはタプルのリストを単一の位置引数として渡すことができます。受け入れられるフォームは、これが：class： `.Insert`か：class：` .Update`のどちらであるかによって異なります。 ：class： `.Insert`または：class：` .Update`のいずれかの構造体に対しては、kwargs form :: users.insert（）の値と同じ働きをする単一の辞書を渡すことができます。 （名前：\ &quot;いくつかの新しい名前\&quot;））どちらの形式でも、より一般的には：class： `のために。テーブルのすべての列のエントリを含むタプルも受け入れられます:: users.insert（）。values（（5、\ &quot;some name \&quot;））：class： `.Insert`構造サーバ上では、 &quot;多値&quot;というあまり一般的でないSQL構文をレンダリングする、辞書やフルテーブルタプルのリストを渡すことをサポートしています - この構文は、SQLite、PostgreSQL、MySQLなどのバックエンドでサポートされています他人:: users.insert（）。値（[{\ &quot;名前\&quot;：\ &quot;名前\&quot;：\ &quot;名前\&quot;：\ &quot;他の名前\&quot;}上記のフォームは、:: INSERT INTO users（name）VALUES（：name_1）、（：name_2）、（：name_3）と同様の複数のVALUES文をレンダリングします。 **複数の値を渡すことは、従来のexecutemany（）フォーム**を使用するのと同じではないことに注意してください。上記の構文は、通常は使用されない**特別な**構文です。複数の行に対してINSERT文を発行するには、複数の値リストを：meth： `.Connection.execute`メソッドに渡します。これは、すべてのデータベースバックエンドでサポートされています。パラメーター。 .. seealso ::：ref： `execute_multiple`  -  INSERTや他のステートメントに対する複数のパラメータセット呼び出しの伝統的なCoreメソッドの紹介です。 .. versionchanged :: 1.0.0複数のVALUES句を使用するINSERTは、長さが1のリストであっても、：paramref： `.Insert.inline`フラグがTrueに設定されていることを意味します。 \ &quot;最後に挿入された主キー\&quot;または他のデフォルトをフェッチする。ステートメントは任意の数の行を処理するため、：attr： `.ResultProxy.inserted_primary_key`アクセサは適用されません。 .. versionchanged :: 1.0.0 multiple-VALUES INSERTはPython側のデフォルト値と呼び出し可能な列を\ &quot;executemany \&quot;スタイルの呼び出しと同じようにサポートするようになりました。呼び出し可能は各行に対して呼び出されます。その他の詳細は：ref： `bug_3288`を参照してください。 ：class： `.Update`コンストラクトは2タプルのリストである特別な形式をサポートしています。これは：paramref：`〜sqlalchemy.sql.expression.update.preserve_parameter_order`パラメータと一緒に渡す必要があります。この形式では、UPDATE文は、：class： `.Table`で与えられた列の順序ではなく、：meth：` .Update.values`に与えられたパラメータの順序を使用してSET句を表示します。 .. versionadded :: 1.0.10  - ：paramref： `〜sqlalchemy.sql.expression.update.preserve_parameter_order`フラグを介して、パラメータ順のUPDATE文のサポートが追加されました。 .. seealso :: ref： `updates_order_parameters`  - 完全な例：paramref：`〜sqlalchemy.sql.expression.update.preserve_parameter_order`フラグ"
 
 #: of sqlalchemy.sql.expression.Insert.values:26
 #: sqlalchemy.sql.expression.Update.values:26
@@ -1384,7 +1371,7 @@ msgid ""
 "argument in order to form the VALUES or SET clause of the statement.  The"
 " forms that are accepted vary based on whether this is an "
 ":class:`.Insert` or an :class:`.Update` construct."
-msgstr ""
+msgstr "キー/値パラメーターを渡す代わりに、ステートメントのVALUES節またはSET節を形成するために、辞書、タプル、または辞書またはタプルのリストを単一の位置引数として渡すことができます。受け入れられるフォームは、これが：class： `.Insert`か：class：` .Update`のどちらであるかによって異なります。"
 
 #: of sqlalchemy.sql.expression.Insert.values:33
 #: sqlalchemy.sql.expression.Update.values:33
@@ -1393,7 +1380,7 @@ msgid ""
 "For either an :class:`.Insert` or :class:`.Update` construct, a single "
 "dictionary can be passed, which works the same as that of the kwargs "
 "form::"
-msgstr ""
+msgstr "：class： `.Insert`または：class：` .Update`のいずれかの構文の場合、kwargs形式のものと同じ働きをする単一の辞書を渡すことができます::"
 
 #: of sqlalchemy.sql.expression.Insert.values:41
 #: sqlalchemy.sql.expression.Update.values:41
@@ -1402,7 +1389,7 @@ msgid ""
 "Also for either form but more typically for the :class:`.Insert` "
 "construct, a tuple that contains an entry for every column in the table "
 "is also accepted::"
-msgstr ""
+msgstr "どちらの形式でも、より一般的には：class： `.Insert`構造体の場合、テーブルの各列のエントリを含むタプルも受け入れられます::"
 
 #: of sqlalchemy.sql.expression.Insert.values:47
 #: sqlalchemy.sql.expression.Update.values:47
@@ -1413,13 +1400,13 @@ msgid ""
 "less common SQL syntax of \"multiple values\" - this syntax is supported "
 "on backends such as SQLite, PostgreSQL, MySQL, but not necessarily "
 "others::"
-msgstr ""
+msgstr "：class： `.Insert`構造は、辞書や全テーブルタプルのリストを渡すこともサポートしています。このタプルは、サーバ上では「多値」のSQL構文があまり一般的ではありません。この構文はバックエンドなどでサポートされています。 SQLite、PostgreSQL、MySQL（ただし必ずしもそうではありません）："
 
 #: of sqlalchemy.sql.expression.Insert.values:59
 #: sqlalchemy.sql.expression.Update.values:59
 #: sqlalchemy.sql.expression.ValuesBase.values:59
 msgid "The above form would render a multiple VALUES statement similar to::"
-msgstr ""
+msgstr "上記のフォームは、次のような複数のVALUES文をレンダリングします。"
 
 #: of sqlalchemy.sql.expression.Insert.values:66
 #: sqlalchemy.sql.expression.Update.values:66
@@ -1432,7 +1419,7 @@ msgid ""
 "list to the :meth:`.Connection.execute` method, which is supported by all"
 " database backends and is generally more efficient for a very large "
 "number of parameters."
-msgstr ""
+msgstr "**複数の値を渡すことは、従来のexecutemany（）フォーム**を使用するのと同じではないことに注意することが重要です。上記の構文は、通常は使用されない**特別な**構文です。複数の行に対してINSERT文を発行するには、複数の値リストを：meth： `.Connection.execute`メソッドに渡します。これは、すべてのデータベースバックエンドでサポートされています。パラメーター。"
 
 #: of sqlalchemy.sql.expression.Insert.values:76
 #: sqlalchemy.sql.expression.Update.values:76
@@ -1440,7 +1427,7 @@ msgstr ""
 msgid ""
 ":ref:`execute_multiple` - an introduction to the traditional Core method "
 "of multiple parameter set invocation for INSERTs and other statements."
-msgstr ""
+msgstr "：ref： `execute_multiple`  -  INSERTや他のステートメントに対する複数のパラメータセット呼び出しの伝統的なCoreメソッドの紹介です。"
 
 #: of sqlalchemy.sql.expression.Insert.values:80
 #: sqlalchemy.sql.expression.Update.values:80
@@ -1452,7 +1439,7 @@ msgid ""
 "inserted primary key\" or other defaults.  The statement deals with an "
 "arbitrary number of rows, so the "
 ":attr:`.ResultProxy.inserted_primary_key` accessor does not apply."
-msgstr ""
+msgstr "複数のVALUES句を使用するINSERTは、長さが1のリストであっても、：paramref： `.Insert.inline`フラグがTrueに設定されていることを意味します。つまり、最後に挿入されたプライマリキー\ &quot;または他のデフォルト値。ステートメントは任意の数の行を処理するため、：attr： `.ResultProxy.inserted_primary_key`アクセサは適用されません。"
 
 #: of sqlalchemy.sql.expression.Insert.values:89
 #: sqlalchemy.sql.expression.Update.values:89
@@ -1462,7 +1449,7 @@ msgid ""
 "values and callables in the same way as that of an \"executemany\" style "
 "of invocation; the callable is invoked for each row.   See "
 ":ref:`bug_3288` for other details."
-msgstr ""
+msgstr "複数VALUES INSERTはPython側のデフォルト値と呼び出し可能な列を\ &quot;executemany \&quot;スタイルの呼び出しと同じようにサポートするようになりました。呼び出し可能は各行に対して呼び出されます。その他の詳細は：ref： `bug_3288`を参照してください。"
 
 #: of sqlalchemy.sql.expression.Insert.values:95
 #: sqlalchemy.sql.expression.Update.values:95
@@ -1474,7 +1461,7 @@ msgid ""
 "parameter. This form causes the UPDATE statement to render the SET "
 "clauses using the order of parameters given to :meth:`.Update.values`, "
 "rather than the ordering of columns given in the :class:`.Table`."
-msgstr ""
+msgstr "：class： `.Update`コンストラクトは2タプルのリストである特別な形式をサポートしています。これは：paramref：`〜sqlalchemy.sql.expression.update.preserve_parameter_order`パラメータと一緒に渡す必要があります。この形式では、UPDATE文は、：class： `.Table`で与えられた列の順序ではなく、：meth：` .Update.values`に与えられたパラメータの順序を使用してSET句を表示します。"
 
 #: of sqlalchemy.sql.expression.Insert.values:104
 #: sqlalchemy.sql.expression.Update.values:104
@@ -1483,47 +1470,47 @@ msgid ""
 "- added support for parameter-ordered UPDATE statements via the "
 ":paramref:`~sqlalchemy.sql.expression.update.preserve_parameter_order` "
 "flag."
-msgstr ""
+msgstr "- ：paramref： `〜sqlalchemy.sql.expression.update.preserve_parameter_order`フラグを使用して、パラメータ順のUPDATE文のサポートを追加しました。"
 
 #: of sqlalchemy.sql.expression.Insert.values:120
 #: sqlalchemy.sql.expression.Update.values:120
 #: sqlalchemy.sql.expression.ValuesBase.values:120
 msgid ":func:`~.expression.insert` - produce an ``INSERT`` statement"
-msgstr ""
+msgstr "：func： `〜.expression.insert`  - ` `INSERT``文を生成します"
 
 #: of sqlalchemy.sql.expression.Insert.values:122
 #: sqlalchemy.sql.expression.Update.values:122
 #: sqlalchemy.sql.expression.ValuesBase.values:122
 msgid ":func:`~.expression.update` - produce an ``UPDATE`` statement"
-msgstr ""
+msgstr "：func： `〜.expression.update`  - ` `UPDATE``文を生成します"
 
 #: of sqlalchemy.sql.expression.Update:1
 msgid "Represent an Update construct."
-msgstr ""
+msgstr "Updateコンストラクトを表します。"
 
 #: of sqlalchemy.sql.expression.Update:3
 msgid ""
 "The :class:`.Update` object is created using the :func:`update()` "
 "function."
-msgstr ""
+msgstr "：class： `.Update`オブジェクトは、：func：` update（） `関数を使って作成されます。"
 
 #: of sqlalchemy.sql.expression.Update.where:1
 msgid ""
 "return a new update() construct with the given expression added to its "
 "WHERE clause, joined to the existing clause via AND, if any."
-msgstr ""
+msgstr "指定された式をWHERE句に追加して新しいupdate（）構文を返し、存在する場合はANDを介して既存の句に結合します。"
 
 #: of sqlalchemy.sql.expression.UpdateBase:1
 msgid "Form the base for ``INSERT``, ``UPDATE``, and ``DELETE`` statements."
-msgstr ""
+msgstr "`` INSERT``、 `` UPDATE``、および `` DELETE``文の基底を形成します。"
 
 #: of sqlalchemy.sql.expression.UpdateBase.get_children:1
 msgid "Return immediate child elements of this :class:`.ClauseElement`."
-msgstr ""
+msgstr "this：class： `.ClauseElement`の直接の子要素を返します。"
 
 #: of sqlalchemy.sql.expression.UpdateBase.get_children:3
 msgid "This is used for visit traversal."
-msgstr ""
+msgstr "訪問トラバーサルに使用されます。"
 
 #: of sqlalchemy.sql.expression.UpdateBase.get_children:5
 msgid ""
@@ -1531,11 +1518,11 @@ msgid ""
 " for example to return a subset of items in order to cut down on larger "
 "traversals, or to return child items from a different context (such as "
 "schema-level collections instead of clause-level)."
-msgstr ""
+msgstr "\\ ** kwargsには、返されるコレクションを変更するフラグが含まれている可能性があります。たとえば、より大きなトラバーサルを減らすためにアイテムのサブセットを返すか、別のコンテキスト（たとえば、スキーマレベルのコレクション節レベルの）。"
 
 #: of sqlalchemy.sql.expression.ValuesBase:1
 msgid ""
 "Supplies support for :meth:`.ValuesBase.values` to INSERT and UPDATE "
 "constructs."
-msgstr ""
+msgstr "INSERTおよびUPDATE構造体に：meth： `.ValuesBase.values`をサポートしています。"
 

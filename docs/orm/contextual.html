@@ -10,7 +10,7 @@
         <title>
             
     
-    Contextual/Thread-local Sessions
+    コンテキスト/スレッドローカルセッション
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Using the Session" href="session.html" />
-        <link rel="next" title="Tracking Object and Session Changes with Events" href="session_events.html" />
-        <link rel="prev" title="Additional Persistence Techniques" href="persistence_techniques.html" />
+        <link rel="up" title="セッションの使用" href="session.html" />
+        <link rel="next" title="イベントによるオブジェクトおよびセッションの変更の追跡" href="session_events.html" />
+        <link rel="prev" title="追加の永続化手法" href="persistence_techniques.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,31 +120,31 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="session_basics.html">Session Basics</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session_state_management.html">State Management</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="cascades.html">Cascades</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session_transaction.html">Transactions and Connection Management</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="persistence_techniques.html">Additional Persistence Techniques</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Contextual/Thread-local Sessions</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#implicit-method-access">Implicit Method Access</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#thread-local-scope">Thread-Local Scope</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#using-thread-local-scope-with-web-applications">Using Thread-Local Scope with Web Applications</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#using-custom-created-scopes">Using Custom Created Scopes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#contextual-session-api">Contextual Session API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="session_basics.html">セッションの基礎</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_state_management.html">状態管理</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="cascades.html">カスケード</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_transaction.html">トランザクションと接続管理</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="persistence_techniques.html">追加の永続化手法</a></span></li>
+<li class="selected"><span class="link-container first"><strong>コンテキスト/スレッドローカルセッション</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#implicit-method-access">暗黙的メソッドアクセス</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#thread-local-scope">スレッドローカルスコープ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#using-thread-local-scope-with-web-applications">Webアプリケーションでのスレッドローカルスコープの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#using-custom-created-scopes">カスタム作成スコープの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#contextual-session-api">コンテクストセッションAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="session_events.html">Tracking Object and Session Changes with Events</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session_api.html">Session API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_events.html">イベントによるオブジェクトおよびセッションの変更の追跡</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session_api.html">セッションAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -160,84 +160,43 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="contextual-thread-local-sessions">
-<span id="unitofwork-contextual"></span><h1>Contextual/Thread-local Sessions<a class="headerlink" href="#contextual-thread-local-sessions" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Recall from the section <a class="reference internal" href="session_basics.html#session-faq-whentocreate"><span class="std std-ref">When do I construct a Session, when do I commit it, and when do I close it?</span></a>, the concept of
-&quot;session scopes&quot; was introduced, with an emphasis on web applications
-and the practice of linking the scope of a <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> with that
-of a web request.   Most modern web frameworks include integration tools
-so that the scope of the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> can be managed automatically,
-and these tools should be used as they are available.</p>
-<p>SQLAlchemy includes its own helper object, which helps with the establishment
-of user-defined <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> scopes.  It is also used by third-party
-integration systems to help construct their integration schemes.</p>
-<p>The object is the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> object, and it represents a
-<strong>registry</strong> of <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> objects.  If you're not familiar with the
-registry pattern, a good introduction can be found in <a class="reference external" href="http://martinfowler.com/eaaCatalog/registry.html">Patterns of Enterprise
-Architecture</a>.</p>
+<span id="unitofwork-contextual"></span><h1>コンテキスト/スレッドローカルセッション<a class="headerlink" href="#contextual-thread-local-sessions" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>セクション：ref： <cite>session_faq_whentocreate`から、&amp;quot;セッションスコープ&amp;quot;という概念が導入されました。ウェブアプリケーションと、：class：</cite> .Session`とWebのスコープをリンクする実践を重視しています要求。最新のWebフレームワークには、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`のスコープを自動的に管理できる統合ツールが含まれており、これらのツールは利用可能な状態で使用する必要があります。</p>
+<p>SQLAlchemyには、独自のヘルパーオブジェクトが含まれており、ユーザー定義クラス：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`スコープの確立に役立ちます。サードパーティの統合システムでも、統合スキームの構築を支援するために使用されます。</p>
+<p>オブジェクトは：class： <cite>.scoped_session`オブジェクトであり、：class：</cite> .Session`オブジェクトの**レジストリ**を表します。レジストリパターンに精通していない場合は、 <a href="#id1"><span class="problematic" id="id2">`</span></a>Patterns of Enterprise Architecture &lt;<a class="reference external" href="http://martinfowler.com/eaaCatalog/registry.html">http://martinfowler.com/eaaCatalog/registry.html</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">The <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> object is a very popular and useful object
-used by many SQLAlchemy applications.  However, it is important to note
-that it presents <strong>only one approach</strong> to the issue of <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>
-management.  If you're new to SQLAlchemy, and especially if the
-term &quot;thread-local variable&quot; seems strange to you, we recommend that
-if possible you familiarize first with an off-the-shelf integration
-system such as <a class="reference external" href="http://packages.python.org/Flask-SQLAlchemy/">Flask-SQLAlchemy</a>
-or <a class="reference external" href="http://pypi.python.org/pypi/zope.sqlalchemy">zope.sqlalchemy</a>.</p>
+<p class="last">：class： <cite>.scoped_session`オブジェクトは、多くのSQLAlchemyアプリケーションで使用されている非常にポピュラーで有用なオブジェクトです。ただし、クラス： `.Session`管理の問題に対して、** **ただ一つのアプローチ**を提示することに注意することが重要です。 SQLAlchemyの初心者で、特に &amp;quot;スレッドローカル変数&amp;quot;という言葉があなたに奇妙に見える場合は、可能であれば、最初にFlask-SQLAlchemy &lt;http://packages.python.org/Flask-SQLAlchemy/&gt; `_または</cite> zope.sqlalchemy &lt;<a class="reference external" href="http://pypi.python.org/pypi/zope.sqlalchemy">http://pypi.python.org/pypi/zope.sqlalchemy</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_。</p>
 </div>
-<p>A <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> is constructed by calling it, passing it a
-<strong>factory</strong> which can create new <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> objects.   A factory
-is just something that produces a new object when called, and in the
-case of <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>, the most common factory is the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.sessionmaker" title="sqlalchemy.orm.session.sessionmaker"><code class="xref py py-class docutils literal"><span class="pre">sessionmaker</span></code></a>,
-introduced earlier in this section.  Below we illustrate this usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">scoped_session</span>
+<p>A：class： <cite>.scoped_session`は、それを呼び出すことによって構築され、新しい：class：</cite> .Session`オブジェクトを作成できる** factory <a href="#id1"><span class="problematic" id="id2">**</span></a>を渡します。ファクトリは、呼び出されたときに新しいオブジェクトを生成するものです：class： <cite>.Session`の場合、最も一般的なファクトリは：class：</cite> .sessionmaker`です。以下に、この使用方法を示します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">scoped_session</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">sessionmaker</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">session_factory</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="n">some_engine</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Session</span> <span class="o">=</span> <span class="n">scoped_session</span><span class="p">(</span><span class="n">session_factory</span><span class="p">)</span></pre></div>
 </div>
-<p>The <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> object we've created will now call upon the
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.sessionmaker" title="sqlalchemy.orm.session.sessionmaker"><code class="xref py py-class docutils literal"><span class="pre">sessionmaker</span></code></a> when we &quot;call&quot; the registry:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">some_session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span></pre></div>
+<p>私たちが作成した：class： <cite>.scoped_session`オブジェクトは、レジストリを&amp;quot;呼ぶ &amp;quot;ときに：class：</cite> .sessionmaker`を呼び出します：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">some_session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span></pre></div>
 </div>
-<p>Above, <code class="docutils literal"><span class="pre">some_session</span></code> is an instance of <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>, which we
-can now use to talk to the database.   This same <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> is also
-present within the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> registry we've created.   If
-we call upon the registry a second time, we get back the <strong>same</strong> <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">some_other_session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
+<p>上記の `` some_session``は、class： <cite>.Session`のインスタンスです。ここでデータベースとの会話に使用できます。これと同じです：class： `.Session`は私たちが作成した：class：</cite> .scoped_session`レジストリ内にも存在します。レジストリをもう一度呼び出すと、同じ**：class： <cite>.Session</cite> ::が返されます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">some_other_session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">some_session</span> <span class="ow">is</span> <span class="n">some_other_session</span>
 <span class="go">True</span></pre></div>
 </div>
-<p>This pattern allows disparate sections of the application to call upon a global
-<a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a>, so that all those areas may share the same session
-without the need to pass it explicitly.   The <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> we've established
-in our registry will remain, until we explicitly tell our registry to dispose of it,
-by calling <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session.remove" title="sqlalchemy.orm.scoping.scoped_session.remove"><code class="xref py py-meth docutils literal"><span class="pre">scoped_session.remove()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span></pre></div>
+<p>このパターンは、アプリケーションの異種のセクションがグローバル：class： <cite>.scoped_session`を呼び出すことを可能にするので、それらのすべての領域は明示的に渡す必要なしに同じセッションを共有することができます。レジストリに設定した：class： `.Session`は、レジストリに明示的にそれを処分するまで、meth：</cite> .scoped_session.remove`</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span></pre></div>
 </div>
-<p>The <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session.remove" title="sqlalchemy.orm.scoping.scoped_session.remove"><code class="xref py py-meth docutils literal"><span class="pre">scoped_session.remove()</span></code></a> method first calls <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.close" title="sqlalchemy.orm.session.Session.close"><code class="xref py py-meth docutils literal"><span class="pre">Session.close()</span></code></a> on
-the current <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>, which has the effect of releasing any connection/transactional
-resources owned by the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> first, then discarding the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>
-itself.  &quot;Releasing&quot; here means that connections are returned to their connection pool and any transactional state is rolled back, ultimately using the <code class="docutils literal"><span class="pre">rollback()</span></code> method of the underlying DBAPI connection.</p>
-<p>At this point, the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> object is &quot;empty&quot;, and will create
-a <strong>new</strong> <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> when called again.  As illustrated below, this
-is not the same <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> we had before:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">new_session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
+<p>：meth： <cite>.scoped_session.remove`メソッドは、現在の：class：</cite> .Session`で最初に：meth： <cite>.Session.close`を呼び出します。これは：class： `.Session`を実行した後、：class：</cite> .Session`自体を破棄します。 &amp;quot;解放&amp;quot;とは、接続が接続プールに返され、トランザクション状態がロールバックされ、最終的に基盤となるDBAPI接続の `` rollback（） <a href="#id1"><span class="problematic" id="id2">``</span></a>メソッドを使用することを意味します。</p>
+<p>この時点で、：class： <cite>.scoped_session`オブジェクトは&amp;quot;空&amp;quot;であり、再び呼び出されると、**新しい**：class：</cite> .Session`が作成されます。下に示すように、これは同じではありません：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`我々が前に持っていたもの:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">new_session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">new_session</span> <span class="ow">is</span> <span class="n">some_session</span>
 <span class="go">False</span></pre></div>
 </div>
-<p>The above series of steps illustrates the idea of the &quot;registry&quot; pattern in a
-nutshell.  With that basic idea in hand, we can discuss some of the details
-of how this pattern proceeds.</p>
+<p>上記の一連の手順は、&amp;quot;レジストリ&amp;quot;パターンの要点を簡単に示しています。その基本的なアイデアを手にして、このパターンがどのように進行するかの詳細についていくつか議論することができます。</p>
 <div class="section" id="implicit-method-access">
-<h2>Implicit Method Access<a class="headerlink" href="#implicit-method-access" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The job of the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> is simple; hold onto a <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>
-for all who ask for it.  As a means of producing more transparent access to this
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>, the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> also includes <strong>proxy behavior</strong>,
-meaning that the registry itself can be treated just like a <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>
-directly; when methods are called on this object, they are <strong>proxied</strong> to the
-underlying <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> being maintained by the registry:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Session</span> <span class="o">=</span> <span class="n">scoped_session</span><span class="p">(</span><span class="n">some_factory</span><span class="p">)</span>
+<h2>暗黙的メソッドアクセス<a class="headerlink" href="#implicit-method-access" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>：class： <cite>.scoped_session`の仕事は簡単です。それを求めるすべての人のために：class： `。Session &amp;#39;を保持してください。 ：class： `.Session</cite>、：class：` .scoped_session`には**プロキシの動作**も含まれています。これは、レジストリ自体が次のように扱われることを意味します：class： <a href="#id1"><span class="problematic" id="id2">``</span></a>セッション。このオブジェクトに対してメソッドが呼び出されると、レジストリによって維持されている** class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Session`の**に**プロキシされます**</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Session</span> <span class="o">=</span> <span class="n">scoped_session</span><span class="p">(</span><span class="n">some_factory</span><span class="p">)</span>
 
 <span class="c1"># equivalent to:</span>
 <span class="c1">#</span>
@@ -246,62 +205,19 @@ underlying <a class="reference internal" href="session_api.html#sqlalchemy.orm.s
 <span class="c1">#</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">MyClass</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">())</span></pre></div>
 </div>
-<p>The above code accomplishes the same task as that of acquiring the current
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> by calling upon the registry, then using that <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>.</p>
+<p>上記のコードは、レジストリを呼び出してclass： <cite>.Session`を使用してcurrent：class：</cite> .Session`を取得するのと同じタスクを実行します。</p>
 </div>
 <div class="section" id="thread-local-scope">
-<h2>Thread-Local Scope<a class="headerlink" href="#thread-local-scope" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Users who are familiar with multithreaded programming will note that representing
-anything as a global variable is usually a bad idea, as it implies that the
-global object will be accessed by many threads concurrently.   The <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>
-object is entirely designed to be used in a <strong>non-concurrent</strong> fashion, which
-in terms of multithreading means &quot;only in one thread at a time&quot;.   So our
-above example of <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> usage, where the same <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>
-object is maintained across multiple calls, suggests that some process needs
-to be in place such that multiple calls across many threads don't actually get
-a handle to the same session.   We call this notion <strong>thread local storage</strong>,
-which means, a special object is used that will maintain a distinct object
-per each application thread.   Python provides this via the
-<a class="reference external" href="http://docs.python.org/library/threading.html#threading.local">threading.local()</a>
-construct.  The <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> object by default uses this object
-as storage, so that a single <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> is maintained for all who call
-upon the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> registry, but only within the scope of a single
-thread.   Callers who call upon the registry in a different thread get a
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> instance that is local to that other thread.</p>
-<p>Using this technique, the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> provides a quick and relatively
-simple (if one is familiar with thread-local storage) way of providing
-a single, global object in an application that is safe to be called upon
-from multiple threads.</p>
-<p>The <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session.remove" title="sqlalchemy.orm.scoping.scoped_session.remove"><code class="xref py py-meth docutils literal"><span class="pre">scoped_session.remove()</span></code></a> method, as always, removes the current
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> associated with the thread, if any.  However, one advantage of the
-<code class="docutils literal"><span class="pre">threading.local()</span></code> object is that if the application thread itself ends, the
-&quot;storage&quot; for that thread is also garbage collected.  So it is in fact &quot;safe&quot; to
-use thread local scope with an application that spawns and tears down threads,
-without the need to call <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session.remove" title="sqlalchemy.orm.scoping.scoped_session.remove"><code class="xref py py-meth docutils literal"><span class="pre">scoped_session.remove()</span></code></a>.  However, the scope
-of transactions themselves, i.e. ending them via <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.commit" title="sqlalchemy.orm.session.Session.commit"><code class="xref py py-meth docutils literal"><span class="pre">Session.commit()</span></code></a> or
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.rollback" title="sqlalchemy.orm.session.Session.rollback"><code class="xref py py-meth docutils literal"><span class="pre">Session.rollback()</span></code></a>, will usually still be something that must be explicitly
-arranged for at the appropriate time, unless the application actually ties the
-lifespan of a thread to the lifespan of a transaction.</p>
+<h2>スレッドローカルスコープ<a class="headerlink" href="#thread-local-scope" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>マルチスレッドプログラミングに精通しているユーザーは、何かをグローバル変数として表現することは悪い考えであることに注意してください。なぜなら、グローバルオブジェクトには多くのスレッドが同時にアクセスすることを意味するからです。 ：class： <cite>.Session`オブジェクトは、**非同時**の方法で使用するように完全に設計されています。これは、マルチスレッド化という意味では&amp;quot;一度に1つのスレッドのみ &amp;quot;を意味します。したがって、上記の：class： `.scoped_session`の使用例では、同じ：class：</cite> .Session`オブジェクトが複数の呼び出しにまたがって維持されているため、多くのスレッドで複数の呼び出しが行われないようなプロセスが必要です実際には同じセッションへのハンドルを取得します。この概念を**スレッドローカルストレージ**と呼びます。つまり、各アプリケーションスレッドごとに異なるオブジェクトを保持する特別なオブジェクトが使用されます。 Pythonはこれを <cite>threading.local（） &lt;http://docs.python.org/library/threading.html#threading.local&gt; `_コンストラクト。 ：class： `.scoped_session`オブジェクトは、デフォルトではこのオブジェクトを記憶域として使用します：class：</cite> .Session`は：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.scoped_session`レジストリを呼び出すすべての人のために維持されますが、スコープ内でのみ保持されます1つのスレッドのレジストリを別のスレッドで呼び出す呼び出し元は、他のスレッドに対してローカルなa：：class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Session`インスタンスを取得します。</p>
+<p>このテクニックを使用すると、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.scoped_session`は、複数のスレッドから安全に呼び出されるアプリケーション内に単一のグローバルオブジェクトを提供する（スレッドローカルストレージに精通している場合） 。</p>
+<p>：meth： <cite>.scoped_session.remove`メソッドはいつものように、スレッドに関連する現在の：class：</cite> .Session`を削除します。しかし、 `` threading.local（） <a href="#id1"><span class="problematic" id="id2">``</span></a>オブジェクトの利点の1つは、アプリケーションスレッド自体が終了すると、そのスレッドの&amp;quot;storage &amp;quot;もガベージコレクトされるということです。だから、実際には：meth： <cite>.scoped_session.remove`を呼び出す必要なしにスレッドを生成して裂くアプリケーションでスレッドローカルスコープを使うことは&amp;quot;安全 &amp;quot;です。しかし、トランザクション自体の範囲、すなわち：meth： `.Session.commit`または：meth：</cite> .Session.rollback`を介してそれらを終了することは、通常、依然として適切な時間に明示的に配置されなければならないものですアプリケーションは実際にはスレッドの寿命をトランザクションの寿命に結びつけます。</p>
 </div>
 <div class="section" id="using-thread-local-scope-with-web-applications">
-<span id="session-lifespan"></span><h2>Using Thread-Local Scope with Web Applications<a class="headerlink" href="#using-thread-local-scope-with-web-applications" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>As discussed in the section <a class="reference internal" href="session_basics.html#session-faq-whentocreate"><span class="std std-ref">When do I construct a Session, when do I commit it, and when do I close it?</span></a>, a web application
-is architected around the concept of a <strong>web request</strong>, and integrating
-such an application with the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> usually implies that the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>
-will be associated with that request.  As it turns out, most Python web frameworks,
-with notable exceptions such as the asynchronous frameworks Twisted and
-Tornado, use threads in a simple way, such that a particular web request is received,
-processed, and completed within the scope of a single <em>worker thread</em>.  When
-the request ends, the worker thread is released to a pool of workers where it
-is available to handle another request.</p>
-<p>This simple correspondence of web request and thread means that to associate a
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> with a thread implies it is also associated with the web request
-running within that thread, and vice versa, provided that the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> is
-created only after the web request begins and torn down just before the web request ends.
-So it is a common practice to use <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> as a quick way
-to integrate the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> with a web application.  The sequence
-diagram below illustrates this flow:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Web</span> <span class="n">Server</span>          <span class="n">Web</span> <span class="n">Framework</span>        <span class="n">SQLAlchemy</span> <span class="n">ORM</span> <span class="n">Code</span>
+<span id="session-lifespan"></span><h2>Webアプリケーションでのスレッドローカルスコープの使用<a class="headerlink" href="#using-thread-local-scope-with-web-applications" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>セクション：ref： <cite>session_faq_whentocreate`で説明したように、Webアプリケーションは** Webリクエスト**のコンセプトの周りに構築され、このようなアプリケーションを：class：</cite> .Session`と統合することは通常：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`はそのリクエストに関連付けられます。明らかになったように、非同期フレームワークのTwistedやTornadoなどの例外的な例外を除いて、ほとんどのPython Webフレームワークは、単純な方法でスレッドを使用して、特定のWebリクエストを受信し、処理し、糸*。要求が終了すると、ワーカースレッドは別の要求を処理できるワーカーのプールに解放されます。</p>
+<p>このWebリクエストとスレッドの単純な対応は、a：class： <cite>.Session`をスレッドに関連付けることは、そのスレッド内で実行されているWebリクエストにも関連付けられていることを意味し、その逆もあります。ただし、：class：</cite> .Session <cite>は、Web要求が開始され、Web要求が終了する直前に切断された後にのみ作成されます。だから：class： `.Session`をWebアプリケーションと統合するための素早い方法として：class：</cite> .scoped_session`を使うのが一般的です。下のシーケンス図はこのフローを示しています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Web</span> <span class="n">Server</span>          <span class="n">Web</span> <span class="n">Framework</span>        <span class="n">SQLAlchemy</span> <span class="n">ORM</span> <span class="n">Code</span>
 <span class="o">--------------</span>      <span class="o">--------------</span>       <span class="o">------------------------------</span>
 <span class="n">startup</span>        <span class="o">-&gt;</span>   <span class="n">Web</span> <span class="n">framework</span>        <span class="c1"># Session registry is established</span>
                     <span class="n">initializes</span>          <span class="n">Session</span> <span class="o">=</span> <span class="n">scoped_session</span><span class="p">(</span><span class="n">sessionmaker</span><span class="p">())</span>
@@ -332,40 +248,19 @@ diagram below illustrates this flow:</p>
 <span class="n">outgoing</span> <span class="n">web</span>    <span class="o">&lt;-</span>
 <span class="n">response</span></pre></div>
 </div>
-<p>Using the above flow, the process of integrating the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> with the
-web application has exactly two requirements:</p>
+<p>上記のフローを使用して、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`とWebアプリケーションを統合するプロセスには、まさに2つの要件があります。</p>
 <ol class="arabic simple">
-<li>Create a single <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> registry when the web application
-first starts, ensuring that this object is accessible by the rest of the
-application.</li>
-<li>Ensure that <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session.remove" title="sqlalchemy.orm.scoping.scoped_session.remove"><code class="xref py py-meth docutils literal"><span class="pre">scoped_session.remove()</span></code></a> is called when the web request ends,
-usually by integrating with the web framework's event system to establish
-an &quot;on request end&quot; event.</li>
+<li>Webアプリケーションが最初に起動するときに、クラス： <a href="#id1"><span class="problematic" id="id2">`</span></a>.scoped_session`という単一のレジストリを作成し、このオブジェクトが残りのアプリケーションからアクセス可能であることを確認します。</li>
+<li>次のことを確認してください：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.scoped_session.remove`は、Webリクエストが終了したときに呼び出されます。通常、Webフレームワークのイベントシステムと統合されて&amp;quot;要求終了時の終了 &amp;quot;イベントが確立されます。</li>
 </ol>
-<p>As noted earlier, the above pattern is <strong>just one potential way</strong> to integrate a <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>
-with a web framework, one which in particular makes the significant assumption
-that the <strong>web framework associates web requests with application threads</strong>.  It is
-however <strong>strongly recommended that the integration tools provided with the web framework
-itself be used, if available</strong>, instead of <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a>.</p>
-<p>In particular, while using a thread local can be convenient, it is preferable that the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> be
-associated <strong>directly with the request</strong>, rather than with
-the current thread.   The next section on custom scopes details a more advanced configuration
-which can combine the usage of <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> with direct request based scope, or
-any kind of scope.</p>
+<p>前述のように、上記のパターンは** class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`をWebフレームワークと統合するための**ただ一つの潜在的な方法です**特に** WebフレームワークがWeb要求をアプリケーションに関連付けるという重要な前提スレッド**。ただし、** class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.scoped_session`の代わりに**利用可能な場合、Webフレームワーク自体で提供される統合ツールを使用することを強くお勧めします。</p>
+<p>特に、スレッドローカルを使用すると便利ですが、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`は**現在のスレッドではなく**リクエストに直接関連することが望ましいです。カスタムスコープの次のセクションでは、class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.scoped_session`とダイレクトリクエストベースのスコープ、またはあらゆる種類のスコープの使用法を組み合わせることができる、より高度な設定について詳しく説明します。</p>
 </div>
 <div class="section" id="using-custom-created-scopes">
-<h2>Using Custom Created Scopes<a class="headerlink" href="#using-custom-created-scopes" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> object's default behavior of &quot;thread local&quot; scope is only
-one of many options on how to &quot;scope&quot; a <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>.   A custom scope can be defined
-based on any existing system of getting at &quot;the current thing we are working with&quot;.</p>
-<p>Suppose a web framework defines a library function <code class="docutils literal"><span class="pre">get_current_request()</span></code>.  An application
-built using this framework can call this function at any time, and the result will be
-some kind of <code class="docutils literal"><span class="pre">Request</span></code> object that represents the current request being processed.
-If the <code class="docutils literal"><span class="pre">Request</span></code> object is hashable, then this function can be easily integrated with
-<a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> to associate the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> with the request.  Below we illustrate
-this in conjunction with a hypothetical event marker provided by the web framework
-<code class="docutils literal"><span class="pre">on_request_end</span></code>, which allows code to be invoked whenever a request ends:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">my_web_framework</span> <span class="k">import</span> <span class="n">get_current_request</span><span class="p">,</span> <span class="n">on_request_end</span>
+<h2>カスタム作成スコープの使用<a class="headerlink" href="#using-custom-created-scopes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>：class： <cite>.scoped_session`オブジェクトのデフォルトの振る舞い&amp;quot; thread local &amp;quot;スコープは、class：</cite> .Session`のスコープを変更するための多くのオプションのうちの一つにすぎません。カスタムスコープは&amp;quot;現在作業中のもの&amp;quot;で取得する既存のシステムに基づいて定義できます。</p>
+<p>Webフレームワークがライブラリ関数 `` get_current_request（） <cite>を定義しているとします。このフレームワークを使用して構築されたアプリケーションはいつでもこの関数を呼び出すことができ、結果は処理中の現在の要求を表す何らかの `</cite> Request``オブジェクトになります。 `` Request``オブジェクトがハッシュ可能な場合、この関数は：class： <cite>.scoped_session`と簡単に統合して：class：</cite> .Session`を要求に関連付けることができます。以下では、Webフレームワークの `` on_request_end``によって提供される仮想的なイベントマーカーと組み合わせてこれを説明します。これにより、リクエストが終了するたびにコードを呼び出すことができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">my_web_framework</span> <span class="k">import</span> <span class="n">get_current_request</span><span class="p">,</span> <span class="n">on_request_end</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">scoped_session</span><span class="p">,</span> <span class="n">sessionmaker</span>
 
 <span class="n">Session</span> <span class="o">=</span> <span class="n">scoped_session</span><span class="p">(</span><span class="n">sessionmaker</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="n">some_engine</span><span class="p">),</span> <span class="n">scopefunc</span><span class="o">=</span><span class="n">get_current_request</span><span class="p">)</span>
@@ -374,34 +269,29 @@ this in conjunction with a hypothetical event marker provided by the web framewo
 <span class="k">def</span> <span class="nf">remove_session</span><span class="p">(</span><span class="n">req</span><span class="p">):</span>
     <span class="n">Session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span></pre></div>
 </div>
-<p>Above, we instantiate <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> in the usual way, except that we pass
-our request-returning function as the &quot;scopefunc&quot;.  This instructs <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a>
-to use this function to generate a dictionary key whenever the registry is called upon
-to return the current <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>.   In this case it is particularly important
-that we ensure a reliable &quot;remove&quot; system is implemented, as this dictionary is not
-otherwise self-managed.</p>
+<p>上の例では：class： <cite>.scoped_session`を通常の方法でインスタンス化しますが、リクエストを返す関数を&amp;quot; scopefunc &amp;quot;として渡す点が異なります。これは：class： `.scoped_session`に、現在の：class：</cite> .Session`を返すようにレジストリが呼び出されるたびにこの関数を使って辞書キーを生成するよう指示します。この場合、信頼できる&amp;quot;remove &amp;quot;システムが実装されていることを確実にすることが特に重要です。なぜなら、この辞書は他には自己管理されていないからです。</p>
 </div>
 <div class="section" id="contextual-session-api">
-<h2>Contextual Session API<a class="headerlink" href="#contextual-session-api" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>コンテクストセッションAPI<a class="headerlink" href="#contextual-session-api" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="class">
 <dt id="sqlalchemy.orm.scoping.scoped_session">
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.scoping.</code><code class="descname">scoped_session</code><span class="sig-paren">(</span><em>session_factory</em>, <em>scopefunc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.scoping.scoped_session" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Provides scoped management of <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> objects.</p>
-<p>See <a class="reference internal" href="#unitofwork-contextual"><span class="std std-ref">Contextual/Thread-local Sessions</span></a> for a tutorial.</p>
+<dd><p>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`オブジェクトのスコープ管理を提供します。</p>
+<p>チュートリアルについては：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>unitofwork_contextual`を参照してください。</p>
 <dl class="method">
 <dt id="sqlalchemy.orm.scoping.scoped_session.__call__">
 <code class="descname">__call__</code><span class="sig-paren">(</span><em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.scoping.scoped_session.__call__" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the current <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>, creating it
-using the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session.session_factory" title="sqlalchemy.orm.scoping.scoped_session.session_factory"><code class="xref py py-attr docutils literal"><span class="pre">scoped_session.session_factory</span></code></a> if not present.</p>
+<dd><p>Return the current <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></a>, creating it
+using the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session.session_factory" title="sqlalchemy.orm.scoping.scoped_session.session_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">scoped_session.session_factory</span></code></a> if not present.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><span class="target" id="sqlalchemy.orm.scoping.scoped_session.__call__.params.**kw"></span><strong>**kw</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.scoping.scoped_session.__call__.params.**kw">¶</a> -- Keyword arguments will be passed to the
-<a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session.session_factory" title="sqlalchemy.orm.scoping.scoped_session.session_factory"><code class="xref py py-attr docutils literal"><span class="pre">scoped_session.session_factory</span></code></a> callable, if an existing
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> is not present.  If the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> is present
+<a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session.session_factory" title="sqlalchemy.orm.scoping.scoped_session.session_factory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">scoped_session.session_factory</span></code></a> callable, if an existing
+<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></a> is not present.  If the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></a> is present
 and keyword arguments have been passed,
-<a class="reference internal" href="../core/exceptions.html#sqlalchemy.exc.InvalidRequestError" title="sqlalchemy.exc.InvalidRequestError"><code class="xref py py-exc docutils literal"><span class="pre">InvalidRequestError</span></code></a> is raised.</td>
+<a class="reference internal" href="../core/exceptions.html#sqlalchemy.exc.InvalidRequestError" title="sqlalchemy.exc.InvalidRequestError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">InvalidRequestError</span></code></a> is raised.</td>
 </tr>
 </tbody>
 </table>
@@ -410,23 +300,23 @@ and keyword arguments have been passed,
 <dl class="method">
 <dt id="sqlalchemy.orm.scoping.scoped_session.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>session_factory</em>, <em>scopefunc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.scoping.scoped_session.__init__" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Construct a new <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a>.</p>
+<dd><p>Construct a new <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal notranslate"><span class="pre">scoped_session</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.orm.scoping.scoped_session.params.session_factory"></span><strong>session_factory</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.scoping.scoped_session.params.session_factory">¶</a> -- a factory to create new <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>
+<li><span class="target" id="sqlalchemy.orm.scoping.scoped_session.params.session_factory"></span><strong>session_factory</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.scoping.scoped_session.params.session_factory">¶</a> -- a factory to create new <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></a>
 instances. This is usually, but not necessarily, an instance
-of <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.sessionmaker" title="sqlalchemy.orm.session.sessionmaker"><code class="xref py py-class docutils literal"><span class="pre">sessionmaker</span></code></a>.</li>
+of <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.sessionmaker" title="sqlalchemy.orm.session.sessionmaker"><code class="xref py py-class docutils literal notranslate"><span class="pre">sessionmaker</span></code></a>.</li>
 <li><span class="target" id="sqlalchemy.orm.scoping.scoped_session.params.scopefunc"></span><strong>scopefunc</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.scoping.scoped_session.params.scopefunc">¶</a> -- optional function which defines
-the current scope.   If not passed, the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a>
+the current scope.   If not passed, the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal notranslate"><span class="pre">scoped_session</span></code></a>
 object assumes &quot;thread-local&quot; scope, and will use
-a Python <code class="docutils literal"><span class="pre">threading.local()</span></code> in order to maintain the current
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>.  If passed, the function should return
+a Python <code class="docutils literal notranslate"><span class="pre">threading.local()</span></code> in order to maintain the current
+<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></a>.  If passed, the function should return
 a hashable token; this token will be used as the key in a
 dictionary in order to store and retrieve the current
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>.</li>
+<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></a>.</li>
 </ul>
 </td>
 </tr>
@@ -437,18 +327,16 @@ dictionary in order to store and retrieve the current
 <dl class="method">
 <dt id="sqlalchemy.orm.scoping.scoped_session.configure">
 <code class="descname">configure</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.scoping.scoped_session.configure" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>reconfigure the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.sessionmaker" title="sqlalchemy.orm.session.sessionmaker"><code class="xref py py-class docutils literal"><span class="pre">sessionmaker</span></code></a> used by this
-<a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a>.</p>
-<p>See <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.sessionmaker.configure" title="sqlalchemy.orm.session.sessionmaker.configure"><code class="xref py py-meth docutils literal"><span class="pre">sessionmaker.configure()</span></code></a>.</p>
+<dd><p>：class： <cite>.scoped_session`によって使用される：class：</cite> .sessionmaker`を再設定します。</p>
+<p>See：meth： <cite>.sessionmaker.configure</cite>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.scoping.scoped_session.query_property">
 <code class="descname">query_property</code><span class="sig-paren">(</span><em>query_cls=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.scoping.scoped_session.query_property" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>return a class property which produces a <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> object
-against the class and the current <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> when called.</p>
-<p>e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Session</span> <span class="o">=</span> <span class="n">scoped_session</span><span class="p">(</span><span class="n">sessionmaker</span><span class="p">())</span>
+<dd><p>クラスに対して：class： <cite>.Query`オブジェクトを生成するクラスプロパティと、呼び出されたときには現在の：class：</cite> .Session`を返します。</p>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Session</span> <span class="o">=</span> <span class="n">scoped_session</span><span class="p">(</span><span class="n">sessionmaker</span><span class="p">())</span>
 
 <span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">query</span> <span class="o">=</span> <span class="n">Session</span><span class="o">.</span><span class="n">query_property</span><span class="p">()</span>
@@ -456,35 +344,21 @@ against the class and the current <a class="reference internal" href="session_ap
 <span class="c1"># after mappers are defined</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">MyClass</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">name</span><span class="o">==</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></pre></div>
 </div>
-<p>Produces instances of the session's configured query class by
-default.  To override and use a custom implementation, provide
-a <code class="docutils literal"><span class="pre">query_cls</span></code> callable.  The callable will be invoked with
-the class's mapper as a positional argument and a session
-keyword argument.</p>
-<p>There is no limit to the number of query properties placed on
-a class.</p>
+<p>既定では、セッションで構成されたクエリクラスのインスタンスが生成されます。カスタム実装をオーバーライドして使用するには、 `` query_cls``を呼び出し可能にします。呼び出し可能オブジェクトは、クラスのマッパーを位置引数およびセッションキーワード引数として呼び出されます。</p>
+<p>クラスに配置されるクエリプロパティの数に制限はありません。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.scoping.scoped_session.remove">
 <code class="descname">remove</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.scoping.scoped_session.remove" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Dispose of the current <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>, if present.</p>
-<p>This will first call <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.close" title="sqlalchemy.orm.session.Session.close"><code class="xref py py-meth docutils literal"><span class="pre">Session.close()</span></code></a> method
-on the current <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a>, which releases any existing
-transactional/connection resources still being held; transactions
-specifically are rolled back.  The <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> is then
-discarded.   Upon next usage within the same scope,
-the <a class="reference internal" href="#sqlalchemy.orm.scoping.scoped_session" title="sqlalchemy.orm.scoping.scoped_session"><code class="xref py py-class docutils literal"><span class="pre">scoped_session</span></code></a> will produce a new
-<a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> object.</p>
+<dd><p>現在の：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`があればそれを破棄します。</p>
+<p>これは、現在：class： <cite>.Session`の：meth：</cite> .Session.close`メソッドを呼び出します。これは、まだ保持されている既存のトランザクション/接続リソースを解放します。トランザクションは特にロールバックされます。 ：class： <cite>.Session`は破棄されます。同じスコープ内で次の使用時に、：class： `.scoped_session`は新しい：class：</cite> .Session`オブジェクトを生成します。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sqlalchemy.orm.scoping.scoped_session.session_factory">
 <code class="descname">session_factory</code><em class="property"> = None</em><a class="headerlink" href="#sqlalchemy.orm.scoping.scoped_session.session_factory" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>The <cite>session_factory</cite> provided to <cite>__init__</cite> is stored in this
-attribute and may be accessed at a later time.  This can be useful when
-a new non-scoped <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> or <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection" title="sqlalchemy.engine.Connection"><code class="xref py py-class docutils literal"><span class="pre">Connection</span></code></a> to the
-database is needed.</p>
+<dd><p><cite>__init__`に与えられた</cite> session_factory`はこの属性に格納され、後でアクセスすることができます。これは、スコープのない新しい：class： <cite>.Session`またはデータベースへの：class：</cite> .Connection`が必要な場合に便利です。</p>
 </dd></dl>
 
 </dd></dl>
@@ -492,18 +366,15 @@ database is needed.</p>
 <dl class="class">
 <dt id="sqlalchemy.util.ScopedRegistry">
 <em class="property">class </em><code class="descclassname">sqlalchemy.util.</code><code class="descname">ScopedRegistry</code><span class="sig-paren">(</span><em>createfunc</em>, <em>scopefunc</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.util.ScopedRegistry" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A Registry that can store one or multiple instances of a single
-class on the basis of a &quot;scope&quot; function.</p>
-<p>The object implements <code class="docutils literal"><span class="pre">__call__</span></code> as the &quot;getter&quot;, so by
-calling <code class="docutils literal"><span class="pre">myregistry()</span></code> the contained object is returned
-for the current scope.</p>
+<dd><p>&amp;quot;スコープ&amp;quot;機能に基づいて単一クラスの1つまたは複数のインスタンスを格納できるレジストリ。</p>
+<p>オブジェクトは&amp;quot;getter &amp;quot;として `` __call__``を実装しているので、 `` myregistry（） <a href="#id1"><span class="problematic" id="id2">``</span></a>を呼び出すことで、現在のスコープに対して含まれているオブジェクトが返されます。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.util.ScopedRegistry.params.createfunc"></span><strong>createfunc</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.util.ScopedRegistry.params.createfunc">¶</a> -- a callable that returns a new object to be placed in the registry</li>
-<li><span class="target" id="sqlalchemy.util.ScopedRegistry.params.scopefunc"></span><strong>scopefunc</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.util.ScopedRegistry.params.scopefunc">¶</a> -- a callable that will return a key to store/retrieve an object.</li>
+<li><span class="target" id="sqlalchemy.util.ScopedRegistry.params.createfunc"></span><strong>createfunc</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.util.ScopedRegistry.params.createfunc">¶</a> -- レジストリに配置される新しいオブジェクトを返す呼び出し可能オブジェクト</li>
+<li><span class="target" id="sqlalchemy.util.ScopedRegistry.params.scopefunc"></span><strong>scopefunc</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.util.ScopedRegistry.params.scopefunc">¶</a> -- オブジェクトを格納/取得するためのキーを返す呼び出し可能オブジェクト。</li>
 </ul>
 </td>
 </tr>
@@ -512,7 +383,7 @@ for the current scope.</p>
 <dl class="method">
 <dt id="sqlalchemy.util.ScopedRegistry.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>createfunc</em>, <em>scopefunc</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.util.ScopedRegistry.__init__" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Construct a new <a class="reference internal" href="#sqlalchemy.util.ScopedRegistry" title="sqlalchemy.util.ScopedRegistry"><code class="xref py py-class docutils literal"><span class="pre">ScopedRegistry</span></code></a>.</p>
+<dd><p>Construct a new <a class="reference internal" href="#sqlalchemy.util.ScopedRegistry" title="sqlalchemy.util.ScopedRegistry"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScopedRegistry</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -533,19 +404,19 @@ thread identifier).</li>
 <dl class="method">
 <dt id="sqlalchemy.util.ScopedRegistry.clear">
 <code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.util.ScopedRegistry.clear" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Clear the current scope, if any.</p>
+<dd><p>存在する場合は、現在のスコープをクリアします。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.util.ScopedRegistry.has">
 <code class="descname">has</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.util.ScopedRegistry.has" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return True if an object is present in the current scope.</p>
+<dd><p>オブジェクトが現在のスコープに存在する場合はTrueを返します。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.util.ScopedRegistry.set">
 <code class="descname">set</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.util.ScopedRegistry.set" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Set the value for the current scope.</p>
+<dd><p>現在のスコープの値を設定します。</p>
 </dd></dl>
 
 </dd></dl>
@@ -553,9 +424,8 @@ thread identifier).</li>
 <dl class="class">
 <dt id="sqlalchemy.util.ThreadLocalRegistry">
 <em class="property">class </em><code class="descclassname">sqlalchemy.util.</code><code class="descname">ThreadLocalRegistry</code><span class="sig-paren">(</span><em>createfunc</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.util.ThreadLocalRegistry" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.util._collections.ScopedRegistry</span></code></p>
-<p>A <a class="reference internal" href="#sqlalchemy.util.ScopedRegistry" title="sqlalchemy.util.ScopedRegistry"><code class="xref py py-class docutils literal"><span class="pre">ScopedRegistry</span></code></a> that uses a <code class="docutils literal"><span class="pre">threading.local()</span></code>
-variable for storage.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.util._collections.ScopedRegistry</span></code></p>
+<p>A：class： <cite>.ScopedRegistry`で、</cite> <cite>threading.local（）</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>変数を使って保存します。</p>
 </dd></dl>
 
 </div>
@@ -567,13 +437,13 @@ variable for storage.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="persistence_techniques.html" title="previous chapter">Additional Persistence Techniques</a>
+        <a href="persistence_techniques.html" title="previous chapter">追加の永続化手法</a>
         Next:
-        <a href="session_events.html" title="next chapter">Tracking Object and Session Changes with Events</a>
+        <a href="session_events.html" title="next chapter">イベントによるオブジェクトおよびセッションの変更の追跡</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -600,6 +470,7 @@ variable for storage.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

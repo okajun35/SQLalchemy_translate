@@ -6,57 +6,47 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../dialects/firebird.rst:4
 msgid "Firebird"
-msgstr ""
+msgstr "ファイアバード"
 
 #: of sqlalchemy.dialects.firebird.base:5
 msgid "Firebird Dialects"
-msgstr ""
+msgstr "ファイアバードの方言"
 
 #: of sqlalchemy.dialects.firebird.base:7
 msgid ""
 "Firebird offers two distinct dialects_ (not to be confused with a "
 "SQLAlchemy ``Dialect``):"
-msgstr ""
+msgstr "Firebirdは2つの異なるdialectを提供しています_（SQLAlchemyの `Dialect`と混同しないでください）："
 
 #: of sqlalchemy.dialects.firebird.base:11
 msgid "dialect 1"
-msgstr ""
+msgstr "方言1"
 
 #: of sqlalchemy.dialects.firebird.base:11
 msgid "This is the old syntax and behaviour, inherited from Interbase pre-6.0."
-msgstr ""
+msgstr "これは、6.0より前のInterbaseから継承された古い構文と動作です。"
 
 #: of sqlalchemy.dialects.firebird.base:14
 msgid "dialect 3"
-msgstr ""
+msgstr "方言3"
 
 #: of sqlalchemy.dialects.firebird.base:14
 msgid "This is the newer and supported syntax, introduced in Interbase 6.0."
-msgstr ""
+msgstr "これは、Interbase 6.0で導入された、より新しい、サポートされている構文です。"
 
 #: of sqlalchemy.dialects.firebird.base:16
 msgid ""
 "The SQLAlchemy Firebird dialect detects these versions and adjusts its "
 "representation of SQL accordingly.  However, support for dialect 1 is not"
 " well tested and probably has incompatibilities."
-msgstr ""
+msgstr "SQLAlchemy Firebirdダイアレクトはこれらのバージョンを検出し、それに応じてSQLの表現を調整します。しかし、方言1のサポートは十分にテストされておらず、おそらく互換性がありません。"
 
 #: of sqlalchemy.dialects.firebird.base:22
 msgid "Locking Behavior"
-msgstr ""
+msgstr "ロック動作"
 
 #: of sqlalchemy.dialects.firebird.base:24
 msgid ""
@@ -64,7 +54,7 @@ msgid ""
 "hang until other transactions are released.  SQLAlchemy does its best to "
 "release transactions as quickly as possible.  The most common cause of "
 "hanging transactions is a non-fully consumed result set, i.e.::"
-msgstr ""
+msgstr "Firebirdはテーブルを積極的にロックします。このため、他のトランザクションが解放されるまで、DROP TABLEがハングアップする可能性があります。 SQLAlchemyはトランザクションをできるだけ早く解放するために最善を尽くします。トランザクションをハングする最も一般的な原因は、完全に消費されていない結果セット、つまり::"
 
 #: of sqlalchemy.dialects.firebird.base:33
 msgid ""
@@ -75,34 +65,34 @@ msgid ""
 "use case can be alleviated by calling ``first()`` on the ``ResultProxy`` "
 "which will fetch the first row and immediately close all remaining "
 "cursor/connection resources."
-msgstr ""
+msgstr "上記の場合、 `` ResultProxy``は完全には消費されていません。接続はプールに返され、Pythonガベージコレクタが接続上に保持されているオブジェクト（非同期的に発生することが多い）を回収すると、トランザクション状態がロールバックされます。上記のユースケースは、最初の行をフェッチし、残りのすべてのカーソル/接続リソースを直ちに閉じる `` ResultProxy``の `` first（） ``を呼び出すことで緩和できます。"
 
 #: of sqlalchemy.dialects.firebird.base:42
 msgid "RETURNING support"
-msgstr ""
+msgstr "RETURNINGサポート"
 
 #: of sqlalchemy.dialects.firebird.base:44
 msgid ""
 "Firebird 2.0 supports returning a result set from inserts, and 2.1 "
 "extends that to deletes and updates. This is generically exposed by the "
 "SQLAlchemy ``returning()`` method, such as::"
-msgstr ""
+msgstr "Firebird 2.0は挿入物から結果セットを返すことをサポートし、2.1はそれを削除と更新に拡張します。これは、SQLAlchemyの `returning（）`メソッドで一般的に公開されています::"
 
 #: ../../dialects/firebird.rst:9
 msgid "fdb"
-msgstr ""
+msgstr "fdb"
 
 #: of sqlalchemy.dialects.firebird.fdb:16
 #: sqlalchemy.dialects.firebird.kinterbasdb:8
 msgid "Arguments"
-msgstr ""
+msgstr "引数"
 
 #: of sqlalchemy.dialects.firebird.fdb:18
 msgid ""
 "The ``fdb`` dialect is based on the "
 ":mod:`sqlalchemy.dialects.firebird.kinterbasdb` dialect, however does not"
 " accept every argument that Kinterbasdb does."
-msgstr ""
+msgstr "`` fdb``方言は：mod： `sqlalchemy.dialects.firebird.kinterbasdb`方言に基づいていますが、Kinterbasdbが行うすべての引数を受け入れません。"
 
 #: of sqlalchemy.dialects.firebird.fdb:22
 msgid ""
@@ -119,7 +109,7 @@ msgid ""
 "to False will also cause the SQLAlchemy ORM to ignore its usage. The "
 "behavior can also be controlled on a per-execution basis using the "
 "``enable_rowcount`` option with :meth:`.Connection.execution_options`::"
-msgstr ""
+msgstr "`` enable_rowcount``  - デフォルトではTrueで、これをFalseに設定するとKinterbasdb方言で\ &quot;cursor.rowcount \&quot;の使用が無効になります。通常、SQLAlchemyはUPDATEまたはDELETE文の後に自動的に呼びます。無効にすると、SQLAlchemyのResultProxyはresult.rowcountに-1を返します。ここでの理論的根拠は、Kernbasdbは.rowcountが呼び出されたときにデータベースへの2回目のラウンドトリップが必要だということです.SQLAのresultproxyは、結果を返さない文の後でカーソルを自動的に閉じます。戻ってきた。さらに、cursor.rowcountはFirebirdの古いバージョンでは正しい結果を返さないことがあり、このフラグをFalseに設定すると、SQLAlchemy ORMはその使用法を無視します。この動作は、 `` enable_rowcount``オプションを使って実行ごとに制御することもできます：meth： `.Connection.execution_options` ::"
 
 #: of sqlalchemy.dialects.firebird.fdb:41
 msgid ""
@@ -129,60 +119,60 @@ msgid ""
 "performance in some situations, but apparently with significant caveats. "
 "Please read the fdb and/or kinterbasdb DBAPI documentation in order to "
 "understand the implications of this flag."
-msgstr ""
+msgstr "`` retain``  - デフォルトではfalseです。これをTrueに設定するとDBAPI接続の `` .commit（） ``と `` .rollback（） ``メソッドに `` retain = True``キーワード引数が渡されます。明らかに重要な警告があります。このフラグの意味を理解するには、fdbおよび/またはkinterbasdb DBAPIのドキュメントを参照してください。"
 
 #: of sqlalchemy.dialects.firebird.fdb:48
 msgid ""
 "- ``retaining`` keyword argument specifying transaction retaining "
 "behavior - in 0.8 it defaults to ``True`` for backwards compatibility."
-msgstr ""
+msgstr "- トランザクションの保持動作を指定する `` retain``キーワード引数 -  0.8では、下位互換性のために `` True``がデフォルトになります。"
 
 #: of sqlalchemy.dialects.firebird.fdb:52
 msgid ""
 "- the ``retaining`` flag defaults to ``False``. In 0.8 it defaulted to "
 "``True``."
-msgstr ""
+msgstr "`` retain``フラグのデフォルトは `` False``です。 0.8ではデフォルトで `` True``になりました。"
 
 #: of sqlalchemy.dialects.firebird.fdb:57
 msgid ""
 "http://pythonhosted.org/fdb/usage-guide.html#retaining-transactions - "
 "information on the \"retaining\" flag."
-msgstr ""
+msgstr "http://pythonhosted.org/fdb/usage-guide.html#retaining-transactions  -  \ &quot;保持\&quot;フラグに関する情報。"
 
 #: ../../dialects/firebird.rst:14
 msgid "kinterbasdb"
-msgstr ""
+msgstr "kinterbasdb"
 
 #: of sqlalchemy.dialects.firebird.kinterbasdb:10
 msgid ""
 "The Kinterbasdb backend accepts the ``enable_rowcount`` and ``retaining``"
 " arguments accepted by the :mod:`sqlalchemy.dialects.firebird.fdb` "
 "dialect. In addition, it also accepts the following:"
-msgstr ""
+msgstr "Kinterbasdbバックエンドは、：mod： `sqlalchemy.dialects.firebird.fdb`の方言で受け入れられた` `enable_rowcount``と` `retaining``引数を受け入れます。さらに、次のものも受け入れます。"
 
 #: of sqlalchemy.dialects.firebird.kinterbasdb:14
 msgid ""
 "``type_conv`` - select the kind of mapping done on the types: by default "
 "SQLAlchemy uses 200 with Unicode, datetime and decimal support.  See the "
 "linked documents below for further information."
-msgstr ""
+msgstr "`` type_conv``  - 型に対して行われたマッピングの種類を選択します：デフォルトでは、SQLAlchemyはUnicode、日時、10進数のサポートで200を使用します。詳細については、以下のリンク先のドキュメントを参照してください。"
 
 #: of sqlalchemy.dialects.firebird.kinterbasdb:18
 msgid ""
 "``concurrency_level`` - set the backend policy with regards to threading "
 "issues: by default SQLAlchemy uses policy 1.  See the linked documents "
 "below for further information."
-msgstr ""
+msgstr "`` concurrency_level``  - スレッディングに関するバックエンドポリシーを設定します：デフォルトでSQLAlchemyはポリシー1を使用します。"
 
 #: of sqlalchemy.dialects.firebird.kinterbasdb:24
 msgid "http://sourceforge.net/projects/kinterbasdb"
-msgstr ""
+msgstr "http://sourceforge.net/projects/kinterbasdb"
 
 #: of sqlalchemy.dialects.firebird.kinterbasdb:26
 msgid "http://kinterbasdb.sourceforge.net/dist_docs/usage.html#adv_param_conv_dynamic_type_translation"
-msgstr ""
+msgstr "http://kinterbasdb.sourceforge.net/dist_docs/usage.html#adv_param_conv_dynamic_type_translation"
 
 #: of sqlalchemy.dialects.firebird.kinterbasdb:28
 msgid "http://kinterbasdb.sourceforge.net/dist_docs/usage.html#special_issue_concurrency"
-msgstr ""
+msgstr "http://kinterbasdb.sourceforge.net/dist_docs/usage.html#special_issue_concurrency"
 

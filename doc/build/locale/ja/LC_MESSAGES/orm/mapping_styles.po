@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/mapping_styles.rst:3
 msgid "Types of Mappings"
-msgstr ""
+msgstr "マッピングのタイプ"
 
 #: ../../orm/mapping_styles.rst:5
 msgid ""
@@ -30,11 +20,11 @@ msgid ""
 "result of each is exactly the same - a user-defined class mapped by the "
 ":func:`.mapper` function onto a selectable unit, typically a "
 ":class:`.Table`."
-msgstr ""
+msgstr "最新のSQLAlchemyには、2つの異なるスタイルのマッパー設定があります。 \ &quot;Classical \&quot;スタイルはSQLAlchemyのオリジナルマッピングAPIですが、 &quot;Declarative&quot;は\ &quot;Classical \&quot;の上に構築されたより豊かでより簡潔なシステムです。両方のスタイルは、それぞれの最終結果がまったく同じで、互換性をもって使用することができます。すなわち、：func： `.mapper`関数によって選択可能な単位、通常はclass：` .Table`にマッピングされたユーザ定義クラスです。"
 
 #: ../../orm/mapping_styles.rst:13
 msgid "Declarative Mapping"
-msgstr ""
+msgstr "宣言的マッピング"
 
 #: ../../orm/mapping_styles.rst:15
 msgid ""
@@ -43,25 +33,25 @@ msgid ""
 ":ref:`declarative_toplevel` system, the components of the user-defined "
 "class as well as the :class:`.Table` metadata to which the class is "
 "mapped are defined at once::"
-msgstr ""
+msgstr "*宣言型マッピング*は、現代のSQLAlchemyでマッピングが構築される典型的な方法です。 ：ref： `declarative_toplevel`システムを利用すると、ユーザ定義クラスのコンポーネントと、クラスがマップされる：class：` .Table`メタデータが同時に定義されます："
 
 #: ../../orm/mapping_styles.rst:35
 msgid ""
 "Above, a basic single-table mapping with four columns.   Additional "
 "attributes, such as relationships to other mapped classes, are also "
 "declared inline within the class definition::"
-msgstr ""
+msgstr "上記の4つの列を持つ基本的な単一表のマッピング。他のマップされたクラスとの関係など、追加の属性もクラス定義内でインラインで宣言されます::"
 
 #: ../../orm/mapping_styles.rst:56
 msgid ""
 "The declarative mapping system is introduced in the "
 ":ref:`ormtutorial_toplevel`.  For additional details on how this system "
 "works, see :ref:`declarative_toplevel`."
-msgstr ""
+msgstr "宣言型マッピングシステムは、：ref： `ormtutorial_toplevel`に導入されています。このシステムの動作の詳細については、：ref： `declarative_toplevel`を参照してください。"
 
 #: ../../orm/mapping_styles.rst:63
 msgid "Classical Mappings"
-msgstr ""
+msgstr "古典的なマッピング"
 
 #: ../../orm/mapping_styles.rst:65
 msgid ""
@@ -69,14 +59,14 @@ msgid ""
 " the :func:`.mapper` function, without using the Declarative system.  "
 "This is SQLAlchemy's original class mapping API, and is still the base "
 "mapping system provided by the ORM."
-msgstr ""
+msgstr "* Classical Mapping *は、宣言システムを使用せずに、：func： `.mapper`関数を使ってマップされたクラスの設定を参照します。これはSQLAlchemyの元のクラスマッピングAPIであり、依然としてORMによって提供されるベースマッピングシステムです。"
 
 #: ../../orm/mapping_styles.rst:70
 msgid ""
 "In \"classical\" form, the table metadata is created separately with the "
 ":class:`.Table` construct, then associated with the ``User`` class via "
 "the :func:`.mapper` function::"
-msgstr ""
+msgstr "\ &quot;古典的な\&quot;形式では、テーブルメタデータは：class： `.Table`構造体で別々に作成され、次に：func：` .mapper`関数を介して `` User``クラスに関連付けられます::"
 
 #: ../../orm/mapping_styles.rst:94
 msgid ""
@@ -84,7 +74,7 @@ msgid ""
 "classes, are provided via the ``properties`` dictionary.  The example "
 "below illustrates a second :class:`.Table` object, mapped to a class "
 "called ``Address``, then linked to ``User`` via :func:`.relationship`::"
-msgstr ""
+msgstr "他のクラスとの関係など、マップされた属性に関する情報は、 `` properties``ディクショナリを介して提供されます。次の例は、 `` Address``というクラスにマップされ、 `` User``にリンクされた：class： `.Table`オブジェクトを示しています：func：` .relationship` ::"
 
 #: ../../orm/mapping_styles.rst:110
 msgid ""
@@ -94,7 +84,7 @@ msgid ""
 "objects, i.e. ``address.c.id`` above for the ``Address`` relationship, "
 "and not ``Address.id``, as ``Address`` may not yet be linked to table "
 "metadata, nor can we specify a string here."
-msgstr ""
+msgstr "古典的なマッピングを使用するときは、Declarativeが提供する\ &quot;string lookup \&quot;システムの利益を得ずに直接クラスを提供しなければなりません。 SQL式は通常：class： `.Table`オブジェクト、すなわち` `Address``ではなく` `Address``関係のための上記の` `address.c.id``オブジェクトの観点から指定されます。 `Address``はまだテーブルメタデータにリンクされていないかもしれませんし、ここで文字列を指定することもできません。"
 
 #: ../../orm/mapping_styles.rst:116
 msgid ""
@@ -105,11 +95,11 @@ msgid ""
 "linked together with a :func:`.mapper`.  When we talk about \"the "
 "behavior of :func:`.mapper`\", this includes when using the Declarative "
 "system as well - it's still used, just behind the scenes."
-msgstr ""
+msgstr "ドキュメントのいくつかの例では古典的アプローチを使用していますが、古典的アプローチと宣言的アプローチは**完全に互換性があります**。どちらのシステムも最終的に同じ設定を作成します：class： `.Table`、ユーザ定義のクラス、：func：` .mapper`でリンクされています。 ：func： `.mapper` \&quot;の振る舞いについて話すとき、Declarativeシステムを使うときもこれが含まれます - それはまだ舞台裏で使われています。"
 
 #: ../../orm/mapping_styles.rst:124
 msgid "Runtime Introspection of Mappings, Objects"
-msgstr ""
+msgstr "マッピング、オブジェクトの実行時イントロスペクション"
 
 #: ../../orm/mapping_styles.rst:126
 msgid ""
@@ -117,37 +107,37 @@ msgid ""
 "regardless of method, using the :ref:`core_inspection_toplevel` system.  "
 "Using the :func:`.inspect` function, one can acquire the :class:`.Mapper`"
 " from a mapped class::"
-msgstr ""
+msgstr "：class： `.Mapper`オブジェクトは、メソッドに関係なく、：ref：` core_inspection_toplevel`システムを使って、マップされたクラスから利用できます。 ：func： `.inspect`関数を使うと、マップされたクラスから：class：` .Mapper`を取得することができます::"
 
 #: ../../orm/mapping_styles.rst:134
 msgid "Detailed information is available including :attr:`.Mapper.columns`::"
-msgstr ""
+msgstr "attr： `.Mapper.columns` ::詳細情報が利用可能です。"
 
 #: ../../orm/mapping_styles.rst:139
 msgid ""
 "This is a namespace that can be viewed in a list format or via individual"
 " names::"
-msgstr ""
+msgstr "これは、リスト形式または個々の名前で表示できる名前空間です。"
 
 #: ../../orm/mapping_styles.rst:147
 msgid ""
 "Other namespaces include :attr:`.Mapper.all_orm_descriptors`, which "
 "includes all mapped attributes as well as hybrids, association proxies::"
-msgstr ""
+msgstr "他の名前空間には、attr： `.Mapper.all_orm_descriptors`があります。これには、すべてのマップされた属性とハイブリッド、アソシエーションプロキシ::"
 
 #: ../../orm/mapping_styles.rst:155
 msgid "As well as :attr:`.Mapper.column_attrs`::"
-msgstr ""
+msgstr "同様に：attr： `.Mapper.column_attrs` ::"
 
 #: ../../orm/mapping_styles.rst:166
 msgid ":ref:`core_inspection_toplevel`"
-msgstr ""
+msgstr "：ref： `core_inspection_toplevel`"
 
 #: ../../orm/mapping_styles.rst:168
 msgid ":class:`.Mapper`"
-msgstr ""
+msgstr "：クラス： `.Mapper`"
 
 #: ../../orm/mapping_styles.rst:170
 msgid ":class:`.InstanceState`"
-msgstr ""
+msgstr "：クラス： `.InstanceState`"
 

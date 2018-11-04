@@ -6,30 +6,20 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/mapped_sql_expr.rst:6
 msgid "SQL Expressions as Mapped Attributes"
-msgstr ""
+msgstr "マップされた属性としてのSQL式"
 
 #: ../../orm/mapped_sql_expr.rst:8
 msgid ""
 "Attributes on a mapped class can be linked to SQL expressions, which can "
 "be used in queries."
-msgstr ""
+msgstr "マップされたクラスの属性は、クエリで使用できるSQL式にリンクできます。"
 
 #: ../../orm/mapped_sql_expr.rst:12
 msgid "Using a Hybrid"
-msgstr ""
+msgstr "ハイブリッドの使用"
 
 #: ../../orm/mapped_sql_expr.rst:14
 msgid ""
@@ -41,17 +31,17 @@ msgid ""
 "containing attributes ``firstname`` and ``lastname``, and include a "
 "hybrid that will provide for us the ``fullname``, which is the string "
 "concatenation of the two::"
-msgstr ""
+msgstr "比較的シンプルなSQL式をクラスにリンクする最も簡単で最も柔軟な方法は、ref： `hybrids_toplevel`節で説明する、いわゆる\&quot;ハイブリッド属性\ &quot;を使用することです。ハイブリッドは、PythonレベルとSQL式レベルの両方で動作する式を提供します。たとえば、属性 `` firstname``と `` lastname``を含む `` User``クラスをマップし、 `` fullname``を文字列の連結とするハイブリッドを含めます。二つ：："
 
 #: ../../orm/mapped_sql_expr.rst:34
 msgid ""
 "Above, the ``fullname`` attribute is interpreted at both the instance and"
 " class level, so that it is available from an instance::"
-msgstr ""
+msgstr "上記の `` fullname``属性は、インスタンスとクラスの両方のレベルで解釈されるため、インスタンス::"
 
 #: ../../orm/mapped_sql_expr.rst:40
 msgid "as well as usable within queries::"
-msgstr ""
+msgstr "クエリ内でも使用できるようになりました::"
 
 #: ../../orm/mapped_sql_expr.rst:44
 msgid ""
@@ -62,11 +52,11 @@ msgid ""
 "we illustrate the case where a conditional needs to be present inside the"
 " hybrid, using the ``if`` statement in Python and the "
 ":func:`.sql.expression.case` construct for SQL expressions::"
-msgstr ""
+msgstr "文字列連結の例は単純なもので、インスタンスとクラスレベルでPythonの式を二重化することができます。多くの場合、SQL式はPython式と区別する必要があります。これは：meth： `.hybrid_property.expression`を使用して実現できます。以下では、Pythonで `` if``文を使用し、SQL式で：func： `.sql.expression.case`構文を使用して、ハイブリッド内に条件文が存在する必要があるケースを示します。"
 
 #: ../../orm/mapped_sql_expr.rst:76
 msgid "Using column_property"
-msgstr ""
+msgstr "column_propertyの使用"
 
 #: ../../orm/mapped_sql_expr.rst:78
 msgid ""
@@ -79,7 +69,7 @@ msgid ""
 "one which links to other tables (typically as a correlated subquery) to "
 "access data that wouldn't normally be available on an already loaded "
 "object."
-msgstr ""
+msgstr "：func： `.orm.column_property`関数は、規則的にマップされた：class：` .Column`と同様の方法でSQL式をマップするのに使用できます。この手法では、ロード時に他のすべての列マップ属性とともに属性がロードされます。これは、ハイブリッドの使用法よりも有利な場合もあります。特に、値がオブジェクトの親行と同時に読み込まれる可能性があります。特に、式が他のテーブルにリンクする場合（通常は相関サブクエリ）を使用して、すでにロードされているオブジェクトで通常は使用できないデータにアクセスします。"
 
 #: ../../orm/mapped_sql_expr.rst:88
 msgid ""
@@ -88,26 +78,26 @@ msgid ""
 "emitted for the class as a whole, and there are also some configurational"
 " quirks which can occur when using :func:`.orm.column_property` from "
 "declarative mixins."
-msgstr ""
+msgstr "func： `.orm.column_property`をSQL式に使用することには、クラス全体で生成されたSELECT文との互換性が必要であり、使用時に発生する可能性のあるいくつかの構成上の癖があります。func：` .orm.column_property`を宣言的なミックスインから削除します。"
 
 #: ../../orm/mapped_sql_expr.rst:93
 msgid ""
 "Our \"fullname\" example can be expressed using "
 ":func:`.orm.column_property` as follows::"
-msgstr ""
+msgstr "私たちの\ &quot;フルネーム\&quot;の例は、以下のように：func： `.orm.column_property`を使って表現することができます::"
 
 #: ../../orm/mapped_sql_expr.rst:105
 msgid ""
 "Correlated subqueries may be used as well.  Below we use the "
 ":func:`.select` construct to create a SELECT that links together the "
 "count of ``Address`` objects available for a particular ``User``::"
-msgstr ""
+msgstr "相関サブクエリも同様に使用できます。以下に、：func： `.select`構文を使用して、特定の` `User``に利用可能な` `Address``オブジェクトの数をリンクするSELECTを作成します::"
 
 #: ../../orm/mapped_sql_expr.rst:131
 msgid ""
 "In the above example, we define a :func:`.select` construct like the "
 "following::"
-msgstr ""
+msgstr "上記の例では、次のように：func： `.select`構造体を定義します。"
 
 #: ../../orm/mapped_sql_expr.rst:137
 msgid ""
@@ -117,7 +107,7 @@ msgid ""
 "(note that ``id`` is also the name of a Python built in function, which "
 "is not what we want to use here - if we were outside of the ``User`` "
 "class definition, we'd use ``User.id``)."
-msgstr ""
+msgstr "上記の文の意味は、 `` Address.user_id``列が `` id``と同じである `` Address.id``行の数を選択することです。これは `` User`` classは：class： `` id``という名前のclass： `.Column`です（` `id``はPythonの組み込み関数の名前でもあります。これは私たちがここで使いたいものではありません。 `` User``クラスの定義、 `` User.id``を使用します）。"
 
 #: ../../orm/mapped_sql_expr.rst:143
 msgid ""
@@ -129,7 +119,7 @@ msgid ""
 "inadvertently omitted from the FROM list in the case of a long string of "
 "joins between ``User`` and ``Address`` tables where SELECT statements "
 "against ``Address`` are nested."
-msgstr ""
+msgstr "：meth： `.select.correlate_except`指示文は、func：` .select`のFROM句の各要素がFROMリストから省略されることを示します（つまり、 `` User``に対して囲むSELECT文に関連づけられています`）に対応するものを除き、` `Address``に対応します。これは厳密には必要ではありませんが、 `` User``と `` Address``テーブルの間の長い文字列の場合、 `` Address``がFROMリストから誤って省略されるのを防ぎます。アドレスは `ネストされています。"
 
 #: ../../orm/mapped_sql_expr.rst:151
 msgid ""
@@ -138,18 +128,18 @@ msgid ""
 "configured.   In Declarative this has the effect of calling "
 ":meth:`.Mapper.add_property` to add an additional property after the "
 "fact::"
-msgstr ""
+msgstr "インポートの問題によって：func： `.column_property`がクラスとインラインで定義されないようにするには、両方を設定した後でクラスに割り当てることができます。 Declarativeでは、これは：meth： `.Mapper.add_property`を呼び出して、事実の後に追加のプロパティを追加する効果があります::"
 
 #: ../../orm/mapped_sql_expr.rst:161
 msgid ""
 "For many-to-many relationships, use :func:`.and_` to join the fields of "
 "the association table to both tables in a relation, illustrated here with"
 " a classical mapping::"
-msgstr ""
+msgstr "多対多の関係の場合、func： `.and_`を使用して関連テーブルのフィールドをリレーション内の両方のテーブルに結合します。ここには古典的なマッピングが示されています::"
 
 #: ../../orm/mapped_sql_expr.rst:177
 msgid "Using a plain descriptor"
-msgstr ""
+msgstr "プレーンな記述子を使う"
 
 #: ../../orm/mapped_sql_expr.rst:179
 msgid ""
@@ -162,18 +152,18 @@ msgid ""
 " function, :func:`.object_session` is used to locate the "
 ":class:`.Session` corresponding to the current object, which is then used"
 " to emit a query::"
-msgstr ""
+msgstr "SQL問合せがwhat：func： `.orm.column_property`や：class：` .hybrid_property`よりも詳細なものでなければならない場合は、式として必要と仮定して、属性としてアクセスされる通常のPython関数を使用できます。すでにロードされているインスタンスで使用できるようにします。この関数はPython独自の `` @ property``デコレータで装飾されており、これを読み取り専用属性としてマークします。関数内では、：func： `.object_session`が、現在のオブジェクトに対応する：class：` .Session`を見つけるために使われます。"
 
 #: ../../orm/mapped_sql_expr.rst:205
 msgid ""
 "The plain descriptor approach is useful as a last resort, but is less "
 "performant in the usual case than both the hybrid and column property "
 "approaches, in that it needs to emit a SQL query upon each access."
-msgstr ""
+msgstr "プレーン・ディスクリプタ・アプローチは最後の手段としては有用ですが、各アクセス時にSQL問合せを発行する必要があるという点で、ハイブリッドとカラムの両方のプロパティ・アプローチよりも通常の場合にパフォーマンスが劣ります。"
 
 #: ../../orm/mapped_sql_expr.rst:212
 msgid "Query-time SQL expressions as mapped attributes"
-msgstr ""
+msgstr "クエリされたSQL式をマップされた属性として"
 
 #: ../../orm/mapped_sql_expr.rst:214
 msgid ""
@@ -181,11 +171,11 @@ msgid ""
 " mapped entities but ad-hoc SQL expressions as well.  Suppose if a class "
 "``A`` had integer attributes ``.x`` and ``.y``, we could query for ``A`` "
 "objects, and additionally the sum of ``.x`` and ``.y``, as follows::"
-msgstr ""
+msgstr "：meth： `.Session.query`を使うと、マッピングされたエンティティだけでなく、アドホックなSQL式も指定することができます。 `` A``クラスが整数属性 `` .x``と `` .y``を持っていたとすると、 `` A``オブジェクトと `` .x``と ` `.y``を以下のように::"
 
 #: ../../orm/mapped_sql_expr.rst:221
 msgid "The above query returns tuples of the form ``(A object, integer)``."
-msgstr ""
+msgstr "上記のクエリは ``（A object、integer） ``という形のタプルを返します。"
 
 #: ../../orm/mapped_sql_expr.rst:223
 msgid ""
@@ -195,24 +185,24 @@ msgid ""
 ":func:`.query_expression` attribute mapping.    The class is mapped to "
 "include a placeholder attribute where any particular SQL expression may "
 "be applied::"
-msgstr ""
+msgstr "別々のタプルエントリではなく、返された `` A``オブジェクトにアドホックな `` Ax + Ay``式を適用できるオプションが存在します。これは：func： `.query_expression`属性マッピングと組み合わせて：func：` .with_expression`クエリオプションです。クラスは、特定のSQL式を適用できるプレースホルダ属性を含むようにマップされています::"
 
 #: ../../orm/mapped_sql_expr.rst:240
 msgid ""
 "We can then query for objects of type ``A``, applying an arbitrary SQL "
 "expression to be populated into ``A.expr``::"
-msgstr ""
+msgstr "次に、 `` A``型にオブジェクトを問い合わせ、任意のSQL式を `` A.expr``に取り込むようにします::"
 
 #: ../../orm/mapped_sql_expr.rst:247
 msgid "The :func:`.query_expression` mapping has these caveats:"
-msgstr ""
+msgstr "：func： `.query_expression`マッピングには次のような警告があります："
 
 #: ../../orm/mapped_sql_expr.rst:249
 msgid ""
 "On an object where :func:`.query_expression` were not used to populate "
 "the attribute, the attribute on an object instance will have the value "
 "``None``."
-msgstr ""
+msgstr "：func： `.query_expression`が属性を設定するために使用されなかったオブジェクトでは、オブジェクトインスタンスの属性の値は` `None``になります。"
 
 #: ../../orm/mapped_sql_expr.rst:253
 msgid ""
@@ -224,19 +214,19 @@ msgid ""
 ":class:`.Query` that touches the object which includes a new "
 ":func:`.with_expression` directive will the attribute be set to a non-"
 "None value."
-msgstr ""
+msgstr "query_expression値**は、オブジェクトが期限切れになったときに更新されません**。オブジェクトが期限切れになると：meth： `.Session.expire`または：meth：` .Session.commit`のexpire_on_commitビヘイビアを介して、属性から値が削除され、後で `` None``が返されますアクセス。 new：func： `.with_expression`指示文を含むオブジェクトに触れるnew：class：` .Query`を実行するだけで、属性はNoneでない値に設定されます。"
 
 #: ../../orm/mapped_sql_expr.rst:261
 msgid ""
 "The mapped attribute currently **cannot** be applied to other parts of "
 "the query, such as the WHERE clause, the ORDER BY clause, and make use of"
 " the ad-hoc expression; that is, this won't work::"
-msgstr ""
+msgstr "マップされた属性は現在、** WHERE句、ORDER BY句などのクエリの他の部分に適用することはできません**、アドホック式を使用します。つまり、これは動作しません::"
 
 #: ../../orm/mapped_sql_expr.rst:270
 msgid ""
 "The ``A.expr`` expression will resolve to NULL in the above WHERE clause "
 "and ORDER BY clause. To use the expression throughout the query, assign "
 "to a variable and use that::"
-msgstr ""
+msgstr "`` A.expr``式は、上記のWHERE句とORDER BY句でNULLに解決されます。問合せ全体で式を使用するには、変数に代入して使用します。"
 

@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/tutorial.rst:5
 msgid "Object Relational Tutorial"
-msgstr ""
+msgstr "オブジェクトリレーショナルチュートリアル"
 
 #: ../../orm/tutorial.rst:7
 msgid ""
@@ -30,13 +20,7 @@ msgid ""
 "objects and their related rows, called a :term:`unit of work`, as well as"
 " a system for expressing database queries in terms of the user defined "
 "classes and their defined relationships between each other."
-msgstr ""
-"SQLAlchemyオブジェクト・リレーショナル・マッパーは、ユーザー定義したPythonクラス"
-"をデータベースのテーブル、および対応するテーブルのrowを持つそれらのクラス（オブジェクト）"
-"のインスタンスに関連付ける方法を提供します。これには、 :term:`unit of work` "
-"と呼ばれるオブジェクトとその関連するrowの間の状態のすべての変化を透過的に同期"
-"させるシステムと、ユーザー定義のクラスと互いに定義された関係の観点からデータ"
-"ベース照会を表現するシステムが含まれます。"
+msgstr "SQLAlchemyオブジェクト・リレーショナル・マッパーは、ユーザー定義のPythonクラスをデータベース表、および対応する表に行を持つそれらのクラス（オブジェクト）のインスタンスに関連付ける方法を提供します。これには、用語： `作業単位（unit of work） &#39;と呼ばれるオブジェクトとその関連行の間の状態のすべての変化を透過的に同期させるシステムと、ユーザー定義のクラスとそれらの定義された関係の観点からデータベースクエリを表現するシステムお互い。"
 
 #: ../../orm/tutorial.rst:15
 
@@ -47,12 +31,7 @@ msgid ""
 "primitive constructs of the relational database directly without opinion,"
 " the ORM presents a high level and abstracted pattern of usage, which "
 "itself is an example of applied usage of the Expression Language."
-msgstr ""
-"ORMはORMが構築されるSQLAlchemy Expression Languageとは対照的です。"
-" :ref:`sqlexpression_toplevel` で紹介された SQL式言語は、"
-"リレーショナル・データベースのプリミティブな構成を判定なしで"
-"直接表現するシステムを提示しています。一方ORMは高いレベルで抽象化された"
-"使用パターンを提示し、それ自体はExpression Languageの適用された使用例です。"
+msgstr "ORMは、ORMが構築されるSQLAlchemy Expression Languageとは対照的です。 ：ref： `sqlexpression_toplevel`で紹介されているSQL式言語は、リレーショナル・データベースのプリミティブ構造を意見なしで直接表現するシステムを提示しますが、ORMは高レベルで抽象化された使用パターンを提示します。表現言語の使い方。"
 
 #: ../../orm/tutorial.rst:22
 msgid ""
@@ -64,12 +43,7 @@ msgid ""
 "The other approaches it from the perspective of literal schema and SQL "
 "expression representations which are explicitly composed into messages "
 "consumed individually by the database."
-msgstr ""
-"ORMとExpression Languageには重複がありますが類似点は当初よりも表面的です。"
-"ユーザ定義の :term:`domain model` の観点から、データの構造と内容にアプローチします。"
-"このモデルは透過的に永続化されて基盤となるストレージモデルからリフレッシュされます。"
-"もう1つはデータベースによって個別に消費されるメッセージに明示的に構成され"
-"たリテラルスキーマとSQL式表現の観点からアプローチする方法です。"
+msgstr "ORMと表現言語の使用パターンには重複がありますが、類似点は最初に現れるよりも表面的です。ユーザ定義の用語：ドメインモデルの観点から、データの構造と内容にアプローチします。この用語は、透過的に永続化され、その基礎となるストレージモデルからリフレッシュされます。もう1つは、データベースによって個別に消費されるメッセージに明示的に構成されたリテラルスキーマとSQL式表現の観点からアプローチする方法です。"
 
 #: ../../orm/tutorial.rst:31
 msgid ""
@@ -78,40 +52,34 @@ msgid ""
 "with the ORM may make occasional usage of the Expression Language "
 "directly in certain areas where specific database interactions are "
 "required."
-msgstr ""
-"オブジェクトリレーショナルマッパーを排他的に使用して正常なアプリケーション"
-"を構築できます。高度な状況では、ORMを使用して構築されたアプリケーションは、"
-"特定のデータベース対話が必要な特定の領域で直接Expression Languageを使用することがあります。"
+msgstr "オブジェクトリレーショナルマッパーを排他的に使用して、正常なアプリケーションを構築することができます。高度な状況では、ORMを使用して構築されたアプリケーションは、特定のデータベース対話が必要な特定の領域で直接Expression Languageを使用することがあります。"
 
 #: ../../orm/tutorial.rst:36
 msgid ""
 "The following tutorial is in doctest format, meaning each ``>>>`` line "
 "represents something you can type at a Python command prompt, and the "
 "following text represents the expected return value."
-msgstr ""
-"以下のチュートリアルはdoctest形式です。つまり、各行の「>>>」はPython"
-"のコマンドプロンプトで入力できるものを表し、その次のテキストは"
-"期待される戻り値を表します。"
+msgstr "次のチュートリアルはdoctest形式です。つまり、 `` &gt;&gt;&gt; ``の行はPythonコマンドプロンプトで入力できるものを表し、次のテキストは期待される戻り値を表します。"
 
 #: ../../orm/tutorial.rst:41
 msgid "Version Check"
-msgstr "バージョンチェック(Version Check)"
+msgstr "バージョンチェック"
 
 #: ../../orm/tutorial.rst:43
 msgid ""
 "A quick check to verify that we are on at least **version 1.3** of "
 "SQLAlchemy::"
-msgstr "まずは、「バージョン 1.3」のSQLAlchemyが使用されているかをチェックします"
+msgstr "私たちが少なくともSQLAlchemyのバージョン1.3 ** **にいることを確認するためのクイックチェック::"
 
 #: ../../orm/tutorial.rst:50
 msgid "Connecting"
-msgstr "接続(Connecting)"
+msgstr "接続する"
 
 #: ../../orm/tutorial.rst:52
 msgid ""
 "For this tutorial we will use an in-memory-only SQLite database. To "
 "connect we use :func:`~sqlalchemy.create_engine`::"
-msgstr ""
+msgstr "このチュートリアルでは、メモリ内のSQLiteデータベースを使用します。接続するには：func： `〜sqlalchemy.create_engine` ::"
 
 #: ../../orm/tutorial.rst:58
 msgid ""
@@ -122,7 +90,7 @@ msgid ""
 "``False``. This tutorial will format the SQL behind a popup window so it "
 "doesn't get in our way; just click the \"SQL\" links to see what's being "
 "generated."
-msgstr ""
+msgstr "`` echo``フラグは、SQLAlchemyのロギングを設定するためのショートカットです。これは、Pythonの標準の `` logging``モジュールによって実現されます。これを有効にすると、生成されたすべての生成SQLが表示されます。このチュートリアルで作業しており、生成される出力が少なくてすむようなら、 `` False``に設定してください。このチュートリアルでは、SQLをポップアップウィンドウの後ろに書式設定して、私たちのやり方では得られないようにします。 \ &quot;SQL \&quot;リンクをクリックして、何が生成されているかを確認してください。"
 
 #: ../../orm/tutorial.rst:65
 msgid ""
@@ -131,14 +99,14 @@ msgid ""
 "adapted through a :term:`dialect` that handles the details of the "
 "database and :term:`DBAPI` in use.  In this case the SQLite dialect will "
 "interpret instructions to the Python built-in ``sqlite3`` module."
-msgstr ""
+msgstr "：func： `.create_engine`の戻り値は：class：` .Engine`のインスタンスであり、データベースのコアインタフェースを表し、：term： `dialect`によって適合され、データベースの詳細を処理します。 ：term： `DBAPI`が使用中です。この場合、SQLiteダイアレクトはPythonの組み込み `` sqlite3``モジュールへの命令を解釈します。"
 
 #: ../../orm/tutorial.rst:74
 msgid ""
 "The :class:`.Engine`, when first returned by :func:`.create_engine`, has "
 "not actually tried to connect to the database yet; that happens only the "
 "first time it is asked to perform a task against the database."
-msgstr ""
+msgstr "：class： `.Engine`は：func：` .create_engine`によって最初に返されたときに、まだデータベースに接続しようとしていません。これは、初めてデータベースに対してタスクを実行するように要求されたときにのみ発生します。"
 
 #: ../../orm/tutorial.rst:78
 msgid ""
@@ -148,17 +116,17 @@ msgid ""
 " the SQL.  When using the ORM, we typically don't use the "
 ":class:`.Engine` directly once created; instead, it's used behind the "
 "scenes by the ORM as we'll see shortly."
-msgstr ""
+msgstr "初めて：meth： `.Engine.execute`や：meth：` .Engine.connect`のようなメソッドが呼び出されると、class： `.Engine`はデータベースへのreal：term：` DBAPI`接続を確立します。これを使用してSQLを発行します。 ORMを使用する場合、通常は一度作成された：class： `.Engine`を使用しません。代わりに、これはORMによって舞台裏で使用されています。"
 
 #: ../../orm/tutorial.rst:86
 msgid ""
 ":ref:`database_urls` - includes examples of :func:`.create_engine` "
 "connecting to several kinds of databases with links to more information."
-msgstr ""
+msgstr "：ref： `database_urls`  - いくつかの種類のデータベースに接続する：func：` .create_engine`の例を含んでいます。"
 
 #: ../../orm/tutorial.rst:90
 msgid "Declare a Mapping"
-msgstr ""
+msgstr "マッピングを宣言する"
 
 #: ../../orm/tutorial.rst:92
 msgid ""
@@ -169,7 +137,7 @@ msgid ""
 ":ref:`declarative_toplevel`, which allows us to create classes that "
 "include directives to describe the actual database table they will be "
 "mapped to."
-msgstr ""
+msgstr "ORMを使用する場合、構成プロセスは、処理対象のデータベーステーブルを記述し、次にそれらのテーブルにマップされる独自のクラスを定義することから始まります。現代のSQLAlchemyでは、これらの2つのタスクは通常：ref： `declarative_toplevel`というシステムを使用して一緒に実行され、マップされる実際のデータベーステーブルを記述するディレクティブを含むクラスを作成することができます。"
 
 #: ../../orm/tutorial.rst:100
 msgid ""
@@ -179,7 +147,7 @@ msgid ""
 "application will usually have just one instance of this base in a "
 "commonly imported module.   We create the base class using the "
 ":func:`.declarative_base` function, as follows::"
-msgstr ""
+msgstr "宣言システムを使用してマップされたクラスは、そのベースに対するクラスとテーブルのカタログを保持する基本クラスの観点から定義されます。これは**宣言的な基本クラス**と呼ばれます。私たちのアプリケーションは通常、一般にインポートされたモジュールにこのベースのインスタンスを1つだけ持ちます。 ：func： `.declarative_base`関数を使って基本クラスを作成します::"
 
 #: ../../orm/tutorial.rst:111
 msgid ""
@@ -189,14 +157,14 @@ msgid ""
 "class called ``User`` will be the class to which we map this table.  "
 "Within the class, we define details about the table to which we'll be "
 "mapping, primarily the table name, and names and datatypes of columns::"
-msgstr ""
+msgstr "今では\ &quot;base \&quot;を持っているので、マップされたクラスをいくつでも定義することができます。私たちはアプリケーションを使用してエンドユーザーのためのレコードを格納する `` users``という単一のテーブルから始めます。 `` User``という新しいクラスが、このテーブルをマップするクラスになります。クラス内では、マッピングするテーブル、主にテーブル名、カラムの名前とデータ型に関する詳細を定義します::"
 
 #: ../../orm/tutorial.rst:133
 msgid ""
 "The ``User`` class defines a ``__repr__()`` method, but note that is "
 "**optional**; we only implement it in this tutorial so that our examples "
 "show nicely formatted ``User`` objects."
-msgstr ""
+msgstr "`` User``クラスは `` __repr __（） ``メソッドを定義しますが、** ** ** **;私たちはこのチュートリアルでのみ実装していますので、ここでの例はきれいにフォーマットされた `` User``オブジェクトを示しています。"
 
 #: ../../orm/tutorial.rst:138
 msgid ""
@@ -208,7 +176,7 @@ msgid ""
 " boilerplate is required; instead, you're encouraged to create your own "
 "automated conventions using helper functions and mixin classes, which is "
 "described in detail at :ref:`declarative_mixins`."
-msgstr ""
+msgstr "Declarativeを最低限必要とするクラスは、 `` __tablename__``属性と、主キーの一部であるclass： `.Column`の少なくとも1つの属性を必要とします。 SQLAlchemyは、名前、データ型、または制約に組み込みの規則がないなど、クラスが参照するテーブルについては何も仮定しません。しかし、これは定型句が必要であるということを意味するものではありません。代わりに、ヘルパー関数とmixinクラスを使用して独自の自動慣習を作成することをお勧めします。詳細については、ref： `declarative_mixins`を参照してください。"
 
 #: ../../orm/tutorial.rst:148
 msgid ""
@@ -218,24 +186,24 @@ msgid ""
 "   The \"instrumented\" mapped class will provide us with the means to "
 "refer to our table in a SQL context as well as to persist and load the "
 "values of columns from the database."
-msgstr ""
+msgstr "私たちのクラスが構築されると、Declarativeは：class： `.Column`オブジェクトをすべて、term：` descriptors`と呼ばれる特殊なPythonアクセサで置き換えます。これは、term： `instrumentation`と呼ばれるプロセスです。マッピングされた\ &quot;instrumented \&quot;クラスは、SQLコンテキストでテーブルを参照したり、データベースからカラムの値を保持したり読み込んだりする手段を提供します。"
 
 #: ../../orm/tutorial.rst:154
 msgid ""
 "Outside of what the mapping process does to our class, the class remains "
 "otherwise mostly a normal Python class, to which we can define any number"
 " of ordinary attributes and methods needed by our application."
-msgstr ""
+msgstr "マッピング処理が私たちのクラスに対して行っていること以外は、クラスは普通は普通のPythonクラスのままであり、アプリケーションに必要な任意の数の通常の属性とメソッドを定義することができます。"
 
 #: ../../orm/tutorial.rst:158
 msgid ""
 "For information on why a primary key is required, see "
 ":ref:`faq_mapper_primary_key`."
-msgstr ""
+msgstr "主キーが必要な理由については、ref： `faq_mapper_primary_key`を参照してください。"
 
 #: ../../orm/tutorial.rst:163
 msgid "Create a Schema"
-msgstr ""
+msgstr "スキーマの作成"
 
 #: ../../orm/tutorial.rst:165
 msgid ""
@@ -245,7 +213,7 @@ msgid ""
 "specific table is called the :class:`.Table` object, and here Declarative"
 " has made one for us.  We can see this object by inspecting the "
 "``__table__`` attribute::"
-msgstr ""
+msgstr "Declarativeシステムで構築された `` User``クラスでは、term： `table metadata`と呼ばれるテーブルに関する情報を定義しています。特定のテーブルに対してこの情報を表すためにSQLAlchemyが使用するオブジェクトは：class： `.Table`オブジェクトと呼ばれ、Declarativeが私たちのために作成しました。このオブジェクトは `` __table__``属性を調べることで見ることができます::"
 
 #: ../../orm/tutorial.rst:179
 msgid ""
@@ -254,7 +222,7 @@ msgid ""
 "class can be mapped to any :class:`.Table` using the :func:`.mapper` "
 "function directly; this less common usage is described at "
 ":ref:`classical_mapping`."
-msgstr ""
+msgstr "宣言システムは、SQLAlchemyのORMを使用するために必須ではありませんが、必須です。 Declarativeの外では、プレーンなPythonクラスは：：func： `.mapper`関数を直接使って：class：` .Table`にマップすることができます。これほど一般的でない使い方については、ref： `classical_mapping`を参照してください。"
 
 #: ../../orm/tutorial.rst:186
 msgid ""
@@ -265,14 +233,14 @@ msgid ""
 ":class:`.Mapper` object.  This object is a behind-the-scenes object we "
 "normally don't need to deal with directly (though it can provide plenty "
 "of information about our mapping when we need it)."
-msgstr ""
+msgstr "私たちがクラスを宣言したとき、Declarativeはクラス宣言が完了したら追加のアクティビティを実行するためにPythonメタクラスを使用しました。この段階で、私たちの仕様に従って：class： `.Table`オブジェクトを作成し、：class：` .Mapper`オブジェクトを作成することによってクラスに関連付けました。このオブジェクトは、通常は直接処理する必要のない背後にあるオブジェクトです（ただし、必要なときにマッピングに関する豊富な情報を提供できます）。"
 
 #: ../../orm/tutorial.rst:194
 msgid ""
 "The :class:`.Table` object is a member of a larger collection known as "
 ":class:`.MetaData`.  When using Declarative, this object is available "
 "using the ``.metadata`` attribute of our declarative base class."
-msgstr ""
+msgstr "：class： `.Table`オブジェクトは、class：` .MetaData`と呼ばれる大きなコレクションのメンバーです。 Declarativeを使用する場合、このオブジェクトは、宣言的な基本クラスの `` .metadata``属性を使用して使用できます。"
 
 #: ../../orm/tutorial.rst:199
 msgid ""
@@ -285,7 +253,7 @@ msgid ""
 " source of database connectivity.  We will see that special commands are "
 "first emitted to check for the presence of the ``users`` table, and "
 "following that the actual ``CREATE TABLE`` statement:"
-msgstr ""
+msgstr "：class： `.MetaData`は：term：` registry`です。これには、限られたスキーマ生成コマンドセットをデータベースに出す機能が含まれています。私たちのSQLiteデータベースは実際には `` users``テーブルを持っていないので、class： `.MetaData`を使って、まだ存在しないすべてのテーブルに対してCREATE TABLE文をデータベースに発行することができます。以下では、：meth： `.MetaData.create_all`メソッドを呼び出して、：class：` .Engine`をデータベース接続のソースとして渡します。 `` users``テーブルが存在するかどうかをチェックするために特別なコマンドが最初に生成され、それに続いて実際の `` CREATE TABLE``ステートメントが表示されます："
 
 #: ../../orm/tutorial.rst:226
 msgid ""
@@ -295,7 +263,7 @@ msgid ""
 " if running this tutorial on one of those databases, and you wish to use "
 "SQLAlchemy to issue CREATE TABLE, a \"length\" may be provided to the "
 ":class:`~sqlalchemy.types.String` type as below::"
-msgstr ""
+msgstr "CREATE TABLEの構文に精通しているユーザーは、VARCHAR列が長さなしで生成されたことに気付くことがあります。 SQLiteとPostgreSQLでは、これは有効なデータ型ですが、他のものでは許可されていません。したがって、これらのデータベースの1つでこのチュートリアルを実行し、SQLAlchemyを使用してCREATE TABLEを発行する場合は、以下のようにclass： `〜sqlalchemy.types.String`型に\&quot; length \ &quot;を指定することができます。"
 
 #: ../../orm/tutorial.rst:235
 msgid ""
@@ -303,7 +271,7 @@ msgid ""
 " precision/scale fields available on :class:`~sqlalchemy.types.Integer`, "
 ":class:`~sqlalchemy.types.Numeric`, etc. are not referenced by SQLAlchemy"
 " other than when creating tables."
-msgstr ""
+msgstr "長さフィールドは：class： `〜sqlalchemy.types.String`と同様の精度/スケールフィールドで利用できます：class：`〜sqlalchemy.types.Integer`、：class： `〜sqlalchemy.types.Numeric`、テーブルの作成時以外はSQLAlchemyによって参照されません。"
 
 #: ../../orm/tutorial.rst:239
 msgid ""
@@ -311,13 +279,13 @@ msgid ""
 "primary key identifiers, and SQLAlchemy doesn't generate or assume these "
 "without being instructed. For that, you use the "
 ":class:`~sqlalchemy.schema.Sequence` construct::"
-msgstr ""
+msgstr "さらに、FirebirdとOracleは新しい主キー識別子を生成するためにシーケンスを必要とし、SQLAlchemyは指示されずにこれらを生成したり仮定したりしません。そのためには、：class： `〜sqlalchemy.schema.Sequence`コンストラクトを使用します："
 
 #: ../../orm/tutorial.rst:246
 msgid ""
 "A full, foolproof :class:`~sqlalchemy.schema.Table` generated via our "
 "declarative mapping is therefore::"
-msgstr ""
+msgstr "したがって、完全で完全な：class： `〜sqlalchemy.schema.Table`は、宣言的マッピングによって生成されます::"
 
 #: ../../orm/tutorial.rst:260
 msgid ""
@@ -326,15 +294,15 @@ msgid ""
 "Python usage only, versus one that will be used to emit CREATE TABLE "
 "statements on a particular set of backends with more stringent "
 "requirements."
-msgstr ""
+msgstr "このより冗長なテーブル定義を個別に含めて、主にPythonでの使用のみに対応する最小構成と、より厳しい要件を持つ特定のバックエンドでCREATE TABLEステートメントを発行するために使用される構成との違いを強調します。"
 
 #: ../../orm/tutorial.rst:267
 msgid "Create an Instance of the Mapped Class"
-msgstr ""
+msgstr "マップされたクラスのインスタンスを作成する"
 
 #: ../../orm/tutorial.rst:269
 msgid "With mappings complete, let's now create and inspect a ``User`` object::"
-msgstr ""
+msgstr "マッピングが完了したら、 `` User``オブジェクトを作成して検査しましょう::"
 
 #: ../../orm/tutorial.rst:282
 msgid ""
@@ -344,7 +312,7 @@ msgid ""
 "    We are free to define any explicit ``__init__()`` method we prefer on"
 " our class, which will override the default method provided by "
 "Declarative."
-msgstr ""
+msgstr "Declarativeシステムで定義された `` User``クラスには、マップしたカラムに一致するキーワード名を自動的に受け入れるコンストラクタ（例えば `` __init __（） ``メソッド）が用意されています。私たちがクラスで好む明示的な `` __init __（） ``メソッドを自由に定義することができます。これはDeclarativeによって提供されるデフォルトメソッドをオーバーライドします。"
 
 #: ../../orm/tutorial.rst:288
 msgid ""
@@ -356,11 +324,11 @@ msgid ""
 "those attributes where we've actually assigned a value, the "
 "instrumentation system is tracking those assignments for use within an "
 "eventual INSERT statement to be emitted to the database."
-msgstr ""
+msgstr "コンストラクタでそれを指定していないにもかかわらず、 `` id``属性は、アクセスしたときに `` None``という値を生成します（Pythonの通常の未定義の場合の `` AttributeError``の振る舞い属性）。 SQLAlchemyの：term： `instrumentation`は、最初にアクセスされたときに、カラムマップされた属性に対してこのデフォルト値を生成します。実際に値を割り当てた属性の場合、計装システムは、最終的なINSERTステートメント内で使用するために割り当てを追跡し、データベースに出力します。"
 
 #: ../../orm/tutorial.rst:298
 msgid "Creating a Session"
-msgstr ""
+msgstr "セッションの作成"
 
 #: ../../orm/tutorial.rst:300
 msgid ""
@@ -370,14 +338,14 @@ msgid ""
 ":func:`~sqlalchemy.create_engine` statement, we define a "
 ":class:`~sqlalchemy.orm.session.Session` class which will serve as a "
 "factory for new :class:`~sqlalchemy.orm.session.Session` objects::"
-msgstr ""
+msgstr "これで、データベースとの会話を開始する準備が整いました。データベースに対するORMの &quot;ハンドル&quot;は：class： `〜sqlalchemy.orm.session.Session`です。 ：func： `〜sqlalchemy.create_engine`ステートメントと同じレベルでアプリケーションを最初にセットアップするとき、新しいクラスのファクトリとして機能する：class：`〜sqlalchemy.orm.session.Session`クラスを定義します：class： `〜sqlalchemy.orm.session.Session`オブジェクト::"
 
 #: ../../orm/tutorial.rst:310
 msgid ""
 "In the case where your application does not yet have an "
 ":class:`~sqlalchemy.engine.Engine` when you define your module-level "
 "objects, just set it up like this::"
-msgstr ""
+msgstr "モジュールレベルのオブジェクトを定義するときに、アプリケーションがまだ：class： `〜sqlalchemy.engine.Engine`を持っていない場合は、次のように設定してください::"
 
 #: ../../orm/tutorial.rst:316
 msgid ""
@@ -385,7 +353,7 @@ msgid ""
 ":func:`~sqlalchemy.create_engine`, connect it to the "
 ":class:`~sqlalchemy.orm.session.Session` using "
 ":meth:`~.sessionmaker.configure`::"
-msgstr ""
+msgstr "後で：func： `〜sqlalchemy.create_engine`でエンジンを作成するときは、：meth：`〜.sessionmaker.configure` ::を使用して：class： `〜sqlalchemy.orm.session.Session`に接続してください。"
 
 #: ../../orm/tutorial.rst:324
 msgid ""
@@ -396,7 +364,7 @@ msgid ""
 " party, the :class:`.Session` is the guest's plate and the objects it "
 "holds are the food (and the database...the kitchen?)!  More on this topic"
 " available at :ref:`session_faq_whentocreate`."
-msgstr ""
+msgstr "どのようなアプリケーションが構築されているかは、class： `Session。 class： `.Session`は、あなたのオブジェクトのためのワークスペースです。特定のデータベース接続のローカルです。アプリケーションスレッドをディナーパーティーのゲストとして考えるなら、：class：` .Session`ゲストの食器であり、それが保持するオブジェクトは食べ物（そしてデータベース...キッチンですか？）です！このトピックについては、ref： `session_faq_whentocreate`を参照してください。"
 
 #: ../../orm/tutorial.rst:333
 msgid ""
@@ -406,7 +374,7 @@ msgid ""
 " when calling :class:`~.sessionmaker` as well; these are described in a "
 "later chapter. Then, whenever you need to have a conversation with the "
 "database, you instantiate a :class:`~sqlalchemy.orm.session.Session`::"
-msgstr ""
+msgstr "このカスタムメイドの：class： `〜sqlalchemy.orm.session.Session`クラスは、データベースにバインドされたnew：class：`〜sqlalchemy.orm.session.Session`オブジェクトを作成します。 class： `〜.sessionmaker`を呼び出しても、他のトランザクション特性を定義することができます。これらについては後の章で説明します。次に、データベースと対話する必要があるときはいつでも：class： `〜sqlalchemy.orm.session.Session` ::"
 
 #: ../../orm/tutorial.rst:342
 msgid ""
@@ -415,17 +383,17 @@ msgid ""
 "yet. When it's first used, it retrieves a connection from a pool of "
 "connections maintained by the :class:`.Engine`, and holds onto it until "
 "we commit all changes and/or close the session object."
-msgstr ""
+msgstr "上記の：class： `〜sqlalchemy.orm.session.Session`は、SQLite対応の：class：` .Engine`に関連付けられていますが、まだ接続を開いていません。最初に使用されるときは、：class： `.Engine`によって維持されている接続プールから接続を取得し、すべての変更をコミットするか、セッションオブジェクトを閉じるまで保持します。"
 
 #: ../../orm/tutorial.rst:350
 msgid "Adding and Updating Objects"
-msgstr ""
+msgstr "オブジェクトの追加と更新"
 
 #: ../../orm/tutorial.rst:352
 msgid ""
 "To persist our ``User`` object, we :meth:`~.Session.add` it to our "
 ":class:`~sqlalchemy.orm.session.Session`::"
-msgstr ""
+msgstr "`` User``オブジェクトを永続化するには、：meth： `〜.Session.add`：class：`〜sqlalchemy.orm.session.Session` ::"
 
 #: ../../orm/tutorial.rst:357
 msgid ""
@@ -436,7 +404,7 @@ msgid ""
 "as a **flush**. If we query the database for ``Ed Jones``, all pending "
 "information will first be flushed, and the query is issued immediately "
 "thereafter."
-msgstr ""
+msgstr "現時点では、インスタンスは**保留中**です。 SQLはまだ発行されておらず、オブジェクトはまだデータベース内の行によって表されていません。 ：class： `〜sqlalchemy.orm.session.Session`は、** flush **と呼ばれるプロセスを使用して、必要に応じて直ちに` `Ed Jones``を持続させるためにSQLを発行します。 `` Ed Jones``をデータベースに照会すると、保留中の情報はすべてフラッシュされ、その直後に照会が発行されます。"
 
 #: ../../orm/tutorial.rst:364
 msgid ""
@@ -445,7 +413,7 @@ msgid ""
 "attribute of ``ed``, and indicate that we'd like only the first result in"
 " the full list of rows. A ``User`` instance is returned which is "
 "equivalent to that which we've added:"
-msgstr ""
+msgstr "たとえば、以下のように `` User``のインスタンスをロードする新しい：class： `〜sqlalchemy.orm.query.Query`オブジェクトを作成します。 `` ed``の `` name``属性でフィルタリングし、行の完全なリストの最初の結果のみを表示することを示します。私たちが追加したものと同等の `` User``インスタンスが返されます："
 
 #: ../../orm/tutorial.rst:387
 msgid ""
@@ -453,7 +421,7 @@ msgid ""
 " the row returned is the **same** row as one already represented within "
 "its internal map of objects, so we actually got back the identical "
 "instance as that which we just added::"
-msgstr ""
+msgstr "実際には：class： `〜sqlalchemy.orm.session.Session`は、返された行がオブジェクトの内部マップ内ですでに表現されているものと同じ**行であることを認識しました。私たちがちょうど追加したもの::"
 
 #: ../../orm/tutorial.rst:395
 msgid ""
@@ -466,29 +434,29 @@ msgid ""
 "Python object for that particular primary key; it also will raise an "
 "error if an attempt is made to place a second, already-persisted object "
 "with the same primary key within the session."
-msgstr ""
+msgstr "ここで作業中のORMの概念は：term： `identity map`と呼ばれ、a：class：`〜sqlalchemy.orm.session.Session`内の特定の行に対するすべての操作が同じデータセットを操作することを保証します。特定の主キーを持つオブジェクトが：class： `〜sqlalchemy.orm.session.Session`に存在すると、それに関するすべてのSQLクエリ：class：`〜sqlalchemy.orm.session.Session`は常に同じPythonを返しますその特定の主キーのオブジェクト。同じプライマリ・キーを持つ2番目のすでに永続化されたオブジェクトをセッション内に配置しようとすると、エラーが発生します。"
 
 #: ../../orm/tutorial.rst:406
 msgid ""
 "We can add more ``User`` objects at once using "
 ":func:`~sqlalchemy.orm.session.Session.add_all`:"
-msgstr ""
+msgstr "func： `〜sqlalchemy.orm.session.Session.add_all`：を使用して、さらに多くの` `User``オブジェクトを追加できます："
 
 #: ../../orm/tutorial.rst:416
 msgid ""
 "Also, we've decided the password for Ed isn't too secure, so lets change "
 "it:"
-msgstr ""
+msgstr "また、私たちはEdのパスワードがあまり安全ではないと判断しましたので、変更してください："
 
 #: ../../orm/tutorial.rst:422
 msgid ""
 "The :class:`~sqlalchemy.orm.session.Session` is paying attention. It "
 "knows, for example, that ``Ed Jones`` has been modified:"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.session.Session`が注目されています。例えば、「エド・ジョーンズ（Ed Jones）」が変更されていることが分かっています。"
 
 #: ../../orm/tutorial.rst:430
 msgid "and that three new ``User`` objects are pending:"
-msgstr ""
+msgstr "3つの新しい `` User``オブジェクトが保留中であることを示します："
 
 #: ../../orm/tutorial.rst:439
 msgid ""
@@ -498,7 +466,7 @@ msgid ""
 ":meth:`~.Session.commit`.  The :class:`~sqlalchemy.orm.session.Session` "
 "emits the ``UPDATE`` statement for the password change on \"ed\", as well"
 " as ``INSERT`` statements for the three new ``User`` objects we've added:"
-msgstr ""
+msgstr "私たちは：class： `〜sqlalchemy.orm.session.Session`に、データベースに残っているすべての変更を発行し、その間中進行していたトランザクションをコミットしたいと言っています。これを行うには、meth： `〜.Session.commit`を実行します。 ：class： `〜sqlalchemy.orm.session.Session`は、\&quot; ed \ &quot;のパスワード変更のための` `UPDATE``文と、3つの新しい` `User``の` `INSERT``文を発行します。 `オブジェクトを追加しました："
 
 #: ../../orm/tutorial.rst:459
 msgid ""
@@ -507,13 +475,13 @@ msgid ""
 "session are now returned to the connection pool. Subsequent operations "
 "with this session will occur in a **new** transaction, which will again "
 "re-acquire connection resources when first needed."
-msgstr ""
+msgstr "：meth： `〜.Session.commit`は、残りの変更をデータベースにフラッシュし、トランザクションをコミットします。セッションで参照される接続リソースが接続プールに返されるようになりました。このセッションでの後続の操作は**新しい**トランザクションで行われ、最初に必要なときに接続リソースを再度取得します。"
 
 #: ../../orm/tutorial.rst:465
 msgid ""
 "If we look at Ed's ``id`` attribute, which earlier was ``None``, it now "
 "has a value:"
-msgstr ""
+msgstr "以前は `` None``だったEdの `` id``属性を見ると、値は次のようになります："
 
 #: ../../orm/tutorial.rst:480
 msgid ""
@@ -526,7 +494,7 @@ msgid ""
 "previous transaction the first time it's accessed within a new "
 "transaction, so that the most recent state is available. The level of "
 "reloading is configurable as is described in :doc:`/orm/session`."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.session.Session`がデータベースに新しい行を挿入した後、新しく生成されたすべての識別子とデータベース生成されたデフォルトが、即座にまたは最初にロードされたアクセスによってインスタンス上で利用可能になります。この場合、新しいトランザクションが開始されたので、行全体がアクセス時に再ロードされました：meth： `〜.Session.commit`。 SQLAlchemyは、デフォルトでは、新しいトランザクション内で最初にアクセスされたときに以前のトランザクションのデータをリフレッシュし、最新の状態が利用可能になります。再ロードのレベルは、doc： `/ orm / session`で説明されているように設定可能です。"
 
 #: ../../orm/tutorial.rst:491
 msgid ""
@@ -536,42 +504,42 @@ msgid ""
 "- **transient**, **pending**, and **persistent**. Being aware of these "
 "states and what they mean is always a good idea - be sure to read "
 ":ref:`session_object_states` for a quick overview."
-msgstr ""
+msgstr "私たちの `` User``オブジェクトが：class： `.Session`の外側から：class：` .Session`の内部に移動して実際に挿入されるまで、それは4つの利用可能な\ &quot;オブジェクト状態\&quot;  -  **一時的**、**保留**、**永続**。これらの状態とそれが意味することを常に意識しておくことは、常に良いアイデアです。簡単な概要については、ref： `session_object_states`を必ず読んでください。"
 
 #: ../../orm/tutorial.rst:499
 msgid "Rolling Back"
-msgstr ""
+msgstr "ロールバック"
 
 #: ../../orm/tutorial.rst:500
 msgid ""
 "Since the :class:`~sqlalchemy.orm.session.Session` works within a "
 "transaction, we can roll back changes made too. Let's make two changes "
 "that we'll revert; ``ed_user``'s user name gets set to ``Edwardo``:"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.session.Session`はトランザクション内で動作するので、変更をロールバックすることもできます。元に戻す2つの変更を加えましょう。 `` ed_user``のユーザ名は `` Edwardo``に設定されます："
 
 #: ../../orm/tutorial.rst:508
 msgid "and we'll add another erroneous user, ``fake_user``:"
-msgstr ""
+msgstr "`` fake_user``という別の誤ったユーザを追加します："
 
 #: ../../orm/tutorial.rst:515
 msgid ""
 "Querying the session, we can see that they're flushed into the current "
 "transaction:"
-msgstr ""
+msgstr "セッションを照会すると、セッションが現在のトランザクションにフラッシュされていることがわかります。"
 
 #: ../../orm/tutorial.rst:533
 msgid ""
 "Rolling back, we can see that ``ed_user``'s name is back to ``ed``, and "
 "``fake_user`` has been kicked out of the session:"
-msgstr ""
+msgstr "ロールバックすると、 `` ed_user``の名前が `` ed``に戻り、 `` fake_user``がセッションから追い出されたことがわかります："
 
 #: ../../orm/tutorial.rst:555
 msgid "issuing a SELECT illustrates the changes made to the database:"
-msgstr ""
+msgstr "SELECTを発行すると、データベースに加えられた変更が示されます。"
 
 #: ../../orm/tutorial.rst:572
 msgid "Querying"
-msgstr ""
+msgstr "クエリ"
 
 #: ../../orm/tutorial.rst:574
 msgid ""
@@ -583,7 +551,7 @@ msgid ""
 ":class:`~sqlalchemy.orm.query.Query` which loads ``User`` instances. When"
 " evaluated in an iterative context, the list of ``User`` objects present "
 "is returned:"
-msgstr ""
+msgstr "A：class： `〜sqlalchemy.orm.query.Query`オブジェクトは、：class：`〜sqlalchemy.orm.session.Sessionの：class： `〜sqlalchemy.orm.session.Session.query（）`メソッドを使って作成されます。 `。この関数は、可変数の引数を取ります。これは、クラスとクラスで実装された記述子の任意の組み合わせです。以下に、 `` User``インスタンスを読み込む：class： `〜sqlalchemy.orm.query.Query`を示します。反復的なコンテキストで評価すると、存在する `` User``オブジェクトのリストが返されます："
 
 #: ../../orm/tutorial.rst:598
 msgid ""
@@ -592,7 +560,7 @@ msgid ""
 "based entities are expressed as arguments to the "
 ":class:`~sqlalchemy.orm.session.Session.query()` function, the return "
 "result is expressed as tuples:"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.query.Query`は、引数としてORMインストルメントされた記述子も受け入れます。 ：class： `〜sqlalchemy.orm.session.Session.query（）`関数への引数として複数のクラスエンティティまたはカラムベースのエンティティが表現されるときはいつでも、返される結果はタプルとして表現されます："
 
 #: ../../orm/tutorial.rst:617
 msgid ""
@@ -600,7 +568,7 @@ msgid ""
 "tuples, supplied by the :class:`.KeyedTuple` class, and can be treated "
 "much like an ordinary Python object. The names are the same as the "
 "attribute's name for an attribute, and the class name for a class:"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.query.Query`によって返されるタプルは、：class：` .KeyedTuple`クラスによって提供される*名前付き*タプルであり、通常のPythonオブジェクトのように扱うことができます。名前は、属性の属性名とクラスのクラス名と同じです。"
 
 #: ../../orm/tutorial.rst:638
 msgid ""
@@ -608,28 +576,28 @@ msgid ""
 ":meth:`~.ColumnElement.label` construct, which is available from any "
 ":class:`.ColumnElement`-derived object, as well as any class attribute "
 "which is mapped to one (such as ``User.name``):"
-msgstr ""
+msgstr "：meth： `〜.ColumnElement.label`構造体を使用して個々の列式の名前を制御することができます。この構造体は、class：` .ColumnElement`由来のオブジェクト、および1つにマップされたクラス属性（ `` User.name``など）："
 
 #: ../../orm/tutorial.rst:655
 msgid ""
 "The name given to a full entity such as ``User``, assuming that multiple "
 "entities are present in the call to :meth:`~.Session.query`, can be "
 "controlled using :func:`~.sqlalchemy.orm.aliased` :"
-msgstr ""
+msgstr "：meth： `〜.Session.query`の呼び出しに複数のエンティティが存在すると仮定して、` `User``のような完全なエンティティに与えられた名前は：func：`〜.sqlalchemy.ormを使って制御できます。エイリアス化："
 
 #: ../../orm/tutorial.rst:677
 msgid ""
 "Basic operations with :class:`~sqlalchemy.orm.query.Query` include "
 "issuing LIMIT and OFFSET, most conveniently using Python array slices and"
 " typically in conjunction with ORDER BY:"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.query.Query`を使った基本的な操作は、LIMITとOFFSETを発行することを含みます。最も簡単にはPythonの配列スライスを使用し、通常はORDER BYと組み合わせて使用​​します。"
 
 #: ../../orm/tutorial.rst:695
 msgid ""
 "and filtering results, which is accomplished either with "
 ":func:`~sqlalchemy.orm.query.Query.filter_by`, which uses keyword "
 "arguments:"
-msgstr ""
+msgstr "フィルタリング結果は、キーワード引数を使用する：func： `〜sqlalchemy.orm.query.Query.filter_by`を使用して実行します。"
 
 #: ../../orm/tutorial.rst:708
 msgid ""
@@ -637,7 +605,7 @@ msgid ""
 "flexible SQL expression language constructs. These allow you to use "
 "regular Python operators with the class-level attributes on your mapped "
 "class:"
-msgstr ""
+msgstr "... or：func： `〜sqlalchemy.orm.query.Query.filter`。より柔軟なSQL式言語構造を使用します。これらの関数を使うと、マップされたクラスのクラスレベルの属性を持つ通常のPython演算子を使用できます。"
 
 #: ../../orm/tutorial.rst:722
 msgid ""
@@ -648,29 +616,29 @@ msgid ""
 "name of \"Ed Jones\", you can call "
 ":func:`~sqlalchemy.orm.query.Query.filter` twice, which joins criteria "
 "using ``AND``:"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.query.Query`オブジェクトは完全に** generative **です。つまり、ほとんどのメソッド呼び出しは新しい：class：`〜sqlalchemy.orm.query.Query`オブジェクトを返します。追加される。たとえば、\ &quot;ed \&quot;という名前のユーザーを\ &quot;Ed Jones \&quot;というフルネームで照会するには、func： `〜sqlalchemy.orm.query.Query.filter`を2回呼び出すことができます。これは、 「AND」："
 
 #: ../../orm/tutorial.rst:745
 msgid "Common Filter Operators"
-msgstr ""
+msgstr "一般的なフィルタ演算子"
 
 #: ../../orm/tutorial.rst:747
 msgid ""
 "Here's a rundown of some of the most common operators used in "
 ":func:`~sqlalchemy.orm.query.Query.filter`:"
-msgstr ""
+msgstr "ここでは、以下で使用される最も一般的な演算子のいくつかの概要を示します：func： `〜sqlalchemy.orm.query.Query.filter`："
 
 #: ../../orm/tutorial.rst:750
 msgid ":meth:`equals <.ColumnOperators.__eq__>`::"
-msgstr ""
+msgstr "：meth： `equals &lt;.ColumnOperators .__ eq __&gt;` ::"
 
 #: ../../orm/tutorial.rst:754
 msgid ":meth:`not equals <.ColumnOperators.__ne__>`::"
-msgstr ""
+msgstr "：meth： `not equals &lt;.ColumnOperators .__ ne __&gt;` ::"
 
 #: ../../orm/tutorial.rst:758
 msgid ":meth:`LIKE <.ColumnOperators.like>`::"
-msgstr ""
+msgstr "：meth： `LIKE &lt;.ColumnOperators.like&gt;` ::"
 
 #: ../../orm/tutorial.rst:762
 msgid ""
@@ -678,92 +646,92 @@ msgid ""
 "insensitive on some backends, and case sensitive on others.  For "
 "guaranteed case-insensitive comparisons, use "
 ":meth:`.ColumnOperators.ilike`."
-msgstr ""
+msgstr "：meth： `.ColumnOperators.like`は、一部のバックエンドで大文字と小文字を区別せず、大文字と小文字を区別するLIKE演算子をレンダリングします。大文字と小文字を区別しない比較を保証するには、：meth： `.ColumnOperators.ilike`を使用します。"
 
 #: ../../orm/tutorial.rst:767
 msgid ":meth:`ILIKE <.ColumnOperators.ilike>` (case-insensitive LIKE)::"
-msgstr ""
+msgstr "：meth： `ILIKE &lt;.ColumnOperators.ilike&gt;`（大文字小文字を区別しないLIKE）::"
 
 #: ../../orm/tutorial.rst:771
 msgid ""
 "most backends don't support ILIKE directly.  For those, the "
 ":meth:`.ColumnOperators.ilike` operator renders an expression combining "
 "LIKE with the LOWER SQL function applied to each operand."
-msgstr ""
+msgstr "ほとんどのバックエンドはILIKEを直接サポートしていません。そのために、：meth： `.ColumnOperators.ilike`演算子はLIKEと各オペランドに適用されるLOWER SQL関数を組み合わせた式をレンダリングします。"
 
 #: ../../orm/tutorial.rst:775
 msgid ":meth:`IN <.ColumnOperators.in_>`::"
-msgstr ""
+msgstr "：meth： `IN &lt;.ColumnOperators.in_&gt;` ::"
 
 #: ../../orm/tutorial.rst:784
 msgid ":meth:`NOT IN <.ColumnOperators.notin_>`::"
-msgstr ""
+msgstr "：meth： `NOT IN &lt;.ColumnOperators.notin_&gt;` ::"
 
 #: ../../orm/tutorial.rst:788
 msgid ":meth:`IS NULL <.ColumnOperators.is_>`::"
-msgstr ""
+msgstr "：meth： `IS NULL &lt;.ColumnOperators.is_&gt;` ::"
 
 #: ../../orm/tutorial.rst:795
 msgid ":meth:`IS NOT NULL <.ColumnOperators.isnot>`::"
-msgstr ""
+msgstr "：meth： `IS NOT NULL &lt;.ColumnOperators.isnot&gt;` ::"
 
 #: ../../orm/tutorial.rst:802
 msgid ":func:`AND <.sql.expression.and_>`::"
-msgstr ""
+msgstr "：func： `AND &lt;.sql.expression.and_&gt;` ::"
 
 #: ../../orm/tutorial.rst:814
 msgid "Make sure you use :func:`.and_` and **not** the Python ``and`` operator!"
-msgstr ""
+msgstr "必ず：func： `.and_`とPythonの` `and``演算子**を使用してください！"
 
 #: ../../orm/tutorial.rst:817
 msgid ":func:`OR <.sql.expression.or_>`::"
-msgstr ""
+msgstr "：func： `OR &lt;.sql.expression.or_&gt;` ::"
 
 #: ../../orm/tutorial.rst:822
 msgid "Make sure you use :func:`.or_` and **not** the Python ``or`` operator!"
-msgstr ""
+msgstr "必ず：func： `.or_`とPythonの` `or``演算子**を使用してください！"
 
 #: ../../orm/tutorial.rst:825
 msgid ":meth:`MATCH <.ColumnOperators.match>`::"
-msgstr ""
+msgstr "：meth： `MATCH &lt;.ColumnOperators.match&gt;` ::"
 
 #: ../../orm/tutorial.rst:831
 msgid ""
 ":meth:`~.ColumnOperators.match` uses a database-specific ``MATCH`` or "
 "``CONTAINS`` function; its behavior will vary by backend and is not "
 "available on some backends such as SQLite."
-msgstr ""
+msgstr "：meth： `〜.ColumnOperators.match`はデータベース固有の` `MATCH``または` `CONTAINS``関数を使います。その動作はバックエンドによって異なるため、SQLiteなどのバックエンドでは使用できません。"
 
 #: ../../orm/tutorial.rst:836
 msgid "Returning Lists and Scalars"
-msgstr ""
+msgstr "リストとスカラーを返す"
 
 #: ../../orm/tutorial.rst:838
 msgid ""
 "A number of methods on :class:`.Query` immediately issue SQL and return a"
 " value containing loaded database results.  Here's a brief tour:"
-msgstr ""
+msgstr "いくつかのメソッド：class： `.Query`はすぐにSQLを発行し、ロードされたデータベース結果を含む値を返します。簡単なツアーです："
 
 #: ../../orm/tutorial.rst:842
 msgid ":meth:`~.Query.all()` returns a list:"
-msgstr ""
+msgstr "：meth： `〜.Query.all（）`はリストを返します："
 
 #: ../../orm/tutorial.rst:858
 msgid ""
 ":meth:`~.Query.first()` applies a limit of one and returns the first "
 "result as a scalar:"
-msgstr ""
+msgstr "：meth： `〜.Query.first（）`は1の制限を適用し、最初の結果をスカラーとして返します："
 
 #: ../../orm/tutorial.rst:874
 msgid ""
 ":meth:`~.Query.one()` fully fetches all rows, and if not exactly one "
 "object identity or composite row is present in the result, raises an "
 "error.  With multiple rows found:"
-msgstr ""
+msgstr "：meth： `〜.Query.one（）`はすべての行を完全にフェッチします。結果に正確に1つのオブジェクトIDまたは複合行が存在しない場合は、エラーが発生します。複数の行が見つかりました："
 
 #: ../../orm/tutorial.rst:885
 msgid "With no rows found:"
-msgstr ""
+msgstr "行が見つからない場合："
 
 #: ../../orm/tutorial.rst:894
 msgid ""
@@ -772,7 +740,7 @@ msgid ""
 "a RESTful web service, which may want to raise a \"404 not found\" when "
 "no results are found, but raise an application error when multiple "
 "results are found."
-msgstr ""
+msgstr "：meth： `〜.Query.one`メソッドは、\&quot;見つかったアイテムがありません\ &quot;と\&quot;複数のアイテムが見つかりました\ &quot;を別々に扱うことが期待されるシステムに最適です。結果が見つからない場合には\ &quot;404 not found \&quot;を発生させたいが、複数の結果が見つかった場合にはアプリケーションエラーを発生させるRESTfulなWebサービスなど。"
 
 #: ../../orm/tutorial.rst:899
 msgid ""
@@ -780,17 +748,17 @@ msgid ""
 "no results are found, it doesn't raise an error; it just returns "
 "``None``. Like :meth:`~.Query.one`, however, it does raise an error if "
 "multiple results are found."
-msgstr ""
+msgstr "：meth： `〜.Query.one_or_none`は：meth：`〜.Query.one`のようなものですが、結果が見つからなければエラーは発生しません。 `` None``を返すだけです。 ：meth： `〜.Query.one`のように、しかし、複数の結果が見つかった場合は、エラーが発生します。"
 
 #: ../../orm/tutorial.rst:904
 msgid ""
 ":meth:`~.Query.scalar` invokes the :meth:`~.Query.one` method, and upon "
 "success returns the first column of the row:"
-msgstr ""
+msgstr "：meth： `〜.Query.scalar`は：meth：`〜.Query.one`メソッドを呼び出し、成功するとその行の最初のカラムを返します："
 
 #: ../../orm/tutorial.rst:921
 msgid "Using Textual SQL"
-msgstr ""
+msgstr "テキストSQLの使用"
 
 #: ../../orm/tutorial.rst:923
 msgid ""
@@ -799,14 +767,14 @@ msgid ""
 ":func:`~.expression.text` construct, which is accepted by most applicable"
 " methods.  For example, :meth:`~sqlalchemy.orm.query.Query.filter()` and "
 ":meth:`~sqlalchemy.orm.query.Query.order_by()`:"
-msgstr ""
+msgstr "リテラル文字列は：class： `〜sqlalchemy.orm.query.Query`で柔軟に使用することができます。これは、ほとんどの適用可能なメソッドで受け入れられる：func：`〜.expression.text`構文を使用して指定します。たとえば、：meth： `〜sqlalchemy.orm.query.Query.filter（）`と：meth： `〜sqlalchemy.orm.query.Query.order_by（）`："
 
 #: ../../orm/tutorial.rst:949
 msgid ""
 "Bind parameters can be specified with string-based SQL, using a colon. To"
 " specify the values, use the :meth:`~sqlalchemy.orm.query.Query.params()`"
 " method:"
-msgstr ""
+msgstr "バインドパラメータは、コロンを使用して文字列ベースのSQLで指定できます。値を指定するには、：meth： `〜sqlalchemy.orm.query.Query.params（）`メソッドを使用します。"
 
 #: ../../orm/tutorial.rst:966
 msgid ""
@@ -816,7 +784,7 @@ msgid ""
 " specifiers, the columns in the string SQL are matched to the model "
 "columns based on name, such as below where we use just an asterisk to "
 "represent loading all columns:"
-msgstr ""
+msgstr "完全な文字列ベースの文を使用するには、完全な文を表すa：func： `.text`構文を：meth：`〜sqlalchemy.orm.query.Query.from_statement（） `に渡すことができます。追加の指定子がなければ、文字列SQLの列は、名前に基づいてモデル列に一致します。たとえば、以下のように、すべての列のロードを表すアスタリスクを使用します。"
 
 #: ../../orm/tutorial.rst:982
 msgid ""
@@ -829,7 +797,7 @@ msgid ""
 "link its textual SQL to Core or ORM-mapped column expressions "
 "positionally; we can achieve this by passing column expressions as "
 "positional arguments to the :meth:`.TextClause.columns` method:"
-msgstr ""
+msgstr "nameに一致する列は単純なケースでは機能しますが、重複する列名を含む複雑なステートメントを扱う場合、または特定の名前に簡単に一致しない匿名化されたORM構文を使用する場合は扱いにくくなる可能性があります。さらに、マッピングされた列には、結果行を処理する際に必要な型指定の動作があります。これらの場合、：func： `〜.expression.text`構造体は、テキスト形式のSQLをCoreまたはORMでマップされた列式に位置的にリンクすることができます。 ：meth： `.TextClause.columns`メソッドにポジション引数としてカラム式を渡すことでこれを実現できます："
 
 #: ../../orm/tutorial.rst:1004
 msgid ""
@@ -837,7 +805,7 @@ msgid ""
 "which will be matched positionally to a plain text SQL result set, "
 "eliminating the need for column names to match or even be unique in the "
 "SQL statement."
-msgstr ""
+msgstr "：meth： `.TextClause.columns`メソッドは、SQL文中で列名を一致させたり、一意にする必要性を排除して、プレーンテキストのSQL結果セットと位置的にマッチする列式を受け入れるようになりました。"
 
 #: ../../orm/tutorial.rst:1009
 msgid ""
@@ -845,23 +813,23 @@ msgid ""
 ":class:`.Query` may still specify what columns and entities are to be "
 "returned; instead of ``query(User)`` we can also ask for the columns "
 "individually, as in any other case:"
-msgstr ""
+msgstr "a：func： `〜.expression.text`構造から選択すると、：class：` .Query`は引き続き返される列とエンティティを指定することができます。 `` query（User） ``の代わりに、他の場合と同様に列を個別に求めることもできます："
 
 #: ../../orm/tutorial.rst:1026
 msgid ""
 ":ref:`sqlexpression_text` - The :func:`.text` construct explained from "
 "the perspective of Core-only queries."
-msgstr ""
+msgstr "：ref： `sqlexpression_text`  - ：func：` .text`構造体は、コアのみのクエリの観点から説明されています。"
 
 #: ../../orm/tutorial.rst:1030
 msgid "Counting"
-msgstr ""
+msgstr "カウント"
 
 #: ../../orm/tutorial.rst:1032
 msgid ""
 ":class:`~sqlalchemy.orm.query.Query` includes a convenience method for "
 "counting called :meth:`~sqlalchemy.orm.query.Query.count()`:"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.query.Query`には、meth：`〜sqlalchemy.orm.query.Query.count（） `と呼ばれる便利な計数方法が含まれています："
 
 #: ../../orm/tutorial.rst:1050
 msgid ""
@@ -871,7 +839,7 @@ msgid ""
 "it uses a simple subquery every time, it's only two lines long and always"
 " returns the right answer.  Use ``func.count()`` if a particular "
 "statement absolutely cannot tolerate the subquery being present."
-msgstr ""
+msgstr "：meth： `.Query.count`は、既存のクエリの周りにサブクエリが必要かどうかを推測しようとすると非常に複雑なメソッドでしたが、いくつかのエキゾチックなケースでは正しいことはしませんでした。これで、毎回簡単なサブクエリが使用されるようになったので、2行しかなく、常に正しい答えが返されます。特定の文がサブクエリの存在を絶対に許さない場合は、 `` func.count（） ``を使用します。"
 
 #: ../../orm/tutorial.rst:1058
 msgid ""
@@ -882,7 +850,7 @@ msgid ""
 "simpler ``SELECT count(*) FROM table``, however modern versions of "
 "SQLAlchemy don't try to guess when this is appropriate, as the exact SQL "
 "can be emitted using more explicit means."
-msgstr ""
+msgstr "：meth： `〜.Query.count（）`メソッドは、SQL文が返す行の数を決定するために使用されます。上記の生成されたSQLを見ると、SQLAlchemyは、それが照会しているものを常にサブクエリに配置し、そこから行を数えます。場合によっては、これは単純な `` SELECT count（*）FROM table``に減らすことができますが、SQLAlchemyの現代版は、より明示的な手段を使って正確なSQLを発行できるので、これがいつ適切かを推測しようとしません。"
 
 #: ../../orm/tutorial.rst:1066
 msgid ""
@@ -891,21 +859,21 @@ msgid ""
 "expression ``func.count()``, available from the "
 ":attr:`~sqlalchemy.sql.expression.func` construct.  Below we use it to "
 "return the count of each distinct user name:"
-msgstr ""
+msgstr "\ &quot;カウントするもの\&quot;を特に指定する必要がある場合は、\ &quot;count \&quot;関数を直接指定することができます： `` func.count（） ``：attr： `〜 sqlalchemy.sql.expression.func`構造体です。以下では、別々のユーザー名の数を返すために使用します。"
 
 #: ../../orm/tutorial.rst:1081
 msgid "To achieve our simple ``SELECT count(*) FROM table``, we can apply it as:"
-msgstr ""
+msgstr "単純な `` SELECT count（*）FROM table``を達成するために、次のように適用することができます："
 
 #: ../../orm/tutorial.rst:1091
 msgid ""
 "The usage of :meth:`~.Query.select_from` can be removed if we express the"
 " count in terms of the ``User`` primary key directly:"
-msgstr ""
+msgstr "：meth： `〜.Query.select_from`の使用法は、` `User``主キーの観点からカウントを直接表現すると削除できます："
 
 #: ../../orm/tutorial.rst:1105
 msgid "Building a Relationship"
-msgstr ""
+msgstr "関係を構築する"
 
 #: ../../orm/tutorial.rst:1107
 msgid ""
@@ -915,7 +883,7 @@ msgid ""
 "association from the ``users`` to a new table which stores email "
 "addresses, which we will call ``addresses``. Using declarative, we define"
 " this table along with its mapped class, ``Address``:"
-msgstr ""
+msgstr "`` User``に関連する2番目のテーブルがどのようにマップされ照会されるかを考えてみましょう。 Googleシステムのユーザーは、ユーザー名に関連付けられた任意の数の電子メールアドレスを保存できます。これは、「ユーザー」から電子メールアドレスを格納する新しいテーブルへの基本的な1対多の関連付けを意味します。これを「アドレス」と呼びます。宣言型を使用して、このテーブルをマッピングされたクラス `` Address``とともに定義します："
 
 #: ../../orm/tutorial.rst:1133
 msgid ""
@@ -928,7 +896,7 @@ msgid ""
 "expresses that values in the ``addresses.user_id`` column should be "
 "constrained to those values in the ``users.id`` column, i.e. its primary "
 "key."
-msgstr ""
+msgstr "上記のクラスは：class： `.ForeignKey`コンストラクトを導入しています。これは：class：` .Column`に適用されるディレクティブで、このカラムの値は以下のようになります：term： `constrained`カラム。これは、リレーショナルデータベースの中核的機能であり、他の方法では未接続のテーブルコレクションを豊富な重複関係に変換する\ &quot;グルー\&quot;です。 ：class： `.ForeignKey`は、` `addresses.user_id``カラムの値を` `users.id``カラムの値、つまりプライマリキーに制限する必要があることを表しています。"
 
 #: ../../orm/tutorial.rst:1142
 msgid ""
@@ -946,7 +914,7 @@ msgid ""
 " reverse;  on one side, ``Address.user`` refers to a ``User`` instance, "
 "and on the other side, ``User.addresses`` refers to a list of ``Address``"
 " instances."
-msgstr ""
+msgstr "：func： `.relationship`と呼ばれる第2の指示文は、` `Address``クラス自身が属性` `Address.user``を使用して` `User``クラスにリンクされるべきであることをORMに伝えます。 ：func： `.relationship`は、このリンクの性質を判断するために2つのテーブル間の外部キー関係を使用し、` `Address.user``がterm：` many to one`になることを決定します。追加の：func： `.relationship`ディレクティブは、` `User.addresses``属性の` `User``マッピングされたクラスに置かれます。 ：func： `.relationship`ディレクティブの両方で、パラメータ：paramref：` .relationship.back_populates`は補完的な属性名を参照するために割り当てられます。そうすることによって、func： `.relationship &#39;は逆に表現された同じ関係について知的な決定を下すことができます。 `` User.address``は `` Address``インスタンスのリストを参照しています。"
 
 #: ../../orm/tutorial.rst:1160
 msgid ""
@@ -957,14 +925,14 @@ msgid ""
 ":paramref:`.relationship.back_populates` is the same thing, except a "
 "little more verbose and easier to manipulate.  For an overview of the "
 "entire topic, see the section :ref:`relationships_backref`."
-msgstr ""
+msgstr "：paramref： `.relationship.back_populates`パラメータはparamref：` .relationship.backref`という非常に一般的なSQLAlchemy機能の新しいバージョンです。 ：paramref： `.relationship.backref`パラメータはどこにもなく、常に利用可能です！ ：paramref： `.relationship.back_populates`はもう少し冗長で扱いやすいことを除いて同じものです。トピック全体の概要は、ref： `relationships_backref`を参照してください。"
 
 #: ../../orm/tutorial.rst:1168
 msgid ""
 "The reverse side of a many-to-one relationship is always :term:`one to "
 "many`. A full catalog of available :func:`.relationship` configurations "
 "is at :ref:`relationship_patterns`."
-msgstr ""
+msgstr "多対1の関係の逆は、常に：term： `one to many`です。利用可能な完全なカタログ：func： `.relationship`設定は：ref：` relationship_patterns`です。"
 
 #: ../../orm/tutorial.rst:1172
 msgid ""
@@ -972,7 +940,7 @@ msgid ""
 "``User.addresses`` are referred to as a :term:`bidirectional "
 "relationship`, and is a key feature of the SQLAlchemy ORM.   The section "
 ":ref:`relationships_backref` discusses the \"backref\" feature in detail."
-msgstr ""
+msgstr "`` Address.user``と `` User.addresses``という2つの補完関係は、a：term： `双方向関係 &#39;と呼ばれ、SQLAlchemy ORMの重要な機能です。セクション：ref： `relationships_backref`は\&quot; backref \ &quot;機能について詳しく説明します。"
 
 #: ../../orm/tutorial.rst:1177
 msgid ""
@@ -983,27 +951,27 @@ msgid ""
 "the ``User`` class.   The names which are allowed during this evaluation "
 "include, among other things, the names of all classes which have been "
 "created in terms of the declared base."
-msgstr ""
+msgstr "Declarativeシステムが使用されていると仮定すると、リモートクラスに関係する：func： `.relationship`の引数は、文字列を使って指定することができます。すべてのマッピングが完了したら、これらの文字列は実際の引数を生成するためにPython式として評価されます。上記の場合、 `` User``クラスです。この評価中に許可される名前には、とりわけ、宣言されたベースに関して作成されたすべてのクラスの名前が含まれます。"
 
 #: ../../orm/tutorial.rst:1185
 msgid ""
 "See the docstring for :func:`.relationship` for more detail on argument "
 "style."
-msgstr ""
+msgstr "引数のスタイルの詳細については、docstring for：func： `.relationship`を参照してください。"
 
 #: ../../orm/tutorial.rst:1189
 msgid ""
 "a FOREIGN KEY constraint in most (though not all) relational databases "
 "can only link to a primary key column, or a column that has a UNIQUE "
 "constraint."
-msgstr ""
+msgstr "ほとんどの（ただしすべてではありませんが）リレーショナル・データベースのFOREIGN KEY制約は、主キー列またはUNIQUE制約を持つ列にのみリンクできます。"
 
 #: ../../orm/tutorial.rst:1191
 msgid ""
 "a FOREIGN KEY constraint that refers to a multiple column primary key, "
 "and itself has multiple columns, is known as a \"composite foreign key\"."
 "  It can also reference a subset of those columns."
-msgstr ""
+msgstr "複数の列の主キーを参照し、複数の列を持つFOREIGN KEY制約は\ &quot;複合外部キー\&quot;として知られています。これらの列のサブセットを参照することもできます。"
 
 #: ../../orm/tutorial.rst:1194
 msgid ""
@@ -1011,30 +979,30 @@ msgid ""
 " change in the referenced column or row.  This is known as the CASCADE "
 "*referential action*, and is a built in function of the relational "
 "database."
-msgstr ""
+msgstr "FOREIGN KEY列は、参照される列または行の変更に応じて自動的に更新されます。これは、CASCADE *参照アクション*と呼ばれ、リレーショナルデータベースの組み込み関数です。"
 
 #: ../../orm/tutorial.rst:1197
 msgid ""
 "FOREIGN KEY can refer to its own table.  This is referred to as a \"self-"
 "referential\" foreign key."
-msgstr ""
+msgstr "FOREIGN KEYはそれ自身のテーブルを参照できます。これは\ &quot;自己参照\&quot;外部キーと呼ばれます。"
 
 #: ../../orm/tutorial.rst:1199
 msgid ""
 "Read more about foreign keys at `Foreign Key - Wikipedia "
 "<http://en.wikipedia.org/wiki/Foreign_key>`_."
-msgstr ""
+msgstr "`Foreign Key  - 外部キーについての詳細はこちら -  Wikipedia <http://en.wikipedia.org/wiki/Foreign_key> `_。"
 
 #: ../../orm/tutorial.rst:1201
 msgid ""
 "We'll need to create the ``addresses`` table in the database, so we will "
 "issue another CREATE from our metadata, which will skip over tables which"
 " have already been created:"
-msgstr ""
+msgstr "データベースに `` addresses``テーブルを作成する必要がありますので、既に作成されているテーブルをスキップして、メタデータから別のCREATEを発行します："
 
 #: ../../orm/tutorial.rst:1220
 msgid "Working with Related Objects"
-msgstr ""
+msgstr "関連オブジェクトの操作"
 
 #: ../../orm/tutorial.rst:1222
 msgid ""
@@ -1042,13 +1010,13 @@ msgid ""
 "present. Various collection types, such as sets and dictionaries, are "
 "possible here (see :ref:`custom_collections` for details), but by "
 "default, the collection is a Python list."
-msgstr ""
+msgstr "今、 `` User``を作成すると、空の `` addresses``コレクションが表示されます。ここでは、セットや辞書などのさまざまなコレクション型が可能です（詳細は：ref： `custom_collections`を参照してください）が、デフォルトでコレクションはPythonリストです。"
 
 #: ../../orm/tutorial.rst:1233
 msgid ""
 "We are free to add ``Address`` objects on our ``User`` object. In this "
 "case we just assign a full list directly:"
-msgstr ""
+msgstr "`` User``オブジェクトに `` Address``オブジェクトを自由に追加することができます。この場合、完全なリストを直接割り当てるだけです："
 
 #: ../../orm/tutorial.rst:1242
 msgid ""
@@ -1056,7 +1024,7 @@ msgid ""
 "automatically become visible in the other direction.  This behavior "
 "occurs based on attribute on-change events and is evaluated in Python, "
 "without using any SQL:"
-msgstr ""
+msgstr "双方向関係を使用する場合、一方向に追加された要素は自動的に他方の方向に表示されます。この動作は、変更時に発生するイベントに基づいて行われ、PythonではSQLを使用せずに評価されます。"
 
 #: ../../orm/tutorial.rst:1255
 msgid ""
@@ -1064,17 +1032,17 @@ msgid ""
 "the two ``Address`` members in the corresponding ``addresses`` collection"
 " are both added to the session at once, using a process known as "
 "**cascading**:"
-msgstr ""
+msgstr "`` Jack Bean``をデータベースに追加してコミットしましょう。対応する `` addresses``コレクションの2つの `` Address``メンバーだけでなく `` jack``も**カスケード**："
 
 #: ../../orm/tutorial.rst:1272
 msgid ""
 "Querying for Jack, we get just Jack back.  No SQL is yet issued for "
 "Jack's addresses:"
-msgstr ""
+msgstr "ジャックを照会すると、ジャックだけが戻ってくる。 JackのアドレスにはまだSQLは発行されていません："
 
 #: ../../orm/tutorial.rst:1290
 msgid "Let's look at the ``addresses`` collection.  Watch the SQL:"
-msgstr ""
+msgstr "`` addresses``コレクションを見てみましょう。 SQLの監視："
 
 #: ../../orm/tutorial.rst:1304
 msgid ""
@@ -1083,11 +1051,11 @@ msgid ""
 "``addresses`` collection is now loaded and behaves just like an ordinary "
 "list.  We'll cover ways to optimize the loading of this collection in a "
 "bit."
-msgstr ""
+msgstr "`` addresses``コレクションにアクセスすると、SQLが突然発行されました。これは：term： `lazy loading`関係の例です。 `` addresses``コレクションがロードされ、通常のリストのように動作します。このコレクションの読み込みを少しでも最適化する方法について説明します。"
 
 #: ../../orm/tutorial.rst:1312
 msgid "Querying with Joins"
-msgstr ""
+msgstr "ジョインを使用したクエリ"
 
 #: ../../orm/tutorial.rst:1314
 msgid ""
@@ -1096,7 +1064,7 @@ msgid ""
 "tables at the same time. The `Wikipedia page on SQL JOIN "
 "<http://en.wikipedia.org/wiki/Join_%28SQL%29>`_ offers a good "
 "introduction to join techniques, several of which we'll illustrate here."
-msgstr ""
+msgstr "ここでは2つのテーブルがあるので、class： `.Query`のいくつかの機能を紹介します。具体的には両方のテーブルを同時に扱うクエリを作成する方法です。 `SQL JOINに関するWikipediaのページ<http://en.wikipedia.org/wiki/Join_%28SQL%29> `_では、ここで説明するいくつかの技術を結合するための良い紹介が提供されています。"
 
 #: ../../orm/tutorial.rst:1320
 msgid ""
@@ -1104,13 +1072,13 @@ msgid ""
 "can use :meth:`.Query.filter()` to equate their related columns together."
 " Below we load the ``User`` and ``Address`` entities at once using this "
 "method:"
-msgstr ""
+msgstr "`` User``と `` Address``の単純な暗黙的な結合を構築するために、：meth： `.Query.filter（）`を使って関連する列をまとめてみましょう。以下では、このメソッドを使用して `` User``と `` Address``エンティティを一度に読み込みます："
 
 #: ../../orm/tutorial.rst:1346
 msgid ""
 "The actual SQL JOIN syntax, on the other hand, is most easily achieved "
 "using the :meth:`.Query.join` method:"
-msgstr ""
+msgstr "一方、実際のSQL JOIN構文は、：meth： `.Query.join`メソッドを使用すると最も簡単に実現できます。"
 
 #: ../../orm/tutorial.rst:1363
 msgid ""
@@ -1118,13 +1086,13 @@ msgid ""
 "because there's only one foreign key between them. If there were no "
 "foreign keys, or several, :meth:`.Query.join` works better when one of "
 "the following forms are used::"
-msgstr ""
+msgstr "：meth： `.Query.join`は、` `User``と` `Address``の間にどのように結合するかを知っています。外部キーがない場合、またはいくつかの場合、次のいずれかの形式を使用すると：meth： `.Query.join`がうまく動作します::"
 
 #: ../../orm/tutorial.rst:1373
 msgid ""
 "As you would expect, the same idea is used for \"outer\" joins, using the"
 " :meth:`~.Query.outerjoin` function::"
-msgstr ""
+msgstr "予想通り、：meth： `〜.Query.outerjoin`関数を使用して、同じ考え方を\&quot; outer \ &quot;結合に使用します::"
 
 #: ../../orm/tutorial.rst:1378
 msgid ""
@@ -1132,7 +1100,7 @@ msgid ""
 "information and examples of the calling styles accepted by this method; "
 ":meth:`~.Query.join` is an important method at the center of usage for "
 "any SQL-fluent application."
-msgstr ""
+msgstr "：meth： `〜.Query.join`のリファレンスドキュメントには、このメソッドで受け入れられる呼び出しスタイルの詳細と例が含まれています。 ：meth： `〜.Query.join`は、SQLの流暢なアプリケーションの使用の中心にある重要なメソッドです。"
 
 #: ../../orm/tutorial.rst:1384
 msgid ""
@@ -1140,11 +1108,11 @@ msgid ""
 "item** in the list of entities, when the ON clause is omitted, or if the "
 "ON clause is a plain SQL expression.  To control the first entity in the "
 "list of JOINs, use the :meth:`.Query.select_from` method::"
-msgstr ""
+msgstr "：meth： `.Query.join`メソッドは、通常、エンティティのリストの中の一番左のアイテム**から、ON句が省略されたとき、またはON句がプレーンなSQL式である場合に参加します。 JOINのリスト内の最初のエンティティを制御するには、：meth： `.Query.select_from`メソッドを使用します::"
 
 #: ../../orm/tutorial.rst:1395
 msgid "Using Aliases"
-msgstr ""
+msgstr "エイリアスの使用"
 
 #: ../../orm/tutorial.rst:1397
 msgid ""
@@ -1155,11 +1123,11 @@ msgid ""
 " supports this most explicitly using the :attr:`~sqlalchemy.orm.aliased` "
 "construct. Below we join to the ``Address`` entity twice, to locate a "
 "user who has two distinct email addresses at the same time:"
-msgstr ""
+msgstr "複数のテーブルにまたがってクエリを実行する場合、同じテーブルを複数回参照する必要がある場合、SQLでは通常、そのテーブルの他のオカレンスと区別できるように、テーブルに別名を*別名*として指定する必要があります。 ：class： `〜sqlalchemy.orm.query.Query`は：attr：`〜sqlalchemy.orm.aliased`構造体を使ってこれを最も明示的にサポートします。以下では、2つの異なる電子メールアドレスを同時に持つユーザを見つけるために、 `` Address``エンティティに2回参加します："
 
 #: ../../orm/tutorial.rst:1430
 msgid "Using Subqueries"
-msgstr ""
+msgstr "サブクエリの使用"
 
 #: ../../orm/tutorial.rst:1432
 msgid ""
@@ -1170,7 +1138,7 @@ msgid ""
 "addresses grouped by user ids, and JOIN to the parent. In this case we "
 "use a LEFT OUTER JOIN so that we get rows back for those users who don't "
 "have any addresses, e.g.::"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.query.Query`はサブクエリとして使用できる文を生成するのに適しています。 `` User``オブジェクトを、各ユーザが持つ `` Address``レコードの数と一緒に読み込みたいとします。このようにSQLを生成する最善の方法は、ユーザーIDでグループ化されたアドレスの数を取得し、親にJOINすることです。この例では、LEFT OUTER JOINを使用して、アドレスを持たないユーザーに対して行を返すようにします。例："
 
 #: ../../orm/tutorial.rst:1444
 msgid ""
@@ -1180,7 +1148,7 @@ msgid ""
 ":class:`~sqlalchemy.orm.query.Query` - this is an instance of a "
 ":func:`~.expression.select` construct, which are described in "
 ":ref:`sqlexpression_toplevel`::"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.query.Query`を使用して、内部からこのようなステートメントを作成します。 `` statement``アクセサは、特定のクラスによって生成された文を表すSQL式を返します：class： `〜sqlalchemy.orm.query.Query`  -  a：func：`〜.expression.select`構造体のインスタンスです。これらはref： `sqlexpression_toplevel` ::に記述されています。"
 
 #: ../../orm/tutorial.rst:1455
 msgid ""
@@ -1188,7 +1156,7 @@ msgid ""
 "method on :class:`~sqlalchemy.orm.query.Query` produces a SQL expression "
 "construct representing a SELECT statement embedded within an alias (it's "
 "actually shorthand for ``query.statement.alias()``)."
-msgstr ""
+msgstr "`` func``キーワードはSQL関数を生成し、class： `〜sqlalchemy.orm.query.Query`の` `subquery（）` `メソッドはエイリアス内に埋め込まれたSELECT文を表すSQL式構造を生成します実際には `` query.statement.alias（） ``の略です）。"
 
 #: ../../orm/tutorial.rst:1460
 msgid ""
@@ -1196,22 +1164,22 @@ msgid ""
 ":class:`~sqlalchemy.schema.Table` construct, such as the one we created "
 "for ``users`` at the start of this tutorial. The columns on the statement"
 " are accessible through an attribute called ``c``:"
-msgstr ""
+msgstr "ステートメントを取得すると、このチュートリアルの始めで `` users``のために作成したものなど、class： `〜sqlalchemy.schema.Table`のように動作します。文の列は、 `` c``という属性を使ってアクセスできます。"
 
 #: ../../orm/tutorial.rst:1488
 msgid "Selecting Entities from Subqueries"
-msgstr ""
+msgstr "サブクエリからエンティティを選択する"
 
 #: ../../orm/tutorial.rst:1490
 msgid ""
 "Above, we just selected a result that included a column from a subquery. "
 "What if we wanted our subquery to map to an entity ? For this we use "
 "``aliased()`` to associate an \"alias\" of a mapped class to a subquery:"
-msgstr ""
+msgstr "上の例では、サブクエリの列を含む結果を選択しました。サブクエリをエンティティにマッピングする場合はどうなりますか？このため、マップされたクラスの\ &quot;エイリアス\&quot;をサブクエリに関連付けるには、 `` aliased（） ``を使います："
 
 #: ../../orm/tutorial.rst:1523
 msgid "Using EXISTS"
-msgstr ""
+msgstr "EXISTSの使用"
 
 #: ../../orm/tutorial.rst:1525
 msgid ""
@@ -1219,11 +1187,11 @@ msgid ""
 " given expression contains any rows. It may be used in many scenarios in "
 "place of joins, and is also useful for locating rows which do not have a "
 "corresponding row in a related table."
-msgstr ""
+msgstr "SQLのEXISTSキーワードは、指定された式に行が含まれる場合はTrueを返すブール演算子です。これは、ジョインの代わりに多くのシナリオで使用され、関連する表に対応する行を持たない行の検索にも役立ちます。"
 
 #: ../../orm/tutorial.rst:1530
 msgid "There is an explicit EXISTS construct, which looks like this:"
-msgstr ""
+msgstr "明示的なEXISTS構文があります。これは次のようになります。"
 
 #: ../../orm/tutorial.rst:1546
 msgid ""
@@ -1231,73 +1199,73 @@ msgid ""
 " make usage of EXISTS automatically. Above, the statement can be "
 "expressed along the ``User.addresses`` relationship using "
 ":meth:`~.RelationshipProperty.Comparator.any`:"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.query.Query`は、EXISTSを自動的に使用するいくつかの演算子を備えています。上記の文は、 `` User.addresses``の関係に沿って以下のように表現できます：meth： `〜.RelationshipProperty.Comparator.any`："
 
 #: ../../orm/tutorial.rst:1563
 msgid ""
 ":meth:`~.RelationshipProperty.Comparator.any` takes criterion as well, to"
 " limit the rows matched:"
-msgstr ""
+msgstr "：meth： `〜.RelationshipProperty.Comparator.any`は、一致した行を制限するためにも基準をとります："
 
 #: ../../orm/tutorial.rst:1578
 msgid ""
 ":meth:`~.RelationshipProperty.Comparator.has` is the same operator as "
 ":meth:`~.RelationshipProperty.Comparator.any` for many-to-one "
 "relationships (note the ``~`` operator here too, which means \"NOT\"):"
-msgstr ""
+msgstr "：meth： `〜.RelationshipProperty.Comparator.has`は多対1の関係のために：meth：`〜。RelationhipProperty.Comparator.any`と同じ演算子です（ここでも ``〜 ``演算子に注意してください。 \ &quot;NOT \&quot;）："
 
 #: ../../orm/tutorial.rst:1597
 msgid "Common Relationship Operators"
-msgstr ""
+msgstr "共通関係演算子"
 
 #: ../../orm/tutorial.rst:1599
 msgid ""
 "Here's all the operators which build on relationships - each one is "
 "linked to its API documentation which includes full details on usage and "
 "behavior:"
-msgstr ""
+msgstr "リレーションシップに基づいて構築されたすべての演算子があります。各演算子は、APIドキュメントにリンクされています。このドキュメントには、使用法と動作の詳細が含まれています。"
 
 #: ../../orm/tutorial.rst:1603
 msgid ""
 ":meth:`~.RelationshipProperty.Comparator.__eq__` (many-to-one \"equals\" "
 "comparison)::"
-msgstr ""
+msgstr "：meth： `〜。RelationhipProperty.Comparator .__ eq__`（多対1の&quot; equals &quot;比較）::"
 
 #: ../../orm/tutorial.rst:1607
 msgid ""
 ":meth:`~.RelationshipProperty.Comparator.__ne__` (many-to-one \"not "
 "equals\" comparison)::"
-msgstr ""
+msgstr "：meth： `〜。RelationhipProperty.Comparator .__ ne__`（多対1の&quot;等しくない &quot;比較）::"
 
 #: ../../orm/tutorial.rst:1611
 msgid ""
 "IS NULL (many-to-one comparison, also uses "
 ":meth:`~.RelationshipProperty.Comparator.__eq__`)::"
-msgstr ""
+msgstr "IS NULL（多対1比較、：meth： `〜.RelationshipProperty.Comparator .__ eq__`）::"
 
 #: ../../orm/tutorial.rst:1615
 msgid ""
 ":meth:`~.RelationshipProperty.Comparator.contains` (used for one-to-many "
 "collections)::"
-msgstr ""
+msgstr "：meth： `〜。RelationhipProperty.Comparator.contains`（1対多のコレクションで使用される）::"
 
 #: ../../orm/tutorial.rst:1619
 msgid ":meth:`~.RelationshipProperty.Comparator.any` (used for collections)::"
-msgstr ""
+msgstr "：meth： `〜。RelationhipProperty.Comparator.any`（コレクションに使用）::"
 
 #: ../../orm/tutorial.rst:1626
 msgid ""
 ":meth:`~.RelationshipProperty.Comparator.has` (used for scalar "
 "references)::"
-msgstr ""
+msgstr "：meth： `〜.RelationshipProperty.Comparator.has`（スカラー参照に使用）::"
 
 #: ../../orm/tutorial.rst:1630
 msgid ":meth:`.Query.with_parent` (used for any relationship)::"
-msgstr ""
+msgstr "：meth： `.Query.with_parent`（任意の関係に使用）::"
 
 #: ../../orm/tutorial.rst:1635
 msgid "Eager Loading"
-msgstr ""
+msgstr "Eager Loading"
 
 #: ../../orm/tutorial.rst:1637
 msgid ""
@@ -1310,11 +1278,11 @@ msgid ""
 "usually invoked via functions known as :term:`query options` which give "
 "additional instructions to the :class:`.Query` on how we would like "
 "various attributes to be loaded, via the :meth:`.Query.options` method."
-msgstr ""
+msgstr "前述のように、 `` User``の `` User.addresses``コレクションにアクセスしてSQLを発行したときに、用語：遅延読み込み操作を示したことを思い出してください。クエリの数を大幅に削減したい場合（多くの場合、劇的に）、クエリ操作に：term： `eager load &#39;を適用できます。 SQLAlchemyには3つのタイプのeager loadingがあり、そのうち2つは自動であり、3つ目はカスタムの基準です。これらの3つは、通常：term： `query options`という関数で呼び出されます。これは、：meth：` .Query.optionsを介して、さまざまな属性をロードする方法について、class： `.Query`に追加の指示を与えます。 `メソッド。"
 
 #: ../../orm/tutorial.rst:1647
 msgid "Subquery Load"
-msgstr ""
+msgstr "サブクエリのロード"
 
 #: ../../orm/tutorial.rst:1649
 msgid ""
@@ -1326,7 +1294,7 @@ msgid ""
 "fact that the SELECT statement constructed directly via the "
 ":class:`.Query` is re-used, embedded as a subquery into a SELECT against "
 "the related table.   This is a little elaborate but very easy to use:"
-msgstr ""
+msgstr "この場合、 `` User.addresses``が熱心に読み込まれるべきであることを示したいと思います。オブジェクトのセットと関連するコレクションのロードには、func： `.orm.subqueryload`オプションがあります。このオプションは、ロードされたばかりの結果に関連付けられたコレクションを完全にロードする2番目のSELECT文を発行します。 \ &quot;サブクエリ\&quot;という名前は、：class： `.Query`を介して直接生成されたSELECT文が再利用され、関連するテーブルに対してSELECTにサブクエリとして埋め込まれているという事実に由来します。これはやや精巧ですが、使い方はとても簡単です："
 
 #: ../../orm/tutorial.rst:1688
 msgid ""
@@ -1334,11 +1302,11 @@ msgid ""
 ":meth:`.Query.first`, :meth:`.Query.limit` or :meth:`.Query.offset` "
 "should also include :meth:`.Query.order_by` on a unique column in order "
 "to ensure correct results.  See :ref:`subqueryload_ordering`."
-msgstr ""
+msgstr "：meth： `.Query.first`、：meth：` .Query.limit`や：meth： `.Query.offset`のような制限付きで使用された場合：func：` .subqueryload`：meth：正確な結果を保証するために、一意の列に `.Query.order_by`を追加します。参照：ref： `subqueryload_ordering`を参照してください。"
 
 #: ../../orm/tutorial.rst:1694
 msgid "Joined Load"
-msgstr ""
+msgstr "結合荷重"
 
 #: ../../orm/tutorial.rst:1696
 msgid ""
@@ -1349,7 +1317,7 @@ msgid ""
 "same ``addresses`` collection in this way - note that even though the "
 "``User.addresses`` collection on ``jack`` is actually populated right "
 "now, the query will emit the extra join regardless:"
-msgstr ""
+msgstr "他の自動eagerローディング関数はよりよく知られており、func： `.orm.joinedload`と呼ばれています。このスタイルの読み込みでは、デフォルトでLEO OUTER JOINというJOINが発行され、リードオブジェクトと関連するオブジェクトまたはコレクションがワンステップでロードされます。このように同じ `` addresses``コレクションをロードすることを示します.-実際に `` jack``の `` User.addresses``コレクションが実際に人口になっていても、クエリは余分なジョインを出すでしょう。"
 
 #: ../../orm/tutorial.rst:1729
 msgid ""
@@ -1358,7 +1326,7 @@ msgid ""
 "applies a \"uniquing\" strategy, based on object identity, to the "
 "returned entities.  This is specifically so that joined eager loading can"
 " be applied without affecting the query results."
-msgstr ""
+msgstr "OUTER JOINの結果は2行であったにもかかわらず、「User」のインスタンスが1つしか戻っていないことに注意してください。これは、以下の理由によるものです。class： `.Query`は、返されたエンティティにオブジェクトアイデンティティに基づいた\&quot;ユニーク\ &quot;戦略を適用します。これは具体的には、照会結果に影響を与えることなく結合されたeagerのロードを適用できるようにするためです。"
 
 #: ../../orm/tutorial.rst:1734
 msgid ""
@@ -1368,7 +1336,7 @@ msgid ""
 "collections while :func:`.joinedload` tends to be better suited for many-"
 "to-one relationships, due to the fact that only one row is loaded for "
 "both the lead and the related object."
-msgstr ""
+msgstr "while：func： `.joinedload`は長い間存在していました：func：` .subqueryload`は熱心な読み込みの新しい形式です。 ：func： `.subqueryload`は、関連するコレクションのロードに適している傾向があります。func：` .joinedload`は多対1の関係に適している傾向があります。リードと関連オブジェクト"
 
 #: ../../orm/tutorial.rst:1742
 msgid ""
@@ -1381,11 +1349,11 @@ msgid ""
 "optimizing detail - it can be added or removed with no impact on actual "
 "results.   See the section :ref:`zen_of_eager_loading` for a detailed "
 "description of how this is used."
-msgstr ""
+msgstr "作成者：func： `.joinedload`は匿名でエイリアス化されているため、クエリ結果**には影響しません。 An：meth： `.Query.order_by`または：meth：` .Query.filter`呼び出し**はこれらのエイリアステーブルを参照できません - いわゆる &quot;user space&quot;結合は：meth： `.Query .join`。 func： `.joinedload`は、関連するオブジェクトやコレクションがどのように最適化の詳細としてロードされるかに影響を与えるためにのみ適用されます。実際の結果に影響を与えずに追加または削除することができます。これがどのように使用されるかの詳細な説明については、ref： `zen_of_eager_loading`を参照してください。"
 
 #: ../../orm/tutorial.rst:1753
 msgid "Explicit Join + Eagerload"
-msgstr ""
+msgstr "明示的な結合+ Eagerload"
 
 #: ../../orm/tutorial.rst:1755
 msgid ""
@@ -1399,29 +1367,29 @@ msgid ""
 " as the related ``User`` object, filtering on the ``User`` named \"jack\""
 " and using :func:`.orm.contains_eager` to apply the \"user\" columns to "
 "the ``Address.user`` attribute:"
-msgstr ""
+msgstr "熱心な読み込みの第3のスタイルは、プライマリ・ローの位置を特定するためにJOINを明示的に作成しており、追加のテーブルをプライマリ・オブジェクトの関連するオブジェクトまたはコレクションに追加的に適用する場合です。この機能は：func： `.orm.contains_eager`関数を介して提供され、同じオブジェクトをフィルタリングする必要があるクエリで多対一オブジェクトをあらかじめ読み込む場合に最も便利です。以下では、 `` Address`行と関連する `` User``オブジェクトをロードし、\ &quot;jack \&quot;という名前の &quot;User&quot;をフィルタリングし、：func： `.orm.contains_eager`を使って\ &quot;user \&quot;カラムを `` Address.user``属性に追加します："
 
 #: ../../orm/tutorial.rst:1790
 msgid ""
 "For more information on eager loading, including how to configure various"
 " forms of loading by default, see the section "
 ":doc:`/orm/loading_relationships`."
-msgstr ""
+msgstr "さまざまな形式の読み込みをデフォルトで設定する方法など、熱心な読み込みの詳細については、doc： `/ orm / loading_relationships`節を参照してください。"
 
 #: ../../orm/tutorial.rst:1794
 msgid "Deleting"
-msgstr ""
+msgstr "削除"
 
 #: ../../orm/tutorial.rst:1796
 msgid ""
 "Let's try to delete ``jack`` and see how that goes. We'll mark the object"
 " as deleted in the session, then we'll issue a ``count`` query to see "
 "that no rows remain:"
-msgstr ""
+msgstr "`` jack``を削除し、それがどうなるか見てみましょう。セッションでオブジェクトを削除済みとしてマークし、 `` count``クエリを発行して行が残っていないことを確認します："
 
 #: ../../orm/tutorial.rst:1817
 msgid "So far, so good.  How about Jack's ``Address`` objects ?"
-msgstr ""
+msgstr "ここまでは順調ですね。 Jackの `` Address``オブジェクトはどうですか？"
 
 #: ../../orm/tutorial.rst:1833
 msgid ""
@@ -1429,11 +1397,11 @@ msgid ""
 " ``user_id`` column of each address was set to NULL, but the rows weren't"
 " deleted. SQLAlchemy doesn't assume that deletes cascade, you have to "
 "tell it to do so."
-msgstr ""
+msgstr "ああ、彼らはまだそこにいる！フラッシュSQLを分析すると、各アドレスの `` user_id``カラムがNULLに設定されていても、ローは削除されていないことがわかります。 SQLAlchemyはカスケードを削除するとは想定していません。"
 
 #: ../../orm/tutorial.rst:1841
 msgid "Configuring delete/delete-orphan Cascade"
-msgstr ""
+msgstr "delete / delete-orphanカスケードの設定"
 
 #: ../../orm/tutorial.rst:1843
 msgid ""
@@ -1443,37 +1411,37 @@ msgid ""
 "this case the existing relationship needs to be removed, so we need to "
 "tear down the mappings completely and start again - we'll close the "
 ":class:`.Session`::"
-msgstr ""
+msgstr "動作を変更するには、 `` User.addresses``関係に**カスケード**オプションを設定します。 SQLAlchemyでは任意の時点でマッピングに新しい属性や関係を追加することができますが、既存の関係を削除する必要があるため、マッピングを完全に解凍してから再開する必要があります。クラス： `.Session` ::"
 
 #: ../../orm/tutorial.rst:1853
 msgid "and use a new :func:`.declarative_base`::"
-msgstr ""
+msgstr "新しい：func： `.declarative_base` ::を使用してください"
 
 #: ../../orm/tutorial.rst:1857
 msgid ""
 "Next we'll declare the ``User`` class, adding in the ``addresses`` "
 "relationship including the cascade configuration (we'll leave the "
 "constructor out too)::"
-msgstr ""
+msgstr "次に、 `` User``クラスを宣言し、カスケード設定を含む `` addresses``の関係を追加します（私たちはコンストラクタも残します）::"
 
 #: ../../orm/tutorial.rst:1875
 msgid ""
 "Then we recreate ``Address``, noting that in this case we've created the "
 "``Address.user`` relationship via the ``User`` class already::"
-msgstr ""
+msgstr "この場合、 `` User``クラスを介して `` Address.user``関係を既に作成していることに気づいて、 `` Address``を再作成します::"
 
 #: ../../orm/tutorial.rst:1888
 msgid ""
 "Now when we load the user ``jack`` (below using :meth:`~.Query.get`, "
 "which loads by primary key), removing an address from the corresponding "
 "``addresses`` collection will result in that ``Address`` being deleted:"
-msgstr ""
+msgstr "これで、主キーでロードされる：meth： `〜.Query.get`を使用して、ユーザー` `jack``をロードすると、対応する` `addresses``コレクションからアドレスを削除すると、` `アドレスは削除されます："
 
 #: ../../orm/tutorial.rst:1932
 msgid ""
 "Deleting Jack will delete both Jack and the remaining ``Address`` "
 "associated with the user:"
-msgstr ""
+msgstr "Jackを削除すると、Jackとユーザに関連する残りの `` Address``の両方が削除されます："
 
 #: ../../orm/tutorial.rst:1968
 msgid ""
@@ -1481,11 +1449,11 @@ msgid ""
 ":ref:`unitofwork_cascades`. The cascade functionality can also integrate "
 "smoothly with the ``ON DELETE CASCADE`` functionality of the relational "
 "database. See :ref:`passive_deletes` for details."
-msgstr ""
+msgstr "カスケードの設定の詳細は：ref： `unitofwork_cascades`を参照してください。カスケード機能は、リレーショナルデータベースの &quot;ON DELETE CASCADE&quot;機能とスムーズに統合することもできます。詳細は：ref： `passive_deletes`を参照してください。"
 
 #: ../../orm/tutorial.rst:1976
 msgid "Building a Many To Many Relationship"
-msgstr ""
+msgstr "多対多の関係を構築する"
 
 #: ../../orm/tutorial.rst:1978
 msgid ""
@@ -1494,14 +1462,14 @@ msgid ""
 "tour. We'll make our application a blog application, where users can "
 "write ``BlogPost`` items, which have ``Keyword`` items associated with "
 "them."
-msgstr ""
+msgstr "ここではボーナスに移行していますが、多対多の関係を誇示することができます。ツアーをするだけで、他の機能も搭載されていきます。私たちのアプリケーションをブログアプリケーションにして、 `` BlogPost``アイテムを書くことができます。そこには `` Keyword``アイテムが関連付けられています。"
 
 #: ../../orm/tutorial.rst:1983
 msgid ""
 "For a plain many-to-many, we need to create an un-mapped :class:`.Table` "
 "construct to serve as the association table.  This looks like the "
 "following::"
-msgstr ""
+msgstr "プレーンの多対多の場合、関連テーブルとして機能するためにマップされていない：class： `.Table`構文を作成する必要があります。これは次のようになります::"
 
 #: ../../orm/tutorial.rst:1993
 msgid ""
@@ -1510,20 +1478,20 @@ msgid ""
 "constructor function, so each individual :class:`.Column` argument is "
 "separated by a comma.  The :class:`.Column` object is also given its name"
 " explicitly, rather than it being taken from an assigned attribute name."
-msgstr ""
+msgstr "上記のように、class： `.Table`を直接宣言することは、マップされたクラスを宣言することとは少し異なります。 ：class： `.Table`はコンストラクタ関数なので、class：` .Column`引数はカンマで区切られています。 ：class： `.Column`オブジェクトには、割り当てられた属性名から取り出されるのではなく、その名前が明示的に与えられます。"
 
 #: ../../orm/tutorial.rst:1999
 msgid ""
 "Next we define ``BlogPost`` and ``Keyword``, using complementary "
 ":func:`.relationship` constructs, each referring to the ``post_keywords``"
 " table as an association table::"
-msgstr ""
+msgstr "次に、 `` BlogPost``と `` Keyword``を、それぞれ `` post_keywords``テーブルを関連テーブルとして参照する、complement：func： `.relationship`構造体を使って定義します::"
 
 #: ../../orm/tutorial.rst:2039
 msgid ""
 "The above class declarations illustrate explicit ``__init__()`` methods. "
 "Remember, when using Declarative, it's optional!"
-msgstr ""
+msgstr "上記のクラス宣言は明示的な `` __init __（） ``メソッドを示しています。 Declarativeを使用するときは、オプションであることを覚えておいてください。"
 
 #: ../../orm/tutorial.rst:2042
 msgid ""
@@ -1535,7 +1503,7 @@ msgid ""
 "*any* other columns, such as its own primary key, or foreign keys to "
 "other tables, SQLAlchemy requires a different usage pattern called the "
 "\"association object\", described at :ref:`association_pattern`."
-msgstr ""
+msgstr "上記の多対多の関係は `` BlogPost.keywords``です。多対多関係の定義的な特徴は、関連テーブルを表す `：sqlalchemy.schema.Table`オブジェクトを参照する` `secondary``キーワード引数です。この表には、関係の2つの側面を参照する列のみが含まれています。それ自身のプライマリキーや他のテーブルへの外部キーなど* *の他のカラムがある場合、SQLAlchemyは：ref： `association_pattern`で説明されている\&quot;関連オブジェクト\ &quot;という別の使用パターンを必要とします。"
 
 #: ../../orm/tutorial.rst:2051
 msgid ""
@@ -1546,60 +1514,60 @@ msgid ""
 "as not to load the entire collection. For this we use a setting accepted "
 "by :func:`~sqlalchemy.orm.relationship` called ``lazy='dynamic'``, which "
 "configures an alternate **loader strategy** on the attribute:"
-msgstr ""
+msgstr "私たちの `` BlogPost``クラスも `` author``フィールドを持っているといいでしょう。これを別の双方向関係として追加しますが、1つのユーザーには1人のユーザーが多数のブログ投稿を持っている可能性があります。 `` User.posts``にアクセスすると、結果をさらに絞り込み、コレクション全体を読み込まないようにしたいと考えています。このためには、属性に別の**ローダー戦略**を設定する、 `` lazy = &#39;dynamic```と呼ばれる：func： `〜sqlalchemy.orm.relationship`によって受け入れられる設定を使用します："
 
 #: ../../orm/tutorial.rst:2064
 msgid "Create new tables:"
-msgstr ""
+msgstr "新しいテーブルを作成する："
 
 #: ../../orm/tutorial.rst:2098
 msgid ""
 "Usage is not too different from what we've been doing.  Let's give Wendy "
 "some blog posts:"
-msgstr ""
+msgstr "使い方は私たちが行ってきたこととあまり変わらない。 Wendyにいくつかのブログ記事を出しましょう："
 
 #: ../../orm/tutorial.rst:2116
 msgid ""
 "We're storing keywords uniquely in the database, but we know that we "
 "don't have any yet, so we can just create them:"
-msgstr ""
+msgstr "キーワードはデータベースに一意に格納されていますが、まだ作成されていないことがわかっているので、作成することができます："
 
 #: ../../orm/tutorial.rst:2124
 msgid ""
 "We can now look up all blog posts with the keyword 'firstpost'. We'll use"
 " the ``any`` operator to locate \"blog posts where any of its keywords "
 "has the keyword string 'firstpost'\":"
-msgstr ""
+msgstr "キーワードfirstpostを使ってすべてのブログ記事を検索できるようになりました。 `` any``演算子を使用してキーワードの文字列が &#39;firstpost&#39; \ &quot;のブログ記事を検索します："
 
 #: ../../orm/tutorial.rst:2154
 msgid ""
 "If we want to look up posts owned by the user ``wendy``, we can tell the "
 "query to narrow down to that ``User`` object as a parent:"
-msgstr ""
+msgstr "ユーザが所有する投稿を検索したい場合、そのユーザに親としてのクエリを絞り込むことができます："
 
 #: ../../orm/tutorial.rst:2176
 msgid ""
 "Or we can use Wendy's own ``posts`` relationship, which is a \"dynamic\" "
 "relationship, to query straight from there:"
-msgstr ""
+msgstr "あるいは、Wendy自身の `` posts``関係を\ &quot;動的\&quot;関係で使用して、そこから直接問い合わせることができます："
 
 #: ../../orm/tutorial.rst:2198
 msgid "Further Reference"
-msgstr ""
+msgstr "さらなる参照"
 
 #: ../../orm/tutorial.rst:2200
 msgid "Query Reference: :ref:`query_api_toplevel`"
-msgstr ""
+msgstr "クエリリファレンス：：ref： `query_api_toplevel`"
 
 #: ../../orm/tutorial.rst:2202
 msgid "Mapper Reference: :ref:`mapper_config_toplevel`"
-msgstr ""
+msgstr "マッパーリファレンス：：ref： `mapper_config_toplevel`"
 
 #: ../../orm/tutorial.rst:2204
 msgid "Relationship Reference: :ref:`relationship_config_toplevel`"
-msgstr ""
+msgstr "関係リファレンス：：ref： `relationship_config_toplevel`"
 
 #: ../../orm/tutorial.rst:2206
 msgid "Session Reference: :doc:`/orm/session`"
-msgstr ""
+msgstr "セッションリファレンス：：doc： `/ orm / session`"
 

@@ -6,39 +6,29 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/basic_relationships.rst:4
 msgid "Basic Relationship Patterns"
-msgstr ""
+msgstr "基本的な関係パターン"
 
 #: ../../orm/basic_relationships.rst:6
 msgid "A quick walkthrough of the basic relational patterns."
-msgstr ""
+msgstr "基本的な関係パターンの簡単なウォークスルー。"
 
 #: ../../orm/basic_relationships.rst:8
 msgid "The imports used for each of the following sections is as follows::"
-msgstr ""
+msgstr "次の各セクションで使用されるインポートは次のとおりです::"
 
 #: ../../orm/basic_relationships.rst:18
 msgid "One To Many"
-msgstr ""
+msgstr "1対多"
 
 #: ../../orm/basic_relationships.rst:20
 msgid ""
 "A one to many relationship places a foreign key on the child table "
 "referencing the parent.  :func:`.relationship` is then specified on the "
 "parent, as referencing a collection of items represented by the child::"
-msgstr ""
+msgstr "一対多関係は、親を参照する子テーブルに外部キーを配置します。 ：func： `.relationship`が親によって指定され、子によって表されるアイテムの集合を参照する::"
 
 #: ../../orm/basic_relationships.rst:34
 msgid ""
@@ -46,46 +36,46 @@ msgid ""
 "\"reverse\" side is a many to one, specify an additional "
 ":func:`.relationship` and connect the two using the "
 ":paramref:`.relationship.back_populates` parameter::"
-msgstr ""
+msgstr "\ &quot;リバース\&quot;側が多対1である一対多関係を確立するには、さらに：func： `.relationship`を指定し、：paramref：` .relationship.back_populates `parameter ::"
 
 #: ../../orm/basic_relationships.rst:49
 msgid "``Child`` will get a ``parent`` attribute with many-to-one semantics."
-msgstr ""
+msgstr "`` Child``は、many-to-oneセマンティクスを持つ `` parent``属性を取得します。"
 
 #: ../../orm/basic_relationships.rst:51
 msgid ""
 "Alternatively, the :paramref:`~.relationship.backref` option may be used "
 "on a single :func:`.relationship` instead of using "
 ":paramref:`~.relationship.back_populates`::"
-msgstr ""
+msgstr "代わりに、：paramref： `〜.relationship.backref`オプションは、：paramref：`〜.relationship.back_populates`の代わりに、単一の：func： `.relationship`で使用することができます："
 
 #: ../../orm/basic_relationships.rst:62
 msgid "Many To One"
-msgstr ""
+msgstr "多対1"
 
 #: ../../orm/basic_relationships.rst:64
 msgid ""
 "Many to one places a foreign key in the parent table referencing the "
 "child. :func:`.relationship` is declared on the parent, where a new "
 "scalar-holding attribute will be created::"
-msgstr ""
+msgstr "多対1の場合、子テーブルを参照する親テーブルに外部キーが配置されます。 ：func： `.relationship`が親に対して宣言され、新しいスカラー保持属性が作成されます::"
 
 #: ../../orm/basic_relationships.rst:78
 msgid ""
 "Bidirectional behavior is achieved by adding a second "
 ":func:`.relationship` and applying the "
 ":paramref:`.relationship.back_populates` parameter in both directions::"
-msgstr ""
+msgstr "双方向動作は、2番目の：func： `.relationship`を追加し、：paramref：` .relationship.back_populates`パラメータを双方向で適用することによって実現されます。"
 
 #: ../../orm/basic_relationships.rst:93
 msgid ""
 "Alternatively, the :paramref:`~.relationship.backref` parameter may be "
 "applied to a single :func:`.relationship`, such as ``Parent.child``::"
-msgstr ""
+msgstr "代わりに、：paramref： `〜.relationship.backref`パラメータは、` `Parent.child``のような単一の：func：` .relationship`に適用することができます::"
 
 #: ../../orm/basic_relationships.rst:105
 msgid "One To One"
-msgstr ""
+msgstr "1対1"
 
 #: ../../orm/basic_relationships.rst:107
 msgid ""
@@ -94,11 +84,11 @@ msgid ""
 ":paramref:`~.relationship.uselist` flag indicates the placement of a "
 "scalar attribute instead of a collection on the \"many\" side of the "
 "relationship. To convert one-to-many into one-to-one::"
-msgstr ""
+msgstr "One to Oneは本質的に両側のスカラ属性を持つ双方向関係です。これを実現するために、：paramref： `〜.relationship.uselist`フラグは、関係の&quot;多\ &quot;側にコレクションの代わりにスカラー属性を配置することを示します。 one-to-manyをone-to-oneに変換する::"
 
 #: ../../orm/basic_relationships.rst:123
 msgid "Or for many-to-one::"
-msgstr ""
+msgstr "または多対一のため::"
 
 #: ../../orm/basic_relationships.rst:136
 msgid ""
@@ -106,11 +96,11 @@ msgid ""
 "functions may be used in lieu of the "
 ":paramref:`.relationship.back_populates` approach; to specify ``uselist``"
 " on a backref, use the :func:`.backref` function::"
-msgstr ""
+msgstr "いつものように、：paramref： `.relationship.back_populates`アプローチの代わりに：paramref：` .relationship.backref`と：func： `.backref`関数を使うことができます。バックリファレンスに `` uselist``を指定するには、：func： `.backref`関数を使用します::"
 
 #: ../../orm/basic_relationships.rst:152
 msgid "Many To Many"
-msgstr ""
+msgstr "多対多"
 
 #: ../../orm/basic_relationships.rst:154
 msgid ""
@@ -121,14 +111,14 @@ msgid ""
 "associated with the declarative base class, so that the "
 ":class:`.ForeignKey` directives can locate the remote tables with which "
 "to link::"
-msgstr ""
+msgstr "Many to Manyは、2つのクラス間に関連テーブルを追加します。関連テーブルは、：func： `.relationship`の：paramref：`〜.relationship.secondary`引数で示されます。通常、：class： `.Table`は：class：` .ForeignKey`ディレクティブがリンクするリモートテーブルを見つけることができるように、宣言的な基本クラスに関連付けられた：class： `.MetaData`オブジェクトを使用します："
 
 #: ../../orm/basic_relationships.rst:175
 msgid ""
 "For a bidirectional relationship, both sides of the relationship contain "
 "a collection.  Specify using :paramref:`.relationship.back_populates`, "
 "and for each :func:`.relationship` specify the common association table::"
-msgstr ""
+msgstr "双方向関係の場合、関係の両側にはコレクションが含まれます。 using：paramref： `.relationship.back_populates`を指定し、それぞれについて：func：` .relationship`共通の関連テーブルを指定する::"
 
 #: ../../orm/basic_relationships.rst:200
 msgid ""
@@ -136,7 +126,7 @@ msgid ""
 ":paramref:`.relationship.back_populates`, the backref will automatically "
 "use the same :paramref:`~.relationship.secondary` argument for the "
 "reverse relationship::"
-msgstr ""
+msgstr "：paramref： `.relationship.back_populates`の代わりに：：paramref：`〜.relationship.backref`パラメータを使用すると、逆参照は自動的に同じ：paramref： `〜.relationship.secondary`引数を使用します::"
 
 #: ../../orm/basic_relationships.rst:220
 msgid ""
@@ -146,18 +136,18 @@ msgid ""
 "this, we can define the ``association_table`` at a later point, as long "
 "as it's available to the callable after all module initialization is "
 "complete::"
-msgstr ""
+msgstr "：paramref： `〜.relationship.secondary`の引数：func：` .relationship`は、最終的な引数を返す呼び出し可能関数も受け取ります。これは、マッパーが最初に使われたときにだけ評価されます。これを使用して、 `` association_table``をすべてのモジュールの初期化が完了した後で呼び出し可能である限り、後の時点で定義できます::"
 
 #: ../../orm/basic_relationships.rst:233
 msgid ""
 "With the declarative extension in use, the traditional \"string name of "
 "the table\" is accepted as well, matching the name of the table as stored"
 " in ``Base.metadata.tables``::"
-msgstr ""
+msgstr "宣言的な拡張が使用されている場合、伝統的な\ &quot;テーブルの文字列名\&quot;も受け入れられ、 `` Base.metadata.tables``に格納されているテーブルの名前と一致します::"
 
 #: ../../orm/basic_relationships.rst:246
 msgid "Deleting Rows from the Many to Many Table"
-msgstr ""
+msgstr "多対多表からの行の削除"
 
 #: ../../orm/basic_relationships.rst:248
 msgid ""
@@ -167,18 +157,18 @@ msgid ""
 "as objects are added or removed from the collection. There is **no need "
 "to delete from this table manually**.   The act of removing a record from"
 " the collection will have the effect of the row being deleted on flush::"
-msgstr ""
+msgstr "：func： `.relationship`の：paramref：`〜.relationship.secondary`引数にユニークな振る舞いは、ここで指定された：class： `.Table`は自動的にINSERTとDELETE文の対象となります。オブジェクトはコレクションに追加または削除されます。 **この表から手動で削除する必要はありません**。コレクションからレコードを削除する行は、flushで削除される行の影響を受けます::"
 
 #: ../../orm/basic_relationships.rst:258
 msgid ""
 "A question which often arises is how the row in the \"secondary\" table "
 "can be deleted when the child object is handed directly to "
 ":meth:`.Session.delete`::"
-msgstr ""
+msgstr "多くの場合、子オブジェクトが直接：meth： `.Session.delete` ::に渡されたときに、\&quot;セカンダリ\ &quot;テーブルの行を削除する方法があります"
 
 #: ../../orm/basic_relationships.rst:263
 msgid "There are several possibilities here:"
-msgstr ""
+msgstr "ここにはいくつかの可能性があります："
 
 #: ../../orm/basic_relationships.rst:265
 msgid ""
@@ -188,7 +178,7 @@ msgid ""
 "deleting this particular ``Child`` object, it needs to maintain the "
 "\"secondary\" table that links it to the ``Parent``.  No delete of the "
 "\"secondary\" table will occur."
-msgstr ""
+msgstr "``親 &#39;&#39;から ``子 &#39;&#39;には：func： `.relationship`がありますが、特定の` `子` `を各親にリンクする逆の関係はありません** ``を指定すると、SQLAlchemyは、この特定の `` Child``オブジェクトを削除するとき、それを `` Parent``にリンクする\ &quot;セカンダリ\&quot;テーブルを維持する必要があるという意識を持ちません。 \ &quot;セカンダリ\&quot;テーブルは削除されません。"
 
 #: ../../orm/basic_relationships.rst:270
 msgid ""
@@ -199,7 +189,7 @@ msgid ""
 "establishes this link.  Note that this relationship does not need to be "
 "bidrectional; SQLAlchemy is strictly looking at every "
 ":func:`.relationship` associated with the ``Child`` object being deleted."
-msgstr ""
+msgstr "特定の `` Child``を各 `` Parent``にリンクする関係がある場合、 `` Child.parents``と呼ばれると仮定すると、SQLAlchemyはデフォルトで `` Child.parents``コレクションを読み込みすべての `` Parent``オブジェクトを削除し、このリンクを確立する\ &quot;セカンダリ\&quot;テーブルから各行を削除します。この関係は双方向である必要はないことに注意してください。 SQLAlchemyは、削除される `` Child``オブジェクトに関連するすべての：func： `.relationship`を厳密に調べています。"
 
 #: ../../orm/basic_relationships.rst:277
 msgid ""
@@ -212,7 +202,7 @@ msgid ""
 ":paramref:`~.relationship.passive_deletes` directive on "
 ":func:`.relationship`; see :ref:`passive_deletes` for more details on "
 "this."
-msgstr ""
+msgstr "より高性能なオプションは、ON DELETE CASCADEディレクティブをデータベースで使用される外部キーとともに使用することです。データベースがこの機能をサポートしていると仮定すると、\ &quot;子\&quot;の参照行が削除されると、\ &quot;セカンダリ\&quot;テーブルの行を自動的に削除するようにデータベース自体を作成できます。この場合、SQLAlchemyは、 `` Child.parents``コレクションを積極的にロードすることを避けるよう指示することができます：func： `.relationship`;の：paramref：`〜.relationship.passive_deletes`指示文。詳細はref： `passive_deletes`を参照してください。"
 
 #: ../../orm/basic_relationships.rst:286
 msgid ""
@@ -224,11 +214,11 @@ msgid ""
 ":func:`.relationship`, cascade rules can be used instead to automatically"
 " delete entities in reaction to a related entity being deleted - see "
 ":ref:`unitofwork_cascades` for information on this feature."
-msgstr ""
+msgstr "ここでも、これらの動作は、：func： `.relationship`で使用されるparamref：`〜.relationship.secondary`オプションにのみ関連しています。関連：func： `.relationship`の：paramref：`〜.relationship.secondary`オプションに明示的にマッピングされていない関連テーブルを扱う場合、カスケードルールを代わりに使用して、関連するエンティティへの反応は削除されます：この機能の情報については：ref： `unitofwork_cascades`を参照してください。"
 
 #: ../../orm/basic_relationships.rst:297
 msgid "Association Object"
-msgstr ""
+msgstr "関連オブジェクト"
 
 #: ../../orm/basic_relationships.rst:299
 msgid ""
@@ -242,14 +232,14 @@ msgid ""
 "association table mapped to the ``Association`` class which includes a "
 "column called ``extra_data``, which is a string value that is stored "
 "along with each association between ``Parent`` and ``Child``::"
-msgstr ""
+msgstr "アソシエーションオブジェクトパターンは、多対多のバリアントです。アソシエーションテーブルに、左右のテーブルの外部キー以外の列が追加されている場合に使用されます。 ：paramref： `〜.relationship.secondary`引数を使う代わりに、新しいクラスを関連テーブルに直接マッピングします。リレーションシップの左側は1対多でアソシエーションオブジェクトを参照し、アソシエーションクラスは多対1で右側を参照します。以下では、 `` Association``クラスにマップされた関連テーブルを示します。これには `` extra_data``という列があり、これは `` Parent``と `` Child``間の関連付けと共に格納される文字列値です::"
 
 #: ../../orm/basic_relationships.rst:327
 msgid ""
 "As always, the bidirectional version makes use of "
 ":paramref:`.relationship.back_populates` or "
 ":paramref:`.relationship.backref`::"
-msgstr ""
+msgstr "いつものように、双方向バージョンは、paramref： `.relationship.back_populates`または：paramref：` .relationship.backref` ::"
 
 #: ../../orm/basic_relationships.rst:348
 msgid ""
@@ -257,7 +247,7 @@ msgid ""
 "child objects are associated with an association instance before being "
 "appended to the parent; similarly, access from parent to child goes "
 "through the association object::"
-msgstr ""
+msgstr "直接パターンで関連パターンを操作するには、子オブジェクトが親に​​追加される前に関連付けインスタンスに関連付けられている必要があります。同様に、親から子へのアクセスは、関連オブジェクト::"
 
 #: ../../orm/basic_relationships.rst:365
 msgid ""
@@ -267,13 +257,13 @@ msgid ""
 "configuration of attributes which will access two \"hops\" with a single "
 "access, one \"hop\" to the associated object, and a second to a target "
 "attribute."
-msgstr ""
+msgstr "`` Association``オブジェクトへの直接アクセスがオプションであるような関連オブジェクトパターンを強化するために、SQLAlchemyは：ref： `associationproxy_toplevel`拡張を提供します。この拡張は、1つのアクセスで2つの &quot;ホップ&quot;にアクセスし、関連するオブジェクトに対して1つの &quot;ホップ&quot;を、そしてターゲットの属性に2番目にアクセスする属性の構成を可能にします。"
 
 #: ../../orm/basic_relationships.rst:374
 msgid ""
 "The association object pattern **does not coordinate changes with a "
 "separate relationship that maps the association table as \"secondary\"**."
-msgstr ""
+msgstr "関連オブジェクトパターン**は、関連テーブルを\ &quot;セカンダリ\&quot; **としてマップする別個の関係で変更を調整しません。"
 
 #: ../../orm/basic_relationships.rst:377
 msgid ""
@@ -283,7 +273,7 @@ msgid ""
 " will continue to function normally by themselves, changes on one will "
 "not show up in another until the :class:`.Session` is expired, which "
 "normally occurs automatically after :meth:`.Session.commit`::"
-msgstr ""
+msgstr "以下、 `` Parent.children``に対する変更は、 `` Parent.child_associations``やPythonの `` Child.parent_associations``に対する変更と調整されません。これらのリレーションシップはすべて通常どおり機能しますが、class： `.Session`が期限切れになるまで別のものに変更が表示されることはありません。通常は：meth：` .Session.commit` ::"
 
 #: ../../orm/basic_relationships.rst:404
 msgid ""
@@ -292,7 +282,7 @@ msgid ""
 "cause conflicting INSERT or DELETE statements as well, such as below "
 "where we establish the same relationship between a ``Parent`` and "
 "``Child`` object twice::"
-msgstr ""
+msgstr "さらに、一方の関係の変更が自動的に他の関係に反映されないのと同様に、両方の関係に同じデータを書き込むと、下の例のように「親」との間に同じ関係が確立されます`` Child``オブジェクトを2回読み込みます::"
 
 #: ../../orm/basic_relationships.rst:417
 msgid ""
@@ -303,5 +293,5 @@ msgid ""
 "two-object ``Parent->Child`` relationship while still using the "
 "association object pattern, use the association proxy extension as "
 "documented at :ref:`associationproxy_toplevel`."
-msgstr ""
+msgstr "もしあなたが何をしているのか分かっているならば、上記のようなマッピングを使うのはいいですが、 `` viewonly = True``パラメータを\ &quot;セカンダリ\&quot;関係に適用して重複の問題を避けることは良い考えです変更が記録されます。しかし、アソシエーションオブジェクトパターンを使用している間にシンプルな2つのオブジェクトの ``親子関係 &#39;&#39;を可能にする完全なパターンを得るためには、：ref： `associationproxy_toplevel`に記述されているアソシエーションプロキシ拡張を使用してください。"
 

@@ -6,30 +6,20 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/session_state_management.rst:2
 msgid "State Management"
-msgstr ""
+msgstr "状態管理"
 
 #: ../../orm/session_state_management.rst:7
 msgid "Quickie Intro to Object States"
-msgstr ""
+msgstr "Quickieオブジェクトの状態の紹介"
 
 #: ../../orm/session_state_management.rst:9
 msgid ""
 "It's helpful to know the states which an instance can have within a "
 "session:"
-msgstr ""
+msgstr "インスタンスがセッション内で持つことができる状態を知ることは役に立ちます："
 
 #: ../../orm/session_state_management.rst:11
 msgid ""
@@ -37,14 +27,14 @@ msgid ""
 "the database; i.e. it has no database identity. The only relationship "
 "such an object has to the ORM is that its class has a ``mapper()`` "
 "associated with it."
-msgstr ""
+msgstr "** Transient **  - セッションになく、データベースに保存されていないインスタンス。つまり、データベースのアイデンティティーはありません。そのようなオブジェクトがORMに持つ唯一の関係は、そのクラスに関連する `` mapper（） ``があるということです。"
 
 #: ../../orm/session_state_management.rst:16
 msgid ""
 "**Pending** - when you :meth:`~.Session.add` a transient instance, it "
 "becomes pending. It still wasn't actually flushed to the database yet, "
 "but it will be when the next flush occurs."
-msgstr ""
+msgstr "**保留中**  - あなたが：meth： `〜.Session.add`を一時インスタンスにすると、保留状態になります。まだ実際にデータベースにフラッシュされていませんでしたが、次のフラッシュが発生した時点になります。"
 
 #: ../../orm/session_state_management.rst:20
 msgid ""
@@ -53,7 +43,7 @@ msgid ""
 "so that the pending instances become persistent, or by querying the "
 "database for existing instances (or moving persistent instances from "
 "other sessions into your local session)."
-msgstr ""
+msgstr "** Persistent **  - セッションに存在し、データベースにレコードを持つインスタンス。保留中のインスタンスが永続的になるようにフラッシュするか、データベースに既存のインスタンスを照会するか（または永続インスタンスを他のセッションからローカルセッションに移動する）、永続インスタンスを取得します。"
 
 #: ../../orm/session_state_management.rst:26
 msgid ""
@@ -63,13 +53,13 @@ msgid ""
 "committed, the object will move to the detached state.  Alternatively, "
 "when the session's transaction is rolled back, a deleted object moves "
 "*back* to the persistent state."
-msgstr ""
+msgstr "** Deleted **  - フラッシュ内で削除されたが、トランザクションがまだ完了していないインスタンス。この状態のオブジェクトは本質的に\ &quot;保留中&quot;状態の反対側にあります。セッションのトランザクションがコミットされると、オブジェクトは分離状態に移行します。あるいは、セッションのトランザクションがロールバックされると、削除されたオブジェクトは*戻って*永続状態に移動します。"
 
 #: ../../orm/session_state_management.rst:33
 msgid ""
 "The 'deleted' state is a newly added session object state distinct from "
 "the 'persistent' state."
-msgstr ""
+msgstr "「削除された」状態は、「永続的」状態とは異なる新たに追加されたセッションオブジェクト状態である。"
 
 #: ../../orm/session_state_management.rst:36
 msgid ""
@@ -81,76 +71,76 @@ msgid ""
 " are safe to use normally, except that they have no ability to load "
 "unloaded attributes or attributes that were previously marked as "
 "\"expired\"."
-msgstr ""
+msgstr "** Detached **  - データベース内のレコードに対応する、または以前に対応したインスタンスですが、現在どのセッションにも存在しません。切り離されたオブジェクトにはデータベースIDマーカーが含まれますが、セッションに関連付けられていないため、このデータベースIDが実際にターゲットデータベースに存在するかどうかは不明です。デタッチされたオブジェクトは、以前は\ &quot;期限切れ\&quot;とマークされていたアンロードされた属性または属性をロードする能力を持たないことを除いて、通常は安全に使用できます。"
 
 #: ../../orm/session_state_management.rst:45
 msgid ""
 "For a deeper dive into all possible state transitions, see the section "
 ":ref:`session_lifecycle_events` which describes each transition as well "
 "as how to programmatically track each one."
-msgstr ""
+msgstr "すべての可能な状態遷移への深い浸透については、各遷移をプログラムで追跡する方法と同様に、ref： `session_lifecycle_events`節を参照してください。"
 
 #: ../../orm/session_state_management.rst:50
 msgid "Getting the Current State of an Object"
-msgstr ""
+msgstr "オブジェクトの現在の状態を取得する"
 
 #: ../../orm/session_state_management.rst:52
 msgid ""
 "The actual state of any mapped object can be viewed at any time using the"
 " :func:`.inspect` system::"
-msgstr ""
+msgstr "マッピングされたオブジェクトの実際の状態は、いつでも：func： `.inspect`システムを使って見ることができます::"
 
 #: ../../orm/session_state_management.rst:62
 msgid ":attr:`.InstanceState.transient`"
-msgstr ""
+msgstr "：attr： `.InstanceState.transient`"
 
 #: ../../orm/session_state_management.rst:64
 msgid ":attr:`.InstanceState.pending`"
-msgstr ""
+msgstr "：attr： `.InstanceState.pending`"
 
 #: ../../orm/session_state_management.rst:66
 msgid ":attr:`.InstanceState.persistent`"
-msgstr ""
+msgstr "：attr： `.InstanceState.persistent`"
 
 #: ../../orm/session_state_management.rst:68
 msgid ":attr:`.InstanceState.deleted`"
-msgstr ""
+msgstr "：attr： `.InstanceState.deleted`"
 
 #: ../../orm/session_state_management.rst:70
 msgid ":attr:`.InstanceState.detached`"
-msgstr ""
+msgstr "：attr： `.InstanceState.detached`"
 
 #: ../../orm/session_state_management.rst:75
 msgid "Session Attributes"
-msgstr ""
+msgstr "セッション属性"
 
 #: ../../orm/session_state_management.rst:77
 msgid ""
 "The :class:`~sqlalchemy.orm.session.Session` itself acts somewhat like a "
 "set-like collection. All items present may be accessed using the iterator"
 " interface::"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.session.Session`自体は、セットのようなコレクションのように動作します。存在するすべてのアイテムは、イテレータインタフェースを使用してアクセスできます::"
 
 #: ../../orm/session_state_management.rst:84
 msgid "And presence may be tested for using regular \"contains\" semantics::"
-msgstr ""
+msgstr "そして存在は、通常の\ &quot;contains \&quot;セマンティクスを使ってテストされるかもしれません::"
 
 #: ../../orm/session_state_management.rst:89
 msgid ""
 "The session is also keeping track of all newly created (i.e. pending) "
 "objects, all objects which have had changes since they were last loaded "
 "or saved (i.e. \"dirty\"), and everything that's been marked as deleted::"
-msgstr ""
+msgstr "セッションでは、新しく作成された（つまり保留中の）オブジェクト、最後にロードまたは保存された（つまり「ダーティー」なので）変更されたすべてのオブジェクト、および削除済みとしてマークされたすべてのオブジェクトも追跡しています。"
 
 #: ../../orm/session_state_management.rst:107
 msgid ""
 "(Documentation: :attr:`.Session.new`, :attr:`.Session.dirty`, "
 ":attr:`.Session.deleted`, :attr:`.Session.identity_map`)."
-msgstr ""
+msgstr "（ドキュメント：：attr： `.Session.new`、：attr：` .Session.dirty`、：attr： `.Session.deleted`、：attr：` .Session.identity_map`）。"
 
 #: ../../orm/session_state_management.rst:114
 msgid "Session Referencing Behavior"
-msgstr ""
+msgstr "セッション参照動作"
 
 #: ../../orm/session_state_management.rst:116
 msgid ""
@@ -162,7 +152,7 @@ msgid ""
 "deleted, or persistent objects which have pending changes on them. After "
 "a full flush, these collections are all empty, and all objects are again "
 "weakly referenced."
-msgstr ""
+msgstr "セッション内のオブジェクトは弱く参照されます*。これは、外部アプリケーションで参照解除されると、：class： `〜sqlalchemy.orm.session.Session`内から範囲外になり、Pythonインタプリタによってガベージコレクションが行われることを意味します。これには例外として、保留中のオブジェクト、削除済みとしてマークされたオブジェクト、または保留中の変更がある永続オブジェクトが含まれます。フルフラッシュの後、これらのコレクションはすべて空であり、すべてのオブジェクトは再び弱参照されます。"
 
 #: ../../orm/session_state_management.rst:125
 msgid ""
@@ -173,14 +163,14 @@ msgid ""
 " of time that they need to remain referenced. These collections can be "
 "associated with a :class:`.Session`, if desired, by placing them into the"
 " :attr:`.Session.info` dictionary."
-msgstr ""
+msgstr "：class： `.Session`のオブジェクトを強く参照させるには、通常は単純なアプローチが必要です。外部的に管理される強力な参照動作の例としては、主キーにキーされたローカル・ディクショナリにオブジェクトをロードすること、または参照する必要がある期間のリストまたはセットにオブジェクトをロードすることが挙げられます。これらのコレクションは、必要に応じて：class： `.Session`に関連付けることができます。それらを：attr：` .Session.info`ディクショナリに配置します。"
 
 #: ../../orm/session_state_management.rst:134
 msgid ""
 "An event based approach is also feasible.  A simple recipe that provides "
 "\"strong referencing\" behavior for all objects as they remain within the"
 " :term:`persistent` state is as follows::"
-msgstr ""
+msgstr "イベントベースのアプローチも実現可能です。 ：term： `persistent`状態のままであるすべてのオブジェクトに対して\&quot;強い参照\ &quot;動作を提供する簡単なレシピは次のとおりです::"
 
 #: ../../orm/session_state_management.rst:160
 msgid ""
@@ -192,21 +182,21 @@ msgid ""
 "the :meth:`.SessionEvents.persistent_to_detached` and "
 ":meth:`.SessionEvents.persistent_to_deleted` hooks to intercept objects "
 "as they leave the persistent state."
-msgstr ""
+msgstr "上記のように、：meth： `.SessionEvents.pending_to_persistent`、：meth：` .SessionEvents.detached_to_persistent`、：meth： `.SessionEvents.deleted_to_persistent`と：meth：` .SessionEvents.loaded_as_persistent`イベントをインターセプトして傍受しますオブジェクトは：term： `persistent`遷移を入力し、：meth：` .SessionEvents.persistent_to_detached`と：meth： `.SessionEvents.persistent_to_deleted`は、オブジェクトが永続状態を離れるときにオブジェクトを傍受するためにフックします。"
 
 #: ../../orm/session_state_management.rst:169
 msgid ""
 "The above function may be called for any :class:`.Session` in order to "
 "provide strong-referencing behavior on a per-:class:`.Session` basis::"
-msgstr ""
+msgstr "上記の関数はper-：class： `.Session` basisで強い参照動作を提供するために：class：` .Session`のいずれかを呼び出すことができます::"
 
 #: ../../orm/session_state_management.rst:177
 msgid "It may also be called for any :class:`.sessionmaker`::"
-msgstr ""
+msgstr "また、どのクラスでも呼び出すことができます：class： `.sessionmaker` ::"
 
 #: ../../orm/session_state_management.rst:188
 msgid "Merging"
-msgstr ""
+msgstr "マージ"
 
 #: ../../orm/session_state_management.rst:190
 msgid ""
@@ -216,11 +206,11 @@ msgid ""
 "stream which will be applied towards the next flush, or alternatively can"
 " be made to produce a simple \"transfer\" of state without producing "
 "change history or accessing the database.  Usage is as follows::"
-msgstr ""
+msgstr "：meth： `〜。Session.merge`は、外部オブジェクトからセッション内の新しいインスタンスまたは既存のインスタンスに状態を転送します。また、着信データをデータベースの状態と照合して、次のフラッシュに適用される履歴ストリームを生成するか、または変更履歴を生成せずに、またはデータベースにアクセスすることなく簡単な状態の「転送」を行うことができます。使用方法は次のとおりです::"
 
 #: ../../orm/session_state_management.rst:199
 msgid "When given an instance, it follows these steps:"
-msgstr ""
+msgstr "インスタンスが指定されると、次の手順に従います。"
 
 #: ../../orm/session_state_management.rst:201
 msgid ""
@@ -228,13 +218,13 @@ msgid ""
 " to locate that instance in the local identity map.   If the "
 "``load=True`` flag is left at its default, it also checks the database "
 "for this primary key if not located locally."
-msgstr ""
+msgstr "インスタンスの主キーを調べます。存在する場合は、そのインスタンスをローカルIDマップに配置しようとします。 `` load = True``フラグがデフォルトのまま残っている場合、ローカルに存在しない場合には、この主キーのデータベースもチェックします。"
 
 #: ../../orm/session_state_management.rst:205
 msgid ""
 "If the given instance has no primary key, or if no instance can be found "
 "with the primary key given, a new instance is created."
-msgstr ""
+msgstr "指定されたインスタンスに主キーがない場合、または主キーが指定されたインスタンスが見つからない場合、新しいインスタンスが作成されます。"
 
 #: ../../orm/session_state_management.rst:207
 msgid ""
@@ -243,7 +233,7 @@ msgid ""
 "instance, the value is transferred to the target instance.  For mapped "
 "attributes which aren't present on the source, the attribute is expired "
 "on the target instance, discarding its existing value."
-msgstr ""
+msgstr "指定されたインスタンスの状態は、配置された/新たに作成されたインスタンスにコピーされます。ソースインスタンスに存在する属性の場合、値はターゲットインスタンスに転送されます。ソースに存在しないマップされた属性の場合、属性はターゲットインスタンスで期限切れになり、既存の値は破棄されます。"
 
 #: ../../orm/session_state_management.rst:213
 msgid ""
@@ -253,17 +243,17 @@ msgid ""
 " reconciled against what's present in the database.  If ``load`` is "
 "passed as ``False``, the incoming data is \"stamped\" directly without "
 "producing any history."
-msgstr ""
+msgstr "`` load = True``フラグがデフォルトのまま残っている場合、このコピープロセスはイベントを送出し、ソースオブジェクトに存在する各属性のターゲットオブジェクトのアンロードされたコレクションをロードします。データベース。 `` load``が `` False``として渡された場合、入ってくるデータは履歴を生成せずに直接 &quot;刻印&quot;されます。"
 
 #: ../../orm/session_state_management.rst:220
 msgid ""
 "The operation is cascaded to related objects and collections, as "
 "indicated by the ``merge`` cascade (see :ref:`unitofwork_cascades`)."
-msgstr ""
+msgstr "操作は、 `` merge``カスケード（参照：ref： `unitofwork_cascades`）で示されているように、関連するオブジェクトやコレクションにカスケードされます。"
 
 #: ../../orm/session_state_management.rst:222
 msgid "The new instance is returned."
-msgstr ""
+msgstr "新しいインスタンスが返されます。"
 
 #: ../../orm/session_state_management.rst:224
 msgid ""
@@ -274,7 +264,7 @@ msgid ""
 "kind of object structure without regard for its origins or current "
 "session associations and copying its state into a new session. Here's "
 "some examples:"
-msgstr ""
+msgstr "：meth： `〜.Session.merge`を使って、与えられた\&quot; source \ &quot;インスタンスは変更されず、target：class：` .Session`にも関連付けられず、残りの任意の数とマージされたままです：クラス： `.Session`オブジェクト。 ：meth： `〜.Session.merge`は、元のオブジェクトや現在のセッションの関連付けを気にせずにオブジェクト構造体の状態を取得し、その状態を新しいセッションにコピーするのに便利です。いくつかの例があります："
 
 #: ../../orm/session_state_management.rst:232
 msgid ""
@@ -288,7 +278,7 @@ msgid ""
 ":class:`~sqlalchemy.orm.session.Session` will automatically update the "
 "database to reflect those changes, loading each object from the database "
 "by primary key and then updating its state with the new state given."
-msgstr ""
+msgstr "ファイルからオブジェクト構造体を読み込んでデータベースに保存したいアプリケーションは、ファイルを解析し、構造体を構築し、それをデータベースに保存するために：meth： `〜。Session.merge`を使用します。ファイル内のデータは、構造の各要素の主キーを作成するために使用されます。後でファイルが変更されたときに、同じプロセスを再実行することができます。これは、わずかに異なるオブジェクト構造を生成し、再び `` merge &#39;&#39;することができます。：class： `〜sqlalchemy.orm.session.Session `はそれらの変更を反映するためにデータベースを自動的に更新し、プライマリキーでデータベースから各オブジェクトを読み込み、与えられた新しい状態で状態を更新します。"
 
 #: ../../orm/session_state_management.rst:246
 msgid ""
@@ -298,7 +288,7 @@ msgid ""
 "copy of it in each :class:`.Session` which requests it. The cached object"
 " remains detached; only its state is moved into copies of itself that are"
 " local to individual :class:`~.Session` objects."
-msgstr ""
+msgstr "アプリケーションは、複数の：class： `.Session`オブジェクトによって同時に共有されるメモリ内キャッシュにオブジェクトを格納しています。 ：meth： `〜.Session.merge`は、オブジェクトをキャッシュから取り出してそれを要求するclass：` .Session`のそれぞれにローカルコピーを作成するたびに使用されます。キャッシュされたオブジェクトは切り離されたままです。その状態だけがindividual：class： `〜.Session`オブジェクトのローカルにコピーされます。"
 
 #: ../../orm/session_state_management.rst:254
 msgid ""
@@ -308,7 +298,7 @@ msgid ""
 ":meth:`~.Query.merge_result` that was designed to work with cache-"
 "extended :class:`.Query` objects - see the section "
 ":ref:`examples_caching`."
-msgstr ""
+msgstr "キャッシングの使用例では、 `` load = False``フラグを使用してオブジェクトの状態をデータベースと照合するオーバーヘッドを除去するのが一般的です。 ：meth： `〜。Session.merge`と呼ばれる一括バージョンもあります：meth：`〜.Query.merge_result`これはcache-extended：class： `.Query`オブジェクトで動作するように設計されていますセクション：ref： `examples_caching`を参照してください。"
 
 #: ../../orm/session_state_management.rst:261
 msgid ""
@@ -318,18 +308,18 @@ msgid ""
 " into this new :class:`.Session`.  At the end of the operation, the "
 "parent thread/process maintains the objects it started with, and the "
 "thread/worker can proceed with local copies of those objects."
-msgstr ""
+msgstr "アプリケーションは、一連のオブジェクトの状態を、ワーカースレッドまたは他の並行システムによって維持される：class： `.Session`に転送することを望んでいます。 ：meth： `〜.Session.merge`は、この新しい：class：` .Session`に配置される各オブジェクトのコピーを作成します。操作の終わりに、親スレッド/プロセスは、それが開始したオブジェクトを維持し、スレッド/ワーカーはそれらのオブジェクトのローカルコピーを進めることができます。"
 
 #: ../../orm/session_state_management.rst:268
 msgid ""
 "In the \"transfer between threads/processes\" use case, the application "
 "may want to use the ``load=False`` flag as well to avoid overhead and "
 "redundant SQL queries as the data is transferred."
-msgstr ""
+msgstr "\ &quot;スレッド間/プロセス間の転送\&quot;ユースケースでは、データが転送される際にオーバヘッドや冗長なSQLクエリを避けるために、アプリケーションは `` load = False``フラグも使用することができます。"
 
 #: ../../orm/session_state_management.rst:273
 msgid "Merge Tips"
-msgstr ""
+msgstr "マージのヒント"
 
 #: ../../orm/session_state_management.rst:275
 msgid ""
@@ -341,25 +331,25 @@ msgid ""
 "state of objects.   Common problems with merge usually involve some "
 "unexpected state regarding the object being passed to "
 ":meth:`~.Session.merge`."
-msgstr ""
+msgstr "：meth： `〜。Session.merge`は多くの目的のために非常に便利なメソッドです。ただし、一時的/分離状態のオブジェクトと永続的なオブジェクトの複雑な境界線、および状態の自動転送を処理します。多くのシナリオでは、オブジェクトの状態をより慎重に検討する必要があります。通常、マージの一般的な問題は、渡されるオブジェクトに関するいくつかの予想外の状態を含みます：meth： `〜。Session.merge`。"
 
 #: ../../orm/session_state_management.rst:282
 msgid "Lets use the canonical example of the User and Address objects::"
-msgstr ""
+msgstr "UserオブジェクトとAddressオブジェクトの標準的な例を使用できます::"
 
 #: ../../orm/session_state_management.rst:298
 msgid "Assume a ``User`` object with one ``Address``, already persistent::"
-msgstr ""
+msgstr "1つの `` Address``を持つ `` User``オブジェクトが既に永続的であると仮定してください::"
 
 #: ../../orm/session_state_management.rst:304
 msgid ""
 "We now create ``a1``, an object outside the session, which we'd like to "
 "merge on top of the existing ``Address``::"
-msgstr ""
+msgstr "セッションの外にあるオブジェクトである `` a1``を作成し、既存の `` Address``の上にマージします："
 
 #: ../../orm/session_state_management.rst:310
 msgid "A surprise would occur if we said this::"
-msgstr ""
+msgstr "私たちがこれを言ったら驚きが起こります::"
 
 #: ../../orm/session_state_management.rst:319
 msgid ""
@@ -367,7 +357,7 @@ msgid ""
 " ``a1.user`` to a persistent object cascaded to the backref of "
 "``User.addresses`` and made our ``a1`` object pending, as though we had "
 "added it.   Now we have *two* ``Address`` objects in the session::"
-msgstr ""
+msgstr "何故ですか ？カスケードには注意を払っていませんでした。永続オブジェクトへの `` a1.user``の割り当ては、 `` User.addresses``のバックリファレンスにカスケードされ、 `` a1``オブジェクトが追加されたかのように保留状態になりました。セッションで2つの `` Address``オブジェクトがあります："
 
 #: ../../orm/session_state_management.rst:333
 msgid ""
@@ -379,22 +369,22 @@ msgid ""
 "usually, that behavior is extremely convenient.  The solution here would "
 "usually be to not assign ``a1.user`` to an object already persistent in "
 "the target session."
-msgstr ""
+msgstr "上記で、私たちの `` a1``は既にセッション中に保留中です。後続の：meth： `〜。Session.merge`オペレーションは本質的に何もしません。カスケードは：func： `.relationship`の：paramref：`〜.relationship.cascade`オプションで設定することができますが、この場合、 `` save-update``カスケードを `` User.addressesその関係は非常に便利です。ここでの解決策は、通常、ターゲットセッションですでに永続しているオブジェクトに `` a1.user``を割り当てないことです。"
 
 #: ../../orm/session_state_management.rst:343
 msgid ""
 "The ``cascade_backrefs=False`` option of :func:`.relationship` will also "
 "prevent the ``Address`` from being added to the session via the ``a1.user"
 " = u1`` assignment."
-msgstr ""
+msgstr "：func： `.relationship`の` `cascade_backrefs = False``オプションは、` `a1.user = u1``割り当てによって` `Address``がセッションに追加されないようにします。"
 
 #: ../../orm/session_state_management.rst:347
 msgid "Further detail on cascade operation is at :ref:`unitofwork_cascades`."
-msgstr ""
+msgstr "カスケード演算の詳細は：ref： `unitofwork_cascades`を参照してください。"
 
 #: ../../orm/session_state_management.rst:349
 msgid "Another example of unexpected state::"
-msgstr ""
+msgstr "予期しない状態の別の例::"
 
 #: ../../orm/session_state_management.rst:359
 msgid ""
@@ -404,46 +394,46 @@ msgid ""
 "the ``user_id`` attribute takes precedence during a flush.  But when we "
 "merge the ``Address`` object into the session, the operation is "
 "equivalent to::"
-msgstr ""
+msgstr "ここでは、a1.userにアクセスしました。このデフォルト値は `` None``を返しました。このアクセスの結果、オブジェクト `` a1``の `` __dict__``に配置されました。通常、この操作は変更イベントを作成しないので、フラッシュ中に `` user_id``属性が優先されます。しかし、 `` Address``オブジェクトをセッションにマージすると、操作は次のようになります::"
 
 #: ../../orm/session_state_management.rst:370
 msgid ""
 "Where above, both ``user_id`` and ``user`` are assigned to, and change "
 "events are emitted for both.  The ``user`` association takes precedence, "
 "and None is applied to ``user_id``, causing a failure."
-msgstr ""
+msgstr "上記の場合、 `` user_id``と `` user``の両方に割り当てられ、両方の変更イベントが発行されます。 `` user``の関連付けが優先され、 `` user_id``にNoneが適用され、失敗します。"
 
 #: ../../orm/session_state_management.rst:374
 msgid ""
 "Most :meth:`~.Session.merge` issues can be examined by first checking - "
 "is the object prematurely in the session ?"
-msgstr ""
+msgstr "ほとんど：meth： `〜。Session.merge`の問題は最初にチェックすることで調べることができます - セッション中のオブジェクトが早すぎますか？"
 
 #: ../../orm/session_state_management.rst:383
 msgid ""
 "Or is there state on the object that we don't want ?   Examining "
 "``__dict__`` is a quick way to check::"
-msgstr ""
+msgstr "それとも、私たちが望んでいないオブジェクト上の状態はありますか？ `` __dict__``を調べることは簡単な方法です::"
 
 #: ../../orm/session_state_management.rst:400
 msgid "Expunging"
-msgstr ""
+msgstr "絶滅"
 
 #: ../../orm/session_state_management.rst:402
 msgid ""
 "Expunge removes an object from the Session, sending persistent instances "
 "to the detached state, and pending instances to the transient state:"
-msgstr ""
+msgstr "Expungeは、Sessionからオブジェクトを削除し、永続インスタンスを分離状態に、保留インスタンスを一時状態に送信します。"
 
 #: ../../orm/session_state_management.rst:409
 msgid ""
 "To remove all items, call :meth:`~.Session.expunge_all` (this method was "
 "formerly known as ``clear()``)."
-msgstr ""
+msgstr "すべての項目を削除するには、meth： `〜.Session.expunge_all`を呼び出します（このメソッドは以前は` `clear（）` `でした）。"
 
 #: ../../orm/session_state_management.rst:415
 msgid "Refreshing / Expiring"
-msgstr ""
+msgstr "リフレッシュ/期限切れ"
 
 #: ../../orm/session_state_management.rst:417
 msgid ""
@@ -451,21 +441,21 @@ msgid ""
 "series of object attributes is erased, in such a way that when those "
 "attributes are next accessed, a SQL query is emitted which will refresh "
 "that data from the database."
-msgstr ""
+msgstr "：term： `Expiring`は、一連のオブジェクト属性内に保持されているデータベース持続データが消去され、その属性が次にアクセスされるときにデータベースからそのデータをリフレッシュするSQLクエリが発行されることを意味します。"
 
 #: ../../orm/session_state_management.rst:422
 msgid ""
 "When we talk about expiration of data we are usually talking about an "
 "object that is in the :term:`persistent` state.   For example, if we load"
 " an object as follows::"
-msgstr ""
+msgstr "データの有効期限について話すとき、私たちは通常、用語：永続的な状態にあるオブジェクトについて話しています。たとえば、次のようにオブジェクトをロードするとします::"
 
 #: ../../orm/session_state_management.rst:428
 msgid ""
 "The above ``User`` object is persistent, and has a series of attributes "
 "present; if we were to look inside its ``__dict__``, we'd see that state "
 "loaded::"
-msgstr ""
+msgstr "上記の `` User``オブジェクトは永続的であり、一連の属性を持っています。私たちが `` __dict__``を調べると、状態が読み込まれていることがわかります::"
 
 #: ../../orm/session_state_management.rst:438
 msgid ""
@@ -474,21 +464,21 @@ msgid ""
 "SQLAlchemy internally (it refers to the :class:`.InstanceState` for the "
 "instance. While not directly relevant to this section, if we want to get "
 "at it, we should use the :func:`.inspect` function to access it)."
-msgstr ""
+msgstr "ここで、 `` id``と `` name``はデータベースの列を参照します。 `` _sa_instance_state``はSQLAlchemyによって内部的に使われる非データベース永続化された値です（これはインスタンスの：class： `.InstanceState`を参照していますが、このセクションには直接関係しませんが、それにアクセスするには：func： `.inspect`関数を使うべきです）。"
 
 #: ../../orm/session_state_management.rst:444
 msgid ""
 "At this point, the state in our ``User`` object matches that of the "
 "loaded database row.  But upon expiring the object using a method such as"
 " :meth:`.Session.expire`, we see that the state is removed::"
-msgstr ""
+msgstr "この時点で、 `` User``オブジェクトの状態は、ロードされたデータベース行の状態と一致します。しかし、：meth： `。Session.expire`のようなメソッドを使ってオブジェクトを期限切れにすると、状態が削除されていることがわかります::"
 
 #: ../../orm/session_state_management.rst:452
 msgid ""
 "We see that while the internal \"state\" still hangs around, the values "
 "which correspond to the ``id`` and ``name`` columns are gone.   If we "
 "were to access one of these columns and are watching SQL, we'd see this:"
-msgstr ""
+msgstr "内部の &quot;状態&quot;は依然としてハングしますが、 &quot;id&quot;と &quot;name&quot;列に対応する値はなくなっています。これらの列の1つにアクセスしてSQLを見ていると、次のようになります。"
 
 #: ../../orm/session_state_management.rst:465
 msgid ""
@@ -496,7 +486,7 @@ msgid ""
 "initiated a :term:`lazy load` to retrieve the most recent state from the "
 "database, by emitting a SELECT for the user row to which this user "
 "refers.  Afterwards, the ``__dict__`` is again populated::"
-msgstr ""
+msgstr "上記のように、期限切れの属性 `` user.name``にアクセスすると、ORMは、このユーザが参照するユーザ行に対してSELECTを発行することにより、データベースから最新の状態を取得するために：term： `lazy load`を開始しました。その後、 `` __dict__``が再び生成されます::"
 
 #: ../../orm/session_state_management.rst:476
 msgid ""
@@ -508,64 +498,64 @@ msgid ""
 ":term:`descriptors` in order to track the changes we make to an object, "
 "and when we modify ``__dict__`` directly, the ORM won't be able to track "
 "that we changed something."
-msgstr ""
+msgstr "SQLAlchemyがオブジェクト属性で何をするのかを見るために `` __dict__``の中を覗いていますが、**少なくとも `__dict__`の内容を**これらの属性まで直接変更してはいけませんSQLAlchemy ORMが維持している（SQLAの領域外の他の属性は問題ありません）。これは、SQLAlchemyがオブジェクトに対して行った変更を追跡するためにSQLAlchemyが：term： `descriptors`を使用し、` `__dict__``を直接変更すると、ORMは変更したものを追跡できなくなるからです。"
 
 #: ../../orm/session_state_management.rst:484
 msgid ""
 "Another key behavior of both :meth:`~.Session.expire` and "
 ":meth:`~.Session.refresh` is that all un-flushed changes on an object are"
 " discarded.  That is, if we were to modify an attribute on our ``User``::"
-msgstr ""
+msgstr "：meth： `〜.Session.expire`と：meth：`〜.Session.refresh`のもう一つの重要な振る舞いは、オブジェクト上のフラッシュされていないすべての変更が破棄されることです。つまり、 `` User``の属性を変更する場合::"
 
 #: ../../orm/session_state_management.rst:490
 msgid ""
 "but then we call :meth:`~.Session.expire` without first calling "
 ":meth:`~.Session.flush`, our pending value of ``'user2'`` is discarded::"
-msgstr ""
+msgstr "しかし、最初に：meth： `〜.Session.flush`を呼び出さずに：meth：`〜。Session.expire`を呼び出すと、保留中の `` &#39;user2```の値は破棄されます::"
 
 #: ../../orm/session_state_management.rst:497
 msgid ""
 "The :meth:`~.Session.expire` method can be used to mark as \"expired\" "
 "all ORM-mapped attributes for an instance::"
-msgstr ""
+msgstr "：meth： `〜.Session.expire`メソッドは、インスタンスのORMでマップされたすべての属性を\&quot; expired \ &quot;としてマークするために使用できます::"
 
 #: ../../orm/session_state_management.rst:503
 msgid ""
 "it can also be passed a list of string attribute names, referring to "
 "specific attributes to be marked as expired::"
-msgstr ""
+msgstr "また、文字列属性名のリストを渡すこともできます。これは、期限切れとマークされる特定の属性を参照しています::"
 
 #: ../../orm/session_state_management.rst:509
 msgid ""
 "The :meth:`~.Session.refresh` method has a similar interface, but instead"
 " of expiring, it emits an immediate SELECT for the object's row "
 "immediately::"
-msgstr ""
+msgstr "：meth： `〜.Session.refresh`メソッドは似たようなインターフェースを持っていますが、期限切れではなく、直ちにオブジェクトの行に対する即時SELECTを出します::"
 
 #: ../../orm/session_state_management.rst:515
 msgid ""
 ":meth:`~.Session.refresh` also accepts a list of string attribute names, "
 "but unlike :meth:`~.Session.expire`, expects at least one name to be that"
 " of a column-mapped attribute::"
-msgstr ""
+msgstr "：meth： `〜.Session.refresh`は文字列属性名のリストも受け付けますが、：meth：`〜.Session.expire`と違って、少なくとも一つの名前が列マップ属性の名前であると期待します::"
 
 #: ../../orm/session_state_management.rst:522
 msgid ""
 "The :meth:`.Session.expire_all` method allows us to essentially call "
 ":meth:`.Session.expire` on all objects contained within the "
 ":class:`.Session` at once::"
-msgstr ""
+msgstr "：meth： `.Session.expire_all`メソッドは：class：` .Session`内に含まれる全てのオブジェクトに対して：meth： `。Session.expire`を本質的に呼び出すことを可能にします::"
 
 #: ../../orm/session_state_management.rst:529
 msgid "What Actually Loads"
-msgstr ""
+msgstr "実際に何が読み込まれるか"
 
 #: ../../orm/session_state_management.rst:531
 msgid ""
 "The SELECT statement that's emitted when an object marked with "
 ":meth:`~.Session.expire` or loaded with :meth:`~.Session.refresh` varies "
 "based on several factors, including:"
-msgstr ""
+msgstr "：meth： `〜.Session.expire`とマークされたオブジェクトまたは：meth：`〜.Session.refresh`でロードされたオブジェクトが、以下を含むいくつかの要因に基づいて変化するときに放出されるSELECTステートメント："
 
 #: ../../orm/session_state_management.rst:534
 msgid ""
@@ -577,13 +567,13 @@ msgid ""
 "oriented attributes, even if expired, will not load as part of this "
 "operation, and instead will load when any column-oriented attribute is "
 "accessed."
-msgstr ""
+msgstr "期限切れ属性のロードは、**列マップされた属性**のみからトリガーされます。 ：func： `.relationship`  - マップされた属性を含む任意の種類の属性を期限切れとマークすることができますが、expired：func：` .relationship`属性にアクセスすると、標準的な関係指向のLazy読み込み中。カラム指向の属性は、期限切れになってもこの操作の一部としてロードされず、カラム指向の属性にアクセスするとロードされます。"
 
 #: ../../orm/session_state_management.rst:542
 msgid ""
 ":func:`.relationship`- mapped attributes will not load in response to "
 "expired column-based attributes being accessed."
-msgstr ""
+msgstr "：func： `.relationship`-マップされた属性は、アクセスされている期限切れの列ベースの属性に応じてロードされません。"
 
 #: ../../orm/session_state_management.rst:545
 msgid ""
@@ -593,7 +583,7 @@ msgid ""
 "only includes relationship-mapped attributes will actually raise an "
 "error. In any case, non-eager-loading :func:`.relationship` attributes "
 "will not be included in any refresh operation."
-msgstr ""
+msgstr "リレーションシップに関して、：meth： `〜.Session.refresh`は、カラムマッピングされていない属性に関して：meth：`〜。Session.expire`よりも制限的です。 ：meth： `.refresh`を呼び出し、リレーションシップマップされた属性のみを含む名前のリストを渡すと、実際にはエラーが発生します。いずれの場合でも、非eager-loading：func： `.relationship`属性は、リフレッシュ操作には含まれません。"
 
 #: ../../orm/session_state_management.rst:552
 msgid ""
@@ -601,7 +591,7 @@ msgid ""
 ":paramref:`~.relationship.lazy` parameter will load in the case of "
 ":meth:`~.Session.refresh`, if either no attribute names are specified, or"
 " if their names are inclued in the list of attributes to be refreshed."
-msgstr ""
+msgstr "：paramref： `〜.relationship.lazy`パラメータを介して\&quot; eager loading \ &quot;として設定された：func：` .relationship`属性は：meth： `〜.Session.refresh`の場合にロードされます。名前が指定されている場合、またはリフレッシュされる属性のリストにその名前が含まれている場合"
 
 #: ../../orm/session_state_management.rst:558
 msgid ""
@@ -610,7 +600,7 @@ msgid ""
 "unloaded attribute that's :func:`.deferred` instead loads on its own when"
 " directly accessed, or if part of a \"group\" of deferred attributes "
 "where an unloaded attribute in that group is accessed."
-msgstr ""
+msgstr "属性：func： `.deferred`で設定された属性は、期限切れ属性のロード中またはリフレッシュ中に通常ロードされません。 ：func： `.deferred`は、直接アクセスされたとき、またはそのグループのアンロードされた属性がアクセスされる遅延属性の\&quot; group \ &quot;の一部である場合、それ自身でロードします。"
 
 #: ../../orm/session_state_management.rst:564
 msgid ""
@@ -620,7 +610,7 @@ msgid ""
 "sophisticated enough to load only the parent or child table, for example,"
 " if the subset of columns that were originally expired encompass only one"
 " or the other of those tables."
-msgstr ""
+msgstr "アクセス時にロードされる期限切れの属性の場合、継承継承テーブルのマッピングでは、通常はアンロードされた属性が存在するテーブルのみが含まれるSELECTが生成されます。ここでのアクションは、親テーブルまたは子テーブルのみをロードするのに十分なほど洗練されています。たとえば、元々期限切れになっていた列のサブセットがこれらのテーブルの一方または他方を含む場合です。"
 
 #: ../../orm/session_state_management.rst:570
 msgid ""
@@ -628,11 +618,11 @@ msgid ""
 "mapping, the SELECT emitted will resemble that of when "
 ":meth:`.Session.query` is used on the target object's class.  This is "
 "typically all those tables that are set up as part of the mapping."
-msgstr ""
+msgstr "継承 - 継承テーブルマッピングで：meth： `〜.Session.refresh`が使用された場合、ターゲットオブジェクトのクラスで：meth：` .Session.query`が使用されたときに生成されるSELECTは似ています。これは、通常、マッピングの一部として設定されているすべてのテーブルです。"
 
 #: ../../orm/session_state_management.rst:577
 msgid "When to Expire or Refresh"
-msgstr ""
+msgstr "期限切れまたは更新する時期"
 
 #: ../../orm/session_state_management.rst:579
 msgid ""
@@ -647,7 +637,7 @@ msgid ""
 " be affecting it.  Only when a new transaction starts can we again have "
 "access to the current state of the database, at which point any number of"
 " changes may have occurred."
-msgstr ""
+msgstr "：class： `.Session`は、セッションが参照するトランザクションが終了するたびに自動的に満了機能を使います。つまり、：meth： `.Session.commit`または：meth：` .Session.rollback`が呼び出されると、：class： `.Session`内のすべてのオブジェクトが、：meth： `。Session.expire_all`メソッド。その根拠は、トランザクションの終了は、データベースの現在の状態が何であるかを知るために利用可能なコンテキストが存在しない境界点であり、他のトランザクションがそれに影響を及ぼす可能性があるためです。新しいトランザクションが開始されたときだけ、データベースの現在の状態に再度アクセスすることができます。この時点で、いくつかの変更が発生している可能性があります。"
 
 #: ../../orm/session_state_management.rst:592
 msgid ""
@@ -664,7 +654,7 @@ msgid ""
 "that within the scope of a transaction, unless it is known that a SQL "
 "expression has been emitted to modify a particular row, there's no need "
 "to refresh a row unless explicitly told to do so."
-msgstr ""
+msgstr "もちろん、ほとんどのデータベースでは、同じ行のデータを含めても、一度に複数のトランザクションを処理することができます。リレーショナルデータベースが同じテーブルや行を含む複数のトランザクションを処理するとき、これはデータベースの：term： `isolation`アスペクトが有効になるときです。異なるデータベースの分離動作はかなり異なり、1つのデータベースでも（いわゆる：term： `分離レベル &#39;の設定によって）異なる方法で動作するように構成できます。その意味で、：class： `.Session`は、同じSELECT文が2回目に放出されたときに、すでに持っているデータを確実に返すか、新しいデータを返すかを完全に予測することはできません。したがって、トランザクションの範囲内で、特定の行を変更するためにSQL式が発行されていることがわかっていない限り、明示的に指示されない限り行をリフレッシュする必要はありません。"
 
 #: ../../orm/session_state_management.rst:605
 msgid ""
@@ -672,21 +662,21 @@ msgid ""
 " in those cases when one wants to force an object to re-load its data "
 "from the database, in those cases when it is known that the current state"
 " of data is possibly stale.  Reasons for this might include:"
-msgstr ""
+msgstr "：meth： `.Session.expire`メソッドと：meth：` .Session.refresh`メソッドは、オブジェクトがデータベースからデータを再ロードすることを強制したい場合に使用されます。データの現在の状態が失効している可能性があります。これには以下の理由が考えられます。"
 
 #: ../../orm/session_state_management.rst:610
 msgid ""
 "some SQL has been emitted within the transaction outside of the scope of "
 "the ORM's object handling, such as if a :meth:`.Table.update` construct "
 "were emitted using the :meth:`.Session.execute` method;"
-msgstr ""
+msgstr "：meth： `.Table.update`コンストラクトが：meth：` .Session.execute`メソッドを使用して生成された場合など、ORMのオブジェクト処理の範囲外でトランザクション内にいくつかのSQLが送出されました。"
 
 #: ../../orm/session_state_management.rst:614
 msgid ""
 "if the application is attempting to acquire data that is known to have "
 "been modified in a concurrent transaction, and it is also known that the "
 "isolation rules in effect allow this data to be visible."
-msgstr ""
+msgstr "アプリケーションが並行トランザクションで変更されていることがわかっているデータを取得しようとしている場合に、このアイソレーションルールが実際にこのデータを表示できることも知られています。"
 
 #: ../../orm/session_state_management.rst:619
 msgid ""
@@ -697,25 +687,25 @@ msgid ""
 "will not.  This is why if one wishes to use :meth:`.expire` or "
 ":meth:`.refresh` in order to view data between ongoing transactions, an "
 "understanding of the isolation behavior in effect is essential."
-msgstr ""
+msgstr "2番目の箇条書きは重要な注意点がありますが、実際には隔離ルールがこのデータを見ることができるということも知られています。これは、別のデータベース接続で起こったUPDATEがまだここに見えないローカル;多くの場合、そうではありません。これは、進行中のトランザクション間のデータを表示するために、：meth： `.expire`または：meth：` .refresh`を使用する場合、効果的な分離動作を理解することが不可欠です。"
 
 #: ../../orm/session_state_management.rst:628
 msgid ":meth:`.Session.expire`"
-msgstr ""
+msgstr "：meth： `。Session.expire`"
 
 #: ../../orm/session_state_management.rst:630
 msgid ":meth:`.Session.expire_all`"
-msgstr ""
+msgstr "：meth： `.Session.expire_all`"
 
 #: ../../orm/session_state_management.rst:632
 msgid ":meth:`.Session.refresh`"
-msgstr ""
+msgstr "：meth： `.Session.refresh`"
 
 #: ../../orm/session_state_management.rst:634
 msgid ""
 ":term:`isolation` - glossary explanation of isolation which includes "
 "links to Wikipedia."
-msgstr ""
+msgstr "：term： `isolation`  -  Wikipediaへのリンクを含む隔離の用語解説。"
 
 #: ../../orm/session_state_management.rst:637
 msgid ""
@@ -723,5 +713,5 @@ msgid ""
 "/pycon-canada-the-sqlalchemy-session-in-depth/>`_ - a video + slides with"
 " an in-depth discussion of the object lifecycle including the role of "
 "data expiration."
-msgstr ""
+msgstr "`SQLAlchemyセッションの詳細<http://techspot.zzzeek.org/2012/11/14/pycon-canada-the-sqlalchemy-session-in-depth/> `_  - ビデオ+スライドで、データの有効期限の役割を含むオブジェクトライフサイクルの詳細な議論が行われます。"
 

@@ -35,7 +35,7 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Dialects" href="index.html" />
+        <link rel="up" title="方言" href="index.html" />
         <link rel="next" title="Sybase" href="sybase.html" />
         <link rel="prev" title="PostgreSQL" href="postgresql.html" />
     <!-- end layout.mako headers -->
@@ -116,56 +116,56 @@
 
         
         <h3>
-            <a href="index.html" title="Dialects">Dialects</a>
+            <a href="index.html" title="方言">方言</a>
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="firebird.html">Firebird</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="firebird.html">ファイアバード</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="mssql.html">Microsoft SQL Server</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="mysql.html">MySQL</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="oracle.html">Oracle</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="oracle.html">オラクル</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="postgresql.html">PostgreSQL</a></span></li>
 <li class="selected"><span class="link-container first"><strong>SQLite</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
 <li><span class="link-container first"><a class="reference external" href="#dialect-sqlite">Support for the SQLite database.</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#date-and-time-types">Date and Time Types</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#ensuring-text-affinity">Ensuring Text affinity</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#date-and-time-types">日付と時刻の種類</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#ensuring-text-affinity">テキストの親和性の確保</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#sqlite-auto-incrementing-behavior">SQLite Auto Incrementing Behavior</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#using-the-autoincrement-keyword">Using the AUTOINCREMENT Keyword</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#allowing-autoincrement-behavior-sqlalchemy-types-other-than-integer-integer">Allowing autoincrement behavior SQLAlchemy types other than Integer/INTEGER</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#sqlite-auto-incrementing-behavior">SQLite自動インクリメント動作</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#using-the-autoincrement-keyword">AUTOINCREMENTキーワードの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#allowing-autoincrement-behavior-sqlalchemy-types-other-than-integer-integer">自動インクリメントの動作を許可するInteger / INTEGER以外のSQLAlchemy型</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#database-locking-behavior-concurrency">Database Locking Behavior / Concurrency</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#transaction-isolation-level">Transaction Isolation Level</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#savepoint-support">SAVEPOINT Support</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#transactional-ddl">Transactional DDL</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#foreign-key-support">Foreign Key Support</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#type-reflection">Type Reflection</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#partial-indexes">Partial Indexes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#dotted-column-names">Dotted Column Names</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#sqlite-data-types">SQLite Data Types</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#database-locking-behavior-concurrency">データベースのロック動作/同時実行性</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#transaction-isolation-level">トランザクション分離レベル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#savepoint-support">SAVEPOINTのサポート</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#transactional-ddl">トランザクションDDL</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#foreign-key-support">外部キーのサポート</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#type-reflection">タイプリフレクション</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#partial-indexes">部分インデックス</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#dotted-column-names">点列名</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#sqlite-data-types">SQLiteデータ型</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="#module-sqlalchemy.dialects.sqlite.pysqlite">Pysqlite</a></span><ul>
 <li><span class="link-container first"><a class="reference external" href="#dialect-sqlite-pysqlite-url">DBAPI</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="#dialect-sqlite-pysqlite-connect">Connecting</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#driver">Driver</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#connect-strings">Connect Strings</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#compatibility-with-sqlite3-native-date-and-datetime-types">Compatibility with sqlite3 &quot;native&quot; date and datetime types</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#threading-pooling-behavior">Threading/Pooling Behavior</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#using-a-memory-database-in-multiple-threads">Using a Memory Database in Multiple Threads</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#using-temporary-tables-with-sqlite">Using Temporary Tables with SQLite</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#driver">ドライバ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#connect-strings">文字列を接続する</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#compatibility-with-sqlite3-native-date-and-datetime-types">sqlite3 &amp;quot;native &amp;quot;の日付と日時の型との互換性</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#threading-pooling-behavior">スレッド/プーリングの動作</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#using-a-memory-database-in-multiple-threads">複数のスレッドでのメモリデータベースの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#using-temporary-tables-with-sqlite">SQLiteでのテンポラリテーブルの使用</a></span></li>
 </ul>
 </li>
 <li><span class="link-container first"><a class="reference external" href="#unicode">Unicode</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#serializable-isolation-savepoints-transactional-ddl">Serializable isolation / Savepoints / Transactional DDL</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#serializable-isolation-savepoints-transactional-ddl">シリアライズ可能な分離/セーブポイント/トランザクションDDL</a></span></li>
 </ul>
 </li>
 <li><span class="link-container first"><a class="reference external" href="#module-sqlalchemy.dialects.sqlite.pysqlcipher">Pysqlcipher</a></span><ul>
 <li><span class="link-container first"><a class="reference external" href="#dialect-sqlite-pysqlcipher-url">DBAPI</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="#dialect-sqlite-pysqlcipher-connect">Connecting</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#id3">Driver</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#id5">Connect Strings</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#pooling-behavior">Pooling Behavior</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#id3">ドライバ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#id5">文字列を接続する</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#pooling-behavior">プール動作</a></span></li>
 </ul>
 </li>
 </ul>
@@ -197,78 +197,44 @@
 </p>
 </div>
 <div class="section" id="date-and-time-types">
-<span id="sqlite-datetime"></span><h2>Date and Time Types<a class="headerlink" href="#date-and-time-types" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>SQLite does not have built-in DATE, TIME, or DATETIME types, and pysqlite does
-not provide out of the box functionality for translating values between Python
-<cite>datetime</cite> objects and a SQLite-supported format. SQLAlchemy's own
-<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.DateTime" title="sqlalchemy.types.DateTime"><code class="xref py py-class docutils literal"><span class="pre">DateTime</span></code></a> and related types provide date formatting
-and parsing functionality when SQlite is used. The implementation classes are
-<a class="reference internal" href="#sqlalchemy.dialects.sqlite.DATETIME" title="sqlalchemy.dialects.sqlite.DATETIME"><code class="xref py py-class docutils literal"><span class="pre">DATETIME</span></code></a>, <a class="reference internal" href="#sqlalchemy.dialects.sqlite.DATE" title="sqlalchemy.dialects.sqlite.DATE"><code class="xref py py-class docutils literal"><span class="pre">DATE</span></code></a> and <a class="reference internal" href="#sqlalchemy.dialects.sqlite.TIME" title="sqlalchemy.dialects.sqlite.TIME"><code class="xref py py-class docutils literal"><span class="pre">TIME</span></code></a>.
-These types represent dates and times as ISO formatted strings, which also
-nicely support ordering. There's no reliance on typical &quot;libc&quot; internals for
-these functions so historical dates are fully supported.</p>
+<span id="sqlite-datetime"></span><h2>日付と時刻の種類<a class="headerlink" href="#date-and-time-types" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQLiteにはDATE、TIME、またはDATETIME型が組み込まれておらず、Pythonの <cite>datetime`オブジェクトとSQLiteでサポートされている形式の間で値を変換する機能は用意されていません。 SQLAlchemy自身の：class： `〜sqlalchemy.types.DateTime`および関連する型は、SQliteが使用されているときに日付の書式設定と解析機能を提供します。実装クラスは、class： `〜.sqlite.DATETIME</cite>、：class：<cite>〜.sqlite.DATE</cite>、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.sqlite.TIME`です。これらのタイプは日付と時刻をISO形式の文字列として表し、順序付けもうまくサポートします。典型的な&amp;quot;libc &amp;quot;内部関数には依存していないので、歴史的日付が完全にサポートされています。</p>
 <div class="section" id="ensuring-text-affinity">
-<h3>Ensuring Text affinity<a class="headerlink" href="#ensuring-text-affinity" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The DDL rendered for these types is the standard <code class="docutils literal"><span class="pre">DATE</span></code>, <code class="docutils literal"><span class="pre">TIME</span></code>
-and <code class="docutils literal"><span class="pre">DATETIME</span></code> indicators.    However, custom storage formats can also be
-applied to these types.   When the
-storage format is detected as containing no alpha characters, the DDL for
-these types is rendered as <code class="docutils literal"><span class="pre">DATE_CHAR</span></code>, <code class="docutils literal"><span class="pre">TIME_CHAR</span></code>, and <code class="docutils literal"><span class="pre">DATETIME_CHAR</span></code>,
-so that the column continues to have textual affinity.</p>
+<h3>テキストの親和性の確保<a class="headerlink" href="#ensuring-text-affinity" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>これらの型に対してレンダリングされるDDLは、標準の `` DATE``、 `` TIME``、および <cite>DATETIME`のインジケータです。ただし、カスタム記憶域形式をこれらの種類に適用することもできます。格納形式がアルファベット文字を含まないものとして検出されると、これらの型のDDLは `</cite> DATE_CHAR``、 `` TIME_CHAR``、および `` DATETIME_CHAR``としてレンダリングされ、列は引き続きテキストの親和性を持ちます。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference external" href="http://www.sqlite.org/datatype3.html#affinity">Type Affinity</a> - in the SQLite documentation</p>
+<p class="last"><a href="#id1"><span class="problematic" id="id2">`</span></a>タイプアフィニティー&lt;<a class="reference external" href="http://www.sqlite.org/datatype3.html#affinity">http://www.sqlite.org/datatype3.html#affinity</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  SQLiteのドキュメント</p>
 </div>
 </div>
 </div>
 <div class="section" id="sqlite-auto-incrementing-behavior">
-<span id="sqlite-autoincrement"></span><h2>SQLite Auto Incrementing Behavior<a class="headerlink" href="#sqlite-auto-incrementing-behavior" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Background on SQLite's autoincrement is at: <a class="reference external" href="http://sqlite.org/autoinc.html">http://sqlite.org/autoinc.html</a></p>
-<p>Key concepts:</p>
+<span id="sqlite-autoincrement"></span><h2>SQLite自動インクリメント動作<a class="headerlink" href="#sqlite-auto-incrementing-behavior" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQLiteの自動インクリメントの背景はhttp://sqlite.org/autoinc.htmlです。</p>
+<p>主なコンセプト：</p>
 <ul class="simple">
-<li>SQLite has an implicit &quot;auto increment&quot; feature that takes place for any
-non-composite primary-key column that is specifically created using
-&quot;INTEGER PRIMARY KEY&quot; for the type + primary key.</li>
-<li>SQLite also has an explicit &quot;AUTOINCREMENT&quot; keyword, that is <strong>not</strong>
-equivalent to the implicit autoincrement feature; this keyword is not
-recommended for general use.  SQLAlchemy does not render this keyword
-unless a special SQLite-specific directive is used (see below).  However,
-it still requires that the column's type is named &quot;INTEGER&quot;.</li>
+<li>SQLiteには、タイプ+プライマリキーに &amp;quot;INTEGER PRIMARY KEY&amp;quot;を使用して作成された非複合プライマリキーカラムに対して暗黙の&amp;quot;自動インクリメント&amp;quot;機能があります。</li>
+<li>SQLiteには明示的な&amp;quot;AUTOINCREMENT &amp;quot;キーワードがあります。<strong>は暗黙の自動インクリメント機能と同等ではありません</strong>。このキーワードは一般的な使用には推奨されません。 SQLAlchemyは特別なSQLite特有の指令が使われていない限り、このキーワードを表示しません（下記参照）。ただし、列の型は&amp;quot;INTEGER &amp;quot;という名前でなければなりません。</li>
 </ul>
 <div class="section" id="using-the-autoincrement-keyword">
-<h3>Using the AUTOINCREMENT Keyword<a class="headerlink" href="#using-the-autoincrement-keyword" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>To specifically render the AUTOINCREMENT keyword on the primary key column
-when rendering DDL, add the flag <code class="docutils literal"><span class="pre">sqlite_autoincrement=True</span></code> to the Table
-construct:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Table</span><span class="p">(</span><span class="s1">&#39;sometable&#39;</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span>
+<h3>AUTOINCREMENTキーワードの使用<a class="headerlink" href="#using-the-autoincrement-keyword" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>DDLをレンダリングするときに主キー列のAUTOINCREMENTキーワードを特にレンダリングするには、フラグ `` sqlite_autoincrement = True``を表の構造体::に追加します</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Table</span><span class="p">(</span><span class="s1">&#39;sometable&#39;</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span>
         <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
         <span class="n">sqlite_autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></pre></div>
 </div>
 </div>
 <div class="section" id="allowing-autoincrement-behavior-sqlalchemy-types-other-than-integer-integer">
-<h3>Allowing autoincrement behavior SQLAlchemy types other than Integer/INTEGER<a class="headerlink" href="#allowing-autoincrement-behavior-sqlalchemy-types-other-than-integer-integer" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>SQLite's typing model is based on naming conventions.  Among
-other things, this means that any type name which contains the
-substring <code class="docutils literal"><span class="pre">&quot;INT&quot;</span></code> will be determined to be of &quot;integer affinity&quot;.  A
-type named <code class="docutils literal"><span class="pre">&quot;BIGINT&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;SPECIAL_INT&quot;</span></code> or even <code class="docutils literal"><span class="pre">&quot;XYZINTQPR&quot;</span></code>, will be considered by
-SQLite to be of &quot;integer&quot; affinity.  However, <strong>the SQLite
-autoincrement feature, whether implicitly or explicitly enabled,
-requires that the name of the column's type
-is exactly the string &quot;INTEGER&quot;</strong>.  Therefore, if an
-application uses a type like <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.BigInteger" title="sqlalchemy.types.BigInteger"><code class="xref py py-class docutils literal"><span class="pre">BigInteger</span></code></a> for a primary key, on
-SQLite this type will need to be rendered as the name <code class="docutils literal"><span class="pre">&quot;INTEGER&quot;</span></code> when
-emitting the initial <code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> statement in order for the autoincrement
-behavior to be available.</p>
-<p>One approach to achieve this is to use <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.Integer" title="sqlalchemy.types.Integer"><code class="xref py py-class docutils literal"><span class="pre">Integer</span></code></a> on SQLite
-only using <a class="reference internal" href="../core/type_api.html#sqlalchemy.types.TypeEngine.with_variant" title="sqlalchemy.types.TypeEngine.with_variant"><code class="xref py py-meth docutils literal"><span class="pre">TypeEngine.with_variant()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span>
+<h3>自動インクリメントの動作を許可するInteger / INTEGER以外のSQLAlchemy型<a class="headerlink" href="#allowing-autoincrement-behavior-sqlalchemy-types-other-than-integer-integer" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SQLiteの型定義モデルは命名規則に基づいています。とりわけ、これは部分文字列 `` &amp;quot;INT &amp;quot; <cite>&amp;quot;を含む型名は&amp;quot;整数類似性&amp;quot;であると判断されることを意味します。 &amp;quot;&amp;quot; BIGINT &amp;quot;</cite> <cite>、</cite> <cite>&amp;quot; SPECIAL_INT &amp;quot;</cite> <cite>または</cite> <cite>&amp;quot; XYZINTQPR &amp;quot;</cite> <cite>という名前の型は、SQLiteによって&amp;quot;整数&amp;quot;親和性であるとみなされます。ただし、**暗黙的または明示的に有効になっているSQLite自動インクリメント機能は、列の型名が文字列&amp;quot;INTEGER &amp;quot; **であることを必要とします。したがって、アプリケーションが主キーに：class： `.BigInteger`のような型を使用する場合、SQLiteではこの型は最初の</cite> <cite>CREATE TABLE &amp;#39;を発行するときに</cite> <cite>&amp;quot; INTEGER &amp;quot;</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>という名前でレンダリングする必要があります``ステートメントを使用して、自動インクリメントの動作を利用できるようにします。</p>
+<p>これを達成するための1つのアプローチは、：meth： <cite>.TypeEngine.with_variant</cite> ::を使用してSQLite上で：class：` .Integer`を使用することです。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span>
     <span class="s2">&quot;my_table&quot;</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span>
     <span class="n">Column</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">BigInteger</span><span class="p">()</span><span class="o">.</span><span class="n">with_variant</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="s2">&quot;sqlite&quot;</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="p">)</span></pre></div>
 </div>
-<p>Another is to use a subclass of <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.BigInteger" title="sqlalchemy.types.BigInteger"><code class="xref py py-class docutils literal"><span class="pre">BigInteger</span></code></a> that overrides its DDL name
-to be <code class="docutils literal"><span class="pre">INTEGER</span></code> when compiled against SQLite:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">BigInteger</span>
+<p>もう1つは：class： <cite>.BigInteger`のサブクラスを使用して、DDL名をSQLiteに対してコンパイルするときに</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>INTEGER``にオーバーライドすることです:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">BigInteger</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.compiler</span> <span class="k">import</span> <span class="n">compiles</span>
 
 <span class="k">class</span> <span class="nc">SLBigInteger</span><span class="p">(</span><span class="n">BigInteger</span><span class="p">):</span>
@@ -290,123 +256,58 @@ to be <code class="docutils literal"><span class="pre">INTEGER</span></code> whe
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="../core/type_api.html#sqlalchemy.types.TypeEngine.with_variant" title="sqlalchemy.types.TypeEngine.with_variant"><code class="xref py py-meth docutils literal"><span class="pre">TypeEngine.with_variant()</span></code></a></p>
-<p><a class="reference internal" href="../core/compiler.html"><span class="std std-ref">Custom SQL Constructs and Compilation Extension</span></a></p>
-<p class="last"><a class="reference external" href="http://sqlite.org/datatype3.html">Datatypes In SQLite Version 3</a></p>
+<p>：meth： <cite>.TypeEngine.with_variant</cite></p>
+<p>：ref： <cite>sqlalchemy.ext.compiler_toplevel</cite></p>
+<p class="last"><a href="#id1"><span class="problematic" id="id2">`</span></a>SQLiteバージョン3のデータ型&lt;<a class="reference external" href="http://sqlite.org/datatype3.html">http://sqlite.org/datatype3.html</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_</p>
 </div>
 </div>
 </div>
 <div class="section" id="database-locking-behavior-concurrency">
-<span id="sqlite-concurrency"></span><h2>Database Locking Behavior / Concurrency<a class="headerlink" href="#database-locking-behavior-concurrency" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>SQLite is not designed for a high level of write concurrency. The database
-itself, being a file, is locked completely during write operations within
-transactions, meaning exactly one &quot;connection&quot; (in reality a file handle)
-has exclusive access to the database during this period - all other
-&quot;connections&quot; will be blocked during this time.</p>
-<p>The Python DBAPI specification also calls for a connection model that is
-always in a transaction; there is no <code class="docutils literal"><span class="pre">connection.begin()</span></code> method,
-only <code class="docutils literal"><span class="pre">connection.commit()</span></code> and <code class="docutils literal"><span class="pre">connection.rollback()</span></code>, upon which a
-new transaction is to be begun immediately.  This may seem to imply
-that the SQLite driver would in theory allow only a single filehandle on a
-particular database file at any time; however, there are several
-factors both within SQlite itself as well as within the pysqlite driver
-which loosen this restriction significantly.</p>
-<p>However, no matter what locking modes are used, SQLite will still always
-lock the database file once a transaction is started and DML (e.g. INSERT,
-UPDATE, DELETE) has at least been emitted, and this will block
-other transactions at least at the point that they also attempt to emit DML.
-By default, the length of time on this block is very short before it times out
-with an error.</p>
-<p>This behavior becomes more critical when used in conjunction with the
-SQLAlchemy ORM.  SQLAlchemy's <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> object by default runs
-within a transaction, and with its autoflush model, may emit DML preceding
-any SELECT statement.   This may lead to a SQLite database that locks
-more quickly than is expected.   The locking mode of SQLite and the pysqlite
-driver can be manipulated to some degree, however it should be noted that
-achieving a high degree of write-concurrency with SQLite is a losing battle.</p>
-<p>For more information on SQLite's lack of write concurrency by design, please
-see
-<a class="reference external" href="http://www.sqlite.org/whentouse.html">Situations Where Another RDBMS May Work Better - High Concurrency</a> near the bottom of the page.</p>
-<p>The following subsections introduce areas that are impacted by SQLite's
-file-based architecture and additionally will usually require workarounds to
-work when using the pysqlite driver.</p>
+<span id="sqlite-concurrency"></span><h2>データベースのロック動作/同時実行性<a class="headerlink" href="#database-locking-behavior-concurrency" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQLiteは、高いレベルの書き込み同時実行性のために設計されていません。データベースそのものはファイルであり、トランザクション内の書き込み操作中に完全にロックされます。つまり、正確に1つの &amp;quot;接続&amp;quot;（実際にはファイルハンドル）はこの期間中にデータベースへの排他的アクセス権を持ちます。この間にブロックされます。</p>
+<p>Python DBAPI仕様では、常にトランザクション内にある接続モデルも必要です。 `` connection.begin（） <a href="#id1"><span class="problematic" id="id2">``</span></a>メソッドはなく、すぐに新しいトランザクションを開始する `` connection.commit（） <a href="#id3"><span class="problematic" id="id4">``</span></a>と `` connection.rollback（） <a href="#id5"><span class="problematic" id="id6">``</span></a>だけがあります。これは、SQLiteドライバが理論的にはいつでも特定のデータベースファイルに対して1つのファイルハンドルしか許可しないことを意味するように見えるかもしれません。しかし、SQlite自体とpysqliteドライバ内には、この制限を大幅に緩和するいくつかの要因があります。</p>
+<p>しかし、ロックモードが使用されていても、トランザクションが開始され、DML（INSERT、UPDATE、DELETEなど）が少なくとも発行されると、SQLiteは常にデータベースファイルをロックし、少なくともその時点で他のトランザクションをブロックしますまた、DMLを発行しようとしています。デフォルトでは、このブロックの時間の長さは非常に短くなってからタイムアウトになり、エラーが発生します。</p>
+<p>この動作は、SQLAlchemy ORMと組み合わせて使用​​するとより重要になります。 SQLAlchemyの：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`オブジェクトは、デフォルトでトランザクション内で実行され、その自動フラッシュモデルでは、SELECT文の前にDMLを発行することができます。これは、予想よりも早くロックするSQLiteデータベースにつながる可能性があります。 SQLiteとpysqliteドライバのロックモードはある程度操作できますが、SQLiteで高度な書き込み同時実行を実現することは失われた戦いであることに注意してください。</p>
+<p>SQLiteの設計による書き込み同時実行性の欠如の詳細については、「別のRDBMSがうまくいく状況 - 高い並行性」を参照してください。 &lt;<a class="reference external" href="http://www.sqlite.org/whentouse.html">http://www.sqlite.org/whentouse.html</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_ページの一番下にあります。</p>
+<p>以下のサブセクションでは、SQLiteのファイルベースアーキテクチャの影響を受ける領域について説明します。通常、pysqliteドライバを使用する場合は、回避策が必要です。</p>
 </div>
 <div class="section" id="transaction-isolation-level">
-<span id="sqlite-isolation-level"></span><h2>Transaction Isolation Level<a class="headerlink" href="#transaction-isolation-level" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>SQLite supports &quot;transaction isolation&quot; in a non-standard way, along two
-axes.  One is that of the <a class="reference external" href="http://www.sqlite.org/pragma.html#pragma_read_uncommitted">PRAGMA read_uncommitted</a>
-instruction.   This setting can essentially switch SQLite between its
-default mode of <code class="docutils literal"><span class="pre">SERIALIZABLE</span></code> isolation, and a &quot;dirty read&quot; isolation
-mode normally referred to as <code class="docutils literal"><span class="pre">READ</span> <span class="pre">UNCOMMITTED</span></code>.</p>
-<p>SQLAlchemy ties into this PRAGMA statement using the
-<a class="reference internal" href="../core/engines.html#sqlalchemy.create_engine.params.isolation_level" title="sqlalchemy.create_engine"><code class="xref py py-paramref docutils literal"><span class="pre">create_engine.isolation_level</span></code></a> parameter of <a class="reference internal" href="../core/engines.html#sqlalchemy.create_engine" title="sqlalchemy.create_engine"><code class="xref py py-func docutils literal"><span class="pre">create_engine()</span></code></a>.
-Valid values for this parameter when used with SQLite are <code class="docutils literal"><span class="pre">&quot;SERIALIZABLE&quot;</span></code>
-and <code class="docutils literal"><span class="pre">&quot;READ</span> <span class="pre">UNCOMMITTED&quot;</span></code> corresponding to a value of 0 and 1, respectively.
-SQLite defaults to <code class="docutils literal"><span class="pre">SERIALIZABLE</span></code>, however its behavior is impacted by
-the pysqlite driver's default behavior.</p>
-<p>The other axis along which SQLite's transactional locking is impacted is
-via the nature of the <code class="docutils literal"><span class="pre">BEGIN</span></code> statement used.   The three varieties
-are &quot;deferred&quot;, &quot;immediate&quot;, and &quot;exclusive&quot;, as described at
-<a class="reference external" href="http://sqlite.org/lang_transaction.html">BEGIN TRANSACTION</a>.   A straight
-<code class="docutils literal"><span class="pre">BEGIN</span></code> statement uses the &quot;deferred&quot; mode, where the the database file is
-not locked until the first read or write operation, and read access remains
-open to other transactions until the first write operation.  But again,
-it is critical to note that the pysqlite driver interferes with this behavior
-by <em>not even emitting BEGIN</em> until the first write operation.</p>
+<span id="sqlite-isolation-level"></span><h2>トランザクション分離レベル<a class="headerlink" href="#transaction-isolation-level" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQLiteは、2つの軸に沿って非標準的な方法で&amp;quot;トランザクション分離&amp;quot;をサポートしています。 1つは <cite>PRAGMA read_uncommitted &lt;http://www.sqlite.org/pragma.html#pragma_read_uncommitted&gt; `_命令。この設定は、基本的に `</cite> SERIALIZABLE``分離のデフォルトモードと通常 `` READ UNCOMMITTED``と呼ばれる&amp;quot;ダーティー読み込み&amp;quot;分離モードの間でSQLiteを切り替えることができます。</p>
+<p>SQLAlchemyは、：func： <cite>.create_engine`の：paramref：</cite> .create_engine.isolation_level`パラメータを使用して、このPRAGMA文に結びつきます。このパラメータの有効な値は、SQLiteと一緒に使用するときは、それぞれ0と1の値に対応する `` &amp;quot;SERIALIZABLE &amp;quot; <a href="#id1"><span class="problematic" id="id2">``</span></a>と `` &amp;quot;READ UNCOMMITTED &amp;quot; <cite>&amp;quot;です。 SQLiteのデフォルトは `</cite> SERIALIZABLE``ですが、動作はpysqliteドライバのデフォルト動作の影響を受けます。</p>
+<p>SQLiteのトランザクションロックが影響を受けるもう1つの軸は、使用される `` BEGIN``ステートメントの性質によるものです。 <cite>BEGIN TRANSACTION &amp;#39;で説明されているように、3つの変種は&amp;quot;遅延&amp;quot;、&amp;quot;即時&amp;quot;、および&amp;quot;排他&amp;quot;です。 &lt;http://sqlite.org/lang_transaction.html&gt; `_。ストレート `</cite> BEGIN`ステートメントは、データベースファイルが最初の読み取りまたは書き込み操作までロックされておらず、読み取りアクセスが最初の書き込み操作まで他のトランザクションに対して開いたままである&amp;quot;遅延&amp;quot;モードを使用します。しかし、再び、pysqliteドライバは、最初の書き込み操作までBEGIN <a href="#id1"><span class="problematic" id="id2">*</span></a>を出さないことによってこの動作に干渉することに注意することが重要です。</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last">SQLite's transactional scope is impacted by unresolved
-issues in the pysqlite driver, which defers BEGIN statements to a greater
-degree than is often feasible. See the section <a class="reference internal" href="#pysqlite-serializable"><span class="std std-ref">Serializable isolation / Savepoints / Transactional DDL</span></a>
-for techniques to work around this behavior.</p>
+<p class="last">SQLiteのトランザクションスコープは、pysqliteドライバの未解決の問題によって影響を受けます。この問題は、BEGIN文を実行する可能性があるよりもはるかに高いです。この動作を回避するテクニックについては、ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>pysqlite_serializable`の節を参照してください。</p>
 </div>
 </div>
 <div class="section" id="savepoint-support">
-<h2>SAVEPOINT Support<a class="headerlink" href="#savepoint-support" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>SQLite supports SAVEPOINTs, which only function once a transaction is
-begun.   SQLAlchemy's SAVEPOINT support is available using the
-<a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection.begin_nested" title="sqlalchemy.engine.Connection.begin_nested"><code class="xref py py-meth docutils literal"><span class="pre">Connection.begin_nested()</span></code></a> method at the Core level, and
-<a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.begin_nested" title="sqlalchemy.orm.session.Session.begin_nested"><code class="xref py py-meth docutils literal"><span class="pre">Session.begin_nested()</span></code></a> at the ORM level.   However, SAVEPOINTs
-won't work at all with pysqlite unless workarounds are taken.</p>
+<h2>SAVEPOINTのサポート<a class="headerlink" href="#savepoint-support" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQLiteはSAVEPOINTをサポートしています.SAVEPOINTは、トランザクションが開始されると機能します。 SQLAlchemyのSAVEPOINTサポートは、コアレベルで：meth： <cite>.Connection.begin_nested`メソッドを使用し、ORMレベルで：meth：</cite> .Session.begin_nested`を使用して使用できます。ただし、回避策が講じられない限り、SAVEPOINTはpysqliteではまったく動作しません。</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last">SQLite's SAVEPOINT feature is impacted by unresolved
-issues in the pysqlite driver, which defers BEGIN statements to a greater
-degree than is often feasible. See the section <a class="reference internal" href="#pysqlite-serializable"><span class="std std-ref">Serializable isolation / Savepoints / Transactional DDL</span></a>
-for techniques to work around this behavior.</p>
+<p class="last">SQLiteのSAVEPOINT機能は、pysqliteドライバの未解決の問題によって影響を受けます。これは、BEGIN文をしばしば実現可能な程度よりも大きくします。この動作を回避するテクニックについては、ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>pysqlite_serializable`の節を参照してください。</p>
 </div>
 </div>
 <div class="section" id="transactional-ddl">
-<h2>Transactional DDL<a class="headerlink" href="#transactional-ddl" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The SQLite database supports transactional <a class="reference internal" href="../glossary.html#term-ddl"><span class="xref std std-term">DDL</span></a> as well.
-In this case, the pysqlite driver is not only failing to start transactions,
-it also is ending any existing transction when DDL is detected, so again,
-workarounds are required.</p>
+<h2>トランザクションDDL<a class="headerlink" href="#transactional-ddl" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQLiteデータベースはtransactional：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>DDL`もサポートしています。この場合、pysqliteドライバはトランザクションの開始に失敗するだけでなく、DDLが検出されたときに既存のトランザクションも終了するため、回避策も必要です。</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last">SQLite's transactional DDL is impacted by unresolved issues
-in the pysqlite driver, which fails to emit BEGIN and additionally
-forces a COMMIT to cancel any transaction when DDL is encountered.
-See the section <a class="reference internal" href="#pysqlite-serializable"><span class="std std-ref">Serializable isolation / Savepoints / Transactional DDL</span></a>
-for techniques to work around this behavior.</p>
+<p class="last">SQLiteのトランザクションDDLは、BEGINを発行できず、さらにDDLに遭遇したときにCOMMITにトランザクションをキャンセルさせるpysqliteドライバの未解決の問題の影響を受けます。この動作を回避するテクニックについては、ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>pysqlite_serializable`の節を参照してください。</p>
 </div>
 </div>
 <div class="section" id="foreign-key-support">
-<span id="sqlite-foreign-keys"></span><h2>Foreign Key Support<a class="headerlink" href="#foreign-key-support" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>SQLite supports FOREIGN KEY syntax when emitting CREATE statements for tables,
-however by default these constraints have no effect on the operation of the
-table.</p>
-<p>Constraint checking on SQLite has three prerequisites:</p>
+<span id="sqlite-foreign-keys"></span><h2>外部キーのサポート<a class="headerlink" href="#foreign-key-support" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQLiteは、テーブルのCREATE文を発行する際にFOREIGN KEY構文をサポートしていますが、デフォルトではこれらの制約はテーブルの操作には影響しません。</p>
+<p>SQLiteの制約チェックには、次の3つの前提条件があります。</p>
 <ul class="simple">
-<li>At least version 3.6.19 of SQLite must be in use</li>
-<li>The SQLite library must be compiled <em>without</em> the SQLITE_OMIT_FOREIGN_KEY
-or SQLITE_OMIT_TRIGGER symbols enabled.</li>
-<li>The <code class="docutils literal"><span class="pre">PRAGMA</span> <span class="pre">foreign_keys</span> <span class="pre">=</span> <span class="pre">ON</span></code> statement must be emitted on all
-connections before use.</li>
+<li>SQLiteのバージョン3.6.19以上が使用されている必要があります</li>
+<li>SQLiteライブラリは、SQLITE_OMIT_FOREIGN_KEYまたはSQLITE_OMIT_TRIGGERシンボルを有効にしないで*コンパイルする必要があります。</li>
+<li>`` PRAGMA foreign_keys = ON``ステートメントは、使用する前にすべてのコネクションで発行する必要があります。</li>
 </ul>
-<p>SQLAlchemy allows for the <code class="docutils literal"><span class="pre">PRAGMA</span></code> statement to be emitted automatically for
-new connections through the usage of events:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.engine</span> <span class="k">import</span> <span class="n">Engine</span>
+<p>SQLAlchemyはイベントの使用を通して新しい接続のために `` PRAGMA``文が自動的に出力されるようにします:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.engine</span> <span class="k">import</span> <span class="n">Engine</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">event</span>
 
 <span class="nd">@event</span><span class="o">.</span><span class="n">listens_for</span><span class="p">(</span><span class="n">Engine</span><span class="p">,</span> <span class="s2">&quot;connect&quot;</span><span class="p">)</span>
@@ -417,79 +318,45 @@ new connections through the usage of events:</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last">When SQLite foreign keys are enabled, it is <strong>not possible</strong>
-to emit CREATE or DROP statements for tables that contain
-mutually-dependent foreign key constraints;
-to emit the DDL for these tables requires that ALTER TABLE be used to
-create or drop these constraints separately, for which SQLite has
-no support.</p>
+<p class="last">SQLiteの外部キーが有効な場合、相互に依存する外部キー制約を含むテーブルに対してCREATEまたはDROPステートメントを発行することはできません**。これらのテーブルに対してDDLを発行するには、ALTER TABLEを使用してこれらの制約を個別に作成または削除する必要があります。そのためにはSQLiteはサポートしていません。</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference external" href="http://www.sqlite.org/foreignkeys.html">SQLite Foreign Key Support</a>
-- on the SQLite web site.</p>
-<p><a class="reference internal" href="../core/event.html"><span class="std std-ref">Events</span></a> - SQLAlchemy event API.</p>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>SQLite外部キーサポート&lt;<a class="reference external" href="http://www.sqlite.org/foreignkeys.html">http://www.sqlite.org/foreignkeys.html</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  SQLiteのWebサイトにあります。</p>
+<p>：ref： <cite>event_toplevel</cite>  -  SQLAlchemyイベントAPI。</p>
 <dl class="last docutils">
-<dt><a class="reference internal" href="../core/constraints.html#use-alter"><span class="std std-ref">Creating/Dropping Foreign Key Constraints via ALTER</span></a> - more information on SQLAlchemy's facilities for handling</dt>
-<dd>mutually-dependent foreign key constraints.</dd>
+<dt>：ref： <cite>use_alter</cite>  - 処理のためのSQLAlchemyの機能の詳細</dt>
+<dd>相互に依存する外部キー制約。</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="type-reflection">
-<span id="sqlite-type-reflection"></span><h2>Type Reflection<a class="headerlink" href="#type-reflection" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>SQLite types are unlike those of most other database backends, in that
-the string name of the type usually does not correspond to a &quot;type&quot; in a
-one-to-one fashion.  Instead, SQLite links per-column typing behavior
-to one of five so-called &quot;type affinities&quot; based on a string matching
-pattern for the type.</p>
-<p>SQLAlchemy's reflection process, when inspecting types, uses a simple
-lookup table to link the keywords returned to provided SQLAlchemy types.
-This lookup table is present within the SQLite dialect as it is for all
-other dialects.  However, the SQLite dialect has a different &quot;fallback&quot;
-routine for when a particular type name is not located in the lookup map;
-it instead implements the SQLite &quot;type affinity&quot; scheme located at
-<a class="reference external" href="http://www.sqlite.org/datatype3.html">http://www.sqlite.org/datatype3.html</a> section 2.1.</p>
-<p>The provided typemap will make direct associations from an exact string
-name match for the following types:</p>
-<p><a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.BIGINT" title="sqlalchemy.types.BIGINT"><code class="xref py py-class docutils literal"><span class="pre">BIGINT</span></code></a>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.BLOB" title="sqlalchemy.types.BLOB"><code class="xref py py-class docutils literal"><span class="pre">BLOB</span></code></a>,
-<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.BOOLEAN" title="sqlalchemy.types.BOOLEAN"><code class="xref py py-class docutils literal"><span class="pre">BOOLEAN</span></code></a>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.BOOLEAN" title="sqlalchemy.types.BOOLEAN"><code class="xref py py-class docutils literal"><span class="pre">BOOLEAN</span></code></a>,
-<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.CHAR" title="sqlalchemy.types.CHAR"><code class="xref py py-class docutils literal"><span class="pre">CHAR</span></code></a>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.DATE" title="sqlalchemy.types.DATE"><code class="xref py py-class docutils literal"><span class="pre">DATE</span></code></a>,
-<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.DATETIME" title="sqlalchemy.types.DATETIME"><code class="xref py py-class docutils literal"><span class="pre">DATETIME</span></code></a>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.FLOAT" title="sqlalchemy.types.FLOAT"><code class="xref py py-class docutils literal"><span class="pre">FLOAT</span></code></a>,
-<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.DECIMAL" title="sqlalchemy.types.DECIMAL"><code class="xref py py-class docutils literal"><span class="pre">DECIMAL</span></code></a>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.FLOAT" title="sqlalchemy.types.FLOAT"><code class="xref py py-class docutils literal"><span class="pre">FLOAT</span></code></a>,
-<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.INTEGER" title="sqlalchemy.types.INTEGER"><code class="xref py py-class docutils literal"><span class="pre">INTEGER</span></code></a>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.INTEGER" title="sqlalchemy.types.INTEGER"><code class="xref py py-class docutils literal"><span class="pre">INTEGER</span></code></a>,
-<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.NUMERIC" title="sqlalchemy.types.NUMERIC"><code class="xref py py-class docutils literal"><span class="pre">NUMERIC</span></code></a>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.REAL" title="sqlalchemy.types.REAL"><code class="xref py py-class docutils literal"><span class="pre">REAL</span></code></a>,
-<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.SMALLINT" title="sqlalchemy.types.SMALLINT"><code class="xref py py-class docutils literal"><span class="pre">SMALLINT</span></code></a>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.TEXT" title="sqlalchemy.types.TEXT"><code class="xref py py-class docutils literal"><span class="pre">TEXT</span></code></a>,
-<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.TIME" title="sqlalchemy.types.TIME"><code class="xref py py-class docutils literal"><span class="pre">TIME</span></code></a>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.TIMESTAMP" title="sqlalchemy.types.TIMESTAMP"><code class="xref py py-class docutils literal"><span class="pre">TIMESTAMP</span></code></a>,
-<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.VARCHAR" title="sqlalchemy.types.VARCHAR"><code class="xref py py-class docutils literal"><span class="pre">VARCHAR</span></code></a>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.NVARCHAR" title="sqlalchemy.types.NVARCHAR"><code class="xref py py-class docutils literal"><span class="pre">NVARCHAR</span></code></a>,
-<a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.NCHAR" title="sqlalchemy.types.NCHAR"><code class="xref py py-class docutils literal"><span class="pre">NCHAR</span></code></a></p>
-<p>When a type name does not match one of the above types, the &quot;type affinity&quot;
-lookup is used instead:</p>
+<span id="sqlite-type-reflection"></span><h2>タイプリフレクション<a class="headerlink" href="#type-reflection" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQLite型は、他のほとんどのデータベースバックエンドとは異なります。通常、型の文字列名は1対1の方法で&amp;quot;型&amp;quot;に対応しません。その代わりに、SQLiteは、型ごとの文字列一致パターンに基づいて、列ごとの型付き動作を5つのいわゆる&amp;quot;型類似性&amp;quot;のいずれかにリンクします。</p>
+<p>SQLAlchemyのリフレクションプロセスは、タイプを検査するときに、単純なルックアップテーブルを使用して、提供されたSQLAlchemyタイプに返されたキーワードをリンクします。このルックアップテーブルは、他のすべての方言の場合と同様に、SQLiteダイアレクト内に存在します。しかし、SQLiteの方言は、特定の型名がルックアップマップにないときには&amp;quot;フォールバック&amp;quot;ルーチンを持っています;代わりにhttp://www.sqlite.orgにあるSQLite &amp;quot;type affinity &amp;quot;スキームを実装します/datatype3.htmlセクション2.1。</p>
+<p>指定されたタイプマップは、以下のタイプの文字列名との直接の関連付けを行います：</p>
+<p>：class： <cite>〜.types.BIGLE</cite>、：class：<cite>〜.types.BLOB</cite>、：class： <cite>〜.types.BOOLEAN</cite>、：class：<cite>〜.types.BOOLEAN</cite>、：class： <cite>〜。 ：class： `〜.types.DATE &amp;#39;、：class：</cite>〜.types.FLOAT`、：class： <cite>〜.types.DECIMAL</cite>、：：クラス： <cite>〜.types.FLOAT</cite>、：class：<cite>〜.types.INTEGER</cite>、：class： <cite>〜.types.INTEGER</cite>、：class：<cite>〜.types.NUMERIC</cite>、：class： <cite>〜.typesクラス： `〜.types.SMALLINT</cite>、：class：<cite>〜.types.TEXT</cite>、：class： <cite>〜.types.TIME</cite>、：class：<cite>〜.types.TIMESTAMP</cite>、：class ： <cite>〜.types.VARCHAR</cite>、：class：<cite>〜.types.NVARCHAR</cite>、：クラス： <cite>〜.types.NCHAR</cite></p>
+<p>型名が上記の型のいずれかと一致しない場合、代わりに&amp;quot;型類義語&amp;quot;の参照が使用されます：</p>
 <ul class="simple">
-<li><a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.INTEGER" title="sqlalchemy.types.INTEGER"><code class="xref py py-class docutils literal"><span class="pre">INTEGER</span></code></a> is returned if the type name includes the
-string <code class="docutils literal"><span class="pre">INT</span></code></li>
-<li><a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.TEXT" title="sqlalchemy.types.TEXT"><code class="xref py py-class docutils literal"><span class="pre">TEXT</span></code></a> is returned if the type name includes the
-string <code class="docutils literal"><span class="pre">CHAR</span></code>, <code class="docutils literal"><span class="pre">CLOB</span></code> or <code class="docutils literal"><span class="pre">TEXT</span></code></li>
-<li><a class="reference internal" href="../core/type_api.html#sqlalchemy.types.NullType" title="sqlalchemy.types.NullType"><code class="xref py py-class docutils literal"><span class="pre">NullType</span></code></a> is returned if the type name includes the
-string <code class="docutils literal"><span class="pre">BLOB</span></code></li>
-<li><a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.REAL" title="sqlalchemy.types.REAL"><code class="xref py py-class docutils literal"><span class="pre">REAL</span></code></a> is returned if the type name includes the string
-<code class="docutils literal"><span class="pre">REAL</span></code>, <code class="docutils literal"><span class="pre">FLOA</span></code> or <code class="docutils literal"><span class="pre">DOUB</span></code>.</li>
-<li>Otherwise, the <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.NUMERIC" title="sqlalchemy.types.NUMERIC"><code class="xref py py-class docutils literal"><span class="pre">NUMERIC</span></code></a> type is used.</li>
+<li>：型名に文字列 `` INT``が含まれている場合、クラス： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.types.INTEGER`が返されます</li>
+<li>：型名に文字列 `` CHAR``、 `` CLOB``または `` TEXT``が含まれている場合、クラス： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.types.TEXT`が返されます</li>
+<li>：型名に文字列 `` BLOB``が含まれている場合、クラス： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.types.NullType`が返されます。</li>
+<li>：class： `` REAL``、 `` FLOA``または `` DOUB``の文字列が型名に含まれている場合、 <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.types.REAL`が返されます。</li>
+<li>それ以外の場合は：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.types.NUMERIC`型が使用されます。</li>
 </ul>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 0.9.3 で追加: </span>Support for SQLite type affinity rules when reflecting
-columns.</p>
+<p><span class="versionmodified">バージョン 0.9.3 で追加: </span>列を反映させる際のSQLite型親和性ルールのサポート</p>
 </div>
 </div>
 <div class="section" id="partial-indexes">
-<span id="sqlite-partial-index"></span><h2>Partial Indexes<a class="headerlink" href="#partial-indexes" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>A partial index, e.g. one which uses a WHERE clause, can be specified
-with the DDL system using the argument <code class="docutils literal"><span class="pre">sqlite_where</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tbl</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s1">&#39;testtbl&#39;</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">))</span>
+<span id="sqlite-partial-index"></span><h2>部分インデックス<a class="headerlink" href="#partial-indexes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>DDLシステムでは、 `` sqlite_where`` ::引数を使用して部分インデックス（例：WHERE句を使用するインデックス）を指定できます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tbl</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s1">&#39;testtbl&#39;</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">))</span>
 <span class="n">idx</span> <span class="o">=</span> <span class="n">Index</span><span class="p">(</span><span class="s1">&#39;test_idx1&#39;</span><span class="p">,</span> <span class="n">tbl</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
             <span class="n">sqlite_where</span><span class="o">=</span><span class="n">and_</span><span class="p">(</span><span class="n">tbl</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">data</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="n">tbl</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">data</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">))</span></pre></div>
 </div>
-<p>The index will be rendered at create time as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">INDEX</span> <span class="n">test_idx1</span> <span class="n">ON</span> <span class="n">testtbl</span> <span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<p>作成時にインデックスがレンダリングされます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">INDEX</span> <span class="n">test_idx1</span> <span class="n">ON</span> <span class="n">testtbl</span> <span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">WHERE</span> <span class="n">data</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="n">AND</span> <span class="n">data</span> <span class="o">&lt;</span> <span class="mi">10</span></pre></div>
 </div>
 <div class="versionadded">
@@ -497,19 +364,13 @@ with the DDL system using the argument <code class="docutils literal"><span clas
 </div>
 </div>
 <div class="section" id="dotted-column-names">
-<span id="sqlite-dotted-column-names"></span><h2>Dotted Column Names<a class="headerlink" href="#dotted-column-names" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Using table or column names that explicitly have periods in them is
-<strong>not recommended</strong>.   While this is generally a bad idea for relational
-databases in general, as the dot is a syntactically significant character,
-the SQLite driver up until version <strong>3.10.0</strong> of SQLite has a bug which
-requires that SQLAlchemy filter out these dots in result sets.</p>
+<span id="sqlite-dotted-column-names"></span><h2>点列名<a class="headerlink" href="#dotted-column-names" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>明示的にピリオドを含む表名または列名を使用することは推奨されません**。これは一般的にリレーショナルデータベースでは一般的に悪い考えですが、ドットが構文的に重要な文字であるため、SQLiteのバージョン** 3.10.0 <a href="#id1"><span class="problematic" id="id2">**</span></a>までのSQLiteドライバにはバグがあり、SQLAlchemyはこれらの点を結果セット。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 1.1 で変更: </span>The following SQLite issue has been resolved as of version 3.10.0
-of SQLite.  SQLAlchemy as of <strong>1.1</strong> automatically disables its internal
-workarounds based on detection of this version.</p>
+<p><span class="versionmodified">バージョン 1.1 で変更: </span>次のSQLiteの問題は、SQLiteのバージョン3.10.0で解決されています。 ** 1.1 <a href="#id1"><span class="problematic" id="id2">**</span></a>のSQLAlchemyは、このバージョンの検出に基づいて内部的な回避策を自動的に無効にします。</p>
 </div>
-<p>The bug, entirely outside of SQLAlchemy, can be illustrated thusly:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<p>このバグは、SQLAlchemyの外部にあります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">assert</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">sqlite_version_info</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;bug is fixed in this version&quot;</span>
 
@@ -531,19 +392,15 @@ workarounds based on detection of this version.</p>
 <span class="k">assert</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">description</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">],</span> \
     <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">description</span><span class="p">]</span></pre></div>
 </div>
-<p>The second assertion fails:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<p>2番目のアサーションは失敗します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
   <span class="n">File</span> <span class="s2">&quot;test.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">19</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
     <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">description</span><span class="p">]</span>
 <span class="ne">AssertionError</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;x.a&#39;</span><span class="p">,</span> <span class="s1">&#39;x.b&#39;</span><span class="p">]</span></pre></div>
 </div>
-<p>Where above, the driver incorrectly reports the names of the columns
-including the name of the table, which is entirely inconsistent vs.
-when the UNION is not present.</p>
-<p>SQLAlchemy relies upon column names being predictable in how they match
-to the original statement, so the SQLAlchemy dialect has no choice but
-to filter these out:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span>
+<p>上記の場合、ドライバはテーブルの名前を含む列の名前を間違って報告します。これは、UNIONが存在しない場合とまったく矛盾しています。</p>
+<p>SQLAlchemyは、元の文とどのように一致するか予測可能なカラム名に依存しているため、SQLAlchemy方言はこれらをフィルタリングするだけではありません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span>
 
 <span class="n">eng</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;sqlite://&quot;</span><span class="p">)</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">eng</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
@@ -562,9 +419,8 @@ to filter these out:</p>
 <span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">]</span></pre></div>
 </div>
-<p>Note that above, even though SQLAlchemy filters out the dots, <em>both
-names are still addressable</em>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">row</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<p>上記のように、SQLAlchemyがドットをフィルタリングしても、<em>両方の名前はまだアドレス可能です</em>：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">row</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
 <span class="go">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;x.a&quot;</span><span class="p">]</span>
@@ -574,32 +430,23 @@ names are still addressable</em>:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;x.b&quot;</span><span class="p">]</span>
 <span class="go">1</span></pre></div>
 </div>
-<p>Therefore, the workaround applied by SQLAlchemy only impacts
-<a class="reference internal" href="../core/connections.html#sqlalchemy.engine.ResultProxy.keys" title="sqlalchemy.engine.ResultProxy.keys"><code class="xref py py-meth docutils literal"><span class="pre">ResultProxy.keys()</span></code></a> and <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.RowProxy.keys" title="sqlalchemy.engine.RowProxy.keys"><code class="xref py py-meth docutils literal"><span class="pre">RowProxy.keys()</span></code></a> in the public API.
-In the very specific case where
-an application is forced to use column names that contain dots, and the
-functionality of <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.ResultProxy.keys" title="sqlalchemy.engine.ResultProxy.keys"><code class="xref py py-meth docutils literal"><span class="pre">ResultProxy.keys()</span></code></a> and <a class="reference internal" href="../core/connections.html#sqlalchemy.engine.RowProxy.keys" title="sqlalchemy.engine.RowProxy.keys"><code class="xref py py-meth docutils literal"><span class="pre">RowProxy.keys()</span></code></a>
-is required to return these dotted names unmodified, the <code class="docutils literal"><span class="pre">sqlite_raw_colnames</span></code>
-execution option may be provided, either on a per-<a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Connection" title="sqlalchemy.engine.Connection"><code class="xref py py-class docutils literal"><span class="pre">Connection</span></code></a> basis:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execution_options</span><span class="p">(</span><span class="n">sqlite_raw_colnames</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<p>したがって、SQLAlchemyによって適用される回避策は、パブリックAPIの：meth： <cite>.ResultProxy.keys`および：meth：</cite> .RowProxy.keys（） <cite>にのみ影響します。アプリケーションがドットを含む列名を使用するように強制され、これらのドット付きの名前を返すには：meth： `.ResultProxy.keys`と：meth：</cite> .RowProxy.keys（） <cite>の機能が必要な非常に特殊なケースでは、 `</cite> sqlite_raw_colnames``実行オプションは、per-：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Connection`の基礎で提供されるかもしれません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execution_options</span><span class="p">(</span><span class="n">sqlite_raw_colnames</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">    select x.a, x.b from x where a=1</span>
 <span class="s1">    union</span>
 <span class="s1">    select x.a, x.b from x where a=2</span>
 <span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;x.a&quot;</span><span class="p">,</span> <span class="s2">&quot;x.b&quot;</span><span class="p">]</span></pre></div>
 </div>
-<p>or on a per-<a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> basis:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;sqlite://&quot;</span><span class="p">,</span> <span class="n">execution_options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;sqlite_raw_colnames&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span></pre></div>
+<p>またはper-：class： <cite>.Engine</cite> basis</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;sqlite://&quot;</span><span class="p">,</span> <span class="n">execution_options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;sqlite_raw_colnames&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span></pre></div>
 </div>
-<p>When using the per-<a class="reference internal" href="../core/connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a> execution option, note that
-<strong>Core and ORM queries that use UNION may not function properly</strong>.</p>
+<p>per-：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Engine`実行オプションを使用する場合、UNIONを使用する**コアクエリとORMクエリは正しく機能しない可能性があります**。</p>
 </div>
 <div class="section" id="sqlite-data-types">
-<h2>SQLite Data Types<a class="headerlink" href="#sqlite-data-types" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>As with all SQLAlchemy dialects, all UPPERCASE types that are known to be
-valid with SQLite are importable from the top level dialect, whether
-they originate from <a class="reference internal" href="../core/type_basics.html#module-sqlalchemy.types" title="sqlalchemy.types"><code class="xref py py-mod docutils literal"><span class="pre">sqlalchemy.types</span></code></a> or from the local dialect:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.dialects.sqlite</span> <span class="k">import</span> \
+<h2>SQLiteデータ型<a class="headerlink" href="#sqlite-data-types" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>すべてのSQLAlchemyの方言と同様に、SQLiteで有効であることが知られているすべてのUPPERCASE型は、from：mod： <a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy.types`またはローカルの方言から上位の方言からインポートできます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.dialects.sqlite</span> <span class="k">import</span> \
             <span class="n">BLOB</span><span class="p">,</span> <span class="n">BOOLEAN</span><span class="p">,</span> <span class="n">CHAR</span><span class="p">,</span> <span class="n">DATE</span><span class="p">,</span> <span class="n">DATETIME</span><span class="p">,</span> <span class="n">DECIMAL</span><span class="p">,</span> <span class="n">FLOAT</span><span class="p">,</span> \
             <span class="n">INTEGER</span><span class="p">,</span> <span class="n">NUMERIC</span><span class="p">,</span> <span class="n">JSON</span><span class="p">,</span> <span class="n">SMALLINT</span><span class="p">,</span> <span class="n">TEXT</span><span class="p">,</span> <span class="n">TIME</span><span class="p">,</span> <span class="n">TIMESTAMP</span><span class="p">,</span> \
             <span class="n">VARCHAR</span></pre></div>
@@ -607,17 +454,16 @@ they originate from <a class="reference internal" href="../core/type_basics.html
 <span class="target" id="module-sqlalchemy.dialects.sqlite"></span><dl class="class">
 <dt id="sqlalchemy.dialects.sqlite.DATETIME">
 <em class="property">class </em><code class="descclassname">sqlalchemy.dialects.sqlite.</code><code class="descname">DATETIME</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.dialects.sqlite.DATETIME" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.dialects.sqlite.base._DateTimeMixin</span></code>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.DateTime" title="sqlalchemy.types.DateTime"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.types.DateTime</span></code></a></p>
-<p>Represent a Python datetime object in SQLite using a string.</p>
-<p>The default string storage format is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">%(year)04d</span><span class="s2">-</span><span class="si">%(month)02d</span><span class="s2">-</span><span class="si">%(day)02d</span><span class="s2"> </span><span class="si">%(hour)02d</span><span class="s2">:</span><span class="si">%(min)02d</span><span class="s2">:</span><span class="si">%(second)02d</span><span class="s2">.</span><span class="si">%(microsecond)06d</span><span class="s2">&quot;</span></pre></div>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.dialects.sqlite.base._DateTimeMixin</span></code>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.DateTime" title="sqlalchemy.types.DateTime"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.types.DateTime</span></code></a></p>
+<p>文字列を使用してSQLiteでPython datetimeオブジェクトを表します。</p>
+<p>デフォルトの文字列格納形式は:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">%(year)04d</span><span class="s2">-</span><span class="si">%(month)02d</span><span class="s2">-</span><span class="si">%(day)02d</span><span class="s2"> </span><span class="si">%(hour)02d</span><span class="s2">:</span><span class="si">%(min)02d</span><span class="s2">:</span><span class="si">%(second)02d</span><span class="s2">.</span><span class="si">%(microsecond)06d</span><span class="s2">&quot;</span></pre></div>
 </div>
-<p>e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2011</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">15</span> <span class="mi">12</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mf">57.10558</span></pre></div>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2011</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">15</span> <span class="mi">12</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mf">57.10558</span></pre></div>
 </div>
-<p>The storage format can be customized to some degree using the
-<code class="docutils literal"><span class="pre">storage_format</span></code> and <code class="docutils literal"><span class="pre">regexp</span></code> parameters, such as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<p>ストレージフォーマットは、 `` storage_format``と `` regexp``パラメータを使ってある程度カスタマイズすることができます：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.dialects.sqlite</span> <span class="k">import</span> <span class="n">DATETIME</span>
 
 <span class="n">dt</span> <span class="o">=</span> <span class="n">DATETIME</span><span class="p">(</span><span class="n">storage_format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(year)04d</span><span class="s2">/</span><span class="si">%(month)02d</span><span class="s2">/</span><span class="si">%(day)02d</span><span class="s2"> &quot;</span>
@@ -630,14 +476,8 @@ they originate from <a class="reference internal" href="../core/type_basics.html
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.dialects.sqlite.DATETIME.params.storage_format"></span><strong>storage_format</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.DATETIME.params.storage_format">¶</a> -- format string which will be applied to the dict
-with keys year, month, day, hour, minute, second, and microsecond.</li>
-<li><span class="target" id="sqlalchemy.dialects.sqlite.DATETIME.params.regexp"></span><strong>regexp</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.DATETIME.params.regexp">¶</a> -- regular expression which will be applied to incoming result
-rows. If the regexp contains named groups, the resulting match dict is
-applied to the Python datetime() constructor as keyword arguments.
-Otherwise, if positional groups are used, the datetime() constructor
-is called with positional arguments via
-<code class="docutils literal"><span class="pre">*map(int,</span> <span class="pre">match_obj.groups(0))</span></code>.</li>
+<li><span class="target" id="sqlalchemy.dialects.sqlite.DATETIME.params.storage_format"></span><strong>storage_format</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.DATETIME.params.storage_format">¶</a> -- 年、月、日、時、分、秒、マイクロ秒のキーで辞書に適用される書式文字列。</li>
+<li><span class="target" id="sqlalchemy.dialects.sqlite.DATETIME.params.regexp"></span><strong>regexp</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.DATETIME.params.regexp">¶</a> -- 着信結果行に適用される正規表現。正規表現に名前付きグループが含まれている場合、結果の一致するdictはキーワード引数としてPythonのdatetime（）コンストラクタに適用されます。それ以外の場合は、位置グループを使用すると、datetime（）コンストラクタは `` * map（int、match_obj.groups（0）） <a href="#id1"><span class="problematic" id="id2">`</span></a>&amp;#39;を介して位置引数で呼び出されます。</li>
 </ul>
 </td>
 </tr>
@@ -648,17 +488,16 @@ is called with positional arguments via
 <dl class="class">
 <dt id="sqlalchemy.dialects.sqlite.DATE">
 <em class="property">class </em><code class="descclassname">sqlalchemy.dialects.sqlite.</code><code class="descname">DATE</code><span class="sig-paren">(</span><em>storage_format=None</em>, <em>regexp=None</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.dialects.sqlite.DATE" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.dialects.sqlite.base._DateTimeMixin</span></code>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.Date" title="sqlalchemy.types.Date"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.types.Date</span></code></a></p>
-<p>Represent a Python date object in SQLite using a string.</p>
-<p>The default string storage format is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">%(year)04d</span><span class="s2">-</span><span class="si">%(month)02d</span><span class="s2">-</span><span class="si">%(day)02d</span><span class="s2">&quot;</span></pre></div>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.dialects.sqlite.base._DateTimeMixin</span></code>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.Date" title="sqlalchemy.types.Date"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.types.Date</span></code></a></p>
+<p>文字列を使用してSQLiteでPythonの日付オブジェクトを表します。</p>
+<p>デフォルトの文字列格納形式は:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">%(year)04d</span><span class="s2">-</span><span class="si">%(month)02d</span><span class="s2">-</span><span class="si">%(day)02d</span><span class="s2">&quot;</span></pre></div>
 </div>
-<p>e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2011</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">15</span></pre></div>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2011</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">15</span></pre></div>
 </div>
-<p>The storage format can be customized to some degree using the
-<code class="docutils literal"><span class="pre">storage_format</span></code> and <code class="docutils literal"><span class="pre">regexp</span></code> parameters, such as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<p>ストレージフォーマットは、 `` storage_format``と `` regexp``パラメータを使ってある程度カスタマイズすることができます：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.dialects.sqlite</span> <span class="k">import</span> <span class="n">DATE</span>
 
 <span class="n">d</span> <span class="o">=</span> <span class="n">DATE</span><span class="p">(</span>
@@ -671,14 +510,8 @@ is called with positional arguments via
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.dialects.sqlite.DATE.params.storage_format"></span><strong>storage_format</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.DATE.params.storage_format">¶</a> -- format string which will be applied to the
-dict with keys year, month, and day.</li>
-<li><span class="target" id="sqlalchemy.dialects.sqlite.DATE.params.regexp"></span><strong>regexp</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.DATE.params.regexp">¶</a> -- regular expression which will be applied to
-incoming result rows. If the regexp contains named groups, the
-resulting match dict is applied to the Python date() constructor
-as keyword arguments. Otherwise, if positional groups are used, the
-date() constructor is called with positional arguments via
-<code class="docutils literal"><span class="pre">*map(int,</span> <span class="pre">match_obj.groups(0))</span></code>.</li>
+<li><span class="target" id="sqlalchemy.dialects.sqlite.DATE.params.storage_format"></span><strong>storage_format</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.DATE.params.storage_format">¶</a> -- 年、月、日のキーを使って辞書に適用されるフォーマット文字列。</li>
+<li><span class="target" id="sqlalchemy.dialects.sqlite.DATE.params.regexp"></span><strong>regexp</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.DATE.params.regexp">¶</a> -- 着信結果行に適用される正規表現。正規表現に名前付きグループが含まれている場合、結果の一致するdictはキーワード引数としてPythonのdate（）コンストラクタに適用されます。それ以外の場合は、位置グループを使用すると、date（）コンストラクタは `` * map（int、match_obj.groups（0）） <a href="#id1"><span class="problematic" id="id2">`</span></a>&amp;#39;を介して位置引数で呼び出されます。</li>
 </ul>
 </td>
 </tr>
@@ -689,18 +522,10 @@ date() constructor is called with positional arguments via
 <dl class="class">
 <dt id="sqlalchemy.dialects.sqlite.JSON">
 <em class="property">class </em><code class="descclassname">sqlalchemy.dialects.sqlite.</code><code class="descname">JSON</code><span class="sig-paren">(</span><em>none_as_null=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.dialects.sqlite.JSON" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.JSON" title="sqlalchemy.types.JSON"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.types.JSON</span></code></a></p>
-<p>SQLite JSON type.</p>
-<p>SQLite supports JSON as of version 3.9 through its <a class="reference external" href="https://www.sqlite.org/json1.html">JSON1</a> extension. Note
-that <a class="reference external" href="https://www.sqlite.org/json1.html">JSON1</a> is a
-<a class="reference external" href="https://www.sqlite.org/loadext.html">loadable extension</a> and as such
-may not be available, or may require run-time loading.</p>
-<p>The <a class="reference internal" href="#sqlalchemy.dialects.sqlite.JSON" title="sqlalchemy.dialects.sqlite.JSON"><code class="xref py py-class docutils literal"><span class="pre">sqlite.JSON</span></code></a> type supports persistence of JSON values
-as well as the core index operations provided by <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.JSON" title="sqlalchemy.types.JSON"><code class="xref py py-class docutils literal"><span class="pre">types.JSON</span></code></a>
-datatype, by adapting the operations to render the <code class="docutils literal"><span class="pre">JSON_EXTRACT</span></code>
-function wrapped in the <code class="docutils literal"><span class="pre">JSON_QUOTE</span></code> function at the database level.
-Extracted values are quoted in order to ensure that the results are
-always JSON string values.</p>
+<dd><p>Bases: <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.JSON" title="sqlalchemy.types.JSON"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.types.JSON</span></code></a></p>
+<p>SQLite JSONタイプ。</p>
+<p>SQLiteは、JSON1_拡張を介してバージョン3.9のJSONをサポートしています。 JSON1_はロード可能な拡張機能です&lt;<a class="reference external" href="https://www.sqlite.org/loadext.html">https://www.sqlite.org/loadext.html</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_そのようなものが利用できないか、実行時の読み込みが必要な場合があります。</p>
+<p>：class： <cite>.sqlite.JSON`型はJSON値の永続性と、class：</cite> .types.JSON`データ型によって提供されるコアインデックス操作をサポートします。これは、 `` JSON_EXTRACT``関数をラップするデータベースレベルの `` JSON_QUOTE``関数の中で実行されます。結果が常にJSON文字列値であることを保証するために、抽出された値が引用されます。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.3 で追加.</span></p>
 </div>
@@ -713,17 +538,16 @@ always JSON string values.</p>
 <dl class="class">
 <dt id="sqlalchemy.dialects.sqlite.TIME">
 <em class="property">class </em><code class="descclassname">sqlalchemy.dialects.sqlite.</code><code class="descname">TIME</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.dialects.sqlite.TIME" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.dialects.sqlite.base._DateTimeMixin</span></code>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.Time" title="sqlalchemy.types.Time"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.types.Time</span></code></a></p>
-<p>Represent a Python time object in SQLite using a string.</p>
-<p>The default string storage format is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">%(hour)02d</span><span class="s2">:</span><span class="si">%(minute)02d</span><span class="s2">:</span><span class="si">%(second)02d</span><span class="s2">.</span><span class="si">%(microsecond)06d</span><span class="s2">&quot;</span></pre></div>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.dialects.sqlite.base._DateTimeMixin</span></code>, <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.Time" title="sqlalchemy.types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.types.Time</span></code></a></p>
+<p>文字列を使用してSQLiteでPythonの時間オブジェクトを表します。</p>
+<p>デフォルトの文字列格納形式は:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">%(hour)02d</span><span class="s2">:</span><span class="si">%(minute)02d</span><span class="s2">:</span><span class="si">%(second)02d</span><span class="s2">.</span><span class="si">%(microsecond)06d</span><span class="s2">&quot;</span></pre></div>
 </div>
-<p>e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">12</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mf">57.10558</span></pre></div>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mf">57.10558</span></pre></div>
 </div>
-<p>The storage format can be customized to some degree using the
-<code class="docutils literal"><span class="pre">storage_format</span></code> and <code class="docutils literal"><span class="pre">regexp</span></code> parameters, such as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<p>ストレージフォーマットは、 `` storage_format``と `` regexp``パラメータを使ってある程度カスタマイズすることができます：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.dialects.sqlite</span> <span class="k">import</span> <span class="n">TIME</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">TIME</span><span class="p">(</span><span class="n">storage_format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(hour)02d</span><span class="s2">-</span><span class="si">%(minute)02d</span><span class="s2">-&quot;</span>
@@ -736,13 +560,8 @@ always JSON string values.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.dialects.sqlite.TIME.params.storage_format"></span><strong>storage_format</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.TIME.params.storage_format">¶</a> -- format string which will be applied to the dict
-with keys hour, minute, second, and microsecond.</li>
-<li><span class="target" id="sqlalchemy.dialects.sqlite.TIME.params.regexp"></span><strong>regexp</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.TIME.params.regexp">¶</a> -- regular expression which will be applied to incoming result
-rows. If the regexp contains named groups, the resulting match dict is
-applied to the Python time() constructor as keyword arguments. Otherwise,
-if positional groups are used, the time() constructor is called with
-positional arguments via <code class="docutils literal"><span class="pre">*map(int,</span> <span class="pre">match_obj.groups(0))</span></code>.</li>
+<li><span class="target" id="sqlalchemy.dialects.sqlite.TIME.params.storage_format"></span><strong>storage_format</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.TIME.params.storage_format">¶</a> -- 日付、時間、分、秒、マイクロ秒のキーで適用されるフォーマット文字列。</li>
+<li><span class="target" id="sqlalchemy.dialects.sqlite.TIME.params.regexp"></span><strong>regexp</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.dialects.sqlite.TIME.params.regexp">¶</a> -- 着信結果行に適用される正規表現。正規表現に名前付きグループが含まれている場合、結果の一致するdictはキーワード引数としてPythonのtime（）コンストラクタに適用されます。それ以外の場合は、位置グループを使用すると、time（）コンストラクタが `` * map（int、match_obj.groups（0）） <a href="#id1"><span class="problematic" id="id2">`</span></a>&amp;#39;を介して位置引数で呼び出されます。</li>
 </ul>
 </td>
 </tr>
@@ -753,7 +572,7 @@ positional arguments via <code class="docutils literal"><span class="pre">*map(i
 </div>
 <div class="section" id="module-sqlalchemy.dialects.sqlite.pysqlite">
 <span id="pysqlite"></span><h2>Pysqlite<a class="headerlink" href="#module-sqlalchemy.dialects.sqlite.pysqlite" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Support for the SQLite database via the pysqlite driver.<p>Note that <code class="docutils literal"><span class="pre">pysqlite</span></code> is the same driver as the <code class="docutils literal"><span class="pre">sqlite3</span></code>
+<p>Support for the SQLite database via the pysqlite driver.<p>Note that <code class="docutils literal notranslate"><span class="pre">pysqlite</span></code> is the same driver as the <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code>
 module included with the Python distribution.</p>
 </p>
 <div class="section" id="dialect-sqlite-pysqlite-url">
@@ -763,148 +582,80 @@ module included with the Python distribution.</p>
 </div>
 <div class="section" id="dialect-sqlite-pysqlite-connect">
 <h3>Connecting<a class="headerlink" href="#dialect-sqlite-pysqlite-connect" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Connect String:<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sqlite</span><span class="o">+</span><span class="n">pysqlite</span><span class="p">:</span><span class="o">///</span><span class="n">file_path</span></pre></div>
+<p>Connect String:<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sqlite</span><span class="o">+</span><span class="n">pysqlite</span><span class="p">:</span><span class="o">///</span><span class="n">file_path</span></pre></div>
 </div>
 </p>
 </div>
 <div class="section" id="driver">
-<h3>Driver<a class="headerlink" href="#driver" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>When using Python 2.5 and above, the built in <code class="docutils literal"><span class="pre">sqlite3</span></code> driver is
-already installed and no additional installation is needed.  Otherwise,
-the <code class="docutils literal"><span class="pre">pysqlite2</span></code> driver needs to be present.  This is the same driver as
-<code class="docutils literal"><span class="pre">sqlite3</span></code>, just with a different name.</p>
-<p>The <code class="docutils literal"><span class="pre">pysqlite2</span></code> driver will be loaded first, and if not found, <code class="docutils literal"><span class="pre">sqlite3</span></code>
-is loaded.  This allows an explicitly installed pysqlite driver to take
-precedence over the built in one.   As with all dialects, a specific
-DBAPI module may be provided to <a class="reference internal" href="../core/engines.html#sqlalchemy.create_engine" title="sqlalchemy.create_engine"><code class="xref py py-func docutils literal"><span class="pre">create_engine()</span></code></a> to control
-this explicitly:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="k">import</span> <span class="n">dbapi2</span> <span class="k">as</span> <span class="n">sqlite</span>
+<h3>ドライバ<a class="headerlink" href="#driver" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Python 2.5以上を使用する場合、組み込みの `` sqlite3``ドライバは既にインストールされており、追加のインストールは必要ありません。それ以外の場合は、 `` pysqlite2``ドライバが必要です。これは `` sqlite3``と同じドライバで、名前が違うだけです。</p>
+<p>`` pysqlite2``ドライバが最初にロードされ、見つからなければ `` sqlite3``がロードされます。これにより、明示的にインストールされたpysqliteドライバが組み込みドライバよりも優先されます。すべての方言と同様に、特定のDBAPIモジュールを次のように提供することができます：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.create_engine（）`これを明示的に制御する:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlite3</span> <span class="k">import</span> <span class="n">dbapi2</span> <span class="k">as</span> <span class="n">sqlite</span>
 <span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite+pysqlite:///file.db&#39;</span><span class="p">,</span> <span class="n">module</span><span class="o">=</span><span class="n">sqlite</span><span class="p">)</span></pre></div>
 </div>
 </div>
 <div class="section" id="connect-strings">
-<h3>Connect Strings<a class="headerlink" href="#connect-strings" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The file specification for the SQLite database is taken as the &quot;database&quot;
-portion of the URL.  Note that the format of a SQLAlchemy url is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">driver</span><span class="p">:</span><span class="o">//</span><span class="n">user</span><span class="p">:</span><span class="k">pass</span><span class="nd">@host</span><span class="o">/</span><span class="n">database</span></pre></div>
+<h3>文字列を接続する<a class="headerlink" href="#connect-strings" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SQLiteデータベースのファイル指定は、URLの &amp;quot;データベース&amp;quot;部分とみなされます。 SQLAlchemyのURLのフォーマットは:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">driver</span><span class="p">:</span><span class="o">//</span><span class="n">user</span><span class="p">:</span><span class="k">pass</span><span class="nd">@host</span><span class="o">/</span><span class="n">database</span></pre></div>
 </div>
-<p>This means that the actual filename to be used starts with the characters to
-the <strong>right</strong> of the third slash.   So connecting to a relative filepath
-looks like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># relative path</span>
+<p>つまり、実際に使用されるファイル名は、3番目のスラッシュの** right <a href="#id1"><span class="problematic" id="id2">**</span></a>の文字で始まります。相対ファイルパスに接続すると、次のようになります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># relative path</span>
 <span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:///path/to/database.db&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>An absolute path, which is denoted by starting with a slash, means you
-need <strong>four</strong> slashes:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># absolute path</span>
+<p>スラッシュで始まる絶対パスは、<a href="#id1"><span class="problematic" id="id2">**</span></a>四つのスラッシュが必要です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># absolute path</span>
 <span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:////path/to/database.db&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>To use a Windows path, regular drive specifications and backslashes can be
-used. Double backslashes are probably needed:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># absolute path on Windows</span>
+<p>Windowsパスを使用するには、通常のドライブ指定とバックスラッシュを使用できます。ダブルバックスラッシュはおそらく必要です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># absolute path on Windows</span>
 <span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:///C:</span><span class="se">\\</span><span class="s1">path</span><span class="se">\\</span><span class="s1">to</span><span class="se">\\</span><span class="s1">database.db&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>The sqlite <code class="docutils literal"><span class="pre">:memory:</span></code> identifier is the default if no filepath is
-present.  Specify <code class="docutils literal"><span class="pre">sqlite://</span></code> and nothing else:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># in-memory database</span>
+<p>ファイルパスが存在しない場合、sqlite <a href="#id1"><span class="problematic" id="id2">``</span></a>：memory： <a href="#id3"><span class="problematic" id="id4">``</span></a>識別子がデフォルトです。 `` sqlite：// <a href="#id5"><span class="problematic" id="id6">``</span></a>を指定し、他には何も指定しないでください:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># in-memory database</span>
 <span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite://&#39;</span><span class="p">)</span></pre></div>
 </div>
 </div>
 <div class="section" id="compatibility-with-sqlite3-native-date-and-datetime-types">
-<h3>Compatibility with sqlite3 &quot;native&quot; date and datetime types<a class="headerlink" href="#compatibility-with-sqlite3-native-date-and-datetime-types" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The pysqlite driver includes the sqlite3.PARSE_DECLTYPES and
-sqlite3.PARSE_COLNAMES options, which have the effect of any column
-or expression explicitly cast as &quot;date&quot; or &quot;timestamp&quot; will be converted
-to a Python date or datetime object.  The date and datetime types provided
-with the pysqlite dialect are not currently compatible with these options,
-since they render the ISO date/datetime including microseconds, which
-pysqlite's driver does not.   Additionally, SQLAlchemy does not at
-this time automatically render the &quot;cast&quot; syntax required for the
-freestanding functions &quot;current_timestamp&quot; and &quot;current_date&quot; to return
-datetime/date types natively.   Unfortunately, pysqlite
-does not provide the standard DBAPI types in <code class="docutils literal"><span class="pre">cursor.description</span></code>,
-leaving SQLAlchemy with no way to detect these types on the fly
-without expensive per-row type checks.</p>
-<p>Keeping in mind that pysqlite's parsing option is not recommended,
-nor should be necessary, for use with SQLAlchemy, usage of PARSE_DECLTYPES
-can be forced if one configures &quot;native_datetime=True&quot; on create_engine():</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite://&#39;</span><span class="p">,</span>
+<h3>sqlite3 &amp;quot;native &amp;quot;の日付と日時の型との互換性<a class="headerlink" href="#compatibility-with-sqlite3-native-date-and-datetime-types" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>pysqliteドライバには、sqlite3.PARSE_DECLTYPESおよびsqlite3.PARSE_COLNAMESオプションが含まれています。これらのオプションは、&amp;quot;日付&amp;quot;または&amp;quot;タイムスタンプ&amp;quot;として明示的にキャストされる列または式の影響をPythonの日付または日時オブジェクトに変換します。 pysqliteの方言で提供されているdate型とdatetime型は、pysqliteのドライバではないマイクロ秒を含むISOの日付/時刻をレンダリングするため、これらのオプションと現在互換性がありません。さらに、SQLAlchemyは現在、フリースタンディング関数&amp;quot;current_timestamp &amp;quot;と&amp;quot;current_date &amp;quot;に必要な&amp;quot;キャスト&amp;quot;構文をネイティブにdatetime / date型を返すように自動的にレンダリングしません。残念ながら、pysqliteは標準のDBAPI型を `` cursor.description``に提供していないため、SQLAlchemyに高価な行単位のチェックを行わずにこれらの型を即座に検出することはできません。</p>
+<p>SQLAlchemyで使用するには、pysqliteの解析オプションは推奨されておらず、また必要であることに留意してください。create_engine（）で&amp;quot;native_datetime = True &amp;quot;を設定すると、PARSE_DECLTYPESの使用を強制できます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite://&#39;</span><span class="p">,</span>
     <span class="n">connect_args</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;detect_types&#39;</span><span class="p">:</span>
         <span class="n">sqlite3</span><span class="o">.</span><span class="n">PARSE_DECLTYPES</span><span class="o">|</span><span class="n">sqlite3</span><span class="o">.</span><span class="n">PARSE_COLNAMES</span><span class="p">},</span>
     <span class="n">native_datetime</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span></pre></div>
 </div>
-<p>With this flag enabled, the DATE and TIMESTAMP types (but note - not the
-DATETIME or TIME types...confused yet ?) will not perform any bind parameter
-or result processing. Execution of &quot;func.current_date()&quot; will return a string.
-&quot;func.current_timestamp()&quot; is registered as returning a DATETIME type in
-SQLAlchemy, so this function still receives SQLAlchemy-level result
-processing.</p>
+<p>このフラグを有効にすると、DATETIME型やTIMESTAMP型（ただし、DATETIME型やTIME型ではありませんが、まだ混乱していません）は、バインドパラメータや結果処理を実行しません。 &amp;quot;func.current_date（）&amp;quot;の実行は文字列を返します。 &amp;quot;func.current_timestamp（）&amp;quot;はSQLAlchemyにDATETIME型を返すように登録されているので、この関数はSQLAlchemyレベルの結果処理を受け取ります。</p>
 </div>
 <div class="section" id="threading-pooling-behavior">
-<span id="pysqlite-threading-pooling"></span><h3>Threading/Pooling Behavior<a class="headerlink" href="#threading-pooling-behavior" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Pysqlite's default behavior is to prohibit the usage of a single connection
-in more than one thread.   This is originally intended to work with older
-versions of SQLite that did not support multithreaded operation under
-various circumstances.  In particular, older SQLite versions
-did not allow a <code class="docutils literal"><span class="pre">:memory:</span></code> database to be used in multiple threads
-under any circumstances.</p>
-<p>Pysqlite does include a now-undocumented flag known as
-<code class="docutils literal"><span class="pre">check_same_thread</span></code> which will disable this check, however note that
-pysqlite connections are still not safe to use in concurrently in multiple
-threads.  In particular, any statement execution calls would need to be
-externally mutexed, as Pysqlite does not provide for thread-safe propagation
-of error messages among other things.   So while even <code class="docutils literal"><span class="pre">:memory:</span></code> databases
-can be shared among threads in modern SQLite, Pysqlite doesn't provide enough
-thread-safety to make this usage worth it.</p>
-<p>SQLAlchemy sets up pooling to work with Pysqlite's default behavior:</p>
+<span id="pysqlite-threading-pooling"></span><h3>スレッド/プーリングの動作<a class="headerlink" href="#threading-pooling-behavior" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Pysqliteのデフォルトの動作は、複数のスレッドで単一の接続の使用を禁止することです。これはもともと、さまざまな状況下でマルチスレッド処理をサポートしていなかった古いバージョンのSQLiteで動作するように意図されています。特に、以前のSQLiteのバージョンでは、どんな状況下でも `` memory： <a href="#id1"><span class="problematic" id="id2">``</span></a>データベースを複数のスレッドで使用することができませんでした。</p>
+<p>Pysqliteには、このチェックを無効にする `` check_same_thread``というフラグがありますが、pysqliteの接続は複数のスレッドで同時に使用することは安全ではありません。特に、Pysqliteはスレッドセーフなエラーメッセージの伝播を提供しないため、ステートメント実行呼び出しは外部的に相互排除する必要があります。そのため、現代のSQLiteではスレッド間で <a href="#id1"><span class="problematic" id="id2">``</span></a>：memory： <a href="#id3"><span class="problematic" id="id4">``</span></a>のデータベースを共有することができますが、Pysqliteはスレッドセーフではありません。</p>
+<p>SQLAlchemyは、Pysqliteのデフォルト動作で動作するようにプーリングを設定します。</p>
 <ul>
-<li><p class="first">When a <code class="docutils literal"><span class="pre">:memory:</span></code> SQLite database is specified, the dialect by default
-will use <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.SingletonThreadPool" title="sqlalchemy.pool.SingletonThreadPool"><code class="xref py py-class docutils literal"><span class="pre">SingletonThreadPool</span></code></a>. This pool maintains a single
-connection per thread, so that all access to the engine within the current
-thread use the same <code class="docutils literal"><span class="pre">:memory:</span></code> database - other threads would access a
-different <code class="docutils literal"><span class="pre">:memory:</span></code> database.</p>
+<li><p class="first">`` memory： `` SQLiteデータベースが指定されている場合、デフォルトでは：class： <cite>.SingletonThreadPool`が使用されます。このプールはスレッドごとに1つの接続を維持するので、現在のスレッド内のエンジンへのすべてのアクセスは同じ `</cite> memory： <a href="#id1"><span class="problematic" id="id2">``</span></a>データベースを使用し、他のスレッドは別の `` memory： <a href="#id3"><span class="problematic" id="id4">``</span></a>データベースにアクセスします。</p>
 </li>
-<li><p class="first">When a file-based database is specified, the dialect will use
-<a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.NullPool" title="sqlalchemy.pool.NullPool"><code class="xref py py-class docutils literal"><span class="pre">NullPool</span></code></a> as the source of connections. This pool closes and
-discards connections which are returned to the pool immediately. SQLite
-file-based connections have extremely low overhead, so pooling is not
-necessary. The scheme also prevents a connection from being used again in
-a different thread and works best with SQLite's coarse-grained file locking.</p>
+<li><p class="first">ファイルベースのデータベースが指定されると、方言は：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.NullPool`を接続のソースとして使用します。このプールは、すぐにプールに返される接続を閉じて破棄します。 SQLiteのファイルベースの接続は非常にオーバーヘッドが少ないため、プールする必要はありません。このスキームはまた、接続が別のスレッドで再び使用されることを防ぎ、SQLiteの粗いファイルロックで最も効果的です。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 0.7 で変更: </span>Default selection of <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.NullPool" title="sqlalchemy.pool.NullPool"><code class="xref py py-class docutils literal"><span class="pre">NullPool</span></code></a> for SQLite file-based databases.
-Previous versions select <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.SingletonThreadPool" title="sqlalchemy.pool.SingletonThreadPool"><code class="xref py py-class docutils literal"><span class="pre">SingletonThreadPool</span></code></a> by
-default for all SQLite databases.</p>
+<p><span class="versionmodified">バージョン 0.7 で変更: </span>デフォルト選択：class：SQLiteファイルベースのデータベースの <cite>.NullPool</cite>。以前のバージョンでは、すべてのSQLiteデータベースに対して、class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.SingletonThreadPool`がデフォルトで選択されていました。</p>
 </div>
 </li>
 </ul>
 <div class="section" id="using-a-memory-database-in-multiple-threads">
-<h4>Using a Memory Database in Multiple Threads<a class="headerlink" href="#using-a-memory-database-in-multiple-threads" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>To use a <code class="docutils literal"><span class="pre">:memory:</span></code> database in a multithreaded scenario, the same
-connection object must be shared among threads, since the database exists
-only within the scope of that connection.   The
-<a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.StaticPool" title="sqlalchemy.pool.StaticPool"><code class="xref py py-class docutils literal"><span class="pre">StaticPool</span></code></a> implementation will maintain a single connection
-globally, and the <code class="docutils literal"><span class="pre">check_same_thread</span></code> flag can be passed to Pysqlite
-as <code class="docutils literal"><span class="pre">False</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.pool</span> <span class="k">import</span> <span class="n">StaticPool</span>
+<h4>複数のスレッドでのメモリデータベースの使用<a class="headerlink" href="#using-a-memory-database-in-multiple-threads" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>マルチスレッドのシナリオで `` memory： <code class="docutils literal notranslate"><span class="pre">データベースを使用するには、データベースがその接続のスコープ内にしか存在しないため、同じ接続オブジェクトをスレッド間で共有する必要があります。</span> <span class="pre">：class：</span> <span class="pre">`.StaticPool`実装はグローバルに単一の接続を維持し、`</span> <span class="pre">`check_same_thread``フラグをPysqliteに`</span> <span class="pre">`False</span></code> ::として渡すことができます</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.pool</span> <span class="k">import</span> <span class="n">StaticPool</span>
 <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite://&#39;</span><span class="p">,</span>
                     <span class="n">connect_args</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;check_same_thread&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">},</span>
                     <span class="n">poolclass</span><span class="o">=</span><span class="n">StaticPool</span><span class="p">)</span></pre></div>
 </div>
-<p>Note that using a <code class="docutils literal"><span class="pre">:memory:</span></code> database in multiple threads requires a recent
-version of SQLite.</p>
+<p>複数のスレッドで `` memory： <a href="#id1"><span class="problematic" id="id2">``</span></a>データベースを使用するには、最近のバージョンのSQLiteが必要です。</p>
 </div>
 <div class="section" id="using-temporary-tables-with-sqlite">
-<h4>Using Temporary Tables with SQLite<a class="headerlink" href="#using-temporary-tables-with-sqlite" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>Due to the way SQLite deals with temporary tables, if you wish to use a
-temporary table in a file-based SQLite database across multiple checkouts
-from the connection pool, such as when using an ORM <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> where
-the temporary table should continue to remain after <a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.commit" title="sqlalchemy.orm.session.Session.commit"><code class="xref py py-meth docutils literal"><span class="pre">Session.commit()</span></code></a> or
-<a class="reference internal" href="../orm/session_api.html#sqlalchemy.orm.session.Session.rollback" title="sqlalchemy.orm.session.Session.rollback"><code class="xref py py-meth docutils literal"><span class="pre">Session.rollback()</span></code></a> is called, a pool which maintains a single
-connection must be used.   Use <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.SingletonThreadPool" title="sqlalchemy.pool.SingletonThreadPool"><code class="xref py py-class docutils literal"><span class="pre">SingletonThreadPool</span></code></a> if the scope is
-only needed within the current thread, or <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.StaticPool" title="sqlalchemy.pool.StaticPool"><code class="xref py py-class docutils literal"><span class="pre">StaticPool</span></code></a> is scope is
-needed within multiple threads for this case:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># maintain the same connection per thread</span>
+<h4>SQLiteでのテンポラリテーブルの使用<a class="headerlink" href="#using-temporary-tables-with-sqlite" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>SQLiteが一時テーブルを処理する方法のため、ORM：class： <cite>.Session`を使用する場合など、接続プールからの複数のチェックアウトにわたってファイルベースのSQLiteデータベースで一時テーブルを使用する場合は、一時テーブル：meth： `.Session.commit`または：meth：</cite> .Session.rollback`が呼び出された後も引き続き残る必要があります.1つの接続を維持するプールを使用する必要があります。スコープが現在のスレッド内でのみ必要な場合は、class： <cite>.SingletonThreadPool`を使用するか、または：class：</cite> .StaticPool` isスコープがこの場合複数のスレッド内で必要です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># maintain the same connection per thread</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.pool</span> <span class="k">import</span> <span class="n">SingletonThreadPool</span>
 <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:///mydb.db&#39;</span><span class="p">,</span>
                     <span class="n">poolclass</span><span class="o">=</span><span class="n">SingletonThreadPool</span><span class="p">)</span>
@@ -915,44 +666,20 @@ needed within multiple threads for this case:</p>
 <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:///mydb.db&#39;</span><span class="p">,</span>
                     <span class="n">poolclass</span><span class="o">=</span><span class="n">StaticPool</span><span class="p">)</span></pre></div>
 </div>
-<p>Note that <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.SingletonThreadPool" title="sqlalchemy.pool.SingletonThreadPool"><code class="xref py py-class docutils literal"><span class="pre">SingletonThreadPool</span></code></a> should be configured for the number
-of threads that are to be used; beyond that number, connections will be
-closed out in a non deterministic way.</p>
+<p>注意：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.SingletonThreadPool`は、使用されるスレッドの数を設定する必要があります。その数を超えると、接続は非決定論的な方法でクローズされます。</p>
 </div>
 </div>
 <div class="section" id="unicode">
 <h3>Unicode<a class="headerlink" href="#unicode" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The pysqlite driver only returns Python <code class="docutils literal"><span class="pre">unicode</span></code> objects in result sets,
-never plain strings, and accommodates <code class="docutils literal"><span class="pre">unicode</span></code> objects within bound
-parameter values in all cases.   Regardless of the SQLAlchemy string type in
-use, string-based result values will by Python <code class="docutils literal"><span class="pre">unicode</span></code> in Python 2.
-The <a class="reference internal" href="../core/type_basics.html#sqlalchemy.types.Unicode" title="sqlalchemy.types.Unicode"><code class="xref py py-class docutils literal"><span class="pre">Unicode</span></code></a> type should still be used to indicate those columns that
-require unicode, however, so that non-<code class="docutils literal"><span class="pre">unicode</span></code> values passed inadvertently
-will emit a warning.  Pysqlite will emit an error if a non-<code class="docutils literal"><span class="pre">unicode</span></code> string
-is passed containing non-ASCII characters.</p>
+<p>pysqliteドライバは、結果セット内のPythonの `` unicode``オブジェクトだけを返すだけで、決してプレーンな文字列ではなく、すべての場合にバインドされたパラメータ値内の `` unicode``オブジェクトに対応します。使用されているSQLAlchemy文字列型にかかわらず、文字列ベースの結果値はPython 2のPythonの `` unicode``になります。：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Unicode`型は、Unicodeを必要とする列を示すために使用されます。誤って渡された <a href="#id3"><span class="problematic" id="id4">``</span></a>unicode``以外の値は警告を発します。 ASCII以外の文字を含む <a href="#id5"><span class="problematic" id="id6">``</span></a>unicode``以外の文字列が渡された場合、Pysqliteはエラーを出力します。</p>
 </div>
 <div class="section" id="serializable-isolation-savepoints-transactional-ddl">
-<span id="pysqlite-serializable"></span><h3>Serializable isolation / Savepoints / Transactional DDL<a class="headerlink" href="#serializable-isolation-savepoints-transactional-ddl" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>In the section <a class="reference internal" href="#sqlite-concurrency"><span class="std std-ref">Database Locking Behavior / Concurrency</span></a>, we refer to the pysqlite
-driver's assortment of issues that prevent several features of SQLite
-from working correctly.  The pysqlite DBAPI driver has several
-long-standing bugs which impact the correctness of its transactional
-behavior.   In its default mode of operation, SQLite features such as
-SERIALIZABLE isolation, transactional DDL, and SAVEPOINT support are
-non-functional, and in order to use these features, workarounds must
-be taken.</p>
-<p>The issue is essentially that the driver attempts to second-guess the user's
-intent, failing to start transactions and sometimes ending them prematurely, in
-an effort to minimize the SQLite databases's file locking behavior, even
-though SQLite itself uses &quot;shared&quot; locks for read-only activities.</p>
-<p>SQLAlchemy chooses to not alter this behavior by default, as it is the
-long-expected behavior of the pysqlite driver; if and when the pysqlite
-driver attempts to repair these issues, that will be more of a driver towards
-defaults for SQLAlchemy.</p>
-<p>The good news is that with a few events, we can implement transactional
-support fully, by disabling pysqlite's feature entirely and emitting BEGIN
-ourselves. This is achieved using two event listeners:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">event</span>
+<span id="pysqlite-serializable"></span><h3>シリアライズ可能な分離/セーブポイント/トランザクションDDL<a class="headerlink" href="#serializable-isolation-savepoints-transactional-ddl" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>セクション：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>sqlite_concurrency`では、SQLiteのいくつかの機能が正しく動作しないようにするpysqliteドライバのさまざまな問題を取り上げます。 pysqlite DBAPIドライバには、トランザクショナル動作の正確性に影響するいくつかの長年にわたるバグがあります。デフォルトの動作モードでは、SERIALIZABLE分離、トランザクションDDL、SAVEPOINTサポートなどのSQLite機能は機能しません。これらの機能を使用するには、回避策を講じる必要があります。</p>
+<p>問題は基本的に、ドライバがSQLiteデータベースのファイルロック動作を最小限に抑えるために、SQLite自体が&amp;quot;共有&amp;quot;ロックを使用しているにもかかわらず、ユーザーの意図を第二に推測し、トランザクションを開始せず、読み取り専用アクティビティ</p>
+<p>SQLAlchemyは、この動作をデフォルトで変更しないことを選択します。これは、pysqliteドライバの長い動作が期待される動作であるためです。 pysqliteドライバがこれらの問題を修復しようとすると、SQLAlchemyのデフォルトに近づくでしょう。</p>
+<p>良いニュースは、いくつかのイベントでは、pysqliteの機能を完全に無効にして自分自身を始動させることによって、トランザクションサポートを完全に実装できることです。これは、2つのイベントリスナーを使用して実現されます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">event</span>
 
 <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;sqlite:///myfile.db&quot;</span><span class="p">)</span>
 
@@ -967,30 +694,26 @@ ourselves. This is achieved using two event listeners:</p>
     <span class="c1"># emit our own BEGIN</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;BEGIN&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>Above, we intercept a new pysqlite connection and disable any transactional
-integration.   Then, at the point at which SQLAlchemy knows that transaction
-scope is to begin, we emit <code class="docutils literal"><span class="pre">&quot;BEGIN&quot;</span></code> ourselves.</p>
-<p>When we take control of <code class="docutils literal"><span class="pre">&quot;BEGIN&quot;</span></code>, we can also control directly SQLite's
-locking modes, introduced at <a class="reference external" href="http://sqlite.org/lang_transaction.html">BEGIN TRANSACTION</a>,
-by adding the desired locking mode to our <code class="docutils literal"><span class="pre">&quot;BEGIN&quot;</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@event</span><span class="o">.</span><span class="n">listens_for</span><span class="p">(</span><span class="n">engine</span><span class="p">,</span> <span class="s2">&quot;begin&quot;</span><span class="p">)</span>
+<p>上では、新しいpysqlite接続を傍受し、トランザクション統合を無効にします。次に、SQLAlchemyがトランザクションスコープを開始することを知っている時点で、私たちは `` &amp;quot;BEGIN &amp;quot; <a href="#id1"><span class="problematic" id="id2">``</span></a>を自分自身で発行します。</p>
+<p>`` &amp;quot;BEGIN &amp;quot; <a href="#id1"><span class="problematic" id="id2">``</span></a>を制御すると、 <cite>BEGIN TRANSACTION &amp;#39;で導入されたSQLiteのロックモードを直接制御することもできます&lt;http://sqlite.org/lang_transaction.html&gt; `_ &amp;#39;に、希望するロックモードを</cite> <cite>&amp;quot; BEGIN &amp;quot;</cite> <a href="#id3"><span class="problematic" id="id4">`</span></a>::に追加する</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@event</span><span class="o">.</span><span class="n">listens_for</span><span class="p">(</span><span class="n">engine</span><span class="p">,</span> <span class="s2">&quot;begin&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">do_begin</span><span class="p">(</span><span class="n">conn</span><span class="p">):</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;BEGIN EXCLUSIVE&quot;</span><span class="p">)</span></pre></div>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference external" href="http://sqlite.org/lang_transaction.html">BEGIN TRANSACTION</a> - on the SQLite site</p>
-<p><a class="reference external" href="http://bugs.python.org/issue9924">sqlite3 SELECT does not BEGIN a transaction</a> - on the Python bug tracker</p>
-<p class="last"><a class="reference external" href="http://bugs.python.org/issue10740">sqlite3 module breaks transactions and potentially corrupts data</a> - on the Python bug tracker</p>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>BEGIN TRANSACTION &lt;<a class="reference external" href="http://sqlite.org/lang_transaction.html">http://sqlite.org/lang_transaction.html</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  SQLiteサイトで</p>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlite3 SELECTはトランザクションを開始しません&lt;<a class="reference external" href="http://bugs.python.org/issue9924">http://bugs.python.org/issue9924</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  Pythonバグトラッカーで</p>
+<p class="last"><a href="#id1"><span class="problematic" id="id2">`</span></a>sqlite3モジュールがトランザクションを中断し、データを破壊する可能性がある&lt;<a class="reference external" href="http://bugs.python.org/issue10740">http://bugs.python.org/issue10740</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_  -  Pythonバグトラッカーで</p>
 </div>
 </div>
 </div>
 <div class="section" id="module-sqlalchemy.dialects.sqlite.pysqlcipher">
 <span id="pysqlcipher"></span><h2>Pysqlcipher<a class="headerlink" href="#module-sqlalchemy.dialects.sqlite.pysqlcipher" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Support for the SQLite database via the pysqlcipher driver.<p><code class="docutils literal"><span class="pre">pysqlcipher</span></code> is a fork of the standard <code class="docutils literal"><span class="pre">pysqlite</span></code> driver to make
+<p>Support for the SQLite database via the pysqlcipher driver.<p><code class="docutils literal notranslate"><span class="pre">pysqlcipher</span></code> is a fork of the standard <code class="docutils literal notranslate"><span class="pre">pysqlite</span></code> driver to make
 use of the <a class="reference external" href="https://www.zetetic.net/sqlcipher">SQLCipher</a> backend.</p>
-<p><code class="docutils literal"><span class="pre">pysqlcipher3</span></code> is a fork of <code class="docutils literal"><span class="pre">pysqlcipher</span></code> for Python 3. This dialect
-will attempt to import it if <code class="docutils literal"><span class="pre">pysqlcipher</span></code> is non-present.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pysqlcipher3</span></code> is a fork of <code class="docutils literal notranslate"><span class="pre">pysqlcipher</span></code> for Python 3. This dialect
+will attempt to import it if <code class="docutils literal notranslate"><span class="pre">pysqlcipher</span></code> is non-present.</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1.4 で追加: </span>- added fallback import for pysqlcipher3</p>
 </div>
@@ -1005,53 +728,30 @@ will attempt to import it if <code class="docutils literal"><span class="pre">py
 </div>
 <div class="section" id="dialect-sqlite-pysqlcipher-connect">
 <h3>Connecting<a class="headerlink" href="#dialect-sqlite-pysqlcipher-connect" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Connect String:<div class="highlight-default"><div class="highlight"><pre><span></span>sqlite+pysqlcipher://:passphrase/file_path[?kdf_iter=&lt;iter&gt;]</pre></div>
+<p>Connect String:<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sqlite+pysqlcipher://:passphrase/file_path[?kdf_iter=&lt;iter&gt;]</pre></div>
 </div>
 </p>
 </div>
 <div class="section" id="id3">
-<h3>Driver<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The driver here is the <a class="reference external" href="https://pypi.python.org/pypi/pysqlcipher">pysqlcipher</a>
-driver, which makes use of the SQLCipher engine.  This system essentially
-introduces new PRAGMA commands to SQLite which allows the setting of a
-passphrase and other encryption parameters, allowing the database
-file to be encrypted.</p>
-<p><cite>pysqlcipher3</cite> is a fork of <cite>pysqlcipher</cite> with support for Python 3,
-the driver is the same.</p>
+<h3>ドライバ<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ここのドライバは <a href="#id1"><span class="problematic" id="id2">`</span></a>pysqlcipher &lt;<a class="reference external" href="https://pypi.python.org/pypi/pysqlcipher">https://pypi.python.org/pypi/pysqlcipher</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_ドライバ、SQLCipherエンジンを利用します。このシステムは基本的に新しいPRAGMAコマンドをSQLiteに導入し、パスフレーズや他の暗号化パラメータの設定を可能にし、データベースファイルを暗号化できるようにします。</p>
+<p><cite>pysqlcipher3`はPython 3をサポートする</cite> pysqlcipher`のforkです。ドライバは同じです。</p>
 </div>
 <div class="section" id="id5">
-<h3>Connect Strings<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The format of the connect string is in every way the same as that
-of the <a class="reference internal" href="#module-sqlalchemy.dialects.sqlite.pysqlite" title="sqlalchemy.dialects.sqlite.pysqlite"><code class="xref py py-mod docutils literal"><span class="pre">pysqlite</span></code></a> driver, except that the
-&quot;password&quot; field is now accepted, which should contain a passphrase:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite+pysqlcipher://:testing@/foo.db&#39;</span><span class="p">)</span></pre></div>
+<h3>文字列を接続する<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>接続文字列の形式は、mod： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.dialects.sqlite.pysqlite`ドライバと同じように、パスフレーズを含む&amp;quot;パスワード&amp;quot;フィールドが現在受け入れられています。 ：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite+pysqlcipher://:testing@/foo.db&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>For an absolute file path, two leading slashes should be used for the
-database name:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite+pysqlcipher://:testing@//path/to/foo.db&#39;</span><span class="p">)</span></pre></div>
+<p>絶対ファイルパスの場合は、データベース名に2つの先頭スラッシュを使用する必要があります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite+pysqlcipher://:testing@//path/to/foo.db&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>A selection of additional encryption-related pragmas supported by SQLCipher
-as documented at <a class="reference external" href="https://www.zetetic.net/sqlcipher/sqlcipher-api/">https://www.zetetic.net/sqlcipher/sqlcipher-api/</a> can be passed
-in the query string, and will result in that PRAGMA being called for each
-new connection.  Currently, <code class="docutils literal"><span class="pre">cipher</span></code>, <code class="docutils literal"><span class="pre">kdf_iter</span></code>
-<code class="docutils literal"><span class="pre">cipher_page_size</span></code> and <code class="docutils literal"><span class="pre">cipher_use_hmac</span></code> are supported:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite+pysqlcipher://:testing@/foo.db?cipher=aes-256-cfb&amp;kdf_iter=64000&#39;</span><span class="p">)</span></pre></div>
+<p><a class="reference external" href="https://www.zetetic.net/sqlcipher/sqlcipher-api">https://www.zetetic.net/sqlcipher/sqlcipher-api</a>/で文書化されているようにSQLCipherでサポートされている追加の暗号化関連プラグマをクエリ文字列に渡すと、新しい接続ごとにPRAGMAが呼び出されます。現在、 `` cipher``、 `` kdf_iter``、 `` cipher_page_size``、 `` cipher_use_hmac``がサポートされています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite+pysqlcipher://:testing@/foo.db?cipher=aes-256-cfb&amp;kdf_iter=64000&#39;</span><span class="p">)</span></pre></div>
 </div>
 </div>
 <div class="section" id="pooling-behavior">
-<h3>Pooling Behavior<a class="headerlink" href="#pooling-behavior" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The driver makes a change to the default pool behavior of pysqlite
-as described in <a class="reference internal" href="#pysqlite-threading-pooling"><span class="std std-ref">Threading/Pooling Behavior</span></a>.   The pysqlcipher driver
-has been observed to be significantly slower on connection than the
-pysqlite driver, most likely due to the encryption overhead, so the
-dialect here defaults to using the <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.SingletonThreadPool" title="sqlalchemy.pool.SingletonThreadPool"><code class="xref py py-class docutils literal"><span class="pre">SingletonThreadPool</span></code></a>
-implementation,
-instead of the <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.NullPool" title="sqlalchemy.pool.NullPool"><code class="xref py py-class docutils literal"><span class="pre">NullPool</span></code></a> pool used by pysqlite.  As always, the pool
-implementation is entirely configurable using the
-<a class="reference internal" href="../core/engines.html#sqlalchemy.create_engine.params.poolclass" title="sqlalchemy.create_engine"><code class="xref py py-paramref docutils literal"><span class="pre">create_engine.poolclass</span></code></a> parameter; the <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.StaticPool" title="sqlalchemy.pool.StaticPool"><code class="xref py py-class docutils literal"><span class="pre">StaticPool</span></code></a> may
-be more feasible for single-threaded use, or <a class="reference internal" href="../core/pooling.html#sqlalchemy.pool.NullPool" title="sqlalchemy.pool.NullPool"><code class="xref py py-class docutils literal"><span class="pre">NullPool</span></code></a> may be used
-to prevent unencrypted connections from being held open for long periods of
-time, at the expense of slower startup time for new connections.</p>
+<h3>プール動作<a class="headerlink" href="#pooling-behavior" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ドライバは、：ref： <cite>pysqlite_threading_pooling`で説明されているように、pysqliteのデフォルトのプール動作を変更します。 pysqlcipherドライバはpysqliteドライバよりも接続がかなり遅いことが観測されています。おそらく暗号化のオーバーヘッドが原因です。したがって、ここでの方言は：class： `.SingletonThreadPool`実装の代わりに：class：`の代わりに使用されます。 pysqliteによって使用されるNullPoolプール。いつものように、プールの実装は：paramref： `.create_engine.poolclass`パラメータを使って完全に設定可能です。 ：class： `.StaticPool`は、シングルスレッドの場合にはより適しています：class：</cite> .NullPool`は、暗号化されていない接続が長時間オープンされないようにするために使用されます。新しい接続のために。</p>
 </div>
 </div>
 </div>
@@ -1068,7 +768,7 @@ time, at the expense of slower startup time for new connections.</p>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -1095,6 +795,7 @@ time, at the expense of slower startup time for new connections.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

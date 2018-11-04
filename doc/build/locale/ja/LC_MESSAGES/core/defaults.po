@@ -6,86 +6,76 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/defaults.rst:8
 msgid "Column Insert/Update Defaults"
-msgstr ""
+msgstr "列の挿入/更新のデフォルト"
 
 #: ../../core/defaults.rst:10
 msgid ""
 "SQLAlchemy provides a very rich featureset regarding column level events "
 "which take place during INSERT and UPDATE statements. Options include:"
-msgstr ""
+msgstr "SQLAlchemyは、INSERTおよびUPDATEステートメント中に発生する列レベルのイベントに関する非常に豊富なフィーチャーセットを提供します。次のオプションがあります。"
 
 #: ../../core/defaults.rst:13
 msgid "Scalar values used as defaults during INSERT and UPDATE operations"
-msgstr ""
+msgstr "INSERTおよびUPDATE操作中にデフォルトとして使用されるスカラー値"
 
 #: ../../core/defaults.rst:14
 msgid "Python functions which execute upon INSERT and UPDATE operations"
-msgstr ""
+msgstr "INSERTおよびUPDATE操作時に実行されるPython関数"
 
 #: ../../core/defaults.rst:15
 msgid ""
 "SQL expressions which are embedded in INSERT statements (or in some cases"
 " execute beforehand)"
-msgstr ""
+msgstr "INSERT文に埋め込まれている（または場合によっては事前に実行される）SQL式は、"
 
 #: ../../core/defaults.rst:16
 msgid "SQL expressions which are embedded in UPDATE statements"
-msgstr ""
+msgstr "UPDATEステートメントに埋め込まれたSQL式"
 
 #: ../../core/defaults.rst:17
 msgid "Server side default values used during INSERT"
-msgstr ""
+msgstr "INSERT中に使用されるサーバー側のデフォルト値"
 
 #: ../../core/defaults.rst:18
 msgid "Markers for server-side triggers used during UPDATE"
-msgstr ""
+msgstr "UPDATE中に使用されるサーバー側トリガーのマーカー"
 
 #: ../../core/defaults.rst:20
 msgid ""
 "The general rule for all insert/update defaults is that they only take "
 "effect if no value for a particular column is passed as an ``execute()`` "
 "parameter; otherwise, the given value is used."
-msgstr ""
+msgstr "すべての挿入/更新のデフォルトの一般的な規則は、特定の列の値が `` execute（） ``パラメータとして渡されない場合にのみ有効となります。それ以外の場合は、指定された値が使用されます。"
 
 #: ../../core/defaults.rst:25
 msgid "Scalar Defaults"
-msgstr ""
+msgstr "スカラーのデフォルト"
 
 #: ../../core/defaults.rst:27
 msgid ""
 "The simplest kind of default is a scalar value used as the default value "
 "of a column::"
-msgstr ""
+msgstr "最も単純なデフォルトは、列のデフォルト値として使用されるスカラー値です。"
 
 #: ../../core/defaults.rst:33
 msgid ""
 "Above, the value \"12\" will be bound as the column value during an "
 "INSERT if no other value is supplied."
-msgstr ""
+msgstr "上記以外の値が指定されていない場合は、値 &quot;12 \&quot;はINSERT中に列の値としてバインドされます。"
 
 #: ../../core/defaults.rst:36
 msgid ""
 "A scalar value may also be associated with an UPDATE statement, though "
 "this is not very common (as UPDATE statements are usually looking for "
 "dynamic defaults)::"
-msgstr ""
+msgstr "スカラー値もUPDATE文に関連付けることができますが、これはあまり一般的ではありません（UPDATE文は通常動的なデフォルトを探します）。"
 
 #: ../../core/defaults.rst:46
 msgid "Python-Executed Functions"
-msgstr ""
+msgstr "Python実行関数"
 
 #: ../../core/defaults.rst:48
 msgid ""
@@ -95,7 +85,7 @@ msgid ""
 "supplied, and the value returned is used for the column's value. Below "
 "illustrates a crude \"sequence\" that assigns an incrementing counter to "
 "a primary key column::"
-msgstr ""
+msgstr "：paramref： `.Column.default`と：paramref：` .Column.onupdate`キーワード引数もPython関数を受け入れます。これらの関数は、その列に他の値が指定されていない場合に挿入または更新時に呼び出され、戻された値が列の値として使用されます。以下は、主キー列にインクリメントカウンタを割り当てる粗い &quot;シーケンス&quot;を示しています::"
 
 #: ../../core/defaults.rst:65
 msgid ""
@@ -108,13 +98,13 @@ msgid ""
 ":paramref:`.Column.autoincrement` flag, as well as the section on "
 ":class:`~sqlalchemy.schema.Sequence` later in this chapter for background"
 " on standard primary key generation techniques."
-msgstr ""
+msgstr "実際の「インクリメントシーケンス」の振舞いについては、データベースの組み込み機能が通常使用されるべきであり、これにはシーケンスオブジェクトまたはその他の自動インクリメント機能が含まれることに注意してください。主キー列の場合、SQLAlchemyはほとんどの場合、これらの機能を自動的に使用します。 APIのドキュメント：class： `〜sqlalchemy.schema.Column`：paramref：` .Column.autoincrement`フラグ、およびこの章の後半の：class： `〜sqlalchemy.schema.Sequence`セクションを参照してください。標準的な主キー生成技術についてのバックグラウンドです。"
 
 #: ../../core/defaults.rst:74
 msgid ""
 "To illustrate onupdate, we assign the Python ``datetime`` function "
 "``now`` to the :paramref:`.Column.onupdate` attribute::"
-msgstr ""
+msgstr "onupdateを説明するために、我々はPythonの `` datetime``関数 `` now``を：paramref： `.Column.onupdate`属性に割り当てます::"
 
 #: ../../core/defaults.rst:86
 msgid ""
@@ -124,11 +114,11 @@ msgid ""
 "Notice that we provide ``now`` as the function itself without calling it "
 "(i.e. there are no parenthesis following) - SQLAlchemy will execute the "
 "function at the time the statement executes."
-msgstr ""
+msgstr "update文が実行され、 `` last_updated``に値が渡されないと、 `` datetime.datetime.now（） ``のPython関数が実行され、その戻り値が `` last_updated``の値として使用されます。関数 `` now``を関数を呼び出さずに提供します（つまり、後に括弧はありません）。SQLAlchemyは、ステートメントの実行時に関数を実行します。"
 
 #: ../../core/defaults.rst:96
 msgid "Context-Sensitive Default Functions"
-msgstr ""
+msgstr "状況依存のデフォルト関数"
 
 #: ../../core/defaults.rst:98
 msgid ""
@@ -141,7 +131,7 @@ msgid ""
 " with regards to default generation is to have access to the other values"
 " being inserted or updated on the row. To access the context, provide a "
 "function that accepts a single ``context`` argument::"
-msgstr ""
+msgstr "：paramref： `.Column.default`と：paramref：` .Column.onupdate`で使用されるPython関数は、現在の文のコンテキストを利用して値を決定することもできます。ステートメントの `context`は、ソース式、それに関連するパラメーター、およびカーソルを含む、実行されているステートメントに関するすべての情報を含む内部SQLAlchemyオブジェクトです。デフォルトの生成に関するこのコンテキストの典型的な使用例は、行に挿入または更新されている他の値にアクセスすることです。コンテキストにアクセスするには、単一の `` context``引数を受け入れる関数を提供してください::"
 
 #: ../../core/defaults.rst:116
 msgid ""
@@ -150,7 +140,7 @@ msgid ""
 "``counter_plus_twelve`` was otherwise not provided, and the value will be"
 " that of whatever value is present in the execution for the ``counter`` "
 "column, plus the number 12."
-msgstr ""
+msgstr "上記のデフォルト生成関数は、 `` counter_plus_twelve``の値が提供されていなかったすべてのINSERT文とUPDATE文に対して実行されるように適用されます。値は、 `` 「カウンター」列に数字12を加えたものです。"
 
 #: ../../core/defaults.rst:121
 msgid ""
@@ -161,7 +151,7 @@ msgid ""
 ":class:`.Insert` construct (e.g. with more than one VALUES clause set up "
 "via the :meth:`.Insert.values` method), the user-defined function is also"
 " called once for each set of parameters."
-msgstr ""
+msgstr "たとえば、複数のパラメータセットを：meth： `.Connection.execute`に渡して、\&quot; executemany \ &quot;スタイルを使用して実行されている単一のステートメントの場合、ユーザー定義関数はパラメータのセットごとに1回呼び出されます。 ：meth： `.Insert.values`メソッドで複数のVALUES句を設定するなど、複数の値を持つクラス：` .Insert`構造のユースケースでは、ユーザ定義関数は一度呼び出されますパラメータの各セットについて。"
 
 #: ../../core/defaults.rst:128
 msgid ""
@@ -173,7 +163,7 @@ msgid ""
 "of a multi-valued INSERT construct, the subset of parameters that "
 "corresponds to the individual VALUES clause is isolated from the full "
 "parameter dictionary and returned alone."
-msgstr ""
+msgstr "この関数が呼び出されると、特殊メソッド：meth： `.DefaultExecutionContext.get_current_parameters`がコンテキストオブジェクト（：class：` .DefaultExecutionContext`のサブクラス）から利用可能になります。このメソッドは、INSERTまたはUPDATEステートメントの完全な値セットを表す値に、column-keyのディクショナリを返します。複数の値を持つINSERT構文の場合、個別のVALUES句に対応するパラメータのサブセットは、完全なパラメータ辞書から分離され、単独で返されます。"
 
 #: ../../core/defaults.rst:139
 msgid ""
@@ -182,18 +172,18 @@ msgid ""
 ":attr:`.DefaultExecutionContext.current_parameters` attribute by offering"
 " the service of organizing multiple VALUES clauses into individual "
 "parameter dictionaries."
-msgstr ""
+msgstr "追加：meth： `.DefaultExecutionContext.get_current_parameters`メソッド。これは、複数のVALUES句を個々のパラメータ辞書に編成するサービスを提供することによって、still-present：attr：` .DefaultExecutionContext.current_parameters`属性を改善しました。"
 
 #: ../../core/defaults.rst:146
 msgid "Client-Invoked SQL Expressions"
-msgstr ""
+msgstr "クライアントが呼び出すSQL式"
 
 #: ../../core/defaults.rst:148
 msgid ""
 "The :paramref:`.Column.default` and :paramref:`.Column.onupdate` keywords"
 " may also be passed SQL expressions, which are in most cases rendered "
 "inline within the INSERT or UPDATE statement::"
-msgstr ""
+msgstr "：paramref： `.Column.default`と：paramref：` .Column.onupdate`キーワードは、ほとんどの場合INSERT文またはUPDATE文の中でインラインでレンダリングされるSQL式を渡すこともできます::"
 
 #: ../../core/defaults.rst:165
 msgid ""
@@ -204,7 +194,7 @@ msgid ""
 "from another table. The ``last_modified`` column will be populated with "
 "the value of the SQL ``UTC_TIMESTAMP()`` MySQL function when an UPDATE "
 "statement is emitted for this table."
-msgstr ""
+msgstr "上記の `` create_date``カラムは `` now（） `` SQL関数（バックエンドに応じて、 `` NOW（） ``または `` CURRENT_TIMESTAMP``にコンパイルされます） case）と、別のテーブルのSELECTサブクエリの結果を含む `` key``カラムとを含む。 `` last_modified``カラムには、このテーブルに対してUPDATE文が発行されたときに、SQLの `` UTC_TIMESTAMP（） `` MySQL関数の値が設定されます。"
 
 #: ../../core/defaults.rst:175
 msgid ""
@@ -215,7 +205,7 @@ msgid ""
 "invoke it ourselves.   In the case of a SQL function, invoking "
 "``func.now()`` returns the SQL expression object that will render the "
 "\"NOW\" function into the SQL being emitted."
-msgstr ""
+msgstr "：attr： `.func`構造体でSQL関数を使用する場合、名前付き関数を` `func.now（）` `のようにかっこで\&quot;コール\ &quot;します。これはPython呼び出し可能関数を `` datetime.datetime``のようなデフォルトとして指定したときとは異なります。ここでは関数自体を渡しますが、呼び出すことはありません。 SQL関数の場合、 `` func.now（） ``を呼び出すと、\ &quot;NOW \&quot;関数を発行されるSQLにレンダリングするSQL式オブジェクトが返されます。"
 
 #: ../../core/defaults.rst:183
 msgid ""
@@ -227,7 +217,7 @@ msgid ""
 "which is part of the table's DDL definition, e.g. as part of the \"CREATE"
 " TABLE\" statement, which are likely more common.   For server side "
 "defaults, see the next section :ref:`server_defaults`."
-msgstr ""
+msgstr "：paramref： `.Column.default`と：paramref：` .Column.onupdate`で指定されたデフォルトおよび更新SQL式は、INSERT文またはUPDATE文が発生したときにSQLAlchemyによって明示的に呼び出されます。以下通り。これはテーブルのDDL定義の一部である\ &quot;サーバサイド\&quot;のデフォルトとは異なります。たとえば、\ &quot;CREATE TABLE \&quot;ステートメントのように、より一般的です。サーバー側のデフォルトについては、次のセクションを参照してください：ref： `server_defaults`"
 
 #: ../../core/defaults.rst:191
 msgid ""
@@ -241,7 +231,7 @@ msgid ""
 ":class:`.Insert` construct that specifies the "
 ":paramref:`~.expression.insert.inline` flag will always render default "
 "expressions inline."
-msgstr ""
+msgstr "：paramref： `.Column.default`で示されるSQL式がプライマリキー列で使用されている場合、SQLAlchemyはデフォルトの生成SQL関数を事前実行する必要があります。つまり、別のSELECTその結果の値はパラメータとしてINSERTに渡されます。これは、RETURNINGまたは `` cursor.lastrowid``が使用されないプライマリキー値を返すように要求されているINSERT文のプライマリキー列に対してのみ発生します。 ：paramref： `〜.expression.insert.inline`フラグを指定するclass：` .Insert`構造体は、常にデフォルト式をインラインで表示します。"
 
 #: ../../core/defaults.rst:201
 msgid ""
@@ -258,22 +248,22 @@ msgid ""
 ":attr:`.ResultProxy.inserted_primary_key` collection contains a list of "
 "primary key values for the row inserted (a list so that single-column and"
 " composite- column primary keys are represented in the same format)."
-msgstr ""
+msgstr "ステートメントがパラメータの1つのセットで実行されると（つまり、executemany \ &quot;スタイルの実行ではない）、返された：class：`〜sqlalchemy.engine.ResultProxy`は：meth： `.ResultProxy.postfetch_cols`には、インラインで実行されるデフォルトを持つall：class：`〜sqlalchemy.schema.Column`オブジェクトのリストが含まれています。同様に、事前に実行されたすべてのPythonおよびSQL式を含む、文にバインドされたすべてのパラメータは：meth： `.ResultProxy.last_inserted_pa​​rams`または：meth：` .ResultProxy.last_updated_pa​​rams`コレクションにあります：class ： `〜sqlalchemy.engine.ResultProxy`。 ：attr： `.ResultProxy.inserted_primary_key`コレクションには、挿入された行の主キー値のリスト（単一列と複合列の主キーが同じ形式で表されるようなリスト）が含まれています。"
 
 #: ../../core/defaults.rst:218
 msgid "Server-invoked DDL-Explicit Default Expressions"
-msgstr ""
+msgstr "サーバーが呼び出すDDL-明示的なデフォルトの式"
 
 #: ../../core/defaults.rst:220
 msgid ""
 "A variant on the SQL expression default is the "
 ":paramref:`.Column.server_default`, which gets placed in the CREATE TABLE"
 " statement during a :meth:`.Table.create` operation:"
-msgstr ""
+msgstr "SQL式のデフォルトのバリエーションは、：paramref： `.Column.server_default`です。これは、：meth：` .Table.create`操作中にCREATE TABLEステートメントに置かれます。"
 
 #: ../../core/defaults.rst:231
 msgid "A create call for the above table will produce::"
-msgstr ""
+msgstr "上記のテーブルを作成すると、次のものが生成されます::"
 
 #: ../../core/defaults.rst:239
 msgid ""
@@ -284,7 +274,7 @@ msgid ""
 "construct for any literal SQL values as opposed to passing the raw value,"
 " as SQLAlchemy does not typically perform any quoting or escaping on "
 "these values."
-msgstr ""
+msgstr "上記の例は、paramref： `.Column.server_default`、SQL関数（上の例ではSYSDATE）、サーバー側の定数値（整数\&quot; 0 \ &quot;上記の例）。 SQLAlchemyは通常、これらの値の引用やエスケープを行わないため、生の値を渡すのではなく、任意のリテラルSQL値に対して：func： `.text`構文を使用することをお勧めします。"
 
 #: ../../core/defaults.rst:246
 msgid ""
@@ -292,11 +282,11 @@ msgid ""
 " accommodate SQL expressions in general, however it is expected that "
 "these will usually be simple functions and expressions, and not the more "
 "complex cases like an embedded SELECT."
-msgstr ""
+msgstr "クライアント生成式のように、：paramref： `.Column.server_default`はSQL式に一般的に対応できますが、通常は単純な関数と式であり、埋め込みSELECTのような複雑なケースではありません。"
 
 #: ../../core/defaults.rst:254
 msgid "Marking Implicitly Generated Values, timestamps, and Triggered Columns"
-msgstr ""
+msgstr "暗黙的に生成された値、タイムスタンプ、トリガーされた列のマーキング"
 
 #: ../../core/defaults.rst:256
 msgid ""
@@ -306,7 +296,7 @@ msgid ""
 "platforms, as well as custom triggers that invoke upon INSERT or UPDATE "
 "to generate a new value, may be called out using :class:`.FetchedValue` "
 "as a marker::"
-msgstr ""
+msgstr "一部のプラットフォームのTIMESTAMP列に見られるようなデータベース固有の自動生成動作や、INSERTまたはUPDATE時に呼び出されるカスタム・トリガーなど、他のサーバー側のデータベース・メカニズムに基づいてINSERTまたはUPDATEに新しい値を生成する列新しい値を生成します：marker：class： `.FetchedValue`を使用して呼び出すことができます::"
 
 #: ../../core/defaults.rst:268
 msgid ""
@@ -320,21 +310,21 @@ msgid ""
 "an operation.   In particular, the :meth:`.ValuesBase.return_defaults` "
 "method can be used with an :class:`.Insert` or :class:`.Update` construct"
 " to indicate that these values should be returned."
-msgstr ""
+msgstr "：class： `.FetchedValue`インジケータは、CREATE TABLEのレンダリングされたDDLには影響しません。代わりに、INSERTステートメントまたはUPDATEステートメントの処理中にデータベースによって新しい値が移入される列としてマークします。また、サポートするデータベースは、列がRETURNING句またはOUTPUT句の一部であることを示すために使用されます。その声明SQLAlchemy ORMなどのツールは、このような操作の後に列の値を取得する方法を知るために、このマーカーを使用します。特に、：meth： `.ValuesBase.return_defaults`メソッドは、：class：` .Insert`または：class： `.Update`構文で使用して、これらの値を返すべきであることを示します。"
 
 #: ../../core/defaults.rst:279
 msgid ""
 "For details on using :class:`.FetchedValue` with the ORM, see "
 ":ref:`orm_server_defaults`."
-msgstr ""
+msgstr "ORMで：class： `.FetchedValue`を使用する方法の詳細は、：ref：` orm_server_defaults`を参照してください。"
 
 #: ../../core/defaults.rst:284
 msgid ":ref:`orm_server_defaults`"
-msgstr ""
+msgstr "：ref： `orm_server_defaults`"
 
 #: ../../core/defaults.rst:288
 msgid "Defining Sequences"
-msgstr ""
+msgstr "シーケンスの定義"
 
 #: ../../core/defaults.rst:290
 msgid ""
@@ -344,7 +334,7 @@ msgid ""
 "which have explicit support for sequences, which currently includes "
 "PostgreSQL, Oracle, and Firebird. The "
 ":class:`~sqlalchemy.schema.Sequence` object is otherwise ignored."
-msgstr ""
+msgstr "SQLAlchemyは：class： `〜sqlalchemy.schema.Sequence`オブジェクトを使用してデータベースシーケンスを表します。これは\&quot;カラムのデフォルト\ &quot;の特別なケースです。 PostgreSQL、Oracle、およびFirebirdを含むシーケンスの明示的なサポートを持つデータベースにのみ影響します。 ：class： `〜sqlalchemy.schema.Sequence`オブジェクトは、それ以外は無視されます。"
 
 #: ../../core/defaults.rst:297
 msgid ""
@@ -352,7 +342,7 @@ msgid ""
 " \"default\" generator to be used during INSERT operations, and can also "
 "be configured to fire off during UPDATE operations if desired. It is most"
 " commonly used in conjunction with a single integer primary key column::"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.schema.Sequence`は、INSERT操作中に使用される\&quot;デフォルト\ &quot;ジェネレータとして任意のカラムに置くことができます。また、必要に応じてUPDATE操作中に起動するように設定することもできます。これは、最も一般的には、単一の整数主キー列と組み合わせて使用​​されます。"
 
 #: ../../core/defaults.rst:311
 msgid ""
@@ -363,7 +353,7 @@ msgid ""
 "function is embedded in the INSERT statement, which is combined with "
 "RETURNING so that the newly generated value can be returned to the Python"
 " code::"
-msgstr ""
+msgstr "上記の場合、\ &quot;cartitems \&quot;テーブルは\ &quot;cart_id_seq \&quot;というシーケンスに関連付けられています。 \ &quot;cartitems \&quot;に対してINSERTステートメントが実行され、\ &quot;cart_id \&quot;列に値が渡されない場合、\ &quot;cart_id_seq \&quot;シーケンスが値を生成するために使用されます。通常、シーケンス関数はINSERTステートメントに組み込まれています。これはRETURNINGと組み合わされ、新しく生成された値をPythonコードに返すことができます::"
 
 #: ../../core/defaults.rst:322
 msgid ""
@@ -379,11 +369,11 @@ msgid ""
 " the :class:`.MetaData` using the :paramref:`.Sequence.metadata` "
 "parameter.  See the section :ref:`sequence_metadata` for more background "
 "on this."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.schema.Sequence`がPython側の**デフォルトジェネレータとして：class：` .Column`に関連付けられている場合、：class： `.Sequence`は\同様のDDLが所有：class： `.Table`のために生成された場合、&quot; CREATE SEQUENCE \ &quot;と&quot; DROP SEQUENCE \ &quot;DDL。これは、制限されたスコープの便利な機能で、：class： `.MetaData`の他の側面（例えばデフォルトスキーマ）の継承に対応していません。したがって、特定の：class： `.Column` /：class：` .Table`に対してローカルであるa：class： `.Sequence`に対して、：class：`と明示的に関連付けられることがベストプラクティスです。 ：paramref： `.Sequence.metadata`パラメータを使用してメタデータを生成します。これに関する詳細は、ref： `sequence_metadata`を参照してください。"
 
 #: ../../core/defaults.rst:335
 msgid "Associating a Sequence on a SERIAL column"
-msgstr ""
+msgstr "SERIAL列へのシーケンスの関連付け"
 
 #: ../../core/defaults.rst:337
 msgid ""
@@ -396,11 +386,11 @@ msgid ""
 "normally.   Instead, the :class:`.Sequence` will only take effect when "
 "used against other sequence-supporting databases, currently Oracle and "
 "Firebird."
-msgstr ""
+msgstr "PostgreSQLのSERIALデータ型は、CREATE TABLEが発行されたときにPostgreSQLシーケンスを暗黙的に作成することを意味する自動インクリメント型です。 a：class： `.Column`が明示的に：class：` .Sequence`オブジェクトを指定している場合、：paramref： `.Sequence.optional`ブールフラグの真の値も指定すると、：class：` .Sequence`はPostgreSQLの下で有効になり、SERIALデータ型は正常に処理されます。代わりに、：class： `.Sequence`は他のシーケンスサポートデータベース、現在OracleとFirebirdに対して使用される場合にのみ有効です。"
 
 #: ../../core/defaults.rst:347
 msgid "Executing a Sequence Standalone"
-msgstr ""
+msgstr "シーケンスをスタンドアロンで実行する"
 
 #: ../../core/defaults.rst:349
 msgid ""
@@ -408,7 +398,7 @@ msgid ""
 "generate values independently in the database.   If you have a "
 ":class:`.Sequence` object, it can be invoked with its \"next value\" "
 "instruction by passing it directly to a SQL execution method::"
-msgstr ""
+msgstr "SEQUENCEはSQLのファースト・クラス・スキーマ・オブジェクトで、データベース内で独立して値を生成するために使用できます。 ：class： `.Sequence`オブジェクトを持っていれば、\&quot;次の値\ &quot;命令でSQL実行メソッドに直接渡すことで呼び出すことができます::"
 
 #: ../../core/defaults.rst:358
 msgid ""
@@ -417,24 +407,24 @@ msgid ""
 ":meth:`.Sequence.next_value` method, which will render at statement "
 "compilation time a SQL function that is appropriate for the target "
 "backend::"
-msgstr ""
+msgstr "SELECTまたはINSERTのようなSQL文の中に：class： `.Sequence`の\&quot;次の値\ &quot;関数を埋め込むには、：meth：` .Sequence.next_value`メソッドを使います。コンパイル時間ターゲットバックエンドに適したSQL関数::"
 
 #: ../../core/defaults.rst:371
 msgid "Associating a Sequence with the MetaData"
-msgstr ""
+msgstr "シーケンスとメタデータの関連付け"
 
 #: ../../core/defaults.rst:373
 msgid ""
 "For many years, the SQLAlchemy documentation referred to the example of "
 "associating a :class:`.Sequence` with a table as follows::"
-msgstr ""
+msgstr "何年もの間、SQLAlchemyのドキュメントは、：class： `.Sequence`を次のようなテーブルに関連付ける例を参照しました::"
 
 #: ../../core/defaults.rst:383
 msgid ""
 "While the above is a prominent idiomatic pattern, it is recommended that "
 "the :class:`.Sequence` in most cases be explicitly associated with the "
 ":class:`.MetaData`, using the :paramref:`.Sequence.metadata` parameter::"
-msgstr ""
+msgstr "上記のものは顕著な慣用パターンですが、：class： `.Sequence`は：class：` .MetaData`と明示的に関連付けることが推奨されています：：paramref： `.Sequence.metadata`パラメータ： ："
 
 #: ../../core/defaults.rst:396
 msgid ""
@@ -448,27 +438,27 @@ msgid ""
 "subject to CREATE or DROP, this is a convenience feature that does not "
 "imply that the :class:`.Sequence` is fully associated with the "
 ":class:`.MetaData` object."
-msgstr ""
+msgstr "：class： `.Sequence`オブジェクトは、データベース内の任意のテーブルとは独立して存在し、テーブル間で共有することができるファーストクラスのスキーマ構造です。したがって、SQLAlchemyは、：class： `.Cequumn`オブジェクトをPython側またはサーバ側のデフォルトジェネレータのいずれかとして関連付けたとき、：class：` .Sequence`を暗黙的に変更しません。 CREATE SEQUENCE / DROP SEQUENCE DDLは、Pythonのサイドジェネレータとして定義された：class： `.Sequence`に対して生成されますが、テーブル自身はCREATEまたはDROPの対象となりますが、これは便利な機能であり、 ：class： `.Sequence`は：class：` .MetaData`オブジェクトと完全に関連付けられています。"
 
 #: ../../core/defaults.rst:406
 msgid ""
 "Explicitly associating the :class:`.Sequence` with :class:`.MetaData` "
 "allows for the following behaviors:"
-msgstr ""
+msgstr "明示的に：class： `.Sequence`を：class：` .MetaData`と関連付けることで、以下のような振る舞いが可能になります："
 
 #: ../../core/defaults.rst:409
 msgid ""
 "The :class:`.Sequence` will inherit the :paramref:`.MetaData.schema` "
 "parameter specified to the target :class:`.MetaData`, which affects the "
 "production of CREATE / DROP DDL, if any."
-msgstr ""
+msgstr "：class： `.Sequence`は、target：class：` .MetaData`に指定された：paramref： `.MetaData.schema`パラメータを継承します。もしあれば、CREATE / DROP DDLの生成に影響します。"
 
 #: ../../core/defaults.rst:413
 msgid ""
 "The :meth:`.Sequence.create` and :meth:`.Sequence.drop` methods "
 "automatically use the engine bound to the :class:`.MetaData` object, if "
 "any."
-msgstr ""
+msgstr "：meth： `.Sequence.create`メソッドと：meth：` .Sequence.drop`メソッドは：class： `.MetaData`オブジェクトがあればそれにバインドされたエンジンを自動的に使います。"
 
 #: ../../core/defaults.rst:417
 msgid ""
@@ -476,7 +466,7 @@ msgid ""
 "will emit CREATE / DROP for this :class:`.Sequence`, even if the "
 ":class:`.Sequence` is not associated with any :class:`.Table` / "
 ":class:`.Column` that's a member of this :class:`.MetaData`."
-msgstr ""
+msgstr "：meth： `.MetaData.create_all`メソッドと：meth：` .MetaData.drop_all`メソッドは：class： `.Sequence`が関連付けられていなくても、class：` .Sequence`のためにCREATE / DROPを生成します。 any：class： `.Table` /：class：` .Column`これはclass： `.MetaData`のメンバーです。"
 
 #: ../../core/defaults.rst:423
 msgid ""
@@ -485,23 +475,23 @@ msgid ""
 ":class:`.Table` and that options like default schema are propagated, "
 "setting the :paramref:`.Sequence.metadata` parameter should be considered"
 " a best practice."
-msgstr ""
+msgstr "：class： `.Sequence`を扱うケースの大部分は、：class：` .Sequence`がassocated：class： `.Table`によって完全に&quot;所有 &quot;され、デフォルトスキーマのようなオプションが伝播するには：paramref： `.Sequence.metadata`パラメータを設定することがベストプラクティスとみなされます。"
 
 #: ../../core/defaults.rst:429
 msgid "Associating a Sequence as the Server Side Default"
-msgstr ""
+msgstr "サーバー側のデフォルトとしてのシーケンスの関連付け"
 
 #: ../../core/defaults.rst:431
 msgid ""
 "The following technique is known to work only with the Postgresql "
 "database.  It does not work with Oracle."
-msgstr ""
+msgstr "次の手法は、PostgreSQLデータベースでのみ動作することが知られています。 Oracleでは動作しません。"
 
 #: ../../core/defaults.rst:434
 msgid ""
 "The preceding sections illustrate how to associate a :class:`.Sequence` "
 "with a :class:`.Column` as the **Python side default generator**::"
-msgstr ""
+msgstr "前のセクションでは、：class： `.Sequence`を**：class：` .Column`と** Python側のデフォルトジェネレータとして関連付ける方法を説明します** ::"
 
 #: ../../core/defaults.rst:441
 msgid ""
@@ -510,7 +500,7 @@ msgid ""
 "is subject to CREATE / DROP.  However, the sequence will **not** be "
 "present as the server-side default for the column when CREATE TABLE is "
 "emitted."
-msgstr ""
+msgstr "上記の場合、：class： `.Table`がCREATE / DROPの対象であるとき、：class：` .Sequence`は自動的にCREATE SEQUENCE / DROP SEQUENCE DDLの対象になります。ただし、CREATE TABLEが発行されたときに、列はサーバー側のデフォルトとして存在しません**。"
 
 #: ../../core/defaults.rst:446
 msgid ""
@@ -522,17 +512,17 @@ msgid ""
 "illustrate the same :class:`.Sequence` being associated with the "
 ":class:`.Column` both as the Python-side default generator as well as the"
 " server-side default generator::"
-msgstr ""
+msgstr "シーケンスをサーバ側のデフォルトとして使用する場合、SQLコマンドラインからテーブルにINSERTコマンドを発行したとしても、それを実行するには、：paramref： `.Column.server_default`パラメータを併用します：meth： `.Sequence.next_value`メソッドから利用可能なシーケンスの値生成関数を使用します。以下で同じことを説明します：class： `.Sequence`は：class：` .Column`にPython側のデフォルトジェネレータとサーバ側のデフォルトジェネレータ::"
 
 #: ../../core/defaults.rst:464
 msgid "or with the ORM::"
-msgstr ""
+msgstr "またはORM ::"
 
 #: ../../core/defaults.rst:476
 msgid ""
 "When the \"CREATE TABLE\" statement is emitted, on PostgreSQL it would be"
 " emitted as::"
-msgstr ""
+msgstr "\ &quot;CREATE TABLE \&quot;文が発行されると、PostgreSQL上では次のように出力されます::"
 
 #: ../../core/defaults.rst:486
 msgid ""
@@ -545,7 +535,7 @@ msgid ""
 "execute\" the sequence outside of the INSERT statement itself, which only"
 " works if the sequence is included as the Python-side default generator "
 "function."
-msgstr ""
+msgstr "Python側とサーバー側のデフォルト生成コンテキストの両方に：class： `.Sequence`を配置すると、すべての場合に\&quot;主キーのフェッチ\ &quot;ロジックが確実に動作します。通常、シーケンス対応データベースは、このステートメントを発行するときにSQLAlchemyによって自動的に使用されるINSERTステートメントのRETURNINGもサポートします。しかし、RETURNINGが特定の挿入に使用されていない場合、SQLAlchemyは、シーケンスがPython側のデフォルトジェネレータ関数としてインクルードされている場合にのみ動作するINSERT文の外でシーケンスを\ &quot;事前実行\&quot;する方が望ましいでしょう。"
 
 #: ../../core/defaults.rst:495
 msgid ""
@@ -553,95 +543,95 @@ msgid ""
 ":class:`.MetaData` directly, which again ensures that the "
 ":class:`.Sequence` is fully associated with the parameters of the "
 ":class:`.MetaData` collection including the default schema, if any."
-msgstr ""
+msgstr "この例では、：class： `.Sequence`を囲んでいる：class：` .MetaData`に直接関連付けることで、：class： `.Sequence`が：class：` .MetaData `もしあれば、デフォルトのスキーマを含むコレクション。"
 
 #: ../../core/defaults.rst:502
 msgid ":ref:`postgresql_sequences` - in the PostgreSQL dialect documentation"
-msgstr ""
+msgstr "：ref： `postgresql_sequences`  -  PostgreSQLの方言文書にあります"
 
 #: ../../core/defaults.rst:504
 msgid ":ref:`oracle_returning` - in the Oracle dialect documentation"
-msgstr ""
+msgstr "：ref： `oracle_returning`  -  Oracle Dialectのドキュメント"
 
 #: ../../core/defaults.rst:507
 msgid "Default Objects API"
-msgstr ""
+msgstr "デフォルトオブジェクトAPI"
 
 #: of sqlalchemy.schema.ColumnDefault:1
 msgid "A plain default value on a column."
-msgstr ""
+msgstr "列のプレーンなデフォルト値。"
 
 #: of sqlalchemy.schema.ColumnDefault:3
 msgid "This could correspond to a constant, a callable function, or a SQL clause."
-msgstr ""
+msgstr "これは、定数、呼び出し可能な関数、またはSQL節に対応する可能性があります。"
 
 #: of sqlalchemy.schema.ColumnDefault:6
 msgid ""
 ":class:`.ColumnDefault` is generated automatically whenever the "
 "``default``, ``onupdate`` arguments of :class:`.Column` are used.  A "
 ":class:`.ColumnDefault` can be passed positionally as well."
-msgstr ""
+msgstr "：class： `.ColumnDefault`は：class：` .Column`の `` default``、 `` onupdate``引数が使われるたびに自動的に生成されます。 A：class： `.ColumnDefault`も位置的に渡すことができます。"
 
 #: of sqlalchemy.schema.ColumnDefault:11 sqlalchemy.schema.DefaultClause:12
 msgid "For example, the following::"
-msgstr ""
+msgstr "たとえば、次の::"
 
 #: of sqlalchemy.schema.ColumnDefault:15 sqlalchemy.schema.DefaultClause:16
 msgid "Is equivalent to::"
-msgstr ""
+msgstr "::と同等です"
 
 #: of sqlalchemy.schema.DefaultClause:1 sqlalchemy.schema.PassiveDefault:1
 msgid "A DDL-specified DEFAULT column value."
-msgstr ""
+msgstr "DDLで指定されたDEFAULT列の値。"
 
 #: of sqlalchemy.schema.DefaultClause:3
 msgid ""
 ":class:`.DefaultClause` is a :class:`.FetchedValue` that also generates a"
 " \"DEFAULT\" clause when \"CREATE TABLE\" is emitted."
-msgstr ""
+msgstr "：class： `.DefaultClause`は：class：` .FetchedValue`で、\ &quot;CREATE TABLE \&quot;が発行されたときに\ &quot;DEFAULT \&quot;節を生成します。"
 
 #: of sqlalchemy.schema.DefaultClause:7
 msgid ""
 ":class:`.DefaultClause` is generated automatically whenever the "
 "``server_default``, ``server_onupdate`` arguments of :class:`.Column` are"
 " used.  A :class:`.DefaultClause` can be passed positionally as well."
-msgstr ""
+msgstr "：class： `.DefaultClause`は：class：` .Column`の `` server_default``、 `` server_onupdate``引数が使われるたびに自動的に生成されます。 A：class： `.DefaultClause`も位置的に渡すことができます。"
 
 #: of sqlalchemy.schema.DefaultGenerator:1
 msgid "Base class for column *default* values."
-msgstr ""
+msgstr "column * default *値の基本クラス。"
 
 #: of sqlalchemy.schema.FetchedValue:1
 msgid "A marker for a transparent database-side default."
-msgstr ""
+msgstr "透過的なデータベース側のデフォルト用のマーカー。"
 
 #: of sqlalchemy.schema.FetchedValue:3
 msgid ""
 "Use :class:`.FetchedValue` when the database is configured to provide "
 "some automatic default for a column."
-msgstr ""
+msgstr "列の自動デフォルトを提供するようにデータベースが設定されている場合は、class： `.FetchedValue`を使用します。"
 
 #: of sqlalchemy.schema.FetchedValue:6
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.schema.FetchedValue:10
 msgid ""
 "Would indicate that some trigger or default generator will create a new "
 "value for the ``foo`` column during an INSERT."
-msgstr ""
+msgstr "いくつかのトリガまたはデフォルトのジェネレータがINSERT中に `` foo``カラムの新しい値を生成することを示します。"
 
 #: of sqlalchemy.schema.FetchedValue:16
 msgid ":ref:`triggered_columns`"
-msgstr ""
+msgstr "：ref： `triggered_columns`"
 
 #: of sqlalchemy.schema.PassiveDefault:3
 msgid ":class:`.PassiveDefault` is deprecated. Use :class:`.DefaultClause`."
-msgstr ""
+msgstr "：class： `.PassiveDefault`は推奨されていません。クラス： `.DefaultClause`を使用してください。"
 
 #: of sqlalchemy.schema.Sequence:1
 msgid "Represents a named database sequence."
-msgstr ""
+msgstr "名前付きデータベースシーケンスを表します。"
 
 #: of sqlalchemy.schema.Sequence:3
 msgid ""
@@ -650,11 +640,11 @@ msgid ""
 "can be \"executed\" by a SQLAlchemy :class:`.Engine` or "
 ":class:`.Connection`, rendering the appropriate \"next value\" function "
 "for the target database and returning a result."
-msgstr ""
+msgstr "：class： `.Sequence`オブジェクトは、データベースシーケンスの名前と構成パラメータを表します。また、SQLAlchemy：class： `.Engine`または：class：` .Connection`によって &quot;実行&quot;され、ターゲットデータベースの適切な\ &quot;次の値\&quot;関数をレンダリングし、結果を返すコンストラクトを表します。"
 
 #: of sqlalchemy.schema.Sequence:9
 msgid "The :class:`.Sequence` is typically associated with a primary key column::"
-msgstr ""
+msgstr "：class： `.Sequence`は通常、主キー列::"
 
 #: of sqlalchemy.schema.Sequence:17
 msgid ""
@@ -662,28 +652,28 @@ msgid ""
 " platform supports sequences, a CREATE SEQUENCE statement will be emitted"
 " as well.   For platforms that don't support sequences, the "
 ":class:`.Sequence` construct is ignored."
-msgstr ""
+msgstr "上記のclass： `.Table`に対してCREATE TABLEが発行されると、ターゲットプラットフォームがシーケンスをサポートしている場合は、CREATE SEQUENCEも発行されます。シーケンスをサポートしないプラットフォームの場合、：class： `.Sequence`構文は無視されます。"
 
 #: of sqlalchemy.schema.Sequence:24
 msgid ":class:`.CreateSequence`"
-msgstr ""
+msgstr "：クラス： `.CreateSequence`"
 
 #: of sqlalchemy.schema.Sequence:26
 msgid ":class:`.DropSequence`"
-msgstr ""
+msgstr "：クラス： `.DropSequence`"
 
 #: of sqlalchemy.schema.Sequence.create:1
 msgid "Creates this sequence in the database."
-msgstr ""
+msgstr "このシーケンスをデータベースに作成します。"
 
 #: of sqlalchemy.schema.Sequence.drop:1
 msgid "Drops this sequence from the database."
-msgstr ""
+msgstr "このシーケンスをデータベースから削除します。"
 
 #: of sqlalchemy.schema.Sequence.next_value:1
 msgid ""
 "Return a :class:`.next_value` function element which will render the "
 "appropriate increment function for this :class:`.Sequence` within any SQL"
 " expression."
-msgstr ""
+msgstr "任意のSQL式の中でclass： `.Sequence`の適切なインクリメント関数をレンダリングするa：class：` .next_value`関数を返します。"
 

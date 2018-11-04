@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/contextual.rst:4
 msgid "Contextual/Thread-local Sessions"
-msgstr ""
+msgstr "コンテキスト/スレッドローカルセッション"
 
 #: ../../orm/contextual.rst:6
 msgid ""
@@ -29,7 +19,7 @@ msgid ""
 " a web request.   Most modern web frameworks include integration tools so"
 " that the scope of the :class:`.Session` can be managed automatically, "
 "and these tools should be used as they are available."
-msgstr ""
+msgstr "セクション：ref： `session_faq_whentocreate`から、\&quot;セッションスコープ\ &quot;という概念が導入されました。ウェブアプリケーションと、：class：` .Session`とWebのスコープをリンクする実践を重視しています要求。最新のWebフレームワークには、：class： `.Session`のスコープを自動的に管理できる統合ツールが含まれており、これらのツールは利用可能な状態で使用する必要があります。"
 
 #: ../../orm/contextual.rst:13
 msgid ""
@@ -37,7 +27,7 @@ msgid ""
 "establishment of user-defined :class:`.Session` scopes.  It is also used "
 "by third-party integration systems to help construct their integration "
 "schemes."
-msgstr ""
+msgstr "SQLAlchemyには、独自のヘルパーオブジェクトが含まれており、ユーザー定義クラス：class： `.Session`スコープの確立に役立ちます。サードパーティの統合システムでも、統合スキームの構築を支援するために使用されます。"
 
 #: ../../orm/contextual.rst:17
 msgid ""
@@ -46,7 +36,7 @@ msgid ""
 "the registry pattern, a good introduction can be found in `Patterns of "
 "Enterprise Architecture "
 "<http://martinfowler.com/eaaCatalog/registry.html>`_."
-msgstr ""
+msgstr "オブジェクトは：class： `.scoped_session`オブジェクトであり、：class：` .Session`オブジェクトの**レジストリ**を表します。レジストリパターンに精通していない場合は、 `Patterns of Enterprise Architecture <http://martinfowler.com/eaaCatalog/registry.html> `_。"
 
 #: ../../orm/contextual.rst:24
 msgid ""
@@ -59,7 +49,7 @@ msgid ""
 "such as `Flask-SQLAlchemy <http://packages.python.org/Flask-"
 "SQLAlchemy/>`_ or `zope.sqlalchemy "
 "<http://pypi.python.org/pypi/zope.sqlalchemy>`_."
-msgstr ""
+msgstr "：class： `.scoped_session`オブジェクトは、多くのSQLAlchemyアプリケーションで使用されている非常にポピュラーで有用なオブジェクトです。ただし、クラス： `.Session`管理の問題に対して、** **ただ一つのアプローチ**を提示することに注意することが重要です。 SQLAlchemyの初心者で、特に &quot;スレッドローカル変数&quot;という言葉があなたに奇妙に見える場合は、可能であれば、最初にFlask-SQLAlchemy <http://packages.python.org/Flask-SQLAlchemy/> `_または` zope.sqlalchemy <http://pypi.python.org/pypi/zope.sqlalchemy> `_。"
 
 #: ../../orm/contextual.rst:33
 msgid ""
@@ -69,13 +59,13 @@ msgid ""
 " of :class:`.Session`, the most common factory is the "
 ":class:`.sessionmaker`, introduced earlier in this section.  Below we "
 "illustrate this usage::"
-msgstr ""
+msgstr "A：class： `.scoped_session`は、それを呼び出すことによって構築され、新しい：class：` .Session`オブジェクトを作成できる** factory **を渡します。ファクトリは、呼び出されたときに新しいオブジェクトを生成するものです：class： `.Session`の場合、最も一般的なファクトリは：class：` .sessionmaker`です。以下に、この使用方法を示します。"
 
 #: ../../orm/contextual.rst:45
 msgid ""
 "The :class:`.scoped_session` object we've created will now call upon the "
 ":class:`.sessionmaker` when we \"call\" the registry::"
-msgstr ""
+msgstr "私たちが作成した：class： `.scoped_session`オブジェクトは、レジストリを\&quot;呼ぶ &quot;ときに：class：` .sessionmaker`を呼び出します："
 
 #: ../../orm/contextual.rst:50
 msgid ""
@@ -84,7 +74,7 @@ msgid ""
 "present within the :class:`.scoped_session` registry we've created.   If "
 "we call upon the registry a second time, we get back the **same** "
 ":class:`.Session`::"
-msgstr ""
+msgstr "上記の `` some_session``は、class： `.Session`のインスタンスです。ここでデータベースとの会話に使用できます。これと同じです：class： `.Session`は私たちが作成した：class：` .scoped_session`レジストリ内にも存在します。レジストリをもう一度呼び出すと、同じ**：class： `.Session` ::が返されます。"
 
 #: ../../orm/contextual.rst:59
 msgid ""
@@ -94,7 +84,7 @@ msgid ""
 ":class:`.Session` we've established in our registry will remain, until we"
 " explicitly tell our registry to dispose of it, by calling "
 ":meth:`.scoped_session.remove`::"
-msgstr ""
+msgstr "このパターンは、アプリケーションの異種のセクションがグローバル：class： `.scoped_session`を呼び出すことを可能にするので、それらのすべての領域は明示的に渡す必要なしに同じセッションを共有することができます。レジストリに設定した：class： `.Session`は、レジストリに明示的にそれを処分するまで、meth：` .scoped_session.remove` ::"
 
 #: ../../orm/contextual.rst:67
 msgid ""
@@ -105,25 +95,25 @@ msgid ""
 "\"Releasing\" here means that connections are returned to their "
 "connection pool and any transactional state is rolled back, ultimately "
 "using the ``rollback()`` method of the underlying DBAPI connection."
-msgstr ""
+msgstr "：meth： `.scoped_session.remove`メソッドは、現在の：class：` .Session`で最初に：meth： `.Session.close`を呼び出します。これは：class： `.Session`を実行した後、：class：` .Session`自体を破棄します。 \ &quot;解放\&quot;とは、接続が接続プールに返され、トランザクション状態がロールバックされ、最終的に基盤となるDBAPI接続の `` rollback（） ``メソッドを使用することを意味します。"
 
 #: ../../orm/contextual.rst:72
 msgid ""
 "At this point, the :class:`.scoped_session` object is \"empty\", and will"
 " create a **new** :class:`.Session` when called again.  As illustrated "
 "below, this is not the same :class:`.Session` we had before::"
-msgstr ""
+msgstr "この時点で、：class： `.scoped_session`オブジェクトは\&quot;空\ &quot;であり、再び呼び出されると、**新しい**：class：` .Session`が作成されます。下に示すように、これは同じではありません：class： `.Session`我々が前に持っていたもの::"
 
 #: ../../orm/contextual.rst:80
 msgid ""
 "The above series of steps illustrates the idea of the \"registry\" "
 "pattern in a nutshell.  With that basic idea in hand, we can discuss some"
 " of the details of how this pattern proceeds."
-msgstr ""
+msgstr "上記の一連の手順は、\ &quot;レジストリ\&quot;パターンの要点を簡単に示しています。その基本的なアイデアを手にして、このパターンがどのように進行するかの詳細についていくつか議論することができます。"
 
 #: ../../orm/contextual.rst:85
 msgid "Implicit Method Access"
-msgstr ""
+msgstr "暗黙的メソッドアクセス"
 
 #: ../../orm/contextual.rst:87
 msgid ""
@@ -134,18 +124,18 @@ msgid ""
 "the registry itself can be treated just like a :class:`.Session` "
 "directly; when methods are called on this object, they are **proxied** to"
 " the underlying :class:`.Session` being maintained by the registry::"
-msgstr ""
+msgstr "：class： `.scoped_session`の仕事は簡単です。それを求めるすべての人のために：class： `。Session &#39;を保持してください。 ：class： `.Session`、：class：` .scoped_session`には**プロキシの動作**も含まれています。これは、レジストリ自体が次のように扱われることを意味します：class： ``セッション。このオブジェクトに対してメソッドが呼び出されると、レジストリによって維持されている** class： `.Session`の**に**プロキシされます**"
 
 #: ../../orm/contextual.rst:103
 msgid ""
 "The above code accomplishes the same task as that of acquiring the "
 "current :class:`.Session` by calling upon the registry, then using that "
 ":class:`.Session`."
-msgstr ""
+msgstr "上記のコードは、レジストリを呼び出してclass： `.Session`を使用してcurrent：class：` .Session`を取得するのと同じタスクを実行します。"
 
 #: ../../orm/contextual.rst:107
 msgid "Thread-Local Scope"
-msgstr ""
+msgstr "スレッドローカルスコープ"
 
 #: ../../orm/contextual.rst:109
 msgid ""
@@ -169,7 +159,7 @@ msgid ""
 "the scope of a single thread.   Callers who call upon the registry in a "
 "different thread get a :class:`.Session` instance that is local to that "
 "other thread."
-msgstr ""
+msgstr "マルチスレッドプログラミングに精通しているユーザーは、何かをグローバル変数として表現することは悪い考えであることに注意してください。なぜなら、グローバルオブジェクトには多くのスレッドが同時にアクセスすることを意味するからです。 ：class： `.Session`オブジェクトは、**非同時**の方法で使用するように完全に設計されています。これは、マルチスレッド化という意味では&quot;一度に1つのスレッドのみ &quot;を意味します。したがって、上記の：class： `.scoped_session`の使用例では、同じ：class：` .Session`オブジェクトが複数の呼び出しにまたがって維持されているため、多くのスレッドで複数の呼び出しが行われないようなプロセスが必要です実際には同じセッションへのハンドルを取得します。この概念を**スレッドローカルストレージ**と呼びます。つまり、各アプリケーションスレッドごとに異なるオブジェクトを保持する特別なオブジェクトが使用されます。 Pythonはこれを `threading.local（） <http://docs.python.org/library/threading.html#threading.local> `_コンストラクト。 ：class： `.scoped_session`オブジェクトは、デフォルトではこのオブジェクトを記憶域として使用します：class：` .Session`は：class： `.scoped_session`レジストリを呼び出すすべての人のために維持されますが、スコープ内でのみ保持されます1つのスレッドのレジストリを別のスレッドで呼び出す呼び出し元は、他のスレッドに対してローカルなa：：class： `.Session`インスタンスを取得します。"
 
 #: ../../orm/contextual.rst:127
 msgid ""
@@ -177,7 +167,7 @@ msgid ""
 "relatively simple (if one is familiar with thread-local storage) way of "
 "providing a single, global object in an application that is safe to be "
 "called upon from multiple threads."
-msgstr ""
+msgstr "このテクニックを使用すると、：class： `.scoped_session`は、複数のスレッドから安全に呼び出されるアプリケーション内に単一のグローバルオブジェクトを提供する（スレッドローカルストレージに精通している場合） 。"
 
 #: ../../orm/contextual.rst:132
 msgid ""
@@ -192,11 +182,11 @@ msgid ""
 ":meth:`.Session.rollback`, will usually still be something that must be "
 "explicitly arranged for at the appropriate time, unless the application "
 "actually ties the lifespan of a thread to the lifespan of a transaction."
-msgstr ""
+msgstr "：meth： `.scoped_session.remove`メソッドはいつものように、スレッドに関連する現在の：class：` .Session`を削除します。しかし、 `` threading.local（） ``オブジェクトの利点の1つは、アプリケーションスレッド自体が終了すると、そのスレッドの\ &quot;storage \&quot;もガベージコレクトされるということです。だから、実際には：meth： `.scoped_session.remove`を呼び出す必要なしにスレッドを生成して裂くアプリケーションでスレッドローカルスコープを使うことは&quot;安全 &quot;です。しかし、トランザクション自体の範囲、すなわち：meth： `.Session.commit`または：meth：` .Session.rollback`を介してそれらを終了することは、通常、依然として適切な時間に明示的に配置されなければならないものですアプリケーションは実際にはスレッドの寿命をトランザクションの寿命に結びつけます。"
 
 #: ../../orm/contextual.rst:146
 msgid "Using Thread-Local Scope with Web Applications"
-msgstr ""
+msgstr "Webアプリケーションでのスレッドローカルスコープの使用"
 
 #: ../../orm/contextual.rst:148
 msgid ""
@@ -210,7 +200,7 @@ msgid ""
 "and completed within the scope of a single *worker thread*.  When the "
 "request ends, the worker thread is released to a pool of workers where it"
 " is available to handle another request."
-msgstr ""
+msgstr "セクション：ref： `session_faq_whentocreate`で説明したように、Webアプリケーションは** Webリクエスト**のコンセプトの周りに構築され、このようなアプリケーションを：class：` .Session`と統合することは通常：class： `.Session`はそのリクエストに関連付けられます。明らかになったように、非同期フレームワークのTwistedやTornadoなどの例外的な例外を除いて、ほとんどのPython Webフレームワークは、単純な方法でスレッドを使用して、特定のWebリクエストを受信し、処理し、糸*。要求が終了すると、ワーカースレッドは別の要求を処理できるワーカーのプールに解放されます。"
 
 #: ../../orm/contextual.rst:158
 msgid ""
@@ -222,27 +212,27 @@ msgid ""
 " practice to use :class:`.scoped_session` as a quick way to integrate the"
 " :class:`.Session` with a web application.  The sequence diagram below "
 "illustrates this flow::"
-msgstr ""
+msgstr "このWebリクエストとスレッドの単純な対応は、a：class： `.Session`をスレッドに関連付けることは、そのスレッド内で実行されているWebリクエストにも関連付けられていることを意味し、その逆もあります。ただし、：class：` .Session `は、Web要求が開始され、Web要求が終了する直前に切断された後にのみ作成されます。だから：class： `.Session`をWebアプリケーションと統合するための素早い方法として：class：` .scoped_session`を使うのが一般的です。下のシーケンス図はこのフローを示しています::"
 
 #: ../../orm/contextual.rst:197
 msgid ""
 "Using the above flow, the process of integrating the :class:`.Session` "
 "with the web application has exactly two requirements:"
-msgstr ""
+msgstr "上記のフローを使用して、：class： `.Session`とWebアプリケーションを統合するプロセスには、まさに2つの要件があります。"
 
 #: ../../orm/contextual.rst:200
 msgid ""
 "Create a single :class:`.scoped_session` registry when the web "
 "application first starts, ensuring that this object is accessible by the "
 "rest of the application."
-msgstr ""
+msgstr "Webアプリケーションが最初に起動するときに、クラス： `.scoped_session`という単一のレジストリを作成し、このオブジェクトが残りのアプリケーションからアクセス可能であることを確認します。"
 
 #: ../../orm/contextual.rst:203
 msgid ""
 "Ensure that :meth:`.scoped_session.remove` is called when the web request"
 " ends, usually by integrating with the web framework's event system to "
 "establish an \"on request end\" event."
-msgstr ""
+msgstr "次のことを確認してください：meth： `.scoped_session.remove`は、Webリクエストが終了したときに呼び出されます。通常、Webフレームワークのイベントシステムと統合されて\&quot;要求終了時の終了 &quot;イベントが確立されます。"
 
 #: ../../orm/contextual.rst:207
 msgid ""
@@ -253,7 +243,7 @@ msgid ""
 "**strongly recommended that the integration tools provided with the web "
 "framework itself be used, if available**, instead of "
 ":class:`.scoped_session`."
-msgstr ""
+msgstr "前述のように、上記のパターンは** class： `.Session`をWebフレームワークと統合するための**ただ一つの潜在的な方法です**特に** WebフレームワークがWeb要求をアプリケーションに関連付けるという重要な前提スレッド**。ただし、** class： `.scoped_session`の代わりに**利用可能な場合、Webフレームワーク自体で提供される統合ツールを使用することを強くお勧めします。"
 
 #: ../../orm/contextual.rst:213
 msgid ""
@@ -263,11 +253,11 @@ msgid ""
 "custom scopes details a more advanced configuration which can combine the"
 " usage of :class:`.scoped_session` with direct request based scope, or "
 "any kind of scope."
-msgstr ""
+msgstr "特に、スレッドローカルを使用すると便利ですが、：class： `.Session`は**現在のスレッドではなく**リクエストに直接関連することが望ましいです。カスタムスコープの次のセクションでは、class： `.scoped_session`とダイレクトリクエストベースのスコープ、またはあらゆる種類のスコープの使用法を組み合わせることができる、より高度な設定について詳しく説明します。"
 
 #: ../../orm/contextual.rst:220
 msgid "Using Custom Created Scopes"
-msgstr ""
+msgstr "カスタム作成スコープの使用"
 
 #: ../../orm/contextual.rst:222
 msgid ""
@@ -275,7 +265,7 @@ msgid ""
 "local\" scope is only one of many options on how to \"scope\" a "
 ":class:`.Session`.   A custom scope can be defined based on any existing "
 "system of getting at \"the current thing we are working with\"."
-msgstr ""
+msgstr "：class： `.scoped_session`オブジェクトのデフォルトの振る舞い\&quot; thread local \ &quot;スコープは、class：` .Session`のスコープを変更するための多くのオプションのうちの一つにすぎません。カスタムスコープは\ &quot;現在作業中のもの\&quot;で取得する既存のシステムに基づいて定義できます。"
 
 #: ../../orm/contextual.rst:226
 msgid ""
@@ -289,7 +279,7 @@ msgid ""
 "conjunction with a hypothetical event marker provided by the web "
 "framework ``on_request_end``, which allows code to be invoked whenever a "
 "request ends::"
-msgstr ""
+msgstr "Webフレームワークがライブラリ関数 `` get_current_request（） `を定義しているとします。このフレームワークを使用して構築されたアプリケーションはいつでもこの関数を呼び出すことができ、結果は処理中の現在の要求を表す何らかの `` Request``オブジェクトになります。 `` Request``オブジェクトがハッシュ可能な場合、この関数は：class： `.scoped_session`と簡単に統合して：class：` .Session`を要求に関連付けることができます。以下では、Webフレームワークの `` on_request_end``によって提供される仮想的なイベントマーカーと組み合わせてこれを説明します。これにより、リクエストが終了するたびにコードを呼び出すことができます::"
 
 #: ../../orm/contextual.rst:243
 msgid ""
@@ -300,39 +290,39 @@ msgid ""
 " :class:`.Session`.   In this case it is particularly important that we "
 "ensure a reliable \"remove\" system is implemented, as this dictionary is"
 " not otherwise self-managed."
-msgstr ""
+msgstr "上の例では：class： `.scoped_session`を通常の方法でインスタンス化しますが、リクエストを返す関数を\&quot; scopefunc \ &quot;として渡す点が異なります。これは：class： `.scoped_session`に、現在の：class：` .Session`を返すようにレジストリが呼び出されるたびにこの関数を使って辞書キーを生成するよう指示します。この場合、信頼できる\ &quot;remove \&quot;システムが実装されていることを確実にすることが特に重要です。なぜなら、この辞書は他には自己管理されていないからです。"
 
 #: ../../orm/contextual.rst:252
 msgid "Contextual Session API"
-msgstr ""
+msgstr "コンテクストセッションAPI"
 
 #: of sqlalchemy.orm.scoping.scoped_session:1
 msgid "Provides scoped management of :class:`.Session` objects."
-msgstr ""
+msgstr "：class： `.Session`オブジェクトのスコープ管理を提供します。"
 
 #: of sqlalchemy.orm.scoping.scoped_session:3
 msgid "See :ref:`unitofwork_contextual` for a tutorial."
-msgstr ""
+msgstr "チュートリアルについては：ref： `unitofwork_contextual`を参照してください。"
 
 #: of sqlalchemy.orm.scoping.scoped_session.configure:1
 msgid ""
 "reconfigure the :class:`.sessionmaker` used by this "
 ":class:`.scoped_session`."
-msgstr ""
+msgstr "：class： `.scoped_session`によって使用される：class：` .sessionmaker`を再設定します。"
 
 #: of sqlalchemy.orm.scoping.scoped_session.configure:4
 msgid "See :meth:`.sessionmaker.configure`."
-msgstr ""
+msgstr "See：meth： `.sessionmaker.configure`。"
 
 #: of sqlalchemy.orm.scoping.scoped_session.query_property:1
 msgid ""
 "return a class property which produces a :class:`.Query` object against "
 "the class and the current :class:`.Session` when called."
-msgstr ""
+msgstr "クラスに対して：class： `.Query`オブジェクトを生成するクラスプロパティと、呼び出されたときには現在の：class：` .Session`を返します。"
 
 #: of sqlalchemy.orm.scoping.scoped_session.query_property:4
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.orm.scoping.scoped_session.query_property:14
 msgid ""
@@ -340,15 +330,15 @@ msgid ""
 "To override and use a custom implementation, provide a ``query_cls`` "
 "callable.  The callable will be invoked with the class's mapper as a "
 "positional argument and a session keyword argument."
-msgstr ""
+msgstr "既定では、セッションで構成されたクエリクラスのインスタンスが生成されます。カスタム実装をオーバーライドして使用するには、 `` query_cls``を呼び出し可能にします。呼び出し可能オブジェクトは、クラスのマッパーを位置引数およびセッションキーワード引数として呼び出されます。"
 
 #: of sqlalchemy.orm.scoping.scoped_session.query_property:20
 msgid "There is no limit to the number of query properties placed on a class."
-msgstr ""
+msgstr "クラスに配置されるクエリプロパティの数に制限はありません。"
 
 #: of sqlalchemy.orm.scoping.scoped_session.remove:1
 msgid "Dispose of the current :class:`.Session`, if present."
-msgstr ""
+msgstr "現在の：class： `.Session`があればそれを破棄します。"
 
 #: of sqlalchemy.orm.scoping.scoped_session.remove:3
 msgid ""
@@ -358,7 +348,7 @@ msgid ""
 "The :class:`.Session` is then discarded.   Upon next usage within the "
 "same scope, the :class:`.scoped_session` will produce a new "
 ":class:`.Session` object."
-msgstr ""
+msgstr "これは、現在：class： `.Session`の：meth：` .Session.close`メソッドを呼び出します。これは、まだ保持されている既存のトランザクション/接続リソースを解放します。トランザクションは特にロールバックされます。 ：class： `.Session`は破棄されます。同じスコープ内で次の使用時に、：class： `.scoped_session`は新しい：class：` .Session`オブジェクトを生成します。"
 
 #: of sqlalchemy.orm.scoping.scoped_session.session_factory:1
 msgid ""
@@ -366,47 +356,47 @@ msgid ""
 "and may be accessed at a later time.  This can be useful when a new non-"
 "scoped :class:`.Session` or :class:`.Connection` to the database is "
 "needed."
-msgstr ""
+msgstr "`__init__`に与えられた` session_factory`はこの属性に格納され、後でアクセスすることができます。これは、スコープのない新しい：class： `.Session`またはデータベースへの：class：` .Connection`が必要な場合に便利です。"
 
 #: of sqlalchemy.util.ScopedRegistry:1
 msgid ""
 "A Registry that can store one or multiple instances of a single class on "
 "the basis of a \"scope\" function."
-msgstr ""
+msgstr "\ &quot;スコープ\&quot;機能に基づいて単一クラスの1つまたは複数のインスタンスを格納できるレジストリ。"
 
 #: of sqlalchemy.util.ScopedRegistry:4
 msgid ""
 "The object implements ``__call__`` as the \"getter\", so by calling "
 "``myregistry()`` the contained object is returned for the current scope."
-msgstr ""
+msgstr "オブジェクトは\ &quot;getter \&quot;として `` __call__``を実装しているので、 `` myregistry（） ``を呼び出すことで、現在のスコープに対して含まれているオブジェクトが返されます。"
 
 #: of sqlalchemy.util.ScopedRegistry
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.util.ScopedRegistry:8
 msgid "a callable that returns a new object to be placed in the registry"
-msgstr ""
+msgstr "レジストリに配置される新しいオブジェクトを返す呼び出し可能オブジェクト"
 
 #: of sqlalchemy.util.ScopedRegistry:11
 msgid "a callable that will return a key to store/retrieve an object."
-msgstr ""
+msgstr "オブジェクトを格納/取得するためのキーを返す呼び出し可能オブジェクト。"
 
 #: of sqlalchemy.util.ScopedRegistry.clear:1
 msgid "Clear the current scope, if any."
-msgstr ""
+msgstr "存在する場合は、現在のスコープをクリアします。"
 
 #: of sqlalchemy.util.ScopedRegistry.has:1
 msgid "Return True if an object is present in the current scope."
-msgstr ""
+msgstr "オブジェクトが現在のスコープに存在する場合はTrueを返します。"
 
 #: of sqlalchemy.util.ScopedRegistry.set:1
 msgid "Set the value for the current scope."
-msgstr ""
+msgstr "現在のスコープの値を設定します。"
 
 #: of sqlalchemy.util.ThreadLocalRegistry:1
 msgid ""
 "A :class:`.ScopedRegistry` that uses a ``threading.local()`` variable for"
 " storage."
-msgstr ""
+msgstr "A：class： `.ScopedRegistry`で、` `threading.local（）` `変数を使って保存します。"
 

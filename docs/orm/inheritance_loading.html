@@ -10,7 +10,7 @@
         <title>
             
     
-    Loading Inheritance Hierarchies
+    継承階層のロード
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Loading Objects" href="loading_objects.html" />
-        <link rel="next" title="Constructors and Object Initialization" href="constructors.html" />
-        <link rel="prev" title="Relationship Loading Techniques" href="loading_relationships.html" />
+        <link rel="up" title="オブジェクトの読み込み" href="loading_objects.html" />
+        <link rel="next" title="コンストラクタとオブジェクトの初期化" href="constructors.html" />
+        <link rel="prev" title="関係の読み込み手法" href="loading_relationships.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,41 +120,41 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="loading_columns.html">Loading Columns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_relationships.html">Relationship Loading Techniques</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Loading Inheritance Hierarchies</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#using-with-polymorphic">Using with_polymorphic</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#using-aliasing-with-with-polymorphic">Using aliasing with with_polymorphic</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#referring-to-specific-subclass-attributes">Referring to Specific Subclass Attributes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#setting-with-polymorphic-at-mapper-configuration-time">Setting with_polymorphic at mapper configuration time</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#setting-with-polymorphic-against-a-query">Setting with_polymorphic against a query</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="loading_columns.html">列の読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_relationships.html">関係の読み込み手法</a></span></li>
+<li class="selected"><span class="link-container first"><strong>継承階層のロード</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#using-with-polymorphic">with_polymorphicの使用</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#using-aliasing-with-with-polymorphic">with_polymorphicでのエイリアシングの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#referring-to-specific-subclass-attributes">特定のサブクラス属性の参照</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#setting-with-polymorphic-at-mapper-configuration-time">マッパー設定時にwith_polymorphicを設定する</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#setting-with-polymorphic-against-a-query">with_polymorphicをクエリに対して設定する</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#polymorphic-selectin-loading">Polymorphic Selectin Loading</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#combining-selectin-and-with-polymorphic">Combining selectin and with_polymorphic</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#polymorphic-selectin-loading">多型セレクチンのローディング</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#combining-selectin-and-with-polymorphic">selectinとwith_polymorphicの組み合わせ</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#referring-to-specific-subtypes-on-relationships">Referring to specific subtypes on relationships</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#eager-loading-of-specific-or-polymorphic-subtypes">Eager Loading of Specific or Polymorphic Subtypes</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#referring-to-specific-subtypes-on-relationships">関係の特定のサブタイプを参照する</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#eager-loading-of-specific-or-polymorphic-subtypes">特定または多型サブタイプのEager読み込み</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#loading-objects-with-joined-table-inheritance">Loading objects with joined table inheritance</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#loading-objects-with-single-table-inheritance">Loading objects with single table inheritance</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#inheritance-loading-api">Inheritance Loading API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#loading-objects-with-joined-table-inheritance">テーブル継承を結合したオブジェクトのロード</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#loading-objects-with-single-table-inheritance">1つのテーブル継承を持つオブジェクトのロード</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#inheritance-loading-api">継承ロードAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="constructors.html">Constructors and Object Initialization</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="query.html">Query API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="constructors.html">コンストラクタとオブジェクトの初期化</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="query.html">クエリAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -170,62 +170,26 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="loading-inheritance-hierarchies">
-<span id="inheritance-loading-toplevel"></span><h1>Loading Inheritance Hierarchies<a class="headerlink" href="#loading-inheritance-hierarchies" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>When classes are mapped in inheritance hierarchies using the &quot;joined&quot;,
-&quot;single&quot;, or &quot;concrete&quot; table inheritance styles as described at
-<a class="reference internal" href="inheritance.html"><span class="std std-ref">Mapping Class Inheritance Hierarchies</span></a>, the usual behavior is that a query for a
-particular base class will also yield objects corresponding to subclasses
-as well.   When a single query is capable of returning a result with
-a different class or subclasses per result row, we use the term
-&quot;polymorphic loading&quot;.</p>
-<p>Within the realm of polymorphic loading, specifically with joined and single
-table inheritance, there is an additional problem of which subclass attributes
-are to be queried up front, and which are to be loaded later. When an attribute
-of a particular subclass is queried up front, we can use it in our query as
-something to filter on, and it also will be loaded when we get our objects
-back.   If it's not queried up front, it gets loaded later when we first need
-to access it.   Basic control of this behavior is provided using the
-<a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> function, as well as two variants, the mapper
-configuration <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.with_polymorphic" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">mapper.with_polymorphic</span></code></a> in conjunction with
-the <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.polymorphic_load" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">mapper.polymorphic_load</span></code></a> option, and the <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a>
--level <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.with_polymorphic" title="sqlalchemy.orm.query.Query.with_polymorphic"><code class="xref py py-meth docutils literal"><span class="pre">Query.with_polymorphic()</span></code></a> method.    The &quot;with_polymorphic&quot; family
-each provide a means of specifying which specific subclasses of a particular
-base class should be included within a query, which implies what columns and
-tables will be available in the SELECT.</p>
+<span id="inheritance-loading-toplevel"></span><h1>継承階層のロード<a class="headerlink" href="#loading-inheritance-hierarchies" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>inheritance_toplevel`で説明されているように継承階層で&amp;quot; joined &amp;quot;、&amp;quot; single &amp;quot;、&amp;quot; concrete &amp;quot;テーブルの継承スタイルを使用してマッピングされている場合、通常の動作は、サブクラスに対応するオブジェクトも生成されます。単一の問合せが結果クラスごとに異なるクラスまたはサブクラスを持つ結果を返すことができる場合は、「ポリモーフィック・ロード」という用語を使用します。</p>
+<p>多相ローディングの領域内、特に結合された単一のテーブル継承では、サブクラス属性を前に照会し、後でロードするという追加の問題があります。特定のサブクラスの属性が前面に照会されると、それを照会でフィルターにかけることができ、オブジェクトを戻すときにもロードされます。正面まで問い合わせなければ、最初にアクセスする必要があるときに後で読み込まれます。この動作の基本的な制御は、：func： <cite>.orm.with_polymorphic`関数と、マッパー設定の2つのバリエーション、paramref：</cite> .mapper.with_polymorphic`と：paramref： <cite>.mapper.polymorphic_load `オプション、：class：</cite> .Query` -level：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Query.with_polymorphic`メソッドです。 &amp;quot;with_polymorphic &amp;quot;ファミリは、クエリ内に特定の基本クラスのどの特定のサブクラスを含めるかを指定する手段を提供します。これは、SELECTで使用できる列とテーブルを示します。</p>
 <div class="section" id="using-with-polymorphic">
-<span id="with-polymorphic"></span><h2>Using with_polymorphic<a class="headerlink" href="#using-with-polymorphic" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>For the following sections, assume the <code class="docutils literal"><span class="pre">Employee</span></code> / <code class="docutils literal"><span class="pre">Engineer</span></code> / <code class="docutils literal"><span class="pre">Manager</span></code>
-examples introduced in <a class="reference internal" href="inheritance.html"><span class="std std-ref">Mapping Class Inheritance Hierarchies</span></a>.</p>
-<p>Normally, when a <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> specifies the base class of an
-inheritance hierarchy, only the columns that are local to that base
-class are queried:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></pre></div>
+<span id="with-polymorphic"></span><h2>with_polymorphicの使用<a class="headerlink" href="#using-with-polymorphic" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>以下のセクションでは、ref： <cite>inheritance_toplevel`に導入された</cite> <cite>Employee`</cite> /` <cite>Engineer`</cite> /` <a href="#id1"><span class="problematic" id="id2">`</span></a>Manager``の例を想定しています。</p>
+<p>通常、a：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Query`が継承階層の基本クラスを指定すると、その基本クラスに対してローカルな列だけが照会されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></pre></div>
 </div>
-<p>Above, for both single and joined table inheritance, only the columns
-local to <code class="docutils literal"><span class="pre">Employee</span></code> will be present in the SELECT.   We may get back
-instances of <code class="docutils literal"><span class="pre">Engineer</span></code> or <code class="docutils literal"><span class="pre">Manager</span></code>, however they will not have the
-additional attributes loaded until we first access them, at which point a
-lazy load is emitted.</p>
-<p>Similarly, if we wanted to refer to columns mapped
-to <code class="docutils literal"><span class="pre">Engineer</span></code> or <code class="docutils literal"><span class="pre">Manager</span></code> in our query that's against <code class="docutils literal"><span class="pre">Employee</span></code>,
-these columns aren't available directly in either the single or joined table
-inheritance case, since the <code class="docutils literal"><span class="pre">Employee</span></code> entity does not refer to these columns
-(note that for single-table inheritance, this is common if Declarative is used,
-but not for a classical mapping).</p>
-<p>To solve both of these issues, the <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> function
-provides a special <a class="reference internal" href="query.html#sqlalchemy.orm.util.AliasedClass" title="sqlalchemy.orm.util.AliasedClass"><code class="xref py py-class docutils literal"><span class="pre">AliasedClass</span></code></a> that represents a range of
-columns across subclasses. This object can be used in a <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a>
-like any other alias.  When queried, it represents all the columns present in
-the classes given:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">with_polymorphic</span>
+<p>上では、単一テーブル継承と結合テーブル継承の両方で、 `` Employee``にローカルな列だけがSELECTに存在します。 `` Engineer``や `` Manager``のインスタンスを返すかもしれませんが、最初にアクセスするまで追加の属性をロードすることはありません。その時点で遅延ロードが発生します。</p>
+<p>同様に、 `` Engineer``や `` Manager``にマップされたクエリを `` Employee``に照らして照会したい場合、これらのカラムは単一の継承ケースまたは結合されたテーブルの継承ケースでは直接利用できません。 `` Employee``エンティティはこれらの列を参照しないので（単一テーブルの継承の場合、Declarativeが使用される場合は一般的ですが、古典的なマッピングの場合は一般的ではないことに注意してください）。</p>
+<p>これらの問題を解決するため、：func： <cite>.orm.with_polymorphic`関数は、サブクラス間の列の範囲を表す特別な：class：</cite> .AliasedClass`を提供します。このオブジェクトは他のエイリアスと同様に、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Query`で使用できます。照会すると、与えられたクラスに存在するすべての列を表します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">with_polymorphic</span>
 
 <span class="n">eng_plus_manager</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span><span class="n">Employee</span><span class="p">,</span> <span class="p">[</span><span class="n">Engineer</span><span class="p">,</span> <span class="n">Manager</span><span class="p">])</span>
 
 <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">eng_plus_manager</span><span class="p">)</span></pre></div>
 </div>
-<p>If the above mapping were using joined table inheritance, the SELECT
-statement for the above would be:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<p>上記のマッピングが結合テーブルの継承を使用していた場合、上記のSELECTステートメントは次のようになります。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 <div class='show_sql'>
 SELECT employee.id AS employee_id,
     engineer.id AS engineer_id,
@@ -241,12 +205,9 @@ FROM employee
     ON employee.id = manager.id
 []</div></pre></div>
 </div>
-<p>Where above, the additional tables / columns for &quot;engineer&quot; and &quot;manager&quot; are
-included.  Similar behavior occurs in the case of single table inheritance.</p>
-<p><a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> accepts a single class or
-mapper, a list of classes/mappers, or the string <code class="docutils literal"><span class="pre">'*'</span></code> to indicate all
-subclasses:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="c1"># include columns for Engineer</span>
+<p>上記の場合、&amp;quot;engineer &amp;quot;と&amp;quot;manager &amp;quot;の追加テーブル/列が含まれています。単一のテーブル継承の場合も同様の動作が発生します。</p>
+<p>：func： <cite>.orm.with_polymorphic`は、単一のクラスまたはマッパー、クラス/マッパーのリスト、またはすべてのサブクラスを示す文字列</cite> <cite>&amp;#39;*&amp;#39;</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>を受け取ります：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="c1"># include columns for Engineer</span>
 <span class="n">entity</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span><span class="n">Employee</span><span class="p">,</span> <span class="n">Engineer</span><span class="p">)</span>
 
 <span class="c1"># include columns for Engineer, Manager</span>
@@ -256,16 +217,9 @@ subclasses:</p>
 <span class="n">entity</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span><span class="n">Employee</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">)</span></pre></div>
 </div>
 <div class="section" id="using-aliasing-with-with-polymorphic">
-<h3>Using aliasing with with_polymorphic<a class="headerlink" href="#using-aliasing-with-with-polymorphic" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> function also provides &quot;aliasing&quot; of the
-polymorphic selectable itself, meaning, two different <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a>
-entities, referring to the same class hierarchy, can be used together.  This
-is available using the <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic.params.aliased" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-paramref docutils literal"><span class="pre">orm.with_polymorphic.aliased</span></code></a> flag.
-For a polymorphic selectable that is across multiple tables, the default behavior
-is to wrap the selectable into a subquery.  Below we emit a query that will
-select for &quot;employee or manager&quot; paired with &quot;employee or engineer&quot; on employees
-with the same name:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="n">engineer_employee</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span>
+<h3>with_polymorphicでのエイリアシングの使用<a class="headerlink" href="#using-aliasing-with-with-polymorphic" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>：func： <cite>.orm.with_polymorphic`関数は、多相選択可能オブジェクト自体の&amp;quot;エイリアシング&amp;quot;も提供します。つまり、同じクラス階層を参照する2つの異なる：func：</cite> .orm.with_polymorphic`エンティティを一緒に使用できます。これは、：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.orm.with_polymorphic.aliased`フラグを使って利用できます。複数の表にまたがるポリモーフィック選択可能な場合、デフォルトの振る舞いは選択可能項目をサブクエリにラップすることです。以下では、同じ名前を持つ従業員の&amp;quot;従業員またはエンジニア&amp;quot;とペアになった&amp;quot;従業員またはマネージャ&amp;quot;を選択するクエリを発行します。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="n">engineer_employee</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span>
     <span class="n">Employee</span><span class="p">,</span> <span class="p">[</span><span class="n">Engineer</span><span class="p">],</span> <span class="n">aliased</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">manager_employee</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span>
     <span class="n">Employee</span><span class="p">,</span> <span class="p">[</span><span class="n">Manager</span><span class="p">],</span> <span class="n">aliased</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -314,15 +268,8 @@ JOIN (
 ON anon_1.employee_id &gt; anon_2.employee_id
 AND anon_1.employee_name = anon_2.employee_name</div></pre></div>
 </div>
-<p>The creation of subqueries above is very verbose.  While it creates the best
-encapsulation of the two distinct queries, it may be inefficient.
-<a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> includes an additional flag to help with this
-situation, <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic.params.flat" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-paramref docutils literal"><span class="pre">orm.with_polymorphic.flat</span></code></a>, which will &quot;flatten&quot; the
-subquery / join combination into straight joins, applying aliasing to the
-individual tables instead.   Setting <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic.params.flat" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-paramref docutils literal"><span class="pre">orm.with_polymorphic.flat</span></code></a>
-implies <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic.params.aliased" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-paramref docutils literal"><span class="pre">orm.with_polymorphic.aliased</span></code></a>, so only one flag
-is necessary:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="n">engineer_employee</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span>
+<p>上記のサブクエリの作成は非常に冗長です。 2つの異なるクエリの最適なカプセル化を作成しますが、非効率的な場合があります。 ：func： <cite>.orm.with_polymorphic`は、この状況を助けるための追加のフラグを含みます：paramref：</cite> .orm.with_polymorphic.flat`：サブクエリ/ジョインの組み合わせをストレートジョインにフラット化し、代わりに個々のテーブル。設定：paramref： <cite>.orm.with_polymorphic.flat`は：paramref：</cite> .orm.with_polymorphic.aliased`を意味するので、フラグは1つだけ必要です。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="n">engineer_employee</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span>
     <span class="n">Employee</span><span class="p">,</span> <span class="p">[</span><span class="n">Engineer</span><span class="p">],</span> <span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">manager_employee</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span>
     <span class="n">Employee</span><span class="p">,</span> <span class="p">[</span><span class="n">Manager</span><span class="p">],</span> <span class="n">flat</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -359,29 +306,16 @@ JOIN (
 ON employee_1.id &gt; employee_2.id
 AND employee_1.name = employee_2.name</div></pre></div>
 </div>
-<p>Note above, when using <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic.params.flat" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-paramref docutils literal"><span class="pre">orm.with_polymorphic.flat</span></code></a>, it is often the
-case when used in conjunction with joined table inheritance that we get a
-right-nested JOIN in our statement.   Some older databases, in particular older
-versions of SQLite, may have a problem with this syntax, although virtually all
-modern database versions now support this syntax.</p>
+<p>上記の注意：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.orm.with_polymorphic.flat`を使用すると、結合されたテーブルの継承と組み合わせて使用​​することがよくあります。これは、ステートメント内で正しいネストされたJOINを取得します。事実上すべての現代のデータベースバージョンでこの構文がサポートされていますが、一部の古いデータベース、特に古いバージョンのSQLiteではこの構文に問題がある可能性があります。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">The <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic.params.flat" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-paramref docutils literal"><span class="pre">orm.with_polymorphic.flat</span></code></a> flag only applies to the use
-of <code class="xref py py-paramref docutils literal"><span class="pre">with_polymorphic</span></code> with <strong>joined table inheritance</strong> and when
-the <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.with_polymorphic.params.selectable" title="sqlalchemy.orm.query.Query.with_polymorphic"><code class="xref py py-paramref docutils literal"><span class="pre">with_polymorphic.selectable</span></code></a> argument is <strong>not</strong> used.</p>
+<p class="last">：paramref： <cite>.orm.with_polymorphic.flat`フラグは、** paramref：</cite> .with_polymorphic`と** joined table inheritance <a href="#id1"><span class="problematic" id="id2">**</span></a>の使用にのみ適用されます。：paramref： <a href="#id3"><span class="problematic" id="id4">`</span></a>.with_polymorphic.selectable`引数が**の場合使用されていない。</p>
 </div>
 </div>
 <div class="section" id="referring-to-specific-subclass-attributes">
-<h3>Referring to Specific Subclass Attributes<a class="headerlink" href="#referring-to-specific-subclass-attributes" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The entity returned by <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> is an <a class="reference internal" href="query.html#sqlalchemy.orm.util.AliasedClass" title="sqlalchemy.orm.util.AliasedClass"><code class="xref py py-class docutils literal"><span class="pre">AliasedClass</span></code></a>
-object, which can be used in a <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> like any other alias, including
-named attributes for those attributes on the <code class="docutils literal"><span class="pre">Employee</span></code> class.   In our
-previous example, <code class="docutils literal"><span class="pre">eng_plus_manager</span></code> becomes the entity that we use to refer to the
-three-way outer join above.  It also includes namespaces for each class named
-in the list of classes, so that attributes specific to those subclasses can be
-called upon as well.   The following example illustrates calling upon attributes
-specific to <code class="docutils literal"><span class="pre">Engineer</span></code> as well as <code class="docutils literal"><span class="pre">Manager</span></code> in terms of <code class="docutils literal"><span class="pre">eng_plus_manager</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">eng_plus_manager</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span><span class="n">Employee</span><span class="p">,</span> <span class="p">[</span><span class="n">Engineer</span><span class="p">,</span> <span class="n">Manager</span><span class="p">])</span>
+<h3>特定のサブクラス属性の参照<a class="headerlink" href="#referring-to-specific-subclass-attributes" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>：func： <cite>.orm.with_polymorphic`によって返されるエンティティは、：class：</cite> .AliasedClass`オブジェクトです。これは、他のエイリアスと同様に：class： <cite>.Query`で使用できます。 「従業員」クラス。前の例では、 `</cite> eng_plus_manager``は上記の3-way外部結合を参照するために使用するエンティティになります。また、クラスのリストに名前が付けられた各クラスの名前空間も含まれているため、それらのサブクラスに固有の属性も呼び出すことができます。次の例は、 `` Engineer``と `` Manager``に固有の属性を `` eng_plus_manager``で呼び出す方法を示しています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">eng_plus_manager</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span><span class="n">Employee</span><span class="p">,</span> <span class="p">[</span><span class="n">Engineer</span><span class="p">,</span> <span class="n">Manager</span><span class="p">])</span>
 <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">eng_plus_manager</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
                 <span class="n">or_</span><span class="p">(</span>
                     <span class="n">eng_plus_manager</span><span class="o">.</span><span class="n">Engineer</span><span class="o">.</span><span class="n">engineer_info</span><span class="o">==</span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
@@ -391,17 +325,9 @@ specific to <code class="docutils literal"><span class="pre">Engineer</span></co
 </div>
 </div>
 <div class="section" id="setting-with-polymorphic-at-mapper-configuration-time">
-<span id="with-polymorphic-mapper-config"></span><h3>Setting with_polymorphic at mapper configuration time<a class="headerlink" href="#setting-with-polymorphic-at-mapper-configuration-time" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> function serves the purpose of allowing
-&quot;eager&quot; loading of attributes from subclass tables, as well as the ability
-to refer to the attributes from subclass tables at query time.   Historically,
-the &quot;eager loading&quot; of columns has been the more important part of the
-equation.   So just as eager loading for relationships can be specified
-as a configurational option, the <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.with_polymorphic" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">mapper.with_polymorphic</span></code></a>
-configuration parameter allows an entity to use a polymorphic load by
-default.  We can add the parameter to our <code class="docutils literal"><span class="pre">Employee</span></code> mapping
-first introduced at <a class="reference internal" href="inheritance.html#joined-inheritance"><span class="std std-ref">Joined Table Inheritance</span></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="with-polymorphic-mapper-config"></span><h3>マッパー設定時にwith_polymorphicを設定する<a class="headerlink" href="#setting-with-polymorphic-at-mapper-configuration-time" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>：func： <cite>.orm.with_polymorphic`関数は、サブクラステーブルからの属性の読み込みを可能にする目的と、クエリ時にサブクラステーブルの属性を参照する機能を提供します。歴史的には、列の熱心な読み込みは、方程式のより重要な部分でした。したがって、関係のための熱心な読み込みをコンフィグレーションオプションとして指定することができるように、：paramref： `.mapper.with_polymorphic`設定パラメータは、エンティティがデフォルトで多態的な読み込みを使用できるようにします。最初にref： `joined_inheritance</cite> ::で導入した` <a href="#id1"><span class="problematic" id="id2">`</span></a>Employee``マッピングにパラメータを追加することができます</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;employee&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -413,24 +339,10 @@ first introduced at <a class="reference internal" href="inheritance.html#joined-
         <span class="s1">&#39;with_polymorphic&#39;</span><span class="p">:</span> <span class="s1">&#39;*&#39;</span>
     <span class="p">}</span></pre></div>
 </div>
-<p>Above is a common setting for <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.with_polymorphic" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">mapper.with_polymorphic</span></code></a>,
-which is to indicate an asterisk to load all subclass columns.   In the
-case of joined table inheritance, this option
-should be used sparingly, as it implies that the mapping will always emit
-a (often large) series of LEFT OUTER JOIN to many tables, which is not
-efficient from a SQL perspective.   For single table inheritance, specifying the
-asterisk is often a good idea as the load is still against a single table only,
-but an additional lazy load of subclass-mapped columns will be prevented.</p>
-<p>Using <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> or <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.with_polymorphic" title="sqlalchemy.orm.query.Query.with_polymorphic"><code class="xref py py-meth docutils literal"><span class="pre">Query.with_polymorphic()</span></code></a>
-will override the mapper-level <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.with_polymorphic" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">mapper.with_polymorphic</span></code></a> setting.</p>
-<p>The <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.with_polymorphic" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">mapper.with_polymorphic</span></code></a> option also accepts a list of
-classes just like <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> to polymorphically load among
-a subset of classes.  However, when using Declarative, providing classes
-to this list is not directly possible as the subclasses we'd like to add
-are not available yet.   Instead, we can specify on each subclass
-that they should individually participate in polymorphic loading by
-default using the <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.polymorphic_load" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">mapper.polymorphic_load</span></code></a> parameter:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Engineer</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
+<p>上記は共通の設定です：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.mapper.with_polymorphic`はすべてのサブクラス列をロードするアスタリスクを示します。結合された表の継承の場合、このオプションは、マッピングが常に（多くの場合、大きな）一連のLEFT OUTER JOINを多くの表に放出することを暗に意味するため、控えめに使用する必要があります。単一テーブルの継承では、アスタリスクを指定することはしばしば良い考えです。なぜなら、ロードは依然として単一のテーブルに対してのみですが、サブクラスにマップされた列の追加の遅延負荷が防止されるからです。</p>
+<p>：func： <cite>.orm.with_polymorphic`または：meth：</cite> .Query.with_polymorphic`を使うと、マッパーレベル：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.mapper.with_polymorphic`の設定が上書きされます。</p>
+<p>：paramref： <cite>.mapper.with_polymorphic`オプションは、func：</cite> .orm.with_polymorphic`のようなクラスのリストを受け入れて、クラスのサブセット間で多態的にロードします。ただし、Declarativeを使用する場合は、追加するサブクラスがまだ使用できないため、このリストにクラスを提供することは直接できません。代わりに、各サブクラスで、デフォルトで：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.mapper.polymorphic_load`パラメータを使用して、多型ロードに個別に関与する必要があることを指定できます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Engineer</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;engineer&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;employee.id&#39;</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">engineer_info</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -448,23 +360,12 @@ default using the <a class="reference internal" href="mapping_api.html#sqlalchem
         <span class="s1">&#39;polymorphic_load&#39;</span><span class="p">:</span> <span class="s1">&#39;inline&#39;</span>
     <span class="p">}</span></pre></div>
 </div>
-<p>Setting the <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.polymorphic_load" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">mapper.polymorphic_load</span></code></a> parameter to the value
-<code class="docutils literal"><span class="pre">&quot;inline&quot;</span></code> means that the <code class="docutils literal"><span class="pre">Engineer</span></code> and <code class="docutils literal"><span class="pre">Manager</span></code> classes above
-are part of the &quot;polymorphic load&quot; of the base <code class="docutils literal"><span class="pre">Employee</span></code> class by default,
-exactly as though they had been appended to the
-<a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.with_polymorphic" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">mapper.with_polymorphic</span></code></a> list of classes.</p>
+<p>：paramref： <cite>.mapper.polymorphic_load`パラメータを値</cite> <cite>&amp;quot; inline &amp;quot;</cite> <cite>に設定すると、上記の</cite> <cite>Engineer``と</cite> <cite>Manager``クラスは&amp;quot;多形性ロード &amp;quot;の一部です。 ：class：paramref： `.mapper.with_polymorphic`クラスに追加されたかのように、デフォルトで</cite> <cite>Employee``クラスの</cite></p>
 </div>
 <div class="section" id="setting-with-polymorphic-against-a-query">
-<h3>Setting with_polymorphic against a query<a class="headerlink" href="#setting-with-polymorphic-against-a-query" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> function evolved from a query-level
-method <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.with_polymorphic" title="sqlalchemy.orm.query.Query.with_polymorphic"><code class="xref py py-meth docutils literal"><span class="pre">Query.with_polymorphic()</span></code></a>.  This method has the same purpose
-as <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a>, except is not as
-flexible in its usage patterns in that it only applies to the first entity
-of the <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a>.   It then takes effect for all occurences of
-that entity, so that the entity (and its subclasses) can be referred to
-directly, rather than using an alias object.  For simple cases it might be
-considered to be more succinct:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span>\
+<h3>with_polymorphicをクエリに対して設定する<a class="headerlink" href="#setting-with-polymorphic-against-a-query" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>：func： <cite>.orm.with_polymorphic`関数は、クエリレベルのメソッド：meth：</cite> .Query.with_polymorphic`から進化しました。このメソッドは：func： <cite>.orm.with_polymorphic`と同じ目的を持っていますが、：class：</cite> .Query`の最初のエンティティにのみ適用されるという点で、その使用パターンに柔軟性があります。次に、そのエンティティのすべての発生に対して有効になるので、エイリアスオブジェクトを使用するのではなく、エンティティ（およびそのサブクラス）を直接参照できます。単純なケースの場合、より簡潔であると考えられるかもしれません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span>\
     <span class="n">with_polymorphic</span><span class="p">([</span><span class="n">Engineer</span><span class="p">,</span> <span class="n">Manager</span><span class="p">])</span><span class="o">.</span>\
     <span class="nb">filter</span><span class="p">(</span>
         <span class="n">or_</span><span class="p">(</span>
@@ -473,32 +374,20 @@ considered to be more succinct:</p>
         <span class="p">)</span>
     <span class="p">)</span></pre></div>
 </div>
-<p>The <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.with_polymorphic" title="sqlalchemy.orm.query.Query.with_polymorphic"><code class="xref py py-meth docutils literal"><span class="pre">Query.with_polymorphic()</span></code></a> method has a more complicated job
-than the <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> function, as it needs to correctly
-transform entities like <code class="docutils literal"><span class="pre">Engineer</span></code> and <code class="docutils literal"><span class="pre">Manager</span></code> appropriately, but
-not interfere with other entities.  If its flexibility is lacking, switch
-to using <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a>.</p>
+<p>：meth： <cite>.Query.with_polymorphic`メソッドは、</cite> <cite>Engineer``や</cite> <cite>Manager``のようなエンティティを適切に変換する必要があるため、：func：</cite> .orm.with_polymorphic`関数よりも複雑です。他のエンティティに干渉することはありません。柔軟性が欠けている場合は、：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.orm.with_polymorphic`を使用します。</p>
 </div>
 </div>
 <div class="section" id="polymorphic-selectin-loading">
-<span id="polymorphic-selectin"></span><h2>Polymorphic Selectin Loading<a class="headerlink" href="#polymorphic-selectin-loading" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>An alternative to using the <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> family of
-functions to &quot;eagerly&quot; load the additional subclasses on an inheritance
-mapping, primarily when using joined table inheritance, is to use polymorphic
-&quot;selectin&quot; loading.   This is an eager loading
-feature which works similarly to the <a class="reference internal" href="loading_relationships.html#selectin-eager-loading"><span class="std std-ref">Select IN loading</span></a> feature
-of relationship loading.   Given our example mapping, we can instruct
-a load of <code class="docutils literal"><span class="pre">Employee</span></code> to emit an extra SELECT per subclass by using
-the <a class="reference internal" href="#sqlalchemy.orm.selectin_polymorphic" title="sqlalchemy.orm.selectin_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.selectin_polymorphic()</span></code></a> loader option:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">selectin_polymorphic</span>
+<span id="polymorphic-selectin"></span><h2>多型セレクチンのローディング<a class="headerlink" href="#polymorphic-selectin-loading" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>主に結合されたテーブルの継承を使用する場合、継承マッピングで追加のサブクラスを読み込むために：func： <cite>.orm.with_polymorphic`ファミリの関数を使用する代わりに、多形&amp;quot; selectin &amp;quot;ロードを使用することができます。これは、関係ロードの：ref： `selectin_eager_loading`機能と同様に動作する熱心なローディング機能です。サンプルマッピングが与えられた場合、：func： `.orm.selectin_polymorphic`ローダーオプションを使用して、</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>Employee``のロードにサブクラスごとに追加のSELECTを出すように指示できます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">selectin_polymorphic</span>
 
 <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span>
     <span class="n">selectin_polymorphic</span><span class="p">(</span><span class="n">Employee</span><span class="p">,</span> <span class="p">[</span><span class="n">Manager</span><span class="p">,</span> <span class="n">Engineer</span><span class="p">])</span>
 <span class="p">)</span></pre></div>
 </div>
-<p>When the above query is run, two additional SELECT statements will
-be emitted:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><div class='show_sql'>query.all()
+<p>上記のクエリが実行されると、2つの追加のSELECTステートメントが発行されます。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><div class='show_sql'>query.all()
 SELECT
     employee.id AS employee_id,
     employee.name AS employee_name,
@@ -524,10 +413,8 @@ FROM employee JOIN manager ON employee.id = manager.id
 WHERE employee.id IN (?) ORDER BY employee.id
 (3,)</div></pre></div>
 </div>
-<p>We can similarly establish the above style of loading to take place
-by default by specifying the <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.polymorphic_load" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">mapper.polymorphic_load</span></code></a> parameter,
-using the value <code class="docutils literal"><span class="pre">&quot;selectin&quot;</span></code> on a per-subclass basis:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>同様に：paramref： <cite>.mapper.polymorphic_load`パラメータを指定して、デフォルトで行われる上記のロードスタイルを、サブクラスごとに</cite> <cite>&amp;quot; selectin &amp;quot;</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>を使って設定することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;employee&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -558,17 +445,8 @@ using the value <code class="docutils literal"><span class="pre">&quot;selectin&
         <span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span> <span class="s1">&#39;manager&#39;</span><span class="p">,</span>
     <span class="p">}</span></pre></div>
 </div>
-<p>Unlike when using <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a>, when using the
-<a class="reference internal" href="#sqlalchemy.orm.selectin_polymorphic" title="sqlalchemy.orm.selectin_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.selectin_polymorphic()</span></code></a> style of loading, we do <strong>not</strong> have the
-ability to refer to the <code class="docutils literal"><span class="pre">Engineer</span></code> or <code class="docutils literal"><span class="pre">Manager</span></code> entities within our main
-query as filter, order by, or other criteria, as these entities are not present
-in the initial query that is used to locate results.   However, we can apply
-loader options that apply towards <code class="docutils literal"><span class="pre">Engineer</span></code> or <code class="docutils literal"><span class="pre">Manager</span></code>, which will take
-effect when the secondary SELECT is emitted.  Below we assume <code class="docutils literal"><span class="pre">Manager</span></code> has
-an additional relationship <code class="docutils literal"><span class="pre">Manager.paperwork</span></code>, that we'd like to eagerly
-load as well.  We can use any type of eager loading, such as joined eager
-loading via the <a class="reference internal" href="loading_relationships.html#sqlalchemy.orm.joinedload" title="sqlalchemy.orm.joinedload"><code class="xref py py-func docutils literal"><span class="pre">joinedload()</span></code></a> function:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">joinedload</span>
+<p>：func： <cite>.orm.with_polymorphic`を使用する場合とは異なり、：func：</cite> .orm.selectin_polymorphic`スタイルの読み込みを使用する場合、私たちは `` Engineer``または `` Engineer``を参照する能力を持っていません。これらのエンティティは結果を特定するために使用される最初のクエリには存在しないため、フィルタ、オーダー、またはその他の基準としてメインクエリ内の「マネージャ」エンティティを削除します。しかし、セカンダリSELECTが発行されたときに有効になる `` Engineer``または `` Manager``に適用されるローダオプションを適用できます。以下では、 <a href="#id1"><span class="problematic" id="id2">``</span></a>マネージャー <a href="#id3"><span class="problematic" id="id4">``</span></a>と <a href="#id5"><span class="problematic" id="id6">``</span></a>マネージャー・ペーパーワーク <a href="#id7"><span class="problematic" id="id8">``</span></a>という追加の関係があり、私たちも熱心にロードしたいと思っています。 ：func： <a href="#id9"><span class="problematic" id="id10">`</span></a>.joinedload`関数を介してeagerにロードするなど、あらゆるタイプのeagerロードを使用できます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">joinedload</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">selectin_polymorphic</span>
 
 <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span>
@@ -576,9 +454,8 @@ loading via the <a class="reference internal" href="loading_relationships.html#s
     <span class="n">joinedload</span><span class="p">(</span><span class="n">Manager</span><span class="o">.</span><span class="n">paperwork</span><span class="p">)</span>
 <span class="p">)</span></pre></div>
 </div>
-<p>Using the query above, we get three SELECT statements emitted, however
-the one against <code class="docutils literal"><span class="pre">Manager</span></code> will be:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+<p>上記のクエリを使用すると、3つのSELECT文が発行されますが、 `` Manager``に対するものは次のようになります。</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
     <span class="n">manager</span><span class="p">.</span><span class="n">id</span> <span class="k">AS</span> <span class="n">manager_id</span><span class="p">,</span>
     <span class="n">employee</span><span class="p">.</span><span class="n">id</span> <span class="k">AS</span> <span class="n">employee_id</span><span class="p">,</span>
     <span class="n">employee</span><span class="p">.</span><span class="k">type</span> <span class="k">AS</span> <span class="n">employee_type</span><span class="p">,</span>
@@ -592,32 +469,22 @@ the one against <code class="docutils literal"><span class="pre">Manager</span><
 <span class="k">WHERE</span> <span class="n">employee</span><span class="p">.</span><span class="n">id</span> <span class="k">IN</span> <span class="p">(</span><span class="o">?</span><span class="p">)</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">employee</span><span class="p">.</span><span class="n">id</span>
 <span class="p">(</span><span class="mi">3</span><span class="p">,)</span></pre></div>
 </div>
-<p>Note that selectin polymorphic loading has similar caveats as that of
-selectin relationship loading; for entities that make use of a composite
-primary key, the database in use must support tuples with &quot;IN&quot;, currently
-known to work with MySQL and Postgresql.</p>
+<p>セレクチン多型負荷は、セレクチン関係負荷と同様の警告を有することに留意されたい。複合主キーを使用するエンティティでは、使用されているデータベースは、現在MySQLとPostgreSQLで動作することが知られている&amp;quot;IN &amp;quot;のタプルをサポートしている必要があります。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.2 で追加.</span></p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last">The selectin polymorphic loading feature should be considered
-as <strong>experimental</strong> within early releases of the 1.2 series.</p>
+<p class="last">selectin多型ロード機能は、1.2シリーズの初期リリースでは**実験的**とみなされるべきです。</p>
 </div>
 <div class="section" id="combining-selectin-and-with-polymorphic">
-<span id="polymorphic-selectin-and-withpoly"></span><h3>Combining selectin and with_polymorphic<a class="headerlink" href="#combining-selectin-and-with-polymorphic" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<span id="polymorphic-selectin-and-withpoly"></span><h3>selectinとwith_polymorphicの組み合わせ<a class="headerlink" href="#combining-selectin-and-with-polymorphic" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">works as of 1.2.0b3</p>
+<p class="last">1.2.0b3から動作します</p>
 </div>
-<p>With careful planning, selectin loading can be applied against a hierarchy
-that itself uses &quot;with_polymorphic&quot;.  A particular use case is that of
-using selectin loading to load a joined-inheritance subtable, which then
-uses &quot;with_polymorphic&quot; to refer to further sub-classes, which may be
-joined- or single-table inheritanace.  If we added a class <code class="docutils literal"><span class="pre">VicePresident</span></code> that
-extends <code class="docutils literal"><span class="pre">Manager</span></code> using single-table inheritance, we could ensure that
-a load of <code class="docutils literal"><span class="pre">Manager</span></code> also fully loads <code class="docutils literal"><span class="pre">VicePresident</span></code> subtypes at the same time:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># use &quot;Employee&quot; example from the enclosing section</span>
+<p>注意深い計画では、&amp;quot;with_polymorphic &amp;quot;を使用する階層に対してselectinローディングを適用できます。特定のユースケースはselectinの読み込みを使用して継承継承サブテーブルをロードすることです。この継承サブテーブルは継承サブテーブルまたは単一テーブル継承のサブクラスを参照するために&amp;quot;with_polymorphic &amp;quot;を使用します。単一テーブル継承を使用して `` Manager`を拡張したクラス `` VicePresident``を追加した場合、 `` Manager``のロードでも `` VicePidentident``サブタイプを同時に読み込むことができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># use &quot;Employee&quot; example from the enclosing section</span>
 
 <span class="k">class</span> <span class="nc">Manager</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;manager&#39;</span>
@@ -637,14 +504,8 @@ a load of <code class="docutils literal"><span class="pre">Manager</span></code>
         <span class="s2">&quot;polymorphic_identity&quot;</span><span class="p">:</span> <span class="s2">&quot;vp&quot;</span>
     <span class="p">}</span></pre></div>
 </div>
-<p>Above, we add a <code class="docutils literal"><span class="pre">vp_info</span></code> column to the <code class="docutils literal"><span class="pre">manager</span></code> table, local to the
-<code class="docutils literal"><span class="pre">VicePresident</span></code> subclass.   This subclass is linked to the polymorphic
-identity <code class="docutils literal"><span class="pre">&quot;vp&quot;</span></code> which refers to rows which have this data.     By setting the
-load style to &quot;inline&quot;, it means that a load of <code class="docutils literal"><span class="pre">Manager</span></code> objects will also
-ensure that the <code class="docutils literal"><span class="pre">vp_info</span></code> column is queried for in the same SELECT statement.
-A query against <code class="docutils literal"><span class="pre">Employee</span></code> that encounters a <code class="docutils literal"><span class="pre">Manager</span></code> row would emit
-similarly to the following:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">employee</span><span class="p">.</span><span class="n">id</span> <span class="k">AS</span> <span class="n">employee_id</span><span class="p">,</span> <span class="n">employee</span><span class="p">.</span><span class="n">name</span> <span class="k">AS</span> <span class="n">employee_name</span><span class="p">,</span>
+<p>上記では、 `` VicePresident``サブクラスの `` manager``テーブルに `` vp_info``カラムを追加しています。このサブクラスは、このデータを持つ行を参照する多相識別情報 `` &amp;quot;vp &amp;quot; <a href="#id1"><span class="problematic" id="id2">``</span></a>にリンクされています。ロードスタイルを&amp;quot;inline &amp;quot;に設定すると、 `` Manager``オブジェクトのロードによって、同じSELECT文で `` vp_info``カラムが照会されるようになります。 `` Employee``に対する `` Manager``行に遭遇するクエリは、以下のように出力されます：</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">employee</span><span class="p">.</span><span class="n">id</span> <span class="k">AS</span> <span class="n">employee_id</span><span class="p">,</span> <span class="n">employee</span><span class="p">.</span><span class="n">name</span> <span class="k">AS</span> <span class="n">employee_name</span><span class="p">,</span>
        <span class="n">employee</span><span class="p">.</span><span class="k">type</span> <span class="k">AS</span> <span class="n">employee_type</span>
 <span class="k">FROM</span> <span class="n">employee</span>
 <span class="p">)</span>
@@ -657,11 +518,8 @@ similarly to the following:</p>
 <span class="k">WHERE</span> <span class="n">employee</span><span class="p">.</span><span class="n">id</span> <span class="k">IN</span> <span class="p">(</span><span class="o">?</span><span class="p">)</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">employee</span><span class="p">.</span><span class="n">id</span>
 <span class="p">(</span><span class="mi">1</span><span class="p">,)</span></pre></div>
 </div>
-<p>Combining &quot;selectin&quot; polymorhic loading with query-time
-<a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> usage is also possible (though this is very
-outer-space stuff!); assuming the above mappings had no <code class="docutils literal"><span class="pre">polymorphic_load</span></code>
-set up, we could get the same result as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">with_polymorphic</span><span class="p">,</span> <span class="n">selectin_polymorphic</span>
+<p>&amp;quot;selectin &amp;quot;ポリモリックな読み込みとquery-time：func： <cite>.orm.with_polymorphic`の使い方も可能です（これは非常に外側のものですが）。上記のマッピングに `</cite> polymorphic_load``が設定されていないと仮定すると、次のような結果が得られます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">with_polymorphic</span><span class="p">,</span> <span class="n">selectin_polymorphic</span>
 
 <span class="n">manager_poly</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span><span class="n">Manager</span><span class="p">,</span> <span class="p">[</span><span class="n">VicePresident</span><span class="p">])</span>
 
@@ -671,22 +529,10 @@ set up, we could get the same result as follows:</p>
 </div>
 </div>
 <div class="section" id="referring-to-specific-subtypes-on-relationships">
-<span id="inheritance-of-type"></span><h2>Referring to specific subtypes on relationships<a class="headerlink" href="#referring-to-specific-subtypes-on-relationships" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Mapped attributes which correspond to a <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> are used
-in querying in order to refer to the linkage between two mappings.  Common
-uses for this are to refer to a <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> in <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.join" title="sqlalchemy.orm.query.Query.join"><code class="xref py py-meth docutils literal"><span class="pre">Query.join()</span></code></a>
-as well as in loader options like <a class="reference internal" href="loading_relationships.html#sqlalchemy.orm.joinedload" title="sqlalchemy.orm.joinedload"><code class="xref py py-func docutils literal"><span class="pre">joinedload()</span></code></a>.   When using
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> where the target class is an inheritance hierarchy,
-the API allows that the join, eager load, or other linkage should target a specific
-subclass, alias, or <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> alias, of that class hierarchy,
-rather than the class directly targeted by the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>.</p>
-<p>The <a class="reference internal" href="internals.html#sqlalchemy.orm.interfaces.PropComparator.of_type" title="sqlalchemy.orm.interfaces.PropComparator.of_type"><code class="xref py py-func docutils literal"><span class="pre">of_type()</span></code></a> method allows the
-construction of joins along <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> paths while
-narrowing the criterion to specific derived aliases or subclasses. Suppose the
-<code class="docutils literal"><span class="pre">employees</span></code> table represents a collection of employees which are associated
-with a <code class="docutils literal"><span class="pre">Company</span></code> object. We'll add a <code class="docutils literal"><span class="pre">company_id</span></code> column to the
-<code class="docutils literal"><span class="pre">employees</span></code> table and a new table <code class="docutils literal"><span class="pre">companies</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Company</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="inheritance-of-type"></span><h2>関係の特定のサブタイプを参照する<a class="headerlink" href="#referring-to-specific-subtypes-on-relationships" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>a：func： <cite>.relationship &amp;#39;に対応するマップされた属性は、2つのマッピング間のリンケージを参照するためにクエリで使用されます。これの一般的な使い方は、：meth： `.Query.join`と：func：</cite> .joinedload`のようなローダーオプションの中の：func： <cite>.relationship`を参照することです。ターゲットクラスが継承階層である場合、：func： `.relationship`を使用する場合、APIは、結合、eager load、または他のリンケージが特定のサブクラス、エイリアス、または：func：</cite> .orm.with_polymorphic`エイリアスをターゲットにすることを許可します：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.relationship`によって直接ターゲットとされるクラスではなく、そのクラス階層のクラスです。</p>
+<p>：func： <cite>〜sqlalchemy.orm.interfaces.PropComparator.of_type`メソッドは：func：</cite>〜sqlalchemy.orm.relationship`のパスに沿ってジョインを構築し、特定の派生エイリアスやサブクラスに基準を絞り込みます。 `` employees``テーブルが `` Company``オブジェクトに関連付けられた従業員の集合を表すとします。 `` employees``テーブルに `` company_id``カラムと `` companies``という新しいテーブルを追加します：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Company</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;company&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -715,21 +561,13 @@ with a <code class="docutils literal"><span class="pre">Company</span></code> ob
     <span class="n">manager_data</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
     <span class="n">__mapper_args__</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span><span class="s1">&#39;manager&#39;</span><span class="p">}</span></pre></div>
 </div>
-<p>When querying from <code class="docutils literal"><span class="pre">Company</span></code> onto the <code class="docutils literal"><span class="pre">Employee</span></code> relationship, the
-<a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.join" title="sqlalchemy.orm.query.Query.join"><code class="xref py py-meth docutils literal"><span class="pre">Query.join()</span></code></a> method as well as operators like <a class="reference internal" href="internals.html#sqlalchemy.orm.interfaces.PropComparator.any" title="sqlalchemy.orm.interfaces.PropComparator.any"><code class="xref py py-meth docutils literal"><span class="pre">PropComparator.any()</span></code></a>
-and <a class="reference internal" href="internals.html#sqlalchemy.orm.interfaces.PropComparator.has" title="sqlalchemy.orm.interfaces.PropComparator.has"><code class="xref py py-meth docutils literal"><span class="pre">PropComparator.has()</span></code></a> will create
-a join from <code class="docutils literal"><span class="pre">company</span></code> to <code class="docutils literal"><span class="pre">employee</span></code>, without including <code class="docutils literal"><span class="pre">engineer</span></code> or
-<code class="docutils literal"><span class="pre">manager</span></code> in the mix. If we wish to have criterion which is specifically
-against the <code class="docutils literal"><span class="pre">Engineer</span></code> class, we can tell those methods to join or subquery
-against the set of columns representing the subclass using the
-<a class="reference internal" href="internals.html#sqlalchemy.orm.interfaces.PropComparator.of_type" title="sqlalchemy.orm.interfaces.PropComparator.of_type"><code class="xref py py-meth docutils literal"><span class="pre">of_type()</span></code></a> operator:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Company</span><span class="p">)</span><span class="o">.</span>\
+<p>`` Company``から `` Employee``関係に問い合わせるときは、：meth： <cite>.Query.join`メソッドと：meth：</cite> .PropComparator.any`と：meth： <cite>.PropComparatorのような演算子があります。 ``エンジニア ``や ``マネージャー `&amp;#39;を含めずに</cite> <cite>会社&amp;#39;</cite> <cite>従業員</cite> <cite>に参加することになる。具体的に `</cite> Engineer``クラスに対して基準を設定したい場合、それらのメソッドに：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.orm.interfaces.PropComparator.of_typeを使ってサブクラスを表す列の集合にサブクラス化するかサブクエリするように指示できます`演算子:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Company</span><span class="p">)</span><span class="o">.</span>\
     <span class="n">join</span><span class="p">(</span><span class="n">Company</span><span class="o">.</span><span class="n">employees</span><span class="o">.</span><span class="n">of_type</span><span class="p">(</span><span class="n">Engineer</span><span class="p">))</span><span class="o">.</span>\
     <span class="nb">filter</span><span class="p">(</span><span class="n">Engineer</span><span class="o">.</span><span class="n">engineer_info</span><span class="o">==</span><span class="s1">&#39;someinfo&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>Similarly, to join from <code class="docutils literal"><span class="pre">Company</span></code> to the polymorphic entity that includes both
-<code class="docutils literal"><span class="pre">Engineer</span></code> and <code class="docutils literal"><span class="pre">Manager</span></code> columns:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manager_and_engineer</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span>
+<p>同様に、 `` Company``から `` Engineer``と `` Manager``カラムの両方を含む多相エンティティに参加する:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manager_and_engineer</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span>
                             <span class="n">Employee</span><span class="p">,</span> <span class="p">[</span><span class="n">Manager</span><span class="p">,</span> <span class="n">Engineer</span><span class="p">])</span>
 
 <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Company</span><span class="p">)</span><span class="o">.</span>\
@@ -741,34 +579,25 @@ against the set of columns representing the subclass using the
         <span class="p">)</span>
     <span class="p">)</span></pre></div>
 </div>
-<p>The <a class="reference internal" href="internals.html#sqlalchemy.orm.interfaces.PropComparator.any" title="sqlalchemy.orm.interfaces.PropComparator.any"><code class="xref py py-meth docutils literal"><span class="pre">PropComparator.any()</span></code></a> and <a class="reference internal" href="internals.html#sqlalchemy.orm.interfaces.PropComparator.has" title="sqlalchemy.orm.interfaces.PropComparator.has"><code class="xref py py-meth docutils literal"><span class="pre">PropComparator.has()</span></code></a> operators also
-can be used with <a class="reference internal" href="internals.html#sqlalchemy.orm.interfaces.PropComparator.of_type" title="sqlalchemy.orm.interfaces.PropComparator.of_type"><code class="xref py py-func docutils literal"><span class="pre">of_type()</span></code></a>,
-such as when the embedded criterion is in terms of a subclass:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Company</span><span class="p">)</span><span class="o">.</span>\
+<p>：meth： <cite>.PropComparator.any`と：meth：</cite> .PropComparator.has`演算子は：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.orm.interfaces.PropComparator.of_type`で使用することもできます。組み込み基準がサブクラスの用語:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Company</span><span class="p">)</span><span class="o">.</span>\
         <span class="nb">filter</span><span class="p">(</span>
             <span class="n">Company</span><span class="o">.</span><span class="n">employees</span><span class="o">.</span><span class="n">of_type</span><span class="p">(</span><span class="n">Engineer</span><span class="p">)</span><span class="o">.</span>
                 <span class="nb">any</span><span class="p">(</span><span class="n">Engineer</span><span class="o">.</span><span class="n">engineer_info</span><span class="o">==</span><span class="s1">&#39;someinfo&#39;</span><span class="p">)</span>
             <span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></pre></div>
 </div>
 <div class="section" id="eager-loading-of-specific-or-polymorphic-subtypes">
-<span id="eagerloading-polymorphic-subtypes"></span><h3>Eager Loading of Specific or Polymorphic Subtypes<a class="headerlink" href="#eager-loading-of-specific-or-polymorphic-subtypes" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The <a class="reference internal" href="loading_relationships.html#sqlalchemy.orm.joinedload" title="sqlalchemy.orm.joinedload"><code class="xref py py-func docutils literal"><span class="pre">joinedload()</span></code></a>, <a class="reference internal" href="loading_relationships.html#sqlalchemy.orm.subqueryload" title="sqlalchemy.orm.subqueryload"><code class="xref py py-func docutils literal"><span class="pre">subqueryload()</span></code></a>, <a class="reference internal" href="loading_relationships.html#sqlalchemy.orm.contains_eager" title="sqlalchemy.orm.contains_eager"><code class="xref py py-func docutils literal"><span class="pre">contains_eager()</span></code></a> and
-other eagerloader options support
-paths which make use of <code class="xref py py-func docutils literal"><span class="pre">of_type()</span></code>.
-Below, we load <code class="docutils literal"><span class="pre">Company</span></code> rows while eagerly loading related <code class="docutils literal"><span class="pre">Engineer</span></code>
-objects, querying the <code class="docutils literal"><span class="pre">employee</span></code> and <code class="docutils literal"><span class="pre">engineer</span></code> tables simultaneously:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Company</span><span class="p">)</span><span class="o">.</span>\
+<span id="eagerloading-polymorphic-subtypes"></span><h3>特定または多型サブタイプのEager読み込み<a class="headerlink" href="#eager-loading-of-specific-or-polymorphic-subtypes" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>：func： <cite>.joinedload</cite>、：func：` .subqueryload`、：func： <cite>.contains_eager`などのeagerloaderオプションは：func：</cite>〜.PropComparator.of_type`を利用するパスをサポートします。以下では、関連する `` Engineer``オブジェクトを熱心に読み込み、 `` employee``と `` engineer``テーブルを同時に照会しながら、 `` Company``行を読み込みます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Company</span><span class="p">)</span><span class="o">.</span>\
     <span class="n">options</span><span class="p">(</span>
         <span class="n">subqueryload</span><span class="p">(</span><span class="n">Company</span><span class="o">.</span><span class="n">employees</span><span class="o">.</span><span class="n">of_type</span><span class="p">(</span><span class="n">Engineer</span><span class="p">))</span><span class="o">.</span>
         <span class="n">subqueryload</span><span class="p">(</span><span class="n">Engineer</span><span class="o">.</span><span class="n">machines</span><span class="p">)</span>
         <span class="p">)</span>
     <span class="p">)</span></pre></div>
 </div>
-<p>As is the case with <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.join" title="sqlalchemy.orm.query.Query.join"><code class="xref py py-meth docutils literal"><span class="pre">Query.join()</span></code></a>, <a class="reference internal" href="internals.html#sqlalchemy.orm.interfaces.PropComparator.of_type" title="sqlalchemy.orm.interfaces.PropComparator.of_type"><code class="xref py py-meth docutils literal"><span class="pre">of_type()</span></code></a>
-can be used to combine eager loading and <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a>,
-so that all sub-attributes of all referenced subtypes
-can be loaded:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">manager_and_engineer</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span>
+<p>：meth： <cite>.Query.join`の場合と同じように、：meth：</cite>〜.PropComparator.of_type`を使用してeager loadingと：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.orm.with_polymorphic`を組み合わせることができます。すべての参照されたサブタイプを読み込むことができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manager_and_engineer</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span>
                             <span class="n">Employee</span><span class="p">,</span> <span class="p">[</span><span class="n">Manager</span><span class="p">,</span> <span class="n">Engineer</span><span class="p">],</span>
                             <span class="n">flat</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -781,26 +610,11 @@ can be loaded:</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p>When using <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">with_polymorphic()</span></code></a> in conjunction with
-<a class="reference internal" href="loading_relationships.html#sqlalchemy.orm.joinedload" title="sqlalchemy.orm.joinedload"><code class="xref py py-func docutils literal"><span class="pre">joinedload()</span></code></a>, the <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">with_polymorphic()</span></code></a> object must be against
-an &quot;aliased&quot; object, that is an instance of <a class="reference internal" href="../core/selectable.html#sqlalchemy.sql.expression.Alias" title="sqlalchemy.sql.expression.Alias"><code class="xref py py-class docutils literal"><span class="pre">Alias</span></code></a>, so that the
-polymorphic selectable is aliased (an informative error message is raised
-otherwise).</p>
-<p class="last">The typical way to do this is to include the
-<a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.with_polymorphic.params.aliased" title="sqlalchemy.orm.query.Query.with_polymorphic"><code class="xref py py-paramref docutils literal"><span class="pre">with_polymorphic.aliased</span></code></a> or <code class="xref py py-paramref docutils literal"><span class="pre">flat</span></code> flag, which will
-apply this aliasing automatically.  However, if the
-<a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.with_polymorphic.params.selectable" title="sqlalchemy.orm.query.Query.with_polymorphic"><code class="xref py py-paramref docutils literal"><span class="pre">with_polymorphic.selectable</span></code></a> argument is being used to pass an
-object that is already an <a class="reference internal" href="../core/selectable.html#sqlalchemy.sql.expression.Alias" title="sqlalchemy.sql.expression.Alias"><code class="xref py py-class docutils literal"><span class="pre">Alias</span></code></a> object then this flag should
-<strong>not</strong> be set.  The &quot;flat&quot; option implies the &quot;aliased&quot; option and is an
-alternate form of aliasing against join objects that produces fewer
-subqueries.</p>
+<p>：func： <cite>.joinedload`と一緒に：func：</cite> .with_polymorphic`を使用する場合、：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.with_polymorphic`オブジェクトは：class：<a href="#id3"><span class="problematic" id="id4">`</span></a>のインスタンスである&amp;quot;エイリアス化された&amp;quot;オブジェクトに対抗する必要があります。エイリアス（alias）」を使用して、多型選択可能なエイリアスがエイリアス化されるようにする（そうでなければ情報メッセージが発生する）。</p>
+<p class="last">これを行う典型的な方法は：paramref： <cite>.with_polymorphic.aliased`または：paramref：</cite> .flat`フラグを含めることです。このフラグはこのエイリアシングを自動的に適用します。ただし、：paramref： <cite>.with_polymorphic.selectable`引数が既に：class：</cite> .Alias`オブジェクトのオブジェクトを渡すために使用されている場合、このフラグは設定されません**。 &amp;quot;flat &amp;quot;オプションは&amp;quot;エイリアス&amp;quot;オプションを意味し、より少ないサブクエリを生成する結合オブジェクトに対するエイリアシングの代替形式です。</p>
 </div>
-<p>Once <a class="reference internal" href="internals.html#sqlalchemy.orm.interfaces.PropComparator.of_type" title="sqlalchemy.orm.interfaces.PropComparator.of_type"><code class="xref py py-meth docutils literal"><span class="pre">of_type()</span></code></a> is the target of the eager load,
-that's the entity we would use for subsequent chaining, not the original class
-or derived class.  If we wanted to further eager load a collection on the
-eager-loaded <code class="docutils literal"><span class="pre">Engineer</span></code> class, we access this class from the namespace of the
-<a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> object:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Company</span><span class="p">)</span><span class="o">.</span>\
+<p>いったん：meth： <cite>〜.PropComparator.of_type`が熱心なロードのターゲットであれば、元のクラスや派生クラスではなく、後続の連鎖に使用するエンティティです。 eager-loadedの `</cite> Engineer``クラスのコレクションをさらに熱心にロードしたい場合、：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.orm.with_polymorphic`オブジェクトの名前空間からこのクラスにアクセスします:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Company</span><span class="p">)</span><span class="o">.</span>\
     <span class="n">options</span><span class="p">(</span>
         <span class="n">joinedload</span><span class="p">(</span><span class="n">Company</span><span class="o">.</span><span class="n">employees</span><span class="o">.</span><span class="n">of_type</span><span class="p">(</span><span class="n">manager_and_engineer</span><span class="p">))</span><span class="o">.</span>\
         <span class="n">subqueryload</span><span class="p">(</span><span class="n">manager_and_engineer</span><span class="o">.</span><span class="n">Engineer</span><span class="o">.</span><span class="n">computers</span><span class="p">)</span>
@@ -810,42 +624,31 @@ eager-loaded <code class="docutils literal"><span class="pre">Engineer</span></c
 </div>
 </div>
 <div class="section" id="loading-objects-with-joined-table-inheritance">
-<span id="loading-joined-inheritance"></span><h2>Loading objects with joined table inheritance<a class="headerlink" href="#loading-objects-with-joined-table-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>When using joined table inheritance, if we query for a specific subclass
-that represents a JOIN of two tables such as our <code class="docutils literal"><span class="pre">Engineer</span></code> example
-from the inheritance section, the SQL emitted is a join:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Engineer</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></pre></div>
+<span id="loading-joined-inheritance"></span><h2>テーブル継承を結合したオブジェクトのロード<a class="headerlink" href="#loading-objects-with-joined-table-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>結合テーブルの継承を使用する場合、継承セクションの &amp;quot;Engineer&amp;quot;のような2つのテーブルのJOINを表す特定のサブクラスをクエリすると、SQLはjoin</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Engineer</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></pre></div>
 </div>
-<p>The above query will emit SQL like:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><div class='show_sql'>
+<p>上記のクエリは次のようにSQLを出力します。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><div class='show_sql'>
 SELECT employee.id AS employee_id,
     employee.name AS employee_name, employee.type AS employee_type,
     engineer.name AS engineer_name
 FROM employee JOIN engineer
 ON employee.id = engineer.id</div></pre></div>
 </div>
-<p>We will then get a collection of <code class="docutils literal"><span class="pre">Engineer</span></code> objects back, which will
-contain all columns from <code class="docutils literal"><span class="pre">employee</span></code> and <code class="docutils literal"><span class="pre">engineer</span></code> loaded.</p>
-<p>However, when emitting a <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> against a base class, the behavior
-is to load only from the base table:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></pre></div>
+<p>`` Engineer``オブジェクトのコレクションを取得します。これには、 `` employee``と `` engineer``のすべての列がロードされます。</p>
+<p>しかし、基本クラスに対して：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Query`を発行するとき、その動作は基本テーブル:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></pre></div>
 </div>
-<p>Above, the default behavior would be to SELECT only from the <code class="docutils literal"><span class="pre">employee</span></code>
-table and not from any &quot;sub&quot; tables (<code class="docutils literal"><span class="pre">engineer</span></code> and <code class="docutils literal"><span class="pre">manager</span></code>, in our
-previous examples):</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><div class='show_sql'>
+<p>上の例では、デフォルトの動作は `` employee``テーブルのみからのSELECTであり、前の例では `` sub &amp;#39;&amp;quot;テーブル（` <cite>engineer``と</cite> <cite>manager`</cite>）からではありません。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><div class='show_sql'>
 SELECT employee.id AS employee_id,
     employee.name AS employee_name, employee.type AS employee_type
 FROM employee
 []</div></pre></div>
 </div>
-<p>After a collection of <code class="docutils literal"><span class="pre">Employee</span></code> objects has been returned from the
-query, and as attributes are requested from those <code class="docutils literal"><span class="pre">Employee</span></code> objects which are
-represented in either the <code class="docutils literal"><span class="pre">engineer</span></code> or <code class="docutils literal"><span class="pre">manager</span></code> child tables, a second
-load is issued for the columns in that related row, if the data was not
-already loaded. So above, after accessing the objects you'd see further SQL
-issued along the lines of:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><div class='show_sql'>
+<p>クエリから `` Employee``オブジェクトのコレクションが返され、 `` engineer``または `` manager``の子テーブルで表される `` Employee``オブジェクトから属性が要求されると、データがまだロードされていなければ、関連する行の列に対する2番目のロードが発行されます。上のように、オブジェクトにアクセスした後、さらに次の行に沿って発行されたSQLが表示されます。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><div class='show_sql'>
 SELECT manager.id AS manager_id,
     manager.manager_data AS manager_manager_data
 FROM manager
@@ -857,20 +660,15 @@ FROM engineer
 WHERE ? = engineer.id
 [2]</div></pre></div>
 </div>
-<p>The <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a>
-function and related configuration options allow us to instead emit a JOIN up
-front which will conditionally load against <code class="docutils literal"><span class="pre">employee</span></code>, <code class="docutils literal"><span class="pre">engineer</span></code>, or
-<code class="docutils literal"><span class="pre">manager</span></code>, very much like joined eager loading works for relationships,
-removing the necessity for a second per-entity load:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">with_polymorphic</span>
+<p>：func： <cite>.orm.with_polymorphic`関数とそれに関連する設定オプションは、条件付きで</cite> <cite>employee`</cite>、` <cite>engineer`</cite>、` <a href="#id1"><span class="problematic" id="id2">`</span></a>manager``に対して条件付きでロードするJOIN upフロントを放出することができますリレーションシップのための結合されたeagerローディングのように、エンティティごとの2番目のロードの必要性を取り除きます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">with_polymorphic</span>
 
 <span class="n">eng_plus_manager</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span><span class="n">Employee</span><span class="p">,</span> <span class="p">[</span><span class="n">Engineer</span><span class="p">,</span> <span class="n">Manager</span><span class="p">])</span>
 
 <span class="n">query</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">eng_plus_manager</span><span class="p">)</span></pre></div>
 </div>
-<p>The above produces a query which joins the <code class="docutils literal"><span class="pre">employee</span></code> table to both the
-<code class="docutils literal"><span class="pre">engineer</span></code> and <code class="docutils literal"><span class="pre">manager</span></code> tables like the following:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<p>上の例は、 `` employee``テーブルを `` engineer``と `` manager``テーブルの両方にジョインするクエリを生成します。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 <div class='show_sql'>
 SELECT employee.id AS employee_id,
     engineer.id AS engineer_id,
@@ -886,32 +684,24 @@ FROM employee
     ON employee.id = manager.id
 []</div></pre></div>
 </div>
-<p>The section <a class="reference internal" href="#with-polymorphic"><span class="std std-ref">Using with_polymorphic</span></a> discusses the <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a>
-function and its configurational variants.</p>
+<p>セクション：ref： <cite>with_polymorphic`では：func：</cite> .orm.with_polymorphic`関数とその構成バリアントについて説明しています。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="#with-polymorphic"><span class="std std-ref">Using with_polymorphic</span></a></p>
+<p class="last">：ref： <cite>with_polymorphic</cite></p>
 </div>
 </div>
 <div class="section" id="loading-objects-with-single-table-inheritance">
-<span id="loading-single-inheritance"></span><h2>Loading objects with single table inheritance<a class="headerlink" href="#loading-objects-with-single-table-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>In modern Declarative, single inheritance mappings produce <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a>
-objects that are mapped only to a subclass, and not available from the
-superclass, even though they are present on the same table.
-In our example from <a class="reference internal" href="inheritance.html#single-inheritance"><span class="std std-ref">Single Table Inheritance</span></a>, the <code class="docutils literal"><span class="pre">Manager</span></code> mapping for example had a
-<a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> specified:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Manager</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
+<span id="loading-single-inheritance"></span><h2>1つのテーブル継承を持つオブジェクトのロード<a class="headerlink" href="#loading-objects-with-single-table-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>現代の宣言型では、単一の継承マッピングが生成されます：class： <cite>.Column`オブジェクトは、サブクラスのみにマップされ、スーパークラスからは利用できません。例：ref： `single_inheritance`の例では、</cite> <cite>Manager``マッピングには：class：</cite> .Column`が指定されています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Manager</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
     <span class="n">manager_data</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
 
     <span class="n">__mapper_args__</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span><span class="s1">&#39;manager&#39;</span>
     <span class="p">}</span></pre></div>
 </div>
-<p>Above, there would be no <code class="docutils literal"><span class="pre">Employee.manager_data</span></code>
-attribute, even though the <code class="docutils literal"><span class="pre">employee</span></code> table has a <code class="docutils literal"><span class="pre">manager_data</span></code> column.
-A query against <code class="docutils literal"><span class="pre">Manager</span></code> will include this column in the query, as well
-as an IN clause to limit rows only to <code class="docutils literal"><span class="pre">Manager</span></code> objects:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Manager</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<p>上記の場合、 `` employee``テーブルに `` manager_data``カラムがあっても、 `` Employee.manager_data``属性はありません。 `` Manager``に対するクエリは、 `` Manager``オブジェクトだけに行を制限するIN句と同様に、このカラムをクエリに含めます：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Manager</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 <div class='show_sql'>
 SELECT
     employee.id AS employee_id,
@@ -923,27 +713,21 @@ WHERE employee.type IN (?)
 
 (&#39;manager&#39;,)</div></pre></div>
 </div>
-<p>However, in a similar way to that of joined table inheritance, a query
-against <code class="docutils literal"><span class="pre">Employee</span></code> will only query for columns mapped to <code class="docutils literal"><span class="pre">Employee</span></code>:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<p>しかし、結合されたテーブルの継承と同様に、 `` Employee``に対するクエリは、 `` Employee``にマップされたカラムに対してのみクエリを実行します：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Employee</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 <div class='show_sql'>
 SELECT employee.id AS employee_id,
     employee.name AS employee_name,
     employee.type AS employee_type
 FROM employee</div></pre></div>
 </div>
-<p>If we get back an instance of <code class="docutils literal"><span class="pre">Manager</span></code> from our result, accessing
-additional columns only mapped to <code class="docutils literal"><span class="pre">Manager</span></code> emits a lazy load
-for those columns, in a similar way to joined inheritance:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>SELECT employee.manager_data AS employee_manager_data
+<p>私たちの結果から `` Manager``のインスタンスを取り戻せば、 `` Manager``にのみマップされた追加のカラムにアクセスすることは、継承継承と同様に、それらのカラムに遅延ロードを発生させます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SELECT employee.manager_data AS employee_manager_data
 FROM employee
 WHERE employee.id = ? AND employee.type IN (?)</pre></div>
 </div>
-<p>The <a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a> function serves a similar role as  joined
-inheritance in the case of single inheritance; it allows both for eager loading
-of subclass attributes as well as specification of subclasses in a query,
-just without the overhead of using OUTER JOIN:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">employee_poly</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span><span class="n">Employee</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">)</span>
+<p>：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.orm.with_polymorphic`関数は、単一継承の場合継承継承と同様の役割を果たします。 OUTER JOIN ::を使用するオーバーヘッドがなくても、サブクラス属性の読み込みとクエリ内のサブクラスの指定が可能です</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">employee_poly</span> <span class="o">=</span> <span class="n">with_polymorphic</span><span class="p">(</span><span class="n">Employee</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">)</span>
 
 <span class="n">q</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">employee_poly</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
     <span class="n">or_</span><span class="p">(</span>
@@ -952,11 +736,8 @@ just without the overhead of using OUTER JOIN:</p>
     <span class="p">)</span>
 <span class="p">)</span></pre></div>
 </div>
-<p>Above, our query remains against a single table however we can refer to the
-columns present in <code class="docutils literal"><span class="pre">Manager</span></code> or <code class="docutils literal"><span class="pre">Engineer</span></code> using the &quot;polymorphic&quot; namespace.
-Since we specified <code class="docutils literal"><span class="pre">&quot;*&quot;</span></code> for the entities, both <code class="docutils literal"><span class="pre">Engineer</span></code> and
-<code class="docutils literal"><span class="pre">Manager</span></code> will be loaded at once.  SQL emitted would be:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="n">q</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<p>上記のクエリは1つのテーブルに対して残っていますが、 `` Manager``または `` Engineer``にあるカラムを&amp;quot;polymorphic &amp;quot;名前空間で参照できます。エンティティに対して `` &amp;quot;* &amp;quot; <a href="#id1"><span class="problematic" id="id2">``</span></a>を指定しているので、 `` Engineer``と `` Manager``が一度に読み込まれます。 SQLは次のように出力されます。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 <div class='show_sql'>
 SELECT
     employee.id AS employee_id, employee.name AS employee_name,
@@ -969,73 +750,28 @@ OR employee.manager_data = :manager_data_1</div></pre></div>
 </div>
 </div>
 <div class="section" id="inheritance-loading-api">
-<h2>Inheritance Loading API<a class="headerlink" href="#inheritance-loading-api" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>継承ロードAPI<a class="headerlink" href="#inheritance-loading-api" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="function">
 <dt id="sqlalchemy.orm.with_polymorphic">
 <code class="descclassname">sqlalchemy.orm.</code><code class="descname">with_polymorphic</code><span class="sig-paren">(</span><em>base</em>, <em>classes</em>, <em>selectable=False</em>, <em>flat=False</em>, <em>polymorphic_on=None</em>, <em>aliased=False</em>, <em>innerjoin=False</em>, <em>_use_mapper_path=False</em>, <em>_existing_alias=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.with_polymorphic" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Produce an <a class="reference internal" href="query.html#sqlalchemy.orm.util.AliasedClass" title="sqlalchemy.orm.util.AliasedClass"><code class="xref py py-class docutils literal"><span class="pre">AliasedClass</span></code></a> construct which specifies
-columns for descendant mappers of the given base.</p>
-<p>Using this method will ensure that each descendant mapper's
-tables are included in the FROM clause, and will allow filter()
-criterion to be used against those tables.  The resulting
-instances will also have those columns already loaded so that
-no &quot;post fetch&quot; of those columns will be required.</p>
+<dd><p>指定された基底の子孫マッパーの列を指定するclass： <a href="#id1"><span class="problematic" id="id2">`</span></a>.AliasedClass`構文を生成します。</p>
+<p>このメソッドを使用すると、各子孫マッパーのテーブルがFROM句に含まれていることを確認し、それらのテーブルに対してfilter（）条件を使用できるようになります。結果のインスタンスには既にこれらの列がロードされているため、これらの列の&amp;quot;ポストフェッチ&amp;quot;は必要ありません。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="#with-polymorphic"><span class="std std-ref">Using with_polymorphic</span></a> - full discussion of
-<a class="reference internal" href="#sqlalchemy.orm.with_polymorphic" title="sqlalchemy.orm.with_polymorphic"><code class="xref py py-func docutils literal"><span class="pre">orm.with_polymorphic()</span></code></a>.</p>
+<p class="last">：ref： <cite>with_polymorphic</cite>  -  func：` .orm.with_polymorphic`の完全な議論です。</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.base"></span><strong>base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.base">¶</a> -- Base class to be aliased.</li>
-<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.classes"></span><strong>classes</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.classes">¶</a> -- a single class or mapper, or list of
-class/mappers, which inherit from the base class.
-Alternatively, it may also be the string <code class="docutils literal"><span class="pre">'*'</span></code>, in which case
-all descending mapped classes will be added to the FROM clause.</li>
-<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.aliased"></span><strong>aliased</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.aliased">¶</a> -- when True, the selectable will be wrapped in an
-alias, that is <code class="docutils literal"><span class="pre">(SELECT</span> <span class="pre">*</span> <span class="pre">FROM</span> <span class="pre">&lt;fromclauses&gt;)</span> <span class="pre">AS</span> <span class="pre">anon_1</span></code>.
-This can be important when using the with_polymorphic()
-to create the target of a JOIN on a backend that does not
-support parenthesized joins, such as SQLite and older
-versions of MySQL.   However if the
-<a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.with_polymorphic.params.selectable" title="sqlalchemy.orm.query.Query.with_polymorphic"><code class="xref py py-paramref docutils literal"><span class="pre">with_polymorphic.selectable</span></code></a> parameter is in use
-with an existing <a class="reference internal" href="../core/selectable.html#sqlalchemy.sql.expression.Alias" title="sqlalchemy.sql.expression.Alias"><code class="xref py py-class docutils literal"><span class="pre">Alias</span></code></a> construct, then you should not
-set this flag.</li>
-<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.flat"></span><strong>flat</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.flat">¶</a> -- <p>Boolean, will be passed through to the
-<a class="reference internal" href="../core/selectable.html#sqlalchemy.sql.expression.FromClause.alias" title="sqlalchemy.sql.expression.FromClause.alias"><code class="xref py py-meth docutils literal"><span class="pre">FromClause.alias()</span></code></a> call so that aliases of <a class="reference internal" href="../core/selectable.html#sqlalchemy.sql.expression.Join" title="sqlalchemy.sql.expression.Join"><code class="xref py py-class docutils literal"><span class="pre">Join</span></code></a>
-objects don't include an enclosing SELECT.  This can lead to more
-efficient queries in many circumstances.  A JOIN against a nested JOIN
-will be rewritten as a JOIN against an aliased SELECT subquery on
-backends that don't support this syntax.</p>
-<p>Setting <code class="docutils literal"><span class="pre">flat</span></code> to <code class="docutils literal"><span class="pre">True</span></code> implies the <code class="docutils literal"><span class="pre">aliased</span></code> flag is
-also <code class="docutils literal"><span class="pre">True</span></code>.</p>
-<div class="versionadded">
-<p><span class="versionmodified">バージョン 0.9.0 で追加.</span></p>
-</div>
-<div class="admonition seealso">
-<p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="../core/selectable.html#sqlalchemy.sql.expression.Join.alias" title="sqlalchemy.sql.expression.Join.alias"><code class="xref py py-meth docutils literal"><span class="pre">Join.alias()</span></code></a></p>
-</div>
-</li>
-<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.selectable"></span><strong>selectable</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.selectable">¶</a> -- a table or select() statement that will
-be used in place of the generated FROM clause. This argument is
-required if any of the desired classes use concrete table
-inheritance, since SQLAlchemy currently cannot generate UNIONs
-among tables automatically. If used, the <code class="docutils literal"><span class="pre">selectable</span></code> argument
-must represent the full set of tables and columns mapped by every
-mapped class. Otherwise, the unaccounted mapped columns will
-result in their table being appended directly to the FROM clause
-which will usually lead to incorrect results.</li>
-<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.polymorphic_on"></span><strong>polymorphic_on</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.polymorphic_on">¶</a> -- a column to be used as the &quot;discriminator&quot;
-column for the given selectable. If not given, the polymorphic_on
-attribute of the base classes' mapper will be used, if any. This
-is useful for mappings that don't have polymorphic loading
-behavior by default.</li>
-<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.innerjoin"></span><strong>innerjoin</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.innerjoin">¶</a> -- if True, an INNER JOIN will be used.  This should
-only be specified if querying for one specific subtype only</li>
+<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.base"></span><strong>base</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.base">¶</a> -- エイリアスするベースクラス。</li>
+<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.classes"></span><strong>classes</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.classes">¶</a> -- 単一のクラスまたはマッパー、または基本クラスから継承したクラス/マッパーのリスト代わりに、文字列 `` &amp;#39;*&amp;#39; &amp;#39;`でもかまいません。この場合、降順にマップされたすべてのクラスがFROM句に追加されます。</li>
+<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.aliased"></span><strong>aliased</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.aliased">¶</a> -- Trueの場合、選択可能なものは別名でラップされます。つまり、 <code class="docutils literal notranslate"><span class="pre">（*</span> <span class="pre">SELECT</span> <span class="pre">*</span> <span class="pre">FROM</span> <span class="pre">&lt;fromclauses&gt;</span> <span class="pre">）as</span> <span class="pre">anon_1</span></code>。これは、with_polymorphic（）を使用して、SQLiteや古いバージョンのMySQLなど、カッコで囲まれた結合をサポートしていないバックエンドでJOINのターゲットを作成するときに重要になります。ただし、：paramref： <cite>.with_polymorphic.selectable`パラメータが既存の：class：</cite> .Alias`構造で使用されている場合、このフラグは設定しないでください。</li>
+<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.flat"></span><strong>flat</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.flat">¶</a> -- Boolean：は：meth： <cite>.FromClause.alias`呼び出しに渡され、class：</cite> .Join`オブジェクトのエイリアスには囲みSELECTが含まれません。これにより、多くの状況でより効率的なクエリにつながる可能性があります。ネストされたJOINに対するJOINは、この構文をサポートしていないバックエンド上のエイリアス化されたSELECTサブクエリに対するJOINとして書き換えられます。 `` flat``を `` True``に設定すると、 `` aliased``フラグも `` True``を意味します。 .. versionadded :: 0.9.0 .. seealso :: meth： <cite>.Join.alias</cite></li>
+<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.selectable"></span><strong>selectable</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.selectable">¶</a> -- 生成されたFROM句の代わりに使用されるtableまたはselect（）文。この引数は、SQLAlchemyが現在テーブル間でUNIONを自動的に生成できないため、目的のクラスのいずれかが具体的なテーブル継承を使用する場合に必要です。使用されている場合、 `` selectable``引数は、マップされたすべてのクラスによってマップされたテーブルとカラムのフルセットを表す必要があります。そうしないと、未対応のマップされた列は、結果として誤った結果につながるFROM句に直接表が追加されます。</li>
+<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.polymorphic_on"></span><strong>polymorphic_on</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.polymorphic_on">¶</a> -- 指定された選択肢の&amp;quot;discriminator &amp;quot;列として使用される列。指定されていない場合、ベースクラスのマッパーのpolymorphic_on属性があればそれが使用されます。これは、デフォルトで多態的な読み込み動作を持たないマッピングに便利です。</li>
+<li><span class="target" id="sqlalchemy.orm.with_polymorphic.params.innerjoin"></span><strong>innerjoin</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.with_polymorphic.params.innerjoin">¶</a> -- Trueの場合は、INNER JOINが使用されます。 1つの特定のサブタイプのみを照会する場合にのみ指定してください</li>
 </ul>
 </td>
 </tr>
@@ -1046,17 +782,14 @@ only be specified if querying for one specific subtype only</li>
 <dl class="function">
 <dt id="sqlalchemy.orm.selectin_polymorphic">
 <code class="descclassname">sqlalchemy.orm.</code><code class="descname">selectin_polymorphic</code><span class="sig-paren">(</span><em>base_cls</em>, <em>classes</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.selectin_polymorphic" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Indicate an eager load should take place for all attributes
-specific to a subclass.</p>
-<p>This uses an additional SELECT with IN against all matched primary
-key values, and is the per-query analogue to the <code class="docutils literal"><span class="pre">&quot;selectin&quot;</span></code>
-setting on the <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.polymorphic_load" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">mapper.polymorphic_load</span></code></a> parameter.</p>
+<dd><p>サブクラスに固有のすべての属性に対して熱心な負荷が発生することを示します。</p>
+<p>これは、一致するすべてのプライマリキー値に対してINで追加のSELECTを使用し、：paramref： <cite>.mapper.polymorphic_load`パラメータの</cite> <cite>&amp;quot; selectin &amp;quot;</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>設定に対するクエリごとの類似点です。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.2 で追加.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><span class="xref std std-ref">inheritance_polymorphic_load</span></p>
+<p class="last">：ref： <cite>inheritance_polymorphic_load</cite></p>
 </div>
 </dd></dl>
 
@@ -1069,13 +802,13 @@ setting on the <a class="reference internal" href="mapping_api.html#sqlalchemy.o
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="loading_relationships.html" title="previous chapter">Relationship Loading Techniques</a>
+        <a href="loading_relationships.html" title="previous chapter">関係の読み込み手法</a>
         Next:
-        <a href="constructors.html" title="next chapter">Constructors and Object Initialization</a>
+        <a href="constructors.html" title="next chapter">コンストラクタとオブジェクトの初期化</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -1102,6 +835,7 @@ setting on the <a class="reference internal" href="mapping_api.html#sqlalchemy.o
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

@@ -10,7 +10,7 @@
         <title>
             
     
-    Loading Objects
+    オブジェクトの読み込み
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -36,8 +36,8 @@
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
         <link rel="up" title="SQLAlchemy ORM" href="index.html" />
-        <link rel="next" title="Loading Columns" href="loading_columns.html" />
-        <link rel="prev" title="Relationships API" href="relationship_api.html" />
+        <link rel="next" title="列の読み込み" href="loading_columns.html" />
+        <link rel="prev" title="リレーションシップAPI" href="relationship_api.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,21 +120,21 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Loading Objects</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="loading_columns.html">Loading Columns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_relationships.html">Relationship Loading Techniques</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="inheritance_loading.html">Loading Inheritance Hierarchies</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="constructors.html">Constructors and Object Initialization</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="query.html">Query API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li class="selected"><span class="link-container first"><strong>オブジェクトの読み込み</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="loading_columns.html">列の読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_relationships.html">関係の読み込み手法</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="inheritance_loading.html">継承階層のロード</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="constructors.html">コンストラクタとオブジェクトの初期化</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="query.html">クエリAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -150,44 +150,44 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="loading-objects">
-<h1>Loading Objects<a class="headerlink" href="#loading-objects" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Notes and features regarding the general loading of mapped objects.</p>
-<p>For an in-depth introduction to querying with the SQLAlchemy ORM, please see the <a class="reference internal" href="tutorial.html"><span class="std std-ref">Object Relational Tutorial</span></a>.</p>
+<h1>オブジェクトの読み込み<a class="headerlink" href="#loading-objects" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>マッピングされたオブジェクトの一般的な読み込みに関する注釈と機能</p>
+<p>SQLAlchemy ORMでクエリを行う方法については、：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>ormtutorial_toplevel`を参照してください。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="loading_columns.html">Loading Columns</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="loading_columns.html#deferred-column-loading">Deferred Column Loading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_columns.html#column-bundles">Column Bundles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loading_columns.html">列の読み込み</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loading_columns.html#deferred-column-loading">遅延カラムロード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_columns.html#column-bundles">列バンドル</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="loading_relationships.html">Relationship Loading Techniques</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#configuring-loader-strategies-at-mapping-time">Configuring Loader Strategies at Mapping Time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#controlling-loading-via-options">Controlling Loading via Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#lazy-loading">Lazy Loading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#joined-eager-loading">Joined Eager Loading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#subquery-eager-loading">Subquery Eager Loading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#select-in-loading">Select IN loading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#what-kind-of-loading-to-use">What Kind of Loading to Use ?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#polymorphic-eager-loading">Polymorphic Eager Loading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#wildcard-loading-strategies">Wildcard Loading Strategies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#routing-explicit-joins-statements-into-eagerly-loaded-collections">Routing Explicit Joins/Statements into Eagerly Loaded Collections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#creating-custom-load-rules">Creating Custom Load Rules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#relationship-loader-api">Relationship Loader API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loading_relationships.html">関係の読み込み手法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#configuring-loader-strategies-at-mapping-time">マッピング時のローダー戦略の設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#controlling-loading-via-options">オプションによる読み込みの制御</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#lazy-loading">レイジーロード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#joined-eager-loading">参加したEager Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#subquery-eager-loading">サブクエリのEager Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#select-in-loading">INロードを選択</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#what-kind-of-loading-to-use">どのようなローディングを使用するのですか？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#polymorphic-eager-loading">多形Eager Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#wildcard-loading-strategies">ワイルドカード読み込み方針</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#routing-explicit-joins-statements-into-eagerly-loaded-collections">明示的な結合/ステートメントを熱心に読み込まれたコレクションにルーティングする</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#creating-custom-load-rules">カスタムロードルールの作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loading_relationships.html#relationship-loader-api">リレーションシップローダーAPI</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="inheritance_loading.html">Loading Inheritance Hierarchies</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#using-with-polymorphic">Using with_polymorphic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#polymorphic-selectin-loading">Polymorphic Selectin Loading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#referring-to-specific-subtypes-on-relationships">Referring to specific subtypes on relationships</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#loading-objects-with-joined-table-inheritance">Loading objects with joined table inheritance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#loading-objects-with-single-table-inheritance">Loading objects with single table inheritance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#inheritance-loading-api">Inheritance Loading API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inheritance_loading.html">継承階層のロード</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#using-with-polymorphic">with_polymorphicの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#polymorphic-selectin-loading">多型セレクチンのローディング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#referring-to-specific-subtypes-on-relationships">関係の特定のサブタイプを参照する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#loading-objects-with-joined-table-inheritance">テーブル継承を結合したオブジェクトのロード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#loading-objects-with-single-table-inheritance">1つのテーブル継承を持つオブジェクトのロード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inheritance_loading.html#inheritance-loading-api">継承ロードAPI</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="constructors.html">Constructors and Object Initialization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="query.html">Query API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="query.html#the-query-object">The Query Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="query.html#orm-specific-query-constructs">ORM-Specific Query Constructs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constructors.html">コンストラクタとオブジェクトの初期化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query.html">クエリAPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="query.html#the-query-object">クエリオブジェクト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="query.html#orm-specific-query-constructs">ORM固有のクエリ構文</a></li>
 </ul>
 </li>
 </ul>
@@ -200,13 +200,13 @@
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="relationship_api.html" title="previous chapter">Relationships API</a>
+        <a href="relationship_api.html" title="previous chapter">リレーションシップAPI</a>
         Next:
-        <a href="loading_columns.html" title="next chapter">Loading Columns</a>
+        <a href="loading_columns.html" title="next chapter">列の読み込み</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -233,6 +233,7 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

@@ -6,28 +6,18 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/loading_columns.rst:5
 msgid "Loading Columns"
-msgstr ""
+msgstr "列の読み込み"
 
 #: ../../orm/loading_columns.rst:7
 msgid "This section presents additional options regarding the loading of columns."
-msgstr ""
+msgstr "このセクションでは、列のロードに関する追加オプションについて説明します。"
 
 #: ../../orm/loading_columns.rst:12
 msgid "Deferred Column Loading"
-msgstr ""
+msgstr "遅延カラムロード"
 
 #: ../../orm/loading_columns.rst:14
 msgid ""
@@ -41,13 +31,13 @@ msgid ""
 "load each of ``.excerpt`` and ``.photo`` in separate, individual-row "
 "SELECT statements when each attribute is first referenced on the "
 "individual object instance::"
-msgstr ""
+msgstr "この機能では、class： `.Query`を使用してエンティティが照会されるのではなく、ダイレクトアクセス時にのみテーブルの特定のカラムをロードすることができます。この機能は、大きなテキストまたはバイナリフィールドを必要としないときにメモリにロードしないようにする場合に便利です。個々のカラムは、それ自身で遅延ロードすることもできますし、：func： `.orm.deferred`関数を使用して遅延ロードするグループに配置して、それらを\&quot;遅延\ &quot;としてマークすることもできます。以下の例では、個々のオブジェクトインスタンスで各属性が最初に参照されたときに、個別の個々の行のSELECTステートメントに `` .excerpt``と `` .photo``をそれぞれロードするマッピングを定義しています::"
 
 #: ../../orm/loading_columns.rst:36
 msgid ""
 "Classical mappings as always place the usage of :func:`.orm.deferred` in "
 "the ``properties`` dictionary against the table-bound :class:`.Column`::"
-msgstr ""
+msgstr "古典的なマッピングはいつも `：properties ::` .orm.deferred`をtable-boundに対して `` properties``ディクショナリに置きます：class： `.Column` ::"
 
 #: ../../orm/loading_columns.rst:43
 msgid ""
@@ -56,42 +46,42 @@ msgid ""
 "defines a mapping with a ``photos`` deferred group.  When one ``.photo`` "
 "is accessed, all three photos will be loaded in one SELECT statement. The"
 " ``.excerpt`` will be loaded separately when it is accessed::"
-msgstr ""
+msgstr "遅延カラムは、\ &quot;グループ\&quot;の名前と関連付けることができるので、それらのグループに最初にアクセスされたときに一緒に読み込まれます。以下の例では、 `` photos``遅延グループを使ったマッピングを定義しています。 `` .photo``にアクセスすると、3枚の写真はすべて1つのSELECT文に読み込まれます。 `` .excerpt``はアクセス時に別々に読み込まれます::"
 
 #: ../../orm/loading_columns.rst:60
 msgid ""
 "You can defer or undefer columns at the "
 ":class:`~sqlalchemy.orm.query.Query` level using options, including "
 ":func:`.orm.defer` and :func:`.orm.undefer`::"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.orm.query.Query`レベルで、：func：` .orm.defer`と：func： `.orm.undefer`を含むオプションを使用して、列を遅延または不能にすることができます::"
 
 #: ../../orm/loading_columns.rst:70
 msgid ""
 ":func:`.orm.deferred` attributes which are marked with a \"group\" can be"
 " undeferred using :func:`.orm.undefer_group`, sending in the group name::"
-msgstr ""
+msgstr "：func： `.orm.deferred`属性は\&quot; group \ &quot;とマークされています：func：` .orm.undefer_group`を使ってundeferredすることができます。グループ名::"
 
 #: ../../orm/loading_columns.rst:79
 msgid "Load Only Cols"
-msgstr ""
+msgstr "荷重のみの欄"
 
 #: ../../orm/loading_columns.rst:81
 msgid ""
 "An arbitrary set of columns can be selected as \"load only\" columns, "
 "which will be loaded while deferring all other columns on a given entity,"
 " using :func:`.orm.load_only`::"
-msgstr ""
+msgstr "任意のセットのカラムを\ &quot;ロードのみ\&quot;カラムとして選択することができます。これは、特定のエンティティ上の他のカラムをすべて延期しながら読み込まれます：func： `.orm.load_only` ::"
 
 #: ../../orm/loading_columns.rst:93
 msgid "Deferred Loading with Multiple Entities"
-msgstr ""
+msgstr "複数エンティティによる遅延ロード"
 
 #: ../../orm/loading_columns.rst:95
 msgid ""
 "To specify column deferral options within a :class:`.Query` that loads "
 "multiple types of entity, the :class:`.Load` object can specify which "
 "parent entity to start with::"
-msgstr ""
+msgstr "複数のタイプのエンティティをロードする：class： `.Query`の中で列の遅延オプションを指定するには、：class：` .Load`オブジェクトは、どの親エンティティで始まるかを指定できます::"
 
 #: ../../orm/loading_columns.rst:106
 msgid ""
@@ -100,40 +90,40 @@ msgid ""
 "each relationship is specified first, then is chained to the deferral "
 "options.  Such as, to load ``Book`` instances, then joined-eager-load the"
 " ``Author``, then apply deferral options to the ``Author`` entity::"
-msgstr ""
+msgstr "さまざまなリレーションシップのパスに沿って列の遅延オプションを指定するには、各リレーションの読み込みスタイルが最初に指定され、遅延オプションに連鎖される連鎖がサポートされます。 `` Book``インスタンスをロードし、 `` Author``をロードし、 `` Author``エンティティに遅延オプションを適用するなど、::"
 
 #: ../../orm/loading_columns.rst:119
 msgid ""
 "In the case where the loading style of parent relationships should be "
 "left unchanged, use :func:`.orm.defaultload`::"
-msgstr ""
+msgstr "親関係の読み込みスタイルを変更しない場合、func： `.orm.defaultload` ::"
 
 #: ../../orm/loading_columns.rst:129
 msgid ""
 "support for :class:`.Load` and other options which allow for better "
 "targeting of deferral options."
-msgstr ""
+msgstr "：class： `.Load`と遅延オプションのより良いターゲティングを可能にする他のオプションをサポートしています。"
 
 #: ../../orm/loading_columns.rst:133
 msgid "Column Deferral API"
-msgstr ""
+msgstr "列遅延API"
 
 #: of sqlalchemy.orm.defer:1
 msgid ""
 "Indicate that the given column-oriented attribute should be deferred, "
 "e.g. not loaded until accessed."
-msgstr ""
+msgstr "指定された列指向属性を遅延する必要があることを示します。たとえば、アクセスされるまでロードされません。"
 
 #: of sqlalchemy.orm.defer:4 sqlalchemy.orm.load_only:5
 #: sqlalchemy.orm.undefer:7
 msgid ""
 "This function is part of the :class:`.Load` interface and supports both "
 "method-chained and standalone operation."
-msgstr ""
+msgstr "この関数は：class： `.Load`インターフェースの一部であり、メソッド連鎖操作とスタンドアロン操作の両方をサポートしています。"
 
 #: of sqlalchemy.orm.defer:7
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.orm.defer:19
 msgid ""
@@ -141,179 +131,179 @@ msgid ""
 "can be specified one token at a time, specifying the loading style for "
 "each link along the chain.  To leave the loading style for a link "
 "unchanged, use :func:`.orm.defaultload`::"
-msgstr ""
+msgstr "関連クラスの属性の遅延ロードを指定するには、一度に1トークンずつ指定し、チェーンに沿った各リンクの読み込みスタイルを指定します。リンクの読み込みスタイルを変更しないままにするには、次のようにします。func： `.orm.defaultload` ::"
 
 #: of sqlalchemy.orm.defer:26
 msgid ""
 "A :class:`.Load` object that is present on a certain path can have "
 ":meth:`.Load.defer` called multiple times, each will operate on the same "
 "parent entity::"
-msgstr ""
+msgstr "A：class： `.Load`オブジェクトは、特定のパス上に存在することができます。：meth：` .Load.defer`は複数回呼び出され、それぞれは同じ親エンティティで動作します::"
 
 #: of sqlalchemy.orm.defer sqlalchemy.orm.deferred sqlalchemy.orm.undefer
 #: sqlalchemy.orm.with_expression
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.orm.defer:38
 msgid "Attribute to be deferred."
-msgstr ""
+msgstr "遅延される属性。"
 
 #: of sqlalchemy.orm.defer:40 sqlalchemy.orm.undefer:21
 msgid ""
 "Deprecated; this option supports the old 0.8 style of specifying a path "
 "as a series of attributes, which is now superseded by the method-chained "
 "style."
-msgstr ""
+msgstr "推奨されない。このオプションは、パスを一連の属性として指定する古い0.8スタイルをサポートします。これは、メソッドチェーンスタイルによって置き換えられました。"
 
 #: of sqlalchemy.orm.defer:46 sqlalchemy.orm.deferred:13
 #: sqlalchemy.orm.undefer:27 sqlalchemy.orm.undefer_group:23
 msgid ":ref:`deferred`"
-msgstr ""
+msgstr "：ref： `deferred`"
 
 #: of sqlalchemy.orm.defer:48 sqlalchemy.orm.undefer_group:27
 msgid ":func:`.orm.undefer`"
-msgstr ""
+msgstr "：func： `.orm.undefer`"
 
 #: of sqlalchemy.orm.deferred:1
 msgid ""
 "Indicate a column-based mapped attribute that by default will not load "
 "unless accessed."
-msgstr ""
+msgstr "アクセスされない限り、デフォルトでロードされない列ベースのマップされた属性を指定します。"
 
 #: of sqlalchemy.orm.deferred:4
 msgid ""
 "columns to be mapped.  This is typically a single :class:`.Column` "
 "object, however a collection is supported in order to support multiple "
 "columns mapped under the same attribute."
-msgstr ""
+msgstr "マップする列。これは通常は単一の：class： `.Column`オブジェクトですが、同じ属性の下にマップされた複数の列をサポートするためにコレクションがサポートされています。"
 
 #: of sqlalchemy.orm.deferred:8
 msgid "additional keyword arguments passed to :class:`.ColumnProperty`."
-msgstr ""
+msgstr "追加のキーワード引数は：class： `.ColumnProperty`に渡されます。"
 
 #: of sqlalchemy.orm.query_expression:1
 msgid "Indicate an attribute that populates from a query-time SQL expression."
-msgstr ""
+msgstr "問合せ時のSQL式から移入する属性を指定します。"
 
 #: of sqlalchemy.orm.query_expression:7 sqlalchemy.orm.with_expression:22
 msgid ":ref:`mapper_query_expression`"
-msgstr ""
+msgstr "：ref： `mapper_query_expression`"
 
 #: of sqlalchemy.orm.load_only:1
 msgid ""
 "Indicate that for a particular entity, only the given list of column-"
 "based attribute names should be loaded; all others will be deferred."
-msgstr ""
+msgstr "特定のエンティティに対して、列ベースの属性名のリストのみをロードする必要があることを示します。他はすべて延期されます。"
 
 #: of sqlalchemy.orm.load_only:8
 msgid ""
 "Example - given a class ``User``, load only the ``name`` and ``fullname``"
 " attributes::"
-msgstr ""
+msgstr "例 - クラス `` User``を与え、 `` name``属性と `` fullname``属性のみを読み込みます::"
 
 #: of sqlalchemy.orm.load_only:13
 msgid ""
 "Example - given a relationship ``User.addresses -> Address``, specify "
 "subquery loading for the ``User.addresses`` collection, but on each "
 "``Address`` object load only the ``email_address`` attribute::"
-msgstr ""
+msgstr "例 -  `` User.addresses  - &gt; Address``の関係を与え、 `` User.addresses``コレクションのサブクエリの読み込みを指定しますが、各 `` Address``オブジェクトは `` email_address``属性のみを読み込みます::"
 
 #: of sqlalchemy.orm.load_only:21
 msgid ""
 "For a :class:`.Query` that has multiple entities, the lead entity can be "
 "specifically referred to using the :class:`.Load` constructor::"
-msgstr ""
+msgstr "複数のエンティティを持つ `class：` .Query`の場合、リードエンティティは：class： `.Load`コンストラクタを使って具体的に参照できます::"
 
 #: of sqlalchemy.orm.undefer:1
 msgid ""
 "Indicate that the given column-oriented attribute should be undeferred, "
 "e.g. specified within the SELECT statement of the entity as a whole."
-msgstr ""
+msgstr "指定された列指向の属性が、例えば、エンティティ全体のSELECT文内で指定されているなど、未定義であることを示します。"
 
 #: of sqlalchemy.orm.undefer:4
 msgid ""
 "The column being undeferred is typically set up on the mapping as a "
 ":func:`.deferred` attribute."
-msgstr ""
+msgstr "undeferredされる列は、通常、マッピングで：func： `.deferred`属性として設定されます。"
 
 #: of sqlalchemy.orm.undefer:10
 msgid "Examples::"
-msgstr ""
+msgstr "例::"
 
 #: of sqlalchemy.orm.undefer:19 sqlalchemy.orm.with_expression:16
 msgid "Attribute to be undeferred."
-msgstr ""
+msgstr "不承認となる属性。"
 
 #: of sqlalchemy.orm.undefer:29 sqlalchemy.orm.undefer_group:25
 msgid ":func:`.orm.defer`"
-msgstr ""
+msgstr "：func： `.orm.defer`"
 
 #: of sqlalchemy.orm.undefer:31
 msgid ":func:`.orm.undefer_group`"
-msgstr ""
+msgstr "：func： `.orm.undefer_group`"
 
 #: of sqlalchemy.orm.undefer_group:1
 msgid ""
 "Indicate that columns within the given deferred group name should be "
 "undeferred."
-msgstr ""
+msgstr "指定した遅延グループ名内の列を未確定にする必要があることを示します。"
 
 #: of sqlalchemy.orm.undefer_group:4
 msgid ""
 "The columns being undeferred are set up on the mapping as "
 ":func:`.deferred` attributes and include a \"group\" name."
-msgstr ""
+msgstr "undeferredされる列は：func： `.deferred`属性としてマッピングに設定され、\&quot; group \ &quot;名を含みます。"
 
 #: of sqlalchemy.orm.undefer_group:7
 msgid "E.g::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.orm.undefer_group:11
 msgid ""
 "To undefer a group of attributes on a related entity, the path can be "
 "spelled out using relationship loader options, such as "
 ":func:`.orm.defaultload`::"
-msgstr ""
+msgstr "関連するエンティティの属性のグループを解除するには、func： `.orm.defaultload` ::などのリレーションシップローダオプションを使用してパスを入力します。"
 
 #: of sqlalchemy.orm.undefer_group:18
 msgid ""
 ":func:`.orm.undefer_group` is now specific to a particiular entity load "
 "path."
-msgstr ""
+msgstr "：func： `.orm.undefer_group`は、特定のエンティティロードパスに固有のものになりました。"
 
 #: of sqlalchemy.orm.with_expression:1
 msgid "Apply an ad-hoc SQL expression to a \"deferred expression\" attribute."
-msgstr ""
+msgstr "ad-hoc SQL式を\ &quot;遅延式\&quot;属性に適用します。"
 
 #: of sqlalchemy.orm.with_expression:3
 msgid ""
 "This option is used in conjunction with the :func:`.orm.query_expression`"
 " mapper-level construct that indicates an attribute which should be the "
 "target of an ad-hoc SQL expression."
-msgstr ""
+msgstr "このオプションは、アドホックSQL式のターゲットとなる属性を示す：func： `.orm.query_expression`マッパーレベルのコンストラクトとともに使用されます。"
 
 #: of sqlalchemy.orm.with_expression:7
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.orm.with_expression:18
 msgid "SQL expression to be applied to the attribute."
-msgstr ""
+msgstr "属性に適用されるSQL式。"
 
 #: ../../orm/loading_columns.rst:152
 msgid "Column Bundles"
-msgstr ""
+msgstr "列バンドル"
 
 #: ../../orm/loading_columns.rst:154
 msgid ""
 "The :class:`.Bundle` may be used to query for groups of columns under one"
 " namespace."
-msgstr ""
+msgstr "：class： `.Bundle`は、1つの名前空間の下の列のグループを問い合わせるために使われます。"
 
 #: ../../orm/loading_columns.rst:159
 msgid "The bundle allows columns to be grouped together::"
-msgstr ""
+msgstr "バンドルを使用すると、列をグループ化できます。"
 
 #: ../../orm/loading_columns.rst:167
 msgid ""
@@ -324,23 +314,23 @@ msgid ""
 "return the individual attribute value, which can then be adapted into any"
 " kind of return data structure.  Below illustrates replacing the usual "
 ":class:`.KeyedTuple` return structure with a straight Python dictionary::"
-msgstr ""
+msgstr "結果をフェッチしたときにカスタム動作を提供するために、バンドルをサブクラス化することができます。メソッド：meth： `.Bundle.create_row_processor`には：class：` .Query`とクエリ実行時に\ &quot;row processor \&quot;関数のセットが与えられます。これらのプロセッサ関数は、結果行が与えられたときに個々の属性値を返すことになり、それを任意の種類の戻りデータ構造に適合させることができる。以下は、通常の：class： `.KeyedTuple`リターン構造体を直筆のPython辞書で置き換える方法を示しています::"
 
 #: ../../orm/loading_columns.rst:188
 msgid ""
 "The ``proc()`` callable passed to the ``create_row_processor()`` method "
 "of custom :class:`.Bundle` classes now accepts only a single \"row\" "
 "argument."
-msgstr ""
+msgstr "custom：class： `.Bundle`クラスの` `create_row_processor（）` `メソッドに渡された` `proc（）` `呼び出し可能クラスは、単一の&quot;行 &quot;引数だけを受け入れるようになりました。"
 
 #: ../../orm/loading_columns.rst:192
 msgid "A result from the above bundle will return dictionary values::"
-msgstr ""
+msgstr "上記バンドルの結果は辞書値を返します::"
 
 #: ../../orm/loading_columns.rst:198
 msgid ""
 "The :class:`.Bundle` construct is also integrated into the behavior of "
 ":func:`.composite`, where it is used to return composite attributes as "
 "objects when queried as individual attributes."
-msgstr ""
+msgstr "：class： `.Bundle`構造体は、：func：` .composite`の振る舞いにも統合されています。ここでは、個々の属性として照会されたときにコンポジット属性をオブジェクトとして返すために使用されます。"
 

@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../intro.rst:6
 msgid "Overview"
-msgstr ""
+msgstr "概要"
 
 #: ../../intro.rst:8
 msgid ""
@@ -28,7 +18,7 @@ msgid ""
 "several distinct areas of functionality which can be used individually or"
 " combined together. Its major components are illustrated below, with "
 "component dependencies organized into layers:"
-msgstr "SQLAlchemyああああああああああああああああああああああああああああああああ"
+msgstr "SQLAlchemy SQL ToolkitとObject Relational Mapperは、データベースとPythonを扱う包括的なツールセットです。それは個別にまたは一緒に組み合わせることができる機能のいくつかの異なる領域を持っています。主なコンポーネントを以下に示します。コンポーネントの依存関係はレイヤーにまとめられています。"
 
 #: ../../intro.rst:17
 msgid ""
@@ -37,17 +27,17 @@ msgid ""
 " Expressions can be used independently of the ORM. When using the ORM, "
 "the SQL Expression language remains part of the public facing API as it "
 "is used within object-relational configurations and queries."
-msgstr ""
+msgstr "上では、SQLAlchemyの最も重要な正面の2つの部分は** Object Relational Mapper **と** SQL Expression Language **です。 SQL式はORMとは独立して使用できます。 ORMを使用する場合、SQL表現言語は、オブジェクト・リレーショナル構成および問合せ内で使用されるため、パブリック・フェイシングAPIの一部として残ります。"
 
 #: ../../intro.rst:28
 msgid "Documentation Overview"
-msgstr ""
+msgstr "ドキュメントの概要"
 
 #: ../../intro.rst:30
 msgid ""
 "The documentation is separated into three sections: :ref:`orm_toplevel`, "
 ":ref:`core_toplevel`, and :ref:`dialect_toplevel`."
-msgstr ""
+msgstr "ドキュメントは、：ref： `orm_toplevel`、：ref：` core_toplevel`、：ref： `dialect_toplevel`の3つのセクションに分かれています。"
 
 #: ../../intro.rst:33
 msgid ""
@@ -56,7 +46,7 @@ msgid ""
 ":ref:`ormtutorial_toplevel`. If you want to work with higher-level SQL "
 "which is constructed automatically for you, as well as management of "
 "Python objects, proceed to this tutorial."
-msgstr ""
+msgstr "In：ref： `orm_toplevel`では、オブジェクトリレーショナルマッパーが導入され、完全に説明されています。新しいユーザは：ref： `ormtutorial_toplevel`で始めるべきです。あなたのために自動的に構築される上位レベルのSQLで作業したい場合や、Pythonオブジェクトの管理については、このチュートリアルに進んでください。"
 
 #: ../../intro.rst:38
 msgid ""
@@ -70,76 +60,76 @@ msgid ""
 "language provides a schema-centric usage paradigm. New users should begin"
 " here with :ref:`sqlexpression_toplevel`. SQLAlchemy engine, connection, "
 "and pooling services are also described in :ref:`core_toplevel`."
-msgstr ""
+msgstr "In：ref： `core_toplevel`では、SQLAlchemyのSQLとデータベースの統合と記述サービスの幅が文書化されており、その中核はSQL式言語です。 SQL式言語は、ORMパッケージとは独立した独自のツールキットです。このツールキットを使用して、プログラムで構築、変更、実行できる操作可能なSQL式を作成し、カーソルのような結果セットを戻すことができます。 ORMのドメイン中心の使用モードとは対照的に、表現言語はスキーマ中心の使用パラダイムを提供します。新規ユーザーは、ここでは：ref： `sqlexpression_toplevel`で始める必要があります。 SQLAlchemyのエンジンサービス、接続サービス、およびプーリングサービスについてはref： `core_toplevel`にも記述されています。"
 
 #: ../../intro.rst:49
 msgid ""
 "In :ref:`dialect_toplevel`, reference documentation for all provided "
 "database and DBAPI backends is provided."
-msgstr ""
+msgstr "In：ref： `dialect_toplevel`、提供されているすべてのデータベースとDBAPIバックエンドのリファレンスドキュメントが提供されています。"
 
 #: ../../intro.rst:53
 msgid "Code Examples"
-msgstr ""
+msgstr "コード例"
 
 #: ../../intro.rst:55
 msgid ""
 "Working code examples, mostly regarding the ORM, are included in the "
 "SQLAlchemy distribution. A description of all the included example "
 "applications is at :ref:`examples_toplevel`."
-msgstr ""
+msgstr "主にORMに関する作業コードの例は、SQLAlchemyディストリビューションに含まれています。含まれているすべてのサンプルアプリケーションの説明は、：ref： `examples_toplevel`です。"
 
 #: ../../intro.rst:59
 msgid ""
 "There is also a wide variety of examples involving both core SQLAlchemy "
 "constructs as well as the ORM on the wiki.  See `Theatrum Chemicum "
 "<http://www.sqlalchemy.org/trac/wiki/UsageRecipes>`_."
-msgstr ""
+msgstr "また、コアSQLAlchemy構造体とwiki上のORMの両方を含む多種多様な例があります。 `Theatrum Chemicum <http://www.sqlalchemy.org/trac/wiki/UsageRecipes> `_。"
 
 #: ../../intro.rst:66
 msgid "Installation Guide"
-msgstr ""
+msgstr "インストールガイド"
 
 #: ../../intro.rst:69
 msgid "Supported Platforms"
-msgstr ""
+msgstr "サポートされているプラ​​ットフォーム"
 
 #: ../../intro.rst:71
 msgid "SQLAlchemy has been tested against the following platforms:"
-msgstr ""
+msgstr "SQLAlchemyは、以下のプラットフォームに対してテストされています。"
 
 #: ../../intro.rst:73
 msgid "cPython 2.7"
-msgstr ""
+msgstr "cPython 2.7"
 
 #: ../../intro.rst:74
 msgid "cPython 3.4 and higher"
-msgstr ""
+msgstr "cPython 3.4以上"
 
 #: ../../intro.rst:75
 msgid "`Pypy <http://pypy.org/>`_ 2.1 or greater"
-msgstr ""
+msgstr "`ピピ<http://pypy.org/> `_ 2.1以上"
 
 #: ../../intro.rst:77
 msgid "Python 2.7 is now the minimum Python version supported."
-msgstr ""
+msgstr "Python 2.7がサポートされている最小のPythonバージョンになりました。"
 
 #: ../../intro.rst:80
 msgid ""
 "Within the Python 3 series, 3.4 is now the minimum Python 3 version "
 "supported."
-msgstr ""
+msgstr "Python 3シリーズでは、3.4がサポートされている最小のPython 3バージョンになりました。"
 
 #: ../../intro.rst:83
 msgid ""
 "Platforms that don't currently have support include Jython and "
 "IronPython. Jython has been supported in the past and may be supported in"
 " future releases as well, depending on the state of Jython itself."
-msgstr ""
+msgstr "現在サポートしていないプラットフォームには、JythonとIronPythonがあります。 Jythonは過去にサポートされており、今後のリリースでもJython自体の状態に応じてサポートされる可能性があります。"
 
 #: ../../intro.rst:88
 msgid "Supported Installation Methods"
-msgstr ""
+msgstr "サポートされているインストール方法"
 
 #: ../../intro.rst:90
 msgid ""
@@ -148,63 +138,63 @@ msgid ""
 "by referring to ``setup.py`` directly or by using `pip "
 "<http://pypi.python.org/pypi/pip/>`_ or other setuptools-compatible "
 "approaches."
-msgstr ""
+msgstr "SQLAlchemyのインストールは、 `setuptools <http://pypi.python.org/pypi/setuptools/> `_、` `setup.py``を直接参照するか` pip <http://pypi.python.org/pypi/pip/> `_または他のsetuptools互換のアプローチ。"
 
 #: ../../intro.rst:96
 msgid ""
 "setuptools is now required by the setup.py file; plain distutils installs"
 " are no longer supported."
-msgstr ""
+msgstr "setuptoolsがsetup.pyファイルで必要になりました。プレーンなdistutilsのインストールはもはやサポートされていません。"
 
 #: ../../intro.rst:100
 msgid "Install via pip"
-msgstr ""
+msgstr "ピップ経由でインストールする"
 
 #: ../../intro.rst:102
 msgid ""
 "When ``pip`` is available, the distribution can be downloaded from Pypi "
 "and installed in one step::"
-msgstr ""
+msgstr "`` pip``が利用可能な場合、配布物はPypiからダウンロードして一段階でインストールできます::"
 
 #: ../../intro.rst:107
 msgid ""
 "This command will download the latest **released** version of SQLAlchemy "
 "from the `Python Cheese Shop <http://pypi.python.org/pypi/SQLAlchemy>`_ "
 "and install it to your system."
-msgstr ""
+msgstr "このコマンドはPythonチーズショップからSQLAlchemyの**最新バージョン**をダウンロードします<http://pypi.python.org/pypi/SQLAlchemy> `_システムにインストールしてください。"
 
 #: ../../intro.rst:110
 msgid ""
 "In order to install the latest **prerelease** version, such as "
 "``1.2.0b1``, pip requires that the ``--pre`` flag be used::"
-msgstr ""
+msgstr "`` 1.2.0b1``のような最新の**プレリリース版をインストールするには、 `` --pre``フラグを使用する必要があります::"
 
 #: ../../intro.rst:115
 msgid ""
 "Where above, if the most recent version is a prerelease, it will be "
 "installed instead of the latest released version."
-msgstr ""
+msgstr "上記の場合、最新版がプレリリース版である場合、最新リリース版の代わりにインストールされます。"
 
 #: ../../intro.rst:120
 msgid "Installing using setup.py"
-msgstr ""
+msgstr "setup.pyを使ってインストールする"
 
 #: ../../intro.rst:122
 msgid ""
 "Otherwise, you can install from the distribution using the ``setup.py`` "
 "script::"
-msgstr ""
+msgstr "それ以外の場合は、 `` setup.py``スクリプトを使ってディストリビューションからインストールできます::"
 
 #: ../../intro.rst:129
 msgid "Installing the C Extensions"
-msgstr ""
+msgstr "C拡張機能のインストール"
 
 #: ../../intro.rst:131
 msgid ""
 "SQLAlchemy includes C extensions which provide an extra speed boost for "
 "dealing with result sets.   The extensions are supported on both the 2.xx"
 " and 3.xx series of cPython."
-msgstr ""
+msgstr "SQLAlchemyには、結果セットを処理するための追加の高速ブーストを提供するC拡張が含まれています。拡張は、cPythonの2.xxと3.xxシリーズの両方でサポートされています。"
 
 #: ../../intro.rst:135
 msgid ""
@@ -213,7 +203,7 @@ msgid ""
 "missing compiler or other issue, the setup process will output a warning "
 "message and re-run the build without the C extensions upon completion, "
 "reporting final status."
-msgstr ""
+msgstr "適切なプラットフォームが検出された場合、 `` setup.py``は自動的に拡張機能をビルドします。コンパイラやその他の問題が原因でC拡張のビルドが失敗した場合、セットアッププロセスは警告メッセージを出力し、完了時にC拡張を使わずにビルドを再実行し、最終ステータスを報告します。"
 
 #: ../../intro.rst:140
 msgid ""
@@ -222,17 +212,17 @@ msgid ""
 "specified.  The use case for this is either for special testing "
 "circumstances, or in the rare case of compatibility/build issues not "
 "overcome by the usual \"rebuild\" mechanism::"
-msgstr ""
+msgstr "C拡張をコンパイルせずにビルド/インストールを実行するには、 `` DISABLE_SQLALCHEMY_CEXT``環境変数を指定することができます。これのためのユースケースは特別なテスト環境のためか、まれに互換性/ビルドの問題が通常の &quot;再構築&quot;メカニズムによって克服されない場合です::"
 
 #: ../../intro.rst:148
 msgid ""
 "The legacy ``--without-cextensions`` flag has been removed from the "
 "installer as it relies on deprecated features of setuptools."
-msgstr ""
+msgstr "従来の `` --without-cextensions``フラグは、setuptoolsの非推奨機能に依存しているため、インストーラから削除されました。"
 
 #: ../../intro.rst:155
 msgid "Installing a Database API"
-msgstr ""
+msgstr "データベースAPIのインストール"
 
 #: ../../intro.rst:157
 msgid ""
@@ -241,26 +231,26 @@ msgid ""
 "popular databases. The individual database sections in "
 ":doc:`/dialects/index` enumerate the available DBAPIs for each database, "
 "including external links."
-msgstr ""
+msgstr "SQLAlchemyは、特定のデータベース用に構築された：term： `DBAPI`実装で動作するように設計されており、最も一般的なデータベースをサポートしています。 ：doc： `/ dialects / index`の個々のデータベースセクションは、外部リンクを含む各データベースの利用可能なDBAPIを列挙します。"
 
 #: ../../intro.rst:163
 msgid "Checking the Installed SQLAlchemy Version"
-msgstr ""
+msgstr "インストールされているSQLAlchemyのバージョンの確認"
 
 #: ../../intro.rst:165
 msgid ""
 "This documentation covers SQLAlchemy version 1.3. If you're working on a "
 "system that already has SQLAlchemy installed, check the version from your"
 " Python prompt like this:"
-msgstr ""
+msgstr "このドキュメントでは、SQLAlchemyバージョン1.3について説明します。すでにSQLAlchemyがインストールされているシステムで作業している場合は、Pythonプロンプトから次のようにバージョンを確認してください："
 
 #: ../../intro.rst:178
 msgid "1.2 to 1.3 Migration"
-msgstr ""
+msgstr "1.2から1.3への移行"
 
 #: ../../intro.rst:180
 msgid ""
 "Notes on what's changed from 1.2 to 1.3 is available here at "
 ":doc:`changelog/migration_13`."
-msgstr ""
+msgstr "1.2から1.3への変更点は、doc： `changelog / migration_13`にあります。"
 

@@ -10,7 +10,7 @@
         <title>
             
     
-    Base Type API
+    ベースタイプAPI
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Column and Data Types" href="types.html" />
-        <link rel="next" title="Engine and Connection Use" href="engines_connections.html" />
-        <link rel="prev" title="Custom Types" href="custom_types.html" />
+        <link rel="up" title="列とデータ型" href="types.html" />
+        <link rel="next" title="エンジンと接続の使用" href="engines_connections.html" />
+        <link rel="prev" title="カスタムタイプ" href="custom_types.html" />
     <!-- end layout.mako headers -->
 
 
@@ -116,21 +116,21 @@
 
         
         <h3>
-            <a href="index.html" title="SQLAlchemy Core">SQLAlchemy Core</a>
+            <a href="index.html" title="SQLAlchemyコア">SQLAlchemyコア</a>
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">SQL Expression Language Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="expression_api.html">SQL Statements and Expressions API</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="schema.html">Schema Definition Language</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="types.html">Column and Data Types</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="type_basics.html">Column and Data Types</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="custom_types.html">Custom Types</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Base Type API</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">SQL式言語チュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="expression_api.html">SQL Statements and Expressions API(SQL文とAPI式)</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="schema.html">スキーマ定義言語</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="types.html">列とデータ型</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="type_basics.html">列とデータ型</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="custom_types.html">カスタムタイプ</a></span></li>
+<li class="selected"><span class="link-container first"><strong>ベースタイプAPI</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="engines_connections.html">Engine and Connection Use</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="api_basics.html">Core API Basics</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="engines_connections.html">エンジンと接続の使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="api_basics.html">コアAPIの基礎</a></span></li>
 </ul>
 
 
@@ -146,72 +146,93 @@
     <div id="docs-body" class="withsidebar" >
         
 <span class="target" id="module-sqlalchemy.types"></span><div class="section" id="base-type-api">
-<span id="types-api"></span><h1>Base Type API<a class="headerlink" href="#base-type-api" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="types-api"></span><h1>ベースタイプAPI<a class="headerlink" href="#base-type-api" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="class">
 <dt id="sqlalchemy.types.TypeEngine">
 <em class="property">class </em><code class="descclassname">sqlalchemy.types.</code><code class="descname">TypeEngine</code><a class="headerlink" href="#sqlalchemy.types.TypeEngine" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.visitors.Visitable</span></code></p>
-<p>The ultimate base class for all SQL datatypes.</p>
-<p>Common subclasses of <a class="reference internal" href="#sqlalchemy.types.TypeEngine" title="sqlalchemy.types.TypeEngine"><code class="xref py py-class docutils literal"><span class="pre">TypeEngine</span></code></a> include
-<a class="reference internal" href="type_basics.html#sqlalchemy.types.String" title="sqlalchemy.types.String"><code class="xref py py-class docutils literal"><span class="pre">String</span></code></a>, <a class="reference internal" href="type_basics.html#sqlalchemy.types.Integer" title="sqlalchemy.types.Integer"><code class="xref py py-class docutils literal"><span class="pre">Integer</span></code></a>, and <a class="reference internal" href="type_basics.html#sqlalchemy.types.Boolean" title="sqlalchemy.types.Boolean"><code class="xref py py-class docutils literal"><span class="pre">Boolean</span></code></a>.</p>
-<p>For an overview of the SQLAlchemy typing system, see
-<a class="reference internal" href="types.html"><span class="std std-ref">Column and Data Types</span></a>.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.visitors.Visitable</span></code></p>
+<p>すべてのSQLデータ型の究極の基底クラスです。</p>
+<p>：class： <cite>.TypeEngine`の共通サブクラスは：class：</cite> .String`、：class： <cite>.Integer</cite>、：class：` .Boolean`です。</p>
+<p>SQLAlchemy型システムの概要は、：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>types_toplevel`を参照してください。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="types.html"><span class="std std-ref">Column and Data Types</span></a></p>
+<p class="last">：ref： <cite>types_toplevel</cite></p>
 </div>
 <dl class="class">
 <dt id="sqlalchemy.types.TypeEngine.Comparator">
 <em class="property">class </em><code class="descname">Comparator</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.Comparator" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.operators.ColumnOperators" title="sqlalchemy.sql.operators.ColumnOperators"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.operators.ColumnOperators</span></code></a></p>
-<p>Base class for custom comparison operations defined at the
-type level.  See <a class="reference internal" href="#sqlalchemy.types.TypeEngine.comparator_factory" title="sqlalchemy.types.TypeEngine.comparator_factory"><code class="xref py py-attr docutils literal"><span class="pre">TypeEngine.comparator_factory</span></code></a>.</p>
+<dd><p>Bases: <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.operators.ColumnOperators" title="sqlalchemy.sql.operators.ColumnOperators"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.operators.ColumnOperators</span></code></a></p>
+<p>型レベルで定義されたカスタム比較演算の基本クラス。参照：attr： <cite>.TypeEngine.comparator_factory</cite>。</p>
+<dl class="method">
+<dt id="sqlalchemy.types.TypeEngine.Comparator.operate">
+<code class="descname">operate</code><span class="sig-paren">(</span><em>default_comparator</em>, <em>op</em>, <em>*other</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.Comparator.operate" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Operate on an argument.</p>
+<p>This is the lowest level of operation, raises
+<code class="xref py py-class docutils literal notranslate"><span class="pre">NotImplementedError</span></code> by default.</p>
+<p>Overriding this on a subclass can allow common
+behavior to be applied to all operations.
+For example, overriding <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.operators.ColumnOperators" title="sqlalchemy.sql.operators.ColumnOperators"><code class="xref py py-class docutils literal notranslate"><span class="pre">ColumnOperators</span></code></a>
+to apply <code class="docutils literal notranslate"><span class="pre">func.lower()</span></code> to the left and right
+side:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyComparator</span><span class="p">(</span><span class="n">ColumnOperators</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">operate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">op</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">lower</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="n">func</span><span class="o">.</span><span class="n">lower</span><span class="p">(</span><span class="n">other</span><span class="p">))</span></pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
+<li><span class="target" id="sqlalchemy.types.TypeEngine.Comparator.operate.params.op"></span><strong>op</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.Comparator.operate.params.op">¶</a> -- Operator callable.</li>
+<li><span class="target" id="sqlalchemy.types.TypeEngine.Comparator.operate.params.*other"></span><strong>*other</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.Comparator.operate.params.*other">¶</a> -- the 'other' side of the operation. Will
+be a single scalar for most operations.</li>
+<li><span class="target" id="sqlalchemy.types.TypeEngine.Comparator.operate.params.**kwargs"></span><strong>**kwargs</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.Comparator.operate.params.**kwargs">¶</a> -- modifiers.  These may be passed by special
+operators such as <code class="xref py py-meth docutils literal notranslate"><span class="pre">ColumnOperators.contains()</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sqlalchemy.types.TypeEngine.Comparator.reverse_operate">
+<code class="descname">reverse_operate</code><span class="sig-paren">(</span><em>default_comparator</em>, <em>op</em>, <em>other</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.Comparator.reverse_operate" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Reverse operate on an argument.</p>
+<p>Usage is the same as <a class="reference internal" href="#sqlalchemy.types.TypeEngine.Comparator.operate" title="sqlalchemy.types.TypeEngine.Comparator.operate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">operate()</span></code></a>.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.adapt">
 <code class="descname">adapt</code><span class="sig-paren">(</span><em>cls</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.adapt" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Produce an &quot;adapted&quot; form of this type, given an &quot;impl&quot; class
-to work with.</p>
-<p>This method is used internally to associate generic
-types with &quot;implementation&quot; types that are specific to a particular
-dialect.</p>
+<dd><p>この型の&amp;quot;適合&amp;quot;形式を生成する。&amp;quot;impl &amp;quot;クラスで動作する。</p>
+<p>このメソッドは、ジェネリック型を特定の方言に固有の&amp;quot;実装&amp;quot;型に関連付けるために内部的に使用されます。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.bind_expression">
 <code class="descname">bind_expression</code><span class="sig-paren">(</span><em>bindvalue</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.bind_expression" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>&quot;Given a bind value (i.e. a <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.BindParameter" title="sqlalchemy.sql.expression.BindParameter"><code class="xref py py-class docutils literal"><span class="pre">BindParameter</span></code></a> instance),
-return a SQL expression in its place.</p>
-<p>This is typically a SQL function that wraps the existing bound
-parameter within the statement.  It is used for special data types
-that require literals being wrapped in some special database function
-in order to coerce an application-level value into a database-specific
-format.  It is the SQL analogue of the
-<a class="reference internal" href="#sqlalchemy.types.TypeEngine.bind_processor" title="sqlalchemy.types.TypeEngine.bind_processor"><code class="xref py py-meth docutils literal"><span class="pre">TypeEngine.bind_processor()</span></code></a> method.</p>
-<p>The method is evaluated at statement compile time, as opposed
-to statement construction time.</p>
-<p>Note that this method, when implemented, should always return
-the exact same structure, without any conditional logic, as it
-may be used in an executemany() call against an arbitrary number
-of bound parameter sets.</p>
-<p>See also:</p>
-<p><a class="reference internal" href="custom_types.html#types-sql-value-processing"><span class="std std-ref">Applying SQL-level Bind/Result Processing</span></a></p>
+<dd><p>バインド値（つまり、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.BindParameter`インスタンス）を指定すると、代わりにSQL式を返します。</p>
+<p>これは通常、文の中に既存のバインドされたパラメータをラップするSQL関数です。アプリケーションレベルの値をデータベース固有の形式に変換するために、特別なデータベース関数でリテラルをラップする必要がある特殊なデータ型に使用されます。これは：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.TypeEngine.bind_processor`メソッドのSQLの類義語です。</p>
+<p>このメソッドは、文の構築時とは異なり、文のコンパイル時に評価されます。</p>
+<p>このメソッドを実装すると、任意の数のバインドされたパラメータセットに対してexecutemany（）コールで使用できるため、条件付きロジックなしで常に同じ構造体を返す必要があることに注意してください。</p>
+<p>参照：</p>
+<p>：ref： <cite>types_sql_value_processing</cite></p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.bind_processor">
 <code class="descname">bind_processor</code><span class="sig-paren">(</span><em>dialect</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.bind_processor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a conversion function for processing bind values.</p>
-<p>Returns a callable which will receive a bind parameter value
-as the sole positional argument and will return a value to
-send to the DB-API.</p>
-<p>If processing is not necessary, the method should return <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<dd><p>バインド値を処理するための変換関数を返します。</p>
+<p>バインド・パラメータ値を唯一の位置引数として受け取り、DB-APIに送る値を戻すコール可能オブジェクトを戻します。</p>
+<p>処理が必要ない場合、メソッドは `` None``を返すべきです。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><span class="target" id="sqlalchemy.types.TypeEngine.bind_processor.params.dialect"></span><strong>dialect</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.bind_processor.params.dialect">¶</a> -- Dialect instance in use.</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><span class="target" id="sqlalchemy.types.TypeEngine.bind_processor.params.dialect"></span><strong>dialect</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.bind_processor.params.dialect">¶</a> -- 使用中の方言インスタンス。</td>
 </tr>
 </tbody>
 </table>
@@ -220,89 +241,49 @@ send to the DB-API.</p>
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.coerce_compared_value">
 <code class="descname">coerce_compared_value</code><span class="sig-paren">(</span><em>op</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.coerce_compared_value" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Suggest a type for a 'coerced' Python value in an expression.</p>
-<p>Given an operator and value, gives the type a chance
-to return a type which the value should be coerced into.</p>
-<p>The default behavior here is conservative; if the right-hand
-side is already coerced into a SQL type based on its
-Python type, it is usually left alone.</p>
-<p>End-user functionality extension here should generally be via
-<a class="reference internal" href="custom_types.html#sqlalchemy.types.TypeDecorator" title="sqlalchemy.types.TypeDecorator"><code class="xref py py-class docutils literal"><span class="pre">TypeDecorator</span></code></a>, which provides more liberal behavior in that
-it defaults to coercing the other side of the expression into this
-type, thus applying special Python conversions above and beyond those
-needed by the DBAPI to both ides. It also provides the public method
-<a class="reference internal" href="custom_types.html#sqlalchemy.types.TypeDecorator.coerce_compared_value" title="sqlalchemy.types.TypeDecorator.coerce_compared_value"><code class="xref py py-meth docutils literal"><span class="pre">TypeDecorator.coerce_compared_value()</span></code></a> which is intended for
-end-user customization of this behavior.</p>
+<dd><p>式で「強制的」なPython値の型を推薦する。</p>
+<p>与えられた演算子と値は、型に強制的に値を代入する型を返す。</p>
+<p>ここでのデフォルトの動作は保守的です。右側がすでにPython型に基づいてSQL型に強制的に変換されている場合、通常はそのまま残されます。</p>
+<p>ここでのエンドユーザ機能拡張は、一般的にvia：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.TypeDecorator`でなければなりません。これはデフォルトで式の反対側をこの型に強制するというより自由な動作を提供します。両方の側にDBAPI。また、publicメソッドを提供します：meth： <a href="#id3"><span class="problematic" id="id4">`</span></a>.TypeDecorator.coerce_compared_value`これは、この動作のエンドユーザのカスタマイズを意図しています。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.column_expression">
 <code class="descname">column_expression</code><span class="sig-paren">(</span><em>colexpr</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.column_expression" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Given a SELECT column expression, return a wrapping SQL expression.</p>
-<p>This is typically a SQL function that wraps a column expression
-as rendered in the columns clause of a SELECT statement.
-It is used for special data types that require
-columns to be wrapped in some special database function in order
-to coerce the value before being sent back to the application.
-It is the SQL analogue of the <a class="reference internal" href="#sqlalchemy.types.TypeEngine.result_processor" title="sqlalchemy.types.TypeEngine.result_processor"><code class="xref py py-meth docutils literal"><span class="pre">TypeEngine.result_processor()</span></code></a>
-method.</p>
-<p>The method is evaluated at statement compile time, as opposed
-to statement construction time.</p>
-<p>See also:</p>
-<p><a class="reference internal" href="custom_types.html#types-sql-value-processing"><span class="std std-ref">Applying SQL-level Bind/Result Processing</span></a></p>
+<dd><p>SELECT列式が指定されている場合、ラッピングSQL式を返します。</p>
+<p>これは、通常、SELECT文のcolumns句にレンダリングされた列式をラップするSQL関数です。これは、アプリケーションに返される前に値を強制的に使用するために、特別なデータベース関数で列をラップする必要がある特殊なデータ型に使用されます。それは：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.TypeEngine.result_processor`メソッドのSQLの類義語です。</p>
+<p>このメソッドは、文の構築時とは異なり、文のコンパイル時に評価されます。</p>
+<p>参照：</p>
+<p>：ref： <cite>types_sql_value_processing</cite></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sqlalchemy.types.TypeEngine.comparator_factory">
 <code class="descname">comparator_factory</code><a class="headerlink" href="#sqlalchemy.types.TypeEngine.comparator_factory" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.operators.ColumnOperators" title="sqlalchemy.sql.operators.ColumnOperators"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.operators.ColumnOperators</span></code></a></p>
-<p>A <a class="reference internal" href="#sqlalchemy.types.TypeEngine.Comparator" title="sqlalchemy.types.TypeEngine.Comparator"><code class="xref py py-class docutils literal"><span class="pre">TypeEngine.Comparator</span></code></a> class which will apply
-to operations performed by owning <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.ColumnElement" title="sqlalchemy.sql.expression.ColumnElement"><code class="xref py py-class docutils literal"><span class="pre">ColumnElement</span></code></a> objects.</p>
-<p>The <a class="reference internal" href="#sqlalchemy.types.TypeEngine.comparator_factory" title="sqlalchemy.types.TypeEngine.comparator_factory"><code class="xref py py-attr docutils literal"><span class="pre">comparator_factory</span></code></a> attribute is a hook consulted by
-the core expression system when column and SQL expression operations
-are performed.   When a <a class="reference internal" href="#sqlalchemy.types.TypeEngine.Comparator" title="sqlalchemy.types.TypeEngine.Comparator"><code class="xref py py-class docutils literal"><span class="pre">TypeEngine.Comparator</span></code></a> class is
-associated with this attribute, it allows custom re-definition of
-all existing operators, as well as definition of new operators.
-Existing operators include those provided by Python operator overloading
-such as <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.__add__" title="sqlalchemy.sql.operators.ColumnOperators.__add__"><code class="xref py py-meth docutils literal"><span class="pre">operators.ColumnOperators.__add__()</span></code></a> and
-<a class="reference internal" href="sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.__eq__" title="sqlalchemy.sql.operators.ColumnOperators.__eq__"><code class="xref py py-meth docutils literal"><span class="pre">operators.ColumnOperators.__eq__()</span></code></a>,
-those provided as standard
-attributes of <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.operators.ColumnOperators" title="sqlalchemy.sql.operators.ColumnOperators"><code class="xref py py-class docutils literal"><span class="pre">operators.ColumnOperators</span></code></a> such as
-<a class="reference internal" href="sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.like" title="sqlalchemy.sql.operators.ColumnOperators.like"><code class="xref py py-meth docutils literal"><span class="pre">operators.ColumnOperators.like()</span></code></a>
-and <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.operators.ColumnOperators.in_" title="sqlalchemy.sql.operators.ColumnOperators.in_"><code class="xref py py-meth docutils literal"><span class="pre">operators.ColumnOperators.in_()</span></code></a>.</p>
-<p>Rudimentary usage of this hook is allowed through simple subclassing
-of existing types, or alternatively by using <a class="reference internal" href="custom_types.html#sqlalchemy.types.TypeDecorator" title="sqlalchemy.types.TypeDecorator"><code class="xref py py-class docutils literal"><span class="pre">TypeDecorator</span></code></a>.
-See the documentation section <a class="reference internal" href="custom_types.html#types-operators"><span class="std std-ref">Redefining and Creating New Operators</span></a> for examples.</p>
+<dd><p>Bases: <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.operators.ColumnOperators" title="sqlalchemy.sql.operators.ColumnOperators"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.operators.ColumnOperators</span></code></a></p>
+<p>A：class： <cite>.TypeEngine.Comparator`クラスです。このクラスは、owning：class：</cite> .ColumnElement`オブジェクトによって実行される操作に適用されます。</p>
+<p>：attr： <cite>.comparator_factory`属性は、列式とSQL式の演算が実行されるときに、コア式システムによって参照されるフックです。 a：class： `.TypeEngine.Comparator`クラスがこの属性に関連付けられている場合、既存のすべての演算子の新しい定義や新しい演算子の定義を行うことができます。既存の演算子には：meth： `.operators.ColumnOperators .__ add__`と：meth：</cite> .operators.ColumnOperators .__ eq__`のようなPython演算子のオーバーロードによって提供されるものが含まれます：class： <cite>.operators.ColumnOperators</cite> ：meth： <cite>.operators.ColumnOperators.like`と：meth：</cite> .operators.ColumnOperators.in_`のようなものです。</p>
+<p>このフックの基本的な使い方は、既存の型を単純にサブクラス化するか、または：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.TypeDecorator`を使用することで可能です。例については、ドキュメンテーションのsection：ref： <a href="#id3"><span class="problematic" id="id4">`</span></a>types_operators`を参照してください。</p>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 0.8 で追加: </span>The expression system was enhanced to support
-customization of operators on a per-type level.</p>
+<p><span class="versionmodified">バージョン 0.8 で追加: </span>表現システムは、タイプごとのレベルでの演算子のカスタマイズをサポートするように拡張されました。</p>
 </div>
-<p><a class="reference internal" href="#sqlalchemy.types.TypeEngine.Comparator" title="sqlalchemy.types.TypeEngine.Comparator"><code class="xref py py-class docutils literal"><span class="pre">TypeEngine.Comparator</span></code></a> のエイリアス</p>
+<p><a class="reference internal" href="#sqlalchemy.types.TypeEngine.Comparator" title="sqlalchemy.types.TypeEngine.Comparator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeEngine.Comparator</span></code></a> のエイリアス</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.compare_against_backend">
 <code class="descname">compare_against_backend</code><span class="sig-paren">(</span><em>dialect</em>, <em>conn_type</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.compare_against_backend" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Compare this type against the given backend type.</p>
-<p>This function is currently not implemented for SQLAlchemy
-types, and for all built in types will return <code class="docutils literal"><span class="pre">None</span></code>.  However,
-it can be implemented by a user-defined type
-where it can be consumed by schema comparison tools such as
-Alembic autogenerate.</p>
-<p>A future release of SQLAlchemy will potentially impement this method
-for builtin types as well.</p>
-<p>The function should return True if this type is equivalent to the
-given type; the type is typically reflected from the database
-so should be database specific.  The dialect in use is also
-passed.   It can also return False to assert that the type is
-not equivalent.</p>
+<dd><p>このタイプを指定されたバックエンドタイプと比較してください。</p>
+<p>この関数は現在SQLAlchemy型では実装されていません。組み込み型では `` None``が返されます。ただし、Alembicの自動生成などのスキーマ比較ツールで使用できるユーザー定義型で実装できます。</p>
+<p>SQLAlchemyの今後のリリースでは、組み込み型に対してもこのメソッドを実装する可能性があります。</p>
+<p>この型が指定された型と等しい場合、この関数はTrueを返さなければなりません。型は通常データベースから反映されるため、データベース固有である必要があります。使用中の方言も渡されます。また、型が等価でないことを宣言するためにFalseを返すこともできます。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.types.TypeEngine.compare_against_backend.params.dialect"></span><strong>dialect</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.compare_against_backend.params.dialect">¶</a> -- a <a class="reference internal" href="internals.html#sqlalchemy.engine.interfaces.Dialect" title="sqlalchemy.engine.interfaces.Dialect"><code class="xref py py-class docutils literal"><span class="pre">Dialect</span></code></a> that is involved in the comparison.</li>
-<li><span class="target" id="sqlalchemy.types.TypeEngine.compare_against_backend.params.conn_type"></span><strong>conn_type</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.compare_against_backend.params.conn_type">¶</a> -- the type object reflected from the backend.</li>
+<li><span class="target" id="sqlalchemy.types.TypeEngine.compare_against_backend.params.dialect"></span><strong>dialect</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.compare_against_backend.params.dialect">¶</a> -- a：class：比較に含まれる <a href="#id1"><span class="problematic" id="id2">`</span></a>.Dialect`です。</li>
+<li><span class="target" id="sqlalchemy.types.TypeEngine.compare_against_backend.params.conn_type"></span><strong>conn_type</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.compare_against_backend.params.conn_type">¶</a> -- バックエンドから反映された型オブジェクト</li>
 </ul>
 </td>
 </tr>
@@ -316,20 +297,19 @@ not equivalent.</p>
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.compare_values">
 <code class="descname">compare_values</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.compare_values" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Compare two values for equality.</p>
+<dd><p>2つの値が等しいかどうかを比較する。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.compile">
 <code class="descname">compile</code><span class="sig-paren">(</span><em>dialect=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.compile" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Produce a string-compiled form of this <a class="reference internal" href="#sqlalchemy.types.TypeEngine" title="sqlalchemy.types.TypeEngine"><code class="xref py py-class docutils literal"><span class="pre">TypeEngine</span></code></a>.</p>
-<p>When called with no arguments, uses a &quot;default&quot; dialect
-to produce a string result.</p>
+<dd><p>クラス： <a href="#id1"><span class="problematic" id="id2">`</span></a>.TypeEngine`の文字列でコンパイルされた形式を生成します。</p>
+<p>引数なしで呼び出された場合、&amp;quot;default &amp;quot;という方言を使用して文字列の結果を生成します。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><span class="target" id="sqlalchemy.types.TypeEngine.compile.params.dialect"></span><strong>dialect</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.compile.params.dialect">¶</a> -- a <a class="reference internal" href="internals.html#sqlalchemy.engine.interfaces.Dialect" title="sqlalchemy.engine.interfaces.Dialect"><code class="xref py py-class docutils literal"><span class="pre">Dialect</span></code></a> instance.</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><span class="target" id="sqlalchemy.types.TypeEngine.compile.params.dialect"></span><strong>dialect</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.compile.params.dialect">¶</a> -- a：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Dialect`インスタンスです。</td>
 </tr>
 </tbody>
 </table>
@@ -338,17 +318,15 @@ to produce a string result.</p>
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.dialect_impl">
 <code class="descname">dialect_impl</code><span class="sig-paren">(</span><em>dialect</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.dialect_impl" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a dialect-specific implementation for this
-<a class="reference internal" href="#sqlalchemy.types.TypeEngine" title="sqlalchemy.types.TypeEngine"><code class="xref py py-class docutils literal"><span class="pre">TypeEngine</span></code></a>.</p>
+<dd><p>このために、方言固有の実装を返します：class： <cite>.TypeEngine</cite>。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.evaluates_none">
 <code class="descname">evaluates_none</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.evaluates_none" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a copy of this type which has the <a class="reference internal" href="#sqlalchemy.types.TypeEngine.should_evaluate_none" title="sqlalchemy.types.TypeEngine.should_evaluate_none"><code class="xref py py-attr docutils literal"><span class="pre">should_evaluate_none</span></code></a>
-flag set to True.</p>
-<p>E.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Table</span><span class="p">(</span>
+<dd><p>：attr： <a href="#id1"><span class="problematic" id="id2">`</span></a>.should_evaluate_none`フラグがTrueに設定されているこのタイプのコピーを返します。</p>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Table</span><span class="p">(</span>
     <span class="s1">&#39;some_table&#39;</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span>
     <span class="n">Column</span><span class="p">(</span>
         <span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">evaluates_none</span><span class="p">(),</span>
@@ -356,61 +334,43 @@ flag set to True.</p>
         <span class="n">server_default</span><span class="o">=</span><span class="s1">&#39;no value&#39;</span><span class="p">)</span>
 <span class="p">)</span></pre></div>
 </div>
-<p>The ORM uses this flag to indicate that a positive value of <code class="docutils literal"><span class="pre">None</span></code>
-is passed to the column in an INSERT statement, rather than omitting
-the column from the INSERT statement which has the effect of firing
-off column-level defaults.   It also allows for types which have
-special behavior associated with the Python None value to indicate
-that the value doesn't necessarily translate into SQL NULL; a
-prime example of this is a JSON type which may wish to persist the
-JSON value <code class="docutils literal"><span class="pre">'null'</span></code>.</p>
-<p>In all cases, the actual NULL SQL value can be always be
-persisted in any column by using
-the <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.null" title="sqlalchemy.sql.expression.null"><code class="xref py py-obj docutils literal"><span class="pre">null</span></code></a> SQL construct in an INSERT statement
-or associated with an ORM-mapped attribute.</p>
+<p>ORMは、このフラグを使用して、列レベルのデフォルトを起動する効果を持つINSERT文から列を省略するのではなく、INSERT文の列に `` None``の正の値が渡されることを示します。また、PythonのNone値に関連付けられた特別な動作を持つ型で、値が必ずしもSQL NULLに変換されないことを示すことができます。 JSON値 `` &amp;#39;null&amp;#39;``を永続化したいJSON型です。</p>
+<p>いずれの場合でも、実際のNULL SQL値は、INSERT文の中で：obj： <cite>〜.expression.null</cite> SQL構文を使用するか、ORMでマップされた属性に関連付けて、いつでも任意の列に永続化することができます。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">The &quot;evaulates none&quot; flag does <strong>not</strong> apply to a value
-of <code class="docutils literal"><span class="pre">None</span></code> passed to <a class="reference internal" href="metadata.html#sqlalchemy.schema.Column.params.default" title="sqlalchemy.schema.Column"><code class="xref py py-paramref docutils literal"><span class="pre">Column.default</span></code></a> or
-<a class="reference internal" href="metadata.html#sqlalchemy.schema.Column.params.server_default" title="sqlalchemy.schema.Column"><code class="xref py py-paramref docutils literal"><span class="pre">Column.server_default</span></code></a>; in these cases, <code class="docutils literal"><span class="pre">None</span></code>
-still means &quot;no default&quot;.</p>
+<p class="last">&amp;quot;evaulates none &amp;quot;フラグは、paramref： <cite>.Column.default`または：paramref：</cite> .Column.server_default`;に渡される `` None``の値には適用されません。これらの場合、 `` None``は&amp;quot;no default &amp;quot;を意味します。</p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="../orm/persistence_techniques.html#session-forcing-null"><span class="std std-ref">Forcing NULL on a column with a default</span></a> - in the ORM documentation</p>
-<p><a class="reference internal" href="../dialects/postgresql.html#sqlalchemy.dialects.postgresql.JSON.params.none_as_null" title="sqlalchemy.dialects.postgresql.JSON"><code class="xref py py-paramref docutils literal"><span class="pre">postgresql.JSON.none_as_null</span></code></a> - PostgreSQL JSON
-interaction with this flag.</p>
-<p class="last"><a class="reference internal" href="#sqlalchemy.types.TypeEngine.should_evaluate_none" title="sqlalchemy.types.TypeEngine.should_evaluate_none"><code class="xref py py-attr docutils literal"><span class="pre">TypeEngine.should_evaluate_none</span></code></a> - class-level flag</p>
+<p>：ref： <cite>session_forcing_null</cite>  -  ORMのドキュメント</p>
+<p>：paramref： <cite>.postgresql.JSON.none_as_null</cite>  -  PostgreSQL JSONはこのフラグと対話します。</p>
+<p class="last">：attr： <cite>.TypeEngine.should_evaluate_none</cite>  - クラスレベルのフラグ</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.get_dbapi_type">
 <code class="descname">get_dbapi_type</code><span class="sig-paren">(</span><em>dbapi</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.get_dbapi_type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the corresponding type object from the underlying DB-API, if
-any.</p>
+<dd><p>基礎となるDB-APIから対応する型オブジェクトを返します。</p>
 <blockquote>
-<div>This can be useful for calling <code class="docutils literal"><span class="pre">setinputsizes()</span></code>, for example.</div></blockquote>
+<div>これは例えば `` setinputsizes（） <a href="#id1"><span class="problematic" id="id2">``</span></a>を呼び出すのに便利です。</div></blockquote>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sqlalchemy.types.TypeEngine.hashable">
 <code class="descname">hashable</code><em class="property"> = True</em><a class="headerlink" href="#sqlalchemy.types.TypeEngine.hashable" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Flag, if False, means values from this type aren't hashable.</p>
-<p>Used by the ORM when uniquing result lists.</p>
+<dd><p>フラグがFalseの場合、この型の値はハッシュ可能ではないことを意味します。</p>
+<p>結果リストを一意にするときにORMによって使用されます。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.literal_processor">
 <code class="descname">literal_processor</code><span class="sig-paren">(</span><em>dialect</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.literal_processor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a conversion function for processing literal values that are
-to be rendered directly without using binds.</p>
-<p>This function is used when the compiler makes use of the
-&quot;literal_binds&quot; flag, typically used in DDL generation as well
-as in certain scenarios where backends don't accept bound parameters.</p>
+<dd><p>バインドを使用せずに直接レンダリングされるリテラル値を処理するための変換関数を返します。</p>
+<p>この関数は、コンパイラが&amp;quot;literal_binds &amp;quot;フラグを使用するときに使用されます。通常、DDL生成やバックエンドがバインドされたパラメータを受け付けないシナリオで使用されます。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 0.9.0 で追加.</span></p>
 </div>
@@ -419,33 +379,25 @@ as in certain scenarios where backends don't accept bound parameters.</p>
 <dl class="attribute">
 <dt id="sqlalchemy.types.TypeEngine.python_type">
 <code class="descname">python_type</code><a class="headerlink" href="#sqlalchemy.types.TypeEngine.python_type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the Python type object expected to be returned
-by instances of this type, if known.</p>
-<p>Basically, for those types which enforce a return type,
-or are known across the board to do such for all common
-DBAPIs (like <code class="docutils literal"><span class="pre">int</span></code> for example), will return that type.</p>
-<p>If a return type is not defined, raises
-<code class="docutils literal"><span class="pre">NotImplementedError</span></code>.</p>
-<p>Note that any type also accommodates NULL in SQL which
-means you can also get back <code class="docutils literal"><span class="pre">None</span></code> from any type
-in practice.</p>
+<dd><p>既知の場合、この型のインスタンスによって返されると予想されるPython型オブジェクトを返します。</p>
+<p>基本的には、戻り値の型を強制する型や、一般的なDBAPI（例えば `` int``など）のために全面的に知られている型の場合、その型を返します。</p>
+<p>戻り値の型が定義されていない場合、 `` NotImplementedError``が送出されます。</p>
+<p>どんな型もSQLにNULLを格納することに注意してください。つまり、実際にはどの型からでも `` None``を返すことができます。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.result_processor">
 <code class="descname">result_processor</code><span class="sig-paren">(</span><em>dialect</em>, <em>coltype</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.result_processor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a conversion function for processing result row values.</p>
-<p>Returns a callable which will receive a result row column
-value as the sole positional argument and will return a value
-to return to the user.</p>
-<p>If processing is not necessary, the method should return <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<dd><p>結果行の値を処理するための変換関数を返します。</p>
+<p>結果行の列値を唯一の位置引数として受け取るコール可能オブジェクトを返し、値を返してユーザーに返します。</p>
+<p>処理が必要ない場合、メソッドは `` None``を返すべきです。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.types.TypeEngine.result_processor.params.dialect"></span><strong>dialect</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.result_processor.params.dialect">¶</a> -- Dialect instance in use.</li>
-<li><span class="target" id="sqlalchemy.types.TypeEngine.result_processor.params.coltype"></span><strong>coltype</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.result_processor.params.coltype">¶</a> -- DBAPI coltype argument received in cursor.description.</li>
+<li><span class="target" id="sqlalchemy.types.TypeEngine.result_processor.params.dialect"></span><strong>dialect</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.result_processor.params.dialect">¶</a> -- 使用中の方言インスタンス。</li>
+<li><span class="target" id="sqlalchemy.types.TypeEngine.result_processor.params.coltype"></span><strong>coltype</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.result_processor.params.coltype">¶</a> -- cursor.descriptionでDBAPI coltype引数を受け取りました。</li>
 </ul>
 </td>
 </tr>
@@ -456,19 +408,12 @@ to return to the user.</p>
 <dl class="attribute">
 <dt id="sqlalchemy.types.TypeEngine.should_evaluate_none">
 <code class="descname">should_evaluate_none</code><em class="property"> = False</em><a class="headerlink" href="#sqlalchemy.types.TypeEngine.should_evaluate_none" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>If True, the Python constant <code class="docutils literal"><span class="pre">None</span></code> is considered to be handled
-explicitly by this type.</p>
-<p>The ORM uses this flag to indicate that a positive value of <code class="docutils literal"><span class="pre">None</span></code>
-is passed to the column in an INSERT statement, rather than omitting
-the column from the INSERT statement which has the effect of firing
-off column-level defaults.   It also allows types which have special
-behavior for Python None, such as a JSON type, to indicate that
-they'd like to handle the None value explicitly.</p>
-<p>To set this flag on an existing type, use the
-<a class="reference internal" href="#sqlalchemy.types.TypeEngine.evaluates_none" title="sqlalchemy.types.TypeEngine.evaluates_none"><code class="xref py py-meth docutils literal"><span class="pre">TypeEngine.evaluates_none()</span></code></a> method.</p>
+<dd><p>Trueの場合、Python定数 `` None``はこの型によって明示的に扱われると考えられます。</p>
+<p>ORMは、このフラグを使用して、列レベルのデフォルトを起動する効果を持つINSERT文から列を省略するのではなく、INSERT文の列に `` None``の正の値が渡されることを示します。また、JSON型のようなPython Noneの特別な振る舞いを持つ型は、None値を明示的に扱いたいことを示すことができます。</p>
+<p>このフラグを既存の型に設定するには、：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.TypeEngine.evaluates_none`メソッドを使用します。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="#sqlalchemy.types.TypeEngine.evaluates_none" title="sqlalchemy.types.TypeEngine.evaluates_none"><code class="xref py py-meth docutils literal"><span class="pre">TypeEngine.evaluates_none()</span></code></a></p>
+<p class="last">：meth： <cite>.TypeEngine.evaluates_none</cite></p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
@@ -478,31 +423,23 @@ they'd like to handle the None value explicitly.</p>
 <dl class="method">
 <dt id="sqlalchemy.types.TypeEngine.with_variant">
 <code class="descname">with_variant</code><span class="sig-paren">(</span><em>type_</em>, <em>dialect_name</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.TypeEngine.with_variant" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Produce a new type object that will utilize the given
-type when applied to the dialect of the given name.</p>
-<p>e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.types</span> <span class="k">import</span> <span class="n">String</span>
+<dd><p>与えられた名前の方言に適用されたときに、与えられた型を利用する新しい型オブジェクトを生成する。</p>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.types</span> <span class="k">import</span> <span class="n">String</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.dialects</span> <span class="k">import</span> <span class="n">mysql</span>
 
 <span class="n">s</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
 
 <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">with_variant</span><span class="p">(</span><span class="n">mysql</span><span class="o">.</span><span class="n">VARCHAR</span><span class="p">(</span><span class="n">collation</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">),</span> <span class="s1">&#39;mysql&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>The construction of <a class="reference internal" href="#sqlalchemy.types.TypeEngine.with_variant" title="sqlalchemy.types.TypeEngine.with_variant"><code class="xref py py-meth docutils literal"><span class="pre">TypeEngine.with_variant()</span></code></a> is always
-from the &quot;fallback&quot; type to that which is dialect specific.
-The returned type is an instance of <a class="reference internal" href="#sqlalchemy.types.Variant" title="sqlalchemy.types.Variant"><code class="xref py py-class docutils literal"><span class="pre">Variant</span></code></a>, which
-itself provides a <code class="xref py py-meth docutils literal"><span class="pre">Variant.with_variant()</span></code>
-that can be called repeatedly.</p>
+<p>：meth： <cite>.TypeEngine.with_variant`の構成は、常に「フォールバック」型から、方言固有の型へと変わります。返される型は：class： `.Variant`のインスタンスであり、それ自身が：meth：</cite> .Variant.with_variant`を繰り返し提供することができます。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.types.TypeEngine.with_variant.params.type_"></span><strong>type_</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.with_variant.params.type_">¶</a> -- a <a class="reference internal" href="#sqlalchemy.types.TypeEngine" title="sqlalchemy.types.TypeEngine"><code class="xref py py-class docutils literal"><span class="pre">TypeEngine</span></code></a> that will be selected
-as a variant from the originating type, when a dialect
-of the given name is in use.</li>
-<li><span class="target" id="sqlalchemy.types.TypeEngine.with_variant.params.dialect_name"></span><strong>dialect_name</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.with_variant.params.dialect_name">¶</a> -- base name of the dialect which uses
-this type. (i.e. <code class="docutils literal"><span class="pre">'postgresql'</span></code>, <code class="docutils literal"><span class="pre">'mysql'</span></code>, etc.)</li>
+<li><span class="target" id="sqlalchemy.types.TypeEngine.with_variant.params.type_"></span><strong>type_</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.with_variant.params.type_">¶</a> -- a：class： <cite>.TypeEngine</cite>。指定された名前の方言が使用されているときに、元の型からバリアントとして選択されます。</li>
+<li><span class="target" id="sqlalchemy.types.TypeEngine.with_variant.params.dialect_name"></span><strong>dialect_name</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.types.TypeEngine.with_variant.params.dialect_name">¶</a> -- この型を使用する方言の基底名。 （つまり、 `` &amp;#39;postgresql``、 <a href="#id1"><span class="problematic" id="id2">``</span></a>&amp;#39; mysql&amp;#39;``など）</li>
 </ul>
 </td>
 </tr>
@@ -518,65 +455,74 @@ this type. (i.e. <code class="docutils literal"><span class="pre">'postgresql'</
 <dl class="class">
 <dt id="sqlalchemy.types.Concatenable">
 <em class="property">class </em><code class="descclassname">sqlalchemy.types.</code><code class="descname">Concatenable</code><a class="headerlink" href="#sqlalchemy.types.Concatenable" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A mixin that marks a type as supporting 'concatenation',
-typically strings.</p>
+<dd><p>あるタイプを「連結」（通常は文字列）をサポートするものとしてマークするミックスイン。</p>
+<dl class="class">
+<dt id="sqlalchemy.types.Concatenable.Comparator">
+<em class="property">class </em><code class="descname">Comparator</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.Concatenable.Comparator" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.types.Comparator</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sqlalchemy.types.Concatenable.comparator_factory">
+<code class="descname">comparator_factory</code><a class="headerlink" href="#sqlalchemy.types.Concatenable.comparator_factory" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#sqlalchemy.types.Concatenable.Comparator" title="sqlalchemy.types.Concatenable.Comparator"><code class="xref py py-class docutils literal notranslate"><span class="pre">Concatenable.Comparator</span></code></a> のエイリアス</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.types.Indexable">
 <em class="property">class </em><code class="descclassname">sqlalchemy.types.</code><code class="descname">Indexable</code><a class="headerlink" href="#sqlalchemy.types.Indexable" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A mixin that marks a type as supporting indexing operations,
-such as array or JSON structures.</p>
+<dd><p>配列やJSON構造などのインデックス作成操作をサポートする型をマークするmixin。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1.0 で追加.</span></p>
 </div>
+<dl class="class">
+<dt id="sqlalchemy.types.Indexable.Comparator">
+<em class="property">class </em><code class="descname">Comparator</code><span class="sig-paren">(</span><em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.Indexable.Comparator" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.types.Comparator</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sqlalchemy.types.Indexable.comparator_factory">
+<code class="descname">comparator_factory</code><a class="headerlink" href="#sqlalchemy.types.Indexable.comparator_factory" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><a class="reference internal" href="#sqlalchemy.types.Indexable.Comparator" title="sqlalchemy.types.Indexable.Comparator"><code class="xref py py-class docutils literal notranslate"><span class="pre">Indexable.Comparator</span></code></a> のエイリアス</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.types.NullType">
 <em class="property">class </em><code class="descclassname">sqlalchemy.types.</code><code class="descname">NullType</code><a class="headerlink" href="#sqlalchemy.types.NullType" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.types.TypeEngine" title="sqlalchemy.types.TypeEngine"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.types.TypeEngine</span></code></a></p>
-<p>An unknown type.</p>
-<p><a class="reference internal" href="#sqlalchemy.types.NullType" title="sqlalchemy.types.NullType"><code class="xref py py-class docutils literal"><span class="pre">NullType</span></code></a> is used as a default type for those cases where
-a type cannot be determined, including:</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.types.TypeEngine" title="sqlalchemy.types.TypeEngine"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.types.TypeEngine</span></code></a></p>
+<p>不明なタイプです。</p>
+<p>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.NullType`は、タイプを特定できない場合のデフォルトタイプとして使用されます。</p>
 <ul class="simple">
-<li>During table reflection, when the type of a column is not recognized
-by the <a class="reference internal" href="internals.html#sqlalchemy.engine.interfaces.Dialect" title="sqlalchemy.engine.interfaces.Dialect"><code class="xref py py-class docutils literal"><span class="pre">Dialect</span></code></a></li>
-<li>When constructing SQL expressions using plain Python objects of
-unknown types (e.g. <code class="docutils literal"><span class="pre">somecolumn</span> <span class="pre">==</span> <span class="pre">my_special_object</span></code>)</li>
-<li>When a new <a class="reference internal" href="metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> is created, and the given type is passed
-as <code class="docutils literal"><span class="pre">None</span></code> or is not passed at all.</li>
+<li>テーブルリフレクション中に、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Dialect`によって列の型が認識されないとき</li>
+<li>型が未知のプレーンなPythonオブジェクト（例えば `` somecolumn == my_special_object``）を使ってSQL式を構築するとき、</li>
+<li>new：class： <cite>.Column`が作成され、与えられた型が</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>None``として渡されるか、まったく渡されません。</li>
 </ul>
-<p>The <a class="reference internal" href="#sqlalchemy.types.NullType" title="sqlalchemy.types.NullType"><code class="xref py py-class docutils literal"><span class="pre">NullType</span></code></a> can be used within SQL expression invocation
-without issue, it just has no behavior either at the expression
-construction level or at the bind-parameter/result processing level.
-<a class="reference internal" href="#sqlalchemy.types.NullType" title="sqlalchemy.types.NullType"><code class="xref py py-class docutils literal"><span class="pre">NullType</span></code></a> will result in a <a class="reference internal" href="exceptions.html#sqlalchemy.exc.CompileError" title="sqlalchemy.exc.CompileError"><code class="xref py py-exc docutils literal"><span class="pre">CompileError</span></code></a> if the compiler
-is asked to render the type itself, such as if it is used in a
-<a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.cast" title="sqlalchemy.sql.expression.cast"><code class="xref py py-func docutils literal"><span class="pre">cast()</span></code></a> operation or within a schema creation operation such as that
-invoked by <a class="reference internal" href="metadata.html#sqlalchemy.schema.MetaData.create_all" title="sqlalchemy.schema.MetaData.create_all"><code class="xref py py-meth docutils literal"><span class="pre">MetaData.create_all()</span></code></a> or the <a class="reference internal" href="ddl.html#sqlalchemy.schema.CreateTable" title="sqlalchemy.schema.CreateTable"><code class="xref py py-class docutils literal"><span class="pre">CreateTable</span></code></a>
-construct.</p>
+<p>：class： <cite>.NullType`は、SQL式の呼び出し内で問題なく使用できます。式の構築レベルまたはバインドパラメータ/結果処理レベルで動作しません。 ：class： `.NullType`は、：func：</cite> .cast`オペレーションやスキーマの作成で使用されている場合など、コンパイラに型自体のレンダリングを要求された場合は：exc： <cite>.CompileError`を返します：meth： `.MetaData.create_all`または：class：</cite> .CreateTable`構造体によって呼び出されるような操作です。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.types.Variant">
 <em class="property">class </em><code class="descclassname">sqlalchemy.types.</code><code class="descname">Variant</code><span class="sig-paren">(</span><em>base</em>, <em>mapping</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.types.Variant" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="custom_types.html#sqlalchemy.types.TypeDecorator" title="sqlalchemy.types.TypeDecorator"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.types.TypeDecorator</span></code></a></p>
-<p>A wrapping type that selects among a variety of
-implementations based on dialect in use.</p>
-<p>The <a class="reference internal" href="#sqlalchemy.types.Variant" title="sqlalchemy.types.Variant"><code class="xref py py-class docutils literal"><span class="pre">Variant</span></code></a> type is typically constructed
-using the <a class="reference internal" href="#sqlalchemy.types.TypeEngine.with_variant" title="sqlalchemy.types.TypeEngine.with_variant"><code class="xref py py-meth docutils literal"><span class="pre">TypeEngine.with_variant()</span></code></a> method.</p>
+<dd><p>Bases: <a class="reference internal" href="custom_types.html#sqlalchemy.types.TypeDecorator" title="sqlalchemy.types.TypeDecorator"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.types.TypeDecorator</span></code></a></p>
+<p>使用中の方言に基づいてさまざまな実装の中から選択するラッピング型。</p>
+<p>：class： <cite>.Variant`型は、通常：meth：</cite> .TypeEngine.with_variant`メソッドを使って構築されます。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 0.7.2 で追加.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="#sqlalchemy.types.TypeEngine.with_variant" title="sqlalchemy.types.TypeEngine.with_variant"><code class="xref py py-meth docutils literal"><span class="pre">TypeEngine.with_variant()</span></code></a> for an example of use.</p>
+<p class="last">：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.TypeEngine.with_variant`は使用例です。</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Members:</th><td class="field-body">with_variant, __init__</td>
+<tr class="field-odd field"><th class="field-name">メンバー:</th><td class="field-body">with_variant、__init__</td>
 </tr>
 </tbody>
 </table>
@@ -590,13 +536,13 @@ using the <a class="reference internal" href="#sqlalchemy.types.TypeEngine.with_
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="custom_types.html" title="previous chapter">Custom Types</a>
+        <a href="custom_types.html" title="previous chapter">カスタムタイプ</a>
         Next:
-        <a href="engines_connections.html" title="next chapter">Engine and Connection Use</a>
+        <a href="engines_connections.html" title="next chapter">エンジンと接続の使用</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -623,6 +569,7 @@ using the <a class="reference internal" href="#sqlalchemy.types.TypeEngine.with_
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

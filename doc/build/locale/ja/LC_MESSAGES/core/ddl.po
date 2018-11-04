@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/ddl.rst:6
 msgid "Customizing DDL"
-msgstr ""
+msgstr "DDLのカスタマイズ"
 
 #: ../../core/ddl.rst:8
 msgid ""
@@ -38,11 +28,11 @@ msgid ""
 "required, SQLAlchemy offers two techniques which can be used to add any "
 "DDL based on any condition, either accompanying the standard generation "
 "of tables or by itself."
-msgstr ""
+msgstr "前のセクションでは、class： `〜sqlalchemy.schema.Table`、：class：`〜sqlalchemy.schema.ForeignKeyConstraint`、：class： `〜sqlalchemy.schema.CheckConstraint`を含むさまざまなスキーマ構造について説明しました。と：class： `〜sqlalchemy.schema.Sequence`です。私たちは、class： `〜sqlalchemy.schema.Table`と：class：`〜sqlalchemyの `` create（） ``と `：func：`〜sqlalchemy.schema.MetaData.create_all`メソッドに頼ってきました。 schema.MetaData`を使用して、すべての構成に対してデータ定義言語（DDL）を発行します。発行されると、オペレーションの所定の順序が呼び出され、各テーブルを作成するためのDDLは、それに関連するすべての制約および他のオブジェクトを含む無条件で作成される。データベース固有のDDLが必要なさらに複雑なシナリオでは、SQLAlchemyには、標準のテーブル生成を伴うか、またはそれ単独で、どのような条件に基づいてDDLを追加するためにも使用できる2つの手法があります。"
 
 #: ../../core/ddl.rst:24
 msgid "Custom DDL"
-msgstr ""
+msgstr "カスタムDDL"
 
 #: ../../core/ddl.rst:26
 msgid ""
@@ -50,18 +40,18 @@ msgid ""
 ":class:`~sqlalchemy.schema.DDL` construct. This construct works like all "
 "the other DDL elements except it accepts a string which is the text to be"
 " emitted:"
-msgstr ""
+msgstr "カスタムDDL句は：class： `〜sqlalchemy.schema.DDL`構文を使用すると最も簡単に実現できます。この構造体は、他のすべてのDDL要素と同様に動作しますが、出力される文字列を受け入れます。"
 
 #: ../../core/ddl.rst:40
 msgid ""
 "A more comprehensive method of creating libraries of DDL constructs is to"
 " use custom compilation - see :ref:`sqlalchemy.ext.compiler_toplevel` for"
 " details."
-msgstr ""
+msgstr "DDL構造体のライブラリを作成するより包括的な方法は、カスタムコンパイルを使用することです。詳しくは：ref： `sqlalchemy.ext.compiler_toplevel`を参照してください。"
 
 #: ../../core/ddl.rst:48
 msgid "Controlling DDL Sequences"
-msgstr ""
+msgstr "DDLシーケンスの制御"
 
 #: ../../core/ddl.rst:50
 msgid ""
@@ -70,13 +60,13 @@ msgid ""
 "  This feature is available using the :meth:`.DDLElement.execute_if` "
 "method.  For example, if we wanted to create a trigger but only on the "
 "PostgreSQL backend, we could invoke this as::"
-msgstr ""
+msgstr "以前に導入された：class： `〜.schema.DDL`構文は、データベースの検査に基づいて条件付きで呼び出すこともできます。この機能は：meth： `.DDLElement.execute_if`メソッドを使って利用できます。たとえば、PostgreSQLバックエンドでのみトリガを作成したい場合は、これを::"
 
 #: ../../core/ddl.rst:73
 msgid ""
 "The :paramref:`.DDLElement.execute_if.dialect` keyword also accepts a "
 "tuple of string dialect names::"
-msgstr ""
+msgstr "：paramref： `.DDLElement.execute_if.dialect`キーワードはまた、文字列の方言名のタプルを受け取ります::"
 
 #: ../../core/ddl.rst:87
 msgid ""
@@ -85,18 +75,18 @@ msgid ""
 "the example below, we use this to conditionally create a CHECK "
 "constraint, first looking within the PostgreSQL catalogs to see if it "
 "exists:"
-msgstr ""
+msgstr "：meth： `.DDLElement.execute_if`メソッドは、使用中のデータベース接続を受け取る呼び出し可能な関数に対しても機能します。以下の例では、PostgreSQLのカタログ内に最初に存在するかどうかを調べるCHECK制約を条件付きで作成するためにこれを使用します。"
 
 #: ../../core/ddl.rst:135
 msgid "Using the built-in DDLElement Classes"
-msgstr ""
+msgstr "組み込みのDDLElementクラスの使用"
 
 #: ../../core/ddl.rst:137
 msgid ""
 "The ``sqlalchemy.schema`` package contains SQL expression constructs that"
 " provide DDL expressions. For example, to produce a ``CREATE TABLE`` "
 "statement:"
-msgstr ""
+msgstr "`` sqlalchemy.schema``パッケージには、DDL式を提供するSQL式の構文が含まれています。たとえば、 `` CREATE TABLE``文を生成するには、次のようにします。"
 
 #: ../../core/ddl.rst:153
 msgid ""
@@ -107,14 +97,14 @@ msgid ""
 "corresponding to CREATE and DROP as well as ALTER, not only in SQLAlchemy"
 " but in Alembic Migrations as well. A full reference of available "
 "constructs is in :ref:`schema_api_ddl`."
-msgstr ""
+msgstr "上の：class： `〜sqlalchemy.schema.CreateTable`構文は、他の式構造体（` `select（）` `、` `table.insert（）` `など）と同様に動作します。 SQLAlchemyのDDL指向のコンストラクトはすべて：class： `.DDLElement`ベースクラスのサブクラスです。これは、SQLAlchemyだけでなく、Alembic Migrationsにおいても、CREATEおよびDROPに対応するすべてのオブジェクトのベースであり、ALTERでもあります。利用可能な構文の完全なリファレンスは：ref： `schema_api_ddl`です。"
 
 #: ../../core/ddl.rst:161
 msgid ""
 "User-defined DDL constructs may also be created as subclasses of "
 ":class:`.DDLElement` itself.   The documentation in "
 ":ref:`sqlalchemy.ext.compiler_toplevel` has several examples of this."
-msgstr ""
+msgstr "ユーザ定義のDDL構造体は、class： `.DDLElement`自身のサブクラスとして作成することもできます。 ：ref： `sqlalchemy.ext.compiler_toplevel`のドキュメンテーションにはいくつかの例があります。"
 
 #: ../../core/ddl.rst:165
 msgid ""
@@ -127,7 +117,7 @@ msgid ""
 "unconditionally. In a future SQLAlchemy release, the DDL event system "
 "including conditional execution will taken into account for built-in "
 "constructs that currently invoke in all cases."
-msgstr ""
+msgstr "前のセクション：ref： `schema_ddl_sequences`で説明したイベントドリブンDDLシステムは、他の：class：` .DDLElement`オブジェクトでも利用できます。しかし、：class： `.CreateIndex`、：class：` .CreateSequence`などのビルトインコンストラクトを扱う場合、イベントシステムは：meth： `のようなメソッドとして** limited ** useです。 Table.create`と：meth： `.MetaData.create_all`はこれらのコンストラクトを無条件に呼び出します。将来のSQLAlchemyリリースでは、条件付き実行を含むDDLイベントシステムが、すべてのケースで現在呼び出されているビルトイン構造に対して考慮されます。"
 
 #: ../../core/ddl.rst:175
 msgid ""
@@ -136,7 +126,7 @@ msgid ""
 "event-driven system will work for CHECK and UNIQUE constraints, using "
 "these as we did in our previous example of "
 ":meth:`.DDLElement.execute_if`:"
-msgstr ""
+msgstr "前述の例で行ったように、イベントドリブンシステムがCHECK制約とUNIQUE制約で動作するので、：class： `.AddConstraint`と：class：` .DropConstraint`構文を使ってイベント駆動型の例を説明することができます：meth： `.DDLElement.execute_if`："
 
 #: ../../core/ddl.rst:218
 msgid ""
@@ -146,15 +136,15 @@ msgid ""
 " as well as with user-defined subclasses of :class:`.DDLElement` that "
 "aren't already part of the :meth:`.MetaData.create_all`, "
 ":meth:`.Table.create`, and corresponding \"drop\" processes."
-msgstr ""
+msgstr "上記の例はbuilt-in：class： `.AddConstraint`と：class：` .DropConstraint`オブジェクトに対して行われていますが、DDLイベントの主な有用性は、class： `.DDL`構造：meth： `.MetaData.create_all`、：meth：` .Table.create`、およびそれに対応する\ &quot;.MetaData.create_all&quot;の一部ではない：class： `.DDLElement`のユーザ定義のサブクラスと同様に、ドロッププロセスを実行します。"
 
 #: ../../core/ddl.rst:228
 msgid "DDL Expression Constructs API"
-msgstr ""
+msgstr "DDL式はAPIを構築する"
 
 #: of sqlalchemy.schema.sort_tables:1
 msgid "sort a collection of :class:`.Table` objects based on dependency."
-msgstr ""
+msgstr "依存関係に基づいて：class： `.Table`オブジェクトのコレクションをソートします。"
 
 #: of sqlalchemy.schema.sort_tables:3
 msgid ""
@@ -163,7 +153,7 @@ msgid ""
 "Tables are dependent on another based on the presence of "
 ":class:`.ForeignKeyConstraint` objects as well as explicit dependencies "
 "added by :meth:`.Table.add_is_dependent_on`."
-msgstr ""
+msgstr "これは、従属順：class： `.Table`オブジェクトに従うように、class：` .Table`オブジェクトを生成する従属順のソートです。テーブルは：class： `.ForeignKeyConstraint`オブジェクトと、：meth：` .Table.add_is_dependent_on`によって追加された明示的な依存関係の存在に基づいて別のテーブルに依存します。"
 
 #: of sqlalchemy.schema.sort_tables:11
 msgid ""
@@ -174,19 +164,19 @@ msgid ""
 "appled to those constraints, or use the "
 ":func:`.sql.sort_tables_and_constraints` function which will break out "
 "foreign key constraints involved in cycles separately."
-msgstr ""
+msgstr "：func： `.sort_tables`関数は、テーブル間の依存関係サイクルの自動解決に対応することはできません。これは、通常、相互に依存する外部キー制約によって引き起こされます。これらのサイクルを解決するには、：paramref： `.ForeignKeyConstraint.use_alter`パラメータをこれらの制約に適用するか、または：func：` .sql.sort_tables_and_constraints`関数を使用します。"
 
 #: of sqlalchemy.schema.DDLElement.execute
 #: sqlalchemy.schema.DDLElement.execute_at
 #: sqlalchemy.schema.DDLElement.execute_if sqlalchemy.schema.sort_tables
 #: sqlalchemy.schema.sort_tables_and_constraints
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.schema.sort_tables:20
 #: sqlalchemy.schema.sort_tables_and_constraints:18
 msgid "a sequence of :class:`.Table` objects."
-msgstr ""
+msgstr "：class： `.Table`オブジェクトのシーケンスです。"
 
 #: of sqlalchemy.schema.sort_tables:22
 msgid ""
@@ -195,28 +185,28 @@ msgid ""
 "  Note this is **different** from the same parameter in "
 ":func:`.sort_tables_and_constraints`, which is instead passed the owning "
 ":class:`.ForeignKeyConstraint` object."
-msgstr ""
+msgstr "オプションのcallableが渡されます：class： `.ForeignKey`オブジェクト; Trueを返すと、この制約は依存関係とはみなされません。これは：func： `.sort_tables_and_constraints`の同じパラメータから** different **です。これは、代わりにowning：class：` .ForeignKeyConstraint`オブジェクトに渡されます。"
 
 #: of sqlalchemy.schema.sort_tables:29
 #: sqlalchemy.schema.sort_tables_and_constraints:29
 msgid ""
 "a sequence of 2-tuples of tables which will also be considered as "
 "dependent on each other."
-msgstr ""
+msgstr "お互いに依存すると考えられる2タプルのテーブルのシーケンス。"
 
 #: of sqlalchemy.schema.sort_tables:34
 msgid ":func:`.sort_tables_and_constraints`"
-msgstr ""
+msgstr "：func： `.sort_tables_and_constraints`"
 
 #: of sqlalchemy.schema.sort_tables:36
 msgid ":meth:`.MetaData.sorted_tables` - uses this function to sort"
-msgstr ""
+msgstr "：meth： `.MetaData.sorted_tables`  - この関数を使ってソートします。"
 
 #: of sqlalchemy.schema.sort_tables_and_constraints:1
 msgid ""
 "sort a collection of :class:`.Table`  / :class:`.ForeignKeyConstraint` "
 "objects."
-msgstr ""
+msgstr "：class： `.Table` /：class：` .ForeignKeyConstraint`オブジェクトのコレクションをソートします。"
 
 #: of sqlalchemy.schema.sort_tables_and_constraints:4
 msgid ""
@@ -226,7 +216,7 @@ msgid ""
 ":class:`.ForeignKeyConstraint` objects that are separate due to "
 "dependency rules not satisfied by the sort are emitted afterwards as "
 "``(None, [ForeignKeyConstraint ...])``."
-msgstr ""
+msgstr "これは ``（Table、[ForeignKeyConstraint、...]） ``のタプルを生成し、それぞれ：class： `.Table`が従属する：class：` .Table`オブジェクトのように従属順のソートです。残り：class： `.ForeignKeyConstraint`オブジェクトは、ソートでは満たされない依存関係の規則のために分離され、後で` `（None、[ForeignKeyConstraint ...]）` `として出力されます。"
 
 #: of sqlalchemy.schema.sort_tables_and_constraints:11
 msgid ""
@@ -235,7 +225,7 @@ msgid ""
 ":meth:`.Table.add_is_dependent_on`, as well as dependencies stated here "
 "using the :paramref:`~.sort_tables_and_constraints.skip_fn` and/or "
 ":paramref:`~.sort_tables_and_constraints.extra_dependencies` parameters."
-msgstr ""
+msgstr "テーブルは：class： `.ForeignKeyConstraint`オブジェクト、：meth：` .Table.add_is_dependent_on`で追加された明示的な依存関係、および：paramref： `〜.sort_tables_and_constraints.skip_fnを使ってここに記述された依存関係の存在に基づいて別のものに依存します`および/または：paramref：`〜.sort_tables_and_constraints.extra_dependencies`パラメータ。"
 
 #: of sqlalchemy.schema.sort_tables_and_constraints:20
 msgid ""
@@ -247,55 +237,55 @@ msgid ""
 "included as an ALTER result at the end.   Returning None means the "
 "constraint is included in the table-based result unless it is detected as"
 " part of a dependency cycle."
-msgstr ""
+msgstr "これはa：class： `.ForeignKeyConstraint`オブジェクトを渡され、この制約がインライン制約として確実に含まれるべきか、またはインライン制約から除外されるのか、またはどちらにも限定されないことに基づいて値を返します。 Falseを返すと、その制約はALTERの対象にならない依存関係として確実に含まれます。 Trueの場合は、最後にALTER結果として** **のみが含まれます。 Returning Noneは、依存関係サイクルの一部として検出されない限り、制約がテーブルベースの結果に含まれていることを意味します。"
 
 #: of sqlalchemy.schema.sort_tables_and_constraints:36
 msgid ":func:`.sort_tables`"
-msgstr ""
+msgstr "：func： `.sort_tables`"
 
 #: of sqlalchemy.schema.DDLElement:1
 msgid "Base class for DDL expression constructs."
-msgstr ""
+msgstr "DDL式の基本クラス。"
 
 #: of sqlalchemy.schema.DDLElement:3
 msgid ""
 "This class is the base for the general purpose :class:`.DDL` class, as "
 "well as the various create/drop clause constructs such as "
 ":class:`.CreateTable`, :class:`.DropTable`, :class:`.AddConstraint`, etc."
-msgstr ""
+msgstr "このクラスは、汎用：class： `.DDL`クラスのベースであり、class：` .CreateTable`、：class： `.DropTable`、：class：`のような様々な作成/ .AddConstraint`など"
 
 #: of sqlalchemy.schema.DDLElement:8
 msgid ""
 ":class:`.DDLElement` integrates closely with SQLAlchemy events, "
 "introduced in :ref:`event_toplevel`.  An instance of one is itself an "
 "event receiving callable::"
-msgstr ""
+msgstr "：class： `.DDLElement`は：ref：` event_toplevel`で導入されたSQLAlchemyイベントと密接に統合されています。 1つのインスタンスは、それ自体がcallable ::を受け取るイベントです"
 
 #: of sqlalchemy.schema.DDLElement:20
 msgid ":class:`.DDL`"
-msgstr ""
+msgstr "：クラス： `.DDL`"
 
 #: of sqlalchemy.schema.DDLElement:22
 #: sqlalchemy.schema.DDLElement.execute_if:59
 msgid ":class:`.DDLEvents`"
-msgstr ""
+msgstr "：クラス： `.DDLEvents`"
 
 #: of sqlalchemy.schema.DDLElement:24
 #: sqlalchemy.schema.DDLElement.execute_if:61
 msgid ":ref:`event_toplevel`"
-msgstr ""
+msgstr "：ref： `event_toplevel`"
 
 #: of sqlalchemy.schema.DDLElement:26
 msgid ":ref:`schema_ddl_sequences`"
-msgstr ""
+msgstr "：ref： `schema_ddl_sequences`"
 
 #: of sqlalchemy.schema.DDLElement.against:1
 msgid "Return a copy of this DDL against a specific schema item."
-msgstr ""
+msgstr "特定のスキーマ項目に対してこのDDLのコピーを返します。"
 
 #: of sqlalchemy.schema.DDLElement.execute:1
 msgid "Execute this DDL immediately."
-msgstr ""
+msgstr "すぐにこのDDLを実行してください。"
 
 #: of sqlalchemy.schema.DDLElement.execute:3
 msgid ""
@@ -303,13 +293,13 @@ msgid ""
 ":class:`.Connectable` or :class:`.Connectable` assigned to the ``.bind`` "
 "property, if not supplied. If the DDL has a conditional ``on`` criteria, "
 "it will be invoked with None as the event."
-msgstr ""
+msgstr "指定されていない場合は、指定された：class： `.Connectable`または`：.bind`プロパティに割り当てられた：class： `.Connectable`を使用して、DDL文を単独で実行します。 DDLに条件付きの &quot;on&quot;条件がある場合、DDLはNoneとしてイベントとして呼び出されます。"
 
 #: of sqlalchemy.schema.DDLElement.execute:9
 msgid ""
 "Optional, an ``Engine`` or ``Connection``. If not supplied, a valid "
 ":class:`.Connectable` must be present in the ``.bind`` property."
-msgstr ""
+msgstr "オプション、 `` Engine``または `` Connection``です。指定されていない場合、valid：class： `.Connectable`が` `.bind``プロパティに存在しなければなりません。"
 
 #: of sqlalchemy.schema.DDLElement.execute:14
 msgid ""
@@ -317,15 +307,15 @@ msgid ""
 "  Will be passed to the ``on`` callable if any, and may also provide "
 "string expansion data for the statement. See ``execute_at`` for more "
 "information."
-msgstr ""
+msgstr "オプションで、デフォルトはNoneです。実行呼び出しのターゲットSchemaItemです。 `` on``呼び出し可能なものがあれば渡され、その文の文字列展開データも提供されます。詳細は `` execute_at``を参照してください。"
 
 #: of sqlalchemy.schema.DDLElement.execute_at:1
 msgid "Link execution of this DDL to the DDL lifecycle of a SchemaItem."
-msgstr ""
+msgstr "このDDLの実行をSchemaItemのDDLライフサイクルにリンクします。"
 
 #: of sqlalchemy.schema.DDLElement.execute_at:3
 msgid "See :class:`.DDLEvents`, as well as :meth:`.DDLElement.execute_if`."
-msgstr ""
+msgstr "参照：class： `.DDLEvents`、：meth：` .DDLElement.execute_if`。"
 
 #: of sqlalchemy.schema.DDLElement.execute_at:5
 msgid ""
@@ -334,44 +324,44 @@ msgid ""
 "statement will be executed using the same Connection and transactional "
 "context as the Table create/drop itself. The ``.bind`` property of this "
 "statement is ignored."
-msgstr ""
+msgstr "この `` DDLElement``を `` Table``や `` MetaData``のインスタンスにリンクし、スキーマ項目の作成時や削除時に実行します。 DDLステートメントは、テーブルの作成/削除自体と同じConnectionおよびトランザクションコンテキストを使用して実行されます。この文の `` .bind``プロパティは無視されます。"
 
 #: of sqlalchemy.schema.DDLElement.execute_at:11
 msgid ""
 "One of the events defined in the schema item's ``.ddl_events``; e.g. "
 "'before-create', 'after-create', 'before-drop' or 'after-drop'"
-msgstr ""
+msgstr "スキーマ項目の `` .ddl_events``で定義されたイベントの1つ。 「作成前」、「作成後」、「Before-Drop」または「After-Drop」のような、"
 
 #: of sqlalchemy.schema.DDLElement.execute_at:15
 msgid ""
 "The Table or MetaData instance for which this DDLElement will be "
 "associated with."
-msgstr ""
+msgstr "このDDLElementが関連付けられるTableまたはMetaDataインスタンス。"
 
 #: of sqlalchemy.schema.DDLElement.execute_at:19
 msgid "A DDLElement instance can be linked to any number of schema items."
-msgstr ""
+msgstr "DDLElementインスタンスは、任意の数のスキーマ項目にリンクできます。"
 
 #: of sqlalchemy.schema.DDLElement.execute_at:21
 msgid ""
 "``execute_at`` builds on the ``append_ddl_listener`` interface of "
 ":class:`.MetaData` and :class:`.Table` objects."
-msgstr ""
+msgstr "`` execute_at``は：class： `.MetaData`と：class：` .Table`オブジェクトの `` append_ddl_listener``インタフェースをベースにしています。"
 
 #: of sqlalchemy.schema.DDLElement.execute_at:24
 msgid ""
 "Caveat: Creating or dropping a Table in isolation will also trigger any "
 "DDL set to ``execute_at`` that Table's MetaData.  This may change in a "
 "future release."
-msgstr ""
+msgstr "警告：単独でテーブルを作成または削除すると、そのテーブルのメタデータを ``実行する ``に設定されたDDLもトリガされます。これは将来のリリースで変更される可能性があります。"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:1
 msgid "Return a callable that will execute this DDLElement conditionally."
-msgstr ""
+msgstr "このDDLElementを条件付きで実行する呼び出し可能オブジェクトを返します。"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:4
 msgid "Used to provide a wrapper for event listening::"
-msgstr ""
+msgstr "イベントリスニング用のラッパーを提供するために使用されます::"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:12
 msgid ""
@@ -380,17 +370,17 @@ msgid ""
 "DDL('something').execute_if(dialect='postgresql')  If a tuple, specifies "
 "multiple dialect names::    "
 "DDL('something').execute_if(dialect=('postgresql', 'mysql'))"
-msgstr ""
+msgstr "文字列、タプル、または呼び出し可能な述語である可能性があります。 execute_if（dialect = &#39;postgresql&#39;）タプルの場合、複数の方言名:: DDL（ &#39;something&#39;）を指定します。文字列の場合は、実行データベースの名前と比較されます。 execute_if（dialect =（ &#39;postgresql&#39;、 &#39;mysql&#39;））"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:12
 msgid ""
 "May be a string, tuple or a callable predicate.  If a string, it will be "
 "compared to the name of the executing database dialect::"
-msgstr ""
+msgstr "文字列、タプル、または呼び出し可能な述語である可能性があります。文字列の場合は、実行中のデータベースdialectの名前と比較されます::"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:18
 msgid "If a tuple, specifies multiple dialect names::"
-msgstr ""
+msgstr "タプルの場合、複数の方言名を指定する::"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:22
 msgid ""
@@ -407,84 +397,84 @@ msgid ""
 "was    set during the call to ``create()``, ``create_all()``,    "
 "``drop()``, ``drop_all()``.  If the callable returns a true value, the "
 "DDL statement will be executed."
-msgstr ""
+msgstr "callableは、4つの位置引数とオプションのキーワード引数で呼び出されます：：ddl：このDDL要素。 ：target：このイベントのターゲットである：class： `.Table`または：class：` .MetaData`オブジェクトです。 DDLが明示的に実行される場合は、Noneになります。 ：bind：DDLの実行に使用される：class： `.Connection`：tables：オプションのキーワード引数 -  MetaData.create_all（）またはdrop_all（）メソッド呼び出しで作成/削除されるTableオブジェクトのリストです。 ：state：オプションのキーワード引数 - この関数に渡される `` state``引数です。 ：checkfirst：キーワード引数は、 `` create（） ``、 `` create_all（） ``、 `` drop（） ``、 `` drop_all（）の呼び出し中に &#39;checkfirst&#39; ``。呼び出し可能関数が真の値を返すと、DDL文が実行されます。"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:22
 msgid ""
 "A callable, which will be invoked with four positional arguments as well "
 "as optional keyword arguments:"
-msgstr ""
+msgstr "callableは、4つの位置引数とオプションのキーワード引数で呼び出されます："
 
 #: of sqlalchemy.schema.DDLElement.execute_if
 msgid "ddl"
-msgstr ""
+msgstr "法案"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:27
 msgid "This DDL element."
-msgstr ""
+msgstr "このDDL要素。"
 
 #: of sqlalchemy.schema.DDLElement.execute_if
 msgid "target"
-msgstr ""
+msgstr "ターゲット"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:30
 msgid ""
 "The :class:`.Table` or :class:`.MetaData` object which is the target of "
 "this event. May be None if the DDL is executed explicitly."
-msgstr ""
+msgstr "このイベントのターゲットである：class： `.Table`または：class：` .MetaData`オブジェクトです。 DDLが明示的に実行される場合は、Noneになります。"
 
 #: of sqlalchemy.schema.DDLElement.execute_if
 msgid "bind"
-msgstr ""
+msgstr "バインド"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:35
 msgid "The :class:`.Connection` being used for DDL execution"
-msgstr ""
+msgstr "DDLの実行に使用される：class： `.Connection`"
 
 #: of sqlalchemy.schema.DDLElement.execute_if
 msgid "tables"
-msgstr ""
+msgstr "テーブル"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:38
 msgid ""
 "Optional keyword argument - a list of Table objects which are to be "
 "created/ dropped within a MetaData.create_all() or drop_all() method "
 "call."
-msgstr ""
+msgstr "オプションのキーワード引数 -  MetaData.create_all（）またはdrop_all（）メソッド呼び出しで作成または削除されるTableオブジェクトのリスト。"
 
 #: of sqlalchemy.schema.DDLElement.execute_if
 msgid "state"
-msgstr ""
+msgstr "状態"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:43
 msgid ""
 "Optional keyword argument - will be the ``state`` argument passed to this"
 " function."
-msgstr ""
+msgstr "オプションのキーワード引数 - この関数に渡される `` state``引数です。"
 
 #: of sqlalchemy.schema.DDLElement.execute_if
 msgid "checkfirst"
-msgstr ""
+msgstr "チェックファースト"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:47
 msgid ""
 "Keyword argument, will be True if the 'checkfirst' flag was set during "
 "the call to ``create()``, ``create_all()``, ``drop()``, ``drop_all()``."
-msgstr ""
+msgstr "`` create（） ``、 `` create_all（） ``、 `` drop（） ``、 `` drop_all（） ``の呼び出し中に &#39;checkfirst&#39;フラグがセットされていれば、キーワード引数はTrueになります。"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:51
 msgid "If the callable returns a true value, the DDL statement will be executed."
-msgstr ""
+msgstr "呼び出し可能関数が真の値を返すと、DDL文が実行されます。"
 
 #: of sqlalchemy.schema.DDLElement.execute_if:54
 msgid ""
 "any value which will be passed to the callable\\_ as the ``state`` "
 "keyword argument."
-msgstr ""
+msgstr "`` state``キーワード引数として呼び出し可能な\\ _に渡される任意の値。"
 
 #: of sqlalchemy.schema.DDL:1
 msgid "A literal DDL statement."
-msgstr ""
+msgstr "リテラルDDLステートメント。"
 
 #: of sqlalchemy.schema.DDL:3
 msgid ""
@@ -493,73 +483,73 @@ msgid ""
 "listed in :class:`.DDLEvents`, using either :class:`.Table` or "
 ":class:`.MetaData` objects as targets.   Basic templating support allows "
 "a single DDL instance to handle repetitive tasks for multiple tables."
-msgstr ""
+msgstr "データベースによって実行されるリテラルSQL DDLを指定します。 DDLオブジェクトはDDLイベントリスナーとして機能し、：class： `.Table`または：class：` .MetaData`オブジェクトをターゲットとして使用して、class： `.DDLEvents`にリストされているイベントにサブスクライブできます。基本的なテンプレートサポートにより、1つのDDLインスタンスで複数のテーブルの反復タスクを処理できます。"
 
 #: of sqlalchemy.schema.DDL:9
 msgid "Examples::"
-msgstr ""
+msgstr "例::"
 
 #: of sqlalchemy.schema.DDL:22
 msgid ""
 "When operating on Table events, the following ``statement`` string "
 "substitions are available::"
-msgstr ""
+msgstr "Tableイベントを操作するとき、次の `` statement``文字列の部分が利用できます::"
 
 #: of sqlalchemy.schema.DDL:29
 msgid ""
 "The DDL's \"context\", if any, will be combined with the standard "
 "substitutions noted above.  Keys present in the context will override the"
 " standard substitutions."
-msgstr ""
+msgstr "DDLの &quot;文脈&quot;は、もしあれば、上記の標準的な置換と組み合わされる。コンテキスト内に存在するキーは標準置換をオーバーライドします。"
 
 #: of sqlalchemy.schema._CreateDropBase:1
 msgid ""
 "Base class for DDL constructs that represent CREATE and DROP or "
 "equivalents."
-msgstr ""
+msgstr "CREATE、DROPまたは同等のものを表すDDL構造体の基本クラス。"
 
 #: of sqlalchemy.schema._CreateDropBase:4
 msgid ""
 "The common theme of _CreateDropBase is a single ``element`` attribute "
 "which refers to the element to be created or dropped."
-msgstr ""
+msgstr "_CreateDropBaseの共通のテーマは、作成または削除される要素を参照する単一の `` element``属性です。"
 
 #: of sqlalchemy.schema.CreateTable:1
 msgid "Represent a CREATE TABLE statement."
-msgstr ""
+msgstr "CREATE TABLEステートメントを表します。"
 
 #: of sqlalchemy.schema.DropTable:1
 msgid "Represent a DROP TABLE statement."
-msgstr ""
+msgstr "DROP TABLEステートメントを表します。"
 
 #: of sqlalchemy.schema.CreateColumn:1
 msgid ""
 "Represent a :class:`.Column` as rendered in a CREATE TABLE statement, via"
 " the :class:`.CreateTable` construct."
-msgstr ""
+msgstr "：class： `.CreateTable`構造体を介して、CREATE TABLE文でレンダリングされたa：class：` .Column`を表します。"
 
 #: of sqlalchemy.schema.CreateColumn:4
 msgid ""
 "This is provided to support custom column DDL within the generation of "
 "CREATE TABLE statements, by using the compiler extension documented in "
 ":ref:`sqlalchemy.ext.compiler_toplevel` to extend :class:`.CreateColumn`."
-msgstr ""
+msgstr "これは、：ref： `sqlalchemy.ext.compiler_toplevel`をextend：class：` .CreateColumn`に記述されたコンパイラ拡張を使用して、CREATE TABLE文の生成の中でカスタム列DDLをサポートするために提供されています。"
 
 #: of sqlalchemy.schema.CreateColumn:9
 msgid ""
 "Typical integration is to examine the incoming :class:`.Column` object, "
 "and to redirect compilation if a particular flag or condition is found::"
-msgstr ""
+msgstr "典型的な統合は、incoming：class： `.Column`オブジェクトを検査し、特定のフラグまたは条件が見つかった場合にコンパイルをリダイレクトすることです::"
 
 #: of sqlalchemy.schema.CreateColumn:40
 msgid "The above construct can be applied to a :class:`.Table` as follows::"
-msgstr ""
+msgstr "上記の構文は、次のようにclass： `.Table`に適用することができます::"
 
 #: of sqlalchemy.schema.CreateColumn:55
 msgid ""
 "Above, the directives we've added to the :attr:`.Column.info` collection "
 "will be detected by our custom compilation scheme::"
-msgstr ""
+msgstr "上記の：attr： `.Column.info`コレクションに追加したディレクティブは、カスタムコンパイルスキームで検出されます::"
 
 #: of sqlalchemy.schema.CreateColumn:65
 msgid ""
@@ -569,7 +559,7 @@ msgid ""
 "essentially how to produce the same effect as using the ``system=True`` "
 "argument on :class:`.Column`, which marks a column as an implicitly-"
 "present \"system\" column."
-msgstr ""
+msgstr "：class： `.CreateColumn`構造体は、` `CREATE TABLE``を生成するときに特定の列をスキップするためにも使用できます。これは条件付きで `` None``を返すコンパイルルールを作成することで実現します。これは、本質的に、列を暗黙的に存在する\ &quot;システム\&quot;列としてマークするclass： `.Column`で` `system = True``引数を使用するのと同じ効果を出す方法です。"
 
 #: of sqlalchemy.schema.CreateColumn:72
 msgid ""
@@ -578,60 +568,60 @@ msgid ""
 "backend, but on other backends does render it, in anticipation of a "
 "triggered rule.  A conditional compilation rule could skip this name only"
 " on PostgreSQL::"
-msgstr ""
+msgstr "たとえば、PostgreSQLの `` xmin``列をPostgreSQLのバックエンドに対してレンダリングすることをスキップする：class： `.Table`を生成したいと仮定します。しかし、他のバックエンドでは、トリガーされた規則を予期してレンダリングします。条件付きコンパイルルールは、PostgreSQLでのみこの名前をスキップすることができます::"
 
 #: of sqlalchemy.schema.CreateColumn:93
 msgid ""
 "Above, a :class:`.CreateTable` construct will generate a ``CREATE TABLE``"
 " which only includes the ``id`` column in the string; the ``xmin`` column"
 " will be omitted, but only against the PostgreSQL backend."
-msgstr ""
+msgstr "上記のa：class： `.CreateTable`構文は、文字列の` `id``カラムのみを含む` `CREATE TABLE``を生成します。 `` xmin``カラムは省略されますが、PostgreSQLバックエンドに対してのみです。"
 
 #: of sqlalchemy.schema.CreateColumn:97
 msgid ""
 "The :class:`.CreateColumn` construct supports skipping of columns by "
 "returning ``None`` from a custom compilation rule."
-msgstr ""
+msgstr "：class： `.CreateColumn`構造体はカスタムコンパイルルールから` `None``を返すことで列のスキップをサポートしています。"
 
 #: of sqlalchemy.schema.CreateColumn:101
 msgid ""
 "The :class:`.CreateColumn` construct was added to support custom column "
 "creation styles."
-msgstr ""
+msgstr "：class： `.CreateColumn`構造体が追加され、カスタム列作成スタイルをサポートしました。"
 
 #: of sqlalchemy.schema.CreateSequence:1
 msgid "Represent a CREATE SEQUENCE statement."
-msgstr ""
+msgstr "CREATE SEQUENCEステートメントを表します。"
 
 #: of sqlalchemy.schema.DropSequence:1
 msgid "Represent a DROP SEQUENCE statement."
-msgstr ""
+msgstr "DROP SEQUENCEステートメントを表します。"
 
 #: of sqlalchemy.schema.CreateIndex:1
 msgid "Represent a CREATE INDEX statement."
-msgstr ""
+msgstr "CREATE INDEXステートメントを表します。"
 
 #: of sqlalchemy.schema.DropIndex:1
 msgid "Represent a DROP INDEX statement."
-msgstr ""
+msgstr "DROP INDEXステートメントを表します。"
 
 #: of sqlalchemy.schema.AddConstraint:1
 msgid "Represent an ALTER TABLE ADD CONSTRAINT statement."
-msgstr ""
+msgstr "ALTER TABLE ADD CONSTRAINTステートメントを表します。"
 
 #: of sqlalchemy.schema.DropConstraint:1
 msgid "Represent an ALTER TABLE DROP CONSTRAINT statement."
-msgstr ""
+msgstr "ALTER TABLE DROP CONSTRAINTステートメントを表します。"
 
 #: of sqlalchemy.schema.CreateSchema:1
 msgid "Represent a CREATE SCHEMA statement."
-msgstr ""
+msgstr "CREATE SCHEMAステートメントを表します。"
 
 #: of sqlalchemy.schema.CreateSchema:5 sqlalchemy.schema.DropSchema:3
 msgid "The argument here is the string name of the schema."
-msgstr ""
+msgstr "引数はスキーマの文字列名です。"
 
 #: of sqlalchemy.schema.DropSchema:1
 msgid "Represent a DROP SCHEMA statement."
-msgstr ""
+msgstr "DROP SCHEMAステートメントを表します。"
 

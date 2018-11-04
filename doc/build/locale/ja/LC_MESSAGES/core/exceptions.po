@@ -6,53 +6,43 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/exceptions.rst:4
 msgid "Core Exceptions"
-msgstr ""
+msgstr "コア例外"
 
 #: of sqlalchemy.exc:1
 msgid "Exceptions used with SQLAlchemy."
-msgstr ""
+msgstr "SQLAlchemyで使用される例外。"
 
 #: of sqlalchemy.exc:3
 msgid ""
 "The base exception class is :exc:`.SQLAlchemyError`.  Exceptions which "
 "are raised as a result of DBAPI exceptions are all subclasses of "
 ":exc:`.DBAPIError`."
-msgstr ""
+msgstr "基本例外クラスは：exc： `.SQLAlchemyError`です。 DBAPI例外の結果として発生する例外は：exc： `.DBAPIError`のすべてのサブクラスです。"
 
 #: of sqlalchemy.exc.AmbiguousForeignKeysError:1
 msgid ""
 "Raised when more than one foreign key matching can be located between two"
 " selectables during a join."
-msgstr ""
+msgstr "結合中に2つの選択可能項目の間に複数の外部キー一致がある場合に発生します。"
 
 #: of sqlalchemy.exc.ArgumentError:1
 msgid "Raised when an invalid or conflicting function argument is supplied."
-msgstr ""
+msgstr "無効または競合する関数引数が指定されたときに発生します。"
 
 #: of sqlalchemy.exc.ArgumentError:3
 msgid "This error generally corresponds to construction time state errors."
-msgstr ""
+msgstr "このエラーは一般に、構築時の状態エラーに対応します。"
 
 #: of sqlalchemy.exc.CircularDependencyError:1
 msgid "Raised by topological sorts when a circular dependency is detected."
-msgstr ""
+msgstr "循環依存が検出されたときにトポロジカルなソートによって発生します。"
 
 #: of sqlalchemy.exc.CircularDependencyError:3
 msgid "There are two scenarios where this error occurs:"
-msgstr ""
+msgstr "このエラーが発生するシナリオは2つあります。"
 
 #: of sqlalchemy.exc.CircularDependencyError:5
 msgid ""
@@ -62,22 +52,22 @@ msgid ""
 "deassociate one of the foreign key constrained values. The "
 "``post_update`` flag described at :ref:`post_update` can resolve this "
 "cycle."
-msgstr ""
+msgstr "セッションのフラッシュ操作では、2つのオブジェクトが相互に依存している場合は、INSERT文またはDELETE文だけで挿入または削除することはできません。外部キー制約値の1つをポスト・アソシエートまたは事前デアソシエーションするためにUPDATEが必要です。 ：ref： `post_update`に記述されている` `post_update``フラグはこのサイクルを解決できます。"
 
 #: of sqlalchemy.exc.CircularDependencyError:11
 msgid ""
 "In a :attr:`.MetaData.sorted_tables` operation, two :class:`.ForeignKey` "
 "or :class:`.ForeignKeyConstraint` objects mutually refer to each other.  "
 "Apply the ``use_alter=True`` flag to one or both, see :ref:`use_alter`."
-msgstr ""
+msgstr "：attr： `.MetaData.sorted_tables`操作では、class：` .ForeignKey`オブジェクトまたは：class： `.ForeignKeyConstraint`オブジェクトが相互に参照します。 `` use_alter = True``フラグを片方または両方に適用します：ref： `use_alter`を参照してください。"
 
 #: of sqlalchemy.exc.CompileError:1
 msgid "Raised when an error occurs during SQL compilation"
-msgstr ""
+msgstr "SQLコンパイル中にエラーが発生した場合に発生します。"
 
 #: of sqlalchemy.exc.DBAPIError:1
 msgid "Raised when the execution of a database operation fails."
-msgstr ""
+msgstr "データベース操作の実行が失敗したときに発生します。"
 
 #: of sqlalchemy.exc.DBAPIError:3
 msgid ""
@@ -88,7 +78,7 @@ msgid ""
 "SQLAlchemy, otherwise the names are identical.  Note that there is no "
 "guarantee that different DB-API implementations will raise the same "
 "exception type for any given error condition."
-msgstr ""
+msgstr "データベース操作の基礎となるDB-APIによって発生した例外をラップします。可能な場合、標準のDB-API例外タイプのドライバ固有の実装は、SQLAlchemyの：class： `DBAPIError`のサブタイプに一致するようにラップされます。 DB-APIの `` Error``型はSQLAlchemyの：class： `DBAPIError`にマップされます。そうでない場合、名前は同じです。特定のエラー条件に対して異なるDB-API実装で同じ例外タイプが発生するという保証はありません。"
 
 #: of sqlalchemy.exc.DBAPIError:11
 msgid ""
@@ -96,26 +86,26 @@ msgid ""
 ":attr:`~.StatementError.params` attributes which supply context regarding"
 " the specifics of the statement which had an issue, for the typical case "
 "when the error was raised within the context of emitting a SQL statement."
-msgstr ""
+msgstr "：class： `DBAPIError`機能：attr：`〜.StatementError.statement`と：attr： `〜.StatementError.params`属性は、エラーが発生した典型的なケースで、問題のある文の詳細に関するコンテキストを提供しますSQL文を発行するコンテキスト内で発生しました。"
 
 #: of sqlalchemy.exc.DBAPIError:17
 msgid ""
 "The wrapped exception object is available in the "
 ":attr:`~.StatementError.orig` attribute. Its type and properties are DB-"
 "API implementation specific."
-msgstr ""
+msgstr "ラップされた例外オブジェクトは：attr： `〜.StatementError.orig`属性で利用できます。その型とプロパティは、DB-API実装固有のものです。"
 
 #: of sqlalchemy.exc.DataError:1
 msgid "Wraps a DB-API DataError."
-msgstr ""
+msgstr "DB-API DataErrorをラップします。"
 
 #: of sqlalchemy.exc.DatabaseError:1
 msgid "Wraps a DB-API DatabaseError."
-msgstr ""
+msgstr "DB-API DatabaseErrorをラップします。"
 
 #: of sqlalchemy.exc.DisconnectionError:1
 msgid "A disconnect is detected on a raw DB-API connection."
-msgstr ""
+msgstr "未処理のDB-API接続で切断が検出されました。"
 
 #: of sqlalchemy.exc.DisconnectionError:3
 msgid ""
@@ -125,176 +115,176 @@ msgid ""
 "before the pool gives up and raises "
 ":class:`~sqlalchemy.exc.InvalidRequestError` regarding the connection "
 "attempt."
-msgstr ""
+msgstr "このエラーは、接続プールによって発生し、内部的に消費されます。それは：meth： `.PoolEvents.checkout`イベントによって引き起こされ、ホストプールは再試行を強制します。プールが断念する前に例外が3回連続してキャッチされ、接続試行に関してclass： `〜sqlalchemy.exc.InvalidRequestError`が発生します。"
 
 #: of sqlalchemy.exc.DontWrapMixin:1
 msgid ""
 "A mixin class which, when applied to a user-defined Exception class, will"
 " not be wrapped inside of :exc:`.StatementError` if the error is emitted "
 "within the process of executing a statement."
-msgstr ""
+msgstr "ユーザ定義のExceptionクラスに適用されたときに、文が実行される過程でエラーが発生した場合、exc： `.StatementError`の中にラップされないmixinクラスです。"
 
 #: of sqlalchemy.exc.DontWrapMixin:5
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.exc.IdentifierError:1
 msgid "Raised when a schema name is beyond the max character limit"
-msgstr ""
+msgstr "スキーマ名が最大文字数制限を超えた場合に発生します。"
 
 #: of sqlalchemy.exc.IntegrityError:1
 msgid "Wraps a DB-API IntegrityError."
-msgstr ""
+msgstr "DB-API IntegrityErrorをラップします。"
 
 #: of sqlalchemy.exc.InterfaceError:1
 msgid "Wraps a DB-API InterfaceError."
-msgstr ""
+msgstr "DB-API InterfaceErrorをラップします。"
 
 #: of sqlalchemy.exc.InternalError:1
 msgid "Wraps a DB-API InternalError."
-msgstr ""
+msgstr "DB-API InternalErrorをラップします。"
 
 #: of sqlalchemy.exc.InvalidRequestError:1
 msgid "SQLAlchemy was asked to do something it can't do."
-msgstr ""
+msgstr "SQLAlchemyは、できないことをするように求められました。"
 
 #: of sqlalchemy.exc.InvalidRequestError:3
 msgid "This error generally corresponds to runtime state errors."
-msgstr ""
+msgstr "このエラーは、通常、ランタイム状態エラーに相当します。"
 
 #: of sqlalchemy.exc.InvalidatePoolError:1
 msgid "Raised when the connection pool should invalidate all stale connections."
-msgstr ""
+msgstr "接続プールが古い接続をすべて無効にする必要がある場合に発生します。"
 
 #: of sqlalchemy.exc.InvalidatePoolError:3
 msgid ""
 "A subclass of :class:`.DisconnectionError` that indicates that the "
 "disconnect situation encountered on the connection probably means the "
 "entire pool should be invalidated, as the database has been restarted."
-msgstr ""
+msgstr "：class： `.DisconnectionError`のサブクラスで、データベース接続が再開されたときに、接続で切断された状況が発生した可能性があることを示している可能性があります。"
 
 #: of sqlalchemy.exc.InvalidatePoolError:7
 msgid ""
 "This exception will be handled otherwise the same way as "
 ":class:`.DisconnectionError`, allowing three attempts to reconnect before"
 " giving up."
-msgstr ""
+msgstr "この例外は、class： `.DisconnectionError`と同じ方法で別の方法で処理されます。これにより、3回の再接続が断念されます。"
 
 #: of sqlalchemy.exc.NoForeignKeysError:1
 msgid ""
 "Raised when no foreign keys can be located between two selectables during"
 " a join."
-msgstr ""
+msgstr "結合中に2つの選択可能項目の間に外部キーがない場合に発生します。"
 
 #: of sqlalchemy.exc.NoInspectionAvailable:1
 msgid ""
 "A subject passed to :func:`sqlalchemy.inspection.inspect` produced no "
 "context for inspection."
-msgstr ""
+msgstr "被験者は：func： `sqlalchemy.inspection.inspect`に渡され、検査のためのコンテキストが生成されませんでした。"
 
 #: of sqlalchemy.exc.NoReferenceError:1
 msgid "Raised by ``ForeignKey`` to indicate a reference cannot be resolved."
-msgstr ""
+msgstr "参照が解決できないことを示すために `` ForeignKey``で発生します。"
 
 #: of sqlalchemy.exc.NoReferencedColumnError:1
 msgid "Raised by ``ForeignKey`` when the referred ``Column`` cannot be located."
-msgstr ""
+msgstr "参照された `` Column``が見つからない場合に `` ForeignKey``で発生します。"
 
 #: of sqlalchemy.exc.NoReferencedTableError:1
 msgid "Raised by ``ForeignKey`` when the referred ``Table`` cannot be located."
-msgstr ""
+msgstr "参照された `` Table``が見つからない場合に `` ForeignKey``によって発生します。"
 
 #: of sqlalchemy.exc.NoSuchColumnError:1
 msgid "A nonexistent column is requested from a ``RowProxy``."
-msgstr ""
+msgstr "存在しない列が `` RowProxy``から要求されます。"
 
 #: of sqlalchemy.exc.NoSuchModuleError:1
 msgid ""
 "Raised when a dynamically-loaded module (usually a database dialect) of a"
 " particular name cannot be located."
-msgstr ""
+msgstr "特定の名前の動的にロードされたモジュール（通常はデータベースダイアレクト）が見つからない場合に発生します。"
 
 #: of sqlalchemy.exc.NoSuchTableError:1
 msgid "Table does not exist or is not visible to a connection."
-msgstr ""
+msgstr "テーブルが存在しないか、接続に表示されません。"
 
 #: of sqlalchemy.exc.NotSupportedError:1
 msgid "Wraps a DB-API NotSupportedError."
-msgstr ""
+msgstr "DB-API NotSupportedErrorをラップします。"
 
 #: of sqlalchemy.exc.ObjectNotExecutableError:1
 msgid ""
 "Raised when an object is passed to .execute() that can't be executed as "
 "SQL."
-msgstr ""
+msgstr ".execute（）に渡されたオブジェクトがSQLとして実行できない場合に発生します。"
 
 #: of sqlalchemy.exc.OperationalError:1
 msgid "Wraps a DB-API OperationalError."
-msgstr ""
+msgstr "DB-API OperationalErrorをラップします。"
 
 #: of sqlalchemy.exc.ProgrammingError:1
 msgid "Wraps a DB-API ProgrammingError."
-msgstr ""
+msgstr "DB-API ProgrammingErrorをラップします。"
 
 #: of sqlalchemy.exc.ResourceClosedError:1
 msgid ""
 "An operation was requested from a connection, cursor, or other object "
 "that's in a closed state."
-msgstr ""
+msgstr "操作は、接続、カーソル、または閉じた状態にある他のオブジェクトから要求されました。"
 
 #: of sqlalchemy.exc.SADeprecationWarning:1
 #: sqlalchemy.exc.SAPendingDeprecationWarning:1
 msgid "Issued once per usage of a deprecated API."
-msgstr ""
+msgstr "推奨されなくなったAPIの使用につき1回発行されます。"
 
 #: of sqlalchemy.exc.SAWarning:1
 msgid "Issued at runtime."
-msgstr ""
+msgstr "実行時に発行されます。"
 
 #: of sqlalchemy.exc.SQLAlchemyError:1
 msgid "Generic error class."
-msgstr ""
+msgstr "一般的なエラークラス。"
 
 #: of sqlalchemy.exc.StatementError:1
 msgid "An error occurred during execution of a SQL statement."
-msgstr ""
+msgstr "SQLステートメントの実行中にエラーが発生しました。"
 
 #: of sqlalchemy.exc.StatementError:3
 msgid ""
 ":class:`StatementError` wraps the exception raised during execution, and "
 "features :attr:`.statement` and :attr:`.params` attributes which supply "
 "context regarding the specifics of the statement which had an issue."
-msgstr ""
+msgstr "：class： `StatementError`は、実行中に発生した例外をラップします。また、attr：` .statement`と：attr： `.params`属性は、問題のある文の詳細に関するコンテキストを提供します。"
 
 #: of sqlalchemy.exc.StatementError:8
 msgid "The wrapped exception object is available in the :attr:`.orig` attribute."
-msgstr ""
+msgstr "ラップされた例外オブジェクトは、：attr： `.orig`属性で利用できます。"
 
 #: of sqlalchemy.exc.StatementError.orig:1
 msgid "The DBAPI exception object."
-msgstr ""
+msgstr "DBAPI例外オブジェクト。"
 
 #: of sqlalchemy.exc.StatementError.params:1
 msgid "The parameter list being used when this exception occurred."
-msgstr ""
+msgstr "この例外が発生したときに使用されるパラメータリストです。"
 
 #: of sqlalchemy.exc.StatementError.statement:1
 msgid "The string SQL statement being invoked when this exception occurred."
-msgstr ""
+msgstr "この例外が発生したときに呼び出されるSQL文。"
 
 #: of sqlalchemy.exc.TimeoutError:1
 msgid "Raised when a connection pool times out on getting a connection."
-msgstr ""
+msgstr "接続プールのタイムアウト時に発生します。"
 
 #: of sqlalchemy.exc.UnboundExecutionError:1
 msgid "SQL was attempted without a database connection to execute it on."
-msgstr ""
+msgstr "データベースを接続せずにSQLを実行しようとしました。"
 
 #: of sqlalchemy.exc.UnreflectableTableError:1
 msgid "Table exists but can't be reflectted for some reason."
-msgstr ""
+msgstr "テーブルは存在しますが、なんらかの理由で反映することはできません。"
 
 #: of sqlalchemy.exc.UnsupportedCompilationError:1
 msgid "Raised when an operation is not supported by the given compiler."
-msgstr ""
+msgstr "指定されたコンパイラによって操作がサポートされていない場合に発生します。"
 

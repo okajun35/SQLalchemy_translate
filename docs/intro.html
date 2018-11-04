@@ -10,7 +10,7 @@
         <title>
             
     
-    Overview
+    概要
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -36,7 +36,7 @@
         <link rel="copyright" title="Copyright" href="copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="index.html" />
         <link rel="next" title="SQLAlchemy ORM" href="orm/index.html" />
-        <link rel="prev" title="Table of Contents" href="contents.html" />
+        <link rel="prev" title="目次" href="contents.html" />
     <!-- end layout.mako headers -->
 
 
@@ -119,27 +119,27 @@
         </h3>
 
         <ul>
-<li class="selected"><span class="link-container first"><strong>Overview</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#documentation-overview">Documentation Overview</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#code-examples">Code Examples</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#installation-guide">Installation Guide</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#supported-platforms">Supported Platforms</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#supported-installation-methods">Supported Installation Methods</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#install-via-pip">Install via pip</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#installing-using-setup-py">Installing using setup.py</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#installing-the-c-extensions">Installing the C Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#installing-a-database-api">Installing a Database API</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#checking-the-installed-sqlalchemy-version">Checking the Installed SQLAlchemy Version</a></span></li>
+<li class="selected"><span class="link-container first"><strong>概要</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#documentation-overview">ドキュメントの概要</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#code-examples">コード例</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#installation-guide">インストールガイド</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#supported-platforms">サポートされているプラ​​ットフォーム</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#supported-installation-methods">サポートされているインストール方法</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#install-via-pip">ピップ経由でインストールする</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#installing-using-setup-py">setup.pyを使ってインストールする</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#installing-the-c-extensions">C拡張機能のインストール</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#installing-a-database-api">データベースAPIのインストール</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#checking-the-installed-sqlalchemy-version">インストールされているSQLAlchemyのバージョンの確認</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#to-1-3-migration">1.2 to 1.3 Migration</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#to-1-3-migration">1.2から1.3への移行</a></span></li>
 </ul>
 </li>
 <li><span class="link-container first"><a class="reference external" href="orm/index.html">SQLAlchemy ORM</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="core/index.html">SQLAlchemy Core</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="dialects/index.html">Dialects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="faq/index.html">Frequently Asked Questions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="errors.html">Error Messages</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="core/index.html">SQLAlchemyコア</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="dialects/index.html">方言</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="faq/index.html">よくある質問</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="errors.html">エラーメッセージ</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="changelog/index.html">Changes and Migration</a></span></li>
 </ul>
 
@@ -156,142 +156,91 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="overview">
-<span id="overview-toplevel"></span><span id="id1"></span><h1>Overview<a class="headerlink" href="#overview" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>SQLAlchemyああああああああああああああああああああああああああああああああ</p>
+<span id="overview-toplevel"></span><span id="id1"></span><h1>概要<a class="headerlink" href="#overview" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>SQLAlchemy SQL ToolkitとObject Relational Mapperは、データベースとPythonを扱う包括的なツールセットです。それは個別にまたは一緒に組み合わせることができる機能のいくつかの異なる領域を持っています。主なコンポーネントを以下に示します。コンポーネントの依存関係はレイヤーにまとめられています。</p>
 <img alt="_images/sqla_arch_small.png" src="_images/sqla_arch_small.png" />
-<p>Above, the two most significant front-facing portions of
-SQLAlchemy are the <strong>Object Relational Mapper</strong> and the
-<strong>SQL Expression Language</strong>. SQL Expressions can be used
-independently of the ORM. When using the ORM, the SQL
-Expression language remains part of the public facing API
-as it is used within object-relational configurations and
-queries.</p>
+<p>上では、SQLAlchemyの最も重要な正面の2つの部分は** Object Relational Mapper <strong>と</strong> SQL Expression Language <a href="#id1"><span class="problematic" id="id2">**</span></a>です。 SQL式はORMとは独立して使用できます。 ORMを使用する場合、SQL表現言語は、オブジェクト・リレーショナル構成および問合せ内で使用されるため、パブリック・フェイシングAPIの一部として残ります。</p>
 <div class="section" id="documentation-overview">
-<span id="doc-overview"></span><h2>Documentation Overview<a class="headerlink" href="#documentation-overview" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The documentation is separated into three sections: <a class="reference internal" href="orm/index.html"><span class="std std-ref">SQLAlchemy ORM</span></a>,
-<a class="reference internal" href="core/index.html"><span class="std std-ref">SQLAlchemy Core</span></a>, and <a class="reference internal" href="dialects/index.html"><span class="std std-ref">Dialects</span></a>.</p>
-<p>In <a class="reference internal" href="orm/index.html"><span class="std std-ref">SQLAlchemy ORM</span></a>, the Object Relational Mapper is introduced and fully
-described. New users should begin with the <a class="reference internal" href="orm/tutorial.html"><span class="std std-ref">Object Relational Tutorial</span></a>. If you
-want to work with higher-level SQL which is constructed automatically for you,
-as well as management of Python objects, proceed to this tutorial.</p>
-<p>In <a class="reference internal" href="core/index.html"><span class="std std-ref">SQLAlchemy Core</span></a>, the breadth of SQLAlchemy's SQL and database
-integration and description services are documented, the core of which is the
-SQL Expression language. The SQL Expression Language is a toolkit all its own,
-independent of the ORM package, which can be used to construct manipulable SQL
-expressions which can be programmatically constructed, modified, and executed,
-returning cursor-like result sets. In contrast to the ORM's domain-centric
-mode of usage, the expression language provides a schema-centric usage
-paradigm. New users should begin here with <a class="reference internal" href="core/tutorial.html"><span class="std std-ref">SQL Expression Language Tutorial</span></a>.
-SQLAlchemy engine, connection, and pooling services are also described in
-<a class="reference internal" href="core/index.html"><span class="std std-ref">SQLAlchemy Core</span></a>.</p>
-<p>In <a class="reference internal" href="dialects/index.html"><span class="std std-ref">Dialects</span></a>, reference documentation for all provided
-database and DBAPI backends is provided.</p>
+<span id="doc-overview"></span><h2>ドキュメントの概要<a class="headerlink" href="#documentation-overview" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ドキュメントは、：ref： <cite>orm_toplevel</cite>、：ref：` core_toplevel`、：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>dialect_toplevel`の3つのセクションに分かれています。</p>
+<p>In：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>orm_toplevel`では、オブジェクトリレーショナルマッパーが導入され、完全に説明されています。新しいユーザは：ref： <a href="#id3"><span class="problematic" id="id4">`</span></a>ormtutorial_toplevel`で始めるべきです。あなたのために自動的に構築される上位レベルのSQLで作業したい場合や、Pythonオブジェクトの管理については、このチュートリアルに進んでください。</p>
+<p>In：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>core_toplevel`では、SQLAlchemyのSQLとデータベースの統合と記述サービスの幅が文書化されており、その中核はSQL式言語です。 SQL式言語は、ORMパッケージとは独立した独自のツールキットです。このツールキットを使用して、プログラムで構築、変更、実行できる操作可能なSQL式を作成し、カーソルのような結果セットを戻すことができます。 ORMのドメイン中心の使用モードとは対照的に、表現言語はスキーマ中心の使用パラダイムを提供します。新規ユーザーは、ここでは：ref： <a href="#id3"><span class="problematic" id="id4">`</span></a>sqlexpression_toplevel`で始める必要があります。 SQLAlchemyのエンジンサービス、接続サービス、およびプーリングサービスについてはref： <a href="#id5"><span class="problematic" id="id6">`</span></a>core_toplevel`にも記述されています。</p>
+<p>In：ref： <cite>dialect_toplevel</cite>、提供されているすべてのデータベースとDBAPIバックエンドのリファレンスドキュメントが提供されています。</p>
 </div>
 <div class="section" id="code-examples">
-<h2>Code Examples<a class="headerlink" href="#code-examples" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Working code examples, mostly regarding the ORM, are included in the
-SQLAlchemy distribution. A description of all the included example
-applications is at <a class="reference internal" href="orm/examples.html"><span class="std std-ref">ORM Examples</span></a>.</p>
-<p>There is also a wide variety of examples involving both core SQLAlchemy
-constructs as well as the ORM on the wiki.  See
-<a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes">Theatrum Chemicum</a>.</p>
+<h2>コード例<a class="headerlink" href="#code-examples" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>主にORMに関する作業コードの例は、SQLAlchemyディストリビューションに含まれています。含まれているすべてのサンプルアプリケーションの説明は、：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>examples_toplevel`です。</p>
+<p>また、コアSQLAlchemy構造体とwiki上のORMの両方を含む多種多様な例があります。 <a href="#id1"><span class="problematic" id="id2">`</span></a>Theatrum Chemicum &lt;<a class="reference external" href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes">http://www.sqlalchemy.org/trac/wiki/UsageRecipes</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_。</p>
 </div>
 <div class="section" id="installation-guide">
-<span id="installation"></span><h2>Installation Guide<a class="headerlink" href="#installation-guide" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="installation"></span><h2>インストールガイド<a class="headerlink" href="#installation-guide" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="supported-platforms">
-<h3>Supported Platforms<a class="headerlink" href="#supported-platforms" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>SQLAlchemy has been tested against the following platforms:</p>
+<h3>サポートされているプラ​​ットフォーム<a class="headerlink" href="#supported-platforms" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SQLAlchemyは、以下のプラットフォームに対してテストされています。</p>
 <ul class="simple">
 <li>cPython 2.7</li>
-<li>cPython 3.4 and higher</li>
-<li><a class="reference external" href="http://pypy.org/">Pypy</a> 2.1 or greater</li>
+<li>cPython 3.4以上</li>
+<li><a href="#id1"><span class="problematic" id="id2">`</span></a>ピピ&lt;<a class="reference external" href="http://pypy.org/">http://pypy.org/</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_ 2.1以上</li>
 </ul>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 1.2 で変更: </span>Python 2.7 is now the minimum Python version supported.</p>
+<p><span class="versionmodified">バージョン 1.2 で変更: </span>Python 2.7がサポートされている最小のPythonバージョンになりました。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 1.3 で変更: </span>Within the Python 3 series, 3.4 is now the minimum Python 3 version supported.</p>
+<p><span class="versionmodified">バージョン 1.3 で変更: </span>Python 3シリーズでは、3.4がサポートされている最小のPython 3バージョンになりました。</p>
 </div>
-<p>Platforms that don't currently have support include Jython and IronPython.
-Jython has been supported in the past and may be supported in future
-releases as well, depending on the state of Jython itself.</p>
+<p>現在サポートしていないプラットフォームには、JythonとIronPythonがあります。 Jythonは過去にサポートされており、今後のリリースでもJython自体の状態に応じてサポートされる可能性があります。</p>
 </div>
 <div class="section" id="supported-installation-methods">
-<h3>Supported Installation Methods<a class="headerlink" href="#supported-installation-methods" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>SQLAlchemy installation is via standard Python methodologies that are
-based on <a class="reference external" href="http://pypi.python.org/pypi/setuptools/">setuptools</a>, either
-by referring to <code class="docutils literal"><span class="pre">setup.py</span></code> directly or by using
-<a class="reference external" href="http://pypi.python.org/pypi/pip/">pip</a> or other setuptools-compatible
-approaches.</p>
+<h3>サポートされているインストール方法<a class="headerlink" href="#supported-installation-methods" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SQLAlchemyのインストールは、 <cite>setuptools &lt;http://pypi.python.org/pypi/setuptools/&gt; `_、</cite> <cite>setup.py``を直接参照するか</cite> pip &lt;<a class="reference external" href="http://pypi.python.org/pypi/pip/">http://pypi.python.org/pypi/pip/</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_または他のsetuptools互換のアプローチ。</p>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 1.1 で変更: </span>setuptools is now required by the setup.py file;
-plain distutils installs are no longer supported.</p>
+<p><span class="versionmodified">バージョン 1.1 で変更: </span>setuptoolsがsetup.pyファイルで必要になりました。プレーンなdistutilsのインストールはもはやサポートされていません。</p>
 </div>
 </div>
 <div class="section" id="install-via-pip">
-<h3>Install via pip<a class="headerlink" href="#install-via-pip" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>When <code class="docutils literal"><span class="pre">pip</span></code> is available, the distribution can be
-downloaded from Pypi and installed in one step:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">SQLAlchemy</span></pre></div>
+<h3>ピップ経由でインストールする<a class="headerlink" href="#install-via-pip" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>`` pip``が利用可能な場合、配布物はPypiからダウンロードして一段階でインストールできます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">SQLAlchemy</span></pre></div>
 </div>
-<p>This command will download the latest <strong>released</strong> version of SQLAlchemy from the <a class="reference external" href="http://pypi.python.org/pypi/SQLAlchemy">Python
-Cheese Shop</a> and install it to your system.</p>
-<p>In order to install the latest <strong>prerelease</strong> version, such as <code class="docutils literal"><span class="pre">1.2.0b1</span></code>,
-pip requires that the <code class="docutils literal"><span class="pre">--pre</span></code> flag be used:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">pre</span> <span class="n">SQLAlchemy</span></pre></div>
+<p>このコマンドはPythonチーズショップからSQLAlchemyの**最新バージョン**をダウンロードします&lt;<a class="reference external" href="http://pypi.python.org/pypi/SQLAlchemy">http://pypi.python.org/pypi/SQLAlchemy</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_システムにインストールしてください。</p>
+<p>`` 1.2.0b1``のような最新の**プレリリース版をインストールするには、 `` --pre``フラグを使用する必要があります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">pre</span> <span class="n">SQLAlchemy</span></pre></div>
 </div>
-<p>Where above, if the most recent version is a prerelease, it will be installed
-instead of the latest released version.</p>
+<p>上記の場合、最新版がプレリリース版である場合、最新リリース版の代わりにインストールされます。</p>
 </div>
 <div class="section" id="installing-using-setup-py">
-<h3>Installing using setup.py<a class="headerlink" href="#installing-using-setup-py" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Otherwise, you can install from the distribution using the <code class="docutils literal"><span class="pre">setup.py</span></code> script:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span></pre></div>
+<h3>setup.pyを使ってインストールする<a class="headerlink" href="#installing-using-setup-py" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>それ以外の場合は、 `` setup.py``スクリプトを使ってディストリビューションからインストールできます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span></pre></div>
 </div>
 </div>
 <div class="section" id="installing-the-c-extensions">
-<span id="c-extensions"></span><h3>Installing the C Extensions<a class="headerlink" href="#installing-the-c-extensions" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>SQLAlchemy includes C extensions which provide an extra speed boost for
-dealing with result sets.   The extensions are supported on both the 2.xx
-and 3.xx series of cPython.</p>
-<p><code class="docutils literal"><span class="pre">setup.py</span></code> will automatically build the extensions if an appropriate platform is
-detected. If the build of the C extensions fails due to a missing compiler or
-other issue, the setup process will output a warning message and re-run the
-build without the C extensions upon completion, reporting final status.</p>
-<p>To run the build/install without even attempting to compile the C extensions,
-the <code class="docutils literal"><span class="pre">DISABLE_SQLALCHEMY_CEXT</span></code> environment variable may be specified.  The
-use case for this is either for special testing circumstances, or in the rare
-case of compatibility/build issues not overcome by the usual &quot;rebuild&quot;
-mechanism:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">DISABLE_SQLALCHEMY_CEXT</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span></pre></div>
+<span id="c-extensions"></span><h3>C拡張機能のインストール<a class="headerlink" href="#installing-the-c-extensions" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SQLAlchemyには、結果セットを処理するための追加の高速ブーストを提供するC拡張が含まれています。拡張は、cPythonの2.xxと3.xxシリーズの両方でサポートされています。</p>
+<p>適切なプラットフォームが検出された場合、 `` setup.py``は自動的に拡張機能をビルドします。コンパイラやその他の問題が原因でC拡張のビルドが失敗した場合、セットアッププロセスは警告メッセージを出力し、完了時にC拡張を使わずにビルドを再実行し、最終ステータスを報告します。</p>
+<p>C拡張をコンパイルせずにビルド/インストールを実行するには、 `` DISABLE_SQLALCHEMY_CEXT``環境変数を指定することができます。これのためのユースケースは特別なテスト環境のためか、まれに互換性/ビルドの問題が通常の &amp;quot;再構築&amp;quot;メカニズムによって克服されない場合です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">DISABLE_SQLALCHEMY_CEXT</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span></pre></div>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 1.1 で変更: </span>The legacy <code class="docutils literal"><span class="pre">--without-cextensions</span></code> flag has been
-removed from the installer as it relies on deprecated features of
-setuptools.</p>
+<p><span class="versionmodified">バージョン 1.1 で変更: </span>従来の `` --without-cextensions``フラグは、setuptoolsの非推奨機能に依存しているため、インストーラから削除されました。</p>
 </div>
 </div>
 <div class="section" id="installing-a-database-api">
-<h3>Installing a Database API<a class="headerlink" href="#installing-a-database-api" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>SQLAlchemy is designed to operate with a <a class="reference internal" href="glossary.html#term-dbapi"><span class="xref std std-term">DBAPI</span></a> implementation built for a
-particular database, and includes support for the most popular databases.
-The individual database sections in <a class="reference internal" href="dialects/index.html"><span class="doc">Dialects</span></a> enumerate
-the available DBAPIs for each database, including external links.</p>
+<h3>データベースAPIのインストール<a class="headerlink" href="#installing-a-database-api" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>SQLAlchemyは、特定のデータベース用に構築された：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>DBAPI`実装で動作するように設計されており、最も一般的なデータベースをサポートしています。 ：doc： <a href="#id3"><span class="problematic" id="id4">`</span></a>/ dialects / index`の個々のデータベースセクションは、外部リンクを含む各データベースの利用可能なDBAPIを列挙します。</p>
 </div>
 <div class="section" id="checking-the-installed-sqlalchemy-version">
-<h3>Checking the Installed SQLAlchemy Version<a class="headerlink" href="#checking-the-installed-sqlalchemy-version" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>This documentation covers SQLAlchemy version 1.3. If you're working on a
-system that already has SQLAlchemy installed, check the version from your
-Python prompt like this:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">sqlalchemy</span>
+<h3>インストールされているSQLAlchemyのバージョンの確認<a class="headerlink" href="#checking-the-installed-sqlalchemy-version" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>このドキュメントでは、SQLAlchemyバージョン1.3について説明します。すでにSQLAlchemyがインストールされているシステムで作業している場合は、Pythonプロンプトから次のようにバージョンを確認してください：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">sqlalchemy</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">sqlalchemy</span><span class="o">.</span><span class="n">__version__</span> 
 <span class="mf">1.3</span><span class="o">.</span><span class="mi">0</span></pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="to-1-3-migration">
-<span id="migration"></span><h2>1.2 to 1.3 Migration<a class="headerlink" href="#to-1-3-migration" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Notes on what's changed from 1.2 to 1.3 is available here at <a class="reference internal" href="changelog/migration_13.html"><span class="doc">What's New in SQLAlchemy 1.3?</span></a>.</p>
+<span id="migration"></span><h2>1.2から1.3への移行<a class="headerlink" href="#to-1-3-migration" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>1.2から1.3への変更点は、doc： <a href="#id1"><span class="problematic" id="id2">`</span></a>changelog / migration_13`にあります。</p>
 </div>
 </div>
 
@@ -301,13 +250,13 @@ Python prompt like this:</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="contents.html" title="previous chapter">Table of Contents</a>
+        <a href="contents.html" title="previous chapter">目次</a>
         Next:
         <a href="orm/index.html" title="next chapter">SQLAlchemy ORM</a>
 
     <div id="docs-copyright">
         &copy; <a href="copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -334,6 +283,7 @@ Python prompt like this:</p>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="_static/detectmobile.js"></script>

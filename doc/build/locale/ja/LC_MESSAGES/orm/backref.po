@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/backref.rst:4
 msgid "Linking Relationships with Backref"
-msgstr ""
+msgstr "バックリファレンスとの関係のリンク"
 
 #: ../../orm/backref.rst:6
 msgid ""
@@ -27,14 +17,14 @@ msgid ""
 "introduced in :ref:`ormtutorial_toplevel`, and has been mentioned "
 "throughout many of the examples here.   What does it actually do ?   "
 "Let's start with the canonical ``User`` and ``Address`` scenario::"
-msgstr ""
+msgstr "：paramref： `〜.relationship.backref`キーワード引数は：ref：` ormtutorial_toplevel`で初めて導入されました。ここでは多くの例で言及されています。それは実際に何をしていますか？正式な `` User``と `` Address``シナリオから始めましょう::"
 
 #: ../../orm/backref.rst:29
 msgid ""
 "The above configuration establishes a collection of ``Address`` objects "
 "on ``User`` called ``User.addresses``.   It also establishes a ``.user`` "
 "attribute on ``Address`` which will refer to the parent ``User`` object."
-msgstr ""
+msgstr "上記の設定は、 `` User``の `` User.addresses``に `` Address``オブジェクトの集合を確立します。親 `` User``オブジェクトを参照する `` Address``に `` .user``属性を設定します。"
 
 #: ../../orm/backref.rst:33
 msgid ""
@@ -43,7 +33,7 @@ msgid ""
 "mapping, including the establishment of an event listener on both sides "
 "which will mirror attribute operations in both directions.   The above "
 "configuration is equivalent to::"
-msgstr ""
+msgstr "実際、：paramref： `〜.relationship.backref`キーワードは、両側にイベントリスナーを設定することを含め、` `Address``マッピングにfunc：` .relationship`を2番目に配置するための共通のショートカットです両方向の属性操作を反映します。上記の設定は、"
 
 #: ../../orm/backref.rst:59
 msgid ""
@@ -58,14 +48,14 @@ msgid ""
 "illustrated as follows.   Start with a ``User`` and an ``Address`` "
 "instance.  The ``.addresses`` collection is empty, and the ``.user`` "
 "attribute is ``None``::"
-msgstr ""
+msgstr "上記では、 `` .user``関係を明示的に `` Address``に追加しています。どちらの関係でも、：paramref： `〜.relationship.back_populates`ディレクティブは、それぞれのリレーションシップにそれぞれのリレーションシップを伝えます。この設定の主な効果は、関係がイベントハンドラを両方の属性に追加することです。この属性は、 &quot;追加イベントまたは設定イベントがここで発生した場合、この特定の属性名を使用して受信属性に自分自身を設定する&quot;というふるまいを持ちます。その挙動を以下に示す。 `` User``と `` Address``インスタンスから始めましょう。 `` .addresses``コレクションは空で、 `` .user``属性は `` None``です::"
 
 #: ../../orm/backref.rst:77
 msgid ""
 "However, once the ``Address`` is appended to the ``u1.addresses`` "
 "collection, both the collection and the scalar attribute have been "
 "populated::"
-msgstr ""
+msgstr "しかし、 `` Address``が `` u1.addresses``コレクションに追加されると、コレクション属性とスカラー属性の両方が読み込まれます::"
 
 #: ../../orm/backref.rst:86
 msgid ""
@@ -73,7 +63,7 @@ msgid ""
 "as well as for equivalent operations on both sides.   Such as when "
 "``.user`` is set again to ``None``, the ``Address`` object is removed "
 "from the reverse collection::"
-msgstr ""
+msgstr "この動作はもちろん、リバースでも削除操作でも同様の操作が両側で行われます。 `` .user``が `` None``に再び設定された場合など、 `` Address``オブジェクトは逆コレクション::から削除されます"
 
 #: ../../orm/backref.rst:95
 msgid ""
@@ -85,7 +75,7 @@ msgid ""
 ":paramref:`~.relationship.backref`/:paramref:`~.relationship.back_populates`"
 " behavior has the advantage that common bidirectional operations can "
 "reflect the correct state without requiring a database round trip."
-msgstr ""
+msgstr "`` .addresses``コレクションと ``user``属性の操作は、完全にPythonでSQLデータベースとのやりとりなしに行われます。この動作がないと、データがデータベースにフラッシュされた後、コミットまたは期限切れ操作が発生した後に後で再ロードされると、適切な状態が両側で明らかになります。 ：paramref： `〜.relationship.backref` /：paramref：`〜.relationship.back_populates`の振る舞いには、一般的な双方向操作がデータベースの往復を必要とせずに正しい状態を反映できるという利点があります。"
 
 #: ../../orm/backref.rst:103
 msgid ""
@@ -93,11 +83,11 @@ msgid ""
 "a single relationship, it's exactly the same as if the above two "
 "relationships were created individually using "
 ":paramref:`~.relationship.back_populates` on each."
-msgstr ""
+msgstr "注意：paramref： `〜.relationship.backref`キーワードが単一のリレーションシップで使用されている場合、上記の2つのリレーションシップが個別に：paramref：`〜.relationship.back_populates`を使用して個別に作成された場合とまったく同じです。"
 
 #: ../../orm/backref.rst:108
 msgid "Backref Arguments"
-msgstr ""
+msgstr "逆引き引数"
 
 #: ../../orm/backref.rst:110
 msgid ""
@@ -114,13 +104,13 @@ msgid ""
 ":paramref:`~.relationship.primaryjoin` argument is discussed in "
 ":ref:`relationship_primaryjoin`).  Such as if we limited the list of "
 "``Address`` objects to those which start with \"tony\"::"
-msgstr ""
+msgstr "paramref： `〜.relationship.backref`キーワードは、互いに参照する2つの個別：func：` .relationship`構造を構築するための単なるショートカットです。このショートカットの動作の一部は、：func： `.relationship &#39;に適用される特定の構成引数が、他の方向、つまりスキーマレベルでの関係を記述する引数にも適用され、逆の方向。ここでの通常の場合は：paramref： `〜.relationship.secondary`引数を持つmany-to-many：func：` .relationship`や、以下を持つ1対多または多対1です。 paramref： `〜.relationship.primaryjoin`引数（：paramref：`〜.relationship.primaryjoin`引数は：ref： `relationship_primaryjoin`で議論されています）。 `` Address``オブジェクトのリストを\ &quot;tony \&quot;で始まるものに限定した場合など::"
 
 #: ../../orm/backref.rst:144
 msgid ""
 "We can observe, by inspecting the resulting property, that both sides of "
 "the relationship have this join condition applied::"
-msgstr ""
+msgstr "結果のプロパティを調べることで、関係の両辺にこの結合条件が適用されていることがわかります。"
 
 #: ../../orm/backref.rst:154
 msgid ""
@@ -131,7 +121,7 @@ msgid ""
 ":paramref:`~.relationship.secondaryjoin` to correspond to the other "
 "direction (see the example in :ref:`self_referential_many_to_many` for "
 "this)."
-msgstr ""
+msgstr "この引数の再利用は、適切な引数を使用するだけでよく、多対多の関係の場合は、paramref： `〜.relationshipの使い方を逆にします。他の方向に対応するために：paramref： `〜.relationship.secondaryjoin`（これについては：ref：` self_referential_many_to_many`を参照してください）。"
 
 #: ../../orm/backref.rst:162
 msgid ""
@@ -142,7 +132,7 @@ msgid ""
 ":paramref:`~.relationship.cascade` and "
 ":paramref:`~.relationship.cascade_backrefs`.   For this case we use the "
 ":func:`.backref` function in place of a string::"
-msgstr ""
+msgstr "しかし、私たちが\ &quot;backref \&quot;を配置した場所に固有の引数を指定することは非常によくあります。これには：paramref： `〜.relationship.lazy`、：paramref：`〜.relationship.remote_side`、：paramref： `〜.relationship.cascade`、：paramref：`〜のようなfunc： `.relationship`引数が含まれます。 relationship.cascade_backrefs`。この場合、文字列の代わりに：func： `.backref`関数を使用します::"
 
 #: ../../orm/backref.rst:182
 msgid ""
@@ -153,11 +143,11 @@ msgid ""
 "The :func:`.backref` function formatted the arguments we gave it into a "
 "form that is interpreted by the receiving :func:`.relationship` as "
 "additional arguments to be applied to the new relationship it creates."
-msgstr ""
+msgstr "上記のところでは、 `` Address.user``側にのみ `` lazy = \ &quot;join \&quot; `ディレクティブを配置しました。これは、` `Address``に対するクエリが行われたときに、` ` `` User``エンティティを自動的に作成して、返された各 `` Address``の `` .user``属性を設定する必要があります。 ：func： `.backref`関数は、与えられた引数を、受け取った：func：` .relationship`によって生成された新しい関係に適用される追加の引数として解釈します。"
 
 #: ../../orm/backref.rst:190
 msgid "One Way Backrefs"
-msgstr ""
+msgstr "一方的な逆説"
 
 #: ../../orm/backref.rst:192
 msgid ""
@@ -169,7 +159,7 @@ msgid ""
 " object on the incoming object. However, we'd also like to have items "
 "that are not part of the collection, but still have the same \"parent\" "
 "association - these items should never be in the collection."
-msgstr ""
+msgstr "異常なケースは、\ &quot;一方通行\&quot;のものです。これは、バックリファレンスの\ &quot;バックポピュレート\&quot;動作が一方向のみで望ましい場合です。これの例は、フィルタリング：paramref： `〜.relationship.primaryjoin`条件を含むコレクションです。必要に応じてこのコレクションにアイテムを追加し、それらのコレクションに入ってくるオブジェクトに\ &quot;親\オブジェクトを設定したいのですが、コレクションの一部ではないアイテムも持っていますが、同じ\ &quot;親\&quot;の関連付け - これらの項目は決してコレクションに含まれるべきではありません。"
 
 #: ../../orm/backref.rst:202
 msgid ""
@@ -179,7 +169,7 @@ msgid ""
 "``tony``, the usual backref behavior is that all items populate in both "
 "directions.   We wouldn't want this behavior for a case like the "
 "following::"
-msgstr ""
+msgstr "前の例では、電子メールアドレスが `` tony`で始まっている `` Address``オブジェクトだけにコレクションを限定した：paramref： `〜.relationship.primaryjoin`を設定しましたが、通常のバックレファレンスはすべてのアイテムが両方向に読み込まれます。次のようなケースではこの動作が望ましくありません::"
 
 #: ../../orm/backref.rst:215
 msgid ""
@@ -192,20 +182,20 @@ msgid ""
 " this unwanted side of the \"backref\" behavior on the Python side by "
 "using two separate :func:`.relationship` constructs, placing "
 ":paramref:`~.relationship.back_populates` only on one side::"
-msgstr ""
+msgstr "上の例では、 ``アドレス &#39;`オブジェクトの` `アドレス&#39;`のコレクションに `&#39;tony&#39; \で始まる\&quot;の基準と一致しません。これらのオブジェクトがフラッシュされ、トランザクションがコミットされ、その属性が再ロードのために期限切れになると、 `` addresses``コレクションは次のアクセス時にデータベースにヒットし、フィルタリングのためにこの `` Address``オブジェクトが存在しなくなります調子。しかし、2つの別々の：func： `.relationship`構造を使用して、paramref：`〜.relationship.back_populates`を一方の側に置くだけで、Python側の\ &quot;backref \&quot;動作のこの不要な部分を取り除くことができます： ："
 
 #: ../../orm/backref.rst:245
 msgid ""
 "With the above scenario, appending an ``Address`` object to the "
 "``.addresses`` collection of a ``User`` will always establish the "
 "``.user`` attribute on that ``Address``::"
-msgstr ""
+msgstr "上記のシナリオでは、 `` Address``オブジェクトを `` User``の `` .addresses``コレクションに追加すると、その `` Address``に `` .user``属性が設定されます::"
 
 #: ../../orm/backref.rst:255
 msgid ""
 "However, applying a ``User`` to the ``.user`` attribute of an "
 "``Address``, will not append the ``Address`` object to the collection::"
-msgstr ""
+msgstr "しかし、 `` Address``の `` .user``属性に `` User``を適用すると `` Address``オブジェクトがコレクションに追加されません::"
 
 #: ../../orm/backref.rst:263
 msgid ""
@@ -219,5 +209,5 @@ msgid ""
 "cross the line of duplicating too much SQL behavior in Python.  The "
 "backref behavior itself is only a slight transgression of this philosophy"
 " - SQLAlchemy tries to keep these to a minimum overall."
-msgstr ""
+msgstr "もちろん、paramref： `〜.relationship.backref`の有用性を無効にしています。これは、` `email.startswith（ &#39;tony&#39;）の基準に対応する` `Address``を追加するときに、 &#39;） ``の場合、セッションがフラッシュされ、コミットまたは期限切れ操作の後に属性がリロードされるまで、 `` User.addresses``コレクションには表示されません。 Pythonでこの基準をチェックするアトリビュートイベントを考えてみることもできますが、これはPythonでSQLの動作を重複させるという行を超えていきます。バックリファレンスの動作自体は、この哲学のわずかな違反です.SQLAlchemyはこれらを最小限に抑えようとしています。"
 

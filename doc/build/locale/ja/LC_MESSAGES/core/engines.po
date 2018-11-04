@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/engines.rst:5
 msgid "Engine Configuration"
-msgstr ""
+msgstr "エンジン構成"
 
 #: ../../core/engines.rst:7
 msgid ""
@@ -28,24 +18,24 @@ msgid ""
 ":term:`DBAPI`, delivered to the SQLAlchemy application through a "
 "connection pool and a :class:`.Dialect`, which describes how to talk to a"
 " specific kind of database/DBAPI combination."
-msgstr ""
+msgstr "：class： `.Engine`は、SQLAlchemyアプリケーションの開始点です。それは実際のデータベースと接続プールを通してSQLAlchemyアプリケーションに渡される：term： `DBAPI`と：class：` .Dialect`です。これは特定の種類のデータベースとの対話方法を記述しています/ DBAPIの組み合わせ。"
 
 #: ../../core/engines.rst:12
 msgid "The general structure can be illustrated as follows:"
-msgstr ""
+msgstr "一般的な構造は、以下のように示すことができる。"
 
 #: ../../core/engines.rst:16
 msgid ""
 "Where above, an :class:`.Engine` references both a :class:`.Dialect` and "
 "a :class:`.Pool`, which together interpret the DBAPI's module functions "
 "as well as the behavior of the database."
-msgstr ""
+msgstr "上記のところ、an：class： `.Engine`は、：class：` .Dialect`とa：class： `.Pool`の両方を参照し、DBAPIのモジュール関数とデータベースの振る舞いを解釈します。"
 
 #: ../../core/engines.rst:21
 msgid ""
 "Creating an engine is just a matter of issuing a single call, "
 ":func:`.create_engine()`::"
-msgstr ""
+msgstr "エンジンを作成することは、単一の呼び出しを発行するだけです：func： `.create_engine（）` ::"
 
 #: ../../core/engines.rst:27
 msgid ""
@@ -58,7 +48,7 @@ msgid ""
 " is dependent on this method such as :meth:`.Engine.execute` is invoked. "
 "In this way, :class:`.Engine` and :class:`.Pool` can be said to have a "
 "*lazy initialization* behavior."
-msgstr ""
+msgstr "上記のエンジンはPostgreSQLに合わせて作られた：class： `.Dialect`オブジェクトと、：class：` .Pool`オブジェクトを生成します。このオブジェクトは、接続要求が最初に受信されたときに `` localhost：5432``でDBAPI接続を確立します。 ：class： `.Engine`とその根底にある：class：` .Pool` do **では、：meth： `.Engine.connect`メソッドが呼び出されるまで、最初の実際のDBAPI接続を確立しません。このメソッドに依存する：meth： `.Engine.execute`が呼び出されます。このように、：class： `.Engine`と：class：` .Pool`は、* lazy initialization *ビヘイビアを持つと言えるでしょう。"
 
 #: ../../core/engines.rst:36
 msgid ""
@@ -68,11 +58,11 @@ msgid ""
 "configuring an :class:`.Engine`.   The next section, "
 ":ref:`connections_toplevel`, will detail the usage API of the "
 ":class:`.Engine` and similar, typically for non-ORM applications."
-msgstr ""
+msgstr "：class： `.Engine`はいったん作成されると、直接データベースと対話するために使うことができますし、ORMを操作するために：class：` .Session`オブジェクトに渡すこともできます。このセクションでは、class： `.Engine`の設定の詳細について説明します。次のセクション：ref： `connections_toplevel`では：class：` .Engine`などの使い方のAPIについて詳しく説明します。通常、ORM以外のアプリケーションの場合も同様です。"
 
 #: ../../core/engines.rst:45
 msgid "Supported Databases"
-msgstr ""
+msgstr "サポートされるデータベース"
 
 #: ../../core/engines.rst:47
 msgid ""
@@ -80,17 +70,17 @@ msgid ""
 "backends.   Dialects for the most common databases are included with "
 "SQLAlchemy; a handful of others require an additional install of a "
 "separate dialect."
-msgstr ""
+msgstr "SQLAlchemyにはさまざまなバックエンドのための多くの：class： `.Dialect`実装が含まれています。 SQLAlchemyには、最も一般的なデータベース用の方言が含まれています。少数の人が別の方言を追加インストールする必要があります。"
 
 #: ../../core/engines.rst:51
 msgid ""
 "See the section :ref:`dialect_toplevel` for information on the various "
 "backends available."
-msgstr ""
+msgstr "利用可能な様々なバックエンドについては、ref： `dialect_topvel`を参照してください。"
 
 #: ../../core/engines.rst:56
 msgid "Database Urls"
-msgstr ""
+msgstr "データベースURL"
 
 #: ../../core/engines.rst:58
 msgid ""
@@ -101,7 +91,7 @@ msgid ""
 "for additional configuration. In some cases a file path is accepted, and "
 "in others a \"data source name\" replaces the \"host\" and \"database\" "
 "portions.  The typical form of a database URL is::"
-msgstr ""
+msgstr "：func： `.create_engine`関数は、URLに基​​づいて：class：` .Engine`オブジェクトを生成します。これらのURLは `RFC-1738 <http://rfc.net/rfc1738.html> `_、通常、ユーザ名、パスワード、ホスト名、データベース名、追加の設定のためのキーワード引数を含めることができます。ファイルパスが受け入れられる場合もあれば、\ &quot;ホスト\&quot;と\ &quot;データベース\&quot;部分が\ &quot;データソース名\&quot;で置き換えられる場合もあります。データベースURLの一般的な形式は::"
 
 #: ../../core/engines.rst:67
 msgid ""
@@ -111,131 +101,131 @@ msgid ""
 "to the database using all lowercase letters. If not specified, a "
 "\"default\" DBAPI will be imported if available - this default is "
 "typically the most widely known driver available for that backend."
-msgstr ""
+msgstr "ダイアレクト名には、SQLAlchemyダイアレクトの識別名、 `` sqlite``、 `` mysql``、 `` postgresql``、oracle``または `` mssql``などの名前が含まれます。 drivernameは、すべての小文字を使用してデータベースに接続するために使用されるDBAPIの名前です。指定されていない場合、\ &quot;デフォルト\&quot; DBAPIが利用可能であればインポートされます - このデフォルトは通常、そのバックエンドで利用可能な最も一般的なドライバです。"
 
 #: ../../core/engines.rst:74
 msgid ""
 "Examples for common connection styles follow below.  For a full index of "
 "detailed information on all included dialects as well as links to third-"
 "party dialects, see :ref:`dialect_toplevel`."
-msgstr ""
+msgstr "一般的な接続スタイルの例を以下に示します。含まれているすべての方言とサードパーティの方言へのリンクに関する詳しい情報については、：ref： `dialect_toplevel`を参照してください。"
 
 #: ../../core/engines.rst:79
 msgid "PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL"
 
 #: ../../core/engines.rst:81
 msgid ""
 "The PostgreSQL dialect uses psycopg2 as the default DBAPI.  pg8000 is "
 "also available as a pure-Python substitute::"
-msgstr ""
+msgstr "PostgreSQLの方言は、デフォルトのDBAPIとしてpsycopg2を使用します。 pg8000は純粋なPythonの代替としても利用できます::"
 
 #: ../../core/engines.rst:93
 msgid "More notes on connecting to PostgreSQL at :ref:`postgresql_toplevel`."
-msgstr ""
+msgstr "PostgreSQLへの接続に関するさらなる注意：ref： `postgresql_toplevel`"
 
 #: ../../core/engines.rst:96
 msgid "MySQL"
-msgstr ""
+msgstr "MySQL"
 
 #: ../../core/engines.rst:98
 msgid ""
 "The MySQL dialect uses mysql-python as the default DBAPI.  There are many"
 " MySQL DBAPIs available, including MySQL-connector-python and OurSQL::"
-msgstr ""
+msgstr "MySQLの方言は、デフォルトのDBAPIとしてmysql-pythonを使用します。 MySQL-connector-pythonとOurSQL ::を含む多くのMySQL DBAPIが利用可能です"
 
 #: ../../core/engines.rst:113
 msgid "More notes on connecting to MySQL at :ref:`mysql_toplevel`."
-msgstr ""
+msgstr "MySQLへの接続に関するさらなる注意：ref： `mysql_toplevel`"
 
 #: ../../core/engines.rst:116
 msgid "Oracle"
-msgstr ""
+msgstr "オラクル"
 
 #: ../../core/engines.rst:118
 msgid "The Oracle dialect uses cx_oracle as the default DBAPI::"
-msgstr ""
+msgstr "Oracleダイアレクトでは、cx_oracleがデフォルトのDBAPI ::"
 
 #: ../../core/engines.rst:124
 msgid "More notes on connecting to Oracle at :ref:`oracle_toplevel`."
-msgstr ""
+msgstr "Oracleへの接続に関する詳細は、ref： `oracle_toplevel`を参照してください。"
 
 #: ../../core/engines.rst:127
 msgid "Microsoft SQL Server"
-msgstr ""
+msgstr "Microsoft SQL Server"
 
 #: ../../core/engines.rst:129
 msgid ""
 "The SQL Server dialect uses pyodbc as the default DBAPI.  pymssql is also"
 " available::"
-msgstr ""
+msgstr "SQL Serverの方言は、デフォルトのDBAPIとしてpyodbcを使用します。 pymssqlも利用可能です::"
 
 #: ../../core/engines.rst:138
 msgid "More notes on connecting to SQL Server at :ref:`mssql_toplevel`."
-msgstr ""
+msgstr "SQL Serverへの接続に関するその他の注意：ref： `mssql_toplevel`"
 
 #: ../../core/engines.rst:141
 msgid "SQLite"
-msgstr ""
+msgstr "SQLite"
 
 #: ../../core/engines.rst:143
 msgid ""
 "SQLite connects to file-based databases, using the Python built-in module"
 " ``sqlite3`` by default."
-msgstr ""
+msgstr "SQLiteはデフォルトでPythonの組み込みモジュール `` sqlite3``を使ってファイルベースのデータベースに接続します。"
 
 #: ../../core/engines.rst:146
 msgid ""
 "As SQLite connects to local files, the URL format is slightly different. "
 "The \"file\" portion of the URL is the filename of the database. For a "
 "relative file path, this requires three slashes::"
-msgstr ""
+msgstr "SQLiteはローカルファイルに接続するので、URL形式は若干異なります。 URLの\ &quot;file \&quot;部分は、データベースのファイル名です。相対ファイルパスの場合、これには3つのスラッシュが必要です::"
 
 #: ../../core/engines.rst:154
 msgid ""
 "And for an absolute file path, the three slashes are followed by the "
 "absolute path::"
-msgstr ""
+msgstr "絶対ファイルパスの場合、3つのスラッシュの後に絶対パスが続きます::"
 
 #: ../../core/engines.rst:163
 msgid "To use a SQLite ``:memory:`` database, specify an empty URL::"
-msgstr ""
+msgstr "SQLite ``：memory： ``データベースを使用するには、空のURLを指定してください::"
 
 #: ../../core/engines.rst:167
 msgid "More notes on connecting to SQLite at :ref:`sqlite_toplevel`."
-msgstr ""
+msgstr "ref： `sqlite_topvel`でSQLiteへの接続に関するその他の注意。"
 
 #: ../../core/engines.rst:170
 msgid "Others"
-msgstr ""
+msgstr "その他"
 
 #: ../../core/engines.rst:172
 msgid ""
 "See :ref:`dialect_toplevel`, the top-level page for all additional "
 "dialect documentation."
-msgstr ""
+msgstr "See：ref： `dialect_toplevel`は、すべての追加方言文書の最上位ページです。"
 
 #: ../../core/engines.rst:178
 msgid "Engine Creation API"
-msgstr ""
+msgstr "エンジン作成API"
 
 #: of sqlalchemy.create_engine:1
 msgid "Create a new :class:`.Engine` instance."
-msgstr ""
+msgstr "new：class： `.Engine`インスタンスを作成します。"
 
 #: of sqlalchemy.create_engine:3
 msgid ""
 "The standard calling form is to send the URL as the first positional "
 "argument, usually a string that indicates database dialect and connection"
 " arguments::"
-msgstr ""
+msgstr "標準的な呼び出し形式はURLを最初の位置引数として、通常はデータベースの方言と接続引数を示す文字列を送信することです::"
 
 #: of sqlalchemy.create_engine:10
 msgid ""
 "Additional keyword arguments may then follow it which establish various "
 "options on the resulting :class:`.Engine` and its underlying "
 ":class:`.Dialect` and :class:`.Pool` constructs::"
-msgstr ""
+msgstr "追加のキーワード引数がそれに続いて、結果として得られる：class： `.Engine`とその根底にある：class：` .Dialect`と：class： `.Pool` constructs ::"
 
 #: of sqlalchemy.create_engine:18
 msgid ""
@@ -245,7 +235,7 @@ msgid ""
 "``postgresql``, etc., and ``driver`` the name of a DBAPI, such as "
 "``psycopg2``, ``pyodbc``, ``cx_oracle``, etc.  Alternatively, the URL can"
 " be an instance of :class:`~sqlalchemy.engine.url.URL`."
-msgstr ""
+msgstr "URLの文字列形式は `` dialect [+ driver]：// user：password @ host / dbname [？key = value ..] ``で、 `` dialect``はmysql `` psycopg2``、 `` pyodbc``、 `` cx_oracle``などのDBAPIの名前は、 `` oracle``、 `` postgresql``など、 `` driver``は、 URLは、class： `〜sqlalchemy.engine.url.URL`のインスタンスにすることもできます。"
 
 #: of sqlalchemy.create_engine:25
 msgid ""
@@ -255,7 +245,7 @@ msgid ""
 ":class:`.Pool`.  Specific dialects also accept keyword arguments that are"
 " unique to that dialect.   Here, we describe the parameters that are "
 "common to most :func:`.create_engine()` usage."
-msgstr ""
+msgstr "`` ** kwargs``は、適切なコンポーネントに向けてルーティングされるさまざまなオプションを取ります。引数は：class： `.Engine`、その下にある：class：` .Dialect`、および：class： `.Pool`に固有のものです。特定の方言は、その方言に固有のキーワード引数も受け入れます。ここでは、ほとんどの場合共通のパラメータfunc： `.create_engine（）`の使い方について説明します。"
 
 #: of sqlalchemy.create_engine:32
 msgid ""
@@ -266,25 +256,25 @@ msgid ""
 "establish the first actual DBAPI connection when this request is "
 "received.   The :func:`.create_engine` call itself does **not** establish"
 " any actual DBAPI connections directly."
-msgstr ""
+msgstr "一旦確立されると、新しく生成された：class： `.Engine`は、基礎となる：class：` .Pool` once：meth： `.Engine.connect`からの接続を要求するか、 meth： `.Engine.execute`が呼び出されます。 ：class： `.Pool`は、このリクエストが受信されると、最初の実際のDBAPI接続を確立します。 ：func： `.create_engine`呼び出し自体は実際のDBAPI接続を直接確立しません**。"
 
 #: of sqlalchemy.create_engine:42
 msgid ":doc:`/core/engines`"
-msgstr ""
+msgstr "：doc： `/ core / engines`"
 
 #: of sqlalchemy.create_engine:44
 msgid ":doc:`/dialects/index`"
-msgstr ""
+msgstr "：doc： `/ dialects / index`"
 
 #: of sqlalchemy.create_engine:46
 msgid ":ref:`connections_toplevel`"
-msgstr ""
+msgstr "：ref： `connections_toplevel`"
 
 #: of sqlalchemy.create_engine sqlalchemy.engine.url.URL
 #: sqlalchemy.engine.url.URL.translate_connect_args
 #: sqlalchemy.engine_from_config
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.create_engine:48
 msgid ""
@@ -292,26 +282,26 @@ msgid ""
 "that is, ``row['SomeColumn']``.  .. versionchanged:: 0.8     By default, "
 "result row names match case-sensitively.     In version 0.7 and prior, "
 "all matches were case-insensitive."
-msgstr ""
+msgstr "Falseの場合、結果の列名は大文字小文字を区別しない形式で一致します。つまり `` row [&#39;SomeColumn&#39;] ``です。 .. versionchanged :: 0.8デフォルトでは、結果行の名前は大文字と小文字を区別して一致します。バージョン0.7以前では、すべての一致が大文字と小文字を区別しませんでした。"
 
 #: of sqlalchemy.create_engine:48
 msgid ""
 "if False, result column names will match in a case-insensitive fashion, "
 "that is, ``row['SomeColumn']``."
-msgstr ""
+msgstr "Falseの場合、結果の列名は大文字小文字を区別しない形式で一致します。つまり `` row [&#39;SomeColumn&#39;] ``です。"
 
 #: of sqlalchemy.create_engine:52
 msgid ""
 "By default, result row names match case-sensitively. In version 0.7 and "
 "prior, all matches were case-insensitive."
-msgstr ""
+msgstr "デフォルトでは、結果行の名前は大文字と小文字を区別して一致します。バージョン0.7以前では、すべての一致が大文字と小文字を区別しませんでした。"
 
 #: of sqlalchemy.create_engine:56
 msgid ""
 "a dictionary of options which will be passed directly to the DBAPI's "
 "``connect()`` method as additional keyword arguments.  See the example at"
 " :ref:`custom_dbapi_args`."
-msgstr ""
+msgstr "DBAPIの `` connect（） ``メソッドに追加のキーワード引数として直接渡されるオプションの辞書です。 ：ref： `custom_dbapi_args`の例を参照してください。"
 
 #: of sqlalchemy.create_engine:61
 msgid ""
@@ -323,7 +313,7 @@ msgid ""
 "natively support Python ``unicode`` objects and raises an error when one "
 "is received (such as pyodbc with FreeTDS).  See :class:`.String` for "
 "further details on what this flag indicates."
-msgstr ""
+msgstr "Trueに設定されている場合、class： `.String`型のデフォルトの動作を` `True``に設定します。class：`： `` False``の設定には関係ありません。 Pythonの `` unicode``オブジェクトに対応するためにall：class： `.String`ベースの列を引き起こします。このフラグは、Pythonの `` unicode``オブジェクトをネイティブにサポートしていないDBAPIを使用しているときにエンジン全体の設定として有用で、受信時にエラーが発生します（FreeTDSのpyodbcなど）。このフラグの意味の詳細については、class： `.String`を参照してください。"
 
 #: of sqlalchemy.create_engine:61
 msgid ""
@@ -334,11 +324,11 @@ msgid ""
 "useful as an engine-wide setting when using a DBAPI that does not "
 "natively support Python ``unicode`` objects and raises an error when one "
 "is received (such as pyodbc with FreeTDS)."
-msgstr ""
+msgstr "Trueに設定されている場合、class： `.String`型のデフォルトの動作を` `True``に設定します。class：`： `` False``の設定には関係ありません。 Pythonの `` unicode``オブジェクトに対応するためにall：class： `.String`ベースの列を引き起こします。このフラグは、Pythonの `` unicode``オブジェクトをネイティブにサポートしていないDBAPIを使用しているときにエンジン全体の設定として有用で、受信時にエラーが発生します（FreeTDSのpyodbcなど）。"
 
 #: of sqlalchemy.create_engine:73
 msgid "See :class:`.String` for further details on what this flag indicates."
-msgstr ""
+msgstr "このフラグの意味の詳細については、class： `.String`を参照してください。"
 
 #: of sqlalchemy.create_engine:76
 msgid ""
@@ -346,7 +336,7 @@ msgid ""
 "be passed to the underlying connection pool and will be used to create "
 "all new database connections. Usage of this function causes connection "
 "parameters specified in the URL argument to be bypassed."
-msgstr ""
+msgstr "DBAPI接続を返す呼び出し可能オブジェクト。この作成関数は、基礎となる接続プールに渡され、新しいデータベース接続をすべて作成するために使用されます。この関数を使用すると、URL引数で指定された接続パラメータがバイパスされます。"
 
 #: of sqlalchemy.create_engine:82
 msgid ""
@@ -357,7 +347,7 @@ msgid ""
 "be printed to the standard output as well. This flag ultimately controls "
 "a Python logger; see :ref:`dbengine_logging` for information on how to "
 "configure logging directly."
-msgstr ""
+msgstr "Trueの場合、エンジンはパラメータリストのすべてのステートメントとrepr（）をエンジンロガーに記録します。デフォルトはsys.stdoutです。 `` Engine``の `` echo``属性はいつでも変更して、ログオンをオンまたはオフにすることができます。文字列 `` \ &quot;debug \&quot; ``に設定すると、結果行も同様に標準出力に出力されます。このフラグは最終的にPythonロガーを制御します。ログを直接設定する方法については、ref： `dbengine_logging`を参照してください。"
 
 #: of sqlalchemy.create_engine:91
 msgid ""
@@ -365,7 +355,7 @@ msgid ""
 "logging stream, which defaults to sys.stdout. This flag ultimately "
 "controls a Python logger; see :ref:`dbengine_logging` for information on "
 "how to configure logging directly."
-msgstr ""
+msgstr "Trueの場合、接続プールはすべてのチェックアウト/チェックインをログ記録ストリームに記録します。デフォルトはsys.stdoutです。このフラグは最終的にPythonロガーを制御します。ログを直接設定する方法については、ref： `dbengine_logging`を参照してください。"
 
 #: of sqlalchemy.create_engine:97
 msgid ""
@@ -383,7 +373,7 @@ msgid ""
 " databases.  .. versionadded:: 1.2  Added the ``empty_in_strategy`` "
 "setting and    additionally defaulted the behavior for empty-set IN "
 "comparisons    to a static boolean expression."
-msgstr ""
+msgstr "INまたはNOT IN式をレンダリングするときに使用するSQLコンパイル方法：meth： `.ColumnOperators.in_`ここで、右側は空のセットです。これは `` static``、 `` dynamic``、または `` dynamic_warn``のいずれかの文字列値です。 `` static``戦略がデフォルトであり、空のセットとのIN比較は単純な偽の式 &quot;1！= 1 \&quot;を生成します。 `` dynamic``戦略は、SQLAlchemy 1.1以前のように動作し、ヌル式の場合にはNULLに評価されるという効果を持つ\ &quot;expr！= expr \&quot;という形式の偽の式を出す。 `` dynamic_warn``は `` dynamic``と同じですが、空のセットに遭遇したときに警告を出します。これは、通常、ほとんどのデータベースでは「ダイナミック」の比較が不十分なためです。 .. versionadded :: 1.2 `` empty_in_strategy``設定を追加しました。さらに、空集合IN比較の動作を静的ブール式にデフォルト設定しました。"
 
 #: of sqlalchemy.create_engine:97
 msgid ""
@@ -399,13 +389,13 @@ msgid ""
 "however also emits a warning when an empty set is encountered; this "
 "because the \"dynamic\" comparison is typically poorly performing on most"
 " databases."
-msgstr ""
+msgstr "INまたはNOT IN式をレンダリングするときに使用するSQLコンパイル方法：meth： `.ColumnOperators.in_`ここで、右側は空のセットです。これは `` static``、 `` dynamic``、または `` dynamic_warn``のいずれかの文字列値です。 `` static``戦略がデフォルトであり、空のセットとのIN比較は単純な偽の式 &quot;1！= 1 \&quot;を生成します。 `` dynamic``戦略は、SQLAlchemy 1.1以前のように動作し、ヌル式の場合にはNULLに評価されるという効果を持つ\ &quot;expr！= expr \&quot;という形式の偽の式を出す。 `` dynamic_warn``は `` dynamic``と同じですが、空のセットに遭遇したときに警告を出します。これは、通常、ほとんどのデータベースでは「ダイナミック」の比較が不十分なためです。"
 
 #: of sqlalchemy.create_engine:111
 msgid ""
 "Added the ``empty_in_strategy`` setting and additionally defaulted the "
 "behavior for empty-set IN comparisons to a static boolean expression."
-msgstr ""
+msgstr "`` empty_in_strategy``設定を追加しました。さらに、空集合IN比較の動作を静的ブール式にデフォルト設定しました。"
 
 #: of sqlalchemy.create_engine:115
 msgid ""
@@ -438,7 +428,7 @@ msgid ""
 "SQLAlchemy must make decisions for each of the above values on a per-"
 "DBAPI basis - implementations are completely inconsistent in their "
 "behavior."
-msgstr ""
+msgstr "デフォルトは `` utf-8``です。これはSQLAlchemy内で発生するSQLAlchemyの文字列エンコード/デコード処理にSQLAlchemyが使用する文字列エンコーディングです** ** DBAPI外の** **最新のDBAPIはPythonの `` unicode``オブジェクトに対するある程度の直接サポートを備えていますPython 2は `` u&#39;some string&#39;``という形式の文字列です。 DBAPIがPythonの `` unicode``オブジェクトをサポートしていないと検出されたシナリオでは、このエンコーディングを使用してソース/宛先エンコーディングを決定します。 DBAPIがユニコードを直接処理する場合は**使用されません**。 Pythonの `` unicode``オブジェクトに対応するようにシステムを適切に設定するには、DBAPIをUnicodeを適切に処理できるように設定する必要があります。参照： `` dialect_toplevel &#39;&#39;で使用されている特定のターゲットデータベースに関連するunicode `。文字列のエンコーディングがDBAPIの外部で処理される必要のある領域は、*：class： `.Unicode`型または：class：` .String`型に対応するバインドされたパラメータに渡される値のうち、 `convert_unicode``は` `True``です。 *： `` True``：class： `.Unicode`型または：class：` .String`型に対応する結果セットの列に返される値。 * DBAPIの `` cursor.execute（） ``メソッドに渡される文字列SQL文。 DBAPIの `` cursor.execute（） ``と `` cursor.setinputsizes（） ``メソッドに渡されたバインドされたパラメータ辞書のキーの文字列名。 * DBAPIの `` cursor.description``属性から取り出された文字列の列名。 Python 3を使用する場合、DBAPIは上記の値の* all *をPythonの `` unicode``オブジェクトとしてサポートする必要があります。これはPython 3では単に `` str``として知られています。 Python 2では、DBAPIはユニコードの動作をまったく指定していないため、SQLAlchemyはDBAPIごとに上記の各値を決定する必要があります。実装の動作は完全に矛盾しています。"
 
 #: of sqlalchemy.create_engine:115
 msgid ""
@@ -450,7 +440,7 @@ msgid ""
 "the DBAPI is detected as not supporting a Python ``unicode`` object, this"
 " encoding is used to determine the source/destination encoding.  It is "
 "**not used** for those cases where the DBAPI handles unicode directly."
-msgstr ""
+msgstr "デフォルトは `` utf-8``です。これはSQLAlchemy内で発生するSQLAlchemyの文字列エンコード/デコード処理にSQLAlchemyが使用する文字列エンコーディングです** ** DBAPI外の** **最新のDBAPIはPythonの `` unicode``オブジェクトに対するある程度の直接サポートを備えていますPython 2は `` u&#39;some string&#39;``という形式の文字列です。 DBAPIがPythonの `` unicode``オブジェクトをサポートしていないと検出されたシナリオでは、このエンコーディングを使用してソース/宛先エンコーディングを決定します。 DBAPIがユニコードを直接処理する場合は**使用されません**。"
 
 #: of sqlalchemy.create_engine:128
 msgid ""
@@ -458,46 +448,46 @@ msgid ""
 " the DBAPI should be configured to handle unicode to the greatest degree "
 "as is appropriate - see the notes on unicode pertaining to the specific "
 "target database in use at :ref:`dialect_toplevel`."
-msgstr ""
+msgstr "Pythonの `` unicode``オブジェクトに対応するようにシステムを適切に設定するには、DBAPIをUnicodeを適切に処理できるように設定する必要があります。参照： `` dialect_toplevel &#39;&#39;で使用されている特定のターゲットデータベースに関連するunicode `。"
 
 #: of sqlalchemy.create_engine:135
 msgid ""
 "Areas where string encoding may need to be accommodated outside of the "
 "DBAPI include zero or more of:"
-msgstr ""
+msgstr "文字列のエンコーディングがDBAPIの外部で処理される必要がある領域には、以下のものが含まれます。"
 
 #: of sqlalchemy.create_engine:138
 msgid ""
 "the values passed to bound parameters, corresponding to the "
 ":class:`.Unicode` type or the :class:`.String` type when "
 "``convert_unicode`` is ``True``;"
-msgstr ""
+msgstr "値は：class： `.Unicode`型または` `convert_unicode``が` `True``のとき：class：` .String`型に対応するバインドされたパラメータに渡されます。"
 
 #: of sqlalchemy.create_engine:141
 msgid ""
 "the values returned in result set columns corresponding to the "
 ":class:`.Unicode` type or the :class:`.String` type when "
 "``convert_unicode`` is ``True``;"
-msgstr ""
+msgstr "`` convert_unicode``が `` True``のとき：class： `.Unicode`型または：class：` .String`型に対応する結果セットの列に返される値。"
 
 #: of sqlalchemy.create_engine:144
 msgid ""
 "the string SQL statement passed to the DBAPI's ``cursor.execute()`` "
 "method;"
-msgstr ""
+msgstr "DBAPIの `` cursor.execute（） ``メソッドに渡される文字列SQL文。"
 
 #: of sqlalchemy.create_engine:146
 msgid ""
 "the string names of the keys in the bound parameter dictionary passed to "
 "the DBAPI's ``cursor.execute()`` as well as ``cursor.setinputsizes()`` "
 "methods;"
-msgstr ""
+msgstr "DBAPIの `` cursor.execute（） ``と `` cursor.setinputsizes（） ``メソッドに渡されたバインドされたパラメータ辞書のキーの文字列名。"
 
 #: of sqlalchemy.create_engine:149
 msgid ""
 "the string column names retrieved from the DBAPI's ``cursor.description``"
 " attribute."
-msgstr ""
+msgstr "DBAPIの `` cursor.description``属性から取得した文字列の列名です。"
 
 #: of sqlalchemy.create_engine:152
 msgid ""
@@ -507,13 +497,13 @@ msgid ""
 "all, so SQLAlchemy must make decisions for each of the above values on a "
 "per-DBAPI basis - implementations are completely inconsistent in their "
 "behavior."
-msgstr ""
+msgstr "Python 3を使用する場合、DBAPIは上記の値の* all *をPythonの `` unicode``オブジェクトとしてサポートする必要があります。これはPython 3では単に `` str``として知られています。 Python 2では、DBAPIはユニコードの動作をまったく指定していないため、SQLAlchemyはDBAPIごとに上記の各値を決定する必要があります。実装の動作は完全に矛盾しています。"
 
 #: of sqlalchemy.create_engine:160
 msgid ""
 "Dictionary execution options which will be applied to all connections.  "
 "See :meth:`~sqlalchemy.engine.Connection.execution_options`"
-msgstr ""
+msgstr "すべての接続に適用されるディクショナリ実行オプション。参照：meth： `〜sqlalchemy.engine.Connection.execution_options`"
 
 #: of sqlalchemy.create_engine:164
 msgid ""
@@ -523,7 +513,7 @@ msgid ""
 "to those backends which support RETURNING or a compatible construct, "
 "including PostgreSQL, Firebird, Oracle, Microsoft SQL Server.   Set this "
 "to ``False`` to disable the automatic usage of RETURNING."
-msgstr ""
+msgstr "`` True``を指定すると、既存のreturning（）句を指定せずに単一行のINSERT文が発行されたときに、新しく生成された主キー値を取得するためにRETURNINGと互換性のある構文が使用されます。これは、PostgreSQL、Firebird、Oracle、Microsoft SQL Serverなど、RETURNINGまたは互換性のある構文をサポートするバックエンドに適用されます。 RETURNINGの自動使用を無効にするには、これを `` False``に設定してください。"
 
 #: of sqlalchemy.create_engine:173
 msgid ""
@@ -543,7 +533,7 @@ msgid ""
 "Transaction Isolation <postgresql_isolation_level>`      :ref:`MySQL "
 "Transaction Isolation <mysql_isolation_level>`      "
 ":ref:`session_transaction_isolation` - for the ORM"
-msgstr ""
+msgstr "この文字列パラメータは、データベース接続のトランザクション分離レベルに影響を及ぼすために、さまざまな方言によって解釈されます。パラメータは本質的に、これらの文字列引数のいくつかのサブセットを受け入れます： `` \ &quot;SERIALIZABLE \&quot; ``、 `&quot; REPEATABLE_READ &quot;&quot; `` `&quot; READ_COMMITTED &quot;&quot; `` `&quot; READ_UNCOMMITTED \ &quot;`と `` \ &quot;AUTOCOMMIT \&quot; ``となります。ここでの動作はバックエンドごとに異なり、個々の方言は直接相談する必要があります。隔離レベルは、：paramref： `.Connection.execution_options.isolation_level`機能を使用して、per：：class：` .Connection`ベースで設定することもできます。 .. seealso :: attr： `.Connection.default_isolation_level`  - デフォルトのレベルを表示：paramref：` .Connection.execution_options.isolation_level`  -  per：class： `.Connection`分離レベル：ref：` SQLiteトランザクション分離<sqlite_isolation_level> `：ref：` PostgreSQLトランザクションの分離<postgresql_isolation_level> `：ref：` MySQLトランザクションの分離<mysql_isolation_level> `：ref：` session_transaction_isolation`  -  ORMのために"
 
 #: of sqlalchemy.create_engine:173
 msgid ""
@@ -553,40 +543,40 @@ msgid ""
 "``\"SERIALIZABLE\"``, ``\"REPEATABLE_READ\"``, ``\"READ_COMMITTED\"``, "
 "``\"READ_UNCOMMITTED\"`` and ``\"AUTOCOMMIT\"``. Behavior here varies per"
 " backend, and individual dialects should be consulted directly."
-msgstr ""
+msgstr "この文字列パラメータは、データベース接続のトランザクション分離レベルに影響を及ぼすために、さまざまな方言によって解釈されます。パラメータは本質的に、これらの文字列引数のいくつかのサブセットを受け入れます： `` \ &quot;SERIALIZABLE \&quot; ``、 `&quot; REPEATABLE_READ &quot;&quot; `` `&quot; READ_COMMITTED &quot;&quot; `` `&quot; READ_UNCOMMITTED \ &quot;`と `` \ &quot;AUTOCOMMIT \&quot; ``となります。ここでの動作はバックエンドごとに異なり、個々の方言は直接相談する必要があります。"
 
 #: of sqlalchemy.create_engine:181
 msgid ""
 "Note that the isolation level can also be set on a "
 "per-:class:`.Connection` basis as well, using the "
 ":paramref:`.Connection.execution_options.isolation_level` feature."
-msgstr ""
+msgstr "隔離レベルは、：paramref： `.Connection.execution_options.isolation_level`機能を使用して、per：：class：` .Connection`ベースで設定することもできます。"
 
 #: of sqlalchemy.create_engine:188
 msgid ":attr:`.Connection.default_isolation_level` - view default level"
-msgstr ""
+msgstr "：attr： `.Connection.default_isolation_level`  - デフォルトのレベルを表示する"
 
 #: of sqlalchemy.create_engine:190
 msgid ""
 ":paramref:`.Connection.execution_options.isolation_level` - set per "
 ":class:`.Connection` isolation level"
-msgstr ""
+msgstr "：paramref： `.Connection.execution_options.isolation_level`  -  per：class：` .Connection`の分離レベル"
 
 #: of sqlalchemy.create_engine:193
 msgid ":ref:`SQLite Transaction Isolation <sqlite_isolation_level>`"
-msgstr ""
+msgstr "：ref： `SQLiteトランザクションの分離<sqlite_isolation_level> `"
 
 #: of sqlalchemy.create_engine:195
 msgid ":ref:`PostgreSQL Transaction Isolation <postgresql_isolation_level>`"
-msgstr ""
+msgstr "：ref： `PostgreSQLトランザクションの分離<postgresql_isolation_level> `"
 
 #: of sqlalchemy.create_engine:197
 msgid ":ref:`MySQL Transaction Isolation <mysql_isolation_level>`"
-msgstr ""
+msgstr "：ref： `MySQLトランザクションの分離<mysql_isolation_level> `"
 
 #: of sqlalchemy.create_engine:199
 msgid ":ref:`session_transaction_isolation` - for the ORM"
-msgstr ""
+msgstr "：ref： `session_transaction_isolation`  -  ORM用"
 
 #: of sqlalchemy.create_engine:201
 msgid ""
@@ -594,20 +584,20 @@ msgid ""
 "column labels to that many characters. If less than 6, labels are "
 "generated as \"_(counter)\". If ``None``, the value of "
 "``dialect.max_identifier_length`` is used instead."
-msgstr ""
+msgstr "動的に生成される列ラベルのサイズをその多くの文字に制限するオプションの整数値。 6未満の場合、ラベルは\ &quot;_（カウンタ）\&quot;として生成されます。 `` None``の場合、代わりに `` dialect.max_identifier_length``の値が使われます。"
 
 #: of sqlalchemy.create_engine:207
 msgid ""
 "A list of one or more :class:`~sqlalchemy.interfaces.PoolListener` "
 "objects which will receive connection pool events."
-msgstr ""
+msgstr "接続プールイベントを受け取る1つまたは複数のclass： `〜sqlalchemy.interfaces.PoolListener`オブジェクトのリストです。"
 
 #: of sqlalchemy.create_engine:211
 msgid ""
 "String identifier which will be used within the \"name\" field of logging"
 " records generated within the \"sqlalchemy.engine\" logger. Defaults to a"
 " hexstring of the object's id."
-msgstr ""
+msgstr "\ &quot;sqlalchemy.engine \&quot;ロガー内で生成されたロギングレコードの\ &quot;名前\&quot;フィールド内で使用される文字列識別子。デフォルトではオブジェクトのIDの16進文字列になります。"
 
 #: of sqlalchemy.create_engine:216
 msgid ""
@@ -615,7 +605,7 @@ msgid ""
 "is connections that can be opened above and beyond the pool_size setting,"
 " which defaults to five. this is only used with "
 ":class:`~sqlalchemy.pool.QueuePool`."
-msgstr ""
+msgstr "接続プールの「オーバーフロー」を許可する接続数。これは、pool_size設定を超えて開くことができる接続で、デフォルトでは5に設定されています。これは：class： `〜sqlalchemy.pool.QueuePool`でのみ使用されます。"
 
 #: of sqlalchemy.create_engine:221
 msgid ""
@@ -626,7 +616,7 @@ msgid ""
 "bypassed, and the given module to be used instead. Can be used for "
 "testing of DBAPIs as well as to inject \"mock\" DBAPI implementations "
 "into the :class:`.Engine`."
-msgstr ""
+msgstr "Pythonモジュールオブジェクト（モジュール自体、文字列名ではない）への参照。エンジンの方言で使用される代替DBAPIモジュールを指定します。各副方言は、最初に接続する前にインポートされる特定のDBAPIを参照します。このパラメータを指定すると、インポートがバイパスされ、指定されたモジュールが代わりに使用されます。 DBAPIのテストや、DBAPI実装を：class： `.Engine`に挿入するために使用できます。"
 
 #: of sqlalchemy.create_engine:229
 msgid ""
@@ -640,7 +630,7 @@ msgid ""
 "is passed, it should be one of the values ``\"qmark\"``, ``\"numeric\"``,"
 " ``\"named\"``, ``\"format\"`` or ``\"pyformat\"``, and should correspond"
 " to a parameter style known to be supported by the DBAPI in use."
-msgstr ""
+msgstr "`パラームスタイル<http://legacy.python.org/dev/peps/pep-0249/#paramstyle>バインドされたパラメータをレンダリングするときに使用する `_。このスタイルのデフォルトは、DBAPI自身が推奨するスタイルです。これは、DBAPIの `` .paramstyle``属性から取得されます。しかし、ほとんどのDBAPIは2つ以上のパラームスタイルを受け入れますが、特に\ &quot;名前付き\&quot;パラメータを\ &quot;位置\&quot;に変更することが望ましい場合もあります。この属性が渡されるとき、それは値 `` \ &quot;qmark \&quot; ``、 `` \ &quot;数値、&quot; &quot;\&quot; `&quot;、 `` \ &quot; ``または `` \ &quot;pyformat \&quot; ``であり、使用中のDBAPIでサポートされていることがわかっているパラメータスタイルに対応する必要があります。"
 
 #: of sqlalchemy.create_engine:240
 msgid ""
@@ -650,7 +640,7 @@ msgid ""
 "bypassing whatever connection parameters are present in the URL argument."
 " For information on constructing connection pools manually, see "
 ":ref:`pooling_toplevel`."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.pool.QueuePool`インスタンスのような、既に構築された：class：`〜sqlalchemy.pool.Pool`のインスタンスです。 non-Noneでない場合、このプールは、URL引数に存在する接続パラメータを無視して、エンジンの基本接続プールとして直接使用されます。手動で接続プールを構築する方法については、：ref： `pooling_toplevel`を参照してください。"
 
 #: of sqlalchemy.create_engine:248
 msgid ""
@@ -659,31 +649,31 @@ msgid ""
 "URL. Note this differs from ``pool`` in that you don't actually "
 "instantiate the pool in this case, you just indicate what type of pool to"
 " be used."
-msgstr ""
+msgstr "a：class： `〜sqlalchemy.pool.Pool`サブクラスであり、URLに指定された接続パラメータを使用して接続プールインスタンスを作成するために使用されます。この場合、実際にプールをインスタンス化しないという点で、これは `` pool``とは異なります。使用するプールのタイプを指定するだけです。"
 
 #: of sqlalchemy.create_engine:255
 msgid ""
 "String identifier which will be used within the \"name\" field of logging"
 " records generated within the \"sqlalchemy.pool\" logger. Defaults to a "
 "hexstring of the object's id."
-msgstr ""
+msgstr "\ &quot;sqlalchemy.pool \&quot;ロガー内で生成されたロギングレコードの\ &quot;name \&quot;フィールド内で使用される文字列識別子。デフォルトではオブジェクトのIDの16進文字列になります。"
 
 #: of sqlalchemy.create_engine:260
 msgid ""
 "boolean, if True will enable the connection pool \"pre-ping\" feature "
 "that tests connections for liveness upon each checkout.  .. "
 "versionadded:: 1.2  .. seealso::      :ref:`pool_disconnects_pessimistic`"
-msgstr ""
+msgstr "boolean、Trueの場合、各チェックアウト時に接続をテストする接続プール\「プレping」機能が有効になります。 .. versionadded :: 1.2 .. seealso ::：ref： `pool_disconnects_pessimistic`"
 
 #: of sqlalchemy.create_engine:260
 msgid ""
 "boolean, if True will enable the connection pool \"pre-ping\" feature "
 "that tests connections for liveness upon each checkout."
-msgstr ""
+msgstr "boolean、Trueの場合、各チェックアウト時に接続をテストする接続プール\「プレping」機能が有効になります。"
 
 #: of sqlalchemy.create_engine:268
 msgid ":ref:`pool_disconnects_pessimistic`"
-msgstr ""
+msgstr "：ref： `pool_disconnects_pessimistic`"
 
 #: of sqlalchemy.create_engine:270
 msgid ""
@@ -693,7 +683,7 @@ msgid ""
 ":class:`~sqlalchemy.pool.QueuePool`, a ``pool_size`` setting of 0 "
 "indicates no limit; to disable pooling, set ``poolclass`` to "
 ":class:`~sqlalchemy.pool.NullPool` instead."
-msgstr ""
+msgstr "接続プール内で開いたままにする接続の数。これは：class： `〜sqlalchemy.pool.QueuePool`と：class：`〜sqlalchemy.pool.SingletonThreadPool`で使用されます。 ：class： `〜sqlalchemy.pool.QueuePool`を使うと、` `pool_size``の値が0に設定されていれば、制限はありません。プーリングを無効にするには、 `` poolclass``を：class： `〜sqlalchemy.pool.NullPool`に設定してください。"
 
 #: of sqlalchemy.create_engine:278
 msgid ""
@@ -704,7 +694,7 @@ msgid ""
 "activity is detected on a connection for eight hours (although this is "
 "configurable with the MySQLDB connection itself and the server "
 "configuration as well).  .. seealso::      :ref:`pool_setting_recycle`"
-msgstr ""
+msgstr "この設定により、指定した秒数が経過するとプールが接続をリサイクルします。デフォルトは-1、またはタイムアウトはありません。たとえば、3600に設定すると、接続は1時間後にリサイクルされます。 MySQLは、8時間の接続でアクティビティが検出されないと自動的に切断されることに注意してください（これはMySQLDB接続自体とサーバ設定でも設定可能です）。 .. seealso ::：ref： `pool_setting_recycle`"
 
 #: of sqlalchemy.create_engine:278
 msgid ""
@@ -715,11 +705,11 @@ msgid ""
 "activity is detected on a connection for eight hours (although this is "
 "configurable with the MySQLDB connection itself and the server "
 "configuration as well)."
-msgstr ""
+msgstr "この設定により、指定した秒数が経過するとプールが接続をリサイクルします。デフォルトは-1、またはタイムアウトはありません。たとえば、3600に設定すると、接続は1時間後にリサイクルされます。 MySQLは、8時間の接続でアクティビティが検出されないと自動的に切断されることに注意してください（これはMySQLDB接続自体とサーバ設定でも設定可能です）。"
 
 #: of sqlalchemy.create_engine:289
 msgid ":ref:`pool_setting_recycle`"
-msgstr ""
+msgstr "：ref： `pool_setting_recycle`"
 
 #: of sqlalchemy.create_engine:291
 msgid ""
@@ -727,24 +717,24 @@ msgid ""
 ":class:`.Pool` object, which can be set to the values ``\"rollback\"``, "
 "``\"commit\"``, or ``None``.  .. seealso::      "
 ":paramref:`.Pool.reset_on_return`"
-msgstr ""
+msgstr "基本的な：class： `.Pool`オブジェクトの：paramref：` .Pool.reset_on_return`パラメータを設定します。これは `` \ &quot;rollback \&quot;、 `` \ &quot;commit&quot; 、 `` None``のいずれかです。 .. seealso :: paramref： `.Pool.reset_on_return`"
 
 #: of sqlalchemy.create_engine:291
 msgid ""
 "set the :paramref:`.Pool.reset_on_return` parameter of the underlying "
 ":class:`.Pool` object, which can be set to the values ``\"rollback\"``, "
 "``\"commit\"``, or ``None``."
-msgstr ""
+msgstr "基本的な：class： `.Pool`オブジェクトの：paramref：` .Pool.reset_on_return`パラメータを設定します。これは `` \ &quot;rollback \&quot;、 `` \ &quot;commit&quot; 、 `` None``のいずれかです。"
 
 #: of sqlalchemy.create_engine:298
 msgid ":paramref:`.Pool.reset_on_return`"
-msgstr ""
+msgstr "：paramref： `.Pool.reset_on_return`"
 
 #: of sqlalchemy.create_engine:300
 msgid ""
 "number of seconds to wait before giving up on getting a connection from "
 "the pool. This is only used with :class:`~sqlalchemy.pool.QueuePool`."
-msgstr ""
+msgstr "プールからの接続を中止するまで待機する秒数。これは、class： `〜sqlalchemy.pool.QueuePool`でのみ使用されます。"
 
 #: of sqlalchemy.create_engine:304
 msgid ""
@@ -755,7 +745,7 @@ msgid ""
 "timeouts, ensure that a recycle or pre-ping strategy is in use to "
 "gracefully   handle stale connections.    .. versionadded:: 1.3    .. "
 "seealso::      :ref:`pool_use_lifo`      :ref:`pool_disconnects`"
-msgstr ""
+msgstr "FIFO（先入れ先出し）ではなくclass： `.QueuePool`からの接続を取得するときにLIFO（先入れ先出し）を使用します。 LIFOを使用すると、サーバー側のタイムアウト・スキームは、非ピーク使用期間中に使用される接続の数を減らすことができます。サーバー側のタイムアウトを計画するときは、古くなった接続を正常に処理するためにリサイクルまたはプレping戦略が使用されていることを確認してください。 .. versionadded :: 1.3 .. seealso :: ref： `pool_use_lifo`：ref：` pool_disconnects`"
 
 #: of sqlalchemy.create_engine:304
 msgid ""
@@ -765,27 +755,27 @@ msgid ""
 "during non- peak   periods of use.   When planning for server-side "
 "timeouts, ensure that a recycle or pre-ping strategy is in use to "
 "gracefully   handle stale connections."
-msgstr ""
+msgstr "FIFO（先入れ先出し）ではなくclass： `.QueuePool`からの接続を取得するときにLIFO（先入れ先出し）を使用します。 LIFOを使用すると、サーバー側のタイムアウト・スキームは、非ピーク使用期間中に使用される接続の数を減らすことができます。サーバー側のタイムアウトを計画するときは、古くなった接続を正常に処理するためにリサイクルまたはプレping戦略が使用されていることを確認してください。"
 
 #: of sqlalchemy.create_engine:315
 msgid ":ref:`pool_use_lifo`"
-msgstr ""
+msgstr "：ref： `pool_use_lifo`"
 
 #: of sqlalchemy.create_engine:317
 msgid ":ref:`pool_disconnects`"
-msgstr ""
+msgstr "：ref： `pool_disconnects`"
 
 #: of sqlalchemy.create_engine:319
 msgid ""
 "string list of plugin names to load.  See :class:`.CreateEnginePlugin` "
 "for background.  .. versionadded:: 1.2.3"
-msgstr ""
+msgstr "ロードするプラグイン名の文字列リスト。参照：class： `.CreateEnginePlugin`はバックグラウンドです。 .. versionadded :: 1.2.3"
 
 #: of sqlalchemy.create_engine:319
 msgid ""
 "string list of plugin names to load.  See :class:`.CreateEnginePlugin` "
 "for background."
-msgstr ""
+msgstr "ロードするプラグイン名の文字列リスト。参照：class： `.CreateEnginePlugin`はバックグラウンドです。"
 
 #: of sqlalchemy.create_engine:324
 msgid ""
@@ -796,17 +786,17 @@ msgid ""
 "``executor``.   See `example in the FAQ   "
 "<http://docs.sqlalchemy.org/en/latest/faq/metadata_schema.html#how-can-i"
 "-get-the-create-table-drop-table-output-as-a-string>`_."
-msgstr ""
+msgstr "代替のエンジン実装を選択します。現在利用可能です：* `` threadlocal``戦略：ref： `threadlocal_strategy`で説明されています。 *すべての文の実行を、引数 `` executor``として渡された関数にディスパッチする `` mock``戦略。 FAQの `の例を参照してください<http://docs.sqlalchemy.org/en/latest/faq/metadata_schema.html#how-can-i-get-the-create-table-drop-table-output-as-a-string> `_。"
 
 #: of sqlalchemy.create_engine:324
 msgid "selects alternate engine implementations. Currently available are:"
-msgstr ""
+msgstr "代替のエンジン実装を選択します。現在利用可能なもの："
 
 #: of sqlalchemy.create_engine:327
 msgid ""
 "the ``threadlocal`` strategy, which is described in "
 ":ref:`threadlocal_strategy`;"
-msgstr ""
+msgstr "`threadlocal`戦略は、：ref：` threadlocal_strategy`に記述されています。"
 
 #: of sqlalchemy.create_engine:329
 msgid ""
@@ -814,22 +804,22 @@ msgid ""
 "function passed as the argument ``executor``. See `example in the FAQ "
 "<http://docs.sqlalchemy.org/en/latest/faq/metadata_schema.html#how-can-i"
 "-get-the-create-table-drop-table-output-as-a-string>`_."
-msgstr ""
+msgstr "すべての文の実行を、引数 `` executor``として渡された関数にディスパッチする `` mock``戦略です。 FAQの `の例を参照してください<http://docs.sqlalchemy.org/en/latest/faq/metadata_schema.html#how-can-i-get-the-create-table-drop-table-output-as-a-string> `_。"
 
 #: of sqlalchemy.create_engine:334
 msgid ""
 "a function taking arguments ``(sql, *multiparams, **params)``, to which "
 "the ``mock`` strategy will dispatch all statement execution. Used only by"
 " ``strategy='mock'``."
-msgstr ""
+msgstr "`` mock``戦略がすべての文の実行をディスパッチする引数 ``（sql、* multiparams、** params） ``をとる関数です。 `` strategy = &#39;mock&#39;``によってのみ使われます。"
 
 #: of sqlalchemy.engine_from_config:1
 msgid "Create a new Engine instance using a configuration dictionary."
-msgstr ""
+msgstr "コンフィグレーション辞書を使用して新しいEngineインスタンスを作成します。"
 
 #: of sqlalchemy.engine_from_config:3
 msgid "The dictionary is typically produced from a config file."
-msgstr ""
+msgstr "辞書は、通常、設定ファイルから生成されます。"
 
 #: of sqlalchemy.engine_from_config:5
 msgid ""
@@ -838,21 +828,21 @@ msgid ""
 "indicates the prefix to be searched for.  Each matching key (after the "
 "prefix is stripped) is treated as though it were the corresponding "
 "keyword argument to a :func:`.create_engine` call."
-msgstr ""
+msgstr "`` sqlalchemy.url``、 `` sqlalchemy.echo``などのように、 `` engine_from_config（） ``に関心のあるキーに接頭辞を付けるべきです。 &#39;prefix&#39;引数は、検索する接頭辞を示します。それぞれの一致するキー（接頭辞が取り除かれた後）は、：func： `.create_engine`呼び出しに対応するキーワード引数であるかのように扱われます。"
 
 #: of sqlalchemy.engine_from_config:11
 msgid ""
 "The only required key is (assuming the default prefix) "
 "``sqlalchemy.url``, which provides the :ref:`database URL "
 "<database_urls>`."
-msgstr ""
+msgstr "唯一必要なキーは、（デフォルトの接頭辞を仮定して） `` sqlalchemy.url``です：これは：ref： `データベースURLを提供します<database_urls> `。"
 
 #: of sqlalchemy.engine_from_config:14
 msgid ""
 "A select set of keyword arguments will be \"coerced\" to their expected "
 "type based on string values.    The set of arguments is extensible per-"
 "dialect using the ``engine_config_types`` accessor."
-msgstr ""
+msgstr "選択されたキーワード引数のセットは、文字列値に基づいて期待される型に\ &quot;強制&quot;されます。引数セットは、 `` engine_config_types``アクセサを使用して方言ごとに拡張可能です。"
 
 #: of sqlalchemy.engine_from_config:18
 msgid ""
@@ -860,32 +850,32 @@ msgid ""
 "requirement).  Items whose keys start with the value of 'prefix' will "
 "have that prefix stripped, and will then be passed to "
 ":ref:`create_engine`."
-msgstr ""
+msgstr "辞書（通常は設定ファイルから作成されますが、これは必須ではありません）。キーが &#39;prefix&#39;の値で始まる項目は、そのプレフィックスが取り除かれた後、：ref： `create_engine`に渡されます。"
 
 #: of sqlalchemy.engine_from_config:23
 msgid "Prefix to match and then strip from keys in 'configuration'."
-msgstr ""
+msgstr "「設定」のキーに一致するように接頭辞を付けます。"
 
 #: of sqlalchemy.engine_from_config:26
 msgid ""
 "Each keyword argument to ``engine_from_config()`` itself overrides the "
 "corresponding item taken from the 'configuration' dictionary.  Keyword "
 "arguments should *not* be prefixed."
-msgstr ""
+msgstr "`` engine_from_config（） ``に対する各キーワード引数は、 &#39;configuration&#39;ディクショナリから取得した対応する項目を上書きします。キーワード引数は接頭辞として*付けるべきではありません。"
 
 #: of sqlalchemy.engine.url.make_url:1
 msgid "Given a string or unicode instance, produce a new URL instance."
-msgstr ""
+msgstr "文字列またはUnicodeインスタンスが指定されると、新しいURLインスタンスが生成されます。"
 
 #: of sqlalchemy.engine.url.make_url:3
 msgid ""
 "The given string is parsed according to the RFC 1738 spec.  If an "
 "existing URL object is passed, just returns the object."
-msgstr ""
+msgstr "指定された文字列は、RFC 1738仕様に従って解析されます。既存のURLオブジェクトが渡された場合、そのオブジェクトが返されます。"
 
 #: of sqlalchemy.engine.url.URL:1
 msgid "Represent the components of a URL used to connect to a database."
-msgstr ""
+msgstr "データベースへの接続に使用されるURLのコンポーネントを表します。"
 
 #: of sqlalchemy.engine.url.URL:3
 msgid ""
@@ -893,53 +883,53 @@ msgid ""
 ":func:`~sqlalchemy.create_engine` call.  The fields of the URL are parsed"
 " from a string by the :func:`.make_url` function.  the string format of "
 "the URL is an RFC-1738-style string."
-msgstr ""
+msgstr "このオブジェクトは：func： `〜sqlalchemy.create_engine`呼び出しに直接渡すのに適しています。 URLのフィールドは：func： `.make_url`関数によって文字列から解析されます。 URLの文字列形式はRFC-1738形式の文字列です。"
 
 #: of sqlalchemy.engine.url.URL:8
 msgid "All initialization parameters are available as public attributes."
-msgstr ""
+msgstr "すべての初期化パラメータは、パブリック属性として使用できます。"
 
 #: of sqlalchemy.engine.url.URL:10
 msgid ""
 "the name of the database backend. This name will correspond to a module "
 "in sqlalchemy/databases or a third party plug-in."
-msgstr ""
+msgstr "データベースバックエンドの名前。この名前は、sqlalchemy / databasesまたはサードパーティのプラグインのモジュールに対応します。"
 
 #: of sqlalchemy.engine.url.URL:14
 msgid "The user name."
-msgstr ""
+msgstr "ユーザー名。"
 
 #: of sqlalchemy.engine.url.URL:16
 msgid "database password."
-msgstr ""
+msgstr "データベースパスワード。"
 
 #: of sqlalchemy.engine.url.URL:18
 msgid "The name of the host."
-msgstr ""
+msgstr "ホストの名前。"
 
 #: of sqlalchemy.engine.url.URL:20
 msgid "The port number."
-msgstr ""
+msgstr "ポート番号。"
 
 #: of sqlalchemy.engine.url.URL:22
 msgid "The database name."
-msgstr ""
+msgstr "データベース名。"
 
 #: of sqlalchemy.engine.url.URL:24
 msgid ""
 "A dictionary of options to be passed to the dialect and/or the DBAPI upon"
 " connect."
-msgstr ""
+msgstr "接続時にダイアレクトおよび/またはDBAPIに渡すオプションの辞書。"
 
 #: of sqlalchemy.engine.url.URL.get_dialect:1
 msgid ""
 "Return the SQLAlchemy database dialect class corresponding to this URL's "
 "driver name."
-msgstr ""
+msgstr "このURLのドライバ名に対応するSQLAlchemyデータベースダイアレクトクラスを返します。"
 
 #: of sqlalchemy.engine.url.URL.translate_connect_args:1
 msgid "Translate url attributes into a dictionary of connection arguments."
-msgstr ""
+msgstr "url属性を接続引数の辞書に変換します。"
 
 #: of sqlalchemy.engine.url.URL.translate_connect_args:3
 msgid ""
@@ -947,21 +937,21 @@ msgid ""
 "`password`, `port`) as a plain dictionary.  The attribute names are used "
 "as the keys by default.  Unset or false attributes are omitted from the "
 "final dictionary."
-msgstr ""
+msgstr "このurlの属性（ `host`、` database`、 `username`、` password`、 `port`）をプレーンな辞書として返します。属性名はデフォルトでキーとして使用されます。未設定または偽の属性は、最終的な辞書から省略されます。"
 
 #: of sqlalchemy.engine.url.URL.translate_connect_args:8
 msgid "Optional, alternate key names for url attributes."
-msgstr ""
+msgstr "オプションで、url属性の代替キー名。"
 
 #: of sqlalchemy.engine.url.URL.translate_connect_args:10
 msgid ""
 "Deprecated.  Same purpose as the keyword-based alternate names, but "
 "correlates the name to the original positionally."
-msgstr ""
+msgstr "推奨されていません。キーワードベースの代替名と同じ目的ですが、名前を元の位置に関連付けます。"
 
 #: ../../core/engines.rst:191
 msgid "Pooling"
-msgstr ""
+msgstr "プール"
 
 #: ../../core/engines.rst:193
 msgid ""
@@ -975,34 +965,34 @@ msgid ""
 " follows that you should keep a single :class:`.Engine` per database "
 "established within an application, rather than creating a new one for "
 "each connection."
-msgstr ""
+msgstr "：class： `.Engine`は、` `connect（）` `や` `execute（）` `メソッドが呼ばれたときに接続プールに接続を要求します。デフォルトの接続プールである：class： `〜.QueuePool`は、必要に応じてデータベースへの接続を開きます。同時実行文が実行されると、：class： `.QueuePool`は接続プールをデフォルトサイズの5に拡張し、デフォルトの&quot; overflow &quot;を10にします。 ：class： `.Engine`は本質的に接続プールの&quot;ホームベース &quot;なので、新しいものを作成するのではなく、アプリケーション内で確立されたデータベースごとにclass：` .Engine`を保持する必要があります接続ごとに"
 
 #: ../../core/engines.rst:206
 msgid ""
 ":class:`.QueuePool` is not used by default for SQLite engines.  See "
 ":ref:`sqlite_toplevel` for details on SQLite connection pool usage."
-msgstr ""
+msgstr "：class： `.QueuePool`はSQLiteエンジンではデフォルトでは使われません。 SQLite接続プールの使用法の詳細については、ref： `sqlite_toplevel`を参照してください。"
 
 #: ../../core/engines.rst:209
 msgid "For more information on connection pooling, see :ref:`pooling_toplevel`."
-msgstr ""
+msgstr "接続プーリングの詳細については、：ref： `pooling_toplevel`を参照してください。"
 
 #: ../../core/engines.rst:215
 msgid "Custom DBAPI connect() arguments"
-msgstr ""
+msgstr "カスタムDBAPI connect（）の引数"
 
 #: ../../core/engines.rst:217
 msgid ""
 "Custom arguments used when issuing the ``connect()`` call to the "
 "underlying DBAPI may be issued in three distinct ways. String-based "
 "arguments can be passed directly from the URL string as query arguments:"
-msgstr ""
+msgstr "基礎となるDBAPIへの `` connect（） ``呼び出しを発行する際に使用されるカスタム引数は、3つの異なる方法で発行されます。文字列ベースの引数は、クエリ文字列としてURL文字列から直接渡すことができます。"
 
 #: ../../core/engines.rst:225
 msgid ""
 "If SQLAlchemy's database connector is aware of a particular query "
 "argument, it may convert its type from string to its proper type."
-msgstr ""
+msgstr "SQLAlchemyのデータベースコネクタが特定のクエリ引数を認識している場合、SQLAlchemyの型を文字列からその適切な型に変換することができます。"
 
 #: ../../core/engines.rst:228
 msgid ""
@@ -1011,17 +1001,17 @@ msgid ""
 "  This can be used when arguments of a type other than string are "
 "required, and SQLAlchemy's database connector has no type conversion "
 "logic present for that parameter:"
-msgstr ""
+msgstr "：func： `〜sqlalchemy.create_engine`は` `connect（）` `に渡される追加の辞書である` `connect_args``引数もとります。これは、string以外の型の引数が必要な場合に使用できます.SQLAlchemyのデータベースコネクタには、その型の型変換ロジックがありません。"
 
 #: ../../core/engines.rst:234
 msgid ""
 "The most customizable connection method of all is to pass a ``creator`` "
 "argument, which specifies a callable that returns a DBAPI connection:"
-msgstr ""
+msgstr "最もカスタマイズ可能な接続方法は、 `` creator``引数を渡すことです。この引数は、DBAPI接続を返す呼び出し可能関数を指定します："
 
 #: ../../core/engines.rst:249
 msgid "Configuring Logging"
-msgstr ""
+msgstr "ロギングの設定"
 
 #: ../../core/engines.rst:251
 msgid ""
@@ -1033,7 +1023,7 @@ msgid ""
 " present on :func:`~sqlalchemy.create_engine`, as well as the "
 "``echo_uow`` flag used on :class:`~sqlalchemy.orm.session.Session`, all "
 "interact with regular loggers."
-msgstr ""
+msgstr "Pythonの標準的な `logging <http://docs.python.org/library/logging.html> `_ moduleはSQLAlchemyで情報出力とデバッグログ出力を実装するために使用されます。これにより、SQLAlchemyのロギングを他のアプリケーションやライブラリと標準的な方法で統合することができます。 ：func： `〜sqlalchemy.create_engine`とclass：`〜sqlalchemy.orm.sessionで使われる `` echo_uow``フラグの `` echo``と `` echo_pool``フラグです。セッション &#39;は、すべて通常のロガーとやりとりします。"
 
 #: ../../core/engines.rst:259
 msgid ""
@@ -1042,44 +1032,44 @@ msgid ""
 "namespace, as used by ``logging.getLogger('sqlalchemy')``. When logging "
 "has been configured (i.e. such as via ``logging.basicConfig()``), the "
 "general namespace of SA loggers that can be turned on is as follows:"
-msgstr ""
+msgstr "このセクションでは、上記のリンクされたロギングモジュールに精通しています。 SQLAlchemyによって実行されるすべてのロギングは、 `` logging.getLogger（ &#39;sqlalchemy&#39;） ``で使用される `` sqlalchemy``名前空間の下に存在します。ロギングが設定されている場合（つまり `` logging.basicConfig（） ``などで）、オンにできるSAロガーの一般的な名前空間は次のとおりです："
 
 #: ../../core/engines.rst:265
 msgid ""
 "``sqlalchemy.engine`` - controls SQL echoing.  set to ``logging.INFO`` "
 "for SQL query output, ``logging.DEBUG`` for query + result set output."
-msgstr ""
+msgstr "`` sqlalchemy.engine``  -  SQLのエコーを制御します。 SQLクエリ出力の場合は `logging.INFO`、クエリ+結果セット出力の場合は` `logging.DEBUG``に設定します。"
 
 #: ../../core/engines.rst:266
 msgid ""
 "``sqlalchemy.dialects`` - controls custom logging for SQL dialects.  See "
 "the documentation of individual dialects for details."
-msgstr ""
+msgstr "`` sqlalchemy.dialects``  -  SQLの方言のカスタムロギングを制御します。詳細については、個々の方言のドキュメントを参照してください。"
 
 #: ../../core/engines.rst:267
 msgid ""
 "``sqlalchemy.pool`` - controls connection pool logging.  set to "
 "``logging.INFO`` or lower to log connection pool checkouts/checkins."
-msgstr ""
+msgstr "`` sqlalchemy.pool``  - 接続プールのロギングを制御します。接続プールのチェックアウト/チェックインを記録するには、 `` logging.INFO``以下に設定してください。"
 
 #: ../../core/engines.rst:268
 msgid ""
 "``sqlalchemy.orm`` - controls logging of various ORM functions.  set to "
 "``logging.INFO`` for information on mapper configurations."
-msgstr ""
+msgstr "`` sqlalchemy.orm``  - さまざまなORM関数のロギングを制御します。マッパー設定に関する情報については、 `` logging.INFO``を設定してください。"
 
 #: ../../core/engines.rst:270
 msgid ""
 "For example, to log SQL queries using Python logging instead of the "
 "``echo=True`` flag::"
-msgstr ""
+msgstr "たとえば、 `` echo = True``フラグの代わりにPythonロギングを使用してSQLクエリを記録するには::"
 
 #: ../../core/engines.rst:277
 msgid ""
 "By default, the log level is set to ``logging.WARN`` within the entire "
 "``sqlalchemy`` namespace so that no log operations occur, even within an "
 "application that has logging enabled otherwise."
-msgstr ""
+msgstr "デフォルトでは、ログレベルは、 `` sqlalchemy``名前空間全体の中で `` logging.WARN``​​に設定され、そうでなければログを有効にしたアプリケーション内でもログ操作は起こりません。"
 
 #: ../../core/engines.rst:281
 msgid ""
@@ -1097,7 +1087,7 @@ msgid ""
 "**in addition** to any existing logger configurations. Therefore, **when "
 "using Python logging, ensure all echo flags are set to False at all "
 "times**, to avoid getting duplicate log lines."
-msgstr ""
+msgstr "：func： `〜sqlalchemy.create_engine`などのキーワード引数、class：`〜sqlalchemy.engine.Engine`の `` echo``プロパティの `` echo``フラグは ` `True``は、まずロギングが有効になっていることを確認します。残念ながら、 `` logging``モジュールは、出力が既に設定されているかどうかを判断する方法を提供しません（ロギングレベルが設定されているだけでなく、ロギング設定が設定されている場合を参照しています）。このため、 `` echo = True``フラグはsys.stdoutをデスティネーションとして `` logging.basicConfig（） ``を呼び出すことになります。また、レベル名、タイムスタンプ、ロガー名を使用してデフォルトのフォーマットを設定します。この設定は、既存のロガー設定に**加えて**設定されていることに影響します。したがって、** Pythonロギングを使用するときは、重複するログ行を避けるため、すべてのエコーフラグが常にFalseに設定されていることを確認してください。"
 
 #: ../../core/engines.rst:295
 msgid ""
@@ -1106,7 +1096,7 @@ msgid ""
 "identifier string. To set this to a specific name, use the "
 "\"logging_name\" and \"pool_logging_name\" keyword arguments with "
 ":func:`sqlalchemy.create_engine`."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.engine.Engine`や：class：`〜sqlalchemy.pool.Pool`のようなインスタンスのロガー名は、デフォルトで、切り詰められた16進数の識別子文字列を使用します。これを特定の名前に設定するには、func： `sqlalchemy.create_engine`で\&quot; logging_name \ &quot;と\&quot; pool_logging_name \ &quot;キーワード引数を使用します。"
 
 #: ../../core/engines.rst:302
 msgid ""
@@ -1121,5 +1111,5 @@ msgid ""
 " new :class:`.Connection` is procured (in the case of "
 ":class:`~.orm.session.Session`, this is after the current transaction "
 "ends and a new one begins)."
-msgstr ""
+msgstr "SQLAlchemy：class： `.Engine`は、現在のロギングレベルが` `logging.INFO``または` `logging.DEBUG``として検出されたときにのみ、ログ文を出力することによって、Pythonの関数呼び出しオーバーヘッドを節約します。新しい接続が接続プールから調達されたときにのみ、このレベルをチェックします。したがって、すでに実行中のアプリケーションのロギング設定を変更すると、現在アクティブなany：class： `.Connection`、またはより一般的には：class：`〜..session.Session`オブジェクトがトランザクションでアクティブになり、新しい：class： `.Connection`が調達されるまで（：class：`〜.orm.session.Session`の場合、これは現在のトランザクションが終了した後で、新しいトランザクションが終了した後です）始まる）。"
 

@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/nonstandard_mappings.rst:3
 msgid "Non-Traditional Mappings"
-msgstr ""
+msgstr "非伝統的なマッピング"
 
 #: ../../orm/nonstandard_mappings.rst:8
 msgid "Mapping a Class against Multiple Tables"
-msgstr ""
+msgstr "クラスを複数のテーブルにマッピングする"
 
 #: ../../orm/nonstandard_mappings.rst:10
 msgid ""
@@ -32,7 +22,7 @@ msgid ""
 ":func:`~.expression.join` function creates a selectable unit comprised of"
 " multiple tables, complete with its own composite primary key, which can "
 "be mapped in the same way as a :class:`.Table`::"
-msgstr ""
+msgstr "マッパーは、プレーンテーブルに加えて任意のリレーショナルユニット（* selectables *と呼ばれます）に対して構築することができます。たとえば、：func： `〜.expression.join`関数は、複数のテーブルで構成された選択可能なユニットを作成し、独自の複合主キーを使用します。class：` .Table`と同じ方法でマッピングできます。 ："
 
 #: ../../orm/nonstandard_mappings.rst:49
 msgid ""
@@ -43,7 +33,7 @@ msgid ""
 "indicate a specialized column mapping.   Based on this part of the "
 "configuration, the mapping will copy new primary key values from "
 "``user.id`` into the ``address.user_id`` column when a flush occurs."
-msgstr ""
+msgstr "上記の例では、joinは `` user``と `` address``両方の表の列を表しています。 `` user.id``と `` address.user_id``のカラムは、外部キーによって同一化されているので、マッピングでは：func： `.column_property`を使用して、一つの属性、` `AddressUser.id``として定義されます。特殊な列マッピングを示す。この設定の部分に基づいて、マッピングは、フラッシュが発生したときに `` user.id``から `` address.user_id``列に新しいプライマリキー値をコピーします。"
 
 #: ../../orm/nonstandard_mappings.rst:58
 msgid ""
@@ -52,7 +42,7 @@ msgid ""
 " of the ``address.id`` column from the same-named ``AddressUser.id`` "
 "attribute, which here has been assigned to refer to the ``user`` table "
 "combined with the ``address.user_id`` foreign key."
-msgstr ""
+msgstr "さらに、 `` address.id``カラムは `` address_id``という名前の属性に明示的にマッピングされています。これは、同じ名前の `` AddressUser.id``属性から `` address.id``カラムのマッピングを**曖昧さをなくすことです**ここでは、 `` user``テーブルの組み合わせを参照するように割り当てられています`` address.user_id``の外部キーを使用します。"
 
 #: ../../orm/nonstandard_mappings.rst:64
 msgid ""
@@ -62,11 +52,11 @@ msgid ""
 "``AddressUser`` object will be in terms of these two values, and is "
 "represented from an ``AddressUser`` object as ``(AddressUser.id, "
 "AddressUser.address_id)``."
-msgstr ""
+msgstr "上記のマッピングの自然な主キーは ``（user.id、address.id） ``のコンポジットです。これは、 `` user``と `` address``テーブルの主キー列であるためです。 `` AddressUser``オブジェクトのアイデンティティはこれら2つの値の観点からなり、 ``（AddressUser.id、AddressUser.address_id） ``として &quot;AddressUser``オブジェクトから表されます。"
 
 #: ../../orm/nonstandard_mappings.rst:73
 msgid "Mapping a Class against Arbitrary Selects"
-msgstr ""
+msgstr "任意の選択肢に対するクラスのマッピング"
 
 #: ../../orm/nonstandard_mappings.rst:75
 msgid ""
@@ -74,7 +64,7 @@ msgid ""
 "object can be used with a mapper as well.  The example fragment below "
 "illustrates mapping a class called ``Customer`` to a "
 ":func:`~.expression.select` which includes a join to a subquery::"
-msgstr ""
+msgstr "結合に対するマッピングと同様に、プレーン：func： `〜.expression.select`オブジェクトもマッパーで使用できます。下のサンプルの例では、 `` Customer``という名前のクラスを：func： `〜.expression.select`にマッピングする方法を示しています。これにはサブクエリへの結合が含まれています::"
 
 #: ../../orm/nonstandard_mappings.rst:97
 msgid ""
@@ -83,7 +73,7 @@ msgid ""
 "by the ``subq`` subquery, which are ``order_count``, ``highest_order``, "
 "and ``customer_id``.  Mapping the ``Customer`` class to this selectable "
 "then creates a class which will contain those attributes."
-msgstr ""
+msgstr "上記の `` customer_select``で表される完全な行は、 `` customers``テーブルのすべてのカラムと、 `` subq``サブクエリによって公開されるカラムに加えて、 `` order_count``、 `highest_order``、` `customer_id``です。 `` Customer``クラスをこの選択可能なものにマッピングすると、それらの属性を含むクラスが作成されます。"
 
 #: ../../orm/nonstandard_mappings.rst:104
 msgid ""
@@ -92,7 +82,7 @@ msgid ""
 " primary key of the ``orders`` table is not represented in the mapping;  "
 "the ORM will only emit an INSERT into a table for which it has mapped the"
 " primary key."
-msgstr ""
+msgstr "ORMが `` Customer``の新しいインスタンスを持続するとき、 `` customers``テーブルだけが実際にINSERTを受け取ります。これは、 `` orders``テーブルの主キーがマッピングで表現されていないためです。 ORMは主キーをマップした表にINSERTのみを発行します。"
 
 #: ../../orm/nonstandard_mappings.rst:112
 msgid ""
@@ -105,11 +95,11 @@ msgid ""
 "interface; in modern usage, the :class:`.Query` object can be used to "
 "construct virtually any SELECT statement, including complex composites, "
 "and should be favored over the \"map-to-selectable\" approach."
-msgstr ""
+msgstr "任意のSELECTステートメント、特に上記の複雑なステートメントへのマッピングの練習はほとんど必要ありません。それは必然的に複雑な照会を生成する傾向があり、これは直接照会構築によって生成される照会より効率が低いことが多い。このプラクティスは、SQLAlchemyの非常に初期の歴史に基づいてある程度です：ここで、：func： `.mapper`構造体はプライマリクエリインタフェースを表すことを意図していました。現代では：class： `.Query`オブジェクトを使用して、複雑な複合体を含むあらゆるSELECT文を構築することができます。また、マップから選択可能なアプローチよりも優先されるべきです。"
 
 #: ../../orm/nonstandard_mappings.rst:124
 msgid "Multiple Mappers for One Class"
-msgstr ""
+msgstr "1クラスの複数のマッパー"
 
 #: ../../orm/nonstandard_mappings.rst:126
 msgid ""
@@ -123,7 +113,7 @@ msgid ""
 "the table metadata.   It's not possible for more than one mapper to be "
 "associated with a class in equal measure, since only one mapper can "
 "actually instrument the class."
-msgstr ""
+msgstr "現代のSQLAlchemyでは、特定のクラスは、一度に1つのいわゆる**プライマリ**マッパーだけによってマッピングされます。このマッパーは、クエリー、永続性、およびマッピングされたクラスのインストルメンテーションの3つの主要機能領域に関係しています。プライマリマッパーの論理的根拠は、：func： `.mapper`は、クラス：` .Table`だけでなく、：term： `instrumenting`属性をクラスに変更するという事実に関連しています。テーブルメタデータに従って具体的に構成されている。 1つのマッパーだけがクラスに実際にインスツルメンテーションできるので、複数のマッパーが等価のクラスに関連付けられることはできません。"
 
 #: ../../orm/nonstandard_mappings.rst:137
 msgid ""
@@ -136,7 +126,7 @@ msgid ""
 "against a class that is already mapped with a primary mapper, and "
 "involves the use of the :paramref:`~sqlalchemy.orm.mapper.non_primary` "
 "flag."
-msgstr ""
+msgstr "しかし、**非プライマリ**マッパとして知られるマッパのクラスがあります。これにより、追加のマッパをクラスに関連付けることができますが、使用範囲は制限されています。このスコープは、通常、代替表または選択可能な単位から行をロードできますが、依然として主マッピングを使用して永続化されるクラスを生成することに適用されます。非プライマリマッパは、すでにプライマリマッパにマップされているクラスに対して古典的なマッピング方法を使用して作成され、：paramref： `〜sqlalchemy.orm.mapper.non_primary`フラグを使用します。"
 
 #: ../../orm/nonstandard_mappings.rst:147
 msgid ""
@@ -144,7 +134,7 @@ msgid ""
 "the task of being able to load classes from subqueries or other compound "
 "statements can be now accomplished using the :class:`.Query` object "
 "directly."
-msgstr ""
+msgstr "サブクエリや他のコンパウンド・ステートメントからクラスをロードできるようにするためには、non：プライマリ・マッパーは現代のSQLAlchemyでは非常に限定されています。これは、class： `.Query`オブジェクトを直接使用して行うことができます。"
 
 #: ../../orm/nonstandard_mappings.rst:151
 msgid ""
@@ -153,7 +143,7 @@ msgid ""
 "useful in the rare and advanced case that our relationship is attempting "
 "to join two classes together using many tables and/or joins in between.  "
 "An example of this pattern is at :ref:`relationship_non_primary_mapper`."
-msgstr ""
+msgstr "実際にはプライマリ以外のマッパーのユースケースは1つしかありません。これはそのようなマッパーに：func： `.relationship`をビルドしたいということです。これは、私たちの関係が多くのテーブルやジョインを使って2つのクラスを一緒に結合しようとしている稀で先進的なケースで役に立ちます。このパターンの例は：ref： `relationship_non_primary_mapper`です。"
 
 #: ../../orm/nonstandard_mappings.rst:157
 msgid ""
@@ -168,5 +158,5 @@ msgid ""
 " any ambiguity of instrumentation - to create new subclasses, each mapped"
 " individually.  This pattern is now available as a recipe at `Entity Name"
 " <http://www.sqlalchemy.org/trac/wiki/UsageRecipes/EntityName>`_."
-msgstr ""
+msgstr "さまざまなシナリオで異なるテーブルに実際に完全に永続化できるクラスのユースケースに関しては、SQLAlchemyの非常に初期のバージョンではHibernateの「エンティティ名」機能と呼ばれる機能を提供していました。しかし、このユースケースは、マップされたクラス自体がSQL式の構築のソースになった後、SQLAlchemy内で実行不可能になりました。つまり、クラスの属性自体がマップされた表の列に直接リンクします。この機能は削除され、計装のあいまいさなしにこのタスクを達成するための簡単なレシピ指向のアプローチに置き換えられました。新しいサブクラスを作成し、それぞれ個別にマッピングしました。このパターンは、エンティティ名でレシピとして利用できるようになりました<http://www.sqlalchemy.org/trac/wiki/UsageRecipes/EntityName> `_。"
 

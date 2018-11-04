@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/mapping_columns.rst:4
 msgid "Mapping Table Columns"
-msgstr ""
+msgstr "マッピング表の列"
 
 #: ../../orm/mapping_columns.rst:6
 msgid ""
@@ -28,11 +18,11 @@ msgid ""
 " of which are named according to the name of the column itself "
 "(specifically, the ``key`` attribute of :class:`.Column`).  This behavior"
 " can be modified in several ways."
-msgstr ""
+msgstr "：func： `〜.orm.mapper`のデフォルトの振る舞いは、マップされた：class：` .Table`のすべての列をマップされたオブジェクト属性にアセンブルすることです。それぞれは、列自体の名前に従って指定されます、class： `.Column`の` `key``属性）を指定します。この動作はいくつかの方法で変更できます。"
 
 #: ../../orm/mapping_columns.rst:15
 msgid "Naming Columns Distinctly from Attribute Names"
-msgstr ""
+msgstr "属性名とは異なる名前の列の名前付け"
 
 #: ../../orm/mapping_columns.rst:17
 msgid ""
@@ -40,7 +30,7 @@ msgid ""
 "of the mapped attribute - specifically it matches the :attr:`.Column.key`"
 " attribute on :class:`.Column`, which by default is the same as the "
 ":attr:`.Column.name`."
-msgstr ""
+msgstr "デフォルトでは、マップされた属性の名前と同じ名前の：class： `.Column`を共有します：特に：class：` .Column`の：attr： `.Column.key`属性に一致します。 ：attr： `.Column.name`と同じです。"
 
 #: ../../orm/mapping_columns.rst:22
 msgid ""
@@ -48,33 +38,33 @@ msgid ""
 "can be different from either :attr:`.Column.name` or :attr:`.Column.key` "
 "just by assigning it that way, as we illustrate here in a Declarative "
 "mapping::"
-msgstr ""
+msgstr "：class： `.Column`にマップされるPython属性に割り当てられた名前は、attr：` .Column.name`または：attr： `.Column.key`と異なる場合があります。宣言的なマッピングをここに示します::"
 
 #: ../../orm/mapping_columns.rst:31
 msgid ""
 "Where above ``User.id`` resolves to a column named ``user_id`` and "
 "``User.name`` resolves to a column named ``user_name``."
-msgstr ""
+msgstr "上の `` User.id``が `` user_id``という名前のカラムに解決され、 `` User.name``が `` user_name``という名前のカラムに解決されます。"
 
 #: ../../orm/mapping_columns.rst:34
 msgid ""
 "When mapping to an existing table, the :class:`.Column` object can be "
 "referenced directly::"
-msgstr ""
+msgstr "既存のテーブルにマッピングすると、：class： `.Column`オブジェクトを直接参照することができます::"
 
 #: ../../orm/mapping_columns.rst:42
 msgid ""
 "Or in a classical mapping, placed in the ``properties`` dictionary with "
 "the desired key::"
-msgstr ""
+msgstr "または、古典的なマッピングで、 ``プロパティ ``の辞書に目的のキーを置きます::"
 
 #: ../../orm/mapping_columns.rst:50
 msgid "In the next section we'll examine the usage of ``.key`` more closely."
-msgstr ""
+msgstr "次のセクションでは、 `` .key``の使い方をより詳しく調べます。"
 
 #: ../../orm/mapping_columns.rst:55
 msgid "Automating Column Naming Schemes from Reflected Tables"
-msgstr ""
+msgstr "リフレクションされたテーブルから列命名スキームを自動化する"
 
 #: ../../orm/mapping_columns.rst:57
 msgid ""
@@ -87,47 +77,47 @@ msgid ""
 " the :meth:`.DDLEvents.column_reflect` event to intercept the production "
 "of :class:`.Column` objects and provide them with the :attr:`.Column.key`"
 " of our choice::"
-msgstr ""
+msgstr "前のセクション：ref： `mapper_column_distinct_names`では、クラスに明示的にマップされたclass：` .Column`がどのようにしてカラムと異なる属性名を持つことができるかを示しました。しかし、class： `.Column`オブジェクトを明示的にリストアップしておかないと、代わりにリフレクションを使用して：class：` .Table`オブジェクトの生成を自動化しています（例：ref： `metadata_reflection_toplevel`）。この場合、：meth： `.DDLEvents.column_reflect`イベントを使用して：class：` .Column`オブジェクトの生成をインターセプトし、それらに：attr： `.Column.key`を指定することができます。 ："
 
 #: ../../orm/mapping_columns.rst:71
 msgid ""
 "With the above event, the reflection of :class:`.Column` objects will be "
 "intercepted with our event that adds a new \".key\" element, such as in a"
 " mapping as below::"
-msgstr ""
+msgstr "上記のイベントで、：class： `.Column`オブジェクトのリフレクションは、以下のような新しい\&quot;。key \ &quot;要素を追加するイベントでインターセプトされます::"
 
 #: ../../orm/mapping_columns.rst:78
 msgid ""
 "If we want to qualify our event to only react for the specific "
 ":class:`.MetaData` object above, we can check for it in our event::"
-msgstr ""
+msgstr "上記の特定の：class： `.MetaData`オブジェクトに対してのみ反応するようにイベントを修飾する場合は、イベントで確認できます::"
 
 #: ../../orm/mapping_columns.rst:90
 msgid "Naming All Columns with a Prefix"
-msgstr ""
+msgstr "接頭辞付きのすべての列に名前を付ける"
 
 #: ../../orm/mapping_columns.rst:92
 msgid ""
 "A quick approach to prefix column names, typically when mapping to an "
 "existing :class:`.Table` object, is to use ``column_prefix``::"
-msgstr ""
+msgstr "接頭辞のカラム名への簡単なアプローチは、通常、既存の：class： `.Table`オブジェクトにマッピングするときに、` `column_prefix`` ::"
 
 #: ../../orm/mapping_columns.rst:99
 msgid ""
 "The above will place attribute names such as ``_user_id``, "
 "``_user_name``, ``_password`` etc. on the mapped ``User`` class."
-msgstr ""
+msgstr "上記では、マッピングされた `` User``クラスに `` _user_id``、 `` _user_name``、 `` _password``などの属性名を置きます。"
 
 #: ../../orm/mapping_columns.rst:102
 msgid ""
 "This approach is uncommon in modern usage.   For dealing with reflected "
 "tables, a more flexible approach is to use that described in "
 ":ref:`mapper_automated_reflection_schemes`."
-msgstr ""
+msgstr "このアプローチは、現代的な使用法では珍しいことです。反映されたテーブルを扱うには、より柔軟なアプローチは：ref： `mapper_automated_reflection_schemes`で説明されているものを使用することです。"
 
 #: ../../orm/mapping_columns.rst:108
 msgid "Using column_property for column level options"
-msgstr ""
+msgstr "カラムレベルオプションにcolumn_propertyを使用する"
 
 #: ../../orm/mapping_columns.rst:110
 msgid ""
@@ -140,7 +130,7 @@ msgid ""
 " we pass an option ``active_history``, which specifies that a change to "
 "this column's value should result in the former value being loaded "
 "first::"
-msgstr ""
+msgstr "：func： `.column_property`関数を使って：class：` .Column`をマッピングするときに、オプションを指定することができます。この関数は、：class： `.Column`を追跡するために：func：` .mapper`によって使用される：class： `.ColumnProperty`を明示的に作成します。通常、：func： `.mapper`はこれを自動的に作成します。 ：func： `.column_property`を使用すると、：class：` .Column`をどのようにマッピングするかについての追加の引数を渡すことができます。以下では、 `` active_history``オプションを渡します。このオプションは、このカラムの値を変更すると、前の値が最初に読み込まれるように指定します::"
 
 #: ../../orm/mapping_columns.rst:128
 msgid ""
@@ -148,11 +138,11 @@ msgid ""
 "multiple columns.  This use case arises when mapping to a "
 ":func:`~.expression.join` which has attributes which are equated to each "
 "other::"
-msgstr ""
+msgstr "：func： `.column_property`は、単一の属性を複数の列にマップするためにも使用されます。このユースケースは、互いに等しい属性を持つ：func： `〜.expression.join`へのマッピング時に発生します::"
 
 #: ../../orm/mapping_columns.rst:139
 msgid "For more examples featuring this usage, see :ref:`maptojoin`."
-msgstr ""
+msgstr "この使い方の例をもっと見るには、ref： `maptojoin`を参照してください。"
 
 #: ../../orm/mapping_columns.rst:141
 msgid ""
@@ -160,15 +150,15 @@ msgid ""
 "expressions as mapped attributes, such as below where we create an "
 "attribute ``fullname`` that is the string concatenation of the "
 "``firstname`` and ``lastname`` columns::"
-msgstr ""
+msgstr "func： `.column_property`が必要な別の場所は、SQL式をマップされた属性として指定することです。たとえば、` `firstname``の文字列連結である属性` `fullname``を作成し、 `` columns ::"
 
 #: ../../orm/mapping_columns.rst:153
 msgid "See examples of this usage at :ref:`mapper_sql_expressions`."
-msgstr ""
+msgstr "この使用法の例を参照：ref： `mapper_sql_expressions`を参照してください。"
 
 #: of sqlalchemy.orm.column_property:1
 msgid "Provide a column-level property for use with a Mapper."
-msgstr ""
+msgstr "Mapperで使用する列レベルのプロパティを提供します。"
 
 #: of sqlalchemy.orm.column_property:3
 msgid ""
@@ -177,21 +167,21 @@ msgid ""
 "Use this function when the given column is not directly present within "
 "the mapper's selectable; examples include SQL expressions, functions, and"
 " scalar SELECT queries."
-msgstr ""
+msgstr "カラムベースのプロパティは通常、：class： `.Column`要素を直接使用してマッパーの` `properties``ディクショナリに適用することができます。指定された列がマッパーの選択可能範囲内に直接存在しない場合は、この関数を使用します。例には、SQL式、関数、およびスカラーSELECTクエリが含まれます。"
 
 #: of sqlalchemy.orm.column_property:9
 msgid ""
 "Columns that aren't present in the mapper's selectable won't be persisted"
 " by the mapper and are effectively \"read-only\" attributes."
-msgstr ""
+msgstr "マッパーの選択肢に存在しない列は、マッパーによって永続化されず、効果的には「読み取り専用」の属性です。"
 
 #: of sqlalchemy.orm.column_property
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.orm.column_property:12
 msgid "list of Column objects to be mapped."
-msgstr ""
+msgstr "マップされるColumnオブジェクトのリスト"
 
 #: of sqlalchemy.orm.column_property:15
 msgid ""
@@ -203,7 +193,7 @@ msgid ""
 ":func:`.attributes.get_history` or :meth:`.Session.is_modified` which "
 "also need to know the \"previous\" value of the attribute.  .. "
 "versionadded:: 0.6.6"
-msgstr ""
+msgstr "`` True``のときは、スカラ属性の\ &quot;previous \&quot;値が置換されていなければ読み込まれなければならないことを示します。通常、単純な非主キースカラー値の履歴追跡ロジックは、フラッシュを実行するために\ &quot;新しい\&quot;値を認識する必要があります。このフラグは：func： `.attributes.get_history`または：meth：` .Session.is_modified`を利用するアプリケーションで利用できます。これは属性の\ &quot;前\&quot;値も知る必要があります。 .. versionadded :: 0.6.6"
 
 #: of sqlalchemy.orm.column_property:16
 msgid ""
@@ -214,30 +204,30 @@ msgid ""
 " This flag is available for applications that make use of "
 ":func:`.attributes.get_history` or :meth:`.Session.is_modified` which "
 "also need to know the \"previous\" value of the attribute."
-msgstr ""
+msgstr "`` True``のときは、スカラ属性の\ &quot;previous \&quot;値が置換されていなければ読み込まれなければならないことを示します。通常、単純な非主キースカラー値の履歴追跡ロジックは、フラッシュを実行するために\ &quot;新しい\&quot;値を認識する必要があります。このフラグは：func： `.attributes.get_history`または：meth：` .Session.is_modified`を利用するアプリケーションで利用できます。これは属性の\ &quot;前\&quot;値も知る必要があります。"
 
 #: of sqlalchemy.orm.column_property:28
 msgid ""
 "a class which extends :class:`.ColumnProperty.Comparator` which provides "
 "custom SQL clause generation for comparison operations."
-msgstr ""
+msgstr "extends：class： `.ColumnProperty.Comparator`これは比較演算のためのカスタムSQL節生成を提供するクラスです。"
 
 #: of sqlalchemy.orm.column_property:32
 msgid "a group name for this property when marked as deferred."
-msgstr ""
+msgstr "このプロパティのグループ名は、遅延としてマークされます。"
 
 #: of sqlalchemy.orm.column_property:35
 msgid ""
 "when True, the column property is \"deferred\", meaning that it does not "
 "load immediately, and is instead loaded when the attribute is first "
 "accessed on an instance.  See also :func:`~sqlalchemy.orm.deferred`."
-msgstr ""
+msgstr "Trueの場合、列プロパティは\ &quot;延期\&quot;であり、即時にロードされず、インスタンスでその属性が最初にアクセスされたときにロードされることを意味します。 func： `〜sqlalchemy.orm.deferred`も参照してください。"
 
 #: of sqlalchemy.orm.column_property:41
 msgid ""
 "optional string that will be applied as the doc on the class-bound "
 "descriptor."
-msgstr ""
+msgstr "クラスバインド記述子のdocとして適用されるオプションの文字列。"
 
 #: of sqlalchemy.orm.column_property:45
 msgid ""
@@ -252,7 +242,7 @@ msgid ""
 " that the :class:`.Session` with default expiration settings still "
 "expires all attributes after a :meth:`.Session.commit` call, however.  .."
 " versionadded:: 0.7.3"
-msgstr ""
+msgstr "フラッシュ時に有効期限を無効にする。 SQL式を参照するcolumn_property（）は、単一の表バインド列ではなく、「読み取り専用」プロパティと見なされます。それを移入することはデータの状態には影響を及ぼさず、データベース状態のみを返すことができます。このため、親オブジェクトがフラッシュに関係している（つまり、フラッシュ内に任意の種類の &quot;ダーティー&quot;状態を持つ）たびに、column_property（）の値が期限切れになります。このパラメータを `` False``に設定すると、フラッシュが実行された後に存在する既存の値を残す効果があります。ただし、：class： `.Session`のデフォルトの有効期限設定では、：meth：` .Session.commit`コールの後にすべての属性が失効します。 .. versionadded :: 0.7.3"
 
 #: of sqlalchemy.orm.column_property:46
 msgid ""
@@ -266,20 +256,20 @@ msgid ""
 "leaving any existing value present after the flush proceeds. Note however"
 " that the :class:`.Session` with default expiration settings still "
 "expires all attributes after a :meth:`.Session.commit` call, however."
-msgstr ""
+msgstr "フラッシュ時に有効期限を無効にする。 SQL式を参照するcolumn_property（）は、単一の表バインド列ではなく、「読み取り専用」プロパティと見なされます。それを移入することはデータの状態には影響を及ぼさず、データベース状態のみを返すことができます。このため、親オブジェクトがフラッシュに関係している（つまり、フラッシュ内に任意の種類の &quot;ダーティー&quot;状態を持つ）たびに、column_property（）の値が期限切れになります。このパラメータを `` False``に設定すると、フラッシュが実行された後に存在する既存の値を残す効果があります。ただし、：class： `.Session`のデフォルトの有効期限設定では、：meth：` .Session.commit`コールの後にすべての属性が失効します。"
 
 #: of sqlalchemy.orm.column_property:61
 msgid ""
 "Optional data dictionary which will be populated into the "
 ":attr:`.MapperProperty.info` attribute of this object.  .. versionadded::"
 " 0.8"
-msgstr ""
+msgstr "このオブジェクトの：attr： `.MapperProperty.info`属性に読み込まれるオプションのデータ辞書です。 .. versionadded :: 0.8"
 
 #: of sqlalchemy.orm.column_property:61
 msgid ""
 "Optional data dictionary which will be populated into the "
 ":attr:`.MapperProperty.info` attribute of this object."
-msgstr ""
+msgstr "このオブジェクトの：attr： `.MapperProperty.info`属性に読み込まれるオプションのデータ辞書です。"
 
 #: of sqlalchemy.orm.column_property:66
 msgid ""
@@ -287,11 +277,11 @@ msgid ""
 "will be prepended to the list of attribute listeners for the resulting "
 "descriptor placed on the class. **Deprecated.** Please see "
 ":class:`.AttributeEvents`."
-msgstr ""
+msgstr "：class： `.AttributeExtension`インスタンス、またはクラスに配置された結果の記述子の属性リスナーのリストの前に追加される拡張のリストです。 **推奨されていません。**参照：class： `.AttributeEvents`。"
 
 #: ../../orm/mapping_columns.rst:160
 msgid "Mapping a Subset of Table Columns"
-msgstr ""
+msgstr "表の列のサブセットのマッピング"
 
 #: ../../orm/mapping_columns.rst:162
 msgid ""
@@ -301,21 +291,21 @@ msgid ""
 "columns that don't need to be referenced in the application, the "
 "``include_properties`` or ``exclude_properties`` arguments can specify "
 "that only a subset of columns should be mapped. For example::"
-msgstr ""
+msgstr "ときには、a：class： `.Table`オブジェクトは：ref：` metadata_reflection`に記述されているリフレクションプロセスを使用して利用可能になり、データベースからテーブルの構造をロードします。アプリケーションで参照する必要のないカラムがたくさんあるこのようなテーブルの場合、 `` include_properties``または `` exclude_properties``引数は、カラムのサブセットのみをマッピングするように指定することができます。例えば：："
 
 #: ../../orm/mapping_columns.rst:176
 msgid ""
 "...will map the ``User`` class to the ``user_table`` table, only "
 "including the ``user_id`` and ``user_name`` columns - the rest are not "
 "referenced. Similarly::"
-msgstr ""
+msgstr "... `` User``クラスと `` user_name``カラムのみを含む `` user_table``テーブルに `` User``クラスをマップします - 残りは参照されません。同様に::"
 
 #: ../../orm/mapping_columns.rst:186
 msgid ""
 "...will map the ``Address`` class to the ``address_table`` table, "
 "including all columns present except ``street``, ``city``, ``state``, and"
 " ``zip``."
-msgstr ""
+msgstr "... `` street``、 `` city``、 `` state``、 `` zip``を除くすべてのカラムを含む `` Address``クラスを `` address_table``テーブルにマップします。"
 
 #: ../../orm/mapping_columns.rst:189
 msgid ""
@@ -324,7 +314,7 @@ msgid ""
 "there be any mapped attribute on the mapped class which represents the "
 "column; assigning an attribute of that name will have no effect beyond "
 "that of a normal Python attribute assignment."
-msgstr ""
+msgstr "このマッピングを使用すると、含まれていない列は：class： `.Query`によって生成されたSELECT文では参照されず、列を表すマップされたクラスにもマップされた属性はありません。その名前の属性を割り当てることは、通常のPython属性の割り当てよりも効果がありません。"
 
 #: ../../orm/mapping_columns.rst:195
 msgid ""
@@ -333,7 +323,7 @@ msgid ""
 "``include_properties`` and ``exclude_properties`` can also accommodate "
 ":class:`.Column` objects to more accurately describe which columns should"
 " be included or excluded::"
-msgstr ""
+msgstr "場合によっては、複数の列が同じ名前を持つ場合があります。たとえば、いくつかの列名を共有する複数の表の結合にマッピングする場合などです。 `` include_properties``と `` exclude_properties``は：class： `.Column`オブジェクトを受け入れることもできます。"
 
 #: ../../orm/mapping_columns.rst:210
 msgid ""
@@ -347,5 +337,5 @@ msgid ""
 "functions to take place when the ORM emits an INSERT or UPDATE, and in "
 "the case of ``server_default`` and ``server_onupdate``, the relational "
 "database itself maintains these functions."
-msgstr ""
+msgstr "class： `.Column`オブジェクト、すなわち：ref：` metadata_defaults`に記述されている、 `` default``、 `` update``、 `` server_default``、 `` `server_onupdate``引数はclass：` .Column`オブジェクトがマッピングされていなくても正常に機能し続けます。これは、 `` default``と `` update``の場合、：class： `.Column`オブジェクトが依然としてclass：` .Table`の下に存在するため、デフォルトの関数が実行されるためですORMがINSERTまたはUPDATEを発行し、 `` server_default``および `` server_onupdate``の場合、リレーショナルデータベース自体がこれらの機能を維持します。"
 

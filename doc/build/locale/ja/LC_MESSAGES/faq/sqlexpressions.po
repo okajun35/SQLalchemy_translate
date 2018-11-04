@@ -6,32 +6,22 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../faq/sqlexpressions.rst:2
 msgid "SQL Expressions"
-msgstr ""
+msgstr "SQL式"
 
 #: ../../faq/sqlexpressions.rst:12
 msgid ""
 "How do I render SQL expressions as strings, possibly with bound "
 "parameters inlined?"
-msgstr ""
+msgstr "SQL式を文字列としてレンダリングするにはどうすればよいでしょうか？"
 
 #: ../../faq/sqlexpressions.rst:14
 msgid ""
 "The \"stringification\" of a SQLAlchemy statement or Query in the vast "
 "majority of cases is as simple as::"
-msgstr ""
+msgstr "ほとんどの場合、SQLAlchemy文やQueryの &quot;文字列&quot;は、次のように簡単です::"
 
 #: ../../faq/sqlexpressions.rst:19
 msgid ""
@@ -40,18 +30,18 @@ msgid ""
 "as compiled to a specific dialect or engine, if the statement itself is "
 "not already bound to one you can pass this in to "
 ":meth:`.ClauseElement.compile`::"
-msgstr ""
+msgstr "これは、ORM：class： `〜.orm.query.Query`と、：func：` .select`または他のステートメントの両方に適用されます。さらに、特定の方言またはエンジンにコンパイルされた文を取得するには、文自体がすでにバインドされていない場合は、これを：meth： `.ClauseElement.compile` ::に渡すことができます"
 
 #: ../../faq/sqlexpressions.rst:26
 msgid "or without an :class:`.Engine`::"
-msgstr ""
+msgstr "an：class： `.Engine` ::なしで"
 
 #: ../../faq/sqlexpressions.rst:31
 msgid ""
 "When given an ORM :class:`~.orm.query.Query` object, in order to get at "
 "the :meth:`.ClauseElement.compile` method we only need access the "
 ":attr:`~.orm.query.Query.statement` accessor first::"
-msgstr ""
+msgstr "ORM：class： `〜.orm.query.Query`オブジェクトが与えられた場合、：meth：` .ClauseElement.compile`メソッドを取得するには、次のようにアクセスする必要があります：attr： `〜.orm.query.Query .statement`アクセサを最初に::"
 
 #: ../../faq/sqlexpressions.rst:39
 msgid ""
@@ -64,7 +54,7 @@ msgid ""
 "this stringification in certain circumstances such as that of emitting "
 "DDL. In order to access this functionality one can use the "
 "``literal_binds`` flag, passed to ``compile_kwargs``::"
-msgstr ""
+msgstr "上記のフォームは、SQL文がPython：term： `DBAPI`に渡されるときにレンダリングします。これには、バインドされたパラメータがインラインでレンダリングされないことが含まれます。 SQLAlchemyは通常、バインドされたパラメータを文字列化しません。これはPython DBAPIによって適切に処理されるため、バインドされたパラメータを省略することはありません。 SQLAlchemyは、DDLを発行するような特定の状況でこの文字列化を行う能力は限られています。この機能にアクセスするには、 `` literal_binds``フラグを `` compile_kwargs``に渡すことができます::"
 
 #: ../../faq/sqlexpressions.rst:57
 msgid ""
@@ -72,40 +62,40 @@ msgid ""
 "types, such as ints and strings, and furthermore if a :func:`.bindparam` "
 "without a pre-set value is used directly, it won't be able to stringify "
 "that either."
-msgstr ""
+msgstr "上記のアプローチでは、intや文字列などの基本型に対してのみサポートされているという注意点があります。さらに、あらかじめ設定された値を持たないa：func： `.bindparam`を直接使用すると、文字列化できませんそのいずれか。"
 
 #: ../../faq/sqlexpressions.rst:62
 msgid ""
 "To support inline literal rendering for types not supported, implement a "
 ":class:`.TypeDecorator` for the target type which includes a "
 ":meth:`.TypeDecorator.process_literal_param` method::"
-msgstr ""
+msgstr "サポートされていない型のインライン・リテラル・レンダリングをサポートするには、：meth： `.TypeDecorator.process_literal_param`メソッドを含むターゲット・タイプに対して：class：` .TypeDecorator`を実装します。"
 
 #: ../../faq/sqlexpressions.rst:84
 msgid "producing output like::"
-msgstr ""
+msgstr "::のような出力を生成する"
 
 #: ../../faq/sqlexpressions.rst:94
 msgid ""
 "I'm using op() to generate a custom operator and my parenthesis are not "
 "coming out correctly"
-msgstr ""
+msgstr "私はop（）を使用してカスタム演算子を生成していますが、カッコが正しく出力されていません"
 
 #: ../../faq/sqlexpressions.rst:96
 msgid ""
 "The :meth:`.Operators.op` method allows one to create a custom database "
 "operator otherwise not known by SQLAlchemy::"
-msgstr ""
+msgstr "：meth： `.Operators.op`メソッドを使うと、SQLAlchemy ::で知られていないカスタムデータベース演算子を作成することができます"
 
 #: ../../faq/sqlexpressions.rst:102
 msgid ""
 "However, when using it on the right side of a compound expression, it "
 "doesn't generate parenthesis as we expect::"
-msgstr ""
+msgstr "しかし、複合式の右側でそれを使用すると、期待どおり括弧が生成されません::"
 
 #: ../../faq/sqlexpressions.rst:108
 msgid "Where above, we probably want ``(q1 + q2) -> p``."
-msgstr ""
+msgstr "上記の場合、おそらく ``（q1 + q2） - &gt; p``が必要です。"
 
 #: ../../faq/sqlexpressions.rst:110
 msgid ""
@@ -113,18 +103,18 @@ msgid ""
 " the :paramref:`.Operators.op.precedence` parameter, to a high number, "
 "where 100 is the maximum value, and the highest number used by any "
 "SQLAlchemy operator is currently 15::"
-msgstr ""
+msgstr "この場合の解決策は、：paramref： `.Operators.op.precedence`パラメータを高い数値に設定して、演算子の優先順位を設定することです。ここで、100は最大値であり、SQLAlchemy演算子現在15です::"
 
 #: ../../faq/sqlexpressions.rst:118
 msgid ""
 "We can also usually force parenthesization around a binary expression "
 "(e.g. an expression that has left/right operands and an operator) using "
 "the :meth:`.ColumnElement.self_group` method::"
-msgstr ""
+msgstr "通常は、：meth： `.ColumnElement.self_group`メソッドを使用して、バイナリ式（左辺/右辺オペランドと演算子を持つ式など）を括弧で囲むこともできます。"
 
 #: ../../faq/sqlexpressions.rst:126
 msgid "Why are the parentheses rules like this?"
-msgstr ""
+msgstr "なぜかっこのルールはどうですか？"
 
 #: ../../faq/sqlexpressions.rst:128
 msgid ""
@@ -133,18 +123,18 @@ msgid ""
 " not generate parenthesis based on groupings, it uses operator precedence"
 " and if the operator is known to be associative, so that parenthesis are "
 "generated minimally. Otherwise, an expression like::"
-msgstr ""
+msgstr "余分な括弧がある場合や括弧が予想外の場所にある場合、SQLAlchemyはグループ化に基づいて括弧を生成せず、演算子の優先順位を使用し、演算子が結合的であるとわかっている場合は括弧最小限に生成される。さもなければ、::のような式"
 
 #: ../../faq/sqlexpressions.rst:136 ../../faq/sqlexpressions.rst:146
 msgid "would produce::"
-msgstr ""
+msgstr "生成するだろう::"
 
 #: ../../faq/sqlexpressions.rst:140
 msgid ""
 "which is fine but would probably annoy people (and be reported as a bug)."
 " In other cases, it leads to things that are more likely to confuse "
 "databases or at the very least readability, such as::"
-msgstr ""
+msgstr "これは問題ありませんが、おそらく人々を悩ますでしょう（とバグとして報告される）。他のケースでは、データベースを混乱させる可能性のあるものや、最低限の可読性をもたらすものにつながります::"
 
 #: ../../faq/sqlexpressions.rst:150
 msgid ""
@@ -152,22 +142,22 @@ msgid ""
 "and databases really don't like that either.  So parenthesization doesn't"
 " naively parenthesize, it uses operator precedence and associativity to "
 "determine groupings."
-msgstr ""
+msgstr "また、 `` \ &quot;（x）= 7 \&quot; ``のようなものがあり、データベースはそれを気に入らないケースもあります。したがって、かっこは括弧で囲むのではなく、演算子の優先順位と結合性を使用してグループ化を決定します。"
 
 #: ../../faq/sqlexpressions.rst:155
 msgid "For :meth:`.Operators.op`, the value of precedence defaults to zero."
-msgstr ""
+msgstr "：meth： `.Operators.op`の場合、優先順位の値はデフォルトでゼロになります。"
 
 #: ../../faq/sqlexpressions.rst:157
 msgid ""
 "What if we defaulted the value of :paramref:`.Operators.op.precedence` to"
 " 100, e.g. the highest?  Then this expression makes more parenthesis, but"
 " is otherwise OK, that is, these two are equivalent::"
-msgstr ""
+msgstr "：paramref： `.Operators.op.precedence`の値を100にデフォルト設定した場合、例えば最高ですか？次に、この式はより多くの括弧を作成しますが、そうでなければOKです。つまり、これら2つは同等です。"
 
 #: ../../faq/sqlexpressions.rst:166
 msgid "but these two are not::"
-msgstr ""
+msgstr "しかし、これらの2つはありません::"
 
 #: ../../faq/sqlexpressions.rst:173
 msgid ""
@@ -177,7 +167,7 @@ msgid ""
 "given that is going to work in all cases, because sometimes you want a "
 "custom op to have a lower precedence than the other operators and "
 "sometimes you want it to be higher."
-msgstr ""
+msgstr "現時点では、演算子の優先順位と結合性に基づいてかっこを行っている限り、すべての場合に優先する優先順位のない汎用演算子に対して自動的にかっこをかける方法が実際にある場合は、カスタムオペレーションの優先順位を他のオペレータよりも低くしたい場合があります。"
 
 #: ../../faq/sqlexpressions.rst:179
 msgid ""
@@ -187,5 +177,5 @@ msgid ""
 "parenthesized harmlessly. Perhaps this change can be made at some point, "
 "however for the time being keeping the parenthesization rules more "
 "internally consistent seems to be the safer approach."
-msgstr ""
+msgstr "`` op（） ``が呼び出されたときに、上記の\ &quot;バイナリ\&quot;の式が強制的に `` self_group（） ``メソッドを使用すると、左側の複合式が、無害に常にカッコで囲んでください。おそらく、この変更はある時点で行うことができますが、括弧の規則をより内部的に一貫して維持することは、より安全なアプローチであるようです。"
 

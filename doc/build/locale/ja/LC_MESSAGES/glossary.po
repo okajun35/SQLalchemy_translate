@@ -6,59 +6,49 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../glossary.rst:7
 msgid "Glossary"
-msgstr ""
+msgstr "用語集"
 
 #: ../../glossary.rst:481
 msgid "ACID"
-msgstr ""
+msgstr "酸"
 
 #: ../../glossary.rst:482
 msgid "ACID model"
-msgstr ""
+msgstr "ACIDモデル"
 
 #: ../../glossary.rst:484
 msgid ""
 "An acronym for \"Atomicity, Consistency, Isolation, Durability\"; a set "
 "of properties that guarantee that database transactions are processed "
 "reliably. (via Wikipedia)"
-msgstr ""
+msgstr "\ &quot;原子性、一貫性、分離、耐久性\&quot;の頭字語。そのデータベーストランザクションが確実に処理されることを保証する一連のプロパティ（ウィキペディア経由で）"
 
 #: ../../glossary.rst:491
 msgid ":term:`atomicity`"
-msgstr ""
+msgstr "：用語：「原子性」"
 
 #: ../../glossary.rst:493
 msgid ":term:`consistency`"
-msgstr ""
+msgstr "：用語：「整合性」"
 
 #: ../../glossary.rst:495
 msgid ":term:`isolation`"
-msgstr ""
+msgstr "：用語： `分離`"
 
 #: ../../glossary.rst:497
 msgid ":term:`durability`"
-msgstr ""
+msgstr "：用語： `耐久性`"
 
 #: ../../glossary.rst:499
 msgid "http://en.wikipedia.org/wiki/ACID_Model"
-msgstr ""
+msgstr "http://en.wikipedia.org/wiki/ACID_Model"
 
 #: ../../glossary.rst:11
 msgid "annotations"
-msgstr ""
+msgstr "アノテーション"
 
 #: ../../glossary.rst:13
 msgid ""
@@ -67,7 +57,7 @@ msgid ""
 "Python dictionary is associated with a copy of the object, which contains"
 " key/value pairs significant to various internal systems, mostly within "
 "the ORM::"
-msgstr ""
+msgstr "アノテーションは、class： `.ClauseElement`オブジェクトとともに追加情報を格納するために、SQLAlchemyによって内部的に使用される概念です。 Python辞書はオブジェクトのコピーに関連付けられています。この中には、主にORM ::内のさまざまな内部システムにとって重要なキーと値のペアが含まれています"
 
 #: ../../glossary.rst:21
 msgid ""
@@ -83,11 +73,11 @@ msgid ""
 "where the column in some cases needs to be expressed in terms of one "
 "particular table alias or another, based on its position within the join "
 "expression."
-msgstr ""
+msgstr "アノテーションシステムはパブリックディクショナリ：attr： `.Column.info`とは異なります。上記のアノテーション操作では、すべてのアノテーション値がaの一部とみなされるのではなく、新しい：class：` .Column`の* copy *単一ユニット。 ORMは、継承継承エンティティに対して相対的なものとしてレンダリングすべき列と、直接の親表のみに対して相対的にレンダリングすべき列を区別するなど、コンテキストに固有の注釈を適用するために式オブジェクトのコピーを作成します。いくつかのケースでは、ある特定のテーブルエイリアスまたは別のテーブルエイリアスの観点から表現される必要がある関係の「結合条件」内の列を区別するために使用されます。"
 
 #: ../../glossary.rst:841
 msgid "association relationship"
-msgstr ""
+msgstr "関連関係"
 
 #: ../../glossary.rst:843
 msgid ""
@@ -97,30 +87,30 @@ msgid ""
 "is mapped by a full class, rather than invisibly handled by the "
 ":func:`sqlalchemy.orm.relationship` construct as in the case with many-"
 "to-many, so that additional attributes are explicitly available."
-msgstr ""
+msgstr "真ん中の関連テーブルを使って2つのテーブルをつなぎ合わせる2段階：term： `relationship`。関連関係は、：func： `sqlalchemy.orm.relationship`構造体によって目に見えない形で処理されるのではなく、多対多表が完全なクラスによってマップされるという点で、：term：` many to many`関係と異なります。追加の属性が明示的に利用できるように、多対多の場合"
 
 #: ../../glossary.rst:852
 msgid ""
 "For example, if we wanted to associate employees with projects, also "
 "storing the specific role for that employee with the project, the "
 "relational schema might look like:"
-msgstr ""
+msgstr "たとえば、従業員をプロジェクトに関連させ、その従業員の特定のロールをプロジェクトに保存する場合、リレーショナルスキーマは次のようになります。"
 
 #: ../../glossary.rst:876
 msgid "A SQLAlchemy declarative mapping for the above might look like::"
-msgstr ""
+msgstr "上記のSQLAlchemyの宣言的なマッピングは次のようになります::"
 
 #: ../../glossary.rst:903
 msgid "Employees can be added to a project given a role name::"
-msgstr ""
+msgstr "ロール名を指定して従業員をプロジェクトに追加することができます::"
 
 #: ../../glossary.rst:740 ../../glossary.rst:917
 msgid ":term:`many to many`"
-msgstr ""
+msgstr "：用語：「多対多」"
 
 #: ../../glossary.rst:500
 msgid "atomicity"
-msgstr ""
+msgstr "原子性"
 
 #: ../../glossary.rst:502
 msgid ""
@@ -130,24 +120,24 @@ msgid ""
 "is left unchanged. An atomic system must guarantee atomicity in each and "
 "every situation, including power failures, errors, and crashes. (via "
 "Wikipedia)"
-msgstr ""
+msgstr "Atomicityは：term： `ACID`モデルのコンポーネントの1つであり、各トランザクションは\&quot;すべてかどうか\ &quot;である必要があります：トランザクションの一部が失敗し、トランザクション全体が失敗し、データベースの状態は変更されません。原子システムは、停電、エラー、クラッシュなど、すべての状況で原子性を保証する必要があります。 （ウィキペディア経由で）"
 
 #: ../../glossary.rst:512 ../../glossary.rst:527 ../../glossary.rst:544
 #: ../../glossary.rst:560
 msgid ":term:`ACID`"
-msgstr ""
+msgstr "：用語： `ACID`"
 
 #: ../../glossary.rst:514
 msgid "http://en.wikipedia.org/wiki/Atomicity_(database_systems)"
-msgstr ""
+msgstr "http://en.wikipedia.org/wiki/Atomicity_(database_systems）"
 
 #: ../../glossary.rst:703
 msgid "backref"
-msgstr ""
+msgstr "バックリファレンス"
 
 #: ../../glossary.rst:704
 msgid "bidirectional relationship"
-msgstr ""
+msgstr "双方向関係"
 
 #: ../../glossary.rst:706
 msgid ""
@@ -160,30 +150,30 @@ msgid ""
 "that the other :func:`~sqlalchemy.orm.relationship` is created "
 "automatically.  We can illustrate this against the example we've used in "
 ":term:`one to many` as follows::"
-msgstr ""
+msgstr "2つの異なる：func： `〜sqlalchemy.orm.relationship`オブジェクトを相互に関連付けることができる：term：` relationship`システムへの拡張です。これらの2つの関係が構築される最も一般的な方法は、一方の側に対して明示的に：func： `〜sqlalchemy.orm.relationship`関数を使用し、他方に` backref``キーワードを指定することです：func： `〜sqlalchemy .orm.relationship`が自動的に作成されます。これを例に挙げてみましょう：term： `one to many`` ::"
 
 #: ../../glossary.rst:729
 msgid ""
 "A backref can be applied to any relationship, including one to many, many"
 " to one, and :term:`many to many`."
-msgstr ""
+msgstr "バックレファレンスは、1対多、多対1、：term： `many to many &#39;など、あらゆる関係に適用できます。"
 
 #: ../../glossary.rst:647 ../../glossary.rst:698 ../../glossary.rst:734
 #: ../../glossary.rst:815
 msgid ":term:`relationship`"
-msgstr ""
+msgstr "：term： `relationship`"
 
 #: ../../glossary.rst:700 ../../glossary.rst:736 ../../glossary.rst:817
 msgid ":term:`one to many`"
-msgstr ""
+msgstr "：用語：「1対多数」"
 
 #: ../../glossary.rst:649 ../../glossary.rst:738 ../../glossary.rst:819
 msgid ":term:`many to one`"
-msgstr ""
+msgstr "：用語：「多対1」"
 
 #: ../../glossary.rst:926
 msgid "candidate key"
-msgstr ""
+msgstr "候補キー"
 
 #: ../../glossary.rst:929
 msgid ""
@@ -192,44 +182,44 @@ msgid ""
 "have more than one candidate key, each of which is suitable for use as "
 "the primary key of that row. The primary key of a table is always a "
 "candidate key."
-msgstr ""
+msgstr "A：term：行の一意の識別キーを形成する属性または属性セットを参照する「関係代数」用語。 1つの行に複数の候補キーがあり、それぞれがその行の主キーとして使用するのに適しています。テーブルの主キーは常に候補キーです。"
 
 #: ../../glossary.rst:937
 msgid ":term:`primary key`"
-msgstr ""
+msgstr "：term： `主キー`"
 
 #: ../../glossary.rst:939
 msgid "http://en.wikipedia.org/wiki/Candidate_key"
-msgstr ""
+msgstr "http://en.wikipedia.org/wiki/Candidate_key"
 
 #: ../../glossary.rst:984
 msgid "check constraint"
-msgstr ""
+msgstr "チェック制約"
 
 #: ../../glossary.rst:987
 msgid ""
 "A check constraint is a condition that defines valid data when adding or "
 "updating an entry in a table of a relational database. A check constraint"
 " is applied to each row in the table."
-msgstr ""
+msgstr "検査制約は、リレーショナル・データベースの表の項目を追加または更新するときに有効なデータを定義する条件です。検査制約が表の各行に適用されます。"
 
 #: ../../glossary.rst:290 ../../glossary.rst:992 ../../glossary.rst:1016
 msgid "(via Wikipedia)"
-msgstr ""
+msgstr "（ウィキペディア経由で）"
 
 #: ../../glossary.rst:994
 msgid ""
 "A check constraint can be added to a table in standard SQL using "
 ":term:`DDL` like the following:"
-msgstr ""
+msgstr "チェック制約は、次のように：term： `DDL`を使用して標準SQLのテーブルに追加できます。"
 
 #: ../../glossary.rst:1003
 msgid "http://en.wikipedia.org/wiki/Check_constraint"
-msgstr ""
+msgstr "http://en.wikipedia.org/wiki/Check_constraint"
 
 #: ../../glossary.rst:331
 msgid "columns clause"
-msgstr ""
+msgstr "columns句"
 
 #: ../../glossary.rst:333
 msgid ""
@@ -237,21 +227,21 @@ msgid ""
 "expressions to be returned in the result set.  The expressions follow the"
 " ``SELECT`` keyword directly and are a comma-separated list of individual"
 " expressions."
-msgstr ""
+msgstr "結果セットに返されるSQL式を列挙する `` SELECT``ステートメントの部分。式は `` SELECT``キーワードの直後にあり、カンマで区切られた個々の式のリストです。"
 
 #: ../../glossary.rst:338
 msgid "E.g.:"
-msgstr ""
+msgstr "例えば："
 
 #: ../../glossary.rst:345
 msgid ""
 "Above, the list of columns ``user_acount.name``, ``user_account.email`` "
 "is the columns clause of the ``SELECT``."
-msgstr ""
+msgstr "上のカラムのリスト `` user_acount.name``、 `` user_account.email``は `` SELECT``のカラム節です。"
 
 #: ../../glossary.rst:515
 msgid "consistency"
-msgstr ""
+msgstr "一貫性"
 
 #: ../../glossary.rst:517
 msgid ""
@@ -260,23 +250,23 @@ msgid ""
 " to another. Any data written to the database must be valid according to "
 "all defined rules, including but not limited to :term:`constraints`, "
 "cascades, triggers, and any combination thereof. (via Wikipedia)"
-msgstr ""
+msgstr "整合性は：term： `ACID`モデルのコンポーネントの1つであり、トランザクションによって確実に1つの有効な状態から別の状態にデータベースが移行されます。データベースに書き込まれるデータは、term： `constraints`、カスケード、トリガー、およびそれらの任意の組み合わせなど、すべての定義された規則に従って有効でなければなりません。 （ウィキペディア経由で）"
 
 #: ../../glossary.rst:529
 msgid "http://en.wikipedia.org/wiki/Consistency_(database_systems)"
-msgstr ""
+msgstr "http://en.wikipedia.org/wiki/Consistency_(database_systems）"
 
 #: ../../glossary.rst:918
 msgid "constraint"
-msgstr ""
+msgstr "制約"
 
 #: ../../glossary.rst:919
 msgid "constraints"
-msgstr ""
+msgstr "制約"
 
 #: ../../glossary.rst:920
 msgid "constrained"
-msgstr ""
+msgstr "拘束された"
 
 #: ../../glossary.rst:922
 msgid ""
@@ -284,25 +274,25 @@ msgid ""
 "and consistency of data.   Common forms of constraint include "
 ":term:`primary key constraint`, :term:`foreign key constraint`, and "
 ":term:`check constraint`."
-msgstr ""
+msgstr "リレーショナルデータベース内に確立され、データの妥当性と整合性を保証するルール。一般的な制約には、term： `primary key constraint`、：term：` foreign key constraint`、：term： `check constraint`があります。"
 
 #: ../../glossary.rst:427
 msgid "correlates"
-msgstr ""
+msgstr "相関する"
 
 #: ../../glossary.rst:428
 msgid "correlated subquery"
-msgstr ""
+msgstr "相関サブクエリ"
 
 #: ../../glossary.rst:429
 msgid "correlated subqueries"
-msgstr ""
+msgstr "相関サブクエリ"
 
 #: ../../glossary.rst:431
 msgid ""
 "A :term:`subquery` is correlated if it depends on data in the enclosing "
 "``SELECT``."
-msgstr ""
+msgstr "A：term： `subquery`は、囲む` `SELECT``のデータに依存する場合には相関します。"
 
 #: ../../glossary.rst:434
 msgid ""
@@ -310,7 +300,7 @@ msgid ""
 "``email_address`` table, such that it will be invoked for each value of "
 "``user_account.id``, correlating the value of this column against the "
 "``email_address.user_account_id`` column:"
-msgstr ""
+msgstr "以下では、サブクエリは、 `` user_account.id`の値ごとに呼び出されるように、 `` MIN（a.id） ``を `` email_address``テーブルから選択し、列を `` email_address.user_account_id``列に置き換えます。"
 
 #: ../../glossary.rst:450
 msgid ""
@@ -319,14 +309,14 @@ msgid ""
 "``user_account`` table is received from the enclosing query, where each "
 "row selected from ``user_account`` results in a distinct execution of the"
 " subquery."
-msgstr ""
+msgstr "上記のサブクエリは、 `` user_account``テーブルを参照します。このテーブルは、このネストされたクエリの `` FROM``節にはありません。代わりに、 `` user_account``テーブルは囲むクエリから受け取られます。ここで `` user_account``から選択された各行はサブクエリの別個の実行をもたらします。"
 
 #: ../../glossary.rst:455
 msgid ""
 "A correlated subquery is in most cases present in the :term:`WHERE "
 "clause` or :term:`columns clause` of the immediately enclosing ``SELECT``"
 " statement, as well as in the ORDER BY or HAVING clause."
-msgstr ""
+msgstr "相関サブクエリは、ほとんどの場合、ORDER BY節またはHAVING節だけでなく、すぐに囲まれた `` SELECT``文の：term： `WHERE節`または：term： `columns節`に存在します。"
 
 #: ../../glossary.rst:459
 msgid ""
@@ -335,7 +325,7 @@ msgid ""
 "correlation is typically due to the enclosing ``SELECT`` itself being "
 "enclosed in the WHERE, ORDER BY, columns or HAVING clause of another "
 "``SELECT``, such as:"
-msgstr ""
+msgstr "あまり一般的でない場合には、相関サブクエリは、囲む `` SELECT``の：term： `FROM clause`に存在することがあります。これらの場合、相関は、典型的には、次のような別の `` SELECT``のWHERE、ORDER BY、columnsまたはHAVING節に囲まれた囲み `` SELECT``自体に起因します。"
 
 #: ../../glossary.rst:476
 msgid ""
@@ -343,11 +333,11 @@ msgid ""
 "correlated query via its ``FROM`` clause is not possible, because the "
 "correlation can only proceed once the original source rows from the "
 "enclosing statement's FROM clause are available."
-msgstr ""
+msgstr "1つの `` SELECT``から `` FROM``節を介して相関クエリを囲むものへの直接的な相関は不可能です。囲み文のFROM句の元のソース行が利用可能になると相関が進行するだけです。"
 
 #: ../../glossary.rst:32
 msgid "crud"
-msgstr ""
+msgstr "酷いです"
 
 #: ../../glossary.rst:34
 msgid ""
@@ -355,11 +345,11 @@ msgid ""
 " the set of operations that create, modify and delete data from the "
 "database, also known as :term:`DML`, and typically refers to the "
 "``INSERT``, ``UPDATE``, and ``DELETE`` statements."
-msgstr ""
+msgstr "\ &quot;作成、更新、削除\&quot;を意味する頭字語。 SQLにおける用語は、用語：DMLとも呼ばれ、データベースからデータを作成、変更、および削除する操作の集合を指し、通常は「INSERT」、「UPDATE」、 `DELETE`ステートメント。"
 
 #: ../../glossary.rst:264
 msgid "DBAPI"
-msgstr ""
+msgstr "DBAPI"
 
 #: ../../glossary.rst:266
 msgid ""
@@ -375,17 +365,17 @@ msgid ""
 "<.postgresql.psycopg2>` DBAPI/dialect combination, whereas the URL "
 "``mysql+mysqldb://@localhost/test`` refers to the :mod:`MySQL for Python "
 "<.mysql.mysqldb>` DBAPI DBAPI/dialect combination."
-msgstr ""
+msgstr "DBAPIは、\ &quot;Python Database API Specification \&quot;というフレーズの省略形です。これは、すべてのデータベース接続パッケージの共通の使用パターンを定義するPython内で広く使用されている仕様です。 DBAPIは\ &quot;低レベル\&quot; APIで、通常はPythonアプリケーションでデータベースと話すために使用される最低レベルのシステムです。 SQLAlchemyの：term： `dialect`システムは、特定のデータベースエンジンの上に特定のDBAPIを提供する個々のダイアレクトクラスを提供する、DBAPIの操作の周りに構築されます。 ：func： `.create_engine` URL` `postgresql + psycopg2：// @ localhost / test``は：mod：` psycopg2 &lt;.​​postgresql.psycopg2&gt; `DBAPI / dialectの組み合わせを指しますが、 `mysql + mysqldb：// @ localhost / test``は、：mod：` MySQL for Python &lt;.mysql.mysqldb&gt; `DBAPI DBAPI / dialectの組み合わせを指します。"
 
 #: ../../glossary.rst:284
 msgid ""
 "`PEP 249 - Python Database API Specification v2.0 "
 "<http://www.python.org/dev/peps/pep-0249/>`_"
-msgstr ""
+msgstr "`PEP 249  -  PythonデータベースAPI仕様v2.0 <http://www.python.org/dev/peps/pep-0249/> `_"
 
 #: ../../glossary.rst:77
 msgid "DDL"
-msgstr ""
+msgstr "DDL"
 
 #: ../../glossary.rst:79
 msgid ""
@@ -393,21 +383,21 @@ msgid ""
 " relational databases use to configure tables, constraints, and other "
 "permanent objects within a database schema.  SQLAlchemy provides a rich "
 "API for constructing and emitting DDL expressions."
-msgstr ""
+msgstr "*データ定義言語*の頭字語。 DDLは、データベース・スキーマ内の表、制約およびその他の永続オブジェクトを構成するためにリレーショナル・データベースが使用するSQLのサブセットです。 SQLAlchemyは、DDL式を構築および出力するための豊富なAPIを提供します。"
 
 #: ../../glossary.rst:86
 msgid ":ref:`metadata_toplevel`"
-msgstr ""
+msgstr "：ref： `metadata_toplevel`"
 
 #: ../../glossary.rst:88
 msgid ""
 "`DDL (via Wikipedia) "
 "<http://en.wikipedia.org/wiki/Data_definition_language>`_"
-msgstr ""
+msgstr "`DDL（ウィキペディア経由） <http://en.wikipedia.org/wiki/Data_definition_language> `_"
 
 #: ../../glossary.rst:1045
 msgid "deleted"
-msgstr ""
+msgstr "削除された"
 
 #: ../../glossary.rst:1047
 msgid ""
@@ -418,20 +408,20 @@ msgid ""
 " state once the session's transaction is committed; alternatively, if the"
 " session's transaction is rolled back, the DELETE is reverted and the "
 "object moves back to the :term:`persistent` state."
-msgstr ""
+msgstr "これは、オブジェクトがa：term： `session`内に持つことができる主要なオブジェクト状態の1つを記述します。削除されたオブジェクトは、以前は永続的であったオブジェクトであり、その行を削除するためにフラッシュ内でデータベースにDELETE文が発行されました。セッションのトランザクションがコミットされると、オブジェクトは：term： `detached`状態に移ります。あるいは、セッションのトランザクションがロールバックされると、DELETEは元に戻され、オブジェクトは：term： `persistent`状態に戻ります。"
 
 #: ../../glossary.rst:1032 ../../glossary.rst:1044 ../../glossary.rst:1059
 #: ../../glossary.rst:1074 ../../glossary.rst:1090
 msgid ":ref:`session_object_states`"
-msgstr ""
+msgstr "：ref： `session_object_states`"
 
 #: ../../glossary.rst:38
 msgid "descriptor"
-msgstr ""
+msgstr "記述子"
 
 #: ../../glossary.rst:39
 msgid "descriptors"
-msgstr ""
+msgstr "記述子"
 
 #: ../../glossary.rst:41
 msgid ""
@@ -440,13 +430,13 @@ msgid ""
 "`descriptor protocol <http://docs.python.org/howto/descriptor.html>`_. "
 "Those methods are __get__(), __set__(), and __delete__(). If any of those"
 " methods are defined for an object, it is said to be a descriptor."
-msgstr ""
+msgstr "Pythonでは、ディスクリプタは「バインディング動作」を持つオブジェクト属性です。その属性アクセスは、ディスクリプタプロトコルのメソッドによってオーバーライドされています<http://docs.python.org/howto/descriptor.html> `_。これらのメソッドは、__get __（）、__set __（）、および__delete __（）です。これらのメソッドのいずれかがオブジェクトに対して定義されている場合、それは記述子であると言われます。"
 
 #: ../../glossary.rst:45
 msgid ""
 "In SQLAlchemy, descriptors are used heavily in order to provide attribute"
 " behavior on mapped classes.   When a class is mapped as such::"
-msgstr ""
+msgstr "SQLAlchemyでは、記述子は、マップされたクラスで属性の動作を提供するために頻繁に使用されます。クラスがそのようにマップされているとき::"
 
 #: ../../glossary.rst:54
 msgid ""
@@ -458,17 +448,17 @@ msgid ""
 "above mentioned ``__get__()``, ``__set__()`` and ``__delete__()`` "
 "methods.   The :class:`.InstrumentedAttribute` will generate a SQL "
 "expression when used at the class level::"
-msgstr ""
+msgstr "`` MyClass``クラスは、その定義が完了したときにterm： `mapped`となります。その時点で、class：` .Column`オブジェクトとして始まる `` id``と `` data``属性が、上記の `` __get __（） ``、 `` __set __（） ``および `` __delete__（）を提供する記述子であるclass： `.InstrumentedAttribute`のインスタンスを持つ：term：` instrumentation`システムで置き換えられます。 （） ``メソッドを呼び出します。 ：class： `.InstrumentedAttribute`は、クラスレベルで使用するとSQL式を生成します::"
 
 #: ../../glossary.rst:66
 msgid ""
 "and at the instance level, keeps track of changes to values, and also "
 ":term:`lazy loads` unloaded attributes from the database::"
-msgstr ""
+msgstr "インスタンスレベルでは、値の変更を追跡します。また、term： `lazy loads`データベースからアンロードされた属性::"
 
 #: ../../glossary.rst:1075
 msgid "detached"
-msgstr ""
+msgstr "分離された"
 
 #: ../../glossary.rst:1077
 msgid ""
@@ -480,11 +470,11 @@ msgid ""
 "session was closed, moves into the detached state. The detached state is "
 "generally used when objects are being moved between sessions or when "
 "being moved to/from an external object cache."
-msgstr ""
+msgstr "これは、オブジェクトがa：term： `session`内に持つことができる主要なオブジェクト状態の1つを記述します。デタッチされたオブジェクトは、データベースアイデンティティ（すなわち、主キー）を有するが、どのセッションにも関連付けられていないオブジェクトである。以前は：term： `persistent`だったオブジェクトが、それが消去されたか、所有しているセッションが閉じられたためにそのセッションから削除されたオブジェクトは、分離状態に移行します。切り離された状態は、オブジェクトがセッション間で移動されるとき、または外部オブジェクトキャッシュとの間で移動されるときに一般に使用されます。"
 
 #: ../../glossary.rst:89
 msgid "discriminator"
-msgstr ""
+msgstr "弁別器"
 
 #: ../../glossary.rst:91
 msgid ""
@@ -492,15 +482,15 @@ msgid ""
 "determine what kind of mapped class should be applied to a particular "
 "incoming result row.   In SQLAlchemy, the classes are always part of a "
 "hierarchy mapping using inheritance mapping."
-msgstr ""
+msgstr "特定の着信結果行にどのような種類のマップクラスを適用するかを決定するための：term： `polymorphic`ローディング中に使用される結果セット列。 SQLAlchemyでは、クラスは常に継承マッピングを使用した階層マッピングの一部です。"
 
 #: ../../glossary.rst:98
 msgid ":ref:`inheritance_toplevel`"
-msgstr ""
+msgstr "：ref： `継承_レベル`"
 
 #: ../../glossary.rst:285
 msgid "domain model"
-msgstr ""
+msgstr "ドメインモデル"
 
 #: ../../glossary.rst:288
 msgid ""
@@ -508,15 +498,15 @@ msgid ""
 "conceptual model of all the topics related to a specific problem. It "
 "describes the various entities, their attributes, roles, and "
 "relationships, plus the constraints that govern the problem domain."
-msgstr ""
+msgstr "問題解決とソフトウェア工学におけるドメインモデルは、特定の問題に関連するすべてのトピックの概念モデルです。さまざまなエンティティ、その属性、役割、および関係、および問題のドメインを管理する制約について説明します。"
 
 #: ../../glossary.rst:294
 msgid "`Domain Model (wikipedia) <http://en.wikipedia.org/wiki/Domain_model>`_"
-msgstr ""
+msgstr "`ドメインモデル（wikipedia） <http://en.wikipedia.org/wiki/Domain_model> `_"
 
 #: ../../glossary.rst:547
 msgid "durability"
-msgstr ""
+msgstr "耐久性"
 
 #: ../../glossary.rst:549
 msgid ""
@@ -526,23 +516,23 @@ msgid ""
 "once a group of SQL statements execute, the results need to be stored "
 "permanently (even if the database crashes immediately thereafter). (via "
 "Wikipedia)"
-msgstr ""
+msgstr "耐久性は：term： `ACID`モデルの特性です。トランザクションがコミットされると、停電、クラッシュ、またはエラーが発生した場合でもその状態が維持されます。たとえば、リレーショナルデータベースでは、一度SQL文のグループが実行されると、結果は永続的に保存される必要があります（データベースがすぐにクラッシュした場合でも）。 （ウィキペディア経由で）"
 
 #: ../../glossary.rst:562
 msgid "http://en.wikipedia.org/wiki/Durability_(database_systems)"
-msgstr ""
+msgstr "http://en.wikipedia.org/wiki/Durability_(database_systems）"
 
 #: ../../glossary.rst:308
 msgid "expire"
-msgstr ""
+msgstr "失効する"
 
 #: ../../glossary.rst:309
 msgid "expires"
-msgstr ""
+msgstr "失効する"
 
 #: ../../glossary.rst:310
 msgid "expiring"
-msgstr ""
+msgstr "失効する"
 
 #: ../../glossary.rst:312
 msgid ""
@@ -551,15 +541,15 @@ msgid ""
 " attributes are next accessed, a :term:`lazy load` SQL query will be "
 "emitted in order to refresh the data for this object as stored in the "
 "current ongoing transaction."
-msgstr ""
+msgstr "SQLAlchemy ORMでは、：term： `persistent`または時には：term：` detached`オブジェクトのデータがいつ消去されるかを参照します。オブジェクトの属性が次にアクセスされるとき、a：term： `lazy load` SQLクエリ現在の進行中のトランザクションに格納されているこのオブジェクトのデータをリフレッシュするために発行されます。"
 
 #: ../../glossary.rst:320
 msgid ":ref:`session_expire`"
-msgstr ""
+msgstr "：ref： `session_expire`"
 
 #: ../../glossary.rst:966
 msgid "foreign key constraint"
-msgstr ""
+msgstr "外部キー制約"
 
 #: ../../glossary.rst:968
 msgid ""
@@ -567,54 +557,54 @@ msgid ""
 " set of fields in a relational table that matches a :term:`candidate key`"
 " of another table. The foreign key can be used to cross-reference tables."
 " (via Wikipedia)"
-msgstr ""
+msgstr "2つの表間の参照制約。外部キーは、別のテーブルのa：term： `候補キー（candidate key） &#39;と一致するリレーショナルテーブル内のフィールドまたはフィールドのセットです。外部キーは、テーブルの相互参照に使用できます。 （ウィキペディア経由で）"
 
 #: ../../glossary.rst:973
 msgid ""
 "A foreign key constraint can be added to a table in standard SQL using "
 ":term:`DDL` like the following:"
-msgstr ""
+msgstr "次のように、term： `DDL`を使用して、標準SQLのテーブルに外部キー制約を追加できます。"
 
 #: ../../glossary.rst:983
 msgid "http://en.wikipedia.org/wiki/Foreign_key_constraint"
-msgstr ""
+msgstr "http://en.wikipedia.org/wiki/Foreign_key_constraint"
 
 #: ../../glossary.rst:361
 msgid "FROM clause"
-msgstr ""
+msgstr "FROM句"
 
 #: ../../glossary.rst:363
 msgid ""
 "The portion of the ``SELECT`` statement which indicates the initial "
 "source of rows."
-msgstr ""
+msgstr "`` SELECT``文の最初の行のソースを示す部分です。"
 
 #: ../../glossary.rst:366
 msgid ""
 "A simple ``SELECT`` will feature one or more table names in its FROM "
 "clause.  Multiple sources are separated by a comma:"
-msgstr ""
+msgstr "単純な `` SELECT``はFROM句に1つ以上のテーブル名を持ちます。複数のソースはコンマで区切られます："
 
 #: ../../glossary.rst:375
 msgid ""
 "The FROM clause is also where explicit joins are specified.  We can "
 "rewrite the above ``SELECT`` using a single ``FROM`` element which "
 "consists of a ``JOIN`` of the two tables:"
-msgstr ""
+msgstr "FROM句は、明示的な結合が指定されている場所でもあります。上記の `` SELECT``は、2つのテーブルの `` JOIN``からなる単一の `` FROM``要素を使って書き換えることができます："
 
 #: ../../glossary.rst:194
 msgid "generative"
-msgstr ""
+msgstr "生成的"
 
 #: ../../glossary.rst:196
 msgid ""
 "A term that SQLAlchemy uses to refer what's normally known as "
 ":term:`method chaining`; see that term for details."
-msgstr ""
+msgstr "SQLAlchemyが、通常は「term： `method chaining`」と呼ばれるものを参照するために使用する用語。詳細については、その用語を参照してください。"
 
 #: ../../glossary.rst:112
 msgid "identity map"
-msgstr ""
+msgstr "アイデンティティマップ"
 
 #: ../../glossary.rst:114
 msgid ""
@@ -628,25 +618,25 @@ msgid ""
 "a reference to an object that's known to have a particular primary key "
 "can be considered from a practical standpoint to be a proxy to the actual"
 " database row."
-msgstr ""
+msgstr "PythonオブジェクトとそのデータベースID間のマッピング。アイデンティティマップは、ORM：term： `session`オブジェクトに関連付けられたコレクションであり、そのIDにキーインされたすべてのデータベースオブジェクトの単一インスタンスを保持します。このパターンの利点は、特定のデータベースIDに対して発生するすべての操作が、単一のオブジェクトインスタンスに透過的に調整されることです。 ：term： `isolated`トランザクションと一緒にアイデンティティマップを使用する場合、特定の主キーを持つことがわかっているオブジェクトへの参照は、実際のデータベース行へのプロキシであると考えることができます。"
 
 #: ../../glossary.rst:128
 msgid ""
 "Martin Fowler - Identity Map - "
 "http://martinfowler.com/eaaCatalog/identityMap.html"
-msgstr ""
+msgstr "Martin Fowler  - アイデンティティマップ -  http://martinfowler.com/eaaCatalog/identityMap.html"
 
 #: ../../glossary.rst:99
 msgid "instrumentation"
-msgstr ""
+msgstr "計装"
 
 #: ../../glossary.rst:100
 msgid "instrumented"
-msgstr ""
+msgstr "計装された"
 
 #: ../../glossary.rst:101
 msgid "instrumenting"
-msgstr ""
+msgstr "装備"
 
 #: ../../glossary.rst:103
 msgid ""
@@ -657,15 +647,15 @@ msgid ""
 ":term:`mapping` process, among other things, adds database-enabled "
 ":term:`descriptors` to a mapped class which each represent a particular "
 "database column or relationship to a related class."
-msgstr ""
+msgstr "計装とは、特定のクラスの機能と属性セットを増強するプロセスを指します。理想的には、クラスの動作は、追加の動作や機能が利用可能になることを除いて、通常のクラスに近いままにする必要があります。とりわけ、SQLAlchemy：term： `mapping`プロセスは、関連するクラスに対する特定のデータベース列または関係を表すマップされたクラスにdatabase-enabled：term：` descriptors &#39;を追加します。"
 
 #: ../../glossary.rst:530
 msgid "isolation"
-msgstr ""
+msgstr "隔離"
 
 #: ../../glossary.rst:531
 msgid "isolated"
-msgstr ""
+msgstr "分離された"
 
 #: ../../glossary.rst:533
 msgid ""
@@ -675,27 +665,27 @@ msgid ""
 "other. Each transaction must execute in total isolation i.e. if T1 and T2"
 " execute concurrently then each should remain independent of the other. "
 "(via Wikipedia)"
-msgstr ""
+msgstr "：term： `ACID`モデルのisolationプロパティは、トランザクションの並行実行により、トランザクションが連続して実行された場合、つまり順番に実行される場合に得られるシステム状態になります。各トランザクションは完全に分離して実行する必要があります。つまり、T1とT2が同時に実行される場合は、それぞれが別のトランザクションと独立していなければなりません。 （ウィキペディア経由で）"
 
 #: ../../glossary.rst:546
 msgid "http://en.wikipedia.org/wiki/Isolation_(database_systems)"
-msgstr ""
+msgstr "http://en.wikipedia.org/wiki/Isolation_(database_systems）"
 
 #: ../../glossary.rst:129
 msgid "lazy load"
-msgstr ""
+msgstr "遅延ロード"
 
 #: ../../glossary.rst:130
 msgid "lazy loads"
-msgstr ""
+msgstr "怠惰な負荷"
 
 #: ../../glossary.rst:131
 msgid "lazy loaded"
-msgstr ""
+msgstr "怠惰に読み込まれた"
 
 #: ../../glossary.rst:132
 msgid "lazy loading"
-msgstr ""
+msgstr "遅延読み込み"
 
 #: ../../glossary.rst:134
 msgid ""
@@ -706,25 +696,25 @@ msgid ""
 "load its data when it's first used.   Using this pattern, the complexity "
 "and time spent within object fetches can sometimes be reduced, in that "
 "attributes for related tables don't need to be addressed immediately."
-msgstr ""
+msgstr "オブジェクトリレーショナルマッピングでは、\ &quot;レイジーロード\&quot;とは、通常、オブジェクトが最初にロードされたときに、データベース側の値が含まれない属性を指します。代わりに、属性はデータベースに送られて最初に使用されたときにそのデータをロードする* memoization *を受け取ります。このパターンを使用すると、関連する表の属性をすぐに処理する必要がないため、オブジェクト・フェッチ内で費やされる複雑さと時間を時々削減できます。"
 
 #: ../../glossary.rst:147
 msgid ""
 "`Lazy Load (on Martin Fowler) "
 "<http://martinfowler.com/eaaCatalog/lazyLoad.html>`_"
-msgstr ""
+msgstr "`レイジーロード（Martin Fowler） <http://martinfowler.com/eaaCatalog/lazyLoad.html> `_"
 
 #: ../../glossary.rst:149
 msgid ":term:`N plus one problem`"
-msgstr ""
+msgstr "：用語：「Nプラス1つの問題」"
 
 #: ../../glossary.rst:151 ../../glossary.rst:180
 msgid ":doc:`orm/loading_relationships`"
-msgstr ""
+msgstr "：doc： `orm / loading_relationships`"
 
 #: ../../glossary.rst:741
 msgid "many to many"
-msgstr ""
+msgstr "数多く"
 
 #: ../../glossary.rst:743
 msgid ""
@@ -732,77 +722,77 @@ msgid ""
 "together via an intermediary table in the middle.   Using this "
 "configuration, any number of rows on the left side may refer to any "
 "number of rows on the right, and vice versa."
-msgstr ""
+msgstr "中間形式の中間テーブルを介して2つのテーブルをリンクする：func： `sqlalchemy.orm.relationship`のスタイルです。この構成を使用すると、左側の任意の数の行が右側の任意の数の行を参照することができ、その逆もあります。"
 
 #: ../../glossary.rst:748
 msgid "A schema where employees can be associated with projects:"
-msgstr ""
+msgstr "従業員をプロジェクトに関連付けることができるスキーマ："
 
 #: ../../glossary.rst:769
 msgid ""
 "Above, the ``employee_project`` table is the many-to-many table, which "
 "naturally forms a composite primary key consisting of the primary key "
 "from each related table."
-msgstr ""
+msgstr "上記の `` employee_project``テーブルは多対多のテーブルで、自然に関連する各テーブルの主キーからなる複合主キーを形成します。"
 
 #: ../../glossary.rst:773
 msgid ""
 "In SQLAlchemy, the :func:`sqlalchemy.orm.relationship` function can "
 "represent this style of relationship in a mostly transparent fashion, "
 "where the many-to-many table is specified using plain table metadata::"
-msgstr ""
+msgstr "SQLAlchemyでは、：func： `sqlalchemy.orm.relationship`関数は、多対多の表がプレーン・テーブル・メタデータを使用して指定されるほとんど透過的な方法で、このスタイルの関係を表すことができます::"
 
 #: ../../glossary.rst:801
 msgid ""
 "Above, the ``Employee.projects`` and back-referencing "
 "``Project.employees`` collections are defined::"
-msgstr ""
+msgstr "上記では、 `` Employee.projects``と `` Project.employees``のコレクションを逆参照しています："
 
 #: ../../glossary.rst:813
 msgid ":term:`association relationship`"
-msgstr ""
+msgstr "：用語： `関係関係`"
 
 #: ../../glossary.rst:652
 msgid "many to one"
-msgstr ""
+msgstr "多対1"
 
 #: ../../glossary.rst:654
 msgid ""
 "A style of :func:`~sqlalchemy.orm.relationship` which links a foreign key"
 " in the parent mapper's table to the primary key of a related table.   "
 "Each parent object can then refer to exactly zero or one related object."
-msgstr ""
+msgstr "親マッパーのテーブルの外部キーを関連するテーブルの主キーにリンクする：func： `〜sqlalchemy.orm.relationship`のスタイル。各親オブジェクトは、正確にゼロまたは1つの関連オブジェクトを参照することができます。"
 
 #: ../../glossary.rst:659
 msgid ""
 "The related objects in turn will have an implicit or explicit :term:`one "
 "to many` relationship to any number of parent objects that refer to them."
-msgstr ""
+msgstr "関連するオブジェクトは、それらを参照する任意の数の親オブジェクトに対して、暗黙的または明示的に：term： `one to many`関係を持ちます。"
 
 #: ../../glossary.rst:663
 msgid ""
 "An example many to one schema (which, note, is identical to the "
 ":term:`one to many` schema):"
-msgstr ""
+msgstr "1対多のスキーマの例（これは、：term： `one to many`スキーマと同じです）："
 
 #: ../../glossary.rst:680
 msgid ""
 "The relationship from ``employee`` to ``department`` is many to one, "
 "since many employee records can be associated with a single department.  "
 "A SQLAlchemy mapping might look like::"
-msgstr ""
+msgstr "1つの部門に多くの従業員レコードを関連付けることができるので、「従業員」から「部署」までの関係は多岐にわたります。 SQLAlchemyマッピングは次のようになります::"
 
 #: ../../glossary.rst:651 ../../glossary.rst:702
 msgid ":term:`backref`"
-msgstr ""
+msgstr "：term： `backref`"
 
 #: ../../glossary.rst:152
 msgid "mapping"
-msgstr ""
+msgstr "マッピング"
 
 #: ../../glossary.rst:153
 msgid "mapped"
-msgstr ""
+msgstr "マップされた"
 
 #: ../../glossary.rst:155
 msgid ""
@@ -811,11 +801,11 @@ msgid ""
 "database table or other :term:`selectable` construct, so that instances "
 "of it can be persisted using a :class:`.Session` as well as loaded using "
 "a :class:`.Query`."
-msgstr ""
+msgstr "：func： `.orm.mapper`関数を使って渡されたクラスは、\&quot;マップされています\ &quot;と言います。このプロセスは、クラスをデータベーステーブルまたは他の：term： `selectable`構造に関連付けます。そのため、インスタンスは：class：` .Session`を使用して永続化することができ、：class： `.Query`を使用してロードできます。"
 
 #: ../../glossary.rst:198
 msgid "method chaining"
-msgstr ""
+msgstr "メソッド連鎖"
 
 #: ../../glossary.rst:200
 msgid ""
@@ -823,7 +813,7 @@ msgid ""
 "constructed by calling methods on the object.   The object features any "
 "number of methods, each of which return a new object (or in some cases "
 "the same object) with additional state added to the object."
-msgstr ""
+msgstr "オブジェクト上のメソッドを呼び出すことによってオブジェクトの状態が構築されるオブジェクト指向技術。オブジェクトには任意の数のメソッドがあり、それぞれがオブジェクトに追加された状態で新しいオブジェクト（場合によっては同じオブジェクト）を返します。"
 
 #: ../../glossary.rst:206
 msgid ""
@@ -833,21 +823,21 @@ msgid ""
 ":class:`~.expression.Select` object can be assigned two expressions to "
 "its WHERE clause as well as an ORDER BY clause by calling upon the "
 ":meth:`~.Select.where` and :meth:`~.Select.order_by` methods::"
-msgstr ""
+msgstr "メソッド連鎖を最大限に活用する2つのSQLAlchemyオブジェクトは：class： `〜.expression.Select`オブジェクトと：class：`〜.orm.query.Query`オブジェクトです。たとえば：class： `〜.expression.Select`オブジェクトには、：meth：`〜.Select.where`と：meth： `を呼び出すことによって、WHERE句とORDER BY句に2つの式を割り当てることができます。 〜.Select.order_by`メソッド::"
 
 #: ../../glossary.rst:219
 msgid ""
 "Each method call above returns a copy of the original "
 ":class:`~.expression.Select` object with additional qualifiers added."
-msgstr ""
+msgstr "上記の各メソッド呼び出しは、元の：class： `〜.expression.Select`オブジェクトのコピーを返します。追加の修飾子が追加されています。"
 
 #: ../../glossary.rst:225
 msgid ":term:`generative`"
-msgstr ""
+msgstr "：用語：「生成的」"
 
 #: ../../glossary.rst:161
 msgid "N plus one problem"
-msgstr ""
+msgstr "Nプラス1つの問題"
 
 #: ../../glossary.rst:163
 msgid ""
@@ -861,15 +851,15 @@ msgid ""
 "for each member in order to load the related attribute or collection for "
 "that member.  The end result is that for a result set of N parent "
 "objects, there will be N + 1 SELECT statements emitted."
-msgstr ""
+msgstr "Nプラス1つの問題は、term： `lazy load`パターンの共通の副作用であり、アプリケーションは、その属性またはコレクションが設定されているオブジェクトの結果セットの各メンバー上の関連する属性またはコレクションを反復したい遅延ロードパターンを介してロードされます。結果として、親オブジェクトの初期結果セットをロードするSELECT文が発行されます。アプリケーションが各メンバーを反復すると、そのメンバーの関連属性またはコレクションをロードするために、各メンバーに対して追加のSELECTステートメントが発行されます。最終的には、N個の親オブジェクトの結果セットに対して、N + 1個のSELECTステートメントが発行されます。"
 
 #: ../../glossary.rst:176
 msgid "The N plus one problem is alleviated using :term:`eager loading`."
-msgstr ""
+msgstr "Nプラス1つの問題は、term： `eager loading`を使用して緩和されます。"
 
 #: ../../glossary.rst:602
 msgid "one to many"
-msgstr ""
+msgstr "1対多数"
 
 #: ../../glossary.rst:604
 msgid ""
@@ -877,30 +867,30 @@ msgid ""
 "key of the parent mapper's table to the foreign key of a related table."
 "   Each unique parent object can then refer to zero or more unique "
 "related objects."
-msgstr ""
+msgstr "親マッパーのテーブルの主キーを関連するテーブルの外部キーにリンクする：func： `〜sqlalchemy.orm.relationship`のスタイル。その後、各固有の親オブジェクトは、0以上の固有の関連オブジェクトを参照することができる。"
 
 #: ../../glossary.rst:609
 msgid ""
 "The related objects in turn will have an implicit or explicit :term:`many"
 " to one` relationship to their parent object."
-msgstr ""
+msgstr "関連するオブジェクトは、親オブジェクトに対して暗黙的または明示的：term： `many to one`の関係を持ちます。"
 
 #: ../../glossary.rst:613
 msgid ""
 "An example one to many schema (which, note, is identical to the "
 ":term:`many to one` schema):"
-msgstr ""
+msgstr "1対多のスキーマの例（これは、：term： `many to one`スキーマと同じです）："
 
 #: ../../glossary.rst:629
 msgid ""
 "The relationship from ``department`` to ``employee`` is one to many, "
 "since many employee records can be associated with a single department.  "
 "A SQLAlchemy mapping might look like::"
-msgstr ""
+msgstr "「部署」から「従業員」までの関係は、多くの従業員レコードが1つの部門に関連付けることができるため、1対多です。 SQLAlchemyマッピングは次のようになります::"
 
 #: ../../glossary.rst:1033
 msgid "pending"
-msgstr ""
+msgstr "保留中"
 
 #: ../../glossary.rst:1035
 msgid ""
@@ -909,11 +899,11 @@ msgid ""
 "have any database identity, but has been recently associated with a "
 "session.   When the session emits a flush and the row is inserted, the "
 "object moves to the :term:`persistent` state."
-msgstr ""
+msgstr "これは、オブジェクトがa：term： `session`内に持つことができる主要なオブジェクト状態の1つを記述します。保留中のオブジェクトは、データベースアイデンティティを持たないが、最近セッションに関連付けられた新しいオブジェクトです。セッションがフラッシュされ、行が挿入されると、オブジェクトは：term： `persistent`ステートに移動します。"
 
 #: ../../glossary.rst:1060
 msgid "persistent"
-msgstr ""
+msgstr "永続的な"
 
 #: ../../glossary.rst:1062
 msgid ""
@@ -924,15 +914,15 @@ msgid ""
 "been inserted is in the persistent state, as is any object that's been "
 "loaded by the session from the database.   When a persistent object is "
 "removed from a session, it is known as :term:`detached`."
-msgstr ""
+msgstr "これは、オブジェクトがa：term： `session`内に持つことができる主要なオブジェクト状態の1つを記述します。永続オブジェクトは、データベースID（すなわち主キー）を持ち、現在セッションに関連付けられているオブジェクトです。以前は：term： `pending`で挿入されたオブジェクトは、セッションからデータベースからロードされたオブジェクトと同様に永続状態になります。永続オブジェクトがセッションから削除されると、term： `detached`と呼ばれます。"
 
 #: ../../glossary.rst:181
 msgid "polymorphic"
-msgstr ""
+msgstr "多型"
 
 #: ../../glossary.rst:182
 msgid "polymorphically"
-msgstr ""
+msgstr "多形的に"
 
 #: ../../glossary.rst:184
 msgid ""
@@ -941,7 +931,7 @@ msgid ""
 " a query operation will return different subclasses based on information "
 "in the result set, typically by checking the value of a particular column"
 " in the result known as the :term:`discriminator`."
-msgstr ""
+msgstr "一度にいくつかの型を扱う関数を指す。 SQLAlchemyでは、ORMマッピングされたクラスのコンセプトにこの用語が通常適用され、結果セット内の情報に基づいて異なるサブクラスが返されます。通常は、結果として特定の列の値を確認します：term： 「弁別者」。"
 
 #: ../../glossary.rst:190
 msgid ""
@@ -949,15 +939,15 @@ msgid ""
 "three different schemes are used to map a hierarchy of classes; "
 "\"joined\", \"single\", and \"concrete\".   The section "
 ":ref:`inheritance_toplevel` describes inheritance mapping fully."
-msgstr ""
+msgstr "SQLAlchemyの多態的なロードは、3つの異なるスキームの1つまたは組み合わせを使用してクラスの階層をマップすることを意味します。 \ &quot;joined \&quot;、\ &quot;single \&quot;、\ &quot;concrete \&quot;のいずれかです。セクション：ref： `inheritance_toplevel`は継承マッピングを完全に記述します。"
 
 #: ../../glossary.rst:940
 msgid "primary key"
-msgstr ""
+msgstr "主キー"
 
 #: ../../glossary.rst:941
 msgid "primary key constraint"
-msgstr ""
+msgstr "主キー制約"
 
 #: ../../glossary.rst:944
 msgid ""
@@ -965,31 +955,31 @@ msgid ""
 ":term:`row`. The primary key has to consist of characteristics that "
 "cannot be duplicated by any other row. The primary key may consist of a "
 "single attribute or multiple attributes in combination. (via Wikipedia)"
-msgstr ""
+msgstr "A：term： `constraint`は、それぞれ：term：` row`の特性を一意的に定義します。主キーは、他の行で複製できない特性で構成する必要があります。主キーは、単一の属性または複数の属性を組み合わせて構成できます。 （ウィキペディア経由で）"
 
 #: ../../glossary.rst:951
 msgid ""
 "The primary key of a table is typically, though not always, defined "
 "within the ``CREATE TABLE`` :term:`DDL`:"
-msgstr ""
+msgstr "テーブルの主キーは、通常は「CREATE TABLE」内に定義されていますが、term： `DDL`："
 
 #: ../../glossary.rst:965
 msgid "http://en.wikipedia.org/wiki/Primary_Key"
-msgstr ""
+msgstr "http://en.wikipedia.org/wiki/Primary_Key"
 
 #: ../../glossary.rst:820
 msgid "relationship"
-msgstr ""
+msgstr "関係"
 
 #: ../../glossary.rst:821
 msgid "relationships"
-msgstr ""
+msgstr "関係"
 
 #: ../../glossary.rst:823
 msgid ""
 "A connecting unit between two mapped classes, corresponding to some "
 "relationship between the two tables in the database."
-msgstr ""
+msgstr "2つのマップされたクラス間の接続ユニット。データベース内の2つのテーブル間の関係に対応します。"
 
 #: ../../glossary.rst:826
 msgid ""
@@ -1002,23 +992,23 @@ msgid ""
 " database in response to in-memory object associations, as well as the "
 "job of loading object references and collections into memory based on the"
 " current linkages in the database."
-msgstr ""
+msgstr "この関係は、SQLAlchemy関数func： `〜sqlalchemy.orm.relationship`を使用して定義されます。 SQLAlchemyは、作成された引数と基本的なマッピングを調べて、その関係を：term： `one to many`、：term：` many to one`、または：term： `many to many`の3つの型の1つとして分類します。 。この分類では、関係構成は、メモリ内のオブジェクトの関連付けに応答してデータベース内の適切なリンケージを保持するタスクと、データベース内の現在のリンケージに基づいてオブジェクト参照およびコレクションをメモリにロードするジョブを処理します。"
 
 #: ../../glossary.rst:840
 msgid ":ref:`relationship_config_toplevel`"
-msgstr ""
+msgstr "：ref： `relationship_config_toplevel`"
 
 #: ../../glossary.rst:226
 msgid "release"
-msgstr ""
+msgstr "解放"
 
 #: ../../glossary.rst:227
 msgid "releases"
-msgstr ""
+msgstr "リリース"
 
 #: ../../glossary.rst:228
 msgid "released"
-msgstr ""
+msgstr "解放された"
 
 #: ../../glossary.rst:230
 msgid ""
@@ -1034,7 +1024,7 @@ msgid ""
 "the current state of the pool.  So we used the term *released* instead, "
 "to mean \"do whatever it is you do with connections when we're done using"
 " them\"."
-msgstr ""
+msgstr "SQLAlchemyの文脈では、\ &quot;リリース\&quot;という用語は、特定のデータベース接続の使用を終了するプロセスを指します。 SQLAlchemyは接続プールの使用を特徴としており、これによりデータベース接続の寿命についての設定が可能です。プールされた接続を使用する場合、\ &quot;closing \&quot;のプロセス、つまり `` connection.close（） ``のようなステートメントを呼び出すと、接続が既存のプールに返されるか、その接続によって参照される基礎となるTCP / IP接続を実際にシャットダウンする効果（設定は、プールの現在の状態と同様に）によって異なります。そこで、代わりに* released *という言葉を使用しました。\ &quot;それらを使って終了したら接続を使って何をしていても何でもします&quot;という意味です。"
 
 #: ../../glossary.rst:245
 msgid ""
@@ -1050,15 +1040,15 @@ msgid ""
 "method of the DBAPI is called as well, so that as the connection is set "
 "up to be used again, it's in a \"clean\" state with no references held to"
 " the previous series of operations."
-msgstr ""
+msgstr "この用語は、「解放トランザクション資源」という句で使用されることがあり、実際に「解放」しているのは、接続時に蓄積されたトランザクション状態です。ほとんどの状況で、テーブルから選択するプロセス、更新を発行するプロセスなどは、その接続と潜在的な行ロックまたはテーブルロックに対して：term： `isolated &#39;状態を取得します。この状態は、接続上の特定のトランザクションに対してすべてローカルであり、ロールバックを発行すると解放されます。接続プールの重要な機能は、プールへの接続を返すときに、DBAPIの `` connection.rollback（） ``メソッドも呼び出されるため、接続が再び使用されるように設定されるので、以前の一連の操作に参照が保持されていない状態で「クリーン」状態になっています。"
 
 #: ../../glossary.rst:263
 msgid ":ref:`pooling_toplevel`"
-msgstr ""
+msgstr "：ref： `pooling_toplevel`"
 
 #: ../../glossary.rst:563
 msgid "RETURNING"
-msgstr ""
+msgstr "戻り値"
 
 #: ../../glossary.rst:565
 msgid ""
@@ -1067,7 +1057,7 @@ msgid ""
 "execution of an INSERT, UPDATE or DELETE statement.  Any set of columns "
 "from the matched rows can be returned, as though they were produced from "
 "a SELECT statement."
-msgstr ""
+msgstr "これは、特定のバックエンドによってさまざまな形式で提供される非SQL標準句で、INSERT文、UPDATE文またはDELETE文の実行時に結果セットを返すサービスを提供します。一致した行の列の集合は、SELECT文から生成されたかのように戻すことができます。"
 
 #: ../../glossary.rst:571
 msgid ""
@@ -1076,11 +1066,11 @@ msgid ""
 "generated primary key values and defaults at the moment they were "
 "created, as well as a way to get at server-generated default values in an"
 " atomic way."
-msgstr ""
+msgstr "RETURNING節は、インラインまたはデフォルトで生成されたプライマリ・キー値の取得や作成時のデフォルト値の取得など、共通の更新/選択シナリオに対する劇的なパフォーマンスの向上と、サーバー生成のデフォルト値を取得する方法原子的な方法で"
 
 #: ../../glossary.rst:577
 msgid "An example of RETURNING, idiomatic to PostgreSQL, looks like::"
-msgstr ""
+msgstr "PostgreSQLに慣用されているRETURNINGの例は次のようになります::"
 
 #: ../../glossary.rst:581
 msgid ""
@@ -1090,7 +1080,7 @@ msgid ""
 "default values as they are not included otherwise (but note any series of"
 " columns or SQL expressions can be placed into RETURNING, not just "
 "default-value columns)."
-msgstr ""
+msgstr "上記のINSERT文は、実行時に、 `` user_account.id``と `` user_account.timestamp``の値を含む結果セットを提供します。これは、上記には含まれていないのでデフォルト値として生成されるべきです（ただし、一連の列またはSQL式は、デフォルト値の列だけでなく、RETURNINGに配置できます）。"
 
 #: ../../glossary.rst:587
 msgid ""
@@ -1104,7 +1094,7 @@ msgid ""
 "it is known as \"RETURNING...INTO\", and requires that the value be "
 "placed into an OUT parameter, meaning not only is the syntax awkward, but"
 " it can also only be used for one row at a time."
-msgstr ""
+msgstr "現在、RETURNINGなどの構文をサポートするバックエンドは、PostgreSQL、SQL Server、Oracle、およびFirebirdです。 PostgreSQLとFirebirdの実装は一般的にフル機能ですが、SQL ServerとOracleの実装には注意が必要です。 SQL Serverでは、この節はINSERTおよびUPDATE文では &quot;OUTPUT INSERTED&quot;、DELETE文では &quot;OUTPUT DELETED&quot;と呼ばれます。重要な注意点は、このキーワードと組み合わせてトリガーはサポートされないということです。 Oracleでは、 &quot;RETURNING ... INTO \&quot;と呼ばれており、値をOUTパラメータに入れる必要があります。これは、構文が厄介なだけでなく、一度に1つの行にしか使用できないことを意味します。"
 
 #: ../../glossary.rst:598
 msgid ""
@@ -1112,32 +1102,32 @@ msgid ""
 "abstraction on top of the RETURNING systems of these backends to provide "
 "a consistent interface for returning columns.  The ORM also includes many"
 " optimizations that make use of RETURNING when available."
-msgstr ""
+msgstr "SQLAlchemyの：meth： `.UpdateBase.returning`システムは、これらのバックエンドのRETURNINGシステムの上に抽象レイヤーを提供して、返すカラムに対して一貫したインターフェースを提供します。 ORMには、利用可能な場合にRETURNINGを使用する多くの最適化も含まれています。"
 
 #: ../../glossary.rst:321
 msgid "Session"
-msgstr ""
+msgstr "セッション"
 
 #: ../../glossary.rst:323
 msgid ""
 "The container or scope for ORM database operations. Sessions load "
 "instances from the database, track changes to mapped instances and "
 "persist changes in a single unit of work when flushed."
-msgstr ""
+msgstr "ORMデータベース操作のコンテナまたはスコープ。セッションは、データベースからインスタンスをロードし、マップされたインスタンスへの変更を追跡し、フラッシュされると単一の作業単位で変更を保持します。"
 
 #: ../../glossary.rst:307 ../../glossary.rst:330
 msgid ":doc:`orm/session`"
-msgstr ""
+msgstr "：doc： `orm / session`"
 
 #: ../../glossary.rst:384
 msgid "subquery"
-msgstr ""
+msgstr "サブクエリ"
 
 #: ../../glossary.rst:386
 msgid ""
 "Refers to a ``SELECT`` statement that is embedded within an enclosing "
 "``SELECT``."
-msgstr ""
+msgstr "囲む `` SELECT``の中に埋め込まれた `` SELECT``ステートメントを参照します。"
 
 #: ../../glossary.rst:389
 msgid ""
@@ -1149,11 +1139,11 @@ msgid ""
 "BY clause or HAVING clause of the enclosing select, whereas the derived "
 "table form is eligible to be placed in the FROM clause of the enclosing "
 "``SELECT``."
-msgstr ""
+msgstr "サブクエリには2つの一般的なフレーバがあります。スカラー選択とは、特に1つの行と1つの列を正確に返さなければならないものと、\ &quot;派生テーブル\&quot;として機能し、スカラー選択は、囲み選択の：term： `WHERE句`、：term： `columns節`、ORDER BY句、またはHAVING節に配置することができますが、派生テーブル形式は同封の `` SELECT``のFROM句に入れることができます。"
 
 #: ../../glossary.rst:398
 msgid "Examples:"
-msgstr ""
+msgstr "例："
 
 #: ../../glossary.rst:400
 msgid ""
@@ -1161,25 +1151,25 @@ msgid ""
 "``SELECT``.  The subquery in this example is a :term:`correlated "
 "subquery` because part of the rows which it selects from are given via "
 "the enclosing statement."
-msgstr ""
+msgstr "囲む &quot;SELECT&quot;の：term： `columns節に置かれたスカラー副問い合わせ。この例のサブクエリは、：term： `correlated subquery`です。なぜなら、それが選択する行の一部が囲む文を介して与えられるからです。"
 
 #: ../../glossary.rst:409
 msgid ""
 "a scalar subquery placed in the :term:`WHERE clause` of an enclosing "
 "``SELECT``.  This subquery in this example is not correlated as it "
 "selects a fixed result."
-msgstr ""
+msgstr "囲む &quot;SELECT&quot;の：term： `WHERE句`に置かれたスカラー副問い合わせ。この例のこのサブクエリは、固定結果を選択するときには関連付けられていません。"
 
 #: ../../glossary.rst:417
 msgid ""
 "a derived table subquery placed in the :term:`FROM clause` of an "
 "enclosing ``SELECT``.   Such a subquery is almost always given an alias "
 "name."
-msgstr ""
+msgstr "包含する `` SELECT``の：term： `FROM clause`に配置された派生テーブル副問い合わせです。このようなサブクエリには、ほとんどの場合、エイリアス名が付けられます。"
 
 #: ../../glossary.rst:1021
 msgid "transient"
-msgstr ""
+msgstr "一時的な"
 
 #: ../../glossary.rst:1023
 msgid ""
@@ -1188,15 +1178,15 @@ msgid ""
 " have any database identity and has not been associated with a session "
 "yet.  When the object is added to the session, it moves to the "
 ":term:`pending` state."
-msgstr ""
+msgstr "これは、オブジェクトがa：term： `session`内に持つことができる主要なオブジェクト状態の1つを記述します。一時オブジェクトはデータベースアイデンティティを持たず、まだセッションに関連付けられていない新しいオブジェクトです。オブジェクトがセッションに追加されると、それは：term： `pending`の状態に移ります。"
 
 #: ../../glossary.rst:1004
 msgid "unique constraint"
-msgstr ""
+msgstr "ユニーク制約"
 
 #: ../../glossary.rst:1005
 msgid "unique key index"
-msgstr ""
+msgstr "一意のキーインデックス"
 
 #: ../../glossary.rst:1007
 msgid ""
@@ -1207,15 +1197,15 @@ msgid ""
 "values) in those unique key index columns if NULL values are not used. "
 "Depending on its design, a database table may have many unique key "
 "indexes but at most one primary key index."
-msgstr ""
+msgstr "一意のキー索引は、データベース表のデータ値の各行を一意に識別できます。一意のキー索引は、単一のデータベース表内の単一の列または一連の列で構成されます。 NULL値が使用されない場合、データベース表の2つの異なる行またはデータ・レコードは、これらの一意のキー索引列に同じデータ値（またはデータ値の組み合わせ）を持つことはできません。その設計に応じて、データベーステーブルは多数のユニークキーインデックスを持つことができますが、多くても1つのプライマリキーインデックスを持ちます。"
 
 #: ../../glossary.rst:1020
 msgid "http://en.wikipedia.org/wiki/Unique_key#Defining_unique_keys"
-msgstr ""
+msgstr "http://en.wikipedia.org/wiki/Unique_key#Defining_unique_keys"
 
 #: ../../glossary.rst:295
 msgid "unit of work"
-msgstr ""
+msgstr "作業単位"
 
 #: ../../glossary.rst:297
 msgid ""
@@ -1223,28 +1213,28 @@ msgid ""
 "objects and periodically flushes all those pending changes out to the "
 "database. SQLAlchemy's Session implements this pattern fully in a manner "
 "similar to that of Hibernate."
-msgstr ""
+msgstr "このパターンは、システムがオブジェクトの変更を透過的に追跡し、保留中のすべての変更を定期的にデータベースにフラッシュします。 SQLAlchemyのSessionは、Hibernateのような方法でこのパターンを完全に実装しています。"
 
 #: ../../glossary.rst:305
 msgid ""
 "`Unit of Work by Martin Fowler "
 "<http://martinfowler.com/eaaCatalog/unitOfWork.html>`_"
-msgstr ""
+msgstr "マーティン・ファウラーによる「作業単位」 <http://martinfowler.com/eaaCatalog/unitOfWork.html> `_"
 
 #: ../../glossary.rst:347
 msgid "WHERE clause"
-msgstr ""
+msgstr "WHERE句"
 
 #: ../../glossary.rst:349
 msgid ""
 "The portion of the ``SELECT`` statement which indicates criteria by which"
 " rows should be filtered.   It is a single SQL expression which follows "
 "the keyword ``WHERE``."
-msgstr ""
+msgstr "行をフィルタリングする基準を示す `` SELECT``文の部分。これは、キーワード &quot;WHERE&quot;に続く単一のSQL式です。"
 
 #: ../../glossary.rst:359
 msgid ""
 "Above, the phrase ``WHERE user_account.name = 'fred' AND "
 "user_account.status = 'E'`` comprises the WHERE clause of the ``SELECT``."
-msgstr ""
+msgstr "上記の文節 `` WHERE user_account.name = &#39;fred&#39; AND user_account.status = &#39;E&#39;``は、 `` SELECT``のWHERE句で構成されています。"
 

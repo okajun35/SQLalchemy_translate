@@ -6,24 +6,14 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/mapped_attributes.rst:4
 msgid "Changing Attribute Behavior"
-msgstr ""
+msgstr "属性の動作の変更"
 
 #: ../../orm/mapped_attributes.rst:9
 msgid "Simple Validators"
-msgstr ""
+msgstr "シンプルなバリデーター"
 
 #: ../../orm/mapped_attributes.rst:11
 msgid ""
@@ -34,7 +24,7 @@ msgid ""
 "Validators, like all attribute extensions, are only called by normal "
 "userland code; they are not issued when the ORM is populating the "
 "object::"
-msgstr ""
+msgstr "属性に &quot;検証&quot;ルーチンを追加する素早い方法は、：func： `〜sqlalchemy.orm.validates`デコレータを使うことです。属性バリデーターは例外を発生させたり、属性の値を変更するプロセスを停止したり、与えられた値を別のものに変更することができます。バリデータは、すべての属性拡張と同様、通常のユーザランドコードによってのみ呼び出されます。 ORMがオブジェクトを設定しているときには発行されません::"
 
 #: ../../orm/mapped_attributes.rst:31
 msgid ""
@@ -42,13 +32,13 @@ msgid ""
 "newly fetched values for primary key columns as well as some python- or "
 "server-side defaults are fetched. Prior to 1.0, validators may be "
 "triggered in those cases as well."
-msgstr ""
+msgstr "- プライオリティキー列の新しく取得された値だけでなく、いくつかのPythonまたはサーバー側のデフォルト値がフェッチされたときに、フラッシュプロセス内でバリデータがトリガされなくなりました。 1.0より前では、バリデータがトリガされることもあります。"
 
 #: ../../orm/mapped_attributes.rst:37
 msgid ""
 "Validators also receive collection append events, when items are added to"
 " a collection::"
-msgstr ""
+msgstr "バリデータは、アイテムがコレクションに追加されたときに、コレクションの追加イベントも受け取る::"
 
 #: ../../orm/mapped_attributes.rst:53
 msgid ""
@@ -59,7 +49,7 @@ msgid ""
 "decorator.  When this flag is set, the validation function must receive "
 "an additional boolean argument which if ``True`` indicates that the "
 "operation is a removal::"
-msgstr ""
+msgstr "典型的な期待は破棄される値が検証を必要としないことであるため、デフォルトでは検証機能はコレクションの削除イベントに対して生成されません。しかし、：func： `.validates`はデコレータに` `include_removes = True``を指定することでこれらのイベントの受信をサポートします。このフラグが設定されている場合、バリデーション関数は追加のブール値引数を受け取る必要があります。もし `` True``が操作が削除であることを示すならば::"
 
 #: ../../orm/mapped_attributes.rst:76
 msgid ""
@@ -67,7 +57,7 @@ msgid ""
 " also be tailored, using the ``include_backrefs=False`` option; this "
 "option, when set to ``False``, prevents a validation function from "
 "emitting if the event occurs as a result of a backref::"
-msgstr ""
+msgstr "`` include_backrefs = False``オプションを使用して、相互に依存するバリデータがバックリファレンスを介してリンクされている場合も調整できます。このオプションを `` False``に設定すると、バックリファレンスの結果としてイベントが発生した場合、バリデーション関数が発光しないようにします::"
 
 #: ../../orm/mapped_attributes.rst:93
 msgid ""
@@ -75,7 +65,7 @@ msgid ""
 " = some_user``, the ``validate_address()`` function would *not* be "
 "emitted, even though an append occurs to ``some_user.addresses`` - the "
 "event is caused by a backref."
-msgstr ""
+msgstr "上記のように、 `` some_address.user = some_user``のように `` Address.user``に代入すると、 `` validate_address（） ``関数は ` `some_user.addresses``  - イベントはバックリファレンスによって引き起こされます。"
 
 #: ../../orm/mapped_attributes.rst:97
 msgid ""
@@ -83,11 +73,11 @@ msgid ""
 "built on top of attribute events.   An application that requires more "
 "control over configuration of attribute change behavior can make use of "
 "this system, described at :class:`~.AttributeEvents`."
-msgstr ""
+msgstr "：func： `〜.validates`デコレータは、属性イベントの上に構築された便利な関数です。属性変更の振る舞いの設定をより詳細に制御する必要のあるアプリケーションは、このシステムを利用することができます（class： `〜.AttributeEvents`）。"
 
 #: of sqlalchemy.orm.validates:1
 msgid "Decorate a method as a 'validator' for one or more named properties."
-msgstr ""
+msgstr "1つまたは複数の名前付きプロパティのメソッドを「バリデータ」として飾ります。"
 
 #: of sqlalchemy.orm.validates:3
 msgid ""
@@ -98,7 +88,7 @@ msgid ""
 "(where Python's built-in ``ValueError`` and ``AssertionError`` exceptions"
 " are reasonable choices), or can modify or replace the value before "
 "proceeding. The function should otherwise return the given value."
-msgstr ""
+msgstr "メソッドをバリデータとして指定します。属性の名前と割り当てられる値、またはコレクションの場合はコレクションに追加される値を受け取るメソッドを指定します。この関数は、プロセスの継続を中止するための検証例外を発生させることができます（Pythonに組み込まれた `` ValueError``と `` AssertionError``例外は妥当な選択肢です）。あるいは、処理を進める前に値を変更または置き換えることができます。それ以外の場合、関数は指定された値を返します。"
 
 #: of sqlalchemy.orm.validates:12
 msgid ""
@@ -106,29 +96,29 @@ msgid ""
 "collection within the validation routine - this usage raises an assertion"
 " to avoid recursion overflows.  This is a reentrant condition which is "
 "not supported."
-msgstr ""
+msgstr "コレクション**のバリデーターは、検証ルーチン内でそのコレクションのロードを**発行できないことに注意してください。この使用法は、再帰オーバーフローを避けるためのアサーションを生成します。これはサポートされていないリエントラントな状態です。"
 
 #: of sqlalchemy.orm.synonym sqlalchemy.orm.validates
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.orm.validates:17
 msgid "list of attribute names to be validated."
-msgstr ""
+msgstr "検証される属性名のリスト。"
 
 #: of sqlalchemy.orm.validates:18
 msgid ""
 "if True, \"remove\" events will be sent as well - the validation function"
 " must accept an additional argument \"is_remove\" which will be a "
 "boolean.  .. versionadded:: 0.7.7"
-msgstr ""
+msgstr "Trueの場合、\ &quot;remove \&quot;イベントも送信されます。検証関数はブール値になる追加の\ &quot;is_remove \&quot;引数を受け入れる必要があります。 .. versionadded :: 0.7.7"
 
 #: of sqlalchemy.orm.validates:18
 msgid ""
 "if True, \"remove\" events will be sent as well - the validation function"
 " must accept an additional argument \"is_remove\" which will be a "
 "boolean."
-msgstr ""
+msgstr "Trueの場合、\ &quot;remove \&quot;イベントも送信されます。検証関数はブール値になる追加の\ &quot;is_remove \&quot;引数を受け入れる必要があります。"
 
 #: of sqlalchemy.orm.validates:23
 msgid ""
@@ -136,7 +126,7 @@ msgid ""
 " if the originator is an attribute event related via a backref.  This can"
 " be used for bi-directional :func:`.validates` usage where only one "
 "validator should emit per attribute operation.  .. versionadded:: 0.9.0"
-msgstr ""
+msgstr "デフォルトは `` True``です。 `` False``の場合、発信元がバックリファレンスを介して関連する属性イベントである場合、検証関数は発行されません。これは、双方向：func： `.validates`の使用に使用できます。ここでは、属性操作ごとに1つのバリデーターだけを出力します。 .. versionadded :: 0.9.0"
 
 #: of sqlalchemy.orm.validates:23
 msgid ""
@@ -144,15 +134,15 @@ msgid ""
 " if the originator is an attribute event related via a backref.  This can"
 " be used for bi-directional :func:`.validates` usage where only one "
 "validator should emit per attribute operation."
-msgstr ""
+msgstr "デフォルトは `` True``です。 `` False``の場合、発信元がバックリファレンスを介して関連する属性イベントである場合、検証関数は発行されません。これは、双方向：func： `.validates`の使用に使用できます。ここでは、属性操作ごとに1つのバリデーターだけを出力します。"
 
 #: of sqlalchemy.orm.validates:33
 msgid ":ref:`simple_validators` - usage examples for :func:`.validates`"
-msgstr ""
+msgstr "：ref： `simple_validators`  - の使用例：func：` .validates`"
 
 #: ../../orm/mapped_attributes.rst:107
 msgid "Using Descriptors and Hybrids"
-msgstr ""
+msgstr "記述子とハイブリッドの使用"
 
 #: ../../orm/mapped_attributes.rst:109
 msgid ""
@@ -162,7 +152,7 @@ msgid ""
 "descriptors is to create a plain descriptor, and to have it read/write "
 "from a mapped attribute with a different name. Below we illustrate this "
 "using Python 2.6-style properties::"
-msgstr ""
+msgstr "属性の変更された動作を生成するためのより包括的な方法は：term： `descriptors`を使用することです。これらはPythonで一般的に `` property（） ``関数を使って使用されます。記述子のための標準的なSQLAlchemy技法は、素朴な記述子を作成し、それを別の名前を持つマップされた属性から読み書きすることです。以下では、Python 2.6スタイルのプロパティを使用してこれを説明します::"
 
 #: ../../orm/mapped_attributes.rst:134
 msgid ""
@@ -172,7 +162,7 @@ msgid ""
 "``EmailAddress.email`` attribute does not have the usual expression "
 "semantics usable with :class:`.Query`. To provide these, we instead use "
 "the :mod:`~sqlalchemy.ext.hybrid` extension as follows::"
-msgstr ""
+msgstr "上記のアプローチはうまくいくが、追加できるものはもっとある。私たちの `` EmailAddress``オブジェクトは、 `` email``記述子と `` _email``でマップされた属性を使って値をシャトルしますが、クラスレベルの `` EmailAddress.email``属性には通常の式セマンティクスは使用できませんwith：class： `.Query`。これらを提供するために、代わりに：mod： `〜sqlalchemy.ext.hybrid`拡張を次のように使用します::"
 
 #: ../../orm/mapped_attributes.rst:158
 msgid ""
@@ -180,7 +170,7 @@ msgid ""
 " when we have an instance of ``EmailAddress``, also provides a SQL "
 "expression when used at the class level, that is, from the "
 "``EmailAddress`` class directly:"
-msgstr ""
+msgstr "`` .email``属性は、 `` EmailAddress``のインスタンスを持っているときにgetter / setterの動作を提供するだけでなく、クラスレベルで使用されるとき、つまり `` EmailAddress``からSQL式を提供します。 `クラス直接："
 
 #: ../../orm/mapped_attributes.rst:183
 msgid ""
@@ -190,7 +180,7 @@ msgid ""
 "using the :meth:`.hybrid_property.expression` modifier. Such as, if we "
 "wanted to add a host name automatically, we might define two sets of "
 "string manipulation logic::"
-msgstr ""
+msgstr "：class： `〜.hybrid_property`は、：meth：` .hybrid_propertyを使用して、クラス/式レベルに対してインスタンスレベルで属性がアクセスされたときに別個の動作を定義することを含め、属性の振る舞いを変更することもできます。式の修飾子です。たとえば、ホスト名を自動的に追加する場合は、2組の文字列操作ロジックを定義することができます。"
 
 #: ../../orm/mapped_attributes.rst:218
 msgid ""
@@ -199,58 +189,58 @@ msgid ""
 "removing or adding the hostname ``@example.com`` from the value. When we "
 "query against the ``email`` attribute, a SQL function is rendered which "
 "produces the same effect:"
-msgstr ""
+msgstr "上で、 `` EmailAddress``のインスタンスの `` email``プロパティにアクセスすると、 `` _email``属性の値が返され、ホスト名 &quot;@ example.com&quot;が値から削除または追加されます。 `` email``属性に対してクエリを実行すると、SQL関数がレンダリングされ、同じ効果が得られます。"
 
 #: ../../orm/mapped_attributes.rst:232
 msgid "Read more about Hybrids at :ref:`hybrids_toplevel`."
-msgstr ""
+msgstr "Hybridsについての詳細は、ref： `hybrids_toplevel`を参照してください。"
 
 #: ../../orm/mapped_attributes.rst:237
 msgid "Synonyms"
-msgstr ""
+msgstr "類義語"
 
 #: ../../orm/mapped_attributes.rst:239
 msgid ""
 "Synonyms are a mapper-level construct that allow any attribute on a class"
 " to \"mirror\" another attribute that is mapped."
-msgstr ""
+msgstr "シノニムは、マッピングされた別の属性をクラスのすべての属性が\ &quot;ミラーリング\&quot;できるようにするマッパーレベルの構造です。"
 
 #: ../../orm/mapped_attributes.rst:242
 msgid ""
 "In the most basic sense, the synonym is an easy way to make a certain "
 "attribute available by an additional name::"
-msgstr ""
+msgstr "最も基本的な意味では、シノニムは特定の属性を追加の名前で利用できるようにする簡単な方法です::"
 
 #: ../../orm/mapped_attributes.rst:253
 msgid ""
 "The above class ``MyClass`` has two attributes, ``.job_status`` and "
 "``.status`` that will behave as one attribute, both at the expression "
 "level::"
-msgstr ""
+msgstr "上記のクラス `` MyClass``は二つの属性、 `` .job_status``と `` .status``を持っています。一つの属性として動作します。"
 
 #: ../../orm/mapped_attributes.rst:263
 msgid "and at the instance level::"
-msgstr ""
+msgstr "インスタンスレベルで::"
 
 #: ../../orm/mapped_attributes.rst:273
 msgid ""
 "The :func:`.synonym` can be used for any kind of mapped attribute that "
 "subclasses :class:`.MapperProperty`, including mapped columns and "
 "relationships, as well as synonyms themselves."
-msgstr ""
+msgstr "：func： `.synonym`は、クラス：` .MapperProperty`をサブクラス化した任意の種類のマップされた属性に使用できます。マッピングされた列とリレーションシップ、シノニム自体が含まれます。"
 
 #: ../../orm/mapped_attributes.rst:277
 msgid ""
 "Beyond a simple mirror, :func:`.synonym` can also be made to reference a "
 "user-defined :term:`descriptor`.  We can supply our ``status`` synonym "
 "with a ``@property``::"
-msgstr ""
+msgstr "単純なミラー以外にも、：func： `.synonym`はユーザ定義：term：`ディスクリプタ &#39;を参照することもできます。 `` status``シノニムに `` @ property`` ::を付けることができます"
 
 #: ../../orm/mapped_attributes.rst:293
 msgid ""
 "When using Declarative, the above pattern can be expressed more "
 "succinctly using the :func:`.synonym_for` decorator::"
-msgstr ""
+msgstr "Declarativeを使用する場合、上記のパターンは：func： `.synonym_for`デコレータを使用してより簡潔に表現できます::"
 
 #: ../../orm/mapped_attributes.rst:309
 msgid ""
@@ -261,32 +251,32 @@ msgid ""
 ":func:`.synonym` can do everything that a :class:`.hybrid_property` can "
 "do, as it also supports injection of custom SQL capabilities, but the "
 "hybrid is more straightforward to use in more complex situations."
-msgstr ""
+msgstr "：func： `.synonym`は単純なミラーリングには便利ですが、記述子での属性動作の拡張のユースケースは、：ref：` hybrid属性<mapper_hybrids> `フィーチャーは、Python記述子の方がより重視されます。技術的には、：func： `.synonym`はclass：` .hybrid_property`ができること全てを行うことができます。カスタムSQL機能の注入もサポートしていますが、より複雑な状況ではハイブリッドを使う方が簡単です。"
 
 #: of sqlalchemy.orm.synonym:1
 msgid ""
 "Denote an attribute name as a synonym to a mapped property, in that the "
 "attribute will mirror the value and expression behavior of another "
 "attribute."
-msgstr ""
+msgstr "属性名は、マップされたプロパティの同義語として指定します。その属性は、別の属性の値と式の動作を反映します。"
 
 #: of sqlalchemy.orm.synonym:5
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.orm.synonym:16
 msgid ""
 "the name of the existing mapped property.  This can refer to the string "
 "name ORM-mapped attribute configured on the class, including column-bound"
 " attributes and relationships."
-msgstr ""
+msgstr "既存のマップされたプロパティの名前これは、列にバインドされた属性や関係など、クラスに構成された文字列名ORMマップ属性を参照できます。"
 
 #: of sqlalchemy.orm.synonym:21
 msgid ""
 "a Python :term:`descriptor` that will be used as a getter (and "
 "potentially a setter) when this attribute is accessed at the instance "
 "level."
-msgstr ""
+msgstr "この属性がインスタンスレベルでアクセスされたときにゲッター（および設定者）として使用されるPython：term： `descriptor &#39;。"
 
 #: of sqlalchemy.orm.synonym:25
 #, python-format
@@ -317,7 +307,7 @@ msgid ""
 "However, note that the :ref:`hybrid properties <mapper_hybrids>` feature "
 "should usually be preferred, particularly when redefining attribute "
 "behavior."
-msgstr ""
+msgstr "**古典的なマッピングと既存のTableオブジェクトに対するマッピングのみ**。 `` True``の場合、：func： `.synonym`構文は：：class：` .Column`オブジェクトを、このシノニムの属性名に通常関連付けられるマップされたテーブル上に配置し、新しい：classを生成します： `.ColumnProperty`は、代わりにthis：class：` .Column`を同義語の\ &quot;name \&quot;引数として与えられた別名にマップします。このようにして：class： `.Column`のマッピングを別の名前の下に再定義する通常の手順は不要です。これは通常：class： `.Column`が記述子を使う属性、すなわち：paramref：` .synonym.descriptor`パラメータと置き換えられるときに使われることを意図しています:: my_table =クラスMyClass（オブジェクト）：@property def _job_status_descriptor（self）：return（返り値） \ &quot;Status：％s \&quot;％self._job_status mapper（MyClass、my_table、properties = {\ &quot;job_status \&quot;：同義語（\ &quot;_ job_status \&quot;、map_column = True、ディスクリプタ= MyClass._job_status_descriptor）}） `` _job_status``という名前の属性は自動的に `` job_status``の列にマップされます:: &gt;&gt;&gt; j1 = MyClass（）&gt;&gt;&gt; j1._job_status = \ &quot;employ \&quot; &gt;&gt;&gt; j1.job_statusステータス：採用時期Declarativeを使用して、シノニムと一緒に記述子を提供するには、：func： `sqlalchemy.ext.declarative.synonym_for`ヘルパーを使用します。しかし、：ref： `ハイブリッドプロパティ<mapper_hybrids>属性の挙動を再定義する際には、通常、機能が優先されるべきです。"
 
 #: of sqlalchemy.orm.synonym:25
 msgid ""
@@ -332,13 +322,13 @@ msgid ""
 "used when a :class:`.Column` is to be replaced with an attribute that "
 "also uses a descriptor, that is, in conjunction with the "
 ":paramref:`.synonym.descriptor` parameter::"
-msgstr ""
+msgstr "**古典的なマッピングと既存のTableオブジェクトに対するマッピングのみ**。 `` True``の場合、：func： `.synonym`構文は：：class：` .Column`オブジェクトを、このシノニムの属性名に通常関連付けられるマップされたテーブル上に配置し、新しい：classを生成します： `.ColumnProperty`は、代わりにthis：class：` .Column`を同義語の\ &quot;name \&quot;引数として与えられた別名にマップします。このようにして：class： `.Column`のマッピングを別の名前の下に再定義する通常の手順は不要です。これは通常、：class： `.Column`が記述子を使用する属性、すなわち：paramref：` .synonym.descriptor`パラメータと一緒に使用されるときに使用されることを意図しています::"
 
 #: of sqlalchemy.orm.synonym:58
 msgid ""
 "Above, the attribute named ``_job_status`` is automatically mapped to the"
 " ``job_status`` column::"
-msgstr ""
+msgstr "上記の `` _job_status``という名前の属性は `` job_status``の列に自動的にマップされます::"
 
 #: of sqlalchemy.orm.synonym:66
 msgid ""
@@ -347,20 +337,20 @@ msgid ""
 "helper.  However, note that the :ref:`hybrid properties <mapper_hybrids>`"
 " feature should usually be preferred, particularly when redefining "
 "attribute behavior."
-msgstr ""
+msgstr "Declarativeを使用する場合、シノニムと一緒に記述子を提供するには、：func： `sqlalchemy.ext.declarative.synonym_for`ヘルパーを使用します。しかし、：ref： `ハイブリッドプロパティ<mapper_hybrids>属性の挙動を再定義する際には、通常、機能が優先されるべきです。"
 
 #: of sqlalchemy.orm.synonym:73
 msgid ""
 "Optional data dictionary which will be populated into the "
 ":attr:`.InspectionAttr.info` attribute of this object.  .. versionadded::"
 " 1.0.0"
-msgstr ""
+msgstr "このオブジェクトの：attr： `.InspectionAttr.info`属性に読み込まれるオプションのデータ辞書です。 .. versionadded :: 1.0.0"
 
 #: of sqlalchemy.orm.synonym:73
 msgid ""
 "Optional data dictionary which will be populated into the "
 ":attr:`.InspectionAttr.info` attribute of this object."
-msgstr ""
+msgstr "このオブジェクトの：attr： `.InspectionAttr.info`属性に読み込まれるオプションのデータ辞書です。"
 
 #: of sqlalchemy.orm.synonym:78
 msgid ""
@@ -370,13 +360,13 @@ msgid ""
 "and SQL-expression level behavior of an attribute,   please refer to the "
 "Hybrid attribute introduced at   :ref:`mapper_hybrids` for a more "
 "effective technique."
-msgstr ""
+msgstr "：class： `.PropComparator`のサブクラスで、SQL式レベルでのカスタム比較動作を提供します。 .. note ::属性のPythonレベルとSQL式レベルの振る舞いを再定義する属性を提供するユースケースについては、より効果的なテクニックについては：ref： `mapper_hybrids`で紹介されたHybrid属性を参照してください。"
 
 #: of sqlalchemy.orm.synonym:78
 msgid ""
 "A subclass of :class:`.PropComparator` that will provide custom "
 "comparison behavior at the SQL expression level."
-msgstr ""
+msgstr "：class： `.PropComparator`のサブクラスで、SQL式レベルでのカスタム比較動作を提供します。"
 
 #: of sqlalchemy.orm.synonym:84
 msgid ""
@@ -384,26 +374,26 @@ msgid ""
 "level and SQL-expression level behavior of an attribute, please refer to "
 "the Hybrid attribute introduced at :ref:`mapper_hybrids` for a more "
 "effective technique."
-msgstr ""
+msgstr "属性のPythonレベルとSQL式の両方のレベル動作を再定義する属性を提供するためのユースケースについては、より効果的なテクニックについては：ref： `mapper_hybrids`で紹介されたHybrid属性を参照してください。"
 
 #: of sqlalchemy.orm.synonym:91
 msgid ":ref:`synonyms` - Overview of synonyms"
-msgstr ""
+msgstr "：ref： `類義語`  - 類義語の概要"
 
 #: of sqlalchemy.orm.synonym:93
 msgid ":func:`.synonym_for` - a helper oriented towards Declarative"
-msgstr ""
+msgstr "：func： `.synonym_for`  -  Declarativeに向けたヘルパー"
 
 #: of sqlalchemy.orm.synonym:95
 msgid ""
 ":ref:`mapper_hybrids` - The Hybrid Attribute extension provides an "
 "updated approach to augmenting attribute behavior more flexibly than can "
 "be achieved with synonyms."
-msgstr ""
+msgstr "：ref： `mapper_hybrids`  - ハイブリッド属性拡張は、同義語で達成できるよりも柔軟に属性の振る舞いを拡張するための更新されたアプローチを提供します。"
 
 #: ../../orm/mapped_attributes.rst:322
 msgid "Operator Customization"
-msgstr ""
+msgstr "オペレータのカスタマイズ"
 
 #: ../../orm/mapped_attributes.rst:324
 msgid ""
@@ -415,7 +405,7 @@ msgid ""
 "associated with column expressions as well.   The operators which take "
 "place for column expressions are most directly redefined at the type "
 "level -  see the section :ref:`types_operators` for a description."
-msgstr ""
+msgstr "SQLAlchemy ORMおよびCore式言語で使用される\ &quot;演算子&quot;は完全にカスタマイズ可能です。例えば、比較式 `` User.name == &#39;ed&#39;``は、 `` operator.eq``と呼ばれるPython自体に組み込まれた演算子を使用します -  SQLAlchemyがそのような演算子に関連する実際のSQL構造体は変更可能です。新しい演算を列式に関連付けることもできます。列式のために行われる演算子は、型レベルで最も直接的に再定義されます。詳細は、ref： `types_operators`の節を参照してください。"
 
 #: ../../orm/mapped_attributes.rst:334
 msgid ""
@@ -425,5 +415,5 @@ msgid ""
 "``comparator_factory`` argument of each function.  Customization of "
 "operators at this level is a rare use case.  See the documentation at "
 ":class:`.PropComparator` for an overview."
-msgstr ""
+msgstr "：func： `.column_property`、：func：` .relationship`、および：func： `.composite`はORMレベルでのオペレータの再定義を提供します：class：` .PropComparator`サブクラスを各関数の `` comparator_factory``引数です。このレベルの演算子のカスタマイズはまれな使用例です。概要は、class： `.PropComparator`のドキュメントを参照してください。"
 

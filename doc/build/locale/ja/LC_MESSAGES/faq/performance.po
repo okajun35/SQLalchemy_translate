@@ -6,34 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../faq/performance.rst:4
 msgid "Performance"
-msgstr ""
+msgstr "パフォーマンス"
 
 #: ../../faq/performance.rst:14
 msgid "How can I profile a SQLAlchemy powered application?"
-msgstr ""
+msgstr "SQLAlchemyパワードアプリケーションをプロファイルするにはどうすればよいですか？"
 
 #: ../../faq/performance.rst:16
 msgid ""
 "Looking for performance issues typically involves two stratgies.  One is "
 "query profiling, and the other is code profiling."
-msgstr ""
+msgstr "パフォーマンスの問題を探すには、通常、2つのストーリーが必要です。 1つはクエリプロファイリングで、もう1つはコードプロファイリングです。"
 
 #: ../../faq/performance.rst:20
 msgid "Query Profiling"
-msgstr ""
+msgstr "クエリプロファイリング"
 
 #: ../../faq/performance.rst:22
 msgid ""
@@ -41,13 +31,13 @@ msgid ""
 "via the ``echo=True`` argument on :func:`.create_engine`) can give an "
 "idea how long things are taking.  For example, if you log something right"
 " after a SQL operation, you'd see something like this in your log::"
-msgstr ""
+msgstr "時には、単純なSQLのロギング（pythonのロギングモジュールを介して有効にするか、または：func： `.create_engine`の` `echo = True``引数を介して）は、どれくらいの時間がかかるかを知ることができます。たとえば、SQL操作の直後に何かを記録すると、ログに次のようなものが表示されます。"
 
 #: ../../faq/performance.rst:32
 msgid ""
 "if you logged ``myapp.somemessage`` right after the operation, you know "
 "it took 334ms to complete the SQL part of things."
-msgstr ""
+msgstr "操作の直後に `` myapp.somemessage``を記録した場合、SQLの部分を完了するのに334msかかりました。"
 
 #: ../../faq/performance.rst:35
 msgid ""
@@ -60,14 +50,14 @@ msgid ""
 "multiple tables can be loaded in one result set instead of multiplying "
 "numbers of queries as more depth is added (i.e. ``r + r*r2 + r*r2*r3`` "
 "...)"
-msgstr ""
+msgstr "SQLのロギングでは、何十/何百ものクエリーが発行されているかどうかがわかります。 SQLAlchemy ORMを使用すると、部分的に（：func： `.contains_eager（）`）または完全に（：func： `.joinedload（）`、：func： `.subqueryload（） ``）このアクティビティを自動化しますが、ORM \ &quot;eager loading \&quot;を使わないと通常はジョインを使用するので、複数のテーブルの結果を深度が追加されたときに複数のクエリを掛ける代わりに1つの結果セットにロードできます+ r * r2 + r * r2 * r3`` ...）"
 
 #: ../../faq/performance.rst:45
 msgid ""
 "For more long-term profiling of queries, or to implement an application-"
 "side \"slow query\" monitor, events can be used to intercept cursor "
 "executions, using a recipe like the following::"
-msgstr ""
+msgstr "問合せの長期的なプロファイリングや、アプリケーション側の「スロー・クエリー」モニターの実装では、次のようなレシピを使用してイベントを使用してカーソルの実行を傍受することができます。"
 
 #: ../../faq/performance.rst:71
 msgid ""
@@ -77,11 +67,11 @@ msgid ""
 "timer onto the connection using the :class:`._ConnectionRecord.info` "
 "dictionary; we use a stack here for the occasional case where the cursor "
 "execute events may be nested."
-msgstr ""
+msgstr "上記では、ステートメントが実行されたときにインターセプトポイントを設定するために、：meth： `.ConnectionEvents.before_cursor_execute`と：meth：` .ConnectionEvents.after_cursor_execute`イベントを使用します。 ：class： `._ConnectionRecord.info`ディクショナリを使用してタイマーを接続に追加します。カーソルの実行イベントが入れ子になっている場合があるため、ここではスタックを使用します。"
 
 #: ../../faq/performance.rst:78
 msgid "Code Profiling"
-msgstr ""
+msgstr "コードプロファイリング"
 
 #: ../../faq/performance.rst:80
 msgid ""
@@ -91,42 +81,42 @@ msgid ""
 "the :term:`DBAPI`, and finally being received by SQLAlchemy's result set "
 "and/or ORM layer.   Each of these stages can present their own individual"
 " bottlenecks, depending on specifics."
-msgstr ""
+msgstr "ロギングで個々のクエリが長すぎると判明した場合は、データベース内でクエリを処理し、ネットワーク経由で結果を送信し、：term： &#39;DBAPI&#39;によって処理された時間を分析し、最後にSQLAlchemyの結果セットおよび/またはORMレイヤーによって受け取られます。これらの段階のそれぞれは、詳細に応じて独自のボトルネックを提示することができます。"
 
 #: ../../faq/performance.rst:87
 msgid ""
 "For that you need to use the `Python Profiling Module "
 "<https://docs.python.org/2/library/profile.html>`_. Below is a simple "
 "recipe which works profiling into a context manager::"
-msgstr ""
+msgstr "そのためには、 `Pythonプロファイリングモジュール<https://docs.python.org/2/library/profile.html> `_。以下は、コンテキストマネージャにプロファイリングする簡単なレシピです："
 
 #: ../../faq/performance.rst:109
 msgid "To profile a section of code::"
-msgstr ""
+msgstr "コードセクションをプロファイルする::"
 
 #: ../../faq/performance.rst:114
 msgid ""
 "The output of profiling can be used to give an idea where time is being "
 "spent.   A section of profiling output looks like this::"
-msgstr ""
+msgstr "プロファイリングの出力を使用して、時間が費やされている場所を知ることができます。プロファイリング出力のセクションは次のようになります::"
 
 #: ../../faq/performance.rst:137
 msgid ""
 "Above, we can see that the ``instances()`` SQLAlchemy function was called"
 " 222 times (recursively, and 21 times from the outside), taking a total "
 "of .011 seconds for all calls combined."
-msgstr ""
+msgstr "上の例では、 `` instances（） `` SQLAlchemy関数が222回（再帰的に、そして外部から21回）呼び出され、すべての呼び出しが合計で.011秒となりました。"
 
 #: ../../faq/performance.rst:142
 msgid "Execution Slowness"
-msgstr ""
+msgstr "実行の遅さ"
 
 #: ../../faq/performance.rst:144
 msgid ""
 "The specifics of these calls can tell us where the time is being spent. "
 "If for example, you see time being spent within ``cursor.execute()``, "
 "e.g. against the DBAPI::"
-msgstr ""
+msgstr "これらの呼び出しの詳細は、時間がどこに費やされているかを示すことができます。例えば、 `` cursor.execute（） ``の中で時間が費やされているとしたら、DBAPI ::"
 
 #: ../../faq/performance.rst:150
 msgid ""
@@ -135,11 +125,11 @@ msgid ""
 " adding indexes or restructuring the query and/or underlying schema.  For"
 " that task, analysis of the query plan is warranted, using a system such "
 "as EXPLAIN, SHOW PLAN, etc. as is provided by the database backend."
-msgstr ""
+msgstr "これは、結果が返されるまでにデータベースが長時間を要していることを示しています。つまり、インデックスを追加したり、クエリや基本スキーマを再構成したりすることによって、クエリを最適化する必要があります。このタスクでは、データベースバックエンドによって提供されるように、EXPLAIN、SHOW PLANなどのシステムを使用して、クエリプランの分析が保証されます。"
 
 #: ../../faq/performance.rst:157
 msgid "Result Fetching Slowness - Core"
-msgstr ""
+msgstr "結果遅れを取り戻す - コア"
 
 #: ../../faq/performance.rst:159
 msgid ""
@@ -148,13 +138,13 @@ msgid ""
 "returning more rows than expected, or that the fetching of rows itself is"
 " slow.   The ORM itself typically uses ``fetchall()`` to fetch rows (or "
 "``fetchmany()`` if the :meth:`.Query.yield_per` option is used)."
-msgstr ""
+msgstr "一方、行をフェッチすることに関連して何千もの呼び出しがあったり、 `` fetchall（） ``の呼び出しが非常に長い場合、クエリが予想よりも多くの行を返しているか、行自体のフェッチが遅い。 ORM自体は通常、行をフェッチするために `` fetchall（） ``を使用します。：meth： `.Query.yield_per`オプションが使用されている場合は` `fetchmany（）` `です。"
 
 #: ../../faq/performance.rst:165
 msgid ""
 "An inordinately large number of rows would be indicated by a very slow "
 "call to ``fetchall()`` at the DBAPI level::"
-msgstr ""
+msgstr "DBAPIレベルで `` fetchall（） ``を呼び出すのが非常に遅いことで、異常に多くの行が表示されます。"
 
 #: ../../faq/performance.rst:170
 msgid ""
@@ -165,7 +155,7 @@ msgid ""
 "SQLAlchemy Core or ORM query if the wrong :class:`.Column` objects are "
 "used in a complex query, pulling in additional FROM clauses that are "
 "unexpected."
-msgstr ""
+msgstr "たとえ最終的な結果が多数の行を持たないように見える場合でも、予想外に多数の行は、複数の行セットが適切に結合されずに結合されているデカルト積の結果である可能性があります。間違った：class： `.Column`オブジェクトが複雑なクエリで使用され、予期せぬ追加のFROM句が引き出された場合、SQLAlchemy CoreまたはORMクエリでこの動作を生成することはしばしば簡単です。"
 
 #: ../../faq/performance.rst:177
 msgid ""
@@ -173,7 +163,7 @@ msgid ""
 "then slowness when SQLAlchemy's :class:`.ResultProxy` is asked to do a "
 "``fetchall()``, may indicate slowness in processing of datatypes, such as"
 " unicode conversions and similar::"
-msgstr ""
+msgstr "一方、DBAPIレベルでの `` fetchall（） ``への高速呼び出しは、SQLAlchemyの：class： `.ResultProxy`が` `fetchall（）` `を実行するように要求されたときに遅くなります。ユニコード変換などのデータ型の処理::"
 
 #: ../../faq/performance.rst:190
 msgid ""
@@ -181,19 +171,19 @@ msgid ""
 "needed.   More specifically, seeing calls within the type API that are "
 "slow are better indicators - below is what it looks like when we use a "
 "type like this::"
-msgstr ""
+msgstr "場合によっては、バックエンドが必要とされないタイプレベルの処理を行っている可能性があります。より具体的には、タイプAPI内で遅い呼び出しを確認する方が良い指標です。以下のような型を使用すると、次のようになります。"
 
 #: ../../faq/performance.rst:206
 msgid ""
 "the profiling output of this intentionally slow operation can be seen "
 "like this::"
-msgstr ""
+msgstr "この意図的に遅い操作のプロファイリング出力は次のように見ることができます::"
 
 #: ../../faq/performance.rst:212
 msgid ""
 "that is, we see many expensive calls within the ``type_api`` system, and "
 "the actual time consuming thing is the ``time.sleep()`` call."
-msgstr ""
+msgstr "つまり、 `` type_api``システム内では多くの高価な呼び出しがあり、実際に時間がかかるのは `` time.sleep（） ``の呼び出しです。"
 
 #: ../../faq/performance.rst:215
 msgid ""
@@ -202,7 +192,7 @@ msgid ""
 "for databases like Oracle.  There may be systems related to ensuring "
 "numeric accuracy or string processing that may not be needed in all "
 "cases."
-msgstr ""
+msgstr "：doc： `Dialect documentationを確認してください<dialects/index> `このレベルでの既知のパフォーマンスチューニングの提案、特にOracleのようなデータベースに関する注意事項。すべての場合に必要とされない数値精度または文字列処理を保証することに関連するシステムが存在する可能性があります。"
 
 #: ../../faq/performance.rst:220
 msgid ""
@@ -211,63 +201,63 @@ msgid ""
 "call like ``socket.receive()``, that could indicate that everything is "
 "fast except for the actual network connection, and too much time is spent"
 " with data moving over the network."
-msgstr ""
+msgstr "ローフェッチのパフォーマンスが低下しているさらに低レベルのポイントがあるかもしれません。例えば、 `` socket.receive（） ``のような呼び出しに時間が費やされているようであれば、実際のネットワーク接続を除いてすべてが速いことを示している可能性があります。"
 
 #: ../../faq/performance.rst:226
 msgid "Result Fetching Slowness - ORM"
-msgstr ""
+msgstr "結果フェロースローネス -  ORM"
 
 #: ../../faq/performance.rst:228
 msgid ""
 "To detect slowness in ORM fetching of rows (which is the most common area"
 " of performance concern), calls like ``populate_state()`` and "
 "``_instance()`` will illustrate individual ORM object populations::"
-msgstr ""
+msgstr "`` populate_state（） ``と `` _instance（） ``のような呼び出しは、個々のORMオブジェクトの母集団を示しています::パフォーマンスの問題の最も一般的な領域である行のORMフェッチの遅さを検出するには、"
 
 #: ../../faq/performance.rst:238
 msgid ""
 "The ORM's slowness in turning rows into ORM-mapped objects is a product "
 "of the complexity of this operation combined with the overhead of "
 "cPython. Common strategies to mitigate this include:"
-msgstr ""
+msgstr "行をORMでマップされたオブジェクトに変換する際のORMの遅さは、この操作の複雑さとcPythonのオーバーヘッドを組み合わせたものです。これを軽減するための一般的な戦略は次のとおりです。"
 
 #: ../../faq/performance.rst:242
 msgid "fetch individual columns instead of full entities, that is::"
-msgstr ""
+msgstr "完全なエンティティの代わりに個々の列をフェッチする："
 
 #: ../../faq/performance.rst:246
 msgid "instead of::"
-msgstr ""
+msgstr "の代わりに：："
 
 #: ../../faq/performance.rst:250
 msgid "Use :class:`.Bundle` objects to organize column-based results::"
-msgstr ""
+msgstr "：class： `.Bundle`オブジェクトを使用してカラムベースの結果を整理する::"
 
 #: ../../faq/performance.rst:258
 msgid ""
 "Use result caching - see :ref:`examples_caching` for an in-depth example "
 "of this."
-msgstr ""
+msgstr "結果のキャッシングを使用してください：詳細は、：ref： `examples_caching`を参照してください。"
 
 #: ../../faq/performance.rst:261
 msgid "Consider a faster interpreter like that of Pypy."
-msgstr ""
+msgstr "Pypyのようなより速い通訳を考えてみましょう。"
 
 #: ../../faq/performance.rst:263
 msgid ""
 "The output of a profile can be a little daunting but after some practice "
 "they are very easy to read."
-msgstr ""
+msgstr "プロファイルの出力は少し難しいかもしれませんが、いくつかの練習の後、読みやすくなります。"
 
 #: ../../faq/performance.rst:268
 msgid ""
 ":ref:`examples_performance` - a suite of performance demonstrations with "
 "bundled profiling capabilities."
-msgstr ""
+msgstr "：ref： `examples_performance`  - バンドルされたプロファイリング機能を備えたパフォーマンスデモのスイートです。"
 
 #: ../../faq/performance.rst:272
 msgid "I'm inserting 400,000 rows with the ORM and it's really slow!"
-msgstr ""
+msgstr "私はORMで400,000行を挿入していますが、それは本当に遅いです！"
 
 #: ../../faq/performance.rst:274
 msgid ""
@@ -283,7 +273,7 @@ msgid ""
 "fair degree of bookkeeping in order to keep all of this running, which "
 "for a very large number of rows at once can create an inordinate amount "
 "of time spent with large data structures, hence it's best to chunk these."
-msgstr ""
+msgstr "SQLAlchemy ORMは、変更をデータベースに同期させるときに：term： `作業単位 &#39;パターンを使用します。このパターンは、データの単純な「挿入」をはるかに超えています。オブジェクトに割り当てられた属性は、オブジェクトが作成されたときの変更を追跡する属性計装システムを使用して受け取られます。挿入されたすべての行がIDマップで追跡され、各行に対してSQLAlchemyが\ &quot;最後に挿入されたID&quot;がまだ与えられていない場合は、挿入される行もスキャンされ、必要に応じて依存関係がソートされます。オブジェクトはまた、これをすべて実行するためにかなりの簿記の対象となります。非常に多数の行については、大量のデータ構造に費やす時間が過度に長くなる可能性があります。"
 
 #: ../../faq/performance.rst:287
 msgid ""
@@ -291,14 +281,14 @@ msgid ""
 "automate the task of persisting a complex object graph into a relational "
 "database with no explicit persistence code, and this automation has a "
 "price."
-msgstr ""
+msgstr "基本的に、作業単位は、複雑なオブジェクト・グラフを明示的な永続コードなしでリレーショナル・データベースに永続化する作業を自動化するために、大規模な自動化であり、この自動化には価格があります。"
 
 #: ../../faq/performance.rst:292
 msgid ""
 "ORMs are basically not intended for high-performance bulk inserts - this "
 "is the whole reason SQLAlchemy offers the Core in addition to the ORM as "
 "a first-class component."
-msgstr ""
+msgstr "ORMは、基本的に高性能なバルク挿入を目的としたものではありません。これは、SQLAlchemyがORMに加えてCoreも第一級のコンポーネントとして提供している理由のすべてです。"
 
 #: ../../faq/performance.rst:296
 msgid ""
@@ -306,14 +296,14 @@ msgid ""
 "system that the ORM builds on top of is part of the :doc:`Core "
 "<core/tutorial>`.  Using this system directly, we can produce an INSERT "
 "that is competitive with using the raw database API directly."
-msgstr ""
+msgstr "高速バルク挿入の使用の場合、ORMがビルドするSQL生成および実行システムは、以下のようになります。doc： `Core <core/tutorial> `。このシステムを直接使用することで、生のデータベースAPIを直接使用することと競合するINSERTを生成することができます。"
 
 #: ../../faq/performance.rst:303
 msgid ""
 "When using the psycopg2 dialect, consider making use of the :ref:`batch "
 "execution helpers <psycopg2_batch_mode>` feature of psycopg2, now "
 "supported directly by the SQLAlchemy psycopg2 dialect."
-msgstr ""
+msgstr "psycopg2方言を使うときは、：ref： `バッチ実行ヘルパー<psycopg2_batch_mode> `psycopg2の機能は、SQLAlchemy psycopg2方言で直接サポートされています。"
 
 #: ../../faq/performance.rst:307
 msgid ""
@@ -321,22 +311,22 @@ msgid ""
 " of methods, which provide hooks into subsections of the unit of work "
 "process in order to emit Core-level INSERT and UPDATE constructs with a "
 "small degree of ORM-based automation."
-msgstr ""
+msgstr "代わりに、SQLAlchemy ORMは：ref： `bulk_operations`メソッド群を提供します。これは、ORMベースの自動化の程度が小さいコアレベルのINSERTおよびUPDATE構文を生成するために、作業単位のサブセクションにフックを提供します。"
 
 #: ../../faq/performance.rst:312
 msgid ""
 "The example below illustrates time-based tests for several different "
 "methods of inserting rows, going from the most automated to the least. "
 "With cPython 2.7, runtimes observed::"
-msgstr ""
+msgstr "以下の例は、最も自動化されたものから最小のものへと、行を挿入するいくつかの異なるメソッドの時間ベースのテストを示しています。 cPython 2.7では、ランタイムが観察されました::"
 
 #: ../../faq/performance.rst:323
 msgid ""
 "We can reduce the time by a factor of nearly three using recent versions "
 "of `Pypy <http://pypy.org/>`_::"
-msgstr ""
+msgstr "最近のバージョンの `Pypy &#39;を使って、時間を3倍近く減らすことができます<http://pypy.org/> `_ ::"
 
 #: ../../faq/performance.rst:332
 msgid "Script::"
-msgstr ""
+msgstr "スクリプト：："
 

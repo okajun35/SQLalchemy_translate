@@ -10,7 +10,7 @@
         <title>
             
     
-    Constructors and Object Initialization
+    コンストラクタとオブジェクトの初期化
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Loading Objects" href="loading_objects.html" />
-        <link rel="next" title="Query API" href="query.html" />
-        <link rel="prev" title="Loading Inheritance Hierarchies" href="inheritance_loading.html" />
+        <link rel="up" title="オブジェクトの読み込み" href="loading_objects.html" />
+        <link rel="next" title="クエリAPI" href="query.html" />
+        <link rel="prev" title="継承階層のロード" href="inheritance_loading.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,21 +120,21 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="loading_columns.html">Loading Columns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_relationships.html">Relationship Loading Techniques</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="inheritance_loading.html">Loading Inheritance Hierarchies</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Constructors and Object Initialization</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="query.html">Query API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="loading_columns.html">列の読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_relationships.html">関係の読み込み手法</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="inheritance_loading.html">継承階層のロード</a></span></li>
+<li class="selected"><span class="link-container first"><strong>コンストラクタとオブジェクトの初期化</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="query.html">クエリAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -150,27 +150,11 @@
     <div id="docs-body" class="withsidebar" >
         
 <span class="target" id="module-sqlalchemy.orm"></span><div class="section" id="constructors-and-object-initialization">
-<span id="mapping-constructors"></span><h1>Constructors and Object Initialization<a class="headerlink" href="#constructors-and-object-initialization" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Mapping imposes no restrictions or requirements on the constructor
-(<code class="docutils literal"><span class="pre">__init__</span></code>) method for the class. You are free to require any arguments for
-the function that you wish, assign attributes to the instance that are unknown
-to the ORM, and generally do anything else you would normally do when writing
-a constructor for a Python class.</p>
-<p>The SQLAlchemy ORM does not call <code class="docutils literal"><span class="pre">__init__</span></code> when recreating objects from
-database rows. The ORM's process is somewhat akin to the Python standard
-library's <code class="docutils literal"><span class="pre">pickle</span></code> module, invoking the low level <code class="docutils literal"><span class="pre">__new__</span></code> method and
-then quietly restoring attributes directly on the instance rather than calling
-<code class="docutils literal"><span class="pre">__init__</span></code>.</p>
-<p>If you need to do some setup on database-loaded instances before they're ready
-to use, there is an event hook known as <a class="reference internal" href="events.html#sqlalchemy.orm.events.InstanceEvents.load" title="sqlalchemy.orm.events.InstanceEvents.load"><code class="xref py py-meth docutils literal"><span class="pre">InstanceEvents.load()</span></code></a> which
-can achieve this; it is also available via a class-specific decorator called
-<a class="reference internal" href="#sqlalchemy.orm.reconstructor" title="sqlalchemy.orm.reconstructor"><code class="xref py py-func docutils literal"><span class="pre">orm.reconstructor()</span></code></a>.   When using <a class="reference internal" href="#sqlalchemy.orm.reconstructor" title="sqlalchemy.orm.reconstructor"><code class="xref py py-func docutils literal"><span class="pre">orm.reconstructor()</span></code></a>,
-the mapper will invoke the decorated method with no
-arguments every time it loads or reconstructs an instance of the
-class. This is
-useful for recreating transient properties that are normally assigned in
-<code class="docutils literal"><span class="pre">__init__</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">orm</span>
+<span id="mapping-constructors"></span><h1>コンストラクタとオブジェクトの初期化<a class="headerlink" href="#constructors-and-object-initialization" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>マッピングは、クラスのコンストラクタ（ `` __init__``）メソッドに制限や要件を課すものではありません。あなたは、あなたが望む関数に対して任意の引数を必要とし、ORMには不明なインスタンスに属性を割り当て、Pythonクラス用のコンストラクタを書くときに普通に行う何かを自由に行うことができます。</p>
+<p>SQLAlchemy ORMは、データベース行からオブジェクトを再作成するときに `` __init__``を呼び出すことはありません。 ORMのプロセスは、Python標準ライブラリの `` pickle``モジュールに似ていますが、低レベルの `` __new__``メソッドを呼び出し、 `` __init__``を呼び出すのではなく、インスタンスに直接属性を静かに復元します。</p>
+<p>使用準備が整う前にデータベースがロードされたインスタンスをセットアップする必要がある場合は、これを実現できるmeth： <cite>.InstanceEvents.load`というイベントフックがあります。 func： `.orm.reconstructor`というクラス固有のデコレータを介して利用することもできます。 ：func： `.orm.reconstructor`を使うと、クラスのインスタンスをロードまたは再構築するたびに、マッパーは引数なしで装飾されたメソッドを呼び出します。これは通常、 `</cite> __init__``で割り当てられる一時的なプロパティを再作成するのに便利です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">orm</span>
 
 <span class="k">class</span> <span class="nc">MyMappedClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
@@ -182,40 +166,20 @@ useful for recreating transient properties that are normally assigned in
     <span class="k">def</span> <span class="nf">init_on_load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stuff</span> <span class="o">=</span> <span class="p">[]</span></pre></div>
 </div>
-<p>Above, when <code class="docutils literal"><span class="pre">obj</span> <span class="pre">=</span> <span class="pre">MyMappedClass()</span></code> is executed, the <code class="docutils literal"><span class="pre">__init__</span></code> constructor
-is invoked normally and the <code class="docutils literal"><span class="pre">data</span></code> argument is required.  When instances are
-loaded during a <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> operation as in
-<code class="docutils literal"><span class="pre">query(MyMappedClass).one()</span></code>, <code class="docutils literal"><span class="pre">init_on_load</span></code> is called.</p>
-<p>Any method may be tagged as the <a class="reference internal" href="#sqlalchemy.orm.reconstructor" title="sqlalchemy.orm.reconstructor"><code class="xref py py-func docutils literal"><span class="pre">orm.reconstructor()</span></code></a>, even
-the <code class="docutils literal"><span class="pre">__init__</span></code> method itself.    It is invoked after all immediate
-column-level attributes are loaded as well as after eagerly-loaded scalar
-relationships.  Eagerly loaded collections may be only partially populated
-or not populated at all, depending on the kind of eager loading used.</p>
-<p>ORM state changes made to objects at this stage will not be recorded for the
-next flush operation, so the activity within a reconstructor should be
-conservative.</p>
-<p><a class="reference internal" href="#sqlalchemy.orm.reconstructor" title="sqlalchemy.orm.reconstructor"><code class="xref py py-func docutils literal"><span class="pre">orm.reconstructor()</span></code></a> is a shortcut into a larger system
-of &quot;instance level&quot; events, which can be subscribed to using the
-event API - see <a class="reference internal" href="events.html#sqlalchemy.orm.events.InstanceEvents" title="sqlalchemy.orm.events.InstanceEvents"><code class="xref py py-class docutils literal"><span class="pre">InstanceEvents</span></code></a> for the full API description
-of these events.</p>
+<p>上記で、 `` obj = MyMappedClass（） <a href="#id1"><span class="problematic" id="id2">``</span></a>が実行されると、 `` __init__``コンストラクタが正常に呼び出され、 `` data``引数が必要です。 `` query（MyMappedClass）.one（） <a href="#id3"><span class="problematic" id="id4">``</span></a>のようにインスタンスが：class： <cite>〜sqlalchemy.orm.query.Query`のときに読み込まれると、</cite> <a href="#id5"><span class="problematic" id="id6">`</span></a>init_on_load``が呼び出されます。</p>
+<p>どんなメソッドも：func： <cite>.orm.reconstructor</cite>、` <a href="#id1"><span class="problematic" id="id2">`</span></a>__init__``メソッド自体でさえタグ付けすることができます。これは、すべての直接的な列レベルの属性が読み込まれた後、熱心に読み込まれたスカラ関係の後に呼び出されます。熱心に読み込まれたコレクションは、使用される熱心な読み込みの種類に応じて、部分的に取り込まれるか、まったく取り込まれないことがあります。</p>
+<p>この段階でオブジェクトに行われたORM状態の変更は、次回のフラッシュ操作では記録されないため、再構築器内のアクティビティは控えめにする必要があります。</p>
+<p>：func： <cite>.orm.reconstructor`は、イベントAPIを使用してサブスクライブすることができる、より大きい&amp;quot;インスタンスレベル&amp;quot;イベントシステムへのショートカットです。これらのAPIの完全な説明については、class：</cite> .InstanceEvents`を参照してください。イベント。</p>
 <dl class="function">
 <dt id="sqlalchemy.orm.reconstructor">
 <code class="descclassname">sqlalchemy.orm.</code><code class="descname">reconstructor</code><span class="sig-paren">(</span><em>fn</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.reconstructor" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Decorate a method as the 'reconstructor' hook.</p>
-<p>Designates a method as the &quot;reconstructor&quot;, an <code class="docutils literal"><span class="pre">__init__</span></code>-like
-method that will be called by the ORM after the instance has been
-loaded from the database or otherwise reconstituted.</p>
-<p>The reconstructor will be invoked with no arguments.  Scalar
-(non-collection) database-mapped attributes of the instance will
-be available for use within the function.  Eagerly-loaded
-collections are generally not yet available and will usually only
-contain the first element.  ORM state changes made to objects at
-this stage will not be recorded for the next flush() operation, so
-the activity within a reconstructor should be conservative.</p>
+<dd><p>メソッドを &amp;#39;reconstructor&amp;#39;フックとして飾ります。</p>
+<p>インスタンスがデータベースからロードされた後、または別の方法で再構成された後に、ORMによって呼び出される、 &amp;quot;再構築者&amp;quot;、メソッド &amp;quot;__init__&amp;quot;のようなメソッドを指定します。</p>
+<p>再構成子は引数なしで呼び出されます。インスタンスのスカラー（非コレクション）データベースにマップされた属性は、関数内で使用できるようになります。熱心に読み込まれたコレクションは一般的にはまだ入手できず、通常は最初の要素のみを含みます。この段階でオブジェクトに対して行われたORM状態の変更は、次のflush（）操作では記録されないため、再構成子内のアクティビティは控えめにする必要があります。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#mapping-constructors"><span class="std std-ref">Constructors and Object Initialization</span></a></p>
-<p class="last"><a class="reference internal" href="events.html#sqlalchemy.orm.events.InstanceEvents.load" title="sqlalchemy.orm.events.InstanceEvents.load"><code class="xref py py-meth docutils literal"><span class="pre">InstanceEvents.load()</span></code></a></p>
+<p>：ref： <cite>mapping_constructors</cite></p>
+<p class="last">：meth： <cite>.InstanceEvents.load</cite></p>
 </div>
 </dd></dl>
 
@@ -227,13 +191,13 @@ the activity within a reconstructor should be conservative.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="inheritance_loading.html" title="previous chapter">Loading Inheritance Hierarchies</a>
+        <a href="inheritance_loading.html" title="previous chapter">継承階層のロード</a>
         Next:
-        <a href="query.html" title="next chapter">Query API</a>
+        <a href="query.html" title="next chapter">クエリAPI</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -260,6 +224,7 @@ the activity within a reconstructor should be conservative.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

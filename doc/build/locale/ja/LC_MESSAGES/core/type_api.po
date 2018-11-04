@@ -6,64 +6,54 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/type_api.rst:6
 msgid "Base Type API"
-msgstr ""
+msgstr "ベースタイプAPI"
 
 #: of sqlalchemy.types.TypeEngine:1
 msgid "The ultimate base class for all SQL datatypes."
-msgstr ""
+msgstr "すべてのSQLデータ型の究極の基底クラスです。"
 
 #: of sqlalchemy.types.TypeEngine:3
 msgid ""
 "Common subclasses of :class:`.TypeEngine` include :class:`.String`, "
 ":class:`.Integer`, and :class:`.Boolean`."
-msgstr ""
+msgstr "：class： `.TypeEngine`の共通サブクラスは：class：` .String`、：class： `.Integer`、：class：` .Boolean`です。"
 
 #: of sqlalchemy.types.TypeEngine:6
 msgid ""
 "For an overview of the SQLAlchemy typing system, see "
 ":ref:`types_toplevel`."
-msgstr ""
+msgstr "SQLAlchemy型システムの概要は、：ref： `types_toplevel`を参照してください。"
 
 #: of sqlalchemy.types.TypeEngine:11
 msgid ":ref:`types_toplevel`"
-msgstr ""
+msgstr "：ref： `types_toplevel`"
 
 #: of sqlalchemy.types.TypeEngine.Comparator:1
 msgid ""
 "Base class for custom comparison operations defined at the type level.  "
 "See :attr:`.TypeEngine.comparator_factory`."
-msgstr ""
+msgstr "型レベルで定義されたカスタム比較演算の基本クラス。参照：attr： `.TypeEngine.comparator_factory`。"
 
 #: of sqlalchemy.types.TypeEngine.adapt:1
 msgid ""
 "Produce an \"adapted\" form of this type, given an \"impl\" class to work"
 " with."
-msgstr ""
+msgstr "この型の\ &quot;適合\&quot;形式を生成する。\ &quot;impl \&quot;クラスで動作する。"
 
 #: of sqlalchemy.types.TypeEngine.adapt:4
 msgid ""
 "This method is used internally to associate generic types with "
 "\"implementation\" types that are specific to a particular dialect."
-msgstr ""
+msgstr "このメソッドは、ジェネリック型を特定の方言に固有の\ &quot;実装\&quot;型に関連付けるために内部的に使用されます。"
 
 #: of sqlalchemy.types.TypeEngine.bind_expression:1
 msgid ""
 "\"Given a bind value (i.e. a :class:`.BindParameter` instance), return a "
 "SQL expression in its place."
-msgstr ""
+msgstr "バインド値（つまり、：class： `.BindParameter`インスタンス）を指定すると、代わりにSQL式を返します。"
 
 #: of sqlalchemy.types.TypeEngine.bind_expression:4
 msgid ""
@@ -72,46 +62,46 @@ msgid ""
 "literals being wrapped in some special database function in order to "
 "coerce an application-level value into a database-specific format.  It is"
 " the SQL analogue of the :meth:`.TypeEngine.bind_processor` method."
-msgstr ""
+msgstr "これは通常、文の中に既存のバインドされたパラメータをラップするSQL関数です。アプリケーションレベルの値をデータベース固有の形式に変換するために、特別なデータベース関数でリテラルをラップする必要がある特殊なデータ型に使用されます。これは：meth： `.TypeEngine.bind_processor`メソッドのSQLの類義語です。"
 
 #: of sqlalchemy.types.TypeEngine.bind_expression:11
 #: sqlalchemy.types.TypeEngine.column_expression:11
 msgid ""
 "The method is evaluated at statement compile time, as opposed to "
 "statement construction time."
-msgstr ""
+msgstr "このメソッドは、文の構築時とは異なり、文のコンパイル時に評価されます。"
 
 #: of sqlalchemy.types.TypeEngine.bind_expression:14
 msgid ""
 "Note that this method, when implemented, should always return the exact "
 "same structure, without any conditional logic, as it may be used in an "
 "executemany() call against an arbitrary number of bound parameter sets."
-msgstr ""
+msgstr "このメソッドを実装すると、任意の数のバインドされたパラメータセットに対してexecutemany（）コールで使用できるため、条件付きロジックなしで常に同じ構造体を返す必要があることに注意してください。"
 
 #: of sqlalchemy.types.TypeEngine.bind_expression:19
 #: sqlalchemy.types.TypeEngine.column_expression:14
 msgid "See also:"
-msgstr ""
+msgstr "参照："
 
 #: of sqlalchemy.types.TypeEngine.bind_expression:21
 #: sqlalchemy.types.TypeEngine.column_expression:16
 msgid ":ref:`types_sql_value_processing`"
-msgstr ""
+msgstr "：ref： `types_sql_value_processing`"
 
 #: of sqlalchemy.types.TypeEngine.bind_processor:1
 msgid "Return a conversion function for processing bind values."
-msgstr ""
+msgstr "バインド値を処理するための変換関数を返します。"
 
 #: of sqlalchemy.types.TypeEngine.bind_processor:3
 msgid ""
 "Returns a callable which will receive a bind parameter value as the sole "
 "positional argument and will return a value to send to the DB-API."
-msgstr ""
+msgstr "バインド・パラメータ値を唯一の位置引数として受け取り、DB-APIに送る値を戻すコール可能オブジェクトを戻します。"
 
 #: of sqlalchemy.types.TypeEngine.bind_processor:7
 #: sqlalchemy.types.TypeEngine.result_processor:7
 msgid "If processing is not necessary, the method should return ``None``."
-msgstr ""
+msgstr "処理が必要ない場合、メソッドは `` None``を返すべきです。"
 
 #: of sqlalchemy.types.TypeEngine.bind_processor
 #: sqlalchemy.types.TypeEngine.compare_against_backend
@@ -119,29 +109,29 @@ msgstr ""
 #: sqlalchemy.types.TypeEngine.result_processor
 #: sqlalchemy.types.TypeEngine.with_variant
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.types.TypeEngine.bind_processor:9
 #: sqlalchemy.types.TypeEngine.result_processor:9
 msgid "Dialect instance in use."
-msgstr ""
+msgstr "使用中の方言インスタンス。"
 
 #: of sqlalchemy.types.TypeEngine.coerce_compared_value:1
 msgid "Suggest a type for a 'coerced' Python value in an expression."
-msgstr ""
+msgstr "式で「強制的」なPython値の型を推薦する。"
 
 #: of sqlalchemy.types.TypeEngine.coerce_compared_value:3
 msgid ""
 "Given an operator and value, gives the type a chance to return a type "
 "which the value should be coerced into."
-msgstr ""
+msgstr "与えられた演算子と値は、型に強制的に値を代入する型を返す。"
 
 #: of sqlalchemy.types.TypeEngine.coerce_compared_value:6
 msgid ""
 "The default behavior here is conservative; if the right-hand side is "
 "already coerced into a SQL type based on its Python type, it is usually "
 "left alone."
-msgstr ""
+msgstr "ここでのデフォルトの動作は保守的です。右側がすでにPython型に基づいてSQL型に強制的に変換されている場合、通常はそのまま残されます。"
 
 #: of sqlalchemy.types.TypeEngine.coerce_compared_value:10
 msgid ""
@@ -152,11 +142,11 @@ msgid ""
 " the DBAPI to both ides. It also provides the public method "
 ":meth:`.TypeDecorator.coerce_compared_value` which is intended for end-"
 "user customization of this behavior."
-msgstr ""
+msgstr "ここでのエンドユーザ機能拡張は、一般的にvia：class： `.TypeDecorator`でなければなりません。これはデフォルトで式の反対側をこの型に強制するというより自由な動作を提供します。両方の側にDBAPI。また、publicメソッドを提供します：meth： `.TypeDecorator.coerce_compared_value`これは、この動作のエンドユーザのカスタマイズを意図しています。"
 
 #: of sqlalchemy.types.TypeEngine.column_expression:1
 msgid "Given a SELECT column expression, return a wrapping SQL expression."
-msgstr ""
+msgstr "SELECT列式が指定されている場合、ラッピングSQL式を返します。"
 
 #: of sqlalchemy.types.TypeEngine.column_expression:3
 msgid ""
@@ -166,13 +156,13 @@ msgid ""
 "database function in order to coerce the value before being sent back to "
 "the application. It is the SQL analogue of the "
 ":meth:`.TypeEngine.result_processor` method."
-msgstr ""
+msgstr "これは、通常、SELECT文のcolumns句にレンダリングされた列式をラップするSQL関数です。これは、アプリケーションに返される前に値を強制的に使用するために、特別なデータベース関数で列をラップする必要がある特殊なデータ型に使用されます。それは：meth： `.TypeEngine.result_processor`メソッドのSQLの類義語です。"
 
 #: of sqlalchemy.types.TypeEngine.comparator_factory:1
 msgid ""
 "A :class:`.TypeEngine.Comparator` class which will apply to operations "
 "performed by owning :class:`.ColumnElement` objects."
-msgstr ""
+msgstr "A：class： `.TypeEngine.Comparator`クラスです。このクラスは、owning：class：` .ColumnElement`オブジェクトによって実行される操作に適用されます。"
 
 #: of sqlalchemy.types.TypeEngine.comparator_factory:4
 msgid ""
@@ -187,24 +177,24 @@ msgid ""
 "attributes of :class:`.operators.ColumnOperators` such as "
 ":meth:`.operators.ColumnOperators.like` and "
 ":meth:`.operators.ColumnOperators.in_`."
-msgstr ""
+msgstr "：attr： `.comparator_factory`属性は、列式とSQL式の演算が実行されるときに、コア式システムによって参照されるフックです。 a：class： `.TypeEngine.Comparator`クラスがこの属性に関連付けられている場合、既存のすべての演算子の新しい定義や新しい演算子の定義を行うことができます。既存の演算子には：meth： `.operators.ColumnOperators .__ add__`と：meth：` .operators.ColumnOperators .__ eq__`のようなPython演算子のオーバーロードによって提供されるものが含まれます：class： `.operators.ColumnOperators` ：meth： `.operators.ColumnOperators.like`と：meth：` .operators.ColumnOperators.in_`のようなものです。"
 
 #: of sqlalchemy.types.TypeEngine.comparator_factory:17
 msgid ""
 "Rudimentary usage of this hook is allowed through simple subclassing of "
 "existing types, or alternatively by using :class:`.TypeDecorator`. See "
 "the documentation section :ref:`types_operators` for examples."
-msgstr ""
+msgstr "このフックの基本的な使い方は、既存の型を単純にサブクラス化するか、または：class： `.TypeDecorator`を使用することで可能です。例については、ドキュメンテーションのsection：ref： `types_operators`を参照してください。"
 
 #: of sqlalchemy.types.TypeEngine.comparator_factory:21
 msgid ""
 "The expression system was enhanced to support customization of operators "
 "on a per-type level."
-msgstr ""
+msgstr "表現システムは、タイプごとのレベルでの演算子のカスタマイズをサポートするように拡張されました。"
 
 #: of sqlalchemy.types.TypeEngine.compare_against_backend:1
 msgid "Compare this type against the given backend type."
-msgstr ""
+msgstr "このタイプを指定されたバックエンドタイプと比較してください。"
 
 #: of sqlalchemy.types.TypeEngine.compare_against_backend:3
 msgid ""
@@ -212,13 +202,13 @@ msgid ""
 "all built in types will return ``None``.  However, it can be implemented "
 "by a user-defined type where it can be consumed by schema comparison "
 "tools such as Alembic autogenerate."
-msgstr ""
+msgstr "この関数は現在SQLAlchemy型では実装されていません。組み込み型では `` None``が返されます。ただし、Alembicの自動生成などのスキーマ比較ツールで使用できるユーザー定義型で実装できます。"
 
 #: of sqlalchemy.types.TypeEngine.compare_against_backend:9
 msgid ""
 "A future release of SQLAlchemy will potentially impement this method for "
 "builtin types as well."
-msgstr ""
+msgstr "SQLAlchemyの今後のリリースでは、組み込み型に対してもこのメソッドを実装する可能性があります。"
 
 #: of sqlalchemy.types.TypeEngine.compare_against_backend:12
 msgid ""
@@ -226,47 +216,47 @@ msgid ""
 "type; the type is typically reflected from the database so should be "
 "database specific.  The dialect in use is also passed.   It can also "
 "return False to assert that the type is not equivalent."
-msgstr ""
+msgstr "この型が指定された型と等しい場合、この関数はTrueを返さなければなりません。型は通常データベースから反映されるため、データベース固有である必要があります。使用中の方言も渡されます。また、型が等価でないことを宣言するためにFalseを返すこともできます。"
 
 #: of sqlalchemy.types.TypeEngine.compare_against_backend:18
 msgid "a :class:`.Dialect` that is involved in the comparison."
-msgstr ""
+msgstr "a：class：比較に含まれる `.Dialect`です。"
 
 #: of sqlalchemy.types.TypeEngine.compare_against_backend:20
 msgid "the type object reflected from the backend."
-msgstr ""
+msgstr "バックエンドから反映された型オブジェクト"
 
 #: of sqlalchemy.types.TypeEngine.compare_values:1
 msgid "Compare two values for equality."
-msgstr ""
+msgstr "2つの値が等しいかどうかを比較する。"
 
 #: of sqlalchemy.types.TypeEngine.compile:1
 msgid "Produce a string-compiled form of this :class:`.TypeEngine`."
-msgstr ""
+msgstr "クラス： `.TypeEngine`の文字列でコンパイルされた形式を生成します。"
 
 #: of sqlalchemy.types.TypeEngine.compile:3
 msgid ""
 "When called with no arguments, uses a \"default\" dialect to produce a "
 "string result."
-msgstr ""
+msgstr "引数なしで呼び出された場合、\ &quot;default \&quot;という方言を使用して文字列の結果を生成します。"
 
 #: of sqlalchemy.types.TypeEngine.compile:6
 msgid "a :class:`.Dialect` instance."
-msgstr ""
+msgstr "a：class： `.Dialect`インスタンスです。"
 
 #: of sqlalchemy.types.TypeEngine.dialect_impl:1
 msgid "Return a dialect-specific implementation for this :class:`.TypeEngine`."
-msgstr ""
+msgstr "このために、方言固有の実装を返します：class： `.TypeEngine`。"
 
 #: of sqlalchemy.types.TypeEngine.evaluates_none:1
 msgid ""
 "Return a copy of this type which has the :attr:`.should_evaluate_none` "
 "flag set to True."
-msgstr ""
+msgstr "：attr： `.should_evaluate_none`フラグがTrueに設定されているこのタイプのコピーを返します。"
 
 #: of sqlalchemy.types.TypeEngine.evaluates_none:4
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.types.TypeEngine.evaluates_none:14
 msgid ""
@@ -277,14 +267,14 @@ msgid ""
 "behavior associated with the Python None value to indicate that the value"
 " doesn't necessarily translate into SQL NULL; a prime example of this is "
 "a JSON type which may wish to persist the JSON value ``'null'``."
-msgstr ""
+msgstr "ORMは、このフラグを使用して、列レベルのデフォルトを起動する効果を持つINSERT文から列を省略するのではなく、INSERT文の列に `` None``の正の値が渡されることを示します。また、PythonのNone値に関連付けられた特別な動作を持つ型で、値が必ずしもSQL NULLに変換されないことを示すことができます。 JSON値 `` &#39;null&#39;``を永続化したいJSON型です。"
 
 #: of sqlalchemy.types.TypeEngine.evaluates_none:23
 msgid ""
 "In all cases, the actual NULL SQL value can be always be persisted in any"
 " column by using the :obj:`~.expression.null` SQL construct in an INSERT "
 "statement or associated with an ORM-mapped attribute."
-msgstr ""
+msgstr "いずれの場合でも、実際のNULL SQL値は、INSERT文の中で：obj： `〜.expression.null` SQL構文を使用するか、ORMでマップされた属性に関連付けて、いつでも任意の列に永続化することができます。"
 
 #: of sqlalchemy.types.TypeEngine.evaluates_none:30
 msgid ""
@@ -292,93 +282,93 @@ msgid ""
 "passed to :paramref:`.Column.default` or "
 ":paramref:`.Column.server_default`; in these cases, ``None`` still means "
 "\"no default\"."
-msgstr ""
+msgstr "\ &quot;evaulates none \&quot;フラグは、paramref： `.Column.default`または：paramref：` .Column.server_default`;に渡される `` None``の値には適用されません。これらの場合、 `` None``は\ &quot;no default \&quot;を意味します。"
 
 #: of sqlalchemy.types.TypeEngine.evaluates_none:39
 msgid ":ref:`session_forcing_null` - in the ORM documentation"
-msgstr ""
+msgstr "：ref： `session_forcing_null`  -  ORMのドキュメント"
 
 #: of sqlalchemy.types.TypeEngine.evaluates_none:41
 msgid ""
 ":paramref:`.postgresql.JSON.none_as_null` - PostgreSQL JSON interaction "
 "with this flag."
-msgstr ""
+msgstr "：paramref： `.postgresql.JSON.none_as_null`  -  PostgreSQL JSONはこのフラグと対話します。"
 
 #: of sqlalchemy.types.TypeEngine.evaluates_none:44
 msgid ":attr:`.TypeEngine.should_evaluate_none` - class-level flag"
-msgstr ""
+msgstr "：attr： `.TypeEngine.should_evaluate_none`  - クラスレベルのフラグ"
 
 #: of sqlalchemy.types.TypeEngine.get_dbapi_type:1
 msgid "Return the corresponding type object from the underlying DB-API, if any."
-msgstr ""
+msgstr "基礎となるDB-APIから対応する型オブジェクトを返します。"
 
 #: of sqlalchemy.types.TypeEngine.get_dbapi_type:4
 msgid "This can be useful for calling ``setinputsizes()``, for example."
-msgstr ""
+msgstr "これは例えば `` setinputsizes（） ``を呼び出すのに便利です。"
 
 #: of sqlalchemy.types.TypeEngine.hashable:1
 msgid "Flag, if False, means values from this type aren't hashable."
-msgstr ""
+msgstr "フラグがFalseの場合、この型の値はハッシュ可能ではないことを意味します。"
 
 #: of sqlalchemy.types.TypeEngine.hashable:3
 msgid "Used by the ORM when uniquing result lists."
-msgstr ""
+msgstr "結果リストを一意にするときにORMによって使用されます。"
 
 #: of sqlalchemy.types.TypeEngine.literal_processor:1
 msgid ""
 "Return a conversion function for processing literal values that are to be"
 " rendered directly without using binds."
-msgstr ""
+msgstr "バインドを使用せずに直接レンダリングされるリテラル値を処理するための変換関数を返します。"
 
 #: of sqlalchemy.types.TypeEngine.literal_processor:4
 msgid ""
 "This function is used when the compiler makes use of the "
 "\"literal_binds\" flag, typically used in DDL generation as well as in "
 "certain scenarios where backends don't accept bound parameters."
-msgstr ""
+msgstr "この関数は、コンパイラが\ &quot;literal_binds \&quot;フラグを使用するときに使用されます。通常、DDL生成やバックエンドがバインドされたパラメータを受け付けないシナリオで使用されます。"
 
 #: of sqlalchemy.types.TypeEngine.python_type:1
 msgid ""
 "Return the Python type object expected to be returned by instances of "
 "this type, if known."
-msgstr ""
+msgstr "既知の場合、この型のインスタンスによって返されると予想されるPython型オブジェクトを返します。"
 
 #: of sqlalchemy.types.TypeEngine.python_type:4
 msgid ""
 "Basically, for those types which enforce a return type, or are known "
 "across the board to do such for all common DBAPIs (like ``int`` for "
 "example), will return that type."
-msgstr ""
+msgstr "基本的には、戻り値の型を強制する型や、一般的なDBAPI（例えば `` int``など）のために全面的に知られている型の場合、その型を返します。"
 
 #: of sqlalchemy.types.TypeEngine.python_type:8
 msgid "If a return type is not defined, raises ``NotImplementedError``."
-msgstr ""
+msgstr "戻り値の型が定義されていない場合、 `` NotImplementedError``が送出されます。"
 
 #: of sqlalchemy.types.TypeEngine.python_type:11
 msgid ""
 "Note that any type also accommodates NULL in SQL which means you can also"
 " get back ``None`` from any type in practice."
-msgstr ""
+msgstr "どんな型もSQLにNULLを格納することに注意してください。つまり、実際にはどの型からでも `` None``を返すことができます。"
 
 #: of sqlalchemy.types.TypeEngine.result_processor:1
 msgid "Return a conversion function for processing result row values."
-msgstr ""
+msgstr "結果行の値を処理するための変換関数を返します。"
 
 #: of sqlalchemy.types.TypeEngine.result_processor:3
 msgid ""
 "Returns a callable which will receive a result row column value as the "
 "sole positional argument and will return a value to return to the user."
-msgstr ""
+msgstr "結果行の列値を唯一の位置引数として受け取るコール可能オブジェクトを返し、値を返してユーザーに返します。"
 
 #: of sqlalchemy.types.TypeEngine.result_processor:11
 msgid "DBAPI coltype argument received in cursor.description."
-msgstr ""
+msgstr "cursor.descriptionでDBAPI coltype引数を受け取りました。"
 
 #: of sqlalchemy.types.TypeEngine.should_evaluate_none:1
 msgid ""
 "If True, the Python constant ``None`` is considered to be handled "
 "explicitly by this type."
-msgstr ""
+msgstr "Trueの場合、Python定数 `` None``はこの型によって明示的に扱われると考えられます。"
 
 #: of sqlalchemy.types.TypeEngine.should_evaluate_none:4
 msgid ""
@@ -388,27 +378,27 @@ msgid ""
 "column-level defaults.   It also allows types which have special behavior"
 " for Python None, such as a JSON type, to indicate that they'd like to "
 "handle the None value explicitly."
-msgstr ""
+msgstr "ORMは、このフラグを使用して、列レベルのデフォルトを起動する効果を持つINSERT文から列を省略するのではなく、INSERT文の列に `` None``の正の値が渡されることを示します。また、JSON型のようなPython Noneの特別な振る舞いを持つ型は、None値を明示的に扱いたいことを示すことができます。"
 
 #: of sqlalchemy.types.TypeEngine.should_evaluate_none:11
 msgid ""
 "To set this flag on an existing type, use the "
 ":meth:`.TypeEngine.evaluates_none` method."
-msgstr ""
+msgstr "このフラグを既存の型に設定するには、：meth： `.TypeEngine.evaluates_none`メソッドを使用します。"
 
 #: of sqlalchemy.types.TypeEngine.should_evaluate_none:16
 msgid ":meth:`.TypeEngine.evaluates_none`"
-msgstr ""
+msgstr "：meth： `.TypeEngine.evaluates_none`"
 
 #: of sqlalchemy.types.TypeEngine.with_variant:1
 msgid ""
 "Produce a new type object that will utilize the given type when applied "
 "to the dialect of the given name."
-msgstr ""
+msgstr "与えられた名前の方言に適用されたときに、与えられた型を利用する新しい型オブジェクトを生成する。"
 
 #: of sqlalchemy.types.TypeEngine.with_variant:4
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.types.TypeEngine.with_variant:13
 msgid ""
@@ -416,59 +406,59 @@ msgid ""
 "\"fallback\" type to that which is dialect specific. The returned type is"
 " an instance of :class:`.Variant`, which itself provides a "
 ":meth:`.Variant.with_variant` that can be called repeatedly."
-msgstr ""
+msgstr "：meth： `.TypeEngine.with_variant`の構成は、常に「フォールバック」型から、方言固有の型へと変わります。返される型は：class： `.Variant`のインスタンスであり、それ自身が：meth：` .Variant.with_variant`を繰り返し提供することができます。"
 
 #: of sqlalchemy.types.TypeEngine.with_variant:19
 msgid ""
 "a :class:`.TypeEngine` that will be selected as a variant from the "
 "originating type, when a dialect of the given name is in use."
-msgstr ""
+msgstr "a：class： `.TypeEngine`。指定された名前の方言が使用されているときに、元の型からバリアントとして選択されます。"
 
 #: of sqlalchemy.types.TypeEngine.with_variant:22
 msgid ""
 "base name of the dialect which uses this type. (i.e. ``'postgresql'``, "
 "``'mysql'``, etc.)"
-msgstr ""
+msgstr "この型を使用する方言の基底名。 （つまり、 `` &#39;postgresql``、 ``&#39; mysql&#39;``など）"
 
 #: of sqlalchemy.types.Concatenable:1
 msgid ""
 "A mixin that marks a type as supporting 'concatenation', typically "
 "strings."
-msgstr ""
+msgstr "あるタイプを「連結」（通常は文字列）をサポートするものとしてマークするミックスイン。"
 
 #: of sqlalchemy.types.Indexable:1
 msgid ""
 "A mixin that marks a type as supporting indexing operations, such as "
 "array or JSON structures."
-msgstr ""
+msgstr "配列やJSON構造などのインデックス作成操作をサポートする型をマークするmixin。"
 
 #: of sqlalchemy.types.NullType:1
 msgid "An unknown type."
-msgstr ""
+msgstr "不明なタイプです。"
 
 #: of sqlalchemy.types.NullType:3
 msgid ""
 ":class:`.NullType` is used as a default type for those cases where a type"
 " cannot be determined, including:"
-msgstr ""
+msgstr "：class： `.NullType`は、タイプを特定できない場合のデフォルトタイプとして使用されます。"
 
 #: of sqlalchemy.types.NullType:6
 msgid ""
 "During table reflection, when the type of a column is not recognized by "
 "the :class:`.Dialect`"
-msgstr ""
+msgstr "テーブルリフレクション中に、：class： `.Dialect`によって列の型が認識されないとき"
 
 #: of sqlalchemy.types.NullType:8
 msgid ""
 "When constructing SQL expressions using plain Python objects of unknown "
 "types (e.g. ``somecolumn == my_special_object``)"
-msgstr ""
+msgstr "型が未知のプレーンなPythonオブジェクト（例えば `` somecolumn == my_special_object``）を使ってSQL式を構築するとき、"
 
 #: of sqlalchemy.types.NullType:10
 msgid ""
 "When a new :class:`.Column` is created, and the given type is passed as "
 "``None`` or is not passed at all."
-msgstr ""
+msgstr "new：class： `.Column`が作成され、与えられた型が` `None``として渡されるか、まったく渡されません。"
 
 #: of sqlalchemy.types.NullType:13
 msgid ""
@@ -480,29 +470,29 @@ msgid ""
 ":func:`.cast` operation or within a schema creation operation such as "
 "that invoked by :meth:`.MetaData.create_all` or the :class:`.CreateTable`"
 " construct."
-msgstr ""
+msgstr "：class： `.NullType`は、SQL式の呼び出し内で問題なく使用できます。式の構築レベルまたはバインドパラメータ/結果処理レベルで動作しません。 ：class： `.NullType`は、：func：` .cast`オペレーションやスキーマの作成で使用されている場合など、コンパイラに型自体のレンダリングを要求された場合は：exc： `.CompileError`を返します：meth： `.MetaData.create_all`または：class：` .CreateTable`構造体によって呼び出されるような操作です。"
 
 #: of sqlalchemy.types.Variant:1
 msgid ""
 "A wrapping type that selects among a variety of implementations based on "
 "dialect in use."
-msgstr ""
+msgstr "使用中の方言に基づいてさまざまな実装の中から選択するラッピング型。"
 
 #: of sqlalchemy.types.Variant:4
 msgid ""
 "The :class:`.Variant` type is typically constructed using the "
 ":meth:`.TypeEngine.with_variant` method."
-msgstr ""
+msgstr "：class： `.Variant`型は、通常：meth：` .TypeEngine.with_variant`メソッドを使って構築されます。"
 
 #: of sqlalchemy.types.Variant:9
 msgid ":meth:`.TypeEngine.with_variant` for an example of use."
-msgstr ""
+msgstr "：meth： `.TypeEngine.with_variant`は使用例です。"
 
 #: ../../core/type_api.rst
 msgid "members"
-msgstr ""
+msgstr "メンバー"
 
 #: ../../core/type_api.rst:24
 msgid "with_variant, __init__"
-msgstr ""
+msgstr "with_variant、__init__"
 

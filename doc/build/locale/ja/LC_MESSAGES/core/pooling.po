@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/pooling.rst:4
 msgid "Connection Pooling"
-msgstr ""
+msgstr "接続プーリング"
 
 #: ../../core/pooling.rst:8
 msgid ""
@@ -27,14 +17,14 @@ msgid ""
 "connections in memory for efficient re-use, as well as to provide "
 "management for the total number of connections an application might use "
 "simultaneously."
-msgstr ""
+msgstr "接続プールは、効率的な再利用のためにメモリ内の長時間実行される接続を維持するとともに、アプリケーションが同時に使用できる接続の総数を管理するために使用される標準的な手法です。"
 
 #: ../../core/pooling.rst:14
 msgid ""
 "Particularly for server-side web applications, a connection pool is the "
 "standard way to maintain a \"pool\" of active database connections in "
 "memory which are reused across requests."
-msgstr ""
+msgstr "特にサーバー側のWebアプリケーションの場合、接続プールは、メモリ内のアクティブなデータベース接続のプールを維持し、要求全体で再利用するための標準的な方法です。"
 
 #: ../../core/pooling.rst:19
 msgid ""
@@ -42,11 +32,11 @@ msgid ""
 "integrate with the :class:`.Engine`.  They can also be used directly for "
 "applications that want to add pooling to an otherwise plain DBAPI "
 "approach."
-msgstr ""
+msgstr "SQLAlchemyには：class： `.Engine`と統合するいくつかの接続プール実装が含まれています。また、通常のDBAPIアプローチにプーリングを追加するアプリケーションに直接使用することもできます。"
 
 #: ../../core/pooling.rst:25
 msgid "Connection Pool Configuration"
-msgstr ""
+msgstr "接続プールの構成"
 
 #: ../../core/pooling.rst:27
 msgid ""
@@ -55,7 +45,7 @@ msgid ""
 ":class:`.QueuePool` integrated, pre-configured with reasonable pooling "
 "defaults.  If you're reading this section only to learn how to enable "
 "pooling - congratulations! You're already done."
-msgstr ""
+msgstr "：func： `〜sqlalchemy.create_engine`関数によって返される：class：`〜.engine.Engine`は、：class： `.QueuePool`が組み込まれていて、合理的なプーリングのデフォルトで事前設定されています。プーリングを有効にする方法を学ぶためにのみ、このセクションを読んでいるなら、おめでとうございます！あなたはすでに完了しています。"
 
 #: ../../core/pooling.rst:33
 msgid ""
@@ -63,7 +53,7 @@ msgid ""
 "directly to :func:`~sqlalchemy.create_engine` as keyword arguments: "
 "``pool_size``, ``max_overflow``, ``pool_recycle`` and ``pool_timeout``.  "
 "For example::"
-msgstr ""
+msgstr "最も一般的な：class： `.QueuePool`チューニングパラメータはキーワード引数として：func：`〜sqlalchemy.create_engine`に直接渡すことができます： `` pool_size``、 `` max_overflow``、 `` pool_recycle``、 `` pool_timeout``を実行します。例えば：："
 
 #: ../../core/pooling.rst:41
 msgid ""
@@ -73,7 +63,7 @@ msgid ""
 "provide a reasonable default behavior to SQLite \"memory\" databases, "
 "which maintain their entire dataset within the scope of a single "
 "connection."
-msgstr ""
+msgstr "SQLiteの場合、：class： `.SingletonThreadPool`または：class：` .NullPool`が方言によって選択され、SQLiteのスレッドとロックモデルとの互換性が向上し、SQLite \単一の接続の範囲内でデータセット全体を維持する「メモリ」データベース。"
 
 #: ../../core/pooling.rst:48
 msgid ""
@@ -87,11 +77,11 @@ msgid ""
 "connections queued up - the pool would only grow to that size if the "
 "application actually used five connections concurrently, in which case "
 "the usage of a small pool is an entirely appropriate default behavior."
-msgstr ""
+msgstr "すべてのSQLAlchemyプールの実装は、接続のどれもが &quot;作成前に作成されません&quot;という共通点を持っています - すべての実装は、接続を作成する前に初めて使用するまで待機します。この時点で、さらに多くの接続に対する追加の並行チェックアウト要求が行われない場合、追加の接続は作成されません。これは、func： `.create_engine`が、アプリケーションが実際に5つの接続が待ち行列に入っているかどうかにかかわらず、size：5のclass：` .QueuePool`を使用することをデフォルトにしている理由です。アプリケーションが実際に5つの接続を同時に使用した場合はそのサイズになります。この場合、小さなプールの使用は完全に適切なデフォルト動作です。"
 
 #: ../../core/pooling.rst:62
 msgid "Switching Pool Implementations"
-msgstr ""
+msgstr "スイッチングプールの実装"
 
 #: ../../core/pooling.rst:64
 msgid ""
@@ -100,22 +90,22 @@ msgid ""
 "imported from the ``sqlalchemy.pool`` module, and handles the details of "
 "building the pool for you.   Common options include specifying "
 ":class:`.QueuePool` with SQLite::"
-msgstr ""
+msgstr "：func： `.create_engine`を使って別の種類のプールを使用する通常の方法は、` `poolclass``引数を使うことです。この引数は、 `` sqlalchemy.pool``モジュールからインポートされたクラスを受け取り、プールの構築の詳細を処理します。一般的なオプションには、class： `.QueuePool` with SQLite ::"
 
 #: ../../core/pooling.rst:73
 msgid "Disabling pooling using :class:`.NullPool`::"
-msgstr ""
+msgstr "クラスを使用してプールを無効にする：class： `.NullPool` ::"
 
 #: ../../core/pooling.rst:81
 msgid "Using a Custom Connection Function"
-msgstr ""
+msgstr "カスタム接続関数の使用"
 
 #: ../../core/pooling.rst:83
 msgid ""
 "All :class:`.Pool` classes accept an argument ``creator`` which is a "
 "callable that creates a new connection.  :func:`.create_engine` accepts "
 "this function to pass onto the pool via an argument of the same name::"
-msgstr ""
+msgstr "All：class： `.Pool`クラスは、新しい接続を作成する呼び出し可能な引数` `creator``を受け入れます。 ：func： `.create_engine`は、この関数が同じ名前の引数を使ってプールに渡すことを許可します::"
 
 #: ../../core/pooling.rst:98
 msgid ""
@@ -124,39 +114,39 @@ msgid ""
 "to :func:`.create_engine` is still usable.  ``creator`` is there as a "
 "last resort for when a DBAPI has some form of ``connect`` that is not at "
 "all supported by SQLAlchemy."
-msgstr ""
+msgstr "ほとんどの\ &quot;初期化時の接続\&quot;ルーチンでは、：class： `.PoolEvents`イベントフックを使うほうが便利です。つまり、：func：` .create_engine`の通常のURL引数が引き続き使用できるようになります。 `` creator``は、DBAPIがSQLAlchemyでサポートされていない何らかの形式の `` connect``を持っているときの最後の手段です。"
 
 #: ../../core/pooling.rst:105
 msgid "Constructing a Pool"
-msgstr ""
+msgstr "プールの作成"
 
 #: ../../core/pooling.rst:107
 msgid ""
 "To use a :class:`.Pool` by itself, the ``creator`` function is the only "
 "argument that's required and is passed first, followed by any additional "
 "options::"
-msgstr ""
+msgstr "：class： `.Pool`を単独で使うには、` `creator``関数が唯一の引数であり、最初に渡され、その後に追加のオプションが続きます::"
 
 #: ../../core/pooling.rst:120
 msgid ""
 "DBAPI connections can then be procured from the pool using the "
 ":meth:`.Pool.connect` function.  The return value of this method is a "
 "DBAPI connection that's contained within a transparent proxy::"
-msgstr ""
+msgstr "次に、：meth： `.Pool.connect`関数を使用してプールからDBAPI接続を調達することができます。このメソッドの戻り値は、透過プロキシに含まれるDBAPI接続です::"
 
 #: ../../core/pooling.rst:131
 msgid ""
 "The purpose of the transparent proxy is to intercept the ``close()`` "
 "call, such that instead of the DBAPI connection being closed, it is "
 "returned to the pool::"
-msgstr ""
+msgstr "透過プロキシの目的は、DBAPI接続が閉じられる代わりにプールに返されるように、 `` close（） ``の呼び出しを傍受することです::"
 
 #: ../../core/pooling.rst:139
 msgid ""
 "The proxy also returns its contained DBAPI connection to the pool when it"
 " is garbage collected, though it's not deterministic in Python that this "
 "occurs immediately (though it is typical with cPython)."
-msgstr ""
+msgstr "プロキシは、プールにガベージコレクションされたときにそのプールに含まれるDBAPI接続も返しますが、Pythonではこれが即座に発生することは確定的ではありません（cPythonでは典型的ですが）。"
 
 #: ../../core/pooling.rst:144
 msgid ""
@@ -167,29 +157,29 @@ msgid ""
 "locks are released as well as that any isolated data snapshots are "
 "removed.   This behavior can be disabled using the ``reset_on_return`` "
 "option of :class:`.Pool`."
-msgstr ""
+msgstr "`` close（） ``ステップは、DBAPI接続の `` rollback（） ``メソッドを呼び出す重要なステップも実行します。これは、接続上の既存のトランザクションが削除されるため、次の使用時に既存の状態が残っていないことを保証するだけでなく、表と行のロックが解除され、隔離されたデータスナップショットが削除されます。この動作は、class： `.Pool`の` `reset_on_return``オプションを使って無効にすることができます。"
 
 #: ../../core/pooling.rst:152
 msgid ""
 "A particular pre-created :class:`.Pool` can be shared with one or more "
 "engines by passing it to the ``pool`` argument of "
 ":func:`.create_engine`::"
-msgstr ""
+msgstr "特定のpre-created：class： `.Pool`は、func：` .create_engine` ::の `` pool``引数に渡すことで、1つ以上のエンジンと共有することができます。"
 
 #: ../../core/pooling.rst:158
 msgid "Pool Events"
-msgstr ""
+msgstr "プールイベント"
 
 #: ../../core/pooling.rst:160
 msgid ""
 "Connection pools support an event interface that allows hooks to execute "
 "upon first connect, upon each new connection, and upon checkout and "
 "checkin of connections.   See :class:`.PoolEvents` for details."
-msgstr ""
+msgstr "接続プールは、最初の接続時、新規接続時、および接続のチェックアウト時およびチェックイン時にフックを実行できるイベント・インターフェースをサポートします。詳しくは、class： `.PoolEvents`を参照してください。"
 
 #: ../../core/pooling.rst:167
 msgid "Dealing with Disconnects"
-msgstr ""
+msgstr "切断を扱う"
 
 #: ../../core/pooling.rst:169
 msgid ""
@@ -199,11 +189,11 @@ msgid ""
 "pool to gracefully recover when the database server has been restarted, "
 "and all previously established connections are no longer functional.   "
 "There are two approaches to this."
-msgstr ""
+msgstr "接続プールには、以前にプールされた接続を「無効」と設定して、個々の接続およびその接続セット全体をリフレッシュする機能があります。一般的な使用例として、データベースサーバーの再起動時に接続プールを正常に回復させることができ、以前に確立された接続は機能しなくなります。これには2つのアプローチがあります。"
 
 #: ../../core/pooling.rst:178
 msgid "Disconnect Handling - Pessimistic"
-msgstr ""
+msgstr "切断処理 - 悲観的"
 
 #: ../../core/pooling.rst:180
 msgid ""
@@ -212,7 +202,7 @@ msgid ""
 "the database connection is still viable.   Typically, this is a simple "
 "statement like \"SELECT 1\", but may also make use of some DBAPI-specific"
 " method to test the connection for liveness."
-msgstr ""
+msgstr "悲観的なアプローチでは、各接続プールのチェックアウトの開始時にSQL接続でテストステートメントを発行し、データベース接続が実行可能であることをテストします。通常、これは\ &quot;SELECT 1 \&quot;のような単純な文ですが、DBAPI固有のメソッドを使用して、接続の有効性をテストすることもできます。"
 
 #: ../../core/pooling.rst:186
 msgid ""
@@ -222,7 +212,7 @@ msgid ""
 "   The calling application does not need to be concerned about organizing"
 " operations to be able to recover from stale connections checked out from"
 " the pool."
-msgstr ""
+msgstr "このアプローチでは、接続チェックアウトプロセスにわずかなオーバーヘッドが追加されますが、プールされていない接続によるデータベースエラーを完全に排除する最も単純で信頼できるアプローチです。呼び出し元のアプリケーションは、プールからチェックアウトされた古い接続から回復できるように操作を整理することを心配する必要はありません。"
 
 #: ../../core/pooling.rst:192
 msgid ""
@@ -236,7 +226,7 @@ msgid ""
 "individual operation where the exception was raised will be lost, and "
 "it's up to the application to either abandon the operation, or retry the "
 "whole transaction again."
-msgstr ""
+msgstr "事前pingのアプローチ**は、トランザクションや他のSQL操作の途中で削除された接続**に対応していないことに注意することが重要です。トランザクションが進行中にデータベースが使用できなくなると、トランザクションは失われ、データベースのエラーが発生します。 ：class： `.Connection`オブジェクトは\&quot; disconnect \ &quot;状況を検出し、接続をリサイクルするだけでなく、この条件が発生したときに残りの接続プールを無効にしますが、例外が発生した個々の操作は失われます。操作を中止するか、トランザクション全体をやり直すかはアプリケーションによって異なります。"
 
 #: ../../core/pooling.rst:203
 msgid ""
@@ -244,7 +234,7 @@ msgid ""
 "the :paramref:`.Pool.pre_ping` argument, available from "
 ":func:`.create_engine` via the :paramref:`.create_engine.pool_pre_ping` "
 "argument::"
-msgstr ""
+msgstr "チェックアウト時の接続の悲観的なテストは、：paramref： `.Pool.pre_ping`引数を使用することで実現できます。：paramref：` .create_engine.pool_pre_ping`引数を介して：func： `.create_engine`から取得できます::"
 
 #: ../../core/pooling.rst:209
 msgid ""
@@ -254,7 +244,7 @@ msgid ""
 "will be immediately recycled, and all other pooled connections older than"
 " the current time are invalidated, so that the next time they are checked"
 " out, they will also be recycled before use."
-msgstr ""
+msgstr "\ &quot;プレping \&quot;機能は通常、接続がプールからチェックアウトされるたびに\ &quot;SELECT 1 \&quot;と同等のSQLを出力します。 \ &quot;disconnect \&quot;状態として検出されたエラーが発生した場合、接続は直ちにリサイクルされ、現在時刻より古いプールされた接続はすべて無効になり、次回チェックアウトされると、使用前にリサイクルしてください。"
 
 #: ../../core/pooling.rst:215
 msgid ""
@@ -264,7 +254,7 @@ msgid ""
 "available for connections, but is not able to respond to a \"ping\", the "
 "\"pre_ping\" will try up to three times before giving up, propagating the"
 " database error last received."
-msgstr ""
+msgstr "\ &quot;pre ping \&quot;が実行されてもデータベースが使用できない場合、初期接続は失敗し、接続失敗のエラーは正常に伝播されます。データベースが接続で利用可能であるが、\ &quot;ping \&quot;に応答できない珍しい状況では、\ &quot;pre_ping \&quot;は3回まで試行し、最後に受信したデータベースエラーを伝播します。"
 
 #: ../../core/pooling.rst:223
 msgid ""
@@ -272,15 +262,15 @@ msgid ""
 "the connection pool / dialect, using a very short codepath for minimal "
 "Python latency.   As such, this statement is **not logged in the SQL echo"
 " output**, and will not show up in SQLAlchemy's engine logging."
-msgstr ""
+msgstr "\ &quot;pre-ping \&quot;によって生成された\ &quot;SELECT 1 \&quot;はPythonの待ち時間を最小限に抑えるために非常に短いコードパスを使用して接続プール/方言の範囲内で呼び出されます。そのため、この文は** SQLエコー出力**には記録されず、SQLAlchemyのエンジンログには表示されません。"
 
 #: ../../core/pooling.rst:228
 msgid "Added \"pre-ping\" capability to the :class:`.Pool` class."
-msgstr ""
+msgstr "：class： `.Pool`クラスに\&quot; pre-ping \ &quot;機能を追加しました。"
 
 #: ../../core/pooling.rst:232
 msgid "Custom / Legacy Pessimistic Ping"
-msgstr ""
+msgstr "カスタム/レガシーペシミスティックPing"
 
 #: ../../core/pooling.rst:234
 msgid ""
@@ -289,7 +279,7 @@ msgid ""
 ":meth:`.ConnectionEvents.engine_connect` engine event. The most common "
 "recipe for this is below, for reference purposes in case an application "
 "is already using such a recipe, or special behaviors are needed::"
-msgstr ""
+msgstr "：paramref： `.create_engine.pool_pre_ping`が追加される前に、\&quot; pre-ping \ &quot;アプローチは歴史的に：meth：` .ConnectionEvents.engine_connect`エンジンイベントを使用して手動で実行されました。アプリケーションがすでにそのようなレシピを使用している場合や、特別な動作が必要な場合の参考のため、これに関する最も一般的なレシピは次のとおりです。"
 
 #: ../../core/pooling.rst:282
 msgid ""
@@ -299,11 +289,11 @@ msgid ""
 "object's ability to correctly invalidate the current connection pool when"
 " this condition occurs and allowing the current :class:`.Connection` to "
 "re-validate onto a new DBAPI connection."
-msgstr ""
+msgstr "上記のレシピは、SQLAlchemyの機能を利用して、\ &quot;disconnect \&quot;状況を示す既知のDBAPI例外を検出し、class： `.Engine`オブジェクトの現在の値を正しく無効にする機能を利用するという利点があります現在の：class： `.Connection`が新しいDBAPI接続に再検証できるようにします。"
 
 #: ../../core/pooling.rst:291
 msgid "Disconnect Handling - Optimistic"
-msgstr ""
+msgstr "ディスコネクト処理 - 楽観的"
 
 #: ../../core/pooling.rst:293
 msgid ""
@@ -316,7 +306,7 @@ msgid ""
 "checkout.  This behavior assumes the :class:`.Pool` is used in "
 "conjunction with a :class:`.Engine`. The :class:`.Engine` has logic which"
 " can detect disconnection events and refresh the pool automatically."
-msgstr ""
+msgstr "悲観的な取り扱いが採用されていない場合、およびデータベースがトランザクション内で接続の使用期間の途中でシャットダウンおよび/または再開される場合と同様に、古い/閉じた接続を処理するもう1つの方法は、SQLAlchemyがその時点で、プール内のすべての接続が無効になります。つまり、古いものとみなされ、次のチェックアウト時に更新されます。この動作は、：class： `.Pool`が：class：` .Engine`と一緒に使用されることを前提としています。 ：class： `.Engine`は、切断イベントを検出して自動的にプールをリフレッシュするロジックを持っています。"
 
 #: ../../core/pooling.rst:303
 msgid ""
@@ -326,7 +316,7 @@ msgid ""
 ":meth:`.Pool.recreate` method, effectively invalidating all connections "
 "not currently checked out so that they are replaced with new ones upon "
 "next checkout.  This flow is illustrated by the code example below::"
-msgstr ""
+msgstr "：class： `.Connection`がDBAPI接続を使用しようとし、\&quot; disconnect \ &quot;イベントに対応する例外が発生すると、接続は無効になります。 ：class： `.Connection`は：meth：` .Pool.recreate`メソッドを呼び出し、現在チェックアウトされていないすべてのコネクションを効果的に無効にして、次のチェックアウト時に新しいコネクションに置き換えます。このフローは、次のコード例で説明されています::"
 
 #: ../../core/pooling.rst:328
 msgid ""
@@ -339,11 +329,11 @@ msgid ""
 "then the web application continuing normally beyond that.   Hence the "
 "approach is \"optimistic\" in that frequent database restarts are not "
 "anticipated."
-msgstr ""
+msgstr "上記の例は、切断イベントが検出された後も正常に続行する、プールをリフレッシュするための特別な介入は必要ないことを示しています。ただし、データベース使用不能イベントが発生している間に使用されている各接続ごとに1つのデータベース例外が発生します。 ORMセッションを使用する一般的なWebアプリケーションでは、上記の条件は1つのリクエストが500エラーで失敗した場合に対応し、Webアプリケーションはそれを超えて通常通り続きます。したがって、頻繁なデータベースの再起動が予期されない点で、アプローチは「楽観的」である。"
 
 #: ../../core/pooling.rst:340
 msgid "Setting Pool Recycle"
-msgstr ""
+msgstr "プールリサイクルの設定"
 
 #: ../../core/pooling.rst:342
 msgid ""
@@ -352,7 +342,7 @@ msgid ""
 "using a particular connection that has passed a certain age, and is "
 "appropriate for database backends such as MySQL that automatically close "
 "connections that have been stale after a particular period of time::"
-msgstr ""
+msgstr "\ &quot;楽観的な\&quot;アプローチを補うことができる追加の設定は、プールリサイクルパラメータを設定することです。このパラメータは、プールが特定の経過時間を経過した特定の接続を使用できないようにします。MySQLなどのデータベースバックエンドに適しており、特定の期間の経過後に自動的に接続を切断します。"
 
 #: ../../core/pooling.rst:351
 msgid ""
@@ -362,11 +352,11 @@ msgid ""
 "that are held in a checked out state.     ``pool_recycle`` is a function "
 "of the :class:`.Pool` itself, independent of whether or not an "
 ":class:`.Engine` is in use."
-msgstr ""
+msgstr "上記の場合、1時間以上開いているDBAPI接続は、次のチェックアウト時に無効になり、置き換えられます。無効化**のみがチェックアウト中に発生することに注意してください。チェックアウト状態に保持されている接続ではありません。 `` pool_recycle``は：class： `.Engine`が使用されているかどうかに関係なく、：class：` .Pool`自体の関数です。"
 
 #: ../../core/pooling.rst:360
 msgid "More on Invalidation"
-msgstr ""
+msgstr "失効の詳細"
 
 #: ../../core/pooling.rst:362
 msgid ""
@@ -374,7 +364,7 @@ msgid ""
 "allow both explicit invalidation of a connection as well as automatic "
 "invalidation in response to conditions that are determined to render a "
 "connection unusable."
-msgstr ""
+msgstr "：class： `.Pool`は、接続の明示的な無効化と、接続を使用不可能にすると判断される条件に応じた自動無効化の両方を可能にする\&quot;接続無効化\ &quot;サービスを提供します。"
 
 #: ../../core/pooling.rst:366
 msgid ""
@@ -383,14 +373,14 @@ msgid ""
 "connection if it is not clear that the connection itself might not be "
 "closed, however if this method fails, the exception is logged but the "
 "operation still proceeds."
-msgstr ""
+msgstr "\ &quot;無効化&quot;は、特定のDBAPI接続がプールから削除され、破棄されることを意味します。 `` .close（） ``メソッドは、接続自体が閉じられないことが明らかでない場合にこの接続で呼び出されますが、このメソッドが失敗すると、例外はログに記録されますが、操作は引き続き進行します。"
 
 #: ../../core/pooling.rst:371
 msgid ""
 "When using a :class:`.Engine`, the :meth:`.Connection.invalidate` method "
 "is the usual entrypoint to explicit invalidation.   Other conditions by "
 "which a DBAPI connection might be invalidated include:"
-msgstr ""
+msgstr "：class： `.Engine`を使用する場合、：meth：` .Connection.invalidate`メソッドは、明示的な無効化の通常のエントリポイントです。 DBAPI接続が無効になるその他の条件は次のとおりです。"
 
 #: ../../core/pooling.rst:375
 msgid ""
@@ -404,7 +394,7 @@ msgid ""
 "determine if this exception indicates that the connection is no longer "
 "usable.  If this is the case, the :meth:`._ConnectionFairy.invalidate` "
 "method is called and the DBAPI connection is then discarded."
-msgstr ""
+msgstr "`` connection.execute（） ``のようなメソッドが呼び出されたときに発生するclass： `.OperationalError`のようなDBAPI例外は、いわゆる&quot;切断 &quot;状態を示すものとして検出されます。 Python DBAPIは例外の性質を判断するための標準システムを提供していないので、すべてのSQLAlchemy方言には、文字列メッセージと潜在的なエラーコードを含む例外オブジェクトの内容を調べる `` is_disconnect（） ``システムが含まれていますこの例外が接続がもはや使用不能であることを示すかどうかを判断するために使用します。この場合、：meth： `._ConnectionFairy.invalidate`メソッドが呼び出され、DBAPI接続が破棄されます。"
 
 #: ../../core/pooling.rst:386
 msgid ""
@@ -413,7 +403,7 @@ msgid ""
 " by the pool's \"reset on return\" behavior, throws an exception. A final"
 " attempt at calling ``.close()`` on the connection will be made, and it "
 "is then discarded."
-msgstr ""
+msgstr "接続がプールに返され、プールの\ &quot;reset on return \&quot;の動作によって指定された `` connection.rollback（） ``または `` connection.commit（） ``メソッドを呼び出すと、例外がスローされます。接続時に `` .close（） ``を呼び出す最後の試みが行われ、それが破棄されます。"
 
 #: ../../core/pooling.rst:392
 msgid ""
@@ -421,17 +411,17 @@ msgid ""
 ":class:`~sqlalchemy.exc.DisconnectionError` exception, indicating that "
 "the connection won't be usable and a new connection attempt needs to be "
 "made."
-msgstr ""
+msgstr "：meth： `.PoolEvents.checkout`を実装しているリスナーが：class：`〜sqlalchemy.exc.DisconnectionError`例外を送出すると、接続が使用できなくなり、新しい接続を試みる必要があることを示します。"
 
 #: ../../core/pooling.rst:396
 msgid ""
 "All invalidations which occur will invoke the "
 ":meth:`.PoolEvents.invalidate` event."
-msgstr ""
+msgstr "発生するすべての無効化は、：meth： `.PoolEvents.invalidate`イベントを呼び出します。"
 
 #: ../../core/pooling.rst:402
 msgid "Using FIFO vs. LIFO"
-msgstr ""
+msgstr "FIFOとLIFOの使用"
 
 #: ../../core/pooling.rst:404
 msgid ""
@@ -448,7 +438,7 @@ msgid ""
 "schemes to close these connections out.   The difference between FIFO and"
 " LIFO is basically whether or not its desirable for the pool to keep a "
 "full set of connections ready to go even during idle periods::"
-msgstr ""
+msgstr "：class： `.QueuePool`クラスには、paramref：` .QueuePool.use_lifo`というフラグがあります。これは、：paramref： `.create_engine.pool_use_lifo`を介して：func：` .create_engine`からアクセスすることもできます。このフラグを `` True``に設定すると、プールの\ &quot;queue \&quot;振る舞いは\ &quot;stack \&quot;の振る舞いになります。例えば、プールに返される最後の接続は、要求。プール内の各接続を直列に使用するラウンドロビン効果を生み出す先入れ先出し方式のプールの長年の動作とは対照的に、ライフモードでは余分な接続がプール内でアイドル状態を維持できるため、これらの接続を閉じるために、サイドタイムアウトスキームを使用します。 FIFOとLIFOの違いは、基本的に、プールがアイドル期間中でも実行できるようにフルセットの接続を維持することが望ましいかどうかです。"
 
 #: ../../core/pooling.rst:420
 msgid ""
@@ -456,19 +446,19 @@ msgid ""
 "flag so that connections which are closed from the server side are "
 "gracefully handled by the connection pool and replaced with a new "
 "connection."
-msgstr ""
+msgstr "上記では、：paramref： `.create_engine.pool_pre_ping`フラグを使用して、サーバー側からクローズされた接続が接続プールによって正常に処理され、新しい接続で置き換えられるようにします。"
 
 #: ../../core/pooling.rst:424
 msgid "Note that the flag only applies to :class:`.QueuePool` use."
-msgstr ""
+msgstr "このフラグはclass： `.QueuePool`のみに適用されます。"
 
 #: ../../core/pooling.rst:430 of sqlalchemy.pool.QueuePool.__init__:44
 msgid ":ref:`pool_disconnects`"
-msgstr ""
+msgstr "：ref： `pool_disconnects`"
 
 #: ../../core/pooling.rst:435
 msgid "Using Connection Pools with Multiprocessing"
-msgstr ""
+msgstr "マルチプロセッシングでの接続プールの使用"
 
 #: ../../core/pooling.rst:437
 msgid ""
@@ -479,11 +469,11 @@ msgid ""
 "across process boundaries, meaning this will cause concurrent access to "
 "the file descriptor on behalf of two or more entirely independent Python "
 "interpreter states."
-msgstr ""
+msgstr "接続プールを使用し、拡張子で：：class： `.Engine`を使用して：func：` .create_engine`を使用して作成した場合、プールされた接続**はフォークされたプロセス**と共有されません。 TCP接続は、通常はプロセスの境界を越えて動作するファイルディスクリプタとして表されます。これは、2つ以上の完全に独立したPythonインタープリタの状態のためにファイルディスクリプタに同時にアクセスすることを意味します。"
 
 #: ../../core/pooling.rst:444
 msgid "There are two approaches to dealing with this."
-msgstr ""
+msgstr "これに対処するには2つの方法があります。"
 
 #: ../../core/pooling.rst:446
 msgid ""
@@ -494,14 +484,14 @@ msgid ""
 "all new ones.  Below is a simple version using "
 "``multiprocessing.Process``, but this idea should be adapted to the style"
 " of forking in use::"
-msgstr ""
+msgstr "最初は、子プロセス内で新しい：class： `.Engine`を作成するか、既存の：class：` .Engine`の上で子プロセスが接続を使用する前に：meth： `.Engine.dispose`を呼び出します。これにより、既存の接続がプールからすべて削除され、新しい接続がすべて作成されます。以下は `` multiprocessing.Process``を使った単純なバージョンですが、このアイデアは使用中のフォークのスタイルに適合させるべきです::"
 
 #: ../../core/pooling.rst:463
 msgid ""
 "The next approach is to instrument the :class:`.Pool` itself with events "
 "so that connections are automatically invalidated in the subprocess. This"
 " is a little more magical but probably more foolproof::"
-msgstr ""
+msgstr "次のアプローチは、：class： `.Pool`自体にイベントを設定して、接続がサブプロセスで自動的に無効になるようにすることです。これはもう少し魔法ですが、恐らくもっと簡単です::"
 
 #: ../../core/pooling.rst:488
 msgid ""
@@ -510,46 +500,46 @@ msgid ""
 "originated in a different parent process as an \"invalid\" connection, "
 "coercing the pool to recycle the connection record to make a new "
 "connection."
-msgstr ""
+msgstr "上記では、異なる親プロセスで発生したDBAPI接続を\ &quot;無効な\&quot;接続として扱うために、：ref： `pool_disconnects_pessimistic`に記述されているのと同様の方法を使用して、プールを強制して接続レコードをリサイクルして、接続。"
 
 #: ../../core/pooling.rst:496
 msgid "API Documentation - Available Pool Implementations"
-msgstr ""
+msgstr "APIドキュメント - 使用可能なプールの実装"
 
 #: of sqlalchemy.pool.Pool:1
 msgid "Abstract base class for connection pools."
-msgstr ""
+msgstr "接続プールの抽象基本クラス。"
 
 #: of sqlalchemy.pool.Pool.__init__:1
 msgid "Construct a Pool."
-msgstr ""
+msgstr "プールを構築する。"
 
 #: of sqlalchemy.pool.Pool.__init__ sqlalchemy.pool.QueuePool.__init__
 #: sqlalchemy.pool.SingletonThreadPool
 #: sqlalchemy.pool._ConnectionFairy.invalidate
 #: sqlalchemy.pool._ConnectionRecord.invalidate
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.pool.Pool.__init__:3
 msgid ""
 "a callable function that returns a DB-API connection object.  The "
 "function will be called with parameters."
-msgstr ""
+msgstr "DB-API接続オブジェクトを返す呼び出し可能な関数。関数はパラメータとともに呼び出されます。"
 
 #: of sqlalchemy.pool.Pool.__init__:7
 msgid ""
 "If set to non -1, number of seconds between connection recycling, which "
 "means upon checkout, if this timeout is surpassed the connection will be "
 "closed and replaced with a newly opened connection. Defaults to -1."
-msgstr ""
+msgstr "非-1に設定すると、接続リサイクルの間の秒数、チェックアウト時に、このタイムアウトを超えると接続が閉じられ、新しく開かれた接続に置き換えられます。デフォルトは-1です。"
 
 #: of sqlalchemy.pool.Pool.__init__:12
 msgid ""
 "String identifier which will be used within the \"name\" field of logging"
 " records generated within the \"sqlalchemy.pool\" logger. Defaults to a "
 "hexstring of the object's id."
-msgstr ""
+msgstr "\ &quot;sqlalchemy.pool \&quot;ロガー内で生成されたロギングレコードの\ &quot;name \&quot;フィールド内で使用される文字列識別子。デフォルトではオブジェクトのIDの16進文字列になります。"
 
 #: of sqlalchemy.pool.Pool.__init__:17
 msgid ""
@@ -557,7 +547,7 @@ msgid ""
 "logged to the standard output, as well as pool sizing information.  "
 "Echoing can also be achieved by enabling logging for the "
 "\"sqlalchemy.pool\" namespace. Defaults to False."
-msgstr ""
+msgstr "Trueの場合、プールから引き出され、プールから取得された接続は、プールサイズ情報と同様に標準出力に記録されます。エコー処理は、\ &quot;sqlalchemy.pool \&quot;名前空間のロギングを有効にすることでも実現できます。デフォルトはFalseです。"
 
 #: of sqlalchemy.pool.Pool.__init__:23
 msgid ""
@@ -582,7 +572,7 @@ msgid ""
 "\"threadlocal\" engine strategy, which provides a more comprehensive   "
 "approach to \"threadlocal\" connectivity for the specific   use case of "
 "using :class:`.Engine` and :class:`.Connection` objects   directly."
-msgstr ""
+msgstr "Trueに設定されている場合、同じアプリケーションスレッド内で：meth： `connect`を繰り返し呼び出すと、同じ接続オブジェクトがプールからすでに取得され、まだ返されていない場合に返されます。デフォルトで個々のトランザクションを犠牲にしてわずかなパフォーマンス上の利点を提供します。 ：meth： `.Pool.unique_connection`メソッドは、フラグが設定されているときに、この動作を回避するための一貫性のある一意の接続を返すために提供されています。 ..警告::：paramref： `.Pool.use_threadlocal`フラグ**は、：meth：` .Engine.connect`の動作**に影響しません。 ：meth： `.Engine.connect`はスレッドローカルコンテキスト**を使わない：meth：` .Pool.unique_connection`メソッドを使います。 ：meth： `.Pool.connect`メソッドを参照する：class：` .Connection`を生成するには、：meth： `.Engine.contextual_connect`を使います。 ：meth： `.Engine.execute`やorm：class：` .Session`などの他のSQLAlchemy接続システムは：meth： `.Engine.contextual_connect`を内部的に使用しているので、これらの関数は：paramref： `.Pool.use_threadlocal`の設定です。 .. seealso :: ref： `threadlocal_strategy`  -  \&quot; threadlocal \ &quot;エンジン戦略の詳細を含んでいます：class：` .Engine `：and：class：` .Connection`オブジェクトを直接呼び出します。"
 
 #: of sqlalchemy.pool.Pool.__init__:23
 msgid ""
@@ -593,7 +583,7 @@ msgid ""
 "individual transactions by default.  The :meth:`.Pool.unique_connection` "
 "method is provided to return a consistently unique connection to bypass "
 "this behavior when the flag is set."
-msgstr ""
+msgstr "Trueに設定されている場合、同じアプリケーションスレッド内で：meth： `connect`を繰り返し呼び出すと、同じ接続オブジェクトがプールからすでに取得され、まだ返されていない場合に返されます。デフォルトで個々のトランザクションを犠牲にしてわずかなパフォーマンス上の利点を提供します。 ：meth： `.Pool.unique_connection`メソッドは、フラグが設定されているときに、この動作を回避するための一貫性のある一意の接続を返すために提供されています。"
 
 #: of sqlalchemy.pool.Pool.__init__:33
 msgid ""
@@ -602,7 +592,7 @@ msgid ""
 "of the :meth:`.Pool.unique_connection` method which **does not use thread"
 " local context**.  To produce a :class:`.Connection` which refers to the "
 ":meth:`.Pool.connect` method, use :meth:`.Engine.contextual_connect`."
-msgstr ""
+msgstr "：paramref： `.Pool.use_threadlocal`フラグ**は：meth：` .Engine.connect`の動作**には影響しません。 ：meth： `.Engine.connect`はスレッドローカルコンテキスト**を使わない：meth：` .Pool.unique_connection`メソッドを使います。 ：meth： `.Pool.connect`メソッドを参照する：class：` .Connection`を生成するには、：meth： `.Engine.contextual_connect`を使います。"
 
 #: of sqlalchemy.pool.Pool.__init__:41
 msgid ""
@@ -610,7 +600,7 @@ msgid ""
 ":meth:`.Engine.execute` as well as the orm :class:`.Session` make use of "
 ":meth:`.Engine.contextual_connect` internally, so these functions are "
 "compatible with the :paramref:`.Pool.use_threadlocal` setting."
-msgstr ""
+msgstr "：meth： `.Engine.execute`やorm：class：` .Session`などの他のSQLAlchemy接続システムは：meth： `.Engine.contextual_connect`を内部的に使用しているので、これらの関数は：paramref： `.Pool.use_threadlocal`の設定です。"
 
 #: of sqlalchemy.pool.Pool.__init__:49
 msgid ""
@@ -618,7 +608,7 @@ msgid ""
 "engine strategy, which provides a more comprehensive approach to "
 "\"threadlocal\" connectivity for the specific use case of using "
 ":class:`.Engine` and :class:`.Connection` objects directly."
-msgstr ""
+msgstr "：ref： `threadlocal_strategy`  -  class：` .Engine`と：class：を使用する特定のユースケースのためのより包括的な\ &quot;threadlocal \&quot;接続へのアプローチを提供する\ &quot;threadlocal \ `.Connection`オブジェクトを直接呼び出します。"
 
 #: of sqlalchemy.pool.Pool.__init__:55
 msgid ""
@@ -645,24 +635,24 @@ msgid ""
 "where   the connection pool in use is not being used to maintain "
 "connection   lifecycle.  * ``False`` - same as None, this is here for   "
 "backwards compatibility."
-msgstr ""
+msgstr "接続がプールに返されるときに、接続にかかる手順を決定します。 reset_on_returnには、次のいずれかの値を指定できます。* `` \ &quot;rollback \&quot; ``  - 接続上でrollback（）を呼び出し、ロックとトランザクションリソースを解放します。これがデフォルト値です。大部分のユースケースでは、この値を設定したままにする必要があります。 * `` True``  -  &#39;rollback&#39;と同じですが、下位互換性のためにここにあります。 * `` \ &quot;commit \&quot; ``  - 接続上でcommit（）を呼び出し、ロックとトランザクションリソースを解放します。ここでのコミットは、Microsoft SQL Serverなど、コミットが発行された場合にクエリプランをキャッシュするデータベースにとって望ましい場合があります。ただし、トランザクションに存在するデータ変更が無条件にコミットされるため、この値は「ロールバック」よりも危険です。 * `` None``  - 接続時に何もしません。この設定は、通常、トランザクションのサポートがまったくないデータベース、つまりMySQL MyISAMでのみ行われます。このバックエンドで使用すると、\ &quot;ロールバック\&quot;呼び出しがMySQLでまだ高価であるため、パフォーマンスを向上させることができます。 **強くお勧めします**この設定は、class： `.QueuePool`のような永続的なプールと一緒にトランザクションをサポートしているデータベースには使用しないでください。プール。この設定は、class： `.NullPool`の場合、または使用中の接続プールが接続ライフサイクルを維持するために使用されていない特別な状況の場合に適切です。 * `` False``  -  Noneと同じですが、下位互換性のためにここにあります。"
 
 #: of sqlalchemy.pool.Pool.__init__:55
 msgid ""
 "Determine steps to take on connections as they are returned to the pool. "
 "reset_on_return can have any of these values:"
-msgstr ""
+msgstr "接続がプールに返されるときに、接続にかかる手順を決定します。 reset_on_returnには、次のいずれかの値を指定できます。"
 
 #: of sqlalchemy.pool.Pool.__init__:59
 msgid ""
 "``\"rollback\"`` - call rollback() on the connection, to release locks "
 "and transaction resources. This is the default value.  The vast majority "
 "of use cases should leave this value set."
-msgstr ""
+msgstr "`` \ &quot;rollback \&quot; ``  - 接続上でrollback（）を呼び出し、ロックとトランザクションリソースを解放します。これがデフォルト値です。大部分のユースケースでは、この値を設定したままにする必要があります。"
 
 #: of sqlalchemy.pool.Pool.__init__:63
 msgid "``True`` - same as 'rollback', this is here for backwards compatibility."
-msgstr ""
+msgstr "`` True``  -  &#39;rollback&#39;と同じですが、下位互換性のためにここにあります。"
 
 #: of sqlalchemy.pool.Pool.__init__:65
 msgid ""
@@ -671,7 +661,7 @@ msgid ""
 "cache query plans if a commit is emitted, such as Microsoft SQL Server.  "
 "However, this value is more dangerous than 'rollback' because any data "
 "changes present on the transaction are committed unconditionally."
-msgstr ""
+msgstr "`` \ &quot;commit \&quot; ``  - 接続上でcommit（）を呼び出して、ロックとトランザクションリソースを解放します。ここでのコミットは、Microsoft SQL Serverなど、コミットが発行された場合にクエリプランをキャッシュするデータベースにとって望ましい場合があります。ただし、トランザクションに存在するデータ変更が無条件にコミットされるため、この値は「ロールバック」よりも危険です。"
 
 #: of sqlalchemy.pool.Pool.__init__:73
 msgid ""
@@ -686,11 +676,11 @@ msgid ""
 "in the case of :class:`.NullPool` or special circumstances where the "
 "connection pool in use is not being used to maintain connection "
 "lifecycle."
-msgstr ""
+msgstr "`` None``  - 接続時に何もしないでください。この設定は、通常、トランザクションのサポートがまったくないデータベース、つまりMySQL MyISAMでのみ行われます。このバックエンドで使用すると、\ &quot;ロールバック\&quot;呼び出しがMySQLでまだ高価であるため、パフォーマンスを向上させることができます。 **強くお勧めします**この設定は、class： `.QueuePool`のような永続的なプールと一緒にトランザクションをサポートしているデータベースには使用しないでください。プール。この設定は、class： `.NullPool`の場合、または使用中の接続プールが接続ライフサイクルを維持するために使用されていない特別な状況の場合に適切です。"
 
 #: of sqlalchemy.pool.Pool.__init__:87
 msgid "``False`` - same as None, this is here for backwards compatibility."
-msgstr ""
+msgstr "`` False``  -  Noneと同じですが、これは下位互換性のためです。"
 
 #: of sqlalchemy.pool.Pool.__init__:90
 msgid ""
@@ -698,7 +688,7 @@ msgid ""
 " passed to :func:`.event.listen` upon construction.   Provided here so "
 "that event listeners can be assigned via :func:`.create_engine` before "
 "dialect-level listeners are applied."
-msgstr ""
+msgstr "構築時に：func： `.event.listen`に渡される` `（callable、target）` `の2つのタプルのリストです。ダイアグラムレベルのリスナーが適用される前に：func： `.create_engine`によってイベントリスナーを割り当てることができるように、ここで提供されています。"
 
 #: of sqlalchemy.pool.Pool.__init__:96
 msgid ""
@@ -706,7 +696,7 @@ msgid ""
 "objects or dictionaries of callables that receive events when DB-API "
 "connections are created, checked out and checked in to the pool.  This "
 "has been superseded by :func:`~sqlalchemy.event.listen`."
-msgstr ""
+msgstr "推奨されていません。 ：class： `〜sqlalchemy.interfaces.PoolListener`のようなオブジェクトや、DB-API接続が作成されたときにイベントを受け取り、プールにチェックインしてチェックインしたコールバックの辞書。これは、func： `〜sqlalchemy.event.listen`に取って代わられています。"
 
 #: of sqlalchemy.pool.Pool.__init__:103
 msgid ""
@@ -716,7 +706,7 @@ msgid ""
 ":func:`~.create_engine` should not use this parameter as it is handled by"
 " the engine creation strategy.  .. versionadded:: 1.1 - ``dialect`` is "
 "now a public parameter    to the :class:`.Pool`."
-msgstr ""
+msgstr "DBAPI接続でrollback（）、close（）、またはcommit（）を呼び出す作業を処理する `：class：` .Dialect`を使用します。省略すると、組み込みの\ &quot;スタブ\&quot;の方言が使われます。 ：func： `〜.create_engine`を使用するアプリケーションは、エンジン作成戦略によって処理されるので、このパラメータを使用しないでください。 .. versionadded :: 1.1  -  `` dialect``は：class： `.Pool`のパブリックパラメータになりました。"
 
 #: of sqlalchemy.pool.Pool.__init__:103
 msgid ""
@@ -725,11 +715,11 @@ msgid ""
 "\"stub\" dialect is used.   Applications that make use of "
 ":func:`~.create_engine` should not use this parameter as it is handled by"
 " the engine creation strategy."
-msgstr ""
+msgstr "DBAPI接続でrollback（）、close（）、またはcommit（）を呼び出す作業を処理する `：class：` .Dialect`を使用します。省略すると、組み込みの\ &quot;スタブ\&quot;の方言が使われます。 ：func： `〜.create_engine`を使用するアプリケーションは、エンジン作成戦略によって処理されるので、このパラメータを使用しないでください。"
 
 #: of sqlalchemy.pool.Pool.__init__:109
 msgid "- ``dialect`` is now a public parameter to the :class:`.Pool`."
-msgstr ""
+msgstr "-  `` dialect``は：class： `.Pool`のパブリックパラメータになりました。"
 
 #: of sqlalchemy.pool.Pool.__init__:112
 msgid ""
@@ -740,7 +730,7 @@ msgid ""
 "prior to that timestamp are invalidated.     Requires that a dialect is "
 "passed as well to interpret the disconnection error.  .. versionadded:: "
 "1.2"
-msgstr ""
+msgstr "Trueの場合、プールはチェックアウト時に接続上に\ &quot;ping \&quot;（通常は\ &quot;SELECT 1 \&quot;、dialect特有です）を出して、接続が生きているかどうかをテストします。そうでない場合、接続は透過的に再接続され、成功すると、そのタイムスタンプより前に確立された他のすべてのプールされた接続は無効になります。切断エラーを解釈するためにダイアレクトも渡される必要があります。 .. versionadded :: 1.2"
 
 #: of sqlalchemy.pool.Pool.__init__:112
 msgid ""
@@ -750,50 +740,50 @@ msgid ""
 "connected and upon success, all other pooled connections established "
 "prior to that timestamp are invalidated.     Requires that a dialect is "
 "passed as well to interpret the disconnection error."
-msgstr ""
+msgstr "Trueの場合、プールはチェックアウト時に接続上に\ &quot;ping \&quot;（通常は\ &quot;SELECT 1 \&quot;、dialect特有です）を出して、接続が生きているかどうかをテストします。そうでない場合、接続は透過的に再接続され、成功すると、そのタイムスタンプより前に確立された他のすべてのプールされた接続は無効になります。切断エラーを解釈するためにダイアレクトも渡される必要があります。"
 
 #: of sqlalchemy.pool.Pool.connect:1 sqlalchemy.pool.QueuePool.connect:1
 msgid "Return a DBAPI connection from the pool."
-msgstr ""
+msgstr "プールからDBAPI接続を返します。"
 
 #: of sqlalchemy.pool.Pool.connect:3 sqlalchemy.pool.QueuePool.connect:3
 msgid ""
 "The connection is instrumented such that when its ``close()`` method is "
 "called, the connection will be returned to the pool."
-msgstr ""
+msgstr "接続は、 `` close（） ``メソッドが呼び出されたときに接続がプールに返されるようにインストルメントされています。"
 
 #: of sqlalchemy.pool.Pool.dispose:1
 msgid "Dispose of this pool."
-msgstr ""
+msgstr "このプールを廃棄してください。"
 
 #: of sqlalchemy.pool.Pool.dispose:3
 msgid ""
 "This method leaves the possibility of checked-out connections remaining "
 "open, as it only affects connections that are idle in the pool."
-msgstr ""
+msgstr "この方法では、プール内でアイドル状態の接続にのみ影響するため、チェックアウトされた接続が開いたままになる可能性があります。"
 
 #: of sqlalchemy.pool.Pool.dispose:7
 msgid "See also the :meth:`Pool.recreate` method."
-msgstr ""
+msgstr "：meth： `Pool.recreate`メソッドも参照してください。"
 
 #: of sqlalchemy.pool.Pool.recreate:1
 msgid ""
 "Return a new :class:`.Pool`, of the same class as this one and configured"
 " with identical creation arguments."
-msgstr ""
+msgstr "このクラスと同じクラスの新しい：class： `.Pool`を返し、同じ作成引数で設定します。"
 
 #: of sqlalchemy.pool.Pool.recreate:4
 msgid ""
 "This method is used in conjunction with :meth:`dispose` to close out an "
 "entire :class:`.Pool` and create a new one in its place."
-msgstr ""
+msgstr "このメソッドは、：meth： `dispose`と一緒に使用されて：class：` .Pool`全体を閉じ、その場所に新しいものを作成します。"
 
 #: of sqlalchemy.pool.Pool.unique_connection:1
 #: sqlalchemy.pool.QueuePool.unique_connection:1
 msgid ""
 "Produce a DBAPI connection that is not referenced by any thread-local "
 "context."
-msgstr ""
+msgstr "任意のスレッドローカルコンテキストによって参照されないDBAPI接続を生成します。"
 
 #: of sqlalchemy.pool.Pool.unique_connection:4
 #: sqlalchemy.pool.QueuePool.unique_connection:4
@@ -803,27 +793,27 @@ msgid ""
 ":paramref:`.Pool.use_threadlocal` is True, the "
 ":meth:`.Pool.unique_connection` method provides a means of bypassing the "
 "threadlocal context."
-msgstr ""
+msgstr "このメソッドは、：paramref： `.Pool.use_threadlocal`フラグがTrueに設定されていない場合、：meth：` .Pool.connect`と同じです。 ：paramref： `.Pool.use_threadlocal`がTrueの場合、：meth：` .Pool.unique_connection`メソッドはスレッドローカルコンテキストをバイパスする手段を提供します。"
 
 #: of sqlalchemy.pool.QueuePool:1
 msgid "A :class:`.Pool` that imposes a limit on the number of open connections."
-msgstr ""
+msgstr "A：class：開いている接続の数に制限を課す `.Pool`。"
 
 #: of sqlalchemy.pool.QueuePool:3
 msgid ""
 ":class:`.QueuePool` is the default pooling implementation used for all "
 ":class:`.Engine` objects, unless the SQLite dialect is in use."
-msgstr ""
+msgstr "：class： `.QueuePool`は、SQLiteの方言が使われていない限り、all：class：` .Engine`オブジェクトに使われるデフォルトのプール実装です。"
 
 #: of sqlalchemy.pool.QueuePool.__init__:1
 msgid "Construct a QueuePool."
-msgstr ""
+msgstr "QueuePoolを構築します。"
 
 #: of sqlalchemy.pool.QueuePool.__init__:3
 msgid ""
 "a callable function that returns a DB-API connection object, same as that"
 " of :paramref:`.Pool.creator`."
-msgstr ""
+msgstr "：paramref： `.Pool.creator`と同じDB-API接続オブジェクトを返す呼び出し可能な関数です。"
 
 #: of sqlalchemy.pool.QueuePool.__init__:6
 msgid ""
@@ -833,7 +823,7 @@ msgid ""
 " is requested, that number of connections will remain. ``pool_size`` can "
 "be set to 0 to indicate no size limit; to disable pooling, use a "
 ":class:`~sqlalchemy.pool.NullPool` instead."
-msgstr ""
+msgstr "保持するプールのサイズ（デフォルトは5）。これは、プール内で永続的に保持される接続の最大数です。プールは接続なしで開始されます。この数の接続が要求されると、その数の接続が残ります。 `` pool_size``はサイズ制限がないことを示すために0に設定できます。プーリングを無効にするには、代わりに：class： `〜sqlalchemy.pool.NullPool`を使用してください。"
 
 #: of sqlalchemy.pool.QueuePool.__init__:15
 msgid ""
@@ -846,13 +836,13 @@ msgid ""
 " connections the pool will allow is pool_size. `max_overflow` can be set "
 "to -1 to indicate no overflow limit; no limit will be placed on the total"
 " number of concurrent connections. Defaults to 10."
-msgstr ""
+msgstr "プールの最大オーバーフローサイズ。チェックアウトされた接続の数がpool_sizeに設定されたサイズに達すると、追加の接続がこの制限まで返されます。これらの追加の接続がプールに戻されると、接続が切断されて破棄されます。プールが許可する同時接続の総数はpool_size + `max_overflow`であり、プールが許可するスリープ接続の総数はpool_sizeであり、max_overflow`は-1を指定してnoオーバーフロー制限であり、同時接続の合計数に制限はありません。デフォルトは10です。"
 
 #: of sqlalchemy.pool.QueuePool.__init__:28
 msgid ""
 "The number of seconds to wait before giving up on returning a connection."
 " Defaults to 30."
-msgstr ""
+msgstr "接続を返すときに諦めるまで待機する秒数。デフォルトは30です。"
 
 #: of sqlalchemy.pool.QueuePool.__init__:31
 msgid ""
@@ -863,7 +853,7 @@ msgid ""
 "strategy is in use to gracefully handle stale connections.  .. "
 "versionadded:: 1.3  .. seealso::    :ref:`pool_use_lifo`    "
 ":ref:`pool_disconnects`"
-msgstr ""
+msgstr "FIFO（先入れ先出し）の代わりに接続を取り出すときは、LIFO（ラスト・イン・ファースト・アウト）を使用します。 LIFOを使用すると、サーバー側のタイムアウトスキームは、ピーク時以外に使用される接続の数を減らすことができます。サーバー側のタイムアウトを計画するときは、古くなった接続を正常に処理するためにリサイクルまたはプレping戦略が使用されていることを確認してください。 .. versionadded :: 1.3 .. seealso :: ref： `pool_use_lifo`：ref：` pool_disconnects`"
 
 #: of sqlalchemy.pool.QueuePool.__init__:31
 msgid ""
@@ -872,28 +862,28 @@ msgid ""
 " the number of connections used during non-peak periods of use.   When "
 "planning for server-side timeouts, ensure that a recycle or pre-ping "
 "strategy is in use to gracefully handle stale connections."
-msgstr ""
+msgstr "FIFO（先入れ先出し）の代わりに接続を取り出すときは、LIFO（ラスト・イン・ファースト・アウト）を使用します。 LIFOを使用すると、サーバー側のタイムアウトスキームは、ピーク時以外に使用される接続の数を減らすことができます。サーバー側のタイムアウトを計画するときは、古くなった接続を正常に処理するためにリサイクルまたはプレping戦略が使用されていることを確認してください。"
 
 #: of sqlalchemy.pool.QueuePool.__init__:42
 msgid ":ref:`pool_use_lifo`"
-msgstr ""
+msgstr "：ref： `pool_use_lifo`"
 
 #: of sqlalchemy.pool.QueuePool.__init__:46
 msgid ""
 "Other keyword arguments including :paramref:`.Pool.recycle`, "
 ":paramref:`.Pool.echo`, :paramref:`.Pool.reset_on_return` and others are "
 "passed to the :class:`.Pool` constructor."
-msgstr ""
+msgstr "他のキーワード引数：paramref： `.Pool.recycle`、：paramref：` .Pool.echo`、：paramref： `.Pool.reset_on_return`などは、：class：` .Pool`コンストラクタに渡されます。"
 
 #: of sqlalchemy.pool.SingletonThreadPool:1
 msgid "A Pool that maintains one connection per thread."
-msgstr ""
+msgstr "スレッドごとに1つの接続を維持するプール。"
 
 #: of sqlalchemy.pool.SingletonThreadPool:3
 msgid ""
 "Maintains one connection per each thread, never moving a connection to a "
 "thread other than the one which it was created in."
-msgstr ""
+msgstr "各スレッドごとに1つの接続を維持し、作成されたスレッド以外のスレッドへの接続を決して移動しません。"
 
 #: of sqlalchemy.pool.SingletonThreadPool:6
 msgid ""
@@ -903,7 +893,7 @@ msgid ""
 "used.   This cleanup is non-deterministic and not sensitive to whether or"
 " not the connections linked to those thread identities are currently in "
 "use."
-msgstr ""
+msgstr "：class： `.SingletonThreadPool`は、` `pool_size`のサイズ設定を超えて存在する任意の接続で` `.close（）` `を呼び出します。 `状態が使用されます。このクリーンアップは非決定的であり、それらのスレッドIDにリンクされている接続が現在使用されているかどうかには影響を受けません。"
 
 #: of sqlalchemy.pool.SingletonThreadPool:13
 msgid ""
@@ -911,70 +901,70 @@ msgid ""
 "however in its current status it is generally used only for test "
 "scenarios using a SQLite ``:memory:`` database and is not recommended for"
 " production use."
-msgstr ""
+msgstr "：class： `.SingletonThreadPool`は将来のリリースで改善されるかもしれませんが、現在のところ、SQLiteの`：memory： ``データベースを使ったテストシナリオでのみ使用され、プロダクションでの使用はお勧めしません。"
 
 #: of sqlalchemy.pool.SingletonThreadPool:19
 msgid "Options are the same as those of :class:`.Pool`, as well as:"
-msgstr ""
+msgstr "オプションは：class： `.Pool`のオプションと同じです："
 
 #: of sqlalchemy.pool.SingletonThreadPool:21
 msgid ""
 "The number of threads in which to maintain connections at once.  Defaults"
 " to five."
-msgstr ""
+msgstr "一度に接続を維持するスレッドの数。デフォルトは5です。"
 
 #: of sqlalchemy.pool.SingletonThreadPool:24
 msgid ""
 ":class:`.SingletonThreadPool` is used by the SQLite dialect automatically"
 " when a memory-based database is used. See :ref:`sqlite_toplevel`."
-msgstr ""
+msgstr "：class： `.SingletonThreadPool`は、メモリベースのデータベースが使用されているときに自動的にSQLiteの方言によって使用されます。参照：ref： `sqlite_toplevel`を参照してください。"
 
 #: of sqlalchemy.pool.AssertionPool:1
 msgid ""
 "A :class:`.Pool` that allows at most one checked out connection at any "
 "given time."
-msgstr ""
+msgstr "A：class： `.Pool`は、任意の与えられた時間に最大で1つのチェックアウトされた接続を可能にします。"
 
 #: of sqlalchemy.pool.AssertionPool:4
 msgid ""
 "This will raise an exception if more than one connection is checked out "
 "at a time.  Useful for debugging code that is using more connections than"
 " desired."
-msgstr ""
+msgstr "一度に複数の接続がチェックアウトされた場合、例外が発生します。必要以上の接続を使用しているコードをデバッグするのに便利です。"
 
 #: of sqlalchemy.pool.AssertionPool:8
 msgid ""
 ":class:`.AssertionPool` also logs a traceback of where the original "
 "connection was checked out, and reports this in the assertion error "
 "raised."
-msgstr ""
+msgstr "：class： `.AssertionPool`は、元の接続がチェックアウトされた場所のトレースバックも記録し、発生したアサーションエラーでこれを報告します。"
 
 #: of sqlalchemy.pool.NullPool:1
 msgid "A Pool which does not pool connections."
-msgstr ""
+msgstr "接続をプールしないプール。"
 
 #: of sqlalchemy.pool.NullPool:3
 msgid ""
 "Instead it literally opens and closes the underlying DB-API connection "
 "per each connection open/close."
-msgstr ""
+msgstr "その代わりに、文字通りオープン/クローズされた各接続ごとの基礎となるDB-API接続をオープンおよびクローズします。"
 
 #: of sqlalchemy.pool.NullPool:6
 msgid ""
 "Reconnect-related functions such as ``recycle`` and connection "
 "invalidation are not supported by this Pool implementation, since no "
 "connections are held persistently."
-msgstr ""
+msgstr "永続的に保持される接続がないため、このプール実装では、「リサイクル」や接続無効化などの再接続関連の機能はサポートされていません。"
 
 #: of sqlalchemy.pool.NullPool:10
 msgid ""
 ":class:`.NullPool` is used by the SQlite dialect automatically when a "
 "file-based database is used. See :ref:`sqlite_toplevel`."
-msgstr ""
+msgstr "：class： `.NullPool`は、ファイルベースのデータベースが使われるときに自動的にSQliteの方言によって使われます。参照：ref： `sqlite_toplevel`を参照してください。"
 
 #: of sqlalchemy.pool.StaticPool:1
 msgid "A Pool of exactly one connection, used for all requests."
-msgstr ""
+msgstr "完全に1つの接続のプール。すべての要求に使用されます。"
 
 #: of sqlalchemy.pool.StaticPool:3
 msgid ""
@@ -982,18 +972,18 @@ msgid ""
 "invalidation (which is also used to support auto-reconnect) are not "
 "currently supported by this Pool implementation but may be implemented in"
 " a future release."
-msgstr ""
+msgstr "``リサイクル &#39;や接続無効化（自動再接続をサポートするためにも使用される）などの再接続関連の機能は、このプール実装では現在サポートされていませんが、将来のリリースで実装される可能性があります。"
 
 #: of sqlalchemy.pool._ConnectionFairy:1
 msgid "Proxies a DBAPI connection and provides return-on-dereference support."
-msgstr ""
+msgstr "DBAPI接続をプロキシし、逆参照時リターンをサポートします。"
 
 #: of sqlalchemy.pool._ConnectionFairy:4
 msgid ""
 "This is an internal object used by the :class:`.Pool` implementation to "
 "provide context management to a DBAPI connection delivered by that "
 ":class:`.Pool`."
-msgstr ""
+msgstr "これは：class： `.Pool`実装によって使用される内部オブジェクトで、class：` .Pool`によって提供されるDBAPI接続にコンテキスト管理を提供します。"
 
 #: of sqlalchemy.pool._ConnectionFairy:8
 msgid ""
@@ -1002,38 +992,38 @@ msgid ""
 "only for the length of a specific DBAPI connection being checked out from"
 " the pool, and additionally that as a transparent proxy, it is mostly "
 "invisible."
-msgstr ""
+msgstr "\ &quot;fairy \&quot;という名前は、：class： `._ConnectionFairy`オブジェクトの存続期間が一時的であるという事実からインスピレーションを受けています。これは、プールからチェックアウトされている特定のDBAPI接続の長さだけ持続します。透明なプロキシは、ほとんど目に見えません。"
 
 #: of sqlalchemy.pool._ConnectionFairy:16
 msgid ":class:`._ConnectionRecord`"
-msgstr ""
+msgstr "：クラス： `._ConnectionRecord`"
 
 #: of sqlalchemy.pool._ConnectionFairy._connection_record:1
 msgid ""
 "A reference to the :class:`._ConnectionRecord` object associated with the"
 " DBAPI connection."
-msgstr ""
+msgstr "DBAPI接続に関連付けられた：class： `._ConnectionRecord`オブジェクトへの参照です。"
 
 #: of sqlalchemy.pool._ConnectionFairy._connection_record:4
 msgid "This is currently an internal accessor which is subject to change."
-msgstr ""
+msgstr "これは現在、変更される可能性のある内部アクセサーです。"
 
 #: of sqlalchemy.pool._ConnectionFairy.connection:1
 #: sqlalchemy.pool._ConnectionRecord.connection:1
 msgid "A reference to the actual DBAPI connection being tracked."
-msgstr ""
+msgstr "追跡中の実際のDBAPI接続への参照。"
 
 #: of sqlalchemy.pool._ConnectionFairy.cursor:1
 msgid "Return a new DBAPI cursor for the underlying connection."
-msgstr ""
+msgstr "基になる接続の新しいDBAPIカーソルを返します。"
 
 #: of sqlalchemy.pool._ConnectionFairy.cursor:3
 msgid "This method is a proxy for the ``connection.cursor()`` DBAPI method."
-msgstr ""
+msgstr "このメソッドは、 `` connection.cursor（） `` DBAPIメソッドのプロキシです。"
 
 #: of sqlalchemy.pool._ConnectionFairy.detach:1
 msgid "Separate this connection from its Pool."
-msgstr ""
+msgstr "この接続をプールから切り離します。"
 
 #: of sqlalchemy.pool._ConnectionFairy.detach:3
 msgid ""
@@ -1041,21 +1031,21 @@ msgid ""
 "when closed, and will instead be literally closed.  The containing "
 "ConnectionRecord is separated from the DB-API connection, and will create"
 " a new connection when next used."
-msgstr ""
+msgstr "これは、接続が閉じられたときにプールに返されなくなり、代わりに文字通り閉じられることを意味します。含まれているConnectionRecordは、DB-API接続から分離され、次に使用するときに新しい接続を作成します。"
 
 #: of sqlalchemy.pool._ConnectionFairy.detach:8
 msgid ""
 "Note that any overall connection limiting constraints imposed by a Pool "
 "implementation may be violated after a detach, as the detached connection"
 " is removed from the pool's knowledge and control."
-msgstr ""
+msgstr "分離された接続がプールの知識と制御から削除されるため、Pool実装によって課せられた全体的な接続制限制約は、分離後に違反する可能性があることに注意してください。"
 
 #: of sqlalchemy.pool._ConnectionFairy.info:1
 msgid ""
 "Info dictionary associated with the underlying DBAPI connection referred "
 "to by this :class:`.ConnectionFairy`, allowing user-defined data to be "
 "associated with the connection."
-msgstr ""
+msgstr "この：class： `.ConnectionFairy`によって参照される基礎となるDBAPI接続に関連付けられた情報辞書。ユーザー定義のデータを接続に関連付けることができます。"
 
 #: of sqlalchemy.pool._ConnectionFairy.info:5
 msgid ""
@@ -1063,17 +1053,17 @@ msgid ""
 " it is returned to the connection pool and used again in subsequent "
 "instances of :class:`._ConnectionFairy`.  It is shared with the "
 ":attr:`._ConnectionRecord.info` and :attr:`.Connection.info` accessors."
-msgstr ""
+msgstr "ここでのデータは、接続プールに戻された後のものも含めてDBAPI接続に沿って続き、後続の：class： `._ConnectionFairy`のインスタンスで再び使用されます。それは：attr： `._ConnectionRecord.info`と：attr：` .Connection.info`アクセサで共有されます。"
 
 #: of sqlalchemy.pool._ConnectionFairy.info:11
 msgid ""
 "The dictionary associated with a particular DBAPI connection is discarded"
 " when the connection itself is discarded."
-msgstr ""
+msgstr "特定のDBAPI接続に関連付けられているディクショナリは、接続自体が破棄されると破棄されます。"
 
 #: of sqlalchemy.pool._ConnectionFairy.invalidate:1
 msgid "Mark this connection as invalidated."
-msgstr ""
+msgstr "この接続を無効にします。"
 
 #: of sqlalchemy.pool._ConnectionFairy.invalidate:3
 msgid ""
@@ -1082,56 +1072,56 @@ msgid ""
 "connection is immediately closed and discarded from further use by the "
 "pool.  The invalidation mechanism proceeds via the "
 ":meth:`._ConnectionRecord.invalidate` internal method."
-msgstr ""
+msgstr "このメソッドは直接呼び出すことができ、また：meth： `.Connection.invalidate`メソッドの結果として呼び出されます。呼び出されると、DBAPI接続は直ちにクローズされ、プールによってそれ以上使用されなくなると破棄されます。無効化のメカニズムは：meth： `._ConnectionRecord.invalidate`内部メソッドを介して行われます。"
 
 #: of sqlalchemy.pool._ConnectionFairy.invalidate:9
 #: sqlalchemy.pool._ConnectionRecord.invalidate:8
 msgid "an exception object indicating a reason for the invalidation."
-msgstr ""
+msgstr "無効化の理由を示す例外オブジェクト。"
 
 #: of sqlalchemy.pool._ConnectionFairy.invalidate:11
 #: sqlalchemy.pool._ConnectionRecord.invalidate:10
 msgid ""
 "if True, the connection isn't closed; instead, this connection will be "
 "recycled on next checkout.  .. versionadded:: 1.0.3"
-msgstr ""
+msgstr "Trueの場合、接続は閉じられません。代わりに、この接続は次のチェックアウト時にリサイクルされます。 .. versionadded :: 1.0.3"
 
 #: of sqlalchemy.pool._ConnectionFairy.invalidate:11
 #: sqlalchemy.pool._ConnectionRecord.invalidate:10
 msgid ""
 "if True, the connection isn't closed; instead, this connection will be "
 "recycled on next checkout."
-msgstr ""
+msgstr "Trueの場合、接続は閉じられません。代わりに、この接続は次のチェックアウト時にリサイクルされます。"
 
 #: of sqlalchemy.pool._ConnectionFairy.invalidate:18
 #: sqlalchemy.pool._ConnectionRecord.invalidate:17
 msgid ":ref:`pool_connection_invalidation`"
-msgstr ""
+msgstr "：ref： `pool_connection_invalidation`"
 
 #: of sqlalchemy.pool._ConnectionFairy.is_valid:1
 msgid ""
 "Return True if this :class:`._ConnectionFairy` still refers to an active "
 "DBAPI connection."
-msgstr ""
+msgstr "もし：class： `._ConnectionFairy`がまだアクティブなDBAPI接続を参照していればTrueを返します。"
 
 #: of sqlalchemy.pool._ConnectionFairy.record_info:1
 msgid ""
 "Info dictionary associated with the :class:`._ConnectionRecord container "
 "referred to by this :class:`.ConnectionFairy`."
-msgstr ""
+msgstr "：class： `.ConnectionFairy`によって参照される：class：` ._ConnectionRecordコンテナに関連付けられた情報辞書。"
 
 #: of sqlalchemy.pool._ConnectionFairy.record_info:4
 msgid ""
 "Unlike the :attr:`._ConnectionFairy.info` dictionary, the lifespan of "
 "this dictionary is persistent across connections that are disconnected "
 "and/or invalidated within the lifespan of a :class:`._ConnectionRecord`."
-msgstr ""
+msgstr "：attr： `._ConnectionFairy.info`ディクショナリーとは異なり、この辞書の有効期間は、：class：` ._ConnectionRecord`の有効期間内に切断されたり、無効にされたりする接続全体で永続的です。"
 
 #: of sqlalchemy.pool._ConnectionRecord:1
 msgid ""
 "Internal object which maintains an individual DBAPI connection referenced"
 " by a :class:`.Pool`."
-msgstr ""
+msgstr "：class： `.Pool`によって参照される個々のDBAPI接続を維持する内部オブジェクトです。"
 
 #: of sqlalchemy.pool._ConnectionRecord:4
 msgid ""
@@ -1139,7 +1129,7 @@ msgid ""
 "DBAPI connection whether or not that DBAPI connection has been \"checked "
 "out\".  This is in contrast to the :class:`._ConnectionFairy` which is "
 "only a public facade to the DBAPI connection while it is checked out."
-msgstr ""
+msgstr "：class： `._ConnectionRecord`オブジェクトは、そのDBAPI接続がチェックアウトされているかどうかに関係なく、常に特定のDBAPI接続に存在します。これは：class： `._ConnectionFairy`とは対照的です。これはチェックアウトされている間にDBAPI接続へのパブリックファサードだけです。"
 
 #: of sqlalchemy.pool._ConnectionRecord:10
 msgid ""
@@ -1150,7 +1140,7 @@ msgid ""
 "discarded, but the :class:`._ConnectionRecord` may be used again, in "
 "which case a new DBAPI connection is produced when the :class:`.Pool` "
 "next uses this record."
-msgstr ""
+msgstr "A：class： `._ConnectionRecord`は単一のDBAPI接続より長いスパンに対して存在する可能性があります。たとえば、：meth： `._ConnectionRecord.invalidate`メソッドが呼び出された場合、この：class：` ._ConnectionRecord`に関連付けられたDBAPI接続は破棄されますが、：class： `._ConnectionRecord`を再び使用することができます。この場合、：class： `.Pool` nextがこのレコードを使用すると、新しいDBAPI接続が生成されます。"
 
 #: of sqlalchemy.pool._ConnectionRecord:19
 msgid ""
@@ -1158,28 +1148,28 @@ msgid ""
 "events, including :meth:`.PoolEvents.connect` and "
 ":meth:`.PoolEvents.checkout`, however :class:`._ConnectionRecord` still "
 "remains an internal object whose API and internals may change."
-msgstr ""
+msgstr "：class： `._ConnectionRecord`は、：meth：` .PoolEvents.connect`と：meth： `.PoolEvents.checkout`を含む接続プールイベントと共に提供されます：class：` ._ConnectionRecord`はまだ内部オブジェクトのままですそのAPIと内部が変更される可能性があります。"
 
 #: of sqlalchemy.pool._ConnectionRecord:26
 msgid ":class:`._ConnectionFairy`"
-msgstr ""
+msgstr "：クラス： `._ConnectionFairy`"
 
 #: of sqlalchemy.pool._ConnectionRecord.connection:3
 msgid ""
 "May be ``None`` if this :class:`._ConnectionRecord` has been marked as "
 "invalidated; a new DBAPI connection may replace it if the owning pool "
 "calls upon this :class:`._ConnectionRecord` to reconnect."
-msgstr ""
+msgstr "class： `._ConnectionRecord`が無効とマークされている場合は` `None``となります。所有しているプールがこの：class： `._ConnectionRecord`を呼び出して再接続すると、新しいDBAPI接続がそれを置き換える可能性があります。"
 
 #: of sqlalchemy.pool._ConnectionRecord.info:1
 msgid "The ``.info`` dictionary associated with the DBAPI connection."
-msgstr ""
+msgstr "DBAPI接続に関連付けられた `` .info``ディクショナリ。"
 
 #: of sqlalchemy.pool._ConnectionRecord.info:3
 msgid ""
 "This dictionary is shared among the :attr:`._ConnectionFairy.info` and "
 ":attr:`.Connection.info` accessors."
-msgstr ""
+msgstr "この辞書は、：attr： `._ConnectionFairy.info`と：attr：` .Connection.info &#39;アクセサで共有されます。"
 
 #: of sqlalchemy.pool._ConnectionRecord.info:8
 msgid ""
@@ -1188,11 +1178,11 @@ msgid ""
 "closed and/or invalidated.   The :attr:`._ConnectionRecord.record_info` "
 "dictionary remains persistent throughout the lifespan of the "
 ":class:`._ConnectionRecord` container."
-msgstr ""
+msgstr "このディクショナリの有効期間はDBAPI接続自体にリンクされています。つまり、DBAPI接続がクローズまたは無効になるたびに**破棄されます**。 ：attr： `._ConnectionRecord.record_info`ディクショナリは：class：` ._ConnectionRecord`コンテナの存続期間を通して永続的です。"
 
 #: of sqlalchemy.pool._ConnectionRecord.invalidate:1
 msgid "Invalidate the DBAPI connection held by this :class:`._ConnectionRecord`."
-msgstr ""
+msgstr "これによって保持されているDBAPI接続を無効にします：class： `._ConnectionRecord`。"
 
 #: of sqlalchemy.pool._ConnectionRecord.invalidate:3
 msgid ""
@@ -1200,11 +1190,11 @@ msgid ""
 "the :meth:`._ConnectionFairy.invalidate` or "
 ":meth:`.Connection.invalidate` methods are called, as well as when any "
 "so-called \"automatic invalidation\" condition occurs."
-msgstr ""
+msgstr "このメソッドは、：meth： `._ConnectionFairy.invalidate`メソッドまたは：meth：` .Connection.invalidate`メソッドが呼び出されたときや、いわゆる「自動無効化」条件が呼び出されたときなど、すべての接続無効化に対して呼び出されます発生する。"
 
 #: of sqlalchemy.pool._ConnectionRecord.record_info:1
 msgid "An \"info' dictionary associated with the connection record itself."
-msgstr ""
+msgstr "接続レコード自体に関連付けられた\ &quot;info&quot;ディクショナリ。"
 
 #: of sqlalchemy.pool._ConnectionRecord.record_info:4
 msgid ""
@@ -1212,5 +1202,5 @@ msgid ""
 " the lifespan of the DBAPI connection, this dictionary is linked to the "
 "lifespan of the :class:`._ConnectionRecord` container itself and will "
 "remain persisent throughout the life of the :class:`._ConnectionRecord`."
-msgstr ""
+msgstr "DBAPI接続の寿命にリンクしている：attr： `._ConnectionRecord.info`ディクショナリとは異なり、このディクショナリは：class：` ._ConnectionRecord`コンテナ自体の寿命にリンクしており、 ：class： `._ConnectionRecord`です。"
 

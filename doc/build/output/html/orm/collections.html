@@ -10,7 +10,7 @@
         <title>
             
     
-    Collection Configuration and Techniques
+    コレクションの構成とテクニック
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Relationship Configuration" href="relationships.html" />
-        <link rel="next" title="Special Relationship Persistence Patterns" href="relationship_persistence.html" />
-        <link rel="prev" title="Configuring how Relationship Joins" href="join_conditions.html" />
+        <link rel="up" title="関係の設定" href="relationships.html" />
+        <link rel="next" title="特別な関係の永続パターン" href="relationship_persistence.html" />
+        <link rel="prev" title="リレーションシップの参加方法のコンフィグレーション" href="join_conditions.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,42 +120,42 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="basic_relationships.html">Basic Relationship Patterns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="self_referential.html">Adjacency List Relationships</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="backref.html">Linking Relationships with Backref</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="join_conditions.html">Configuring how Relationship Joins</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Collection Configuration and Techniques</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#working-with-large-collections">Working with Large Collections</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#dynamic-relationship-loaders">Dynamic Relationship Loaders</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#setting-noload-raiseload">Setting Noload, RaiseLoad</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#using-passive-deletes">Using Passive Deletes</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="basic_relationships.html">基本的な関係パターン</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="self_referential.html">隣接関係リストの関係</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="backref.html">バックリファレンスとの関係のリンク</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="join_conditions.html">リレーションシップの参加方法のコンフィグレーション</a></span></li>
+<li class="selected"><span class="link-container first"><strong>コレクションの構成とテクニック</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#working-with-large-collections">大規模コレクションの操作</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#dynamic-relationship-loaders">ダイナミックリレーションシップローダー</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#setting-noload-raiseload">Noload、RaiseLoadの設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#using-passive-deletes">パッシブ削除の使用</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#customizing-collection-access">Customizing Collection Access</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#dictionary-collections">Dictionary Collections</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#customizing-collection-access">コレクションアクセスのカスタマイズ</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#dictionary-collections">辞書コレクション</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#custom-collection-implementations">Custom Collection Implementations</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#annotating-custom-collections-via-decorators">Annotating Custom Collections via Decorators</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#custom-dictionary-based-collections">Custom Dictionary-Based Collections</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#instrumentation-and-custom-types">Instrumentation and Custom Types</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#custom-collection-implementations">カスタムコレクションの実装</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#annotating-custom-collections-via-decorators">デコレータを使用してカスタムコレクションに注釈を付ける</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#custom-dictionary-based-collections">カスタム辞書ベースのコレクション</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#instrumentation-and-custom-types">計装とカスタムタイプ</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#collection-internals">Collection Internals</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#collection-internals">コレクション内部</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="relationship_persistence.html">Special Relationship Persistence Patterns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationship_api.html">Relationships API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationship_persistence.html">特別な関係の永続パターン</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationship_api.html">リレーションシップAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -171,31 +171,15 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="collection-configuration-and-techniques">
-<span id="collections-toplevel"></span><h1>Collection Configuration and Techniques<a class="headerlink" href="#collection-configuration-and-techniques" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> function defines a linkage between two classes.
-When the linkage defines a one-to-many or many-to-many relationship, it's
-represented as a Python collection when objects are loaded and manipulated.
-This section presents additional information about collection configuration
-and techniques.</p>
+<span id="collections-toplevel"></span><h1>コレクションの構成とテクニック<a class="headerlink" href="#collection-configuration-and-techniques" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.relationship`関数は、2つのクラス間のリンケージを定義します。リンケージが一対多または多対多の関係を定義するとき、オブジェクトがロードされて操作されるとき、それはPythonコレクションとして表されます。このセクションでは、コレクションの構成とテクニックに関する追加情報を示します。</p>
 <div class="section" id="working-with-large-collections">
-<span id="largecollections"></span><h2>Working with Large Collections<a class="headerlink" href="#working-with-large-collections" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The default behavior of <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> is to fully load
-the collection of items in, as according to the loading strategy of the
-relationship. Additionally, the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> by default only knows how to delete
-objects which are actually present within the session. When a parent instance
-is marked for deletion and flushed, the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> loads its full list of child
-items in so that they may either be deleted as well, or have their foreign key
-value set to null; this is to avoid constraint violations. For large
-collections of child items, there are several strategies to bypass full
-loading of child items both at load time as well as deletion time.</p>
+<span id="largecollections"></span><h2>大規模コレクションの操作<a class="headerlink" href="#working-with-large-collections" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.relationship`のデフォルトの振る舞いは、関係のローディング戦略に従ってアイテムのコレクションを完全にロードすることです。さらに：class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Session`は、デフォルトではセッション内に実際に存在するオブジェクトを削除する方法しか知りません。親インスタンスが削除のためにマークされ、フラッシュされると、：class： <a href="#id5"><span class="problematic" id="id6">`</span></a>.Session`は子項目の完全なリストをロードして、削除されるか、または外部キー値がnullに設定されるようにします。これは制約違反を避けるためです。子アイテムの大規模なコレクションの場合、ロード時と削除時の両方で子アイテムの完全ロードをバイパスするいくつかの戦略があります。</p>
 <div class="section" id="dynamic-relationship-loaders">
-<span id="dynamic-relationship"></span><h3>Dynamic Relationship Loaders<a class="headerlink" href="#dynamic-relationship-loaders" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>A key feature to enable management of a large collection is the so-called &quot;dynamic&quot;
-relationship.  This is an optional form of <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> which
-returns a <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> object in place of a collection
-when accessed. <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query.filter" title="sqlalchemy.orm.query.Query.filter"><code class="xref py py-func docutils literal"><span class="pre">filter()</span></code></a> criterion may be
-applied as well as limits and offsets, either explicitly or via array slices:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="dynamic-relationship"></span><h3>ダイナミックリレーションシップローダー<a class="headerlink" href="#dynamic-relationship-loaders" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>大規模なコレクションの管理を可能にする重要な機能は、いわゆる「ダイナミック」な関係です。これはオプションの：func： <cite>〜sqlalchemy.orm.relationship`です。これはアクセス時にコレクションの代わりに：class：</cite>〜sqlalchemy.orm.query.Query`オブジェクトを返します。 ：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.orm.query.Query.filter`基準を、明示的にまたは配列スライスを介して制限とオフセットだけでなく適用することもできます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span>
 
     <span class="n">posts</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="n">Post</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="s2">&quot;dynamic&quot;</span><span class="p">)</span>
@@ -208,89 +192,59 @@ applied as well as limits and offsets, either explicitly or via array slices:</p
 <span class="c1"># apply array slices</span>
 <span class="n">posts</span> <span class="o">=</span> <span class="n">jack</span><span class="o">.</span><span class="n">posts</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span></pre></div>
 </div>
-<p>The dynamic relationship supports limited write operations, via the
-<code class="docutils literal"><span class="pre">append()</span></code> and <code class="docutils literal"><span class="pre">remove()</span></code> methods:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">oldpost</span> <span class="o">=</span> <span class="n">jack</span><span class="o">.</span><span class="n">posts</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Post</span><span class="o">.</span><span class="n">headline</span><span class="o">==</span><span class="s1">&#39;old post&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">one</span><span class="p">()</span>
+<p>動的関係では、 `` append（） <a href="#id1"><span class="problematic" id="id2">``</span></a>と `` remove（） <a href="#id3"><span class="problematic" id="id4">``</span></a>メソッドを使って制限付きの書き込み操作をサポートしています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">oldpost</span> <span class="o">=</span> <span class="n">jack</span><span class="o">.</span><span class="n">posts</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Post</span><span class="o">.</span><span class="n">headline</span><span class="o">==</span><span class="s1">&#39;old post&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">one</span><span class="p">()</span>
 <span class="n">jack</span><span class="o">.</span><span class="n">posts</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">oldpost</span><span class="p">)</span>
 
 <span class="n">jack</span><span class="o">.</span><span class="n">posts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Post</span><span class="p">(</span><span class="s1">&#39;new post&#39;</span><span class="p">))</span></pre></div>
 </div>
-<p>Since the read side of the dynamic relationship always queries the
-database, changes to the underlying collection will not be visible
-until the data has been flushed.  However, as long as &quot;autoflush&quot; is
-enabled on the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> in use, this will occur
-automatically each time the collection is about to emit a
-query.</p>
-<p>To place a dynamic relationship on a backref, use the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a>
-function in conjunction with <code class="docutils literal"><span class="pre">lazy='dynamic'</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>動的関係の読み取り側は常にデータベースに照会するため、データがフラッシュされるまで、基礎となるコレクションの変更は表示されません。しかし、use：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Session`で&amp;quot; autoflush &amp;quot;が有効になっている限り、コレクションがクエリを送出しようとするたびに自動的に発生します。</p>
+<p>バックレファレンスに動的関係を置くには、 `` lazy = &amp;#39;dynamic``` :: func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.orm.backref`関数を使用してください。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__table__</span> <span class="o">=</span> <span class="n">posts_table</span>
 
     <span class="n">user</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="n">User</span><span class="p">,</span>
                 <span class="n">backref</span><span class="o">=</span><span class="n">backref</span><span class="p">(</span><span class="s1">&#39;posts&#39;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="s1">&#39;dynamic&#39;</span><span class="p">)</span>
             <span class="p">)</span></pre></div>
 </div>
-<p>Note that eager/lazy loading options cannot be used in conjunction dynamic relationships at this time.</p>
+<p>現時点では、eager / lazyローディングオプションは動的な関係では使用できません。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">The <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.dynamic_loader" title="sqlalchemy.orm.dynamic_loader"><code class="xref py py-func docutils literal"><span class="pre">dynamic_loader()</span></code></a> function is essentially the same
-as <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> with the <code class="docutils literal"><span class="pre">lazy='dynamic'</span></code> argument specified.</p>
+<p class="last">：func： <cite>〜.orm.dynamic_loader`関数は、基本的に</cite> <cite>lazy = &amp;#39;dynamic&amp;#39;``引数を指定して：func：</cite>〜.orm.relationship`と同じです。</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last">The &quot;dynamic&quot; loader applies to <strong>collections only</strong>.   It is not valid
-to use &quot;dynamic&quot; loaders with many-to-one, one-to-one, or uselist=False
-relationships.   Newer versions of SQLAlchemy emit warnings or exceptions
-in these cases.</p>
+<p class="last">&amp;quot;ダイナミック&amp;quot;ローダーは**コレクションのみ**に適用されます。多対1、1対1、またはuselist = Falseの関係を持つ&amp;quot;ダイナミック&amp;quot;ローダーを使用することは有効ではありません。新しいバージョンのSQLAlchemyでは、これらのケースで警告または例外が発生します。</p>
 </div>
 </div>
 <div class="section" id="setting-noload-raiseload">
-<span id="collections-noload-raiseload"></span><h3>Setting Noload, RaiseLoad<a class="headerlink" href="#setting-noload-raiseload" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>A &quot;noload&quot; relationship never loads from the database, even when
-accessed.   It is configured using <code class="docutils literal"><span class="pre">lazy='noload'</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="collections-noload-raiseload"></span><h3>Noload、RaiseLoadの設定<a class="headerlink" href="#setting-noload-raiseload" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>&amp;quot;noload &amp;quot;関係は、たとえアクセスされても、データベースからロードされることはありません。 `` lazy = &amp;#39;noload&amp;#39;`` ::を使って設定されています</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;some_table&#39;</span>
 
     <span class="n">children</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="n">MyOtherClass</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="s1">&#39;noload&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>Above, the <code class="docutils literal"><span class="pre">children</span></code> collection is fully writeable, and changes to it will
-be persisted to the database as well as locally available for reading at the
-time they are added. However when instances of <code class="docutils literal"><span class="pre">MyClass</span></code> are freshly loaded
-from the database, the <code class="docutils literal"><span class="pre">children</span></code> collection stays empty.   The noload
-strategy is also available on a query option basis using the
-<a class="reference internal" href="loading_relationships.html#sqlalchemy.orm.noload" title="sqlalchemy.orm.noload"><code class="xref py py-func docutils literal"><span class="pre">orm.noload()</span></code></a> loader option.</p>
-<p>Alternatively, a &quot;raise&quot;-loaded relationship will raise an
-<a class="reference internal" href="../core/exceptions.html#sqlalchemy.exc.InvalidRequestError" title="sqlalchemy.exc.InvalidRequestError"><code class="xref py py-exc docutils literal"><span class="pre">InvalidRequestError</span></code></a> where the attribute would normally
-emit a lazy load:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>上記の `` children``コレクションは完全に書き込み可能で、その変更はデータベースに永続化されるだけでなく、追加された時点でローカルで利用可能になります。しかし、 `` MyClass``のインスタンスがデータベースから新しく読み込まれると、 `` children``コレクションは空のままです。 noload戦略は：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.orm.noload`ローダーオプションを使用してクエリオプションベースでも利用できます。</p>
+<p>代わりに、&amp;quot;raise &amp;quot;ロードされた関係では、：exc： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.exc.InvalidRequestError`が発生します。この属性では通常、遅延ロードが発生します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;some_table&#39;</span>
 
     <span class="n">children</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="n">MyOtherClass</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="s1">&#39;raise&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>Above, attribute access on the <code class="docutils literal"><span class="pre">children</span></code> collection will raise an exception
-if it was not previously eagerloaded.  This includes read access but for
-collections will also affect write access, as collections can't be mutated
-without first loading them.  The rationale for this is to ensure that an
-application is not emitting any unexpected lazy loads within a certain context.
-Rather than having to read through SQL logs to determine that all necessary
-attributes were eager loaded, the &quot;raise&quot; strategy will cause unloaded
-attributes to raise immediately if accessed.  The raise strategy is
-also available on a query option basis using the <a class="reference internal" href="loading_relationships.html#sqlalchemy.orm.raiseload" title="sqlalchemy.orm.raiseload"><code class="xref py py-func docutils literal"><span class="pre">orm.raiseload()</span></code></a>
-loader option.</p>
+<p>上で、 `` children``コレクションの属性アクセスは、それが以前にeagerloadedされていなかった場合、例外を送出します。これには読み取りアクセスが含まれますが、コレクションを最初にロードせずにコレクションに変更を加えることはできないため、コレクションは書き込みアクセスにも影響します。これの根拠は、アプリケーションが特定のコンテキスト内で予期しない遅延ロードを発生しないようにすることです。すべての必要な属性が熱心に読み込まれているかどうかを判断するためにSQLログを読み取るのではなく、アクセスするとアンロードされた属性が即座に引き上げられます。 raise戦略は：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.orm.raiseload`ローダーオプションを使用してクエリオプションベースでも利用できます。</p>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 1.1 で追加: </span>added the &quot;raise&quot; loader strategy.</p>
+<p><span class="versionmodified">バージョン 1.1 で追加: </span>&amp;quot;raise &amp;quot;ローダー戦略を追加しました。</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="loading_relationships.html#prevent-lazy-with-raiseload"><span class="std std-ref">Preventing unwanted lazy loads using raiseload</span></a></p>
+<p class="last">：ref： <cite>prevent_lazy_with_raiseload</cite></p>
 </div>
 </div>
 <div class="section" id="using-passive-deletes">
-<span id="passive-deletes"></span><h3>Using Passive Deletes<a class="headerlink" href="#using-passive-deletes" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Use <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.passive_deletes" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">passive_deletes</span></code></a> to disable child object loading on a DELETE
-operation, in conjunction with &quot;ON DELETE (CASCADE|SET NULL)&quot; on your database
-to automatically cascade deletes to child objects:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="passive-deletes"></span><h3>パッシブ削除の使用<a class="headerlink" href="#using-passive-deletes" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>データベース上の&amp;quot;ON DELETE（CASCADE | SET NULL）&amp;quot;と一緒に、子オブジェクトへの削除を自動的にカスケードするために、paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.relationship.passive_deletes`を使用して、</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;mytable&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">children</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;MyOtherClass&quot;</span><span class="p">,</span>
@@ -306,34 +260,23 @@ to automatically cascade deletes to child objects:</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p>To use &quot;ON DELETE CASCADE&quot;, the underlying database engine must
-support foreign keys.</p>
+<p>&amp;quot;ON DELETE CASCADE &amp;quot;を使用するには、基礎となるデータベースエンジンが外部キーをサポートしていなければなりません。</p>
 <ul class="last simple">
-<li>When using MySQL, an appropriate storage engine must be
-selected.  See <a class="reference internal" href="../dialects/mysql.html#mysql-storage-engines"><span class="std std-ref">CREATE TABLE arguments including Storage Engines</span></a> for details.</li>
-<li>When using SQLite, foreign key support must be enabled explicitly.
-See <a class="reference internal" href="../dialects/sqlite.html#sqlite-foreign-keys"><span class="std std-ref">Foreign Key Support</span></a> for details.</li>
+<li>MySQLを使用する場合は、適切なストレージエンジンを選択する必要があります。詳細はref： <a href="#id1"><span class="problematic" id="id2">`</span></a>mysql_storage_engines`を参照してください。</li>
+<li>SQLiteを使用する場合は、外部キーのサポートを明示的に有効にする必要があります。詳細はref： <a href="#id1"><span class="problematic" id="id2">`</span></a>sqlite_foreign_keys`を参照してください。</li>
 </ul>
 </div>
-<p>When <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.passive_deletes" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">passive_deletes</span></code></a> is applied, the <code class="docutils literal"><span class="pre">children</span></code> relationship will not be
-loaded into memory when an instance of <code class="docutils literal"><span class="pre">MyClass</span></code> is marked for deletion. The
-<code class="docutils literal"><span class="pre">cascade=&quot;all,</span> <span class="pre">delete-orphan&quot;</span></code> <em>will</em> take effect for instances of
-<code class="docutils literal"><span class="pre">MyOtherClass</span></code> which are currently present in the session; however for
-instances of <code class="docutils literal"><span class="pre">MyOtherClass</span></code> which are not loaded, SQLAlchemy assumes that
-&quot;ON DELETE CASCADE&quot; rules will ensure that those rows are deleted by the
-database.</p>
+<p>：paramref： <cite>〜.relationship.passive_deletes`が適用されたとき、</cite> <cite>MyClass``のインスタンスが削除マークされているとき、</cite> <cite>children``関係はメモリにロードされません。セッション中に現在存在する `</cite> MyOtherClass``のインスタンスに対して、 <a href="#id1"><span class="problematic" id="id2">``</span></a>カスケード= &amp;quot;すべて、削除 - オーファン&amp;quot; <cite>* *が有効になります。しかし、ロードされていない `</cite> MyOtherClass``のインスタンスの場合、SQLAlchemyは&amp;quot;ON DELETE CASCADE &amp;quot;ルールによってそれらの行がデータベースによって確実に削除されることを保証します。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.params.passive_deletes" title="sqlalchemy.orm.mapper"><code class="xref py py-paramref docutils literal"><span class="pre">orm.mapper.passive_deletes</span></code></a> - similar feature on <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper" title="sqlalchemy.orm.mapper"><code class="xref py py-func docutils literal"><span class="pre">mapper()</span></code></a></p>
+<p class="last">：paramref： <cite>.orm.mapper.passive_deletes</cite>  - 類似機能：func：` .mapper`</p>
 </div>
 </div>
 </div>
 <div class="section" id="customizing-collection-access">
-<span id="custom-collections"></span><h2>Customizing Collection Access<a class="headerlink" href="#customizing-collection-access" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Mapping a one-to-many or many-to-many relationship results in a collection of
-values accessible through an attribute on the parent instance. By default,
-this collection is a <code class="docutils literal"><span class="pre">list</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Parent</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="custom-collections"></span><h2>コレクションアクセスのカスタマイズ<a class="headerlink" href="#customizing-collection-access" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>1対多または多対多の関係をマッピングすると、親インスタンスの属性を介してアクセス可能な値の集合になります。デフォルトでは、このコレクションは `` list``</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Parent</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;parent&#39;</span>
     <span class="n">parent_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -343,11 +286,8 @@ this collection is a <code class="docutils literal"><span class="pre">list</span
 <span class="n">parent</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Child</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span></pre></div>
 </div>
-<p>Collections are not limited to lists. Sets, mutable sequences and almost any
-other Python object that can act as a container can be used in place of the
-default list, by specifying the <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship.params.collection_class" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">collection_class</span></code></a> option on
-<a class="reference internal" href="relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Parent</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>コレクションはリストに限定されません。デフォルトのリストの代わりに、：paramref： <cite>〜.relationship.collection_class`オプションを：func：</cite>〜sqlalchemy.ormに指定することで、セット、変更可能なシーケンス、およびコンテナとして機能することができる他のほぼすべてのPythonオブジェクトをデフォルトリストの代わりに使用できます。関係性:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Parent</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;parent&#39;</span>
     <span class="n">parent_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -360,15 +300,9 @@ default list, by specifying the <a class="reference internal" href="relationship
 <span class="k">assert</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">parent</span><span class="o">.</span><span class="n">children</span></pre></div>
 </div>
 <div class="section" id="dictionary-collections">
-<h3>Dictionary Collections<a class="headerlink" href="#dictionary-collections" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>A little extra detail is needed when using a dictionary as a collection.
-This because objects are always loaded from the database as lists, and a key-generation
-strategy must be available to populate the dictionary correctly.  The
-<a class="reference internal" href="#sqlalchemy.orm.collections.attribute_mapped_collection" title="sqlalchemy.orm.collections.attribute_mapped_collection"><code class="xref py py-func docutils literal"><span class="pre">attribute_mapped_collection()</span></code></a> function is by far the most common way
-to achieve a simple dictionary collection.  It produces a dictionary class that will apply a particular attribute
-of the mapped class as a key.   Below we map an <code class="docutils literal"><span class="pre">Item</span></code> class containing
-a dictionary of <code class="docutils literal"><span class="pre">Note</span></code> items keyed to the <code class="docutils literal"><span class="pre">Note.keyword</span></code> attribute:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">ForeignKey</span>
+<h3>辞書コレクション<a class="headerlink" href="#dictionary-collections" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ディクショナリをコレクションとして使用する場合は、少し詳細が必要です。これは、オブジェクトは常にデータベースからリストとしてロードされるため、キー生成戦略を使用してディクショナリを正しく読み込む必要があるためです。 ：func： <cite>.attribute_mapped_collection`関数は、単純な辞書コレクションを実現する最も一般的な方法です。マップされたクラスの特定の属性をキーとして適用する辞書クラスを生成します。以下では、 `</cite> Note.keyword``属性にキー入力された `` Note``アイテムの辞書を含む `` Item``クラスをマップします:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">ForeignKey</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">relationship</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="k">import</span> <span class="n">attribute_mapped_collection</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declarative_base</span>
@@ -393,28 +327,21 @@ a dictionary of <code class="docutils literal"><span class="pre">Note</span></co
         <span class="bp">self</span><span class="o">.</span><span class="n">keyword</span> <span class="o">=</span> <span class="n">keyword</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span></pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">Item.notes</span></code> is then a dictionary:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">item</span> <span class="o">=</span> <span class="n">Item</span><span class="p">()</span>
+<p>`` Item.notes``は辞書です:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">item</span> <span class="o">=</span> <span class="n">Item</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">item</span><span class="o">.</span><span class="n">notes</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Note</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;atext&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">item</span><span class="o">.</span><span class="n">notes</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
 <span class="go">{&#39;a&#39;: &lt;__main__.Note object at 0x2eaaf0&gt;}</span></pre></div>
 </div>
-<p><a class="reference internal" href="#sqlalchemy.orm.collections.attribute_mapped_collection" title="sqlalchemy.orm.collections.attribute_mapped_collection"><code class="xref py py-func docutils literal"><span class="pre">attribute_mapped_collection()</span></code></a> will ensure that
-the <code class="docutils literal"><span class="pre">.keyword</span></code> attribute of each <code class="docutils literal"><span class="pre">Note</span></code> complies with the key in the
-dictionary.   Such as, when assigning to <code class="docutils literal"><span class="pre">Item.notes</span></code>, the dictionary
-key we supply must match that of the actual <code class="docutils literal"><span class="pre">Note</span></code> object:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">item</span> <span class="o">=</span> <span class="n">Item</span><span class="p">()</span>
+<p>：func： <cite>.attribute_mapped_collection`は、各</cite> <cite>Note``の</cite> <cite>.keyword``属性が辞書のキーに従っていることを保証します。 `</cite> Item.notes``に代入するときのように、私たちが供給する辞書キーは実際の `` Note``オブジェクトのものと一致しなければなりません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">item</span> <span class="o">=</span> <span class="n">Item</span><span class="p">()</span>
 <span class="n">item</span><span class="o">.</span><span class="n">notes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="n">Note</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;atext&#39;</span><span class="p">),</span>
             <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="n">Note</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;btext&#39;</span><span class="p">)</span>
         <span class="p">}</span></pre></div>
 </div>
-<p>The attribute which <a class="reference internal" href="#sqlalchemy.orm.collections.attribute_mapped_collection" title="sqlalchemy.orm.collections.attribute_mapped_collection"><code class="xref py py-func docutils literal"><span class="pre">attribute_mapped_collection()</span></code></a> uses as a key
-does not need to be mapped at all!  Using a regular Python <code class="docutils literal"><span class="pre">&#64;property</span></code> allows virtually
-any detail or combination of details about the object to be used as the key, as
-below when we establish it as a tuple of <code class="docutils literal"><span class="pre">Note.keyword</span></code> and the first ten letters
-of the <code class="docutils literal"><span class="pre">Note.text</span></code> field:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>：func： <cite>.attribute_mapped_collection`がキーとして使う属性は、全くマッピングする必要はありません！通常のPython `</cite> &#64; property``を使うと、以下のように、 `` Note.keyword``のタプルと最初の10文字`` Note.text``フィールドの:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;item&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">notes</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Note&quot;</span><span class="p">,</span>
@@ -437,18 +364,15 @@ of the <code class="docutils literal"><span class="pre">Note.text</span></code> 
         <span class="bp">self</span><span class="o">.</span><span class="n">keyword</span> <span class="o">=</span> <span class="n">keyword</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span></pre></div>
 </div>
-<p>Above we added a <code class="docutils literal"><span class="pre">Note.item</span></code> backref.  Assigning to this reverse relationship, the <code class="docutils literal"><span class="pre">Note</span></code>
-is added to the <code class="docutils literal"><span class="pre">Item.notes</span></code> dictionary and the key is generated for us automatically:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">item</span> <span class="o">=</span> <span class="n">Item</span><span class="p">()</span>
+<p>上記では、 `` Note.item``バックリファレンスを追加しました。この逆の関係に代入すると、 `` Note``が `` Item.notes``辞書に追加され、キーが自動的に生成されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">item</span> <span class="o">=</span> <span class="n">Item</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">n1</span> <span class="o">=</span> <span class="n">Note</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;atext&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">n1</span><span class="o">.</span><span class="n">item</span> <span class="o">=</span> <span class="n">item</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">item</span><span class="o">.</span><span class="n">notes</span>
 <span class="go">{(&#39;a&#39;, &#39;atext&#39;): &lt;__main__.Note object at 0x2eaaf0&gt;}</span></pre></div>
 </div>
-<p>Other built-in dictionary types include <a class="reference internal" href="#sqlalchemy.orm.collections.column_mapped_collection" title="sqlalchemy.orm.collections.column_mapped_collection"><code class="xref py py-func docutils literal"><span class="pre">column_mapped_collection()</span></code></a>,
-which is almost like <a class="reference internal" href="#sqlalchemy.orm.collections.attribute_mapped_collection" title="sqlalchemy.orm.collections.attribute_mapped_collection"><code class="xref py py-func docutils literal"><span class="pre">attribute_mapped_collection()</span></code></a> except given the <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a>
-object directly:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="k">import</span> <span class="n">column_mapped_collection</span>
+<p>他の組み込みの辞書型には、func： <cite>.column_mapped_collection`があります：func：</cite> .attribute_mapped_collection`とほぼ同じです：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Column`オブジェクトを直接渡します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="k">import</span> <span class="n">column_mapped_collection</span>
 
 <span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;item&#39;</span>
@@ -457,10 +381,8 @@ object directly:</p>
                 <span class="n">collection_class</span><span class="o">=</span><span class="n">column_mapped_collection</span><span class="p">(</span><span class="n">Note</span><span class="o">.</span><span class="n">__table__</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">keyword</span><span class="p">),</span>
                 <span class="n">cascade</span><span class="o">=</span><span class="s2">&quot;all, delete-orphan&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>as well as <a class="reference internal" href="#sqlalchemy.orm.collections.mapped_collection" title="sqlalchemy.orm.collections.mapped_collection"><code class="xref py py-func docutils literal"><span class="pre">mapped_collection()</span></code></a> which is passed any callable function.
-Note that it's usually easier to use <a class="reference internal" href="#sqlalchemy.orm.collections.attribute_mapped_collection" title="sqlalchemy.orm.collections.attribute_mapped_collection"><code class="xref py py-func docutils literal"><span class="pre">attribute_mapped_collection()</span></code></a> along
-with a <code class="docutils literal"><span class="pre">&#64;property</span></code> as mentioned earlier:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="k">import</span> <span class="n">mapped_collection</span>
+<p>：func： <cite>.mapped_collection`は呼び出し可能な関数に渡されます。 func： `.attribute_mapped_collection`と前述の</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>&#64; property``を使うのが普通です：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="k">import</span> <span class="n">mapped_collection</span>
 
 <span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;item&#39;</span>
@@ -469,93 +391,46 @@ with a <code class="docutils literal"><span class="pre">&#64;property</span></co
                 <span class="n">collection_class</span><span class="o">=</span><span class="n">mapped_collection</span><span class="p">(</span><span class="k">lambda</span> <span class="n">note</span><span class="p">:</span> <span class="n">note</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]),</span>
                 <span class="n">cascade</span><span class="o">=</span><span class="s2">&quot;all, delete-orphan&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>Dictionary mappings are often combined with the &quot;Association Proxy&quot; extension to produce
-streamlined dictionary views.  See <a class="reference internal" href="extensions/associationproxy.html#proxying-dictionaries"><span class="std std-ref">Proxying to Dictionary Based Collections</span></a> and <a class="reference internal" href="extensions/associationproxy.html#composite-association-proxy"><span class="std std-ref">Composite Association Proxies</span></a>
-for examples.</p>
+<p>ディクショナリマッピングは&amp;quot;Association Proxy &amp;quot;拡張と組み合わせて使用​​され、効率的な辞書ビューを生成します。例えば：ref： <cite>proxying_dictionaries`と：ref：</cite> composite_association_proxy`を参照してください。</p>
 <dl class="function">
 <dt id="sqlalchemy.orm.collections.attribute_mapped_collection">
 <code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">attribute_mapped_collection</code><span class="sig-paren">(</span><em>attr_name</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.attribute_mapped_collection" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A dictionary-based collection type with attribute-based keying.</p>
-<p>Returns a <a class="reference internal" href="#sqlalchemy.orm.collections.MappedCollection" title="sqlalchemy.orm.collections.MappedCollection"><code class="xref py py-class docutils literal"><span class="pre">MappedCollection</span></code></a> factory with a keying based on the
-'attr_name' attribute of entities in the collection, where <code class="docutils literal"><span class="pre">attr_name</span></code>
-is the string name of the attribute.</p>
-<p>The key value must be immutable for the lifetime of the object.  You
-can not, for example, map on foreign key values if those key values will
-change during the session, i.e. from None to a database-assigned integer
-after a session flush.</p>
+<dd><p>属性ベースのキーイングを使用する辞書ベースのコレクション型。</p>
+<p>コレクション内のエンティティの &amp;#39;attr_name&amp;#39;属性に基づいたキーイングを持つa：class： <cite>.MappedCollection`ファクトリを返します。ここで</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>attr_name``は属性の文字列名です。</p>
+<p>キー値は、オブジェクトの存続期間中不変でなければなりません。たとえば、セッション中にキー値が変更されると、外部キー値をマップすることはできません。セッションフラッシュ後に、Noneからデータベースに割り当てられた整数に変更することはできません。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sqlalchemy.orm.collections.column_mapped_collection">
 <code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">column_mapped_collection</code><span class="sig-paren">(</span><em>mapping_spec</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.column_mapped_collection" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A dictionary-based collection type with column-based keying.</p>
-<p>Returns a <a class="reference internal" href="#sqlalchemy.orm.collections.MappedCollection" title="sqlalchemy.orm.collections.MappedCollection"><code class="xref py py-class docutils literal"><span class="pre">MappedCollection</span></code></a> factory with a keying function
-generated from mapping_spec, which may be a Column or a sequence
-of Columns.</p>
-<p>The key value must be immutable for the lifetime of the object.  You
-can not, for example, map on foreign key values if those key values will
-change during the session, i.e. from None to a database-assigned integer
-after a session flush.</p>
+<dd><p>列ベースのキーイングを使用する辞書ベースのコレクション型。</p>
+<p>mapping_specから生成されたキーイング関数を持つa：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.MappedCollection`ファクトリを返します。このファンクションは、ColumnまたはColumnの列です。</p>
+<p>キー値は、オブジェクトの存続期間中不変でなければなりません。たとえば、セッション中にキー値が変更されると、外部キー値をマップすることはできません。セッションフラッシュ後に、Noneからデータベースに割り当てられた整数に変更することはできません。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sqlalchemy.orm.collections.mapped_collection">
 <code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">mapped_collection</code><span class="sig-paren">(</span><em>keyfunc</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.mapped_collection" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A dictionary-based collection type with arbitrary keying.</p>
-<p>Returns a <a class="reference internal" href="#sqlalchemy.orm.collections.MappedCollection" title="sqlalchemy.orm.collections.MappedCollection"><code class="xref py py-class docutils literal"><span class="pre">MappedCollection</span></code></a> factory with a keying function
-generated from keyfunc, a callable that takes an entity and returns a
-key value.</p>
-<p>The key value must be immutable for the lifetime of the object.  You
-can not, for example, map on foreign key values if those key values will
-change during the session, i.e. from None to a database-assigned integer
-after a session flush.</p>
+<dd><p>任意のキーイングを持つ辞書ベースのコレクション型。</p>
+<p>keyfuncから生成されたキーイング関数を持つa：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.MappedCollection`ファクトリを返します。これはエンティティを取り、キー値を返すコール可能です。</p>
+<p>キー値は、オブジェクトの存続期間中不変でなければなりません。たとえば、セッション中にキー値が変更されると、外部キー値をマップすることはできません。セッションフラッシュ後に、Noneからデータベースに割り当てられた整数に変更することはできません。</p>
 </dd></dl>
 
 </div>
 </div>
 <div class="section" id="custom-collection-implementations">
-<h2>Custom Collection Implementations<a class="headerlink" href="#custom-collection-implementations" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>You can use your own types for collections as well.  In simple cases,
-inherting from <code class="docutils literal"><span class="pre">list</span></code> or <code class="docutils literal"><span class="pre">set</span></code>, adding custom behavior, is all that's needed.
-In other cases, special decorators are needed to tell SQLAlchemy more detail
-about how the collection operates.</p>
+<h2>カスタムコレクションの実装<a class="headerlink" href="#custom-collection-implementations" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>コレクションには独自のタイプを使用することもできます。単純なケースでは、 `` list``や `` set``から継承し、カスタム動作を追加するだけで十分です。他のケースでは、コレクションがどのように動作するかについてSQLAlchemyに詳細を知らせるために特別なデコレータが必要です。</p>
 <div class="topic">
 <p class="topic-title first">Do I need a custom collection implementation?</p>
-<p>In most cases not at all!   The most common use cases for a &quot;custom&quot; collection
-is one that validates or marshals incoming values into a new form, such as
-a string that becomes a class instance, or one which goes a
-step beyond and represents the data internally in some fashion, presenting
-a &quot;view&quot; of that data on the outside of a different form.</p>
-<p>For the first use case, the <a class="reference internal" href="mapped_attributes.html#sqlalchemy.orm.validates" title="sqlalchemy.orm.validates"><code class="xref py py-func docutils literal"><span class="pre">orm.validates()</span></code></a> decorator is by far
-the simplest way to intercept incoming values in all cases for the purposes
-of validation and simple marshaling.  See <a class="reference internal" href="mapped_attributes.html#simple-validators"><span class="std std-ref">Simple Validators</span></a>
-for an example of this.</p>
-<p>For the second use case, the <a class="reference internal" href="extensions/associationproxy.html"><span class="std std-ref">Association Proxy</span></a> extension is a
-well-tested, widely used system that provides a read/write &quot;view&quot; of a
-collection in terms of some attribute present on the target object. As the
-target attribute can be a <code class="docutils literal"><span class="pre">&#64;property</span></code> that returns virtually anything, a
-wide array of &quot;alternative&quot; views of a collection can be constructed with
-just a few functions. This approach leaves the underlying mapped collection
-unaffected and avoids the need to carefully tailor collection behavior on a
-method-by-method basis.</p>
-<p>Customized collections are useful when the collection needs to
-have special behaviors upon access or mutation operations that can't
-otherwise be modeled externally to the collection.   They can of course
-be combined with the above two approaches.</p>
+<p>ほとんどの場合、全くありません！ &amp;quot;カスタム&amp;quot;コレクションの最も一般的な使用例は、クラスインスタンスになる文字列や、あるステップを超えていくつかの内部的にデータを表すような、新しいフォームに入力値を検証またはマーシャリングするものですファッション、別のフォームの外側にそのデータの&amp;quot;ビュー&amp;quot;を提示する。</p>
+<p>最初のユースケースの場合、：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.orm.validates`デコレータは、検証と単純マーシャリングの目的で、すべてのケースで入力値をインターセプトする最も簡単な方法です。これの例は：ref： <a href="#id3"><span class="problematic" id="id4">`</span></a>simple_validators`を参照してください。</p>
+<p>2番目のユースケースの場合、：ref： <cite>associationproxy_toplevel`拡張は、テスト対象のオブジェクトに存在するいくつかの属性の観点から、コレクションの読み取り/書き込み&amp;quot;ビュー&amp;quot;を提供する充分にテストされ、広く使われているシステムです。ターゲット属性は事実上何かを返す `</cite> &#64; property``であることができるので、少数の関数だけでコレクションの&amp;quot;代替&amp;quot;ビューの幅広い配列を構築することができます。このアプローチでは、基になるマップされたコレクションに影響を与えず、メソッドごとにコレクションの振る舞いを慎重に調整する必要がありません。</p>
+<p>カスタマイズされたコレクションは、コレクションが外部でモデル化されないアクセス操作や突然変異操作で特殊な動作を行う必要がある場合に便利です。もちろん、それらは上記の2つのアプローチと組み合わせることができます。</p>
 </div>
-<p>Collections in SQLAlchemy are transparently <em>instrumented</em>. Instrumentation
-means that normal operations on the collection are tracked and result in
-changes being written to the database at flush time. Additionally, collection
-operations can fire <em>events</em> which indicate some secondary operation must take
-place. Examples of a secondary operation include saving the child item in the
-parent's <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> (i.e. the <code class="docutils literal"><span class="pre">save-update</span></code>
-cascade), as well as synchronizing the state of a bi-directional relationship
-(i.e. a <a class="reference internal" href="relationship_api.html#sqlalchemy.orm.backref" title="sqlalchemy.orm.backref"><code class="xref py py-func docutils literal"><span class="pre">backref()</span></code></a>).</p>
-<p>The collections package understands the basic interface of lists, sets and
-dicts and will automatically apply instrumentation to those built-in types and
-their subclasses. Object-derived types that implement a basic collection
-interface are detected and instrumented via duck-typing:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ListLike</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<p>SQLAlchemyのコレクションは透過的に計装*されています。計装とは、コレクションの通常の操作が追跡され、フラッシュ時に変更がデータベースに書き込まれることを意味します。さらに、収集操作では、いくつかの2次操作が行われなければならないことを示す*イベント*を発生させることができます。二次操作の例としては、親アイテムのclass： <cite>〜sqlalchemy.orm.session.Session`（つまり</cite> <cite>save-update``カスケード）に子アイテムを保存することと、双方向の状態を同期させる関係（つまり、a：func： `.backref</cite>）です。</p>
+<p>collectionsパッケージは、リスト、セット、およびディクテーションの基本インターフェースを理解し、それらの組み込みタイプとそのサブクラスに自動的にインストゥルメンテーションを適用します。基本コレクションインターフェイスを実装するオブジェクト派生型は、ダックタイピングによって検出され計測されます。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ListLike</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
@@ -569,13 +444,9 @@ interface are detected and instrumented via duck-typing:</p>
     <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s1">&#39;foo&#39;</span></pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">append</span></code>, <code class="docutils literal"><span class="pre">remove</span></code>, and <code class="docutils literal"><span class="pre">extend</span></code> are known list-like methods, and will
-be instrumented automatically. <code class="docutils literal"><span class="pre">__iter__</span></code> is not a mutator method and won't
-be instrumented, and <code class="docutils literal"><span class="pre">foo</span></code> won't be either.</p>
-<p>Duck-typing (i.e. guesswork) isn't rock-solid, of course, so you can be
-explicit about the interface you are implementing by providing an
-<code class="docutils literal"><span class="pre">__emulates__</span></code> class attribute:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SetLike</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<p>`` append``、 `` remove``、 `` extend``はリスト形式のメソッドであり、自動的にインストルメントされます。 `` __iter__``はミューテータメソッドではなく、インストゥルメントされませんし、 `` foo``もそれにはなりません。</p>
+<p>もちろん、ダックタイピング（guesswork）は固いものではないので、あなたは `` __emulates__``クラス属性を提供することで実装しているインターフェースを明示することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SetLike</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">__emulates__</span> <span class="o">=</span> <span class="nb">set</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -587,23 +458,12 @@ explicit about the interface you are implementing by providing an
     <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span></pre></div>
 </div>
-<p>This class looks list-like because of <code class="docutils literal"><span class="pre">append</span></code>, but <code class="docutils literal"><span class="pre">__emulates__</span></code> forces
-it to set-like. <code class="docutils literal"><span class="pre">remove</span></code> is known to be part of the set interface and will
-be instrumented.</p>
-<p>But this class won't work quite yet: a little glue is needed to adapt it for
-use by SQLAlchemy. The ORM needs to know which methods to use to append,
-remove and iterate over members of the collection. When using a type like
-<code class="docutils literal"><span class="pre">list</span></code> or <code class="docutils literal"><span class="pre">set</span></code>, the appropriate methods are well-known and used
-automatically when present. This set-like class does not provide the expected
-<code class="docutils literal"><span class="pre">add</span></code> method, so we must supply an explicit mapping for the ORM via a
-decorator.</p>
+<p>このクラスは `` append``のためにリストのように見えますが、 `` __emulates__``はそれを強制的にset-likeにします。 `` remove``は設定されたインターフェースの一部であることが知られており、インストルメントされます。</p>
+<p>しかし、このクラスはまだ動作しません。SQLAlchemyで使用するためには少し接着剤が必要です。 ORMは、コレクションのメンバーを追加、削除、反復するために使用するメソッドを知る必要があります。 `` list``や `` set``のような型を使うとき、適切なメソッドはよく知られていて、自動的に使われます。このset-likeクラスは期待される `` add``メソッドを提供しないので、デコレータを介してORMの明示的なマッピングを提供する必要があります。</p>
 <div class="section" id="annotating-custom-collections-via-decorators">
-<h3>Annotating Custom Collections via Decorators<a class="headerlink" href="#annotating-custom-collections-via-decorators" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Decorators can be used to tag the individual methods the ORM needs to manage
-collections. Use them when your class doesn't quite meet the regular interface
-for its container type, or when you otherwise would like to use a different method to
-get the job done.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="kn">import</span> <span class="n">collection</span>
+<h3>デコレータを使用してカスタムコレクションに注釈を付ける<a class="headerlink" href="#annotating-custom-collections-via-decorators" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>デコレータを使用すると、ORMがコレクションを管理するために必要な個々のメソッドにタグを付けることができます。あなたのクラスがそのコンテナタイプの通常のインターフェースをまったく満たしていないときや、そうでなければ別のメソッドを使って仕事をやりたいときに使います。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="kn">import</span> <span class="n">collection</span>
 
 <span class="k">class</span> <span class="nc">SetLike</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">__emulates__</span> <span class="o">=</span> <span class="nb">set</span>
@@ -621,11 +481,8 @@ get the job done.</p>
     <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span></pre></div>
 </div>
-<p>And that's all that's needed to complete the example. SQLAlchemy will add
-instances via the <code class="docutils literal"><span class="pre">append</span></code> method. <code class="docutils literal"><span class="pre">remove</span></code> and <code class="docutils literal"><span class="pre">__iter__</span></code> are the
-default methods for sets and will be used for removing and iteration. Default
-methods can be changed as well:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="kn">import</span> <span class="n">collection</span>
+<p>この例を完了するために必要なのはこれだけです。 SQLAlchemyは `` append``メソッドでインスタンスを追加します。 `` remove``と `` __iter__``はセットのデフォルトメソッドであり、削除と反復に使用されます。デフォルトのメソッドも同様に変更できます。</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="kn">import</span> <span class="n">collection</span>
 
 <span class="k">class</span> <span class="nc">MyList</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
     <span class="nd">@collection.remover</span>
@@ -636,25 +493,18 @@ methods can be changed as well:</p>
     <span class="k">def</span> <span class="nf">hey_use_this_instead_for_iteration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># ...</span></pre></div>
 </div>
-<p>There is no requirement to be list-, or set-like at all. Collection classes
-can be any shape, so long as they have the append, remove and iterate
-interface marked for SQLAlchemy's use. Append and remove methods will be
-called with a mapped entity as the single argument, and iterator methods are
-called with no arguments and must return an iterator.</p>
+<p>リストやセットにする必要は全くありません。コレクションクラスは、SQLAlchemyの使用のためにマークされたインタフェースを追加、削除、反復する限り、任意の形状にすることができます。メソッドの追加と削除は、マッピングされたエンティティを単一の引数として呼び出され、イテレータメソッドは引数なしで呼び出され、イテレータを返す必要があります。</p>
 <dl class="class">
 <dt id="sqlalchemy.orm.collections.collection">
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">collection</code><a class="headerlink" href="#sqlalchemy.orm.collections.collection" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Decorators for entity collection classes.</p>
-<p>The decorators fall into two groups: annotations and interception recipes.</p>
-<p>The annotating decorators (appender, remover, iterator, linker, converter,
-internally_instrumented) indicate the method's purpose and take no
-arguments.  They are not written with parens:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">appender</span>
+<dd><p>エンティティコレクションクラスのデコレータ。</p>
+<p>デコレータは、アノテーションとインターセプトレシピという2つのグループに分類されます。</p>
+<p>注釈デコレータ（appender、remover、iterator、linker、converter、internally_instrumented）は、メソッドの目的を示し、引数をとりません。彼らはparensと書かれていません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">appender</span>
 <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">append</span><span class="p">):</span> <span class="o">...</span></pre></div>
 </div>
-<p>The recipe decorators all require parens, even those that take no
-arguments:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">adds</span><span class="p">(</span><span class="s1">&#39;entity&#39;</span><span class="p">)</span>
+<p>レシピデコレータはすべて引数を取らないものであっても括弧を必要とします:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">adds</span><span class="p">(</span><span class="s1">&#39;entity&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">entity</span><span class="p">):</span> <span class="o">...</span>
 
 <span class="nd">@collection</span><span class="o">.</span><span class="n">removes_return</span><span class="p">()</span>
@@ -663,12 +513,9 @@ arguments:</p>
 <dl class="staticmethod">
 <dt id="sqlalchemy.orm.collections.collection.adds">
 <em class="property">static </em><code class="descname">adds</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.collection.adds" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Mark the method as adding an entity to the collection.</p>
-<p>Adds &quot;add to collection&quot; handling to the method.  The decorator
-argument indicates which method argument holds the SQLAlchemy-relevant
-value.  Arguments can be specified positionally (i.e. integer) or by
-name:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">adds</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<dd><p>メソッドを、コレクションにエンティティを追加するものとしてマークします。</p>
+<p>メソッドへの &amp;quot;コレクションへの追加&amp;quot;処理を追加します。 decorator引数は、SQLAlchemy関連値を保持するメソッド引数を示します。引数は位置的（すなわち整数）または名前で指定することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">adds</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span> <span class="o">...</span>
 
 <span class="nd">@collection</span><span class="o">.</span><span class="n">adds</span><span class="p">(</span><span class="s1">&#39;entity&#39;</span><span class="p">)</span>
@@ -679,11 +526,9 @@ name:</p>
 <dl class="staticmethod">
 <dt id="sqlalchemy.orm.collections.collection.appender">
 <em class="property">static </em><code class="descname">appender</code><span class="sig-paren">(</span><em>fn</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.collection.appender" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Tag the method as the collection appender.</p>
-<p>The appender method is called with one positional argument: the value
-to append. The method will be automatically decorated with 'adds(1)'
-if not already decorated:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">appender</span>
+<dd><p>メソッドをコレクションアペンダーとしてタグ付けします。</p>
+<p>appenderメソッドは、1つの位置引数、つまり追加する値で呼び出されます。メソッドは自動的に &amp;#39;adds（1）&amp;#39;が装飾されていなければ装飾されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">appender</span>
 <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">append</span><span class="p">):</span> <span class="o">...</span>
 
 <span class="c1"># or, equivalently</span>
@@ -704,56 +549,35 @@ if not already decorated:</p>
     <span class="bp">self</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">entity</span>
     <span class="k">return</span> <span class="n">previous</span></pre></div>
 </div>
-<p>If the value to append is not allowed in the collection, you may
-raise an exception.  Something to remember is that the appender
-will be called for each object mapped by a database query.  If the
-database contains rows that violate your collection semantics, you
-will need to get creative to fix the problem, as access via the
-collection will not work.</p>
-<p>If the appender method is internally instrumented, you must also
-receive the keyword argument '_sa_initiator' and ensure its
-promulgation to collection events.</p>
+<p>追加する値がコレクション内で許可されていない場合は、例外を発生させることができます。覚えておかなければならないのは、アペンダーがデータベースクエリによってマップされた各オブジェクトに対して呼び出されるということです。データベースにコレクションのセマンティクスに違反する行が含まれている場合は、コレクションを介したアクセスが機能しないため、問題を解決するために創造的に対応する必要があります。</p>
+<p>アペンダーメソッドが内部で計装されている場合は、キーワード引数 &amp;#39;_sa_initiator&amp;#39;も受け取らなければならず、コレクションイベントへの公布が確実に行われなければなりません。</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="sqlalchemy.orm.collections.collection.converter">
 <em class="property">static </em><code class="descname">converter</code><span class="sig-paren">(</span><em>fn</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.collection.converter" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Tag the method as the collection converter.</p>
+<dd><p>メソッドをコレクションコンバータとしてタグ付けします。</p>
 <div class="deprecated">
-<p><span class="versionmodified">バージョン 1.3 で撤廃: </span>Use the bulk_replace event handler</p>
+<p><span class="versionmodified">バージョン 1.3 で撤廃: </span>bulk_replaceイベントハンドラを使用する</p>
 </div>
-<p>This optional method will be called when a collection is being
-replaced entirely, as in:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">myobj</span><span class="o">.</span><span class="n">acollection</span> <span class="o">=</span> <span class="p">[</span><span class="n">newvalue1</span><span class="p">,</span> <span class="n">newvalue2</span><span class="p">]</span></pre></div>
+<p>このオプションのメソッドは、コレクションが完全に置き換えられるときに呼び出されます。:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myobj</span><span class="o">.</span><span class="n">acollection</span> <span class="o">=</span> <span class="p">[</span><span class="n">newvalue1</span><span class="p">,</span> <span class="n">newvalue2</span><span class="p">]</span></pre></div>
 </div>
-<p>The converter method will receive the object being assigned and should
-return an iterable of values suitable for use by the <code class="docutils literal"><span class="pre">appender</span></code>
-method.  A converter must not assign values or mutate the collection,
-its sole job is to adapt the value the user provides into an iterable
-of values for the ORM's use.</p>
-<p>The default converter implementation will use duck-typing to do the
-conversion.  A dict-like collection will be convert into an iterable
-of dictionary values, and other types will simply be iterated:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">converter</span>
+<p>コンバータメソッドは割り当てられているオブジェクトを受け取り、 `` appender``メソッドで使用するのに適した値の繰り返し可能性を返さなければなりません。コンバーターは値を割り当てたり、コレクションを変更したりしてはいけません。その唯一の仕事は、ユーザーが提供する値をORMの使用のための反復可能な値に適合させることです。</p>
+<p>デフォルトのコンバータの実装では、ダックタイピングを使用して変換が行われます。 dict-likeコレクションは辞書値の繰り返し可能性に変換され、他の型は単純に反復されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">converter</span>
 <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span> <span class="o">...</span></pre></div>
 </div>
-<p>If the duck-typing of the object does not match the type of this
-collection, a TypeError is raised.</p>
-<p>Supply an implementation of this method if you want to expand the
-range of possible types that can be assigned in bulk or perform
-validation on the values about to be assigned.</p>
+<p>オブジェクトのダックタイピングがこのコレクションの型と一致しない場合、TypeErrorが発生します。</p>
+<p>バルクで割り当てることができる可能な型の範囲を拡張したい場合や、割り当てようとしている値に対して検証を実行する場合は、このメソッドの実装を指定します。</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="sqlalchemy.orm.collections.collection.internally_instrumented">
 <em class="property">static </em><code class="descname">internally_instrumented</code><span class="sig-paren">(</span><em>fn</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.collection.internally_instrumented" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Tag the method as instrumented.</p>
-<p>This tag will prevent any decoration from being applied to the
-method. Use this if you are orchestrating your own calls to
-<code class="xref py py-func docutils literal"><span class="pre">collection_adapter()</span></code> in one of the basic SQLAlchemy
-interface methods, or to prevent an automatic ABC method
-decoration from wrapping your implementation:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># normally an &#39;extend&#39; method on a list-like class would be</span>
+<dd><p>メソッドに計測器としてタグを付けます。</p>
+<p>このタグは、装飾がメソッドに適用されないようにします。基本的なSQLAlchemyインターフェースメソッドの1つでfunc： <a href="#id1"><span class="problematic" id="id2">`</span></a>.collection_adapter`への呼び出しをオーケストレーションする場合や、自動ABCメソッドのデコレーションが実装をラップしないようにする場合に使用します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># normally an &#39;extend&#39; method on a list-like class would be</span>
 <span class="c1"># automatically intercepted and re-implemented in terms of</span>
 <span class="c1"># SQLAlchemy events and append().  your implementation will</span>
 <span class="c1"># never be called, unless:</span>
@@ -765,10 +589,9 @@ decoration from wrapping your implementation:</p>
 <dl class="staticmethod">
 <dt id="sqlalchemy.orm.collections.collection.iterator">
 <em class="property">static </em><code class="descname">iterator</code><span class="sig-paren">(</span><em>fn</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.collection.iterator" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Tag the method as the collection remover.</p>
-<p>The iterator method is called with no arguments.  It is expected to
-return an iterator over all collection members:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">iterator</span>
+<dd><p>メソッドをコレクションリムーバとしてタグ付けします。</p>
+<p>反復子メソッドは引数なしで呼び出されます。すべてのコレクションメンバーに対してイテレータを返すことが期待されています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">iterator</span>
 <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="o">...</span></pre></div>
 </div>
 </dd></dl>
@@ -776,33 +599,27 @@ return an iterator over all collection members:</p>
 <dl class="staticmethod">
 <dt id="sqlalchemy.orm.collections.collection.link">
 <em class="property">static </em><code class="descname">link</code><span class="sig-paren">(</span><em>fn</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.collection.link" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>deprecated; synonym for <a class="reference internal" href="#sqlalchemy.orm.collections.collection.linker" title="sqlalchemy.orm.collections.collection.linker"><code class="xref py py-meth docutils literal"><span class="pre">collection.linker()</span></code></a>.</p>
+<dd><p>廃止されました。 ：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.collection.linker`の同義語です。</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="sqlalchemy.orm.collections.collection.linker">
 <em class="property">static </em><code class="descname">linker</code><span class="sig-paren">(</span><em>fn</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.collection.linker" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Tag the method as a &quot;linked to attribute&quot; event handler.</p>
-<p>This optional event handler will be called when the collection class
-is linked to or unlinked from the InstrumentedAttribute.  It is
-invoked immediately after the '_sa_adapter' property is set on
-the instance.  A single argument is passed: the collection adapter
-that has been linked, or None if unlinking.</p>
+<dd><p>このメソッドに&amp;quot;リンクされた属性&amp;quot;イベントハンドラとしてタグを付けます。</p>
+<p>このオプションのイベントハンドラは、コレクションクラスがInstrumentedAttributeにリンクされているか、リンクされていないときに呼び出されます。これは、インスタンスに &amp;#39;_sa_adapter&amp;#39;プロパティが設定された直後に呼び出されます。 1つの引数が渡されます：リンクされたコレクションアダプタ、またはリンクを解除する場合はNoneです。</p>
 <div class="deprecated">
-<p><span class="versionmodified">バージョン 1.0.0 で撤廃: </span>- the <a class="reference internal" href="#sqlalchemy.orm.collections.collection.linker" title="sqlalchemy.orm.collections.collection.linker"><code class="xref py py-meth docutils literal"><span class="pre">collection.linker()</span></code></a> handler
-is superseded by the <a class="reference internal" href="events.html#sqlalchemy.orm.events.AttributeEvents.init_collection" title="sqlalchemy.orm.events.AttributeEvents.init_collection"><code class="xref py py-meth docutils literal"><span class="pre">AttributeEvents.init_collection()</span></code></a>
-and <a class="reference internal" href="events.html#sqlalchemy.orm.events.AttributeEvents.dispose_collection" title="sqlalchemy.orm.events.AttributeEvents.dispose_collection"><code class="xref py py-meth docutils literal"><span class="pre">AttributeEvents.dispose_collection()</span></code></a> handlers.</p>
+<p><span class="versionmodified">バージョン 1.0.0 で撤廃: </span>- the <a class="reference internal" href="#sqlalchemy.orm.collections.collection.linker" title="sqlalchemy.orm.collections.collection.linker"><code class="xref py py-meth docutils literal notranslate"><span class="pre">collection.linker()</span></code></a> handler
+is superseded by the <a class="reference internal" href="events.html#sqlalchemy.orm.events.AttributeEvents.init_collection" title="sqlalchemy.orm.events.AttributeEvents.init_collection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AttributeEvents.init_collection()</span></code></a>
+and <a class="reference internal" href="events.html#sqlalchemy.orm.events.AttributeEvents.dispose_collection" title="sqlalchemy.orm.events.AttributeEvents.dispose_collection"><code class="xref py py-meth docutils literal notranslate"><span class="pre">AttributeEvents.dispose_collection()</span></code></a> handlers.</p>
 </div>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="sqlalchemy.orm.collections.collection.remover">
 <em class="property">static </em><code class="descname">remover</code><span class="sig-paren">(</span><em>fn</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.collection.remover" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Tag the method as the collection remover.</p>
-<p>The remover method is called with one positional argument: the value
-to remove. The method will be automatically decorated with
-<a class="reference internal" href="#sqlalchemy.orm.collections.collection.removes_return" title="sqlalchemy.orm.collections.collection.removes_return"><code class="xref py py-meth docutils literal"><span class="pre">removes_return()</span></code></a> if not already decorated:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">remover</span>
+<dd><p>メソッドをコレクションリムーバとしてタグ付けします。</p>
+<p>除去メソッドは、1つの位置引数、つまり削除する値で呼び出されます。メソッドは自動的に装飾されます：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>remov_return`まだ装飾されていない場合:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">remover</span>
 <span class="k">def</span> <span class="nf">zap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entity</span><span class="p">):</span> <span class="o">...</span>
 
 <span class="c1"># or, equivalently</span>
@@ -810,52 +627,39 @@ to remove. The method will be automatically decorated with
 <span class="nd">@collection</span><span class="o">.</span><span class="n">removes_return</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">zap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="p">):</span> <span class="o">...</span></pre></div>
 </div>
-<p>If the value to remove is not present in the collection, you may
-raise an exception or return None to ignore the error.</p>
-<p>If the remove method is internally instrumented, you must also
-receive the keyword argument '_sa_initiator' and ensure its
-promulgation to collection events.</p>
+<p>削除する値がコレクションに存在しない場合は、例外を発生させるか、Noneを返してエラーを無視することができます。</p>
+<p>removeメソッドが内部的にインスツルメンテーションされている場合は、キーワード引数 &amp;#39;_sa_initiator&amp;#39;も受け取らなければならず、コレクションイベントへの宣言が確実に行われなければなりません。</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="sqlalchemy.orm.collections.collection.removes">
 <em class="property">static </em><code class="descname">removes</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.collection.removes" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Mark the method as removing an entity in the collection.</p>
-<p>Adds &quot;remove from collection&quot; handling to the method.  The decorator
-argument indicates which method argument holds the SQLAlchemy-relevant
-value to be removed. Arguments can be specified positionally (i.e.
-integer) or by name:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">removes</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<dd><p>メソッドをコレクション内のエンティティを削除するものとしてマークします。</p>
+<p>メソッドへの &amp;quot;コレクションからの削除&amp;quot;処理を追加します。デコレータ引数は、削除されるSQLAlchemy関連値を保持するメソッド引数を示します。引数は位置的（すなわち整数）または名前で指定することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">removes</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">zap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span> <span class="o">...</span></pre></div>
 </div>
-<p>For methods where the value to remove is not known at call-time, use
-collection.removes_return.</p>
+<p>コール時に削除する値がわからないメソッドの場合は、collection.removes_returnを使用します。</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="sqlalchemy.orm.collections.collection.removes_return">
 <em class="property">static </em><code class="descname">removes_return</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.collection.removes_return" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Mark the method as removing an entity in the collection.</p>
-<p>Adds &quot;remove from collection&quot; handling to the method.  The return
-value of the method, if any, is considered the value to remove.  The
-method arguments are not inspected:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">removes_return</span><span class="p">()</span>
+<dd><p>メソッドをコレクション内のエンティティを削除するものとしてマークします。</p>
+<p>メソッドへの &amp;quot;コレクションからの削除&amp;quot;処理を追加します。メソッドの戻り値があれば、削除する値とみなされます。メソッド引数は検査されません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">removes_return</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="o">...</span></pre></div>
 </div>
-<p>For methods where the value to remove is known at call-time, use
-collection.remove.</p>
+<p>削除する値がコール時にわかっているメソッドの場合は、collection.removeを使用します。</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="sqlalchemy.orm.collections.collection.replaces">
 <em class="property">static </em><code class="descname">replaces</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.collection.replaces" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Mark the method as replacing an entity in the collection.</p>
-<p>Adds &quot;add to collection&quot; and &quot;remove from collection&quot; handling to
-the method.  The decorator argument indicates which method argument
-holds the SQLAlchemy-relevant value to be added, and return value, if
-any will be considered the value to remove.</p>
-<p>Arguments can be specified positionally (i.e. integer) or by name:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">replaces</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<dd><p>メソッドをコレクション内のエンティティを置き換えるものとしてマークします。</p>
+<p>&amp;quot;コレクションに追加&amp;quot;と&amp;quot;コレクションから削除&amp;quot;をメソッドに追加します。 decorator引数は、追加するSQLAlchemy関連値を保持するメソッド引数と、削除する値があるとみなされる場合は戻り値を示します。</p>
+<p>引数は位置的（すなわち整数）または名前で指定することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">replaces</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span> <span class="o">...</span></pre></div>
 </div>
 </dd></dl>
@@ -864,12 +668,9 @@ any will be considered the value to remove.</p>
 
 </div>
 <div class="section" id="custom-dictionary-based-collections">
-<span id="id1"></span><h3>Custom Dictionary-Based Collections<a class="headerlink" href="#custom-dictionary-based-collections" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The <a class="reference internal" href="#sqlalchemy.orm.collections.MappedCollection" title="sqlalchemy.orm.collections.MappedCollection"><code class="xref py py-class docutils literal"><span class="pre">MappedCollection</span></code></a> class can be used as
-a base class for your custom types or as a mix-in to quickly add <code class="docutils literal"><span class="pre">dict</span></code>
-collection support to other classes. It uses a keying function to delegate to
-<code class="docutils literal"><span class="pre">__setitem__</span></code> and <code class="docutils literal"><span class="pre">__delitem__</span></code>:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.util</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<span id="id1"></span><h3>カスタム辞書ベースのコレクション<a class="headerlink" href="#custom-dictionary-based-collections" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>：class： <cite>.MappedCollection`クラスは、あなたのカスタムタイプの基本クラスとして使うことも、他のクラスに</cite> <cite>dict``コレクションのサポートを素早く追加するためのミックスインとして使うこともできます。これはキーイング関数を使って `</cite> __setitem__``と `` __delitem__``に委譲します：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.util</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="kn">import</span> <span class="n">MappedCollection</span>
 
 <span class="k">class</span> <span class="nc">NodeMap</span><span class="p">(</span><span class="n">OrderedDict</span><span class="p">,</span> <span class="n">MappedCollection</span><span class="p">):</span>
@@ -879,15 +680,8 @@ collection support to other classes. It uses a keying function to delegate to
         <span class="n">MappedCollection</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keyfunc</span><span class="o">=</span><span class="k">lambda</span> <span class="n">node</span><span class="p">:</span> <span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
         <span class="n">OrderedDict</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span></pre></div>
 </div>
-<p>When subclassing <a class="reference internal" href="#sqlalchemy.orm.collections.MappedCollection" title="sqlalchemy.orm.collections.MappedCollection"><code class="xref py py-class docutils literal"><span class="pre">MappedCollection</span></code></a>, user-defined versions
-of <code class="docutils literal"><span class="pre">__setitem__()</span></code> or <code class="docutils literal"><span class="pre">__delitem__()</span></code> should be decorated
-with <a class="reference internal" href="#sqlalchemy.orm.collections.collection.internally_instrumented" title="sqlalchemy.orm.collections.collection.internally_instrumented"><code class="xref py py-meth docutils literal"><span class="pre">collection.internally_instrumented()</span></code></a>, <strong>if</strong> they call down
-to those same methods on <a class="reference internal" href="#sqlalchemy.orm.collections.MappedCollection" title="sqlalchemy.orm.collections.MappedCollection"><code class="xref py py-class docutils literal"><span class="pre">MappedCollection</span></code></a>.  This because the methods
-on <a class="reference internal" href="#sqlalchemy.orm.collections.MappedCollection" title="sqlalchemy.orm.collections.MappedCollection"><code class="xref py py-class docutils literal"><span class="pre">MappedCollection</span></code></a> are already instrumented - calling them
-from within an already instrumented call can cause events to be fired off
-repeatedly, or inappropriately, leading to internal state corruption in
-rare cases:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="k">import</span> <span class="n">MappedCollection</span><span class="p">,</span>\
+<p>class： <cite>.MappedCollection`をサブクラス化するとき、</cite> <cite>__setitem __（）</cite> <cite>や</cite> <cite>__delitem __（）</cite> <cite>のユーザ定義バージョンは：meth：</cite> .collection.internally_instrumented`、** if ** they同じメソッドを：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.MappedCollection`で呼び出してください。これは：class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.MappedCollection`のメソッドが既にインスツルメンテーションされているためです。すでにインストルメントされているコールの中からそれらを呼び出すと、イベントが繰り返し発生したり、不適切に発生したりすることがあります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="k">import</span> <span class="n">MappedCollection</span><span class="p">,</span>\
                                     <span class="n">collection</span>
 
 <span class="k">class</span> <span class="nc">MyMappedCollection</span><span class="p">(</span><span class="n">MappedCollection</span><span class="p">):</span>
@@ -906,34 +700,21 @@ rare cases:</p>
         <span class="c1"># do something with key</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">MyMappedCollection</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__delitem__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">_sa_initiator</span><span class="p">)</span></pre></div>
 </div>
-<p>The ORM understands the <code class="docutils literal"><span class="pre">dict</span></code> interface just like lists and sets, and will
-automatically instrument all dict-like methods if you choose to subclass
-<code class="docutils literal"><span class="pre">dict</span></code> or provide dict-like collection behavior in a duck-typed class. You
-must decorate appender and remover methods, however- there are no compatible
-methods in the basic dictionary interface for SQLAlchemy to use by default.
-Iteration will go through <code class="docutils literal"><span class="pre">itervalues()</span></code> unless otherwise decorated.</p>
+<p>ORMはリストやセットと同様に `` dict``インターフェースを理解し、 `` dict``をサブクラス化するか、duck-typedクラスでdict-likeコレクション動作を提供するかを選択すると、自動的にすべてのdict-likeメソッドを計測します。あなたはアペンダーとリムーバーメソッドを装飾する必要がありますが、デフォルトで使用するSQLAlchemyの基本辞書インターフェイスには互換性のあるメソッドはありません。反復は、別途装飾されていない限り、 `` itervalues（） <a href="#id1"><span class="problematic" id="id2">``</span></a>を実行します。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p>Due to a bug in MappedCollection prior to version 0.7.6, this
-workaround usually needs to be called before a custom subclass
-of <a class="reference internal" href="#sqlalchemy.orm.collections.MappedCollection" title="sqlalchemy.orm.collections.MappedCollection"><code class="xref py py-class docutils literal"><span class="pre">MappedCollection</span></code></a> which uses <a class="reference internal" href="#sqlalchemy.orm.collections.collection.internally_instrumented" title="sqlalchemy.orm.collections.collection.internally_instrumented"><code class="xref py py-meth docutils literal"><span class="pre">collection.internally_instrumented()</span></code></a>
-can be used:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="k">import</span> <span class="n">_instrument_class</span><span class="p">,</span> <span class="n">MappedCollection</span>
+<p>バージョン0.7.6より前のMappedCollectionのバグのため、この回避策は、通常：class： <cite>.MappedCollection`のカスタムサブクラスの前に呼び出される必要があります：meth：</cite> .collection.internally_instrumented`を使用することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="k">import</span> <span class="n">_instrument_class</span><span class="p">,</span> <span class="n">MappedCollection</span>
 <span class="n">_instrument_class</span><span class="p">(</span><span class="n">MappedCollection</span><span class="p">)</span></pre></div>
 </div>
-<p class="last">This will ensure that the <a class="reference internal" href="#sqlalchemy.orm.collections.MappedCollection" title="sqlalchemy.orm.collections.MappedCollection"><code class="xref py py-class docutils literal"><span class="pre">MappedCollection</span></code></a> has been properly
-initialized with custom <code class="docutils literal"><span class="pre">__setitem__()</span></code> and <code class="docutils literal"><span class="pre">__delitem__()</span></code>
-methods before used in a custom subclass.</p>
+<p class="last">これにより、：class： <cite>.MappedCollection`がカスタムサブクラスで使用される前にカスタムの</cite> <cite>__setitem __（）</cite> <cite>と</cite> <cite>__delitem __（）</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>メソッドで適切に初期化されていることを保証します。</p>
 </div>
 <dl class="class">
 <dt id="sqlalchemy.orm.collections.MappedCollection">
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">MappedCollection</code><span class="sig-paren">(</span><em>keyfunc</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.MappedCollection" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">builtins.dict</span></code></p>
-<p>A basic dictionary-based collection class.</p>
-<p>Extends dict with the minimal bag semantics that collection
-classes require. <code class="docutils literal"><span class="pre">set</span></code> and <code class="docutils literal"><span class="pre">remove</span></code> are implemented in terms
-of a keying function: any callable that takes an object and
-returns an object for use as a dictionary key.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.dict</span></code></p>
+<p>基本的な辞書ベースのコレクションクラス。</p>
+<p>コレクションクラスに必要な最小限のバッグセマンティクスで補完します。 `` set``と `` remove``は、キーイング関数の形で実装されています。オブジェクトを取って辞書キーとして使うオブジェクトを返す呼び出し可能なものです。</p>
 <dl class="method">
 <dt id="sqlalchemy.orm.collections.MappedCollection.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>keyfunc</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.MappedCollection.__init__" title="この定義へのパーマリンク">¶</a></dt>
@@ -943,7 +724,7 @@ for use as a dictionary key.</p>
 <p>The keyfunc will be called every time the ORM needs to add a member by
 value-only (such as when loading instances from the database) or
 remove a member.  The usual cautions about dictionary keying apply-
-<code class="docutils literal"><span class="pre">keyfunc(object)</span></code> should return the same output for the life of the
+<code class="docutils literal notranslate"><span class="pre">keyfunc(object)</span></code> should return the same output for the life of the
 collection.  Keying based on mutable properties can result in
 unreachable instances &quot;lost&quot; in the collection.</p>
 </dd></dl>
@@ -956,25 +737,25 @@ unreachable instances &quot;lost&quot; in the collection.</p>
 <dl class="method">
 <dt id="sqlalchemy.orm.collections.MappedCollection.pop">
 <code class="descname">pop</code><span class="sig-paren">(</span><em>k</em><span class="optional">[</span>, <em>d</em><span class="optional">]</span><span class="sig-paren">)</span> &#x2192; v, remove specified key and return the corresponding value.<a class="headerlink" href="#sqlalchemy.orm.collections.MappedCollection.pop" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>If key is not found, d is returned if given, otherwise KeyError is raised</p>
+<dd><p>keyが見つからなければ、与えられればdが返され、そうでなければKeyErrorが発生します</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.collections.MappedCollection.popitem">
 <code class="descname">popitem</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; (k, v), remove and return some (key, value) pair as a<a class="headerlink" href="#sqlalchemy.orm.collections.MappedCollection.popitem" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>2-tuple; but raise KeyError if D is empty.</p>
+<dd><p>2タプル; Dが空の場合はKeyErrorを上げます。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.collections.MappedCollection.remove">
 <code class="descname">remove</code><span class="sig-paren">(</span><em>value</em>, <em>_sa_initiator=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.MappedCollection.remove" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Remove an item by value, consulting the keyfunc for the key.</p>
+<dd><p>値で項目を削除し、キーのkeyfuncと相談します。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.orm.collections.MappedCollection.set">
 <code class="descname">set</code><span class="sig-paren">(</span><em>value</em>, <em>_sa_initiator=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.MappedCollection.set" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Add an item by value, consulting the keyfunc for the key.</p>
+<dd><p>値で項目を追加し、キーのkeyfuncと相談します。</p>
 </dd></dl>
 
 <dl class="method">
@@ -985,54 +766,40 @@ unreachable instances &quot;lost&quot; in the collection.</p>
 <dl class="method">
 <dt id="sqlalchemy.orm.collections.MappedCollection.update">
 <code class="descname">update</code><span class="sig-paren">(</span><span class="optional">[</span><em>E</em>, <span class="optional">]</span><em>**F</em><span class="sig-paren">)</span> &#x2192; None.  Update D from dict/iterable E and F.<a class="headerlink" href="#sqlalchemy.orm.collections.MappedCollection.update" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]
-If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v
-In either case, this is followed by: for k in F:  D[k] = F[k]</p>
+<dd><p>もしEが存在し、そして.keys（）メソッドを持っていれば、E：D [k] = E [k] F [k] = F [k]であるとき、E：D [k] = vのいずれかの場合、</p>
 </dd></dl>
 
 </dd></dl>
 
 </div>
 <div class="section" id="instrumentation-and-custom-types">
-<h3>Instrumentation and Custom Types<a class="headerlink" href="#instrumentation-and-custom-types" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Many custom types and existing library classes can be used as a entity
-collection type as-is without further ado. However, it is important to note
-that the instrumentation process will modify the type, adding decorators
-around methods automatically.</p>
-<p>The decorations are lightweight and no-op outside of relationships, but they
-do add unneeded overhead when triggered elsewhere. When using a library class
-as a collection, it can be good practice to use the &quot;trivial subclass&quot; trick
-to restrict the decorations to just your usage in relationships. For example:</p>
-<div class="highlight-python+sql"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyAwesomeList</span><span class="p">(</span><span class="n">some</span><span class="o">.</span><span class="n">great</span><span class="o">.</span><span class="n">library</span><span class="o">.</span><span class="n">AwesomeList</span><span class="p">):</span>
+<h3>計装とカスタムタイプ<a class="headerlink" href="#instrumentation-and-custom-types" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>多くのカスタムタイプと既存のライブラリクラスは、そのままのエンティティコレクションタイプとしてそのまま使用できます。しかし、インストルメンテーションプロセスはタイプを変更し、メソッドの周りにデコレータを自動的に追加することに注意することが重要です。</p>
+<p>デコレーションは軽量で、関係の外では何も操作しませんが、他の場所でトリガされると不要なオーバーヘッドが追加されます。ライブラリクラスをコレクションとして使用する場合、&amp;quot;トリビアルサブクラス&amp;quot;トリックを使用して装飾をリレーションシップでの使用に限定することをお勧めします。例えば：</p>
+<div class="highlight-python+sql notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyAwesomeList</span><span class="p">(</span><span class="n">some</span><span class="o">.</span><span class="n">great</span><span class="o">.</span><span class="n">library</span><span class="o">.</span><span class="n">AwesomeList</span><span class="p">):</span>
     <span class="k">pass</span>
 
 <span class="c1"># ... relationship(..., collection_class=MyAwesomeList)</span></pre></div>
 </div>
-<p>The ORM uses this approach for built-ins, quietly substituting a trivial
-subclass when a <code class="docutils literal"><span class="pre">list</span></code>, <code class="docutils literal"><span class="pre">set</span></code> or <code class="docutils literal"><span class="pre">dict</span></code> is used directly.</p>
+<p>ORMは、 `` list``、 `` set``または `` dict``を直接使用するとき、静かにサブクラスに置き換えて、組み込み関数にこのアプローチを使用します。</p>
 </div>
 </div>
 <div class="section" id="collection-internals">
-<h2>Collection Internals<a class="headerlink" href="#collection-internals" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Various internal methods.</p>
+<h2>コレクション内部<a class="headerlink" href="#collection-internals" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>さまざまな内部メソッド。</p>
 <dl class="function">
 <dt id="sqlalchemy.orm.collections.bulk_replace">
 <code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">bulk_replace</code><span class="sig-paren">(</span><em>values</em>, <em>existing_adapter</em>, <em>new_adapter</em>, <em>initiator=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.bulk_replace" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Load a new collection, firing events based on prior like membership.</p>
-<p>Appends instances in <code class="docutils literal"><span class="pre">values</span></code> onto the <code class="docutils literal"><span class="pre">new_adapter</span></code>. Events will be
-fired for any instance not present in the <code class="docutils literal"><span class="pre">existing_adapter</span></code>.  Any
-instances in <code class="docutils literal"><span class="pre">existing_adapter</span></code> not present in <code class="docutils literal"><span class="pre">values</span></code> will have
-remove events fired upon them.</p>
+<dd><p>新しいコレクションを読み込み、以前のメンバーシップに基づいてイベントを発生させます。</p>
+<p>`` values``のインスタンスを `` new_adapter``に追加します。イベントは `` existing_adapter``に存在しないインスタンスに対して起動されます。 `` values``に存在しない `` existing_adapter``内のインスタンスはすべて削除イベントが発生します。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.orm.collections.bulk_replace.params.values"></span><strong>values</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.collections.bulk_replace.params.values">¶</a> -- An iterable of collection member instances</li>
-<li><span class="target" id="sqlalchemy.orm.collections.bulk_replace.params.existing_adapter"></span><strong>existing_adapter</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.collections.bulk_replace.params.existing_adapter">¶</a> -- A <a class="reference internal" href="#sqlalchemy.orm.collections.CollectionAdapter" title="sqlalchemy.orm.collections.CollectionAdapter"><code class="xref py py-class docutils literal"><span class="pre">CollectionAdapter</span></code></a> of
-instances to be replaced</li>
-<li><span class="target" id="sqlalchemy.orm.collections.bulk_replace.params.new_adapter"></span><strong>new_adapter</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.collections.bulk_replace.params.new_adapter">¶</a> -- An empty <a class="reference internal" href="#sqlalchemy.orm.collections.CollectionAdapter" title="sqlalchemy.orm.collections.CollectionAdapter"><code class="xref py py-class docutils literal"><span class="pre">CollectionAdapter</span></code></a>
-to load with <code class="docutils literal"><span class="pre">values</span></code></li>
+<li><span class="target" id="sqlalchemy.orm.collections.bulk_replace.params.values"></span><strong>values</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.collections.bulk_replace.params.values">¶</a> -- コレクションメンバーインスタンスの繰り返し可能</li>
+<li><span class="target" id="sqlalchemy.orm.collections.bulk_replace.params.existing_adapter"></span><strong>existing_adapter</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.collections.bulk_replace.params.existing_adapter">¶</a> -- A：class：置き換えられるインスタンスの <cite>.CollectionAdapter</cite></li>
+<li><span class="target" id="sqlalchemy.orm.collections.bulk_replace.params.new_adapter"></span><strong>new_adapter</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.orm.collections.bulk_replace.params.new_adapter">¶</a> -- 空の：class： `` Values``でロードする <cite>.CollectionAdapter</cite></li>
 </ul>
 </td>
 </tr>
@@ -1043,17 +810,14 @@ to load with <code class="docutils literal"><span class="pre">values</span></cod
 <dl class="class">
 <dt>
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">collection</code></dt>
-<dd><p>Decorators for entity collection classes.</p>
-<p>The decorators fall into two groups: annotations and interception recipes.</p>
-<p>The annotating decorators (appender, remover, iterator, linker, converter,
-internally_instrumented) indicate the method's purpose and take no
-arguments.  They are not written with parens:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">appender</span>
+<dd><p>エンティティコレクションクラスのデコレータ。</p>
+<p>デコレータは、アノテーションとインターセプトレシピという2つのグループに分類されます。</p>
+<p>注釈デコレータ（appender、remover、iterator、linker、converter、internally_instrumented）は、メソッドの目的を示し、引数をとりません。彼らはparensと書かれていません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">appender</span>
 <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">append</span><span class="p">):</span> <span class="o">...</span></pre></div>
 </div>
-<p>The recipe decorators all require parens, even those that take no
-arguments:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">adds</span><span class="p">(</span><span class="s1">&#39;entity&#39;</span><span class="p">)</span>
+<p>レシピデコレータはすべて引数を取らないものであっても括弧を必要とします:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@collection</span><span class="o">.</span><span class="n">adds</span><span class="p">(</span><span class="s1">&#39;entity&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">entity</span><span class="p">):</span> <span class="o">...</span>
 
 <span class="nd">@collection</span><span class="o">.</span><span class="n">removes_return</span><span class="p">()</span>
@@ -1064,50 +828,44 @@ arguments:</p>
 <dl class="data">
 <dt id="sqlalchemy.orm.collections.collection_adapter">
 <code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">collection_adapter</code><em class="property"> = operator.attrgetter('_sa_adapter')</em><a class="headerlink" href="#sqlalchemy.orm.collections.collection_adapter" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Fetch the <a class="reference internal" href="#sqlalchemy.orm.collections.CollectionAdapter" title="sqlalchemy.orm.collections.CollectionAdapter"><code class="xref py py-class docutils literal"><span class="pre">CollectionAdapter</span></code></a> for a collection.</p>
+<dd><p>Collection：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.CollectionAdapter`を取得します。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.orm.collections.CollectionAdapter">
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">CollectionAdapter</code><span class="sig-paren">(</span><em>attr</em>, <em>owner_state</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.CollectionAdapter" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bridges between the ORM and arbitrary Python collections.</p>
-<p>Proxies base-level collection operations (append, remove, iterate)
-to the underlying Python collection, and emits add/remove events for
-entities entering or leaving the collection.</p>
-<p>The ORM uses <a class="reference internal" href="#sqlalchemy.orm.collections.CollectionAdapter" title="sqlalchemy.orm.collections.CollectionAdapter"><code class="xref py py-class docutils literal"><span class="pre">CollectionAdapter</span></code></a> exclusively for interaction with
-entity collections.</p>
+<dd><p>ORMと任意のPythonコレクションとの間のブリッジ。</p>
+<p>基底のPythonコレクションに基本レベルのコレクション操作（追加、削除、反復）をプロキシし、コレクションに入ったり出るエンティティの追加/削除イベントを発行します。</p>
+<p>ORMは、class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.CollectionAdapter`をエンティティコレクションとの相互作用のために排他的に使用します。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.orm.collections.InstrumentedDict">
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">InstrumentedDict</code><a class="headerlink" href="#sqlalchemy.orm.collections.InstrumentedDict" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">builtins.dict</span></code></p>
-<p>An instrumented version of the built-in dict.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.dict</span></code></p>
+<p>組み込み命令のインストルメント版。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.orm.collections.InstrumentedList">
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">InstrumentedList</code><a class="headerlink" href="#sqlalchemy.orm.collections.InstrumentedList" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">builtins.list</span></code></p>
-<p>An instrumented version of the built-in list.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.list</span></code></p>
+<p>組み込みリストのインストルメント版。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.orm.collections.InstrumentedSet">
 <em class="property">class </em><code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">InstrumentedSet</code><a class="headerlink" href="#sqlalchemy.orm.collections.InstrumentedSet" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">builtins.set</span></code></p>
-<p>An instrumented version of the built-in set.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.set</span></code></p>
+<p>組み込みセットの計装版。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="sqlalchemy.orm.collections.prepare_instrumentation">
 <code class="descclassname">sqlalchemy.orm.collections.</code><code class="descname">prepare_instrumentation</code><span class="sig-paren">(</span><em>factory</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.orm.collections.prepare_instrumentation" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Prepare a callable for future use as a collection class factory.</p>
-<p>Given a collection class factory (either a type or no-arg callable),
-return another factory that will produce compatible instances when
-called.</p>
-<p>This function is responsible for converting collection_class=list
-into the run-time behavior of collection_class=InstrumentedList.</p>
+<dd><p>コレクションクラスファクトリとしての将来の使用のためにコールバックを準備する。</p>
+<p>コレクションクラスファクトリ（型または無引数呼び出し可能）を指定すると、呼び出されると互換性のあるインスタンスを生成する別のファクトリを返します。</p>
+<p>この関数は、collection_class = listをcollection_class = InstrumentedListの実行時動作に変換する役割を担います。</p>
 </dd></dl>
 
 </div>
@@ -1119,13 +877,13 @@ into the run-time behavior of collection_class=InstrumentedList.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="join_conditions.html" title="previous chapter">Configuring how Relationship Joins</a>
+        <a href="join_conditions.html" title="previous chapter">リレーションシップの参加方法のコンフィグレーション</a>
         Next:
-        <a href="relationship_persistence.html" title="next chapter">Special Relationship Persistence Patterns</a>
+        <a href="relationship_persistence.html" title="next chapter">特別な関係の永続パターン</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -1152,6 +910,7 @@ into the run-time behavior of collection_class=InstrumentedList.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

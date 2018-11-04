@@ -10,7 +10,7 @@
         <title>
             
     
-    SQL Expressions as Mapped Attributes
+    マップされた属性としてのSQL式
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Mapping Columns and Expressions" href="scalar_mapping.html" />
-        <link rel="next" title="Changing Attribute Behavior" href="mapped_attributes.html" />
-        <link rel="prev" title="Mapping Table Columns" href="mapping_columns.html" />
+        <link rel="up" title="列と式のマッピング" href="scalar_mapping.html" />
+        <link rel="next" title="属性の動作の変更" href="mapped_attributes.html" />
+        <link rel="prev" title="マッピング表の列" href="mapping_columns.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,34 +120,34 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="mapping_styles.html">Types of Mappings</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="scalar_mapping.html">Mapping Columns and Expressions</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="mapping_columns.html">Mapping Table Columns</a></span></li>
-<li class="selected"><span class="link-container first"><strong>SQL Expressions as Mapped Attributes</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#using-a-hybrid">Using a Hybrid</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#using-column-property">Using column_property</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#using-a-plain-descriptor">Using a plain descriptor</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#query-time-sql-expressions-as-mapped-attributes">Query-time SQL expressions as mapped attributes</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="mapping_styles.html">マッピングのタイプ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="scalar_mapping.html">列と式のマッピング</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="mapping_columns.html">マッピング表の列</a></span></li>
+<li class="selected"><span class="link-container first"><strong>マップされた属性としてのSQL式</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#using-a-hybrid">ハイブリッドの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#using-column-property">column_propertyの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#using-a-plain-descriptor">プレーンな記述子を使う</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#query-time-sql-expressions-as-mapped-attributes">クエリされたSQL式をマップされた属性として</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="mapped_attributes.html">Changing Attribute Behavior</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="composites.html">Composite Column Types</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapped_attributes.html">属性の動作の変更</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="composites.html">コンポジット列の種類</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="inheritance.html">Mapping Class Inheritance Hierarchies</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="nonstandard_mappings.html">Non-Traditional Mappings</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="versioning.html">Configuring a Version Counter</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapping_api.html">Class Mapping API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="inheritance.html">クラス継承階層のマッピング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="nonstandard_mappings.html">非伝統的なマッピング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="versioning.html">バージョンカウンタの設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapping_api.html">クラスマッピングAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -163,19 +163,12 @@
     <div id="docs-body" class="withsidebar" >
         
 <span class="target" id="module-sqlalchemy.orm"></span><div class="section" id="sql-expressions-as-mapped-attributes">
-<span id="mapper-sql-expressions"></span><h1>SQL Expressions as Mapped Attributes<a class="headerlink" href="#sql-expressions-as-mapped-attributes" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Attributes on a mapped class can be linked to SQL expressions, which can
-be used in queries.</p>
+<span id="mapper-sql-expressions"></span><h1>マップされた属性としてのSQL式<a class="headerlink" href="#sql-expressions-as-mapped-attributes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>マップされたクラスの属性は、クエリで使用できるSQL式にリンクできます。</p>
 <div class="section" id="using-a-hybrid">
-<h2>Using a Hybrid<a class="headerlink" href="#using-a-hybrid" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The easiest and most flexible way to link relatively simple SQL expressions to a class is to use a so-called
-&quot;hybrid attribute&quot;,
-described in the section <a class="reference internal" href="extensions/hybrid.html"><span class="std std-ref">Hybrid Attributes</span></a>.  The hybrid provides
-for an expression that works at both the Python level as well as at the
-SQL expression level.  For example, below we map a class <code class="docutils literal"><span class="pre">User</span></code>,
-containing attributes <code class="docutils literal"><span class="pre">firstname</span></code> and <code class="docutils literal"><span class="pre">lastname</span></code>, and include a hybrid that
-will provide for us the <code class="docutils literal"><span class="pre">fullname</span></code>, which is the string concatenation of the two:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_property</span>
+<h2>ハイブリッドの使用<a class="headerlink" href="#using-a-hybrid" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>比較的シンプルなSQL式をクラスにリンクする最も簡単で最も柔軟な方法は、ref： <cite>hybrids_toplevel`節で説明する、いわゆる&amp;quot;ハイブリッド属性&amp;quot;を使用することです。ハイブリッドは、PythonレベルとSQL式レベルの両方で動作する式を提供します。たとえば、属性 `</cite> firstname``と `` lastname``を含む `` User``クラスをマップし、 `` fullname``を文字列の連結とするハイブリッドを含めます。二つ：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_property</span>
 
 <span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span>
@@ -187,21 +180,15 @@ will provide for us the <code class="docutils literal"><span class="pre">fullnam
     <span class="k">def</span> <span class="nf">fullname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">firstname</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastname</span></pre></div>
 </div>
-<p>Above, the <code class="docutils literal"><span class="pre">fullname</span></code> attribute is interpreted at both the instance and
-class level, so that it is available from an instance:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">some_user</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<p>上記の `` fullname``属性は、インスタンスとクラスの両方のレベルで解釈されるため、インスタンス:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some_user</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">some_user</span><span class="o">.</span><span class="n">fullname</span><span class="p">)</span></pre></div>
 </div>
-<p>as well as usable within queries:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">some_user</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">fullname</span> <span class="o">==</span> <span class="s2">&quot;John Smith&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span></pre></div>
+<p>クエリ内でも使用できるようになりました:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some_user</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">fullname</span> <span class="o">==</span> <span class="s2">&quot;John Smith&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span></pre></div>
 </div>
-<p>The string concatenation example is a simple one, where the Python expression
-can be dual purposed at the instance and class level.  Often, the SQL expression
-must be distinguished from the Python expression, which can be achieved using
-<a class="reference internal" href="extensions/hybrid.html#sqlalchemy.ext.hybrid.hybrid_property.expression" title="sqlalchemy.ext.hybrid.hybrid_property.expression"><code class="xref py py-meth docutils literal"><span class="pre">hybrid_property.expression()</span></code></a>.  Below we illustrate the case where a conditional
-needs to be present inside the hybrid, using the <code class="docutils literal"><span class="pre">if</span></code> statement in Python and the
-<a class="reference internal" href="../core/sqlelement.html#sqlalchemy.sql.expression.case" title="sqlalchemy.sql.expression.case"><code class="xref py py-func docutils literal"><span class="pre">sql.expression.case()</span></code></a> construct for SQL expressions:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_property</span>
+<p>文字列連結の例は単純なもので、インスタンスとクラスレベルでPythonの式を二重化することができます。多くの場合、SQL式はPython式と区別する必要があります。これは：meth： <cite>.hybrid_property.expression`を使用して実現できます。以下では、Pythonで `</cite> if``文を使用し、SQL式で：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.sql.expression.case`構文を使用して、ハイブリッド内に条件文が存在する必要があるケースを示します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.hybrid</span> <span class="k">import</span> <span class="n">hybrid_property</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.sql</span> <span class="k">import</span> <span class="n">case</span>
 
 <span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
@@ -225,23 +212,11 @@ needs to be present inside the hybrid, using the <code class="docutils literal">
 </div>
 </div>
 <div class="section" id="using-column-property">
-<span id="mapper-column-property-sql-expressions"></span><h2>Using column_property<a class="headerlink" href="#using-column-property" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>The <a class="reference internal" href="mapping_columns.html#sqlalchemy.orm.column_property" title="sqlalchemy.orm.column_property"><code class="xref py py-func docutils literal"><span class="pre">orm.column_property()</span></code></a> function can be used to map a SQL
-expression in a manner similar to a regularly mapped <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a>.
-With this technique, the attribute is loaded
-along with all other column-mapped attributes at load time.  This is in some
-cases an advantage over the usage of hybrids, as the value can be loaded
-up front at the same time as the parent row of the object, particularly if
-the expression is one which links to other tables (typically as a correlated
-subquery) to access data that wouldn't normally be
-available on an already loaded object.</p>
-<p>Disadvantages to using <a class="reference internal" href="mapping_columns.html#sqlalchemy.orm.column_property" title="sqlalchemy.orm.column_property"><code class="xref py py-func docutils literal"><span class="pre">orm.column_property()</span></code></a> for SQL expressions include that
-the expression must be compatible with the SELECT statement emitted for the class
-as a whole, and there are also some configurational quirks which can occur
-when using <a class="reference internal" href="mapping_columns.html#sqlalchemy.orm.column_property" title="sqlalchemy.orm.column_property"><code class="xref py py-func docutils literal"><span class="pre">orm.column_property()</span></code></a> from declarative mixins.</p>
-<p>Our &quot;fullname&quot; example can be expressed using <a class="reference internal" href="mapping_columns.html#sqlalchemy.orm.column_property" title="sqlalchemy.orm.column_property"><code class="xref py py-func docutils literal"><span class="pre">orm.column_property()</span></code></a> as
-follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">column_property</span>
+<span id="mapper-column-property-sql-expressions"></span><h2>column_propertyの使用<a class="headerlink" href="#using-column-property" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>：func： <cite>.orm.column_property`関数は、規則的にマップされた：class：</cite> .Column`と同様の方法でSQL式をマップするのに使用できます。この手法では、ロード時に他のすべての列マップ属性とともに属性がロードされます。これは、ハイブリッドの使用法よりも有利な場合もあります。特に、値がオブジェクトの親行と同時に読み込まれる可能性があります。特に、式が他のテーブルにリンクする場合（通常は相関サブクエリ）を使用して、すでにロードされているオブジェクトで通常は使用できないデータにアクセスします。</p>
+<p>func： <cite>.orm.column_property`をSQL式に使用することには、クラス全体で生成されたSELECT文との互換性が必要であり、使用時に発生する可能性のあるいくつかの構成上の癖があります。func：</cite> .orm.column_property`を宣言的なミックスインから削除します。</p>
+<p>私たちの&amp;quot;フルネーム&amp;quot;の例は、以下のように：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.orm.column_property`を使って表現することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">column_property</span>
 
 <span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span>
@@ -250,10 +225,8 @@ follows:</p>
     <span class="n">lastname</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
     <span class="n">fullname</span> <span class="o">=</span> <span class="n">column_property</span><span class="p">(</span><span class="n">firstname</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">lastname</span><span class="p">)</span></pre></div>
 </div>
-<p>Correlated subqueries may be used as well.  Below we use the <a class="reference internal" href="../core/selectable.html#sqlalchemy.sql.expression.select" title="sqlalchemy.sql.expression.select"><code class="xref py py-func docutils literal"><span class="pre">select()</span></code></a>
-construct to create a SELECT that links together the count of <code class="docutils literal"><span class="pre">Address</span></code>
-objects available for a particular <code class="docutils literal"><span class="pre">User</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">column_property</span>
+<p>相関サブクエリも同様に使用できます。以下に、：func： <cite>.select`構文を使用して、特定の</cite> <cite>User``に利用可能な</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>Address``オブジェクトの数をリンクするSELECTを作成します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">column_property</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">select</span><span class="p">,</span> <span class="n">func</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">ForeignKey</span>
 
@@ -275,36 +248,21 @@ objects available for a particular <code class="docutils literal"><span class="p
             <span class="n">correlate_except</span><span class="p">(</span><span class="n">Address</span><span class="p">)</span>
     <span class="p">)</span></pre></div>
 </div>
-<p>In the above example, we define a <a class="reference internal" href="../core/selectable.html#sqlalchemy.sql.expression.select" title="sqlalchemy.sql.expression.select"><code class="xref py py-func docutils literal"><span class="pre">select()</span></code></a> construct like the following:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span><span class="p">([</span><span class="n">func</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">Address</span><span class="o">.</span><span class="n">id</span><span class="p">)])</span><span class="o">.</span>\
+<p>上記の例では、次のように：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.select`構造体を定義します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">select</span><span class="p">([</span><span class="n">func</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">Address</span><span class="o">.</span><span class="n">id</span><span class="p">)])</span><span class="o">.</span>\
     <span class="n">where</span><span class="p">(</span><span class="n">Address</span><span class="o">.</span><span class="n">user_id</span><span class="o">==</span><span class="nb">id</span><span class="p">)</span><span class="o">.</span>\
     <span class="n">correlate_except</span><span class="p">(</span><span class="n">Address</span><span class="p">)</span></pre></div>
 </div>
-<p>The meaning of the above statement is, select the count of <code class="docutils literal"><span class="pre">Address.id</span></code> rows
-where the <code class="docutils literal"><span class="pre">Address.user_id</span></code> column is equated to <code class="docutils literal"><span class="pre">id</span></code>, which in the context
-of the <code class="docutils literal"><span class="pre">User</span></code> class is the <a class="reference internal" href="../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> named <code class="docutils literal"><span class="pre">id</span></code> (note that <code class="docutils literal"><span class="pre">id</span></code> is
-also the name of a Python built in function, which is not what we want to use
-here - if we were outside of the <code class="docutils literal"><span class="pre">User</span></code> class definition, we'd use <code class="docutils literal"><span class="pre">User.id</span></code>).</p>
-<p>The <code class="xref py py-meth docutils literal"><span class="pre">select.correlate_except()</span></code> directive indicates that each element in the
-FROM clause of this <a class="reference internal" href="../core/selectable.html#sqlalchemy.sql.expression.select" title="sqlalchemy.sql.expression.select"><code class="xref py py-func docutils literal"><span class="pre">select()</span></code></a> may be omitted from the FROM list (that is, correlated
-to the enclosing SELECT statement against <code class="docutils literal"><span class="pre">User</span></code>) except for the one corresponding
-to <code class="docutils literal"><span class="pre">Address</span></code>.  This isn't strictly necessary, but prevents <code class="docutils literal"><span class="pre">Address</span></code> from
-being inadvertently omitted from the FROM list in the case of a long string
-of joins between <code class="docutils literal"><span class="pre">User</span></code> and <code class="docutils literal"><span class="pre">Address</span></code> tables where SELECT statements against
-<code class="docutils literal"><span class="pre">Address</span></code> are nested.</p>
-<p>If import issues prevent the <a class="reference internal" href="mapping_columns.html#sqlalchemy.orm.column_property" title="sqlalchemy.orm.column_property"><code class="xref py py-func docutils literal"><span class="pre">column_property()</span></code></a> from being defined
-inline with the class, it can be assigned to the class after both
-are configured.   In Declarative this has the effect of calling <a class="reference internal" href="mapping_api.html#sqlalchemy.orm.mapper.Mapper.add_property" title="sqlalchemy.orm.mapper.Mapper.add_property"><code class="xref py py-meth docutils literal"><span class="pre">Mapper.add_property()</span></code></a>
-to add an additional property after the fact:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">User</span><span class="o">.</span><span class="n">address_count</span> <span class="o">=</span> <span class="n">column_property</span><span class="p">(</span>
+<p>上記の文の意味は、 `` Address.user_id``列が `` id``と同じである `` Address.id``行の数を選択することです。これは `` User`` classは：class： `` id``という名前のclass： <cite>.Column`です（</cite> <cite>id``はPythonの組み込み関数の名前でもあります。これは私たちがここで使いたいものではありません。 `</cite> User``クラスの定義、 `` User.id``を使用します）。</p>
+<p>：meth： <cite>.select.correlate_except`指示文は、func：</cite> .select`のFROM句の各要素がFROMリストから省略されることを示します（つまり、 `` User``に対して囲むSELECT文に関連づけられています`）に対応するものを除き、` <cite>Address``に対応します。これは厳密には必要ではありませんが、 `</cite> User``と `` Address``テーブルの間の長い文字列の場合、 `` Address``がFROMリストから誤って省略されるのを防ぎます。アドレスは <a href="#id1"><span class="problematic" id="id2">`</span></a>ネストされています。</p>
+<p>インポートの問題によって：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.column_property`がクラスとインラインで定義されないようにするには、両方を設定した後でクラスに割り当てることができます。 Declarativeでは、これは：meth： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Mapper.add_property`を呼び出して、事実の後に追加のプロパティを追加する効果があります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">User</span><span class="o">.</span><span class="n">address_count</span> <span class="o">=</span> <span class="n">column_property</span><span class="p">(</span>
         <span class="n">select</span><span class="p">([</span><span class="n">func</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">Address</span><span class="o">.</span><span class="n">id</span><span class="p">)])</span><span class="o">.</span>\
             <span class="n">where</span><span class="p">(</span><span class="n">Address</span><span class="o">.</span><span class="n">user_id</span><span class="o">==</span><span class="n">User</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
     <span class="p">)</span></pre></div>
 </div>
-<p>For many-to-many relationships, use <a class="reference internal" href="../core/sqlelement.html#sqlalchemy.sql.expression.and_" title="sqlalchemy.sql.expression.and_"><code class="xref py py-func docutils literal"><span class="pre">and_()</span></code></a> to join the fields of the
-association table to both tables in a relation, illustrated
-here with a classical mapping:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">and_</span>
+<p>多対多の関係の場合、func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.and_`を使用して関連テーブルのフィールドをリレーション内の両方のテーブルに結合します。ここには古典的なマッピングが示されています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">and_</span>
 
 <span class="n">mapper</span><span class="p">(</span><span class="n">Author</span><span class="p">,</span> <span class="n">authors</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">{</span>
     <span class="s1">&#39;book_count&#39;</span><span class="p">:</span> <span class="n">column_property</span><span class="p">(</span>
@@ -317,16 +275,9 @@ here with a classical mapping:</p>
 </div>
 </div>
 <div class="section" id="using-a-plain-descriptor">
-<h2>Using a plain descriptor<a class="headerlink" href="#using-a-plain-descriptor" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>In cases where a SQL query more elaborate than what <a class="reference internal" href="mapping_columns.html#sqlalchemy.orm.column_property" title="sqlalchemy.orm.column_property"><code class="xref py py-func docutils literal"><span class="pre">orm.column_property()</span></code></a>
-or <a class="reference internal" href="extensions/hybrid.html#sqlalchemy.ext.hybrid.hybrid_property" title="sqlalchemy.ext.hybrid.hybrid_property"><code class="xref py py-class docutils literal"><span class="pre">hybrid_property</span></code></a> can provide must be emitted, a regular Python
-function accessed as an attribute can be used, assuming the expression
-only needs to be available on an already-loaded instance.   The function
-is decorated with Python's own <code class="docutils literal"><span class="pre">&#64;property</span></code> decorator to mark it as a read-only
-attribute.   Within the function, <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.object_session" title="sqlalchemy.orm.session.object_session"><code class="xref py py-func docutils literal"><span class="pre">object_session()</span></code></a>
-is used to locate the <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> corresponding to the current object,
-which is then used to emit a query:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">object_session</span>
+<h2>プレーンな記述子を使う<a class="headerlink" href="#using-a-plain-descriptor" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>SQL問合せがwhat：func： <cite>.orm.column_property`や：class：</cite> .hybrid_property`よりも詳細なものでなければならない場合は、式として必要と仮定して、属性としてアクセスされる通常のPython関数を使用できます。すでにロードされているインスタンスで使用できるようにします。この関数はPython独自の `` &#64; property``デコレータで装飾されており、これを読み取り専用属性としてマークします。関数内では、：func： <cite>.object_session`が、現在のオブジェクトに対応する：class：</cite> .Session`を見つけるために使われます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">object_session</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">select</span><span class="p">,</span> <span class="n">func</span>
 
 <span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
@@ -343,26 +294,16 @@ which is then used to emit a query:</p>
                     <span class="n">where</span><span class="p">(</span><span class="n">Address</span><span class="o">.</span><span class="n">user_id</span><span class="o">==</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
             <span class="p">)</span></pre></div>
 </div>
-<p>The plain descriptor approach is useful as a last resort, but is less performant
-in the usual case than both the hybrid and column property approaches, in that
-it needs to emit a SQL query upon each access.</p>
+<p>プレーン・ディスクリプタ・アプローチは最後の手段としては有用ですが、各アクセス時にSQL問合せを発行する必要があるという点で、ハイブリッドとカラムの両方のプロパティ・アプローチよりも通常の場合にパフォーマンスが劣ります。</p>
 </div>
 <div class="section" id="query-time-sql-expressions-as-mapped-attributes">
-<span id="mapper-querytime-expression"></span><h2>Query-time SQL expressions as mapped attributes<a class="headerlink" href="#query-time-sql-expressions-as-mapped-attributes" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>When using <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.query" title="sqlalchemy.orm.session.Session.query"><code class="xref py py-meth docutils literal"><span class="pre">Session.query()</span></code></a>, we have the option to specify not just
-mapped entities but ad-hoc SQL expressions as well.  Suppose if a class
-<code class="docutils literal"><span class="pre">A</span></code> had integer attributes <code class="docutils literal"><span class="pre">.x</span></code> and <code class="docutils literal"><span class="pre">.y</span></code>, we could query for <code class="docutils literal"><span class="pre">A</span></code>
-objects, and additionally the sum of <code class="docutils literal"><span class="pre">.x</span></code> and <code class="docutils literal"><span class="pre">.y</span></code>, as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">A</span><span class="o">.</span><span class="n">y</span><span class="p">)</span></pre></div>
+<span id="mapper-querytime-expression"></span><h2>クエリされたSQL式をマップされた属性として<a class="headerlink" href="#query-time-sql-expressions-as-mapped-attributes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>：meth： <cite>.Session.query`を使うと、マッピングされたエンティティだけでなく、アドホックなSQL式も指定することができます。 `</cite> A``クラスが整数属性 `` .x``と `` .y``を持っていたとすると、 `` A``オブジェクトと `` .x``と ` <a href="#id1"><span class="problematic" id="id2">`</span></a>.y``を以下のように:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">A</span><span class="o">.</span><span class="n">y</span><span class="p">)</span></pre></div>
 </div>
-<p>The above query returns tuples of the form <code class="docutils literal"><span class="pre">(A</span> <span class="pre">object,</span> <span class="pre">integer)</span></code>.</p>
-<p>An option exists which can apply the ad-hoc <code class="docutils literal"><span class="pre">A.x</span> <span class="pre">+</span> <span class="pre">A.y</span></code> expression to the
-returned <code class="docutils literal"><span class="pre">A</span></code> objects instead of as a separate tuple entry; this is the
-<a class="reference internal" href="loading_columns.html#sqlalchemy.orm.with_expression" title="sqlalchemy.orm.with_expression"><code class="xref py py-func docutils literal"><span class="pre">with_expression()</span></code></a> query option in conjunction with the
-<a class="reference internal" href="loading_columns.html#sqlalchemy.orm.query_expression" title="sqlalchemy.orm.query_expression"><code class="xref py py-func docutils literal"><span class="pre">query_expression()</span></code></a> attribute mapping.    The class is mapped
-to include a placeholder attribute where any particular SQL expression
-may be applied:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">query_expression</span>
+<p>上記のクエリは <a href="#id1"><span class="problematic" id="id2">``</span></a>（A object、integer） <a href="#id3"><span class="problematic" id="id4">``</span></a>という形のタプルを返します。</p>
+<p>別々のタプルエントリではなく、返された `` A``オブジェクトにアドホックな `` Ax + Ay``式を適用できるオプションが存在します。これは：func： <cite>.query_expression`属性マッピングと組み合わせて：func：</cite> .with_expression`クエリオプションです。クラスは、特定のSQL式を適用できるプレースホルダ属性を含むようにマップされています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">query_expression</span>
 
 <span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
@@ -372,38 +313,25 @@ may be applied:</p>
 
     <span class="n">expr</span> <span class="o">=</span> <span class="n">query_expression</span><span class="p">()</span></pre></div>
 </div>
-<p>We can then query for objects of type <code class="docutils literal"><span class="pre">A</span></code>, applying an arbitrary
-SQL expression to be populated into <code class="docutils literal"><span class="pre">A.expr</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">with_expression</span>
+<p>次に、 `` A``型にオブジェクトを問い合わせ、任意のSQL式を `` A.expr``に取り込むようにします:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">with_expression</span>
 <span class="n">q</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span>
     <span class="n">with_expression</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">expr</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">A</span><span class="o">.</span><span class="n">y</span><span class="p">))</span></pre></div>
 </div>
-<p>The <a class="reference internal" href="loading_columns.html#sqlalchemy.orm.query_expression" title="sqlalchemy.orm.query_expression"><code class="xref py py-func docutils literal"><span class="pre">query_expression()</span></code></a> mapping has these caveats:</p>
+<p>：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.query_expression`マッピングには次のような警告があります：</p>
 <ul>
-<li><p class="first">On an object where <a class="reference internal" href="loading_columns.html#sqlalchemy.orm.query_expression" title="sqlalchemy.orm.query_expression"><code class="xref py py-func docutils literal"><span class="pre">query_expression()</span></code></a> were not used to populate
-the attribute, the attribute on an object instance will have the value
-<code class="docutils literal"><span class="pre">None</span></code>.</p>
+<li><p class="first">：func： <cite>.query_expression`が属性を設定するために使用されなかったオブジェクトでは、オブジェクトインスタンスの属性の値は</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>None``になります。</p>
 </li>
-<li><p class="first">The query_expression value <strong>does not refresh when the object is
-expired</strong>.  Once the object is expired, either via <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.expire" title="sqlalchemy.orm.session.Session.expire"><code class="xref py py-meth docutils literal"><span class="pre">Session.expire()</span></code></a>
-or via the expire_on_commit behavior of <a class="reference internal" href="session_api.html#sqlalchemy.orm.session.Session.commit" title="sqlalchemy.orm.session.Session.commit"><code class="xref py py-meth docutils literal"><span class="pre">Session.commit()</span></code></a>, the value is
-removed from the attribute and will return <code class="docutils literal"><span class="pre">None</span></code> on subsequent access.
-Only by running a new <a class="reference internal" href="query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> that touches the object which includes
-a new <a class="reference internal" href="loading_columns.html#sqlalchemy.orm.with_expression" title="sqlalchemy.orm.with_expression"><code class="xref py py-func docutils literal"><span class="pre">with_expression()</span></code></a> directive will the attribute be set to a
-non-None value.</p>
+<li><p class="first">query_expression値**は、オブジェクトが期限切れになったときに更新されません**。オブジェクトが期限切れになると：meth： <cite>.Session.expire`または：meth：</cite> .Session.commit`のexpire_on_commitビヘイビアを介して、属性から値が削除され、後で `` None``が返されますアクセス。 new：func： <cite>.with_expression`指示文を含むオブジェクトに触れるnew：class：</cite> .Query`を実行するだけで、属性はNoneでない値に設定されます。</p>
 </li>
-<li><p class="first">The mapped attribute currently <strong>cannot</strong> be applied to other parts of the
-query, such as the WHERE clause, the ORDER BY clause, and make use of the
-ad-hoc expression; that is, this won't work:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># wont work</span>
+<li><p class="first">マップされた属性は現在、** WHERE句、ORDER BY句などのクエリの他の部分に適用することはできません**、アドホック式を使用します。つまり、これは動作しません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># wont work</span>
 <span class="n">q</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span>
     <span class="n">with_expression</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">expr</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">A</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
 <span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">expr</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">expr</span><span class="p">)</span></pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">A.expr</span></code> expression will resolve to NULL in the above WHERE clause
-and ORDER BY clause. To use the expression throughout the query, assign to a
-variable and use that:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a_expr</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">A</span><span class="o">.</span><span class="n">y</span>
+<p>`` A.expr``式は、上記のWHERE句とORDER BY句でNULLに解決されます。問合せ全体で式を使用するには、変数に代入して使用します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a_expr</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">A</span><span class="o">.</span><span class="n">y</span>
 <span class="n">q</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">options</span><span class="p">(</span>
     <span class="n">with_expression</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">expr</span><span class="p">,</span> <span class="n">a_expr</span><span class="p">)</span>
 <span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">a_expr</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">a_expr</span><span class="p">)</span></pre></div>
@@ -422,13 +350,13 @@ variable and use that:</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="mapping_columns.html" title="previous chapter">Mapping Table Columns</a>
+        <a href="mapping_columns.html" title="previous chapter">マッピング表の列</a>
         Next:
-        <a href="mapped_attributes.html" title="next chapter">Changing Attribute Behavior</a>
+        <a href="mapped_attributes.html" title="next chapter">属性の動作の変更</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -455,6 +383,7 @@ variable and use that:</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

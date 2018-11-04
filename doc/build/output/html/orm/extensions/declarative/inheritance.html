@@ -10,7 +10,7 @@
         <title>
             
     
-    Inheritance Configuration
+    継承の設定
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../../../search.html" />
         <link rel="copyright" title="Copyright" href="../../../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../../../index.html" />
-        <link rel="up" title="Declarative" href="index.html" />
-        <link rel="next" title="Mixin and Custom Base Classes" href="mixins.html" />
-        <link rel="prev" title="Table Configuration" href="table_config.html" />
+        <link rel="up" title="宣言的" href="index.html" />
+        <link rel="next" title="ミックスインとカスタムベースクラス" href="mixins.html" />
+        <link rel="prev" title="テーブル構成" href="table_config.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,42 +120,42 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="../../tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../../mapper_config.html">Mapper Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../../relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../../loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../../session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../../extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../index.html">ORM Extensions</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="../associationproxy.html">Association Proxy</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../automap.html">Automap</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../baked.html">Baked Queries</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="index.html">Declarative</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="basic_use.html">Basic Use</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Configuring Relationships</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="table_config.html">Table Configuration</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Inheritance Configuration</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#joined-table-inheritance">Joined Table Inheritance</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="#single-table-inheritance">Single Table Inheritance</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="#resolving-column-conflicts">Resolving Column Conflicts</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../mapper_config.html">マッパー設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../index.html">ORM拡張</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="../associationproxy.html">アソシエーションプロキシ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../automap.html">オートマップ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../baked.html">焼いたクエリ</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="index.html">宣言的</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="basic_use.html">基本的な使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="table_config.html">テーブル構成</a></span></li>
+<li class="selected"><span class="link-container first"><strong>継承の設定</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#joined-table-inheritance">結合されたテーブル継承</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#single-table-inheritance">単一テーブル継承</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="#resolving-column-conflicts">列の衝突の解決</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="#concrete-table-inheritance">Concrete Table Inheritance</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="#concrete-table-inheritance">具体的なテーブル継承</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="mixins.html">Mixin and Custom Base Classes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="api.html">Declarative API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mixins.html">ミックスインとカスタムベースクラス</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="api.html">宣言的API</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="../mutable.html">Mutation Tracking</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../orderinglist.html">Ordering List</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../horizontal_shard.html">Horizontal Sharding</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../hybrid.html">Hybrid Attributes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../indexable.html">Indexable</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="../instrumentation.html">Alternate Class Instrumentation</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../mutable.html">突然変異の追跡</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../orderinglist.html">オーダーリスト</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../horizontal_shard.html">水平シャーディング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../hybrid.html">ハイブリッド属性</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../indexable.html">インデックス作成可能</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../instrumentation.html">代替クラスの計装</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="../../examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="../../examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -171,23 +171,16 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="inheritance-configuration">
-<span id="declarative-inheritance"></span><h1>Inheritance Configuration<a class="headerlink" href="#inheritance-configuration" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Declarative supports all three forms of inheritance as intuitively
-as possible.  The <code class="docutils literal"><span class="pre">inherits</span></code> mapper keyword argument is not needed
-as declarative will determine this from the class itself.   The various
-&quot;polymorphic&quot; keyword arguments are specified using <code class="docutils literal"><span class="pre">__mapper_args__</span></code>.</p>
+<span id="declarative-inheritance"></span><h1>継承の設定<a class="headerlink" href="#inheritance-configuration" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>宣言は、可能な限り直感的に継承の3つの形式をサポートします。宣言はクラス自体からこれを判断するので、 `` inherits``マッパーキーワード引数は必要ありません。様々な &amp;quot;多形&amp;quot;キーワード引数は `` __mapper_args__``を使って指定します。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last">This section describes some specific details on how the Declarative system
-interacts with SQLAlchemy ORM inheritance configuration.  See
-<a class="reference internal" href="../../inheritance.html"><span class="std std-ref">Mapping Class Inheritance Hierarchies</span></a> for a general introduction to inheritance
-mapping.</p>
+<p class="last">このセクションでは、宣言システムがSQLAlchemy ORM継承設定とどのようにやりとりするかについて具体的に説明します。継承マッピングの概要については、：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>inheritance_toplevel`を参照してください。</p>
 </div>
 <div class="section" id="joined-table-inheritance">
-<h2>Joined Table Inheritance<a class="headerlink" href="#joined-table-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Joined table inheritance is defined as a subclass that defines its own
-table:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<h2>結合されたテーブル継承<a class="headerlink" href="#joined-table-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>結合されたテーブルの継承は、独自のテーブルを定義するサブクラスとして定義されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;people&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">discriminator</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -199,13 +192,8 @@ table:</p>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;people.id&#39;</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">primary_language</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span></pre></div>
 </div>
-<p>Note that above, the <code class="docutils literal"><span class="pre">Engineer.id</span></code> attribute, since it shares the
-same attribute name as the <code class="docutils literal"><span class="pre">Person.id</span></code> attribute, will in fact
-represent the <code class="docutils literal"><span class="pre">people.id</span></code> and <code class="docutils literal"><span class="pre">engineers.id</span></code> columns together,
-with the &quot;Engineer.id&quot; column taking precedence if queried directly.
-To provide the <code class="docutils literal"><span class="pre">Engineer</span></code> class with an attribute that represents
-only the <code class="docutils literal"><span class="pre">engineers.id</span></code> column, give it a different attribute name:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Engineer</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+<p>上記の `` Engineer.id``属性は、 `` Person.id``属性と同じ属性名を共有しているので、実際には `` people.id``と `` engineers.id &amp;quot;Engineer.id &amp;quot;列が直接照会された場合に優先されます。 `` engineers.id``列のみを表す属性を持つ `` Engineer``クラスを提供するには、それに別の属性名:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Engineer</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;engineers&#39;</span>
     <span class="n">__mapper_args__</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span> <span class="s1">&#39;engineer&#39;</span><span class="p">}</span>
     <span class="n">engineer_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;people.id&#39;</span><span class="p">),</span>
@@ -214,11 +202,9 @@ only the <code class="docutils literal"><span class="pre">engineers.id</span></c
 </div>
 </div>
 <div class="section" id="single-table-inheritance">
-<span id="declarative-single-table"></span><h2>Single Table Inheritance<a class="headerlink" href="#single-table-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Single table inheritance is defined as a subclass that does not have
-its own table; you just leave out the <code class="docutils literal"><span class="pre">__table__</span></code> and <code class="docutils literal"><span class="pre">__tablename__</span></code>
-attributes:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="declarative-single-table"></span><h2>単一テーブル継承<a class="headerlink" href="#single-table-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>単一テーブルの継承は、独自のテーブルを持たないサブクラスとして定義されます。あなたは `` __table__``と `` __tablename__``属性を残しておきます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;people&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">discriminator</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -228,32 +214,16 @@ attributes:</p>
     <span class="n">__mapper_args__</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span> <span class="s1">&#39;engineer&#39;</span><span class="p">}</span>
     <span class="n">primary_language</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span></pre></div>
 </div>
-<p>When the above mappers are configured, the <code class="docutils literal"><span class="pre">Person</span></code> class is mapped
-to the <code class="docutils literal"><span class="pre">people</span></code> table <em>before</em> the <code class="docutils literal"><span class="pre">primary_language</span></code> column is
-defined, and this column will not be included in its own mapping.
-When <code class="docutils literal"><span class="pre">Engineer</span></code> then defines the <code class="docutils literal"><span class="pre">primary_language</span></code> column, the
-column is added to the <code class="docutils literal"><span class="pre">people</span></code> table so that it is included in the
-mapping for <code class="docutils literal"><span class="pre">Engineer</span></code> and is also part of the table's full set of
-columns.  Columns which are not mapped to <code class="docutils literal"><span class="pre">Person</span></code> are also excluded
-from any other single or joined inheriting classes using the
-<code class="docutils literal"><span class="pre">exclude_properties</span></code> mapper argument.  Below, <code class="docutils literal"><span class="pre">Manager</span></code> will have
-all the attributes of <code class="docutils literal"><span class="pre">Person</span></code> and <code class="docutils literal"><span class="pre">Manager</span></code> but <em>not</em> the
-<code class="docutils literal"><span class="pre">primary_language</span></code> attribute of <code class="docutils literal"><span class="pre">Engineer</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Manager</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+<p>上記のマッパーが設定されている場合、 `` Person``クラスは、 `` primary_language``カラムが定義される前の `` people``テーブル*にマップされ、このカラムはそれ自身のマッピングには含まれません。 `` Engineer``が `` primary_language``カラムを定義すると、カラムは `` people``テーブルに追加され、 `` Engineer``のマッピングに含まれ、テーブルのフル列のセット。 `` Person``にマップされていない列は、 `` exclude_properties``マッパー引数を使って、他の単独クラスまたは結合された継承クラスからも除外されます。下の `` Manager``は `` Person``と `` Manager``のすべての属性を持ちますが、 `` Engineer``の `` primary_language``属性ではありません:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Manager</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
     <span class="n">__mapper_args__</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span> <span class="s1">&#39;manager&#39;</span><span class="p">}</span>
     <span class="n">golf_swing</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span></pre></div>
 </div>
-<p>The attribute exclusion logic is provided by the
-<code class="docutils literal"><span class="pre">exclude_properties</span></code> mapper argument, and declarative's default
-behavior can be disabled by passing an explicit <code class="docutils literal"><span class="pre">exclude_properties</span></code>
-collection (empty or otherwise) to the <code class="docutils literal"><span class="pre">__mapper_args__</span></code>.</p>
+<p>属性除外ロジックは `` exclude_properties``マッパー引数で提供され、 `` __mapper_args__``に明示的な `` exclude_properties``コレクション（空かどうか）を渡すことで、宣言のデフォルト動作を無効にすることができます。</p>
 <div class="section" id="resolving-column-conflicts">
-<h3>Resolving Column Conflicts<a class="headerlink" href="#resolving-column-conflicts" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Note above that the <code class="docutils literal"><span class="pre">primary_language</span></code> and <code class="docutils literal"><span class="pre">golf_swing</span></code> columns
-are &quot;moved up&quot; to be applied to <code class="docutils literal"><span class="pre">Person.__table__</span></code>, as a result of their
-declaration on a subclass that has no table of its own.   A tricky case
-comes up when two subclasses want to specify <em>the same</em> column, as below:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<h3>列の衝突の解決<a class="headerlink" href="#resolving-column-conflicts" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>`` Person .__ table__``に適用される `` primary_language``と `` golf_swing``カラムは、 `` person.__ table__``のテーブルを持たないサブクラスでの宣言の結果、&amp;quot;上に移動します。自分の。 2つのサブクラスが*同じ*列を指定したい場合、以下のようにトリッキーなケースが発生します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;people&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">discriminator</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -267,19 +237,13 @@ comes up when two subclasses want to specify <em>the same</em> column, as below:
     <span class="n">__mapper_args__</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span> <span class="s1">&#39;manager&#39;</span><span class="p">}</span>
     <span class="n">start_date</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">DateTime</span><span class="p">)</span></pre></div>
 </div>
-<p>Above, the <code class="docutils literal"><span class="pre">start_date</span></code> column declared on both <code class="docutils literal"><span class="pre">Engineer</span></code> and <code class="docutils literal"><span class="pre">Manager</span></code>
-will result in an error:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>sqlalchemy.exc.ArgumentError: Column &#39;start_date&#39; on class
+<p>上記の `` Engineer``と `` Manager``の両方で宣言された `` start_date``カラムはエラーになります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sqlalchemy.exc.ArgumentError: Column &#39;start_date&#39; on class
 &lt;class &#39;__main__.Manager&#39;&gt; conflicts with existing
 column &#39;people.start_date&#39;</pre></div>
 </div>
-<p>In a situation like this, Declarative can't be sure
-of the intent, especially if the <code class="docutils literal"><span class="pre">start_date</span></code> columns had, for example,
-different types.   A situation like this can be resolved by using
-<a class="reference internal" href="api.html#sqlalchemy.ext.declarative.declared_attr" title="sqlalchemy.ext.declarative.declared_attr"><code class="xref py py-class docutils literal"><span class="pre">declared_attr</span></code></a> to define the <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> conditionally, taking
-care to return the <strong>existing column</strong> via the parent <code class="docutils literal"><span class="pre">__table__</span></code> if it
-already exists:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declared_attr</span>
+<p>このような状況では、特に `` start_date``列に異なる型があった場合、Declarativeは意図を確認できません。このような状況は：class： <cite>.declared_attr`を使用して：class：</cite> .Column`を条件付きで定義することで解決できます。既に存在する場合は**既存の列**を親の `` __table__``で返すよう注意してください存在する:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="k">import</span> <span class="n">declared_attr</span>
 
 <span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;people&#39;</span>
@@ -303,33 +267,15 @@ already exists:</p>
         <span class="s2">&quot;Start date column, if not present already.&quot;</span>
         <span class="k">return</span> <span class="n">Person</span><span class="o">.</span><span class="n">__table__</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;start_date&#39;</span><span class="p">,</span> <span class="n">Column</span><span class="p">(</span><span class="n">DateTime</span><span class="p">))</span></pre></div>
 </div>
-<p>Above, when <code class="docutils literal"><span class="pre">Manager</span></code> is mapped, the <code class="docutils literal"><span class="pre">start_date</span></code> column is
-already present on the <code class="docutils literal"><span class="pre">Person</span></code> class.  Declarative lets us return
-that <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> as a result in this case, where it knows to skip
-re-assigning the same column. If the mapping is mis-configured such
-that the <code class="docutils literal"><span class="pre">start_date</span></code> column is accidentally re-assigned to a
-different table (such as, if we changed <code class="docutils literal"><span class="pre">Manager</span></code> to be joined
-inheritance without fixing <code class="docutils literal"><span class="pre">start_date</span></code>), an error is raised which
-indicates an existing <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> is trying to be re-assigned to
-a different owning <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a>.</p>
+<p>上記の `` Manager``がマップされているとき、 `` Person``クラスに `` start_date``カラムはすでに存在しています。 Declarativeは、この場合、class： <cite>.Column`を返します。この場合、同じ列の再割り当てをスキップすることがわかります。 `</cite> start_date``カラムが誤って別のテーブルに再割り当てされるようなマッピングが誤って設定されている場合（例えば `` Manager``を `` start_date``を修正せずに継承結合するように変更した場合）既存の：class： <cite>.Column`が別の所有：class：</cite> .Table`に再割り当てしようとしていることを示すエラーが発生します。</p>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 0.8 で追加: </span><a class="reference internal" href="api.html#sqlalchemy.ext.declarative.declared_attr" title="sqlalchemy.ext.declarative.declared_attr"><code class="xref py py-class docutils literal"><span class="pre">declared_attr</span></code></a> can be used on a non-mixin
-class, and the returned <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> or other mapped attribute
-will be applied to the mapping as any other attribute.  Previously,
-the resulting attribute would be ignored, and also result in a warning
-being emitted when a subclass was created.</p>
+<p><span class="versionmodified">バージョン 0.8 で追加: </span>：class： <cite>.declared_attr`はnon-mixinクラスで使うことができ、返される：class：</cite> .Column`や他のマップされた属性は他の属性と同様にマッピングに適用されます。以前は、結果の属性は無視され、サブクラスの作成時に警告が出力されていました。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 0.8 で追加: </span><a class="reference internal" href="api.html#sqlalchemy.ext.declarative.declared_attr" title="sqlalchemy.ext.declarative.declared_attr"><code class="xref py py-class docutils literal"><span class="pre">declared_attr</span></code></a>, when used either with a
-mixin or non-mixin declarative class, can return an existing
-<a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> already assigned to the parent <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a>,
-to indicate that the re-assignment of the <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> should be
-skipped, however should still be mapped on the target class,
-in order to resolve duplicate column conflicts.</p>
+<p><span class="versionmodified">バージョン 0.8 で追加: </span>：class： <cite>.declared_attr`は、mixinまたはnon-mixinの宣言的なクラスのいずれかと一緒に使われると、既存の：class：</cite> .Column`を既に親：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Table`に返して、re ：class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.Column`の割り当てはスキップする必要がありますが、重複するカラムの競合を解決するためには、ターゲットクラスにマッピングする必要があります。</p>
 </div>
-<p>The same concept can be used with mixin classes (see
-<a class="reference internal" href="mixins.html#declarative-mixins"><span class="std std-ref">Mixin and Custom Base Classes</span></a>):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>mixinクラスでも同じコンセプトを使用できます（ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>declarative_mixins`を参照）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;people&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">discriminator</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -346,18 +292,13 @@ in order to resolve duplicate column conflicts.</p>
 <span class="k">class</span> <span class="nc">Manager</span><span class="p">(</span><span class="n">HasStartDate</span><span class="p">,</span> <span class="n">Person</span><span class="p">):</span>
     <span class="n">__mapper_args__</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span> <span class="s1">&#39;manager&#39;</span><span class="p">}</span></pre></div>
 </div>
-<p>The above mixin checks the local <code class="docutils literal"><span class="pre">__table__</span></code> attribute for the column.
-Because we're using single table inheritance, we're sure that in this case,
-<code class="docutils literal"><span class="pre">cls.__table__</span></code> refers to <code class="docutils literal"><span class="pre">Person.__table__</span></code>.  If we were mixing joined-
-and single-table inheritance, we might want our mixin to check more carefully
-if <code class="docutils literal"><span class="pre">cls.__table__</span></code> is really the <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> we're looking for.</p>
+<p>上記のmixinは、その列のローカルの `` __table__``属性をチェックします。単一のテーブル継承を使用しているので、この場合、 `` cls .__ table__``は `` Person .__ table__``を参照していると確信しています。結合表と単一表の継承を混在させていた場合、 `` cls .__ table__``が実際には：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Table`であるかどうかを確認することができます。</p>
 </div>
 </div>
 <div class="section" id="concrete-table-inheritance">
-<span id="declarative-concrete-table"></span><h2>Concrete Table Inheritance<a class="headerlink" href="#concrete-table-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Concrete is defined as a subclass which has its own table and sets the
-<code class="docutils literal"><span class="pre">concrete</span></code> keyword argument to <code class="docutils literal"><span class="pre">True</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<span id="declarative-concrete-table"></span><h2>具体的なテーブル継承<a class="headerlink" href="#concrete-table-inheritance" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Concreteは独自のテーブルを持ち、 `` concrete``キーワード引数を `` True``に設定するサブクラスとして定義されています:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;people&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -369,11 +310,8 @@ if <code class="docutils literal"><span class="pre">cls.__table__</span></code> 
     <span class="n">primary_language</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span></pre></div>
 </div>
-<p>Usage of an abstract base class is a little less straightforward as it
-requires usage of <a class="reference internal" href="../../mapping_api.html#sqlalchemy.orm.util.polymorphic_union" title="sqlalchemy.orm.util.polymorphic_union"><code class="xref py py-func docutils literal"><span class="pre">polymorphic_union()</span></code></a>,
-which needs to be created with the <a class="reference internal" href="../../../core/metadata.html#sqlalchemy.schema.Table" title="sqlalchemy.schema.Table"><code class="xref py py-class docutils literal"><span class="pre">Table</span></code></a> objects
-before the class is built:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">engineers</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s1">&#39;engineers&#39;</span><span class="p">,</span> <span class="n">Base</span><span class="o">.</span><span class="n">metadata</span><span class="p">,</span>
+<p>抽象基本クラスの使用法は、func： <cite>〜sqlalchemy.orm.util.polymorphic_union`の使用を必要とするため、少し難解です。クラスをビルドする前に：class：</cite> .Table`オブジェクトで作成する必要があります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">engineers</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s1">&#39;engineers&#39;</span><span class="p">,</span> <span class="n">Base</span><span class="o">.</span><span class="n">metadata</span><span class="p">,</span>
                 <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
                 <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">)),</span>
                 <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;primary_language&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
@@ -401,14 +339,11 @@ before the class is built:</p>
     <span class="n">__table__</span> <span class="o">=</span> <span class="n">managers</span>
     <span class="n">__mapper_args__</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;polymorphic_identity&#39;</span><span class="p">:</span><span class="s1">&#39;manager&#39;</span><span class="p">,</span> <span class="s1">&#39;concrete&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">}</span></pre></div>
 </div>
-<p>The helper classes <a class="reference internal" href="api.html#sqlalchemy.ext.declarative.AbstractConcreteBase" title="sqlalchemy.ext.declarative.AbstractConcreteBase"><code class="xref py py-class docutils literal"><span class="pre">AbstractConcreteBase</span></code></a> and <a class="reference internal" href="api.html#sqlalchemy.ext.declarative.ConcreteBase" title="sqlalchemy.ext.declarative.ConcreteBase"><code class="xref py py-class docutils literal"><span class="pre">ConcreteBase</span></code></a>
-provide automation for the above system of creating a polymorphic union.
-See the documentation for these helpers as well as the main ORM documentation
-on concrete inheritance for details.</p>
+<p>ヘルパークラス：class： <cite>.AbstractConcreteBase`と：class：</cite> .ConcreteBase`は、上記の多態的な共用体を作るシステムを自動化します。詳細については、これらのヘルパーのドキュメントと、具体的な継承に関する主要なORMのドキュメントを参照してください。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="../../inheritance.html#concrete-inheritance"><span class="std std-ref">Concrete Table Inheritance</span></a></p>
-<p class="last"><span class="xref std std-ref">inheritance_concrete_helpers</span></p>
+<p>：ref： <cite>concrete_inheritance</cite></p>
+<p class="last">：ref： <cite>inheritance_concrete_helpers</cite></p>
 </div>
 </div>
 </div>
@@ -419,13 +354,13 @@ on concrete inheritance for details.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="table_config.html" title="previous chapter">Table Configuration</a>
+        <a href="table_config.html" title="previous chapter">テーブル構成</a>
         Next:
-        <a href="mixins.html" title="next chapter">Mixin and Custom Base Classes</a>
+        <a href="mixins.html" title="next chapter">ミックスインとカスタムベースクラス</a>
 
     <div id="docs-copyright">
         &copy; <a href="../../../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -452,6 +387,7 @@ on concrete inheritance for details.</p>
         <script type="text/javascript" src="../../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../../../_static/detectmobile.js"></script>

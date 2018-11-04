@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/tutorial.rst:5
 msgid "SQL Expression Language Tutorial"
-msgstr ""
+msgstr "SQL式言語チュートリアル"
 
 #: ../../core/tutorial.rst:7
 msgid ""
@@ -33,7 +23,7 @@ msgid ""
 "unique to particular subsets of backends. The Expression Language "
 "therefore presents a method of writing backend-neutral SQL expressions, "
 "but does not attempt to enforce that expressions are backend-neutral."
-msgstr ""
+msgstr "SQLAlchemy Expression Languageは、Pythonの構造を使ってリレーショナルデータベースの構造と表現を表現するシステムを提供します。これらの構成は、データベースのバックエンド間のさまざまな実装の違いを抽象化しながら、できるだけ密接に基盤データベースのものに似せるようにモデル化されています。構築物は、一貫した構造を持つバックエンド間で同等の概念を表現しようとしますが、バックエンドの特定のサブセットに固有の有用な概念を隠すわけではありません。したがって、Expression Languageは、バックエンドに中立なSQL式を記述する方法を提供しますが、式がバックエンドに中立であることを強制しようとしません。"
 
 #: ../../core/tutorial.rst:18
 msgid ""
@@ -44,7 +34,7 @@ msgid ""
 " applied usage of the Expression Language, the Expression Language "
 "presents a system of representing the primitive constructs of the "
 "relational database directly without opinion."
-msgstr ""
+msgstr "Expression Languageは、Object Relational Mapperと対照的です。これは、Expression Languageの上に構築される個別のAPIです。 ：ref： `ormtutorial_toplevel`で導入されたORMは、高いレベルで抽象化された使用パターンを提示しますが、それ自体が表現言語の適用された使い方の例です。表現言語は、リレーショナルのプリミティブ構造を表すシステムを提示します意見なしで直接データベース。"
 
 #: ../../core/tutorial.rst:26
 msgid ""
@@ -57,7 +47,7 @@ msgid ""
 "approaches it from the perspective of literal schema and SQL expression "
 "representations which are explicitly composed into messages consumed "
 "individually by the database."
-msgstr ""
+msgstr "ORMと表現言語の使用パターンには重複がありますが、類似点は最初に現れるよりも表面的です。ユーザ定義のドメインモデルの観点から、データの構造と内容にアプローチする<http://en.wikipedia.org/wiki/Domain_model> `_は透過的に永続化され、その基礎となるストレージモデルからリフレッシュされます。もう1つは、データベースによって個別に消費されるメッセージに明示的に構成されたリテラルスキーマとSQL式表現の観点からアプローチする方法です。"
 
 #: ../../core/tutorial.rst:36
 msgid ""
@@ -68,7 +58,7 @@ msgid ""
 "constructed with the ORM may, in advanced scenarios, make occasional "
 "usage of the Expression Language directly in certain areas where specific"
 " database interactions are required."
-msgstr ""
+msgstr "アプリケーションの概念を個々のデータベースメッセージと個々のデータベース結果セットに変換する独自のシステムを定義する必要がありますが、エクスプレッション言語のみを使用してアプリケーションを構築することができます。あるいは、ORMで構築されたアプリケーションは、高度なシナリオでは、特定のデータベースのやりとりが必要な特定の領域で直接Expression Languageを使用することがあります。"
 
 #: ../../core/tutorial.rst:44
 msgid ""
@@ -76,28 +66,28 @@ msgid ""
 "represents something you can type at a Python command prompt, and the "
 "following text represents the expected return value. The tutorial has no "
 "prerequisites."
-msgstr ""
+msgstr "次のチュートリアルはdoctest形式です。つまり、 `` &gt;&gt;&gt; ``の行はPythonコマンドプロンプトで入力できるものを表し、次のテキストは期待される戻り値を表します。チュートリアルには前提条件はありません。"
 
 #: ../../core/tutorial.rst:50
 msgid "Version Check"
-msgstr ""
+msgstr "バージョンチェック"
 
 #: ../../core/tutorial.rst:53
 msgid ""
 "A quick check to verify that we are on at least **version 1.3** of "
 "SQLAlchemy:"
-msgstr ""
+msgstr "SQLAlchemyのバージョン1.3 **以上であることを確認するためのクイックチェック："
 
 #: ../../core/tutorial.rst:62
 msgid "Connecting"
-msgstr ""
+msgstr "接続する"
 
 #: ../../core/tutorial.rst:64
 msgid ""
 "For this tutorial we will use an in-memory-only SQLite database. This is "
 "an easy way to test things without needing to have an actual database "
 "defined anywhere. To connect we use :func:`~sqlalchemy.create_engine`:"
-msgstr ""
+msgstr "このチュートリアルでは、メモリ内のSQLiteデータベースを使用します。これは、実際のデータベースをどこにでも定義する必要なく、物をテストする簡単な方法です。接続するには：func： `〜sqlalchemy.create_engine`："
 
 #: ../../core/tutorial.rst:73
 msgid ""
@@ -108,7 +98,7 @@ msgid ""
 "``False``. This tutorial will format the SQL behind a popup window so it "
 "doesn't get in our way; just click the \"SQL\" links to see what's being "
 "generated."
-msgstr ""
+msgstr "`` echo``フラグは、SQLAlchemyのロギングを設定するためのショートカットです。これは、Pythonの標準の `` logging``モジュールによって実現されます。これを有効にすると、生成されたすべての生成SQLが表示されます。このチュートリアルで作業しており、生成される出力が少なくてすむようなら、 `` False``に設定してください。このチュートリアルでは、SQLをポップアップウィンドウの後ろに書式設定して、私たちのやり方では得られないようにします。 \ &quot;SQL \&quot;リンクをクリックして、何が生成されているかを確認してください。"
 
 #: ../../core/tutorial.rst:80
 msgid ""
@@ -117,14 +107,14 @@ msgid ""
 "adapted through a :term:`dialect` that handles the details of the "
 "database and :term:`DBAPI` in use.  In this case the SQLite dialect will "
 "interpret instructions to the Python built-in ``sqlite3`` module."
-msgstr ""
+msgstr "：func： `.create_engine`の戻り値は：class：` .Engine`のインスタンスであり、データベースのコアインタフェースを表し、：term： `dialect`によって適合され、データベースの詳細を処理します。 ：term： `DBAPI`が使用中です。この場合、SQLiteダイアレクトはPythonの組み込み `` sqlite3``モジュールへの命令を解釈します。"
 
 #: ../../core/tutorial.rst:89
 msgid ""
 "The :class:`.Engine`, when first returned by :func:`.create_engine`, has "
 "not actually tried to connect to the database yet; that happens only the "
 "first time it is asked to perform a task against the database."
-msgstr ""
+msgstr "：class： `.Engine`は：func：` .create_engine`によって最初に返されたときに、まだデータベースに接続しようとしていません。これは、初めてデータベースに対してタスクを実行するように要求されたときにのみ発生します。"
 
 #: ../../core/tutorial.rst:93
 msgid ""
@@ -132,17 +122,17 @@ msgid ""
 ":meth:`.Engine.connect` is called, the :class:`.Engine` establishes a "
 "real :term:`DBAPI` connection to the database, which is then used to emit"
 " the SQL."
-msgstr ""
+msgstr "初めて：meth： `.Engine.execute`や：meth：` .Engine.connect`のようなメソッドが呼び出されると、class： `.Engine`はデータベースへのreal：term：` DBAPI`接続を確立します。これを使用してSQLを発行します。"
 
 #: ../../core/tutorial.rst:99
 msgid ""
 ":ref:`database_urls` - includes examples of :func:`.create_engine` "
 "connecting to several kinds of databases with links to more information."
-msgstr ""
+msgstr "：ref： `database_urls`  - いくつかの種類のデータベースに接続する：func：` .create_engine`の例を含んでいます。"
 
 #: ../../core/tutorial.rst:103
 msgid "Define and Create Tables"
-msgstr ""
+msgstr "表の定義と作成"
 
 #: ../../core/tutorial.rst:105
 msgid ""
@@ -157,7 +147,7 @@ msgid ""
 "but note that SA can also \"import\" whole sets of "
 ":class:`~sqlalchemy.schema.Table` objects automatically from an existing "
 "database (this process is called **table reflection**)."
-msgstr ""
+msgstr "SQL式言語は、ほとんどの場合、表の列に対して式を構成します。 SQLAlchemyでは、カラムはclass： `〜sqlalchemy.schema.Column`というオブジェクトで表現されることが最も多く、すべての場合にclass：`〜sqlalchemy.schema.Column`は：class： `〜 sqlalchemy.schema.Table`。 ：class： `〜sqlalchemy.schema.Table`オブジェクトとそれに関連する子オブジェクトのコレクションは、**データベースメタデータ**と呼ばれます。このチュートリアルでは、class： `〜sqlalchemy.schema.Table`オブジェクトを明示的にレイアウトしますが、SAは：class：`〜sqlalchemy.schema.Table`オブジェクトのセット全体を自動的に\ &quot;インポート\&quot;することもできます既存のデータベース（このプロセスを**表反映**と呼びます）。"
 
 #: ../../core/tutorial.rst:117
 msgid ""
@@ -167,14 +157,14 @@ msgid ""
 "CREATE TABLE statements. We'll make two tables, one of which represents "
 "\"users\" in an application, and another which represents zero or more "
 "\"email addresses\" for each row in the \"users\" table:"
-msgstr ""
+msgstr "通常のSQL CREATE TABLE文に似ている：class： `〜sqlalchemy.schema.Table`構文を使用して、class：`〜sqlalchemy.schema.MetaData`というカタログ内にテーブルを定義します。 2つのテーブルを作成します。そのうちの1つはアプリケーション内の\ &quot;users \&quot;を表し、もう1つは\ &quot;users \&quot;テーブルの各行の0以上の\ &quot;電子メールアドレス\&quot;を表します。"
 
 #: ../../core/tutorial.rst:140
 msgid ""
 "All about how to define :class:`~sqlalchemy.schema.Table` objects, as "
 "well as how to create them from an existing database automatically, is "
 "described in :ref:`metadata_toplevel`."
-msgstr ""
+msgstr "：class： `〜sqlalchemy.schema.Table`オブジェクトの定義方法と既存のデータベースから自動的に作成する方法については、ref：` metadata_toplevel`を参照してください。"
 
 #: ../../core/tutorial.rst:144
 msgid ""
@@ -184,7 +174,7 @@ msgid ""
 "``engine`` instance which points to our database. This will check for the"
 " presence of each table first before creating, so it's safe to call "
 "multiple times:"
-msgstr ""
+msgstr "次に、：class： `〜sqlalchemy.schema.MetaData`を伝えるために、私たちは実際にSQLiteデータベース内のテーブルの選択を作成したいと考えています：func：`〜sqlalchemy.schema.MetaData.create_all`、私たちのデータベースを指す `` engine``インスタンスを渡します。これは、作成する前に各テーブルの存在を最初にチェックするので、複数回呼び出しても安全です。"
 
 #: ../../core/tutorial.rst:174
 msgid ""
@@ -194,7 +184,7 @@ msgid ""
 " if running this tutorial on one of those databases, and you wish to use "
 "SQLAlchemy to issue CREATE TABLE, a \"length\" may be provided to the "
 ":class:`~sqlalchemy.types.String` type as below::"
-msgstr ""
+msgstr "CREATE TABLEの構文に精通しているユーザーは、VARCHAR列が長さなしで生成されたことに気付くことがあります。 SQLiteとPostgreSQLでは、これは有効なデータ型ですが、他のものでは許可されていません。したがって、これらのデータベースの1つでこのチュートリアルを実行し、SQLAlchemyを使用してCREATE TABLEを発行する場合は、以下のようにclass： `〜sqlalchemy.types.String`型に\&quot; length \ &quot;を指定することができます。"
 
 #: ../../core/tutorial.rst:183
 msgid ""
@@ -202,7 +192,7 @@ msgid ""
 " precision/scale fields available on :class:`~sqlalchemy.types.Integer`, "
 ":class:`~sqlalchemy.types.Numeric`, etc. are not referenced by SQLAlchemy"
 " other than when creating tables."
-msgstr ""
+msgstr "長さフィールドは：class： `〜sqlalchemy.types.String`と同様の精度/スケールフィールドで利用できます：class：`〜sqlalchemy.types.Integer`、：class： `〜sqlalchemy.types.Numeric`、テーブルの作成時以外はSQLAlchemyによって参照されません。"
 
 #: ../../core/tutorial.rst:187
 msgid ""
@@ -210,11 +200,11 @@ msgid ""
 "primary key identifiers, and SQLAlchemy doesn't generate or assume these "
 "without being instructed. For that, you use the "
 ":class:`~sqlalchemy.schema.Sequence` construct::"
-msgstr ""
+msgstr "さらに、FirebirdとOracleは新しい主キー識別子を生成するためにシーケンスを必要とし、SQLAlchemyは指示されずにこれらを生成したり仮定したりしません。そのためには、：class： `〜sqlalchemy.schema.Sequence`コンストラクトを使用します："
 
 #: ../../core/tutorial.rst:194
 msgid "A full, foolproof :class:`~sqlalchemy.schema.Table` is therefore::"
-msgstr ""
+msgstr "class： `〜sqlalchemy.schema.Table`は次のようになります::"
 
 #: ../../core/tutorial.rst:203
 msgid ""
@@ -223,11 +213,11 @@ msgid ""
 " towards in-Python usage only, versus one that will be used to emit "
 "CREATE TABLE statements on a particular set of backends with more "
 "stringent requirements."
-msgstr ""
+msgstr "主にin-Pythonの使用法のみを対象とした最小コンストラクトと、特定のセットのCREATE TABLE文を発行するために使用されるものとの違いを強調するために、このより詳細な：class： `〜.schema.Table`構造を個別に組み込みます。より厳しい要件のバックエンド。"
 
 #: ../../core/tutorial.rst:212
 msgid "Insert Expressions"
-msgstr ""
+msgstr "式の挿入"
 
 #: ../../core/tutorial.rst:214
 msgid ""
@@ -235,20 +225,20 @@ msgid ""
 ":class:`~sqlalchemy.sql.expression.Insert` construct, which represents an"
 " INSERT statement. This is typically created relative to its target "
 "table::"
-msgstr ""
+msgstr "最初に作成するSQL式は、：class： `〜sqlalchemy.sql.expression.Insert`です。これはINSERT文を表します。これは、通常、ターゲットテーブルに対して作成されます::"
 
 #: ../../core/tutorial.rst:220
 msgid ""
 "To see a sample of the SQL this construct produces, use the ``str()`` "
 "function::"
-msgstr ""
+msgstr "この構文が生成するSQLのサンプルを見るには、 `` str（） ``関数を使います::"
 
 #: ../../core/tutorial.rst:226
 msgid ""
 "Notice above that the INSERT statement names every column in the "
 "``users`` table. This can be limited by using the ``values()`` method, "
 "which establishes the VALUES clause of the INSERT explicitly::"
-msgstr ""
+msgstr "上記のINSERTステートメントは、 `` users``テーブルのすべてのカラムに名前を付けています。これは、INSERTのVALUES句を明示的に確立する `` values（） ``メソッドを使うことで制限できます::"
 
 #: ../../core/tutorial.rst:234
 msgid ""
@@ -260,11 +250,11 @@ msgid ""
 " executed; since the data consists of literal values, SQLAlchemy "
 "automatically generates bind parameters for them. We can peek at this "
 "data for now by looking at the compiled form of the statement::"
-msgstr ""
+msgstr "上記の `` values``メソッドはVALUES句を2つのカラムに限定していましたが、 `` values``に置かれた実際のデータは文字列にレンダリングされませんでした。代わりに、名前付きのバインドパラメータが取得されます。実際には、私たちのデータ*は*：class： `〜sqlalchemy.sql.expression.Insert`構造体に格納されていますが、通常はその文が実際に実行されたときにのみ出力されます。データはリテラル値で構成されているため、SQLAlchemyは自動的にバインドパラメータを生成します。このデータは、コンパイルされた次のような文を見ればわかります。::"
 
 #: ../../core/tutorial.rst:247
 msgid "Executing"
-msgstr ""
+msgstr "実行中"
 
 #: ../../core/tutorial.rst:249
 msgid ""
@@ -274,14 +264,14 @@ msgid ""
 "\"shortcut\" ways to do it. The ``engine`` object we created is a "
 "repository for database connections capable of issuing SQL to the "
 "database. To acquire a connection, we use the ``connect()`` method::"
-msgstr ""
+msgstr "興味深い：class： `〜sqlalchemy.sql.expression.Insert`がそれを実行しています。このチュートリアルでは、一般に、SQL構造を実行する最も明白な方法に焦点を当て、後でそれを行うためのいくつかの &quot;ショートカット&quot;方法に触れます。作成した `` engine``オブジェクトは、SQLをデータベースに発行できるデータベース接続のリポジトリです。接続を取得するには、 `` connect（） ``メソッドを使用します::"
 
 #: ../../core/tutorial.rst:260
 msgid ""
 "The :class:`~sqlalchemy.engine.Connection` object represents an actively "
 "checked out DBAPI connection resource. Lets feed it our "
 ":class:`~sqlalchemy.sql.expression.Insert` object and see what happens:"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.engine.Connection`オブジェクトは、アクティブにチェックアウトされたDBAPI接続リソースを表します。 class： `〜sqlalchemy.sql.expression.Insert`オブジェクトをフィードし、何が起こるかを見てみましょう："
 
 #: ../../core/tutorial.rst:271
 msgid ""
@@ -292,7 +282,7 @@ msgid ""
 "help generate the statement; when we use the ``str()`` function, the "
 "statement isn't aware of this dialect, and falls back onto a default "
 "which uses named parameters. We can view this manually as follows:"
-msgstr ""
+msgstr "そのため、INSERT文がデータベースに発行されました。出力の\ &quot;named \&quot;バインドパラメータの代わりに位置\ &quot;qmark \&quot;バインドパラメータを取得しましたが、どうして ？実行されると、：class： `〜sqlalchemy.engine.Connection`はSQLite **方言**を使ってステートメントを生成します。 `` str（） ``関数を使うと、このステートメントはこの方言を認識せず、名前付きパラメータを使うデフォルトに戻ります。これを手動で次のように表示できます。"
 
 #: ../../core/tutorial.rst:285
 msgid ""
@@ -303,7 +293,7 @@ msgid ""
 " cursor object. In the case of an INSERT, we can get important "
 "information from it, such as the primary key values which were generated "
 "from our statement using :attr:`.ResultProxy.inserted_primary_key`:"
-msgstr ""
+msgstr "`` execute（） ``と呼んだときに得た `` result``変数はどうでしょうか？ SQLAlchemy：class： `〜sqlalchemy.engine.Connection`オブジェクトはDBAPI接続を参照するため、a：class：`〜sqlalchemy.engine.ResultProxy`オブジェクトと呼ばれる結果はDBAPIカーソルオブジェクトに似ています。 INSERTの場合、ステートメントから生成された主キーの値（attr： `.ResultProxy.inserted_primary_key`）など、重要な情報を取得できます。"
 
 #: ../../core/tutorial.rst:298
 msgid ""
@@ -319,11 +309,11 @@ msgid ""
 "supports composite primary keys).    Methods here range from using "
 "``cursor.lastrowid``, to selecting from a database-specific function, to "
 "using ``INSERT..RETURNING`` syntax; this all occurs transparently."
-msgstr ""
+msgstr "`` 1``の値はSQLiteによって自動的に生成されましたが、class： `〜sqlalchemy.sql.expression.Insert`ステートメントで` `id``カラムを指定しなかったためです。それ以外の場合は、明示的な値が使用されます。どちらの場合でも、SQLAlchemyは、新しく生成された主キー値を取得する方法を常に知っています。各データベースのclass： `〜sqlalchemy.engine.interfaces.Dialect`は、正しい値（または値; attr：` .ResultProxy.inserted_primary_key`）が複合主キーをサポートするようにリストを返します）。ここでのメソッドには、 `` cursor.lastrowid``からデータベース固有の関数から `` INSERT..RETURNING``構文の使用までの範囲があります。これはすべて透過的に行われます。"
 
 #: ../../core/tutorial.rst:314
 msgid "Executing Multiple Statements"
-msgstr ""
+msgstr "複数のステートメントの実行"
 
 #: ../../core/tutorial.rst:316
 msgid ""
@@ -335,7 +325,7 @@ msgid ""
 "the ``values`` keyword with :class:`~sqlalchemy.sql.expression.Insert`. "
 "Lets create a generic :class:`~sqlalchemy.sql.expression.Insert` "
 "statement again and use it in the \"normal\" way:"
-msgstr ""
+msgstr "上記の挿入例は、意図的に表現言語構造の様々な振る舞いを示すために描かれたものです。普通の場合、class： `〜sqlalchemy.sql.expression.Insert`文は通常、class：`〜sqlalchemy.engine.Connection`の `` execute（） ``メソッドに送られるパラメータに対してコンパイルされます。 class： `〜sqlalchemy.sql.expression.Insert`で` `values``キーワードを使う必要はありません。 `〜sqlalchemy.sql.expression.Insert`ステートメントを再度作成し、それを\&quot;通常の\ &quot;という形で使用します："
 
 #: ../../core/tutorial.rst:334
 msgid ""
@@ -345,20 +335,20 @@ msgid ""
 "execution time based on the parameters we specified; if we specified "
 "fewer parameters, the :class:`~.expression.Insert` would have fewer "
 "entries in its VALUES clause."
-msgstr ""
+msgstr "上記では、 `` execute（） ``メソッドで3つのカラムをすべて指定したため、コンパイルされた：class： `〜.expression.Insert`には3つのカラムがすべて含まれていました。 ：class： `〜.expression.Insert`文は、指定されたパラメータに基づいて実行時にコンパイルされます。より少ないパラメータを指定すると、：class： `〜.expression.Insert`はそのVALUES句に含まれるエントリが少なくなります。"
 
 #: ../../core/tutorial.rst:341
 msgid ""
 "To issue many inserts using DBAPI's ``executemany()`` method, we can send"
 " in a list of dictionaries each containing a distinct set of parameters "
 "to be inserted, as we do here to add some email addresses:"
-msgstr ""
+msgstr "DBAPIの `` executemany（） ``メソッドを使って多くのインサートを発行するには、いくつかの電子メールアドレスを追加するために、挿入する個別のパラメータセットを含むディクショナリのリストを送ることができます："
 
 #: ../../core/tutorial.rst:358
 msgid ""
 "Above, we again relied upon SQLite's automatic generation of primary key "
 "identifiers for each ``addresses`` row."
-msgstr ""
+msgstr "上記では、各「アドレス」行のSQLiteの主キー識別子の自動生成に再び依存しました。"
 
 #: ../../core/tutorial.rst:361
 msgid ""
@@ -368,17 +358,17 @@ msgid ""
 ":class:`~sqlalchemy.sql.expression.Insert` statement is compiled against "
 "the **first** dictionary in the list, and it's assumed that all "
 "subsequent argument dictionaries are compatible with that statement."
-msgstr ""
+msgstr "複数のパラメータセットを実行する場合、各辞書に**同じ**キーセットが必要です。つまり、ある辞書では他の辞書より少ないキーしか持っていません。これは、：class： `〜sqlalchemy.sql.expression.Insert`ステートメントがリストの**最初の**ディクショナリに対してコンパイルされているためで、後続のすべての引数ディクショナリがそのステートメントと互換性があると仮定しています。"
 
 #: ../../core/tutorial.rst:368
 msgid ""
 "The \"executemany\" style of invocation is available for each of the "
 ":func:`.insert`, :func:`.update` and :func:`.delete` constructs."
-msgstr ""
+msgstr "\ &quot;executemany \&quot;スタイルの呼び出しは：func： `.insert`、：func：` .update`と：func： `.delete`の各構文で利用できます。"
 
 #: ../../core/tutorial.rst:375
 msgid "Selecting"
-msgstr ""
+msgstr "選択"
 
 #: ../../core/tutorial.rst:377
 msgid ""
@@ -386,7 +376,7 @@ msgid ""
 " The more interesting part of the data is selecting it! We'll cover "
 "UPDATE and DELETE statements later. The primary construct used to "
 "generate SELECT statements is the :func:`.select` function:"
-msgstr ""
+msgstr "私たちは、テストデータベースにデータが入っているように、挿入を開始しました。より興味深いのは、データを選択することです！後でUPDATEとDELETE文について説明します。 SELECT文を生成するために使用される主な構文は、：func： `.select`関数です："
 
 #: ../../core/tutorial.rst:391
 msgid ""
@@ -399,24 +389,24 @@ msgid ""
 ":func:`~sqlalchemy.engine.ResultProxy.fetchone` and "
 ":func:`~sqlalchemy.engine.ResultProxy.fetchall`. The easiest way to get "
 "rows from it is to just iterate:"
-msgstr ""
+msgstr "上では、basic：func： `.select`コールを発行し、selectのCOLUMNS句に` `users``テーブルを置き、実行しました。 SQLAlchemyは、 `` users``テーブルを各カラムのセットに展開し、FROM句を生成しました。返される結果は、再び：class： `〜sqlalchemy.engine.ResultProxy`オブジェクトです。このオブジェクトは、func：`〜sqlalchemy.engine.ResultProxy.fetchone`や：func： `〜などのメソッドを含むDBAPIカーソルとよく似た働きをします。 sqlalchemy.engine.ResultProxy.fetchall`。行を取得する最も簡単な方法は、反復処理だけです。"
 
 #: ../../core/tutorial.rst:408
 msgid ""
 "Above, we see that printing each row produces a simple tuple-like result."
 " We have more options at accessing the data in each row. One very common "
 "way is through dictionary access, using the string names of columns:"
-msgstr ""
+msgstr "上記のように、各行を印刷すると単純なタプルのような結果が得られることがわかります。各行のデータにアクセスする際の選択肢が増えました。非常に一般的な方法の1つは、列の文字列名を使用した辞書アクセスによるものです。"
 
 #: ../../core/tutorial.rst:423
 msgid "Integer indexes work as well:"
-msgstr ""
+msgstr "整数インデックスも同様に動作します。"
 
 #: ../../core/tutorial.rst:431
 msgid ""
 "But another way, whose usefulness will become apparent later on, is to "
 "use the :class:`~sqlalchemy.schema.Column` objects directly as keys:"
-msgstr ""
+msgstr "しかし、後で明白になる別の方法は：class： `〜sqlalchemy.schema.Column`オブジェクトをキーとして直接使うことです："
 
 #: ../../core/tutorial.rst:444
 msgid ""
@@ -426,7 +416,7 @@ msgid ""
 "closed and returned to the connection pool when the object is garbage "
 "collected, it's better to make it explicit as some database APIs are very"
 " picky about such things:"
-msgstr ""
+msgstr "保留中の行が残っている結果セットは、破棄する前に明示的に閉じておく必要があります。 ：class： `〜sqlalchemy.engine.ResultProxy`で参照されるカーソルと接続リソースは、オブジェクトがガベージコレクトされたときに閉じられ、接続プールに返されますが、一部のデータベースAPIは非常に厄介なので、そのようなことについて："
 
 #: ../../core/tutorial.rst:455
 msgid ""
@@ -436,7 +426,7 @@ msgid ""
 ":class:`~sqlalchemy.schema.Table`. These are available as named "
 "attributes off the ``c`` attribute of the "
 ":class:`~sqlalchemy.schema.Table` object:"
-msgstr ""
+msgstr "selectのCOLUMNS節に置かれているカラムをもっと慎重に制御したい場合は、class： `〜sqlalchemy.schema.Column`オブジェクトをindividual：class：`〜sqlalchemy.schema.Table`から参照します。 。これらは、class： `〜sqlalchemy.schema.Table`オブジェクトの` `c``属性から名前付き属性として利用できます："
 
 #: ../../core/tutorial.rst:473
 msgid ""
@@ -445,7 +435,7 @@ msgid ""
 "part and a \"FROM table\" part, our :func:`.select` construct only has a "
 "list containing columns. How does this work ? Let's try putting *two* "
 "tables into our :func:`.select` statement:"
-msgstr ""
+msgstr "FROM句に関する興味深いことを観察できます。生成されたステートメントは2つの異なるセクション、すなわち &quot;SELECT columns&quot;部分と &quot;FROM table&quot;部分を含んでいますが、私たちの：func： `.select`構造は列を含むリストしか持っていません。これはどのように作動しますか ？ func： `.select`ステートメントに* 2つのテーブルを入れてみましょう："
 
 #: ../../core/tutorial.rst:495
 msgid ""
@@ -455,7 +445,7 @@ msgid ""
 "against each row from the ``addresses`` table. So to put some sanity into"
 " this statement, we need a WHERE clause.  We do that using "
 ":meth:`.Select.where`:"
-msgstr ""
+msgstr "**両方の**テーブルをFROM句に入れました。しかしまた、それは本当の混乱を作りました。 SQLに慣れている人は、これが**デカルト製品**であることを知っています。 `` users``テーブルの各行は `` addresses``テーブルの各行に対して生成されます。したがって、この文にいくつかの正気を置くためには、WHERE句が必要です。これを行うには：meth： `.Select.where`："
 
 #: ../../core/tutorial.rst:516
 msgid ""
@@ -468,13 +458,13 @@ msgid ""
 "that something is up. Saying ``1 == 1`` produces ``True``, and ``1 == 2``"
 " produces ``False``, not a WHERE clause. So lets see exactly what that "
 "expression is doing:"
-msgstr ""
+msgstr "だからもっと良く見えるように、私たちはfunc： `.select`に式を追加しました。これは` `WHERE users.id = addresses.user_id``を文に追加する効果があり、結果は`` users``と `` addresses``行の結合が意味を成していました。しかし、その表現を見てみましょうか？ 2つの異なるクラス： `〜sqlalchemy.schema.Column`オブジェクトの間でPythonの等価演算子を使用しています。何かが起こっていることは明らかです。 `` 1 == 1``は `` True``を出力し、 `` 1 == 2``はWHERE句ではなく `` False``を出力します。その表現が何をしているのかを正確に見ることができます："
 
 #: ../../core/tutorial.rst:530
 msgid ""
 "Wow, surprise ! This is neither a ``True`` nor a ``False``. Well what is "
 "it ?"
-msgstr ""
+msgstr "うわー、驚き！これは「真」でも「偽」でもない。まあそれは何ですか？"
 
 #: ../../core/tutorial.rst:537
 msgid ""
@@ -485,41 +475,41 @@ msgid ""
 "we are working with is ultimately the same type of object. SQLAlchemy "
 "terms the base class of all of these expressions as "
 ":class:`~.expression.ColumnElement`."
-msgstr ""
+msgstr "ご覧のとおり、 `` == ``演算子は、これまでのところ、class： `〜.expression.Insert`と：func：` .select`オブジェクトに非常によく似たオブジェクトを生成しています。ありがとうPythonの `` __eq __（） ``に組み込みます。あなたは `` str（） ``を呼び出してSQLを生成します。ここまでで、作業しているものはすべて最終的に同じタイプのオブジェクトであることがわかります。 SQLAlchemyは、これらすべての式の基本クラスをclass： `〜.expression.ColumnElement`と呼びます。"
 
 #: ../../core/tutorial.rst:545
 msgid "Operators"
-msgstr ""
+msgstr "演算子"
 
 #: ../../core/tutorial.rst:547
 msgid ""
 "Since we've stumbled upon SQLAlchemy's operator paradigm, let's go "
 "through some of its capabilities. We've seen how to equate two columns to"
 " each other:"
-msgstr ""
+msgstr "SQLAlchemyの演算子パラダイムを見つけたので、いくつかの機能を試してみましょう。 2つの列を相互に等しくする方法を見てきました。"
 
 #: ../../core/tutorial.rst:555
 msgid ""
 "If we use a literal value (a literal meaning, not a SQLAlchemy clause "
 "object), we get a bind parameter:"
-msgstr ""
+msgstr "リテラル値（SQLAlchemy句オブジェクトではなく文字通りの意味）を使用すると、バインドパラメータが取得されます。"
 
 #: ../../core/tutorial.rst:563
 msgid ""
 "The ``7`` literal is embedded the resulting "
 ":class:`~.expression.ColumnElement`; we can use the same trick we did "
 "with the :class:`~sqlalchemy.sql.expression.Insert` object to see it:"
-msgstr ""
+msgstr "`` 7``リテラルは次のように埋め込まれます：class： `〜.expression.ColumnElement`; ：class： `〜sqlalchemy.sql.expression.Insert`オブジェクトを使って同じトリックを使用することができます："
 
 #: ../../core/tutorial.rst:572
 msgid ""
 "Most Python operators, as it turns out, produce a SQL expression here, "
 "like equals, not equals, etc.:"
-msgstr ""
+msgstr "ほとんどのPython演算子は、equals、equalsなどのように、ここにSQL式を生成します。"
 
 #: ../../core/tutorial.rst:588
 msgid "If we add two integer columns together, we get an addition expression:"
-msgstr ""
+msgstr "2つの整数列を加算すると、加算式が得られます。"
 
 #: ../../core/tutorial.rst:595
 msgid ""
@@ -529,37 +519,37 @@ msgid ""
 ":class:`~sqlalchemy.types.String` on our "
 ":class:`~sqlalchemy.schema.Column` objects at the beginning), we get "
 "something different:"
-msgstr ""
+msgstr "興味深いことに、：class： `〜sqlalchemy.schema.Column`の型は重要です！ 2つの文字列ベースの列を持つ `` + ``を使用する場合（class： `〜sqlalchemy.types.Integer`と：class：`〜sqlalchemy.types.String`のような型をクラス： `〜sqlalchemy最初に.schema.Column`オブジェクト）、私たちは何か違うものを得ます："
 
 #: ../../core/tutorial.rst:606
 msgid ""
 "Where ``||`` is the string concatenation operator used on most databases."
 " But not all of them. MySQL users, fear not:"
-msgstr ""
+msgstr "`` || ``はほとんどのデータベースで使用される文字列連結演算子です。しかし、それらのすべてではありません。 MySQLのユーザーは、恐れていない："
 
 #: ../../core/tutorial.rst:615
 msgid ""
 "The above illustrates the SQL that's generated for an "
 ":class:`~sqlalchemy.engine.Engine` that's connected to a MySQL database; "
 "the ``||`` operator now compiles as MySQL's ``concat()`` function."
-msgstr ""
+msgstr "上の例は、MySQLデータベースに接続されている：class： `〜sqlalchemy.engine.Engine`に対して生成されたSQLを示しています。 `` || ``演算子はMySQLの `` concat（） ``関数としてコンパイルされるようになりました。"
 
 #: ../../core/tutorial.rst:619
 msgid ""
 "If you have come across an operator which really isn't available, you can"
 " always use the :meth:`.Operators.op` method; this generates whatever "
 "operator you need:"
-msgstr ""
+msgstr "実際に利用できない演算子を見つけた場合は、常に：meth： `.Operators.op`メソッドを使用できます。必要な演算子を生成します。"
 
 #: ../../core/tutorial.rst:627
 msgid ""
 "This function can also be used to make bitwise operators explicit. For "
 "example::"
-msgstr ""
+msgstr "この関数は、ビット演算子を明示的にするためにも使用できます。例えば：："
 
 #: ../../core/tutorial.rst:631
 msgid "is a bitwise AND of the value in ``somecolumn``."
-msgstr ""
+msgstr "`` somecolumn``の値のビット単位のANDです。"
 
 #: ../../core/tutorial.rst:633
 msgid ""
@@ -568,22 +558,22 @@ msgid ""
 "will be sent as a result column.   For this case, be sure to make the "
 "type explicit, if not what's normally expected, using "
 ":func:`.type_coerce`::"
-msgstr ""
+msgstr "：meth： `.Operators.op`を使用する場合、演算子が結果列として送られる式で使用されるときは、式の戻り値の型が重要になります。この場合、通常どおりでない場合は、型を明示的に明示してください：func： `.type_coerce` ::"
 
 #: ../../core/tutorial.rst:643
 msgid ""
 "For boolean operators, use the :meth:`.Operators.bool_op` method, which "
 "will ensure that the return type of the expression is handled as "
 "boolean::"
-msgstr ""
+msgstr "ブール演算子の場合は、：meth： `.Operators.bool_op`メソッドを使用します。これにより、式の戻り値の型がboolean ::として扱われます"
 
 #: ../../core/tutorial.rst:648
 msgid "Added the :meth:`.Operators.bool_op` method."
-msgstr ""
+msgstr "：meth： `.Operators.bool_op`メソッドを追加しました。"
 
 #: ../../core/tutorial.rst:651
 msgid "Operator Customization"
-msgstr ""
+msgstr "オペレータのカスタマイズ"
 
 #: ../../core/tutorial.rst:653
 msgid ""
@@ -594,11 +584,11 @@ msgid ""
 "which become available for all column expressions that are part of that "
 "particular type.  See the section :ref:`types_operators` for a "
 "description."
-msgstr ""
+msgstr "急いでカスタムオペレータを得るには：meth： `.Operators.op`が便利ですが、コアはタイプレベルでのオペレータシステムの基本的なカスタマイズと拡張をサポートします。既存の演算子の動作は、型ごとに変更することができ、新しい演算を定義して、その特定の型の一部であるすべての列式で使用できるようにすることができます。説明については：ref： `types_operators`を参照してください。"
 
 #: ../../core/tutorial.rst:663
 msgid "Conjunctions"
-msgstr ""
+msgstr "結合詞"
 
 #: ../../core/tutorial.rst:666
 msgid ""
@@ -609,14 +599,14 @@ msgid ""
 ":func:`.and_`, :func:`.or_`, and :func:`.not_` can work from the "
 "corresponding functions SQLAlchemy provides (notice we also throw in a "
 ":meth:`~.ColumnOperators.like`):"
-msgstr ""
+msgstr "我々は、func： `.select`構造体の中にいくつかの演算子を披露したいと思います。しかし、もう少しまとめる必要があるので、最初に接続詞を紹介しましょう。結合詞は、物事をまとめるANDやORのような小さな言葉です。我々はまた、NOTに当てるでしょう。 ：func： `.and_`、：func：` .or_`、そして：func： `.not_`は、SQLAlchemyが提供する対応する関数から動作することができます（：meth：`〜.ColumnOperators.like`） ："
 
 #: ../../core/tutorial.rst:692
 msgid ""
 "And you can also use the re-jiggered bitwise AND, OR and NOT operators, "
 "although because of Python operator precedence you have to watch your "
 "parenthesis:"
-msgstr ""
+msgstr "また、リジグされたビット単位のAND、OR、およびNOT演算子を使用することもできます。ただし、演​​算子の優先順位がPythonのため、カッコを見る必要があります。"
 
 #: ../../core/tutorial.rst:710
 msgid ""
@@ -629,7 +619,7 @@ msgid ""
 " a BETWEEN clause, and :meth:`~.ColumnElement.label` is used in a column "
 "expression to produce labels using the ``AS`` keyword; it's recommended "
 "when selecting from expressions that otherwise would not have a name:"
-msgstr ""
+msgstr "したがって、このすべての語彙では、AOLまたはMSNのメールアドレスを持つすべてのユーザーを選択しましょう。名前は\ &quot;m \&quot;と\ &quot;z \&quot;の間の文字で始まり、フルネームとメールアドレスを組み合わせたものです。この文には、meth： `〜.ColumnOperators.between`と：meth：`〜.ColumnElement.label`の2つの新しい構造体を追加します。 ：meth： `〜.ColumnOperators.between`はBETWEEN句を生成し、` `AS``キーワードを使ってラベルを生成するために：meth：`〜.ColumnElement.label`を列式で使用します。それ以外の場合は名前を持たない式から選択することをお勧めします："
 
 #: ../../core/tutorial.rst:743
 msgid ""
@@ -637,23 +627,23 @@ msgid ""
 "fact it will determine the FROM clause based on all of its other bits; "
 "the columns clause, the where clause, and also some other elements which "
 "we haven't covered yet, which include ORDER BY, GROUP BY, and HAVING."
-msgstr ""
+msgstr "もう一度、SQLAlchemyは私たちのステートメントのFROM句を見つけました。実際には、他のすべてのビットに基づいてFROM句を決定します。 columns句、where句、およびORDER BY、GROUP BY、およびHAVINGを含むまだ扱っていない他の要素が含まれています。"
 
 #: ../../core/tutorial.rst:748
 msgid ""
 "A shortcut to using :func:`.and_` is to chain together multiple "
 ":meth:`~.Select.where` clauses.   The above can also be written as:"
-msgstr ""
+msgstr "：func： `.and_`を使うショートカットは、複数の：meth：`〜.Select.where`節を連鎖することです。上記は次のように書くこともできます："
 
 #: ../../core/tutorial.rst:772
 msgid ""
 "The way that we can build up a :func:`.select` construct through "
 "successive method calls is called :term:`method chaining`."
-msgstr ""
+msgstr "連続するメソッド呼び出しを通じてa：func： `.select`構造を構築する方法は、term：` method chaining`と呼ばれます。"
 
 #: ../../core/tutorial.rst:778
 msgid "Using Textual SQL"
-msgstr ""
+msgstr "テキストSQLの使用"
 
 #: ../../core/tutorial.rst:780
 msgid ""
@@ -666,7 +656,7 @@ msgid ""
 "compose a textual statement that is passed to the database mostly "
 "unchanged.  Below, we create a :func:`~.expression.text` object and "
 "execute it:"
-msgstr ""
+msgstr "私たちの最後の例は実際には少数になりました。理解しているものをテキストのSQL式にすることから、プログラマチックなスタイルでコンポーネントをグループ化するPythonの構造に移行するのは難しいでしょう。そのため、SQLAlchemyでは、SQLがすでにわかっており、ステートメントが動的機能をサポートする必要がない場合に、文字列を使用できます。 ：func： `〜.expression.text`構文は、ほとんど変更されていないデータベースに渡されるテキスト文を作成するために使用されます。以下に、：func： `〜.expression.text`オブジェクトを作成して実行します："
 
 #: ../../core/tutorial.rst:807
 msgid ""
@@ -675,42 +665,42 @@ msgid ""
 "consistent regardless of database backend.  To send values in for the "
 "parameters, we passed them into the :meth:`~.Connection.execute` method "
 "as additional arguments."
-msgstr ""
+msgstr "上記では、バインドされたパラメータが、指定されたコロン形式を使用して：func： `〜.expression.text`で指定されていることがわかります。この形式は、データベースのバックエンドに関係なく一貫しています。パラメータの値を送るために、それらを追加の引数として：meth： `〜.Connection.execute`メソッドに渡しました。"
 
 #: ../../core/tutorial.rst:814
 msgid "Specifying Bound Parameter Behaviors"
-msgstr ""
+msgstr "バウンドパラメータビヘイビアの指定"
 
 #: ../../core/tutorial.rst:816
 msgid ""
 "The :func:`~.expression.text` construct supports pre-established bound "
 "values using the :meth:`.TextClause.bindparams` method::"
-msgstr ""
+msgstr "：func： `〜.expression.text`構造体は、：meth：` .TextClause.bindparams`メソッドを使って事前に設定されたバウンド値をサポートします::"
 
 #: ../../core/tutorial.rst:822
 msgid "The parameters can also be explicitly typed::"
-msgstr ""
+msgstr "パラメータは明示的にタイプすることもできます::"
 
 #: ../../core/tutorial.rst:827
 msgid ""
 "Typing for bound parameters is necessary when the type requires Python-"
 "side or special SQL-side processing provided by the datatype."
-msgstr ""
+msgstr "型がデータ型によって提供されるPython側または特別なSQL側の処理を必要とする場合、バインドされたパラメータの型指定が必要です。"
 
 #: ../../core/tutorial.rst:832
 msgid ":meth:`.TextClause.bindparams` - full method description"
-msgstr ""
+msgstr "：meth： `.TextClause.bindparams`  - 完全なメソッドの説明"
 
 #: ../../core/tutorial.rst:837
 msgid "Specifying Result-Column Behaviors"
-msgstr ""
+msgstr "結果列ビヘイビアの指定"
 
 #: ../../core/tutorial.rst:839
 msgid ""
 "We may also specify information about the result columns using the "
 ":meth:`.TextClause.columns` method; this method can be used to specify "
 "the return types, based on name::"
-msgstr ""
+msgstr "結果の列に関する情報は、：meth： `.TextClause.columns`メソッドを使って指定することもできます。このメソッドは、名前に基づいて戻り値の型を指定するために使用できます::"
 
 #: ../../core/tutorial.rst:845
 msgid ""
@@ -718,14 +708,14 @@ msgid ""
 " untyped.  In this case it's a good idea to list out the columns "
 "explicitly within our textual SQL, since the correlation of our column "
 "expressions to the SQL will be done positionally::"
-msgstr ""
+msgstr "または、型指定されたものと型なしのもののいずれかを、位置的に完全な列式に渡すことができます。この場合、私たちの列式のSQLへの相関関係は位置的に行われるので、テキスト形式のSQL内で明示的に列を列挙することをお勧めします::"
 
 #: ../../core/tutorial.rst:853
 msgid ""
 "When we call the :meth:`.TextClause.columns` method, we get back a "
 ":class:`.TextAsFrom` object that supports the full suite of "
 ":attr:`.TextAsFrom.c` and other \"selectable\" operations::"
-msgstr ""
+msgstr "：meth： `.TextClause.columns`メソッドを呼び出すと、attr：` .TextAsFrom.c`と他の\ &quot;selectable \&quot;オペレーションをサポートする：class： `.TextAsFrom`オブジェクトが返されます::"
 
 #: ../../core/tutorial.rst:862
 msgid ""
@@ -733,7 +723,7 @@ msgid ""
 " when relating textual SQL to existing Core or ORM models, because we can"
 " use column expressions directly without worrying about name conflicts or"
 " other issues with the result column names in the textual SQL:"
-msgstr ""
+msgstr "位置形式の：meth： `.TextClause.columns`は、テキストのSQLを既存のCoreまたはORMモデルに関連付けるときに特に便利です。これは、名前の競合やテキストの結果列名に関するその他の問題を気にせずに列式を直接使用できるためですSQL："
 
 #: ../../core/tutorial.rst:886
 msgid ""
@@ -742,14 +732,14 @@ msgid ""
 "names aren't an issue when the result-columns are fetched using the "
 "actual column object as a key. Fetching the ``email_address`` column "
 "would be::"
-msgstr ""
+msgstr "上の例では、\ &quot;id \&quot;という名前の3つの列がありますが、これらを列式と位置的に関連付けているので、実際の列オブジェクトを使用して結果列を取得したときの名前は問題になりませんキー。 `` email_address``カラムを取得することは::"
 
 #: ../../core/tutorial.rst:895
 msgid ""
 "If on the other hand we used a string column key, the usual rules of "
 "name- based matching still apply, and we'd get an ambiguous column error "
 "for the ``id`` value::"
-msgstr ""
+msgstr "一方、文字列の列キーを使用した場合、名前ベースの照合の通常の規則が適用され、 `` id``値に対してあいまいな列エラーが発生します::"
 
 #: ../../core/tutorial.rst:904
 msgid ""
@@ -760,7 +750,7 @@ msgid ""
 ":meth:`.TextClause.columns` method is typically very applicable to "
 "textual statements to be used in an ORM context.   The example at "
 ":ref:`orm_tutorial_literal_sql` illustrates a simple usage."
-msgstr ""
+msgstr "：class： `.Column`オブジェクトを使った結果セットからのカラムへのアクセスは珍しいように見えるかもしれませんが、ORMによって使用される唯一のシステムで、class：`〜 .orm.query.Query`オブジェクト;このように、：meth： `.TextClause.columns`メソッドは、通常、ORMコンテキストで使用されるテキスト文に非常に適用されます。 ：ref： `orm_tutorial_literal_sql`の例は簡単な使い方を示しています。"
 
 #: ../../core/tutorial.rst:914
 msgid ""
@@ -768,21 +758,21 @@ msgid ""
 "which will be matched positionally to a plain text SQL result set, "
 "eliminating the need for column names to match or even be unique in the "
 "SQL statement when matching table metadata or ORM models to textual SQL."
-msgstr ""
+msgstr "：meth： `.TextClause.columns`メソッドは、テーブルのメタデータまたはORMを一致させるときに、SQL文で列名が一致する必要がなくなるか、またはSQL文中で一意でなくても、プレーンテキストのSQL結果セットと位置的に一致する列式を受け入れるようになりましたモデルをテキストSQLに変換します。"
 
 #: ../../core/tutorial.rst:921
 msgid ":meth:`.TextClause.columns` - full method description"
-msgstr ""
+msgstr "：meth： `.TextClause.columns`  - 完全なメソッドの説明"
 
 #: ../../core/tutorial.rst:923
 msgid ""
 ":ref:`orm_tutorial_literal_sql` - integrating ORM-level queries with "
 ":func:`.text`"
-msgstr ""
+msgstr "：ref： `orm_tutorial_literal_sql`  -  ORMレベルのクエリを：func：` .text`と統合する"
 
 #: ../../core/tutorial.rst:928
 msgid "Using text() fragments inside bigger statements"
-msgstr ""
+msgstr "より大きな文の中でのtext（）フラグメントの使用"
 
 #: ../../core/tutorial.rst:930
 msgid ""
@@ -795,20 +785,20 @@ msgid ""
 "statement, and the :func:`~.expression.text` construct provides the "
 "textual content within this form.  We can build a statement without the "
 "need to refer to any pre-established :class:`.Table` metadata:"
-msgstr ""
+msgstr "：func： `〜.expression.text`は、：func：`〜.expression.select`オブジェクト内で自由に使用できるSQLのフラグメントを生成するためにも使用できます。これは：func： `〜.expression.text`オブジェクトを受け入れますそのビルダー関数のほとんどの引数として使用します。以下は、：func： `〜.expression.text`の使用法をa：func：` .select`オブジェクト内で組み合わせたものです。 ：func： `〜.expression.select`構造は文の\&quot; geometry \ &quot;を提供し、：func：`〜.expression.text`構造はこの形式のテキストコンテンツを提供します。あらかじめ設定されたクラス： `.Table`メタデータを参照せずにステートメントを作成することができます："
 
 #: ../../core/tutorial.rst:962
 msgid ""
 "The :func:`.select` construct emits warnings when string SQL fragments "
 "are coerced to :func:`.text`, and :func:`.text` should be used "
 "explicitly.  See :ref:`migration_2992` for background."
-msgstr ""
+msgstr "：func： `.select`構文は、文字列SQLフラグメントが強制的に：func：` .text`に、そして：func： `.text`が明示的に使用されるべきときに、警告を出します。背景については：ref： `migration_2992`を参照してください。"
 
 #: ../../core/tutorial.rst:972
 msgid ""
 "Using More Specific Text with :func:`.table`, :func:`.literal_column`, "
 "and :func:`.column`"
-msgstr ""
+msgstr "：func： `.table`、：func：` .literal_column`、および：func： `.column`でより特定のテキストを使用する"
 
 #: ../../core/tutorial.rst:974
 msgid ""
@@ -826,11 +816,11 @@ msgid ""
 "expressions, e.g. ``users.fullname``, that will be rendered as is; using "
 ":func:`~.expression.column` implies an individual column name that may be"
 " quoted:"
-msgstr ""
+msgstr "：func： `〜.expression.column`、：func：`〜.expression.literal_column`、および：func： `〜.expression.table`のために、私たちは構造のレベルを反対方向に戻すこともできます私たちの声明の重要な要素のいくつか。これらの構造体を使用すると、func： `〜.expression.text`を直接使用する場合よりも、より多くの表現能力を得ることができます。これらの構造体は、格納する文字列の使用方法class： `.Table`ベースのメタデータです。以下では、key：func： `〜.expression.literal_column`オブジェクトの2つについて：class：` .String`データ型を指定して、文字列固有の連結演算子を利用できるようにします。また、 `` users.fullname``のようにテーブル修飾された式を使うために：func： `〜.expression.literal_column`を使います。 ：func： `〜.expression.column`は、引用符で囲むことができる個々の列名を意味します："
 
 #: ../../core/tutorial.rst:1018
 msgid "Ordering or Grouping by a Label"
-msgstr ""
+msgstr "ラベルによる注文またはグループ化"
 
 #: ../../core/tutorial.rst:1020
 msgid ""
@@ -842,13 +832,13 @@ msgid ""
 " directly by passing the string straight into :meth:`.select.order_by` or"
 " :meth:`.select.group_by`, among others.  This will refer to the named "
 "label and also prevent the expression from being rendered twice:"
-msgstr ""
+msgstr "文字列をショートカットとして使用したい場合がある場所の1つは、\ &quot;ORDER BY \&quot;または\ &quot;GROUP BY \&quot;節などの場所で参照したいラベル付きの列要素がいくつかある場合です。他の候補には、\ &quot;OVER \&quot;または\ &quot;DISTINCT \&quot;節内のフィールドが含まれます。 ：func： `.select`構造体にこのようなラベルがある場合は、文字列を：meth：` .select.order_by`または：meth： `.select.group_by`に直接渡すことで直接参照することができます。その他。これは名前付きラベルを参照し、式が2回表示されないようにします。"
 
 #: ../../core/tutorial.rst:1043
 msgid ""
 "We can use modifiers like :func:`.asc` or :func:`.desc` by passing the "
 "string name:"
-msgstr ""
+msgstr "文字列名を渡すことによって：func： `.asc`や：func：` .desc`のような修飾子を使うことができます："
 
 #: ../../core/tutorial.rst:1060
 msgid ""
@@ -859,11 +849,11 @@ msgid ""
 "can make the most effective choices for rendering.  Below, we illustrate "
 "how using the :class:`.ColumnElement` eliminates ambiguity when we want "
 "to order by a column name that appears more than once:"
-msgstr ""
+msgstr "ここでの文字列のフィーチャは、：meth： `〜.ColumnElement.label`メソッドを使用して特別な名前のラベルを作成したときに非常に調整されていることに注意してください。他の場合では、表現システムがレンダリングのための最も効果的な選択肢を作ることができるように、常に：class： `.ColumnElement`オブジェクトを直接参照したいと思っています。以下では、：class： `.ColumnElement`を使用すると、複数回出現する列名で並べ替えるときのあいまいさがなくなります。"
 
 #: ../../core/tutorial.rst:1087
 msgid "Using Aliases"
-msgstr ""
+msgstr "エイリアスの使用"
 
 #: ../../core/tutorial.rst:1089
 msgid ""
@@ -875,7 +865,7 @@ msgid ""
 "be named in the FROM clause multiple times. In the case of a SELECT "
 "statement, it provides a parent name for the columns represented by the "
 "statement, allowing them to be referenced relative to this name."
-msgstr ""
+msgstr "SQLのエイリアスは、テーブルまたはSELECTステートメントの\ &quot;リネームされた\&quot;バージョンに対応します。これは\ &quot;SELECT。FROM sometable AS someothername \&quot;といつでも言います。 `` AS``はテーブルの新しい名前を作成します。エイリアスは、テーブルやサブクエリを一意の名前で参照できるため、主要な構成要素です。テーブルの場合、FROM句に複数の同じテーブルの名前を付けることができます。 SELECTステートメントの場合は、ステートメントによって表される列の親名を提供します。この名前を基準にして参照できるようにします。"
 
 #: ../../core/tutorial.rst:1098
 msgid ""
@@ -888,7 +878,7 @@ msgid ""
 " to the ``addresses`` table, once for each address.   We create two "
 ":class:`.Alias` constructs against ``addresses``, and then use them both "
 "within a :func:`.select` construct:"
-msgstr ""
+msgstr "SQLAlchemyでは、：class： `.Table`、：func：` .select`構造体、またはその他の選択可能なものは、：meth： `.FromClause.alias`メソッドを使用して別名に変換できます。 。アリアの構造。例として、ユーザーの `` jack``に2つの特定の電子メールアドレスがあることを知っているとします。これらの2つのアドレスの組み合わせに基づいて、どのようにジャックを見つけることができますか？これを達成するために、アドレスごとに `` addresses``テーブルへの結合を1回使います。 `` addresses``に対してclass： `.Alias`構造を作り、それをa：func：` .select`構造体の中で使う："
 
 #: ../../core/tutorial.rst:1127
 msgid ""
@@ -900,7 +890,7 @@ msgid ""
 " of the names is also *deterministic*, meaning the same SQLAlchemy "
 "statement construct will produce the identical SQL string each time it is"
 " rendered for a particular dialect."
-msgstr ""
+msgstr "：class： `.Alias`構文は、最終的なSQL結果に` `addresses_1``と` `addresses_2``という名前を生成したことに注意してください。これらの名前の生成は、ステートメント内の構造の位置によって決まります。 2番目の `` a2``エイリアスだけを使ってクエリを作成した場合、その名前は `` addresses_1``として出てきます。名前の生成も*確定的です。つまり、特定の方言に対してレンダリングされるたびに、同じSQLAlchemyステートメント構成で同じSQL文字列が生成されます。"
 
 #: ../../core/tutorial.rst:1135
 msgid ""
@@ -908,7 +898,7 @@ msgid ""
 "construct itself, we don't need to be concerned about the generated name."
 "  However, for the purposes of debugging, it can be specified by passing "
 "a string name to the :meth:`.FromClause.alias` method::"
-msgstr ""
+msgstr "外部では：class： `.Alias`構造体を使用してエイリアスを参照するので、生成された名前について心配する必要はありません。しかし、デバッグの目的では、：meth： `.FromClause.alias`メソッドに文字列名を渡すことで指定することができます::"
 
 #: ../../core/tutorial.rst:1142
 msgid ""
@@ -918,11 +908,11 @@ msgid ""
 " entire statement. The ``correlate(None)`` directive is to avoid "
 "SQLAlchemy's attempt to \"correlate\" the inner ``users`` table with the "
 "outer one:"
-msgstr ""
+msgstr "エイリアスは、もちろんSELECT文を含め、SELECTから選択できるものに使用できます。文全体のエイリアスを作成して作成した：func： `.select`に` `users``テーブルを自己結合することができます。 `` correlate（None） ``ディレクティブは、内側の `` users``テーブルを外側のテーブルと &quot;相関&quot;させるSQLAlchemyの試みを避けることです："
 
 #: ../../core/tutorial.rst:1165
 msgid "Using Joins"
-msgstr ""
+msgstr "結合の使用"
 
 #: ../../core/tutorial.rst:1167
 msgid ""
@@ -933,7 +923,7 @@ msgid ""
 "But if we want to make a real \"JOIN\" or \"OUTERJOIN\" construct, we use"
 " the :meth:`~.FromClause.join` and :meth:`~.FromClause.outerjoin` "
 "methods, most commonly accessed from the left table in the join:"
-msgstr ""
+msgstr "途中でSELECT式を構築できるようになりました。 SELECTの次の基盤はJOIN式です。私たちはすでに、例の中でjoin節を行っています：columns節または：func： `.select`構造のwhere節に2つのテーブルを置くだけです。しかし、実際の\ &quot;JOIN \&quot;または\ &quot;OUTERJOIN \&quot;構造を作成したい場合は、：meth： `〜.FromClause.join`メソッドと：meth：`〜.FromClause.outerjoin`メソッドを使用します。結合の左の表から："
 
 #: ../../core/tutorial.rst:1180
 msgid ""
@@ -943,14 +933,14 @@ msgid ""
 ":class:`~sqlalchemy.schema.ForeignKey` object which we placed on the "
 "``addresses`` table way at the beginning of this tutorial. Already the "
 "``join()`` construct is looking like a much better way to join tables."
-msgstr ""
+msgstr "アラートリーダーはもっと驚きを見るでしょう。 SQLAlchemyは、2つのテーブルを結合する方法を考え出しました！結合のON条件は、このチュートリアルの冒頭にある `` addresses``テーブルの方法で設定した：class： `〜sqlalchemy.schema.ForeignKey`オブジェクトに基づいて自動的に生成されました。既に `` join（） ``構造はテーブルを結合するもっと良い方法のように見えます。"
 
 #: ../../core/tutorial.rst:1187
 msgid ""
 "Of course you can join on whatever expression you want, such as if we "
 "want to join on all users who use the same name in their email address as"
 " their username:"
-msgstr ""
+msgstr "もちろん、自分のユーザー名と同じ名前の電子メールアドレスに参加するすべてのユーザーに参加したい場合など、必要な表現に参加できます。"
 
 #: ../../core/tutorial.rst:1199
 msgid ""
@@ -958,13 +948,13 @@ msgid ""
 "the tables we've mentioned and then places them in the FROM clause of the"
 " statement. When we use JOINs however, we know what FROM clause we want, "
 "so here we make use of the :meth:`~.Select.select_from` method:"
-msgstr ""
+msgstr "：func： `.select`構文を作成すると、SQLAlchemyは前述のテーブルを調べて、それらをステートメントのFROM句に配置します。しかし、JOINを使うときは、私たちが望むFROM句を知っているので、ここで：meth： `〜.Select.select_from`メソッドを使います："
 
 #: ../../core/tutorial.rst:1216
 msgid ""
 "The :meth:`~.FromClause.outerjoin` method creates ``LEFT OUTER JOIN`` "
 "constructs, and is used in the same way as :meth:`~.FromClause.join`:"
-msgstr ""
+msgstr "：meth： `〜.FromClause.outerjoin`メソッドは、` LEFT OUTER JOIN`コンストラクトを作成し、以下のように使用されます：meth： `〜.FromClause.join`："
 
 #: ../../core/tutorial.rst:1227
 msgid ""
@@ -972,40 +962,40 @@ msgid ""
 "stuck in a gig using Oracle prior to version 9, and you've set up your "
 "engine (which would be using ``OracleDialect``) to use Oracle-specific "
 "SQL:"
-msgstr ""
+msgstr "これはもちろん、バージョン9より前のOracleを使ってギグに陥っていて、エンジンをセットアップしていない限り（ `` OracleDialect``を使っている）、 `` outerjoin（） ``という出力が生成されます。 Oracle固有のSQLを使用するには："
 
 #: ../../core/tutorial.rst:1239
 msgid ""
 "If you don't know what that SQL means, don't worry ! The secret tribe of "
 "Oracle DBAs don't want their black magic being found out ;)."
-msgstr ""
+msgstr "SQLが何を意味するのかわからない場合は、心配しないでください！ Oracle DBAの秘密の部族は、彼らの黒い魔法を発見したくはありません。"
 
 #: ../../core/tutorial.rst:1244
 msgid ":func:`.expression.join`"
-msgstr ""
+msgstr "：func： `.expression.join`"
 
 #: ../../core/tutorial.rst:1246
 msgid ":func:`.expression.outerjoin`"
-msgstr ""
+msgstr "：func： `.expression.outerjoin`"
 
 #: ../../core/tutorial.rst:1248
 msgid ":class:`.Join`"
-msgstr ""
+msgstr "：クラス： `.Join`"
 
 #: ../../core/tutorial.rst:1251
 msgid "Everything Else"
-msgstr ""
+msgstr "ほかのすべて"
 
 #: ../../core/tutorial.rst:1253
 msgid ""
 "The concepts of creating SQL expressions have been introduced. What's "
 "left are more variants of the same themes. So now we'll catalog the rest "
 "of the important things we'll need to know."
-msgstr ""
+msgstr "SQL式の作成の概念が導入されました。残っているのは、同じテーマのより多くの変種です。だから今私たちが知る必要がある残りの重要なものをカタログ化します。"
 
 #: ../../core/tutorial.rst:1260
 msgid "Bind Parameter Objects"
-msgstr ""
+msgstr "パラメータオブジェクトのバインド"
 
 #: ../../core/tutorial.rst:1262
 msgid ""
@@ -1017,7 +1007,7 @@ msgid ""
 "parameters by name on the API side, the database dialect converts to the "
 "appropriate named or positional style at execution time, as here where it"
 " converts to positional for SQLite:"
-msgstr ""
+msgstr "これらすべての例を通して、SQLAlchemyはリテラル式が出現するたびにバインドパラメータを作成しています。独自の名前で独自のバインド・パラメーターを指定し、同じステートメントを繰り返し使用することもできます。 ：func： `.bindparam`構文は、指定された名前を持つバインドされたパラメータを生成するために使用されます。 SQLAlchemyは常にAPI側で名前でバインドされたパラメータを参照しますが、実行時にデータベースの方言は適切な名前付きまたは位置指定のスタイルに変換されます。ここではSQLiteの定位置に変換されます。"
 
 #: ../../core/tutorial.rst:1282
 msgid ""
@@ -1025,34 +1015,34 @@ msgid ""
 " a type. The type of the bind parameter will determine its behavior "
 "within expressions and also how the data bound to it is processed before "
 "being sent off to the database:"
-msgstr ""
+msgstr "：func： `.bindparam`のもう一つの重要な側面は、型に割り当てられるということです。バインド・パラメータのタイプによって、式内での動作と、バインドされたデータが処理されてデータベースに送信される仕組みが決まります。"
 
 #: ../../core/tutorial.rst:1298
 msgid ""
 ":func:`.bindparam` constructs of the same name can also be used multiple "
 "times, where only a single named value is needed in the execute "
 "parameters:"
-msgstr ""
+msgstr "同じ名前のfunc： `.bindparam`構造体も複数回使用できます。ここでは、実行パラメータには単一の名前付き値しか必要ありません。"
 
 #: ../../core/tutorial.rst:1325
 msgid ":func:`.bindparam`"
-msgstr ""
+msgstr "：機能： `.bindparam`"
 
 #: ../../core/tutorial.rst:1328
 msgid "Functions"
-msgstr ""
+msgstr "関数"
 
 #: ../../core/tutorial.rst:1330
 msgid ""
 "SQL functions are created using the :data:`~.expression.func` keyword, "
 "which generates functions using attribute access:"
-msgstr ""
+msgstr "SQL関数は：data： `〜.expression.func`キーワードを使用して作成され、属性アクセスを使用して関数を生成します。"
 
 #: ../../core/tutorial.rst:1342
 msgid ""
 "By \"generates\", we mean that **any** SQL function is created based on "
 "the word you choose::"
-msgstr ""
+msgstr "\ &quot;generate \&quot;とは、**任意の** SQL関数は、選択した単語に基づいて作成されたことを意味します::"
 
 #: ../../core/tutorial.rst:1348
 msgid ""
@@ -1060,7 +1050,7 @@ msgid ""
 "behavioral rules to be applied. Some for example are \"ANSI\" functions, "
 "which mean they don't get the parenthesis added after them, such as "
 "CURRENT_TIMESTAMP:"
-msgstr ""
+msgstr "特定の関数名はSQLAlchemyによって認識され、特別な動作規則が適用されます。たとえば、\ &quot;ANSI \&quot;関数があります。つまり、CURRENT_TIMESTAMPのように後に括弧が追加されないという意味です。"
 
 #: ../../core/tutorial.rst:1357
 msgid ""
@@ -1072,7 +1062,7 @@ msgid ""
 "date conversions. Below, we use the result function ``scalar()`` to just "
 "read the first column of the first row and then close the result; the "
 "label, even though present, is not important in this case:"
-msgstr ""
+msgstr "関数は、通常、select文のcolumns句で使用されます。また、型を指定するだけでなく、ラベル付けすることもできます。文字列名に基づいて結果の行を対象にし、結果セット処理（Unicode変換や日付変換など）が必要な場合は、型を割り当てるために、関数にラベルを付けることをお勧めします。以下では、結果関数 `` scalar（） ``を使用して、最初の行の最初の列を読み込み、結果を閉じます。ラベルは存在していてもこの場合重要ではありません。"
 
 #: ../../core/tutorial.rst:1379
 msgid ""
@@ -1082,7 +1072,7 @@ msgid ""
 "which takes the parameters ``x`` and ``y``, and returns three columns "
 "which we'd like to name ``q``, ``z`` and ``r``, we can construct using "
 "\"lexical\" column objects as well as bind parameters:"
-msgstr ""
+msgstr "結果セット全体を返す関数をサポートするPostgreSQLやOracleなどのデータベースは、ステートメントで使用できる選択可能なユニットにアセンブルできます。パラメータ `` x``と `` y``をとり、 `` q``、 `` z``という3つのカラムを返すデータベース関数 `` calculate（） `` `と` `r``を使うと、\&quot;字句\ &quot;列オブジェクトとバインドパラメータを使って構築できます："
 
 #: ../../core/tutorial.rst:1403
 msgid ""
@@ -1092,29 +1082,29 @@ msgid ""
 "will create copies for us, and mark the bind parameters as \"unique\" so "
 "that conflicting names are isolated. Note we also make two separate "
 "aliases of our selectable:"
-msgstr ""
+msgstr "異なったバインドパラメータで `` calculate``ステートメントを2回使いたいなら、：func： `〜sqlalchemy.sql.expression.ClauseElement.unique_params`関数は私たちのためにコピーを作成し、バインドパラメータを\&quot; unique \ &quot;を使用して、競合する名前が分離されるようにします。選択可能なものの2つの別々のエイリアスも作成しています。"
 
 #: ../../core/tutorial.rst:1427
 msgid ":data:`.func`"
-msgstr ""
+msgstr "：データ： `.func`"
 
 #: ../../core/tutorial.rst:1432
 msgid "Window Functions"
-msgstr ""
+msgstr "ウィンドウ関数"
 
 #: ../../core/tutorial.rst:1434
 msgid ""
 "Any :class:`.FunctionElement`, including functions generated by "
 ":data:`~.expression.func`, can be turned into a \"window function\", that"
 " is an OVER clause, using the :meth:`.FunctionElement.over` method::"
-msgstr ""
+msgstr "Any：class： `.FunctionElement`は：data：`〜.expression.func`で生成された関数も含めて、：meth： `.FunctionElementを使ってOVER句である&quot;ウィンドウ関数 &quot;に変換できます.over`メソッド::"
 
 #: ../../core/tutorial.rst:1446
 msgid ""
 ":meth:`.FunctionElement.over` also supports range specification using "
 "either the :paramref:`.expression.over.rows` or "
 ":paramref:`.expression.over.range` parameters::"
-msgstr ""
+msgstr "：meth： `.FunctionElement.over`は：paramref：` .expression.over.rows`または：paramref： `.expression.over.range`のいずれかのパラメータを使って範囲指定をサポートしています::"
 
 #: ../../core/tutorial.rst:1461
 msgid ""
@@ -1123,37 +1113,37 @@ msgid ""
 "positive integers for ranges, zero to indicate \"CURRENT ROW\" and "
 "``None`` to indicate \"UNBOUNDED\".  See the examples at :func:`.over` "
 "for more detail."
-msgstr ""
+msgstr "：paramref： `.expression.over.rows`と：paramref：` .expression.over.range`はそれぞれ、範囲のための負の整数と正の整数の組み合わせを含む2つのタプルを受け入れ、\ &quot;CURRENT ROW \&quot; \ &quot;UNBOUNDED \&quot;を示す &quot;None&quot;を指定します。詳細については、例：func： `.over`を参照してください。"
 
 #: ../../core/tutorial.rst:1466
 msgid "support for \"rows\" and \"range\" specification for window functions"
-msgstr ""
+msgstr "ウィンドウ関数の\ &quot;行\&quot;と\ &quot;範囲\&quot;指定のサポート"
 
 #: ../../core/tutorial.rst:1471
 msgid ":func:`.over`"
-msgstr ""
+msgstr "：func： `.over`"
 
 #: ../../core/tutorial.rst:1473
 msgid ":meth:`.FunctionElement.over`"
-msgstr ""
+msgstr "：meth： `.FunctionElement.over`"
 
 #: ../../core/tutorial.rst:1476
 msgid "Unions and Other Set Operations"
-msgstr ""
+msgstr "組合とその他の集合演算"
 
 #: ../../core/tutorial.rst:1478
 msgid ""
 "Unions come in two flavors, UNION and UNION ALL, which are available via "
 "module level functions :func:`~.expression.union` and "
 ":func:`~.expression.union_all`:"
-msgstr ""
+msgstr "共用体には、モジュールレベルの関数func： `〜.expression.union`と：func：`〜.expression.union_all`の2つのフレーバーUNIONとUNION ALLがあります。"
 
 #: ../../core/tutorial.rst:1503
 msgid ""
 "Also available, though not supported on all databases, are "
 ":func:`~.expression.intersect`, :func:`~.expression.intersect_all`, "
 ":func:`~.expression.except_`, and :func:`~.expression.except_all`:"
-msgstr ""
+msgstr "func： `〜.expression.intersect`、：func：`〜.expression.intersect_all`、：func： `〜.expression.except_`、および：func：`〜は、すべてのデータベースでサポートされていますが、 .expression.except_all`："
 
 #: ../../core/tutorial.rst:1529
 msgid ""
@@ -1165,35 +1155,35 @@ msgid ""
 "that element is also a compound. For example, to nest a \"union\" and a "
 "\"select\" inside of \"except\\_\", SQLite will want the \"union\" to be "
 "stated as a subquery:"
-msgstr ""
+msgstr "いわゆる「化合物」選択肢の一般的な問題は、かっこでネスティングするという事実のために発生します。特にSQLiteでは、かっこで始まる文が好きではありません。したがって、 &quot;compound&quot;内に\ &quot;compound \&quot;を入れ子にするときは、最も外側の化合物の最初の要素に `` .alias（）。select（） ``を適用する必要があります。たとえば、\ &quot;union \&quot;と\ &quot;select \&quot;を\ &quot;except \\ _ \&quot;の中にネストする場合、SQLiteは\ &quot;union \&quot;をサブクエリとして記述します。"
 
 #: ../../core/tutorial.rst:1569
 msgid ":func:`.union`"
-msgstr ""
+msgstr "：func： `.union`"
 
 #: ../../core/tutorial.rst:1571
 msgid ":func:`.union_all`"
-msgstr ""
+msgstr "：func： `.union_all`"
 
 #: ../../core/tutorial.rst:1573
 msgid ":func:`.intersect`"
-msgstr ""
+msgstr "：func： `.intersect`"
 
 #: ../../core/tutorial.rst:1575
 msgid ":func:`.intersect_all`"
-msgstr ""
+msgstr "：func： `.intersect_all`"
 
 #: ../../core/tutorial.rst:1577
 msgid ":func:`.except_`"
-msgstr ""
+msgstr "：func： `.except_`"
 
 #: ../../core/tutorial.rst:1579
 msgid ":func:`.except_all`"
-msgstr ""
+msgstr "：func： `.except_all`"
 
 #: ../../core/tutorial.rst:1584
 msgid "Scalar Selects"
-msgstr ""
+msgstr "スカラ選択"
 
 #: ../../core/tutorial.rst:1586
 msgid ""
@@ -1201,14 +1191,14 @@ msgid ""
 "  It can then be used as a column expression.  A scalar select is often a"
 " :term:`correlated subquery`, which relies upon the enclosing SELECT "
 "statement in order to acquire at least one of its FROM clauses."
-msgstr ""
+msgstr "スカラー選択は、正確に1つの行と1つの列を返すSELECTです。これを列式として使用できます。スカラー選択は、しばしば：関連するサブクエリであり、FROM句の少なくとも1つを取得するために囲むSELECTステートメントに依存します。"
 
 #: ../../core/tutorial.rst:1591
 msgid ""
 "The :func:`.select` construct can be modified to act as a column "
 "expression by calling either the :meth:`~.SelectBase.as_scalar` or "
 ":meth:`~.SelectBase.label` method:"
-msgstr ""
+msgstr "：func： `.select`構造体は、：meth：`〜.SelectBase.as_scalar`または：meth： `〜.SelectBase.label`メソッドのいずれかを呼び出して、列式として動作するように変更できます："
 
 #: ../../core/tutorial.rst:1601
 msgid ""
@@ -1217,25 +1207,25 @@ msgid ""
 "it instead is within the :class:`~.expression.ColumnElement` family of "
 "expression constructs.  We can place this construct the same as any other"
 " column within another :func:`.select`:"
-msgstr ""
+msgstr "上記の構造体はa：class： `〜.expression.ScalarSelect`オブジェクトになり、もはやclass：`〜.expression.FromClause`階層の一部ではなくなりました。その代わりに：class： `〜.expression.ColumnElement`の式構造体の中にあります。この構造体を他の列と同じように配置することができます：func： `.select`："
 
 #: ../../core/tutorial.rst:1617
 msgid ""
 "To apply a non-anonymous column name to our scalar select, we create it "
 "using :meth:`.SelectBase.label` instead:"
-msgstr ""
+msgstr "非匿名の列名をスカラー選択に適用するには、代わりに：meth： `.SelectBase.label`を使用して作成します。"
 
 #: ../../core/tutorial.rst:1635
 msgid ":meth:`.Select.as_scalar`"
-msgstr ""
+msgstr "：meth： `.Select.as_scalar`"
 
 #: ../../core/tutorial.rst:1637
 msgid ":meth:`.Select.label`"
-msgstr ""
+msgstr "：meth： `.Select.label`"
 
 #: ../../core/tutorial.rst:1642
 msgid "Correlated Subqueries"
-msgstr ""
+msgstr "相関サブクエリ"
 
 #: ../../core/tutorial.rst:1644
 msgid ""
@@ -1245,7 +1235,7 @@ msgid ""
 " objects to that of an enclosing query, if present, and if the inner "
 "SELECT statement would still have at least one FROM clause of its own.  "
 "For example:"
-msgstr ""
+msgstr "：ref： `scalar_selects`の例では、各組み込みselectのFROM句にFROM句に` `users``テーブルが含まれていませんでした。これは、SQLAlchemyが自動的に：term： `correlates`をFROMオブジェクトに埋め込みクエリが存在する場合、内部SELECTステートメントがそれ自身のFROM句を少なくとも1つも持っているためです。例えば："
 
 #: ../../core/tutorial.rst:1666
 msgid ""
@@ -1254,13 +1244,13 @@ msgid ""
 "the ``addresses`` table but not the ``users`` table, even if both were "
 "present in the enclosing SELECT, we use the :meth:`~.Select.correlate` "
 "method to specify those FROM clauses that may be correlated:"
-msgstr ""
+msgstr "自己相関は通常予想されることを行いますが、制御することもできます。例えば、ステートメントが `` addresses``テーブルにのみ関連づけられ、 `` users``テーブルには関連しないようにするには、両者が囲まれたSELECTに存在していても、：meth： `〜.Select。 correlate`メソッドを使用して、相関する可能性のあるFROM句を指定します。"
 
 #: ../../core/tutorial.rst:1691
 msgid ""
 "To entirely disable a statement from correlating, we can pass ``None`` as"
 " the argument:"
-msgstr ""
+msgstr "ステートメントの相関を完全に無効にするには、引数として `` None``を渡すことができます："
 
 #: ../../core/tutorial.rst:1710
 msgid ""
@@ -1268,11 +1258,11 @@ msgid ""
 ":meth:`.Select.correlate_except` method.   Such as, we can write our "
 "SELECT for the ``users`` table by telling it to correlate all FROM "
 "clauses except for ``users``:"
-msgstr ""
+msgstr "：meth： `.Select.correlate_except`メソッドを使用して、除外による相関を制御することもできます。例えば、 `` users``を除くすべてのFROM句を関連付けるように指示することで、 `` users``テーブルのSELECTを書くことができます："
 
 #: ../../core/tutorial.rst:1736
 msgid "LATERAL correlation"
-msgstr ""
+msgstr "LATERAL相関"
 
 #: ../../core/tutorial.rst:1738
 msgid ""
@@ -1281,7 +1271,7 @@ msgid ""
 "single FROM clause.  This is an extremely special use case which, while "
 "part of the SQL standard, is only known to be supported by recent "
 "versions of PostgreSQL."
-msgstr ""
+msgstr "LATERAL相関は、選択可能なユニットが単一のFROM句内の別の選択可能なユニットを参照できるようにする、SQL相関の特別なサブカテゴリです。これは、SQL標準の一部ではあるが、最近のバージョンのPostgreSQLでサポートされることが知られている非常に特殊な使用例である。"
 
 #: ../../core/tutorial.rst:1744
 msgid ""
@@ -1291,7 +1281,7 @@ msgid ""
 "only refer to a table that is part of another SELECT that entirely "
 "encloses this SELECT.  The LATERAL keyword allows us to turn this "
 "behavior around, allowing an expression such as:"
-msgstr ""
+msgstr "通常、SELECT文がFROM句で `` table1 JOIN（some SELECT）AS subquery``を参照する場合、右側のサブクエリは左側の\ &quot;table1 \&quot;式を参照しないことがあります。相関は、このSELECTを完全に囲む別のSELECTの一部である表のみを参照することがあります。 LATERALキーワードは、このような振る舞いを可能にし、次のような表現を可能にします："
 
 #: ../../core/tutorial.rst:1758
 msgid ""
@@ -1300,7 +1290,7 @@ msgid ""
 "correlating to the left side of the JOIN.   SQLAlchemy Core supports a "
 "statement like the above using the :meth:`.Select.lateral` method as "
 "follows::"
-msgstr ""
+msgstr "上記のところでは、JOINの右側には、\ &quot;books \&quot;テーブルだけでなく\ &quot;people \&quot;テーブルも参照するサブクエリがあり、JOINの左側に関連付けられています。 SQLAlchemy Coreは、上記のような文を以下のように：meth： `.Select.lateral`メソッドを使用してサポートします::"
 
 #: ../../core/tutorial.rst:1774
 msgid ""
@@ -1310,7 +1300,7 @@ msgid ""
 "instead of an :class:`.Alias` which provides for the LATERAL keyword as "
 "well as special instructions to allow correlation from inside the FROM "
 "clause of the enclosing statement."
-msgstr ""
+msgstr "上記のように、：meth： `.Select.lateral`メソッドは：meth：` .Select.alias`メソッドのように動作します。これには、オプションの名前を指定することもできます。しかし、構造体は：class： `.Lateral`構造体である：class：` .Alias`は、LATERALキーワードと、囲むステートメントのFROM句の内部からの相関を可能にする特別な命令を提供します。"
 
 #: ../../core/tutorial.rst:1781
 msgid ""
@@ -1321,35 +1311,35 @@ msgid ""
 "to these tables by default, is explicit if the table is specified to "
 ":meth:`.Select.correlate`, and is explicit to all tables except those "
 "specified to :meth:`.Select.correlate_except`."
-msgstr ""
+msgstr "：meth： `.Select.lateral`メソッドは：meth：` .Select.correlate`と：meth： `.Select.correlate_except`メソッドと正常にやり取りします。ただし、相関ルールは、他のテーブルにも適用されます。囲む文のFROM句。相関はデフォルトでこれらのテーブルに対して\ &quot;自動\&quot;であり、テーブルが：meth： `.Select.correlate`に指定されている場合は明示的であり、：meth：` .Select.correlate_except` 。"
 
 #: ../../core/tutorial.rst:1792
 msgid "Support for the LATERAL keyword and lateral correlation."
-msgstr ""
+msgstr "LATERALキーワードと横方向相関のサポート。"
 
 #: ../../core/tutorial.rst:1796
 msgid ":class:`.Lateral`"
-msgstr ""
+msgstr "：クラス： `.Lateral`"
 
 #: ../../core/tutorial.rst:1798
 msgid ":meth:`.Select.lateral`"
-msgstr ""
+msgstr "：meth： `.Select.lateral`"
 
 #: ../../core/tutorial.rst:1802
 msgid "Ordering, Grouping, Limiting, Offset...ing..."
-msgstr ""
+msgstr "オーダー、グルーピング、制限、オフセット... ing ..."
 
 #: ../../core/tutorial.rst:1804
 msgid ""
 "Ordering is done by passing column expressions to the "
 ":meth:`~.SelectBase.order_by` method:"
-msgstr ""
+msgstr "順序付けは、列式を：meth： `〜.SelectBase.order_by`メソッドに渡すことによって行われます。"
 
 #: ../../core/tutorial.rst:1816
 msgid ""
 "Ascending or descending can be controlled using the "
 ":meth:`~.ColumnElement.asc` and :meth:`~.ColumnElement.desc` modifiers:"
-msgstr ""
+msgstr "昇順または降順は：meth： `〜.ColumnElement.asc`と：meth：`〜.ColumnElement.desc`修飾子を使って制御できます："
 
 #: ../../core/tutorial.rst:1828
 msgid ""
@@ -1357,21 +1347,21 @@ msgid ""
 "conjunction with aggregate functions to establish groups of rows to be "
 "aggregated. This is provided via the :meth:`~.SelectBase.group_by` "
 "method:"
-msgstr ""
+msgstr "グループ化はGROUP BY句を参照し、集約する行のグループを確立するために集計関数と一緒に使用されます。これは：meth： `〜.SelectBase.group_by`メソッドによって提供されます："
 
 #: ../../core/tutorial.rst:1845
 msgid ""
 "HAVING can be used to filter results on an aggregate value, after GROUP "
 "BY has been applied.  It's available here via the :meth:`~.Select.having`"
 " method:"
-msgstr ""
+msgstr "GROUP BYが適用された後、HAVINGを使用して集計値の結果をフィルタリングできます。これは：meth： `〜.Select.having`メソッドで利用できます："
 
 #: ../../core/tutorial.rst:1864
 msgid ""
 "A common system of dealing with duplicates in composed SELECT statements "
 "is the DISTINCT modifier.  A simple DISTINCT clause can be added using "
 "the :meth:`.Select.distinct` method:"
-msgstr ""
+msgstr "合成されたSELECT文で重複を処理する一般的なシステムは、DISTINCT修飾子です。単純なDISTINCT節は：meth： `.Select.distinct`メソッドを使って追加できます："
 
 #: ../../core/tutorial.rst:1881
 msgid ""
@@ -1383,11 +1373,11 @@ msgid ""
 "ids to achieve the same effect.  The :meth:`~.Select.limit` and "
 ":meth:`~.Select.offset` methods provide an easy abstraction into the "
 "current backend's methodology:"
-msgstr ""
+msgstr "ほとんどのデータベースバックエンドは、返される行の数を制限するシステムをサポートしています。大半は、指定された\ &quot;オフセット\&quot;の後に行を返す方法もあります。 PostgreSQL、MySQL、SQLiteなどの一般的なバックエンドはLIMITとOFFSETのキーワードをサポートしていますが、他のバックエンドは同じ効果を得るために\ &quot;ウィンドウ関数\&quot;や行IDのようなより秘密の機能を参照する必要があります。 ：meth： `〜.Select.limit`メソッドと：meth：`〜.Select.offset`メソッドは、現在のバックエンドの方法論を簡単に抽象化します："
 
 #: ../../core/tutorial.rst:1906
 msgid "Inserts, Updates and Deletes"
-msgstr ""
+msgstr "挿入、更新、および削除"
 
 #: ../../core/tutorial.rst:1908
 msgid ""
@@ -1396,13 +1386,13 @@ msgid ""
 ":meth:`~.TableClause.update` method produces UPDATE.  Both of these "
 "constructs feature a method called :meth:`~.ValuesBase.values` which "
 "specifies the VALUES or SET clause of the statement."
-msgstr ""
+msgstr "我々は見た：meth： `〜.TableClause.insert`はこのチュートリアルの前半で説明しました。 ：meth： `〜.TableClause.insert`はINSERTを生成し、：meth：`〜.TableClause.update`メソッドはUPDATEを生成します。どちらの構文も、：meth： `〜.ValuesBase.values`というメソッドで、ステートメントのVALUES節またはSET節を指定します。"
 
 #: ../../core/tutorial.rst:1915
 msgid ""
 "The :meth:`~.ValuesBase.values` method accommodates any column expression"
 " as a value:"
-msgstr ""
+msgstr "：meth： `〜.ValuesBase.values`メソッドは、任意の列式を値として扱います："
 
 #: ../../core/tutorial.rst:1928
 msgid ""
@@ -1419,14 +1409,14 @@ msgid ""
 " are reserved for the \"automatic\" generation of bind names.  We can "
 "combine the usage of implicitly available bind names and explicitly named"
 " parameters as in the example below:"
-msgstr ""
+msgstr "\ &quot;execute many \&quot;コンテキストで：meth： `〜.TableClause.insert`または：meth：`〜.TableClause.update`を使用する場合、引数で参照できる名前付きバインドパラメータを指定することもできますリスト。 2つの構文は、実行時に：meth： `〜.Connection.execute`に送られた辞書に渡された任意の列名のためのバインドされたプレースホルダを自動的に生成します。しかし、明示的にターゲットとした名前付きパラメータを合成式で使用する場合は、：func： `〜.expression.bindparam`構文を使用する必要があります。 ：meth： `〜.TableClause.insert`または：meth：`〜.TableClause.update`を使用して：func： `〜.expression.bindparam`を使用すると、テーブルのカラム自体の名前は\&quot; automatic \ &quot;バインド名の生成。以下の例のように、暗黙的に使用可能なバインド名と明示的に名前が付けられたパラメータの使用法を組み合わせることができます。"
 
 #: ../../core/tutorial.rst:1957
 msgid ""
 "An UPDATE statement is emitted using the :meth:`~.TableClause.update` "
 "construct.  This works much like an INSERT, except there is an additional"
 " WHERE clause that can be specified:"
-msgstr ""
+msgstr "UPDATE文は、：meth： `〜.TableClause.update`構文を使用して生成されます。これは、指定できる追加のWHERE句があることを除いて、INSERTとよく似ています。"
 
 #: ../../core/tutorial.rst:1973
 msgid ""
@@ -1434,21 +1424,21 @@ msgid ""
 " may wish to also use explicitly named bound parameters in the WHERE "
 "clause.  Again, :func:`~.expression.bindparam` is the construct used to "
 "achieve this:"
-msgstr ""
+msgstr "\ &quot;executemany \&quot;コンテキストで：meth： `〜.TableClause.update`を使用する場合、WHERE句で明示的に名前付きのバインドされたパラメータを使用することもできます。ここでも、：func： `〜.expression.bindparam`はこれを達成するために使用される構造体です："
 
 #: ../../core/tutorial.rst:1995
 msgid "Correlated Updates"
-msgstr ""
+msgstr "相関関係の更新"
 
 #: ../../core/tutorial.rst:1997
 msgid ""
 "A correlated update lets you update a table using selection from another "
 "table, or the same table:"
-msgstr ""
+msgstr "相関更新では、別の表または同じ表からの選択を使用して表を更新できます。"
 
 #: ../../core/tutorial.rst:2017
 msgid "Multiple Table Updates"
-msgstr ""
+msgstr "複数のテーブルの更新"
 
 #: ../../core/tutorial.rst:2021
 msgid ""
@@ -1460,22 +1450,22 @@ msgid ""
 "tables can be embedded into a single UPDATE statement separated by a "
 "comma. The SQLAlchemy :func:`.update` construct supports both of these "
 "modes implicitly, by specifying multiple tables in the WHERE clause::"
-msgstr ""
+msgstr "PostgreSQL、Microsoft SQL Server、およびMySQLバックエンドは、すべて複数のテーブルを参照するUPDATE文をサポートしています。 PGとMSSQLの場合、これは\ &quot;UPDATE FROM \&quot;構文で、一度に1つのテーブルを更新しますが、WHERE句で直接参照できる追加の\ &quot;FROM \&quot;節で追加のテーブルを参照できます。 MySQLでは、カンマで区切られた単一のUPDATE文に複数のテーブルを埋め込むことができます。 SQLAlchemy：func： `.update`構文は、WHERE句で複数のテーブルを指定することによって、これらのモードを暗黙的にサポートします::"
 
 #: ../../core/tutorial.rst:2035
 msgid "The resulting SQL from the above statement would render as::"
-msgstr ""
+msgstr "上記の文から得られるSQLは::"
 
 #: ../../core/tutorial.rst:2041
 msgid ""
 "When using MySQL, columns from each table can be assigned to in the SET "
 "clause directly, using the dictionary form passed to "
 ":meth:`.Update.values`::"
-msgstr ""
+msgstr "MySQLを使用する場合、各テーブルのカラムは、SET句の中で、：meth： `.Update.values`に渡されるディクショナリフォームを使用して直接割り当てることができます::"
 
 #: ../../core/tutorial.rst:2052
 msgid "The tables are referenced explicitly in the SET clause::"
-msgstr ""
+msgstr "テーブルはSET節で明示的に参照されます::"
 
 #: ../../core/tutorial.rst:2058 ../../core/tutorial.rst:2163
 msgid ""
@@ -1484,11 +1474,11 @@ msgid ""
 "is printed as a string without specification of a dialect, the \"string "
 "SQL\" compiler will be invoked which provides a non-working SQL "
 "representation of the construct."
-msgstr ""
+msgstr "この構造体がサポートされていないデータベースで使用されると、コンパイラは `` NotImplementedError``を発生させます。便宜上、ステートメントが方言が指定されていない文字列として出力された場合、\ &quot;文字列SQL \&quot;コンパイラが呼び出され、構文の非動作SQL表現が提供されます。"
 
 #: ../../core/tutorial.rst:2067
 msgid "Parameter-Ordered Updates"
-msgstr ""
+msgstr "パラメータオーダーの更新"
 
 #: ../../core/tutorial.rst:2069
 msgid ""
@@ -1501,7 +1491,7 @@ msgid ""
 "either client side or server side. Since the parameters themselves are "
 "passed to the :meth:`.Update.values` method as Python dictionary keys, "
 "there is no other fixed ordering available."
-msgstr ""
+msgstr "SET句をレンダリングするときの：func： `.update`のデフォルトの動作は、originating：class：` .Table`オブジェクトで与えられた列の順序付けを使ってレンダリングすることです。これは、特定の列を持つ特定のUPDATE文のレンダリングが毎回同じようにレンダリングされることを意味するため、重要な動作です。これは、クライアント側またはサーバー側の文の形式に依存する問合せキャッシュ・システムに影響します側。パラメータ自体は：meth： `.Update.values`メソッドにPythonのディクショナリキーとして渡されるため、利用可能な他の固定順序はありません。"
 
 #: ../../core/tutorial.rst:2080
 msgid ""
@@ -1509,18 +1499,18 @@ msgid ""
 " of an UPDATE statement can be significant.  The main example of this is "
 "when using MySQL and providing updates to column values based on that of "
 "other column values.  The end result of the following statement::"
-msgstr ""
+msgstr "しかし、場合によっては、UPDATEステートメントのSET節に表示されるパラメーターの順序が重要になることがあります。この主な例は、MySQLを使用し、他の列の値に基づいて列の値を更新するときです。次のステートメントの最終結果::"
 
 #: ../../core/tutorial.rst:2087
 msgid "Will have a different result than::"
-msgstr ""
+msgstr "::とは異なる結果をもたらすでしょう。"
 
 #: ../../core/tutorial.rst:2091
 msgid ""
 "This because on MySQL, the individual SET clauses are fully evaluated on "
 "a per-value basis, as opposed to on a per-row basis, and as each SET "
 "clause is evaluated, the values embedded in the row are changing."
-msgstr ""
+msgstr "これは、MySQLでは個々のSET句が行単位ではなく、値ごとに完全に評価され、各SET句が評価されるときに行に埋め込まれた値が変化しているためです。"
 
 #: ../../core/tutorial.rst:2095
 msgid ""
@@ -1528,7 +1518,7 @@ msgid ""
 ":paramref:`~sqlalchemy.sql.expression.update.preserve_parameter_order` "
 "flag may be used.  When using this flag, we supply a **Python list of "
 "2-tuples** as the argument to the :meth:`.Update.values` method::"
-msgstr ""
+msgstr "この特定のユースケースに合わせて、：paramref： `〜sqlalchemy.sql.expression.update.preserve_parameter_order`フラグを使用することができます。このフラグを使用するときは、：meth： `.Update.values`メソッドの引数として**の2つのタプル**のPythonリストを提供します::"
 
 #: ../../core/tutorial.rst:2103
 msgid ""
@@ -1536,34 +1526,34 @@ msgid ""
 "dictionary except it is ordered.  Using the above form, we are assured "
 "that the \"y\" column's SET clause will render first, then the \"x\" "
 "column's SET clause."
-msgstr ""
+msgstr "2タプルのリストは、基本的にPython辞書と同じ構造ですが、順序は異なります。上記の形式を使用すると、\ &quot;y \&quot;列のSET句が最初にレンダリングされ、次に\ &quot;x \&quot;列のSET句がレンダリングされることが保証されます。"
 
 #: ../../core/tutorial.rst:2107
 msgid ""
 "Added support for explicit ordering of UPDATE parameters using the "
 ":paramref:`~sqlalchemy.sql.expression.update.preserve_parameter_order` "
 "flag."
-msgstr ""
+msgstr "：paramref： `〜sqlalchemy.sql.expression.update.preserve_parameter_order`フラグを使用して、UPDATEパラメータの明示的な順序付けをサポートしました。"
 
 #: ../../core/tutorial.rst:2113
 msgid ""
 ":ref:`mysql_insert_on_duplicate_key_update` - background on the MySQL "
 "``ON DUPLICATE KEY UPDATE`` clause and how to support parameter ordering."
-msgstr ""
+msgstr "：ref： `mysql_insert_on_duplicate_key_update`  -  MySQLの` `ON DUPLICATE KEY UPDATE``節の背景と、パラメータの順序付けをサポートする方法。"
 
 #: ../../core/tutorial.rst:2119
 msgid "Deletes"
-msgstr ""
+msgstr "削除"
 
 #: ../../core/tutorial.rst:2121
 msgid ""
 "Finally, a delete.  This is accomplished easily enough using the "
 ":meth:`~.TableClause.delete` construct:"
-msgstr ""
+msgstr "最後に、削除。これは：meth： `〜.TableClause.delete`構文を使って簡単に行えます："
 
 #: ../../core/tutorial.rst:2141
 msgid "Multiple Table Deletes"
-msgstr ""
+msgstr "複数のテーブルの削除"
 
 #: ../../core/tutorial.rst:2145
 msgid ""
@@ -1573,17 +1563,17 @@ msgid ""
 "for SQL Server, it's a \"DELETE FROM\" that refers to more than one "
 "table.  The SQLAlchemy :func:`.delete` construct supports both of these "
 "modes implicitly, by specifying multiple tables in the WHERE clause::"
-msgstr ""
+msgstr "PostgreSQL、Microsoft SQL Server、およびMySQLのバックエンドはすべて、WHERE条件内の複数のテーブルを参照するDELETE文をサポートしています。 PGとMySQLの場合、これは\ &quot;DELETE USING \&quot;構文であり、SQL Serverの場合は複数のテーブルを参照する\ &quot;DELETE FROM \&quot;です。 SQLAlchemy：func： `.delete`構文は、WHERE句で複数のテーブルを指定することによって、これらのモードを暗黙的にサポートします::"
 
 #: ../../core/tutorial.rst:2157
 msgid ""
 "On a Postgresql backend, the resulting SQL from the above statement would"
 " render as::"
-msgstr ""
+msgstr "Postgresqlのバックエンドでは、上記の文から得られるSQLは::"
 
 #: ../../core/tutorial.rst:2170
 msgid "Matched Row Counts"
-msgstr ""
+msgstr "一致した行数"
 
 #: ../../core/tutorial.rst:2172
 msgid ""
@@ -1592,29 +1582,29 @@ msgid ""
 "number of rows that were matched by the WHERE clause. Note that by "
 "\"matched\", this includes rows where no UPDATE actually took place. The "
 "value is available as :attr:`~.ResultProxy.rowcount`:"
-msgstr ""
+msgstr "：meth： `〜.TableClause.update`と：meth：`〜.TableClause.delete`は*一致する行数*に関連付けられます。これは、WHERE句で一致した行の数を示す数値です。 \ &quot;matched \&quot;によって、UPDATEが実際に行なわれなかった行が含まれていることに注意してください。値は次のように使用できます：attr： `〜.ResultProxy.rowcount`："
 
 #: ../../core/tutorial.rst:2188
 msgid "Further Reference"
-msgstr ""
+msgstr "さらなる参照"
 
 #: ../../core/tutorial.rst:2190
 msgid "Expression Language Reference: :ref:`expression_api_toplevel`"
-msgstr ""
+msgstr "表現言語リファレンス：：ref： `expression_api_toplevel`"
 
 #: ../../core/tutorial.rst:2192
 msgid "Database Metadata Reference: :ref:`metadata_toplevel`"
-msgstr ""
+msgstr "データベースメタデータリファレンス：：ref： `metadata_toplevel`"
 
 #: ../../core/tutorial.rst:2194
 msgid "Engine Reference: :doc:`/core/engines`"
-msgstr ""
+msgstr "エンジンリファレンス：：doc： `/ core / engines`"
 
 #: ../../core/tutorial.rst:2196
 msgid "Connection Reference: :ref:`connections_toplevel`"
-msgstr ""
+msgstr "接続リファレンス：：ref： `connections_toplevel`"
 
 #: ../../core/tutorial.rst:2198
 msgid "Types Reference: :ref:`types_toplevel`"
-msgstr ""
+msgstr "型リファレンス：：ref： `types_toplevel`"
 

@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../core/connections.rst:5
 msgid "Working with Engines and Connections"
-msgstr ""
+msgstr "エンジンと接続の操作"
 
 #: ../../core/connections.rst:9
 msgid ""
@@ -32,17 +22,17 @@ msgid ""
 "involvement by the ORM's higher level management services, the "
 ":class:`.Engine` and :class:`.Connection` are king (and queen?) - read "
 "on."
-msgstr ""
+msgstr "このセクションでは、：class： `.Engine`、：class：` .Connection`、および関連するオブジェクトを直接使用する方法について詳しく説明します。 SQLAlchemy ORMを使用する場合、これらのオブジェクトは一般にアクセスされないことに注意することが重要です。代わりに：class： `.Session`オブジェクトがデータベースへのインタフェースとして使用されます。しかし、ORMの上位レベルの管理サービスが関与していないテキストSQLステートメントやSQL式構造を直接使用するアプリケーションの場合、：class： `.Engine`と：class：` .Connection`はキングです女王？） - 読んでください。"
 
 #: ../../core/connections.rst:19
 msgid "Basic Usage"
-msgstr ""
+msgstr "基本的な使用法"
 
 #: ../../core/connections.rst:21
 msgid ""
 "Recall from :doc:`/core/engines` that an :class:`.Engine` is created via "
 "the :func:`.create_engine` call::"
-msgstr ""
+msgstr "：func： `.create_engine`コールでクラス：` .Engine`が作成されたことを思い出してください：:: / core / engines` ::"
 
 #: ../../core/connections.rst:26
 msgid ""
@@ -54,7 +44,7 @@ msgid ""
 "DBAPI ``connect`` function, which represents just one connection resource"
 " - the :class:`.Engine` is most efficient when created just once at the "
 "module level of an application, not per-object or per-function call."
-msgstr ""
+msgstr "：func： `.create_engine（）`の典型的な使い方は、特定のデータベースURLごとに一度であり、単一のアプリケーションプロセスの存続期間にわたってグローバルに保持されます。単一の：class： `.Engine`は、プロセスに代わって多くの個々のDBAPI接続を管理し、並行して呼び出されることを意図しています。 ：class： `.Engine`はDBAPIの` `connect``関数と同義ではありません**：**：` .Engine`はモジュールで一度だけ作成されたときに最も効率的ですオブジェクト単位または関数単位の呼び出しではなく、アプリケーションのレベル。"
 
 #: ../../core/connections.rst:35
 msgid ""
@@ -66,14 +56,14 @@ msgid ""
 " to not be portable across process boundaries. An :class:`.Engine` that "
 "is configured not to use pooling (which is achieved via the usage of "
 ":class:`.NullPool`) does not have this requirement."
-msgstr ""
+msgstr "`` os.fork``システムコールや、例えばPythonの `` multiprocessing``モジュールを使用するマルチプロセスアプリケーションでは、通常、各子プロセスに別々の：class： `.Engine`を使用する必要があります。これは、：class： `.Engine`が最終的にDBAPI接続を参照する接続プールへの参照を保持しているためです。これらはプロセスの境界を越えて移植できない傾向があります。プーリングを使用しないように設定されたclass： `.Engine`（これは：class：` .NullPool`の使用によって実現されます）にはこの要件はありません。"
 
 #: ../../core/connections.rst:44
 msgid ""
 "The engine can be used directly to issue SQL to the database. The most "
 "generic way is first procure a connection resource, which you get via the"
 " :meth:`.Engine.connect` method::"
-msgstr ""
+msgstr "エンジンを直接使用してデータベースにSQLを発行することができます。最も一般的な方法は、まず：meth： `.Engine.connect`メソッドで取得する接続リソースを取得することです::"
 
 #: ../../core/connections.rst:54
 msgid ""
@@ -81,7 +71,7 @@ msgid ""
 "**proxy** object for an actual DBAPI connection.  The DBAPI connection is"
 " retrieved from the connection pool at the point at which "
 ":class:`.Connection` is created."
-msgstr ""
+msgstr "接続は：class： `.Connection`のインスタンスです。これは実際のDBAPI接続の**プロキシ**オブジェクトです。 DBAPI接続は、class： `.Connection`が作成された時点で接続プールから取得されます。"
 
 #: ../../core/connections.rst:59
 msgid ""
@@ -92,7 +82,7 @@ msgid ""
 "  A :class:`.ResultProxy` that returns no rows, such as that of an UPDATE"
 " statement (without any returned rows), releases cursor resources "
 "immediately upon construction."
-msgstr ""
+msgstr "返される結果は、：class： `.ResultProxy`のインスタンスで、DBAPIカーソルを参照し、DBAPIカーソルのインタフェースとほぼ互換性のあるインタフェースを提供します。 DBAPIカーソルは、すべての結果行（存在する場合）が使い果たされたときに：class： `.ResultProxy`によって閉じられます。 A：class： `.ResultProxy`は、UPDATE文のような行を返しません（返された行はありません）。"
 
 #: ../../core/connections.rst:67
 msgid ""
@@ -103,13 +93,13 @@ msgid ""
 "``rollback()`` call on the DBAPI connection so that any transactional "
 "state or locks are removed, and the connection is ready for its next "
 "usage."
-msgstr ""
+msgstr "：meth： `〜.Connection.close`メソッドが呼び出されると、参照されるDBAPI接続は：term：`解放されて接続プールに接続されます。プーリングが使用されていると仮定すると、データベース自体の観点からは、実際には &quot;クローズド&quot;はありません。プーリングメカニズムはDBAPI接続で `` rollback（） ``呼び出しを発行し、トランザクション状態やロックが削除され、次回の使用の準備ができます。"
 
 #: ../../core/connections.rst:74
 msgid ""
 "The above procedure can be performed in a shorthand way by using the "
 ":meth:`~.Engine.execute` method of :class:`.Engine` itself::"
-msgstr ""
+msgstr "上記の手順は：meth： `〜.Engine.execute`メソッドを使って簡単に実行できます：class：` .Engine`自体::"
 
 #: ../../core/connections.rst:81
 msgid ""
@@ -121,13 +111,13 @@ msgid ""
 "cursor is closed, the :class:`.Connection` object itself is also closed, "
 "which again returns the DBAPI connection to the connection pool, "
 "releasing transactional resources."
-msgstr ""
+msgstr "上記の場合、：meth： `〜.Engine.execute`メソッドは、それ自身で新しい：class：` .Connection`を取得し、そのオブジェクトでステートメントを実行し、：class： `.ResultProxy`を返します。この場合、：class： `.ResultProxy`は` `close_with_result``と呼ばれる特別なフラグを含みます。これは、その基になるDBAPIカーソルが閉じられると、：class：` .Connection`オブジェクト自体も閉じられます。 DBAPI接続を接続プールに戻し、トランザクション・リソースを解放します。"
 
 #: ../../core/connections.rst:89
 msgid ""
 "If the :class:`.ResultProxy` potentially has rows remaining, it can be "
 "instructed to close out its resources explicitly::"
-msgstr ""
+msgstr "：class： `.ResultProxy`に潜在的に行が残っている場合、そのリソースを明示的に閉じるように指示することができます::"
 
 #: ../../core/connections.rst:94
 msgid ""
@@ -138,7 +128,7 @@ msgid ""
 "achieves this by the usage of weakref callbacks - *never* the ``__del__``"
 " method) - however it's never a good idea to rely upon Python garbage "
 "collection to manage resources."
-msgstr ""
+msgstr "：class： `.ResultProxy`に残っている行が残っていて、アプリケーションが閉じずに参照解除されると、Pythonのガベージコレクションは最終的にカーソルを閉じて、プールされたDBAPI接続リソースをプールに戻します（SQLAlchemyはこれはweakrefコールバックの使用によるものです。*決して* `` __del__``メソッド） - しかし、リソースを管理するためにPythonのガベージコレクションに依存することは決して良い考えではありません。"
 
 #: ../../core/connections.rst:101
 msgid ""
@@ -146,11 +136,11 @@ msgid ""
 ":meth:`~.Connection.execute` method can of course accommodate more than "
 "that, including the variety of SQL expression constructs described in "
 ":ref:`sqlexpression_toplevel`."
-msgstr ""
+msgstr "上記の例では、テキストのSQL文字列の実行を示しています。 ：meth： `〜.Connection.execute`メソッドはもちろん、ref：` sqlexpression_toplevel`に記述されているさまざまなSQL式の構文を含めて、それ以上のものに対応できます。"
 
 #: ../../core/connections.rst:107
 msgid "Using Transactions"
-msgstr ""
+msgstr "トランザクションの使用"
 
 #: ../../core/connections.rst:111
 msgid ""
@@ -160,7 +150,7 @@ msgid ""
 ":class:`.Session` object, which makes usage of the :class:`.Transaction` "
 "object internally. See :ref:`unitofwork_transaction` for further "
 "information."
-msgstr ""
+msgstr "このセクションでは、class： `.Engine`と：class：` .Connection`オブジェクトを直接扱うときのトランザクションの使い方について説明します。 SQLAlchemy ORMを使用する場合、トランザクション制御用のパブリックAPIは、：class： `.Session`オブジェクトを介して行われます。このオブジェクトは：class：` .Transaction`オブジェクトを内部的に使用します。詳細は：ref： `unitofwork_transaction`を参照してください。"
 
 #: ../../core/connections.rst:118
 msgid ""
@@ -169,23 +159,23 @@ msgid ""
 "object. This object is usually used within a try/except clause so that it"
 " is guaranteed to invoke :meth:`.Transaction.rollback` or "
 ":meth:`.Transaction.commit`::"
-msgstr ""
+msgstr "：class： `〜sqlalchemy.engine.Connection`オブジェクトは：class：` .Transaction`オブジェクトを返す：meth： `〜.Connection.begin`メソッドを提供します。このオブジェクトは通常、try / except句内で使用されるため、meth： `.Transaction.rollback`または：meth：` .Transaction.commit` ::を呼び出すことが保証されています"
 
 #: ../../core/connections.rst:133
 msgid ""
 "The above block can be created more succinctly using context managers, "
 "either given an :class:`.Engine`::"
-msgstr ""
+msgstr "上記のブロックはコンテキストマネージャを使ってより簡潔に作成することができます：class： `.Engine` ::"
 
 #: ../../core/connections.rst:141
 msgid ""
 "Or from the :class:`.Connection`, in which case the :class:`.Transaction`"
 " object is available as well::"
-msgstr ""
+msgstr "または、：class： `.Connection`から：class：` .Transaction`オブジェクトも利用できます::"
 
 #: ../../core/connections.rst:151
 msgid "Nesting of Transaction Blocks"
-msgstr ""
+msgstr "トランザクションブロックのネスト"
 
 #: ../../core/connections.rst:153
 msgid ""
@@ -194,7 +184,7 @@ msgid ""
 "functions both issue a transaction on a :class:`.Connection`, but only "
 "the outermost :class:`.Transaction` object actually takes effect when it "
 "is committed."
-msgstr ""
+msgstr "：class： `.Transaction`オブジェクトは、一番外側の開始/コミットのペアを追跡することによって、\&quot;入れ子\ &quot;の振る舞いも処理します。この例では、2つの関数の両方が：class： `.Connection`でトランザクションを発行しますが、最も外側の：class：` .Transaction`オブジェクトだけが実際にコミットされたときに有効になります。"
 
 #: ../../core/connections.rst:186
 msgid ""
@@ -207,11 +197,11 @@ msgid ""
 "\"nesting\" behavior allows the creation of functions which \"guarantee\""
 " that a transaction will be used if one was not already available, but "
 "will automatically participate in an enclosing transaction if one exists."
-msgstr ""
+msgstr "上では、 `` connection_begin（） ``を呼び出す `` method_a``が最初に呼び出されます。次に、 `` method_b``を呼び出します。 `` method_b``が `` connection.begin（） ``を呼び出すとき、単に `` commit（） ``を呼び出すとデクリメントされるカウンタをインクリメントします。 `` method_a``または `` method_b``のどちらかが `` rollback（） ``を呼び出すと、トランザクション全体がロールバックされます。 `` method_a``が `` commit（） ``メソッドを呼び出すまで、トランザクションはコミットされません。この &quot;ネスティング（nesting）&quot;動作は、トランザクションがまだ利用可能でない場合にトランザクションが使用されることを保証する機能の作成を可能にするが、トランザクションが存在する場合にはそれを自動的に囲むトランザクションに参加する。"
 
 #: ../../core/connections.rst:202
 msgid "Understanding Autocommit"
-msgstr ""
+msgstr "オートコミットについて"
 
 #: ../../core/connections.rst:204
 msgid ""
@@ -223,7 +213,7 @@ msgid ""
 "core behavior of DBAPI per PEP-0249 is that a *transaction is always in "
 "progress*, providing only ``rollback()`` and ``commit()`` methods but no "
 "``begin()``. SQLAlchemy assumes this is the case for any given DBAPI."
-msgstr ""
+msgstr "前のトランザクションの例は：class： `.Transaction`を使っていくつかの実行が同じトランザクションに参加できるようにする方法を示しています。 ：class： `.Transaction`を使わずにINSERT、UPDATE、またはDELETE呼び出しを発行するとどうなりますか？一部のDBAPI実装では、さまざまな特別な &quot;非トランザクション&quot;モードを提供していますが、PEP-0249のDBAPIのコア動作は、トランザクションが常に進行中*で、 `` rollback（） ``と `` commit ） ``メソッドではなく `` begin（） ``を呼び出すことができます。 SQLAlchemyは、これが与えられたDBAPIの場合であると仮定します。"
 
 #: ../../core/connections.rst:213
 msgid ""
@@ -238,7 +228,7 @@ msgid ""
 "the flag is not set, a regular expression is used to detect INSERT, "
 "UPDATE, DELETE, as well as a variety of other commands for a particular "
 "backend::"
-msgstr ""
+msgstr "この要件が与えられると、SQLAlchemyはすべてのバックエンドで完全に一貫して機能する独自の\ &quot;自動コミット\&quot;機能を実装します。これは、データ変更操作、つまりINSERT、UPDATE、DELETE、およびCREATE TABLE、ALTER TABLEなどのデータ定義言語（DDL）文を表す文を検出し、トランザクションが進行中でない場合にCOMMITを自動的に発行することによって実現されます。検出は、文の `` autocommit = True``実行オプションの有無に基づいて行われます。文がテキストのみの文であり、フラグが設定されていない場合は、正規表現を使用して特定のバックエンドに対してさまざまな他のコマンドと同様にINSERT、UPDATE、DELETEを検出します。"
 
 #: ../../core/connections.rst:227
 msgid ""
@@ -246,7 +236,7 @@ msgid ""
 ":class:`.Transaction` has otherwise been declared.   This means the "
 "feature is not generally used with the ORM, as the :class:`.Session` "
 "object by default always maintains an ongoing :class:`.Transaction`."
-msgstr ""
+msgstr "\ &quot;autocommit \&quot;機能は、class： `.Transaction`が宣言されていない場合にのみ有効です。つまり、：class： `.Session`オブジェクトは、デフォルトで常に進行中の：class：` .Transaction`を維持しているため、この機能はORMで一般的には使用されません。"
 
 #: ../../core/connections.rst:232
 msgid ""
@@ -257,11 +247,11 @@ msgid ""
 "selected scope. For example, a :func:`.text` construct representing a "
 "stored procedure that commits might use it so that a SELECT statement "
 "will issue a COMMIT::"
-msgstr ""
+msgstr "\ &quot;autocommit \&quot;の動作を完全に制御するには、class： `.Connection`、：class：` .Engine`、：class： `.Executable`で提供されるgenerative：meth：` .Connection.execution_options`メソッドを使用できます。選択されたスコープの自動コミットをオンまたはオフにする\ &quot;自動コミット\&quot;フラグを使用します。たとえば、ストアド・プロシージャを表すa：func： `.text`構造体は、コミットするストアド・プロシージャを使用して、SELECT文がCOMMIT ::"
 
 #: ../../core/connections.rst:244
 msgid "Connectionless Execution, Implicit Execution"
-msgstr ""
+msgstr "コネクションレス型の実行、暗黙の実行"
 
 #: ../../core/connections.rst:246
 msgid ""
@@ -270,7 +260,7 @@ msgid ""
 "refers to the usage of the ``execute()`` method on an object which is not"
 " a :class:`.Connection`.  This was illustrated using the "
 ":meth:`~.Engine.execute` method of :class:`.Engine`::"
-msgstr ""
+msgstr "最初のセクションから：class： `.Connection`の明示的な使用の有無にかかわらず実行することを思い出してください。 \ &quot;Connectionless \&quot;の実行とは：class： `.Connection`ではないオブジェクトに対して` `execute（）` `メソッドを使用することを指します。これは：meth： `〜.Engine.execute`メソッドを使って説明しました：class：` .Engine` ::"
 
 #: ../../core/connections.rst:256
 msgid ""
@@ -280,24 +270,24 @@ msgid ""
 "execution.   The SQL expression object itself references an "
 ":class:`.Engine` or :class:`.Connection` known as the **bind**, which it "
 "uses in order to provide so-called \"implicit\" execution services."
-msgstr ""
+msgstr "\ &quot;コネクションレス\&quot;の実行に加えて、実行をサポートするSQL式オブジェクトのマーカーである：class： `.Executable`構文の：meth：`〜.Executable.execute`メソッドを使用することもできます。 SQL式オブジェクト自体は：class： `.Engine`または**：bind：**と呼ばれる：class：` .Connection`を参照します。これはいわゆる暗黙的な実行サービスを提供するために使用されます。"
 
 #: ../../core/connections.rst:263
 msgid "Given a table as below::"
-msgstr ""
+msgstr "与えられたテーブルは::"
 
 #: ../../core/connections.rst:273
 msgid ""
 "Explicit execution delivers the SQL text or constructed SQL expression to"
 " the :meth:`~.Connection.execute` method of "
 ":class:`~sqlalchemy.engine.Connection`:"
-msgstr ""
+msgstr "明示的に実行すると、SQLテキストまたは構築されたSQL式が：meth： `〜.Connection.execute`メソッドに渡されます。class：`〜sqlalchemy.engine.Connection`："
 
 #: ../../core/connections.rst:285
 msgid ""
 "Explicit, connectionless execution delivers the expression to the "
 ":meth:`~.Engine.execute` method of :class:`~sqlalchemy.engine.Engine`:"
-msgstr ""
+msgstr "明示的でコネクションレスな実行は、式を：meth： `〜.Engine.execute`メソッドに渡します：class：`〜sqlalchemy.engine.Engine`："
 
 #: ../../core/connections.rst:296
 msgid ""
@@ -312,7 +302,7 @@ msgid ""
 ":attr:`.MetaData.bind` has been used to associate a series of "
 ":class:`.Table` objects and all SQL constructs derived from them with a "
 "specific engine::"
-msgstr ""
+msgstr "暗黙の実行もコネクションレスであり、式自体に：meth： `〜.Executable.execute`メソッドを使用します。このメソッドは：class： `.Executable`クラスの一部として提供されます。このクラスは、データベースに対して呼び出されるのに十分なSQLステートメントを参照します。このメソッドは、：class： `〜sqlalchemy.engine.Engine`または：class：`〜sqlalchemy.engine.Connection`のいずれかが式オブジェクトに**バインド**されているという前提を使用します。 \ &quot;bound \&quot;という特別な属性：attr： `.MetaData.bind`は一連の：class：` .Table`オブジェクトと、それらから派生したすべてのSQL構造体を特定のエンジンに関連付けるために使用されています::"
 
 #: ../../core/connections.rst:315
 msgid ""
@@ -321,17 +311,17 @@ msgid ""
 "construct produced from the :class:`.Table` object has a method "
 ":meth:`~.Executable.execute`, which will search for an :class:`.Engine` "
 "that's \"bound\" to the :class:`.Table`."
-msgstr ""
+msgstr "上記では、特別な属性：attr： `.MetaData.bind`を使用して：class：` .Engine`をa：class： `.MetaData`オブジェクトに関連付けます。 ：class： `.Table`オブジェクトから生成された：func：` .select`構造体はメソッド：meth： `〜.Executable.execute`を持っています。これは：class：` .Engine`を探します。 \ &quot;を：class：` .Table`に追加します。"
 
 #: ../../core/connections.rst:320
 msgid "Overall, the usage of \"bound metadata\" has three general effects:"
-msgstr ""
+msgstr "全体として、\ &quot;バインドされたメタデータ\&quot;の使用には、3つの一般的な効果があります。"
 
 #: ../../core/connections.rst:322
 msgid ""
 "SQL statement objects gain an :meth:`.Executable.execute` method which "
 "automatically locates a \"bind\" with which to execute themselves."
-msgstr ""
+msgstr "SQL文オブジェクトは：meth： `.Executable.execute`メソッドを取得します。これは自動的に\&quot;バインド\ &quot;を検索して実行します。"
 
 #: ../../core/connections.rst:324
 msgid ""
@@ -340,7 +330,7 @@ msgid ""
 "statements on behalf of a particular mapped class, though the "
 ":class:`.Session` also features its own explicit system of establishing "
 "complex :class:`.Engine`/ mapped class configurations."
-msgstr ""
+msgstr "ORM：class： `.Session`オブジェクトは、特定のマップされたクラスに代わってSQL文を呼び出すためにclass：` .Engine`が使われるべきであることを確立するために、\ &quot;bound metadata \ `.Session`は、complex：class：` .Engine` / mappedのクラス設定を確立する独自の明示的なシステムも備えています。"
 
 #: ../../core/connections.rst:329
 msgid ""
@@ -348,14 +338,14 @@ msgid ""
 ":meth:`.Table.create`, :meth:`.Table.drop`, and \"autoload\" features all"
 " make usage of the bound :class:`.Engine` automatically without the need "
 "to pass it explicitly."
-msgstr ""
+msgstr "：meth： `.MetaData.create_all`、：meth：` .MetaData.drop_all`、：meth： `.Table.create`、：meth：` .Table.drop`、および\ &quot;autoload \&quot;フィーチャーはすべてmake bound：class： `.Engine`を明示的に渡す必要なしに自動的に使用します。"
 
 #: ../../core/connections.rst:335
 msgid ""
 "The concepts of \"bound metadata\" and \"implicit execution\" are not "
 "emphasized in modern SQLAlchemy. While they offer some convenience, they "
 "are no longer required by any API and are never necessary."
-msgstr ""
+msgstr "最近のSQLAlchemyでは、\ &quot;バウンドメタデータ\&quot;と\ &quot;暗黙の実行\&quot;という概念は強調されていません。彼らはいくつかの便利さを提供しますが、それらはもはやAPIによって必要とされず、決して必要ではありません。"
 
 #: ../../core/connections.rst:339
 msgid ""
@@ -367,14 +357,14 @@ msgid ""
 ":class:`.Session` object as a means to associate :class:`.Table` objects "
 "with an appropriate :class:`.Engine`, as an alternative to using the bind"
 " arguments accepted directly by the :class:`.Session`."
-msgstr ""
+msgstr "複数の：class： `.Engine`オブジェクトが存在し、それぞれが特定のテーブルセット（すなわち* vertical sharding *）に論理的に関連付けられているアプリケーションでは、\&quot;バインドされたメタデータ\ &quot;テクニックを使用して、individual：class： `.Table`は適切な：class：` .Engine`を自動的に参照できます。特にこれはORM内で：class： `.Session`オブジェクトを使って：class：` .Table`オブジェクトを適切な：class： `.Engine`に関連付ける手段としてサポートされています。 ：class： `.Session`によって直接受け入れられます。"
 
 #: ../../core/connections.rst:346
 msgid ""
 "However, the \"implicit execution\" technique is not at all appropriate "
 "for use with the ORM, as it bypasses the transactional context maintained"
 " by the :class:`.Session`."
-msgstr ""
+msgstr "しかし、\ &quot;暗黙の実行\&quot;技法は：class： `.Session`によって維持されるトランザクションコンテキストをバイパスするので、ORMでの使用にはまったく適していません。"
 
 #: ../../core/connections.rst:349
 msgid ""
@@ -385,7 +375,7 @@ msgid ""
 "more confusing than it is helpful, and its usage is discouraged. Both "
 "patterns seem to encourage the overuse of expedient \"short cuts\" in "
 "application design which lead to problems later on."
-msgstr ""
+msgstr "全体的に、*大多数のケースでは、\ &quot;バインドされたメタデータ\&quot;と\ &quot;暗黙の実行\&quot;は有用ではありません**。 \ &quot;バインドされたメタデータ\&quot;はORMの設定に関して有益な限界レベルを持っていますが、\ &quot;暗黙の実行\&quot;は非常に古い使用パターンであり、ほとんどの場合、参考になるよりも混乱しやすく、どちらのパターンも、後で問題を引き起こすアプリケーション設計における短期間の「短期間」の過度使用を促進するように見える。"
 
 #: ../../core/connections.rst:356
 msgid ""
@@ -396,7 +386,7 @@ msgid ""
 ":meth:`.Executable.execute` method on a particular SQL statement usually "
 "implies that the execution is not part of any particular transaction, "
 "which is usually not the desired effect."
-msgstr ""
+msgstr "最新のSQLAlchemyの使用、特にORMは、トランザクションのコンテキスト内で常に作業することに重いストレスを与えます。 \ &quot;暗黙の実行\&quot;という概念は、文の実行と特定のトランザクションとの関連付けをはるかに困難にします。特定のSQL文に対する：meth： `.Executable.execute`メソッドは、通常、実行が特定のトランザクションの一部ではないことを意味します。通常、これは望ましい効果ではありません。"
 
 #: ../../core/connections.rst:363
 msgid ""
@@ -408,11 +398,11 @@ msgid ""
 "underlying :class:`.Connection` is closed for us, resulting in the DBAPI "
 "connection being returned to the pool with transactional resources "
 "removed."
-msgstr ""
+msgstr "両方の\ &quot;connectionless \&quot;の例では、：class： `〜sqlalchemy.engine.Connection`がバックグラウンドで作成されています。 ：class： `〜sqlalchemy.engine.ResultProxy`は、SQL文を発行するために使用される：class：`〜sqlalchemy.engine.Connection`を参照します。 ：class： `.ResultProxy`が閉じられると、基底の：class：` .Connection`が閉じられ、トランザクションリソースが削除されたDBAPI接続がプールに返されます。"
 
 #: ../../core/connections.rst:374
 msgid "Translation of Schema Names"
-msgstr ""
+msgstr "スキーマ名の変換"
 
 #: ../../core/connections.rst:376
 msgid ""
@@ -421,11 +411,11 @@ msgid ""
 ":paramref:`.Connection.execution_options.schema_translate_map` execution "
 "option may be used to repurpose a set of :class:`.Table` objects to "
 "render under different schema names without any changes."
-msgstr ""
+msgstr "共通のテーブルセットを複数のスキーマに配布するマルチテナントアプリケーションをサポートするには、：paramref： `.Connection.execution_options.schema_translate_map`実行オプションを使用して、class：` .Table`オブジェクトのセットを再利用して、スキーマ名は変更されません。"
 
 #: ../../core/connections.rst:382
 msgid "Given a table::"
-msgstr ""
+msgstr "与えられたテーブル::"
 
 #: ../../core/connections.rst:390
 msgid ""
@@ -434,17 +424,17 @@ msgid ""
 ":paramref:`.Connection.execution_options.schema_translate_map` can "
 "specify that all :class:`.Table` objects with a schema of ``None`` would "
 "instead render the schema as ``user_schema_one``::"
-msgstr ""
+msgstr "：paramref： `.Table.schema`属性で定義されているthis：class：` .Table`のスキーマは `` None``です。 ：paramref： `.Connection.execution_options.schema_translate_map`はスキーマが` `None``のall：class：` .Table`オブジェクトがスキーマを `` user_schema_one``としてレンダリングすることを指定できます::"
 
 #: ../../core/connections.rst:401
 msgid "The above code will invoke SQL on the database of the form::"
-msgstr ""
+msgstr "上記のコードは、フォームのデータベース上でSQLを呼び出します::"
 
 #: ../../core/connections.rst:406
 msgid ""
 "That is, the schema name is substituted with our translated name.  The "
 "map can specify any number of target->destination schemas::"
-msgstr ""
+msgstr "つまり、スキーマ名は翻訳された名前に置き換えられます。マップは、任意の数のtarget-&gt; destinationスキーマを指定できます::"
 
 #: ../../core/connections.rst:416
 msgid ""
@@ -454,7 +444,7 @@ msgid ""
 ":class:`.Sequence` objects. It does **not** impact literal string SQL "
 "used via the :func:`.expression.text` construct nor via plain strings "
 "passed to :meth:`.Connection.execute`."
-msgstr ""
+msgstr "：paramref： `.Connection.execution_options.schema_translate_map`パラメータは：class：` .Table`または：class： `.Sequence`オブジェクトから派生した、SQL式言語から生成されたすべてのDDLとSQL構造に影響します。これは、：func： `.expression.text`コンストラクトや、：meth：` .Connection.execute`に渡されるプレーンな文字列を介して使用されるリテラル文字列SQLには影響しません。"
 
 #: ../../core/connections.rst:422
 msgid ""
@@ -468,11 +458,11 @@ msgid ""
 "object.  However it does **not** affect the operations present on the "
 ":class:`.Inspector` object, as the schema name is passed to these methods"
 " explicitly."
-msgstr ""
+msgstr "この機能は、スキーマの名前が：class： `.Table`または：class：` .Sequence`;のものから直接派生した場合に** **のみ有効です。文字列スキーマ名が直接渡されるメソッドには影響しません。このパターンでは、：meth： `.MetaData.create_all`や：meth：` .MetaData.drop_all`などのメソッドによって実行されるチェックは、 &quot;作成できます&quot; / &quot; class： `.Table`オブジェクトを指定してテーブルリフレクションを使用すると有効になります。ただし、：class： `.Inspector`オブジェクトに存在する操作には影響しません**。スキーマ名はこれらのメソッドに明示的に渡されます。"
 
 #: ../../core/connections.rst:437
 msgid "Engine Disposal"
-msgstr ""
+msgstr "エンジンの廃棄"
 
 #: ../../core/connections.rst:439
 msgid ""
@@ -486,7 +476,7 @@ msgid ""
 "database connections as well.   But otherwise, the :class:`.Engine` will "
 "hold onto open database connections assuming it uses the normally default"
 " pool implementation of :class:`.QueuePool`."
-msgstr ""
+msgstr "：class： `.Engine`は接続プールを指します。これは通常の状況下では：class：` .Engine`オブジェクトがまだメモリに常駐している間に開いているデータベース接続が存在することを意味します。 ：class： `.Engine`がガベージコレクトされると、その接続プールはもはやその：class：` .Engine`によって参照されなくなり、接続がまだチェックアウトされていないと仮定すると、プールとその接続もガーベッジ・コレクションは、実際のデータベース接続もクローズするという効果があります。しかし、それ以外の場合、：class： `.Engine`は、オープンされたデータベース接続を保持します：class：` .QueuePool`の通常のデフォルトのプール実装を使用すると仮定します。"
 
 #: ../../core/connections.rst:449
 msgid ""
@@ -497,7 +487,7 @@ msgid ""
 "connections as well as configurational information about the database and"
 " DBAPI in use, as well as some degree of internal caching of per-database"
 " resources."
-msgstr ""
+msgstr "：class： `.Engine`は、通常、アプリケーションの寿命を通して維持され、維持されている永続的なフィクスチャであることを意図しています。接続ごとに作成および廃棄することを意図したものではありません**。代わりに、接続プールと使用中のデータベースとDBAPIに関する構成情報とデータベース単位の内部キャッシュのある程度のキャッシュを維持するレジストリです。"
 
 #: ../../core/connections.rst:457
 msgid ""
@@ -510,18 +500,18 @@ msgid ""
 "a new one that's empty. Provided that the :class:`.Engine` is discarded "
 "at this point and no longer used, all **checked-in** connections which it"
 " refers to will also be fully closed."
-msgstr ""
+msgstr "しかし、class： `.Engine`で参照されるすべての接続リソースを完全にクローズすることが望ましい場合が多いです。これらの場合には、Pythonガベージコレクションを使用するのが一般的には良い考えではありません。代わりに：class： `.Engine`は：meth：` .Engine.dispose`メソッドを使って明示的に処理することができます。これにより、エンジンの基礎となる接続プールが破棄され、空の新しい接続プールに置き換えられます。ただし：class： `.Engine`がこの時点で破棄され、使用されなくなった場合、参照されている**チェックインされた**接続も完全に閉じられます。"
 
 #: ../../core/connections.rst:467
 msgid "Valid use cases for calling :meth:`.Engine.dispose` include:"
-msgstr ""
+msgstr "呼び出しの有効な使用例：meth： `.Engine.dispose` include："
 
 #: ../../core/connections.rst:469
 msgid ""
 "When a program wants to release any remaining checked-in connections held"
 " by the connection pool and expects to no longer be connected to that "
 "database at all for any future operations."
-msgstr ""
+msgstr "プログラムが接続プールによって保持されている残りのチェックインされた接続を解放したい場合、将来の操作のためにそのデータベースに接続できなくなることが予想されます。"
 
 #: ../../core/connections.rst:473
 msgid ""
@@ -530,13 +520,13 @@ msgid ""
 ":meth:`.Engine.dispose` should be called so that the engine creates brand"
 " new database connections local to that fork.   Database connections "
 "generally do **not** travel across process boundaries."
-msgstr ""
+msgstr "プログラムがマルチプロセッシングや `` fork（） ``を使用し、：class： `.Engine`オブジェクトが子プロセスにコピーされた場合、エンジンが新しいものを作成するように：meth：` .Engine.dispose`を呼び出す必要がありますそのフォークにローカルなデータベース接続。データベース接続は通常、プロセスの境界を越えて移動しません**。"
 
 #: ../../core/connections.rst:479
 msgid ""
 "Within test suites or multitenancy scenarios where many ad-hoc, short-"
 "lived :class:`.Engine` objects may be created and disposed."
-msgstr ""
+msgstr "多くの特別な、短命の：class： `.Engine`オブジェクトが作成され、処理されるテストスイートまたはマルチテナントシナリオでは、"
 
 #: ../../core/connections.rst:483
 msgid ""
@@ -551,7 +541,7 @@ msgid ""
 " is strongly recommended that :meth:`.Engine.dispose` is called only "
 "after all checked out connections are checked in or otherwise de-"
 "associated from their pool."
-msgstr ""
+msgstr "**チェックアウトされた接続**は、エンジンが廃棄されたりガベージコレクトされたときに破棄されません**。これらの接続は依然としてアプリケーションの他の場所でも強く参照されています。しかし、：meth： `.Engine.dispose`が呼び出された後、それらの接続はもはやそれに関連付けられません：class：` .Engine`;それらが閉じられると、それらは孤立した接続プールに戻され、最終的にガベージコレクションされます。一度それを参照するすべての接続もどこでも参照されなくなります。このプロセスは制御するのが容易ではないので、meth： `.Engine.dispose`は、チェックアウトされたすべての接続がチェックインされた後に呼び出されるか、そうでなければプールからデア結合された後にのみ呼び出されます。"
 
 #: ../../core/connections.rst:495
 msgid ""
@@ -561,11 +551,11 @@ msgid ""
 "the use of new connections, and means that when a connection is checked "
 "in, it is entirely closed out and is not held in memory.  See "
 ":ref:`pool_switching` for guidelines on how to disable pooling."
-msgstr ""
+msgstr "：class： `.Engine`オブジェクトの接続プーリングの使用によって悪影響を受けるアプリケーションの代替方法は、プーリングを完全に無効にすることです。これは、通常、新しい接続の使用時にわずかなパフォーマンスの影響しか受けません。つまり、接続がチェックインされると、完全にクローズされ、メモリに保持されません。プーリングを無効にする方法のガイドラインについては、ref： `pool_switching`を参照してください。"
 
 #: ../../core/connections.rst:505
 msgid "Using the Threadlocal Execution Strategy"
-msgstr ""
+msgstr "スレッドローカル実行戦略の使用"
 
 #: ../../core/connections.rst:507
 msgid ""
@@ -574,7 +564,7 @@ msgid ""
 "thread, such that all parts of the application can participate in that "
 "transaction implicitly without the need to explicitly reference a "
 ":class:`.Connection`."
-msgstr ""
+msgstr "\ &quot;threadlocal \&quot;エンジン戦略は、ORM以外のアプリケーションがトランザクションを現在のスレッドに関連付けるために使用できるオプションの機能です。アプリケーションのすべての部分が明示的に次のものを参照する必要はなく暗黙的にそのトランザクションに参加できます。クラス： `.Connection`。"
 
 #: ../../core/connections.rst:515
 msgid ""
@@ -586,11 +576,11 @@ msgid ""
 ":class:`~sqlalchemy.orm.session.Session` itself represents an ongoing "
 "transaction and itself handles the job of maintaining connection and "
 "transactional resources."
-msgstr ""
+msgstr "\ &quot;threadlocal \&quot;機能は一般的には推奨されません。これは、一般にレガシーパターンと見なされる特定の使用パターン用に設計されています。 SQLAlchemyコンポーネントやアプリケーションの\ &quot;スレッドセーフティ\&quot;に**影響はありません**。また、ORM：class： `〜sqlalchemy.orm.session.Session`オブジェクトを使用するときは使用しないでください。class：`〜sqlalchemy.orm.session.Session`自体は進行中のトランザクションを表し、それ自体はジョブを処理します接続リソースとトランザクションリソースを維持します。"
 
 #: ../../core/connections.rst:525
 msgid "Enabling ``threadlocal`` is achieved as follows::"
-msgstr ""
+msgstr "`` threadlocal``を有効にするには、次のようにします::"
 
 #: ../../core/connections.rst:529
 msgid ""
@@ -600,20 +590,20 @@ msgid ""
 "This connection resource is maintained as long as it is referenced, which"
 " allows multiple points of an application to share a transaction while "
 "using connectionless execution::"
-msgstr ""
+msgstr "上記の：class： `.Engine`は：meth：` .Engine.execute`または：meth： `.Engine.contextual_connect`の時にスレッドローカル変数から派生した接続リソースを使用して：class：` .Connection`を取得するようになりました。が呼び出されます。この接続リソースは参照されている限り維持され、アプリケーションの複数のポイントがコネクションレス実行を使用してトランザクションを共有できるようになります::"
 
 #: ../../core/connections.rst:550
 msgid ""
 "Explicit execution can be mixed with connectionless execution by using "
 "the :meth:`.Engine.connect` method to acquire a :class:`.Connection` that"
 " is not part of the threadlocal scope::"
-msgstr ""
+msgstr "明示的な実行は、：meth： `.Engine.connect`メソッドを使用して、threadlocalスコープの一部ではない：class：` .Connection`を取得することによって、コネクションレス実行と混合することができます::"
 
 #: ../../core/connections.rst:568
 msgid ""
 "To access the :class:`.Connection` that is bound to the threadlocal "
 "scope, call :meth:`.Engine.contextual_connect`::"
-msgstr ""
+msgstr "スレッドローカルスコープにバインドされている：class： `.Connection`にアクセスするには、：meth：` .Engine.contextual_connect` ::"
 
 #: ../../core/connections.rst:575
 msgid ""
@@ -621,11 +611,11 @@ msgid ""
 "not :term:`release` its resources until all other usages of that resource"
 " are closed as well, including that any ongoing transactions are rolled "
 "back or committed."
-msgstr ""
+msgstr "\ &quot;contextual \&quot;接続でmeth： `〜.Connection.close`を実行しても、そのリソースの他のすべての用途が閉じられるまで、リソースは解放されません。コミット。"
 
 #: ../../core/connections.rst:582
 msgid "Working with Raw DBAPI Connections"
-msgstr ""
+msgstr "Raw DBAPI接続の操作"
 
 #: ../../core/connections.rst:584
 msgid ""
@@ -633,14 +623,14 @@ msgid ""
 "at accessing some :term:`DBAPI` functions, such as calling stored "
 "procedures as well as dealing with multiple result sets.  In these cases,"
 " it's just as expedient to deal with the raw DBAPI connection directly."
-msgstr ""
+msgstr "SQLAlchemyが、ストアドプロシージャの呼び出しや複数の結果セットの処理など、いくつかの：term： `DBAPI`関数にアクセスする際に汎用化された方法を提供しないケースがいくつかあります。このような場合は、生のDBAPI接続を直接処理するほうが便利です。"
 
 #: ../../core/connections.rst:589
 msgid ""
 "The most common way to access the raw DBAPI connection is to get it from "
 "an already present :class:`.Connection` object directly.  It is present "
 "using the :attr:`.Connection.connection` attribute::"
-msgstr ""
+msgstr "生のDBAPI接続にアクセスする最も一般的な方法は、既に存在する：class： `.Connection`オブジェクトから直接取得することです。これは：attr： `.Connection.connection`属性を使って存在します::"
 
 #: ../../core/connections.rst:596
 msgid ""
@@ -653,7 +643,7 @@ msgid ""
 ":meth:`.Connection.close` method; if these operations are performed on "
 "the DBAPI connection directly, the owning :class:`.Connection` will not "
 "be aware of these changes in state."
-msgstr ""
+msgstr "ここのDBAPI接続は、元の接続プールに関しては実際には「プロキシード」ですが、これはほとんどの場合無視できる実装の詳細です。このDBAPI接続は依然としてowning：class： `.Connection`オブジェクトのスコープ内に含まれているので、トランザクション制御などのほとんどの機能には：class：` .Connection`オブジェクトを使用することが最善です。 ：meth： `.Connection.close`メソッド;これらの操作がDBAPI接続で直接実行される場合、所有：class： `.Connection`は状態のこれらの変更を認識しません。"
 
 #: ../../core/connections.rst:605
 msgid ""
@@ -661,7 +651,7 @@ msgid ""
 "maintained by an owning :class:`.Connection`, a DBAPI connection is also "
 "available without the need to procure a :class:`.Connection` first, using"
 " the :meth:`.Engine.raw_connection` method of :class:`.Engine`::"
-msgstr ""
+msgstr "所有：class： `.Connection`によって維持されるDBAPI接続によって課される制限を克服するために、：meth：`を使用して：class： `.Connection`を最初に取得する必要なしにDBAPI接続も利用できます： .Engine.raw_connection`のメソッド：class： `.Engine` ::"
 
 #: ../../core/connections.rst:613
 msgid ""
@@ -670,7 +660,7 @@ msgid ""
 "``.close()`` method of this connection, the DBAPI connection is typically"
 " not actually closed, but instead :term:`released` back to the engine's "
 "connection pool::"
-msgstr ""
+msgstr "このDBAPI接続は、前と同様にプロキシされた形式です。この接続の ``close（）` `メソッドを呼び出すと、DBAPI接続は通常は実際には閉じられず、term：`解放されてエンジンの接続プールに戻されます::"
 
 #: ../../core/connections.rst:621
 msgid ""
@@ -679,37 +669,37 @@ msgid ""
 " needed and they also vary highly dependent on the type of DBAPI in use, "
 "so in any case the direct DBAPI calling pattern is always there for those"
 " cases where it is needed."
-msgstr ""
+msgstr "SQLAlchemyでは将来DBAPIユースケースの組み込みパターンを追加することがありますが、これらのケースはめったに必要ではなく、使用されているDBAPIのタイプによって大きく異なるため、リターンは減少します。したがって、直接DBAPI呼び出しパターンは、必要な場合に常に存在します。"
 
 #: ../../core/connections.rst:627
 msgid "Some recipes for DBAPI connection use follow."
-msgstr ""
+msgstr "DBAPI接続の使用に関するいくつかのレシピが続きます。"
 
 #: ../../core/connections.rst:632
 msgid "Calling Stored Procedures"
-msgstr ""
+msgstr "ストアドプロシージャの呼び出し"
 
 #: ../../core/connections.rst:634
 msgid ""
 "For stored procedures with special syntactical or parameter concerns, "
 "DBAPI-level `callproc "
 "<http://legacy.python.org/dev/peps/pep-0249/#callproc>`_ may be used::"
-msgstr ""
+msgstr "特殊な構文またはパラメータの問題を伴うストアドプロシージャの場合、DBAPIレベルの `` callproc <http://legacy.python.org/dev/peps/pep-0249/#callproc> `_を使うことができます::"
 
 #: ../../core/connections.rst:649
 msgid "Multiple Result Sets"
-msgstr ""
+msgstr "複数の結果セット"
 
 #: ../../core/connections.rst:651
 msgid ""
 "Multiple result set support is available from a raw DBAPI cursor using "
 "the `nextset <http://legacy.python.org/dev/peps/pep-0249/#nextset>`_ "
 "method::"
-msgstr ""
+msgstr "複数の結果セットのサポートは、未処理のDBAPIカーソルから `nextset <http://legacy.python.org/dev/peps/pep-0249/#nextset> `_メソッド::"
 
 #: ../../core/connections.rst:668
 msgid "Registering New Dialects"
-msgstr ""
+msgstr "新しい方言の登録"
 
 #: ../../core/connections.rst:670
 msgid ""
@@ -717,11 +707,11 @@ msgid ""
 "setuptools entrypoints.   These entry points can be established for third"
 " party dialects within the setup.py script.  For example, to create a new"
 " dialect \"foodialect://\", the steps are as follows:"
-msgstr ""
+msgstr "：func： `.create_engine`関数呼び出しは、setuptoolsのエントリポイントを使って指定された方言を探します。これらのエントリポイントは、setup.pyスクリプト内のサードパーティの方言用に設定できます。たとえば、新しいダイアレクト「foodialect：// \」を作成するには、次の手順を実行します。"
 
 #: ../../core/connections.rst:675
 msgid "Create a package called ``foodialect``."
-msgstr ""
+msgstr "`` foodialect``というパッケージを作ります。"
 
 #: ../../core/connections.rst:676
 msgid ""
@@ -730,11 +720,11 @@ msgid ""
 ":class:`sqlalchemy.engine.default.DefaultDialect`. In this example let's "
 "say it's called ``FooDialect`` and its module is accessed via "
 "``foodialect.dialect``."
-msgstr ""
+msgstr "パッケージにはdialectクラスを含むモジュールが必要です。これは、通常、class： `sqlalchemy.engine.default.DefaultDialect`のサブクラスです。この例では、 `` FooDialect``と呼ばれ、モジュールは `` foodialect.dialect``でアクセスされます。"
 
 #: ../../core/connections.rst:680
 msgid "The entry point can be established in setup.py as follows::"
-msgstr ""
+msgstr "エントリポイントは、次のようにsetup.pyで設定できます::"
 
 #: ../../core/connections.rst:687
 msgid ""
@@ -742,38 +732,38 @@ msgid ""
 "existing SQLAlchemy-supported database, the name can be given including a"
 " database-qualification.  For example, if ``FooDialect`` were in fact a "
 "MySQL dialect, the entry point could be established like this::"
-msgstr ""
+msgstr "ダイアレクトが既存のSQLAlchemy対応データベースの上に特定のDBAPIをサポートしている場合は、そのデータベース名を含めて名前を付けることができます。たとえば、 `` FooDialect``が実際にMySQLの方言だった場合、エントリポイントは次のように設定できます::"
 
 #: ../../core/connections.rst:697
 msgid ""
 "The above entrypoint would then be accessed as "
 "``create_engine(\"mysql+foodialect://\")``."
-msgstr ""
+msgstr "上記のエントリポイントは `` create_engine（\ &quot;mysql + foodialect：// \&quot;） ``としてアクセスされます。"
 
 #: ../../core/connections.rst:700
 msgid "Registering Dialects In-Process"
-msgstr ""
+msgstr "インプロセスのダイアレクトの登録"
 
 #: ../../core/connections.rst:702
 msgid ""
 "SQLAlchemy also allows a dialect to be registered within the current "
 "process, bypassing the need for separate installation.   Use the "
 "``register()`` function as follows::"
-msgstr ""
+msgstr "SQLAlchemyでは、別のインストールの必要性を回避して、現在のプロセス内にダイアレクトを登録することもできます。次のように `` register（） ``関数を使用してください::"
 
 #: ../../core/connections.rst:708
 msgid ""
 "The above will respond to ``create_engine(\"mysql+foodialect://\")`` and "
 "load the ``MyMySQLDialect`` class from the ``myapp.dialect`` module."
-msgstr ""
+msgstr "上記は `` create_engine（\ &quot;mysql + foodialect：// \&quot;） ``に応答し、 `` myapp.dialect``モジュールから `` MyMySQLDialect``クラスをロードします。"
 
 #: ../../core/connections.rst:714
 msgid "Connection / Engine API"
-msgstr ""
+msgstr "接続/エンジンAPI"
 
 #: of sqlalchemy.engine.Connection:1
 msgid "Provides high-level functionality for a wrapped DB-API connection."
-msgstr ""
+msgstr "ラップされたDB-API接続の高レベル機能を提供します。"
 
 #: of sqlalchemy.engine.Connection:3
 msgid ""
@@ -781,7 +771,7 @@ msgid ""
 ":class:`.ClauseElement`, :class:`.Compiled` and "
 ":class:`.DefaultGenerator` objects. Provides a :meth:`begin` method to "
 "return :class:`.Transaction` objects."
-msgstr ""
+msgstr "文字列ベースのSQL文だけでなく、：class： `.ClauseElement`、：class：` .Compiled`、：class： `.DefaultGenerator`オブジェクトの実行をサポートします。 ：meth： `begin`メソッドを提供して：class：` .Transaction`オブジェクトを返します。"
 
 #: of sqlalchemy.engine.Connection:8
 msgid ""
@@ -789,7 +779,7 @@ msgid ""
 "shared among threads using properly synchronized access, it is still "
 "possible that the underlying DBAPI connection may not support shared "
 "access between threads.  Check the DBAPI documentation for details."
-msgstr ""
+msgstr "Connectionオブジェクトは**スレッドセーフではありません**。 Connectionは、適切に同期化されたアクセスを使用してスレッド間で共有できますが、基礎となるDBAPI接続がスレッド間の共有アクセスをサポートしていない可能性もあります。詳細については、DBAPIのマニュアルを参照してください。"
 
 #: of sqlalchemy.engine.Connection:13
 msgid ""
@@ -799,11 +789,11 @@ msgid ""
 "For the connection pool to properly manage connections, connections "
 "should be returned to the connection pool (i.e. ``connection.close()``) "
 "whenever the connection is not in use."
-msgstr ""
+msgstr "Connectionオブジェクトは、接続プールからチェックアウトされた単一のdbapi接続を表します。この状態では、接続プールは、有効期限またはタイムアウト状態を含む接続に影響を与えません。接続プールが適切に接続を管理するためには、接続が使用されていないときはいつでも、接続プール（つまり `` connection.close（） ``）に返す必要があります。"
 
 #: of sqlalchemy.engine.Connection.begin:1
 msgid "Begin a transaction and return a transaction handle."
-msgstr ""
+msgstr "トランザクションを開始し、トランザクションハンドルを返します。"
 
 #: of sqlalchemy.engine.Connection.begin:3
 msgid ""
@@ -811,14 +801,14 @@ msgid ""
 "represents the \"scope\" of the transaction, which completes when either "
 "the :meth:`.Transaction.rollback` or :meth:`.Transaction.commit` method "
 "is called."
-msgstr ""
+msgstr "返されるオブジェクトは：class： `.Transaction`のインスタンスです。このオブジェクトは：meth： `.Transaction.rollback`または：meth：` .Transaction.commit`メソッドが呼び出されたときに完了する、トランザクションの\ &quot;スコープ\&quot;を表します。"
 
 #: of sqlalchemy.engine.Connection.begin:8
 msgid ""
 "Nested calls to :meth:`.begin` on the same :class:`.Connection` will "
 "return new :class:`.Transaction` objects that represent an emulated "
 "transaction within the scope of the enclosing transaction, that is::"
-msgstr ""
+msgstr "クラス： `.Connection`は、囲んでいるトランザクションのスコープ内でエミュレートされたトランザクションを表すnew：class：` .Transaction`オブジェクトを返します。つまり、:: meth： `.begin`"
 
 #: of sqlalchemy.engine.Connection.begin:18
 msgid ""
@@ -826,33 +816,33 @@ msgid ""
 " the outermost :class:`.Transaction` object, though the "
 ":meth:`.Transaction.rollback` method of any of the :class:`.Transaction` "
 "objects will roll back the transaction."
-msgstr ""
+msgstr "：meth： `.Transaction.commit`は、：class：` .Transaction`オブジェクトから呼び出されたときにのみ効果がありますが、：class： `の：meth：` .Transaction.rollback`メソッドです。トランザクションオブジェクトはトランザクションをロールバックします。"
 
 #: of sqlalchemy.engine.Connection.begin:24
 #: sqlalchemy.engine.Connection.transaction:32 sqlalchemy.engine.Engine:8
 #: sqlalchemy.engine.Engine.begin:24 sqlalchemy.engine.Engine.transaction:29
 msgid "See also:"
-msgstr ""
+msgstr "参照："
 
 #: of sqlalchemy.engine.Connection.begin:26
 msgid ":meth:`.Connection.begin_nested` - use a SAVEPOINT"
-msgstr ""
+msgstr "：meth： `.Connection.begin_nested`  -  SAVEPOINTを使用します。"
 
 #: of sqlalchemy.engine.Connection.begin:28
 msgid ":meth:`.Connection.begin_twophase` - use a two phase /XID transaction"
-msgstr ""
+msgstr "：meth： `.Connection.begin_twophase`  - 二相/ XIDトランザクションを使用する"
 
 #: of sqlalchemy.engine.Connection.begin:30
 msgid ":meth:`.Engine.begin` - context manager available from :class:`.Engine`."
-msgstr ""
+msgstr "：meth： `.Engine.begin`  - コンテキストマネージャはclass：` .Engine`から利用できます。"
 
 #: of sqlalchemy.engine.Connection.begin_nested:1
 msgid "Begin a nested transaction and return a transaction handle."
-msgstr ""
+msgstr "ネストされたトランザクションを開始し、トランザクションハンドルを返します。"
 
 #: of sqlalchemy.engine.Connection.begin_nested:3
 msgid "The returned object is an instance of :class:`.NestedTransaction`."
-msgstr ""
+msgstr "返されるオブジェクトは：class： `.NestedTransaction`のインスタンスです。"
 
 #: of sqlalchemy.engine.Connection.begin_nested:5
 msgid ""
@@ -860,23 +850,23 @@ msgid ""
 "  Any transaction in the hierarchy may ``commit`` and ``rollback``, "
 "however the outermost transaction still controls the overall ``commit`` "
 "or ``rollback`` of the transaction of a whole."
-msgstr ""
+msgstr "ネストされたトランザクションでは、基礎となるデータベースにSAVEPOINTサポートが必要です。階層内のどのトランザクションも「コミット」と「ロールバック」することができますが、もっとも外側のトランザクションは全体のトランザクションの全体的な「コミット」または「ロールバック」を制御します。"
 
 #: of sqlalchemy.engine.Connection.begin_nested:11
 #: sqlalchemy.engine.Connection.begin_twophase:12
 msgid "See also :meth:`.Connection.begin`, :meth:`.Connection.begin_twophase`."
-msgstr ""
+msgstr "参照：meth： `.Connection.begin`、：meth：` .Connection.begin_twophase`。"
 
 #: of sqlalchemy.engine.Connection.begin_twophase:1
 msgid "Begin a two-phase or XA transaction and return a transaction handle."
-msgstr ""
+msgstr "2フェーズまたはXAトランザクションを開始し、トランザクションハンドルを返します。"
 
 #: of sqlalchemy.engine.Connection.begin_twophase:4
 msgid ""
 "The returned object is an instance of :class:`.TwoPhaseTransaction`, "
 "which in addition to the methods provided by :class:`.Transaction`, also "
 "provides a :meth:`~.TwoPhaseTransaction.prepare` method."
-msgstr ""
+msgstr "返されるオブジェクトは：class： `.TwoPhaseTransaction`のインスタンスです：class：` .Transaction`によって提供されるメソッドに加えて：meth： `〜.TwoPhaseTransaction.prepare`メソッドも提供されます。"
 
 #: of sqlalchemy.engine.Connection.begin_twophase
 #: sqlalchemy.engine.Connection.execute
@@ -884,17 +874,17 @@ msgstr ""
 #: sqlalchemy.engine.Engine.contextual_connect
 #: sqlalchemy.engine.Engine.table_names
 msgid "パラメータ"
-msgstr ""
+msgstr "パラメータ"
 
 #: of sqlalchemy.engine.Connection.begin_twophase:9
 msgid ""
 "the two phase transaction id.  If not supplied, a random id will be "
 "generated."
-msgstr ""
+msgstr "2フェーズのトランザクションID指定しない場合は、ランダムなIDが生成されます。"
 
 #: of sqlalchemy.engine.Connection.close:1
 msgid "Close this :class:`.Connection`."
-msgstr ""
+msgstr "これを閉じます：class： `.Connection`。"
 
 #: of sqlalchemy.engine.Connection.close:3
 msgid ""
@@ -906,55 +896,55 @@ msgid ""
 "connection is also unconditionally released via the DBAPI connection's "
 "``rollback()`` method, regardless of any :class:`.Transaction` object "
 "that may be outstanding with regards to this :class:`.Connection`."
-msgstr ""
+msgstr "これにより、基盤となるデータベース・リソース、つまり内部的に参照されるDBAPI接続が解放されます。 DBAPI接続は、通常、class： `.Connection`を生成した：class：` .Engine`によって参照される：class： `.Pool`を保持している接続に復元されます。 DBAPI接続に存在するトランザクション状態は、DBAPI接続の `` rollback（） ``メソッドを介して無条件に解放されます。これはclass： `.Transaction`オブジェクトに関係なく未処理です。class：` .Connection `。"
 
 #: of sqlalchemy.engine.Connection.close:14
 msgid ""
 "After :meth:`~.Connection.close` is called, the :class:`.Connection` is "
 "permanently in a closed state, and will allow no further operations."
-msgstr ""
+msgstr "：meth： `〜.Connection.close`が呼び出された後、：class：` .Connection`は永続的に閉じた状態にあり、これ以上の操作はできません。"
 
 #: of sqlalchemy.engine.Connection.closed:1
 msgid "Return True if this connection is closed."
-msgstr ""
+msgstr "この接続が閉じている場合はTrueを返します。"
 
 #: of sqlalchemy.engine.Connection.connect:1
 #: sqlalchemy.engine.Connection.contextual_connect:1
 msgid "Returns a branched version of this :class:`.Connection`."
-msgstr ""
+msgstr "これの分岐バージョンを返します：class： `.Connection`。"
 
 #: of sqlalchemy.engine.Connection.connect:3
 #: sqlalchemy.engine.Connection.contextual_connect:3
 msgid ""
 "The :meth:`.Connection.close` method on the returned :class:`.Connection`"
 " can be called and this :class:`.Connection` will remain open."
-msgstr ""
+msgstr "返される：meth： `.Connection.close`メソッドは、：class：` .Connection`を呼び出すことができ、これは：class： `.Connection`はオープンのままです。"
 
 #: of sqlalchemy.engine.Connection.connect:7
 msgid ""
 "This method provides usage symmetry with :meth:`.Engine.connect`, "
 "including for usage with context managers."
-msgstr ""
+msgstr "このメソッドは、コンテキストマネージャでの使用を含め、：meth： `.Engine.connect`で使用対称性を提供します。"
 
 #: of sqlalchemy.engine.Connection.connection:1
 msgid "The underlying DB-API connection managed by this Connection."
-msgstr ""
+msgstr "このConnectionによって管理される基本となるDB-API接続。"
 
 #: of sqlalchemy.engine.Connection.connection:6
 #: sqlalchemy.engine.Engine.raw_connection:18
 msgid ":ref:`dbapi_connections`"
-msgstr ""
+msgstr "：ref： `dbapi_connections`"
 
 #: of sqlalchemy.engine.Connection.contextual_connect:7
 msgid ""
 "This method provides usage symmetry with "
 ":meth:`.Engine.contextual_connect`, including for usage with context "
 "managers."
-msgstr ""
+msgstr "このメソッドは、コンテキストマネージャでの使用を含め、：meth： `.Engine.contextual_connect`で使用対称性を提供します。"
 
 #: of sqlalchemy.engine.Connection.default_isolation_level:1
 msgid "The default isolation level assigned to this :class:`.Connection`."
-msgstr ""
+msgstr "これに割り当てられたデフォルトの分離レベル：class： `.Connection`。"
 
 #: of sqlalchemy.engine.Connection.default_isolation_level:3
 msgid ""
@@ -963,19 +953,19 @@ msgid ""
 "stays in place until the "
 ":paramref:`.Connection.execution_options.isolation_level` is used to "
 "change the setting on a per-:class:`.Connection` basis."
-msgstr ""
+msgstr "これは：class： `.Connection`が：meth：` .Engine.connect`メソッドで最初に調達したときの分離レベルの設定です。このレベルは、：paramref： `.Connection.execution_options.isolation_level`がper：：class：` .Connection`ベースで設定を変更するために使用されるまでそのまま残ります。"
 
 #: of sqlalchemy.engine.Connection.default_isolation_level:9
 msgid ""
 "Unlike :meth:`.Connection.get_isolation_level`, this attribute is set "
 "ahead of time from the first connection procured by the dialect, so SQL "
 "query is not invoked when this accessor is called."
-msgstr ""
+msgstr "：meth： `.Connection.get_isolation_level`とは異なり、この属性は、方言で最初に取得された接続から事前に設定されているため、このアクセサが呼び出されたときにSQLクエリは呼び出されません。"
 
 #: of sqlalchemy.engine.Connection.default_isolation_level:17
 #: sqlalchemy.engine.Connection.execution_options:101
 msgid ":meth:`.Connection.get_isolation_level` - view current level"
-msgstr ""
+msgstr "：meth： `.Connection.get_isolation_level`  - 現在のレベルを表示する"
 
 #: of sqlalchemy.engine.Connection.default_isolation_level:19
 #: sqlalchemy.engine.Connection.execution_options:98
@@ -983,40 +973,40 @@ msgstr ""
 msgid ""
 ":paramref:`.create_engine.isolation_level` - set per :class:`.Engine` "
 "isolation level"
-msgstr ""
+msgstr "：paramref： `.create_engine.isolation_level`  -  per：class：` .Engine`分離レベル"
 
 #: of sqlalchemy.engine.Connection.default_isolation_level:22
 #: sqlalchemy.engine.Connection.get_isolation_level:27
 msgid ""
 ":paramref:`.Connection.execution_options.isolation_level` - set per "
 ":class:`.Connection` isolation level"
-msgstr ""
+msgstr "：paramref： `.Connection.execution_options.isolation_level`  -  per：class：` .Connection`の分離レベル"
 
 #: of sqlalchemy.engine.Connection.detach:1
 msgid "Detach the underlying DB-API connection from its connection pool."
-msgstr ""
+msgstr "基礎となるDB-API接続を接続プールから切り離します。"
 
 #: of sqlalchemy.engine.Connection.detach:3 sqlalchemy.engine.Engine.begin:4
 msgid "E.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.engine.Connection.detach:14
 msgid ""
 "This :class:`.Connection` instance will remain usable.  When closed (or "
 "exited from a context manager context as above), the DB-API connection "
 "will be literally closed and not returned to its originating pool."
-msgstr ""
+msgstr "これは：class： `.Connection`インスタンスは使用可能なままです。閉じられると（上記のようなコンテキスト・マネージャ・コンテキストから抜け出すと）、DB-API接続は文字どおり閉じられ、元のプールに戻されません。"
 
 #: of sqlalchemy.engine.Connection.detach:19
 msgid ""
 "This method can be used to insulate the rest of an application from a "
 "modified state on a connection (such as a transaction isolation level or "
 "similar)."
-msgstr ""
+msgstr "このメソッドを使用して、接続の変更された状態（トランザクション分離レベルなど）からアプリケーションの残りの部分を保護することができます。"
 
 #: of sqlalchemy.engine.Connection.execute:1
 msgid "Executes a SQL statement construct and returns a :class:`.ResultProxy`."
-msgstr ""
+msgstr "SQL文を実行し、：class： `.ResultProxy`を返します。"
 
 #: of sqlalchemy.engine.Connection.execute:4
 msgid ""
@@ -1027,40 +1017,40 @@ msgid ""
 "will be automatically wrapped in   a SELECT statement, which is then "
 "executed. * a :class:`.DDLElement` object * a :class:`.DefaultGenerator` "
 "object * a :class:`.Compiled` object"
-msgstr ""
+msgstr "実行されるステートメント。 *：単純な文字列* any：class： `.ClauseElement`構造体：class：` .Executable`のサブクラスでもあります：a：func： `〜.expression.select`構造体* a：クラス： `.FunctionElement`は、：data：` .func`によって生成されたものなど、自動的にSELECTステートメントにラップされ、それが実行されます。 * a：class： `.DDLElement`オブジェクト* a：class：` .DefaultGenerator`オブジェクト* a：class： `.Compiled`オブジェクト"
 
 #: of sqlalchemy.engine.Connection.execute:4
 msgid "The statement to be executed.  May be one of:"
-msgstr ""
+msgstr "実行されるステートメント。次のいずれかになります。"
 
 #: of sqlalchemy.engine.Connection.execute:7
 msgid "a plain string"
-msgstr ""
+msgstr "平らなひも"
 
 #: of sqlalchemy.engine.Connection.execute:8
 msgid ""
 "any :class:`.ClauseElement` construct that is also a subclass of "
 ":class:`.Executable`, such as a :func:`~.expression.select` construct"
-msgstr ""
+msgstr "any：class： `.ClauseElement`構造体：class：` .Executable`のサブクラスでもあります：a：func： `〜.expression.select`構造体"
 
 #: of sqlalchemy.engine.Connection.execute:11
 msgid ""
 "a :class:`.FunctionElement`, such as that generated by :data:`.func`, "
 "will be automatically wrapped in a SELECT statement, which is then "
 "executed."
-msgstr ""
+msgstr "a：class： `.FunctionElement`（例えば：data：` .func`によって生成されたもの）は自動的にSELECT文にラップされ、その後実行されます。"
 
 #: of sqlalchemy.engine.Connection.execute:14
 msgid "a :class:`.DDLElement` object"
-msgstr ""
+msgstr "a：class： `.DDLElement`オブジェクト"
 
 #: of sqlalchemy.engine.Connection.execute:15
 msgid "a :class:`.DefaultGenerator` object"
-msgstr ""
+msgstr "a：クラス： `.DefaultGenerator`オブジェクト"
 
 #: of sqlalchemy.engine.Connection.execute:16
 msgid "a :class:`.Compiled` object"
-msgstr ""
+msgstr "a：class： `.Compiled`オブジェクト"
 
 #: of sqlalchemy.engine.Connection.execute:18
 msgid ""
@@ -1083,25 +1073,25 @@ msgid ""
 "for details on paramstyle.  To execute a textual SQL statement which uses"
 " bound parameters in a DBAPI-agnostic way, use the "
 ":func:`~.expression.text` construct."
-msgstr ""
+msgstr "実行に使用されるバインドされたパラメータ値を表します。通常、\\ * multiparams :: conn.execute（table.insert（）、{\ &quot;id \&quot;：1、\ &quot;value \&quot;：\ &quot;v1 \ &quot;}、{\&quot; id \ &quot;：2、\&quot; value \ &quot;：\&quot; v2 \ &quot;}）... \\ ** params :: conn.execute（table.insert（ ）、id = 1、value = \ &quot;v1 \&quot;）プレーンSQL文字列が渡され、基礎となるDBAPIが位置バインドパラメータを受け入れる場合、\\ * multiparamsのタプルまたは個々の値の集合が渡されます。 （1、\ &quot;v1 \&quot;）、（2、\ &quot;v2 \&quot;））conn.execute（\ &quot;INSERT INTOテーブル（ID、値）VALUE（？、？） （？、？）\ &quot;、1、\&quot; v1 \ &quot;）上記のように、\&quot;？\ &quot;または他のシンボルの使用は\&quot; paramstyle \ \ &quot;qmark \&quot;、\ &quot;named \&quot;、\ &quot;pyformat \&quot;、\ &quot;format \&quot;、\ &quot;numeric \&quot;のいずれかであるDBAPIで受け入れられます。 `pep-249 <http://www.python.org/dev/peps/pep-0249/>パラームスタイルの詳細については、_を参照してください。 DBAPIに依存しない方法でバインドされたパラメータを使用するテキストSQL文を実行するには、：func： `〜.expression.text`構文を使用します。"
 
 #: of sqlalchemy.engine.Connection.execute:18
 msgid ""
 "represent bound parameter values to be used in the execution.   "
 "Typically, the format is either a collection of one or more dictionaries "
 "passed to \\*multiparams::"
-msgstr ""
+msgstr "実行に使用されるバインドされたパラメータ値を表します。通常、この形式は、\\ * multiparamsに渡される1つ以上の辞書のコレクションです。"
 
 #: of sqlalchemy.engine.Connection.execute:29
 msgid "...or individual key/values interpreted by \\**params::"
-msgstr ""
+msgstr "...または\\ ** paramsによって解釈される個々のキー/値::"
 
 #: of sqlalchemy.engine.Connection.execute:35
 msgid ""
 "In the case that a plain SQL string is passed, and the underlying DBAPI "
 "accepts positional bind parameters, a collection of tuples or individual "
 "values in \\*multiparams may be passed::"
-msgstr ""
+msgstr "プレーンなSQL文字列が渡され、基礎となるDBAPIが位置バインドパラメータを受け入れる場合、\\ * multiparamsのタプルまたは個々の値のコレクションが渡される可能性があります::"
 
 #: of sqlalchemy.engine.Connection.execute:49
 msgid ""
@@ -1110,17 +1100,17 @@ msgid ""
 "may be any of \"qmark\", \"named\", \"pyformat\", \"format\", "
 "\"numeric\".   See `pep-249 <http://www.python.org/dev/peps/pep-0249/>`_ "
 "for details on paramstyle."
-msgstr ""
+msgstr "上記の注意、疑問符 &quot;？&quot;の使用やその他の記号は、使用中のDBAPIが受け入れる\ &quot;paramstyle \&quot;を条件としています。\ &quot;qmark \&quot;、\ &quot;named \ \ &quot;フォーマット\&quot;、\ &quot;フォーマット\&quot;、\ &quot;数値\&quot; `pep-249 <http://www.python.org/dev/peps/pep-0249/>パラームスタイルの詳細については、_を参照してください。"
 
 #: of sqlalchemy.engine.Connection.execute:55
 msgid ""
 "To execute a textual SQL statement which uses bound parameters in a "
 "DBAPI-agnostic way, use the :func:`~.expression.text` construct."
-msgstr ""
+msgstr "DBAPIに依存しない方法でバインドされたパラメータを使用するテキストSQL文を実行するには、：func： `〜.expression.text`構文を使用します。"
 
 #: of sqlalchemy.engine.Connection.execution_options:1
 msgid "Set non-SQL options for the connection which take effect during execution."
-msgstr ""
+msgstr "実行中に有効になる接続の非SQLオプションを設定します。"
 
 #: of sqlalchemy.engine.Connection.execution_options:4
 msgid ""
@@ -1130,7 +1120,7 @@ msgid ""
 "As the new :class:`.Connection` references the same underlying resource, "
 "it's usually a good idea to ensure that the copies will be discarded "
 "immediately, which is implicit if used as in::"
-msgstr ""
+msgstr "このメソッドは、同じ基底のDBAPI接続を参照するthis：class： `.Connection`のコピーを返しますが、：meth：` execute`の呼び出しに有効な、指定された実行オプションも定義します。 new：class： `.Connection`は同じ基礎となるリソースを参照するので、通常はコピーがすぐに破棄されるようにすることをお勧めします。"
 
 #: of sqlalchemy.engine.Connection.execution_options:14
 msgid ""
@@ -1139,14 +1129,14 @@ msgid ""
 "``_execution_options`` dictionary of the :class:`.Connection`.   It is "
 "suitable for usage by end-user schemes to communicate with event "
 "listeners, for example."
-msgstr ""
+msgstr "どのキー/値も：meth： `.Connection.execution_options`に渡すことができ、：class：` .Connection`の `` _execution_options``ディクショナリに格納されます。例えば、エンドユーザスキームがイベントリスナと通信するのに適しています。"
 
 #: of sqlalchemy.engine.Connection.execution_options:20
 msgid ""
 "The keywords that are currently recognized by SQLAlchemy itself include "
 "all those listed under :meth:`.Executable.execution_options`, as well as "
 "others that are specific to :class:`.Connection`."
-msgstr ""
+msgstr "現在SQLAlchemyで認識されているキーワードには、meth： `.Executable.execution_options`の他に、class：` .Connection`に固有のものも含まれます。"
 
 #: of sqlalchemy.engine.Connection.execution_options:24
 msgid ""
@@ -1161,7 +1151,7 @@ msgid ""
 "when invoking a SELECT or other specific SQL construct where COMMIT is "
 "desired (typically when calling stored procedures and such), and an "
 "explicit transaction is not in progress."
-msgstr ""
+msgstr "利用可能：接続、ステートメント。 Trueの場合、COMMITは &#39;自動コミット&#39;モードで実行されたとき、つまり明示的なトランザクションが接続で開始されていないときに実行されます。デフォルトでは、DBAPI接続は常にトランザクション内にあることに注意してください.SQLAlchemyは、さまざまな種類のステートメントに適用されるルールを使用して、COMMITが呼び出されて自動コミット機能を提供するかどうかを判断します。通常、すべてのINSERT / UPDATE / DELETEステートメントとCREATE / DROPステートメントは、自動コミット動作を有効にします。 SELECT構文はしません。 COMMITが必要なSELECTや他の特定のSQL構文（通常はストアド・プロシージャを呼び出すときなど）を呼び出し、明示的なトランザクションが進行中でないときに、このオプションを使用します。"
 
 #: of sqlalchemy.engine.Connection.execution_options:38
 msgid ""
@@ -1176,7 +1166,7 @@ msgid ""
 "use of its own \"compiled\" caches for some operations, including flush "
 "operations.  The caching used by the ORM internally supersedes a cache "
 "dictionary specified here."
-msgstr ""
+msgstr "使用可能な場所：Connection。辞書：where：class： `.Compiled`オブジェクトは：class：` .Connection`が節式を：class： `.Compiled`オブジェクトにコンパイルするときにキャッシュされます。このディクショナリのサイズを管理するのは、ディクテーション、節の要素、INSERTまたはUPDATEのVALUESまたはSET句内の列名、および「バッチ」モードに対応するキーを持つユーザーの責任です。 INSERTまたはUPDATEステートメントの場合この辞書の形式は、将来のリリースでも同じであるとは限りません。 ORMは、フラッシュ操作を含むいくつかの操作に、独自の\ &quot;コンパイル済み\&quot;キャッシュを使用することに注意してください。 ORMによって使用されるキャッシングは、ここで指定されたキャッシュディクショナリに優先して内部的に使用されます。"
 
 #: of sqlalchemy.engine.Connection.execution_options:38
 msgid ""
@@ -1188,14 +1178,14 @@ msgid ""
 "clause of an INSERT or UPDATE, as well as the \"batch\" mode for an "
 "INSERT or UPDATE statement. The format of this dictionary is not "
 "guaranteed to stay the same in future releases."
-msgstr ""
+msgstr "使用可能な場所：Connection。辞書：where：class： `.Compiled`オブジェクトは：class：` .Connection`が節式を：class： `.Compiled`オブジェクトにコンパイルするときにキャッシュされます。このディクショナリのサイズを管理するのは、ディクテーション、節の要素、INSERTまたはUPDATEのVALUESまたはSET句内の列名、および「バッチ」モードに対応するキーを持つユーザーの責任です。 INSERTまたはUPDATEステートメントの場合この辞書の形式は、将来のリリースでも同じであるとは限りません。"
 
 #: of sqlalchemy.engine.Connection.execution_options:50
 msgid ""
 "Note that the ORM makes use of its own \"compiled\" caches for some "
 "operations, including flush operations.  The caching used by the ORM "
 "internally supersedes a cache dictionary specified here."
-msgstr ""
+msgstr "ORMは、フラッシュ操作を含むいくつかの操作に、独自の\ &quot;コンパイル済み\&quot;キャッシュを使用することに注意してください。 ORMによって使用されるキャッシングは、ここで指定されたキャッシュディクショナリに優先して内部的に使用されます。"
 
 #: of sqlalchemy.engine.Connection.execution_options:55
 msgid ""
@@ -1233,7 +1223,7 @@ msgid ""
 "        :ref:`MySQL Transaction Isolation <mysql_isolation_level>`"
 "        :ref:`SQL Server Transaction Isolation <mssql_isolation_level>`"
 "        :ref:`session_transaction_isolation` - for the ORM"
-msgstr ""
+msgstr "利用可能なのは：class： `.Connection`です。 class： `.Connection`オブジェクトのライフタイムに対するトランザクション分離レベルを設定します（class：` .Connection`オブジェクトの終了時にレベルが元の設定にリセットされる、基底のDBAPI接続ではありません） 。有効な値には：paramref： `.create_engine.isolation_level`パラメータで受け入れられた文字列値が含まれます：func：` .create_engine`。これらのレベルはセミデータベース固有のものです。有効なレベルについては個々の方言文書を参照してください。このオプションは、元の：class： `.Connection`の存続期間の基礎となるDBAPI接続に必ず影響し、実行ごとではないことに注意してください。この設定は、基礎となるDBAPI接続が接続プールに返されるまでは削除されません。つまり、：meth： `.Connection.close`メソッドが呼び出されます。 .. warning :: `` isolation_level``実行オプションは、トランザクションがすでに確立されている場合、つまり：meth： `.Connection.begin`メソッドなどが呼び出されたときには使用しないでください。データベースは進行中のトランザクションの分離レベルを変更することができず、異なるDBAPIやSQLAlchemyの方言はトランザクションを暗黙的にロールバックまたはコミットしたり、接続にまったく影響を与えません。 .. versionchanged :: 0.9.9トランザクションが：meth： `.Connection.begin`またはそれに類するもので開始された後、` `isolation_level``実行オプションが使用されたときに、警告が発行されます。 ..注意:: `` isolation_level``実行オプションは、：class： `.Connection`が無効にされている場合、例えば：meth：` .Connection.invalidate`メソッドによって、または切断エラーが発生した場合、暗黙的にリセットされます。無効化後に生成された新しい接続には、分離レベルが自動的に再適用されることはありません。 .. seealso :: paramref :: `.create_engine.isolation_level`  -  per：class：` .Engine`分離レベル：meth： `.Connection.get_isolation_level`  - 現在のレベルを表示：ref：` SQLite Transaction Isolation <sqlite_isolation_level> `：ref：` PostgreSQLトランザクションの分離<postgresql_isolation_level> `：ref：` MySQLトランザクションの分離<mysql_isolation_level> `：ref：` SQL Serverトランザクションの分離<mssql_isolation_level> `：ref：` session_transaction_isolation`  -  ORMのために"
 
 #: of sqlalchemy.engine.Connection.execution_options:55
 msgid ""
@@ -1241,7 +1231,7 @@ msgid ""
 "for the lifespan of this :class:`.Connection` object (*not* the "
 "underlying DBAPI connection, for which the level is reset to its original"
 " setting upon termination of this :class:`.Connection` object)."
-msgstr ""
+msgstr "利用可能なのは：class： `.Connection`です。 class： `.Connection`オブジェクトのライフタイムに対するトランザクション分離レベルを設定します（class：` .Connection`オブジェクトの終了時にレベルが元の設定にリセットされる、基底のDBAPI接続ではありません） 。"
 
 #: of sqlalchemy.engine.Connection.execution_options:62
 msgid ""
@@ -1249,7 +1239,7 @@ msgid ""
 ":paramref:`.create_engine.isolation_level` parameter passed to "
 ":func:`.create_engine`.  These levels are semi-database specific; see "
 "individual dialect documentation for valid levels."
-msgstr ""
+msgstr "有効な値には：paramref： `.create_engine.isolation_level`パラメータで受け入れられた文字列値が含まれます：func：` .create_engine`。これらのレベルはセミデータベース固有のものです。有効なレベルについては個々の方言文書を参照してください。"
 
 #: of sqlalchemy.engine.Connection.execution_options:69
 msgid ""
@@ -1258,7 +1248,7 @@ msgid ""
 "per-execution. This setting is not removed until the underlying DBAPI "
 "connection is returned to the connection pool, i.e. the "
 ":meth:`.Connection.close` method is called."
-msgstr ""
+msgstr "このオプションは、元の：class： `.Connection`の存続期間の基礎となるDBAPI接続に必ず影響し、実行ごとではないことに注意してください。この設定は、基礎となるDBAPI接続が接続プールに返されるまでは削除されません。つまり、：meth： `.Connection.close`メソッドが呼び出されます。"
 
 #: of sqlalchemy.engine.Connection.execution_options:76
 msgid ""
@@ -1268,14 +1258,14 @@ msgid ""
 "cannot change the isolation level on a transaction in progress, and "
 "different DBAPIs and/or SQLAlchemy dialects may implicitly roll back or "
 "commit the transaction, or not affect the connection at all."
-msgstr ""
+msgstr "`` isolation_level``の実行オプションは、トランザクションがすでに確立されている場合、つまり：meth： `.Connection.begin`メソッドなどが呼び出されたときには使用しないでください。データベースは進行中のトランザクションの分離レベルを変更することができず、異なるDBAPIやSQLAlchemyの方言はトランザクションを暗黙的にロールバックまたはコミットしたり、接続にまったく影響を与えません。"
 
 #: of sqlalchemy.engine.Connection.execution_options:84
 msgid ""
 "A warning is emitted when the ``isolation_level`` execution option is "
 "used after a transaction has been started with :meth:`.Connection.begin` "
 "or similar."
-msgstr ""
+msgstr "トランザクションが：meth： `.Connection.begin`またはそれに類するもので開始された後に、` `isolation_level``実行オプションが使用されると、警告が発行されます。"
 
 #: of sqlalchemy.engine.Connection.execution_options:89
 msgid ""
@@ -1284,27 +1274,27 @@ msgid ""
 ":meth:`.Connection.invalidate` method, or if a disconnection error "
 "occurs.  The new connection produced after the invalidation will not have"
 " the isolation level re-applied to it automatically."
-msgstr ""
+msgstr "`` isolation_level``実行オプションは、：class： `.Connection`が無効にされている場合、例えば：meth：` .Connection.invalidate`メソッドを介して、または切断エラーが発生した場合、暗黙的にリセットされます。無効化後に生成された新しい接続には、分離レベルが自動的に再適用されることはありません。"
 
 #: of sqlalchemy.engine.Connection.execution_options:103
 msgid ":ref:`SQLite Transaction Isolation <sqlite_isolation_level>`"
-msgstr ""
+msgstr "：ref： `SQLiteトランザクションの分離<sqlite_isolation_level> `"
 
 #: of sqlalchemy.engine.Connection.execution_options:105
 msgid ":ref:`PostgreSQL Transaction Isolation <postgresql_isolation_level>`"
-msgstr ""
+msgstr "：ref： `PostgreSQLトランザクションの分離<postgresql_isolation_level> `"
 
 #: of sqlalchemy.engine.Connection.execution_options:107
 msgid ":ref:`MySQL Transaction Isolation <mysql_isolation_level>`"
-msgstr ""
+msgstr "：ref： `MySQLトランザクションの分離<mysql_isolation_level> `"
 
 #: of sqlalchemy.engine.Connection.execution_options:109
 msgid ":ref:`SQL Server Transaction Isolation <mssql_isolation_level>`"
-msgstr ""
+msgstr "：ref： `SQL Serverトランザクションの分離<mssql_isolation_level> `"
 
 #: of sqlalchemy.engine.Connection.execution_options:111
 msgid ":ref:`session_transaction_isolation` - for the ORM"
-msgstr ""
+msgstr "：ref： `session_transaction_isolation`  -  ORM用"
 
 #: of sqlalchemy.engine.Connection.execution_options:113
 msgid ""
@@ -1317,7 +1307,7 @@ msgid ""
 " that is neutral regarding whether it's executed by the DBAPI or piped "
 "into a script that's later invoked by command line tools.  .. "
 "versionadded:: 0.7.6"
-msgstr ""
+msgstr "`` True``のとき、最後のパラメータリストまたは辞書が完全に空であれば、パラメータコレクションをまったく渡さずに、カーソル上の文を `` cursor.execute（statement） ``として呼び出します。 psycopg2やmysql-pythonなどの一部のDBAPIでは、パラメータが存在する場合にのみパーセント記号が重要とみなされます。このオプションを使用すると、DBAPIによって実行されるか、後でコマンドラインツールで呼び出されるスクリプトにパイプされているかに関して、パーセント記号（場合によってはその他の文字）を含むSQLをコードで生成できます。 .. versionadded :: 0.7.6"
 
 #: of sqlalchemy.engine.Connection.execution_options:113
 msgid ""
@@ -1329,7 +1319,7 @@ msgid ""
 " to generate SQL containing percent signs (and possibly other characters)"
 " that is neutral regarding whether it's executed by the DBAPI or piped "
 "into a script that's later invoked by command line tools."
-msgstr ""
+msgstr "`` True``のとき、最後のパラメータリストまたは辞書が完全に空であれば、パラメータコレクションをまったく渡さずに、カーソル上の文を `` cursor.execute（statement） ``として呼び出します。 psycopg2やmysql-pythonなどの一部のDBAPIでは、パラメータが存在する場合にのみパーセント記号が重要とみなされます。このオプションを使用すると、DBAPIによって実行されるか、後でコマンドラインツールで呼び出されるスクリプトにパイプされているかに関して、パーセント記号（場合によってはその他の文字）を含むSQLをコードで生成できます。"
 
 #: of sqlalchemy.engine.Connection.execution_options:127
 msgid ""
@@ -1337,7 +1327,7 @@ msgid ""
 " should be \"streamed\" and not pre-buffered, if possible.  This is a "
 "limitation of many DBAPIs.  The flag is currently understood only by the "
 "psycopg2, mysqldb and pymysql dialects."
-msgstr ""
+msgstr "利用可能：接続、ステートメント。可能であれば、結果は &quot;ストリーミング&quot;され、事前にバッファリングされてはならないという方言を示します。これは多くのDBAPIの制限です。フラグは現在、psycopg2、mysqldb、およびpymysqlの方言でのみ理解されています。"
 
 #: of sqlalchemy.engine.Connection.execution_options:133
 msgid ""
@@ -1347,7 +1337,7 @@ msgid ""
 "elements are compiled into strings; the resulting schema name will be "
 "converted based on presence in the map of the original name.  .. "
 "versionadded:: 1.1  .. seealso::    :ref:`schema_translating`"
-msgstr ""
+msgstr "利用可能：接続、エンジン。 SQLまたはDDL式の要素が文字列にコンパイルされたときに、それぞれ：class： `.Table`が検出され、：paramref：` .Table.schema`要素に適用される、スキーマ名をスキーマ名にマッピングする辞書です。結果のスキーマ名は、元の名前のマップ内の存在に基づいて変換されます。 .. versionadded :: 1.1 .. seealso ::：ref： `schema_translating`"
 
 #: of sqlalchemy.engine.Connection.execution_options:133
 msgid ""
@@ -1356,17 +1346,17 @@ msgid ""
 "element of each :class:`.Table` encountered when SQL or DDL expression "
 "elements are compiled into strings; the resulting schema name will be "
 "converted based on presence in the map of the original name."
-msgstr ""
+msgstr "利用可能：接続、エンジン。 SQLまたはDDL式の要素が文字列にコンパイルされたときに、それぞれ：class： `.Table`が検出され、：paramref：` .Table.schema`要素に適用される、スキーマ名をスキーマ名にマッピングする辞書です。結果のスキーマ名は、元の名前のマップ内の存在に基づいて変換されます。"
 
 #: of sqlalchemy.engine.Connection.execution_options:144
 #: sqlalchemy.engine.Connection.schema_for_object:12
 #: sqlalchemy.engine.Engine.schema_for_object:12
 msgid ":ref:`schema_translating`"
-msgstr ""
+msgstr "：ref： `schema_translating`"
 
 #: of sqlalchemy.engine.Connection.get_isolation_level:1
 msgid "Return the current isolation level assigned to this :class:`.Connection`."
-msgstr ""
+msgstr "this：class： `.Connection`に割り当てられた現在の隔離レベルを返します。"
 
 #: of sqlalchemy.engine.Connection.get_isolation_level:4
 msgid ""
@@ -1375,7 +1365,7 @@ msgid ""
 ":paramref:`.Connection.execution_options.isolation_level` feature has "
 "been used to alter the isolation level on a per-:class:`.Connection` "
 "basis."
-msgstr ""
+msgstr "：paramref： `.Connection.execution_options.isolation_level`機能を使用してper：：class：` .Connection`ベースで隔離レベルを変更していない限り、これは通常、方言によって決定されるデフォルトの隔離レベルになります。"
 
 #: of sqlalchemy.engine.Connection.get_isolation_level:10
 msgid ""
@@ -1385,42 +1375,42 @@ msgid ""
 " set.  Compare to the :attr:`.Connection.default_isolation_level` "
 "accessor which returns the dialect-level setting without performing a SQL"
 " query."
-msgstr ""
+msgstr "この属性は、現在の分離レベルを取得するために通常はライブSQL操作を実行するため、返される値は、この状態がどのように設定されたかにかかわらず、基礎となるDBAPI接続の実際のレベルです。 ：attr： `.Connection.default_isolation_level`アクセサと比較して、SQLクエリを実行せずにダイアレクトレベルの設定を返します。"
 
 #: of sqlalchemy.engine.Connection.get_isolation_level:22
 msgid ":attr:`.Connection.default_isolation_level` - view default level"
-msgstr ""
+msgstr "：attr： `.Connection.default_isolation_level`  - デフォルトのレベルを表示する"
 
 #: of sqlalchemy.engine.Connection.in_transaction:1
 msgid "Return True if a transaction is in progress."
-msgstr ""
+msgstr "トランザクションが進行中の場合はTrueを返します。"
 
 #: of sqlalchemy.engine.Connection.info:1
 msgid ""
 "Info dictionary associated with the underlying DBAPI connection referred "
 "to by this :class:`.Connection`, allowing user-defined data to be "
 "associated with the connection."
-msgstr ""
+msgstr "this：class： `.Connection`で参照される基になるDBAPI接続に関連付けられた情報辞書。ユーザー定義のデータを接続に関連付けることができます。"
 
 #: of sqlalchemy.engine.Connection.info:5
 msgid ""
 "The data here will follow along with the DBAPI connection including after"
 " it is returned to the connection pool and used again in subsequent "
 "instances of :class:`.Connection`."
-msgstr ""
+msgstr "ここでのデータは、接続プールに戻された後のものも含めて、DBAPI接続の後に続き、class： `.Connection`の後続のインスタンスで再び使用されます。"
 
 #: of sqlalchemy.engine.Connection.invalidate:1
 msgid ""
 "Invalidate the underlying DBAPI connection associated with this "
 ":class:`.Connection`."
-msgstr ""
+msgstr "これに関連する基礎となるDBAPI接続を無効にします：class： `.Connection`。"
 
 #: of sqlalchemy.engine.Connection.invalidate:4
 msgid ""
 "The underlying DBAPI connection is literally closed (if possible), and is"
 " discarded.  Its source connection pool will typically lazily create a "
 "new connection to replace it."
-msgstr ""
+msgstr "基本となるDBAPI接続は、可能な場合は文字通り閉じられ、破棄されます。そのソース接続プールは、通常、新しい接続を作成して置き換えます。"
 
 #: of sqlalchemy.engine.Connection.invalidate:8
 msgid ""
@@ -1428,7 +1418,7 @@ msgid ""
 ":meth:`.Connection.execute` method or similar), this :class:`.Connection`"
 " will attempt to procure a new DBAPI connection using the services of the"
 " :class:`.Pool` as a source of connectivity (e.g. a \"reconnection\")."
-msgstr ""
+msgstr "次の使用時に（\ use &quot;は通常：meth：` .Connection.execute`メソッドなどを使用することを意味します）、class： `.Connection`は、次のサービスを使用して新しいDBAPI接続を獲得しようとします。 ：class： `.Pool`を接続元（例えば&quot;再接続 &quot;）にします。"
 
 #: of sqlalchemy.engine.Connection.invalidate:14
 msgid ""
@@ -1444,57 +1434,57 @@ msgid ""
 "applications from accidentally continuing an ongoing transactional "
 "operations despite the fact that the transaction has been lost due to an "
 "invalidation."
-msgstr ""
+msgstr "：meth： `.Connection.invalidate`メソッドが呼び出されたときに、トランザクションが進行中（例えば、：meth：` .Connection.begin`メソッドが呼び出された場合）、DBAPIレベルでこのトランザクションに関連するすべての状態が失われ、 DBAPI接続が閉じられているためです。 ：class： `.Connection`は：class：` .Transaction`オブジェクトが終了するまで、：meth： `.Transaction.rollback`メソッドを呼び出すことによって、再接続を続行することはできません。その時点まで：class： `.Connection`を使い続けると、class：`〜sqlalchemy.exc.InvalidRequestError`が発生します。これは、無効化によってトランザクションが失われたにもかかわらず、アプリケーションが誤って進行中のトランザクション操作を続行しないようにするためです。"
 
 #: of sqlalchemy.engine.Connection.invalidate:29
 msgid ""
 "The :meth:`.Connection.invalidate` method, just like auto-invalidation, "
 "will at the connection pool level invoke the "
 ":meth:`.PoolEvents.invalidate` event."
-msgstr ""
+msgstr "：meth： `.Connection.invalidate`メソッドは、自動無効化と同様に、接続プールレベルで、：meth：` .PoolEvents.invalidate`イベントを呼び出します。"
 
 #: of sqlalchemy.engine.Connection.invalidate:35
 msgid ":ref:`pool_connection_invalidation`"
-msgstr ""
+msgstr "：ref： `pool_connection_invalidation`"
 
 #: of sqlalchemy.engine.Connection.invalidated:1
 msgid "Return True if this connection was invalidated."
-msgstr ""
+msgstr "この接続が無効にされた場合はTrueを返します。"
 
 #: of sqlalchemy.engine.Connection.run_callable:1
 #: sqlalchemy.engine.Engine.run_callable:1
 msgid ""
 "Given a callable object or function, execute it, passing a "
 ":class:`.Connection` as the first argument."
-msgstr ""
+msgstr "呼び出し可能なオブジェクトまたは関数があれば、それを実行して：class： `.Connection`を最初の引数として渡します。"
 
 #: of sqlalchemy.engine.Connection.run_callable:4
 #: sqlalchemy.engine.Engine.run_callable:4
 msgid ""
 "The given \\*args and \\**kwargs are passed subsequent to the "
 ":class:`.Connection` argument."
-msgstr ""
+msgstr "与えられた\\ * argsと\\ ** kwargsは：class： `.Connection`引数の後に渡されます。"
 
 #: of sqlalchemy.engine.Connection.run_callable:7
 msgid ""
 "This function, along with :meth:`.Engine.run_callable`, allows a function"
 " to be run with a :class:`.Connection` or :class:`.Engine` object without"
 " the need to know which one is being dealt with."
-msgstr ""
+msgstr "この関数は：meth： `.Engine.run_callable`と一緒に、：class：` .Connection`または：class： `.Engine`オブジェクトを使って関数を実行することを可能にします。 。"
 
 #: of sqlalchemy.engine.Connectable.scalar:1
 #: sqlalchemy.engine.Connection.scalar:1
 msgid "Executes and returns the first column of the first row."
-msgstr ""
+msgstr "最初の行の最初の列を実行して返します。"
 
 #: of sqlalchemy.engine.Connection.scalar:3
 msgid "The underlying result/cursor is closed after execution."
-msgstr ""
+msgstr "基礎となる結果/カーソルは実行後に閉じられます。"
 
 #: of sqlalchemy.engine.Connection.schema_for_object:1
 #: sqlalchemy.engine.Engine.schema_for_object:1
 msgid "Return the \".schema\" attribute for an object."
-msgstr ""
+msgstr "オブジェクトの\ &quot;スキーマ\&quot;属性を返します。"
 
 #: of sqlalchemy.engine.Connection.schema_for_object:3
 #: sqlalchemy.engine.Engine.schema_for_object:3
@@ -1502,18 +1492,18 @@ msgid ""
 "Used for :class:`.Table`, :class:`.Sequence` and similar objects, and "
 "takes into account the "
 ":paramref:`.Connection.execution_options.schema_translate_map` parameter."
-msgstr ""
+msgstr "：class： `.Table`、：class：` .Sequence`などのオブジェクトで使用され、：paramref： `.Connection.execution_options.schema_translate_map`パラメータを考慮します。"
 
 #: of sqlalchemy.engine.Connection.transaction:1
 #: sqlalchemy.engine.Engine.transaction:1
 msgid "Execute the given function within a transaction boundary."
-msgstr ""
+msgstr "指定された関数をトランザクション境界内で実行します。"
 
 #: of sqlalchemy.engine.Connection.transaction:3
 msgid ""
 "The function is passed this :class:`.Connection` as the first argument, "
 "followed by the given \\*args and \\**kwargs, e.g.::"
-msgstr ""
+msgstr "この関数は次のように渡されます：クラス： `.Connection`を最初の引数に指定し、その後に与えられた\\ * argsと\\ ** kwargsを続けます::"
 
 #: of sqlalchemy.engine.Connection.transaction:12
 #: sqlalchemy.engine.Engine.transaction:14
@@ -1522,48 +1512,48 @@ msgid ""
 "a single :class:`.Transaction`. Upon success, the transaction is "
 "committed.  If an exception is raised, the transaction is rolled back "
 "before propagating the exception."
-msgstr ""
+msgstr "関数内の操作はすべて、class： `.Transaction`という単一のコンテキスト内で呼び出されます。成功すると、トランザクションはコミットされます。例外が発生した場合、トランザクションは例外を伝播する前にロールバックされます。"
 
 #: of sqlalchemy.engine.Connection.transaction:20
 msgid ""
 "The :meth:`.transaction` method is superseded by the usage of the Python "
 "``with:`` statement, which can be used with :meth:`.Connection.begin`::"
-msgstr ""
+msgstr "：meth： `.transaction`メソッドは、Pythonの` `with：` `ステートメントの代わりに使われます。これは：meth：` .Connection.begin` ::"
 
 #: of sqlalchemy.engine.Connection.transaction:27
 msgid "As well as with :meth:`.Engine.begin`::"
-msgstr ""
+msgstr "同様に：meth： `.Engine.begin` ::"
 
 #: of sqlalchemy.engine.Connection.transaction:34
 #: sqlalchemy.engine.Engine.transaction:31
 msgid ":meth:`.Engine.begin` - engine-level transactional context"
-msgstr ""
+msgstr "：meth： `.Engine.begin`  - エンジンレベルのトランザクションコンテキスト"
 
 #: of sqlalchemy.engine.Connection.transaction:37
 msgid ""
 ":meth:`.Engine.transaction` - engine-level version of "
 ":meth:`.Connection.transaction`"
-msgstr ""
+msgstr "：meth： `.Engine.transaction`  - エンジンレベルのバージョン：meth：` .Connection.transaction`"
 
 #: of sqlalchemy.engine.Connectable:1
 msgid "Interface for an object which supports execution of SQL constructs."
-msgstr ""
+msgstr "SQL構文の実行をサポートするオブジェクトのインタフェース。"
 
 #: of sqlalchemy.engine.Connectable:3
 msgid ""
 "The two implementations of :class:`.Connectable` are :class:`.Connection`"
 " and :class:`.Engine`."
-msgstr ""
+msgstr "class： `.Connectable`の2つの実装は：class：` .Connection`と：class： `.Engine`です。"
 
 #: of sqlalchemy.engine.Connectable:6
 msgid ""
 "Connectable must also implement the 'dialect' member which references a "
 ":class:`.Dialect` instance."
-msgstr ""
+msgstr "Connectableは：class： `.Dialect`インスタンスを参照する &#39;dialect&#39;メンバも実装しなければなりません。"
 
 #: of sqlalchemy.engine.Connectable.connect:1
 msgid "Return a :class:`.Connection` object."
-msgstr ""
+msgstr "a：class： `.Connection`オブジェクトを返します。"
 
 #: of sqlalchemy.engine.Connectable.connect:3
 #: sqlalchemy.engine.Connectable.contextual_connect:4
@@ -1571,49 +1561,49 @@ msgid ""
 "Depending on context, this may be ``self`` if this object is already an "
 "instance of :class:`.Connection`, or a newly procured "
 ":class:`.Connection` if this object is an instance of :class:`.Engine`."
-msgstr ""
+msgstr "文脈によっては、このオブジェクトが既に：class： `.Connection`のインスタンスである場合は` `self``、またはこのオブジェクトがインスタンスである場合は`：Connection :: `` Connection``：class： `： .Engine`。"
 
 #: of sqlalchemy.engine.Connectable.contextual_connect:1
 msgid ""
 "Return a :class:`.Connection` object which may be part of an ongoing "
 "context."
-msgstr ""
+msgstr "進行中のコンテキストの一部であるかもしれないa：class： `.Connection`オブジェクトを返します。"
 
 #: of sqlalchemy.engine.Connectable.create:1
 msgid "Emit CREATE statements for the given schema entity."
-msgstr ""
+msgstr "指定されたスキーマエンティティのCREATE文を発行します。"
 
 #: of sqlalchemy.engine.Connectable.create:3
 msgid ""
 "Use the create() method on the given schema object directly, i.e. "
 ":meth:`.Table.create`, :meth:`.Index.create`, "
 ":meth:`.MetaData.create_all`"
-msgstr ""
+msgstr "指定されたスキーマオブジェクトに対して直接create（）メソッドを使用してください：meth： `.Table.create`、：meth：` .Index.create`、：meth： `.MetaData.create_all`"
 
 #: of sqlalchemy.engine.Connectable.drop:1
 msgid "Emit DROP statements for the given schema entity."
-msgstr ""
+msgstr "指定されたスキーマエンティティのDROP文を発行します。"
 
 #: of sqlalchemy.engine.Connectable.drop:3
 msgid ""
 "Use the drop() method on the given schema object directly, i.e. "
 ":meth:`.Table.drop`, :meth:`.Index.drop`, :meth:`.MetaData.drop_all`"
-msgstr ""
+msgstr "指定されたスキーマオブジェクトに対してdrop（）メソッドを直接使用してください：meth： `.Table.drop`、：meth：` .Index.drop`、：meth： `.MetaData.drop_all`"
 
 #: of sqlalchemy.engine.Connectable.execute:1
 #: sqlalchemy.engine.Engine.execute:1
 msgid "Executes the given construct and returns a :class:`.ResultProxy`."
-msgstr ""
+msgstr "与えられた構文を実行し、：class： `.ResultProxy`を返します。"
 
 #: of sqlalchemy.engine.Connectable.scalar:3
 msgid "The underlying cursor is closed after execution."
-msgstr ""
+msgstr "基本カーソルは実行後に閉じられます。"
 
 #: of sqlalchemy.engine.CreateEnginePlugin:1
 msgid ""
 "A set of hooks intended to augment the construction of an "
 ":class:`.Engine` object based on entrypoint names in a URL."
-msgstr ""
+msgstr "URLのエントリポイント名に基づいて：class： `.Engine`オブジェクトの構築を補強するためのフックのセットです。"
 
 #: of sqlalchemy.engine.CreateEnginePlugin:4
 msgid ""
@@ -1622,46 +1612,46 @@ msgid ""
 "the need for the target application to be modified; instead, the plugin "
 "names can be added to the database URL.  Target applications for "
 ":class:`.CreateEnginePlugin` include:"
-msgstr ""
+msgstr "：class： `.CreateEnginePlugin`の目的は、ターゲットアプリケーションを変更することなく、サードパーティシステムがエンジン、プール、および方言レベルのイベントリスナーを適用できるようにすることです。代わりに、プラグイン名をデータベースURLに追加することができます。ターゲットアプリケーション：class： `.CreateEnginePlugin` include："
 
 #: of sqlalchemy.engine.CreateEnginePlugin:10
 msgid ""
 "connection and SQL performance tools, e.g. which use events to track "
 "number of checkouts and/or time spent with statements"
-msgstr ""
+msgstr "例えば、イベントを使用してチェックアウトの回数および/またはステートメントで費やされた時間を追跡する接続およびSQLパフォーマンスツール"
 
 #: of sqlalchemy.engine.CreateEnginePlugin:13
 msgid "connectivity plugins such as proxies"
-msgstr ""
+msgstr "プロキシなどの接続プラグイン"
 
 #: of sqlalchemy.engine.CreateEnginePlugin:15
 msgid ""
 "Plugins are registered using entry points in a similar way as that of "
 "dialects::"
-msgstr ""
+msgstr "プラグインは、方言と同様にエントリポイントを使って登録されます::"
 
 #: of sqlalchemy.engine.CreateEnginePlugin:23
 msgid ""
 "A plugin that uses the above names would be invoked from a database URL "
 "as in::"
-msgstr ""
+msgstr "上記の名前を使用するプラグインは、次のようにデータベースURLから呼び出されます。"
 
 #: of sqlalchemy.engine.CreateEnginePlugin:31
 msgid ""
 "Alternatively, the :paramref:`.create_engine.plugins\" argument may be "
 "passed as a list to :func:`.create_engine`::"
-msgstr ""
+msgstr "代わりに、：paramref： `.create_engine.plugins \&quot;引数をリストとして渡すこともできます：func： `.create_engine` ::"
 
 #: of sqlalchemy.engine.CreateEnginePlugin:38
 msgid "plugin names can also be specified to :func:`.create_engine` as a list"
-msgstr ""
+msgstr "プラグイン名も指定することができます：func： `.create_engine`をリストとして"
 
 #: of sqlalchemy.engine.CreateEnginePlugin:41
 msgid ""
 "The ``plugin`` argument supports multiple instances, so that a URL may "
 "specify multiple plugins; they are loaded in the order stated in the "
 "URL::"
-msgstr ""
+msgstr "`` plugin``引数は複数のインスタンスをサポートしているので、URLは複数のプラグインを指定することができます。 URLに記載された順序でロードされます::"
 
 #: of sqlalchemy.engine.CreateEnginePlugin:49
 msgid ""
@@ -1670,13 +1660,13 @@ msgid ""
 ":class:`.URL` object and the keyword dictionary are passed to the "
 "constructor so that these arguments can be extracted from the url's "
 ":attr:`.URL.query` collection as well as from the dictionary::"
-msgstr ""
+msgstr "プラグインは、URL文字列とfunc： `.create_engine`に渡されるキーワード引数から追加の引数を受け取ることができます。 ：class： `.URL`オブジェクトとキーワード辞書はコンストラクタに渡され、これらの引数はurlの：attr：` .URL.query`コレクションから、また辞書::"
 
 #: of sqlalchemy.engine.CreateEnginePlugin:61
 msgid ""
 "Arguments like those illustrated above would be consumed from the "
 "following::"
-msgstr ""
+msgstr "上記のような議論は、次のものから消費されるでしょう："
 
 #: of sqlalchemy.engine.CreateEnginePlugin:71
 msgid ""
@@ -1685,7 +1675,7 @@ msgid ""
 "that are only understood by the plugin should be popped or otherwise "
 "removed so that they aren't interpreted as erroneous arguments "
 "afterwards."
-msgstr ""
+msgstr "URLと辞書は、それ以降のエンジンの設定にそのまま使用されるため、プラグインはその場で引数を変更できます。プラグインだけが理解できる引数はポップされるか、そうでなければ削除されて、後で誤った引数として解釈されないようにする必要があります。"
 
 #: of sqlalchemy.engine.CreateEnginePlugin:77
 msgid ""
@@ -1694,58 +1684,58 @@ msgid ""
 ":meth:`.CreateEnginePlugin.engine_created` hook.  In this hook, "
 "additional changes can be made to the engine, most typically involving "
 "setup of events (e.g. those defined in :ref:`core_event_toplevel`)."
-msgstr ""
+msgstr "エンジンの作成プロセスが完了し、：class： `.Engine`オブジェクトを生成すると、再び：meth：` .CreateEnginePlugin.engine_created`フックを介してプラグインに渡されます。このフックでは、エンジンに追加の変更を加えることができ、最も一般的にはイベントの設定が必要です（例：：ref： `core_event_toplevel`）。"
 
 #: of sqlalchemy.engine.CreateEnginePlugin.engine_created:1
 msgid "Receive the :class:`.Engine` object when it is fully constructed."
-msgstr ""
+msgstr "それが完全に構築されたら：class： `.Engine`オブジェクトを受け取ります。"
 
 #: of sqlalchemy.engine.CreateEnginePlugin.engine_created:3
 msgid ""
 "The plugin may make additional changes to the engine, such as registering"
 " engine or connection pool events."
-msgstr ""
+msgstr "プラグインは、エンジンまたは接続プールイベントの登録など、エンジンに追加の変更を加えることがあります。"
 
 #: of sqlalchemy.engine.CreateEnginePlugin.handle_dialect_kwargs:1
 msgid "parse and modify dialect kwargs"
-msgstr ""
+msgstr "方言kwargsを解析して修正する"
 
 #: of sqlalchemy.engine.CreateEnginePlugin.handle_pool_kwargs:1
 msgid "parse and modify pool kwargs"
-msgstr ""
+msgstr "プールkwargsを解析して変更する"
 
 #: of sqlalchemy.engine.Engine:1
 msgid ""
 "Connects a :class:`~sqlalchemy.pool.Pool` and "
 ":class:`~sqlalchemy.engine.interfaces.Dialect` together to provide a "
 "source of database connectivity and behavior."
-msgstr ""
+msgstr "a：class： `〜sqlalchemy.pool.Pool`と：class：`〜sqlalchemy.engine.interfaces.Dialect`を一緒に接続して、データベース接続と動作のソースを提供します。"
 
 #: of sqlalchemy.engine.Engine:5
 msgid ""
 "An :class:`.Engine` object is instantiated publicly using the "
 ":func:`~sqlalchemy.create_engine` function."
-msgstr ""
+msgstr "An：class： `.Engine`オブジェクトは：func：`〜sqlalchemy.create_engine`関数を使って公開されています。"
 
 #: of sqlalchemy.engine.Engine:10
 msgid ":doc:`/core/engines`"
-msgstr ""
+msgstr "：doc： `/ core / engines`"
 
 #: of sqlalchemy.engine.Engine:12 sqlalchemy.engine.ResultProxy.close:31
 msgid ":ref:`connections_toplevel`"
-msgstr ""
+msgstr "：ref： `connections_toplevel`"
 
 #: of sqlalchemy.engine.Engine.begin:1
 msgid ""
 "Return a context manager delivering a :class:`.Connection` with a "
 ":class:`.Transaction` established."
-msgstr ""
+msgstr "コンテキストマネージャーを返します：class： `.Connection`を：class：` .Transaction`が設定された状態で返します。"
 
 #: of sqlalchemy.engine.Engine.begin:10
 msgid ""
 "Upon successful operation, the :class:`.Transaction` is committed.  If an"
 " error is raised, the :class:`.Transaction` is rolled back."
-msgstr ""
+msgstr "操作が成功すると、：class： `.Transaction`がコミットされます。エラーが発生すると、：class： `.Transaction`がロールバックされます。"
 
 #: of sqlalchemy.engine.Engine.begin:14
 msgid ""
@@ -1756,23 +1746,23 @@ msgid ""
 "first call to :meth:`.Connection.execute` will close the "
 ":class:`.Connection` when that :class:`.ResultProxy` has exhausted all "
 "result rows."
-msgstr ""
+msgstr "`` close_with_result``フラグは通常 `` False``で、操作が完了すると：class： `.Connection`が閉じられることを示します。 `` True``に設定すると、：class： `.Connection`が\&quot;一回使用\ &quot;モードにあります。ここで、：class：` .ResultProxy`は最初の呼び出しで返されます：meth： `.Connection .execute`は：class： `.Connection`を閉じます：class：` .ResultProxy`がすべての結果行を使い果たしたとき。"
 
 #: of sqlalchemy.engine.Engine.begin:26
 msgid ""
 ":meth:`.Engine.connect` - procure a :class:`.Connection` from an "
 ":class:`.Engine`."
-msgstr ""
+msgstr "：meth： `.Engine.connect`  - ：class：` .Engine`からa：class： `.Connection`を取得します。"
 
 #: of sqlalchemy.engine.Engine.begin:29
 msgid ""
 ":meth:`.Connection.begin` - start a :class:`.Transaction` for a "
 "particular :class:`.Connection`."
-msgstr ""
+msgstr "：meth： `.Connection.begin`  - 特定の：class：` .Connection`に対してa：class： `.Transaction`を開始します。"
 
 #: of sqlalchemy.engine.Engine.connect:1
 msgid "Return a new :class:`.Connection` object."
-msgstr ""
+msgstr "新しい：class： `.Connection`オブジェクトを返します。"
 
 #: of sqlalchemy.engine.Engine.connect:3
 msgid ""
@@ -1783,20 +1773,20 @@ msgid ""
 ":class:`.Connection` object is called, the underlying DBAPI connection is"
 " then returned to the connection pool, where it may be used again in a "
 "subsequent call to :meth:`~.Engine.connect`."
-msgstr ""
+msgstr "：class： `.Connection`オブジェクトは、データベースと通信するためにDBAPI接続を内部的に使用するファサードです。この接続は、class： `.Engine`によって参照されるconnection-holding：class：` .Pool`から取得されます。 ：class： `.Connection`オブジェクトの：meth：`〜.Connection.close`メソッドが呼び出されると、基礎となるDBAPI接続が接続プールに返されます。この接続プールは、次に続く呼び出しで再び使用されます。 meth： `〜.Engine.connect`。"
 
 #: of sqlalchemy.engine.Engine.contextual_connect:1
 msgid ""
 "Return a :class:`.Connection` object which may be part of some ongoing "
 "context."
-msgstr ""
+msgstr "進行中のコンテキストの一部であるかもしれないa：class： `.Connection`オブジェクトを返します。"
 
 #: of sqlalchemy.engine.Engine.contextual_connect:4
 msgid ""
 "By default, this method does the same thing as :meth:`.Engine.connect`. "
 "Subclasses of :class:`.Engine` may override this method to provide "
 "contextual behavior."
-msgstr ""
+msgstr "デフォルトでは、このメソッドは：meth： `.Engine.connect`と同じことを行います。 ：class： `.Engine`のサブクラスは、このメソッドをオーバーライドしてコンテキスト動作を提供します。"
 
 #: of sqlalchemy.engine.Engine.contextual_connect:8
 msgid ""
@@ -1805,11 +1795,11 @@ msgid ""
 "that connection as soon as any pending result rows are exhausted. This is"
 " used to supply the \"connectionless execution\" behavior provided by the"
 " :meth:`.Engine.execute` method."
-msgstr ""
+msgstr "Trueの場合、：class： `.Connection`で作成された最初の：class：` .ResultProxy`は、保留中の結果行が使い尽くされるとすぐにその接続の：meth： `.Connection.close`メソッドを呼び出します。これは、：meth： `.Engine.execute`メソッドによって提供される\&quot;コネクションレス実行\ &quot;の動作を提供するために使用されます。"
 
 #: of sqlalchemy.engine.Engine.dispose:1
 msgid "Dispose of the connection pool used by this :class:`.Engine`."
-msgstr ""
+msgstr "this：class： `.Engine`によって使用された接続プールを破棄します。"
 
 #: of sqlalchemy.engine.Engine.dispose:3
 msgid ""
@@ -1819,7 +1809,7 @@ msgid ""
 ":class:`.Engine`, so when they are closed individually, eventually the "
 ":class:`.Pool` which they are associated with will be garbage collected "
 "and they will be closed out fully, if not already closed on checkin."
-msgstr ""
+msgstr "これは**現在チェックされているすべての**データベース接続を完全に閉じるという効果があります。まだチェックアウトされているコネクションは**閉鎖されませんが、class： `.Engine`にはもはや関連付けられません。したがって、それらが個別に閉じられると、結局：class：` .Pool`ガベージコレクションに関連付けられており、チェックイン時にまだ閉じていない場合は、完全にクローズされます。"
 
 #: of sqlalchemy.engine.Engine.dispose:11
 msgid ""
@@ -1828,21 +1818,21 @@ msgid ""
 " make any actual connections to the database until one is first "
 "requested, so as long as the :class:`.Engine` isn't used again, no new "
 "connections will be made."
-msgstr ""
+msgstr "新しい接続プールは、古い接続プールが破棄された直後に作成されます。この新しいプールは、すべてのSQLAlchemy接続プールと同様に、データベースへの実際の接続が最初に要求されるまで行われないため、：class： `.Engine`が再び使用されない限り、新しい接続は行われません。"
 
 #: of sqlalchemy.engine.Engine.dispose:19
 msgid ":ref:`engine_disposal`"
-msgstr ""
+msgstr "：ref： `engine_disposal`"
 
 #: of sqlalchemy.engine.Engine.driver:1
 msgid ""
 "Driver name of the :class:`~sqlalchemy.engine.interfaces.Dialect` in use "
 "by this :class:`Engine`."
-msgstr ""
+msgstr "：class： `Engine`によって使用されている：class：`〜sqlalchemy.engine.interfaces.Dialect`のドライバ名です。"
 
 #: of sqlalchemy.engine.Engine.execute:3
 msgid "The arguments are the same as those used by :meth:`.Connection.execute`."
-msgstr ""
+msgstr "引数は：meth： `.Connection.execute`で使用される引数と同じです。"
 
 #: of sqlalchemy.engine.Engine.execute:6
 msgid ""
@@ -1853,40 +1843,40 @@ msgid ""
 "cursor is closed, the :class:`.Connection` created here will also be "
 "closed, which allows its associated DBAPI connection resource to be "
 "returned to the connection pool."
-msgstr ""
+msgstr "ここで、a：class： `.Connection`は、：meth：`〜.Engine.contextual_connect`メソッドとその接続で実行されたステートメントを使用して取得されます。返される：class： `.ResultProxy`は、：class：` .ResultProxy`が使い果たされ、その下にあるカーソルが閉じられると、ここで作成される：class： `.Connection`も閉じられ、接続プールに返されるDBAPI接続リソース。"
 
 #: of sqlalchemy.engine.Engine.execution_options:1
 msgid ""
 "Return a new :class:`.Engine` that will provide :class:`.Connection` "
 "objects with the given execution options."
-msgstr ""
+msgstr "指定された実行オプションで：class： `.Connection`オブジェクトを提供する新しい：class：` .Engine`を返します。"
 
 #: of sqlalchemy.engine.Engine.execution_options:4
 msgid ""
 "The returned :class:`.Engine` remains related to the original "
 ":class:`.Engine` in that it shares the same connection pool and other "
 "state:"
-msgstr ""
+msgstr "返される：class： `.Engine`は、元の：class：` .Engine`に関連していて、同じ接続プールと他の状態を共有しています："
 
 #: of sqlalchemy.engine.Engine.execution_options:8
 msgid ""
 "The :class:`.Pool` used by the new :class:`.Engine` is the same instance."
 "  The :meth:`.Engine.dispose` method will replace the connection pool "
 "instance for the parent engine as well as this one."
-msgstr ""
+msgstr "新しい：class： `.Engine`で使われる：class：` .Pool`は同じインスタンスです。 ：meth： `.Engine.dispose`メソッドは、親エンジンとこれと同じ接続プールインスタンスを置き換えます。"
 
 #: of sqlalchemy.engine.Engine.execution_options:12
 msgid ""
 "Event listeners are \"cascaded\" - meaning, the new :class:`.Engine` "
 "inherits the events of the parent, and new events can be associated with "
 "the new :class:`.Engine` individually."
-msgstr ""
+msgstr "イベントリスナーは\ &quot;カスケード\&quot;です。新しい：class： `.Engine`は親のイベントを継承し、新しいイベントはnew：class：` .Engine`に個別に関連付けることができます。"
 
 #: of sqlalchemy.engine.Engine.execution_options:15
 msgid ""
 "The logging configuration and logging_name is copied from the parent "
 ":class:`.Engine`."
-msgstr ""
+msgstr "ロギング設定とlogging_nameは、親：class： `.Engine`からコピーされます。"
 
 #: of sqlalchemy.engine.Engine.execution_options:18
 msgid ""
@@ -1894,7 +1884,7 @@ msgid ""
 "implement \"sharding\" schemes where multiple :class:`.Engine` objects "
 "refer to the same connection pool, but are differentiated by options that"
 " would be consumed by a custom event::"
-msgstr ""
+msgstr "：meth： `.Engine.execution_options`メソッドの目的は、multiple：class：` .Engine`オブジェクトが同じ接続プールを参照していて、消費するオプションによって区別される\ sharding \スキームを実装することですカスタムイベント::"
 
 #: of sqlalchemy.engine.Engine.execution_options:27
 msgid ""
@@ -1902,7 +1892,7 @@ msgid ""
 " objects that will contain the execution option ``shard_id=shard1``, and "
 "``shard2`` will produce :class:`.Connection` objects that contain the "
 "execution option ``shard_id=shard2``."
-msgstr ""
+msgstr "上記の `` shard1``エンジンは、実行オプション `` shard_id = shard1``と `` shard2``を含むclass： `.Connection`オブジェクトのファクトリとして機能します：class：` .Connection `実行オプション` `shard_id = shard2``を含むオブジェクトです。"
 
 #: of sqlalchemy.engine.Engine.execution_options:32
 msgid ""
@@ -1912,45 +1902,45 @@ msgid ""
 "track of which database we've established using the "
 ":attr:`.Connection.info` dictionary, which gives us a persistent storage "
 "space that follows the DBAPI connection::"
-msgstr ""
+msgstr "イベントハンドラは、上記の実行オプションを消費して、接続が与えられたときにスキーマスイッチやその他の操作を実行できます。以下では、MySQLの `` use``文を発行してデータベースを切り替えると同時に、：attr： `.Connection.info`ディクショナリを使用してどのデータベースを構築したかを追跡します。 DBAPI接続::"
 
 #: of sqlalchemy.engine.Engine.execution_options:58
 msgid ""
 ":meth:`.Connection.execution_options` - update execution options on a "
 ":class:`.Connection` object."
-msgstr ""
+msgstr "：meth： `.Connection.execution_options`  -  class：` .Connection`オブジェクトの実行オプションを更新します。"
 
 #: of sqlalchemy.engine.Engine.execution_options:61
 msgid ""
 ":meth:`.Engine.update_execution_options` - update the execution options "
 "for a given :class:`.Engine` in place."
-msgstr ""
+msgstr "：meth： `.Engine.update_execution_options`  - 与えられた：class：` .Engine`の実行オプションを更新します。"
 
 #: of sqlalchemy.engine.Engine.has_table:1
 msgid "Return True if the given backend has a table of the given name."
-msgstr ""
+msgstr "指定されたバックエンドに指定された名前のテーブルがある場合はTrueを返します。"
 
 #: of sqlalchemy.engine.Engine.has_table:5
 msgid ""
 ":ref:`metadata_reflection_inspector` - detailed schema inspection using "
 "the :class:`.Inspector` interface."
-msgstr ""
+msgstr "：ref： `metadata_reflection_inspector`  - ：class：` .Inspector`インターフェースを使った詳細なスキーマ検査。"
 
 #: of sqlalchemy.engine.Engine.has_table:8
 msgid ""
 ":class:`.quoted_name` - used to pass quoting information along with a "
 "schema identifier."
-msgstr ""
+msgstr "：class： `.quoted_name`  - 引用情報とスキーマ識別子を渡すために使われます。"
 
 #: of sqlalchemy.engine.Engine.name:1
 msgid ""
 "String name of the :class:`~sqlalchemy.engine.interfaces.Dialect` in use "
 "by this :class:`Engine`."
-msgstr ""
+msgstr "this：class： `Engine`によって使用されている：class：`〜sqlalchemy.engine.interfaces.Dialect`の文字列名です。"
 
 #: of sqlalchemy.engine.Engine.raw_connection:1
 msgid "Return a \"raw\" DBAPI connection from the connection pool."
-msgstr ""
+msgstr "接続プールから\ &quot;未処理\&quot; DBAPI接続を返します。"
 
 #: of sqlalchemy.engine.Engine.raw_connection:3
 msgid ""
@@ -1959,7 +1949,7 @@ msgid ""
 "behavior as the real DBAPI connection, except that its ``close()`` method"
 " will result in the connection being returned to the pool, rather than "
 "being closed for real."
-msgstr ""
+msgstr "返されるオブジェクトは、使用中の基礎となるドライバによって使用されるDBAPI接続オブジェクトのプロキシバージョンです。オブジェクトは実際のDBAPI接続と全く同じ動作をしますが、 `` close（） ``メソッドでは、接続が実際には閉じられずにプールに返される点が異なります。"
 
 #: of sqlalchemy.engine.Engine.raw_connection:10
 msgid ""
@@ -1968,55 +1958,55 @@ msgid ""
 "   When a :class:`.Connection` object is already present, the DBAPI "
 "connection is available using the :attr:`.Connection.connection` "
 "accessor."
-msgstr ""
+msgstr "このメソッドは、class： `.Connection`によって提供されるAPIが不要な特殊な状況に対して直接DBAPI接続アクセスを提供します。 a：class： `.Connection`オブジェクトが既に存在する場合、DBAPI接続は：attr：` .Connection.connection`アクセサを使用して利用できます。"
 
 #: of sqlalchemy.engine.Engine.run_callable:7
 msgid ""
 "This function, along with :meth:`.Connection.run_callable`, allows a "
 "function to be run with a :class:`.Connection` or :class:`.Engine` object"
 " without the need to know which one is being dealt with."
-msgstr ""
+msgstr "この関数は：meth： `.Connection.run_callable`と一緒に、：class：` .Connection`または：class： `.Engine`オブジェクトを使って関数を実行することを許可します。 。"
 
 #: of sqlalchemy.engine.Engine.table_names:1
 msgid "Return a list of all table names available in the database."
-msgstr ""
+msgstr "データベースで使用可能なすべてのテーブル名のリストを返します。"
 
 #: of sqlalchemy.engine.Engine.table_names:3
 msgid "Optional, retrieve names from a non-default schema."
-msgstr ""
+msgstr "オプションで、デフォルト以外のスキーマから名前を取得します。"
 
 #: of sqlalchemy.engine.Engine.table_names:5
 msgid ""
 "Optional, use a specified connection. Default is the "
 "``contextual_connect`` for this ``Engine``."
-msgstr ""
+msgstr "オプションで、指定された接続を使用します。デフォルトはこの `` Engine``の `` contextual_connect``です。"
 
 #: of sqlalchemy.engine.Engine.transaction:3
 msgid ""
 "The function is passed a :class:`.Connection` newly procured from "
 ":meth:`.Engine.contextual_connect` as the first argument, followed by the"
 " given \\*args and \\**kwargs."
-msgstr ""
+msgstr "この関数は：class： `.Connection`を新たに：meth：` .Engine.contextual_connect`から最初の引数として渡し、その後に与えられた\\ * argsと\\ ** kwargsを渡します。"
 
 #: of sqlalchemy.engine.Engine.transaction:7
 msgid "e.g.::"
-msgstr ""
+msgstr "例えば：："
 
 #: of sqlalchemy.engine.Engine.transaction:22
 msgid ""
 "The :meth:`.transaction` method is superseded by the usage of the Python "
 "``with:`` statement, which can be used with :meth:`.Engine.begin`::"
-msgstr ""
+msgstr "：meth： `.transaction`メソッドは、Pythonの` `with：` `ステートメントの代わりに使われます。これは：meth：` .Engine.begin` ::"
 
 #: of sqlalchemy.engine.Engine.transaction:34
 msgid ""
 ":meth:`.Connection.transaction` - connection-level version of "
 ":meth:`.Engine.transaction`"
-msgstr ""
+msgstr "：meth： `.Connection.transaction`  - 接続レベルのバージョン：meth：` .Engine.transaction`"
 
 #: of sqlalchemy.engine.Engine.update_execution_options:1
 msgid "Update the default execution_options dictionary of this :class:`.Engine`."
-msgstr ""
+msgstr "これのデフォルトのexecution_options辞書を更新してください：class： `.Engine`。"
 
 #: of sqlalchemy.engine.Engine.update_execution_options:4
 msgid ""
@@ -2024,38 +2014,38 @@ msgid ""
 "options that will be used for all connections.  The initial contents of "
 "this dictionary can be sent via the ``execution_options`` parameter to "
 ":func:`.create_engine`."
-msgstr ""
+msgstr "\\ ** optの指定されたキー/値は、すべての接続で使用されるデフォルトの実行オプションに追加されます。この辞書の初期の内容は、 `` execution_options``パラメータを介して：func： `.create_engine`に送ることができます。"
 
 #: of sqlalchemy.engine.Engine.update_execution_options:12
 msgid ":meth:`.Connection.execution_options`"
-msgstr ""
+msgstr "：meth： `.Connection.execution_options`"
 
 #: of sqlalchemy.engine.Engine.update_execution_options:14
 msgid ":meth:`.Engine.execution_options`"
-msgstr ""
+msgstr "：meth： `.Engine.execution_options`"
 
 #: of sqlalchemy.engine.ExceptionContext:1
 msgid "Encapsulate information about an error condition in progress."
-msgstr ""
+msgstr "進行中のエラー状態に関する情報をカプセル化します。"
 
 #: of sqlalchemy.engine.ExceptionContext:3
 msgid ""
 "This object exists solely to be passed to the "
 ":meth:`.ConnectionEvents.handle_error` event, supporting an interface "
 "that can be extended without backwards-incompatibility."
-msgstr ""
+msgstr "このオブジェクトは、：meth： `.ConnectionEvents.handle_error`イベントに渡すためにのみ存在し、後方互換性を持たない拡張が可能なインターフェースをサポートしています。"
 
 #: of sqlalchemy.engine.ExceptionContext.chained_exception:1
 msgid ""
 "The exception that was returned by the previous handler in the exception "
 "chain, if any."
-msgstr ""
+msgstr "例外チェーン内の前のハンドラによって返された例外（存在する場合）。"
 
 #: of sqlalchemy.engine.ExceptionContext.chained_exception:4
 msgid ""
 "If present, this exception will be the one ultimately raised by "
 "SQLAlchemy unless a subsequent handler replaces it."
-msgstr ""
+msgstr "存在する場合、この例外は、後続のハンドラがそれを置き換えない限り、最終的にSQLAlchemyによって生成される例外になります。"
 
 #: of sqlalchemy.engine.ExceptionContext.chained_exception:7
 #: sqlalchemy.engine.ExceptionContext.cursor:3
@@ -2063,41 +2053,41 @@ msgstr ""
 #: sqlalchemy.engine.ExceptionContext.parameters:3
 #: sqlalchemy.engine.ExceptionContext.statement:3
 msgid "May be None."
-msgstr ""
+msgstr "なしかもしれません。"
 
 #: of sqlalchemy.engine.ExceptionContext.connection:1
 msgid "The :class:`.Connection` in use during the exception."
-msgstr ""
+msgstr "：class：例外の間に使用されている `.Connection`です。"
 
 #: of sqlalchemy.engine.ExceptionContext.connection:3
 msgid ""
 "This member is present, except in the case of a failure when first "
 "connecting."
-msgstr ""
+msgstr "このメンバーは、最初に接続するときの障害を除いて存在します。"
 
 #: of sqlalchemy.engine.ExceptionContext.connection:8
 msgid ":attr:`.ExceptionContext.engine`"
-msgstr ""
+msgstr "：attr： `.ExceptionContext.engine`"
 
 #: of sqlalchemy.engine.ExceptionContext.cursor:1
 msgid "The DBAPI cursor object."
-msgstr ""
+msgstr "DBAPIカーソルオブジェクト。"
 
 #: of sqlalchemy.engine.ExceptionContext.engine:1
 msgid "The :class:`.Engine` in use during the exception."
-msgstr ""
+msgstr "：class：例外の間に使用されている `.Engine`。"
 
 #: of sqlalchemy.engine.ExceptionContext.engine:3
 msgid ""
 "This member should always be present, even in the case of a failure when "
 "first connecting."
-msgstr ""
+msgstr "最初に接続したときに障害が発生した場合でも、このメンバーは常に存在する必要があります。"
 
 #: of sqlalchemy.engine.ExceptionContext.execution_context:1
 msgid ""
 "The :class:`.ExecutionContext` corresponding to the execution operation "
 "in progress."
-msgstr ""
+msgstr "進行中の実行操作に対応する：class： `.ExecutionContext`。"
 
 #: of sqlalchemy.engine.ExceptionContext.execution_context:4
 msgid ""
@@ -2105,7 +2095,7 @@ msgid ""
 "operations such as transaction begin/end.  It also is not present when "
 "the exception was raised before the :class:`.ExecutionContext` could be "
 "constructed."
-msgstr ""
+msgstr "これは、文の実行操作には存在しますが、トランザクションの開始/終了などの操作には現れません。これは、class： `.ExecutionContext`が構築される前に例外が発生したときにも存在しません。"
 
 #: of sqlalchemy.engine.ExceptionContext.execution_context:9
 msgid ""
@@ -2114,13 +2104,13 @@ msgid ""
 "value than that of the :class:`.ExecutionContext`, potentially in the "
 "case where a :meth:`.ConnectionEvents.before_cursor_execute` event or "
 "similar modified the statement/parameters to be sent."
-msgstr ""
+msgstr "：attr： `.ExceptionContext.statement`と：attr：` .ExceptionContext.parameters`のメンバーは、：class： `.ExecutionContext`とは異なる値を表すかもしれないことに注意してください。a：meth：` .ConnectionEvents.before_cursor_execute`イベントまたは同様のものが送信されるステートメント/パラメータを変更しました。"
 
 #: of sqlalchemy.engine.ExceptionContext.invalidate_pool_on_disconnect:1
 msgid ""
 "Represent whether all connections in the pool should be invalidated when "
 "a \"disconnect\" condition is in effect."
-msgstr ""
+msgstr "\ &quot;disconnect \&quot;条件が有効なときに、プール内のすべての接続を無効にする必要があるかどうかを表します。"
 
 #: of sqlalchemy.engine.ExceptionContext.invalidate_pool_on_disconnect:4
 msgid ""
@@ -2129,26 +2119,26 @@ msgid ""
 "that the full collection of connections in the pool will not be "
 "invalidated during a disconnect; only the current connection that is the "
 "subject of the error will actually be invalidated."
-msgstr ""
+msgstr "：meth： `.ConnectionEvents.handle_error`イベントのスコープ内でこのフラグをFalseに設定すると、切断中にプール内の接続の完全集合が無効にならないような効果があります。エラーの対象となる現在の接続のみが実際に無効になります。"
 
 #: of sqlalchemy.engine.ExceptionContext.invalidate_pool_on_disconnect:10
 msgid ""
 "The purpose of this flag is for custom disconnect-handling schemes where "
 "the invalidation of other connections in the pool is to be performed "
 "based on other conditions, or even on a per-connection basis."
-msgstr ""
+msgstr "このフラグの目的は、プール内の他の接続の無効化が他の条件に基づいて、または接続ごとに実行されるカスタム切断処理スキームのためです。"
 
 #: of sqlalchemy.engine.ExceptionContext.is_disconnect:1
 msgid ""
 "Represent whether the exception as occurred represents a \"disconnect\" "
 "condition."
-msgstr ""
+msgstr "発生した例外が\ &quot;disconnect \&quot;状態を表すかどうかを表します。"
 
 #: of sqlalchemy.engine.ExceptionContext.is_disconnect:4
 msgid ""
 "This flag will always be True or False within the scope of the "
 ":meth:`.ConnectionEvents.handle_error` handler."
-msgstr ""
+msgstr "このフラグは：meth： `.ConnectionEvents.handle_error`ハンドラーのスコープ内で常にTrueまたはFalseになります。"
 
 #: of sqlalchemy.engine.ExceptionContext.is_disconnect:7
 msgid ""
@@ -2157,108 +2147,108 @@ msgid ""
 "assigning to this flag, a \"disconnect\" event which then results in a "
 "connection and pool invalidation can be invoked or prevented by changing "
 "this flag."
-msgstr ""
+msgstr "SQLAlchemyはこのフラグを延期して、その後に接続を無効にする必要があるかどうかを判断します。つまり、このフラグを代入することによって、このフラグを変更することによって接続およびプールの無効化をもたらす「切断」イベントを呼び出すことができます。"
 
 #: of sqlalchemy.engine.ExceptionContext.original_exception:1
 msgid "The exception object which was caught."
-msgstr ""
+msgstr "捕捉された例外オブジェクト。"
 
 #: of sqlalchemy.engine.ExceptionContext.original_exception:3
 msgid "This member is always present."
-msgstr ""
+msgstr "このメンバーは常に存在します。"
 
 #: of sqlalchemy.engine.ExceptionContext.parameters:1
 msgid "Parameter collection that was emitted directly to the DBAPI."
-msgstr ""
+msgstr "DBAPIに直接発行されたパラメータコレクション。"
 
 #: of sqlalchemy.engine.ExceptionContext.sqlalchemy_exception:1
 msgid ""
 "The :class:`sqlalchemy.exc.StatementError` which wraps the original, and "
 "will be raised if exception handling is not circumvented by the event."
-msgstr ""
+msgstr "：class： `sqlalchemy.exc.StatementError`：元の文字をラップし、例外処理がイベントによって回避されない場合に発生します。"
 
 #: of sqlalchemy.engine.ExceptionContext.sqlalchemy_exception:4
 msgid ""
 "May be None, as not all exception types are wrapped by SQLAlchemy. For "
 "DBAPI-level exceptions that subclass the dbapi's Error class, this field "
 "will always be present."
-msgstr ""
+msgstr "すべての例外タイプがSQLAlchemyでラップされているわけではないため、Noneである可能性があります。 dbapiのErrorクラスをサブクラス化するDBAPIレベルの例外の場合、このフィールドは常に存在します。"
 
 #: of sqlalchemy.engine.ExceptionContext.statement:1
 msgid "String SQL statement that was emitted directly to the DBAPI."
-msgstr ""
+msgstr "String直接DBAPIに発行されたSQLステートメント。"
 
 #: of sqlalchemy.engine.NestedTransaction:1
 msgid "Represent a 'nested', or SAVEPOINT transaction."
-msgstr ""
+msgstr "&#39;ネストされた&#39;トランザクション、またはSAVEPOINTトランザクションを表します。"
 
 #: of sqlalchemy.engine.NestedTransaction:3
 msgid ""
 "A new :class:`.NestedTransaction` object may be procured using the "
 ":meth:`.Connection.begin_nested` method."
-msgstr ""
+msgstr "新しい：class： `.NestedTransaction`オブジェクトは、：meth：` .Connection.begin_nested`メソッドを使用して調達することができます。"
 
 #: of sqlalchemy.engine.NestedTransaction:6
 msgid "The interface is the same as that of :class:`.Transaction`."
-msgstr ""
+msgstr "インタフェースは：class： `.Transaction`と同じです。"
 
 #: of sqlalchemy.engine.ResultProxy:1
 msgid "Wraps a DB-API cursor object to provide easier access to row columns."
-msgstr ""
+msgstr "行の列へのアクセスを容易にするためにDB-APIカーソルオブジェクトをラップします。"
 
 #: of sqlalchemy.engine.ResultProxy:3
 msgid ""
 "Individual columns may be accessed by their integer position, case-"
 "insensitive column name, or by ``schema.Column`` object. e.g.::"
-msgstr ""
+msgstr "個々の列は、整数位置、大文字小文字を区別しない列名、または `` schema.Column``オブジェクトによってアクセスできます。例えば：："
 
 #: of sqlalchemy.engine.ResultProxy:15
 msgid ""
 "``ResultProxy`` also handles post-processing of result column data using "
 "``TypeEngine`` objects, which are referenced from the originating SQL "
 "statement that produced this result set."
-msgstr ""
+msgstr "`` ResultProxy``は、この結果セットを生成した元のSQL文から参照される `` TypeEngine``オブジェクトを使用して結果カラムデータの後処理も処理します。"
 
 #: of sqlalchemy.engine.ResultProxy._cursor_description:1
 msgid "May be overridden by subclasses."
-msgstr ""
+msgstr "サブクラスによってオーバーライドされることがあります。"
 
 #: of sqlalchemy.engine.ResultProxy._soft_close:1
 msgid "Soft close this :class:`.ResultProxy`."
-msgstr ""
+msgstr "ソフトを閉じるには：class： `.ResultProxy`。"
 
 #: of sqlalchemy.engine.ResultProxy._soft_close:3
 msgid ""
 "This releases all DBAPI cursor resources, but leaves the ResultProxy "
 "\"open\" from a semantic perspective, meaning the fetchXXX() methods will"
 " continue to return empty results."
-msgstr ""
+msgstr "これにより、すべてのDBAPIカーソルリソースが解放されますが、意味的な観点からResultProxy \ &quot;open \&quot;が残されます。つまり、fetchXXX（）メソッドは空の結果を引き続き返します。"
 
 #: of sqlalchemy.engine.ResultProxy._soft_close:7
 msgid "This method is called automatically when:"
-msgstr ""
+msgstr "このメソッドは、次の場合に自動的に呼び出されます。"
 
 #: of sqlalchemy.engine.ResultProxy._soft_close:9
 msgid "all result rows are exhausted using the fetchXXX() methods."
-msgstr ""
+msgstr "fetchXXX（）メソッドを使用してすべての結果行が使い果たされます。"
 
 #: of sqlalchemy.engine.ResultProxy._soft_close:10
 msgid "cursor.description is None."
-msgstr ""
+msgstr "cursor.descriptionはNoneです。"
 
 #: of sqlalchemy.engine.ResultProxy._soft_close:12
 msgid ""
 "This method is **not public**, but is documented in order to clarify the "
 "\"autoclose\" process used."
-msgstr ""
+msgstr "このメソッドはpublic **ではありませんが、使用された\ &quot;autoclose \&quot;プロセスを明確にするために文書化されています。"
 
 #: of sqlalchemy.engine.ResultProxy._soft_close:19
 msgid ":meth:`.ResultProxy.close`"
-msgstr ""
+msgstr "：meth： `.ResultProxy.close`"
 
 #: of sqlalchemy.engine.ResultProxy.close:1
 msgid "Close this ResultProxy."
-msgstr ""
+msgstr "このResultProxyを閉じます。"
 
 #: of sqlalchemy.engine.ResultProxy.close:3
 msgid ""
@@ -2268,21 +2258,21 @@ msgid ""
 "available rows.  :meth:`.ResultProxy.close` is generally an optional "
 "method except in the case when discarding a :class:`.ResultProxy` that "
 "still has additional rows pending for fetch."
-msgstr ""
+msgstr "これにより、文の実行に対応する基礎となるDBAPIカーソルが存在する場合は、それがクローズされます。 ：class： `.ResultProxy`が利用可能なすべての行を使い果たすと、DBAPIカーソルが自動的に解放されることに注意してください。 ：meth： `.ResultProxy.close`は、fetchのために保留中の行がまだ残っている：class：` .ResultProxy`を破棄する場合を除いて、一般的にオプションです。"
 
 #: of sqlalchemy.engine.ResultProxy.close:10
 msgid ""
 "In the case of a result that is the product of :ref:`connectionless "
 "execution <dbengine_implicit>`, the underlying :class:`.Connection` "
 "object is also closed, which :term:`releases` DBAPI connection resources."
-msgstr ""
+msgstr "結果の場合：ref： `コネクションレス型の実行<dbengine_implicit> `、underlying：class：` .Connection`オブジェクトも閉じます。term：DBAPI接続リソースを解放します。"
 
 #: of sqlalchemy.engine.ResultProxy.close:15
 msgid ""
 "After this method is called, it is no longer valid to call upon the fetch"
 " methods, which will raise a :class:`.ResourceClosedError` on subsequent "
 "use."
-msgstr ""
+msgstr "このメソッドが呼び出された後は、フェッチメソッドを呼び出すことはもはや有効ではなく、後で使用するときには：class： `.ResourceClosedError`が発生します。"
 
 #: of sqlalchemy.engine.ResultProxy.close:19
 msgid ""
@@ -2294,15 +2284,15 @@ msgid ""
 " set; the actual :meth:`.ResultProxy.close` method is never called.    It"
 " is still safe to discard a :class:`.ResultProxy` that has been fully "
 "exhausted without calling this method."
-msgstr ""
+msgstr "- ：meth： `.ResultProxy.close`メソッドは、基になるDBAPIカーソルリソースを解放するプロセスから分離されています。 ：class： `.Connection`の\&quot;自動クローズ\ &quot;機能は、基本的なDBAPIカーソルを解放するいわゆる&quot;ソフトクローズ &quot;を実行しますが、class：` .ResultProxy`は引き続き動作します開放的だが疲れた結果セットとして。実際の：meth： `.ResultProxy.close`メソッドは決して呼び出されません。このメソッドを呼び出さずに完全に使い果たされた：class： `.ResultProxy`を破棄することは、まだ安全です。"
 
 #: of sqlalchemy.engine.ResultProxy.close:33
 msgid ":meth:`.ResultProxy._soft_close`"
-msgstr ""
+msgstr "：meth： `.ResultProxy._soft_close`"
 
 #: of sqlalchemy.engine.ResultProxy.fetchall:1
 msgid "Fetch all rows, just like DB-API ``cursor.fetchall()``."
-msgstr ""
+msgstr "DB-APIの `` cursor.fetchall（） ``のように、すべての行を取得します。"
 
 #: of sqlalchemy.engine.ResultProxy.fetchall:3
 #: sqlalchemy.engine.ResultProxy.fetchmany:4
@@ -2310,14 +2300,14 @@ msgstr ""
 msgid ""
 "After all rows have been exhausted, the underlying DBAPI cursor resource "
 "is released, and the object may be safely discarded."
-msgstr ""
+msgstr "すべての行が使い果たされた後、基礎となるDBAPIカーソルリソースが解放され、オブジェクトは安全に破棄される可能性があります。"
 
 #: of sqlalchemy.engine.ResultProxy.fetchall:7
 msgid ""
 "Subsequent calls to :meth:`.ResultProxy.fetchall` will return an empty "
 "list.   After the :meth:`.ResultProxy.close` method is called, the method"
 " will raise :class:`.ResourceClosedError`."
-msgstr ""
+msgstr "続いて：meth： `.ResultProxy.fetchall`を呼び出すと、空のリストが返されます。 ：meth： `.ResultProxy.close`メソッドが呼び出されると、このメソッドはraise：class：` .ResourceClosedError`メソッドを呼び出します。"
 
 #: of sqlalchemy.engine.ResultProxy.fetchall:11
 #: sqlalchemy.engine.ResultProxy.fetchmany:13
@@ -2326,13 +2316,13 @@ msgid ""
 "- Added \"soft close\" behavior which allows the result to be used in an "
 "\"exhausted\" state prior to calling the :meth:`.ResultProxy.close` "
 "method."
-msgstr ""
+msgstr "- ：meth： `.ResultProxy.close`メソッドを呼び出す前に、結果が\&quot;使い尽くされた &quot;状態で使用されるようにする\&quot;ソフトクローズ\ &quot;の動作を追加しました。"
 
 #: of sqlalchemy.engine.ResultProxy.fetchmany:1
 msgid ""
 "Fetch many rows, just like DB-API "
 "``cursor.fetchmany(size=cursor.arraysize)``."
-msgstr ""
+msgstr "DB-APIの `` cursor.fetchmany（size = cursor.arraysize） ``と同じように、多くの行を取得します。"
 
 #: of sqlalchemy.engine.ResultProxy.fetchmany:8
 msgid ""
@@ -2340,50 +2330,50 @@ msgid ""
 "exhausted will return an empty list.   After the "
 ":meth:`.ResultProxy.close` method is called, the method will raise "
 ":class:`.ResourceClosedError`."
-msgstr ""
+msgstr "すべての行が使い果たされた後：meth： `.ResultProxy.fetchmany`を呼び出すと、空のリストが返されます。 ：meth： `.ResultProxy.close`メソッドが呼び出されると、このメソッドはraise：class：` .ResourceClosedError`メソッドを呼び出します。"
 
 #: of sqlalchemy.engine.ResultProxy.fetchone:1
 msgid "Fetch one row, just like DB-API ``cursor.fetchone()``."
-msgstr ""
+msgstr "DB-APIの `` cursor.fetchone（） ``と同じように、1つの行を取得します。"
 
 #: of sqlalchemy.engine.ResultProxy.fetchone:7
 msgid ""
 "Calls to :meth:`.ResultProxy.fetchone` after all rows have been exhausted"
 " will return ``None``. After the :meth:`.ResultProxy.close` method is "
 "called, the method will raise :class:`.ResourceClosedError`."
-msgstr ""
+msgstr "：meth： `.ResultProxy.fetchone`を呼び出すと、すべての行がなくなり、` `None``が返されます。 ：meth： `.ResultProxy.close`メソッドが呼び出されると、このメソッドはraise：class：` .ResourceClosedError`メソッドを呼び出します。"
 
 #: of sqlalchemy.engine.ResultProxy.first:1
 msgid "Fetch the first row and then close the result set unconditionally."
-msgstr ""
+msgstr "最初の行をフェッチし、無条件に結果セットを閉じます。"
 
 #: of sqlalchemy.engine.ResultProxy.first:3
 #: sqlalchemy.engine.ResultProxy.scalar:3
 msgid "Returns None if no row is present."
-msgstr ""
+msgstr "行が存在しない場合はNoneを返します。"
 
 #: of sqlalchemy.engine.ResultProxy.first:5
 #: sqlalchemy.engine.ResultProxy.scalar:5
 msgid ""
 "After calling this method, the object is fully closed, e.g. the "
 ":meth:`.ResultProxy.close` method will have been called."
-msgstr ""
+msgstr "このメソッドを呼び出した後、オブジェクトは完全に閉じられます。例えば、：meth： `.ResultProxy.close`メソッドが呼び出されます。"
 
 #: of sqlalchemy.engine.ResultProxy.inserted_primary_key:1
 msgid "Return the primary key for the row just inserted."
-msgstr ""
+msgstr "挿入された行の主キーを返します。"
 
 #: of sqlalchemy.engine.ResultProxy.inserted_primary_key:3
 msgid ""
 "The return value is a list of scalar values corresponding to the list of "
 "primary key columns in the target table."
-msgstr ""
+msgstr "戻り値は、ターゲット表の主キー列のリストに対応するスカラー値のリストです。"
 
 #: of sqlalchemy.engine.ResultProxy.inserted_primary_key:7
 msgid ""
 "This only applies to single row :func:`.insert` constructs which did not "
 "explicitly specify :meth:`.Insert.returning`."
-msgstr ""
+msgstr "これは明示的に：meth： `.Insert.returning`を指定しなかった単一行：func：` .insert`構造にのみ適用されます。"
 
 #: of sqlalchemy.engine.ResultProxy.inserted_primary_key:11
 msgid ""
@@ -2393,7 +2383,7 @@ msgid ""
 "will appear in this list as ``None`` unless the backend supports "
 "\"returning\" and the insert statement executed with the \"implicit "
 "returning\" enabled."
-msgstr ""
+msgstr "server_default句を指定するか、または &quot;autoincrement \&quot;カラム（class： `.Column`の注釈を参照）として修飾されず、データベース側のデフォルトを使用して生成された主キー列は、バックエンドが\ &quot;戻る\&quot;をサポートしていなくて、\ &quot;暗黙の復帰\&quot;を有効にして実行された挿入文がない限り、このリストは `` None``となります。"
 
 #: of sqlalchemy.engine.ResultProxy.inserted_primary_key:20
 #: sqlalchemy.engine.ResultProxy.last_inserted_params:4
@@ -2401,62 +2391,62 @@ msgid ""
 "Raises :class:`~sqlalchemy.exc.InvalidRequestError` if the executed "
 "statement is not a compiled expression construct or is not an insert() "
 "construct."
-msgstr ""
+msgstr "実行された文がコンパイルされた式構造でないか、またはinsert（）構文でない場合、class： `〜sqlalchemy.exc.InvalidRequestError`を送出します。"
 
 #: of sqlalchemy.engine.ResultProxy.is_insert:1
 msgid ""
 "True if this :class:`.ResultProxy` is the result of a executing an "
 "expression language compiled :func:`.expression.insert` construct."
-msgstr ""
+msgstr "Trueの場合：class： `.ResultProxy`はコンパイルされた式言語を実行した結果です：func：` .expression.insert` construct。"
 
 #: of sqlalchemy.engine.ResultProxy.is_insert:5
 msgid ""
 "When True, this implies that the :attr:`inserted_primary_key` attribute "
 "is accessible, assuming the statement did not include a user defined "
 "\"returning\" construct."
-msgstr ""
+msgstr "Trueの場合、これは：attr： `inserted_primary_key`属性がアクセス可能であることを意味し、ステートメントにユーザー定義の&quot;返す &quot;構成が含まれていないと仮定します。"
 
 #: of sqlalchemy.engine.ResultProxy.keys:1
 msgid "Return the current set of string keys for rows."
-msgstr ""
+msgstr "行の文字列キーの現在のセットを返します。"
 
 #: of sqlalchemy.engine.ResultProxy.last_inserted_params:1
 msgid "Return the collection of inserted parameters from this execution."
-msgstr ""
+msgstr "この実行から挿入されたパラメータのコレクションを返します。"
 
 #: of sqlalchemy.engine.ResultProxy.last_updated_params:1
 msgid "Return the collection of updated parameters from this execution."
-msgstr ""
+msgstr "この実行から更新されたパラメータのコレクションを返します。"
 
 #: of sqlalchemy.engine.ResultProxy.last_updated_params:4
 msgid ""
 "Raises :class:`~sqlalchemy.exc.InvalidRequestError` if the executed "
 "statement is not a compiled expression construct or is not an update() "
 "construct."
-msgstr ""
+msgstr "実行された文がコンパイルされた式の構文でないか、またはupdate（）構文でない場合、class： `〜sqlalchemy.exc.InvalidRequestError`を送出します。"
 
 #: of sqlalchemy.engine.ResultProxy.lastrow_has_defaults:1
 msgid ""
 "Return ``lastrow_has_defaults()`` from the underlying "
 ":class:`.ExecutionContext`."
-msgstr ""
+msgstr "基底：class： `.ExecutionContext`から` `lastrow_has_defaults（）` `を返します。"
 
 #: of sqlalchemy.engine.ResultProxy.lastrow_has_defaults:4
 #: sqlalchemy.engine.ResultProxy.postfetch_cols:4
 #: sqlalchemy.engine.ResultProxy.prefetch_cols:4
 msgid "See :class:`.ExecutionContext` for details."
-msgstr ""
+msgstr "詳細は、：class： `.ExecutionContext`を参照してください。"
 
 #: of sqlalchemy.engine.ResultProxy.lastrowid:1
 msgid "return the 'lastrowid' accessor on the DBAPI cursor."
-msgstr ""
+msgstr "DBAPIカーソルの &#39;lastrowid&#39;アクセサを返します。"
 
 #: of sqlalchemy.engine.ResultProxy.lastrowid:3
 msgid ""
 "This is a DBAPI specific method and is only functional for those backends"
 " which support it, for statements where it is appropriate.  It's behavior"
 " is not consistent across backends."
-msgstr ""
+msgstr "これはDBAPI固有のメソッドであり、それをサポートするバックエンド、適切なステートメントに対してのみ機能します。バックエンド間で一貫していない動作です。"
 
 #: of sqlalchemy.engine.ResultProxy.lastrowid:8
 msgid ""
@@ -2464,17 +2454,17 @@ msgid ""
 "expression constructs; the :attr:`~ResultProxy.inserted_primary_key` "
 "attribute provides a tuple of primary key values for a newly inserted "
 "row, regardless of database backend."
-msgstr ""
+msgstr "このメソッドの使用法は、通常、insert（）式の構文を使用する場合は不要です。 ：attr： `〜ResultProxy.inserted_primary_key`属性は、データベースのバックエンドに関係なく、新しく挿入された行の主キー値のタプルを提供します。"
 
 #: of sqlalchemy.engine.ResultProxy.next:1
 msgid "Implement the next() protocol."
-msgstr ""
+msgstr "next（）プロトコルを実装します。"
 
 #: of sqlalchemy.engine.ResultProxy.postfetch_cols:1
 msgid ""
 "Return ``postfetch_cols()`` from the underlying "
 ":class:`.ExecutionContext`."
-msgstr ""
+msgstr "基礎となる：class： `.ExecutionContext`から` `postfetch_cols（）` `を返します。"
 
 #: of sqlalchemy.engine.ResultProxy.postfetch_cols:6
 #: sqlalchemy.engine.ResultProxy.prefetch_cols:6
@@ -2482,52 +2472,52 @@ msgid ""
 "Raises :class:`~sqlalchemy.exc.InvalidRequestError` if the executed "
 "statement is not a compiled expression construct or is not an insert() or"
 " update() construct."
-msgstr ""
+msgstr "実行された文がコンパイルされた式構造でないか、またはinsert（）またはupdate（）構文でない場合、class： `〜sqlalchemy.exc.InvalidRequestError`を送出します。"
 
 #: of sqlalchemy.engine.ResultProxy.prefetch_cols:1
 msgid "Return ``prefetch_cols()`` from the underlying :class:`.ExecutionContext`."
-msgstr ""
+msgstr "基礎となる：class： `.ExecutionContext`から` prefetch_cols（） ``を返します。"
 
 #: of sqlalchemy.engine.ResultProxy.returned_defaults:1
 msgid ""
 "Return the values of default columns that were fetched using the "
 ":meth:`.ValuesBase.return_defaults` feature."
-msgstr ""
+msgstr "：meth： `.ValuesBase.return_defaults`機能を使用してフェッチされたデフォルト列の値を返します。"
 
 #: of sqlalchemy.engine.ResultProxy.returned_defaults:4
 msgid ""
 "The value is an instance of :class:`.RowProxy`, or ``None`` if "
 ":meth:`.ValuesBase.return_defaults` was not used or if the backend does "
 "not support RETURNING."
-msgstr ""
+msgstr "値は：class： `.RowProxy`のインスタンス、または：meth：` .ValuesBase.return_defaults`が使用されなかった場合、またはバックエンドがRETURNINGをサポートしない場合は `` None``です。"
 
 #: of sqlalchemy.engine.ResultProxy.returned_defaults:12
 msgid ":meth:`.ValuesBase.return_defaults`"
-msgstr ""
+msgstr "：meth： `.ValuesBase.return_defaults`"
 
 #: of sqlalchemy.engine.ResultProxy.returns_rows:1
 msgid "True if this :class:`.ResultProxy` returns rows."
-msgstr ""
+msgstr "trueの場合：class： `.ResultProxy`は行を返します。"
 
 #: of sqlalchemy.engine.ResultProxy.returns_rows:3
 msgid ""
 "I.e. if it is legal to call the methods :meth:`~.ResultProxy.fetchone`, "
 ":meth:`~.ResultProxy.fetchmany` :meth:`~.ResultProxy.fetchall`."
-msgstr ""
+msgstr "つまり、meth： `〜.ResultProxy.fetchone`、：meth：`〜.ResultProxy.fetchmany`：meth： `〜.ResultProxy.fetchall`メソッドを呼び出すことが合法であるかどうか。"
 
 #: of sqlalchemy.engine.ResultProxy.rowcount:1
 msgid "Return the 'rowcount' for this result."
-msgstr ""
+msgstr "この結果の「行数」を返します。"
 
 #: of sqlalchemy.engine.ResultProxy.rowcount:3
 msgid ""
 "The 'rowcount' reports the number of rows *matched* by the WHERE "
 "criterion of an UPDATE or DELETE statement."
-msgstr ""
+msgstr "&#39;rowcount&#39;は、UPDATEまたはDELETEステートメントのWHERE条件に一致する行数を報告します。"
 
 #: of sqlalchemy.engine.ResultProxy.rowcount:8
 msgid "Notes regarding :attr:`.ResultProxy.rowcount`:"
-msgstr ""
+msgstr "注意事項：attr： `.ResultProxy.rowcount`："
 
 #: of sqlalchemy.engine.ResultProxy.rowcount:11
 msgid ""
@@ -2538,7 +2528,7 @@ msgid ""
 "already. Such a row would be matched but not modified. On backends that "
 "feature both styles, such as MySQL, rowcount is configured by default to "
 "return the match count in all cases."
-msgstr ""
+msgstr "この属性は、実際に*変更された行の数と必ずしも同じではない*一致した行の数を返します。* UPDATE文は、指定されたSET値が与えられた場合、すでに行にあるものと同じです。このような行は一致しますが、変更されません。 MySQLなどの両方のスタイルを持つバックエンドでは、rowcountはデフォルトですべてのケースで一致カウントを返すように設定されています。"
 
 #: of sqlalchemy.engine.ResultProxy.rowcount:21
 msgid ""
@@ -2547,7 +2537,7 @@ msgid ""
 "does *not* return the number of rows available from the results of a "
 "SELECT statement as DBAPIs cannot support this functionality when rows "
 "are unbuffered."
-msgstr ""
+msgstr "：attr： `.ResultProxy.rowcount`は、UPDATEまたはDELETEステートメントと組み合わせてのみ有効です。 Python DBAPIとは異なり、行がバッファリングされていない場合、DBAPIはこの機能をサポートできないため、SELECT文の結果から使用可能な行数を返しません。"
 
 #: of sqlalchemy.engine.ResultProxy.rowcount:28
 msgid ""
@@ -2557,32 +2547,32 @@ msgid ""
 ":meth:`.ResultProxy.supports_sane_rowcount` and "
 ":meth:`.ResultProxy.supports_sane_multi_rowcount` methods will report "
 "from the dialect if each usage is known to be supported."
-msgstr ""
+msgstr "：attr： `.ResultProxy.rowcount`はすべての方言によって完全に実装されていないかもしれません。特に、ほとんどのDBAPIはexecutemanyコールからの集計行カウントをサポートしていません。 ：meth： `.ResultProxy.supports_sane_rowcount`と：meth：` .ResultProxy.supports_sane_multi_rowcount`メソッドは、各使用法がサポートされていることがわかっている場合、方言から報告します。"
 
 #: of sqlalchemy.engine.ResultProxy.rowcount:36
 msgid "Statements that use RETURNING may not return a correct rowcount."
-msgstr ""
+msgstr "RETURNINGを使用するステートメントは、正しい行数を返しません。"
 
 #: of sqlalchemy.engine.ResultProxy.scalar:1
 msgid "Fetch the first column of the first row, and close the result set."
-msgstr ""
+msgstr "最初の行の最初の列をフェッチし、結果セットを閉じます。"
 
 #: of sqlalchemy.engine.ResultProxy.supports_sane_multi_rowcount:1
 msgid "Return ``supports_sane_multi_rowcount`` from the dialect."
-msgstr ""
+msgstr "方言から `` supports_sane_multi_rowcount``を返します。"
 
 #: of sqlalchemy.engine.ResultProxy.supports_sane_multi_rowcount:3
 #: sqlalchemy.engine.ResultProxy.supports_sane_rowcount:3
 msgid "See :attr:`.ResultProxy.rowcount` for background."
-msgstr ""
+msgstr "参照：背景：attr： `.ResultProxy.rowcount`"
 
 #: of sqlalchemy.engine.ResultProxy.supports_sane_rowcount:1
 msgid "Return ``supports_sane_rowcount`` from the dialect."
-msgstr ""
+msgstr "方言から `` supports_sane_rowcount``を返します。"
 
 #: of sqlalchemy.engine.RowProxy:1
 msgid "Proxy values from a single cursor row."
-msgstr ""
+msgstr "単一のカーソル行からのプロキシ値。"
 
 #: of sqlalchemy.engine.RowProxy:3
 msgid ""
@@ -2591,29 +2581,29 @@ msgid ""
 "row, as well as Column instances which can be mapped to the original "
 "Columns that produced this result set (for results that correspond to "
 "constructed SQL expressions)."
-msgstr ""
+msgstr "ほとんどの場合、結果セットの値を文字列ベースの列名、行内の結果の整数位置、およびこの結果セットを生成した元の列にマップできるColumnインスタンスにマップする、\ &quot;順序付けられた辞書&quot;の動作に従います構築されたSQL式に対応する結果の場合）。"
 
 #: of sqlalchemy.engine.RowProxy.has_key:1
 msgid "Return True if this RowProxy contains the given key."
-msgstr ""
+msgstr "このRowProxyに指定されたキーが含まれている場合はTrueを返します。"
 
 #: of sqlalchemy.engine.RowProxy.items:1
 msgid "Return a list of tuples, each tuple containing a key/value pair."
-msgstr ""
+msgstr "キー/値のペアを含むタプルのリストを返します。"
 
 #: of sqlalchemy.engine.RowProxy.keys:1
 msgid "Return the list of keys as strings represented by this RowProxy."
-msgstr ""
+msgstr "このRowProxyが表す文字列としてキーのリストを返します。"
 
 #: of sqlalchemy.engine.Transaction:1
 msgid "Represent a database transaction in progress."
-msgstr ""
+msgstr "進行中のデータベーストランザクションを表します。"
 
 #: of sqlalchemy.engine.Transaction:3
 msgid ""
 "The :class:`.Transaction` object is procured by calling the "
 ":meth:`~.Connection.begin` method of :class:`.Connection`::"
-msgstr ""
+msgstr "：class： `.Transaction`オブジェクトは、：meth：`〜.Connection.begin`メソッドを呼び出すことによって調達されます：class： `.Connection` ::"
 
 #: of sqlalchemy.engine.Transaction:14
 msgid ""
@@ -2621,63 +2611,63 @@ msgid ""
 "order to control transaction boundaries.  It also implements a context "
 "manager interface so that the Python ``with`` statement can be used with "
 "the :meth:`.Connection.begin` method::"
-msgstr ""
+msgstr "オブジェクトは、トランザクションの境界を制御するために：meth： `.rollback`メソッドと：meth：` .commit`メソッドを提供します。また、Pythonの `` with``文が：meth： `.Connection.begin`メソッドで使用できるように、コンテキストマネージャインタフェースを実装しています::"
 
 #: of sqlalchemy.engine.Transaction:23
 msgid "The Transaction object is **not** threadsafe."
-msgstr ""
+msgstr "Transactionオブジェクトは**スレッドセーフではありません。"
 
 #: of sqlalchemy.engine.Transaction:25
 msgid ""
 "See also:  :meth:`.Connection.begin`, :meth:`.Connection.begin_twophase`,"
 " :meth:`.Connection.begin_nested`."
-msgstr ""
+msgstr "：meth： `.Connection.begin`、：meth：` .Connection.begin_twophase`、：meth： `.Connection.begin_nested`も参照してください。"
 
 #: of sqlalchemy.engine.Transaction.close:1
 msgid "Close this :class:`.Transaction`."
-msgstr ""
+msgstr "これを閉じます：class： `.Transaction`。"
 
 #: of sqlalchemy.engine.Transaction.close:3
 msgid ""
 "If this transaction is the base transaction in a begin/commit nesting, "
 "the transaction will rollback().  Otherwise, the method returns."
-msgstr ""
+msgstr "このトランザクションがbegin / commitネストの基本トランザクションである場合、トランザクションはロールバック（）されます。それ以外の場合は、メソッドが戻ります。"
 
 #: of sqlalchemy.engine.Transaction.close:7
 msgid ""
 "This is used to cancel a Transaction without affecting the scope of an "
 "enclosing transaction."
-msgstr ""
+msgstr "これは、囲みトランザクションのスコープに影響を与えずにトランザクションを取り消すために使用されます。"
 
 #: of sqlalchemy.engine.Transaction.commit:1
 msgid "Commit this :class:`.Transaction`."
-msgstr ""
+msgstr "これをコミットします：class： `.Transaction`。"
 
 #: of sqlalchemy.engine.Transaction.rollback:1
 msgid "Roll back this :class:`.Transaction`."
-msgstr ""
+msgstr "これをロールバックする：class： `.Transaction`。"
 
 #: of sqlalchemy.engine.TwoPhaseTransaction:1
 msgid "Represent a two-phase transaction."
-msgstr ""
+msgstr "2フェーズトランザクションを表します。"
 
 #: of sqlalchemy.engine.TwoPhaseTransaction:3
 msgid ""
 "A new :class:`.TwoPhaseTransaction` object may be procured using the "
 ":meth:`.Connection.begin_twophase` method."
-msgstr ""
+msgstr "新しい：class： `.TwoPhaseTransaction`オブジェクトは：meth：` .Connection.begin_twophase`メソッドを使って調達することができます。"
 
 #: of sqlalchemy.engine.TwoPhaseTransaction:6
 msgid ""
 "The interface is the same as that of :class:`.Transaction` with the "
 "addition of the :meth:`prepare` method."
-msgstr ""
+msgstr "インタフェースは：class： `.Transaction`のインタフェースと同じで、：meth：` prepare`メソッドが追加されています。"
 
 #: of sqlalchemy.engine.TwoPhaseTransaction.prepare:1
 msgid "Prepare this :class:`.TwoPhaseTransaction`."
-msgstr ""
+msgstr "これを準備します：class： `.TwoPhaseTransaction`。"
 
 #: of sqlalchemy.engine.TwoPhaseTransaction.prepare:3
 msgid "After a PREPARE, the transaction can be committed."
-msgstr ""
+msgstr "PREPAREの後に、トランザクションをコミットすることができます。"
 

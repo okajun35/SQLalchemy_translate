@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/extensions/declarative/mixins.rst:4
 msgid "Mixin and Custom Base Classes"
-msgstr ""
+msgstr "ミックスインとカスタムベースクラス"
 
 #: ../../orm/extensions/declarative/mixins.rst:6
 msgid ""
@@ -28,7 +18,7 @@ msgid ""
 "options, or other mapped properties, across many classes.  The standard "
 "Python idioms for this is to have the classes inherit from a base which "
 "includes these common features."
-msgstr ""
+msgstr "：mod： `〜sqlalchemy.ext.declarative`を使うときの一般的な必要性は、多くのクラスにわたって共通のコラム、いくつかの共通テーブルオプション、または他のマップされたプロパティのようないくつかの機能を共有することです。標準的なPythonのイディオムは、これらの共通の機能を含むベースからクラスを継承することです。"
 
 #: ../../orm/extensions/declarative/mixins.rst:12
 msgid ""
@@ -38,7 +28,7 @@ msgid ""
 "Declarative includes several helper features to make this work in terms "
 "of how mappings are declared.   An example of some commonly mixed-in "
 "idioms is below::"
-msgstr ""
+msgstr "：mod： `〜sqlalchemy.ext.declarative`を使うとき、このイディオムは、カスタム宣言的な基本クラスの使用と、プライマリベースに加えて継承される\&quot; mixin \ &quot;クラスの使用によって許可されます。 Declarativeには、マッピングが宣言される方法でこの機能を実現するいくつかのヘルパー機能が含まれています。一般的に混入しているイディオムの例を以下に示します::"
 
 #: ../../orm/extensions/declarative/mixins.rst:35
 msgid ""
@@ -46,14 +36,14 @@ msgid ""
 "primary key, a ``__tablename__`` attribute that derives from the name of "
 "the class itself, as well as ``__table_args__`` and ``__mapper_args__`` "
 "defined by the ``MyMixin`` mixin class."
-msgstr ""
+msgstr "上記のところでは、 `` MyModel``クラスはプライマリキーとして\ &quot;id \&quot;カラム、クラス自体の名前から派生する `` __tab_name``属性、 `` __table_args__``、 `` MyMixin`` mixinクラスによって定義された `` __mapper_args__``です。"
 
 #: ../../orm/extensions/declarative/mixins.rst:40
 msgid ""
 "There's no fixed convention over whether ``MyMixin`` precedes ``Base`` or"
 " not.  Normal Python method resolution rules apply, and the above example"
 " would work just as well with::"
-msgstr ""
+msgstr "`` MyMixin``が `` Base``に先行するかどうかについては、固定された規約はありません。通常のPythonのメソッド解決規則が適用され、上の例は::と同様に動作します"
 
 #: ../../orm/extensions/declarative/mixins.rst:47
 msgid ""
@@ -62,11 +52,11 @@ msgid ""
 " etc.   If the ``Base`` did define an attribute of the same name, the "
 "class placed first in the inherits list would determine which attribute "
 "is used on the newly defined class."
-msgstr ""
+msgstr "これは `` Base``は `` MyMixin``が定義する変数、 `` __tablename__``、 `` __table_args__``、 `` id``などを定義していないからです。 `` Base``は同じ名前の属性を定義しました。継承リストに最初に置かれたクラスは、新しく定義されたクラスでどの属性が使用されるかを決定します。"
 
 #: ../../orm/extensions/declarative/mixins.rst:55
 msgid "Augmenting the Base"
-msgstr ""
+msgstr "ベースの拡張"
 
 #: ../../orm/extensions/declarative/mixins.rst:57
 msgid ""
@@ -74,31 +64,31 @@ msgid ""
 " can also be applied to the base class itself, for patterns that should "
 "apply to all classes derived from a particular base.  This is achieved "
 "using the ``cls`` argument of the :func:`.declarative_base` function::"
-msgstr ""
+msgstr "純粋なミックスインを使用することに加えて、このセクションのテクニックのほとんどは、特定のベースから派生したすべてのクラスに適用するパターンのために、ベースクラス自体にも適用できます。これは：func： `.declarative_base`関数の` `cls``引数を使って実現します::"
 
 #: ../../orm/extensions/declarative/mixins.rst:80
 msgid ""
 "Where above, ``MyModel`` and all other classes that derive from ``Base`` "
 "will have a table name derived from the class name, an ``id`` primary key"
 " column, as well as the \"InnoDB\" engine for MySQL."
-msgstr ""
+msgstr "上記のところで、 `` MyModel``と `` Base``から派生する他のすべてのクラスは、クラス名、 `` id``主キー列、および\ &quot;InnoDB \&quot;から派生したテーブル名を持ちます。 MySQLのエンジン。"
 
 #: ../../orm/extensions/declarative/mixins.rst:85
 msgid "Mixing in Columns"
-msgstr ""
+msgstr "列の混合"
 
 #: ../../orm/extensions/declarative/mixins.rst:87
 msgid ""
 "The most basic way to specify a column on a mixin is by simple "
 "declaration::"
-msgstr ""
+msgstr "mixinに列を指定する最も基本的な方法は、単純な宣言::"
 
 #: ../../orm/extensions/declarative/mixins.rst:99
 msgid ""
 "Where above, all declarative classes that include ``TimestampMixin`` will"
 " also have a column ``created_at`` that applies a timestamp to all row "
 "insertions."
-msgstr ""
+msgstr "上記のところでは、 `` TimestampMixin``を含む宣言的なクラスには、すべての行の挿入にタイムスタンプを適用する `` created_at``という列もあります。"
 
 #: ../../orm/extensions/declarative/mixins.rst:103
 msgid ""
@@ -108,7 +98,7 @@ msgid ""
 "but the way these are differentiated is that ``a.c.id`` and ``b.c.id`` "
 "are two distinct Python objects, referencing their parent tables ``a`` "
 "and ``b`` respectively."
-msgstr ""
+msgstr "SQLAlchemy式言語をよく知っている人は、clause要素のオブジェクトIDがスキーマ内での役割を定義していることを知っています。 2つの `` Table``オブジェクト `` a``と `` b``はどちらも `` id``という列を持ちますが、これらが区別される方法は `` acid``と `` bcid``が2つの異なるPythonオブジェクトで、親テーブルをそれぞれ「a」と「b」で参照しています。"
 
 #: ../../orm/extensions/declarative/mixins.rst:110
 msgid ""
@@ -118,7 +108,7 @@ msgid ""
 "destination class.  To accomplish this, the declarative extension creates"
 " a **copy** of each :class:`.Column` object encountered on a class that "
 "is detected as a mixin."
-msgstr ""
+msgstr "mixinカラムの場合、class： `.Column`オブジェクトは明示的に作成されているようですが、上記の最終的な` `created_at``カラムは、別々の宛先クラスごとに個別のPythonオブジェクトとして存在しなければなりません。これを実現するために、宣言的拡張は、mixinとして検出されたクラス上で遭遇する各：class： `.Column`オブジェクトの**コピー**を作成します。"
 
 #: ../../orm/extensions/declarative/mixins.rst:117
 msgid ""
@@ -129,7 +119,7 @@ msgid ""
 "require destination-explicit context, the :class:`~.declared_attr` "
 "decorator is provided so that patterns common to many classes can be "
 "defined as callables::"
-msgstr ""
+msgstr "このコピーメカニズムは、外部キーを持たない単純な列に限定されています。class： `.ForeignKey`自体には、このレベルで正しく再作成できない列への参照が含まれています。外部キーを持つカラム、および宛先明示コンテキストを必要とするさまざまなマッパーレベルのコンストラクトの場合、：class： `〜.declared_attr`デコレータが提供され、多くのクラスに共通するパターンを呼び出し可能として定義できます。 ："
 
 #: ../../orm/extensions/declarative/mixins.rst:136
 msgid ""
@@ -137,11 +127,11 @@ msgid ""
 "point at which the ``User`` class is constructed, and the declarative "
 "extension can use the resulting :class:`.Column` object as returned by "
 "the method without the need to copy it."
-msgstr ""
+msgstr "上記の場合、 `` address_id``クラスレベルの呼び出し可能関数は、 `` User``クラスが構築された時点で実行され、宣言的拡張は、結果として：class： `.Column`オブジェクトを使用することができます。メソッドをコピーする必要はありません。"
 
 #: ../../orm/extensions/declarative/mixins.rst:141
 msgid "Rename ``sqlalchemy.util.classproperty`` into :class:`~.declared_attr`."
-msgstr ""
+msgstr "`` sqlalchemy.util.classproperty``の名前をclass： `〜.declared_attr`に変更してください。"
 
 #: ../../orm/extensions/declarative/mixins.rst:144
 msgid ""
@@ -149,11 +139,11 @@ msgid ""
 "``__mapper_args__`` to a limited degree, currently by ``polymorphic_on`` "
 "and ``version_id_col``; the declarative extension will resolve them at "
 "class construction time::"
-msgstr ""
+msgstr "：class： `〜.declared_attr`によって生成されたカラムは、` `__mapper_args__``によって、現在` `polymorphic_on``と` `version_id_col``によって制限された程度で参照することもできます。宣言的な拡張はクラス構築時にそれらを解決します::"
 
 #: ../../orm/extensions/declarative/mixins.rst:162
 msgid "Mixing in Relationships"
-msgstr ""
+msgstr "関係の混在"
 
 #: ../../orm/extensions/declarative/mixins.rst:164
 msgid ""
@@ -164,11 +154,11 @@ msgid ""
 " Below is an example which combines a foreign key column and a "
 "relationship so that two classes ``Foo`` and ``Bar`` can both be "
 "configured to reference a common target class via many-to-one::"
-msgstr ""
+msgstr "：func： `〜sqlalchemy.orm.relationship`によって作成されたリレーションシップは、：class：` .declared_attr`アプローチを使用して宣言的なmixinクラスで提供され、リレーションシップとその可能性のある列バインドされたコンテンツをコピーするときに生じる可能性があります。以下は、外部キーの列と関係を組み合わせた例で、 `` Foo``と `` Bar``の2つのクラスを、多対1で共通のターゲットクラスを参照するように設定することができます。"
 
 #: ../../orm/extensions/declarative/mixins.rst:195
 msgid "Using Advanced Relationship Arguments (e.g. ``primaryjoin``, etc.)"
-msgstr ""
+msgstr "拡張関係引数（例えば、 `` primaryjoin``など）を使用すると、"
 
 #: ../../orm/extensions/declarative/mixins.rst:197
 msgid ""
@@ -182,36 +172,36 @@ msgid ""
 "objects, those are not the :class:`.Column` objects that Declarative will"
 " be using as it calls the methods on its own, thus using *different* "
 ":class:`.Column` objects."
-msgstr ""
+msgstr "：func： `〜sqlalchemy.orm.relationship`定義は明示的なprimaryjoin、order_byなどを必要とします。しかし、最も単純なケースでは、これらの引数に** late bound **フォームを使用します。ラムダ。なぜなら、 `` @ declared_attr``を使って設定される関連する：class： `.Column`オブジェクトは別の` `@ declared_attr``属性で利用できないからです。メソッドは動作しnew：class： `.Column`オブジェクトを返しますが、それらは宣言が独自のメソッドを呼び出すときに使用する：class：` .Column`オブジェクトではないので、* different *：classを使用します： `.Column`オブジェクト。"
 
 #: ../../orm/extensions/declarative/mixins.rst:208
 msgid ""
 "The canonical example is the primaryjoin condition that depends upon "
 "another mixed-in column::"
-msgstr ""
+msgstr "標準的な例は、別の混在列に依存するprimaryjoin条件です::"
 
 #: ../../orm/extensions/declarative/mixins.rst:222
 msgid "Mapping a class using the above mixin, we will get an error like::"
-msgstr ""
+msgstr "上記のmixinを使ってクラスをマッピングすると、次のようなエラーが出ます："
 
 #: ../../orm/extensions/declarative/mixins.rst:227
 msgid ""
 "This is because the ``target_id`` :class:`.Column` we've called upon in "
 "our ``target()`` method is not the same :class:`.Column` that declarative"
 " is actually going to map to our table."
-msgstr ""
+msgstr "これは、 `` target（） ``メソッドで呼び出された `` target_id``：class： `.Column`は、宣言が実際にマップされるクラス：` .Column`と同じではないからです私たちのテーブル。"
 
 #: ../../orm/extensions/declarative/mixins.rst:231
 msgid "The condition above is resolved using a lambda::"
-msgstr ""
+msgstr "上記の条件は、lambda ::"
 
 #: ../../orm/extensions/declarative/mixins.rst:244
 msgid "or alternatively, the string form (which ultimately generates a lambda)::"
-msgstr ""
+msgstr "または文字列形式（最終的にラムダを生成する）::"
 
 #: ../../orm/extensions/declarative/mixins.rst:258
 msgid "Mixing in deferred(), column_property(), and other MapperProperty classes"
-msgstr ""
+msgstr "deferred（）、column_property（）、およびその他のMapperPropertyクラスを混在させる"
 
 #: ../../orm/extensions/declarative/mixins.rst:260
 msgid ""
@@ -222,25 +212,25 @@ msgid ""
 "references to columns, and therefore, when used with declarative mixins, "
 "have the :class:`.declared_attr` requirement so that no reliance on "
 "copying is needed::"
-msgstr ""
+msgstr "以下のような：func： `〜sqlalchemy.orm.relationship`、all：class：`〜sqlalchemy.orm.interfaces.MapperProperty`サブクラス：func： `〜sqlalchemy.orm.deferred`、：func：`〜sqlalchemy.orm .column_property`などは最終的にはカラムへの参照を伴うため、宣言的なミックスインとともに使用する場合は、：class： `.declared_attr`要件があり、コピーに依存する必要はありません。"
 
 #: ../../orm/extensions/declarative/mixins.rst:276
 msgid ""
 "The :func:`.column_property` or other construct may refer to other "
 "columns from the mixin.  These are copied ahead of time before the "
 ":class:`.declared_attr` is invoked::"
-msgstr ""
+msgstr "：func： `.column_property`や他の構文は、mixinの他の列を参照するかもしれません。これらは、クラス： `.declared_attr`が呼び出される前にコピーされます::"
 
 #: ../../orm/extensions/declarative/mixins.rst:290
 msgid ""
 "mixin columns are copied to the final mapped class so that "
 ":class:`.declared_attr` methods can access the actual column that will be"
 " mapped."
-msgstr ""
+msgstr "mixinの列は最終的にマッピングされたクラスにコピーされるので、class： `.declared_attr`メソッドはマッピングされる実際の列にアクセスできます。"
 
 #: ../../orm/extensions/declarative/mixins.rst:295
 msgid "Mixing in Association Proxy and Other Attributes"
-msgstr ""
+msgstr "アソシエーションのプロキシとその他の属性の混合"
 
 #: ../../orm/extensions/declarative/mixins.rst:297
 msgid ""
@@ -252,7 +242,7 @@ msgid ""
 "each target a different type of child object.  Below is an "
 ":func:`.association_proxy` / mixin example which provides a scalar list "
 "of string values to an implementing class::"
-msgstr ""
+msgstr "ミックスインは、ユーザ定義の属性だけでなく、func： `.association_proxy`のような他の拡張ユニットも指定できます。 ：class： `.declared_attr`の使用法は、属性をターゲットサブクラスに特別に合わせなければならない場合に必要です。一例は、それぞれが異なるタイプの子オブジェクトを対象とするmultiple：func： `.association_proxy`属性を構築するときです。以下は：func： `.association_proxy` / mixinの例で、文字列値のスカラーリストを実装クラスに提供しています::"
 
 #: ../../orm/extensions/declarative/mixins.rst:342
 msgid ""
@@ -264,20 +254,20 @@ msgid ""
 ":func:`.association_proxy` object which proxies references to the "
 "``strings`` attribute onto the ``value`` attribute of each "
 "``StringAttribute`` instance."
-msgstr ""
+msgstr "上では、 `` HasStringCollection`` mixinは、 `` StringAttribute``と呼ばれる新たに生成されたクラスを参照する：func： `.relationship`を生成します。 `` StringAttribute``クラスは、それ自身の：class： `.Table`定義で生成されます。これは、親クラスに対してローカルであり、` `HasStringCollection``ミックスインを使用します。また、 `` StringAttribute``インスタンスの `` value``属性への `` strings``属性への参照を代行する：func： `.association_proxy`オブジェクトも生成します。"
 
 #: ../../orm/extensions/declarative/mixins.rst:350
 msgid ""
 "``TypeA`` or ``TypeB`` can be instantiated given the constructor argument"
 " ``strings``, a list of strings::"
-msgstr ""
+msgstr "`` TypeA``または `` TypeB``は、コンストラクタ引数 `` strings``、文字列のリスト::"
 
 #: ../../orm/extensions/declarative/mixins.rst:356
 msgid ""
 "This list will generate a collection of ``StringAttribute`` objects, "
 "which are persisted into a table that's local to either the "
 "``type_a_strings`` or ``type_b_strings`` table::"
-msgstr ""
+msgstr "このリストは、 `` StringAttribute``オブジェクトのコレクションを生成します。これらのオブジェクトは、 `` type_a_strings``または `` type_b_strings``テーブルのいずれかにローカルなテーブルに保持されます::"
 
 #: ../../orm/extensions/declarative/mixins.rst:364
 msgid ""
@@ -285,17 +275,17 @@ msgid ""
 ":class:`.declared_attr` decorator must be used so that a distinct "
 ":func:`.association_proxy` object is created for each of the ``TypeA`` "
 "and ``TypeB`` classes."
-msgstr ""
+msgstr "：func： `.association_proxy`を構築するときは、：class：` .declared_attr`デコレータを使用して、 `` TypeA``と `` TypeB ``クラス。"
 
 #: ../../orm/extensions/declarative/mixins.rst:369
 msgid ""
 ":class:`.declared_attr` is usable with non-mapped attributes, including "
 "user-defined attributes as well as :func:`.association_proxy`."
-msgstr ""
+msgstr "：class： `.declared_attr`は：func：` .association_proxy`と同様に、ユーザ定義属性を含むマップされていない属性でも使用できます。"
 
 #: ../../orm/extensions/declarative/mixins.rst:376
 msgid "Controlling table inheritance with mixins"
-msgstr ""
+msgstr "ミックスインによるテーブル継承の制御"
 
 #: ../../orm/extensions/declarative/mixins.rst:378
 msgid ""
@@ -303,7 +293,7 @@ msgid ""
 "will determine the name of the table used for each class in an "
 "inheritance hierarchy, as well as whether a class has its own distinct "
 "table."
-msgstr ""
+msgstr "`` __tablename__``属性は、継承階層の各クラスに使用されるテーブルの名前や、クラスに独自のテーブルがあるかどうかを決定する関数を提供するために使用できます。"
 
 #: ../../orm/extensions/declarative/mixins.rst:382
 msgid ""
@@ -314,13 +304,13 @@ msgid ""
 "**for each mapped class in the hierarchy, except if overridden in a "
 "subclass**.   The function therefore needs to expect to receive each "
 "class individually and to provide the correct answer for each."
-msgstr ""
+msgstr "これは：class： `.declared_attr`インジケータと` `__tablename __（）` `というメソッドを併用することで実現します。 Declarativeは、特別な名前 `` __tablename__``、 `` __mapper_args__``、 `` __table_args__`` **のクラス： `.declared_attr`を呼び出す**サブクラスでオーバーライドされている場合を除いて、 *。したがって、この関数は、各クラスを個別に受け取り、それぞれに対して正しい答えを提供することを期待する必要があります。"
 
 #: ../../orm/extensions/declarative/mixins.rst:391
 msgid ""
 "For example, to create a mixin that gives every class a simple table name"
 " based on class name::"
-msgstr ""
+msgstr "たとえば、すべてのクラスにクラス名に基づいた単純なテーブル名を与えるmixinを作成するには::"
 
 #: ../../orm/extensions/declarative/mixins.rst:411
 msgid ""
@@ -328,11 +318,11 @@ msgid ""
 "``None`` for subclasses, using :func:`.has_inherited_table`.  This has "
 "the effect of those subclasses being mapped with single table inheritance"
 " against the parent::"
-msgstr ""
+msgstr "あるいは、func： `.has_inherited_table`を使用して、` `__tablename__``関数を変更して、サブクラスに対して` `None``を返すことができます。これは、それらのサブクラスが親に対して1つのテーブルの継承でマップされているという影響を与えます::"
 
 #: ../../orm/extensions/declarative/mixins.rst:438
 msgid "Mixing in Columns in Inheritance Scenarios"
-msgstr ""
+msgstr "継承シナリオでの列の混合"
 
 #: ../../orm/extensions/declarative/mixins.rst:440
 msgid ""
@@ -342,7 +332,7 @@ msgid ""
 " invoked for the **base class only** in the hierarchy.  Below, only the "
 "``Person`` class will receive a column called ``id``; the mapping will "
 "fail on ``Engineer``, which is not given a primary key::"
-msgstr ""
+msgstr "`` __tablename__``と他の特別な名前が：class： `.declared_attr`と一緒に使われるときとは対照的に、カラムとプロパティ（例えば、リレーションシップ、カラムプロパティなど）を混在させると、関数は**階層内の基本クラスのみ**。以下では、 `` Person``クラスだけが `` id``という列を受け取ります。主キーが与えられていない `` Engineer``でマッピングが失敗します::"
 
 #: ../../orm/extensions/declarative/mixins.rst:463
 msgid ""
@@ -354,7 +344,7 @@ msgid ""
 "function should be invoked **for each class in the hierarchy**, in "
 "*almost* (see warning below) the same way as it does for "
 "``__tablename__``::"
-msgstr ""
+msgstr "通常、結合表の継承では、各サブクラスに明示的に名前が付けられた列が必要です。しかし、この場合、すべてのテーブルに `` id``カラムを持ち、それらを外部キーを介して互いに参照させたいことがあります。 ：attr： `.declared_attr.cascading`モディファイアを使用することで、これをミックスインとして実現することができます。この修飾子は、階層**内の各クラスに対して**ほとんど*（下記の警告を参照）で呼び出される必要があることを示します。 `` __tablename__``と同じように::"
 
 #: ../../orm/extensions/declarative/mixins.rst:491
 msgid ""
@@ -365,15 +355,15 @@ msgid ""
 "condition is detected.   This limitation does **not** exist for the "
 "special attribute names such as ``__tablename__``, which resolve in a "
 "different way internally than that of :attr:`.declared_attr.cascading`."
-msgstr ""
+msgstr "：attr： `.declared_attr.cascading`機能は現在、サブクラスが異なる機能や値で属性を上書きできるようにしません**。これは `` @ declared_attr``がどのように解決されるかのメカニズムの現在の制限であり、この状態が検出された場合には警告が出されます。この制限は、 `` __tablename__``のような特殊な属性名に対しては存在しません**：attr： `.declared_attr.cascading`よりも内部的に解決されます。"
 
 #: ../../orm/extensions/declarative/mixins.rst:501
 msgid "added :attr:`.declared_attr.cascading`."
-msgstr ""
+msgstr "追加されました：attr： `.declared_attr.cascading`。"
 
 #: ../../orm/extensions/declarative/mixins.rst:504
 msgid "Combining Table/Mapper Arguments from Multiple Mixins"
-msgstr ""
+msgstr "複数のミックスインからのテーブル/マッパー引数の結合"
 
 #: ../../orm/extensions/declarative/mixins.rst:506
 msgid ""
@@ -382,16 +372,16 @@ msgid ""
 "mixins with those you wish to define on the class iteself. The "
 ":class:`.declared_attr` decorator can be used here to create user-defined"
 " collation routines that pull from multiple collections::"
-msgstr ""
+msgstr "宣言的なミックスインで `` __table_args__`や `` __mapper_args__``を指定した場合、いくつかのミックスインのいくつかのパラメータをクラス自身で定義したいものと組み合わせることができます。 ：class： `.declared_attr`デコレータを使って、複数のコレクションから引き出すユーザ定義の照合ルーチンを作成することができます::"
 
 #: ../../orm/extensions/declarative/mixins.rst:535
 msgid "Creating Indexes with Mixins"
-msgstr ""
+msgstr "ミックスインでインデックスを作成する"
 
 #: ../../orm/extensions/declarative/mixins.rst:537
 msgid ""
 "To define a named, potentially multicolumn :class:`.Index` that applies "
 "to all tables derived from a mixin, use the \"inline\" form of "
 ":class:`.Index` and establish it as part of ``__table_args__``::"
-msgstr ""
+msgstr "ミックスインから派生したすべてのテーブルに適用される名前付き、潜在的にマルチカラムのクラス： `.Index`を定義するには：class：` .Index`の\ &quot;インライン\&quot;形式を使用し、それを `` __table_args__`の一部として確立します。 `::"
 

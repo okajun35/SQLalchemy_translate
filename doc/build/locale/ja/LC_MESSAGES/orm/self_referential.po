@@ -6,20 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SQLAlchemy 1.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-06 18:59+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
 
 #: ../../orm/self_referential.rst:4
 msgid "Adjacency List Relationships"
-msgstr ""
+msgstr "隣接関係リストの関係"
 
 #: ../../orm/self_referential.rst:6
 msgid ""
@@ -33,21 +23,21 @@ msgid ""
 "hierarchical storage needs, for reasons of concurrency, reduced "
 "complexity, and that modified preorder has little advantage over an "
 "application which can fully load subtrees into the application space."
-msgstr ""
+msgstr "**隣接関係リスト**パターンは、テーブルがそれ自身への外部キー参照を含む共通の関係パターンです。これは、フラットテーブルで階層データを表現する最も一般的な方法です。他のメソッドには**ネストされたセット**、時に\ &quot;修正された予約注文&quot;と呼ばれるもの、**マテリアライズドパス**があります。並行性、複雑さの軽減、および変更された予約注文の利点がほとんどないため、SQL照会内での流暢性を評価したときに変更された予約注文があったにもかかわらず、おそらく隣接リスト・モデルは大半の階層ストレージニーズにとって最も適切なパターンですサブツリーをアプリケーション空間に完全にロードすることができるアプリケーションに適用されます。"
 
 #: ../../orm/self_referential.rst:17
 msgid ""
 "In this example, we'll work with a single mapped class called ``Node``, "
 "representing a tree structure::"
-msgstr ""
+msgstr "この例では、ツリー構造を表す `` Node``というマップされたクラスを1つ使用して作業します::"
 
 #: ../../orm/self_referential.rst:27
 msgid "With this structure, a graph such as the following::"
-msgstr ""
+msgstr "このような構成により、以下のようなグラフが生成される。"
 
 #: ../../orm/self_referential.rst:34
 msgid "Would be represented with data such as::"
-msgstr ""
+msgstr "::のようなデータで表されるでしょうか？"
 
 #: ../../orm/self_referential.rst:45
 msgid ""
@@ -59,7 +49,7 @@ msgid ""
 ":paramref:`~.relationship.remote_side`, which is a :class:`.Column` or "
 "collection of :class:`.Column` objects that indicate those which should "
 "be considered to be \"remote\"::"
-msgstr ""
+msgstr "：func： `.relationship`の設定は\&quot;普通\ &quot;の1対多の関係と同じように動作しますが、\&quot;方向\ &quot;、つまり関係が1対多または多対1は、デフォルトでは1対多であるとみなされます。関係を多対1にするために、paramref： `〜.relationship.remote_side`という追加の指示文が追加されています。これは：class：` .Column`または：class： `.Column`オブジェクトのコレクションです。 \ &quot;リモート\&quot;と考えるべきものを示す："
 
 #: ../../orm/self_referential.rst:61
 msgid ""
@@ -67,24 +57,24 @@ msgid ""
 ":paramref:`~.relationship.remote_side` of the ``parent`` "
 ":func:`.relationship`, thus establishing ``parent_id`` as the \"local\" "
 "side, and the relationship then behaves as a many-to-one."
-msgstr ""
+msgstr "上記のところでは、 `` id``カラムは `` parent``：func： `.relationship`の：paramref：`〜.relationship.remote_side`として適用され、 `` parent_id``を `ローカル側では、リレーションシップは多対1のように動作します。"
 
 #: ../../orm/self_referential.rst:66
 msgid ""
 "As always, both directions can be combined into a bidirectional "
 "relationship using the :func:`.backref` function::"
-msgstr ""
+msgstr "いつものように、：func： `.backref`関数を使って両方向を双方向関係に結合することができます::"
 
 #: ../../orm/self_referential.rst:78
 msgid ""
 "There are several examples included with SQLAlchemy illustrating self-"
 "referential strategies; these include :ref:`examples_adjacencylist` and "
 ":ref:`examples_xmlpersistence`."
-msgstr ""
+msgstr "自己参照戦略を示すSQLAlchemyには、いくつかの例があります。 ref： `examples_adjacencylist`と：ref：` examples_xmlpersistence`があります。"
 
 #: ../../orm/self_referential.rst:83
 msgid "Composite Adjacency Lists"
-msgstr ""
+msgstr "複合隣接リスト"
 
 #: ../../orm/self_referential.rst:85
 msgid ""
@@ -95,7 +85,7 @@ msgid ""
 "indicate sub folders which are within the same account as that of the "
 "parent; while ``folder_id`` refers to a specific folder within that "
 "account::"
-msgstr ""
+msgstr "隣接リスト関係のサブカテゴリは、特定の列が結合条件の\ &quot;ローカル\&quot;と\ &quot;リモート\&quot;の両方に存在するまれなケースです。例は、以下の `` Folder``クラスです。複合主キーを使用する場合、 `` account_id``列は、それ自身を参照して、親アカウントと同じアカウント内にあるサブフォルダを示します。 `` folder_id``はそのアカウント内の特定のフォルダを参照しています::"
 
 #: ../../orm/self_referential.rst:111
 msgid ""
@@ -104,21 +94,21 @@ msgid ""
 "recognizes that the ``account_id`` column here is on both sides, and "
 "aligns the \"remote\" column along with the ``folder_id`` column, which "
 "it recognizes as uniquely present on the \"remote\" side."
-msgstr ""
+msgstr "上では、： `account_id``を：paramref：`〜.relationship.remote_side`リストに渡します。 ：func： `.relationship`は、ここにある` `account_id``カラムが両側にあることを認識し、\&quot; remote \ &quot;カラムと` `folder_id``カラムを整列させます。 &quot;リモート\&quot;側。"
 
 #: ../../orm/self_referential.rst:117
 msgid ""
 "Support for self-referential composite keys in :func:`.relationship` "
 "where a column points to itself."
-msgstr ""
+msgstr "自己参照複合キーのサポート：func： `.relationship`カラムは、それ自身を指します。"
 
 #: ../../orm/self_referential.rst:122
 msgid "Self-Referential Query Strategies"
-msgstr ""
+msgstr "自己参照クエリの戦略"
 
 #: ../../orm/self_referential.rst:124
 msgid "Querying of self-referential structures works like any other query::"
-msgstr ""
+msgstr "自己参照構造の問合せは、他の問合せと同様に機能します。"
 
 #: ../../orm/self_referential.rst:129
 msgid ""
@@ -126,7 +116,7 @@ msgid ""
 "key from one level of the tree to the next.  In SQL, a join from a table "
 "to itself requires that at least one side of the expression be "
 "\"aliased\" so that it can be unambiguously referred to."
-msgstr ""
+msgstr "ただし、ツリーの1つのレベルから次のレベルへの外部キーに沿って結合しようとすると、特別な注意が必要です。 SQLでは、テーブルからそれ自身への結合は、明示的に参照できるように、式の少なくとも片方を\ &quot;別名\&quot;にする必要があります。"
 
 #: ../../orm/self_referential.rst:134
 msgid ""
@@ -134,7 +124,7 @@ msgid ""
 ":func:`.orm.aliased` construct is normally used to provide an \"alias\" "
 "of an ORM entity.  Joining from ``Node`` to itself using this technique "
 "looks like:"
-msgstr ""
+msgstr "ORMチュートリアルの：ref： `ormtutorial_aliases`を思い出してください。：func：` .orm.aliased`構文は通常、ORMエンティティの\ &quot;エイリアス\&quot;を提供するために使用されます。このテクニックを使って `` Node``から自分自身に参加すると以下のようになります："
 
 #: ../../orm/self_referential.rst:157
 msgid ""
@@ -145,31 +135,31 @@ msgid ""
 "an explicit entity.   Calls to :meth:`.Query.filter` and similar "
 "subsequent to the aliased join will **adapt** the ``Node`` entity to be "
 "that of the alias:"
-msgstr ""
+msgstr "：meth： `.Query.join`には、クエリの柔軟性を犠牲にして、冗長自己参照結合を短縮できるparamref：` .Query.join.aliased`という機能も含まれています。この機能は、明示的なエンティティを必要とせずに、上記と同様のエイリアス処理を行います。 ：meth： `.Query.filter`などのエイリアス化された結合に続く呼び出しは、エイリアスのものになるように` `Node``エンティティを適応させます**："
 
 #: ../../orm/self_referential.rst:179
 msgid ""
 "To add criterion to multiple points along a longer join, add "
 ":paramref:`.Query.join.from_joinpoint` to the additional "
 ":meth:`~.Query.join` calls:"
-msgstr ""
+msgstr "より長い結合に沿って複数のポイントに基準を追加するには、paramref： `.Query.join.from_joinpoint`を追加：meth：`〜.Query.join`呼び出しに追加します："
 
 #: ../../orm/self_referential.rst:205
 msgid ""
 ":meth:`.Query.reset_joinpoint` will also remove the \"aliasing\" from "
 "filtering calls::"
-msgstr ""
+msgstr "：meth： `.Query.reset_joinpoint`はフィルタリング呼び出しから\&quot; aliasing \ &quot;も削除します::"
 
 #: ../../orm/self_referential.rst:214
 msgid ""
 "For an example of using :paramref:`.Query.join.aliased` to arbitrarily "
 "join along a chain of self-referential nodes, see "
 ":ref:`examples_xmlpersistence`."
-msgstr ""
+msgstr "：paramref： `.Query.join.aliased`を使って、自己参照ノードのチェーンに沿って任意に結合する例については、：ref：` examples_xmlpersistence`を参照してください。"
 
 #: ../../orm/self_referential.rst:221
 msgid "Configuring Self-Referential Eager Loading"
-msgstr ""
+msgstr "自己参照型eagerローディングのコンフィグレーション"
 
 #: ../../orm/self_referential.rst:223
 msgid ""
@@ -184,5 +174,5 @@ msgid ""
 "many levels deep it should join and/or query; otherwise the eager load "
 "will not take place at all. This depth setting is configured via "
 ":paramref:`~.relationships.join_depth`:"
-msgstr ""
+msgstr "通常の照会操作中に親から子表への結合または外部結合を使用して、親およびその直下の子のコレクションまたは参照に1つのSQL文またはすべての直接の子コレクションの2つ目の文を入れることができます。 SQLAlchemyの結合およびサブクエリeagerローディングは、関連項目への結合時にエイリアステーブルを使用するため、自己参照結合と互換性があります。しかし、自己参照関係を持つ熱心な読み込みを使用するには、SQLAlchemyにいくつのレベルの結合やクエリが必要かを伝える必要があります。そうでなければ熱心な負荷はまったく起こりません。この深度の設定は、paramref： `〜.relationships.join_depth`によって設定されます："
 

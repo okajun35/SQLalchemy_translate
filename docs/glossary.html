@@ -10,7 +10,7 @@
         <title>
             
     
-    Glossary
+    用語集
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -117,12 +117,12 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="intro.html">Overview</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="intro.html">概要</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="orm/index.html">SQLAlchemy ORM</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="core/index.html">SQLAlchemy Core</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="dialects/index.html">Dialects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="faq/index.html">Frequently Asked Questions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="errors.html">Error Messages</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="core/index.html">SQLAlchemyコア</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="dialects/index.html">方言</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="faq/index.html">よくある質問</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="errors.html">エラーメッセージ</a></span></li>
 <li><span class="link-container first"><a class="reference external" href="changelog/index.html">Changes and Migration</a></span></li>
 </ul>
 
@@ -139,55 +139,30 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="glossary">
-<span id="id1"></span><h1>Glossary<a class="headerlink" href="#glossary" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="id1"></span><h1>用語集<a class="headerlink" href="#glossary" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <dl class="glossary docutils">
-<dt id="term-acid">ACID<dt id="term-acid-model">ACID model</dt>
-<dd><p class="first">An acronym for &quot;Atomicity, Consistency, Isolation,
-Durability&quot;; a set of properties that guarantee that
-database transactions are processed reliably.
-(via Wikipedia)</p>
+<dt id="term-acid">酸<dt id="term-acid-model">ACIDモデル</dt>
+<dd><p class="first">&amp;quot;原子性、一貫性、分離、耐久性&amp;quot;の頭字語。そのデータベーストランザクションが確実に処理されることを保証する一連のプロパティ（ウィキペディア経由で）</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#term-atomicity"><span class="xref std std-term">atomicity</span></a></p>
-<p><a class="reference internal" href="#term-consistency"><span class="xref std std-term">consistency</span></a></p>
-<p><a class="reference internal" href="#term-isolation"><span class="xref std std-term">isolation</span></a></p>
-<p><a class="reference internal" href="#term-durability"><span class="xref std std-term">durability</span></a></p>
+<p>：用語：「原子性」</p>
+<p>：用語：「整合性」</p>
+<p>：用語： <cite>分離</cite></p>
+<p>：用語： <cite>耐久性</cite></p>
 <p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/ACID_Model">http://en.wikipedia.org/wiki/ACID_Model</a></p>
 </div>
 </dd>
-<dt id="term-annotations">annotations</dt>
-<dd><p class="first">Annotations are a concept used internally by SQLAlchemy in order to store
-additional information along with <a class="reference internal" href="core/sqlelement.html#sqlalchemy.sql.expression.ClauseElement" title="sqlalchemy.sql.expression.ClauseElement"><code class="xref py py-class docutils literal"><span class="pre">ClauseElement</span></code></a> objects.  A Python
-dictionary is associated with a copy of the object, which contains key/value
-pairs significant to various internal systems, mostly within the ORM:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">some_column</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;some_column&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">)</span>
+<dt id="term-annotations">アノテーション</dt>
+<dd><p class="first">アノテーションは、class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.ClauseElement`オブジェクトとともに追加情報を格納するために、SQLAlchemyによって内部的に使用される概念です。 Python辞書はオブジェクトのコピーに関連付けられています。この中には、主にORM ::内のさまざまな内部システムにとって重要なキーと値のペアが含まれています</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">some_column</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;some_column&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">)</span>
 <span class="n">some_column_annotated</span> <span class="o">=</span> <span class="n">some_column</span><span class="o">.</span><span class="n">_annotate</span><span class="p">({</span><span class="s2">&quot;entity&quot;</span><span class="p">:</span> <span class="n">User</span><span class="p">})</span></pre></div>
 </div>
-<p class="last">The annotation system differs from the public dictionary <a class="reference internal" href="core/metadata.html#sqlalchemy.schema.Column.info" title="sqlalchemy.schema.Column.info"><code class="xref py py-attr docutils literal"><span class="pre">Column.info</span></code></a>
-in that the above annotation operation creates a <em>copy</em> of the new <a class="reference internal" href="core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a>,
-rather than considering all annotation values to be part of a single
-unit.  The ORM creates copies of expression objects in order to
-apply annotations that are specific to their context, such as to differentiate
-columns that should render themselves as relative to a joined-inheritance
-entity versus those which should render relative to their immediate parent
-table alone, as well as to differentiate columns within the &quot;join condition&quot;
-of a relationship where the column in some cases needs to be expressed
-in terms of one particular table alias or another, based on its position
-within the join expression.</p>
+<p class="last">アノテーションシステムはパブリックディクショナリ：attr： <cite>.Column.info`とは異なります。上記のアノテーション操作では、すべてのアノテーション値がaの一部とみなされるのではなく、新しい：class：</cite> .Column`の* copy <a href="#id1"><span class="problematic" id="id2">*</span></a>単一ユニット。 ORMは、継承継承エンティティに対して相対的なものとしてレンダリングすべき列と、直接の親表のみに対して相対的にレンダリングすべき列を区別するなど、コンテキストに固有の注釈を適用するために式オブジェクトのコピーを作成します。いくつかのケースでは、ある特定のテーブルエイリアスまたは別のテーブルエイリアスの観点から表現される必要がある関係の「結合条件」内の列を区別するために使用されます。</p>
 </dd>
-<dt id="term-association-relationship">association relationship</dt>
-<dd><p class="first">A two-tiered <a class="reference internal" href="#term-relationship"><span class="xref std std-term">relationship</span></a> which links two tables
-together using an association table in the middle.  The
-association relationship differs from a <a class="reference internal" href="#term-many-to-many"><span class="xref std std-term">many to many</span></a>
-relationship in that the many-to-many table is mapped
-by a full class, rather than invisibly handled by the
-<a class="reference internal" href="orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">sqlalchemy.orm.relationship()</span></code></a> construct as in the case
-with many-to-many, so that additional attributes are
-explicitly available.</p>
-<p>For example, if we wanted to associate employees with
-projects, also storing the specific role for that employee
-with the project, the relational schema might look like:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">employee</span> <span class="p">(</span>
+<dt id="term-association-relationship">関連関係</dt>
+<dd><p class="first">真ん中の関連テーブルを使って2つのテーブルをつなぎ合わせる2段階：term： <cite>relationship</cite>。関連関係は、：func： <cite>sqlalchemy.orm.relationship`構造体によって目に見えない形で処理されるのではなく、多対多表が完全なクラスによってマップされるという点で、：term：</cite> many to many`関係と異なります。追加の属性が明示的に利用できるように、多対多の場合</p>
+<p>たとえば、従業員をプロジェクトに関連させ、その従業員の特定のロールをプロジェクトに保存する場合、リレーショナルスキーマは次のようになります。</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">employee</span> <span class="p">(</span>
     <span class="n">id</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
     <span class="n">name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 <span class="p">)</span>
@@ -205,8 +180,8 @@ with the project, the relational schema might look like:</p>
     <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="n">project_id</span> <span class="k">REFERENCES</span> <span class="n">project</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">)</span></pre></div>
 </div>
-<p>A SQLAlchemy declarative mapping for the above might look like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>上記のSQLAlchemyの宣言的なマッピングは次のようになります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;employee&#39;</span>
 
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">)</span>
@@ -230,8 +205,8 @@ with the project, the relational schema might look like:</p>
     <span class="n">project</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Project&quot;</span><span class="p">,</span> <span class="n">backref</span><span class="o">=</span><span class="s2">&quot;project_employees&quot;</span><span class="p">)</span>
     <span class="n">employee</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Employee&quot;</span><span class="p">,</span> <span class="n">backref</span><span class="o">=</span><span class="s2">&quot;employee_projects&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>Employees can be added to a project given a role name:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">proj</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Client A&quot;</span><span class="p">)</span>
+<p>ロール名を指定して従業員をプロジェクトに追加することができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">proj</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Client A&quot;</span><span class="p">)</span>
 
 <span class="n">emp1</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;emp1&quot;</span><span class="p">)</span>
 <span class="n">emp2</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;emp2&quot;</span><span class="p">)</span>
@@ -243,35 +218,20 @@ with the project, the relational schema might look like:</p>
 </div>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="#term-many-to-many"><span class="xref std std-term">many to many</span></a></p>
+<p class="last">：用語：「多対多」</p>
 </div>
 </dd>
-<dt id="term-atomicity">atomicity</dt>
-<dd><p class="first">Atomicity is one of the components of the <a class="reference internal" href="#term-acid"><span class="xref std std-term">ACID</span></a> model,
-and requires that each transaction is &quot;all or nothing&quot;:
-if one part of the transaction fails, the entire transaction
-fails, and the database state is left unchanged. An atomic
-system must guarantee atomicity in each and every situation,
-including power failures, errors, and crashes.
-(via Wikipedia)</p>
+<dt id="term-atomicity">原子性</dt>
+<dd><p class="first">Atomicityは：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>ACID`モデルのコンポーネントの1つであり、各トランザクションは&amp;quot;すべてかどうか&amp;quot;である必要があります：トランザクションの一部が失敗し、トランザクション全体が失敗し、データベースの状態は変更されません。原子システムは、停電、エラー、クラッシュなど、すべての状況で原子性を保証する必要があります。 （ウィキペディア経由で）</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#term-acid"><span class="xref std std-term">ACID</span></a></p>
-<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Atomicity_(database_systems">http://en.wikipedia.org/wiki/Atomicity_(database_systems</a>)</p>
+<p>：用語： <cite>ACID</cite></p>
+<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Atomicity_(database_systems">http://en.wikipedia.org/wiki/Atomicity_(database_systems</a>）</p>
 </div>
 </dd>
-<dt id="term-backref">backref<dt id="term-bidirectional-relationship">bidirectional relationship</dt>
-<dd><p class="first">An extension to the <a class="reference internal" href="#term-relationship"><span class="xref std std-term">relationship</span></a> system whereby two
-distinct <a class="reference internal" href="orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> objects can be
-mutually associated with each other, such that they coordinate
-in memory as changes occur to either side.   The most common
-way these two relationships are constructed is by using
-the <a class="reference internal" href="orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> function explicitly
-for one side and specifying the <code class="docutils literal"><span class="pre">backref</span></code> keyword to it so that
-the other <a class="reference internal" href="orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> is created
-automatically.  We can illustrate this against the example we've
-used in <a class="reference internal" href="#term-one-to-many"><span class="xref std std-term">one to many</span></a> as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Department</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<dt id="term-backref">バックリファレンス<dt id="term-bidirectional-relationship">双方向関係</dt>
+<dd><p class="first">2つの異なる：func： <cite>〜sqlalchemy.orm.relationship`オブジェクトを相互に関連付けることができる：term：</cite> relationship`システムへの拡張です。これらの2つの関係が構築される最も一般的な方法は、一方の側に対して明示的に：func： <cite>〜sqlalchemy.orm.relationship`関数を使用し、他方に</cite> backref``キーワードを指定することです：func： <cite>〜sqlalchemy .orm.relationship`が自動的に作成されます。これを例に挙げてみましょう：term： `one to many`</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Department</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;department&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
@@ -283,83 +243,56 @@ used in <a class="reference internal" href="#term-one-to-many"><span class="xref
     <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
     <span class="n">dep_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;department.id&#39;</span><span class="p">))</span></pre></div>
 </div>
-<p>A backref can be applied to any relationship, including one to many,
-many to one, and <a class="reference internal" href="#term-many-to-many"><span class="xref std std-term">many to many</span></a>.</p>
+<p>バックレファレンスは、1対多、多対1、：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>many to many &amp;#39;など、あらゆる関係に適用できます。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#term-relationship"><span class="xref std std-term">relationship</span></a></p>
-<p><a class="reference internal" href="#term-one-to-many"><span class="xref std std-term">one to many</span></a></p>
-<p><a class="reference internal" href="#term-many-to-one"><span class="xref std std-term">many to one</span></a></p>
-<p class="last"><a class="reference internal" href="#term-many-to-many"><span class="xref std std-term">many to many</span></a></p>
+<p>：term： <cite>relationship</cite></p>
+<p>：用語：「1対多数」</p>
+<p>：用語：「多対1」</p>
+<p class="last">：用語：「多対多」</p>
 </div>
 </dd>
-<dt id="term-candidate-key">candidate key</dt>
-<dd><p class="first">A <span class="xref std std-term">relational algebra</span> term referring to an attribute or set
-of attributes that form a uniquely identifying key for a
-row.  A row may have more than one candidate key, each of which
-is suitable for use as the primary key of that row.
-The primary key of a table is always a candidate key.</p>
+<dt id="term-candidate-key">候補キー</dt>
+<dd><p class="first">A：term：行の一意の識別キーを形成する属性または属性セットを参照する「関係代数」用語。 1つの行に複数の候補キーがあり、それぞれがその行の主キーとして使用するのに適しています。テーブルの主キーは常に候補キーです。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#term-primary-key"><span class="xref std std-term">primary key</span></a></p>
+<p>：term： <cite>主キー</cite></p>
 <p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Candidate_key">http://en.wikipedia.org/wiki/Candidate_key</a></p>
 </div>
 </dd>
-<dt id="term-check-constraint">check constraint</dt>
-<dd><p class="first">A check constraint is a
-condition that defines valid data when adding or updating an
-entry in a table of a relational database. A check constraint
-is applied to each row in the table.</p>
-<p>(via Wikipedia)</p>
-<p>A check constraint can be added to a table in standard
-SQL using <a class="reference internal" href="#term-ddl"><span class="xref std std-term">DDL</span></a> like the following:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">distributors</span> <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">zipchk</span> <span class="k">CHECK</span> <span class="p">(</span><span class="k">char_length</span><span class="p">(</span><span class="n">zipcode</span><span class="p">)</span> <span class="o">=</span> <span class="mi">5</span><span class="p">);</span></pre></div>
+<dt id="term-check-constraint">チェック制約</dt>
+<dd><p class="first">検査制約は、リレーショナル・データベースの表の項目を追加または更新するときに有効なデータを定義する条件です。検査制約が表の各行に適用されます。</p>
+<p>（ウィキペディア経由で）</p>
+<p>チェック制約は、次のように：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>DDL`を使用して標準SQLのテーブルに追加できます。</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">distributors</span> <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">zipchk</span> <span class="k">CHECK</span> <span class="p">(</span><span class="k">char_length</span><span class="p">(</span><span class="n">zipcode</span><span class="p">)</span> <span class="o">=</span> <span class="mi">5</span><span class="p">);</span></pre></div>
 </div>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
 <p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Check_constraint">http://en.wikipedia.org/wiki/Check_constraint</a></p>
 </div>
 </dd>
-<dt id="term-columns-clause">columns clause</dt>
-<dd><p class="first">The portion of the <code class="docutils literal"><span class="pre">SELECT</span></code> statement which enumerates the
-SQL expressions to be returned in the result set.  The expressions
-follow the <code class="docutils literal"><span class="pre">SELECT</span></code> keyword directly and are a comma-separated
-list of individual expressions.</p>
-<p>E.g.:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">user_account</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">user_account</span><span class="p">.</span><span class="n">email</span>
+<dt id="term-columns-clause">columns句</dt>
+<dd><p class="first">結果セットに返されるSQL式を列挙する `` SELECT``ステートメントの部分。式は `` SELECT``キーワードの直後にあり、カンマで区切られた個々の式のリストです。</p>
+<p>例えば：</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">user_account</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">user_account</span><span class="p">.</span><span class="n">email</span>
 <span class="k">FROM</span> <span class="n">user_account</span> <span class="k">WHERE</span> <span class="n">user_account</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;fred&#39;</span></pre></div>
 </div>
-<p class="last">Above, the list of columns <code class="docutils literal"><span class="pre">user_acount.name</span></code>,
-<code class="docutils literal"><span class="pre">user_account.email</span></code> is the columns clause of the <code class="docutils literal"><span class="pre">SELECT</span></code>.</p>
+<p class="last">上のカラムのリスト `` user_acount.name``、 `` user_account.email``は `` SELECT``のカラム節です。</p>
 </dd>
-<dt id="term-consistency">consistency</dt>
-<dd><p class="first">Consistency is one of the components of the <a class="reference internal" href="#term-acid"><span class="xref std std-term">ACID</span></a> model,
-and ensures that any transaction will
-bring the database from one valid state to another. Any data
-written to the database must be valid according to all defined
-rules, including but not limited to <a class="reference internal" href="#term-constraints"><span class="xref std std-term">constraints</span></a>, cascades,
-triggers, and any combination thereof.
-(via Wikipedia)</p>
+<dt id="term-consistency">一貫性</dt>
+<dd><p class="first">整合性は：term： <cite>ACID`モデルのコンポーネントの1つであり、トランザクションによって確実に1つの有効な状態から別の状態にデータベースが移行されます。データベースに書き込まれるデータは、term： `constraints</cite>、カスケード、トリガー、およびそれらの任意の組み合わせなど、すべての定義された規則に従って有効でなければなりません。 （ウィキペディア経由で）</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#term-acid"><span class="xref std std-term">ACID</span></a></p>
-<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Consistency_(database_systems">http://en.wikipedia.org/wiki/Consistency_(database_systems</a>)</p>
+<p>：用語： <cite>ACID</cite></p>
+<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Consistency_(database_systems">http://en.wikipedia.org/wiki/Consistency_(database_systems</a>）</p>
 </div>
 </dd>
-<dt id="term-constraint">constraint<dt id="term-constraints">constraints<dt id="term-constrained">constrained</dt>
-<dd>Rules established within a relational database that ensure
-the validity and consistency of data.   Common forms
-of constraint include <a class="reference internal" href="#term-primary-key-constraint"><span class="xref std std-term">primary key constraint</span></a>,
-<a class="reference internal" href="#term-foreign-key-constraint"><span class="xref std std-term">foreign key constraint</span></a>, and <a class="reference internal" href="#term-check-constraint"><span class="xref std std-term">check constraint</span></a>.</dd>
-<dt id="term-correlates">correlates<dt id="term-correlated-subquery">correlated subquery<dt id="term-correlated-subqueries">correlated subqueries</dt>
-<dd><p class="first">A <a class="reference internal" href="#term-subquery"><span class="xref std std-term">subquery</span></a> is correlated if it depends on data in the
-enclosing <code class="docutils literal"><span class="pre">SELECT</span></code>.</p>
-<p>Below, a subquery selects the aggregate value <code class="docutils literal"><span class="pre">MIN(a.id)</span></code>
-from the <code class="docutils literal"><span class="pre">email_address</span></code> table, such that
-it will be invoked for each value of <code class="docutils literal"><span class="pre">user_account.id</span></code>, correlating
-the value of this column against the <code class="docutils literal"><span class="pre">email_address.user_account_id</span></code>
-column:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">user_account</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">email_address</span><span class="p">.</span><span class="n">email</span>
+<dt id="term-constraint">制約<dt id="term-constraints">制約<dt id="term-constrained">拘束された</dt>
+<dd>リレーショナルデータベース内に確立され、データの妥当性と整合性を保証するルール。一般的な制約には、term： <cite>primary key constraint</cite>、：term：` foreign key constraint`、：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>check constraint`があります。</dd>
+<dt id="term-correlates">相関する<dt id="term-correlated-subquery">相関サブクエリ<dt id="term-correlated-subqueries">相関サブクエリ</dt>
+<dd><p class="first">A：term： <cite>subquery`は、囲む</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>SELECT``のデータに依存する場合には相関します。</p>
+<p>以下では、サブクエリは、 `` user_account.id`の値ごとに呼び出されるように、 `` MIN（a.id） <a href="#id1"><span class="problematic" id="id2">``</span></a>を `` email_address``テーブルから選択し、列を `` email_address.user_account_id``列に置き換えます。</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">user_account</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">email_address</span><span class="p">.</span><span class="n">email</span>
  <span class="k">FROM</span> <span class="n">user_account</span>
  <span class="k">JOIN</span> <span class="n">email_address</span> <span class="k">ON</span> <span class="n">user_account</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">email_address</span><span class="p">.</span><span class="n">user_account_id</span>
  <span class="k">WHERE</span> <span class="n">email_address</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="p">(</span>
@@ -367,19 +300,10 @@ column:</p>
     <span class="k">WHERE</span> <span class="n">a</span><span class="p">.</span><span class="n">user_account_id</span><span class="o">=</span><span class="n">user_account</span><span class="p">.</span><span class="n">id</span>
  <span class="p">)</span></pre></div>
 </div>
-<p>The above subquery refers to the <code class="docutils literal"><span class="pre">user_account</span></code> table, which is not itself
-in the <code class="docutils literal"><span class="pre">FROM</span></code> clause of this nested query.   Instead, the <code class="docutils literal"><span class="pre">user_account</span></code>
-table is received from the enclosing query, where each row selected from
-<code class="docutils literal"><span class="pre">user_account</span></code> results in a distinct execution of the subquery.</p>
-<p>A correlated subquery is in most cases present in the <a class="reference internal" href="#term-where-clause"><span class="xref std std-term">WHERE clause</span></a>
-or <a class="reference internal" href="#term-columns-clause"><span class="xref std std-term">columns clause</span></a> of the immediately enclosing <code class="docutils literal"><span class="pre">SELECT</span></code>
-statement, as well as in the ORDER BY or HAVING clause.</p>
-<p>In less common cases, a correlated subquery may be present in the
-<a class="reference internal" href="#term-from-clause"><span class="xref std std-term">FROM clause</span></a> of an enclosing <code class="docutils literal"><span class="pre">SELECT</span></code>; in these cases the
-correlation is typically due to the enclosing <code class="docutils literal"><span class="pre">SELECT</span></code> itself being
-enclosed in the WHERE,
-ORDER BY, columns or HAVING clause of another <code class="docutils literal"><span class="pre">SELECT</span></code>, such as:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">parent</span><span class="p">.</span><span class="n">id</span> <span class="k">FROM</span> <span class="n">parent</span>
+<p>上記のサブクエリは、 `` user_account``テーブルを参照します。このテーブルは、このネストされたクエリの `` FROM``節にはありません。代わりに、 `` user_account``テーブルは囲むクエリから受け取られます。ここで `` user_account``から選択された各行はサブクエリの別個の実行をもたらします。</p>
+<p>相関サブクエリは、ほとんどの場合、ORDER BY節またはHAVING節だけでなく、すぐに囲まれた `` SELECT``文の：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>WHERE節`または：term： <a href="#id3"><span class="problematic" id="id4">`</span></a>columns節`に存在します。</p>
+<p>あまり一般的でない場合には、相関サブクエリは、囲む `` SELECT``の：term： <cite>FROM clause`に存在することがあります。これらの場合、相関は、典型的には、次のような別の `</cite> SELECT``のWHERE、ORDER BY、columnsまたはHAVING節に囲まれた囲み `` SELECT``自体に起因します。</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">parent</span><span class="p">.</span><span class="n">id</span> <span class="k">FROM</span> <span class="n">parent</span>
 <span class="k">WHERE</span> <span class="k">EXISTS</span> <span class="p">(</span>
     <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="p">(</span>
         <span class="k">SELECT</span> <span class="n">child</span><span class="p">.</span><span class="n">id</span> <span class="k">AS</span> <span class="n">id</span><span class="p">,</span> <span class="n">child</span><span class="p">.</span><span class="n">parent_id</span> <span class="k">AS</span> <span class="n">parent_id</span><span class="p">,</span> <span class="n">child</span><span class="p">.</span><span class="n">pos</span> <span class="k">AS</span> <span class="n">pos</span>
@@ -388,90 +312,47 @@ ORDER BY, columns or HAVING clause of another <code class="docutils literal"><sp
     <span class="k">LIMIT</span> <span class="mi">3</span><span class="p">)</span>
 <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">7</span><span class="p">)</span></pre></div>
 </div>
-<p class="last">Correlation from one <code class="docutils literal"><span class="pre">SELECT</span></code> directly to one which encloses the correlated
-query via its <code class="docutils literal"><span class="pre">FROM</span></code>
-clause is not possible, because the correlation can only proceed once the
-original source rows from the enclosing statement's FROM clause are available.</p>
+<p class="last">1つの `` SELECT``から `` FROM``節を介して相関クエリを囲むものへの直接的な相関は不可能です。囲み文のFROM句の元のソース行が利用可能になると相関が進行するだけです。</p>
 </dd>
-<dt id="term-crud">crud</dt>
-<dd>An acronym meaning &quot;Create, Update, Delete&quot;.  The term in SQL refers to the
-set of operations that create, modify and delete data from the database,
-also known as <span class="xref std std-term">DML</span>, and typically refers to the <code class="docutils literal"><span class="pre">INSERT</span></code>,
-<code class="docutils literal"><span class="pre">UPDATE</span></code>, and <code class="docutils literal"><span class="pre">DELETE</span></code> statements.</dd>
+<dt id="term-crud">酷いです</dt>
+<dd>&amp;quot;作成、更新、削除&amp;quot;を意味する頭字語。 SQLにおける用語は、用語：DMLとも呼ばれ、データベースからデータを作成、変更、および削除する操作の集合を指し、通常は「INSERT」、「UPDATE」、 <a href="#id1"><span class="problematic" id="id2">`</span></a>DELETE`ステートメント。</dd>
 <dt id="term-dbapi">DBAPI</dt>
-<dd><p class="first">DBAPI is shorthand for the phrase &quot;Python Database API
-Specification&quot;.  This is a widely used specification
-within Python to define common usage patterns for all
-database connection packages.   The DBAPI is a &quot;low level&quot;
-API which is typically the lowest level system used
-in a Python application to talk to a database.  SQLAlchemy's
-<span class="xref std std-term">dialect</span> system is constructed around the
-operation of the DBAPI, providing individual dialect
-classes which service a specific DBAPI on top of a
-specific database engine; for example, the <a class="reference internal" href="core/engines.html#sqlalchemy.create_engine" title="sqlalchemy.create_engine"><code class="xref py py-func docutils literal"><span class="pre">create_engine()</span></code></a>
-URL <code class="docutils literal"><span class="pre">postgresql+psycopg2://&#64;localhost/test</span></code>
-refers to the <a class="reference internal" href="dialects/postgresql.html#module-sqlalchemy.dialects.postgresql.psycopg2" title="sqlalchemy.dialects.postgresql.psycopg2"><code class="xref py py-mod docutils literal"><span class="pre">psycopg2</span></code></a>
-DBAPI/dialect combination, whereas the URL <code class="docutils literal"><span class="pre">mysql+mysqldb://&#64;localhost/test</span></code>
-refers to the <a class="reference internal" href="dialects/mysql.html#module-sqlalchemy.dialects.mysql.mysqldb" title="sqlalchemy.dialects.mysql.mysqldb"><code class="xref py py-mod docutils literal"><span class="pre">MySQL</span> <span class="pre">for</span> <span class="pre">Python</span></code></a>
-DBAPI DBAPI/dialect combination.</p>
+<dd><p class="first">DBAPIは、&amp;quot;Python Database API Specification &amp;quot;というフレーズの省略形です。これは、すべてのデータベース接続パッケージの共通の使用パターンを定義するPython内で広く使用されている仕様です。 DBAPIは&amp;quot;低レベル&amp;quot; APIで、通常はPythonアプリケーションでデータベースと話すために使用される最低レベルのシステムです。 SQLAlchemyの：term： <cite>dialect`システムは、特定のデータベースエンジンの上に特定のDBAPIを提供する個々のダイアレクトクラスを提供する、DBAPIの操作の周りに構築されます。 ：func： `.create_engine</cite> URL` <cite>postgresql + psycopg2：// &#64; localhost / test``は：mod：</cite> psycopg2 &amp;lt;.​​postgresql.psycopg2&amp;gt; <cite>DBAPI / dialectの組み合わせを指しますが、 `mysql + mysqldb：// &#64; localhost / test``は、：mod：</cite> MySQL for Python &amp;lt;.mysql.mysqldb&amp;gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>DBAPI DBAPI / dialectの組み合わせを指します。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference external" href="http://www.python.org/dev/peps/pep-0249/">PEP 249 - Python Database API Specification v2.0</a></p>
+<p class="last"><a href="#id1"><span class="problematic" id="id2">`</span></a>PEP 249  -  PythonデータベースAPI仕様v2.0 &lt;<a class="reference external" href="http://www.python.org/dev/peps/pep-0249/">http://www.python.org/dev/peps/pep-0249/</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_</p>
 </div>
 </dd>
 <dt id="term-ddl">DDL</dt>
-<dd><p class="first">An acronym for <em>Data Definition Language</em>.  DDL is the subset
-of SQL that relational databases use to configure tables, constraints,
-and other permanent objects within a database schema.  SQLAlchemy
-provides a rich API for constructing and emitting DDL expressions.</p>
+<dd><p class="first"><a href="#id1"><span class="problematic" id="id2">*</span></a>データ定義言語*の頭字語。 DDLは、データベース・スキーマ内の表、制約およびその他の永続オブジェクトを構成するためにリレーショナル・データベースが使用するSQLのサブセットです。 SQLAlchemyは、DDL式を構築および出力するための豊富なAPIを提供します。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="core/metadata.html"><span class="std std-ref">Describing Databases with MetaData</span></a></p>
-<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Data_definition_language">DDL (via Wikipedia)</a></p>
+<p>：ref： <cite>metadata_toplevel</cite></p>
+<p class="last"><a href="#id1"><span class="problematic" id="id2">`</span></a>DDL（ウィキペディア経由） &lt;<a class="reference external" href="http://en.wikipedia.org/wiki/Data_definition_language">http://en.wikipedia.org/wiki/Data_definition_language</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_</p>
 </div>
 </dd>
-<dt id="term-deleted">deleted</dt>
-<dd><p class="first">This describes one of the major object states which
-an object can have within a <a class="reference internal" href="#term-session"><span class="xref std std-term">session</span></a>; a deleted object
-is an object that was formerly persistent and has had a
-DELETE statement emitted to the database within a flush
-to delete its row.  The object will move to the <a class="reference internal" href="#term-detached"><span class="xref std std-term">detached</span></a>
-state once the session's transaction is committed; alternatively,
-if the session's transaction is rolled back, the DELETE is
-reverted and the object moves back to the <a class="reference internal" href="#term-persistent"><span class="xref std std-term">persistent</span></a>
-state.</p>
+<dt id="term-deleted">削除された</dt>
+<dd><p class="first">これは、オブジェクトがa：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>session`内に持つことができる主要なオブジェクト状態の1つを記述します。削除されたオブジェクトは、以前は永続的であったオブジェクトであり、その行を削除するためにフラッシュ内でデータベースにDELETE文が発行されました。セッションのトランザクションがコミットされると、オブジェクトは：term： <a href="#id3"><span class="problematic" id="id4">`</span></a>detached`状態に移ります。あるいは、セッションのトランザクションがロールバックされると、DELETEは元に戻され、オブジェクトは：term： <a href="#id5"><span class="problematic" id="id6">`</span></a>persistent`状態に戻ります。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="orm/session_state_management.html#session-object-states"><span class="std std-ref">Quickie Intro to Object States</span></a></p>
+<p class="last">：ref： <cite>session_object_states</cite></p>
 </div>
 </dd>
-<dt id="term-descriptor">descriptor<dt id="term-descriptors">descriptors</dt>
-<dd><p class="first">In Python, a descriptor is an object attribute with “binding behavior”, one whose attribute access has been overridden by methods in the <a class="reference external" href="http://docs.python.org/howto/descriptor.html">descriptor protocol</a>.
-Those methods are __get__(), __set__(), and __delete__(). If any of those methods are defined
-for an object, it is said to be a descriptor.</p>
-<p>In SQLAlchemy, descriptors are used heavily in order to provide attribute behavior
-on mapped classes.   When a class is mapped as such:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<dt id="term-descriptor">記述子<dt id="term-descriptors">記述子</dt>
+<dd><p class="first">Pythonでは、ディスクリプタは「バインディング動作」を持つオブジェクト属性です。その属性アクセスは、ディスクリプタプロトコルのメソッドによってオーバーライドされています&lt;<a class="reference external" href="http://docs.python.org/howto/descriptor.html">http://docs.python.org/howto/descriptor.html</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_。これらのメソッドは、__get __（）、__set __（）、および__delete __（）です。これらのメソッドのいずれかがオブジェクトに対して定義されている場合、それは記述子であると言われます。</p>
+<p>SQLAlchemyでは、記述子は、マップされたクラスで属性の動作を提供するために頻繁に使用されます。クラスがそのようにマップされているとき:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span>
 
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span></pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">MyClass</span></code> class will be <a class="reference internal" href="#term-mapped"><span class="xref std std-term">mapped</span></a> when its definition
-is complete, at which point the <code class="docutils literal"><span class="pre">id</span></code> and <code class="docutils literal"><span class="pre">data</span></code> attributes,
-starting out as <a class="reference internal" href="core/metadata.html#sqlalchemy.schema.Column" title="sqlalchemy.schema.Column"><code class="xref py py-class docutils literal"><span class="pre">Column</span></code></a> objects, will be replaced
-by the <a class="reference internal" href="#term-instrumentation"><span class="xref std std-term">instrumentation</span></a> system with instances
-of <a class="reference internal" href="orm/internals.html#sqlalchemy.orm.attributes.InstrumentedAttribute" title="sqlalchemy.orm.attributes.InstrumentedAttribute"><code class="xref py py-class docutils literal"><span class="pre">InstrumentedAttribute</span></code></a>, which are descriptors that
-provide the above mentioned <code class="docutils literal"><span class="pre">__get__()</span></code>, <code class="docutils literal"><span class="pre">__set__()</span></code> and
-<code class="docutils literal"><span class="pre">__delete__()</span></code> methods.   The <a class="reference internal" href="orm/internals.html#sqlalchemy.orm.attributes.InstrumentedAttribute" title="sqlalchemy.orm.attributes.InstrumentedAttribute"><code class="xref py py-class docutils literal"><span class="pre">InstrumentedAttribute</span></code></a>
-will generate a SQL expression when used at the class level:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+<p>`` MyClass``クラスは、その定義が完了したときにterm： <cite>mapped`となります。その時点で、class：</cite> .Column`オブジェクトとして始まる `` id``と `` data``属性が、上記の `` __get __（） <a href="#id1"><span class="problematic" id="id2">``</span></a>、 `` __set __（） <a href="#id3"><span class="problematic" id="id4">``</span></a>および `` __delete__（）を提供する記述子であるclass： <cite>.InstrumentedAttribute`のインスタンスを持つ：term：</cite> instrumentation`システムで置き換えられます。 （） <a href="#id5"><span class="problematic" id="id6">``</span></a>メソッドを呼び出します。 ：class： <a href="#id7"><span class="problematic" id="id8">`</span></a>.InstrumentedAttribute`は、クラスレベルで使用するとSQL式を生成します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
 <span class="go">data = :data_1</span></pre></div>
 </div>
-<p>and at the instance level, keeps track of changes to values,
-and also <a class="reference internal" href="#term-lazy-loads"><span class="xref std std-term">lazy loads</span></a> unloaded attributes
-from the database:</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m1</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<p>インスタンスレベルでは、値の変更を追跡します。また、term： <a href="#id1"><span class="problematic" id="id2">`</span></a>lazy loads`データベースからアンロードされた属性:</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m1</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">m1</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">m1</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;some data&quot;</span>
 
@@ -480,74 +361,47 @@ from the database:</p>
 <span class="go">&quot;some data&quot;</span></pre></div>
 </div>
 </dd>
-<dt id="term-detached">detached</dt>
-<dd><p class="first">This describes one of the major object states which
-an object can have within a <a class="reference internal" href="#term-session"><span class="xref std std-term">session</span></a>; a detached object
-is an object that has a database identity (i.e. a primary key)
-but is not associated with any session.  An object that
-was previously <a class="reference internal" href="#term-persistent"><span class="xref std std-term">persistent</span></a> and was removed from its
-session either because it was expunged, or the owning
-session was closed, moves into the detached state.
-The detached state is generally used when objects are being
-moved between sessions or when being moved to/from an external
-object cache.</p>
+<dt id="term-detached">分離された</dt>
+<dd><p class="first">これは、オブジェクトがa：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>session`内に持つことができる主要なオブジェクト状態の1つを記述します。デタッチされたオブジェクトは、データベースアイデンティティ（すなわち、主キー）を有するが、どのセッションにも関連付けられていないオブジェクトである。以前は：term： <a href="#id3"><span class="problematic" id="id4">`</span></a>persistent`だったオブジェクトが、それが消去されたか、所有しているセッションが閉じられたためにそのセッションから削除されたオブジェクトは、分離状態に移行します。切り離された状態は、オブジェクトがセッション間で移動されるとき、または外部オブジェクトキャッシュとの間で移動されるときに一般に使用されます。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="orm/session_state_management.html#session-object-states"><span class="std std-ref">Quickie Intro to Object States</span></a></p>
+<p class="last">：ref： <cite>session_object_states</cite></p>
 </div>
 </dd>
-<dt id="term-discriminator">discriminator</dt>
-<dd><p class="first">A result-set column which is used during <a class="reference internal" href="#term-polymorphic"><span class="xref std std-term">polymorphic</span></a> loading
-to determine what kind of mapped class should be applied to a particular
-incoming result row.   In SQLAlchemy, the classes are always part
-of a hierarchy mapping using inheritance mapping.</p>
+<dt id="term-discriminator">弁別器</dt>
+<dd><p class="first">特定の着信結果行にどのような種類のマップクラスを適用するかを決定するための：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>polymorphic`ローディング中に使用される結果セット列。 SQLAlchemyでは、クラスは常に継承マッピングを使用した階層マッピングの一部です。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="orm/inheritance.html"><span class="std std-ref">Mapping Class Inheritance Hierarchies</span></a></p>
+<p class="last">：ref： <cite>継承_レベル</cite></p>
 </div>
 </dd>
-<dt id="term-domain-model">domain model</dt>
-<dd><p class="first">A domain model in problem solving and software engineering is a conceptual model of all the topics related to a specific problem. It describes the various entities, their attributes, roles, and relationships, plus the constraints that govern the problem domain.</p>
-<p>(via Wikipedia)</p>
+<dt id="term-domain-model">ドメインモデル</dt>
+<dd><p class="first">問題解決とソフトウェア工学におけるドメインモデルは、特定の問題に関連するすべてのトピックの概念モデルです。さまざまなエンティティ、その属性、役割、および関係、および問題のドメインを管理する制約について説明します。</p>
+<p>（ウィキペディア経由で）</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Domain_model">Domain Model (wikipedia)</a></p>
+<p class="last"><a href="#id1"><span class="problematic" id="id2">`</span></a>ドメインモデル（wikipedia） &lt;<a class="reference external" href="http://en.wikipedia.org/wiki/Domain_model">http://en.wikipedia.org/wiki/Domain_model</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_</p>
 </div>
 </dd>
-<dt id="term-durability">durability</dt>
-<dd><p class="first">Durability is a property of the <a class="reference internal" href="#term-acid"><span class="xref std std-term">ACID</span></a> model
-which means that once a transaction has been committed,
-it will remain so, even in the event of power loss, crashes,
-or errors. In a relational database, for instance, once a
-group of SQL statements execute, the results need to be stored
-permanently (even if the database crashes immediately
-thereafter).
-(via Wikipedia)</p>
+<dt id="term-durability">耐久性</dt>
+<dd><p class="first">耐久性は：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>ACID`モデルの特性です。トランザクションがコミットされると、停電、クラッシュ、またはエラーが発生した場合でもその状態が維持されます。たとえば、リレーショナルデータベースでは、一度SQL文のグループが実行されると、結果は永続的に保存される必要があります（データベースがすぐにクラッシュした場合でも）。 （ウィキペディア経由で）</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#term-acid"><span class="xref std std-term">ACID</span></a></p>
-<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Durability_(database_systems">http://en.wikipedia.org/wiki/Durability_(database_systems</a>)</p>
+<p>：用語： <cite>ACID</cite></p>
+<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Durability_(database_systems">http://en.wikipedia.org/wiki/Durability_(database_systems</a>）</p>
 </div>
 </dd>
-<dt id="term-expire">expire<dt id="term-expires">expires<dt id="term-expiring">expiring</dt>
-<dd><p class="first">In the SQLAlchemy ORM, refers to when the data in a <a class="reference internal" href="#term-persistent"><span class="xref std std-term">persistent</span></a>
-or sometimes <a class="reference internal" href="#term-detached"><span class="xref std std-term">detached</span></a> object is erased, such that when
-the object's attributes are next accessed, a <a class="reference internal" href="#term-lazy-load"><span class="xref std std-term">lazy load</span></a> SQL
-query will be emitted in order to refresh the data for this object
-as stored in the current ongoing transaction.</p>
+<dt id="term-expire">失効する<dt id="term-expires">失効する<dt id="term-expiring">失効する</dt>
+<dd><p class="first">SQLAlchemy ORMでは、：term： <cite>persistent`または時には：term：</cite> detached`オブジェクトのデータがいつ消去されるかを参照します。オブジェクトの属性が次にアクセスされるとき、a：term： <cite>lazy load</cite> SQLクエリ現在の進行中のトランザクションに格納されているこのオブジェクトのデータをリフレッシュするために発行されます。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="orm/session_state_management.html#session-expire"><span class="std std-ref">Refreshing / Expiring</span></a></p>
+<p class="last">：ref： <cite>session_expire</cite></p>
 </div>
 </dd>
-<dt id="term-foreign-key-constraint">foreign key constraint</dt>
-<dd><p class="first">A referential constraint between two tables.  A foreign key is a field or set of fields in a
-relational table that matches a <a class="reference internal" href="#term-candidate-key"><span class="xref std std-term">candidate key</span></a> of another table.
-The foreign key can be used to cross-reference tables.
-(via Wikipedia)</p>
-<p>A foreign key constraint can be added to a table in standard
-SQL using <a class="reference internal" href="#term-ddl"><span class="xref std std-term">DDL</span></a> like the following:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">employee</span> <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">dep_id_fk</span>
+<dt id="term-foreign-key-constraint">外部キー制約</dt>
+<dd><p class="first">2つの表間の参照制約。外部キーは、別のテーブルのa：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>候補キー（candidate key） &amp;#39;と一致するリレーショナルテーブル内のフィールドまたはフィールドのセットです。外部キーは、テーブルの相互参照に使用できます。 （ウィキペディア経由で）</p>
+<p>次のように、term： <a href="#id1"><span class="problematic" id="id2">`</span></a>DDL`を使用して、標準SQLのテーブルに外部キー制約を追加できます。</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">employee</span> <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">dep_id_fk</span>
 <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">employee</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">department</span> <span class="p">(</span><span class="n">dep_id</span><span class="p">)</span></pre></div>
 </div>
 <div class="last admonition seealso">
@@ -555,92 +409,50 @@ SQL using <a class="reference internal" href="#term-ddl"><span class="xref std s
 <p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Foreign_key_constraint">http://en.wikipedia.org/wiki/Foreign_key_constraint</a></p>
 </div>
 </dd>
-<dt id="term-from-clause">FROM clause</dt>
-<dd><p class="first">The portion of the <code class="docutils literal"><span class="pre">SELECT</span></code> statement which indicates the initial
-source of rows.</p>
-<p>A simple <code class="docutils literal"><span class="pre">SELECT</span></code> will feature one or more table names in its
-FROM clause.  Multiple sources are separated by a comma:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">user</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">address</span><span class="p">.</span><span class="n">email_address</span>
+<dt id="term-from-clause">FROM句</dt>
+<dd><p class="first">`` SELECT``文の最初の行のソースを示す部分です。</p>
+<p>単純な `` SELECT``はFROM句に1つ以上のテーブル名を持ちます。複数のソースはコンマで区切られます：</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">user</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">address</span><span class="p">.</span><span class="n">email_address</span>
 <span class="k">FROM</span> <span class="k">user</span><span class="p">,</span> <span class="n">address</span>
 <span class="k">WHERE</span> <span class="k">user</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">address</span><span class="p">.</span><span class="n">user_id</span></pre></div>
 </div>
-<p>The FROM clause is also where explicit joins are specified.  We can
-rewrite the above <code class="docutils literal"><span class="pre">SELECT</span></code> using a single <code class="docutils literal"><span class="pre">FROM</span></code> element which consists
-of a <code class="docutils literal"><span class="pre">JOIN</span></code> of the two tables:</p>
-<div class="last highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">user</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">address</span><span class="p">.</span><span class="n">email_address</span>
+<p>FROM句は、明示的な結合が指定されている場所でもあります。上記の `` SELECT``は、2つのテーブルの `` JOIN``からなる単一の `` FROM``要素を使って書き換えることができます：</p>
+<div class="last highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">user</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">address</span><span class="p">.</span><span class="n">email_address</span>
 <span class="k">FROM</span> <span class="k">user</span> <span class="k">JOIN</span> <span class="n">address</span> <span class="k">ON</span> <span class="k">user</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">address</span><span class="p">.</span><span class="n">user_id</span></pre></div>
 </div>
 </dd>
-<dt id="term-generative">generative</dt>
-<dd>A term that SQLAlchemy uses to refer what's normally known
-as <a class="reference internal" href="#term-method-chaining"><span class="xref std std-term">method chaining</span></a>; see that term for details.</dd>
-<dt id="term-identity-map">identity map</dt>
-<dd><p class="first">A mapping between Python objects and their database identities.
-The identity map is a collection that's associated with an
-ORM <a class="reference internal" href="#term-session"><span class="xref std std-term">session</span></a> object, and maintains a single instance
-of every database object keyed to its identity.   The advantage
-to this pattern is that all operations which occur for a particular
-database identity are transparently coordinated onto a single
-object instance.  When using an identity map in conjunction with
-an <a class="reference internal" href="#term-isolated"><span class="xref std std-term">isolated</span></a> transaction, having a reference
-to an object that's known to have a particular primary key can
-be considered from a practical standpoint to be a
-proxy to the actual database row.</p>
+<dt id="term-generative">生成的</dt>
+<dd>SQLAlchemyが、通常は「term： <cite>method chaining</cite>」と呼ばれるものを参照するために使用する用語。詳細については、その用語を参照してください。</dd>
+<dt id="term-identity-map">アイデンティティマップ</dt>
+<dd><p class="first">PythonオブジェクトとそのデータベースID間のマッピング。アイデンティティマップは、ORM：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>session`オブジェクトに関連付けられたコレクションであり、そのIDにキーインされたすべてのデータベースオブジェクトの単一インスタンスを保持します。このパターンの利点は、特定のデータベースIDに対して発生するすべての操作が、単一のオブジェクトインスタンスに透過的に調整されることです。 ：term： <a href="#id3"><span class="problematic" id="id4">`</span></a>isolated`トランザクションと一緒にアイデンティティマップを使用する場合、特定の主キーを持つことがわかっているオブジェクトへの参照は、実際のデータベース行へのプロキシであると考えることができます。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last">Martin Fowler - Identity Map - <a class="reference external" href="http://martinfowler.com/eaaCatalog/identityMap.html">http://martinfowler.com/eaaCatalog/identityMap.html</a></p>
+<p class="last">Martin Fowler  - アイデンティティマップ -  <a class="reference external" href="http://martinfowler.com/eaaCatalog/identityMap.html">http://martinfowler.com/eaaCatalog/identityMap.html</a></p>
 </div>
 </dd>
-<dt id="term-instrumentation">instrumentation<dt id="term-instrumented">instrumented<dt id="term-instrumenting">instrumenting</dt>
-<dd>Instrumentation refers to the process of augmenting the functionality
-and attribute set of a particular class.   Ideally, the
-behavior of the class should remain close to a regular
-class, except that additional behaviors and features are
-made available.  The SQLAlchemy <a class="reference internal" href="#term-mapping"><span class="xref std std-term">mapping</span></a> process,
-among other things, adds database-enabled <a class="reference internal" href="#term-descriptors"><span class="xref std std-term">descriptors</span></a>
-to a mapped
-class which each represent a particular database column
-or relationship to a related class.</dd>
-<dt id="term-isolation">isolation<dt id="term-isolated">isolated</dt>
-<dd><p class="first">The isolation property of the <a class="reference internal" href="#term-acid"><span class="xref std std-term">ACID</span></a> model
-ensures that the concurrent execution
-of transactions results in a system state that would be
-obtained if transactions were executed serially, i.e. one
-after the other. Each transaction must execute in total
-isolation i.e. if T1 and T2 execute concurrently then each
-should remain independent of the other.
-(via Wikipedia)</p>
+<dt id="term-instrumentation">計装<dt id="term-instrumented">計装された<dt id="term-instrumenting">装備</dt>
+<dd>計装とは、特定のクラスの機能と属性セットを増強するプロセスを指します。理想的には、クラスの動作は、追加の動作や機能が利用可能になることを除いて、通常のクラスに近いままにする必要があります。とりわけ、SQLAlchemy：term： <cite>mapping`プロセスは、関連するクラスに対する特定のデータベース列または関係を表すマップされたクラスにdatabase-enabled：term：</cite> descriptors &amp;#39;を追加します。</dd>
+<dt id="term-isolation">隔離<dt id="term-isolated">分離された</dt>
+<dd><p class="first">：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>ACID`モデルのisolationプロパティは、トランザクションの並行実行により、トランザクションが連続して実行された場合、つまり順番に実行される場合に得られるシステム状態になります。各トランザクションは完全に分離して実行する必要があります。つまり、T1とT2が同時に実行される場合は、それぞれが別のトランザクションと独立していなければなりません。 （ウィキペディア経由で）</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#term-acid"><span class="xref std std-term">ACID</span></a></p>
-<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Isolation_(database_systems">http://en.wikipedia.org/wiki/Isolation_(database_systems</a>)</p>
+<p>：用語： <cite>ACID</cite></p>
+<p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Isolation_(database_systems">http://en.wikipedia.org/wiki/Isolation_(database_systems</a>）</p>
 </div>
 </dd>
-<dt id="term-lazy-load">lazy load<dt id="term-lazy-loads">lazy loads<dt id="term-lazy-loaded">lazy loaded<dt id="term-lazy-loading">lazy loading</dt>
-<dd><p class="first">In object relational mapping, a &quot;lazy load&quot; refers to an
-attribute that does not contain its database-side value
-for some period of time, typically when the object is
-first loaded.  Instead, the attribute receives a
-<em>memoization</em> that causes it to go out to the database
-and load its data when it's first used.   Using this pattern,
-the complexity and time spent within object fetches can
-sometimes be reduced, in that
-attributes for related tables don't need to be addressed
-immediately.</p>
+<dt id="term-lazy-load">遅延ロード<dt id="term-lazy-loads">怠惰な負荷<dt id="term-lazy-loaded">怠惰に読み込まれた<dt id="term-lazy-loading">遅延読み込み</dt>
+<dd><p class="first">オブジェクトリレーショナルマッピングでは、&amp;quot;レイジーロード&amp;quot;とは、通常、オブジェクトが最初にロードされたときに、データベース側の値が含まれない属性を指します。代わりに、属性はデータベースに送られて最初に使用されたときにそのデータをロードする* memoization <a href="#id1"><span class="problematic" id="id2">*</span></a>を受け取ります。このパターンを使用すると、関連する表の属性をすぐに処理する必要がないため、オブジェクト・フェッチ内で費やされる複雑さと時間を時々削減できます。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference external" href="http://martinfowler.com/eaaCatalog/lazyLoad.html">Lazy Load (on Martin Fowler)</a></p>
-<p><a class="reference internal" href="#term-n-plus-one-problem"><span class="xref std std-term">N plus one problem</span></a></p>
-<p class="last"><a class="reference internal" href="orm/loading_relationships.html"><span class="doc">Relationship Loading Techniques</span></a></p>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>レイジーロード（Martin Fowler） &lt;<a class="reference external" href="http://martinfowler.com/eaaCatalog/lazyLoad.html">http://martinfowler.com/eaaCatalog/lazyLoad.html</a>&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>_</p>
+<p>：用語：「Nプラス1つの問題」</p>
+<p class="last">：doc： <cite>orm / loading_relationships</cite></p>
 </div>
 </dd>
-<dt id="term-many-to-many">many to many</dt>
-<dd><p class="first">A style of <a class="reference internal" href="orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">sqlalchemy.orm.relationship()</span></code></a> which links two tables together
-via an intermediary table in the middle.   Using this configuration,
-any number of rows on the left side may refer to any number of
-rows on the right, and vice versa.</p>
-<p>A schema where employees can be associated with projects:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">employee</span> <span class="p">(</span>
+<dt id="term-many-to-many">数多く</dt>
+<dd><p class="first">中間形式の中間テーブルを介して2つのテーブルをリンクする：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy.orm.relationship`のスタイルです。この構成を使用すると、左側の任意の数の行が右側の任意の数の行を参照することができ、その逆もあります。</p>
+<p>従業員をプロジェクトに関連付けることができるスキーマ：</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">employee</span> <span class="p">(</span>
     <span class="n">id</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
     <span class="n">name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 <span class="p">)</span>
@@ -657,14 +469,9 @@ rows on the right, and vice versa.</p>
     <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="n">project_id</span> <span class="k">REFERENCES</span> <span class="n">project</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">)</span></pre></div>
 </div>
-<p>Above, the <code class="docutils literal"><span class="pre">employee_project</span></code> table is the many-to-many table,
-which naturally forms a composite primary key consisting
-of the primary key from each related table.</p>
-<p>In SQLAlchemy, the <a class="reference internal" href="orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">sqlalchemy.orm.relationship()</span></code></a> function
-can represent this style of relationship in a mostly
-transparent fashion, where the many-to-many table is
-specified using plain table metadata:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>上記の `` employee_project``テーブルは多対多のテーブルで、自然に関連する各テーブルの主キーからなる複合主キーを形成します。</p>
+<p>SQLAlchemyでは、：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>sqlalchemy.orm.relationship`関数は、多対多の表がプレーン・テーブル・メタデータを使用して指定されるほとんど透過的な方法で、このスタイルの関係を表すことができます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;employee&#39;</span>
 
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">)</span>
@@ -687,9 +494,8 @@ specified using plain table metadata:</p>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="p">)</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span></pre></div>
 </div>
-<p>Above, the <code class="docutils literal"><span class="pre">Employee.projects</span></code> and back-referencing <code class="docutils literal"><span class="pre">Project.employees</span></code>
-collections are defined:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">proj</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Client A&quot;</span><span class="p">)</span>
+<p>上記では、 `` Employee.projects``と `` Project.employees``のコレクションを逆参照しています：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">proj</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Client A&quot;</span><span class="p">)</span>
 
 <span class="n">emp1</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;emp1&quot;</span><span class="p">)</span>
 <span class="n">emp2</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;emp2&quot;</span><span class="p">)</span>
@@ -698,23 +504,17 @@ collections are defined:</p>
 </div>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#term-association-relationship"><span class="xref std std-term">association relationship</span></a></p>
-<p><a class="reference internal" href="#term-relationship"><span class="xref std std-term">relationship</span></a></p>
-<p><a class="reference internal" href="#term-one-to-many"><span class="xref std std-term">one to many</span></a></p>
-<p class="last"><a class="reference internal" href="#term-many-to-one"><span class="xref std std-term">many to one</span></a></p>
+<p>：用語： <cite>関係関係</cite></p>
+<p>：term： <cite>relationship</cite></p>
+<p>：用語：「1対多数」</p>
+<p class="last">：用語：「多対1」</p>
 </div>
 </dd>
-<dt id="term-many-to-one">many to one</dt>
-<dd><p class="first">A style of <a class="reference internal" href="orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> which links
-a foreign key in the parent mapper's table to the primary
-key of a related table.   Each parent object can
-then refer to exactly zero or one related object.</p>
-<p>The related objects in turn will have an implicit or
-explicit <a class="reference internal" href="#term-one-to-many"><span class="xref std std-term">one to many</span></a> relationship to any number
-of parent objects that refer to them.</p>
-<p>An example many to one schema (which, note, is identical
-to the <a class="reference internal" href="#term-one-to-many"><span class="xref std std-term">one to many</span></a> schema):</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">department</span> <span class="p">(</span>
+<dt id="term-many-to-one">多対1</dt>
+<dd><p class="first">親マッパーのテーブルの外部キーを関連するテーブルの主キーにリンクする：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.orm.relationship`のスタイル。各親オブジェクトは、正確にゼロまたは1つの関連オブジェクトを参照することができます。</p>
+<p>関連するオブジェクトは、それらを参照する任意の数の親オブジェクトに対して、暗黙的または明示的に：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>one to many`関係を持ちます。</p>
+<p>1対多のスキーマの例（これは、：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>one to many`スキーマと同じです）：</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">department</span> <span class="p">(</span>
     <span class="n">id</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
     <span class="n">name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 <span class="p">)</span>
@@ -725,10 +525,8 @@ to the <a class="reference internal" href="#term-one-to-many"><span class="xref 
     <span class="n">dep_id</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span> <span class="n">department</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">)</span></pre></div>
 </div>
-<p>The relationship from <code class="docutils literal"><span class="pre">employee</span></code> to <code class="docutils literal"><span class="pre">department</span></code> is
-many to one, since many employee records can be associated with a
-single department.  A SQLAlchemy mapping might look like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Department</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>1つの部門に多くの従業員レコードを関連付けることができるので、「従業員」から「部署」までの関係は多岐にわたります。 SQLAlchemyマッピングは次のようになります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Department</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;department&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
@@ -742,74 +540,40 @@ single department.  A SQLAlchemy mapping might look like:</p>
 </div>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#term-relationship"><span class="xref std std-term">relationship</span></a></p>
-<p><a class="reference internal" href="#term-one-to-many"><span class="xref std std-term">one to many</span></a></p>
-<p class="last"><a class="reference internal" href="#term-backref"><span class="xref std std-term">backref</span></a></p>
+<p>：term： <cite>relationship</cite></p>
+<p>：用語：「1対多数」</p>
+<p class="last">：term： <cite>backref</cite></p>
 </div>
 </dd>
-<dt id="term-mapping">mapping<dt id="term-mapped">mapped</dt>
-<dd>We say a class is &quot;mapped&quot; when it has been passed through the
-<a class="reference internal" href="orm/mapping_api.html#sqlalchemy.orm.mapper" title="sqlalchemy.orm.mapper"><code class="xref py py-func docutils literal"><span class="pre">orm.mapper()</span></code></a> function.   This process associates the
-class with a database table or other <span class="xref std std-term">selectable</span>
-construct, so that instances of it can be persisted
-using a <a class="reference internal" href="orm/session_api.html#sqlalchemy.orm.session.Session" title="sqlalchemy.orm.session.Session"><code class="xref py py-class docutils literal"><span class="pre">Session</span></code></a> as well as loaded using a
-<a class="reference internal" href="orm/query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a>.</dd>
-<dt id="term-method-chaining">method chaining</dt>
-<dd><p class="first">An object-oriented technique whereby the state of an object
-is constructed by calling methods on the object.   The
-object features any number of methods, each of which return
-a new object (or in some cases the same object) with
-additional state added to the object.</p>
-<p>The two SQLAlchemy objects that make the most use of
-method chaining are the <a class="reference internal" href="core/selectable.html#sqlalchemy.sql.expression.Select" title="sqlalchemy.sql.expression.Select"><code class="xref py py-class docutils literal"><span class="pre">Select</span></code></a>
-object and the <a class="reference internal" href="orm/query.html#sqlalchemy.orm.query.Query" title="sqlalchemy.orm.query.Query"><code class="xref py py-class docutils literal"><span class="pre">Query</span></code></a> object.
-For example, a <a class="reference internal" href="core/selectable.html#sqlalchemy.sql.expression.Select" title="sqlalchemy.sql.expression.Select"><code class="xref py py-class docutils literal"><span class="pre">Select</span></code></a> object can
-be assigned two expressions to its WHERE clause as well
-as an ORDER BY clause by calling upon the <a class="reference internal" href="core/selectable.html#sqlalchemy.sql.expression.Select.where" title="sqlalchemy.sql.expression.Select.where"><code class="xref py py-meth docutils literal"><span class="pre">where()</span></code></a>
-and <a class="reference internal" href="core/selectable.html#sqlalchemy.sql.expression.Select.order_by" title="sqlalchemy.sql.expression.Select.order_by"><code class="xref py py-meth docutils literal"><span class="pre">order_by()</span></code></a> methods:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">([</span><span class="n">user</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">name</span><span class="p">])</span><span class="o">.</span>\
+<dt id="term-mapping">マッピング<dt id="term-mapped">マップされた</dt>
+<dd>：func： <cite>.orm.mapper`関数を使って渡されたクラスは、&amp;quot;マップされています&amp;quot;と言います。このプロセスは、クラスをデータベーステーブルまたは他の：term： `selectable`構造に関連付けます。そのため、インスタンスは：class：</cite> .Session`を使用して永続化することができ、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Query`を使用してロードできます。</dd>
+<dt id="term-method-chaining">メソッド連鎖</dt>
+<dd><p class="first">オブジェクト上のメソッドを呼び出すことによってオブジェクトの状態が構築されるオブジェクト指向技術。オブジェクトには任意の数のメソッドがあり、それぞれがオブジェクトに追加された状態で新しいオブジェクト（場合によっては同じオブジェクト）を返します。</p>
+<p>メソッド連鎖を最大限に活用する2つのSQLAlchemyオブジェクトは：class： <cite>〜.expression.Select`オブジェクトと：class：</cite>〜.orm.query.Query`オブジェクトです。たとえば：class： <cite>〜.expression.Select`オブジェクトには、：meth：</cite>〜.Select.where`と：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>を呼び出すことによって、WHERE句とORDER BY句に2つの式を割り当てることができます。 〜.Select.order_by`メソッド:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">([</span><span class="n">user</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">name</span><span class="p">])</span><span class="o">.</span>\
             <span class="n">where</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">id</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span>\
             <span class="n">where</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">like</span><span class="p">(</span><span class="s1">&#39;e%&#39;</span><span class="p">)</span><span class="o">.</span>\
             <span class="n">order_by</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></pre></div>
 </div>
-<p>Each method call above returns a copy of the original
-<a class="reference internal" href="core/selectable.html#sqlalchemy.sql.expression.Select" title="sqlalchemy.sql.expression.Select"><code class="xref py py-class docutils literal"><span class="pre">Select</span></code></a> object with additional qualifiers
-added.</p>
+<p>上記の各メソッド呼び出しは、元の：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.expression.Select`オブジェクトのコピーを返します。追加の修飾子が追加されています。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="#term-generative"><span class="xref std std-term">generative</span></a></p>
+<p class="last">：用語：「生成的」</p>
 </div>
 </dd>
-<dt id="term-n-plus-one-problem">N plus one problem</dt>
-<dd><p class="first">The N plus one problem is a common side effect of the
-<a class="reference internal" href="#term-lazy-load"><span class="xref std std-term">lazy load</span></a> pattern, whereby an application wishes
-to iterate through a related attribute or collection on
-each member of a result set of objects, where that
-attribute or collection is set to be loaded via the lazy
-load pattern.   The net result is that a SELECT statement
-is emitted to load the initial result set of parent objects;
-then, as the application iterates through each member,
-an additional SELECT statement is emitted for each member
-in order to load the related attribute or collection for
-that member.  The end result is that for a result set of
-N parent objects, there will be N + 1 SELECT statements emitted.</p>
-<p>The N plus one problem is alleviated using <span class="xref std std-term">eager loading</span>.</p>
+<dt id="term-n-plus-one-problem">Nプラス1つの問題</dt>
+<dd><p class="first">Nプラス1つの問題は、term： <a href="#id1"><span class="problematic" id="id2">`</span></a>lazy load`パターンの共通の副作用であり、アプリケーションは、その属性またはコレクションが設定されているオブジェクトの結果セットの各メンバー上の関連する属性またはコレクションを反復したい遅延ロードパターンを介してロードされます。結果として、親オブジェクトの初期結果セットをロードするSELECT文が発行されます。アプリケーションが各メンバーを反復すると、そのメンバーの関連属性またはコレクションをロードするために、各メンバーに対して追加のSELECTステートメントが発行されます。最終的には、N個の親オブジェクトの結果セットに対して、N + 1個のSELECTステートメントが発行されます。</p>
+<p>Nプラス1つの問題は、term： <a href="#id1"><span class="problematic" id="id2">`</span></a>eager loading`を使用して緩和されます。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="orm/loading_relationships.html"><span class="doc">Relationship Loading Techniques</span></a></p>
+<p class="last">：doc： <cite>orm / loading_relationships</cite></p>
 </div>
 </dd>
-<dt id="term-one-to-many">one to many</dt>
-<dd><p class="first">A style of <a class="reference internal" href="orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a> which links
-the primary key of the parent mapper's table to the foreign
-key of a related table.   Each unique parent object can
-then refer to zero or more unique related objects.</p>
-<p>The related objects in turn will have an implicit or
-explicit <a class="reference internal" href="#term-many-to-one"><span class="xref std std-term">many to one</span></a> relationship to their parent
-object.</p>
-<p>An example one to many schema (which, note, is identical
-to the <a class="reference internal" href="#term-many-to-one"><span class="xref std std-term">many to one</span></a> schema):</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">department</span> <span class="p">(</span>
+<dt id="term-one-to-many">1対多数</dt>
+<dd><p class="first">親マッパーのテーブルの主キーを関連するテーブルの外部キーにリンクする：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜sqlalchemy.orm.relationship`のスタイル。その後、各固有の親オブジェクトは、0以上の固有の関連オブジェクトを参照することができる。</p>
+<p>関連するオブジェクトは、親オブジェクトに対して暗黙的または明示的：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>many to one`の関係を持ちます。</p>
+<p>1対多のスキーマの例（これは、：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>many to one`スキーマと同じです）：</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">department</span> <span class="p">(</span>
     <span class="n">id</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
     <span class="n">name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 <span class="p">)</span>
@@ -820,10 +584,8 @@ to the <a class="reference internal" href="#term-many-to-one"><span class="xref 
     <span class="n">dep_id</span> <span class="nb">INTEGER</span> <span class="k">REFERENCES</span> <span class="n">department</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">)</span></pre></div>
 </div>
-<p>The relationship from <code class="docutils literal"><span class="pre">department</span></code> to <code class="docutils literal"><span class="pre">employee</span></code> is
-one to many, since many employee records can be associated with a
-single department.  A SQLAlchemy mapping might look like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Department</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>「部署」から「従業員」までの関係は、多くの従業員レコードが1つの部門に関連付けることができるため、1対多です。 SQLAlchemyマッピングは次のようになります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Department</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;department&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
@@ -837,59 +599,33 @@ single department.  A SQLAlchemy mapping might look like:</p>
 </div>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#term-relationship"><span class="xref std std-term">relationship</span></a></p>
-<p><a class="reference internal" href="#term-many-to-one"><span class="xref std std-term">many to one</span></a></p>
-<p class="last"><a class="reference internal" href="#term-backref"><span class="xref std std-term">backref</span></a></p>
+<p>：term： <cite>relationship</cite></p>
+<p>：用語：「多対1」</p>
+<p class="last">：term： <cite>backref</cite></p>
 </div>
 </dd>
-<dt id="term-pending">pending</dt>
-<dd><p class="first">This describes one of the major object states which
-an object can have within a <a class="reference internal" href="#term-session"><span class="xref std std-term">session</span></a>; a pending object
-is a new object that doesn't have any database identity,
-but has been recently associated with a session.   When
-the session emits a flush and the row is inserted, the
-object moves to the <a class="reference internal" href="#term-persistent"><span class="xref std std-term">persistent</span></a> state.</p>
+<dt id="term-pending">保留中</dt>
+<dd><p class="first">これは、オブジェクトがa：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>session`内に持つことができる主要なオブジェクト状態の1つを記述します。保留中のオブジェクトは、データベースアイデンティティを持たないが、最近セッションに関連付けられた新しいオブジェクトです。セッションがフラッシュされ、行が挿入されると、オブジェクトは：term： <a href="#id3"><span class="problematic" id="id4">`</span></a>persistent`ステートに移動します。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="orm/session_state_management.html#session-object-states"><span class="std std-ref">Quickie Intro to Object States</span></a></p>
+<p class="last">：ref： <cite>session_object_states</cite></p>
 </div>
 </dd>
-<dt id="term-persistent">persistent</dt>
-<dd><p class="first">This describes one of the major object states which
-an object can have within a <a class="reference internal" href="#term-session"><span class="xref std std-term">session</span></a>; a persistent object
-is an object that has a database identity (i.e. a primary key)
-and is currently associated with a session.   Any object
-that was previously <a class="reference internal" href="#term-pending"><span class="xref std std-term">pending</span></a> and has now been inserted
-is in the persistent state, as is any object that's
-been loaded by the session from the database.   When a
-persistent object is removed from a session, it is known
-as <a class="reference internal" href="#term-detached"><span class="xref std std-term">detached</span></a>.</p>
+<dt id="term-persistent">永続的な</dt>
+<dd><p class="first">これは、オブジェクトがa：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>session`内に持つことができる主要なオブジェクト状態の1つを記述します。永続オブジェクトは、データベースID（すなわち主キー）を持ち、現在セッションに関連付けられているオブジェクトです。以前は：term： <a href="#id3"><span class="problematic" id="id4">`</span></a>pending`で挿入されたオブジェクトは、セッションからデータベースからロードされたオブジェクトと同様に永続状態になります。永続オブジェクトがセッションから削除されると、term： <a href="#id5"><span class="problematic" id="id6">`</span></a>detached`と呼ばれます。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="orm/session_state_management.html#session-object-states"><span class="std std-ref">Quickie Intro to Object States</span></a></p>
+<p class="last">：ref： <cite>session_object_states</cite></p>
 </div>
 </dd>
-<dt id="term-polymorphic">polymorphic<dt id="term-polymorphically">polymorphically</dt>
-<dd><p class="first">Refers to a function that handles several types at once.  In SQLAlchemy,
-the term is usually applied to the concept of an ORM mapped class
-whereby a query operation will return different subclasses
-based on information in the result set, typically by checking the
-value of a particular column in the result known as the <a class="reference internal" href="#term-discriminator"><span class="xref std std-term">discriminator</span></a>.</p>
-<p class="last">Polymorphic loading in SQLAlchemy implies that a one or a
-combination of three different schemes are used to map a hierarchy
-of classes; &quot;joined&quot;, &quot;single&quot;, and &quot;concrete&quot;.   The section
-<a class="reference internal" href="orm/inheritance.html"><span class="std std-ref">Mapping Class Inheritance Hierarchies</span></a> describes inheritance mapping fully.</p>
+<dt id="term-polymorphic">多型<dt id="term-polymorphically">多形的に</dt>
+<dd><p class="first">一度にいくつかの型を扱う関数を指す。 SQLAlchemyでは、ORMマッピングされたクラスのコンセプトにこの用語が通常適用され、結果セット内の情報に基づいて異なるサブクラスが返されます。通常は、結果として特定の列の値を確認します：term： 「弁別者」。</p>
+<p class="last">SQLAlchemyの多態的なロードは、3つの異なるスキームの1つまたは組み合わせを使用してクラスの階層をマップすることを意味します。 &amp;quot;joined &amp;quot;、&amp;quot;single &amp;quot;、&amp;quot;concrete &amp;quot;のいずれかです。セクション：ref： <a href="#id1"><span class="problematic" id="id2">`</span></a>inheritance_toplevel`は継承マッピングを完全に記述します。</p>
 </dd>
-<dt id="term-primary-key">primary key<dt id="term-primary-key-constraint">primary key constraint</dt>
-<dd><p class="first">A <a class="reference internal" href="#term-constraint"><span class="xref std std-term">constraint</span></a> that uniquely defines the characteristics
-of each <span class="xref std std-term">row</span>. The primary key has to consist of
-characteristics that cannot be duplicated by any other row.
-The primary key may consist of a single attribute or
-multiple attributes in combination.
-(via Wikipedia)</p>
-<p>The primary key of a table is typically, though not always,
-defined within the <code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> <a class="reference internal" href="#term-ddl"><span class="xref std std-term">DDL</span></a>:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">employee</span> <span class="p">(</span>
+<dt id="term-primary-key">主キー<dt id="term-primary-key-constraint">主キー制約</dt>
+<dd><p class="first">A：term： <cite>constraint`は、それぞれ：term：</cite> row`の特性を一意的に定義します。主キーは、他の行で複製できない特性で構成する必要があります。主キーは、単一の属性または複数の属性を組み合わせて構成できます。 （ウィキペディア経由で）</p>
+<p>テーブルの主キーは、通常は「CREATE TABLE」内に定義されていますが、term： <cite>DDL</cite>：</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">employee</span> <span class="p">(</span>
      <span class="n">emp_id</span> <span class="nb">INTEGER</span><span class="p">,</span>
      <span class="n">emp_name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
      <span class="n">dep_id</span> <span class="nb">INTEGER</span><span class="p">,</span>
@@ -901,133 +637,56 @@ defined within the <code class="docutils literal"><span class="pre">CREATE</span
 <p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Primary_Key">http://en.wikipedia.org/wiki/Primary_Key</a></p>
 </div>
 </dd>
-<dt id="term-relationship">relationship<dt id="term-relationships">relationships</dt>
-<dd><p class="first">A connecting unit between two mapped classes, corresponding
-to some relationship between the two tables in the database.</p>
-<p>The relationship is defined using the SQLAlchemy function
-<a class="reference internal" href="orm/relationship_api.html#sqlalchemy.orm.relationship" title="sqlalchemy.orm.relationship"><code class="xref py py-func docutils literal"><span class="pre">relationship()</span></code></a>.   Once created, SQLAlchemy
-inspects the arguments and underlying mappings involved
-in order to classify the relationship as one of three types:
-<a class="reference internal" href="#term-one-to-many"><span class="xref std std-term">one to many</span></a>, <a class="reference internal" href="#term-many-to-one"><span class="xref std std-term">many to one</span></a>, or <a class="reference internal" href="#term-many-to-many"><span class="xref std std-term">many to many</span></a>.
-With this classification, the relationship construct
-handles the task of persisting the appropriate linkages
-in the database in response to in-memory object associations,
-as well as the job of loading object references and collections
-into memory based on the current linkages in the
-database.</p>
+<dt id="term-relationship">関係<dt id="term-relationships">関係</dt>
+<dd><p class="first">2つのマップされたクラス間の接続ユニット。データベース内の2つのテーブル間の関係に対応します。</p>
+<p>この関係は、SQLAlchemy関数func： <cite>〜sqlalchemy.orm.relationship`を使用して定義されます。 SQLAlchemyは、作成された引数と基本的なマッピングを調べて、その関係を：term： `one to many</cite>、：term：` many to one`、または：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>many to many`の3つの型の1つとして分類します。 。この分類では、関係構成は、メモリ内のオブジェクトの関連付けに応答してデータベース内の適切なリンケージを保持するタスクと、データベース内の現在のリンケージに基づいてオブジェクト参照およびコレクションをメモリにロードするジョブを処理します。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="orm/relationships.html"><span class="std std-ref">Relationship Configuration</span></a></p>
+<p class="last">：ref： <cite>relationship_config_toplevel</cite></p>
 </div>
 </dd>
-<dt id="term-release">release<dt id="term-releases">releases<dt id="term-released">released</dt>
-<dd><p class="first">In the context of SQLAlchemy, the term &quot;released&quot;
-refers to the process of ending the usage of a particular
-database connection.    SQLAlchemy features the usage
-of connection pools, which allows configurability as to
-the lifespan of database connections.   When using a pooled
-connection, the process of &quot;closing&quot; it, i.e. invoking
-a statement like <code class="docutils literal"><span class="pre">connection.close()</span></code>, may have the effect
-of the connection being returned to an existing pool,
-or it may have the effect of actually shutting down the
-underlying TCP/IP connection referred to by that connection -
-which one takes place depends on configuration as well
-as the current state of the pool.  So we used the term
-<em>released</em> instead, to mean &quot;do whatever it is you do
-with connections when we're done using them&quot;.</p>
-<p>The term will sometimes be used in the phrase, &quot;release
-transactional resources&quot;, to indicate more explicitly that
-what we are actually &quot;releasing&quot; is any transactional
-state which as accumulated upon the connection.  In most
-situations, the process of selecting from tables, emitting
-updates, etc. acquires <a class="reference internal" href="#term-isolated"><span class="xref std std-term">isolated</span></a> state upon
-that connection as well as potential row or table locks.
-This state is all local to a particular transaction
-on the connection, and is released when we emit a rollback.
-An important feature of the connection pool is that when
-we return a connection to the pool, the <code class="docutils literal"><span class="pre">connection.rollback()</span></code>
-method of the DBAPI is called as well, so that as the
-connection is set up to be used again, it's in a &quot;clean&quot;
-state with no references held to the previous series
-of operations.</p>
+<dt id="term-release">解放<dt id="term-releases">リリース<dt id="term-released">解放された</dt>
+<dd><p class="first">SQLAlchemyの文脈では、&amp;quot;リリース&amp;quot;という用語は、特定のデータベース接続の使用を終了するプロセスを指します。 SQLAlchemyは接続プールの使用を特徴としており、これによりデータベース接続の寿命についての設定が可能です。プールされた接続を使用する場合、&amp;quot;closing &amp;quot;のプロセス、つまり `` connection.close（） <a href="#id1"><span class="problematic" id="id2">``</span></a>のようなステートメントを呼び出すと、接続が既存のプールに返されるか、その接続によって参照される基礎となるTCP / IP接続を実際にシャットダウンする効果（設定は、プールの現在の状態と同様に）によって異なります。そこで、代わりに* released <a href="#id3"><span class="problematic" id="id4">*</span></a>という言葉を使用しました。&amp;quot;それらを使って終了したら接続を使って何をしていても何でもします&amp;quot;という意味です。</p>
+<p>この用語は、「解放トランザクション資源」という句で使用されることがあり、実際に「解放」しているのは、接続時に蓄積されたトランザクション状態です。ほとんどの状況で、テーブルから選択するプロセス、更新を発行するプロセスなどは、その接続と潜在的な行ロックまたはテーブルロックに対して：term： <cite>isolated &amp;#39;状態を取得します。この状態は、接続上の特定のトランザクションに対してすべてローカルであり、ロールバックを発行すると解放されます。接続プールの重要な機能は、プールへの接続を返すときに、DBAPIの `</cite> connection.rollback（） <a href="#id1"><span class="problematic" id="id2">``</span></a>メソッドも呼び出されるため、接続が再び使用されるように設定されるので、以前の一連の操作に参照が保持されていない状態で「クリーン」状態になっています。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="core/pooling.html"><span class="std std-ref">Connection Pooling</span></a></p>
+<p class="last">：ref： <cite>pooling_toplevel</cite></p>
 </div>
 </dd>
-<dt id="term-returning">RETURNING</dt>
-<dd><p class="first">This is a non-SQL standard clause provided in various forms by
-certain backends, which provides the service of returning a result
-set upon execution of an INSERT, UPDATE or DELETE statement.  Any set
-of columns from the matched rows can be returned, as though they were
-produced from a SELECT statement.</p>
-<p>The RETURNING clause provides both a dramatic performance boost to
-common update/select scenarios, including retrieval of inline- or
-default- generated primary key values and defaults at the moment they
-were created, as well as a way to get at server-generated
-default values in an atomic way.</p>
-<p>An example of RETURNING, idiomatic to PostgreSQL, looks like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">user_account</span> <span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="n">VALUES</span> <span class="p">(</span><span class="s1">&#39;new name&#39;</span><span class="p">)</span> <span class="n">RETURNING</span> <span class="nb">id</span><span class="p">,</span> <span class="n">timestamp</span></pre></div>
+<dt id="term-returning">戻り値</dt>
+<dd><p class="first">これは、特定のバックエンドによってさまざまな形式で提供される非SQL標準句で、INSERT文、UPDATE文またはDELETE文の実行時に結果セットを返すサービスを提供します。一致した行の列の集合は、SELECT文から生成されたかのように戻すことができます。</p>
+<p>RETURNING節は、インラインまたはデフォルトで生成されたプライマリ・キー値の取得や作成時のデフォルト値の取得など、共通の更新/選択シナリオに対する劇的なパフォーマンスの向上と、サーバー生成のデフォルト値を取得する方法原子的な方法で</p>
+<p>PostgreSQLに慣用されているRETURNINGの例は次のようになります:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">INSERT</span> <span class="n">INTO</span> <span class="n">user_account</span> <span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="n">VALUES</span> <span class="p">(</span><span class="s1">&#39;new name&#39;</span><span class="p">)</span> <span class="n">RETURNING</span> <span class="nb">id</span><span class="p">,</span> <span class="n">timestamp</span></pre></div>
 </div>
-<p>Above, the INSERT statement will provide upon execution a result set
-which includes the values of the columns <code class="docutils literal"><span class="pre">user_account.id</span></code> and
-<code class="docutils literal"><span class="pre">user_account.timestamp</span></code>, which above should have been generated as default
-values as they are not included otherwise (but note any series of columns
-or SQL expressions can be placed into RETURNING, not just default-value columns).</p>
-<p>The backends that currently support
-RETURNING or a similar construct are PostgreSQL, SQL Server, Oracle,
-and Firebird.    The PostgreSQL and Firebird implementations are generally
-full featured, whereas the implementations of SQL Server and Oracle
-have caveats. On SQL Server, the clause is known as &quot;OUTPUT INSERTED&quot;
-for INSERT and UPDATE statements and &quot;OUTPUT DELETED&quot; for DELETE statements;
-the key caveat is that triggers are not supported in conjunction with this
-keyword.  On Oracle, it is known as &quot;RETURNING...INTO&quot;, and requires that the
-value be placed into an OUT parameter, meaning not only is the syntax awkward,
-but it can also only be used for one row at a time.</p>
-<p class="last">SQLAlchemy's <a class="reference internal" href="core/dml.html#sqlalchemy.sql.expression.UpdateBase.returning" title="sqlalchemy.sql.expression.UpdateBase.returning"><code class="xref py py-meth docutils literal"><span class="pre">UpdateBase.returning()</span></code></a> system provides a layer of abstraction
-on top of the RETURNING systems of these backends to provide a consistent
-interface for returning columns.  The ORM also includes many optimizations
-that make use of RETURNING when available.</p>
+<p>上記のINSERT文は、実行時に、 `` user_account.id``と `` user_account.timestamp``の値を含む結果セットを提供します。これは、上記には含まれていないのでデフォルト値として生成されるべきです（ただし、一連の列またはSQL式は、デフォルト値の列だけでなく、RETURNINGに配置できます）。</p>
+<p>現在、RETURNINGなどの構文をサポートするバックエンドは、PostgreSQL、SQL Server、Oracle、およびFirebirdです。 PostgreSQLとFirebirdの実装は一般的にフル機能ですが、SQL ServerとOracleの実装には注意が必要です。 SQL Serverでは、この節はINSERTおよびUPDATE文では &amp;quot;OUTPUT INSERTED&amp;quot;、DELETE文では &amp;quot;OUTPUT DELETED&amp;quot;と呼ばれます。重要な注意点は、このキーワードと組み合わせてトリガーはサポートされないということです。 Oracleでは、 &amp;quot;RETURNING ... INTO &amp;quot;と呼ばれており、値をOUTパラメータに入れる必要があります。これは、構文が厄介なだけでなく、一度に1つの行にしか使用できないことを意味します。</p>
+<p class="last">SQLAlchemyの：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.UpdateBase.returning`システムは、これらのバックエンドのRETURNINGシステムの上に抽象レイヤーを提供して、返すカラムに対して一貫したインターフェースを提供します。 ORMには、利用可能な場合にRETURNINGを使用する多くの最適化も含まれています。</p>
 </dd>
-<dt id="term-session">Session</dt>
-<dd><p class="first">The container or scope for ORM database operations. Sessions
-load instances from the database, track changes to mapped
-instances and persist changes in a single unit of work when
-flushed.</p>
+<dt id="term-session">セッション</dt>
+<dd><p class="first">ORMデータベース操作のコンテナまたはスコープ。セッションは、データベースからインスタンスをロードし、マップされたインスタンスへの変更を追跡し、フラッシュされると単一の作業単位で変更を保持します。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="orm/session.html"><span class="doc">Using the Session</span></a></p>
+<p class="last">：doc： <cite>orm / session</cite></p>
 </div>
 </dd>
-<dt id="term-subquery">subquery</dt>
-<dd><p class="first">Refers to a <code class="docutils literal"><span class="pre">SELECT</span></code> statement that is embedded within an enclosing
-<code class="docutils literal"><span class="pre">SELECT</span></code>.</p>
-<p>A subquery comes in two general flavors, one known as a &quot;scalar select&quot;
-which specifically must return exactly one row and one column, and the
-other form which acts as a &quot;derived table&quot; and serves as a source of
-rows for the FROM clause of another select.  A scalar select is eligible
-to be placed in the <a class="reference internal" href="#term-where-clause"><span class="xref std std-term">WHERE clause</span></a>, <a class="reference internal" href="#term-columns-clause"><span class="xref std std-term">columns clause</span></a>,
-ORDER BY clause or HAVING clause of the enclosing select, whereas the
-derived table form is eligible to be placed in the FROM clause of the
-enclosing <code class="docutils literal"><span class="pre">SELECT</span></code>.</p>
-<p>Examples:</p>
+<dt id="term-subquery">サブクエリ</dt>
+<dd><p class="first">囲む `` SELECT``の中に埋め込まれた `` SELECT``ステートメントを参照します。</p>
+<p>サブクエリには2つの一般的なフレーバがあります。スカラー選択とは、特に1つの行と1つの列を正確に返さなければならないものと、&amp;quot;派生テーブル&amp;quot;として機能し、スカラー選択は、囲み選択の：term： <cite>WHERE句</cite>、：term： <cite>columns節</cite>、ORDER BY句、またはHAVING節に配置することができますが、派生テーブル形式は同封の `` SELECT``のFROM句に入れることができます。</p>
+<p>例：</p>
 <ol class="last arabic">
-<li><p class="first">a scalar subquery placed in the <a class="reference internal" href="#term-columns-clause"><span class="xref std std-term">columns clause</span></a> of an enclosing
-<code class="docutils literal"><span class="pre">SELECT</span></code>.  The subquery in this example is a <a class="reference internal" href="#term-correlated-subquery"><span class="xref std std-term">correlated subquery</span></a> because part
-of the rows which it selects from are given via the enclosing statement.</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">address</span> <span class="k">WHERE</span> <span class="n">address</span><span class="p">.</span><span class="n">user_id</span><span class="o">=</span><span class="k">user</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
+<li><p class="first">囲む &amp;quot;SELECT&amp;quot;の：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>columns節に置かれたスカラー副問い合わせ。この例のサブクエリは、：term： <a href="#id3"><span class="problematic" id="id4">`</span></a>correlated subquery`です。なぜなら、それが選択する行の一部が囲む文を介して与えられるからです。</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">address</span> <span class="k">WHERE</span> <span class="n">address</span><span class="p">.</span><span class="n">user_id</span><span class="o">=</span><span class="k">user</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
 <span class="k">FROM</span> <span class="k">user</span></pre></div>
 </div>
 </li>
-<li><p class="first">a scalar subquery placed in the <a class="reference internal" href="#term-where-clause"><span class="xref std std-term">WHERE clause</span></a> of an enclosing
-<code class="docutils literal"><span class="pre">SELECT</span></code>.  This subquery in this example is not correlated as it selects a fixed result.</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span> <span class="k">FROM</span> <span class="k">user</span>
+<li><p class="first">囲む &amp;quot;SELECT&amp;quot;の：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>WHERE句`に置かれたスカラー副問い合わせ。この例のこのサブクエリは、固定結果を選択するときには関連付けられていません。</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span> <span class="k">FROM</span> <span class="k">user</span>
 <span class="k">WHERE</span> <span class="n">status</span><span class="o">=</span><span class="p">(</span><span class="k">SELECT</span> <span class="n">status_id</span> <span class="k">FROM</span> <span class="n">status_code</span> <span class="k">WHERE</span> <span class="n">code</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)</span></pre></div>
 </div>
 </li>
-<li><p class="first">a derived table subquery placed in the <a class="reference internal" href="#term-from-clause"><span class="xref std std-term">FROM clause</span></a> of an enclosing
-<code class="docutils literal"><span class="pre">SELECT</span></code>.   Such a subquery is almost always given an alias name.</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">user</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="k">user</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ad_subq</span><span class="p">.</span><span class="n">email_address</span>
+<li><p class="first">包含する `` SELECT``の：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>FROM clause`に配置された派生テーブル副問い合わせです。このようなサブクエリには、ほとんどの場合、エイリアス名が付けられます。</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">user</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="k">user</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">ad_subq</span><span class="p">.</span><span class="n">email_address</span>
 <span class="k">FROM</span>
     <span class="k">user</span> <span class="k">JOIN</span>
     <span class="p">(</span><span class="k">select</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">email_address</span> <span class="k">FROM</span> <span class="n">address</span> <span class="k">WHERE</span> <span class="n">address_type</span><span class="o">=</span><span class="s1">&#39;Q&#39;</span><span class="p">)</span> <span class="k">AS</span> <span class="n">ad_subq</span>
@@ -1036,55 +695,36 @@ of the rows which it selects from are given via the enclosing statement.</p>
 </li>
 </ol>
 </dd>
-<dt id="term-transient">transient</dt>
-<dd><p class="first">This describes one of the major object states which
-an object can have within a <a class="reference internal" href="#term-session"><span class="xref std std-term">session</span></a>; a transient object
-is a new object that doesn't have any database identity
-and has not been associated with a session yet.  When the
-object is added to the session, it moves to the
-<a class="reference internal" href="#term-pending"><span class="xref std std-term">pending</span></a> state.</p>
+<dt id="term-transient">一時的な</dt>
+<dd><p class="first">これは、オブジェクトがa：term： <a href="#id1"><span class="problematic" id="id2">`</span></a>session`内に持つことができる主要なオブジェクト状態の1つを記述します。一時オブジェクトはデータベースアイデンティティを持たず、まだセッションに関連付けられていない新しいオブジェクトです。オブジェクトがセッションに追加されると、それは：term： <a href="#id3"><span class="problematic" id="id4">`</span></a>pending`の状態に移ります。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="orm/session_state_management.html#session-object-states"><span class="std std-ref">Quickie Intro to Object States</span></a></p>
+<p class="last">：ref： <cite>session_object_states</cite></p>
 </div>
 </dd>
-<dt id="term-unique-constraint">unique constraint<dt id="term-unique-key-index">unique key index</dt>
-<dd><p class="first">A unique key index can uniquely identify each row of data
-values in a database table. A unique key index comprises a
-single column or a set of columns in a single database table.
-No two distinct rows or data records in a database table can
-have the same data value (or combination of data values) in
-those unique key index columns if NULL values are not used.
-Depending on its design, a database table may have many unique
-key indexes but at most one primary key index.</p>
-<p>(via Wikipedia)</p>
+<dt id="term-unique-constraint">ユニーク制約<dt id="term-unique-key-index">一意のキーインデックス</dt>
+<dd><p class="first">一意のキー索引は、データベース表のデータ値の各行を一意に識別できます。一意のキー索引は、単一のデータベース表内の単一の列または一連の列で構成されます。 NULL値が使用されない場合、データベース表の2つの異なる行またはデータ・レコードは、これらの一意のキー索引列に同じデータ値（またはデータ値の組み合わせ）を持つことはできません。その設計に応じて、データベーステーブルは多数のユニークキーインデックスを持つことができますが、多くても1つのプライマリキーインデックスを持ちます。</p>
+<p>（ウィキペディア経由で）</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
 <p class="last"><a class="reference external" href="http://en.wikipedia.org/wiki/Unique_key#Defining_unique_keys">http://en.wikipedia.org/wiki/Unique_key#Defining_unique_keys</a></p>
 </div>
 </dd>
-<dt id="term-unit-of-work">unit of work</dt>
-<dd><p class="first">This pattern is where the system transparently keeps
-track of changes to objects and periodically flushes all those
-pending changes out to the database. SQLAlchemy's Session
-implements this pattern fully in a manner similar to that of
-Hibernate.</p>
+<dt id="term-unit-of-work">作業単位</dt>
+<dd><p class="first">このパターンは、システムがオブジェクトの変更を透過的に追跡し、保留中のすべての変更を定期的にデータベースにフラッシュします。 SQLAlchemyのSessionは、Hibernateのような方法でこのパターンを完全に実装しています。</p>
 <div class="last admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference external" href="http://martinfowler.com/eaaCatalog/unitOfWork.html">Unit of Work by Martin Fowler</a></p>
-<p class="last"><a class="reference internal" href="orm/session.html"><span class="doc">Using the Session</span></a></p>
+<p>マーティン・ファウラーによる「作業単位」 &lt;<a class="reference external" href="http://martinfowler.com/eaaCatalog/unitOfWork.html">http://martinfowler.com/eaaCatalog/unitOfWork.html</a>&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>_</p>
+<p class="last">：doc： <cite>orm / session</cite></p>
 </div>
 </dd>
-<dt id="term-where-clause">WHERE clause</dt>
-<dd><p class="first">The portion of the <code class="docutils literal"><span class="pre">SELECT</span></code> statement which indicates criteria
-by which rows should be filtered.   It is a single SQL expression
-which follows the keyword <code class="docutils literal"><span class="pre">WHERE</span></code>.</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">user_account</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">user_account</span><span class="p">.</span><span class="n">email</span>
+<dt id="term-where-clause">WHERE句</dt>
+<dd><p class="first">行をフィルタリングする基準を示す `` SELECT``文の部分。これは、キーワード &amp;quot;WHERE&amp;quot;に続く単一のSQL式です。</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">user_account</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">user_account</span><span class="p">.</span><span class="n">email</span>
 <span class="k">FROM</span> <span class="n">user_account</span>
 <span class="k">WHERE</span> <span class="n">user_account</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;fred&#39;</span> <span class="k">AND</span> <span class="n">user_account</span><span class="p">.</span><span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;E&#39;</span></pre></div>
 </div>
-<p class="last">Above, the phrase <code class="docutils literal"><span class="pre">WHERE</span> <span class="pre">user_account.name</span> <span class="pre">=</span> <span class="pre">'fred'</span> <span class="pre">AND</span> <span class="pre">user_account.status</span> <span class="pre">=</span> <span class="pre">'E'</span></code>
-comprises the WHERE clause of the <code class="docutils literal"><span class="pre">SELECT</span></code>.</p>
+<p class="last">上記の文節 `` WHERE user_account.name = &amp;#39;fred&amp;#39; AND user_account.status = &amp;#39;E&amp;#39;``は、 `` SELECT``のWHERE句で構成されています。</p>
 </dd>
 </dl>
 </div>
@@ -1097,7 +737,7 @@ comprises the WHERE clause of the <code class="docutils literal"><span class="pr
 
     <div id="docs-copyright">
         &copy; <a href="copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -1124,6 +764,7 @@ comprises the WHERE clause of the <code class="docutils literal"><span class="pr
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="_static/detectmobile.js"></script>

@@ -10,7 +10,7 @@
         <title>
             
     
-    SQL and Generic Functions
+    SQLと汎用関数
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="SQL Statements and Expressions API" href="expression_api.html" />
-        <link rel="next" title="Custom SQL Constructs and Compilation Extension" href="compiler.html" />
-        <link rel="prev" title="Insert, Updates, Deletes" href="dml.html" />
+        <link rel="up" title="SQL Statements and Expressions API(SQL文とAPI式)" href="expression_api.html" />
+        <link rel="next" title="カスタムSQLコンストラクトとコンパイル拡張" href="compiler.html" />
+        <link rel="prev" title="挿入、更新、削除" href="dml.html" />
     <!-- end layout.mako headers -->
 
 
@@ -116,24 +116,24 @@
 
         
         <h3>
-            <a href="index.html" title="SQLAlchemy Core">SQLAlchemy Core</a>
+            <a href="index.html" title="SQLAlchemyコア">SQLAlchemyコア</a>
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">SQL Expression Language Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="expression_api.html">SQL Statements and Expressions API</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="sqlelement.html">Column Elements and Expressions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="selectable.html">Selectables, Tables, FROM objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="dml.html">Insert, Updates, Deletes</a></span></li>
-<li class="selected"><span class="link-container first"><strong>SQL and Generic Functions</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="compiler.html">Custom SQL Constructs and Compilation Extension</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="serializer.html">Expression Serializer Extension</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">SQL式言語チュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="expression_api.html">SQL Statements and Expressions API(SQL文とAPI式)</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="sqlelement.html">列要素と式</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="selectable.html">選択可能オブジェクト、テーブル、FROMオブジェクト</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="dml.html">挿入、更新、削除</a></span></li>
+<li class="selected"><span class="link-container first"><strong>SQLと汎用関数</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="compiler.html">カスタムSQLコンストラクトとコンパイル拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="serializer.html">式シリアライザ拡張</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="schema.html">Schema Definition Language</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="types.html">Column and Data Types</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="engines_connections.html">Engine and Connection Use</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="api_basics.html">Core API Basics</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="schema.html">スキーマ定義言語</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="types.html">列とデータ型</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="engines_connections.html">エンジンと接続の使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="api_basics.html">コアAPIの基礎</a></span></li>
 </ul>
 
 
@@ -149,22 +149,16 @@
     <div id="docs-body" class="withsidebar" >
         
 <div class="section" id="module-sqlalchemy.sql.expression">
-<span id="sql-and-generic-functions"></span><span id="generic-functions"></span><span id="functions-toplevel"></span><h1>SQL and Generic Functions<a class="headerlink" href="#module-sqlalchemy.sql.expression" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>SQL functions which are known to SQLAlchemy with regards to database-specific
-rendering, return types and argument behavior. Generic functions are invoked
-like all SQL functions, using the <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-attr docutils literal"><span class="pre">func</span></code></a> attribute:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">select</span><span class="p">([</span><span class="n">func</span><span class="o">.</span><span class="n">count</span><span class="p">()])</span><span class="o">.</span><span class="n">select_from</span><span class="p">(</span><span class="n">sometable</span><span class="p">)</span></pre></div>
+<span id="sql-and-generic-functions"></span><span id="generic-functions"></span><span id="functions-toplevel"></span><h1>SQLと汎用関数<a class="headerlink" href="#module-sqlalchemy.sql.expression" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>SQLAlchemyがデータベース特有のレンダリング、戻り値の型、および引数の動作に関して知っているSQL関数。一般関数は：attr： <a href="#id1"><span class="problematic" id="id2">`</span></a>func`属性を使って、すべてのSQL関数のように呼び出されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">select</span><span class="p">([</span><span class="n">func</span><span class="o">.</span><span class="n">count</span><span class="p">()])</span><span class="o">.</span><span class="n">select_from</span><span class="p">(</span><span class="n">sometable</span><span class="p">)</span></pre></div>
 </div>
-<p>Note that any name not known to <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-attr docutils literal"><span class="pre">func</span></code></a> generates the function name as is
-- there is no restriction on what SQL functions can be called, known or
-unknown to SQLAlchemy, built-in or user defined. The section here only
-describes those functions where SQLAlchemy already knows what argument and
-return types are in use.</p>
-<span class="target" id="module-sqlalchemy.sql.functions"></span><p>SQL function API, factories, and built-in functions.</p>
+<p>attr： <a href="#id1"><span class="problematic" id="id2">`</span></a>func`には知られていない任意の名前がそのまま関数名を生成することに注意してください。-SQLAlchemyに対して、組み込み関数またはユーザー定義関数で呼び出すことのできるSQL関数を制限することはできません。このセクションでは、SQLAlchemyがすでに使用されている引数と戻り値の型を知っている関数についてのみ説明します。</p>
+<span class="target" id="module-sqlalchemy.sql.functions"></span><p>SQLファンクションAPI、ファクトリ、および組み込み関数が含まれます。</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.AnsiFunction">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">AnsiFunction</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.AnsiFunction" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.AnsiFunction.identifier">
 <code class="descname">identifier</code><em class="property"> = 'AnsiFunction'</em><a class="headerlink" href="#sqlalchemy.sql.functions.AnsiFunction.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -180,23 +174,20 @@ return types are in use.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.Function">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>name</em>, <em>*clauses</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.Function" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.FunctionElement</span></code></a></p>
-<p>Describe a named SQL function.</p>
-<p>See the superclass <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal"><span class="pre">FunctionElement</span></code></a> for a description
-of public methods.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.FunctionElement</span></code></a></p>
+<p>名前付きSQL関数を記述します。</p>
+<p>パブリックメソッドの説明については、スーパークラス：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement`を参照してください。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal"><span class="pre">func</span></code></a> - namespace which produces registered or ad-hoc
-<a class="reference internal" href="#sqlalchemy.sql.functions.Function" title="sqlalchemy.sql.functions.Function"><code class="xref py py-class docutils literal"><span class="pre">Function</span></code></a> instances.</p>
-<p class="last"><a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">GenericFunction</span></code></a> - allows creation of registered function
-types.</p>
+<p>：data： <cite>.func</cite>  - 登録されたクラスまたはアドホッククラスを生成するnamespace：class：` .Function`インスタンス。</p>
+<p class="last">：class： <cite>.GenericFunction</cite>  - 登録された関数型の作成を許可します。</p>
 </div>
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.Function.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>name</em>, <em>*clauses</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.Function.__init__" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Construct a <a class="reference internal" href="#sqlalchemy.sql.functions.Function" title="sqlalchemy.sql.functions.Function"><code class="xref py py-class docutils literal"><span class="pre">Function</span></code></a>.</p>
-<p>The <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal"><span class="pre">func</span></code></a> construct is normally used to construct
-new <a class="reference internal" href="#sqlalchemy.sql.functions.Function" title="sqlalchemy.sql.functions.Function"><code class="xref py py-class docutils literal"><span class="pre">Function</span></code></a> instances.</p>
+<dd><p>Construct a <a class="reference internal" href="#sqlalchemy.sql.functions.Function" title="sqlalchemy.sql.functions.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a>.</p>
+<p>The <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal notranslate"><span class="pre">func</span></code></a> construct is normally used to construct
+new <a class="reference internal" href="#sqlalchemy.sql.functions.Function" title="sqlalchemy.sql.functions.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">Function</span></code></a> instances.</p>
 </dd></dl>
 
 </dd></dl>
@@ -204,7 +195,7 @@ new <a class="reference internal" href="#sqlalchemy.sql.functions.Function" titl
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.FunctionAsBinary">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">FunctionAsBinary</code><span class="sig-paren">(</span><em>fn</em>, <em>left_index</em>, <em>right_index</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionAsBinary" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.BinaryExpression" title="sqlalchemy.sql.expression.BinaryExpression"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.expression.BinaryExpression</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.BinaryExpression" title="sqlalchemy.sql.expression.BinaryExpression"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.expression.BinaryExpression</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.FunctionAsBinary.left">
 <code class="descname">left</code><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionAsBinary.left" title="この定義へのパーマリンク">¶</a></dt>
@@ -220,76 +211,60 @@ new <a class="reference internal" href="#sqlalchemy.sql.functions.Function" titl
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.FunctionElement">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">FunctionElement</code><span class="sig-paren">(</span><em>*clauses</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.Executable" title="sqlalchemy.sql.expression.Executable"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.expression.Executable</span></code></a>, <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.ColumnElement" title="sqlalchemy.sql.expression.ColumnElement"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.expression.ColumnElement</span></code></a>, <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.FromClause" title="sqlalchemy.sql.expression.FromClause"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.expression.FromClause</span></code></a></p>
-<p>Base for SQL function-oriented constructs.</p>
+<dd><p>Bases: <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.Executable" title="sqlalchemy.sql.expression.Executable"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.expression.Executable</span></code></a>, <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.ColumnElement" title="sqlalchemy.sql.expression.ColumnElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.expression.ColumnElement</span></code></a>, <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.FromClause" title="sqlalchemy.sql.expression.FromClause"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.expression.FromClause</span></code></a></p>
+<p>SQL関数指向の構造のベース。</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="#sqlalchemy.sql.functions.Function" title="sqlalchemy.sql.functions.Function"><code class="xref py py-class docutils literal"><span class="pre">Function</span></code></a> - named SQL function.</p>
-<p><a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal"><span class="pre">func</span></code></a> - namespace which produces registered or ad-hoc
-<a class="reference internal" href="#sqlalchemy.sql.functions.Function" title="sqlalchemy.sql.functions.Function"><code class="xref py py-class docutils literal"><span class="pre">Function</span></code></a> instances.</p>
-<p class="last"><a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">GenericFunction</span></code></a> - allows creation of registered function
-types.</p>
+<p>：class： <cite>.Function</cite>  - 名前付きSQL関数です。</p>
+<p>：data： <cite>.func</cite>  - 登録されたクラスまたはアドホッククラスを生成するnamespace：class：` .Function`インスタンス。</p>
+<p class="last">：class： <cite>.GenericFunction</cite>  - 登録された関数型の作成を許可します。</p>
 </div>
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*clauses</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.__init__" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Construct a <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal"><span class="pre">FunctionElement</span></code></a>.</p>
+<dd><p>Construct a <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionElement</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.alias">
 <code class="descname">alias</code><span class="sig-paren">(</span><em>name=None</em>, <em>flat=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.alias" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Produce a <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.Alias" title="sqlalchemy.sql.expression.Alias"><code class="xref py py-class docutils literal"><span class="pre">Alias</span></code></a> construct against this
-<a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal"><span class="pre">FunctionElement</span></code></a>.</p>
-<p>This construct wraps the function in a named alias which
-is suitable for the FROM clause, in the style accepted for example
-by PostgreSQL.</p>
-<p>e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.sql</span> <span class="k">import</span> <span class="n">column</span>
+<dd><p>以下のようにa：class： <cite>.Alias`を生成します：class：</cite> .FunctionElement`。</p>
+<p>この構造体は、PostgreSQLなどで受け入れられたスタイルで、FROM句に適した名前付きエイリアスに関数をラップします。</p>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.sql</span> <span class="k">import</span> <span class="n">column</span>
 
 <span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">([</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;data_view&#39;</span><span class="p">)])</span><span class="o">.</span>\
     <span class="n">select_from</span><span class="p">(</span><span class="n">SomeTable</span><span class="p">)</span><span class="o">.</span>\
     <span class="n">select_from</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">unnest</span><span class="p">(</span><span class="n">SomeTable</span><span class="o">.</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;data_view&#39;</span><span class="p">)</span>
 <span class="p">)</span></pre></div>
 </div>
-<p>Would produce:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">data_view</span>
+<p>それは生産するでしょう：</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">data_view</span>
 <span class="k">FROM</span> <span class="n">sometable</span><span class="p">,</span> <span class="k">unnest</span><span class="p">(</span><span class="n">sometable</span><span class="p">.</span><span class="k">data</span><span class="p">)</span> <span class="k">AS</span> <span class="n">data_view</span></pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 0.9.8 で追加: </span>The <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.alias" title="sqlalchemy.sql.functions.FunctionElement.alias"><code class="xref py py-meth docutils literal"><span class="pre">FunctionElement.alias()</span></code></a> method
-is now supported.  Previously, this method's behavior was
-undefined and did not behave consistently across versions.</p>
+<p><span class="versionmodified">バージョン 0.9.8 で追加: </span>：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement.alias`メソッドがサポートされるようになりました。以前は、このメソッドの動作は未定義であり、バージョン間で一貫して動作しませんでした。</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.as_comparison">
 <code class="descname">as_comparison</code><span class="sig-paren">(</span><em>left_index</em>, <em>right_index</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.as_comparison" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Interpret this expression as a boolean comparison between two values.</p>
-<p>A hypothetical SQL function &quot;is_equal()&quot; which compares to values
-for equality would be written in the Core expression language as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">is_equal</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span></pre></div>
+<dd><p>この式を2つの値のブール比較として解釈します。</p>
+<p>仮想のSQL関数&amp;quot;is_equal（）&amp;quot;は、等価の値と比較して、コア表現言語で次のように記述されます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">is_equal</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span></pre></div>
 </div>
-<p>If &quot;is_equal()&quot; above is comparing &quot;a&quot; and &quot;b&quot; for equality, the
-<a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.as_comparison" title="sqlalchemy.sql.functions.FunctionElement.as_comparison"><code class="xref py py-meth docutils literal"><span class="pre">FunctionElement.as_comparison()</span></code></a> method would be invoked as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">is_equal</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">as_comparison</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></pre></div>
+<p>上記の&amp;quot;is_equal（）&amp;quot;が&amp;quot;a &amp;quot;と&amp;quot;b &amp;quot;を等価であると比較すると、：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement.as_comparison`メソッドは:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">is_equal</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">as_comparison</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></pre></div>
 </div>
-<p>Where above, the integer value &quot;1&quot; refers to the first argument of the
-&quot;is_equal()&quot; function and the integer value &quot;2&quot; refers to the second.</p>
-<p>This would create a <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.BinaryExpression" title="sqlalchemy.sql.expression.BinaryExpression"><code class="xref py py-class docutils literal"><span class="pre">BinaryExpression</span></code></a> that is equivalent to:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">BinaryExpression</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="n">op</span><span class="o">.</span><span class="n">eq</span><span class="p">)</span></pre></div>
+<p>上記の場合、整数値 &amp;quot;1&amp;quot;は&amp;quot;is_equal（）&amp;quot;関数の第1引数を参照し、整数値 &amp;quot;2 &amp;quot;は第2引数を参照します。</p>
+<p>これは：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.BinaryExpression`を生成します：これは:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BinaryExpression</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="n">op</span><span class="o">.</span><span class="n">eq</span><span class="p">)</span></pre></div>
 </div>
-<p>However, at the SQL level it would still render as
-&quot;is_equal('a', 'b')&quot;.</p>
-<p>The ORM, when it loads a related object or collection, needs to be able
-to manipulate the &quot;left&quot; and &quot;right&quot; sides of the ON clause of a JOIN
-expression. The purpose of this method is to provide a SQL function
-construct that can also supply this information to the ORM, when used
-with the <a class="reference internal" href="../orm/relationship_api.html#sqlalchemy.orm.relationship.params.primaryjoin" title="sqlalchemy.orm.relationship"><code class="xref py py-paramref docutils literal"><span class="pre">relationship.primaryjoin</span></code></a> parameter.  The return
-value is a containment object called <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionAsBinary" title="sqlalchemy.sql.functions.FunctionAsBinary"><code class="xref py py-class docutils literal"><span class="pre">FunctionAsBinary</span></code></a>.</p>
-<p>An ORM example is as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Venue</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+<p>しかし、SQLレベルでは、 &amp;quot;is_equal（ &amp;#39;a&amp;#39;、 &amp;#39;b&amp;#39;）&amp;quot;としてレンダリングされます。</p>
+<p>ORMは、関連するオブジェクトまたはコレクションをロードするときに、JOIN式のON句の左辺と右辺を操作できる必要があります。このメソッドの目的は、：paramref： <a href="#id1"><span class="problematic" id="id2">`</span></a>.relationship.primaryjoin`パラメータとともに使用すると、この情報をORMにも渡すことができるSQL関数構造を提供することです。戻り値は、class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.FunctionAsBinary`と呼ばれる包含オブジェクトです。</p>
+<p>ORMの例は次のとおりです:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Venue</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;venue&#39;</span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
@@ -303,22 +278,15 @@ value is a containment object called <a class="reference internal" href="#sqlalc
         <span class="n">order_by</span><span class="o">=</span><span class="n">name</span>
     <span class="p">)</span></pre></div>
 </div>
-<p>Above, the &quot;Venue&quot; class can load descendant &quot;Venue&quot; objects by
-determining if the name of the parent Venue is contained within the
-start of the hypothetical descendant value's name, e.g. &quot;parent1&quot; would
-match up to &quot;parent1/child1&quot;, but not to &quot;parent2/child1&quot;.</p>
-<p>Possible use cases include the &quot;materialized path&quot; example given above,
-as well as making use of special SQL functions such as geometric
-functions to create join conditions.</p>
+<p>上の&amp;quot;Venue &amp;quot;クラスは、親Venueの名前が仮説的子孫値の名前の先頭に含まれているかどうかを判定することによって子孫&amp;quot;Venue &amp;quot;オブジェクトをロードすることができます。例えば、&amp;quot;parent1 &amp;quot;は&amp;quot;parent1 / child1 &amp;quot;ではなく、 &amp;quot;parent2 / child1 &amp;quot;には適用されません。</p>
+<p>可能なユースケースには、上記の「マテリアライズドパス」の例があります。また、ジオメトリ関数などの特殊なSQL関数を使用して結合条件を作成することもできます。</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><span class="target" id="sqlalchemy.sql.functions.FunctionElement.as_comparison.params.left_index"></span><strong>left_index</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.sql.functions.FunctionElement.as_comparison.params.left_index">¶</a> -- the integer 1-based index of the function argument
-that serves as the &quot;left&quot; side of the expression.</li>
-<li><span class="target" id="sqlalchemy.sql.functions.FunctionElement.as_comparison.params.right_index"></span><strong>right_index</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.sql.functions.FunctionElement.as_comparison.params.right_index">¶</a> -- the integer 1-based index of the function argument
-that serves as the &quot;right&quot; side of the expression.</li>
+<li><span class="target" id="sqlalchemy.sql.functions.FunctionElement.as_comparison.params.left_index"></span><strong>left_index</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.sql.functions.FunctionElement.as_comparison.params.left_index">¶</a> -- 式の左辺として機能する関数の引数の1から始まる整数のインデックス。</li>
+<li><span class="target" id="sqlalchemy.sql.functions.FunctionElement.as_comparison.params.right_index"></span><strong>right_index</strong><a class="paramlink headerlink reference internal" href="#sqlalchemy.sql.functions.FunctionElement.as_comparison.params.right_index">¶</a> -- 式の右辺として機能する関数の引数の1から始まる整数のインデックス。</li>
 </ul>
 </td>
 </tr>
@@ -332,21 +300,16 @@ that serves as the &quot;right&quot; side of the expression.</li>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.FunctionElement.clauses">
 <code class="descname">clauses</code><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.clauses" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the underlying <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.ClauseList" title="sqlalchemy.sql.expression.ClauseList"><code class="xref py py-class docutils literal"><span class="pre">ClauseList</span></code></a> which contains
-the arguments for this <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal"><span class="pre">FunctionElement</span></code></a>.</p>
+<dd><p>基礎となる：class： <cite>.ClauseList`を返します。これには、class：</cite> .FunctionElement`の引数が含まれています。</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.FunctionElement.columns">
 <code class="descname">columns</code><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.columns" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>The set of columns exported by this <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal"><span class="pre">FunctionElement</span></code></a>.</p>
-<p>Function objects currently have no result column names built in;
-this method returns a single-element column collection with
-an anonymously named column.</p>
-<p>An interim approach to providing named columns for a function
-as a FROM clause is to build a <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.select" title="sqlalchemy.sql.expression.select"><code class="xref py py-func docutils literal"><span class="pre">select()</span></code></a> with the
-desired columns:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.sql</span> <span class="k">import</span> <span class="n">column</span>
+<dd><p>this：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement`によってエクスポートされたカラムのセットです。</p>
+<p>関数オブジェクトには現在、結果の列名が組み込まれていません。このメソッドは、匿名で命名された列を持つ単一要素の列コレクションを返します。</p>
+<p>関数の名前付きカラムをFROM句として提供するための暫定的なアプローチは、：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.select`を目的のカラムで構築することです:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.sql</span> <span class="k">import</span> <span class="n">column</span>
 
 <span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">([</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">),</span> <span class="n">column</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)])</span><span class="o">.</span>                <span class="n">select_from</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">myfunction</span><span class="p">())</span></pre></div>
 </div>
@@ -355,26 +318,21 @@ desired columns:</p>
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.execute">
 <code class="descname">execute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.execute" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute this <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal"><span class="pre">FunctionElement</span></code></a> against an embedded
-'bind'.</p>
-<p>This first calls <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.select" title="sqlalchemy.sql.functions.FunctionElement.select"><code class="xref py py-meth docutils literal"><span class="pre">select()</span></code></a> to
-produce a SELECT construct.</p>
-<p>Note that <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal"><span class="pre">FunctionElement</span></code></a> can be passed to
-the <a class="reference internal" href="connections.html#sqlalchemy.engine.Connectable.execute" title="sqlalchemy.engine.Connectable.execute"><code class="xref py py-meth docutils literal"><span class="pre">Connectable.execute()</span></code></a> method of <a class="reference internal" href="connections.html#sqlalchemy.engine.Connection" title="sqlalchemy.engine.Connection"><code class="xref py py-class docutils literal"><span class="pre">Connection</span></code></a>
-or <a class="reference internal" href="connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a>.</p>
+<dd><p>組み込みの &amp;#39;bind&amp;#39;に対してthis：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement`を実行します。</p>
+<p>これは最初に：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.FunctionElement.select`を呼び出してSELECT構文を生成します。</p>
+<p>class： <cite>.FunctionElement`は：class：</cite> .Connection`または：class： <cite>.Engine`の：meth：</cite> .Connectable.execute`メソッドに渡すことができます。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.filter">
 <code class="descname">filter</code><span class="sig-paren">(</span><em>*criterion</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.filter" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Produce a FILTER clause against this function.</p>
-<p>Used against aggregate and window functions,
-for database backends that support the &quot;FILTER&quot; clause.</p>
-<p>The expression:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">func</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></pre></div>
+<dd><p>この関数に対してFILTER句を生成します。</p>
+<p>&amp;quot;FILTER &amp;quot;句をサポートするデータベースバックエンドに対して、集約関数およびウィンドウ関数に対して使用されます。</p>
+<p>表現：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">func</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></pre></div>
 </div>
-<p>is shorthand for:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">funcfilter</span>
+<p>::の省略形です</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">funcfilter</span>
 <span class="n">funcfilter</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="kc">True</span><span class="p">)</span></pre></div>
 </div>
 <div class="versionadded">
@@ -382,30 +340,36 @@ for database backends that support the &quot;FILTER&quot; clause.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p><a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.FunctionFilter" title="sqlalchemy.sql.expression.FunctionFilter"><code class="xref py py-class docutils literal"><span class="pre">FunctionFilter</span></code></a></p>
-<p class="last"><a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.funcfilter" title="sqlalchemy.sql.expression.funcfilter"><code class="xref py py-func docutils literal"><span class="pre">funcfilter()</span></code></a></p>
+<p>：class： <cite>.FunctionFilter</cite></p>
+<p class="last">：機能： <cite>.funcfilter</cite></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.get_children">
 <code class="descname">get_children</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.get_children" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Return immediate child elements of this <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.ClauseElement" title="sqlalchemy.sql.expression.ClauseElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClauseElement</span></code></a>.</p>
+<p>This is used for visit traversal.</p>
+<p>**kwargs may contain flags that change the collection that is
+returned, for example to return a subset of items in order to
+cut down on larger traversals, or to return child items from a
+different context (such as schema-level collections instead of
+clause-level).</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.over">
 <code class="descname">over</code><span class="sig-paren">(</span><em>partition_by=None</em>, <em>order_by=None</em>, <em>rows=None</em>, <em>range_=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.over" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Produce an OVER clause against this function.</p>
-<p>Used against aggregate or so-called &quot;window&quot; functions,
-for database backends that support window functions.</p>
-<p>The expression:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">func</span><span class="o">.</span><span class="n">row_number</span><span class="p">()</span><span class="o">.</span><span class="n">over</span><span class="p">(</span><span class="n">order_by</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span></pre></div>
+<dd><p>この関数に対してOVER句を生成します。</p>
+<p>ウィンドウ関数をサポートするデータベースバックエンドに対して、集約またはいわゆる&amp;quot;ウィンドウ&amp;quot;関数に対して使用されます。</p>
+<p>表現：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">func</span><span class="o">.</span><span class="n">row_number</span><span class="p">()</span><span class="o">.</span><span class="n">over</span><span class="p">(</span><span class="n">order_by</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>is shorthand for:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">over</span>
+<p>::の省略形です</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">over</span>
 <span class="n">over</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">row_number</span><span class="p">(),</span> <span class="n">order_by</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span></pre></div>
 </div>
-<p>See <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.over" title="sqlalchemy.sql.expression.over"><code class="xref py py-func docutils literal"><span class="pre">over()</span></code></a> for a full description.</p>
+<p>See：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.expression.over`で詳しく説明しています。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 0.7 で追加.</span></p>
 </div>
@@ -419,38 +383,50 @@ for database backends that support window functions.</p>
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.scalar">
 <code class="descname">scalar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.scalar" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Execute this <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal"><span class="pre">FunctionElement</span></code></a> against an embedded
-'bind' and return a scalar value.</p>
-<p>This first calls <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.select" title="sqlalchemy.sql.functions.FunctionElement.select"><code class="xref py py-meth docutils literal"><span class="pre">select()</span></code></a> to
-produce a SELECT construct.</p>
-<p>Note that <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal"><span class="pre">FunctionElement</span></code></a> can be passed to
-the <a class="reference internal" href="connections.html#sqlalchemy.engine.Connectable.scalar" title="sqlalchemy.engine.Connectable.scalar"><code class="xref py py-meth docutils literal"><span class="pre">Connectable.scalar()</span></code></a> method of <a class="reference internal" href="connections.html#sqlalchemy.engine.Connection" title="sqlalchemy.engine.Connection"><code class="xref py py-class docutils literal"><span class="pre">Connection</span></code></a>
-or <a class="reference internal" href="connections.html#sqlalchemy.engine.Engine" title="sqlalchemy.engine.Engine"><code class="xref py py-class docutils literal"><span class="pre">Engine</span></code></a>.</p>
+<dd><p>組み込みの &amp;#39;bind&amp;#39;に対してclass： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement`を実行し、スカラー値を返します。</p>
+<p>これは最初に：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.FunctionElement.select`を呼び出してSELECT構文を生成します。</p>
+<p>class： <cite>.FunctionElement`は：class：</cite> .Connection`または：class： <cite>.Engine`の：meth：</cite> .Connectable.scalar`メソッドに渡すことができます。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.select">
 <code class="descname">select</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.select" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Produce a <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.select" title="sqlalchemy.sql.expression.select"><code class="xref py py-func docutils literal"><span class="pre">select()</span></code></a> construct
-against this <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement" title="sqlalchemy.sql.functions.FunctionElement"><code class="xref py py-class docutils literal"><span class="pre">FunctionElement</span></code></a>.</p>
-<p>This is shorthand for:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">select</span><span class="p">([</span><span class="n">function_element</span><span class="p">])</span></pre></div>
+<dd><p>次のようにa：func： <cite>〜.expression.select`を生成します：class：</cite> .FunctionElement`。</p>
+<p>これは::の短縮形です</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">select</span><span class="p">([</span><span class="n">function_element</span><span class="p">])</span></pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.self_group">
 <code class="descname">self_group</code><span class="sig-paren">(</span><em>against=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.self_group" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Apply a 'grouping' to this <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.ClauseElement" title="sqlalchemy.sql.expression.ClauseElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClauseElement</span></code></a>.</p>
+<p>This method is overridden by subclasses to return a
+&quot;grouping&quot; construct, i.e. parenthesis.   In particular
+it's used by &quot;binary&quot; expressions to provide a grouping
+around themselves when placed into a larger expression,
+as well as by <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.select" title="sqlalchemy.sql.expression.select"><code class="xref py py-func docutils literal notranslate"><span class="pre">select()</span></code></a> constructs when placed into
+the FROM clause of another <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.select" title="sqlalchemy.sql.expression.select"><code class="xref py py-func docutils literal notranslate"><span class="pre">select()</span></code></a>.  (Note that
+subqueries should be normally created using the
+<a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.Select.alias" title="sqlalchemy.sql.expression.Select.alias"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Select.alias()</span></code></a> method, as many platforms require
+nested SELECT statements to be named).</p>
+<p>As expressions are composed together, the application of
+<a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.self_group" title="sqlalchemy.sql.functions.FunctionElement.self_group"><code class="xref py py-meth docutils literal notranslate"><span class="pre">self_group()</span></code></a> is automatic - end-user code should never
+need to use this method directly.  Note that SQLAlchemy's
+clause constructs take operator precedence into account -
+so parenthesis might not be needed, for example, in
+an expression like <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">OR</span> <span class="pre">(y</span> <span class="pre">AND</span> <span class="pre">z)</span></code> - AND takes precedence
+over OR.</p>
+<p>The base <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.self_group" title="sqlalchemy.sql.functions.FunctionElement.self_group"><code class="xref py py-meth docutils literal notranslate"><span class="pre">self_group()</span></code></a> method of <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.ClauseElement" title="sqlalchemy.sql.expression.ClauseElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClauseElement</span></code></a>
+just returns self.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.within_group">
 <code class="descname">within_group</code><span class="sig-paren">(</span><em>*order_by</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.within_group" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Produce a WITHIN GROUP (ORDER BY expr) clause against this function.</p>
-<p>Used against so-called &quot;ordered set aggregate&quot; and &quot;hypothetical
-set aggregate&quot; functions, including <a class="reference internal" href="#sqlalchemy.sql.functions.percentile_cont" title="sqlalchemy.sql.functions.percentile_cont"><code class="xref py py-class docutils literal"><span class="pre">percentile_cont</span></code></a>,
-<a class="reference internal" href="#sqlalchemy.sql.functions.rank" title="sqlalchemy.sql.functions.rank"><code class="xref py py-class docutils literal"><span class="pre">rank</span></code></a>, <a class="reference internal" href="#sqlalchemy.sql.functions.dense_rank" title="sqlalchemy.sql.functions.dense_rank"><code class="xref py py-class docutils literal"><span class="pre">dense_rank</span></code></a>, etc.</p>
-<p>See <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.within_group" title="sqlalchemy.sql.expression.within_group"><code class="xref py py-func docutils literal"><span class="pre">within_group()</span></code></a> for a full description.</p>
+<dd><p>この関数に対してWITHIN GROUP（ORDER BY expr）句を生成します。</p>
+<p>class： <cite>.percentile_cont</cite>、：class：` .rank`、：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.dense_rank`など、いわゆる&amp;quot;順序集合集合&amp;quot;と&amp;quot;仮集合集約&amp;quot;関数に対して使用されます。</p>
+<p>詳細は、func： <a href="#id1"><span class="problematic" id="id2">`</span></a>〜.expression.within_group`を参照してください。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
 </div>
@@ -459,11 +435,8 @@ set aggregate&quot; functions, including <a class="reference internal" href="#sq
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.FunctionElement.within_group_type">
 <code class="descname">within_group_type</code><span class="sig-paren">(</span><em>within_group</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.FunctionElement.within_group_type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>For types that define their return type as based on the criteria
-within a WITHIN GROUP (ORDER BY) expression, called by the
-<a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.WithinGroup" title="sqlalchemy.sql.expression.WithinGroup"><code class="xref py py-class docutils literal"><span class="pre">WithinGroup</span></code></a> construct.</p>
-<p>Returns None by default, in which case the function's normal <code class="docutils literal"><span class="pre">.type</span></code>
-is used.</p>
+<dd><p>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.WithinGroup`構造体によって呼び出されたWITHIN GROUP（ORDER BY）式内の基準に基づいて、戻り値の型を定義する型の場合。</p>
+<p>デフォルトではNoneを返します。この場合、関数の通常の `` .type``が使われます。</p>
 </dd></dl>
 
 </dd></dl>
@@ -471,23 +444,11 @@ is used.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.GenericFunction">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">GenericFunction</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.GenericFunction" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.Function" title="sqlalchemy.sql.functions.Function"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.Function</span></code></a></p>
-<p>Define a 'generic' function.</p>
-<p>A generic function is a pre-established <a class="reference internal" href="#sqlalchemy.sql.functions.Function" title="sqlalchemy.sql.functions.Function"><code class="xref py py-class docutils literal"><span class="pre">Function</span></code></a>
-class that is instantiated automatically when called
-by name from the <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal"><span class="pre">func</span></code></a> attribute.    Note that
-calling any name from <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal"><span class="pre">func</span></code></a> has the effect that
-a new <a class="reference internal" href="#sqlalchemy.sql.functions.Function" title="sqlalchemy.sql.functions.Function"><code class="xref py py-class docutils literal"><span class="pre">Function</span></code></a> instance is created automatically,
-given that name.  The primary use case for defining
-a <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">GenericFunction</span></code></a> class is so that a function
-of a particular name may be given a fixed return type.
-It can also include custom argument parsing schemes as well
-as additional methods.</p>
-<p>Subclasses of <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">GenericFunction</span></code></a> are automatically
-registered under the name of the class.  For
-example, a user-defined function <code class="docutils literal"><span class="pre">as_utc()</span></code> would
-be available immediately:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.sql.functions</span> <span class="k">import</span> <span class="n">GenericFunction</span>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.Function" title="sqlalchemy.sql.functions.Function"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.Function</span></code></a></p>
+<p>「汎用」関数を定義します。</p>
+<p>ジェネリック関数は、：data： <cite>.func`属性から名前で呼ばれたときに自動的にインスタンス化される、事前設定されたclass：</cite> .Function`クラスです。 ：data： <cite>.func`から任意の名前を呼び出すと、その名前を指定するとnew：class：</cite> .Function`インスタンスが自動的に作成されるという効果があります。 a：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.GenericFunction`クラスを定義するための主な使用例は、特定の名前の関数に固定戻り値型を与えることができるようにすることです。カスタム引数の構文解析スキームと追加のメソッドも含めることができます。</p>
+<p>：class： <cite>.GenericFunction`のサブクラスは自動的にクラスの名前で登録されます。例えば、ユーザ定義の関数 `</cite> as_utc（） <a href="#id1"><span class="problematic" id="id2">``</span></a>はすぐに利用できます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy.sql.functions</span> <span class="k">import</span> <span class="n">GenericFunction</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.types</span> <span class="k">import</span> <span class="n">DateTime</span>
 
 <span class="k">class</span> <span class="nc">as_utc</span><span class="p">(</span><span class="n">GenericFunction</span><span class="p">):</span>
@@ -495,46 +456,30 @@ be available immediately:</p>
 
 <span class="nb">print</span> <span class="n">select</span><span class="p">([</span><span class="n">func</span><span class="o">.</span><span class="n">as_utc</span><span class="p">()])</span></pre></div>
 </div>
-<p>User-defined generic functions can be organized into
-packages by specifying the &quot;package&quot; attribute when defining
-<a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">GenericFunction</span></code></a>.   Third party libraries
-containing many functions may want to use this in order
-to avoid name conflicts with other systems.   For example,
-if our <code class="docutils literal"><span class="pre">as_utc()</span></code> function were part of a package
-&quot;time&quot;:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">as_utc</span><span class="p">(</span><span class="n">GenericFunction</span><span class="p">):</span>
+<p>ユーザ定義のジェネリック関数は、class： <cite>.GenericFunction`を定義するときに&amp;quot; package &amp;quot;属性を指定することで、パッケージ化することができます。多くの関数を含むサードパーティのライブラリは、他のシステムとの名前の競合を避けるためにこれを使用したいかもしれません。例えば、 `</cite> as_utc（） <a href="#id1"><span class="problematic" id="id2">``</span></a>関数が&amp;quot;time &amp;quot;パッケージに含まれているとします:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">as_utc</span><span class="p">(</span><span class="n">GenericFunction</span><span class="p">):</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="n">DateTime</span>
     <span class="n">package</span> <span class="o">=</span> <span class="s2">&quot;time&quot;</span></pre></div>
 </div>
-<p>The above function would be available from <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal"><span class="pre">func</span></code></a>
-using the package name <code class="docutils literal"><span class="pre">time</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">select</span><span class="p">([</span><span class="n">func</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">as_utc</span><span class="p">()])</span></pre></div>
+<p>上記の関数は以下から入手可能です：data： <cite>.func`パッケージ名</cite> <cite>time`</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">select</span><span class="p">([</span><span class="n">func</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">as_utc</span><span class="p">()])</span></pre></div>
 </div>
-<p>A final option is to allow the function to be accessed
-from one name in <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal"><span class="pre">func</span></code></a> but to render as a different name.
-The <code class="docutils literal"><span class="pre">identifier</span></code> attribute will override the name used to
-access the function as loaded from <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal"><span class="pre">func</span></code></a>, but will retain
-the usage of <code class="docutils literal"><span class="pre">name</span></code> as the rendered name:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GeoBuffer</span><span class="p">(</span><span class="n">GenericFunction</span><span class="p">):</span>
+<p>最後のオプションは：data： <cite>.func`内のある名前から関数にアクセスできるようにすることですが、別の名前としてレンダリングすることです。 `</cite> identifier``属性は：data： <cite>.func`からロードされた関数へのアクセスに使用された名前を上書きしますが、レンダリングされた名前として</cite> <a href="#id1"><span class="problematic" id="id2">`</span></a>name``の使用法を保持します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GeoBuffer</span><span class="p">(</span><span class="n">GenericFunction</span><span class="p">):</span>
     <span class="nb">type</span> <span class="o">=</span> <span class="n">Geometry</span>
     <span class="n">package</span> <span class="o">=</span> <span class="s2">&quot;geo&quot;</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ST_Buffer&quot;</span>
     <span class="n">identifier</span> <span class="o">=</span> <span class="s2">&quot;buffer&quot;</span></pre></div>
 </div>
-<p>The above function will render as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">func</span><span class="o">.</span><span class="n">geo</span><span class="o">.</span><span class="n">buffer</span><span class="p">()</span>
+<p>上記の関数は次のようにレンダリングされます:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">func</span><span class="o">.</span><span class="n">geo</span><span class="o">.</span><span class="n">buffer</span><span class="p">()</span>
 <span class="go">ST_Buffer()</span></pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified">バージョン 0.8 で追加: </span><a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">GenericFunction</span></code></a> now supports
-automatic registration of new functions as well as package
-and custom naming support.</p>
+<p><span class="versionmodified">バージョン 0.8 で追加: </span>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.GenericFunction`は、新しい関数の自動登録と、パッケージとカスタム命名のサポートをサポートするようになりました。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">バージョン 0.8 で変更: </span>The attribute name <code class="docutils literal"><span class="pre">type</span></code> is used
-to specify the function's return type at the class level.
-Previously, the name <code class="docutils literal"><span class="pre">__return_type__</span></code> was used.  This
-name is still recognized for backwards-compatibility.</p>
+<p><span class="versionmodified">バージョン 0.8 で変更: </span>属性名 `` type``は、クラスレベルで関数の戻り値の型を指定するために使用されます。以前は、 `` __return_type__``という名前が使われていました。この名前は下位互換性のために認識されています。</p>
 </div>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.GenericFunction.coerce_arguments">
@@ -556,10 +501,8 @@ name is still recognized for backwards-compatibility.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.OrderedSetAgg">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">OrderedSetAgg</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.OrderedSetAgg" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>Define a function where the return type is based on the sort
-expression type as defined by the expression passed to the
-<a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.within_group" title="sqlalchemy.sql.functions.FunctionElement.within_group"><code class="xref py py-meth docutils literal"><span class="pre">FunctionElement.within_group()</span></code></a> method.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>戻り値の型が：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement.within_group`メソッドに渡される式によって定義されたソート式の型に基づく関数を定義します。</p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.OrderedSetAgg.array_for_multi_clause">
 <code class="descname">array_for_multi_clause</code><em class="property"> = False</em><a class="headerlink" href="#sqlalchemy.sql.functions.OrderedSetAgg.array_for_multi_clause" title="この定義へのパーマリンク">¶</a></dt>
@@ -578,15 +521,17 @@ expression type as defined by the expression passed to the
 <dl class="method">
 <dt id="sqlalchemy.sql.functions.OrderedSetAgg.within_group_type">
 <code class="descname">within_group_type</code><span class="sig-paren">(</span><em>within_group</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.OrderedSetAgg.within_group_type" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
+<dd><p>：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.WithinGroup`構造体によって呼び出されたWITHIN GROUP（ORDER BY）式内の基準に基づいて、戻り値の型を定義する型の場合。</p>
+<p>デフォルトではNoneを返します。この場合、関数の通常の `` .type``が使われます。</p>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.ReturnTypeFromArgs">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">ReturnTypeFromArgs</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.ReturnTypeFromArgs" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>Define a function whose return type is the same as its arguments.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>戻り値の型が引数と同じである関数を定義します。</p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.ReturnTypeFromArgs.identifier">
 <code class="descname">identifier</code><em class="property"> = 'ReturnTypeFromArgs'</em><a class="headerlink" href="#sqlalchemy.sql.functions.ReturnTypeFromArgs.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -602,20 +547,18 @@ expression type as defined by the expression passed to the
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.array_agg">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">array_agg</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.array_agg" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>support for the ARRAY_AGG function.</p>
-<p>The <code class="docutils literal"><span class="pre">func.array_agg(expr)</span></code> construct returns an expression of
-type <a class="reference internal" href="type_basics.html#sqlalchemy.types.ARRAY" title="sqlalchemy.types.ARRAY"><code class="xref py py-class docutils literal"><span class="pre">types.ARRAY</span></code></a>.</p>
-<p>e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">([</span><span class="n">func</span><span class="o">.</span><span class="n">array_agg</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">values</span><span class="p">)[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]])</span></pre></div>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>ARRAY_AGG関数のサポート。</p>
+<p>`` func.array_agg（expr） <a href="#id1"><span class="problematic" id="id2">``</span></a>の構文は、class： <a href="#id3"><span class="problematic" id="id4">`</span></a>.types.ARRAY`型の式を返します。</p>
+<p>例えば：：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">([</span><span class="n">func</span><span class="o">.</span><span class="n">array_agg</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">values</span><span class="p">)[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]])</span></pre></div>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">参考</p>
-<p class="last"><a class="reference internal" href="../dialects/postgresql.html#sqlalchemy.dialects.postgresql.array_agg" title="sqlalchemy.dialects.postgresql.array_agg"><code class="xref py py-func docutils literal"><span class="pre">postgresql.array_agg()</span></code></a> - PostgreSQL-specific version that
-returns <a class="reference internal" href="../dialects/postgresql.html#sqlalchemy.dialects.postgresql.ARRAY" title="sqlalchemy.dialects.postgresql.ARRAY"><code class="xref py py-class docutils literal"><span class="pre">postgresql.ARRAY</span></code></a>, which has PG-specific operators added.</p>
+<p class="last">：func： <cite>.postgresql.array_agg</cite>  -  PostgreSQL特有のバージョンで、class：` .postgresql.ARRAY`を返します。これには、PG固有の演算子が追加されています。</p>
 </div>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.array_agg.identifier">
@@ -630,7 +573,7 @@ returns <a class="reference internal" href="../dialects/postgresql.html#sqlalche
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.array_agg.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.array_agg.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.ARRAY</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.ARRAY</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -638,7 +581,7 @@ returns <a class="reference internal" href="../dialects/postgresql.html#sqlalche
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.char_length">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">char_length</code><span class="sig-paren">(</span><em>arg</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.char_length" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.char_length.identifier">
 <code class="descname">identifier</code><em class="property"> = 'char_length'</em><a class="headerlink" href="#sqlalchemy.sql.functions.char_length.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -652,7 +595,7 @@ returns <a class="reference internal" href="../dialects/postgresql.html#sqlalche
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.char_length.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.char_length.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.Integer</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.Integer</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -660,7 +603,7 @@ returns <a class="reference internal" href="../dialects/postgresql.html#sqlalche
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.coalesce">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">coalesce</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.coalesce" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.ReturnTypeFromArgs" title="sqlalchemy.sql.functions.ReturnTypeFromArgs"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.ReturnTypeFromArgs</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.ReturnTypeFromArgs" title="sqlalchemy.sql.functions.ReturnTypeFromArgs"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.ReturnTypeFromArgs</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.coalesce.identifier">
 <code class="descname">identifier</code><em class="property"> = 'coalesce'</em><a class="headerlink" href="#sqlalchemy.sql.functions.coalesce.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -676,7 +619,7 @@ returns <a class="reference internal" href="../dialects/postgresql.html#sqlalche
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.concat">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">concat</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.concat" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.concat.identifier">
 <code class="descname">identifier</code><em class="property"> = 'concat'</em><a class="headerlink" href="#sqlalchemy.sql.functions.concat.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -690,7 +633,7 @@ returns <a class="reference internal" href="../dialects/postgresql.html#sqlalche
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.concat.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.concat.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.String</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.String</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -698,9 +641,8 @@ returns <a class="reference internal" href="../dialects/postgresql.html#sqlalche
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.count">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">count</code><span class="sig-paren">(</span><em>expression=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.count" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>The ANSI COUNT aggregate function.  With no arguments,
-emits COUNT *.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>ANSI COUNT集計関数。引き数を指定しない場合は、COUNT <a href="#id1"><span class="problematic" id="id2">*</span></a>を出力します。</p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.count.identifier">
 <code class="descname">identifier</code><em class="property"> = 'count'</em><a class="headerlink" href="#sqlalchemy.sql.functions.count.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -714,7 +656,7 @@ emits COUNT *.</p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.count.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.count.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.Integer</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.Integer</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -722,11 +664,10 @@ emits COUNT *.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.cube">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">cube</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.cube" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>Implement the <code class="docutils literal"><span class="pre">CUBE</span></code> grouping operation.</p>
-<p>This function is used as part of the GROUP BY of a statement,
-e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.Select.group_by" title="sqlalchemy.sql.expression.Select.group_by"><code class="xref py py-meth docutils literal"><span class="pre">Select.group_by()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>`` CUBE``グルーピング操作を実装してください。</p>
+<p>この関数は、文のGROUP BYの一部として使用されます。例：meth： <cite>.Select.group_by</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span>
     <span class="p">[</span><span class="n">func</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_1</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_2</span><span class="p">]</span>
     <span class="p">)</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">cube</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_1</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_2</span><span class="p">))</span></pre></div>
 </div>
@@ -748,11 +689,10 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.cume_dist">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">cume_dist</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.cume_dist" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>Implement the <code class="docutils literal"><span class="pre">cume_dist</span></code> hypothetical-set aggregate function.</p>
-<p>This function must be used with the <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.within_group" title="sqlalchemy.sql.functions.FunctionElement.within_group"><code class="xref py py-meth docutils literal"><span class="pre">FunctionElement.within_group()</span></code></a>
-modifier to supply a sort expression to operate upon.</p>
-<p>The return type of this function is <a class="reference internal" href="type_basics.html#sqlalchemy.types.Numeric" title="sqlalchemy.types.Numeric"><code class="xref py py-class docutils literal"><span class="pre">Numeric</span></code></a>.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>`` cume_dist``仮説集合集合関数を実装します。</p>
+<p>この関数は：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement.within_group`修飾子と一緒に使用して操作するソート式を指定する必要があります。</p>
+<p>この関数の戻り値の型は：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Numeric`です。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
 </div>
@@ -776,7 +716,7 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.current_date">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">current_date</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.current_date" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.current_date.identifier">
 <code class="descname">identifier</code><em class="property"> = 'current_date'</em><a class="headerlink" href="#sqlalchemy.sql.functions.current_date.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -790,7 +730,7 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.current_date.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.current_date.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.Date</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.Date</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -798,7 +738,7 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.current_time">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">current_time</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.current_time" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.current_time.identifier">
 <code class="descname">identifier</code><em class="property"> = 'current_time'</em><a class="headerlink" href="#sqlalchemy.sql.functions.current_time.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -812,7 +752,7 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.current_time.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.current_time.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.Time</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.Time</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -820,7 +760,7 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.current_timestamp">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">current_timestamp</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.current_timestamp" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.current_timestamp.identifier">
 <code class="descname">identifier</code><em class="property"> = 'current_timestamp'</em><a class="headerlink" href="#sqlalchemy.sql.functions.current_timestamp.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -834,7 +774,7 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.current_timestamp.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.current_timestamp.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.DateTime</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.DateTime</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -842,7 +782,7 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.current_user">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">current_user</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.current_user" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.current_user.identifier">
 <code class="descname">identifier</code><em class="property"> = 'current_user'</em><a class="headerlink" href="#sqlalchemy.sql.functions.current_user.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -856,7 +796,7 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.current_user.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.current_user.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.String</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.String</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -864,11 +804,10 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.dense_rank">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">dense_rank</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.dense_rank" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>Implement the <code class="docutils literal"><span class="pre">dense_rank</span></code> hypothetical-set aggregate function.</p>
-<p>This function must be used with the <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.within_group" title="sqlalchemy.sql.functions.FunctionElement.within_group"><code class="xref py py-meth docutils literal"><span class="pre">FunctionElement.within_group()</span></code></a>
-modifier to supply a sort expression to operate upon.</p>
-<p>The return type of this function is <a class="reference internal" href="type_basics.html#sqlalchemy.types.Integer" title="sqlalchemy.types.Integer"><code class="xref py py-class docutils literal"><span class="pre">Integer</span></code></a>.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>`` dense_rank``仮説集合集合関数を実装します。</p>
+<p>この関数は：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement.within_group`修飾子と一緒に使用して操作するソート式を指定する必要があります。</p>
+<p>この関数の戻り値の型は：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Integer`です。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
 </div>
@@ -892,16 +831,15 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.grouping_sets">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">grouping_sets</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.grouping_sets" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>Implement the <code class="docutils literal"><span class="pre">GROUPING</span> <span class="pre">SETS</span></code> grouping operation.</p>
-<p>This function is used as part of the GROUP BY of a statement,
-e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.Select.group_by" title="sqlalchemy.sql.expression.Select.group_by"><code class="xref py py-meth docutils literal"><span class="pre">Select.group_by()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>`` GROUPING SETS``グルーピング操作を実装してください。</p>
+<p>この関数は、文のGROUP BYの一部として使用されます。例：meth： <cite>.Select.group_by</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span>
     <span class="p">[</span><span class="n">func</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_1</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_2</span><span class="p">]</span>
 <span class="p">)</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">grouping_sets</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_1</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_2</span><span class="p">))</span></pre></div>
 </div>
-<p>In order to group by multiple sets, use the <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.tuple_" title="sqlalchemy.sql.expression.tuple_"><code class="xref py py-func docutils literal"><span class="pre">tuple_()</span></code></a> construct:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">tuple_</span>
+<p>複数のセットでグループ化するには、：func： <a href="#id1"><span class="problematic" id="id2">`</span></a>.tuple_`構造体を使用します:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">tuple_</span>
 
 <span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span>
     <span class="p">[</span>
@@ -933,7 +871,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.localtime">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">localtime</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.localtime" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.localtime.identifier">
 <code class="descname">identifier</code><em class="property"> = 'localtime'</em><a class="headerlink" href="#sqlalchemy.sql.functions.localtime.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -947,7 +885,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.localtime.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.localtime.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.DateTime</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.DateTime</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -955,7 +893,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.localtimestamp">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">localtimestamp</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.localtimestamp" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.localtimestamp.identifier">
 <code class="descname">identifier</code><em class="property"> = 'localtimestamp'</em><a class="headerlink" href="#sqlalchemy.sql.functions.localtimestamp.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -969,7 +907,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.localtimestamp.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.localtimestamp.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.DateTime</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.DateTime</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -977,7 +915,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.max">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">max</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.max" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.ReturnTypeFromArgs" title="sqlalchemy.sql.functions.ReturnTypeFromArgs"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.ReturnTypeFromArgs</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.ReturnTypeFromArgs" title="sqlalchemy.sql.functions.ReturnTypeFromArgs"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.ReturnTypeFromArgs</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.max.identifier">
 <code class="descname">identifier</code><em class="property"> = 'max'</em><a class="headerlink" href="#sqlalchemy.sql.functions.max.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -993,7 +931,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.min">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">min</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.min" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.ReturnTypeFromArgs" title="sqlalchemy.sql.functions.ReturnTypeFromArgs"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.ReturnTypeFromArgs</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.ReturnTypeFromArgs" title="sqlalchemy.sql.functions.ReturnTypeFromArgs"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.ReturnTypeFromArgs</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.min.identifier">
 <code class="descname">identifier</code><em class="property"> = 'min'</em><a class="headerlink" href="#sqlalchemy.sql.functions.min.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -1009,11 +947,10 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.mode">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">mode</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.mode" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.OrderedSetAgg" title="sqlalchemy.sql.functions.OrderedSetAgg"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.OrderedSetAgg</span></code></a></p>
-<p>implement the <code class="docutils literal"><span class="pre">mode</span></code> ordered-set aggregate function.</p>
-<p>This function must be used with the <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.within_group" title="sqlalchemy.sql.functions.FunctionElement.within_group"><code class="xref py py-meth docutils literal"><span class="pre">FunctionElement.within_group()</span></code></a>
-modifier to supply a sort expression to operate upon.</p>
-<p>The return type of this function is the same as the sort expression.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.OrderedSetAgg" title="sqlalchemy.sql.functions.OrderedSetAgg"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.OrderedSetAgg</span></code></a></p>
+<p>`` mode``順序集合集合関数を実装します。</p>
+<p>この関数は：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement.within_group`修飾子と一緒に使用して操作するソート式を指定する必要があります。</p>
+<p>この関数の戻り値の型は、ソート式と同じです。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
 </div>
@@ -1032,12 +969,9 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.next_value">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">next_value</code><span class="sig-paren">(</span><em>seq</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.next_value" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>Represent the 'next value', given a <a class="reference internal" href="defaults.html#sqlalchemy.schema.Sequence" title="sqlalchemy.schema.Sequence"><code class="xref py py-class docutils literal"><span class="pre">Sequence</span></code></a>
-as its single argument.</p>
-<p>Compiles into the appropriate function on each backend,
-or will raise NotImplementedError if used on a backend
-that does not provide support for sequences.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>その次の値を表す：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Sequence`を単一の引数として与えます。</p>
+<p>各バックエンドで適切な関数にコンパイルするか、シーケンスのサポートを提供しないバックエンドで使用する場合はNotImplementedErrorを生成します。</p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.next_value.identifier">
 <code class="descname">identifier</code><em class="property"> = 'next_value'</em><a class="headerlink" href="#sqlalchemy.sql.functions.next_value.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -1058,7 +992,7 @@ that does not provide support for sequences.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.now">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">now</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.now" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.now.identifier">
 <code class="descname">identifier</code><em class="property"> = 'now'</em><a class="headerlink" href="#sqlalchemy.sql.functions.now.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -1072,7 +1006,7 @@ that does not provide support for sequences.</p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.now.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.now.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.DateTime</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.DateTime</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -1080,11 +1014,10 @@ that does not provide support for sequences.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.percent_rank">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">percent_rank</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.percent_rank" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>Implement the <code class="docutils literal"><span class="pre">percent_rank</span></code> hypothetical-set aggregate function.</p>
-<p>This function must be used with the <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.within_group" title="sqlalchemy.sql.functions.FunctionElement.within_group"><code class="xref py py-meth docutils literal"><span class="pre">FunctionElement.within_group()</span></code></a>
-modifier to supply a sort expression to operate upon.</p>
-<p>The return type of this function is <a class="reference internal" href="type_basics.html#sqlalchemy.types.Numeric" title="sqlalchemy.types.Numeric"><code class="xref py py-class docutils literal"><span class="pre">Numeric</span></code></a>.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>`` percent_rank``仮説集合集合関数を実装します。</p>
+<p>この関数は：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement.within_group`修飾子と一緒に使用して操作するソート式を指定する必要があります。</p>
+<p>この関数の戻り値の型は：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Numeric`です。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
 </div>
@@ -1108,13 +1041,10 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.percentile_cont">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">percentile_cont</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.percentile_cont" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.OrderedSetAgg" title="sqlalchemy.sql.functions.OrderedSetAgg"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.OrderedSetAgg</span></code></a></p>
-<p>implement the <code class="docutils literal"><span class="pre">percentile_cont</span></code> ordered-set aggregate function.</p>
-<p>This function must be used with the <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.within_group" title="sqlalchemy.sql.functions.FunctionElement.within_group"><code class="xref py py-meth docutils literal"><span class="pre">FunctionElement.within_group()</span></code></a>
-modifier to supply a sort expression to operate upon.</p>
-<p>The return type of this function is the same as the sort expression,
-or if the arguments are an array, an <a class="reference internal" href="type_basics.html#sqlalchemy.types.ARRAY" title="sqlalchemy.types.ARRAY"><code class="xref py py-class docutils literal"><span class="pre">types.ARRAY</span></code></a> of the sort
-expression's type.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.OrderedSetAgg" title="sqlalchemy.sql.functions.OrderedSetAgg"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.OrderedSetAgg</span></code></a></p>
+<p>`` percentile_cont``順序集合集合関数を実装してください。</p>
+<p>この関数は：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement.within_group`修飾子と一緒に使用して操作するソート式を指定する必要があります。</p>
+<p>この関数の戻り値の型は、ソート式と同じです。または、引数が配列の場合、ソート式の型の：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.types.ARRAY`です。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
 </div>
@@ -1138,13 +1068,10 @@ expression's type.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.percentile_disc">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">percentile_disc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.percentile_disc" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.OrderedSetAgg" title="sqlalchemy.sql.functions.OrderedSetAgg"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.OrderedSetAgg</span></code></a></p>
-<p>implement the <code class="docutils literal"><span class="pre">percentile_disc</span></code> ordered-set aggregate function.</p>
-<p>This function must be used with the <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.within_group" title="sqlalchemy.sql.functions.FunctionElement.within_group"><code class="xref py py-meth docutils literal"><span class="pre">FunctionElement.within_group()</span></code></a>
-modifier to supply a sort expression to operate upon.</p>
-<p>The return type of this function is the same as the sort expression,
-or if the arguments are an array, an <a class="reference internal" href="type_basics.html#sqlalchemy.types.ARRAY" title="sqlalchemy.types.ARRAY"><code class="xref py py-class docutils literal"><span class="pre">types.ARRAY</span></code></a> of the sort
-expression's type.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.OrderedSetAgg" title="sqlalchemy.sql.functions.OrderedSetAgg"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.OrderedSetAgg</span></code></a></p>
+<p>`` percentile_disc``順序集合集合関数を実装します。</p>
+<p>この関数は：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement.within_group`修飾子と一緒に使用して操作するソート式を指定する必要があります。</p>
+<p>この関数の戻り値の型は、ソート式と同じです。または、引数が配列の場合、ソート式の型の：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.types.ARRAY`です。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
 </div>
@@ -1168,7 +1095,7 @@ expression's type.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.random">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">random</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.random" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.random.identifier">
 <code class="descname">identifier</code><em class="property"> = 'random'</em><a class="headerlink" href="#sqlalchemy.sql.functions.random.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -1184,11 +1111,10 @@ expression's type.</p>
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.rank">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">rank</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.rank" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>Implement the <code class="docutils literal"><span class="pre">rank</span></code> hypothetical-set aggregate function.</p>
-<p>This function must be used with the <a class="reference internal" href="#sqlalchemy.sql.functions.FunctionElement.within_group" title="sqlalchemy.sql.functions.FunctionElement.within_group"><code class="xref py py-meth docutils literal"><span class="pre">FunctionElement.within_group()</span></code></a>
-modifier to supply a sort expression to operate upon.</p>
-<p>The return type of this function is <a class="reference internal" href="type_basics.html#sqlalchemy.types.Integer" title="sqlalchemy.types.Integer"><code class="xref py py-class docutils literal"><span class="pre">Integer</span></code></a>.</p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>`` rank``仮説集合集合関数を実装します。</p>
+<p>この関数は：meth： <a href="#id1"><span class="problematic" id="id2">`</span></a>.FunctionElement.within_group`修飾子と一緒に使用して操作するソート式を指定する必要があります。</p>
+<p>この関数の戻り値の型は：class： <a href="#id1"><span class="problematic" id="id2">`</span></a>.Integer`です。</p>
 <div class="versionadded">
 <p><span class="versionmodified">バージョン 1.1 で追加.</span></p>
 </div>
@@ -1212,21 +1138,17 @@ modifier to supply a sort expression to operate upon.</p>
 <dl class="function">
 <dt id="sqlalchemy.sql.functions.register_function">
 <code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">register_function</code><span class="sig-paren">(</span><em>identifier</em>, <em>fn</em>, <em>package='_default'</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.register_function" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Associate a callable with a particular func. name.</p>
-<p>This is normally called by _GenericMeta, but is also
-available by itself so that a non-Function construct
-can be associated with the <a class="reference internal" href="sqlelement.html#sqlalchemy.sql.expression.func" title="sqlalchemy.sql.expression.func"><code class="xref py py-data docutils literal"><span class="pre">func</span></code></a> accessor (i.e.
-CAST, EXTRACT).</p>
+<dd><p>呼び出し可能関数を特定の関数と関連付けます。名。</p>
+<p>これは通常_GenericMetaによって呼び出されますが、それ自身でも利用でき、非関数構造体を：data： <a href="#id1"><span class="problematic" id="id2">`</span></a>.func`アクセサ（つまりCAST、EXTRACT）に関連付けることができます。</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.rollup">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">rollup</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.rollup" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
-<p>Implement the <code class="docutils literal"><span class="pre">ROLLUP</span></code> grouping operation.</p>
-<p>This function is used as part of the GROUP BY of a statement,
-e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expression.Select.group_by" title="sqlalchemy.sql.expression.Select.group_by"><code class="xref py py-meth docutils literal"><span class="pre">Select.group_by()</span></code></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.GenericFunction" title="sqlalchemy.sql.functions.GenericFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.GenericFunction</span></code></a></p>
+<p>`` ROLLUP``グルーピング操作を実装してください。</p>
+<p>この関数は、文のGROUP BYの一部として使用されます。例：meth： <cite>.Select.group_by</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stmt</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span>
     <span class="p">[</span><span class="n">func</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">value</span><span class="p">),</span> <span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_1</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_2</span><span class="p">]</span>
 <span class="p">)</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">rollup</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_1</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">col_2</span><span class="p">))</span></pre></div>
 </div>
@@ -1248,7 +1170,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.session_user">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">session_user</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.session_user" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.session_user.identifier">
 <code class="descname">identifier</code><em class="property"> = 'session_user'</em><a class="headerlink" href="#sqlalchemy.sql.functions.session_user.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -1262,7 +1184,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.session_user.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.session_user.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.String</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.String</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -1270,7 +1192,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.sum">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">sum</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.sum" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.ReturnTypeFromArgs" title="sqlalchemy.sql.functions.ReturnTypeFromArgs"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.ReturnTypeFromArgs</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.ReturnTypeFromArgs" title="sqlalchemy.sql.functions.ReturnTypeFromArgs"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.ReturnTypeFromArgs</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.sum.identifier">
 <code class="descname">identifier</code><em class="property"> = 'sum'</em><a class="headerlink" href="#sqlalchemy.sql.functions.sum.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -1286,7 +1208,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.sysdate">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">sysdate</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.sysdate" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.sysdate.identifier">
 <code class="descname">identifier</code><em class="property"> = 'sysdate'</em><a class="headerlink" href="#sqlalchemy.sql.functions.sysdate.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -1300,7 +1222,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.sysdate.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.sysdate.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.DateTime</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.DateTime</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -1308,7 +1230,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="class">
 <dt id="sqlalchemy.sql.functions.user">
 <em class="property">class </em><code class="descclassname">sqlalchemy.sql.functions.</code><code class="descname">user</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sqlalchemy.sql.functions.user" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#sqlalchemy.sql.functions.AnsiFunction" title="sqlalchemy.sql.functions.AnsiFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.functions.AnsiFunction</span></code></a></p>
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.user.identifier">
 <code class="descname">identifier</code><em class="property"> = 'user'</em><a class="headerlink" href="#sqlalchemy.sql.functions.user.identifier" title="この定義へのパーマリンク">¶</a></dt>
@@ -1322,7 +1244,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 <dl class="attribute">
 <dt id="sqlalchemy.sql.functions.user.type">
 <code class="descname">type</code><a class="headerlink" href="#sqlalchemy.sql.functions.user.type" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-class docutils literal"><span class="pre">sqlalchemy.sql.sqltypes.String</span></code> のエイリアス</p>
+<dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.String</span></code> のエイリアス</p>
 </dd></dl>
 
 </dd></dl>
@@ -1335,13 +1257,13 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="dml.html" title="previous chapter">Insert, Updates, Deletes</a>
+        <a href="dml.html" title="previous chapter">挿入、更新、削除</a>
         Next:
-        <a href="compiler.html" title="next chapter">Custom SQL Constructs and Compilation Extension</a>
+        <a href="compiler.html" title="next chapter">カスタムSQLコンストラクトとコンパイル拡張</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -1368,6 +1290,7 @@ e.g. <a class="reference internal" href="selectable.html#sqlalchemy.sql.expressi
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

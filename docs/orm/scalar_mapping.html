@@ -10,7 +10,7 @@
         <title>
             
     
-    Mapping Columns and Expressions
+    列と式のマッピング
  &mdash;
     SQLAlchemy 1.3 Documentation
 
@@ -35,9 +35,9 @@
     <link rel="search" title="Search" href="../search.html" />
         <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="SQLAlchemy 1.3 Documentation" href="../index.html" />
-        <link rel="up" title="Mapper Configuration" href="mapper_config.html" />
-        <link rel="next" title="Mapping Table Columns" href="mapping_columns.html" />
-        <link rel="prev" title="Types of Mappings" href="mapping_styles.html" />
+        <link rel="up" title="マッパー設定" href="mapper_config.html" />
+        <link rel="next" title="マッピング表の列" href="mapping_columns.html" />
+        <link rel="prev" title="マッピングのタイプ" href="mapping_styles.html" />
     <!-- end layout.mako headers -->
 
 
@@ -120,28 +120,28 @@
         </h3>
 
         <ul>
-<li><span class="link-container first"><a class="reference external" href="tutorial.html">Object Relational Tutorial</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapper_config.html">Mapper Configuration</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="mapping_styles.html">Types of Mappings</a></span></li>
-<li class="selected"><span class="link-container first"><strong>Mapping Columns and Expressions</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
-<li><span class="link-container first"><a class="reference external" href="mapping_columns.html">Mapping Table Columns</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapped_sql_expr.html">SQL Expressions as Mapped Attributes</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapped_attributes.html">Changing Attribute Behavior</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="composites.html">Composite Column Types</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="tutorial.html">オブジェクトリレーショナルチュートリアル</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapper_config.html">マッパー設定</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="mapping_styles.html">マッピングのタイプ</a></span></li>
+<li class="selected"><span class="link-container first"><strong>列と式のマッピング</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container first"><a class="reference external" href="mapping_columns.html">マッピング表の列</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapped_sql_expr.html">マップされた属性としてのSQL式</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapped_attributes.html">属性の動作の変更</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="composites.html">コンポジット列の種類</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="inheritance.html">Mapping Class Inheritance Hierarchies</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="nonstandard_mappings.html">Non-Traditional Mappings</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="versioning.html">Configuring a Version Counter</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="mapping_api.html">Class Mapping API</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="inheritance.html">クラス継承階層のマッピング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="nonstandard_mappings.html">非伝統的なマッピング</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="versioning.html">バージョンカウンタの設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="mapping_api.html">クラスマッピングAPI</a></span></li>
 </ul>
 </li>
-<li><span class="link-container first"><a class="reference external" href="relationships.html">Relationship Configuration</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="loading_objects.html">Loading Objects</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="session.html">Using the Session</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extending.html">Events and Internals</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM Extensions</a></span></li>
-<li><span class="link-container first"><a class="reference external" href="examples.html">ORM Examples</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="relationships.html">関係の設定</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="loading_objects.html">オブジェクトの読み込み</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="session.html">セッションの使用</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extending.html">イベントと内部</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="extensions/index.html">ORM拡張</a></span></li>
+<li><span class="link-container first"><a class="reference external" href="examples.html">ORMの例</a></span></li>
 </ul>
 
 
@@ -157,36 +157,35 @@
     <div id="docs-body" class="withsidebar" >
         
 <span class="target" id="module-sqlalchemy.orm"></span><div class="section" id="mapping-columns-and-expressions">
-<h1>Mapping Columns and Expressions<a class="headerlink" href="#mapping-columns-and-expressions" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The following sections discuss how table columns and SQL expressions are
-mapped to individual object attributes.</p>
+<h1>列と式のマッピング<a class="headerlink" href="#mapping-columns-and-expressions" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>次のセクションでは、表の列とSQL式が個々のオブジェクト属性にマップされる方法について説明します。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mapping_columns.html">Mapping Table Columns</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html#naming-columns-distinctly-from-attribute-names">Naming Columns Distinctly from Attribute Names</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html#automating-column-naming-schemes-from-reflected-tables">Automating Column Naming Schemes from Reflected Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html#naming-all-columns-with-a-prefix">Naming All Columns with a Prefix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html#using-column-property-for-column-level-options">Using column_property for column level options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html#mapping-a-subset-of-table-columns">Mapping a Subset of Table Columns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping_columns.html">マッピング表の列</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html#naming-columns-distinctly-from-attribute-names">属性名とは異なる名前の列の名前付け</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html#automating-column-naming-schemes-from-reflected-tables">リフレクションされたテーブルから列命名スキームを自動化する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html#naming-all-columns-with-a-prefix">接頭辞付きのすべての列に名前を付ける</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html#using-column-property-for-column-level-options">カラムレベルオプションにcolumn_propertyを使用する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapping_columns.html#mapping-a-subset-of-table-columns">表の列のサブセットのマッピング</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapped_sql_expr.html">SQL Expressions as Mapped Attributes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapped_sql_expr.html#using-a-hybrid">Using a Hybrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapped_sql_expr.html#using-column-property">Using column_property</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapped_sql_expr.html#using-a-plain-descriptor">Using a plain descriptor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapped_sql_expr.html#query-time-sql-expressions-as-mapped-attributes">Query-time SQL expressions as mapped attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapped_sql_expr.html">マップされた属性としてのSQL式</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapped_sql_expr.html#using-a-hybrid">ハイブリッドの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapped_sql_expr.html#using-column-property">column_propertyの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapped_sql_expr.html#using-a-plain-descriptor">プレーンな記述子を使う</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapped_sql_expr.html#query-time-sql-expressions-as-mapped-attributes">クエリされたSQL式をマップされた属性として</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapped_attributes.html">Changing Attribute Behavior</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapped_attributes.html#simple-validators">Simple Validators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapped_attributes.html#using-descriptors-and-hybrids">Using Descriptors and Hybrids</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapped_attributes.html#synonyms">Synonyms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapped_attributes.html#operator-customization">Operator Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapped_attributes.html">属性の動作の変更</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapped_attributes.html#simple-validators">シンプルなバリデーター</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapped_attributes.html#using-descriptors-and-hybrids">記述子とハイブリッドの使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapped_attributes.html#synonyms">類義語</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapped_attributes.html#operator-customization">オペレータのカスタマイズ</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="composites.html">Composite Column Types</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="composites.html#tracking-in-place-mutations-on-composites">Tracking In-Place Mutations on Composites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="composites.html#redefining-comparison-operations-for-composites">Redefining Comparison Operations for Composites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="composites.html">コンポジット列の種類</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="composites.html#tracking-in-place-mutations-on-composites">コンポジットのインプレース・ミューテックスのトラッキング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="composites.html#redefining-comparison-operations-for-composites">コンポジットの比較操作の再定義</a></li>
 </ul>
 </li>
 </ul>
@@ -199,13 +198,13 @@ mapped to individual object attributes.</p>
 
 <div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
         Previous:
-        <a href="mapping_styles.html" title="previous chapter">Types of Mappings</a>
+        <a href="mapping_styles.html" title="previous chapter">マッピングのタイプ</a>
         Next:
-        <a href="mapping_columns.html" title="next chapter">Mapping Table Columns</a>
+        <a href="mapping_columns.html" title="next chapter">マッピング表の列</a>
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -232,6 +231,7 @@ mapped to individual object attributes.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>

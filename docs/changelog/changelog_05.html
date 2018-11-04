@@ -1055,7 +1055,7 @@ multi-page exceptions from filling up screens and logfiles
 for large executemany() statements.<a class="changeset-link headerlink reference internal" href="#change-6a264288f4c28d189d06b156158f75f9">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/1413">#1413</a></p>
 </p>
 </li>
-<li><p id="change-0.5.4-18"><span class="target" id="change-01d31f576dc5491eb4674d5a24c5dd32"><strong>[sql] </strong></span><code class="docutils literal"><span class="pre">sqlalchemy.extract()</span></code> is now dialect sensitive and can
+<li><p id="change-0.5.4-18"><span class="target" id="change-01d31f576dc5491eb4674d5a24c5dd32"><strong>[sql] </strong></span><code class="docutils literal notranslate"><span class="pre">sqlalchemy.extract()</span></code> is now dialect sensitive and can
 extract components of timestamps idiomatically across the
 supported databases, including SQLite.<a class="changeset-link headerlink reference internal" href="#change-01d31f576dc5491eb4674d5a24c5dd32">¶</a><p></p>
 </p>
@@ -1219,7 +1219,7 @@ in conjunction with an aliased object on the left and
 of_type() on the right.<a class="changeset-link headerlink reference internal" href="#change-192d36e5463caf99edcc9d7d3b1d9ccc">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/1325">#1325</a></p>
 </p>
 </li>
-<li><p id="change-0.5.3-13"><span class="target" id="change-2a46f035edea7feda9d9d6a572b6975f"><strong>[orm] </strong></span>Added an attribute helper method <code class="docutils literal"><span class="pre">set_committed_value</span></code> in
+<li><p id="change-0.5.3-13"><span class="target" id="change-2a46f035edea7feda9d9d6a572b6975f"><strong>[orm] </strong></span>Added an attribute helper method <code class="docutils literal notranslate"><span class="pre">set_committed_value</span></code> in
 sqlalchemy.orm.attributes.  Given an object, attribute name,
 and value, will set the value on the object as part of its
 &quot;committed&quot; state, i.e. state that is understood to have
@@ -1491,7 +1491,7 @@ operation, greatly simplifying typical usage patterns
 within declarative.<a class="changeset-link headerlink reference internal" href="#change-d942c9f0feaf7f8fe8d86dd5f3846838">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/1269">#1269</a></p>
 </p>
 </li>
-<li><p id="change-0.5.1-11"><span class="target" id="change-82c422d444d39214d5378d7961dd511b"><strong>[orm] </strong></span>ColumnProperty (and front-end helpers such as <code class="docutils literal"><span class="pre">deferred</span></code>) no
+<li><p id="change-0.5.1-11"><span class="target" id="change-82c422d444d39214d5378d7961dd511b"><strong>[orm] </strong></span>ColumnProperty (and front-end helpers such as <code class="docutils literal notranslate"><span class="pre">deferred</span></code>) no
 longer ignores unknown **keyword arguments.<a class="changeset-link headerlink reference internal" href="#change-82c422d444d39214d5378d7961dd511b">¶</a><p></p>
 </p>
 </li>
@@ -1917,7 +1917,7 @@ non-length types as an unbound variable length Binary type.<a class="changeset-l
 MSDateTimeOffset, and MSDateTime2 types<a class="changeset-link headerlink reference internal" href="#change-5c00e393c842b417f4285b3a178aadcb">¶</a><p></p>
 </p>
 </li>
-<li><p id="change-0.5.0-52"><span class="target" id="change-b759863e8434ae6cea17a2115098b806"><strong>[mssql] </strong></span>Refactored the Date/Time types. The <code class="docutils literal"><span class="pre">smalldatetime</span></code> data
+<li><p id="change-0.5.0-52"><span class="target" id="change-b759863e8434ae6cea17a2115098b806"><strong>[mssql] </strong></span>Refactored the Date/Time types. The <code class="docutils literal notranslate"><span class="pre">smalldatetime</span></code> data
 type no longer truncates to a date only, and will now be
 mapped to the MSSmallDateTime type.<a class="changeset-link headerlink reference internal" href="#change-b759863e8434ae6cea17a2115098b806">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/1254">#1254</a></p>
 </p>
@@ -1925,26 +1925,26 @@ mapped to the MSSmallDateTime type.<a class="changeset-link headerlink reference
 <li><p id="change-0.5.0-53"><span class="target" id="change-7ad24f536d7b91e2dd7a3b2b99a19727"><strong>[mssql] </strong></span>Corrected an issue with Numerics to accept an int.<a class="changeset-link headerlink reference internal" href="#change-7ad24f536d7b91e2dd7a3b2b99a19727">¶</a><p></p>
 </p>
 </li>
-<li><p id="change-0.5.0-54"><span class="target" id="change-75b12696700d5e57f4fe29cdbc7ec8ac"><strong>[mssql] </strong></span>Mapped <code class="docutils literal"><span class="pre">char_length</span></code> to the <code class="docutils literal"><span class="pre">LEN()</span></code> function.<a class="changeset-link headerlink reference internal" href="#change-75b12696700d5e57f4fe29cdbc7ec8ac">¶</a><p></p>
+<li><p id="change-0.5.0-54"><span class="target" id="change-75b12696700d5e57f4fe29cdbc7ec8ac"><strong>[mssql] </strong></span>Mapped <code class="docutils literal notranslate"><span class="pre">char_length</span></code> to the <code class="docutils literal notranslate"><span class="pre">LEN()</span></code> function.<a class="changeset-link headerlink reference internal" href="#change-75b12696700d5e57f4fe29cdbc7ec8ac">¶</a><p></p>
 </p>
 </li>
-<li><p id="change-0.5.0-55"><span class="target" id="change-ec975da215d6fde5f163e8a064cd4591"><strong>[mssql] </strong></span>If an <code class="docutils literal"><span class="pre">INSERT</span></code> includes a subselect the <code class="docutils literal"><span class="pre">INSERT</span></code> is
-converted from an <code class="docutils literal"><span class="pre">INSERT</span> <span class="pre">INTO</span> <span class="pre">VALUES</span></code> construct to a
-<code class="docutils literal"><span class="pre">INSERT</span> <span class="pre">INTO</span> <span class="pre">SELECT</span></code> construct.<a class="changeset-link headerlink reference internal" href="#change-ec975da215d6fde5f163e8a064cd4591">¶</a><p></p>
+<li><p id="change-0.5.0-55"><span class="target" id="change-ec975da215d6fde5f163e8a064cd4591"><strong>[mssql] </strong></span>If an <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> includes a subselect the <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> is
+converted from an <code class="docutils literal notranslate"><span class="pre">INSERT</span> <span class="pre">INTO</span> <span class="pre">VALUES</span></code> construct to a
+<code class="docutils literal notranslate"><span class="pre">INSERT</span> <span class="pre">INTO</span> <span class="pre">SELECT</span></code> construct.<a class="changeset-link headerlink reference internal" href="#change-ec975da215d6fde5f163e8a064cd4591">¶</a><p></p>
 </p>
 </li>
-<li><p id="change-0.5.0-56"><span class="target" id="change-eaa3b35c76afd357117e3d0dd780ae3f"><strong>[mssql] </strong></span>If the column is part of a <code class="docutils literal"><span class="pre">primary_key</span></code> it will be <code class="docutils literal"><span class="pre">NOT</span>
-<span class="pre">NULL</span></code> since MSSQL doesn't allow <code class="docutils literal"><span class="pre">NULL</span></code> in primary_key
+<li><p id="change-0.5.0-56"><span class="target" id="change-eaa3b35c76afd357117e3d0dd780ae3f"><strong>[mssql] </strong></span>If the column is part of a <code class="docutils literal notranslate"><span class="pre">primary_key</span></code> it will be <code class="docutils literal notranslate"><span class="pre">NOT</span>
+<span class="pre">NULL</span></code> since MSSQL doesn't allow <code class="docutils literal notranslate"><span class="pre">NULL</span></code> in primary_key
 columns.<a class="changeset-link headerlink reference internal" href="#change-eaa3b35c76afd357117e3d0dd780ae3f">¶</a><p></p>
 </p>
 </li>
-<li><p id="change-0.5.0-57"><span class="target" id="change-b986d7aae928f54f9c93125d11c52073"><strong>[mssql] </strong></span><code class="docutils literal"><span class="pre">MSBinary</span></code> now returns a <code class="docutils literal"><span class="pre">BINARY</span></code> instead of an
-<code class="docutils literal"><span class="pre">IMAGE</span></code>. This is a backwards incompatible change in that
-<code class="docutils literal"><span class="pre">BINARY</span></code> is a fixed length data type whereas <code class="docutils literal"><span class="pre">IMAGE</span></code> is a
+<li><p id="change-0.5.0-57"><span class="target" id="change-b986d7aae928f54f9c93125d11c52073"><strong>[mssql] </strong></span><code class="docutils literal notranslate"><span class="pre">MSBinary</span></code> now returns a <code class="docutils literal notranslate"><span class="pre">BINARY</span></code> instead of an
+<code class="docutils literal notranslate"><span class="pre">IMAGE</span></code>. This is a backwards incompatible change in that
+<code class="docutils literal notranslate"><span class="pre">BINARY</span></code> is a fixed length data type whereas <code class="docutils literal notranslate"><span class="pre">IMAGE</span></code> is a
 variable length data type.<a class="changeset-link headerlink reference internal" href="#change-b986d7aae928f54f9c93125d11c52073">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/1249">#1249</a></p>
 </p>
 </li>
-<li><p id="change-0.5.0-58"><span class="target" id="change-804ce8c8340ab54b256a14785ec30540"><strong>[mssql] </strong></span><code class="docutils literal"><span class="pre">get_default_schema_name</span></code> is now reflected from the database
+<li><p id="change-0.5.0-58"><span class="target" id="change-804ce8c8340ab54b256a14785ec30540"><strong>[mssql] </strong></span><code class="docutils literal notranslate"><span class="pre">get_default_schema_name</span></code> is now reflected from the database
 based on the user's default schema. This only works with MSSQL
 2005 and later.<a class="changeset-link headerlink reference internal" href="#change-804ce8c8340ab54b256a14785ec30540">¶</a><p>References: <a class="reference external" href="http://www.sqlalchemy.org/trac/ticket/1258">#1258</a></p>
 </p>
@@ -3200,7 +3200,7 @@ Ken Kuhlman.<a class="changeset-link headerlink reference internal" href="#chang
 
     <div id="docs-copyright">
         &copy; <a href="../copyright.html">Copyright</a> 2007-2018, the SQLAlchemy authors and contributors.
-        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.6.7.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.1.
     </div>
 </div>
 
@@ -3227,6 +3227,7 @@ Ken Kuhlman.<a class="changeset-link headerlink reference internal" href="#chang
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- end iterate through sphinx environment script_files -->
 
     <script type="text/javascript" src="../_static/detectmobile.js"></script>
